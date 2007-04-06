@@ -5,7 +5,6 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 
 echo "<h1 class=\"pagetitle\">".$template['license']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
-
 	echo "<h1>".$template['license']['text']."</h1>";
 	echo "<p>".$template['license']['text2']."</p>";
 	echo "<h3>Szymon Stefanek :)</h3>";
