@@ -17,11 +17,12 @@ echo "<div class=\"column1-unit\">";
 		<li><?echo $template['index']['dutch'];?>: <a href="mailto:balboy@kvirc.REMOVE.THE.ANTISPAM.WORDS.net">Balboy</a></li>
 		<li><?echo $template['index']['french'];?>: <a href="mailto:ahinu.laman@gmail.REMOVE.THE.ANTISPAM.WORDS.com">Ahinu</a></li>
 		<li><?echo $template['index']['german'];?>: <a href="mailto:crissi99@gmx.REMOVE.THE.ANTISPAM.WORDS.de">Christoph Thielecke</a></li>
+		<li><?echo $template['index']['hungarian'];?>: <a href="mailto:vfiber@gmail.REMOVE.THE.ANTISPAM.WORDS.com">Fiber^</a></li>
 		<li><?echo $template['index']['italian'];?>: <a href="mailto:nate@paranoici.REMOVE.THE.ANTISPAM.WORDS.org">Nate Grey</a>, <a href="mailto:hellvis69@netsons.REMOVE.THE.ANTISPAM.WORDS.org">HelLViS69</a>, <a href="mailto:cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org">etherea`</a></li>
 		<li><?echo $template['index']['polish'];?>: <a href="mailto:kgod@poczta.onet.REMOVE.THE.ANTISPAM.WORDS.pl">Krzysztof Godlewski</a></li>
 		<li><?echo $template['index']['portuguese'];?>: <a href="mailto:mmodem00@netvisao.REMOVE.THE.ANTISPAM.WORDS.pt">Américo José Melo</a></li>
 		<li><?echo $template['index']['brazilian'];?>: <a href="mailto:cabide@brfree.com.REMOVE.THE.ANTISPAM.WORDS.br">Adilson Gonçalves Soares Junior</a></li>
-		<li><?echo $template['index']['russian'];?>: <a href="mailto:valeragir@mail.REMOVE.THE.ANTISPAM.WORDS.ru">Valeriy Girchenko</a></li>
+		<li><?echo $template['index']['russian'];?>: <a href="mailto:spam@kvirc.REMOVE.THE.ANTISPAM.WORDS.ru">Alexey</a></li>
 		<li><?echo $template['index']['serbian'];?>: <a href="mailto:preth@kvsky.REMOVE.THE.ANTISPAM.WORDS.net">Prethorian</a></li>
 		<li><?echo $template['index']['spanish'];?>: <a href="mailto:jsanchezv@teleline.REMOVE.THE.ANTISPAM.WORDS.es">José Luis Sánchez</a></li>
 	</ul>
@@ -37,7 +38,7 @@ echo "<div class=\"column1-unit\">";
 	echo "<p>".$template['translation']['text8a']." <a href=\"?id=SVN&amp;lang=$lang\">http://www.kvirc.net/?id=SVN</a>.<br />".$template['translation']['text8b']." <code>kvirc/po/</code>";
 
 	echo "<h1>".$template['translation']['step']." 1: ".$template['translation']['text9']."</h1>";
-	echo "<p>".$template['translation']['text10a']." <a href=\"http://translation.sourceforge.net/HTML/teams.html\">".$template['translation']['text10b']."</a>.<br />".$template['translation']['text10c']."\"it\", \"en\", \"hu\" or \"pt_BR\".</p>";
+	echo "<p>".$template['translation']['text10a']." <a href=\"http://sourceforge.net/projects/translation/\">".$template['translation']['text10b']."</a>.<br />".$template['translation']['text10c']."\"it\", \"en\", \"hu\" or \"pt_BR\".</p>";
 
 	echo "<h1>".$template['translation']['step']." 2: ".$template['translation']['text11']."</h1>";
 	echo "<p>".$template['translation']['text12'].".</p>";
