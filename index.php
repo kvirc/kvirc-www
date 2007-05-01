@@ -33,10 +33,13 @@ require("conf/config.php");
 	<meta name="publisher" content="etherea` ./LSD @ virg0.org - CreativeCode" />
 	<meta name="copyright" content="etherea` ./LSD @ virg0.org | CreativeCode | KVIrc.net" />
 	<meta name="author" content="etherea` - graphics - ./LSD @ virg0.org" />
-	<meta name="author" content="HelLViS69 - code - helvis69 @ netsons.org" />
+	<meta name="author" content="HelLViS69 - code - hellvis69 @ netsons.org" />
 	<meta name="distribution" content="global" />
 	<meta name="description" content="KVIrc.net - The K-Visual IRC client" />
 	<meta name="keywords" content="KVIrc, KDE, IRC, Chat, pragma" />
+	<!-- Google diagnostic start -->
+	<meta name="verify-v1" content="Q0B/rT+mLDe7URI4WfL8NQlJ5ksx3WMAMK3K0spUib4=" />
+	<!-- Google diagnostic end -->
 	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="./css/layout4_setup.css" />
 	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="./css/layout4_text.css" />
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -73,6 +76,7 @@ require("conf/config.php");
 						<li><a href="?id=<?echo $id;?>&amp;lang=pt" title="<?echo $template['index']['portuguese'];?>"><img src="./img/flags/Portugal.png" alt="<?echo $template['index']['portuguese'];?>" /></a></li>
 						<li><a href="?id=<?echo $id;?>&amp;lang=br" title="<?echo $template['index']['brazilian'];?>"><img src="./img/flags/Brazil.png" alt="<?echo $template['index']['brazilian'];?>" /></a></li>
 						<li><a href="?id=<?echo $id;?>&amp;lang=sr" title="<?echo $template['index']['serbian'];?>"><img src="./img/flags/Serbia.png" alt="<?echo $template['index']['serbian'];?>" /></a></li>
+						<li><a href="?id=<?echo $id;?>&amp;lang=hu" title="<?echo $template['index']['hungarian'];?>"><img src="./img/flags/Hungary.png" alt="<?echo $template['index']['hungarian'];?>" /></a></li>
 						<?/*<li><a href="?id=<?echo $id;?>&amp;lang=hr" title="<?echo $template['index']['croatian'];?>"><img src="./img/flags/Croatia.png" alt="<?echo $template['index']['croatian'];?>" /></a></li>*/?>
 					</ul>
 				</div>
@@ -241,7 +245,7 @@ require("conf/config.php");
 				<h1><img src="img/network-offline.png" alt="<?echo $template['index']['oldlayout'];?>" border="0" /><?echo $template['index']['oldlayout'];?></h1>
 				<p>
 					<img src="img/th_oldsite_1.gif" alt="<?echo $template['index']['oldsite'];?>" width="159" height="105" /><br />
-					<a href="http://old.kvirc.de/" title="<?echo $template['index']['oldsite'];?>" target="_blank">old.kvirc.de</a> by <a href="http://iakko.net/" title="<?echo $template['index']['iakkohome'];?>" target="_blank">iakko</a>
+					<a href="http://old.kvirc.de/" title="<?echo $template['index']['oldsite'];?>" target="_blank">old.kvirc.de</a> by istari</a>
 				</p>
 				<p>
 					<img src="img/th_oldsite_2.gif" alt="<?echo $template['index']['oldsite'];?>" width="159" height="105" /><br />
@@ -308,7 +312,7 @@ require("conf/config.php");
 
 		<div class="footer">
 			<p>KVIrc.net | (c) 2007 ./LSD - CreativeCode | <?echo $template['index']['footer'];?></p>
-			<p class="credits"><a href="http://validator.w3.org/check?uri=referer" title="Validate XHTML code">XHTML 1.1</a> | <a href="http://jigsaw.w3.org/css-validator/" title="Validate CSS code">CSS 2.0</a> | credits</p>
+			<p class="credits"><a href="http://validator.w3.org/check/referer" title="Validate XHTML code">XHTML 1.1</a> | <a href="http://http://jigsaw.w3.org/css-validator/check/referer" title="Validate CSS code">CSS 2.0</a> | credits</p>
 		</div>
 	</div>
 </body>

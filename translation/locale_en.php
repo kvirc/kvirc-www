@@ -18,7 +18,9 @@ $template['index']['polish']="Polish";
 $template['index']['portuguese']="Portuguese";
 $template['index']['brazilian']="Brazilian";
 $template['index']['serbian']="Serbian";
+$template['index']['hungarian']="Hungarian";
 $template['index']['croatian']="Croatian";
+
 // the project
 $template['index']['theproject']="the project";
 $template['index']['status']="status";
