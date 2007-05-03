@@ -1070,29 +1070,30 @@ $template['screen']['screen15']="Help window and the dock widget";
 $template['screen']['screen16']="Fancy Default Theme with Transfers Window";
 $template['screen']['screen17']="Minimalist Theme and one of the contextual pop-up";
 $template['screen']['screen18']="
-	Four special windows. File transfers, Log View, Terminal and Shared Files: here to simplify your daily ircing.
-	";
+	Four special windows. File transfers, Log View, Terminal and Shared Files: here to simplify your daily ircing.";
 $template['screen']['screen19']="Are you a scripter? KVIrc has various tools for you.";
 $template['screen']['screen20']="Helix on three servers and a lot of channels";
 $template['screen']['screen21']="Helix connecting thru psyBNC and the nice KVIrc desktop shortcut :D";
 $template['screen']['screen22']="
-	Four servers. Note the tree window on the left showing the most active channels.
-	";
+	Four servers. Note the tree window on the left showing the most active channels.";
 $template['screen']['screen23']="The DCC exploits don't work with KVIrc :)";
 $template['screen']['screen24']="A snapshot by bongwater: it is running since 10 days :)";
 $template['screen']['screen25']="
-	A snapshot by <a href=\"http://kvirc.virg0.org\">etherea`</a>: Time makes no sense
-	";
+	A snapshot by <a href=\"http://kvirc.virg0.org\">etherea`</a>: Time makes no sense";
 $template['screen']['screen26']="A shot by Xemanth^: a 'hackish' KVIrc on windows";
 $template['screen']['screen27']="
-	A snapshot by <a href=\"http://kvirc.virg0.org\">etherea`</a>: Pragma's Newsticker in action :)
-	";
+	A snapshot by <a href=\"http://kvirc.virg0.org\">etherea`</a>: Pragma's Newsticker in action :)";
 $template['screen']['screen28']="
-	A snapshot by <a href=\"http://hellvis69.altervista.org\">HelLViS69</a>: Clonescanner working :)
-	";
+	A snapshot by <a href=\"http://hellvis69.altervista.org\">HelLViS69</a>: Clonescanner working :)";
 $template['screen']['screen29']="
-	The Twins' script and its <a href=\"?id=addons&amp;lang=$lang&amp;version=3.2.3\">media player</a> on 'Anomalies'. Also  the new namespace scripting environment in the alias editor window.
-	";
+	The Twins' script and its <a href=\"?id=addons&amp;lang=$lang&amp;version=3.2.3\">media player</a> on 'Anomalies'. Also  the new namespace scripting environment in the alias editor window.";
+$template['screen']['screen30']="
+	The SilverIRC theme, the default since KVIrc 3.2.6 after a fresh installation. Screenshot provided by thexception";
+$template['screen']['screen31']="
+	SilverIRC theme. The theme manager. Screenshot provided by thexception";
+$template['screen']['screen32']="SilverIRC theme. The Aliases Editor. Screenshot provided by thexception";
+$template['screen']['screen33']="SilverIRC theme. The Events Editor. Screenshot provided by thexception";
+$template['screen']['screen34']="SilverIRC theme. The Popups Editor. Screenshot provided by thexception";
 /* screen.php end */
 
 /* scripts.php start */

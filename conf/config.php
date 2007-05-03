@@ -70,6 +70,14 @@ $screen=array(
 		array("img" => "img/snapshot13.png", "thumb" => "img/snapshot13_small.png", "desc" => $template['screen']['screen27']),
 		array("img" => "img/snapshot11.png", "thumb" => "img/snapshot11_small.png", "desc" => $template['screen']['screen28']),
 		array("img" => "img/snapshot14.png", "thumb" => "img/snapshot14_small.png", "desc" => $template['screen']['screen29'])
+	),
+	array(
+		0 => "KVIrc 3.2.6 \"Anomalies\"",
+		array("img" => "img/snapshot15.png", "thumb" => "img/snapshot15_small.png", "desc" => $template['screen']['screen30']),
+		array("img" => "img/snapshot16.png", "thumb" => "img/snapshot16_small.png", "desc" => $template['screen']['screen31']),
+		array("img" => "img/snapshot17.png", "thumb" => "img/snapshot17_small.png", "desc" => $template['screen']['screen32']),
+		array("img" => "img/snapshot18.png", "thumb" => "img/snapshot18_small.png", "desc" => $template['screen']['screen33']),
+		array("img" => "img/snapshot19.png", "thumb" => "img/snapshot19_small.png", "desc" => $template['screen']['screen34'])
 	)
 );
 
