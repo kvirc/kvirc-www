@@ -58,6 +58,7 @@ $template['index']['misc']="misc";
 $template['index']['honor']="honor &amp; glory";
 $template['index']['scripts']="scripts";
 $template['index']['addons']="addons";
+$template['index']['tools']="tools";
 $template['index']['changelog']="changeLog";
 $template['index']['svncommits']="SVN commits";
 // contact
@@ -1205,6 +1206,12 @@ $template['themes']['theme17']="erotica.. mh..";
 $template['themes']['theme18']="Anger is a variation of erotica. Keep on lick your lips!";
 $template['themes']['theme19']="Dark Blue is a variation of marble. Enjoy it";
 /* themes.php end */
+
+/* tools.php start */
+$template['tools']['title']="Tools";
+$template['tools']['text1']="Here you can find some KVIrc-related tools";
+$template['tools']['tool1']="KVS sinthax highlight for Notepad++";
+/* tools.php end */
 
 /* translation.php start */
 $template['translation']['title']="Translations";

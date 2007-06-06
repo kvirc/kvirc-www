@@ -161,6 +161,7 @@ require("conf/config.php");
 								<li><a href="?id=honor&amp;lang=<?echo $lang;?>"><?echo $template['index']['honor'];?></a></li>
 								<li><a href="?id=scripts&amp;lang=<?echo $lang;?>"><?echo $template['index']['scripts'];?></a></li>
 								<li><a href="?id=addons&amp;lang=<?echo $lang;?>"><?echo $template['index']['addons'];?></a></li>
+								<li><a href="?id=tools&amp;lang=<?echo $lang;?>"><?echo $template['index']['tools'];?></a></li>
 								<li><a href="?id=changelog&amp;lang=<?echo $lang;?>"><?echo $template['index']['changelog'];?></a></li>
 								<li><a href="http://cia.navi.cx/stats/project/kvirc" target="_blank" title="CIA commits on KVIrc project"><?echo $template['index']['svncommits'];?></a></li>
 							</ul>

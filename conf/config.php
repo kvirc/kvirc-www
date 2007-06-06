@@ -3,6 +3,10 @@
 if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
+// Some vars
+$current="3.2.6";
+$availVersions=array("3.2.1","3.2.3","3.2.4","3.2.5",$current);
+
 // WWW mirrors
 //array("name" => "name", "url" => "http url", "desc" => "description", "country" => "country location", "city" => "city location", "sponsor" => "who sponsors")
 $www_mirror=array(
@@ -25,6 +29,34 @@ $ftp_mirror=array(
 	array("name" => "kvirc.tradebit.com", "url" => "http://kvirc.tradebit.com/pub", "desc" => "kvirc.tradebit.com: New York, USA (bandwidth by tradebit.com)"),
 	array("name" => "kvirc.imsam.info", "url" => "http://kvirc.imsam.info", "desc" => "kvirc.imsam.info: Nuernberg, Germany (bandwidth by tradebit.com)"),
 	array("name" => "kvirc.bcoos.net", "url" => "http://kvirc.bcoos.net", "desc" => "kvirc.bcoos.net: USA (bandwidth by exoops.info)")
+);
+
+// Addons
+//aray("name" => "name", "ver" => "addon version", "min" => "min KVIrc version", "max" => "max KVIrc version", "author" => "author", "desc" => "description", "url" => "url")
+$addons=array(
+	1 => array("name" => "Auto Away: Automatic Away", "ver" => "1.0.0", "min" => "3.2.1", "max" => $current, "author" => "Szymon Stefanek", "desc" => $template['addons']['addon1'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/autoaway.1.0.0.zip"),
+	array("name" => "Chan Ops: Channel Operations", "ver" => "1.0.0", "min" => "3.2.1", "max" => $current, "author" => "Szymon Stefanek", "desc" => $template['addons']['addon2'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/chanops.1.0.0.zip"),
+	array("name" => "Chan Stats: Channel Statistics", "ver" => "1.1.1", "min" => "3.2.1", "max" => $current, "author" => "g00dsP33D", "desc" => $template['addons']['addon3'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/chanstats.1.1.1.zip"),
+	array("name" => "Hell Country", "ver" => "0.1", "min" => "3.2.1", "max" => $current, "author" => "HelLViS69", "desc" => $template['addons']['addon4'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/country.0.1.zip"),
+	array("name" => "Cryption", "ver" => "1.0.2", "min" => "3.2.1", "max" => $current, "author" => "g00dsP33D", "desc" => $template['addons']['addon5'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/cryption.1.0.2.zip"),
+	array("name" => "Ezbounce", "ver" => "1.0.0", "min" => "3.2.1", "max" => $current, "author" => "Szymon Stefanek", "desc" => $template['addons']['addon6'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/ezbounce.1.0.0.zip"),
+	array("name" => "F4: Forza 4 game", "ver" => "0.9", "min" => "3.2.1", "max" => $current, "author" => "Grifisx &amp; Noldor", "desc" => $template['addons']['addon7'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/forza4.0.9.zip"),
+	array("name" => "Fserve: An F-Server", "ver" => "1.0.0", "min" => "3.2.1", "max" => $current, "author" => "assassin", "desc" => $template['addons']['addon8'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/fserve.1.0.0.zip"),
+	array("name" => "Funny Lol And Write", "ver" => "0.1", "min" => "3.2.1", "max" => $current, "author" => "Grifisx &amp; HelLViS69", "desc" => $template['addons']['addon9'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/funnylolandwrite.0.1.zip"),
+	array("name" => "Hell Mediaplayer", "ver" => "0.1", "min" => "3.2.1", "max" => $current, "author" => "HelLViS69", "desc" => $template['addons']['addon10'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/mediaplayer.0.1.zip"),
+	array("name" => "Mines Weeper", "ver" => "1.1.0", "min" => "3.2.1", "max" => $current, "author" => "Szymon Stefanek", "desc" => $template['addons']['addon11'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/mediaplayer.0.1.zip"),
+	array("name" => "News Ticker: The RSS News Reader", "ver" => "1.1.0", "min" => "3.2.1", "max" => $current, "author" => "Szymon Stefanek", "desc" => $template['addons']['addon12'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/newsticker-1.1.0.zip"),
+	array("name" => "Now Playing: The Media Advertiser", "ver" => "1.0.0", "min" => "3.2.1", "max" => $current, "author" => "Szymon Stefanek", "desc" => $template['addons']['addon13'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/nowplaying.1.0.0.zip"),
+	array("name" => "Question Manager", "ver" => "0.1", "min" => "3.2.1", "max" => $current, "author" => "Grifisx &amp; Noldor", "desc" => $template['addons']['addon14'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/questionManager.0.1.zip"),
+	array("name" => "Quiz", "ver" => "1.0.0", "min" => "3.2.1", "max" => $current, "author" => "Szymon Stefanek and HelLViS69", "desc" => $template['addons']['addon15'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/quiz.1.0.0.zip"),
+	array("name" => "SMS: SMS sender", "ver" => "1.9.9", "min" => "3.2.1", "max" => $current, "author" => "Grifisx &amp; Noldor", "desc" => $template['addons']['addon16'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/sms.1.9.9.zip"),
+	array("name" => "The Censor", "ver" => "1.0.0", "min" => "3.2.1", "max" => $current, "author" => "Grifisx", "desc" => $template['addons']['addon17'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/thecensor.1.0.0.zip"),
+	array("name" => "Twins Auto Op: auto op/voice/ban", "ver" => "1.1", "min" => "3.2.3", "max" => $current, "author" => "Ahinu", "desc" => $template['addons']['addon18'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/twinsautoop-1.1.zip"),
+	array("name" => "Twins Input Color: Colorize your input text", "ver" => "1.2", "min" => "3.2.4", "max" => $current, "author" => "Ahinu", "desc" => $template['addons']['addon19'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/twinsinputcolor-1.2.zip"),
+	array("name" => "Twins Lag bar: A graphical lag bar", "ver" => "1.0", "min" => "3.2.4", "max" => $current, "author" => "Ahinu", "desc" => $template['addons']['addon20'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/twinslagbar-1.0.zip"),
+	array("name" => "Twins Media Player: Control your player and share you music", "ver" => "1.4", "min" => "3.2.4", "max" => $current, "author" => "Ahinu", "desc" => $template['addons']['addon21'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/twinsmediaplayer-1.4.zip"),
+	array("name" => "Host Check", "ver" => "1.0", "min" => "3.2.6", "max" => $current, "author" => "", "desc" => $template['addons']['addon22'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/hostcheck.tar.gz"),
+	array("name" => "KISS: The KVIrc Icons Style Setup", "ver" => "2.0", "min" => "3.2.6", "max" => $current, "author" => "HelLViS69", "desc" => $template['addons']['addon23'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/KISS-2.0.tar.bz2")
 );
 
 // Screenshots
@@ -81,6 +113,15 @@ $screen=array(
 	)
 );
 
+// Scripts
+// array("script" => "script name", "author" => "author name", "mail" => "author mail", "desc" => "description", "home" => "script homepage")
+$scripts=array(
+	1 => array("script" => "Princoscript", "author" => "Francesco Meloni", "mail" => "francesco.melo@tiscali.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => $template['scripts']['script1'], "home" => "http://web.tiscali.it/princoscript/"),
+	array("script" => "SaNVirC", "author" => "Wunslov", "mail" => "", "desc" => $template['scripts']['script2'], "home" => "http://sanvirc.sourceforge.net/"),
+	array("script" => "Savage", "author" => "???", "mail" => "", "desc" => $template['scripts']['script3'].":<br /><code>cvs -z4 -d:pserver:anonymous@cvs.omnikron.net:/cvs co savage</code>", "home" => "http://www.cynapses.org/tmp/kvirc-script-0.7.tar.gz"),
+	//array("script" => "dwnKVIrc", "author" => "Klaus Weidenbach", "mail" => "Klaus.Weidenbach@gmx.REMOVE.THE.ANTISPAM.WORDS.net", "desc" => $template['scripts']['script4'], "home" => "http://dszdw.homelinux.org/~klaus/programs/kvirc/index.php")
+);
+
 // Splash screens
 // array("name" => "name", "screen" => "screenshot", "alt" => "version number", "motd" => "motd", "date" => "date", "present" => "present")
 $splash=array(
@@ -102,11 +143,9 @@ $splash=array(
 	array("name" => "3.2.6 CVS \"Anomalies\"", "screen" => "splash-3.2.5-cvs.png", "alt" => "3.2.5", "motd" => "Time makes no sense", "date" => "12.09.2006", "present" => "3.2.4, 3.2.5, 3.2.6")
 );
 
-// array("script" => "script name", "author" => "author name", "mail" => "author mail", "desc" => "description", "home" => "script homepage")
-$scripts=array(
-	1 => array("script" => "Princoscript", "author" => "Francesco Meloni", "mail" => "francesco.melo@tiscali.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => $template['scripts']['script1'], "home" => "http://web.tiscali.it/princoscript/"),
-	array("script" => "SaNVirC", "author" => "Wunslov", "mail" => "", "desc" => $template['scripts']['script2'], "home" => "http://sanvirc.sourceforge.net/"),
-	array("script" => "Savage", "author" => "???", "mail" => "", "desc" => $template['scripts']['script3'].":<br /><code>cvs -z4 -d:pserver:anonymous@cvs.omnikron.net:/cvs co savage</code>", "home" => "http://www.cynapses.org/tmp/kvirc-script-0.7.tar.gz"),
-	//array("script" => "dwnKVIrc", "author" => "Klaus Weidenbach", "mail" => "Klaus.Weidenbach@gmx.REMOVE.THE.ANTISPAM.WORDS.net", "desc" => $template['scripts']['script4'], "home" => "http://dszdw.homelinux.org/~klaus/programs/kvirc/index.php")
+// Tools
+//aray("name" => "tool name", "author" => "author name", "mail" => "author mail", "desc" => "description", "url" => "url")
+$tools=array(
+	1 => array("name" => "", "author" => "theXception", "mail" => "thex.email@googlemail.REMOVE.THE.ANTISPAM.WORDS.com", "desc" => $template['tools']['tool1'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/tools/kvs-notepad++.zip")
 );
 ?>

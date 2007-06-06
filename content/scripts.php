@@ -29,7 +29,7 @@ echo "<div class=\"column1-unit\">";
 
 		echo "<tr>";
 			echo "<td><em>".$template['custom']['homepage'].":</em></td>";
-			echo "<td><a href=\"".$value['home']."\">".$value['home']."</a></td>";
+			echo "<td><a href=\"".$value['home']."\">".basename($value['home'])."</a></td>";
 		echo "</tr>";
 
 		echo "</table>";
