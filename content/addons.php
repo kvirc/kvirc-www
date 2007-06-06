@@ -8,9 +8,11 @@ $version=trim(strip_tags(addslashes($_GET['version'])));
 if(!$version || !eregi("^[0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}$",$version))
 	$version="3.2.1";
 
-echo "<div class=\"title\">".$template['addons']['title']."</div>";
-echo "<div class=\"text\">";
-	echo $template['addons']['text1'].":<br />";
+echo "<h1 class=\"pagetitle\">".$template['addons']['title']."</h1>";
+echo "<div class=\"column1-unit\">";
+	echo "<br /><h3>".$template['addons']['text1']."</h3>";
+
+	echo "<p>".$template['addons']['text1b']."</p>";
 
 	echo "<form method=\"get\" action=\"\">";
 		echo "<p>";
@@ -27,7 +29,7 @@ echo "<div class=\"text\">";
 		echo "</p>";
 	echo "</form>";
 
-	echo $template['addons']['text2'].":<br />";
+	echo "<p>".$template['addons']['text2'].":</p>";
 	echo "<ul>";
 		echo "<li>".$template['addons']['tree1']."</li>";
 		echo "<li>".$template['addons']['tree2']."</li>";

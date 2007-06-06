@@ -146,6 +146,6 @@ $splash=array(
 // Tools
 //aray("name" => "tool name", "author" => "author name", "mail" => "author mail", "desc" => "description", "url" => "url")
 $tools=array(
-	1 => array("name" => "", "author" => "theXception", "mail" => "thex.email@googlemail.REMOVE.THE.ANTISPAM.WORDS.com", "desc" => $template['tools']['tool1'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/tools/kvs-notepad++.zip")
+	1 => array("name" => "Notepad++ KVS-Syntax", "author" => "TheXception", "mail" => "thex.email@googlemail.REMOVE.THE.ANTISPAM.WORDS.com", "desc" => $template['tools']['tool1'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/tools/kvs-notepad++.zip")
 );
 ?>
