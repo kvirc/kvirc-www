@@ -37,23 +37,25 @@ require("conf/config.php");
 	<meta name="distribution" content="global" />
 	<meta name="description" content="KVIrc.net - The K-Visual IRC client" />
 	<meta name="keywords" content="KVIrc, KDE, IRC, Chat, pragma" />
-	<!-- Google diagnostic start -->
+	<!-- Google Diagnostic start -->
 	<meta name="verify-v1" content="Q0B/rT+mLDe7URI4WfL8NQlJ5ksx3WMAMK3K0spUib4=" />
-	<!-- Google diagnostic end -->
+	<!-- Google Diagnostic end -->
 	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="./css/layout4_setup.css" />
 	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="./css/layout4_text.css" />
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="alternate" href="rss.php" type="application/rss+xml" title="KVIrc News" />
-	<!--<script type="text/javascript" src="http://www.google-analytics.com/urchin.js" />-->
+	<!-- Google Analytics start -->
+	<script type="text/javascript" src="http://www.google-analytics.com/urchin.js" />
+	<!-- Google Analytics end -->
 	<title> >. KVIrc.net - The Visual IRC Client</title>
 </head>
 <body>
-	<!-- Google Analytics start
+	<!-- Google Analytics start -->
 	<script type="text/javascript">
 		_uacct="UA-881180-2";
 		urchinTracker();
 	</script>
-	Google Analytics end -->
+	<!-- Google Analytics end -->
 	<div class="page-container">
 		<div class="header">
 			<div class="header-top">
@@ -61,39 +63,26 @@ require("conf/config.php");
 					<h1><a href="." title="KVIrc.net Home">KVIrc.net <span style="font-weight:normal;font-size:50%;">&nbsp;the visual IRC client </span></a></h1>
 					<h2>no boundaries on the net</h2>
 				</div>
-				<div class="nav0">
-					<ul>
-						<li><a href="?id=<?echo $id;?>&amp;lang=it" title="<?echo $template['index']['italian'];?>"><img src="./img/flags/Italy.png" alt="<?echo $template['index']['italian'];?>" /></a></li>
-						<li><a href="?id=<?echo $id;?>&amp;lang=en" title="<?echo $template['index']['english'];?>"><img src="./img/flags/United-States.png" alt="<?echo $template['index']['english'];?>" /></a></li>
-						<li><a href="?id=<?echo $id;?>&amp;lang=de" title="<?echo $template['index']['german'];?>"><img src="./img/flags/Germany.png" alt="<?echo $template['index']['german'];?>" /></a></li>
-						<li><a href="?id=<?echo $id;?>&amp;lang=ru" title="<?echo $template['index']['russian'];?>"><img src="./img/flags/Russia.png" alt="<?echo $template['index']['russian'];?>" /></a></li>
-						<li><a href="?id=<?echo $id;?>&amp;lang=fr" title="<?echo $template['index']['french'];?>"><img src="./img/flags/France.png" alt="<?echo $template['index']['french'];?>" /></a></li>
-						<li><a href="?id=<?echo $id;?>&amp;lang=es" title="<?echo $template['index']['spanish'];?>"><img src="./img/flags/Spain.png" alt="<?echo $template['index']['spanish'];?>" /></a></li>
-						<li><a href="?id=<?echo $id;?>&amp;lang=bg" title="<?echo $template['index']['bulgarian'];?>"><img src="./img/flags/Bulgaria.png" alt="<?echo $template['index']['bulgarian'];?>" /></a></li>
-						<li><a href="?id=<?echo $id;?>&amp;lang=cz" title="<?echo $template['index']['czech'];?>"><img src="./img/flags/Czech-Republic.png" alt="<?echo $template['index']['czech'];?>" /></a></li>
-						<li><a href="?id=<?echo $id;?>&amp;lang=nl" title="<?echo $template['index']['dutch'];?>"><img src="./img/flags/Netherlands.png" alt="<?echo $template['index']['dutch'];?>" /></a></li>
-						<li><a href="?id=<?echo $id;?>&amp;lang=pl" title="<?echo $template['index']['polish'];?>"><img src="./img/flags/Poland.png" alt="<?echo $template['index']['polish'];?>" /></a></li>
-						<li><a href="?id=<?echo $id;?>&amp;lang=pt" title="<?echo $template['index']['portuguese'];?>"><img src="./img/flags/Portugal.png" alt="<?echo $template['index']['portuguese'];?>" /></a></li>
-						<li><a href="?id=<?echo $id;?>&amp;lang=br" title="<?echo $template['index']['brazilian'];?>"><img src="./img/flags/Brazil.png" alt="<?echo $template['index']['brazilian'];?>" /></a></li>
-						<li><a href="?id=<?echo $id;?>&amp;lang=sr" title="<?echo $template['index']['serbian'];?>"><img src="./img/flags/Serbia.png" alt="<?echo $template['index']['serbian'];?>" /></a></li>
-						<li><a href="?id=<?echo $id;?>&amp;lang=hu" title="<?echo $template['index']['hungarian'];?>"><img src="./img/flags/Hungary.png" alt="<?echo $template['index']['hungarian'];?>" /></a></li>
-						<?/*<li><a href="?id=<?echo $id;?>&amp;lang=hr" title="<?echo $template['index']['croatian'];?>"><img src="./img/flags/Croatia.png" alt="<?echo $template['index']['croatian'];?>" /></a></li>*/?>
-					</ul>
-				</div>
-				<div class="nav1">
-					<ul>
-						<li><a href="?id=status&amp;lang=<?echo $lang;?>" title="KVIrc status"><?echo $template['index']['status'];?></a></li>
-						<li><a href="<?echo $quickdownload_link;?>" title="get the latest release"><?echo $template['index']['quickdnl'];?></a></li>
-						<li><a href="?id=themes&amp;lang=<?echo $lang;?>" title="themes and appearance"><?echo $template['index']['themes'];?></a></li>
-					</ul>
-				</div>
 			</div>
 			<div class="header-middle">
-				<div class="sitemessage">
-					<h1>KVIrc is a <a href="http://www.gnu.org/" title="GNU.org" target="_blank">free</a> portable <a href="http://en.wikipedia.org/wiki/Internet_Relay_Chat" title="Internet Relay Chat" target="_blank">IRC</a> client based on<br />the <a href="http://www.trolltech.com/" title="QT Trolltech" target="_blank">QT GUI Toolkit</a></h1>
-
-					<h2><br />is being written by <a href="http://www.pragmaware.net/" title="Pragma's home" target="_blank">Szymon Stefanek</a> and<br />the KVIrc Development Team with the<br />contribution of many IRC addicted<br />developers around the world.</h2>
-					<h3><a href="help" title="how to help the KVIrc project">&rsaquo;&rsaquo;&nbsp;be part of the project!</a></h3>
+				<div class="nav0">
+					<ul>
+					<li><a href="?id=<?echo $id;?>&amp;lang=it" title="<?echo $template['index']['italian'];?>"><img src="./img/flags/Italy.png" alt="<?echo $template['index']['italian'];?>" /></a></li>
+					<li><a href="?id=<?echo $id;?>&amp;lang=en" title="<?echo $template['index']['english'];?>"><img src="./img/flags/United-States.png" alt="<?echo $template['index']['english'];?>" /></a></li>
+					<li><a href="?id=<?echo $id;?>&amp;lang=de" title="<?echo $template['index']['german'];?>"><img src="./img/flags/Germany.png" alt="<?echo $template['index']['german'];?>" /></a></li>
+					<li><a href="?id=<?echo $id;?>&amp;lang=ru" title="<?echo $template['index']['russian'];?>"><img src="./img/flags/Russia.png" alt="<?echo $template['index']['russian'];?>" /></a></li>
+					<li><a href="?id=<?echo $id;?>&amp;lang=fr" title="<?echo $template['index']['french'];?>"><img src="./img/flags/France.png" alt="<?echo $template['index']['french'];?>" /></a></li>
+					<li><a href="?id=<?echo $id;?>&amp;lang=es" title="<?echo $template['index']['spanish'];?>"><img src="./img/flags/Spain.png" alt="<?echo $template['index']['spanish'];?>" /></a></li>
+					<li><a href="?id=<?echo $id;?>&amp;lang=bg" title="<?echo $template['index']['bulgarian'];?>"><img src="./img/flags/Bulgaria.png" alt="<?echo $template['index']['bulgarian'];?>" /></a></li>
+					<li><a href="?id=<?echo $id;?>&amp;lang=cz" title="<?echo $template['index']['czech'];?>"><img src="./img/flags/Czech-Republic.png" alt="<?echo $template['index']['czech'];?>" /></a></li>
+					<li><a href="?id=<?echo $id;?>&amp;lang=nl" title="<?echo $template['index']['dutch'];?>"><img src="./img/flags/Netherlands.png" alt="<?echo $template['index']['dutch'];?>" /></a></li>
+					<li><a href="?id=<?echo $id;?>&amp;lang=pl" title="<?echo $template['index']['polish'];?>"><img src="./img/flags/Poland.png" alt="<?echo $template['index']['polish'];?>" /></a></li>
+					<li><a href="?id=<?echo $id;?>&amp;lang=pt" title="<?echo $template['index']['portuguese'];?>"><img src="./img/flags/Portugal.png" alt="<?echo $template['index']['portuguese'];?>" /></a></li>
+					<li><a href="?id=<?echo $id;?>&amp;lang=br" title="<?echo $template['index']['brazilian'];?>"><img src="./img/flags/Brazil.png" alt="<?echo $template['index']['brazilian'];?>" /></a></li>
+					<li><a href="?id=<?echo $id;?>&amp;lang=sr" title="<?echo $template['index']['serbian'];?>"><img src="./img/flags/Serbia.png" alt="<?echo $template['index']['serbian'];?>" /></a></li>
+					<li><a href="?id=<?echo $id;?>&amp;lang=hu" title="<?echo $template['index']['hungarian'];?>"><img src="./img/flags/Hungary.png" alt="<?echo $template['index']['hungarian'];?>" /></a></li>
+					<?/*<li><a href="?id=<?echo $id;?>&amp;lang=hr" title="<?echo $template['index']['croatian'];?>"><img src="./img/flags/Croatia.png" alt="<?echo $template['index']['croatian'];?>" /></a></li>*/?>
+					</ul>
 				</div>
 			</div>
 			<div class="header-bottom">
@@ -109,7 +98,7 @@ require("conf/config.php");
 								<li><a href="?id=license&amp;lang=<?echo $lang;?>"><?echo $template['index']['license'];?></a></li>
 								<li><a href="?id=require&amp;lang=<?echo $lang;?>"><?echo $template['index']['require'];?></a></li>
 								<li><a href="?id=screen&amp;lang=<?echo $lang;?>"><?echo $template['index']['screens'];?></a></li>
-								<li><a href="http://bugtrack.kvirc.omnikron.net/" target="_blank" title="KVIrc bugtrack"><?echo $template['index']['bugtrack'];?></a></li>
+								<li><a href="https://svn.kvirc.de/kvirc/" target="_blank" title="KVIrc bugtrack"><?echo $template['index']['bugtrack'];?></a></li>
 							</ul>
 						</li>
 					</ul>
@@ -185,11 +174,10 @@ require("conf/config.php");
 			</div>
 			<div class="header-breadcrumbs">
 				<ul>
-					<li><a href="#">KVIrc</a></li>
-					<li><a href="#">human interface</a></li>
-					<li>navigation</li>
+					<li><a href="?id=status&amp;lang=<?echo $lang;?>" title="KVIrc status"><?echo $template['index']['status'];?></a></li>
+					<li><a href="<?echo $quickdownload_link;?>" title="get the latest release"><?echo $template['index']['quickdnl'];?></a></li>
+					<li><a href="?id=themes&amp;lang=<?echo $lang;?>" title="themes and appearance"><?echo $template['index']['themes'];?></a></li>
 				</ul>
-
 				<div class="searchform">
 					<form action="#" method="get" class="form">
 						<fieldset>
@@ -246,7 +234,7 @@ require("conf/config.php");
 				<h1><img src="img/network-offline.png" alt="<?echo $template['index']['oldlayout'];?>" border="0" /><?echo $template['index']['oldlayout'];?></h1>
 				<p>
 					<img src="img/th_oldsite_1.gif" alt="<?echo $template['index']['oldsite'];?>" width="159" height="105" /><br />
-					<a href="http://old.kvirc.de/" title="<?echo $template['index']['oldsite'];?>" target="_blank">old.kvirc.de</a> by istari</a>
+					<a href="http://old.kvirc.de/" title="<?echo $template['index']['oldsite'];?>" target="_blank">old.kvirc.de</a> by istari
 				</p>
 				<p>
 					<img src="img/th_oldsite_2.gif" alt="<?echo $template['index']['oldsite'];?>" width="159" height="105" /><br />
@@ -260,25 +248,15 @@ require("conf/config.php");
 				if(!file_exists("./content/$id.php"))
 					include('content/welcome.php');
 				else include("./content/$id.php");
-				/*?>
-
-				<!-- Pagetitle -->
-				<h1 class="pagetitle">it's all about KVIrc, babe </h1>
-				<!-- Content unit - One column -->
-				<div class="column1-unit">
-					<h1>beh</h1>
-					<h3>bah bah </h3>
-					<p>miao miao miao </p>
-				</div>
-				*/?>
+				?>
 				<hr class="clear-contentunit" />
 			</div>
 
 			<div class="main-subcontent">
 				<div class="subcontent-unit-border">
-				<div class="round-border-topleft"></div><div class="round-border-topright"></div>
+					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
 					<h1><img src="img/applications-graphics.png" alt="<?echo $template['index']['latestscreen'];?>" /><?echo $template['index']['latestscreen'];?></h1>
-					<p align="center">
+					<p class="center">
 						<img src="img/th_theme_anger.gif" alt="Anger Theme - KVIrc &quot;Anomalies&quot;" /><br />
 
 						<a href="http://kvirc.virg0.org/themes.htm" title="Anger Theme @ kvirc.virg0.org" target="_blank">Anger theme</a> - <a href="mailto:cle [at] virg0 [dot] org" title="mail etherea`">etherea`</a><br />
@@ -286,25 +264,25 @@ require("conf/config.php");
 					</p>
 				</div>
 				<div class="subcontent-unit-border">
-				<div class="round-border-topleft"></div><div class="round-border-topright"></div>
+					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
 					<h1><img src="img/help-browser.png" alt="finding help" /><?echo $template['index']['help'];?></h1>
-					<p align="center">
+					<p class="center">
 						<?echo $template['index']['helptext1a']." <a href=\"?id=mailinglist&amp;lang=$lang\" title=\"".$template['index']['helptext1b']."\">".$template['index']['helptext1b']."</a><br /><br />".$template['index']['helptext1c']."<br />";?>
 
 						<a href="irc://irc.eutelia.it/#KVIrc">#kvirc@IRCnet</a><br /><a href="irc://irc.azzurra.org/#KVIrc.net">#kvirc.net@azzurra</a><br /><a href="irc://irc.freenode.org/#KVIrc">#kvirc@freenode</a>
 					</p>
 				</div>
 				<div class="subcontent-unit-border-orange">
-				<div class="round-border-topleft"></div><div class="round-border-topright"></div>
+					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
 					<h1 class="orange"><img src="img/media-record.png" alt="<?echo $template['index']['bugreport'];?>" /><?echo $template['index']['bugreport'];?></h1>
-					<p align="center">
+					<p class="center">
 						<?echo $template['index']['bugstext'];?> <a href="http://bugtrack.kvirc.omnikron.net/" title="<?echo $template['index']['bugtrack'];?>" target="_blank"><?echo $template['index']['bugtrack'];?></a>
 					</p>
 				</div>
 				<div class="subcontent-unit-border">
-				<div class="round-border-topleft"></div><div class="round-border-topright"></div>
+					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
 					<h1><img src="img/document-open.png" alt="<?echo $template['index']['moredocs'];?>" /><?echo $template['index']['moredocs'];?></h1>
-					<p align="center">
+					<p class="center">
 						<a href="http://www.kvirc.de/docu/" title="<?echo $template['index']['officialdocs'];?>" target="_blank"><?echo $template['index']['officialdocs'];?></a><br /><?echo $template['index']['docsauto'];?>
 					</p>
 				</div>

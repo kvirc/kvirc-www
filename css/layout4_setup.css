@@ -3,7 +3,7 @@
 .page-container {width:900px; margin:0px auto; margin-top:10px; margin-bottom:10px; border:solid 1px rgb(150,150,150); font-size:1.0em;}
 .main {clear:both; width:900px; padding-bottom:30px; background:transparent url(../img/bg_main_withnav.jpg) top left repeat-y;}
 .main-navigation {display:inline /*Fix IE floating margin bug*/; float:left; width:200px; overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/;}
-.main-content {display:inline; /*Fix IE floating margin bug*/; float:left; width:440px; margin:0 0 0 30px; overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/;}
+.main-content {display:inline; /*Fix IE floating margin bug*/ float:left; width:440px; margin:0 0 0 30px; overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/;}
 .main-subcontent {display:inline /*Fix IE floating margin bug*/; float:right; width:185px; margin:0 15px 0 0; overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/;}
 .footer {clear:both; width:900px; padding:1.0em 0 1.0em 0; background:rgb(225,225,225) url(../img/bg_foot.jpg) no-repeat; font-size:1.0em; overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/;}
 
@@ -14,26 +14,28 @@
 .header-breadcrumbs {clear:both; width:900px; padding:1.0em 0 1.5em 0; background:rgb(255,255,255) url(../img/bg_head_breadcrumbs.jpg) repeat-y;}
 
 .sitelogo {width:60px; height:40px; position:absolute; z-index:1; margin:22px 0 0 20px; background:url(../img/kvirc_logo_small.png); }
-.sitename {width:300px; height:45px; position:absolute; z-index:1; margin:20px 0 0 90px; overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/; left: 247px; 	top: 10px;}
-.sitename h1 {font-size:240%;}
-.sitename h2 {margin:-4px 0 0 0; color:rgb(125,125,125); font-size:120%;}
+.sitename {width:350px; height:45px; position:absolute; z-index:1; margin:60px 0 0 200px; overflow:visible !important /*Firefox*/; overflow:hidden /*IE6*/; left: 247px; top: 10px;}
+.sitename h1 {font-size:350%;}
+.sitename h2 {margin:-4px 0 0 0; color:rgb(125,125,125); font-size:200%;}
 .sitename a {text-decoration:none; color:rgb(125,125,125);}
 .sitename a:hover {text-decoration:none; color:rgb(50,50,50);}
 
-.nav0 {width:350px; position:absolute; z-index:2; margin:25px 0 0 0; margin-left:550px !important/*Non-IE6*/; margin-left:553px /*IE6*/;}
+.nav0 {width:600px; position:absolute; z-index:2; margin:120px 0 0 0; margin-left:280px !important/*Non-IE6*/; margin-left:553px /*IE6*/;}
 .nav0 ul {float:right; padding:0 20px 0 0;}
 .nav0 li {display:inline; list-style:none;}
 .nav0 li a {padding:0 0 0 3px;}
 .nav0 a:hover {text-decoration:none;}
 .nav0 a img {height:14px; border:none;}
 
+/*
 .nav1 {width:350px; position:absolute; z-index:3; margin:45px 0 0 550px;}
 .nav1 ul {float:right; padding:0 15px 0 0; font-weight:bold;}	
 .nav1 li {display:inline; list-style:none;}
 .nav1 li a {display:block; float:left; padding:2px 5px 2px 5px; color:rgb(125,125,125) ; text-decoration:none; font-size:120%;}
 .nav1 a:hover {text-decoration:none; color:rgb(50,50,50);}
+*/
 
-.sitemessage {width:400px; height:120px; position:absolute; z-index:1; margin:20px 0 0 480px; color:rgb(234,239,247); /*overflow:visible !important /*Activate if Firefox print problems*/; overflow:hidden /*IE6*/;}
+.sitemessage {width:400px; height:120px; position:absolute; z-index:1; margin:20px 0 0 480px; color:rgb(234,239,247); /*overflow:visible !important /*Activate if Firefox print problems*/ overflow:hidden /*IE6*/;}
 .sitemessage h1 {width:500px; text-align:right; font-size:130%; font-family:bitstream,verdana,arial,sans-serif; color:rgb(255,255,255);}
 .sitemessage h1 a {text-decoration:none; color:rgb(234,239,247);}
 .sitemessage h1 a:hover {text-decoration:none; color:rgb(50,50,50);}
@@ -57,8 +59,8 @@
 
 .nav2 table {position:absolute; top:0; left:0; border-collapse:collapse;}
 .nav2 ul li a:hover {background-color:rgb(210,210,210); text-decoration:none;} /*Color main cells hovering mode*/
-.nav2 ul li a:hover ul {display:block; width:10.0em; position:absolute; z-index:999; top:3.1em; t\op:3.0em; left:0; marg\in-top:0.1em;}
-.nav2 ul li a:hover ul li a {display:block; w\idth:10.0em; height:1px; line-height:1.3em; padding:4px 16px 4px 16px; border-left:solid 1px rgb(175,175,175); border-bottom: solid 1px rgb(175,175,175); background-color:rgb(237,237,237); font-weight:normal; color:rgb(50,50,50);} /*Color subcells normal mode*/
+.nav2 ul li a:hover ul {display:block; width:10.0em; position:absolute; z-index:999; top:3.1em; top:3.0em; left:0; margin-top:0.1em;}
+.nav2 ul li a:hover ul li a {display:block; width:10.0em; height:1px; line-height:1.3em; padding:4px 16px 4px 16px; border-left:solid 1px rgb(175,175,175); border-bottom: solid 1px rgb(175,175,175); background-color:rgb(237,237,237); font-weight:normal; color:rgb(50,50,50);} /*Color subcells normal mode*/
 .nav2 ul li a:hover ul li a:hover {background-color:rgb(210,210,210); text-decoration:none;} /*Color subcells hovering mode*/
 
 .header-breadcrumbs ul {float:left; width:560px; list-style:none; padding:0 0 0 15px; font-family:bitstream,verdana,arial,sans-serif;}

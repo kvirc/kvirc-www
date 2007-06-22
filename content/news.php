@@ -8,33 +8,31 @@ include_once("conf/functions.php");
 $story=trim(addslashes(strip_tags($_GET['story'])));
 $dir=trim(addslashes(strip_tags($_GET['dir'])));
 
-echo "<div class=\"title\">".$template['news']['title']."</div>";
+echo "<h1 class=\"pagetitle\">".$template['news']['title']."</h1>";
+echo "<div class=\"column1-unit\">";
 
 if(($story!="")&&($dir!="")){
 	$x['dummy']="";
 	if(!news_read_entry($docRoot."/news/".$dir."/".$story,$x)){
-		echo "<div class=\"littletitle\">".$template['news']['error']."</div>";
-		echo "<div class=\"text\">";
-		echo $template['news']['nonews'];
+		echo "<h1>".$template['news']['error']."</h1>";
+		echo "<p>".$template['news']['nonews'],"</p>";
 		echo "</div>";
 		return;
 	}
 	
-	echo "<div class=\"littletitle\">".$x['year']."-".$x['month']."-".$x['day'].": ".$x['title']."</div>";
-	echo "<div class=\"text\">";
-	echo $x['body'];
+	echo "<h1>".$x['year']."-".$x['month']."-".$x['day'].": ".$x['title']."</h1>";
+	echo "<p>".$x['body']."</p>";
 	echo "</div>";
 	return;
 }
 
-echo "<div class=\"text\">";
 if($dir!=""){
-	echo "<div class=\"littletitle\">";
+	echo "<h1>";
 	if($dir!="latest")
 		echo $template['news']['news'].": ".news_get_dir_description($dir);
 	else
 		echo $template['news']['latest'];
-	echo "</div>";
+	echo "</h1>";
 
 	$latestnews = array();
 	news_scan_dir($docRoot."/news/$dir",$latestnews);
@@ -45,12 +43,12 @@ if($dir!=""){
 			echo "<li>";
 			echo "<b>".$content['year'].".".$content['month'].".".$content['day']." ".$content['hour'].":".$content['minute']."</b><br />";
 			echo $content['short']."<br />";
-			echo "<a href=\"?id=news&amp;lang=$lang&amp;story=".basename($latestnews[$i])."&amp;dir=$dir\">".$template['rmenu']['readmore']."...</a></li>";
+			echo "<a href=\"?id=news&amp;story=".basename($latestnews[$i])."&amp;dir=$dir&amp;lang=$lang\">".$template['rmenu']['readmore']."...</a></li>";
 		}
 	}
 }
 
-echo "<li><a href=\"?id=news&amp;lang=$lang&amp;dir=latest\">".$template['news']['latest']."</a></li>";
+echo "<li><a href=\"?id=news&amp;dir=latest&amp;lang=$lang\">".$template['news']['latest']."</a></li>";
 
 $d=opendir($docRoot."/news");
 if($d){
@@ -64,10 +62,9 @@ if($d){
 	closedir($d);
 
 	rsort($arry);
-
 	for($i=0;$i<$cnt;$i++){
 		$desc = news_get_dir_description($arry[$i]);
-		echo "<li><a href=\"?id=news&amp;lang=$lang&amp;dir=".$arry[$i]."\">".$desc."</a></li>";
+		echo "<p><a href=\"?id=news&amp;dir=".$arry[$i]."&amp;lang=$lang\">".$desc."</a></p>";
 	}
 }
 
