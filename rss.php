@@ -6,7 +6,7 @@
 		<description>The K-visual IRC client</description>
 		<language>en</language>
 	<?
-	include("conf/functions.php");
+	require("conf/functions.php");
 	
 	function cleanText($intext) {
 		return utf8_encode(htmlspecialchars(stripslashes($intext)));
@@ -26,7 +26,7 @@
 		$description = substr(cleanText($x["short"]),1);
 		$author = substr(cleanText($x["author"]),1);
 		$news = basename($latestnews[$i]);
-		$guid = "http://www.kvirc.net/?id=news&amp;lang=$lang&amp;story=$news&amp;dir=latest";
+		$guid = "http://www.kvirc.net/?id=news&amp;story=$news&amp;dir=latest&amp;lang=$lang";
 		$pubDate = date("r",mktime($x["hour"],$x["minute"],0,$x["month"],$x["day"],$x["year"]));
 
 		// Now output one item
