@@ -3,7 +3,7 @@
 if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
-include_once("conf/packages.conf");
+require_once("conf/packages.php");
 
 echo "<h1 class=\"pagetitle\">".$template['releases']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
@@ -41,7 +41,7 @@ echo "<div class=\"column1-unit\">";
 			$text=$av_platform[$i];
 			if(isset($platform_description[$av_platform[$i]]))
 				$text=$platform_description[$av_platform[$i]];
-			echo "<h1><a href=\"?id=releases&amp;lang=$lang&amp;platform=".$av_platform[$i]."\">$text</a></h1>";
+			echo "<h1><a href=\"?id=releases&amp;platform=".$av_platform[$i]."&amp;lang=$lang\">$text</a></h1>";
 		
 			if(isset($platform_details[$av_platform[$i]])){
 				$text=$platform_details[$av_platform[$i]];
@@ -88,7 +88,7 @@ echo "<div class=\"column1-unit\">";
 			if(isset($version_description[$av_version[$i]]))
 				$text=$version_description[$av_version[$i]];
 
-			echo "<h3><a href=\"?id=releases&amp;lang=$lang&amp;platform=$platform&amp;version=".$av_version[$i]."\">$text</a></h3>";
+			echo "<h3><a href=\"?id=releases&amp;platform=$platform&amp;version=".$av_version[$i]."&amp;lang=$lang\">$text</a></h3>";
 
 			if(isset($version_details[$av_version[$i]])){
 				$text=$version_details[$av_version[$i]];
@@ -155,7 +155,7 @@ echo "<div class=\"column1-unit\">";
 				if(isset($group_description[$av_group[$i]]))
 					$text=$group_description[$av_group[$i]];
 
-				echo "<a href=\"?id=releases&amp;lang=$lang&amp;platform=$platform&amp;version=$version&amp;group=".$av_group[$i]."\">$text</a><br />";
+				echo "<a href=\"?id=releases&amp;platform=$platform&amp;version=$version&amp;group=".$av_group[$i]."&amp;lang=$lang\">$text</a><br />";
 				if(isset($group_details[$av_group[$i]])){
 					$text=$group_details[$av_group[$i]];
 					echo $text;

@@ -9,12 +9,11 @@ if(!$page || !is_numeric($page))
 
 echo "<h1 class=\"pagetitle\">".$template['screen']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
-echo "<p>".$template['screen']['text']." <a href=\"mailto:hellvis69@altervista.REMOVE.THE.ANTISPAM.WORDS.org?subject=New Screenshot for the site\">HelLViS69</a>.</p>";
+echo "<p>".$template['screen']['text']." <a href=\"mailto:hellvis69@netsons.REMOVE.THE.ANTISPAM.WORDS.org?subject=New Screenshot for the site\">HelLViS69</a>.</p>";
 echo "<h1>".$screen[$page][0]."</h1>";
 
 for($i=count($screen[$page])-1;$i>0;$i--){
-	if(fmod($i,2)!=0)
-		echo "<div class=\"screen\"><div class=\"left\">";
+	if(fmod($i,2)!=0) echo "<div class=\"screen\"><div class=\"left\">";
 	else echo "<div class=\"right\">";
 
 	echo "<a href=\"".$screen[$page][$i]['img']."\"><img src=\"".$screen[$page][$i]['thumb']."\" alt=\"".strip_tags($screen[$page][$i]['desc'])."\" /></a><br />";
@@ -37,10 +36,10 @@ $next=$page-1;
 $prev=$page+1;
 
 if($prev<=count($screen))
-	echo "<b>[</b><a href=\"?id=screen&amp;lang=$lang&amp;page=$prev\">".$template['screen']['prev']."</a><b>]</b>";
+	echo "<b>[</b><a href=\"?id=screen&amp;page=$prev&amp;lang=$lang\">".$template['screen']['prev']."</a><b>]</b>";
 
 echo "&nbsp;";
 
 if($next>0)
-	echo "<b>[</b><a href=\"?id=screen&amp;lang=$lang&amp;page=$next\">".$template['screen']['next']."</a><b>]</b>";
+	echo "<b>[</b><a href=\"?id=screen&amp;page=$next&amp;lang=$lang\">".$template['screen']['next']."</a><b>]</b>";
 ?>

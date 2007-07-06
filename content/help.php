@@ -12,7 +12,7 @@ echo "<div class=\"column1-unit\">";
 
 	echo "<p>".$template['help']['text4a']." <a href=\"http://www.freenode.org\">".$template['help']['text4b']."</a> ".$template['help']['text4c']." <a href=\"irc://irc.freenode.org/#kvirc\">#kvirc</a>. ".$template['help']['text4d']." <a href=\"irc://irc.azzurra.org/#kvirc.net\">#KVIrc.net</a> ".$template['help']['text4e']." <a href=\"http://www.azzurra.org\">".$template['help']['text4f']."</a>.<br />".$template['help']['text4g']." <a href=\"http://www.ircnet.org\">".$template['help']['text4h']."</a> ".$template['help']['text4i']." <a href=\"irc://chat.ircnet.org/#kvirc\">#kvirc</a>".$template['help']['text4j']."</p>";
 
-	echo "<p>".$template['help']['text5']." <a href=\"http://bugtrack.kvirc.omnikron.net\">".$template['index']['bugtrack']."</a>.</p>";
+	echo "<p>".$template['help']['text5']." <a href=\"https://svn.kvirc.de/kvirc/\">".$template['index']['bugtrack']."</a>.</p>";
 	
 	echo "<p>".$template['help']['text6']." <a href=\"mailto:hellvis69@netsons.REMOVE.THE.ANTISPAM.WORDS.org\">HelLViS69</a>.</p>";
 	

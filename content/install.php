@@ -6,11 +6,12 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 echo "<h1 class=\"pagetitle\">".$template['install']['title1']."</h1>";
 echo "<div class=\"column1-unit\">";
 	echo "<br /><h3>".$template['install']['text1']."</h3>";
-	echo "<a href=\"?id=install#guru&amp;lang=$lang\">1. ".$template['install']['title2']."</a><br />";
-	echo "<a href=\"?id=install#hacker&amp;lang=$lang\">2. ".$template['install']['title3']."</a><br />";
-	echo "<a href=\"?id=install#human&amp;lang=$lang\">3. ".$template['install']['title4']."</a><br />";
+	echo "<a href=\"?id=install&amp;lang=$lang#guru\">1. ".$template['install']['title2']."</a><br />";
+	echo "<a href=\"?id=install&amp;lang=$lang#hacker\">2. ".$template['install']['title3']."</a><br />";
+	echo "<a href=\"?id=install&amp;lang=$lang#human\">3. ".$template['install']['title4']."</a><br />";
 echo "</div><br />";
 
+echo "<a name=\"guru\"></a>";
 echo "<h1 class=\"pagetitle\">1. ".$template['install']['title2'].":</h1>";
 echo "<div class=\"column1-unit\">";
 	echo "<code>";
@@ -19,6 +20,7 @@ echo "<div class=\"column1-unit\">";
 	echo "</code>";
 echo "</div><br />";
 
+echo "<a name=\"hacker\"></a>";
 echo "<h1 class=\"pagetitle\">2. ".$template['install']['title3'].":</h1>";
 echo "<div class=\"column1-unit\">";
 
@@ -42,6 +44,7 @@ echo "<div class=\"column1-unit\">";
 	echo "</code>";
 echo "</div><br />";
 
+echo "<a name=\"human\"></a>";
 echo "<h1 class=\"pagetitle\">3. ".$template['install']['title4'].":</h1>";
 echo "<div class=\"column1-unit\">";
 

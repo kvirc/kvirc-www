@@ -3,7 +3,7 @@
 if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
-include_once("conf/functions.php");
+require_once("conf/functions.php");
 
 $story=trim(addslashes(strip_tags($_GET['story'])));
 $dir=trim(addslashes(strip_tags($_GET['dir'])));
@@ -43,7 +43,7 @@ if($dir!=""){
 			echo "<li>";
 			echo "<b>".$content['year'].".".$content['month'].".".$content['day']." ".$content['hour'].":".$content['minute']."</b><br />";
 			echo $content['short']."<br />";
-			echo "<a href=\"?id=news&amp;story=".basename($latestnews[$i])."&amp;dir=$dir&amp;lang=$lang\">".$template['rmenu']['readmore']."...</a></li>";
+			echo "<a href=\"?id=news&amp;story=".basename($latestnews[$i])."&amp;dir=$dir&amp;lang=$lang\">".$template['news']['readmore']."...</a></li>";
 		}
 	}
 }

@@ -174,8 +174,8 @@ require("conf/config.php");
 			</div>
 			<div class="header-breadcrumbs">
 				<ul>
-					<li><a href="?id=status&amp;lang=<?echo $lang;?>" title="KVIrc status"><?echo $template['index']['status'];?></a></li>
 					<li><a href="<?echo $quickdownload_link;?>" title="get the latest release"><?echo $template['index']['quickdnl'];?></a></li>
+					<li><a href="ftp://ftp.kvirc.net/pub/kvirc/snapshots/" title="get snapshots"><?echo $template['index']['snapshots'];?></a></li>
 					<li><a href="?id=themes&amp;lang=<?echo $lang;?>" title="themes and appearance"><?echo $template['index']['themes'];?></a></li>
 				</ul>
 				<div class="searchform">
@@ -198,12 +198,12 @@ require("conf/config.php");
 				<dl class="nav3-grid">
 					<?
 					$latestnews=array();
-					news_scan_dir("news/latest",$latestnews);
+					news_scan_dir($docRoot."/news/latest",$latestnews);
 					for($i=0;$i<10;$i++){
 						if(basename($latestnews[$i])=="") break;
 						$x["dummy"] = "";
-						news_split_filename(basename($latestnews[$i]),$x);
-						echo "<dt><a href=\"?id=news&amp;lang=$lang&amp;story=".basename($latestnews[$i])."&amp;dir=latest\">".$x["day"]." ".$x["monthname"]." ".$x["year"]."</a></dt>\n";
+						news_read_entry($latestnews[$i],$x);
+						echo "<dt><a href=\"?id=news&amp;lang=$lang&amp;story=".basename($latestnews[$i])."&amp;dir=latest\">".$x["day"]." ".$x["monthname"]." ".$x["year"]."<br />".$x['short']."</a></dt>\n";
 					}
 					echo "<dt><a href=\"?id=news&amp;lang=$lang&amp;dir=latest\">".$template['index']['allnews']."</a></dt>";
 					?>
@@ -276,7 +276,7 @@ require("conf/config.php");
 					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
 					<h1 class="orange"><img src="img/media-record.png" alt="<?echo $template['index']['bugreport'];?>" /><?echo $template['index']['bugreport'];?></h1>
 					<p class="center">
-						<?echo $template['index']['bugstext'];?> <a href="http://bugtrack.kvirc.omnikron.net/" title="<?echo $template['index']['bugtrack'];?>" target="_blank"><?echo $template['index']['bugtrack'];?></a>
+						<?echo $template['index']['bugstext'];?> <a href="https://svn.kvirc.de/kvirc/" title="<?echo $template['index']['bugtrack'];?>" target="_blank"><?echo $template['index']['bugtrack'];?></a>
 					</p>
 				</div>
 				<div class="subcontent-unit-border">

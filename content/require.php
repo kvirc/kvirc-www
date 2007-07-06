@@ -14,6 +14,7 @@ echo "<div class=\"column1-unit\">";
 				echo "<li>".$template['require']['tree1d']."</li>";
 				echo "<li>".$template['require']['tree1e']."</li>";
 				echo "<li>".$template['require']['tree1f']."</li>";
+				echo "<li>".$template['require']['tree1g']."</li>";
 			echo "</ul></li>";
 		echo "<li><h1>".$template['require']['tree2']."</h1>";
 			echo "<ul>";

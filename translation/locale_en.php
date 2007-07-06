@@ -866,6 +866,7 @@ $template['news']['latest']="Latest news";
 $template['news']['error']="Error reading story";
 $template['news']['nonews']="No such news entry.";
 $template['news']['news']="News";
+$template['news']['readmore']="Read more";
 /* news.php end */
 
 /* releases.php start */
@@ -896,6 +897,8 @@ $template['require']['tree1e']="
 	<a href=\"http://www.cpan.org\">Perl</a> (for generating online documentation)";
 $template['require']['tree1f']="
 	<a href=\"http://www.kde.org\">KDE</a> libs linked to <b>the same</b> version of Qt (optional)";
+$template['require']['tree1g']="
+	Check if your distro split devel libraries; if so you have to install the packages which contains them. Those packages have often \"-dev\" in their name";
 $template['require']['tree2']="Unix version (binaries):";
 $template['require']['tree2a']="A working unix system";
 $template['require']['tree2b']="

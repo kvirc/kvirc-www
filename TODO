@@ -3,22 +3,48 @@ Reorganize release
 Create section "press" where insert articles about KVirc
 Create section for administer server db
 
-it_faq.php      to insert in locale_it.php
-
 /* missing classes */
-<pre>              http://kvirc.hellvis69.byza.it/?id=license&lang=en
-float left/right   http://kvirc.hellvis69.byza.it/?id=screen&lang=en
-table              http://kvirc.hellvis69.byza.it/?id=releases&lang=en&platform=source&version=3.2.0
-<code>             http://kvirc.hellvis69.byza.it/?id=svn&lang=en
-ul class           http://kvirc.hellvis69.byza.it/?id=install&lang=en
-ul class           http://kvirc.hellvis69.byza.it/?id=tutorials&lang=en
+<pre>              ?id=license
+float left/right   ?id=screen
+table              ?id=releases&platform=source&version=3.2.0
+<code>             ?id=svn
+ul class           ?id=install
+ul class           ?id=tutorials
+class sponsor      ?id=honor
 class center
 
-/* reorganize template */
+
+/* reorganize template/xhtml */
 install.php
 faq.php
-honor.php
 scripts.php
 addons.php
 themes.php
 arts.php
+mirroring.php
+
+
+KNOWN BUGS
+==========
+1) Imho this css snippet cause more problems than the one that it solve:
+
+.main img {layout4_text.css (line 117)
+... (cut)
+margin:3px 10px 7px 0pt;
+... (cut)
+}
+
+This margin definition place the images near the navigators titles in a
+strange position, causing also the first news to get that strange
+indentation. Better move it out the .main namespace?
+
+2) The "navbar" in header-breadcrumbs seems static. Should it follow
+user navigation through the site's pages? It doesn't.
+3) the image in page "status" is under the right menu
+4) In http://www.kvirc.net/www/?id=screen&lang=it&page=4 (screenshot
+page, after pressing the "next" link) the right menu goes out of the
+main (<div class="main-subcontent"> is not inside <div class="main">)
+8)
+http://www.kvirc.net/www/?id=releases&lang=it&platform=source&version=3.2.0
+The gray boxes goes a way toooo long to the right
+

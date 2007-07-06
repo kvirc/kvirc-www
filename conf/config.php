@@ -59,6 +59,62 @@ $addons=array(
 	array("name" => "KISS: The KVIrc Icons Style Setup", "ver" => "2.0", "min" => "3.2.6", "max" => $current, "author" => "HelLViS69", "desc" => $template['addons']['addon23'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/KISS-2.0.tar.bz2")
 );
 
+// Arts
+// array("title" => "title", "author" => "author", "mail" => "email", "desc" => "description", "thumb" => "thumbnail", "down" => "download", "date" => "date")
+$arts=array(
+	1 => array("title" => "\"Connect to the World\" Splash Screens", "author" => "SuSp|r|a", "mail" => "suspy@email.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => $template['arts']['desc1'], "thumb" => "arts/connect_to_the_world_thumb.jpg", "down" => "connect_to_the_world.zip", "date" => "18.05.2005"),
+	array("title" => "Suspiria's Marmalade", "author" => "SuSp|r|a", "mail" => "suspy@email.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => $template['arts']['desc2'], "thumb" => "arts/suspirias_marmalade_thumb.jpg", "down" => "suspirias_marmalade.jpg", "date" => "18.05.2005"),
+	array("title" => "Upside Down", "author" => "SuSp|r|a", "mail" => "suspy@email.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => $template['arts']['desc3'], "thumb" => "arts/upsidedown_thumb.jpg", "down" => "upsidedown.jpg", "date" => "18.05.2005"),
+	array("title" => "Avatar Background", "author" => "SuSp|r|a", "mail" => "suspy@email.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => $template['arts']['desc4'], "thumb" => "arts/avatar_back_thumb.jpg", "down" => "avatar_back.jpg", "date" => "18.05.2005"),
+	array("title" => "Oh.. So Lovely!", "author" => "SuSp|r|a", "mail" => "suspy@email.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => ":)", "thumb" => "arts/ohsolovely_thumb.jpg", "down" => "ohsolovely.jpg", "date" => "18.05.2005"),
+	array("title" => "BSD Magik", "author" => "Lady_dark_demoN", "mail" => "", "desc" => $template['arts']['desc6'], "thumb" => "arts/karries_splash_thumb.jpg", "down" => "karrie_splash.jpg", "date" => "17.10.2005"),
+	array("title" => "\"Virg0 - Time makes no Sense\" Splash Screens", "author" => "etherea`", "mail" => "cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org", "desc" => $template['arts']['desc7'], "thumb" => "arts/virg0_anomalies_thumb.png", "down" => "virg0_anomalies.zip", "date" => "09.03.2006")
+);
+
+// Honor & glory
+// array("nick" => "nick", "name" => "name", "mail" => "mail", "made" => "made", "quote" => "quote", "image" => "image")
+$honor=array(
+	1 => array("nick" => "Pragma", "name" => "Szymon Stefanek", "mail" => "pragma@kvirc.REMOVE.THE.ANTISPAM.WORDS.net", "made" => $template['honor']['made1'], "quote" => $template['honor']['quote1'], "image" => "pragma"),
+	array("nick" => "Istari, spion", "name" => "Jan Wagner", "mail" => "webmaster@cyconet.REMOVE.THE.ANTISPAM.WORDS.org", "made" => $template['honor']['made2'], "quote" => "", "image" => "istari"),
+	array("nick" => "Balboy", "name" => "Luk De Ketelaere", "mail" => "balboy@kvirc.REMOVE.THE.ANTISPAM.WORDS.net", "made" => $template['honor']['made3'], "quote" => $template['honor']['quote3'], "image" => "balboy"),
+	array("nick" => "YaP", "name" => "Andrea Parrella", "mail" => "yap@kvirc.REMOVE.THE.ANTISPAM.WORDS.net", "made" => $template['honor']['made4'], "quote" => $template['honor']['quote4'], "image" => "yap"),
+	array("nick" => "alch3m1st", "name" => "Ted Podgurski", "mail" => "tedp@toocool.REMOVE.THE.ANTISPAM.WORDS.com", "made" => $template['honor']['made5'], "quote" => $template['honor']['quote5'], "image" => "alch3m1st"),
+	array("nick" => "oehansen", "name" => "O. E. Hansen", "mail" => "oe.hansen@gamma.telenordia.REMOVE.THE.ANTISPAM.WORDS.se", "made" => $template['honor']['made6'], "quote" => $template['honor']['quote6'], "image" => "oehansen"),
+	array("nick" => "wiza", "name" => "Jorma Tuomainen", "mail" => "jt@wiza.REMOVE.THE.ANTISPAM.WORDS.fi", "made" => $template['honor']['made7'], "quote" => "", "image" => "wiza"),
+	array("nick" => "Penny", "name" => "Eva Schaller", "mail" => "eva@cyberbeat.REMOVE.THE.ANTISPAM.WORDS.it", "made" => $template['honor']['made8'], "quote" => $template['honor']['quote8'], "image" => "penny"),
+	array("nick" => "Crissi", "name" => "Christoph Thielecke", "mail" => "", "made" => $template['honor']['made9'], "quote" => $template['honor']['quote9'], "image" => "crissi"),
+	array("nick" => "Triskelios", "name" => "", "mail" => "trisk-kvirc@quasarnet.REMOVE.THE.ANTISPAM.WORDS.org", "made" => $template['honor']['made10'], "quote" => $template['honor']['quote10'], "image" => "trisk"),
+	array("nick" => "munehiro", "name" => "", "mail" => "", "made" => $template['honor']['made11'], "quote" => "", "image" => "munehiro"),
+	array("nick" => "Kristoff", "name" => "Krzysztof Godlewski", "mail" => "kristoff@proczta.wprost.REMOVE.THE.ANTISPAM.WORDS.pl", "made" => $template['honor']['made12'], "quote" => $template['honor']['quote12'], "image" => "kristoff"),
+	array("nick" => "iakko", "name" => "Iacopo Palazzi", "mail" => "iakko@siena.linux.it_REMOVEFROMUNDERSCORETOTHISPOINT", "made" => $template['honor']['made13'], "quote" => $template['honor']['quote13'], "image" => "iakko"),
+	array("nick" => "Thilo", "name" => "Thilo Schulz", "mail" => "arny@ats.s.bawue.REMOVE.THE.ANTISPAM.WORDS.de", "made" => $template['honor']['made14'], "quote" => "", "image" => "Thilo"),
+	array("nick" => "Ahinu", "name" => "Ahinu", "mail" => "ahinu.laman@gmail.REMOVE.THE.ANTISPAM.WORDS.com", "made" => $template['honor']['made15'], "quote" => "", "image" => "ahinu"),
+	array("nick" => "Noldor", "name" => "Alessandro Carbone", "mail" => "Noldor@barmes.REMOVE.THE.ANTISPAM.WORDS.org", "made" => $template['honor']['made16'], "quote" => $template['honor']['quote16'], "image" => "noldor"),
+	array("nick" => "Grifisx", "name" => "Tonino Imbesi", "mail" => "", "made" => $template['honor']['made17'], "quote" => $template['honor']['quote17'], "image" => "grifisx"),
+	array("nick" => "Alexey", "name" => "Alexey Uzhva", "mail" => "wizard-ANTISPAM@opendoor.REMOVE.THE.ANTISPAM.WORDS.ru", "made" => $template['honor']['made18'], "quote" => "", "image" => "alexey"),
+	array("nick" => "HelLViS69", "name" => "Elvio Basello", "mail" => "hellvis69@altervista.REMOVE.THE.ANTISPAM.WORDS.org", "made" => $template['honor']['made19'], "quote" => $template['honor']['quote19'], "image" => "hellvis69"),
+	array("nick" => "etherea`", "name" => "Claudia Galingani Mongini", "mail" => "cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org", "made" => $template['honor']['made20'], "quote" => $template['honor']['quote20'], "image" => "etherea"),
+	array("nick" => "Nate", "name" => "Alessio Paoletti", "mail" => "nate@paranoici.REMOVE.THE.ANTISPAM.WORDS.org", "made" => $template['honor']['made21'], "quote" => "", "image" => "nate"),
+	array("nick" => "k0sm|k0", "name" => "Massimiliano Leone", "mail" => "k0smik0@logorroici.REMOVE.THE.ANTISPAM.WORDS.org", "made" => $template['honor']['made22'], "quote" => $template['honor']['quote22'], "image" => "kosmiko"),
+	array("nick" => "LoSko", "name" => "Lorenzo Marcon", "mail" => "lorenzo.marcon@startrekitalia.REMOVE.THE.ANTISPAM.WORDS.com", "made" => $template['honor']['made23'], "quote" => $template['honor']['quote23'], "image" => "losko"),
+	array("nick" => "Kane", "name" => "Juanjo �varez", "mail" => "juanjux@yahoo.REMOVE.THE.ANTISPAM.WORDS.es", "made" => $template['honor']['made24'], "quote" => $template['honor']['quote24'], "image" => "unknown"),
+	array("nick" => "CGabriel", "name" => "Christopher R. Gabriel", "mail" => "cgabriel@linux.REMOVE.THE.ANTISPAM.WORDS.it", "made" => $template['honor']['made25'], "quote" => $template['honor']['quote25'], "image" => "unknown"),
+	array("nick" => "Drosha", "name" => "Andrew Frolov", "mail" => "", "made" => $template['honor']['made26'], "quote" => $template['honor']['quote26'], "image" => "unknown"),
+	array("nick" => "Number1", "name" => "Christian Strmmen", "mail" => "number1@realityx.REMOVE.THE.ANTISPAM.WORDS.net", "made" => $template['honor']['made27'], "quote" => $template['honor']['quote27'], "image" => "unknown"),
+	array("nick" => "RADKade1", "name" => "RAD Kade 1", "mail" => "", "made" => $template['honor']['made28'], "quote" => $template['honor']['quote28'], "image" => "unknown"),
+	array("nick" => "KNFritz", "name" => "Fritz Elfert", "mail" => "", "made" => $template['honor']['made29'], "quote" => "", "image" => "unknown"),
+	array("nick" => "Njaard", "name" => "Charles Samuels", "mail" => "kcharles@altair.dhs.REMOVE.THE.ANTISPAM.WORDS.org", "made" => $template['honor']['made30'], "quote" => $template['honor']['quote30'], "image" => "unknown"),
+	array("nick" => "BuTi", "name" => "", "mail" => "buti@geocities.REMOVE.THE.ANTISPAM.WORDS.com", "made" => $template['honor']['made31'], "quote" => "", "image" => "unknown"),
+	array("nick" => "Error403", "name" => "Nick Betcher", "mail" => "nbetcher@real-time.REMOVE.THE.ANTISPAM.WORDS.com", "made" => "", "quote" => $template['honor']['quote32'], "image" => "unknown"),
+	array("nick" => "Crocodile", "name" => "Olle H�ln�", "mail" => "olle@xmms.REMOVE.THE.ANTISPAM.WORDS.org", "made" => $template['honor']['made33'], "quote" => "", "image" => "unknown"),
+	array("nick" => "marl", "name" => "Giovanni Ferri", "mail" => "giovanni@fonderiadigitale.REMOVE.THE.ANTISPAM.WORDS.it", "made" => $template['honor']['made34'], "quote" => $template['honor']['quote34'], "image" => "unknown"),
+	array("nick" => "[Anodine]", "name" => "Anodine", "mail" => "", "made" => $template['honor']['made35'], "quote" => $template['honor']['quote35'], "image" => "unknown"),
+	array("nick" => "infected", "name" => "Paul Boehm", "mail" => "", "made" => $template['honor']['made36'], "quote" => $template['honor']['quote36'], "image" => "unknown"),
+	array("nick" => "|Tom|@IrcNet", "name" => "Thomas Kalla", "mail" => "", "made" => $template['honor']['made37'], "quote" => "", "image" => "unknown"),
+	array("nick" => "^J^", "name" => "Am rico Jos Melo", "mail" => "", "made" => $template['honor']['made38'], "quote" => "", "image" => "unknown"),
+	array("nick" => "valeragir", "name" => "Valeriy Girchenko", "mail" => "valeragir@mail.REMOVE.THE.ANTISPAM.WORDS.ru", "made" => $template['honor']['made39'], "quote" => "", "image" => "unknown")
+);
+
 // Screenshots
 // array("img" => "image", "thumb" => "thumbnail", "desc" => "description")
 $screen=array(
@@ -141,6 +197,31 @@ $splash=array(
 	array("name" => "3.2.0.99 CVS \"Marmalade\" (2)", "screen" => "splash-3.2.0.99.2.png", "alt" => "3.2.0.99", "motd" => "Hello, Hey Joe! You Wanna Give It a Go ?", "date" => "01.08.2005", "present" => ""),
 	array("name" => "3.2.4 CVS \"Anomalies\"", "screen" => "splash-3.2.0.20051230.png", "alt" => "3.2.4", "motd" => "Time makes no sense", "date" => "06.08.2006", "present" => "3.2.0.20051230, 3.2.1, 3.2.2, 3.2.3, 3.2.4"),
 	array("name" => "3.2.6 CVS \"Anomalies\"", "screen" => "splash-3.2.5-cvs.png", "alt" => "3.2.5", "motd" => "Time makes no sense", "date" => "12.09.2006", "present" => "3.2.4, 3.2.5, 3.2.6")
+);
+
+// Themes
+// array("name" => "name", "version" => "version", "mail" => "mail", "author" => "author", "desc" => "description", "home" => "homepage", "download" => "download", "screen" => "screenshot", "thumb" => "thumbnail")
+
+$themes=array(
+	1 => array("name" => "Marble Theme", "version" => "1.0.4", "mail" => "sbrokka@openlug.REMOVE.THE.ANTISPAM.WORDS.org", "author" => "Sbrokka", "desc" => $template['themes']['theme1'], "home" => "", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/Marble-1.0.4.tar.bz2", "screen" => "theme_marble.jpg", "thumb" => "thumb_marble.png"),
+	array("name" => "Crystal", "version" => "0.3.0", "mail" => "trisk-kvirc@quasarnet.REMOVE.THE.ANTISPAM.WORDS.org", "author" => "Triskelios", "desc" => $template['themes']['theme2'], "home" => "", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/Crystal-0.3.0.tar.bz2", "screen" => "theme_crystal.jpg", "thumb" => "thumb_crystal.png"),
+	array("name" => "Green Theme", "version" => "1.1.0", "mail" => "", "author" => "F.F (have more fun)", "desc" => $template['themes']['theme3'], "home" => "", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/Green-1.1.0.tar.gz", "screen" => "theme_green.jpg", "thumb" => "thumb_green.png"),
+	array("name" => "Ircii Like", "version" => "1.0.0", "mail" => "eva@cyberbeat.REMOVE.THE.ANTISPAM.WORDS.it", "author" => "Penny", "desc" => $template['themes']['theme4'], "home" => "", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/ircii_like-1.0.0.tar.bz2", "screen" => "theme_ircii.jpg", "thumb" => "thumb_ircii.png"),
+	array("name" => "Yisus", "version" => "0.3", "mail" => "fnotari@comtron.com.REMOVE.THE.ANTISPAM.WORDS.ar", "author" => "Fernando Notari", "desc" => $template['themes']['theme5'], "home" => "", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/yisus-0.3.tar.bz2", "screen" => "theme_notari.jpg", "thumb" => "thumb_notari.png"),
+	array("name" => "Kitsch Theme", "version" => "1.0.0", "mail" => "eva@cyberbeat.REMOVE.THE.ANTISPAM.WORDS.it", "author" => "Penny", "desc" => $template['themes']['theme6'], "home" => "", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/Kitsch-1.0.0.tar.bz2", "screen" => "theme_kitsch.jpg", "thumb" => "thumb_kitsch.png"),
+	array("name" => "Ghost", "version" => "1.0.0", "mail" => "darkstalker@insightbb.REMOVE.THE.ANTISPAM.WORDS.com", "author" => "Jason Carter", "desc" => $template['themes']['theme7'], "home" => "", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/Ghost-1.0.0.tar.bz2", "screen" => "theme_ghost.jpg", "thumb" => "thumb_ghost.png"),
+	array("name" => "PayneReactor", "version" => "1.0.0", "mail" => "webmaster@paynereactor.REMOVE.THE.ANTISPAM.WORDS.net", "author" => "Kristian Hollund", "desc" => $template['themes']['theme8'], "home" => "http://www.PayneReactor.com", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/PayneReactor.tar.bz2", "screen" => "theme_payne.jpg", "thumb" => "thumb_payne.png"),
+	array("name" => "XCrystall Black", "version" => "0.0.1", "mail" => "wizard at opendoor.REMOVE.THE.ANTISPAM.WORDS.ru", "author" => "Alexey", "desc" => $template['themes']['theme9'], "home" => "", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/xcrystall-0.0.1.tar.bz2", "screen" => "theme_xcrystall.jpg", "thumb" => "thumb_xcrystall.jpg"),
+	array("name" => "DarkBaghira", "version" => "0.1.2", "mail" => "hellvis69@altervista.REMOVE.THE.ANTISPAM.WORDS.org", "author" => "HelLViS69", "desc" => $template['themes']['theme10'], "home" => "http://hellvis69.altervista.org", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/DarkBaghira-0.1.2.tar.bz2", "screen" => "theme_darkbaghira.jpg", "thumb" => "thumb_darkbaghira.png"),
+	array("name" => "Time makes no sense", "version" => "3.3.2", "mail" => "cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org", "author" => "etherea`", "desc" => $template['themes']['theme11'], "home" => "http://kvirc.virg0.org", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/Time-3.3.2.tar.bz2", "screen" => "theme_time.png", "thumb" => "thumb_time.png"),
+	array("name" => "Pure", "version" => "1.0.1", "mail" => "cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org", "author" => "etherea`", "desc" => $template['themes']['theme12'], "home" => "http://kvirc.virg0.org", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/Pure-1.0.1.tar.bz2", "screen" => "theme_pure.png", "thumb" => "thumb_pure.png"),
+	array("name" => "Dark Glass", "version" => "1.0.0", "mail" => "grifisx@barmes.org", "author" => "Grifisx &amp; Noldor", "desc" => $template['themes']['theme13'], "home" => "", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/DarkGlass-1.0.tar.bz2", "screen" => "theme_darkglass.png", "thumb" => "thumb_darkglass.png"),
+	array("name" => "Black Heart", "version" => "1.0.0", "mail" => "grifisx@barmes.org", "author" => "Grifisx &amp; Noldor", "desc" => $template['themes']['theme14'], "home" => "", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/BlackHeart-1.0.tar.bz2", "screen" => "theme_blackheart.png", "thumb" => "thumb_blackheart.png"),
+	array("name" => "X-KVIrc-mas", "version" => "1.0.0", "mail" => "grifisx@barmes.org", "author" => "Grifisx &amp; Noldor", "desc" => $template['themes']['theme15'], "home" => "", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/X-KVIrcmas-1.0.tar.bz2", "screen" => "theme_X-KVIrcmas.png", "thumb" => "thumb_X-KVIrcmas.png"),
+	array("name" => "Words are Perversion", "version" => "1.0.3", "mail" => "cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org", "author" => "etherea`", "desc" => $template['themes']['theme16'], "home" => "http://kvirc.virg0.org", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/Words_are_Perversion-1.0.tar.bz2", "screen" => "theme_words.png", "thumb" => "thumb_words.png"),
+	array("name" => "erotica", "version" => "0.6.9", "mail" => "cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org", "author" => "etherea`", "desc" => $template['themes']['theme17'], "home" => "http://kvirc.virg0.org", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/erotica-0.6.9.rar", "screen" => "theme_erotica.png", "thumb" => "thumb_erotica.png"),
+	array("name" => "Anger", "version" => "0.0.1", "mail" => "cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org", "author" => "etherea`", "desc" => $template['themes']['theme18'], "home" => "http://kvirc.virg0.org", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/Anger-0.0.1.rar", "screen" => "theme_anger.png", "thumb" => "thumb_anger.png"),
+	array("name" => "Dark Blue", "version" => "0.9.0", "mail" => "lgxco@yahoo.REMOVE.THE.ANTISPAM.WORDS.it", "author" => "Puk", "desc" => $template['themes']['theme19'], "home" => "", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/DarkBlue-0.9.0.kvt", "screen" => "theme_darkblue.png", "thumb" => "thumb_darkblue.png")
 );
 
 // Tools

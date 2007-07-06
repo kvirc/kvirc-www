@@ -35,7 +35,7 @@ echo "<div class=\"column1-unit\">";
 	echo "<hr />";
 
 	echo "<h1>".$template['translation']['step']." 0: ".$template['translation']['text7']."</h1>";
-	echo "<p>".$template['translation']['text8a']." <a href=\"?id=SVN&amp;lang=$lang\">http://www.kvirc.net/?id=SVN</a>.<br />".$template['translation']['text8b']." <code>kvirc/po/</code>";
+	echo "<p>".$template['translation']['text8a']." <a href=\"?id=svn&amp;lang=$lang\">http://www.kvirc.net/?id=svn</a>.<br />".$template['translation']['text8b']." <code>kvirc/po/</code>";
 
 	echo "<h1>".$template['translation']['step']." 1: ".$template['translation']['text9']."</h1>";
 	echo "<p>".$template['translation']['text10a']." <a href=\"http://sourceforge.net/projects/translation/\">".$template['translation']['text10b']."</a>.<br />".$template['translation']['text10c']."\"it\", \"en\", \"hu\" or \"pt_BR\".</p>";
