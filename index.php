@@ -43,6 +43,7 @@ require("conf/config.php");
 	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="./css/layout4_setup.css" />
 	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="./css/layout4_text.css" />
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="alternate" href="rss.php" type="application/rss+xml" title="KVIrc News" />
 	<!-- Google Analytics start -->
 	<script type="text/javascript" src="http://www.google-analytics.com/urchin.js" />
