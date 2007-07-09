@@ -808,55 +808,35 @@ $template['ml']['text9']="
 /* mirroring.php start */
 $template['mirror']['title']="Mirroring the KVIrc Project";
 $template['mirror']['text1']="
-	Contributing to the KVIrc project by mirroring its files is really easy.<br />
-	This page contains step by step instructions to create a www or ftp mirror (or both).";
-$template['mirror']['text2']="Non european ftp mirrors are especially needed";
-$template['mirror']['title2']="Setting up a mirror of www.kvirc.net";
-$template['mirror']['tree1']="Requirements";
-$template['mirror']['tree1a']="A web server with virtual hosts and php support, preferably";
-$template['mirror']['tree1b']="A SVN client (usually included on your favorite distribution CD)";
-$template['mirror']['tree1c']="A cron daemon (or equivalent) in order to keep the mirror in sync";
-$template['mirror']['text3']="Setup procedure";
-$template['mirror']['text4']="
-	The following explaination assumes that you have a working installation of Apache and your vhosts are in /var/www/vhosts/. If it is not the case then please adjust the paths accordingly.";
-$template['mirror']['text5']="First of all you need to checkout the site (once).";
-$template['mirror']['text6']="hit return when asked for a password";
-$template['mirror']['text7']="Now move the site to the vhost directory of your web server.";
-$template['mirror']['text8']="yourdomain";
+	This page contains step by step instructions to create a ftp mirror";
+$template['mirror']['text2']="
+	Contributing to the KVIrc project by mirroring its files is really easy.<br />";
+$template['mirror']['text3']="Non european ftp mirrors are especially needed";
+$template['mirror']['title2']="Setting up a mirror of ftp.kvirc.net";
+$template['mirror']['tree']="Requirements";
+$template['mirror']['tree1']="An ftp server";
+$template['mirror']['tree2']="A cron daemon (or equivalent) in order to keep the mirror in sync";
+$template['mirror']['text4']="Setup procedure";
+$template['mirror']['text5']="
+	Setting up an ftp mirror is really easy: it is done by using the mirroring feature of the program";
+$template['mirror']['text6']="
+	The commandline to retrieve the whole kvirc ftp archive is the following:";
+$template['mirror']['text7']="your_ftp_server_root";
+$template['mirror']['text8']="
+	So all you need to do is to set up your ftp server to accept anonymous connections and instruct cron to sync the mirror every N hours.";
 $template['mirror']['text9']="
-	Edit your httpd.conf and point the vhost kvirc.yourdomain.org to the directory";
-$template['mirror']['text10']="If you're using Apache then the entry might be similar to this:";
-$template['mirror']['text11']="your";
-$template['mirror']['text12']="
-	Set up your dns to resolve correctly your mirror hostname.<br />
-	If your dns is managed by someone else (your ISP or a network admin) then ask him to add an A or CNAME record that points the name \"kvirc\" to your mirror machine.<br />
-	If you own the authoritative dns server for your domain then this usually involves putting a line similar to the following your domain zone file.";
-$template['mirror']['text13']="youripaddress";
-$template['mirror']['text14']="
-	Restart your dns server, restart the web server and test your mirror by pointing the browser at";
-$template['mirror']['text15']="
 	Now you need to setup the automatic updates.<br />
 	This is usually accomplished by a cron daemon and involves adding a couple of lines to the crontab.<br />
 	An example of such a crontab file might be:";
-$template['mirror']['text16']="
-	This crontab file tells the cron daemon to run the command \"\$HOME/bin/cronjob >> \$HOME/cronjoblog 2>&amp;1\" at 6.30 am of every day.<br />
-	\$HOME/bin/cronjob is a script that changes the current directory to the mirror vhost root and performs a SVN update.";
-$template['mirror']['text17']="
-	Once you have succesfully set up your mirror please drop a mail to <b>pragma at kvirc dot net</b> or to the <a href=\"?id=mailinglist&amp;lang=$lang\">mailing list</a> so we can link you from the main site.";
-$template['mirror']['title2']="Setting up a mirror of ftp.kvirc.net";
-$template['mirror']['tree2a']="An ftp server";
-$template['mirror']['text18']="
-	Setting up an ftp mirror is really easy: it is done by using the mirroring feature of the program <a href=\"http://www.gnu.org/software/wget/wget.html\">wget</a><br />
-	The commandline to retrieve the whole kvirc ftp archive is the following:";
-$template['mirror']['text19']="your_ftp_server_root";
-$template['mirror']['text20']="
-	So all you need to do is to set up your ftp server to accept anonymous connections and instruct cron to sync the mirror every N hours.<br />
-	The procedure is similar to the one explained above (in the section about www mirrors).<br />
-	In fact you can use the \$HOME/bin/cronjob script to perform both tasks sequentially.<br />
-	In this case \$HOME/bin/cronjob would look as follows:";
-$template['mirror']['text21']="
+$template['mirror']['text10a']="
+	This crontab file tells the cron daemon to run the command";
+$template['mirror']['text10b']="at 6.30 am of every day";
+$template['mirror']['text11a']="In this case";
+$template['mirror']['text11b']="would look as follows:";
+$template['mirror']['text12']="yourdomain";
+$template['mirror']['text13']="
 	At the moment of writing the complete ftp archive is around 500 MB. If you don't have the space for a complete mirror you can achieve partial mirroring by retrieving only a subset of the ftp.kvirc.net directories.";
-$template['mirror']['text22']="
+$template['mirror']['text14']="
 	Once you have succesfully set up your mirror please drop a mail to <b>pragma at kvirc dot net</b> or to the <a href=\"?id=mailinglist&amp;lang=$lang\">mailing list</a> so we can link you from the main site.";
 /* mirroring.php end */
 
