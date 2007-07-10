@@ -124,23 +124,23 @@ echo "<div class=\"column1-unit\">";
 		if(($av_groups<2)||($group!="")){
 			for($i=0;$i<$package_count;$i++){
 				if(($p_version[$i]==$version)&&($p_platform[$i]==$platform)&&(($av_groups<2)||($group==$p_group[$i]))){
-					echo "<table>";
-						echo "<tr><td class=\"header\" colspan=\"2\">".$p_description[$i]."</td></tr>";
-						echo "<tr><td class=\"data\">".$template['custom']['version']."</td><td class=\"value\">".$version_description[$version]."</td></tr>";
-						echo "<tr><td class=\"data\">".$template['custom']['type']."</td><td class=\"value\">".$platform_description[$platform]."</td></tr>";
+					echo "<table class=\"pair\">";
+						echo "<tr class=\"head\"><td colspan=\"2\">".$p_description[$i]."</td></tr>";
+						echo "<tr><td class=\"data\">".$template['custom']['version']."</td><td>".$version_description[$version]."</td></tr>";
+						echo "<tr><td class=\"data\">".$template['custom']['type']."</td><td>".$platform_description[$platform]."</td></tr>";
 
 						if($p_size[$i]!="")
-							echo "<tr><td class=\"data\">".$template['custom']['size']."</td><td class=\"value\">".$p_size[$i]."</td></tr>";
+							echo "<tr><td class=\"data\">".$template['custom']['size']."</td><td>".$p_size[$i]."</td></tr>";
 						if($p_author[$i]!="")
-							echo "<tr><td class=\"data\">".$template['custom']['author']."</td><td class=\"value\">".$p_author[$i]."</td></tr>";
+							echo "<tr><td class=\"data\">".$template['custom']['author']."</td><td>".$p_author[$i]."</td></tr>";
 						if($p_details[$i]!="")
-							echo "<tr><td class=\"value\" colspan=\"2\">".$p_details[$i]."</td></tr>";
+							echo "<tr><td colspan=\"2\">".$p_details[$i]."</td></tr>";
 
 						echo "<tr><td colspan=\"2\">";
 						echo "<b>".$template['releases']['available']."</b><br /><br />";
-						for($j=0;$j<$ftp_mirror_count;$j++){
-							echo "<a href=\"".$ftp_mirror_link[$j]."/".$p_path[$i]."/".$p_filename[$i]."\">".$p_filename[$i]."</a><br />";
-							echo $ftp_mirror_text[$j]."<br /><br />";
+						foreach($ftp_mirror as $key=>$value){
+							echo "<a href=\"".$value['url']."/".$p_path[$i]."/".$p_filename[$i]."\">".$p_filename[$i]."</a><br />";
+							echo $value['desc']."<br /><br />";
 						}
 						echo "</td></tr></table>";
 				}
