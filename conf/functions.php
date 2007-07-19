@@ -62,6 +62,26 @@ function checkVersion($version,$min,$max){
 	return (($versionSelected>=$minVersion)&&($versionSelected<=$maxVersion)) ? 1 : 0;
 }
 
+// Search site
+function search(){
+	// Check for a search
+	if(isset($_POST['button'])&&($_POST['button']!="")){
+		// Select type of search
+		$type=trim(strip_tags(addslashes($_POST['type'])));
+		if($type=="site") $site="www.kvirc.net";
+		elseif($type=="mail") $site="lists.omnikron.net";
+
+		// Setup keywords
+		$keywords=trim(strip_tags(addslashes($_POST['keywords'])));
+		$keywords=str_replace(" ","+",$keywords);
+		$searchUrl="http://www.google.com/search?hl=$lang&q=$keywords+site%3A$site";
+
+		// Get the results
+		header("Location: $searchUrl");
+		exit();
+	}
+}
+
 // News
 /*
 news file name:
