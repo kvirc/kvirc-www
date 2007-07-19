@@ -23,6 +23,9 @@ if(!file_exists("./translation/locale_$lang.php"))
 else include("./translation/locale_$lang.php");
 
 require("conf/config.php");
+
+// Search activated
+search();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -30,7 +33,6 @@ require("conf/config.php");
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta http-equiv="cache-control" content="no-cache" />
 	<meta name="robots" content="index,follow" />
-	<meta name="publisher" content="etherea` ./LSD @ virg0.org - CreativeCode" />
 	<meta name="copyright" content="etherea` ./LSD @ virg0.org | CreativeCode | KVIrc.net" />
 	<meta name="author" content="etherea` - graphics - ./LSD @ virg0.org" />
 	<meta name="author" content="HelLViS69 - code - hellvis69 @ netsons.org" />
@@ -44,11 +46,11 @@ require("conf/config.php");
 	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="./css/layout4_text.css" />
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-	<link rel="alternate" href="rss.php" type="application/rss+xml" title="KVIrc News" />
+	<link rel="alternate" type="application/rss+xml" href="rss.php"  title="KVIrc News" />
 	<!-- Google Analytics start -->
 	<script type="text/javascript" src="http://www.google-analytics.com/urchin.js" />
 	<!-- Google Analytics end -->
-	<title> >. KVIrc.net - The Visual IRC Client</title>
+	<title>KVIrc.net - The Visual IRC Client</title>
 </head>
 <body>
 	<!-- Google Analytics start -->
@@ -180,10 +182,11 @@ require("conf/config.php");
 					<li><a href="?id=themes&amp;lang=<?echo $lang;?>" title="themes and appearance"><?echo $template['index']['themes'];?></a></li>
 				</ul>
 				<div class="searchform">
-					<form action="#" method="get" class="form">
+					<form action="<?echo "?id=$id&amp;lang=$lang";?>" method="post" class="form">
 						<fieldset>
-							<input value=" <?echo $template['index']['search'];?>..." name="field" class="field" />
-							<input type="submit" value="<?echo $template['index']['go'];?>!" name="button" class="button" />
+							<input type="text" name="keywords" value="<?echo $template['index']['search'];?>..." class="field" />
+							<input type="hidden" name="type" value="site" />
+							<input type="submit" name="button" value="<?echo $template['index']['go'];?>!" class="button" />
 						</fieldset>
 					</form>
 				</div>

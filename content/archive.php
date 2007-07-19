@@ -8,20 +8,21 @@ echo "<div class=\"column1-unit\">";
 	echo "<br /><h3>".$template['archive']['text']."</h3>";
 	?>
 
-	<form method="get" action="http://www.google.com/custom">
-		<p>
-		<img src="http://www.google.com/logos/Logo_25wht.gif" alt="Google" /><br />
-		<input type="text" name="q" size="25" maxlength="255" />
-		<input type="submit" name="sa" value="<?echo $template['archive']['search'];?>" />
-		<input type="hidden" name="sitesearch" value="lists.omnikron.net" />
-		</p>
-	</form>
+	<div class="searchform">
+		<form action="<?echo "?id=$id&amp;lang=$lang";?>" method="post" class="form">
+			<fieldset>
+				<input type="text" name="keywords" value="<?echo $template['index']['search'];?>..." class="field" />
+				<input type="hidden" name="type" value="mail" />
+				<input type="submit" name="button" value="<?echo $template['index']['go'];?>!" class="button" />
+			</fieldset>
+		</form>
+	</div><br />
 
 	<?
 	$annocorrente = date("Y");
 	$mesecorrente = date("n");
 
-	echo "<ul>";
+	echo "<ul class=\"list\">";
 	for($a=$annocorrente;$a>=2003;$a--){
 		if(($mesecorrente > 11)|| ($a < $annocorrente))echo "<li><a href=\"http://lists.omnikron.net/pipermail/kvirc/$a-December/thread.html\">".$template['archive']['dec']." $a</a></li>";
 		if(($mesecorrente > 10)|| ($a < $annocorrente))echo "<li><a href=\"http://lists.omnikron.net/pipermail/kvirc/$a-November/thread.html\">".$template['archive']['nov']." $a</a></li>";
