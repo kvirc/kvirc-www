@@ -184,7 +184,7 @@ search();
 				<div class="searchform">
 					<form action="<?echo "?id=$id&amp;lang=$lang";?>" method="post" class="form">
 						<fieldset>
-							<input type="text" name="keywords" value="<?echo $template['index']['search'];?>..." class="field" />
+							<input type="text" name="keywords" value="<?echo $template['index']['search'];?>..." class="field" onclick="this.value=''" />
 							<input type="hidden" name="type" value="site" />
 							<input type="submit" name="button" value="<?echo $template['index']['go'];?>!" class="button" />
 						</fieldset>
