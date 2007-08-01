@@ -28,8 +28,16 @@ echo "<div class=\"column1-unit\">";
 	echo "</ul>";
 
 foreach($themes as $key => $value){
+	if(fmod($key,2)!=0)
+		echo "<div class=\"split\"><div class=\"left\">";
+	else echo "<div class=\"right\">";
+
 	echo "<h1>".$value['name']."&nbsp;".$value['version']."</h1>";
 
+	echo "<div class=\"img\"><a href=\"img/".$value['screen']."\"><img src=\"img/".$value['thumb']."\" alt=\"".$template['themes']['screenshot']."\" /></a></div>";
+
+	echo "<div class=\"desc\">";
+	echo "<p>";
 	if($value['mail']!="")
 		echo "<b>".$template['custom']['author'].": </b><a href=\"mailto:".$value['mail']."\">".$value['author']."</a><br />";
 	else echo "<b>".$template['custom']['author'].": </b>".$value['author']."<br />";
@@ -37,10 +45,17 @@ foreach($themes as $key => $value){
 	echo "<b>".$template['custom']['description'].": </b>".$value['desc']."<br />";
 
 	if($value['home']!="")
-		echo "<a href=\"".$value['home']."\">".$template['custom']['homepage']."</a>.<br />";
+		echo "<a href=\"".$value['home']."\">".$template['custom']['homepage']."</a><br />";
 
-	echo "<a href=\"img/".$value['screen']."\"><img src=\"img/".$value['thumb']."\" alt=\"".$template['themes']['screenshot']."\" /></a><br />";
-	echo "<a href=\"".$value['download']."\">".$template['custom']['download']."</a><br />";
+	echo "<a href=\"".$value['download']."\">".$template['custom']['download']."</a>";
+	echo "</p>";
+	echo "</div>";
+
+	// close left or right div
+	echo "</div>";
+
+	// if the object is on the right or if it's the last, we have to close the container split
+	if((fmod($key,2)==0)||($key==count($themes))) echo "</div>";
 }
 
 echo "</div>";
