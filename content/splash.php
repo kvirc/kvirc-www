@@ -5,7 +5,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 
 echo "<h1 class=\"pagetitle\">".$template['splash']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
-	echo "<p>".$template['splash']['text']."</p>";
+	echo "<br /><h3>".$template['splash']['text']."</h3>";
 
 	foreach($splash as $key => $value){
 		echo "<h1>".$value['name']."</h1>";

@@ -140,7 +140,6 @@ search();
 						<li><a href="#"><?echo $template['index']['graphsuite'];?></a>
 							<ul>
 								<li><a href="?id=themes&amp;lang=<?echo $lang;?>"><?echo $template['index']['themes'];?></a></li>
-								<li><a href="startups"><?echo $template['index']['startup'];?></a></li>
 								<li><a href="?id=splash&amp;lang=<?echo $lang;?>"><?echo $template['index']['splash'];?></a></li>
 								<li><a href="?id=banners&amp;lang=<?echo $lang;?>"><?echo $template['index']['banners'];?></a></li>
 								<li><a href="?id=arts&amp;lang=<?echo $lang;?>"><?echo $template['index']['arts'];?></a></li>

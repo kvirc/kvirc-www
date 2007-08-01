@@ -111,7 +111,7 @@ $honor=array(
 	array("nick" => "[Anodine]", "name" => "Anodine", "mail" => "", "made" => $template['honor']['made35'], "quote" => $template['honor']['quote35'], "image" => "unknown"),
 	array("nick" => "infected", "name" => "Paul Boehm", "mail" => "", "made" => $template['honor']['made36'], "quote" => $template['honor']['quote36'], "image" => "unknown"),
 	array("nick" => "|Tom|@IrcNet", "name" => "Thomas Kalla", "mail" => "", "made" => $template['honor']['made37'], "quote" => "", "image" => "unknown"),
-	array("nick" => "^J^", "name" => "Am rico Jos Melo", "mail" => "", "made" => $template['honor']['made38'], "quote" => "", "image" => "unknown"),
+	array("nick" => "^J^", "name" => "Américo Josè Melo", "mail" => "", "made" => $template['honor']['made38'], "quote" => "", "image" => "unknown"),
 	array("nick" => "valeragir", "name" => "Valeriy Girchenko", "mail" => "valeragir@mail.REMOVE.THE.ANTISPAM.WORDS.ru", "made" => $template['honor']['made39'], "quote" => "", "image" => "unknown")
 );
 
@@ -196,7 +196,7 @@ $splash=array(
 	array("name" => "3.2.0.99 CVS \"Marmalade\" (1)", "screen" => "splash-3.2.0.99.1.png", "alt" => "3.2.0.99", "motd" => "Hello, Hey Joe! You Wanna Give It a Go ?", "date" => "01.05.2005", "present" => ""),
 	array("name" => "3.2.0.99 CVS \"Marmalade\" (2)", "screen" => "splash-3.2.0.99.2.png", "alt" => "3.2.0.99", "motd" => "Hello, Hey Joe! You Wanna Give It a Go ?", "date" => "01.08.2005", "present" => ""),
 	array("name" => "3.2.4 CVS \"Anomalies\"", "screen" => "splash-3.2.0.20051230.png", "alt" => "3.2.4", "motd" => "Time makes no sense", "date" => "06.08.2006", "present" => "3.2.0.20051230, 3.2.1, 3.2.2, 3.2.3, 3.2.4"),
-	array("name" => "3.2.6 CVS \"Anomalies\"", "screen" => "splash-3.2.5-cvs.png", "alt" => "3.2.5", "motd" => "Time makes no sense", "date" => "12.09.2006", "present" => "3.2.4, 3.2.5, 3.2.6")
+	array("name" => "3.2.6 SVN \"Anomalies\"", "screen" => "splash-3.2.5-cvs.png", "alt" => "3.2.5", "motd" => "Time makes no sense", "date" => "12.09.2006", "present" => "3.2.4, 3.2.5, 3.2.6")
 );
 
 // Themes
