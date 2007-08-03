@@ -129,8 +129,6 @@ search();
 							<ul>
 								<li><a href="?id=faq&amp;lang=<?echo $lang;?>"><?echo $template['index']['faq'];?></a></li>
 								<li><a href="http://www.kvirc.de/docu/"><?echo $template['index']['kviman'];?></a></li>
-								<li><a href="http://www.aclibre.org/archives/kvric-es.pdf"><?echo $template['index']['spanishman'];?></a></li>
-								<li><a href="http://we-are-teh-b.org/~kvirc/index.php/Main_Page"><?echo $template['index']['kviwiki'];?></a></li>
 								<li><a href="?id=tutorials&amp;lang=<?echo $lang;?>"><?echo $template['index']['tutorials'];?></a></li>
 								<li><a href="?id=translation&amp;lang=<?echo $lang;?>"><?echo $template['index']['translations'];?></a></li>
 							</ul>
@@ -154,7 +152,7 @@ search();
 								<li><a href="?id=addons&amp;lang=<?echo $lang;?>"><?echo $template['index']['addons'];?></a></li>
 								<li><a href="?id=tools&amp;lang=<?echo $lang;?>"><?echo $template['index']['tools'];?></a></li>
 								<li><a href="?id=changelog&amp;lang=<?echo $lang;?>"><?echo $template['index']['changelog'];?></a></li>
-								<li><a href="http://cia.navi.cx/stats/project/kvirc" target="_blank" title="CIA commits on KVIrc project"><?echo $template['index']['svncommits'];?></a></li>
+								<li><a href="http://cia.vc/stats/project/kvirc" target="_blank" title="CIA commits on KVIrc project"><?echo $template['index']['svncommits'];?></a></li>
 							</ul>
 						</li>
 					</ul>

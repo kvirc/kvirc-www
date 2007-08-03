@@ -42,8 +42,6 @@ $template['index']['builds']="builds";
 $template['index']['docs']="documentation";
 $template['index']['faq']="FAQ";
 $template['index']['kviman']="KVIrc manual";
-$template['index']['spanishman']="Spanish manual";
-$template['index']['kviwiki']="KVIrc wiki";
 $template['index']['tutorials']="tutorials";
 $template['index']['translations']="translations";
 // graphic suite
@@ -51,7 +49,7 @@ $template['index']['graphsuite']="graphic suite";
 $template['index']['themes']="themes";
 $template['index']['splash']="splash screens";
 $template['index']['banners']="banners";
-$template['index']['arts']="KVIrc related art";
+$template['index']['arts']="arts";
 // misc
 $template['index']['misc']="misc";
 $template['index']['honor']="honor &amp; glory";
