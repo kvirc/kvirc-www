@@ -5,6 +5,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 
 $page=trim(strip_tags(addslashes($_GET['page'])));
 if(!$page||!is_numeric($page)||($page>count($screen))||($page<1)) $page=count($screen);
+$path="img/screenshots";
 
 echo "<h1 class=\"pagetitle\">".$template['screen']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
@@ -15,7 +16,7 @@ for($i=count($screen[$page])-1,$key=1;$i>0;$i--,$key++){
 	if(fmod($key,2)!=0) echo "<div class=\"split\"><div class=\"left\">";
 	else echo "<div class=\"right\">";
 
-	echo "<a href=\"".$screen[$page][$i]['img']."\"><img src=\"".$screen[$page][$i]['thumb']."\" alt=\"".strip_tags($screen[$page][$i]['desc'])."\" /></a><br />";
+	echo "<a href=\"$path/".$screen[$page][$i]['img']."\"><img src=\"$path/".$screen[$page][$i]['thumb']."\" alt=\"".strip_tags($screen[$page][$i]['desc'])."\" /></a><br />";
 	echo "<div class=\"descc\">".$screen[$page][$i]['desc']."</div>";
 
 	// close left or right div

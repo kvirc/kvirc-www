@@ -3,6 +3,8 @@
 if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
+$path="img/honor";
+
 echo "<h1 class=\"pagetitle\">".$template['honor']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
 	echo "<br /><h3>".$template['honor']['text1']."</h3>";
@@ -13,7 +15,7 @@ foreach($honor as $key => $value){
 		echo "<div class=\"split\"><div class=\"left\">";
 	else echo "<div class=\"right\">";
 
-	echo "<div class=\"img\"><img src=\"img/".$value['image'].".png\" alt=\"".$value['nick']."'s avatar\" /></div>";
+	echo "<div class=\"img\"><img src=\"$path/".$value['image'].".png\" alt=\"".$value['nick']."'s avatar\" /></div>";
 
 	echo "<div class=\"desc\">";
 	if($value['name']=="") $name=$value['nick'];

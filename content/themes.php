@@ -3,6 +3,8 @@
 if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
+$path="img/themes";
+
 echo "<h1 class=\"pagetitle\">".$template['themes']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
 	echo "<br /><h3>".$template['themes']['text1'].".</h3><br />";
@@ -34,7 +36,7 @@ foreach($themes as $key => $value){
 
 	echo "<h1>".$value['name']."&nbsp;".$value['version']."</h1>";
 
-	echo "<div class=\"img\"><a href=\"img/".$value['screen']."\"><img src=\"img/".$value['thumb']."\" alt=\"".$template['themes']['screenshot']."\" /></a></div>";
+	echo "<div class=\"img\"><a href=\"$path/".$value['screen']."\"><img src=\"$path/".$value['thumb']."\" alt=\"".$template['themes']['screenshot']."\" /></a></div>";
 
 	echo "<div class=\"desc\">";
 	echo "<p>";

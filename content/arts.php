@@ -3,6 +3,8 @@
 if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
+$path="img/arts";
+
 echo "<div class=\"title\">".$template['arts']['title']."</div>";
 echo "<div class=\"text\">";
 	echo $template['arts']['text'];
@@ -12,7 +14,7 @@ foreach($arts as $key => $value){
 	echo "<div class=\"header\">".$value['title']."</div>";
 
 	echo "<div class=\"wrap\">";
-	echo "<div class=\"img\"><a href=\"".$value['downlink']."\"><img src=\"".$value['thumb']."\" alt=\"".$value['title']."\" /></a></div>";
+	echo "<div class=\"img\"><a href=\"$path/".$value['down']."\"><img src=\"$path/".$value['thumb']."\" alt=\"".$value['title']."\" /></a></div>";
 	
 	echo "<div class=\"desc\">";
 	
@@ -22,7 +24,7 @@ foreach($arts as $key => $value){
 		echo $template['custom']['author'].": ".$value['author'];
 
 	echo "<br />".$template['custom']['date'].": ".$value['date']."<br />";
-	echo $template['custom']['download'].": <a href=\"arts/".$value['down']."\">".$value['down']."</a><br /><br />";
+	echo $template['custom']['download'].": <a href=\"$path/".$value['down']."\">".$value['down']."</a><br /><br />";
 	echo $value['desc']."</div>";
 	echo "</div>";
 

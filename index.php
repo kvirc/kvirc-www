@@ -260,7 +260,7 @@ search();
 					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
 					<h1><img src="img/applications-graphics.png" alt="<?echo $template['index']['latestscreen'];?>" /><?echo $template['index']['latestscreen'];?></h1>
 					<p class="center">
-						<img src="img/th_theme_anger.gif" alt="Anger Theme - KVIrc &quot;Anomalies&quot;" /><br />
+						<img src="img/themes/th_theme_anger.gif" alt="Anger Theme - KVIrc &quot;Anomalies&quot;" /><br />
 
 						<a href="http://kvirc.virg0.org/themes.htm" title="Anger Theme @ kvirc.virg0.org" target="_blank">Anger theme</a> - <a href="mailto:cle [at] virg0 [dot] org" title="mail etherea`">etherea`</a><br />
 						KVIrc Anomalies

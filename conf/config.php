@@ -62,13 +62,13 @@ $addons=array(
 // Arts
 // array("title" => "title", "author" => "author", "mail" => "email", "desc" => "description", "thumb" => "thumbnail", "down" => "download", "date" => "date")
 $arts=array(
-	1 => array("title" => "\"Connect to the World\" Splash Screens", "author" => "SuSp|r|a", "mail" => "suspy@email.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => $template['arts']['desc1'], "thumb" => "arts/connect_to_the_world_thumb.jpg", "down" => "connect_to_the_world.zip", "date" => "18.05.2005"),
-	array("title" => "Suspiria's Marmalade", "author" => "SuSp|r|a", "mail" => "suspy@email.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => $template['arts']['desc2'], "thumb" => "arts/suspirias_marmalade_thumb.jpg", "down" => "suspirias_marmalade.jpg", "date" => "18.05.2005"),
-	array("title" => "Upside Down", "author" => "SuSp|r|a", "mail" => "suspy@email.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => $template['arts']['desc3'], "thumb" => "arts/upsidedown_thumb.jpg", "down" => "upsidedown.jpg", "date" => "18.05.2005"),
-	array("title" => "Avatar Background", "author" => "SuSp|r|a", "mail" => "suspy@email.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => $template['arts']['desc4'], "thumb" => "arts/avatar_back_thumb.jpg", "down" => "avatar_back.jpg", "date" => "18.05.2005"),
-	array("title" => "Oh.. So Lovely!", "author" => "SuSp|r|a", "mail" => "suspy@email.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => ":)", "thumb" => "arts/ohsolovely_thumb.jpg", "down" => "ohsolovely.jpg", "date" => "18.05.2005"),
-	array("title" => "BSD Magik", "author" => "Lady_dark_demoN", "mail" => "", "desc" => $template['arts']['desc6'], "thumb" => "arts/karries_splash_thumb.jpg", "down" => "karrie_splash.jpg", "date" => "17.10.2005"),
-	array("title" => "\"Virg0 - Time makes no Sense\" Splash Screens", "author" => "etherea`", "mail" => "cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org", "desc" => $template['arts']['desc7'], "thumb" => "arts/virg0_anomalies_thumb.png", "down" => "virg0_anomalies.zip", "date" => "09.03.2006")
+	1 => array("title" => "\"Connect to the World\" Splash Screens", "author" => "SuSp|r|a", "mail" => "suspy@email.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => $template['arts']['desc1'], "thumb" => "connect_to_the_world_thumb.jpg", "down" => "connect_to_the_world.zip", "date" => "18.05.2005"),
+	array("title" => "Suspiria's Marmalade", "author" => "SuSp|r|a", "mail" => "suspy@email.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => $template['arts']['desc2'], "thumb" => "suspirias_marmalade_thumb.jpg", "down" => "suspirias_marmalade.jpg", "date" => "18.05.2005"),
+	array("title" => "Upside Down", "author" => "SuSp|r|a", "mail" => "suspy@email.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => $template['arts']['desc3'], "thumb" => "upsidedown_thumb.jpg", "down" => "upsidedown.jpg", "date" => "18.05.2005"),
+	array("title" => "Avatar Background", "author" => "SuSp|r|a", "mail" => "suspy@email.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => $template['arts']['desc4'], "thumb" => "avatar_back_thumb.jpg", "down" => "avatar_back.jpg", "date" => "18.05.2005"),
+	array("title" => "Oh.. So Lovely!", "author" => "SuSp|r|a", "mail" => "suspy@email.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => ":)", "thumb" => "ohsolovely_thumb.jpg", "down" => "ohsolovely.jpg", "date" => "18.05.2005"),
+	array("title" => "BSD Magik", "author" => "Lady_dark_demoN", "mail" => "", "desc" => $template['arts']['desc6'], "thumb" => "karries_splash_thumb.jpg", "down" => "karrie_splash.jpg", "date" => "17.10.2005"),
+	array("title" => "\"Virg0 - Time makes no Sense\" Splash Screens", "author" => "etherea`", "mail" => "cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org", "desc" => $template['arts']['desc7'], "thumb" => "virg0_anomalies_thumb.png", "down" => "virg0_anomalies.zip", "date" => "09.03.2006")
 );
 
 // Honor & glory
@@ -120,52 +120,52 @@ $honor=array(
 $screen=array(
 	1 => array(
 		0 => "KVIrc 2.0.0 \"Phoenix\"",
-		array("img" => "img/phoenix_shot1.jpg", "thumb" => "img/phoenix_smallshot1.jpg", "desc" => $template['screen']['screen1']),
-		array("img" => "img/phoenix_shot2.jpg", "thumb" => "img/phoenix_smallshot2.jpg", "desc" => $template['screen']['screen2']),
-		array("img" => "img/phoenix_shot3.jpg", "thumb" => "img/phoenix_smallshot3.jpg", "desc" => $template['screen']['screen3']),
-		array("img" => "img/phoenix_shot4.jpg", "thumb" => "img/phoenix_smallshot4.jpg", "desc" => $template['screen']['screen4']),
-		array("img" => "img/phoenix_shot5.jpg", "thumb" => "img/phoenix_smallshot5.jpg", "desc" => $template['screen']['screen5']),
-		array("img" => "img/phoenix_shot6.jpg", "thumb" => "img/phoenix_smallshot6.jpg", "desc" => $template['screen']['screen6']),
-		array("img" => "img/phoenix_shot7.jpg", "thumb" => "img/phoenix_smallshot7.jpg", "desc" => $template['screen']['screen7']),
-		array("img" => "img/phoenix_shot8.jpg", "thumb" => "img/phoenix_smallshot8.jpg", "desc" => $template['screen']['screen8'])
+		array("img" => "phoenix_shot1.jpg", "thumb" => "phoenix_smallshot1.jpg", "desc" => $template['screen']['screen1']),
+		array("img" => "phoenix_shot2.jpg", "thumb" => "phoenix_smallshot2.jpg", "desc" => $template['screen']['screen2']),
+		array("img" => "phoenix_shot3.jpg", "thumb" => "phoenix_smallshot3.jpg", "desc" => $template['screen']['screen3']),
+		array("img" => "phoenix_shot4.jpg", "thumb" => "phoenix_smallshot4.jpg", "desc" => $template['screen']['screen4']),
+		array("img" => "phoenix_shot5.jpg", "thumb" => "phoenix_smallshot5.jpg", "desc" => $template['screen']['screen5']),
+		array("img" => "phoenix_shot6.jpg", "thumb" => "phoenix_smallshot6.jpg", "desc" => $template['screen']['screen6']),
+		array("img" => "phoenix_shot7.jpg", "thumb" => "phoenix_smallshot7.jpg", "desc" => $template['screen']['screen7']),
+		array("img" => "phoenix_shot8.jpg", "thumb" => "phoenix_smallshot8.jpg", "desc" => $template['screen']['screen8'])
 	),
 	array(
 		0 => "KVIrc 3.0.0 CVS \"Avatar\"",
-		array("img" => "img/snapshot8.jpg", "thumb" => "img/snapshot8_small.jpg", "desc" => $template['screen']['screen9']),
-		array("img" => "img/snapshot1.jpg", "thumb" => "img/snapshot1_small.jpg", "desc" => $template['screen']['screen10']),
-		array("img" => "img/snapshot2.jpg", "thumb" => "img/snapshot2_small.jpg", "desc" => $template['screen']['screen11']),
-		array("img" => "img/snapshot3.jpg", "thumb" => "img/snapshot3_small.jpg", "desc" => $template['screen']['screen12']),
-		array("img" => "img/snapshot4.jpg", "thumb" => "img/snapshot4_small.jpg", "desc" => $template['screen']['screen13']),
-		array("img" => "img/snapshot5.jpg", "thumb" => "img/snapshot5_small.jpg", "desc" => $template['screen']['screen14']),
-		array("img" => "img/snapshot6.jpg", "thumb" => "img/snapshot6_small.jpg", "desc" => $template['screen']['screen15'])
+		array("img" => "snapshot8.jpg", "thumb" => "snapshot8_small.jpg", "desc" => $template['screen']['screen9']),
+		array("img" => "snapshot1.jpg", "thumb" => "snapshot1_small.jpg", "desc" => $template['screen']['screen10']),
+		array("img" => "snapshot2.jpg", "thumb" => "snapshot2_small.jpg", "desc" => $template['screen']['screen11']),
+		array("img" => "snapshot3.jpg", "thumb" => "snapshot3_small.jpg", "desc" => $template['screen']['screen12']),
+		array("img" => "snapshot4.jpg", "thumb" => "snapshot4_small.jpg", "desc" => $template['screen']['screen13']),
+		array("img" => "snapshot5.jpg", "thumb" => "snapshot5_small.jpg", "desc" => $template['screen']['screen14']),
+		array("img" => "snapshot6.jpg", "thumb" => "snapshot6_small.jpg", "desc" => $template['screen']['screen15'])
 	),
 	array(
 		0 => "KVIrc 3.0.0 \"Awakening\" ~ 3.0.0 CVS \"Avatar\"",
-		array("img" => "img/awake_fancy.jpg", "thumb" => "img/awake_fancy_small.jpg", "desc" => $template['screen']['screen16']),
-		array("img" => "img/awake_minimalist.jpg", "thumb" => "img/awake_minimalist_small.jpg", "desc" => $template['screen']['screen17']),
-		array("img" => "img/awake_spec_windows.jpg", "thumb" => "img/awake_spec_windows_small.jpg", "desc" => $template['screen']['screen18']),
-		array("img" => "img/awake_scripter.jpg", "thumb" => "img/awake_scripter_small.jpg", "desc" => $template['screen']['screen19']),
-		array("img" => "img/trex_shot1.jpg", "thumb" => "img/trex_shot1_small.jpg", "desc" => $template['screen']['screen20']),
-		array("img" => "img/trex_shot2.jpg", "thumb" => "img/trex_shot2_small.jpg", "desc" => $template['screen']['screen21']),
-		array("img" => "img/trex_shot3.jpg", "thumb" => "img/trex_shot3_small.jpg", "desc" => $template['screen']['screen22']),
-		array("img" => "img/trex_shot4.jpg", "thumb" => "img/trex_shot4_small.jpg", "desc" => $template['screen']['screen23'])
+		array("img" => "awake_fancy.jpg", "thumb" => "awake_fancy_small.jpg", "desc" => $template['screen']['screen16']),
+		array("img" => "awake_minimalist.jpg", "thumb" => "awake_minimalist_small.jpg", "desc" => $template['screen']['screen17']),
+		array("img" => "awake_spec_windows.jpg", "thumb" => "awake_spec_windows_small.jpg", "desc" => $template['screen']['screen18']),
+		array("img" => "awake_scripter.jpg", "thumb" => "awake_scripter_small.jpg", "desc" => $template['screen']['screen19']),
+		array("img" => "trex_shot1.jpg", "thumb" => "trex_shot1_small.jpg", "desc" => $template['screen']['screen20']),
+		array("img" => "trex_shot2.jpg", "thumb" => "trex_shot2_small.jpg", "desc" => $template['screen']['screen21']),
+		array("img" => "trex_shot3.jpg", "thumb" => "trex_shot3_small.jpg", "desc" => $template['screen']['screen22']),
+		array("img" => "trex_shot4.jpg", "thumb" => "trex_shot4_small.jpg", "desc" => $template['screen']['screen23'])
 	),
 	array(
 		0 => "KVIrc 3.2.0 \"Realia\" ~ 3.2.3 CVS \"Anomalies\"",
-		array("img" => "img/snapshot9.jpg", "thumb" => "img/snapshot9_small.jpg", "desc" => $template['screen']['screen24']),
-		array("img" => "img/realia_shot_bizzia.png", "thumb" => "img/realia_smallshot_bizzia.png", "desc" => $template['screen']['screen25']),
-		array("img" => "img/snapshot10.png", "thumb" => "img/snapshot10_small.png", "desc" => $template['screen']['screen26']),
-		array("img" => "img/snapshot13.png", "thumb" => "img/snapshot13_small.png", "desc" => $template['screen']['screen27']),
-		array("img" => "img/snapshot11.png", "thumb" => "img/snapshot11_small.png", "desc" => $template['screen']['screen28']),
-		array("img" => "img/snapshot14.png", "thumb" => "img/snapshot14_small.png", "desc" => $template['screen']['screen29'])
+		array("img" => "snapshot9.jpg", "thumb" => "snapshot9_small.jpg", "desc" => $template['screen']['screen24']),
+		array("img" => "realia_shot_bizzia.png", "thumb" => "realia_smallshot_bizzia.png", "desc" => $template['screen']['screen25']),
+		array("img" => "snapshot10.png", "thumb" => "snapshot10_small.png", "desc" => $template['screen']['screen26']),
+		array("img" => "snapshot13.png", "thumb" => "snapshot13_small.png", "desc" => $template['screen']['screen27']),
+		array("img" => "snapshot11.png", "thumb" => "snapshot11_small.png", "desc" => $template['screen']['screen28']),
+		array("img" => "snapshot14.png", "thumb" => "snapshot14_small.png", "desc" => $template['screen']['screen29'])
 	),
 	array(
 		0 => "KVIrc 3.2.6 \"Anomalies\"",
-		array("img" => "img/snapshot15.png", "thumb" => "img/snapshot15_small.png", "desc" => $template['screen']['screen30']),
-		array("img" => "img/snapshot16.png", "thumb" => "img/snapshot16_small.png", "desc" => $template['screen']['screen31']),
-		array("img" => "img/snapshot17.png", "thumb" => "img/snapshot17_small.png", "desc" => $template['screen']['screen32']),
-		array("img" => "img/snapshot18.png", "thumb" => "img/snapshot18_small.png", "desc" => $template['screen']['screen33']),
-		array("img" => "img/snapshot19.png", "thumb" => "img/snapshot19_small.png", "desc" => $template['screen']['screen34'])
+		array("img" => "snapshot15.png", "thumb" => "snapshot15_small.png", "desc" => $template['screen']['screen30']),
+		array("img" => "snapshot16.png", "thumb" => "snapshot16_small.png", "desc" => $template['screen']['screen31']),
+		array("img" => "snapshot17.png", "thumb" => "snapshot17_small.png", "desc" => $template['screen']['screen32']),
+		array("img" => "snapshot18.png", "thumb" => "snapshot18_small.png", "desc" => $template['screen']['screen33']),
+		array("img" => "snapshot19.png", "thumb" => "snapshot19_small.png", "desc" => $template['screen']['screen34'])
 	)
 );
 
@@ -174,7 +174,7 @@ $screen=array(
 $scripts=array(
 	1 => array("script" => "Princoscript", "author" => "Francesco Meloni", "mail" => "francesco.melo@tiscali.REMOVE.THE.ANTISPAM.WORDS.it", "desc" => $template['scripts']['script1'], "home" => "http://web.tiscali.it/princoscript/"),
 	array("script" => "SaNVirC", "author" => "Wunslov", "mail" => "", "desc" => $template['scripts']['script2'], "home" => "http://sanvirc.sourceforge.net/"),
-	array("script" => "Savage", "author" => "???", "mail" => "", "desc" => $template['scripts']['script3'].":<br /><code>cvs -z4 -d:pserver:anonymous@cvs.omnikron.net:/cvs co savage</code>", "home" => "http://www.cynapses.org/tmp/kvirc-script-0.7.tar.gz"),
+	array("script" => "Savage", "author" => "???", "mail" => "", "desc" => $template['scripts']['script3'], "home" => "http://www.cynapses.org/tmp/kvirc-script-0.7.tar.gz"),
 	//array("script" => "dwnKVIrc", "author" => "Klaus Weidenbach", "mail" => "Klaus.Weidenbach@gmx.REMOVE.THE.ANTISPAM.WORDS.net", "desc" => $template['scripts']['script4'], "home" => "http://dszdw.homelinux.org/~klaus/programs/kvirc/index.php")
 );
 

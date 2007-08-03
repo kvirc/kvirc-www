@@ -3,6 +3,8 @@
 if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
+$path="img/banners";
+
 echo "<h1 class=\"pagetitle\">".$template['banners']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
 	echo "<br /><h3>".$template['banners']['text1']."</h3>";
