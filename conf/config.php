@@ -59,6 +59,23 @@ $addons=array(
 	array("name" => "KISS: The KVIrc Icons Style Setup", "ver" => "2.0", "min" => "3.2.6", "max" => $current, "author" => "HelLViS69", "desc" => $template['addons']['addon23'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/KISS-2.0.tar.bz2")
 );
 
+// Archive
+// array("link" => "link name", "long" => "long name")
+$months=array(
+	1 => array("link" => $template['archive']['jan'], "long" => "January"),
+	array("link" => $template['archive']['feb'], "long" => "February"),
+	array("link" => $template['archive']['mar'], "long" => "March"),
+	array("link" => $template['archive']['apr'], "long" => "April"),
+	array("link" => $template['archive']['may'], "long" => "May"),
+	array("link" => $template['archive']['jun'], "long" => "June"),
+	array("link" => $template['archive']['jul'], "long" => "July"),
+	array("link" => $template['archive']['aug'], "long" => "August"),
+	array("link" => $template['archive']['sep'], "long" => "September"),
+	array("link" => $template['archive']['oct'], "long" => "October"),
+	array("link" => $template['archive']['nov'], "long" => "November"),
+	array("link" => $template['archive']['dec'], "long" => "December")
+);
+
 // Arts
 // array("title" => "title", "author" => "author", "mail" => "email", "desc" => "description", "thumb" => "thumbnail", "down" => "download", "date" => "date")
 $arts=array(

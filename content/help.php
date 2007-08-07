@@ -1,7 +1,7 @@
 <?
 // Security check
 if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
-	echo "<script type=\"text/javascript\">location.href='../index.php';</script>";
+	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
 echo "<h1 class=\"pagetitle\">".$template['help']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
