@@ -986,7 +986,7 @@ $template['splash']['in']="Splash Present in";
 $template['status']['title']="Project Status";
 $template['status']['text']="
 	After 7 years of development KVIrc is a mature and full featured IRC client, an excellent companion for your daily IRC sessions.<br /><br />
-	The latest stable release is <a href=\"/?id=news&amp;story=2005.02.27.16.29.1.story&amp;dir=latest&amp;lang=$lang\">3.2.0 \"Realia\"</a>.
+	The latest stable release is <a href=\"/?id=news&amp;story=2005.02.27.16.29.1.story&amp;dir=2005.02&amp;lang=$lang\">3.2.0 \"Realia\"</a>.
 	It has been published on Feb 27 2005.
 	It can be obtained in source form from the <a href=\"?id=download&amp;lang=$lang\">download</a> page.<br /><br />
 	If you are looking for official releases have a look at <a href=\"?id=releases&amp;lang=$lang\">this section</a>, those are released less often but are most stable. Choose your release between Linux, Windows, MacOSX or source package.<br /><br />

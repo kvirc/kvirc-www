@@ -11,7 +11,7 @@ echo "<div class=\"column1-unit\">";
 ?>
 
 <pre>
---------------------------------------------------------------------
+--------------------------------------------------------------
  GNU GENERAL PUBLIC LICENSE
  Version 2, June 1991
  Extended by Szymon Stefanek
@@ -24,14 +24,15 @@ echo "<div class=\"column1-unit\">";
 			Preamble
 
   The licenses for most software are designed to take away your
-freedom to share and change it.  By contrast, the GNU General Public
-License is intended to guarantee your freedom to share and change
-free software--to make sure the software is free for all its users.
+freedom to share and change it.  By contrast, the GNU General
+Public License is intended to guarantee your freedom to share
+and change free software, to make sure the software is free for
+all its users.
 This General Public License applies to most of the Free Software
-Foundation's software and to any other program whose authors commit
-to using it. (Some other Free Software Foundation software is covered
-by the GNU Library General Public License instead.)  You can apply
-it to your programs, too.
+Foundation's software and to any other program whose authors
+commit to using it. (Some other Free Software Foundation software
+is covered by the GNU Library General Public License instead.)
+You can apply it to your programs, too.
 
   When we speak of free software, we are referring to freedom, not
 price.  Our General Public Licenses are designed to make sure that

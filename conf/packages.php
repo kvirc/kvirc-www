@@ -3,6 +3,8 @@
 if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
+require_once("config.php");
+
 // The available platforms
 $platform_description["source"] = "Source package (all the platforms)";
 $platform_details["source"]     = "C++ sources: you must to compile them to obtain a working executable. This means that you need a compiler and all the tools needed to compile a program on your system.";
@@ -71,7 +73,7 @@ if((strpos($hua,'Windows') !== false) || (strpos($hua,'WinXP') !== false))
 {
 	$quickdownload_link = $ftp_mirror_link[0]."/3.2.0/binary/macosx/KVirc-3.2.0.dmg";
 } else {
-	$quickdownload_link = $ftp_mirror_link[0]."/3.2.0/source/kvirc-3.2.0.tar.bz2";
+	$quickdownload_link = $ftp_mirror[1]['url']."/3.2.0/source/kvirc-3.2.0.tar.bz2";
 }
 
 $quickdownload_version = "3.2.0";

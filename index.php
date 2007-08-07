@@ -204,9 +204,9 @@ search();
 						if(basename($latestnews[$i])=="") break;
 						$x["dummy"] = "";
 						news_read_entry($latestnews[$i],$x);
-						echo "<dt><a href=\"?id=news&amp;lang=$lang&amp;story=".basename($latestnews[$i])."&amp;dir=latest\">".$x["day"]." ".$x["monthname"]." ".$x["year"]."<br />".$x['short']."</a></dt>\n";
+						echo "<dt><a href=\"?id=news&amp;story=".basename($latestnews[$i])."&amp;dir=latest&amp;lang=$lang\">".$x["day"]." ".$x["monthname"]." ".$x["year"]."<br />".$x['short']."</a></dt>\n";
 					}
-					echo "<dt><a href=\"?id=news&amp;lang=$lang&amp;dir=latest\">".$template['index']['allnews']."</a></dt>";
+					echo "<dt><a href=\"?id=news&amp;dir=latest&amp;lang=$lang\">".$template['index']['allnews']."</a></dt>";
 					?>
 				</dl>
 
