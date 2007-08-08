@@ -30,7 +30,7 @@ echo "<div class=\"column1-unit\">";
 	echo "</form>";
 
 	echo "<p>".$template['addons']['text2'].":</p>";
-	echo "<ul>";
+	echo "<ul class=\"list\">";
 		echo "<li>".$template['addons']['tree1']."</li>";
 		echo "<li>".$template['addons']['tree2']."</li>";
 		echo "<li>".$template['addons']['tree3']."</li>";

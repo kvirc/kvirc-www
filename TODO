@@ -2,28 +2,13 @@ Reorganize conf/packages.php
 
 Create section "press" where insert articles about KVirc
 
-/* reorganize template/xhtml */
-arts.php
-
 
 KNOWN BUGS
 ==========
-1) Imho this css snippet cause more problems than the one that it solve:
-
-.main img {layout4_text.css (line 117)
-... (cut)
-margin:3px 10px 7px 0pt;
-... (cut)
-}
-
-This margin definition place the images near the navigators titles in a
-strange position, causing also the first news to get that strange
-indentation. Better move it out the .main namespace?
-
-
 news:
-	some news (like this: ?id=news&lang=it&story=2006.11.04.14.50.1.story&dir=latest) shows under right column;
+some news (like this: ?id=news&lang=it&story=2006.11.04.14.50.1.story&dir=latest) shows under right column;
 
+this is caused by how the news is written. It should follow a fixed number of chars by line
 
 OTHER PROJECTS
 ==============
