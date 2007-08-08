@@ -36,8 +36,6 @@ $template['index']['releases']="official releases";
 $template['index']['snapshots']="snapshots";
 $template['index']['svn']="SVN";
 $template['index']['install']="installation";
-// builds
-$template['index']['builds']="builds";
 // documentation
 $template['index']['docs']="documentation";
 $template['index']['faq']="FAQ";

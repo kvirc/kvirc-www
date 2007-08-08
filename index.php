@@ -118,14 +118,6 @@ search();
 						</li>
 					</ul>
 					<ul>
-						<li><a href="#"><?echo $template['index']['builds'];?></a>
-							<ul>
-								<li><a href="macosx">MacOS X</a></li>
-								<li><a href="suse">SUSe</a></li>
-							</ul>
-						</li>
-					</ul>
-					<ul>
 						<li><a href="#"><?echo $template['index']['docs'];?></a>
 							<ul>
 								<li><a href="?id=faq&amp;lang=<?echo $lang;?>"><?echo $template['index']['faq'];?></a></li>
