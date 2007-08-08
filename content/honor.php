@@ -11,8 +11,7 @@ echo "<div class=\"column1-unit\">";
 	echo "<p>".$template['honor']['text2']." <a href=\"mailto:pragma@kvirc.REMOVE.THE.ANTISPAM.WORDS.net\">Pragma</a>";
 
 foreach($honor as $key => $value){
-	if(fmod($key,2)!=0)
-		echo "<div class=\"split\"><div class=\"left\">";
+	if(fmod($key,2)!=0) echo "<div class=\"split\"><div class=\"left\">";
 	else echo "<div class=\"right\">";
 
 	echo "<div class=\"img\"><img src=\"$path/".$value['image'].".png\" alt=\"".$value['nick']."'s avatar\" /></div>";

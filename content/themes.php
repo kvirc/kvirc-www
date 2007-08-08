@@ -30,8 +30,7 @@ echo "<div class=\"column1-unit\">";
 	echo "</ul>";
 
 foreach($themes as $key => $value){
-	if(fmod($key,2)!=0)
-		echo "<div class=\"split\"><div class=\"left\">";
+	if(fmod($key,2)!=0) echo "<div class=\"split\"><div class=\"left\">";
 	else echo "<div class=\"right\">";
 
 	echo "<h1>".$value['name']."&nbsp;".$value['version']."</h1>";
