@@ -15,17 +15,19 @@ foreach($arts as $key => $value){
 
 	echo "<div class=\"img\"><a href=\"$path/".$value['down']."\"><img src=\"$path/".$value['thumb']."\" alt=\"".$value['title']."\" /></a></div>";
 	
-	echo "<div class=\"desc\">";
-	echo $value['title'];
+	echo "<p>";
+	echo $value['title']."<br />";
 	
 	if($value['mail']!="")
-		echo $template['custom']['author'].": <a href=\"mailto:".$value['mail']."\">".$value['author']."</a>";
-	else echo $template['custom']['author'].": ".$value['author'];
+		echo $template['custom']['author'].": <a href=\"mailto:".$value['mail']."\">".$value['author']."</a><br />";
+	else echo $template['custom']['author'].": ".$value['author']."<br />";
 
-	echo "<br />".$template['custom']['date'].": ".$value['date']."<br />";
-	echo $template['custom']['download'].": <a href=\"$path/".$value['down']."\">".$value['down']."</a><br /><br />";
-	echo $value['desc'];
-	echo "</div>";
+	echo $template['custom']['date'].": ".$value['date'];
+	echo "</p>";
+
+	echo "<p><a href=\"$path/".$value['down']."\">".$template['custom']['download']."</a></p>";
+
+	echo "<div class=\"desc\">".$value['desc']."</div>";
 
 	// close left or right div
 	echo "</div>";

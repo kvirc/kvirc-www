@@ -71,6 +71,7 @@ search();
 			<div class="header-middle">
 				<div class="nav0">
 					<ul>
+					<?/*
 					<li><a href="?id=<?echo $id;?>&amp;lang=it" title="<?echo $template['index']['italian'];?>"><img src="./img/flags/Italy.png" alt="<?echo $template['index']['italian'];?>" /></a></li>
 					<li><a href="?id=<?echo $id;?>&amp;lang=en" title="<?echo $template['index']['english'];?>"><img src="./img/flags/United-States.png" alt="<?echo $template['index']['english'];?>" /></a></li>
 					<li><a href="?id=<?echo $id;?>&amp;lang=de" title="<?echo $template['index']['german'];?>"><img src="./img/flags/Germany.png" alt="<?echo $template['index']['german'];?>" /></a></li>
@@ -85,7 +86,7 @@ search();
 					<li><a href="?id=<?echo $id;?>&amp;lang=br" title="<?echo $template['index']['brazilian'];?>"><img src="./img/flags/Brazil.png" alt="<?echo $template['index']['brazilian'];?>" /></a></li>
 					<li><a href="?id=<?echo $id;?>&amp;lang=sr" title="<?echo $template['index']['serbian'];?>"><img src="./img/flags/Serbia.png" alt="<?echo $template['index']['serbian'];?>" /></a></li>
 					<li><a href="?id=<?echo $id;?>&amp;lang=hu" title="<?echo $template['index']['hungarian'];?>"><img src="./img/flags/Hungary.png" alt="<?echo $template['index']['hungarian'];?>" /></a></li>
-					<?/*<li><a href="?id=<?echo $id;?>&amp;lang=hr" title="<?echo $template['index']['croatian'];?>"><img src="./img/flags/Croatia.png" alt="<?echo $template['index']['croatian'];?>" /></a></li>*/?>
+					<li><a href="?id=<?echo $id;?>&amp;lang=hr" title="<?echo $template['index']['croatian'];?>"><img src="./img/flags/Croatia.png" alt="<?echo $template['index']['croatian'];?>" /></a></li>*/?>
 					</ul>
 				</div>
 			</div>
