@@ -15,7 +15,7 @@ if(($story!="")&&($dir!="")){
 	$x['dummy']="";
 	if(!news_read_entry($docRoot."/news/".$dir."/".$story,$x)){
 		echo "<h1>".$template['news']['error']."</h1>";
-		echo "<p>".$template['news']['nonews'],"</p>";
+		echo "<p>".$template['news']['nonews']."</p>";
 		echo "</div>";
 		return;
 	}
