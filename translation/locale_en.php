@@ -311,21 +311,18 @@ $template['faq']['text5a']="On Windows KVIrc seems to slow-down sometimes";
 $template['faq']['text5b']="
 	This is usually caused by the heavy graphics: try removing some graphic effects like the pseudo-transparency. I have experimented that it happens almost always on 32-bit displays. Switching to 16 or 24 bits may also help";
 $template['faq']['text6a']="How do I connect to an SSL-enabled IRC server";
-$template['faq']['text6b']="
-	Use /server -s &lt;servername&gt;<br />
-	It should work also over IPV6.<br />
+$template['faq']['text6b1']="Use";
+$template['faq']['text6b2']="It should work also over IPv6.<br />
 	If it doesn't work then your executable might have no SSL support compiled in.<br />
-	To find it out type<br /><br />
-	/echo \$features<br /><br />
-	in the KVIrc commandline. If \"SSL\" is not in the list then you must go back to the compilation phase and see what went wrong";
+	To find it out type";
+$template['faq']['text6b3']="in the KVIrc commandline. If \"SSL\" is not in the list then you must go back to the compilation phase and see what went wrong";
 $template['faq']['text7a']="How do I use DCC over SSL";
-$template['faq']['text7b']="/dcc.chat -s &lt;nickname&gt; should work";
+$template['faq']['text7b']="should work";
 $template['faq']['text8a']="Do I need a SSL certificate";
 $template['faq']['text8b']="No you shouldn't need it, but you can use it if you want";
 $template['faq']['text9a']="How do I create a SSL certificate";
 $template['faq']['text9b']="
-	A test self-signed certificate can be created by using the CA.pl perl script included in the OpenSSL distribution. It will be something like<br />
-	perl CA.pl -newcert";
+	A test self-signed certificate can be created by using the CA.pl perl script included in the OpenSSL distribution. It will be something like";
 $template['faq']['text10a']="I can't get KVIrc to use my SSL certificate in a DCC";
 $template['faq']['text10b']="
 	The SSL protocol doesn't require the \"client\" to send the certificate: it is sent only if the \"server side\" requests it (it is not the KVIrc case).<br />
@@ -368,8 +365,7 @@ $template['faq']['text16b1c']="
 	A deeper hardware problem: if upgrading the compiler and changing memory banks doesn't help then it *might* be a deeper hardware problem: bus errors , faulty IDE (or SCSI) controller or even buggy CPU... Well";
 $template['faq']['text17a']="KVIrc crashes when an URL is printed in the output window";
 $template['faq']['text17b']="
-	This might be caused by the URL module: the causes are being investigated.<br />
-	Try /url.unload";
+	This might be caused by the URL module: the causes are being investigated.<br />Try";
 $template['faq']['text18a']="KVIrc crashes when the multiline text input is opened (or in the script center)";
 $template['faq']['text18b']="
 	If you have installed a new version of KVIrc over a previous installation or if you have changed the Qt libraries that KVIrc is linked to then it might be caused by a broken multiline text editor config.<br />

@@ -3,9 +3,10 @@
 if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
-echo "<div class=\"title\">".$template['faq']['title']."</div>";
-echo "<div class=\"text\">";
-	echo "<ul>";
+echo "<h1 class=\"pagetitle\">".$template['faq']['title']."</h1>";
+echo "<div class=\"column1-unit\">";
+	echo "<ul class=\"list\">";
+		echo "<br />";
 		echo "<li><b>Q: ".$template['faq']['text1a']."?</b><br />";
 		echo "A: ".$template['faq']['text1b']."</li>";
 
@@ -13,10 +14,10 @@ echo "<div class=\"text\">";
 		echo "A: ".$template['faq']['text2b'].".</li>";
 
 		echo "<li><b>Q: ".$template['faq']['text3a']."</b><br />";
-		echo "A: ".$template['faq']['text3b1'].".<br /><br />";
-	        echo "# ping6 www.6bone.net<br /><br />";
-		echo $template['faq']['text3b2']."?<br /><br />";
-		echo "/echo \$features<br /><br />";
+		echo "A: ".$template['faq']['text3b1'];
+	        echo "<code># ping6 www.6bone.net</code>";
+		echo $template['faq']['text3b2']."?";
+		echo "<code>/echo \$features</code>";
 		echo $template['faq']['text3b3'].".</li>";
 
 		echo "<li><b>Q: ".$template['faq']['text4a']."?</b><br />";
@@ -31,16 +32,21 @@ echo "<div class=\"text\">";
 		echo "A: ".$template['faq']['text5b'].".</li>";
 
 		echo "<li><b>Q: ".$template['faq']['text6a']."?</b><br />";
-		echo "A: ".$template['faq']['text6b'].".</li>";
+		echo "A: ".$template['faq']['text6b1'];
+		echo "<code>/server -s &lt;servername&gt;</code>";
+		echo $template['faq']['text6b2'];
+		echo "<code>/echo \$features</code>";
+		echo $template['faq']['text6b3']."</li>";
 
 		echo "<li><b>Q: ".$template['faq']['text7a']."?</b><br />";
-		echo "A: ".$template['faq']['text7b'].".</li>";
+		echo "A: <code>/dcc.chat -s &lt;nickname&gt;</code> ".$template['faq']['text7b'].".</li>";
 
 		echo "<li><b>Q: ".$template['faq']['text8a']."?</b><br />";
 		echo "A: ".$template['faq']['text8b'].".</li>";
 
 		echo "<li><b>Q: ".$template['faq']['text9a']."?</b><br />";
-		echo "A: ".$template['faq']['text9b']."</li>";
+		echo "A: ".$template['faq']['text9b'];
+		echo "<code>perl CA.pl -newcert</code></li>";
 
 		echo "<li><b>Q: ".$template['faq']['text10a']."</b><br />";
 		echo "A: ".$template['faq']['text10b'].".</li>";
@@ -71,7 +77,8 @@ echo "<div class=\"text\">";
 		echo "</ol></li>";
 
 		echo "<li><b>Q: ".$template['faq']['text17a']."</b><br />";
-		echo "A: ".$template['faq']['text17b']."</li>";
+		echo "A: ".$template['faq']['text17b'];
+		echo "<code>/url.unload</code></li>";
 
 		echo "<li><b>Q: ".$template['faq']['text18a']."</b><br />";
 		echo "A: ".$template['faq']['text18b'].".</li>";

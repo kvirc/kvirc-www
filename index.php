@@ -34,6 +34,7 @@ search();
 	<meta http-equiv="cache-control" content="no-cache" />
 	<meta name="robots" content="index,follow" />
 	<meta name="copyright" content="etherea` ./LSD @ virg0.org | CreativeCode | KVIrc.net" />
+	<meta name="copyright" content="HelLViS69 hellvis69 @ netsons.org | GPL | KVIrc.net" />
 	<meta name="author" content="etherea` - graphics - ./LSD @ virg0.org" />
 	<meta name="author" content="HelLViS69 - code - hellvis69 @ netsons.org" />
 	<meta name="distribution" content="global" />
