@@ -84,7 +84,7 @@ $template['index']['mirrorstext2']="Also, non European ftps are gladly needed.";
 $template['index']['mirrorstitle']="www and ftp mirroring";
 // layouts
 $template['index']['oldlayout']="old site layouts";
-$template['index']['oldsite']="old KVIrc site by iakko";
+$template['index']['oldsite']="old KVIrc site";
 $template['index']['iakkohome']="iakko's home";
 // help
 $template['index']['helptext1a']="if you need any help the fastest way is to refer to the";
