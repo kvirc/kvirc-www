@@ -162,7 +162,7 @@ search();
 						</li>
 					</ul>
 					<ul>
-						<li><a href="http://forum.kvirc.ru/" target="_blank" title="KVIrc forum"><?echo $template['index']['forum'];?></a></li>
+						<li><a href="http://forum.kvirc.ru/" target="_blank"><?echo $template['index']['forum'];?></a></li>
 					</ul>
 				</div>
 			</div>

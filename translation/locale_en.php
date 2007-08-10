@@ -236,7 +236,7 @@ $template['contribute']['text17']="
 $template['contribute']['text18']="Who to contact";
 $template['contribute']['text19']="
 	Once you decide that you want to contribute in some way you can mail your proposal to <a href=\"mailto:pragma@kvirc.REMOVE.THE.ANTISPAM.WORDS.net\">Pragma</a>.<br />
-	Another place where you can announce your availability/proposal is the <a href=\"irc://chat.ircnet.org/#kvirc\">#kvirc</a> IRC channel on IRCNet, <a href=\"irc://irc.azzurra.org/#KVIrc.net\">#KVIrc.net</a> on Azzurra or <a href=\"irc://irc.freenode.org/#kvirc\">#kvirc</a> on FreeNode (formerly known as OpenProjects network).";
+	Another place where you can announce your availability/proposal is the <a href=\"irc://chat.ircnet.org/#kvirc\">#KVIrc</a> IRC channel on IRCNet, <a href=\"irc://irc.azzurra.org/#KVIrc.net\">#KVIrc.net</a> on Azzurra or <a href=\"irc://irc.freenode.org/#kvirc\">#KVIrc</a> on FreeNode (formerly known as OpenProjects network).";
 /* contribute.php end */
 
 /* donate.php start */
@@ -337,7 +337,7 @@ $template['faq']['text12b']="
 $template['faq']['text13a']="/me doesn't support the '&quot;' (double quote) character";
 $template['faq']['text13b']="
 	This is NOT a bug : this is a feature : a string enclosed in double quotes will have its whitespace preserved while the other strings will have the whitespace simplified. This is valid for ANY command.<br />
-	You can escape your &quot; sign by using the backslash character: /me feels a bit \"foo\" will work correctly";
+	You can escape your &quot; sign by using the backslash character: /me feels a bit \\\"foo\\\" will work correctly";
 $template['faq']['text14a']="/me can't contain the ';' character";
 $template['faq']['text14b']="
 	This is NOT a bug : this is a feature : kvirc supports multiple commands on a single line and uses ';' as a command separator. You can escape your ';' sign by using the backslash character: /me is hungry \;) will work correctly";
