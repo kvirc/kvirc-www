@@ -41,7 +41,7 @@ search();
 	<meta name="description" content="KVIrc.net - The K-Visual IRC client" />
 	<meta name="keywords" content="KVIrc, KDE, IRC, Chat, pragma" />
 	<!-- Google Diagnostic start -->
-	<meta name="verify-v1" content="Q0B/rT+mLDe7URI4WfL8NQlJ5ksx3WMAMK3K0spUib4=" />
+	<meta name="verify-v1" content="Q0B/rT+mLDe7URI4WfL8NQlJ5ksx3WMAMK3K0spUib4==" />
 	<!-- Google Diagnostic end -->
 	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="./css/layout4_setup.css" />
 	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="./css/layout4_text.css" />
