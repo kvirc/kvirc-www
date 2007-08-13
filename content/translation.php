@@ -10,7 +10,7 @@ echo "<div class=\"column1-unit\">";
 	echo "<p>".$template['translation']['text3']."</p>";
 	echo "<p>".$template['translation']['text4']."</p>";
 	?>
-	<ul>
+	<ul class="list">
 		<li><?echo $template['index']['bulgarian'];?>: <a href="mailto:bugar@developer.REMOVE.THE.ANTISPAM.WORDS.bg">Bugar</a></li>
 		<!--<li><?echo $template['index']['croatian'];?>: <a href="mailto:">SpeedyGhost</a></li>-->
 		<li><?echo $template['index']['czech'];?>: <a href="mailto:dusan@mirc.REMOVE.THE.ANTISPAM.WORDS.cz">Dusan Hokuv</a></li>

@@ -984,8 +984,8 @@ $template['status']['text']="
 	It has been published on Feb 27 2005.
 	It can be obtained in source form from the <a href=\"?id=download&amp;lang=$lang\">download</a> page.</p>
 	<p>If you are looking for official releases have a look at <a href=\"?id=releases&amp;lang=$lang\">this section</a>, those are released less often but are most stable. Choose your release between Linux, Windows, MacOSX or source package.</p>
-	<p>Snapshots are located <a href=\"?id=snapshots&amp;lang=$lang\">here</a> while SVN are found <a href=\"?id=SVN&amp;lang=$lang\">here</a>.<br /><br />
-	Also be sure to check for <a href=\"?id=install&amp;lang=$lang\">installation notes</a>, <a href=\"?id=tutorials&amp;lang=$lang\">tutorials</a>, <a href=\"?id=translation&amp;lang=$lang\">translations</a> and <a href=\"?id=themes&amp;lang=$lang\">themes</a> for a more customized version of your KVIrc =)</p>";
+	<p>Snapshots are located <a href=\"?id=snapshots&amp;lang=$lang\">here</a> while SVN are found <a href=\"?id=SVN&amp;lang=$lang\">here</a>.</p>
+	<p>Also be sure to check for <a href=\"?id=install&amp;lang=$lang\">installation notes</a>, <a href=\"?id=tutorials&amp;lang=$lang\">tutorials</a>, <a href=\"?id=translation&amp;lang=$lang\">translations</a> and <a href=\"?id=themes&amp;lang=$lang\">themes</a> for a more customized version of your KVIrc =)</p>";
 /* status.php end */
 
 /* SVN.php start */
@@ -1001,7 +1001,7 @@ $template['svn']['text3']="
 $template['svn']['text4']="
 	and then follow the common <a href=\"?id=install&amp;lang=$lang\">installation instructions</a>.<br />
 	The latest installation instructions for the SVN version of KVIrc can be also found in the INSTALL file.<br />
-	We're trying to keep the SVN as \"clean\" as possible but it *might* happen that the sources you have downloaded do not compile or run properly.<br /><br />
+	We're trying to keep the SVN as \"clean\" as possible but it *might* happen that the sources you have downloaded do not compile or run properly.<br />
 	You can also browse trough the SVN via <a href=\"https://SVN.kvirc.de/kvirc/browser/\">https://SVN.kvirc.de/</a>";
 /* SVN.php end */
 
@@ -1033,7 +1033,7 @@ $template['themes']['theme6']="Just a pink example...";
 $template['themes']['theme7']="A transparent theme meant mainly for use with the KDE background. Set for good visibility and contrast.";
 $template['themes']['theme8']="A quite relaxed theme inspired by the site http://www.PayneReactor.com";
 $template['themes']['theme9']="A nice black theme, based on other crystall theme :)";
-$template['themes']['theme10']="Another dark theme with Slackware logo";
+$template['themes']['theme10']="Another dark theme with Slackware logo and a black baghira";
 $template['themes']['theme11']="A dark theme based on XCrystall-black";
 $template['themes']['theme12']="Pure Love. Pure White. A clean, neat pure theme";
 $template['themes']['theme13']="A glass dark theme";

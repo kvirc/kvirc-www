@@ -49,7 +49,7 @@ search();
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="alternate" type="application/rss+xml" href="rss.php"  title="KVIrc News" />
 	<!-- Google Analytics start -->
-	<script type="text/javascript" src="http://www.google-analytics.com/urchin.js" />
+	<script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
 	<!-- Google Analytics end -->
 	<title>KVIrc.net - The Visual IRC Client</title>
 </head>
@@ -71,9 +71,9 @@ search();
 			<div class="header-middle">
 				<div class="nav0">
 					<ul>
-					<?/*
 					<li><a href="?id=<?echo $id;?>&amp;lang=it" title="<?echo $template['index']['italian'];?>"><img src="./img/flags/Italy.png" alt="<?echo $template['index']['italian'];?>" /></a></li>
 					<li><a href="?id=<?echo $id;?>&amp;lang=en" title="<?echo $template['index']['english'];?>"><img src="./img/flags/United-States.png" alt="<?echo $template['index']['english'];?>" /></a></li>
+					<?/*
 					<li><a href="?id=<?echo $id;?>&amp;lang=de" title="<?echo $template['index']['german'];?>"><img src="./img/flags/Germany.png" alt="<?echo $template['index']['german'];?>" /></a></li>
 					<li><a href="?id=<?echo $id;?>&amp;lang=ru" title="<?echo $template['index']['russian'];?>"><img src="./img/flags/Russia.png" alt="<?echo $template['index']['russian'];?>" /></a></li>
 					<li><a href="?id=<?echo $id;?>&amp;lang=fr" title="<?echo $template['index']['french'];?>"><img src="./img/flags/France.png" alt="<?echo $template['index']['french'];?>" /></a></li>
