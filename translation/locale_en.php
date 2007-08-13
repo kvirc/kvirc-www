@@ -20,6 +20,7 @@ $template['index']['brazilian']="Brazilian";
 $template['index']['serbian']="Serbian";
 $template['index']['hungarian']="Hungarian";
 $template['index']['croatian']="Croatian";
+$template['index']['latvian']="Latvian";
 
 // the project
 $template['index']['theproject']="the project";
