@@ -144,7 +144,7 @@ echo "<div class=\"column1-unit\">";
 		echo "<li>--with-ix86-asm<br />";
 		echo $template['install']['tree2d']."</li>";
 
-		echo "<li>--with-optimisation=&lt;NUMBER&gt;<br />";
+		echo "<li>--with-optimisation=&lt;".$template['install']['tree2e1']."&gt;<br />";
 		echo $template['install']['tree2e']."</li>";
 
 		echo "<li>--with-no-pthread-check<br />";
@@ -255,7 +255,7 @@ echo "<div class=\"column1-unit\">";
 		echo "<li>--without-info-tips<br />";
 		echo $template['install']['tree2b6']."</li>";
 
-		echo "<li>--without-gsm<br /><br />";
+		echo "<li>--without-gsm<br />";
 		echo $template['install']['tree2b7']."</li>";
 
 		echo "<li>--without-dcc-sound<br />";
@@ -293,7 +293,7 @@ echo "<div class=\"column1-unit\">";
         echo "<p>".$template['install']['text26']."</p>";
         echo "<p>".$template['install']['text27']."</p>";
 
-	echo "<code># make kvirc</code>";
+	echo "<code># make</code>";
 
         echo "<p>".$template['install']['text28']."</p>";
 

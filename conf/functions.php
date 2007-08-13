@@ -154,7 +154,7 @@ function news_split_filename($filename,&$data){
 
 // returns false if the file is unreadable
 function news_read_entry($filepath,&$data){
-	$f = fopen($filepath,"r");
+	$f = @fopen($filepath,"r");
 	if(!$f)return false;
 	$d = fread($f,16000);
 	fclose($f);
