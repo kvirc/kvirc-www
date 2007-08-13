@@ -537,8 +537,8 @@ $template['install']['step']="Step";
 $template['install']['text10']="
 	If (and ONLY IF) you're compiling the SVN version of KVIrc you need to generate the configure script.";
 $template['install']['text11']="
-	If it does not run correctly, check your auomake version.<br />
-	You need automake 1.5 older versions will NOT WORK with the current SVN.<br />
+	If it does not run correctly, check your automake version.<br />
+	You need automake 1.5, older versions will NOT WORK with the current SVN.<br />
 	You can check the automake version with the command";
 $template['install']['text12']="
 	If your automake version is lower than 1.5 upgrade it.<br />
@@ -555,12 +555,10 @@ $template['install']['tree1a']="
         The main Qt www site is www.trolltech.com.<br />
         Note for the GPL maniacs: Qt IS GPL.<br />
         The minimum required version is 3.0.5 (older versions *might* work)<br />
-        Download and install it by following the rules<br />
-        explained in the documentation that comes with the library";
+        Download and install it by following the rules explained in the documentation that comes with the library";
 $template['install']['tree1b']="
 	You need a decent pthread implementation.<br />
-        This is usually included in your distribution and is probably<br />
-        already installed. The library is libpthread.so.<br />
+        This is usually included in your distribution and is probably already installed. The library is libpthread.so.<br />
         You can look for it with the \"find\" command";
 $template['install']['tree1btext1']="On my system the output is";
 $template['install']['tree1btext2']="
@@ -603,7 +601,7 @@ $template['install']['text15']="
 	On my system qt is installed in /usr/local/kde/qt<br />
         so I actually execute";
 $template['install']['text16']="
-	If you want to compile the KDE support you might want to do the same with KDEDIR";
+	If you want to compile the KDE support you might want to do the same with \$KDEDIR";
 $template['install']['text17']="your kde dir";
 $template['install']['text18']="In my case KDE is installed in /usr/local/kde so I use";
 $template['install']['text19']="The configure script has a lot of options that can be listed by using";
