@@ -619,6 +619,7 @@ $template['install']['tree2ctext1']="somewhere_on_your_path";
 $template['install']['tree2ctext2']="All this AFTER running ./configure and BEFORE running make";
 $template['install']['tree2d']="
 	KVIrc contains some ix86 assembly routines that could performs some things faster (this is not always true, depends on the compiler). You might want to try it";
+$template['install']['tree2e1']="NUMBER";
 $template['install']['tree2e']="
 	Enables the compiler optimisation flag -o&lt;NUMBER&gt;.<br />
 	Possible values are 0 , 1, 2 and 3 (but if you compiler supports more optimisation levels, you might use other numbers here).<br />
