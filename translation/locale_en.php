@@ -906,7 +906,7 @@ $template['screen']['screen5']="Channel Popup menus";
 $template['screen']['screen6']="Channel Ban &amp; Mode Dialogs";
 $template['screen']['screen7']="Help and directory browser";
 $template['screen']['screen8']="Directory browser";
-$template['screen']['screen9']="KVIrc SVN happily running on Solaris";
+$template['screen']['screen9']="KVIrc CVS happily running on Solaris";
 $template['screen']['screen10']="Window list, DCC send and Userlist Popup";
 $template['screen']['screen11']="I/O Graph, Terminal Emulator and Avatars";
 $template['screen']['screen12']="3 active server connections";
@@ -952,7 +952,7 @@ $template['scripts']['script1']="
 $template['scripts']['script2']="
 	SaNVirC is a script for KVirc that includes functions like nick identification, autojoin, defense, attack, bots management, an away system, etc.<br /> It was written for IRC-Hispano bots but is very easy to adapt to other servers.";
 $template['scripts']['script3']="
-	Savage Script is a script for Gamers with XQF support, system informations, qauth...<br />You can download it from the SVN, with this commandline";
+	Savage Script is a script for Gamers with XQF support, system informations, qauth...";
 $template['scripts']['script4']="
 	This is the first public release of the script with some improvements for the notify list. It also adds AutoOp, AutoVoice functions, fix OPless chan, etc.";
 /* scripts.php end */
@@ -979,13 +979,13 @@ $template['splash']['in']="Splash Present in";
 /* status.php start */
 $template['status']['title']="Project Status";
 $template['status']['text']="
-	After 7 years of development KVIrc is a mature and full featured IRC client, an excellent companion for your daily IRC sessions.<br /><br />
-	The latest stable release is <a href=\"/?id=news&amp;story=2005.02.27.16.29.1.story&amp;dir=2005.02&amp;lang=$lang\">3.2.0 \"Realia\"</a>.
+	<p>After 7 years of development KVIrc is a mature and full featured IRC client, an excellent companion for your daily IRC sessions.</p>
+	<p>The latest stable release is <a href=\"/?id=news&amp;story=2005.02.27.16.29.1.story&amp;dir=2005.02&amp;lang=$lang\">3.2.0 \"Realia\"</a>.
 	It has been published on Feb 27 2005.
-	It can be obtained in source form from the <a href=\"?id=download&amp;lang=$lang\">download</a> page.<br /><br />
-	If you are looking for official releases have a look at <a href=\"?id=releases&amp;lang=$lang\">this section</a>, those are released less often but are most stable. Choose your release between Linux, Windows, MacOSX or source package.<br /><br />
-	Snapshots are located <a href=\"?id=snapshots&amp;lang=$lang\">here</a> while SVN are found <a href=\"?id=SVN&amp;lang=$lang\">here</a>.<br /><br />
-	Also be sure to check for <a href=\"?id=install&amp;lang=$lang\">installation notes</a>, <a href=\"?id=tutorials&amp;lang=$lang\">tutorials</a>, <a href=\"?id=translation&amp;lang=$lang\">translations</a> and <a href=\"?id=themes&amp;lang=$lang\">themes</a> for a more customized version of your KVIrc =)";
+	It can be obtained in source form from the <a href=\"?id=download&amp;lang=$lang\">download</a> page.</p>
+	<p>If you are looking for official releases have a look at <a href=\"?id=releases&amp;lang=$lang\">this section</a>, those are released less often but are most stable. Choose your release between Linux, Windows, MacOSX or source package.</p>
+	<p>Snapshots are located <a href=\"?id=snapshots&amp;lang=$lang\">here</a> while SVN are found <a href=\"?id=SVN&amp;lang=$lang\">here</a>.<br /><br />
+	Also be sure to check for <a href=\"?id=install&amp;lang=$lang\">installation notes</a>, <a href=\"?id=tutorials&amp;lang=$lang\">tutorials</a>, <a href=\"?id=translation&amp;lang=$lang\">translations</a> and <a href=\"?id=themes&amp;lang=$lang\">themes</a> for a more customized version of your KVIrc =)</p>";
 /* status.php end */
 
 /* SVN.php start */
