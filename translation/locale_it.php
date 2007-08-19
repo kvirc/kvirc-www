@@ -633,7 +633,7 @@ $template['install']['tree2i']="
 	Usa &lt;NOME&gt; invece di \"qt\" come nome della libreria Qt.<br />
 	Questo serve su sistemi dove Qt &egrave; stata installata con un nome differente del default \"qt\".<br />
 	Succede spesso che per permettere diverse copie di Qt la nuova abbia la versione in fondo al nome.<br />
-	Per esempio, su FreeBSD ho trovato \"qt\" come Qt1.* e \"qt2\" come Qt2.*. Dal momento che ti serve Qt 2.* per compilare kvirc, devi usare --with-qt-name=qt2.<br />
+	Per esempio, su FreeBSD ho trovato \"qt\" come Qt1.* e \"qt2\" come Qt2.*. Dal momento che ti serve Qt 3.* per compilare kvirc, devi usare --with-qt-name=qt3.<br />
 	Se usi questa opzione, probabilmente dovrai remappare il nome/path del compilatore moc con --with-qt-moc";
 $template['install']['tree2j']="
 	Disabilita il controllo delle versioni multithread di Qt. Per default, KVIrc cercher&agrave; di linkare la versione multithread se trovata sul sistema.<br />
