@@ -52,6 +52,63 @@ search();
 	<script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
 	<!-- Google Analytics end -->
 	<title>KVIrc.net - The Visual IRC Client</title>
+<!-- AKVS head start v1.4 -->
+	<style type="text/css">
+	<!--
+	div#akct {
+        	position: absolute; top:0px; right: 0px; z-index: 2342; width:113px; height:88px;
+	        background-image: url(http://wiki.vorratsdatenspeicherung.de/images/Akvse.gif);
+        	background-repeat: no-repeat;
+	        background-position: right top;
+        	border:none;
+	        padding:0;
+	        margin:0;
+	        text-align: right;
+	}
+	div#akct img {
+	        border:none;
+	        padding:0;
+	        margin:0;
+	        background: none;
+	}
+	div#akct a#akpeel img {
+        	width: 100%;
+	        height: 100%;
+	}
+
+	div#akct a, div#akct a:hover {
+	        text-decoration: none;
+	        border:none;
+	        padding:0;
+	        margin:0;
+	        display: block;
+	        background: none;
+	}
+	div#akct a#akpeel:hover {
+	        position: absolute; top:0px; right: 0px; z-index: 4223; width:500px; height:500px;
+	        display: block;
+	        background-image: url(http://wiki.vorratsdatenspeicherung.de/images/Akvsb.gif);
+	        background-repeat: no-repeat;
+	        background-position: right top;
+	}
+	div#akct a#akpreload
+	{
+	        background-image: url(http://wiki.vorratsdatenspeicherung.de/images/Akvsb.gif);
+	        background-repeat: no-repeat;
+	        background-position: 234px 0px;
+	}
+	-->
+	</style>
+	<!--[if gte IE 5.5]>
+	<![if lt IE 7]>
+	<style type="text/css">
+	div#akct a#akpeel:hover {
+	                right: -1px;
+	}
+	</style>
+	<![endif]>
+	<![endif]-->
+<!-- AKVS head end -->
 </head>
 <body>
 	<!-- Google Analytics start -->
