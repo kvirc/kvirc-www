@@ -52,50 +52,53 @@ search();
 	<script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
 	<!-- Google Analytics end -->
 	<title>KVIrc.net - The Visual IRC Client</title>
-<!-- AKVS head start v1.4 -->
+<!-- AKVS head start v1.5 -->
 	<style type="text/css">
 	<!--
 	div#akct {
-        	position: absolute; top:0px; right: 0px; z-index: 2342; width:113px; height:88px;
-	        background-image: url(http://wiki.vorratsdatenspeicherung.de/images/Akvse.gif);
-        	background-repeat: no-repeat;
-	        background-position: right top;
-        	border:none;
-	        padding:0;
-	        margin:0;
-	        text-align: right;
+		position: absolute; top:0px; right: 0px; z-index: 2342; width:113px; height:88px;
+		background-image: url(http://wiki.vorratsdatenspeicherung.de/images/Akvse.gif);
+		background-repeat: no-repeat;
+		background-position: right top;
+		border:none;
+		padding:0;
+		margin:0;
+		text-align: right;
 	}
+
 	div#akct img {
-	        border:none;
-	        padding:0;
-	        margin:0;
-	        background: none;
+		border:none;
+		padding:0;
+		margin:0;
+		background: none;
 	}
+
 	div#akct a#akpeel img {
-        	width: 100%;
-	        height: 100%;
+	        width: 113px;
+	        height: 88px;
 	}
 
 	div#akct a, div#akct a:hover {
-	        text-decoration: none;
-	        border:none;
-	        padding:0;
-	        margin:0;
-	        display: block;
-	        background: none;
+		text-decoration: none;
+		border:none;
+		padding:0;
+		margin:0;
+		display: block;
+		background: none;
 	}
+
 	div#akct a#akpeel:hover {
-	        position: absolute; top:0px; right: 0px; z-index: 4223; width:500px; height:500px;
-	        display: block;
-	        background-image: url(http://wiki.vorratsdatenspeicherung.de/images/Akvsb.gif);
-	        background-repeat: no-repeat;
-	        background-position: right top;
+		position: absolute; top:0px; right: 0px; z-index: 4223; width:500px; height:500px;
+		display: block;
+		background-image: url(http://wiki.vorratsdatenspeicherung.de/images/Akvsb.gif);
+		background-repeat: no-repeat;
+		background-position: right top;
 	}
-	div#akct a#akpreload
-	{
-	        background-image: url(http://wiki.vorratsdatenspeicherung.de/images/Akvsb.gif);
-	        background-repeat: no-repeat;
-	        background-position: 234px 0px;
+
+	div#akct a#akpreload {
+		background-image: url(http://wiki.vorratsdatenspeicherung.de/images/Akvsb.gif);
+		background-repeat: no-repeat;
+		background-position: 234px 0px;
 	}
 	-->
 	</style>
@@ -103,13 +106,12 @@ search();
 	<![if lt IE 7]>
 	<style type="text/css">
 	div#akct a#akpeel:hover {
-	                right: -1px;
+			right: -1px;
 	}
 	</style>
 	<![endif]>
 	<![endif]-->
 <!-- AKVS head end -->
-</head>
 <body>
 	<!-- Google Analytics start -->
 	<script type="text/javascript">
@@ -347,6 +349,6 @@ search();
 			<p class="credits"><a href="http://validator.w3.org/check/referer" title="Validate XHTML code">XHTML 1.1</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Validate CSS code">CSS 2.0</a> | credits</p>
 		</div>
 	</div>
-<?php if ((stristr($servername, 'kvirc.de')) || (stristr($servername, 'cyconet.org')) || (stristr($servername, 'ipv6.kvirc.net'))){ echo "<div id=\"akct\"><a id=\"akpeel\" href=\"http://www.vorratsdatenspeicherung.de\" target=\"_blank\" title=\"Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!\"><img src=\"http://wiki.vorratsdatenspeicherung.de/images/Akvst.gif\" alt=\"Stoppt die Vorratsdatenspeicherung! Jetzt klicken &&amp; handeln!\" /></a><a id=\"akpreload\" href=\"http://wiki.vorratsdatenspeicherung.de/?title=Online_Demo\" target=\"_blank\" title=\"Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:\"><img src=\"http://wiki.vorratsdatenspeicherung.de/images/Akvsi.gif\" alt=\"Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:\" /></a></div>\n"; } ?>
+<?php if ((stristr($servername, 'kvirc.de')) || (stristr($servername, 'cyconet.org')) || (stristr($servername, 'ipv6.kvirc.net'))){ echo "<div id=\"akct\"><a id=\"akpeel\" href=\"http://www.vorratsdatenspeicherung.de\" target=\"_blank\" title=\"Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!\"><img src=\"http://wiki.vorratsdatenspeicherung.de/images/Akvst.gif\" alt=\"Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!\" /></a><a id=\"akpreload\" href=\"http://wiki.vorratsdatenspeicherung.de/?title=Online_Demo\" target=\"_blank\" title=\"Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:\"><img src=\"http://wiki.vorratsdatenspeicherung.de/images/Akvsi.gif\" alt=\"Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:\" /></a></div>\n"; } ?>
 </body>
 </html>
