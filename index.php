@@ -8,7 +8,6 @@ require("conf/packages.php");
 require("conf/functions.php");
 
 // Set environment
-setenv();
 $docRoot=$_SERVER['DOCUMENT_ROOT'].dirname($_SERVER['SCRIPT_NAME']);
 
 // Get the page using GET value
