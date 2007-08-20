@@ -290,5 +290,6 @@ search();
 			<p class="credits"><a href="http://validator.w3.org/check/referer" title="Validate XHTML code">XHTML 1.1</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Validate CSS code">CSS 2.0</a> | credits</p>
 		</div>
 	</div>
+<?php if ((stristr($servername, 'kvirc.de')) || (stristr($servername, 'cyconet.org')) || (stristr($servername, 'ipv6.kvirc.net'))){ echo "<div id=\"akct\"><a id=\"akpeel\" href=\"http://www.vorratsdatenspeicherung.de\" target=\"_blank\" title=\"Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!\"><img src=\"http://wiki.vorratsdatenspeicherung.de/images/Akvst.gif\" alt=\"Stoppt die Vorratsdatenspeicherung! Jetzt klicken &&amp; handeln!\" /></a><a id=\"akpreload\" href=\"http://wiki.vorratsdatenspeicherung.de/?title=Online_Demo\" target=\"_blank\" title=\"Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:\"><img src=\"http://wiki.vorratsdatenspeicherung.de/images/Akvsi.gif\" alt=\"Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:\" /></a></div>\n"; } ?>
 </body>
 </html>
