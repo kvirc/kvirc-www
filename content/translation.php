@@ -56,14 +56,13 @@ echo "<div class=\"column1-unit\">";
 	echo "<h1>".$template['translation']['step']." 3: ".$template['translation']['text14']."</h1>";
 	echo "<p>".$template['translation']['text15a']."</p>";
 	echo "<p>".$template['translation']['text15b']."</p>";
-	?>
-	<code>
-	#: A file named kvirc.pot will be created. You have to rename this file to kvirc_xxx.po, where xxx is your language code found in Step 1.
-	msgid "Translating the messages"
-	msgstr "The translation goes here"
-	</code>
 
-	<?
+	echo "<code>";
+	echo "#: ".$template['translation']['text100a']."<br />";
+	echo "msgid \"".$template['translation']['text100b']."\"<br />";
+	echo "msgstr \"".$template['translation']['text100c']."\"";
+	echo "</code>";
+
 	echo "<p>".$template['translation']['text16']."</p>";
 	echo "<p>".$template['translation']['text17']."</p>";
 

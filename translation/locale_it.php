@@ -455,7 +455,7 @@ $template['honor']['text2']="Questa lista &egrave; ben lontana dall'essere compl
 $template['honor']['text3']="Se il tuo avatar non appare, o &egrave; sbagliato, inviami la giusta immagine. Se hai trovato qualcosa di sbagliato, link rotti, o qualcosa di mancante nella pagina, manda una mail a";
 $template['honor']['made1']="Il \"Creatore\" di KVIrc. Lavoro mentale, lavoro manuale, consumo di occhi e bevitore di caff&egrave;";
 $template['honor']['quote1']="I'll check... lemme check...&quot;<br />&quot;I'll fix it tomorrow...&quot;<br />&quot;KVIrc: the client that can't make coffee";
-$template['honor']['made2']="Webmaster, cacciatore di bug, manutentore di snapshot, supporta gay^Wguy :o) e l'uomo che fa andare KVIrc su IPv6. Fornisce il servizio SVN, mirror WWW e FTP, banda";
+$template['honor']['made2']="Webmaster, cacciatore di bug, manutentore di snapshot, supporta gay^Wguy :o) e l'uomo che fa andare KVIrc su IPv6";
 $template['honor']['made3']="Documentazione, ricerca di bug, relazioni pubbliche";
 $template['honor']['quote3']="No idea of what you're talking about... or why you need it :)";
 $template['honor']['made4']="Cacciatore di bug, sviluppatore di plugin, fix dei bug, porting su windows e snapshot";
@@ -507,7 +507,7 @@ $template['honor']['made30']="L'uomo KDE! Si assicura che KVIrc sia una ragione 
 $template['honor']['quote30']="Could I please make KVIrc a pure KDE application today?? Pleeease...";
 $template['honor']['made31']="Alcuni \"piccoli\" pezzi di codice.";
 $template['honor']['quote32']="&lt;Error403&gt;Number1: I imagined you looking crazy :)&quot;<br />&quot;&lt;NumeroUno&gt; I was drunk";
-$template['honor']['made33']="La \"mano aperta\" per il progetto KVIrc. Grandi idee e si diverte mentre programma.";
+$template['honor']['made33']="La \"mano aperta\" per il progetto KVIrc. Fornisce il servizio SVN, mirror WWW e FTP, banda, grandi idee e si diverte mentre programma.";
 $template['honor']['made34']="Caccia ai bug, nuove idee :)";
 $template['honor']['quote34']="buy a pigeon traveller and pass dcc transfers to him";
 $template['honor']['made35']="Vari migliorie funky.";
@@ -1085,6 +1085,9 @@ $template['translation']['text15a']="
 	Se non c'&egrave; torna al Passo 2.";
 $template['translation']['text15b']="
 	Il file <code>kvirc_xxx.po</code> contiene un set di stringhe come la seguente:";
+$template['translation']['text100a']="/percorso/al/file/che/contiene/la/stringa: numero della linea";
+$template['translation']['text100b']="Messaggio da tradurre";
+$template['translation']['text100c']="La traduzione va qui";
 $template['translation']['text16']="
 	La stringa <i>msgid</i> &egrave; il messaggio originale che deve essere tradotto e la stringa <i>msgstr</i> &egrave; la traduzione (che sar&agrave; vuota all'inizio, quando il file <code>kvirc_xxx.po</code> viene creato).";
 $template['translation']['text17']="
