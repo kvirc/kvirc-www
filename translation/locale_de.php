@@ -779,7 +779,7 @@ $template['ml']['text1b']="
 $template['ml']['text2']="Web-Schnittstelle";
 $template['ml']['text3']="
 	Die Mailingliste hat <a href=\"http://lists.omikron.net/mailman/listinfo/kvirc/\">hier</a> ein Interface.<br />
-	Über dieses Interface kannst Du die Liste abonnieren, das Abo kündigen und Deine Daten verwalten.":
+	Über dieses Interface kannst Du die Liste abonnieren, das Abo kündigen und Deine Daten verwalten.";
 $template['ml']['text4']="Um per E-Mail zu abonnieren";
 $template['ml']['text5']="
 	Sende eine leere E-Mail (leerer Hauptteil, leerer Betreff) an <a href=\"mailto:kvirc-subscribe@lists.omnikron.net\">diese Adresse</a>, von der Adresse, mit der Du die Liste abonnieren willst.<br />
