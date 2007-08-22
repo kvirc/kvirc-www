@@ -120,15 +120,14 @@ search();
 	<!-- Google Analytics end -->
 	<div class="page-container">
 		<div class="header">
-			<div class="header-top">
-			</div>
+			<div class="header-top"></div>
 			<div class="header-middle">
 				<div class="nav0">
 					<ul>
 					<li><a href="?id=<?echo $id;?>&amp;lang=it" title="<?echo $template['index']['italian'];?>"><img src="./img/flags/Italy.png" alt="<?echo $template['index']['italian'];?>" /></a></li>
 					<li><a href="?id=<?echo $id;?>&amp;lang=en" title="<?echo $template['index']['english'];?>"><img src="./img/flags/United-States.png" alt="<?echo $template['index']['english'];?>" /></a></li>
-					<?/*
 					<li><a href="?id=<?echo $id;?>&amp;lang=de" title="<?echo $template['index']['german'];?>"><img src="./img/flags/Germany.png" alt="<?echo $template['index']['german'];?>" /></a></li>
+					<?/*
 					<li><a href="?id=<?echo $id;?>&amp;lang=ru" title="<?echo $template['index']['russian'];?>"><img src="./img/flags/Russia.png" alt="<?echo $template['index']['russian'];?>" /></a></li>
 					<li><a href="?id=<?echo $id;?>&amp;lang=fr" title="<?echo $template['index']['french'];?>"><img src="./img/flags/France.png" alt="<?echo $template['index']['french'];?>" /></a></li>
 					<li><a href="?id=<?echo $id;?>&amp;lang=es" title="<?echo $template['index']['spanish'];?>"><img src="./img/flags/Spain.png" alt="<?echo $template['index']['spanish'];?>" /></a></li>
