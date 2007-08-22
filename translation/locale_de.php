@@ -5,761 +5,757 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 
 /* index.php start */
 // languages
-$template['index']['italian']="Italian";
-$template['index']['english']="English";
-$template['index']['german']="German";
-$template['index']['russian']="Russian";
-$template['index']['french']="French";
-$template['index']['spanish']="Spanish";
-$template['index']['bulgarian']="Bulgarian";
-$template['index']['czech']="Czech";
-$template['index']['dutch']="Dutch";
-$template['index']['polish']="Polish";
-$template['index']['portuguese']="Portuguese";
-$template['index']['brazilian']="Brazilian";
-$template['index']['serbian']="Serbian";
-$template['index']['hungarian']="Hungarian";
-$template['index']['croatian']="Croatian";
-$template['index']['latvian']="Latvian";
+$template['index']['italian']="italienisch";
+$template['index']['english']="englisch";
+$template['index']['german']="deutsch";
+$template['index']['russian']="russisch";
+$template['index']['french']="französisch";
+$template['index']['spanish']="spanisch";
+$template['index']['bulgarian']="bulgarisch";
+$template['index']['czech']="tschechisch";
+$template['index']['dutch']="niederländisch";
+$template['index']['polish']="polnisch";
+$template['index']['portuguese']="portugiesisch";
+$template['index']['brazilian']="brasilianisch";
+$template['index']['serbian']="serbisch";
+$template['index']['hungarian']="ungarisch";
+$template['index']['croatian']="kroatisch";
+$template['index']['latvian']="lettisch";
 
 // the project
-$template['index']['theproject']="the project";
-$template['index']['status']="status";
-$template['index']['features']="features";
-$template['index']['license']="license";
-$template['index']['require']="requirements";
-$template['index']['screens']="screenshots";
-$template['index']['bugtrack']="KVIrc bugtrack";
+$template['index']['theproject']="das Projekt";
+$template['index']['status']="Status";
+$template['index']['features']="Eigenschaften";
+$template['index']['license']="Lizenz";
+$template['index']['require']="Voraussetzungen";
+$template['index']['screens']="Bildschirmfotos";
+$template['index']['bugtrack']="KVIrc Fehlerdatenbank";
 // running kvirc
-$template['index']['running']="running KVIrc";
-$template['index']['download']="download";
-$template['index']['releases']="official releases";
-$template['index']['snapshots']="snapshots";
+$template['index']['running']="KVIrc benutzen";
+$template['index']['download']="runterladen";
+$template['index']['releases']="offizielle Veröffentlichungen";
+$template['index']['snapshots']="Momentaufnahme";
 $template['index']['svn']="SVN";
-$template['index']['install']="installation";
+$template['index']['install']="Installation";
 // documentation
-$template['index']['docs']="documentation";
-$template['index']['faq']="FAQ";
-$template['index']['kviman']="KVIrc manual";
-$template['index']['tutorials']="tutorials";
-$template['index']['translations']="translations";
+$template['index']['docs']="Dokumentation";
+$template['index']['faq']="häufig gestellte Fragen";
+$template['index']['kviman']="KVIrc Handbuch";
+$template['index']['tutorials']="Tutorien";
+$template['index']['translations']="Übersetzungen";
 // graphic suite
-$template['index']['graphsuite']="graphic suite";
-$template['index']['themes']="themes";
-$template['index']['splash']="splash screens";
-$template['index']['banners']="banners";
-$template['index']['arts']="arts";
+$template['index']['graphsuite']="Grafiken";
+$template['index']['themes']="Themen";
+$template['index']['splash']="Begrüßungsbildschirme";
+$template['index']['banners']="Banner";
+$template['index']['arts']="Kunst";
 // misc
-$template['index']['misc']="misc";
-$template['index']['honor']="honor &amp; glory";
-$template['index']['scripts']="scripts";
-$template['index']['addons']="addons";
-$template['index']['tools']="tools";
-$template['index']['changelog']="changeLog";
-$template['index']['svncommits']="SVN commits";
+$template['index']['misc']="Verschiedenes";
+$template['index']['honor']="Ehre &amp; Ruhm";
+$template['index']['scripts']="Skripte";
+$template['index']['addons']="Zusätze";
+$template['index']['tools']="Werkzeuge";
+$template['index']['changelog']="Änderungsliste";
+$template['index']['svncommits']="SVN Einreichungen";
 // contact
-$template['index']['contact']="contact";
-$template['index']['ml']="KVIrc mailing list";
-$template['index']['archive']="archive";
-$template['index']['contribute']="collaboration";
-$template['index']['help']="finding help";
-$template['index']['donation']="make a donation";
+$template['index']['contact']="Kontakt";
+$template['index']['ml']="KVIrc Mailingliste";
+$template['index']['archive']="Archiv";
+$template['index']['contribute']="Zusammenarbeit";
+$template['index']['help']="Hilfe finden";
+$template['index']['donation']="Spenden";
 // forum
-$template['index']['forum']="forum";
+$template['index']['forum']="Forum";
 // other
-$template['index']['quickdnl']="quick download";
+$template['index']['quickdnl']="schnell herunterladen";
 // search
-$template['index']['search']="Search";
-$template['index']['go']="GO";
+$template['index']['search']="Suche";
+$template['index']['go']="los";
 // news
-$template['index']['latestnews']="latest news";
-$template['index']['allnews']="All News";
+$template['index']['latestnews']="Neuigkeiten";
+$template['index']['allnews']="Alle Neuheiten";
 // mirrors
-$template['index']['mirrors']="mirrors";
-$template['index']['wwwmirrors']="WWW mirrors";
-$template['index']['ftpmirrors']="FTP mirrors";
-$template['index']['mirrorstext1a']="Contributing to the KVIrc project by mirroring its files is really easy and appreciated; in";
-$template['index']['mirrorstext1b']="this page";
-$template['index']['mirrorstext1c']="you'll find step by step instructions to create a www or ftp mirror (or both).";
-$template['index']['mirrorstext2']="Also, non European ftps are gladly needed.";
-$template['index']['mirrorstitle']="www and ftp mirroring";
+$template['index']['mirrors']="Spiegelserver";
+$template['index']['wwwmirrors']="WWW Spiegel";
+$template['index']['ftpmirrors']="FTP Spiegel";
+$template['index']['mirrorstext1a']="Dem KVIrc-Projekt zu helfen, indem man Dateien spiegelt ist wirklich einfach und erwünscht; auf";
+$template['index']['mirrorstext1b']="dieser Seite";
+$template['index']['mirrorstext1c']="findest Du eine Schritt-für-Schritt-Anleitung, um einen www- oder ftp-Spiegelserver (oder beides) zu erstellen.";
+$template['index']['mirrorstext2']="Ebenso werden aussereuropäische FTP-Server gebraucht.";
+$template['index']['mirrorstitle']="www und ftp Spiegelung";
 // layouts
-$template['index']['oldlayout']="old site layouts";
-$template['index']['oldsite']="old KVIrc site";
-$template['index']['iakkohome']="iakko's home";
+$template['index']['oldlayout']="Alte Seitenlayouts";
+$template['index']['oldsite']="alte KVIrc Seite";
+$template['index']['iakkohome']="iakko's Homepage";
 // help
-$template['index']['helptext1a']="if you need any help the fastest way is to refer to the";
-$template['index']['helptext1b']="KVIrc public mailing list";
-$template['index']['helptext1c']="or join dedicated channels";
+$template['index']['helptext1a']="Wenn Du Hilfe brauchst, wende Dich an die";
+$template['index']['helptext1b']="öffentliche KVIrc Mailingliste";
+$template['index']['helptext1c']="oder die entsprechenden IRC-Kanäle zu nutzen:";
 // bugs
-$template['index']['bugreport']="bug report";
-$template['index']['bugstext']="bugs can be reported and viewed by using the KVIrc bugtrack system available at the";
+$template['index']['bugreport']="Fehlermeldung";
+$template['index']['bugstext']="Fehler können in der KVIrc-Fehlerdatenbank gemeldet und eingesehen werden:";
 // more docs
-$template['index']['moredocs']="more docs";
-$template['index']['officialdocs']="KVIrc official documentation";
-$template['index']['docsauto']="autogenerated index query";
+$template['index']['moredocs']="Mehr Dokumentation";
+$template['index']['officialdocs']="offizielle KVIrc Dokumentation";
+$template['index']['docsauto']="automatisch generierter Index";
 // other
-$template['index']['latestscreen']="latest screenshot";
-$template['index']['footer']="this site is best viewed with a monitor";
+$template['index']['latestscreen']="neueste Bildschirmfotos";
+$template['index']['footer']="Diese Seite ist am besten zu betrachten mit einem Monitor";
 /* index.php end */
 
 /* custom vars start */
-$template['custom']['author']="Author";
-$template['custom']['description']="Description";
+$template['custom']['author']="Autor";
+$template['custom']['description']="Beschreibung";
 $template['custom']['homepage']="Homepage";
 $template['custom']['download']="Download";
-$template['custom']['date']="Date";
-$template['custom']['size']="Size";
+$template['custom']['date']="Datum";
+$template['custom']['size']="Größe";
 $template['custom']['version']="Version";
-$template['custom']['type']="Type";
+$template['custom']['type']="Typ";
 /* custom vars end */
 
 /* addons.php start */
-$template['addons']['title']="Addons";
-$template['addons']['text1']="Here you can find a set of script-based addons for KVIrc";
+$template['addons']['title']="Zusätze";
+$template['addons']['text1']="Hier kannst Du Zusatz-Skripte für KVIrc finden";
 $template['addons']['text1b']="
-	All of these require at least version 3.2.1 (SVN snapshot).<br />
-	Please, <b>choose your version</b> of KVIrc";
-$template['addons']['text2']="To install an addon";
-$template['addons']['tree1']="<b>Download</b> the addon and <b>unzip</b> it somewhere";
+	Jedes von diesen benötigt zumindest Version 3.2.1 (SVN Momentaufnahme).<br />
+	Bitte <b>wähle Deine Version</b> von KVIrc";
+$template['addons']['text2']="Um einen Zusatz zu installieren";
+$template['addons']['tree1']="<b>lade</b> den Zusatz und <b>unzip</b> es";
 $template['addons']['tree2']="
-	Press <b>CTRL+Alt+M</b> to open the Addon Management dialog (or open it from the Settings menu)";
-$template['addons']['tree3']="Press the \"<b>Install Addon</b>\" button on the right";
+	Drücke <b>CTRL+ALT+M</b>, um den Zusätze-verwalten-Dialog zu öffnen (oder öffne ihn über das Einstellungsmenü.";
+$template['addons']['tree3']="Klicke auf \"<b>Zusatz installieren</b>\" auf der rechten Seite";
 $template['addons']['tree4']="
-	Navigate to the place where you have unzipped the addon and select the <b>install.kvs</b> file";
-$template['addons']['sorry']="Sorry, no addons were found for the specified version of KVIrc";
-$template['addons']['addon1']="Automatically enters away state after a period of inactivity";
-$template['addons']['addon2']="Provides toolbar buttons for several commonly used channel operations";
-$template['addons']['addon3']="Shows Statistics for a joined channel";
-$template['addons']['addon4']="A simple script to know where a host come from";
-$template['addons']['addon5']="Automatically enters cryption-data for your crypted objects";
-$template['addons']['addon6']="Provides shortcuts and toolbar buttons for EZBounce IRC proxy commands";
-$template['addons']['addon7']="A simple one-o-one game";
-$template['addons']['addon8']="A simple F-Server";
-$template['addons']['addon9']="A simple script for lol and kiss with F3-F8 keys and for funny writing";
-$template['addons']['addon10']="A simple script for announcing mp3s that are played and sharing option";
-$template['addons']['addon11']="A nice \"time eater\"";
-$template['addons']['addon12']="Displays RSS news feeds from various sources";
+	Klicke Dich zu dem Ort, an dem Du den Zusatz entpackt hast und wähle die Datei <b>install.kvs</b> aus";
+$template['addons']['sorry']="Entschuldigung, es wurden keine Zusätze zu der ausgewählten KVIrc-Version gefunden";
+$template['addons']['addon1']="Wechselt automatisch den away-Status nach einer Zeit der Inaktivität.";
+$template['addons']['addon2']="Stellt Werkzeugleisten-Knöpfe für einige häufig benötigte Kanal-Tätigkeiten";
+$template['addons']['addon3']="Zeigt Statistiken der betretenen Kanäle an";
+$template['addons']['addon4']="Ein einfaches Skript, um zu wissen, wo der Computer herkommt";
+$template['addons']['addon5']="Automatically enters cryption-data for your crypted objects";                    //TODO
+$template['addons']['addon6']="Stellt Kurzformen und Werkzeugleistenknöpfe für EZBounce-IRC-Proxy-Befehle bereit";
+$template['addons']['addon7']="Ein einfaches 1-gegen-1 Spiel";
+$template['addons']['addon8']="Ein einfacher F-Server";
+$template['addons']['addon9']="Ein einfaches Skript für \"lol\" und Kuss mit F3-F8 und für spaßiges Schreiben";
+$template['addons']['addon10']="Ein einfaches Skript, um gespielte MP3 bekanntzugeben und Verteil-Option";
+$template['addons']['addon11']="Ein netter \"Zeitvertreib\"";
+$template['addons']['addon12']="Zeigt RSS-Nachrichten von verschiedenen Quellen an";
 $template['addons']['addon13']="
-	Allows advertising and eventually sharing the currently played media on IRC channels and queries";
-$template['addons']['addon14']="A simple script to manage public lessons";
-$template['addons']['addon15']="Implements a simple Quiz Bot";
-$template['addons']['addon16']="Allows sending SMS messages through several web-based services";
-$template['addons']['addon17']="It allows the user to warn, kick, and ban who says forbidden words";
-$template['addons']['addon18']="An auto op/voice/ban system for your channels (addon from the Twins script)";
+	Erlaubt das Bewerben und eventuelle Tauschen von gerade gespielten MP3 in IRC-Kanälen und -queries";
+$template['addons']['addon14']="Ein einfaches Script, um öffentliche Lektionen zu verwalten";
+$template['addons']['addon15']="Implementiert einen einfachen Quiz-Bot";
+$template['addons']['addon16']="Erlaubt das Senden von SMS-Nachrichten über verschiedene Web-basierte-Dienste";
+$template['addons']['addon17']="Erlaubt dem Benutzer jemanden zu verwarnen, zu kicken und zu bannen, der verbotenen Wörter sagt";
+$template['addons']['addon18']="Ein automatisches Op/Voice/Ban-System für Deine Kanäle (Zusatz vom Twins-Skript)";
 $template['addons']['addon19']="
-	Colorizes your input text in channel, queries and DCC chats (addon from the Twins script)";
-$template['addons']['addon20']="A simple lag bar with three different colors (addon from the Twins script)";
+	Färbt Deine Texteingabe in Kanal, queries und DCC-Unterhaltungen (Zusatz vom Twins-Skript)";
+$template['addons']['addon20']="Eine einfache Verzögerungsleiste mit drei verschiedenen Farben (Zusatz vom Twins-Skript)";
 $template['addons']['addon21']="
-	Remote control your media player with a simple user interface, and offer your music to other users (addon from the Twins script)";
-$template['addons']['addon22']="Check previous host of an user";
-$template['addons']['addon23']="Simple icons sets changer. You can choose old icons, new icons with old smiles or new icons";
+	Bediene Deinen Medienspieler mit einer einfachen Benutzerschnittstelle fern, und biete anderen Benutzern Musik an (Zusatz vom Twins-Skript)";
+$template['addons']['addon22']="Prüfe den letzten Host eines Benutzers";
+$template['addons']['addon23']="Einfacher Icon-Set-Wechsler. Du kannst wählen zwischen alten Icons, neuen Icons mit alten Smilies oder neuen Icons";
 /* addons.php end */
 
 /* archive.php start */
-$template['archive']['title']="Mailing List Archive";
+$template['archive']['title']="Mailinglisten-Archiv";
 $template['archive']['text']="
-	Here you can find the mailing list archives: this is the first place to look at if you have any problem.<br />
-	You can browse the archive manually or use the form below to search in.";
-$template['archive']['search']="Google Search";
-$template['archive']['jan']="January";
-$template['archive']['feb']="February";
-$template['archive']['mar']="March";
+	Hier findest Du das Archiv der Mailingliste: Dies ist der erste Ort zum suchen, wenn Du Probleme hast.<br />
+	Du kannst das Archive durchblättern, oder das Suchformular unten benutzen.";
+$template['archive']['search']="Google Suche";
+$template['archive']['jan']="Januar";
+$template['archive']['feb']="Februar";
+$template['archive']['mar']="März";
 $template['archive']['apr']="April";
-$template['archive']['may']="May";
-$template['archive']['jun']="June";
-$template['archive']['jul']="July";
+$template['archive']['may']="Mai";
+$template['archive']['jun']="Juni";
+$template['archive']['jul']="Juli";
 $template['archive']['aug']="August";
 $template['archive']['sep']="September";
-$template['archive']['oct']="October";
+$template['archive']['oct']="Oktober";
 $template['archive']['nov']="November";
-$template['archive']['dec']="December";
+$template['archive']['dec']="Dezember";
 /* archive.php end */
 
 /* arts.php start */
-$template['arts']['title']="Arts";
-$template['arts']['text']="A collection of miscelaneous arts related to KVIrc.";
+$template['arts']['title']="Kunst";
+$template['arts']['text']="Eine Sammlung unterschiedlicher Kunst mit Bezug zu KVIrc";
 $template['arts']['desc1']="
-	Six colorful variations of a nice comix-like theme for these splash screen replacements. Just save the choosen image as \$HOME/.kvirc/pics/kvi_splash.png. You can also use these nice splashes as banners or as starting point for your own art.
+	Sechs farbenfrohe Variationen eines netten Comix-artigen Themas für diese Begrüßungsbildschirm-Ersetzungen. Speichere einfach das gewünschte Bild als \$HOME/.kvirc/pics/kvi_splash.png. Du kannst diese netten Bilder auch als Banner nutzen, oder als Startpunkt für Deine eigene Kunst.
 	";
-$template['arts']['desc2']="Yet another vision of \"Marmalade\" by suspiria :)";
-$template['arts']['desc3']="Huh ?";
-$template['arts']['desc4']="A starting point for an avatar.";
-$template['arts']['desc6']="She uses this as splash screen... :)";
+$template['arts']['desc2']="Eine weitere Sichtweise von \"Marmalade\" von suspiria :)";
+$template['arts']['desc3']="Häh?";
+$template['arts']['desc4']="Ein Startpunkt für einen Avatar.";
+$template['arts']['desc6']="Sie benutzt dies als Begrüßungsbildschirm... :)";
 /* arts.php end */
 
 /* banners.php start */
-$template['banners']['title']="Banners";
+$template['banners']['title']="Banner";
 $template['banners']['text1']="
-	This is a collection of KVIrc banners made by various artits: just save the image and use it on your own site :)";
-$template['banners']['text2']="Send your banners to";
-$template['banners']['bannerby']="Banners By";
+	Dies ist eine Sammlung verschiedener KVIrc-Banner, erstellt durch unterschiedliche Künstler; speichere sie einfach und nutze sie auf Deiner eigenen Seite :)";
+$template['banners']['text2']="Schicke Deine Banners an";
+$template['banners']['bannerby']="Banner von";
 /* banners.php end */
 
 /* contribute.php start */
-$template['contribute']['title']="Getting Involved";
+$template['contribute']['title']="Beteilige Dich";
 $template['contribute']['text1']="
-	The KVIrc project is open to contributions in many ways. You can get involved in different tasks that require various degrees of development skill (from \"almost none\" to \"guru\").";
-$template['contribute']['text2']="Contributing code";
+	Das KVIrc-Projekt ist in mehrenen Arten offen für Beiträge. Du kannst Dich bei verschiedenen Aufgaben beteiligen, die unterschiedliche Anforderungen anProgrammierkenntnissen voraussetzen (von \"fast keine\" bis \"Guru\").";
+$template['contribute']['text2']="Quelltext beisteuern";
 $template['contribute']['text3']="
-	The main task is obviously code writing. The developement of the KVIrc core and external modules requires a reasonable knowledge of C++.<br />
-	The KVIrc GUI uses the Qt library (and eventually KDE) thus some knowledge of these libraries might be needed too. There are many areas of interest in the source tree: networking, cryptography, data compression, language parsers...<br />
-	Every level of conribution is precious: from two-line patches to core feature implementation and manteinance.";
-$template['contribute']['text4']="Contributing artwork";
+	Die Hauptaufgabe ist offensichtlich Quellcode schreiben. Die Entwickler des KVIrc-Kerns und externer Module benötigen eine vernünfitige Kenntnis von C++.<br />
+	Die grafische Benutzerschnittstelle von KVIrc benutzt die Qt-Bibliothek (und schließlich KDE), so dass einige Kenntnisse dieser Bibliotheken auch gebraucht werden könnte. Es gibt viele Interessensgebiete im Quelltext: Netzwerkbetrieb, Verschlüsselung, Datenkompression, Sprach-Analysierer ...<br />
+	Jede Stufe des Beitrags ist wichtig: Vom zweizeiligen Patch bis zu Kernfunktionen und Wartung.";
+$template['contribute']['text4']="Kunstwerke beisteuern";
 $template['contribute']['text5']="
-	The \"V\" in KVIrc stands for \"Visual\". Graphics help the users in navigating the program interface and recognizing quickly the many functions the program provides. We need icons, dialog images, splash-screens, logos, a mascotte character... A nice idea would be to implement a complete theme of graphics...";
-$template['contribute']['text6']="Contributing documentation";
+	Das \"V\" in KVIrc steht für \"visuell\". Grafiken helfen den Benutzern das Programm zu benutzen und die vielen Funktionen, die das Programm bietet, wieder zu erkennen. Wir brauchen Icons, Dialog-Bilder, Begrüßungsbildschirme, Logos, ein Maskottchen... Eine gute Idee ist es, ein komplettes Thema zu implementieren...";
+$template['contribute']['text6']="Dokumentation beisteuern";
 $template['contribute']['text7']="
-	Documentation is as important as the program itself.<br />
-	Many KVIrc features are invisible to the average user just because they're not mentioned in any publicly available document.<br />
-	Contributing documentation means: collecting FAQs and putting them in a readable and searchable form, writing documents about specific features, writing tutorials.<br />
-	A well-written \"introduction to KVIrc for beginners\" is needed (this could be a sort of introduction to IRC too).";
-$template['contribute']['text8']="Translating KVIrc messages";
+	Dokumentation is genauso wichtig wie das Programm selbst.<br />
+	Viele KVIrc-Merkmale sind für einen durchschnittlichen Benutzer nicht sichtbar, weil sie in keinem öffentlich zugänglichen Dokument erwähnt werden.<br />
+	Dokumentation beitragen heißt: häufig gestellte Fragen zusammentragen, und diese in einer les- und durchsuchbaren Form zusammenstellen, Dokumentation über besondere Merkmale schreiben, Tutorien schreiben.<br />
+	Es wird auch eine gutgeschriebene \"Einführung in KVIrc für Anfänger\" gebraucht (dies kann auch eine Art Einführung in IRC sein).";
+$template['contribute']['text8']="KVIrc Meldungen übersetzen";
 $template['contribute']['text9']="
-	KVIrc is a text-based application: the interface strings need to be translated to as many languages as possible. You only need the knowledge of a non-English language: the translation scheme is gettext based and requires very little knowledge about coding.";
-$template['contribute']['text10']="Translating documentation";
+	KVIrc ist eine Text-basierte Anwendung: Die Schnittstellenbeschriftungen müssen in so viele Sprachen wie möglich übersetzt werden. Du brauchst nur Kenntnisse in einer nicht-englischen Sprache: Das Übersetzungsschema ist gettext-basiert und benötigt kaum Programmierwissen.";
+$template['contribute']['text10']="Dokumentation übersetzen";
 $template['contribute']['text11']="
-	The most basic parts of the documentation should be translated to non-English languages so that everyone can understand fully the \"core\" features of KVIrc.<br />
-	This requires yet less coding knowledge than translating messages.";
-$template['contribute']['text12']="Site management/development";
+	Der größte Teil der Dokumentation sollte in verschiedene Sprachen übersetzt werden, so dass jeder die \"Kern\"-Merkmale von KVIrc verstehen kann.<br />
+	Dies benötigt weit weniger Programmierkenntnisse als Meldungen zu übersetzen.";
+$template['contribute']['text12']="Website Verwaltung/Entwicklung";
 $template['contribute']['text13']="
-	The web site needs to be extended and mantained.<br />
-	For this task you need knowledge of php, xhtml, css and some ideas :)";
-$template['contribute']['text14']="Mirroring";
+	Die Website muss erweitert und gewartet werden.<br />
+	Für diese Aufgabe brauchst Du Kenntnisse in php, xhtml, css und einige Ideen :)";
+$template['contribute']['text14']="Spiegelung";
 $template['contribute']['text15']="
-	FTP and WWW mirrors are always welcome: we're actually missing mirrors outside Europe.<br />
-	The www site is written in php and updated via SVN thus the mirroring machine must have a php-capable web server and a SVN client installed.<br />
-	The FTP archive is around 200 MB; partial mirroring schemes can be also arranged.<br />
-	The detailed instructions for setting up a www or ftp mirror are available <a href=\"?id=mirroring&amp;lang=$lang\">here</a>.";
-$template['contribute']['text16']="Public relations";
+	FTP- und WWW-Spiegel sind immer willkommen: Wir bruachen momentan Spiegel ausserhalb Europas.<br />
+	Die Website ist in php geschrieben und wird via SVN aktualisiert, daher muss ein Spiegelserver php-fähig sein und einen SVN-Client installiert haben.<br />
+	Das FTP-Archiv umfasst ca. 200MB; eine teilweise Spiegelung kann ebenso arrangiert werden.<br />
+	Eine detailierte Anleitung um einen WWW- oder FTP-SPiegelserver einzurichten ist <a href0\"?id=mirroring&amp;lang=$lang\">hier</a> verfügbar.";
+$template['contribute']['text16']="Öffentlichkeitsarbeit";
 $template['contribute']['text17']="
-	We need people that talk about KVIrc, write articles, descriptions, reviews, look for contributors...";
-$template['contribute']['text18']="Who to contact";
+	Wir brauchen Leute, die über KVIrc sprechen, Artikel, Beschreibungen, Kritiken schreiben, nach Beitragenden suchen ...";
+$template['contribute']['text18']="Wen kontaktieren";
 $template['contribute']['text19']="
-	Once you decide that you want to contribute in some way you can mail your proposal to <a href=\"mailto:pragma@kvirc.REMOVE.THE.ANTISPAM.WORDS.net\">Pragma</a>.<br />
-	Another place where you can announce your availability/proposal is the <a href=\"irc://chat.ircnet.org/#kvirc\">#KVIrc</a> IRC channel on IRCNet, <a href=\"irc://irc.azzurra.org/#KVIrc.net\">#KVIrc.net</a> on Azzurra or <a href=\"irc://irc.freenode.org/#kvirc\">#KVIrc</a> on FreeNode (formerly known as OpenProjects network).";
+	Wenn Du Dich entschieden hast, mitzuwirken, kannst Du Dein Angebot an <a href=\"mailto:pragma@kvirc.REMOVE.THE.ANTISPAM.WORDS.net\">Pragma</a> senden.<br />
+	Ein weiterer Platz um Deine Bereitschaft anzukündigen, ist der <a href=\"irc://chat.ircnet.org/#kvirc\">#KVIrc</a>-IRC-Kanal bei IRCNet, <a href=\"irc://irc.azzura.org/#KVIrc.net\">#KVIrc.net</a> bei Azzura oder <a href=\"irc://irc.freenode.org/'KVirc\">#KVIrc</a> bei FreeNode (früher bekannt als OpenProjects network).";
 /* contribute.php end */
 
 /* donate.php start */
-$template['donate']['title']="Supporting the KVIrc Project by Money Donations";
+$template['donate']['title']="Unterstütze das KVIrc-Projekt mit Geldspenden";
 $template['donate']['text1']="
-	KVIrc is available for free and will always be available for free: no payment is required to download, use, modify and redistribute the source code.";
+	KVIrc ist kostenlos verfügbar und wird immer frei verfügbar bleiben: es ist keine Zahlug erforderlich um es zu laden, zu benutzen, zu verändern und den Quelltext weiterzugeben.";
 $template['donate']['text2']="
-	Most of the physical resources that KVIrc lives from (such as www or ftp servers) are contributed for free by the KVIrc team members. On the other side the project requires an incredible amount of coding hours as well as several things that need to be paid for such as hardware upgrades, domain name registrations, hosting fees, books... If you enjoy KVIrc please consider supporting the project financially: you can make the donation by using PayPal.";
+	Die meisten materiellen Ressourcen, von denen KVIrc lebt (wie www- oder ftp-Server), werden von den KVIrc-Team-Mitgliedern kostenlos zur Verfügung gestellt. Auf der anderen Seite benötigt das Projekt eine immense Zahl an Programmierstunden, sowie Sachen, für die gezahlt werden muss, wie Computeraufrüstungen, Domain-Namenregistration, Hosting-Kosten, Bücher... Wenn Dir KVIrc gefällt, denke bitte darüber nach, das Projekt finanziell zu unterstützen: Du kannst zum Spenden PayPal benutzen.";
 $template['donate']['text3']="
-	The button below will bring you to the PayPal site where you will be able to specify the donation amount and the currency you want to use. You can donate any amount you wish: all will be appreciated. If you have never used PayPal before, then the site will ask you about your credit card details, your country, address and your home phone number. This information is required by PayPal to do the money transaction and is not required by or visible to the KVIrc team.";
+	Der Knopf unten bringt Dich zu PayPal, wo Du den Betrag und die Währung bestimmen kannst. Du kannst jeden Betrag spenden, alles ist willkommen. Wenn Du PayPal nie vorher benutzt hast, wird Dich PayPal wegen Deiner Kreditkarte, Dein Land, Adresse und Deiner Telefonnummer fragen. Diese Informationen werden von PayPal benötigt, um die Geldspende abzuwickeln &ndash sie werden weder vom KVIrc-Team benötigt, ncoh sind sie diesem sichtbar.";
 $template['donate']['text4']="
-	After you have made the donation you will be contacted by e-mail and asked if your donation can be listed on this page. Once the donated money is used, its destination will be listed along with the donator and the donation amount.";
-$template['donate']['text5']="Thank you! :)";
-$template['donate']['title2']="Recent Donations";
-$template['donate']['donation']="donated by";
-$template['donate']['alttext']="Make a donation to the KVIrc Project by PayPal";
+	Nachdem Du Deine Spende gemacht hast, wirst Du per E-Mail kontaktiert und gefragt, ob Deine Spende auf dieser Seite gelistet werden kann. Wenn der gespendete Betrag verbraucht ist, wird die Verwendung neben dem Spender und dem Betrag gelistet.";
+$template['donate']['text5']="Danke! :)";
+$template['donate']['title2']="Neueste Spenden";
+$template['donate']['donation']="gespendet von";
+$template['donate']['alttext']="Spende an das KVIrc-Projekt via PayPal";
 /* donate.php end */
 
 /* download.php start */
-$template['download']['title']="Downloading KVIrc";
-$template['download']['text1']="You can obtain KVIrc in three ways:";
-$template['download']['text2']="Official release packages";
+$template['download']['title']="Lade KVIrc";
+$template['download']['text1']="Du kannst KVIrc auf drei Arten erhalten:";
+$template['download']['text2']="Offiziell veröffentlichte Palete";
 $template['download']['text3']="
-	The official packages are released least frequently but are the most stable ones. Each official source package is well tested and will probably compile on your system. You also have more possibilities to find a binary package suitable for your system. The on-line FAQs and documentation refer to this type of package.";
-$template['download']['text4']="Development snapshots";
+	Die offiziellen Pakete werden weniger häufig veröffentlicht, sind aber die stabilsten. Jedes offizielle Quelltext-Paket ist gut getestet und wird wahrscheinlich auf Deinem System kompilieren. Du hast auch mehrere Möglichkeiten, ein zu Deinem System passendes Binärpaket zu finden. Die hier abrufbaren hüfig-gestellten-Fragen und die Dokumentation beziehen sich auf diese Pakete.";
+$template['download']['text4']="Entwicklungs-Snapshots";
 $template['download']['text5']="
-	The development snapshots are unofficial packages extracted from the SVN on a non-regular basis. Each snapshot reflects the SVN state on a particular revision and you're likely to find a really recent one. The packages have been tested on at least a couple of systems and have a good possibility to compile on yours. There are also some binary builds available.";
-$template['download']['text6']="Up to date sources from SVN";
+	Die Momentaufnahmen des Quelltextes sind inoffizielle Pakete, gewonnen aus dem SVN auf einer nicht regelmäßigen Basis. Jede Momentaufnahme spiegelt den SVN-Status zu einer bestimmten Revision wider und gewöhnlich findest Du eine aktuelle. Diese Pakete wurden zumindest auf ein paar Systemen getestet und eine hohe Wahrscheinlichkeit, dass sie auch auf Deinem System kopilieren. Es sind auch einige Binärpakete verfügbar.";
+$template['download']['text6']="Aktuelle Quellen aus dem SVN";
 $template['download']['text7']="
-	The latest bleeding-edge sources can be downloaded by using the SVN system. We're trying to keep the SVN as \"clean\" as possible but finally the sources are not guaranteed to compile. The SVN method provides only sources: there are no binaries.";
+	Den aktuellsten Quelltext kann über das SVN-System geladen werden. Wir versuchen SVN so \"suaber\" wie möglich zu halten, aber trotzdem kann nicht garantiert werden, dass der Quelltext kompiliert. Der SVN-Methode stellt nur den Quelltext zur Verfügung, es gibt keine Binärpakete.";
 /* download.php end */
 
 /* faq.php start */
-$template['faq']['title']="FAQ";
-$template['faq']['text1a']="How do i join a channel";
-$template['faq']['text1b']="Type \"/join #channelname\"";
-$template['faq']['text2a']="I can't compile kvirc (any version)";
+$template['faq']['title']="Häufig gestellte Fragen";
+$template['faq']['text1a']="Wie betrete ich einen Kanal";
+$template['faq']['text1b']="Tippe \"/join #Kanalname\"";
+$template['faq']['text2a']="Ich kann KVIrc nicht kompilieren (jede Version)";
 $template['faq']['text2b']="
-	READ the instructions in the INSTALL file: the most common problems can be solved by setting the correct enviroinement variables and fiddling with the ./configure options. If the INSTALL file doesn't help you you can try to join #kvirc on IRCNet or FreeNode: there are many experienced users that can try to help you. If you still can't get out of it, you might try posting your error on the KVIrc mailing list";
-$template['faq']['text3a']="I can't connect to an IPV6 server";
+	LIES die Anweisungen in der Datei INSTALL; die meisten üblichen Probleme können gelöst werden, indem man die Umgebungsvariablen richtig setzt und mit den Optionen von ./configure \"spielt\". Wenn Dir die Datei INSTALL nicht hilft, kannst Du versuchen, #kvirc bei IRCNet oder bei FreeNode zu betreten: Hier sind viele erfahrene Benutzer, die versuchen können, Dir zu helfen. Wenn Du es immer noch nicht lösen konntest, schreibe Dein Problem/Fehler an die KVIrc-Mailingliste";
+$template['faq']['text3a']="Ich kann mich nicht zu einem IPv6-Server verbinden";
 $template['faq']['text3b1']="
-	First of all make sure that your IPV6 stack is setup correctly.<br />
-	Can you ping6 other IPV6 other machines";
+	Zuerst stelle sicher, dass IPv6 bei Deinem System korrekt eingerichtet ist.<br />
+	Kannst Du andere IPv6-Maschinen anpingen via ping6";
 $template['faq']['text3b2']="
-	Is the IPV6 support enabled in your kvirc executable.<br />
-	To find it out, try";
+	Ist IPv6-Unterstützung aktiviert in KVIrc?<br />
+	Um dies herauszufinden, gib";
 $template['faq']['text3b3']="
-	in the KVIrc commandline. You should get a comma separated list of features compiled in the executable. If the list contains \"IPv6\" then the support is compiled in, otherwise you must check your compilation stage to guess what went wrong.
-	To connect to an IPV6 server you can use /server -i &lt;servername&gt;
-	If you can ping other IPV6 machines, the IPv6 support is compiled in your executable and you still can't connect to an *existing* IPv6 server then you may have found a bug :) Report it";
-$template['faq']['text4a']="How do i autojoin channels";
+	auf der KVIrc-Kommandozeile ein. Du solltest eine komma-separierte Liste mit den einkompilierten Merkmalen erhalten. Wenn die Liste \"IPv6\" enthält, ist die Unterstützung einkompiliert, ansonsten musst Du die Kompilierungsphase überprüfen und rausfinden, was falsch läuft.
+	Du kannst /server -i &lt;servername&gt; verwenden, um zu einem IPv6-Server zu verbinden.
+	Wenn Du andere IPv6-Systeme anpingen kannst, die IPv6-Unterstützun einkompiliert wurde ud Du ncoh immer nicht zu einem *existierenden* IPv6-Server verbinden kann, hast Du vielleicht einen FEhler im Programm entdeckt :) Melde ihn";
+$template['faq']['text4a']="Wie betrete ich Kanäle automatisch";
 $template['faq']['text4b1']="
-	There are many ways to do it.
-	For example";
+	Es gibt viele Wege die zu tun.
+	Zum Beispiel";
 $template['faq']['text4b2']="
-	Select \"Scripting/Events\" from the KVIrc menu<br />
-	Lookup the \"OnIrc\" entry in the left pane of the window that pops up.<br />
-	Right-click on that entry and select \"Add handler\".<br />
-	A \"default\" handler will be created. In the right pane write:<br />
+	Wähle \"Skripte/Ereignisse bearbeiten\"aus dem KVIrc-Menü.<br />
+	Suche \"OnIRC\" in der linken Leiste des aufgegangenen Fensters.<br />
+	Rechtsklick auf diesen Eintrag und wähle \"Neuer Handler\".<br />
+	Ein \"Standard\"-Handler wird erstellt. Auf der rechten Seite schreib:<br />
 	join #kvirc<br />
 	join #kde-users<br />
 	join #somechannel<br />
 	....<br />
-	Now click OK and you're done: you have just created a handler for an event.<br />
-	Reconnect to a server and KVIrc will autojoin the channels that you have selected";
+	Jetzt klicke auf OK und fertig: Du hast gerade einen Handler für ein Ereignis erstellt.<br />
+	Verbinde Dich erneut zu einem Server und KVIrc wird die ausgewählten Kanäle automatisch betreten.";
 $template['faq']['text4b3']="
-	Another option (nicer, if you use several servers) is to go to the servers options page and click the button labeled 'Advanced' on the entry for the single server.<br />
-	There is a server-specific \"On connect execute...\" event";
-$template['faq']['text5a']="On Windows KVIrc seems to slow-down sometimes";
+	Eine weitere Möglichkeit (besser, wenn Du mehrere Server nutzt) ist, zu den Server-Optionen zu gehen und dort auf den Knopf 'Erweitert' zu klicken.<br />
+	Dort ist ein Server-spezifisches \"Beim Verbinden\"-Ereignis.";
+$template['faq']['text5a']="Unter Windows scheint KVIrc manchmal zu verlangsamen";
 $template['faq']['text5b']="
-	This is usually caused by the heavy graphics: try removing some graphic effects like the pseudo-transparency. I have experimented that it happens almost always on 32-bit displays. Switching to 16 or 24 bits may also help";
-$template['faq']['text6a']="How do I connect to an SSL-enabled IRC server";
-$template['faq']['text6b1']="Use";
-$template['faq']['text6b2']="It should work also over IPv6.<br />
-	If it doesn't work then your executable might have no SSL support compiled in.<br />
-	To find it out type";
-$template['faq']['text6b3']="in the KVIrc commandline. If \"SSL\" is not in the list then you must go back to the compilation phase and see what went wrong";
-$template['faq']['text7a']="How do I use DCC over SSL";
-$template['faq']['text7b']="should work";
-$template['faq']['text8a']="Do I need a SSL certificate";
-$template['faq']['text8b']="No you shouldn't need it, but you can use it if you want";
-$template['faq']['text9a']="How do I create a SSL certificate";
+	Dies ist gewöhnlich verursacht durch große Grafiken; versuche einige grafische Effekte wie \"Falsche Transparenz\" zu deaktivieren. Ich habe herausgefunden, dass es fast immer bei 32-bit Farbtiefe auftritt. Ein Wechsel zu 16 oder 24 bit kann ebenso helfen.";
+$template['faq']['text6a']="Wie kann ich zu einem SSL-fähigen IRC-Server verbinden";
+$template['faq']['text6b1']="Nutze";
+$template['faq']['text6b2']="Es sollte auch über IPv6 funktionieren.<br />
+	Wenn es nicht funktioniert, ist es möglich, dass keine SSL-Unterstützung einkompiliert wurde.<br />
+	Um dies herauszufinden, tippe";
+$template['faq']['text6b3']="in die KVIrc-Kommandozeile. Wenn \"SSL\" nicht in der Liste enthalten ist, überprüfe die Kompilierungsphase";
+$template['faq']['text7a']="Wie kann ich DCC über SSL nutzen";
+$template['faq']['text7b']="sollte funktionieren";
+$template['faq']['text8a']="Brauche ich ein SSL-Zertifikat";
+$template['faq']['text8b']="Nein, Du solltest keins brauchen, aber Du kannst es nutzen, wenn Du willst.";
+$template['faq']['text9a']="Wie erstelle ich ein SSL-Zertifikat";
 $template['faq']['text9b']="
-	A test self-signed certificate can be created by using the CA.pl perl script included in the OpenSSL distribution. It will be something like";
-$template['faq']['text10a']="I can't get KVIrc to use my SSL certificate in a DCC";
+	Ein selbst-signiertes Test-Zertifikat kann durch das CA.pl Perl-Skript erstellt werden, welches in der OpenSSL-Distribution enthalten ist. Es wird in etwa sein wie";
+$template['faq']['text10a']="Ich kann KVIrc nicht dazu bringern, mein SSL-Zertifikat in DCC zu nutzen";
 $template['faq']['text10b']="
-	The SSL protocol doesn't require the \"client\" to send the certificate: it is sent only if the \"server side\" requests it (it is not the KVIrc case).<br />
-	The server side may have a certificate and you can set it in the SSL options page.<br />
-	If your Private Key is stored in the certificate file pass the same filename to both Certificate and PrivateKey option.<br />
-	Remember to set the password if needed";
-$template['faq']['text11a']="KVIrc crashes when a certificate is used under Windows";
+	Das SSL-Protokoll fordert von der \"Client\"-Seite nicht, dass Zertifikat zu senden; es wird nur verwendet, wenn die \"Server\"-Seite es anfordert (dies ist nicht der Fall bei KVIrc).<br />
+	Die Server-Seite kann ein Zertifikat haben, und Du kannst es auf der SSL-Optionen-Seite einstellen.<br />
+	Wenn Dein privater Schlüssel im Zertifikat gespeichert ist, wähle den gleichen Dateinamen bei SSL-Zertifikat und SSL-Schlüssel.<br />
+	Denke daran, dass Passwort anzugeben, falls nötig";
+$template['faq']['text11a']="Unter Windows stürzt KVirc ab, wenn ein Zertifikat benutzt wird";
 $template['faq']['text11b']="
-	This is probably a bug of the SSL dll shipped with the windows version of KVIrc.<br />
-	You might try with a different version of this dll";
-$template['faq']['text12a']="/me doesn't support the '\$' character";
-$template['faq']['text12b']="
-	This is NOT a bug : this is a feature : kvirc supports (and substitutes!) variables in all the commands. You can escape your $ sign by using the backslash character: /me has gained \\\$100 will work correctly";
-$template['faq']['text13a']="/me doesn't support the '&quot;' (double quote) character";
+	Dies ist wahrscheinlich ein Fehler der SSL-dll, welche mit der Windowsversion von KVIrc ausgeliefert wird.<br />
+	Du kannst es mit einer anderen Version dieser dll versuchen";
+$template['faq']['text12a']="/me unterstützt das '\$'-Zeichen nicht";
+$template['faq']['text12b']="Dies ist KEIN Fehler &ndash dies ist eine Besonderheit. KVIrc unterstützt (und ersetzt) Variablen in allen Befehlen. Du kannst das $-Zeichen maskieren, indem Du einen Rückwärtsschrägstrich benutzt: \"/me hat \\\$100 verdient\" funktioniert";
+$template['faq']['text13a']="/me unterstützt '&quot;' (doppelte Anführungszeichen) nicht";
 $template['faq']['text13b']="
-	This is NOT a bug : this is a feature : a string enclosed in double quotes will have its whitespace preserved while the other strings will have the whitespace simplified. This is valid for ANY command.<br />
-	You can escape your &quot; sign by using the backslash character: /me feels a bit \\\"foo\\\" will work correctly";
-$template['faq']['text14a']="/me can't contain the ';' character";
+	Dies ist KEIN Fehler &ndash dies ist eine Besonderheit. Bei einer in doppelten Anführungszeichen eingeschlossene Zeichenfolge werden die Leerzeichen erhalten, während bei anderen Zeichenketten die Leerzeichen bereinigt werden. Dies ist gültig für JEDEN Befehl.<br />
+	Du kannst das &quot;-Zeichen maskieren, indem Du einen Rückwärtsschrägstrich benutzt: /me fühlt sich ein wenig \\\"mäh\\\"";
+$template['faq']['text14a']="/me kann kein ';' enthalten";
 $template['faq']['text14b']="
-	This is NOT a bug : this is a feature : kvirc supports multiple commands on a single line and uses ';' as a command separator. You can escape your ';' sign by using the backslash character: /me is hungry \;) will work correctly";
-$template['faq']['text15a']="I don't see the channel popup menus anymore";
-$template['faq']['text15b']="
-	If something went wrong with KVIrc settings (a crash when the script settings were saved ?) or if you have messed with the scripting options and you want to get back the original behaviour (default script) you can choose \"Scripting/Restore default script\" from the KVIrc menu.<br />
-	(<b>WARNING:</b> It will erase any script modification you have made!)";
-$template['faq']['text16a']="
-	I'm getting compile errors like this:<br />
+	Dies ist KEIN Fehler &ndash dies ist eine Besonderheit. KVIrc unterstützt mehrere Befehle in einer Zeile und benutzt ';' als Befehlstrenner. Du kannst das ';' mit einem Rückwärtsschrägstrich maskieren: /me hat hunger \;)";
+$template['faq']['text15a']="Ich kann das aufklappende Kanal-Menü nicht mehr sehen";
+$template['faq']['text15b']="Wenn etwas schiefgegangen ist bei den KVIrc-Einstellungen (ein Absturz wenn die Einstellungen gespeichert werden?), oder wenn Du die Skript-Optionen durcheinander gebracht hast und Du zum Originalverhalten (Standard-Skript) zurückkehren möchtest, kannst Du \"Skripte/Standardskript wiederherstellen\" im KVIrc Hauptmenü auswählen.<br />
+	(<b>ACHTUNG:</b> Dies löscht alle Skript-Veränderungen von Dir!)";
+$template['faq']['text16a']="Ich erhalte Kompilierfehler wie diesen:<br />
 	&nbsp; &nbsp; In file [somefile]:[someline] internal error:<br />
 	&nbsp; &nbsp; Segmentation fault<br />
 	&nbsp; &nbsp; Please submit a full bug report,<br />
 	&nbsp; &nbsp; with preprocessed source if appropriate.<br />
-	&nbsp; &nbsp; See &lt;URL:http:...";
-$template['faq']['text16b1']="This error can have multiple reasons";
+	&nbsp; &nbsp; See &lt;URL:http:...";                                                //TODO
+$template['faq']['text16b1']="Dieser Fehler kann verschiedene Ursachen haben";
 $template['faq']['text16b1a']="
-	A compiler bug: my GCC 3.2 20020903 (default on RH 8.0) spits out 5-6 of them daily. Usually it is solved by simply restarting the \"make\" command.<br />
-	If it doesn't go away or if it gets really frequent and annoying you might try to upgrade the compiler";
+	Ein Kompiliererfehler: mein GCC 3.2 20020903 (Standard bei RH 8.0) gibt täglich 5-6 von diesen Fehlern aus. Normalerweise lassen die sich einfach lösen, indem man das Kommando \"make\"  erneut aufruft. <br />
+	Wenn dies nciht hilft, oder es ziemlich häufig auftritt und es störend ist, kannst Du Deinen Kompilierer aktualisieren";
 $template['faq']['text16b1b']="
-	A memory corruption: this is really frequent: one of your memory banks is spitting random bytes sometimes. Usually the problems come out under heavy system load (kernel, KDE or kvirc compilation for example). You can check for memory corruption by trying different RAM modules (or removing them one at a time to discover the broken bank). You can also try a program called memtest and a kernel patch that can force the broken memory banks to be ignored by the kernel (allocated permanently to a dummy kernel task).<br />
-	These tools can be found by digging the web with your favorite search engine";
+	Eine Speicherverfälschung: Dies ist wirklich häufig. Eine der Speicherbänke gibt manchmal wahllos Bytes zurück. Normalerweise tritt das Problem unter hoher Systemlast auf (z. B. Kern, KDE oder KVIrc Kompilation). Du kannst auf diesen Fehler testen, indem Du verschiedene RAM-Module testest (oder eins nach dem anderen ausbaust, um das defelte zu finden). Du kannst auch das Programm memtest testen und ein Kernel-Patch kann das kaputte Speichermodul ignorieren (wird permanent einer Scheinaufgabe des Kernels zugewiesen).<br />
+	Diese Werkzeuge kasnt Du mit Deiner Lieblingssuchmaschine im Web finden";
 $template['faq']['text16b1c']="
-	A deeper hardware problem: if upgrading the compiler and changing memory banks doesn't help then it *might* be a deeper hardware problem: bus errors , faulty IDE (or SCSI) controller or even buggy CPU... Well";
-$template['faq']['text17a']="KVIrc crashes when an URL is printed in the output window";
+	Ein tieferes Hardware-Problem: Wenn das Aktualisieren des Kompilierers und das tauschen des Speichers keine Verbesserung brachten, *kann* es ein tiefers Hardware-Problem sein: Bus-Fehler, fehlerhafter IDE- (oder SCSI-) Controller, oder sogar ein fehlerhafter Prozessor...";
+$template['faq']['text17a']="KVIrc stürzt ab, wenn eine URL im Ausgabe-Fenster angezeigt wird";
 $template['faq']['text17b']="
-	This might be caused by the URL module: the causes are being investigated.<br />Try";
-$template['faq']['text18a']="KVIrc crashes when the multiline text input is opened (or in the script center)";
+	Dies kann vom URL-Modul kommen, die Ursachen werden untersucht.<br /> Versuche";
+$template['faq']['text18a']="KVIrc stürzt ab, wenn die Mehrzeileneingabe geöffnet wird (oder im Skript-Center)";
 $template['faq']['text18b']="
-	If you have installed a new version of KVIrc over a previous installation or if you have changed the Qt libraries that KVIrc is linked to then it might be caused by a broken multiline text editor config.<br />
-	Try removing \$HOME/.kvircssexeditorrc and starting KVIrc again";
+	Wenn Du eine neue Version von KVIrc über eine alte installiert hast, oder wenn Du die Qt-Bibliotheken, gegen die KVIrc gelinked ist, getauscht hast, dann kann damit ein kaputter Mehrzeileneditor verursacht werden.<br />
+	Versuche, \$HOME/.kvircssexeditorrc und starte KVIrc erneut";
 /* faq.php end */
 
 /* features.php start */
-$template['features']['title']="Features";
+$template['features']['title']="Merkmale";
 $template['features']['text1']="
-	Hmmm.. listing the KVIrc features ?<br />
-	Well... why not ?<br />
-	Here are some key-phrases that came in my mind.";
-$template['features']['tree1']="User interface";
-$template['features']['tree1a']="Full GUI Based configuration";
-$template['features']['tree1b']="MDI floatable windows";
-$template['features']['tree1c']="Built-in help browser";
-$template['features']['tree1d']="Themes support (all configurable by GUI or scripting)";
+	Hmmm... alle KVIrc-Merkmale auflisten?<br />
+	Nun... warum nicht?<br />
+	Hier sind einige Kernaussagen.";
+$template['features']['tree1']="Benutzerschnittstelle";
+$template['features']['tree1a']="komplette grafische Konfiguration";
+$template['features']['tree1b']="MDI floatable windows";                      //TODO
+$template['features']['tree1c']="eingebauter Hilfe-Betrachter";
+$template['features']['tree1d']="Unterstützung für Themen (komplett konfigurierbar über eine grafische Schnittstelle oder via Skripte)";
 $template['features']['tree1e']="Pseudo-transparency support (up to the desktop on KDE)";
-$template['features']['tree1f']="Drag &amp; Drop toolbar editing";
-$template['features']['tree1g']="Activity Notifier Pop-Up";
-$template['features']['tree1h']="Status bar with Applet support";
-$template['features']['tree1i']="Unread text mark";
-$template['features']['tree1j']="14 Languages Translations";
-$template['features']['tree2']="Network";
-$template['features']['tree2a']="Proxy support (SOCKSv4, SOCKSv5, HTTP)";
-$template['features']['tree2b']="Full IPv6 support (also for DCC transfers)";
-$template['features']['tree2c']="SSL support (also over IPv6)";
-$template['features']['tree2d']="Micryption support";
-$template['features']['tree3']="Core";
+$template['features']['tree1f']="Werkzeugleiste via \"Drag &amp; Drop\" veränderbar";			//TODO
+$template['features']['tree1g']="Aktivitätsbenachrichtigungs-Popup";
+$template['features']['tree1h']="Statusleiste mit Unterstützung für Minianwendungen";
+$template['features']['tree1i']="Markierung für ungelesenen Text";
+$template['features']['tree1j']="Übersetzung in 14 Sprachen";
+$template['features']['tree2']="Netzwerk";
+$template['features']['tree2a']="Proxy-Unterstützung (SOCKSv4, SOCKSv5, HTTP)";
+$template['features']['tree2b']="Volle IPv6-Unterstützung (auch für DCC-Übertragungen)";
+$template['features']['tree2c']="SSL-Unterstützung (auch über IPv6)";
+$template['features']['tree2d']="Unterstützun für Micryption";
+$template['features']['tree3']="Kern";
 $template['features']['tree3a']="
-	Modular architecture: unfrequently used features reside in external modules and are loaded only when necessary";
-$template['features']['tree3b']="Extensibility: a huge API for writing extension modules";
-$template['features']['tree3c']="UNICODE support";
+	Modulare Architektur: selten gebrauchte Merkmale sind in externen Modulen und werden nur bei Bedarf geladen";
+$template['features']['tree3b']="Erweiterbarkeit: Eine große Programmierschnittstelle, um Erweiterungsmodule zu schreiben";
+$template['features']['tree3c']="UNICODE-Unterstützung";
 $template['features']['tree4']="IRC";
-$template['features']['tree4a']="Multiserver connection";
-$template['features']['tree4b']="Notify lists (yes, WATCH is supported)";
-$template['features']['tree4c']="Ignore lists";
-$template['features']['tree4d']="Registered users database";
-$template['features']['tree4e']="Lag meter";
-$template['features']['tree4f']="Configurable logging";
-$template['features']['tree4g']="Standard DCC CHAT and SEND (with resume) support";
-$template['features']['tree4h']="Extended DCC types: VOICE, RSEND, GET, RECV";
-$template['features']['tree4i']="DCC CHAT over SSL";
-$template['features']['tree4j']="DCC bandwidth limit (ability to set it \"on the fly\")";
-$template['features']['tree5']="Scripting";
-$template['features']['tree5a']="Built-in scripting language interpreter";
-$template['features']['tree5a1']="scalars, arrays and hashes...";
-$template['features']['tree5a2']="aliases";
-$template['features']['tree5a3']="popups";
-$template['features']['tree5a4']="events";
-$template['features']['tree5a5']="scriptable toolbars";
-$template['features']['tree5a6']="Perl support";
-$template['features']['tree5a7']="Ability to translate scripts (by the means of the tr() function)";
+$template['features']['tree4a']="Verbindungen zu mehreren Servern";
+$template['features']['tree4b']="Benachrichtigungslisten (ja, WATCH wird unterstützt)";
+$template['features']['tree4c']="Ignorierlisten";
+$template['features']['tree4d']="Registrierte-Benutzer-Datenbank";
+$template['features']['tree4e']="Lag meter";													//TODO
+$template['features']['tree4f']="Konfigurierbare Protokollierung";
+$template['features']['tree4g']="Unterstützung fürStandard-DCC-CHAT und -SEND (mit Wiederaufnahme)";
+$template['features']['tree4h']="Erweiterte DCC-Arten: VOICE, RSEND, GET, RECV";
+$template['features']['tree4i']="DCC CHAT über SSL";
+$template['features']['tree4j']="DCC Bandbreitenlimitierung (mit der Fähigkeit,es  \"spontan\" zu setzen)";
+$template['features']['tree5']="Skripte";
+$template['features']['tree5a']="Eingebauter Skriptsprachen-Interpreter";
+$template['features']['tree5a1']="Skalare, Felder (arrays) und hashes...";
+$template['features']['tree5a2']="Aliase";
+$template['features']['tree5a3']="Popups";
+$template['features']['tree5a4']="Ereignisse";
+$template['features']['tree5a5']="Skriptfähige Werkzeugleisten";
+$template['features']['tree5a6']="Perl-Unterstützung";
+$template['features']['tree5a7']="Fähigkeit, Skripte zu übersetzen (im Sinne der tr()-Funktion)";
 $template['features']['tree5b']="
-	Objects support in scripting language: yes, now you can do <acronym title=\"Object Oriented Programming\">OOP</acronym>";
-$template['features']['text2']="Hmmm...I hope that's enough to make you curious :D";
+	Unterstützung für Objekte in der Skriptsprache: Ja, jetzt kannst Du <acronym title=\"Objektorientierte Programmierung\">OOP</acronym> verwenden";
+$template['features']['text2']="Hmmm...Ich hoffe, das reicht, um Dich neugierig zu machen :D";
 /* features.php end */
 
 /* help.php start */
-$template['help']['title']="Help Wanted";
+$template['help']['title']="Hilfe gewünscht";
 $template['help']['text1']="
-	The first place to look at when you have a problem is the KVIrc mailing list.";
+	Die erste Stelle, wo Du vorbeischauen solltest, wenn Du ein Problem hast, ist die KVIrc Mailingliste";
 $template['help']['text2']="
-	If something goes wrong, or if you have a question, a suggestion, or are simply interested in KVIrc developement, you can join the";
+	Wenn etwas falsch läuft, Du Fragen oder Anregungen hast, oder einfach an der KVIrc-Entwicklung interessiert bist, abonniere die";
 $template['help']['text3']="
-	The developers follow the mailing list and will answer questions as soon as is possible.";
-$template['help']['text4a']="The official KVIrc support channel is located on the";
-$template['help']['text4b']="Freenode network";
-$template['help']['text4c']="and the channel is obviously named";
-$template['help']['text4d']="The official Italian channel is";
-$template['help']['text4e']="on the";
-$template['help']['text4f']="Azzurra network";
-$template['help']['text4g']="You can also find some movement on the";
-$template['help']['text4h']="IRCNet network";
-$template['help']['text4i']="in the";
-$template['help']['text4j']="channel too :)";
-$template['help']['text5']="Bugs can be reported and viewed by using the";
+	Die Entwickler verfolgen die Mailingliste und werde Fragen so schnell wie möglich beantworten.";
+$template['help']['text4a']="Der offizielle KVIrc-Support-Raum ist im";
+$template['help']['text4b']="Freenode Netzwerk";
+$template['help']['text4c']="und der Kanal heißt offensichtlich";
+$template['help']['text4d']="Der offizielle italienische Kanal ist";
+$template['help']['text4e']="bei dem";
+$template['help']['text4f']="Azzurra Netzwerk";
+$template['help']['text4g']="Du kannst auch etwas Regung finden im";
+$template['help']['text4h']="IRCNet Netzwerk";
+$template['help']['text4i']="im";
+$template['help']['text4j']="Kanal :)";
+$template['help']['text5']="Fehler können gemeldet und eingesehen werden unter";
 $template['help']['text6']="
-	For suggestions, news, corrections and whatever related with the website please drop an email to";
+	Für Anregungen, Neuigkeiten, Verbesserungen oder sonstiges in Bezug zur Web-Site, schicke eine E-Mail an";
 $template['help']['text7']="
-	For any kind of help in graphics, translations, and documentation please contact";
+	Für jede Art von Hilfe in Grafik, Übersetzungen und Dokumentation kontaktiere bitte";
 /* help.php end */
 
 /* honor.php start */
-$template['honor']['title']="Honor and Glory";
-$template['honor']['text1']="This is a list of the people that have contributed in some way to the KVIrc project.";
-$template['honor']['text2']="This list is far from being complete. A lot of more or less \"anonymous\" people have wasted their time, eyes, bandwidth and brain resources on this project. If you're one of those, then well, don't hesitate to contact";
-$template['honor']['text3']="If your avatar doesn't appear, or it's wrong, send me the right picture. If you've found something incorrect, broken links, or missing on this page, please drop an email to";
-$template['honor']['made1']="The \"Creator\" of KVIrc. Mental work, hand work, eyes consuming and coffee drinking";
-$template['honor']['quote1']="I'll check... lemme check...&quot;<br />&quot;I'll fix it tomorrow...&quot;<br />&quot;KVIrc: the client that can't make coffee";
-$template['honor']['made2']="Webmaster, bughunter, snapshot maintainer, support gay^Wguy :o) and the man that gives you KVIrc through IPv6";
-$template['honor']['made3']="Documentation, bug searching, public relations";
-$template['honor']['quote3']="No idea of what you're talking about... or why you need it :)";
-$template['honor']['made4']="Bug hunting, plugin development, bug fixes, windows porting and snapshots";
-$template['honor']['quote4']="&lt;YaP&gt; why you haven't implemented a class like DoEverythingByYourself ? :)&quot;<br />&quot;&lt;Pragma&gt; a wonderful recursive function :)&quot;<br />&quot;&lt;YaP&gt; Damn...I knew it eheheheheh";
-$template['honor']['made5']="Test scripter, bug hunting  ideator &amp; creator of the first www.kvirc.net";
-$template['honor']['quote5']="whassup?";
-$template['honor']['made6']="The official C++ manual and plugin developer";
-$template['honor']['quote6']="prepare yourselves..&quot; &quot; #include &lt;iostream.h&gt;&quot;<br />&quot;class testing {...&quot;<br />&quot;&lt;oehansen&gt; I must admit, I'm getting confused :-)&quot;<br />&quot;&lt;Pragma&gt; Me too , at this point :)";
-$template['honor']['made7']="Slackware Packages";
-$template['honor']['made8']="Italian translation, bug hunting, moral support :))))";
-$template['honor']['quote8']="KVIrc? Ah! The dinosaur...";
-$template['honor']['made9']="German translation, bug hunting, new ideas. Some scripting, Code improvements + new code ;)";
-$template['honor']['quote9']="Pragma: Short question...";
-$template['honor']['made10']="Breaking everything, and correcting grammar when there isn't anything left to break. Also, listening to Aeri's requests and getting about half of them done...";
-$template['honor']['quote10']="Hey, it's not my responsibility to find a funny quote of myself ^_~";
-$template['honor']['made11']="Italian translations, code improvements and many useful suggestions";
-$template['honor']['made12']="Official polish beer provider and plugin developer";
-$template['honor']['quote12']="echo &quot;STOP IT&quot; &gt; /dev/neighbour&quot; &quot;cd ./neighbour &amp;&amp; make clean&quot;<br />&quot;Pragma...erm...bugs ? WHICH bugs ? ;))";
-$template['honor']['made13']="Old site creator, some suggestions, tea drinker (Thanks Szymon, your tea is excellent ;) ) and.. why I'm listed here?";
-$template['honor']['quote13']="Hey mum, look!! My name is in the KVIrc Honor &amp; Glory section!!";
-$template['honor']['made14']="Newsauthor, bugtracker and constant user support on #kvirc";
-$template['honor']['made15']="French translation, betatesting and heavy bughunting";
-$template['honor']['made16']="Object classes developer, code improvements, betatesting, bugfixing, exotic scripting, documentation...";
-$template['honor']['quote16']="&lt;Grifisx&gt;...damned brackets ! ...there are always too many...<br />&lt;Noldor&gt;....or too few...";
-$template['honor']['made17']="Object classes developer, code improvements, betatesting, bugfixing, exotic scripting, documentation...";
-$template['honor']['quote17']="&lt;Grifisx&gt; The difference between me and you is just that, You see things and you say &quot;Why?&quot; But I dream things that never were and I say...&quot;Why not?";
-$template['honor']['made18']="Internationalization, bugfixing, bughunting, new ideas and more...";
-$template['honor']['made19']="New site creator, site mantainer, Italian translation, scripting, bughunting, Slackware packages, new ideas...";
-$template['honor']['quote19']="&lt;HelLViS69&gt; Blessed gdb, in the name of ritchie, kerningham and rms";
-$template['honor']['made20']="Italian translation, graphics, true believer";
-$template['honor']['quote20']="Time makes no sense";
-$template['honor']['made21']="FAQ and Italian translations";
-$template['honor']['made22']="Debian packages, moral support";
-$template['honor']['quote22']="One must make one's self superior to humanity, in power, in loftiness of soul, in contempt. - Friedrich Nietzsche";
-$template['honor']['made23']="Bug hunting and fixing, doc fixes, scripting (NGL File Server)";
-$template['honor']['quote23']="I don't know what I want, but I know how to get it.";
-$template['honor']['made24']="Away system, colored nicks, general programming, spanish translantation";
-$template['honor']['quote24']="Pragma: think of KVIrc as a tool for scripters... we have to left them something to do :)";
-$template['honor']['made25']="The 'light' inside the GNU clouds. Generic (??!) official project supporter :)";
-$template['honor']['quote25']="Pragma: seems that kvirc with all its plugins is becoming a desktop environment&quot; &quot;echo espresso &gt; /dev/coffee&quot; &quot;Pragma: you reached the user limit. WTF!";
-$template['honor']['made26']="Ideator of www.kvirc.org";
-$template['honor']['quote26']="This free project is better that shareware&quot; &quot;mIrc for windows even in alpha stage";
-$template['honor']['made27']="Makes sure that nobody is lazy, bug-hunter, a LOT of suggestions and maker of RealityX IRC.";
-$template['honor']['quote27']="Skydiving is almost as exciting as KVIrc scripting!&quot;<br />&quot;Pragma: could you add these functions: \$rubmyback() and \$makecoffe()?";
-$template['honor']['made28']="Debugging and improvements.";
-$template['honor']['quote28']="I'm just *really* good at doing things when I have no idea of what I'm actually doing";
-$template['honor']['made29']="Improvements of KVIrc code and of my linux knowledge. I like to think him as a 'spiritual guide'... :D";
-$template['honor']['made30']="The KDE man! Making sure that KVIrc has a reason to have a K in the beginning";
-$template['honor']['quote30']="Could I please make KVIrc a pure KDE application today?? Pleeease...";
-$template['honor']['made31']="Some \"tiny\" pieces of code.";
-$template['honor']['quote32']="&lt;Error403&gt;Number1: I imagined you looking crazy :)&quot;<br />&quot;&lt;NumeroUno&gt; I was drunk";
-$template['honor']['made33']="The \"open hand\" for the KVIrc project. Provider of the SVN service, www &amp; ftp mirroring, bandwidth, great ideas and fun while coding.";
-$template['honor']['made34']="Bug hunter, ideas source :)";
-$template['honor']['quote34']="buy a pigeon traveller and pass dcc transfers to him";
-$template['honor']['made35']="Various funky improvements.";
-$template['honor']['quote35']="I can program anything I set my mind to!";
-$template['honor']['made36']="Beta testing, language structure improvements.";
-$template['honor']['quote36']="...it's enough for 100 IPs per meter on earth, so every lightswitch can have its own IP...then you telnet to your lightswitch and turn it off!";
-$template['honor']['made37']="MacOSX porting";
-$template['honor']['made38']="Portuguese translation, default script patches.";
-$template['honor']['made39']="Russian translation";
+$template['honor']['title']="Ehre und Ruhm";
+$template['honor']['text1']="Dies ist eine Liste der Leute, die zu KVIrc beigetragen haben.";
+$template['honor']['text2']="Diese Liste ist bei weitem nicht vollständig. Einige mehr oder weniger \"anonyme\" Personen haben ihre Zeit, Augen, Bandbreite und Gehirn bei diesem Projekt verbraucht. Wenn Du einer von ihnen bist, zögere nicht, uns zu kontaktieren";
+$template['honor']['text3']="Wenn Dein Avatar nicht richtig erscheint oder falsch ist, schicke mir das richtige Bild. Wenn Du einen Fehler, eine kaputte Verknüpfung oder eine fehlende Seite findest, schicke bitte eine E-Mail an";
+$template['honor']['made1']="Der \"Schöpfer\" von KVIrc. Kopfarbeit, Handarbeit, eyes consuming und Kaffee trinken";	//TODO
+$template['honor']['quote1']="Ich prüf's... lass es mich checken...&quot;<br />&quot;Ich reparier's morgen...&quot;<br />&quot;KVIrc: Der Client, der keinen Kaffee kochen kann";
+$template['honor']['made2']="Webmaster, Fehlerjäger, Schnappschuss-Verwalter, Supporter, und der Mann, der KVIrc IPv6 gegeben hat.";
+$template['honor']['made3']="Dokumentation, Fehlersuche, Öffentlichkeitsarbeit";
+$template['honor']['quote3']="Ich habe keine Ahnung, wovon Du sprichst... oder warum Du es haben willst :)";
+$template['honor']['made4']="Fehlersuche, Plugin-Entwicklung, Fehlerbeseitigung, Windows-Portierung und Schnappschüsse";
+$template['honor']['quote4']="&lt;YaP&gt; Warum hast Du nicht eine Funktion MachAllesSelber geschrieben? :)&quot;<br />&quot;&lt;Pragma&gt; Eine wunderbar rekursive Funktion :)&quot;<br />&quot;&lt;YaP&gt; Verdammt... Ich wusste es eheheheheh";
+$template['honor']['made5']="Test scripter, Fehlersuche, Ideengeber &amp; Ersteller des ersten www.kvirc.net";
+$template['honor']['quote5']="Was'n?";
+$template['honor']['made6']="Das offizielle C++-Handbuch und Plugin-Entwickler";
+$template['honor']['quote6']="Bereitet euch vor..&quot; &quot; #include &lt;iostream.h&gt;&quot;<br />&quot;class testing {...&quot;<br />&quot;&lt;oehansen&gt; Ich muss zugeben, Ich bin verwirrt :-)&quot;<br />&quot;&lt;Pragma&gt; Ich auch, an diesem Punkt  :)";
+$template['honor']['made7']="Pakete für Slackware";
+$template['honor']['made8']="Italienische Übersetzung, Fehlersuche, moralische Unterstützung :))))";
+$template['honor']['quote8']="KVIrc? Ah! Der Dinosaurier...";
+$template['honor']['made9']="Deutsche Übersetzung, Fehlersuche, neue Ideen. ein paar Skripte, Quelltextverbesserungen + neuer code ;)";
+$template['honor']['quote9']="Pragma: Kurze Frage...";
+$template['honor']['made10']="Macht alles kaputt, und verbessert die Grammatik, wenn es nichts mehr zu zerstören gibt. Hört auch auf Aeris Anfragen, und hat schon die Hälfte davon erledigt...";
+$template['honor']['quote10']="Hey, ich bin nicht zuständig, um ein lustiges Zitat von mir zu finden ^_~";
+$template['honor']['made11']="Italienische Übersetzung, Quelltextverbesserung und viele nützliche Vorschläge";
+$template['honor']['made12']="Offizieller polnischer Bierlieferant und Plugin-Entwickler";
+$template['honor']['quote12']="echo &quot;STOP IT&quot; &gt; /dev/neighbour&quot; &quot;cd ./neighbour &amp;&amp; make clean&quot;<br />&quot;Pragma...erm...Fehler? WELCHE Fehler? ;))";
+$template['honor']['made13']="Ersteller der alten Website, einige Vorschläge, Teetrinker (Danke Szymon, Dein Tee ist großartig ;) ) und.. warum bin ich hier gelistet?";
+$template['honor']['quote13']="Hey Mami, schau!! Mein Name steht in der KVIrc Ehre-&amp;-Ruhm-Rubrik!!";
+$template['honor']['made14']="Nachrichtenautor, Bugtracker und stetige Benuzterunterstützung in #kvirc";
+$template['honor']['made15']="Französische Übersetzung, Betatester und starker Fehlerjäger";
+$template['honor']['made16']="Objektklassenentwickler, Code-Verbesserungen, Betatester, Fehlerausbesserungen, exotische Skripte, Dokumentation...";
+$template['honor']['quote16']="&lt;Grifisx&gt;...verdammte Klammern! ...es sind immer zu viele...<br />&lt;Noldor&gt;....oder zu wenige...";
+$template['honor']['made17']="Objektklassenentwickler, Code-Verbesserungen, Betatester, Fehlerausbesserungen, exotische Skripte, Dokumentation...";
+$template['honor']['quote17']="&lt;Grifisx&gt; Der Unterschied zwischen uns beiden ist: Du siehst Dinge und fragst &quot;Warum?&quot;, ich träume von Dingen, die es nicht gibt und frage &quot;Warum nicht?";
+$template['honor']['made18']="Internationalisierung, Fehlerausbesserungen, Fehlersuche, neue Ideen und mehr...";
+$template['honor']['made19']="Ersteller der neuen Webpräsenz und -verwalter, italienische Übersetzung, Skripte, Fehlersuche, Slackware-Pakete, neue Ideen...";
+$template['honor']['quote19']="&lt;HelLViS69&gt; heiliger gdb, im Namen Ritchies, Kerninghams und rms'";
+$template['honor']['made20']="Italienische Übersetzung, Grafiken, true believer";
+$template['honor']['quote20']="Zeit hat keinen Sinn";
+$template['honor']['made21']="FAQ und italienische Übersetzung";
+$template['honor']['made22']="Debian-Pakete, moralische Unterstützung";
+$template['honor']['quote22']="Man muß der Menschheit überlegen sein durch Kraft, durch Höhe der Seele, - durch Verachtung. - Friedrich Nietzsche";
+$template['honor']['made23']="Fehlersuche und -ausbesserungen, Ausbesserung der Dokumentation, Skripte (NGL File Server)";
+$template['honor']['quote23']="Ich weiß nicht, was ich will, aber ich weiß, wie ich es kriege.";
+$template['honor']['made24']="Away-System, farbige Spitznamen, generelle Programmierung, spanische Überseetzung";
+$template['honor']['quote24']="Pragma: stell' Dir KVIrc als Werkzeug für Skript-Programmierer vor... wir müssen ihnen etwas zu tun übrig lassen :)";
+$template['honor']['made25']="Das 'Licht' innerhalb der GNU-Wolken. Allgemeiner (??!) offizieller Project-Unterstützer :)";
+$template['honor']['quote25']="Pragma: scheint so, als ob KVIrc mit all seinen Zusatzmodulen eine komplette Arbeitsumgebung wird&quot; &quot;echo espresso &gt; /dev/coffee&quot; &quot;Pragma: Du hast das Benutzerlimit erreicht. WTF!";
+$template['honor']['made26']="Ideengeber für www.kvirc.org";
+$template['honor']['quote26']="Dieses freie Projekt ist besser als Shareware&quot; &quot;mIrc für Windows sogar im Alphastadium";
+$template['honor']['made27']="Stellt sicher, dass niemand faul ist, Fehlersucher, eine MENGE Vorschläge und Ersteller von RealityX IRC.";
+$template['honor']['quote27']="Fallschirmsprigen ist fast so aufregend wie KVIrc-Skripte schreiben!&quot;<br />&quot;Pragma: kannst Du diese Funktionen hinzufügen: \$rubbelmeinenRuecken() and \$machKaffee()?";
+$template['honor']['made28']="Fehlerbehebung und Verbesserungen.";
+$template['honor']['quote28']="Ich kann *wirklich* gut Sachen erledigen, wenn ich keine AHnung habe, was ich gerade tue";
+$template['honor']['made29']="Verbesserungen von KVIrc und meiner Linux-Kenntnisse. Ich mag an ihn als einen 'seelischen Führer' denken... :D";
+$template['honor']['made30']="Der KDE-Mann! Stellt sicher, dass KVIrc einen Grund hat, das K am Anfang des Namens zu haben";
+$template['honor']['quote30']="Kann ich heute bitte aus KVIrc eine reine KDE-Applikation machen?? Bitteee...";
+$template['honor']['made31']="Einige \"kleine\" Stücke Quelltext.";
+$template['honor']['quote32']="&lt;Error403&gt;Number1: Ich stellte mir vor, dass Du verrückt aussiehst :)&quot;<br />&quot;&lt;NumeroUno&gt; Ich war betrunken";
+$template['honor']['made33']="Der \"großzügige\" für das KVIrc-Projekt. Stellt SVN-Service, www &amp; ftp Spiegelung und Bandbreite zur Verfügung, großartige Ideen und Spaß während dem Programmieren.";
+$template['honor']['made34']="Fehlersucher, Ideenquelle :)";
+$template['honor']['quote34']="buy a pigeon traveller and pass dcc transfers to him";							//TODO
+$template['honor']['made35']="Verschiedene irre Verbesserungen.";
+$template['honor']['quote35']="Ich kann alles programmieren, woran ich denke!";
+$template['honor']['made36']="Betatester, Sprachstrukturverbesserungen.";
+$template['honor']['quote36']="...es reicht für 100 IPs pro Meter der Erde, so dass jeder Lichtschalter seine eigene IP haben kann...dann kannst du dich per telnet zu deinem Lichtschalter verbinden und ihn ausschalten!";
+$template['honor']['made37']="MacOSX-Portierung";
+$template['honor']['made38']="Portugiesische Übersetzung, Standard-Skript-Patches.";
+$template['honor']['made39']="Russische Übersetzung";
 /* honor.php end */
 
 /* install.php start */
 $template['install']['title1']="Installation";
 $template['install']['title2']="Guru Installation";
 $template['install']['title3']="Hacker Installation";
-$template['install']['title4']="Human (detailed) Installation";
-$template['install']['text1']="General notes for the installation of the release 3.2.0 of KVIrc";
-$template['install']['text2']="You NEED automake 1.5";
-$template['install']['text3']="If you're compiling the SVN version of KVIrc run ./autogen.sh";
-$template['install']['text4']="your qtlibrary path";
-$template['install']['text5']="eventually";
-$template['install']['text6']="your kde library path";
-$template['install']['text7']="We're using GNU tools here.";
-$template['install']['text8']="your options";
+$template['install']['title4']="Humane (detailierte) Installation";
+$template['install']['text1']="Generelle Anmerkung zur Installation von KVIrc Version 3.2.0";
+$template['install']['text2']="Du MUSST automake 1.5 haben";
+$template['install']['text3']="Wenn Du die SVN-Version von KVIrc kompilierst, starte ./autogen.sh";
+$template['install']['text4']="Pfad zur Qt-Bibliothek";
+$template['install']['text5']="schließlich";
+$template['install']['text6']="Pfad zur KDE-Bibliothek";
+$template['install']['text7']="Wir benutzen hier die GNU-Werkzeuge.";
+$template['install']['text8']="Deine Optionen";
 $template['install']['text9']="
-	If you're not a guru, or have problems with the installation read these instructions carefully.";
-$template['install']['step']="Step";
+	Wenn Du kein Guru bist, oder Probleme mit der Installation hast, lies diese Anleitung sorgfältig.";
+$template['install']['step']="Schritt";
 $template['install']['text10']="
-	If (and ONLY IF) you're compiling the SVN version of KVIrc you need to generate the configure script.";
+	Wenn (und NUR dann) Du die SVN-Version von KVIrc kompilierst, musst Du das configure-Skript generieren.";
 $template['install']['text11']="
-	If it does not run correctly, check your automake version.<br />
-	You need automake 1.5, older versions will NOT WORK with the current SVN.<br />
-	You can check the automake version with the command";
+	Wenn es nicht erfolgreich durchläuft, überprüfe Deine automake-Version.<br />
+	Du brauchst automake 1.5, ältere Versionen arbeiten NICHT mit der SVN-Version.<br />
+	Du kannst die Version von automake überprüfen mit";
 $template['install']['text12']="
-	If your automake version is lower than 1.5 upgrade it.<br />
-	You can find it at http://www.gnu.org/software/automake/ (source version) or on your favorite distribution site as auto-installing package.<br /><br />
-	Automake installation tip: automake installs in /usr/local/ by default.<br />
-	If you have an older automake installation that resides in /usr/ it's better to remove it: the files to be removed are /usr/bin/automake /usr/bin/aclocal /usr/share/automake /usr/share/aclocal<br />
-	If you feel unsure about removing it, rename it.<br />
-        Also make sure that /usr/local/bin is in your \$PATH.<br /><br />
-	If you have downloaded the sources as tar.gz (or tar.bz2) package or if you don't even know what SVN is, ignore this step and skip to the next one.";
-$template['install']['steptitle1']="Matching the requirements";
+	Wenn Deine Version von automake kleiner als 1.5 ist, aktualisiere es.<br />
+	Du kannst es finden unter http://www.gnu.org/software/automake (Quelltext), oder in der Paketverwaltung deiner Distribution.<br /><br />
+	Hinweis zur automake-Installation: Standardmäßig installiert sich automake nach /usr/local.<br />
+	Wenn Du eine ältere Version von automake in /usr hast, ist es besser sie zu entfernen: Die Dateien, die gelöscht werden müssen sind /usr/bin/automake, /usr/bin/aclocal, /usr/share/automake und /usr/share/aclocal<br />
+	Wenn Du unsicher bist, die Dateien zu entfernen, benenne sie um.<br />
+	Stelle ebenfalls sicher, dass /usr/local/bin in deinem Pfad (\$PATH) enthalten ist.<br /><br />
+	Wenn Du die Quellen als tar.gz (oder tar.bz2) geladen hast, oder du nicht weißt, was SVN ist, ignoriere diesen Schritt und gehe zum nächsten.";
+$template['install']['steptitle1']="Die Voraussetzungen";
 $template['install']['tree1a']="
-	You need the Qt library.<br />
-        You can download the latest version from ftp.trolltech.com.<br />
-        The main Qt www site is www.trolltech.com.<br />
-        Note for the GPL maniacs: Qt IS GPL.<br />
-        The minimum required version is 3.0.5 (older versions *might* work)<br />
-        Download and install it by following the rules explained in the documentation that comes with the library";
+	Du brauchst die Qt-Bibliothek.<br />
+		Die kannst die aktuellste Version bei ftp.trolltech.com herunterladen.ybr />
+		Die Qt-Hauptseite ist www.trolltech.com.<br />
+		Hinweis für die GPL-Fanatiker: Qt IST GPL.<br />
+		Die zumindest benötigte Version ist 3.0.5 (älter Versionen *können* funktionieren)<br />
+		Lade und installiere es, indem Du der Anleitung folgst, die der Bibliothek beiliegt";
 $template['install']['tree1b']="
-	You need a decent pthread implementation.<br />
-        This is usually included in your distribution and is probably already installed. The library is libpthread.so.<br />
-        You can look for it with the \"find\" command";
-$template['install']['tree1btext1']="On my system the output is";
+	Du brauchst eine korrekte pthread-Implementierung.<br />
+		Diese ist normalerweise in Deiner Distributuion enthalten und schon installiert. Die Bibliothek heißt libpthread.so.<br />
+		Du kannst sie suchen mit dem \"find\"-Befehl";
+$template['install']['tree1btext1']="Auf meinem System lautet die Ausgabe";
 $template['install']['tree1btext2']="
-	If you don't have it (the configure script will tell you) you can download it from your favorite GNU mirror.<br />
-        On Solaris you can use the native libthread.so library instead but you will have to pass the specific option to configure (see below).<br />
-        FreeBSD has a native implementation of pthreads in libc_r and the gcc compiler has a special -pthread flag to link to it.<br />
-        If you're on FreeBSD, use the --with-freebsd-pthread configure option and make sure that you don't have other pthread wrappers installed (that might collide with the native header files).";
+	Wenn Du es nicht hast (das configure-Skript wird es Dir sagen), kannst Du es von Deinem bevorzugten GNU-Spiegel laden.<br />
+		Unter Solaris kannst Du stattdessen die systemeigene Bibliothek libthread.so nutzen, aber Du musst die entsprechenden Option bei configure angeben (siehe unten).<br />
+		FreeBSD hat eine eigene Implementierung von pthread in libc_r und der gcc-Kompilierer hat ein spezielles -pthread Flag, um dagegen zu linken.<br />
+		Wenn Du unter FreeBSD arbeitest, benutze die \"--with-freebsd-pthread\"-configure-Option, und stelle sicher, dass Du keinen anderen pthread-wrapper installiert hast (dieser könnte mit den systemeigenen Header-Dateien kollidieren).";
 $template['install']['tree1btext3']="
-	The configure script will also fail if the library is hidden somewhere on your system (eg. not in /lib , /usr/lib or /usr/local/lib): you should probably move it";
+	Das configure-Skript schlägt auch fehl, wenn die Bibliothek irgendwo in Deinem System versteckt ist (z. B. nicht in /lib, /usr/lib oder /usr/local/lib): Du solltest sie wahrscheinlich verschieben";
 $template['install']['tree1c']="
-	You need the dynamic linker interface library libdl.so.<br />
-        This is usually installed on your system, so don't care until configure complatins about it. Some system have the interface builtin in libc. The configure script can detect it";
+	Du brauchst die Schnittstellenbibliothek des Dynamischen Linkers libdl.so<br />
+		Diese ist normalerweise auf Deinem System installiert, so dass Du Dich nicht darum kümmern musst, ausser configure beschwert sich darüber. Einige Systeme haben die Schnittstelle in libs integriert. Das configure-Skript kann dieses feststellen";
 $template['install']['tree1d']="
-	(Optional) If you want to compile the KDE integration support you obviousy need KDE. The kdelibs package should suffice. On some distros you have to install also kdelibs-devel";
+	(Optional) Wenn Du die KDE-Unterstützung einkompiliert haben möchtest, brauchst Du natürlich KDE. Das Paket kdelibs sollte ausreichen. Bei einigen Distributionen musst Du auch kdelibs-devel installieren";
 $template['install']['tree1e']="
-	(Optional) If you want DCC VOICE to support the gsm codec, you need a recent copy of libgsm. This is not strictly required at compile time since KVIrc will look for the library at run-time, and only if the DCC VOICE with the gsm codec is requested.<br />
-        You can check for libgsm using the 'find' command.";
-$template['install']['tree1etext1']="The output should be sometihg like";
+	(Optional) Wenn Du bei DCC VOICE Unterstützung für den gsm-codec haben möchtest, brauchst Du eine aktuelle Version von libgsm. Diese wird nicht zwangsläufig bei der Kompilierung benötigt, da KVIrc sie zur Laufzeit sucht, wenn DCC VOICE mit gsm-codec gebraucht wird.<br />
+		Du kannst nacht libgsm mit dem \"find\"-Befehl suchen.";	
+$template['install']['tree1etext1']="Die Ausgabe sollte aussehen wie";
 $template['install']['tree1etext2']="
-	This library is included in most distributions. Some distros ship only the static version of the library \"libgsm.a\": if the previous find returned something similar to \"/usr/lib/libgsm.a\" , you might create manually the shared archive by running:";
+	Diese Bibliothek is bei den meisten Distributionen enthalten. Einige liefern nur die statische Version der Bibliothek \"libgsm.a\" mit. Wenn das vorherige find etwas in der Art \"/usr/lib/libgsm.a\" ausgegeben hat, kannst Du mit den folgenden Befehlen die dynamische erstellen:";
 $template['install']['tree1etext3']="
-	If you don't have it installed at all, you might have a look in your distribution CD, or download it from the web";
+	Wenn Du es gar nicht installiert hast, kannst Du auf der CD Deiner Distribution suchen, oder es aus dem Web laden";
 $template['install']['tree1f']="
-	(Optional) If you want the /snd plugin to play various audio formats
-        you either need a running artsd , a running esd or a reasonably recent audiofile library.
-        Without these KVIrc will be only able to play *.au files";
+	(Optional) Wenn Du willst, dass das /snd-Plugin verschiedene Audioformate spielt
+		brauchst Du entweder einen laufenden artsd, einen laufenden esd oder eine aktuelle audiofile-Bibliothek.
+		Ohne diese wird KVIrc nur *.au-Dateien abspielen";
 $template['install']['tree1g']="
-	(Optional) If you want to generate the on-line documentation you also need perl: any version will do (I guess)";
+	(Optional) Wenn Du die Online-Dokumentation erstellen willst, brauchst Du auch Perl, Version egal (wahrscheinlich)";
 $template['install']['tree1h']="
-	(Optional) If you want the secure socket layer support to be compiled
-        you need the OpenSSL library and headers. (libssl.so e openssl/ssl.h)";
-$template['install']['steptitle2']="Running the configure script (mandatory)";
+	(Optional) Wenn Du SSL-Unterstützung kompiliert haben möchtest
+		brauchst Du die OpenSSL-Bibliothek und -Headers. (libsshl.so und openssl/ssl.h)";
+$template['install']['steptitle2']="Das configure-Skript aufrufen (erfoderlich)";
 $template['install']['text13']="
-	First of all you must run the configure script that will guess some info about your system and prepare the compilation.<br />
-        You may try to \"simply run\" it and check if it works...the configure script tries to be smart, but in many cases it will fail.<br /><br />
-        So before running the script make sure that the enviroinement variable \$QTDIR points to the right location. This will help in finding the correct version of Qt.<br />
-        You might eventually set it with the command:";
-$template['install']['text14']="your qt dir";
+	Zuerst musst Du das configure-Skript aufrufen, dass einige Infos über Dein System sammelt und die Kompilierung vorbereitet.<br />
+		Du kannst einen \"einfachen Lauf\" probieren und sehen, ob dies reicht... Das configure-Skript versucht schlau zu sein, aber in einigen Fällen wird es versagen.<br /><br />
+		Bevor Du das Skript startest, stelle sicher, dass die Umgebungsvariable \$QTDIR auf das richtige Verzeichnis zeigt. Dies hilft, die richtige Version von Qt zu finden.<br />
+		Du kannst sie setzen mit dem Befehl:";
+$template['install']['text14']="Dein Qt-Verzeichnis";
 $template['install']['text15']="
-	On my system qt is installed in /usr/local/kde/qt<br />
-        so I actually execute";
+	Auf meinem System ist Qt in /usr/local/kde/qt installiert<br />
+		daher führe ich aus";
 $template['install']['text16']="
-	If you want to compile the KDE support you might want to do the same with \$KDEDIR";
-$template['install']['text17']="your kde dir";
-$template['install']['text18']="In my case KDE is installed in /usr/local/kde so I use";
-$template['install']['text19']="The configure script has a lot of options that can be listed by using";
-$template['install']['text20']="Here's a list with explainations (the most common are at the top):";
+	Wenn Du KDE-Unterstützung kompilieren möchtest, musst Du das gleiche mit \$KDEDIR machen";
+$template['install']['text17']="Dein KDE-Verzeichnis";
+$template['install']['text18']="In meinem Fall ist KDE in /usr/local/kde installier, daher nutze ich";
+$template['install']['text19']="Das configure-Skript hat eine Menge Optionen, die aufgelistet werden können mit";
+$template['install']['text20']="Hier ist eine Liste mit Erklärungen (die gebräuchlichsten stehen oben):";
 $template['install']['tree2a']="
-	This is for debugging and reporting problems. It sets the compiler options in order to leave the debugging informations into the kvirc executable and the libraries.
-	In this way you will be able to produce a gdb backtrace in case of a crash.<br />
-	YOU NEED THIS OPTION IF YOU WANT TO REPORT A PROGRAM CRASH";
+	Dies ist für Fehlersuche und Problemberichte. Es setzt die Kompilieroptionen, die die Informationen zur Fehlerfindung im lauffähigen KVIrc und den Bibliotheken lässt.
+	In diesem Fall hast Du die Möglichkeit, gdb-Ablaufverfolgungen im Falle eines Absturzes zu erstellen.<br />
+	DU BRAUCHST DIESE OPTION, WENN DU EINEN PROGRAMMABSTURZ MELDEN WILLST";
 $template['install']['tree2b']="
-	Asks the compiler to use pipes instead of files for the compilation stage. The pipes will help in reducing disk usage and will probably shorten the compilation a bit. Use this option if your platform supports it";
+	Weist den Kopilierer an, pipes anastatt von Dateien während der Kompilation zu verwenden. Pipes helfen, Festplattenbeanspruchung zu senken und verkürzen die Kompilierzeit ein wenig. Nutze diese Option, wenn Deine Platform sie unterstützt";
 $template['install']['tree2c']="
-	This is an experimental support for object prelinking that improves significantly the executable startup time. In order to use it you need to have the \"objprelink\" program in the PATH. The objprelink program is included in the distribution in the admin directory. In order to use it, you will need to:";
-$template['install']['tree2ctext1']="somewhere_on_your_path";
-$template['install']['tree2ctext2']="All this AFTER running ./configure and BEFORE running make";
+	Dies ist eine experimentelle Unterstützung für Objektvorverknüpfungen, die spürbar die Startzeit des Programms verbessert. Um es zu nutzen, musst Du das \"objprelink\"-Programm in Deinem Pfad haben. Das objprelink-Programm ist im admin-Verzeichnis enthalten. Um es zu nutzen, musst Du:";
+$template['install']['tree2ctext1']="irgendwo_in_Deinem_Pfad";
+$template['install']['tree2ctext2']="All dieses NACH ./configure und VOR make";
 $template['install']['tree2d']="
-	KVIrc contains some ix86 assembly routines that could performs some things faster (this is not always true, depends on the compiler). You might want to try it";
-$template['install']['tree2e1']="NUMBER";
+	KVIrc beinhaltet einige ix86 Assemblerroutinen, die einige Dinge beschleunigen können (trifft nicht immer zu, hängt vom Kompilierer ab). Du willst es vielleicht ausprobieren";
+$template['install']['tree2e1']="NUMMER";
 $template['install']['tree2e']="
-	Enables the compiler optimisation flag -o&lt;NUMBER&gt;.<br />
-	Possible values are 0 , 1, 2 and 3 (but if you compiler supports more optimisation levels, you might use other numbers here).<br />
-	Increases compilation time but may produce a slightly faster executable";
+	Aktiviert das Kompiliereroptimierungskennzeichen -o&lt;NUMMER&gt;.<br />
+	Mögliche WErte sind 0, 1, 2 und 3 (aber wenn Dein Kompilierer mehr optimierungsstufen unterstützt, kannst Du diese Nummern hier auch nutzen).<br />
+	Verlängert die Kompilierungszeit, produziert aber ein etwas schnelleres Programm";
 $template['install']['tree2f']="
-	Do not check if the pthread stuff works.<br />
-	If configure fails in the pthread library check , you might want to try this...(but then you will have really to \"pray\" that the check has been broken by some \"unusual\" conditions and the compilation will succeed)";
+	Teste nicht, ob pthread funktioniert.<br />
+	Wenn configure während dem pthread-Bibliotheks-Check (pthread library check) fehlschlägt, kannst Du dieses ausprobieren...  (Aber dann musst Du wirklich \"beten\", dass der Test durch \"ungewöhnliche\" Umstände fehlschlug und die Kompilierung erfolgreich verläuft.)";
 $template['install']['tree2g']="
-	Specifies explicitly the path to the X header files. You might want to use this if the configure script has trouble in finding it";
+	Gibt explizit den Pfad zu den X-Header-Dateien an. Du kannst dies nutzen, wenn configure Probleme hat, sie zu finden";
 $template['install']['tree2h']="
-	Specifies explicitly the path to the X libraries. You might want to use this if the configure script has trouble in finding it";
+	Gibt explizit den Pfand zu den X-Bibliotheken an. Du kannst dies nutzen, wenn configure Probleme hat, sie zu finden";
 $template['install']['tree2i']="
-	Use &lt;NAME&gt; instead of \"qt\" as the Qt library name.<br />
-	This is useful on systems where Qt has been installed with a name different than the default \"qt\".<br />
-	It happens often that to allow multiple copies of qt to work the newest have the version name appended to it.<br />
-	For example, on FreeBSD I have found \"qt\" being Qt1.* and \"qt2\" being Qt 2.*. Since you need Qt 2.* for kvirc to work, you will need to use --with-qt-name=qt2.<br />
-	If you use this option, you will probably also need to remap the moc compiler path/name with --with-qt-moc";
+	Nutze &lt;NAME&gt; anstatt \"qt\", als Qt-Bibliothekenname.<br />
+	Dies ist nützlich auf Systemen, wo Qt unter einem anderen als dem Standardnamen \"qt\" installiert ist.<br />
+	Es passiert oft, um verschiedene Versionen von Qt zu ermöglichen, dass die Version an den Namen angehangen wird.<br />
+	Bei FreeBSD zum Beispiel ist \"qt\" Qt1.* und \"qt2\" Qt 2.*. Da Du Qt 3.* brauchst, damit KVIrc funktioniert, musst Du --with-qt-name=qt3 angeben.<br />
+	Wenn Du diese Option nutzt, wirst Du wahrscheinlich auch den Pfad/Namen für den moc-Kompilierer mit --with-qt-moc angeben müssen";
 $template['install']['tree2j']="
-	Disable checking for the multithreaded version of Qt. By default, KVIrc will try to link to the multithreaded version if found on the system.<br />
-	NOTE: if you enable the KDE support , KVIrc MUST be linked to the qt library that KDE is linked to";
+	Deaktiviert das Überprüfen, ob die Qt-Version \"multithreaded\" ist. Standardmäßig wird KVIrc versuchen gegen die \"multithreaded\"-Version zu linken, wenn sie auf dem System gefunden wird.<br />
+	HINWEIS: Wenn Du KDE-Unterstützung aktivierst, muss KVIrc gegen die gleiche QT-Version gelinked werden, gegen die auch KDE gelinked ist";
 $template['install']['tree2k']="
-	Look for the qt library in &lt;DIR&gt;.<br />
-	You might want to use this if the configure script has trouble in finding the qt library.<br />
-	You should have no problems if you use export QTDIR=\"&lt;DIR&gt;\" before launching the configure script, but it might help you if you have a non standard Qt installation";
+	Suche die Qt-Bibliothek in &lt;DIR&gt;.<br />
+	Du kannst dies benutzen, wenn configure Probleme hat, die Qt-Bibliothek zu finden.<br />
+	Du solltest keine Probleme haben, wenn Du export QTDIR=\"&lt;DIR&gt;\" ausführst, bevor Du configure startest. Es kann aber nützlich sein, wenn Du keine standardmäßige Qt-Installation hast";
 $template['install']['tree2l']="
-	Look for the qt headers in &lt;DIR&gt;.<br />
-	You might want to use this if the configure script has trouble in finding the qt headers.<br />
-	You should have no problems if you use export QTDIR=\"&lt;DIR&gt;\" before launching the configure script, but it might help you if you have a non standard Qt installation";
+	Suche die Qt-Header in &lt;DIR&gt;.<br />
+	Du kannst dies benutzen, wenn configure Probleme hat, die Qt-Header zu finden.<br />
+	Du solltest keine Probleme haben, wenn Du export QTDIR=\"&lt;DIR&gt;\" ausführst, bevor Du configure startest. Es kann aber nützlich sein, wenn Du keine standardmäßige Qt-Installation hast";
 $template['install']['tree2m']="
-	Use the qt meta-object compiler found in &lt;PATH&gt;<br />
-	The path is usually \$QTDIR/bin/moc , and the configure script will find it if you have a standard Qt installation and \$QTDIR points to the right directory.<br />
-	Thus should have no problems if you use export QTDIR=\"&lt;DIR&gt;\" before launching the configure script, but it might help you if you have a non standard Qt installation.<br />
-	This will also help if you have the moc compiler renamed in some way: like \"moc2\" or sth...<br />
-	&lt;PATH&gt; in this case is a FULL path: directory/program_name!";
+	Benutze den Qt-Meta-Objekt-Kompilierer (moc) in &lt;PATH&gt;<br />
+	Der Pfad ist gewöhnlich \$QTDIR/bin/moc und configure wird ihn automatisch finden, wenn Du eine Standard-Qt-Installation hast und \$QTDIR auf das richtige Verzeichnis zeigt.<br />
+	Dieses sollte kein Problem sein, wenn Du export QTDIR=\"&lt;DIR&gt;\" ausführst, bevor Du configure startest. Es kann aber nützlich sein, wenn Du keine Standard-Qt-Installation hast.<br />
+	Dies hilft Dir auch, wenn Du den moc-Kompilierer umbenannt hast, wie z. B. \"moc2\" oder ähnliches...<br />
+	&lt;PATH&gt; ist in diesem Fall der VOLLE Pfad: Verzeichnis/Programmname!";
 $template['install']['tree2n']="
-	This disables Qt checking at compilation time.<br />
-	If this is the only way to compile and run the kvirc executable , then there is something wrong with the configure script";
+	Dies deaktiviert das Überprüfen von Qt zur Kompilierungszeit.<br />
+	Wenn dies der einzige Weg ist, KVIrc zu kompilieren und aufzurufen, dann stimmt was mit dem configure-Skript nicht";
 $template['install']['tree2o']="
-	The configure script will look for the KDE headers and libraries and if found it will enable the KDE support. If you don't want the KDE support even if KDE is detected, just use this switch";
+	Das configure-Skript sucht die KDE-Headers und -Bibliotheken und wenn es sie findet, aktiviert es die KDE-Unterstützung. Wenn Du die KDE-Unterstützung nicht haben willst, obwohl KDE gefunden wurde, nutze diesen Schalter";
 $template['install']['tree2p']="
-	Look for the KDE libraries in &lt;DIR&gt;<br />
-	If \$KDEDIR points to the right place, you shouldn't need this";
+	Suche die KDE-Bibliotheken in &lt;DIR&gt;<br />
+	Wenn \$KDEDIR auf den richtigen Ort zeigt, solltest Du dies nciht brauchen";
 $template['install']['tree2q']="
-	Look for the KDE headers in &lt;DIR&gt;<br />
-	If \$KDEDIR points to the right place, you shouldn't need this";
+	Suche die KDE-Headers in &lt;DIR&gt;<br />
+	Wenn \$KDEDIR auf den richtigen Ort zeigt, solltest Du dies nciht brauchen";
 $template['install']['tree2r']="
-	Install the kde service protocol files in &lt;DIR&gt;<br />
-	If \$KDEDIR points to the right place, you shouldn't need this.<br />
-	This is also non-critical for kvirc: if the configure script can't find this directory, you will only looose the support for irc:// urls in konqueror";
-$template['install']['tree2s']="Similar to --without-qt-check but for KDE";
+	Installiere die KDE-Service-Protokoll-Dateien nach &lt;DIR&gt;<br />
+	Wenn \$KDEDIR auf den richtigen Ort zeigt, solltest Du dies nciht brauchen<br />
+	Dies ist für KVIrc nicht kritisch: Wenn configure dieses Verzeichnis nicht finden kann, verlierst Du nur die Unterstützung für irc://-URLs in Konqueror";
+$template['install']['tree2s']="Wie --without-qt-check, aber für KDE";
 $template['install']['tree2t']="
-	The IPV6 support is compiled by default on the platforms that support it: this option disables it.<br />
-	Even if you have a plain IPV4-only connection, you might want to keep the IPV6 support: you will be able to lookup IPV6 hostnames";
+	Die IPv6-Unterstützung wird normalerweise auf Platformen, die dies unterstützuen, einkompiliert. Diese Option unterbindet dies.<br />
+	Selbst wenn Du nur eine reine IPv4-Verbindung hast, kannst Du IPv6-Unterstützung aktiviert lassen, Du kannst dann IPv6-Hostnamen nachschlagen";
 $template['install']['tree2u']="
-	This will disable the use of the system memmove() memcpy() and memset() functions and enable the bundled implementations. Use it if you have undefined references to these functions while compiling";
+	Dies deaktiviert die Nutzung der Systemfunktionen memmove(), memcpy() und memset() und aktiviert die Nutzung der eigenen Implementierung. Nutze dies, wenn Du undefinierte Referenzen (undefined references) zu diesen Funktionen während der Kompilierung hast";
 $template['install']['tree2v']="
-	This is a hack mainly for Solaris.<br />
-	Use this option if kvirc exits with no apparent reason and the system prints a message related to an \"Alarm\" :)";
+	Dies ist ein hack hauptsächlich für Solaris.<br />
+	Nutze diese Option, wenn sich KVIrc ohne sichtbaren Grund beendet und das System eine Nachricht bezüglich eines \"Alarms\" ausgibt :)";
 $template['install']['tree2w']="
-	Disables the cryptographic engines and the whole cryptography/text-transformation support. Produces a slightly smaller executable.<br />
-	Anyway, if you don't know what the ctryptography/text-transformation support is ,I suggest you to avoid using this option";
+	Deaktiviert die Verschlüüselungseinheit und die ganze Verschlüsselungs-/Textumwandlungsunterstützung. Erstellt ein etwas kleineres Programm.<br />
+	Falls Du nicht weißt, was Verschlüsselungs-/Textumwandlungsunterstützung ist, empfehle ich Dir, diese Option zu meiden";
 $template['install']['tree2x']="
-	This option disables pseudo-transparency support.<br />
-	The pseudo transparency support makes the KVirc windows look like semi-transparent (this is NOT real transparency: this is just a nice-looking hack).<br />
-	If KDE support is enabled, KVirc will have an option that makes all windows use a faded KDE desktop background image as background. Without KDE support you will be able to choose a fake background image and use it as background. (You can still choose your desktop wallpaper: this will (more-or-less) work in all the window managers). It is cool-looking but usually eats some memory when enabled. It also eats some executable size.<br />
-	So this option allows to disable the pseudo-transparency";
+	Diese Option deaktiviert die Scheintransparenz-Unterstützung.<br />
+	Die Scheintransparenzunterstützung lässt das KVIrc-Fenster halbtransparent aussehen (dies ist KEINE echte Transparenz, dies ist nur ein gutaussehender hack).<br />
+	Wenn die KDE-Unterstützung eingeschaltet ist, wird KVIrc eine Option haben, das alle Fenster ein abgedunkeltes Bild der KDE-Arbeitsfläche als Hintergrund haben. Ohne KDE-Unterstützung hast Du die Möglichkeit, ein Hintergrundbild einzustellen. (Du kannst weiterhin den Hintergrund der Arbeitsfläche nehmen; dies wird (mehr oder weniger) bei jedem Fenstermanager funktionieren.) Es sieht gut aus, belegt aber einigen Speicher. Es vergrössert auch die Programmdatei.<br />
+	Diese Option erlaubt Dir, die Scheintransparenz zu deaktivieren";
 $template['install']['tree2y']="
-	If you're on Solaris and don't have the pthread library (A wrapper I guess) you might try this option: it attempts to use the native Solaris threading support";
+	Wenn Du Solaris nutzt und keine pthread-Bibliothek hast, kannst Du diese Option probieren: Es versucht die Solaris-eigene threading-Bibliothek zu nutzen";
 $template['install']['tree2z']="
-	If you're on FreeBSD, you NEED this option. This enables the usage of the native FreeBSD pthread implementation found in libc_r.<br />
-	This requires you to use the native gcc compiler: it has a special -pthread flag that enables the linkage to libc_r instead of plain libc";
-$template['install']['tree2a1']="Link to libresolv. I guess that this is required for Solaris";
-$template['install']['tree2a2']="Link to libsocket. I guess that this is required for Solaris";
-$template['install']['tree2a3']="Link to libnsl. I guess that this is required for Solaris";
+	Wenn Du FreeBSD nutzt, BRAUCHST Du diese Option. Sie aktiviert die Nutzung der FreeBSD-eigenen pthread-Implementierung in libc_r.<br />
+	Dies setzt voraus, dass Du den gcc-Kompilierer nutzt, denn dieser hat einen speziellen Schalter \"-pthread\", der das linken gegen libc_r anstatt der normalen libc ermöglicht";
+$template['install']['tree2a1']="Linke gegen libresolv. Ich vermute, dies wird bei Solaris benötigt";
+$template['install']['tree2a2']="Linke gegen libsocket. Ich vermute, dies wird bei Solaris benötigt";
+$template['install']['tree2a3']="Linke gegeb libnsl. Ich vermute, dies wird bei Solaris benötigt";
 $template['install']['tree2a4']="
-	Link to libcompat. This might be required for some systems...<br />
-	but I have no idea which ones. If you find it useful: mail me";
+	Linke gegen libcompat. Dies kann bei einigen Systemen benötigt sein...<br />
+	aber ich weiß nciht, bei welchen. Wenn Du es hilfreich findest, schick mir ein E-Mail";
 $template['install']['tree2a5']="
-	Disables compiler runtime type information generation. This is mainly needed with qt-embedded";
+	Deaktiviert die Erstellung der Laufzeit-Type-Informationen des Kompiliererscompiler. Dies wird hauptsächlich für Qt-embedded gebraucht";
 $template['install']['tree2a6']="
-	Disables the usage of the XBell function (needed if you want to compile KVIrc with qt-embedded (no X at all))";
-$template['install']['tree2a7']="You need this to compile KVIrc with qt-embedded";
+	Deaktiviere die Nutzung der XBell-Funktion (nötig, wenn Du KVIrc mit qt-embedded kompilieren willst (kein X))";
+$template['install']['tree2a7']="Du brauchst diese Option, um KVIrc mit qt-embedded zu kompilieren";
 $template['install']['tree2a8']="
-	Explicitly link to the specified libraries.<br />
-	Example: --with-other-libs=\"-lmylib -lstrangesystemsupport -lmybraindamagedsyscallfix\"";
+	Linke explizit gegen die angegebenen Bibliotheken.<br />
+	Beispiel: --with-other-libs=\"-lmylib -lstrangesystemsupport -lmybraindamagedsyscallfix\"";
 $template['install']['tree2a9']="
-	Explicitly add the specified library search paths<br />
-	Example: --with-other-ldirs=\"-L/home/pippo/lib/ -L/my/safe/library/place/\"";
+	Füge die angegebenen Bibliothekensuchpfade explizit hinzu.<br />
+	Beispiel: --with-other-ldirs=\"-L/home/pippo/lib/ -L/meine/sicheren/Bibliotheken/\"";
 $template['install']['tree2b1']="
-	Explicitly add the specified include search path<br />
-	Example: --with-other-idirs=\"-I/home/pippo/include/ -I/tmp/include/\"";
+	Füge die angegebenen include-Suchpfade explizit hinzu.<br />
+	Beispiel: --with-other-idirs=\"-I/home/pippo/include/ -I/tmp/include/\"";
 $template['install']['tree2b2']="
-	Disables support for inter-process communication.<br />
-	You will be not able to send remote commands to running KVIrc sessions: this basically means that every time you run the KVIrc executable, a new session will be started.<br />
-	If you don't use this switch, a new session will be started only if no session is running on the same display or \"new session\" has been forced by a commandline switch.<br />
-	If a session is already running, the commandline will be passed to that session via IPC (X-event-based communication). This option saves some KB of the KVIrc executable, so if you're really short in memory, you might use it, otherwise, IPC is a nice feature";
+	Deaktiviere die Inter-Prozess-Kommunikation.<br />
+	Es wird Dir nicht möglich sein, Befehle von ausserhalb an laufende KVIrc-Sitzungen zu senden. Das heißt, dass jedesmal, wenn Du KVIrc aufrufst, eine neue Sitzung gestartet wird.<br />
+	Wenn Du diesen Schalter nicht benutzt, wird eine neue Sitzung nur dann gestertet, falls keine auf dem gleichen Display läuft, oder eine \"neue Sitzung\" über einen Kommandozeilenschalter erzwungen wurde.<br />
+	Wenn eine Sitzung bereits läuft, wird die Kommandozeile an diese Sitzung via IPC (X-basierte Kommunikation) weitergereicht. Diese Option spart einige KB an KVIrc. Du kannst sie nutzen, wenn Du wirklich wenig Speicher hast, andernfalls ist IPC ein nettes Merkmal";
 $template['install']['tree2b3']="
-	You should not need this option.<br />
-	It disables compilation of code that relies on a particular compiler feature (jumping to a dynamic label with a goto). Not all compilers support this , but configure shoud detect it automatically. Anyway , if you get compilation errors on kvi_ircview.cpp, you may try this option...<br />
-	This may also help if the configure script seems to hang when checking for the \"compiler dynamic label support\"";
+	Du solltest diese Option nicht brauchen.<br />
+	Sie verhindert die Kompilierung von Code, der auf einem bestimmten Kompilierermerkmal beruht (Sprung zu einer dynamischen Marke mit einem goto). Nicht alle Kompilierer unterstützen dies, aber configure sollte dies automatisch erkennen. Wenn Du Kompilierungsfehler bei kvi_ircview.cpp bekommst, solltest Du diese Option ausprobieren...<br />
+	Dies kann auch helfen, wenn configure scheinbar bei der Prüfung von \"Kompilierunterstützung für dynamische Marken (compiler dynamic label support)\" hängt";
 $template['install']['tree2b4']="
-	Disables completly the X drawing calls (always enabled with Qt >= 3.0.0). This can help if you have font problems in the view window";
+	Deaktiviert die X-drawing-Aufrufe (immer aktiviert mit Qt >= 3.0.0). Dies kann helfen, wenn Du Probleme mit Schriften im View-Fenster hast";
 $template['install']['tree2b5']="
-	Do not compile the splash screen code.<br />
-	This will remove you that nice \"banner\" image that pops up while kvirc is starting up. It will maybe help in making an executable smaller by a couple of KB and save a couple of extra milliseconds during the startup. Use it if you're tring to build a performance critical executable and you're short both in memory and CPU time :)";
+	Kompiliere nicht den Begrüßungsbildschirm-Code.<br />
+	Die entfernt das sczöne \"Banner\", das erscheint, während KVIrc startet. Dies hilft, die ausführbare Datei ein paar KB kleiner zu machen und ein paar Millisekunden während des Starts zu sparen. Nutze dies, wenn Du versuchst, ein leistungskritisches Programm zu erstellen und Du sowohl wenig Speicher, als auch wenig CPU-Zeit hast :)";
 $template['install']['tree2b6']="
-	This will disable some informational tooltips in the option dialogs. It will help in making a smaller executable and modules. Use this option if you're a KVIrc guru and you don't need tips about using the options";
+	Dies aktiviert einige Kurzinfos in den Optionsdialogen. Es ist hilfreich, um ein kleineres Programm und Module zu erhalten. Nutze diese Option, wenn Du ein KVIrc-Guru bist und keine Tipps für den den Umgang mit den Optionen brauchst";
 $template['install']['tree2b7']="
-	Explicitly disable the usage of the GSM library. This will disable the DCC VOICE gsm codec but might help when the compilation stops complaining of something related to GSM :)";
+	Deaktiviere explizit die Nutzung der GSM-Bibliothek. Dies sperrt den DCC VOICE gsm codec, aber kann vielleicht helfen, wenn die Kompilierung wegen irgendwas bezüglich GSM abbricht :)";
 $template['install']['tree2b8']="
-	Explicitly disable the DCC VOICE sound support. This might help if you have problems in compilation of src/modules/dcc/voice.cpp. It will disable the sound support (and thus make DCC VOICE not usable)";
+	Deaktiviere explizit die DCC-VOICE-Sound-Unterstützung. Dies kann helfen, wenn Du Probleme hast, src/modules/dcc/voice.cpp zu kompilieren. Es deaktiviert die Sound-Unterstützung (und daher ist DCC VOICE nicht benutzbar)";
 $template['install']['tree2b9']="
-	Disables the secure socket layer support. The SSL support is automatically enabled if OpenSSL is detected at ./configure time. This option forces it to be left out";
-$template['install']['tree2c1']="Debug stuff...enables memory allocation profiling (don't use it :)";
+	Deaktiviert SSL. Die SSL-Unterstützun ist automatisch aktiviert, wenn configure OpenSSL findet. Diese Option lässt diese Suche aus";
+$template['install']['tree2c1']="Debug stuff...enables memory allocation profiling (Nutze es nicht :)";			//TODO
 $template['install']['tree2c2']="
-	Enables malloc() memory checks. This will print a nice message if your system goes out of memory... It can't save you from buying new RAM, but at least you will know that your system went out of memory and it is not a proper kvirc fault. Actually you probably have no reason in using it";
+	Aktiviert malloc() Speicherchecks. Dies gibt eine nette Nachricht aus, wenn Deinem System der Speicher ausgeht... Es kann Dir nciht ersparen, neuen RAM zu kaufen, aber zumindest weißt Du, dass Dein System zu wenig Speicher hat und es nicht die Schuld von KVIrc ist. Eigentlich solltest Du keinen Grund haben, es zu nutzen";
 $template['install']['tree2c3']="
-	Minor hash table optimisations: higher memory usage but faster user lookups. Use it if you often stay in channels with a lot of users. (this is not critical anyway)";
-$template['install']['text21']="So finally you have to run";
-$template['install']['text22']="For example, my common options are:";
-$template['install']['text23']="On FreeBSD I have found useful this command line:";
-$template['install']['text24']="Once the configure script ran succesfully you can go to the next step.";
-$template['install']['text25']="Compiling (mandatory)";
-$template['install']['text26']="This step is easy:";
-$template['install']['text27']="Cross your fingers and run";
+	Kleinere Hash-Tabellen-Optimierungen: Höhere Speichernutzung, aber schnellere Benutzersuchen. Nutze dies, wenn Du öfters in Kanälen mit vielen Benutzern bist. (Dies ist nicht kritisch)";
+$template['install']['text21']="Schließlich musst Du aufrufen:";
+$template['install']['text22']="Meine normalen Optionen sind zum Beispiel:";
+$template['install']['text23']="Auf FreeBSD fand ich diese Befehlszeile nützlich:";
+$template['install']['text24']="Wenn das configure-Skript erfolgreich durchgelaufen ist, kannst Du zum nächsten Schritt übergehen.";
+$template['install']['text25']="Kompilieren (erforderlich)";
+$template['install']['text26']="Dieser Schritt ist einfach:";
+$template['install']['text27']="Kreuze Deine Finger und starte";
 $template['install']['text28']="
-	If your make is not a GNU make (this happens on FreeBSD for example) you should use \"gmake\" instead.<br />
-	The compilation process will take from 6-7 minutes to several hours depending on the machine capabilities and load.<br />br />
-	Once the compilation has been succesfull, run";
+	Wenn Dein make kein GNU make ist (zum Beispiel auf FreeBSD), solltest Du stattdessen \"gmake\" nutzen.<br />
+	Die Kompilierung dauert zwischen 6-7 Minuten bis hin zu mehreren Stunden, abhänging vom System und dessen Auslastung.<br /><br />
+	Wenn die Kompilierung erfolgreich war, starte";
 $template['install']['text29']="
-	Same as above: use \"gmake install\" if your make is not GNU make.<br /><br />
-        This will install the executable in /usr/local/bin<br />
-        (if you don't have specified a different --prefix option in the configure script) , the libraries in /usr/local/lib and the shared data in /usr/local/share/kvirc.<br />
-        If you had a previous kvirc installation, the default prefix will be referring to the directory where the old kvirc executable was found.<br /><br />
-        Make sure that /usr/local/lib is in your /etc/ld.so.conf, if it isn't there, put it there and run";
+	Das selbe wie oben: Nutze \"gmake install\", wenn Dein make kein GNU make ist.<br /><br />
+		Die installiert das ausführbare Programm nach /usr/local/bin<br />
+		Falls Du eine vorhergehende KVIrc-Installation hattest, wird der Standard-prefix auf das Verzeichnis zeigen, in dem die alte ausführbare KVIrc-Datei gefunden wurde.<br /><br />
+		Stelle sicher, dass /usr/local/lib in Deiner /etc/ld.so.conf enthalten ist. Falls nicht, füge es hinzu und starte";
 $template['install']['text30']="
-	If you have decided to use the KDE support the installation might have placed all these files in your \$KDEDIR tree instead of /usr/local. In this case you should be OK since
-        KDE requires its library dir to be in /etc/ld.so.conf";
-$template['install']['text31']="Having fun";
-$template['install']['text32']="That's all folks.";
+	Wenn Du KDE-Unterstützung gewählt hast, kann es sein, dass die Installation die Dateien unterhalb von \$KDEDIR anstatt /usr/local platziert hat. Dies sollte ok sein, da
+		KDE erfordert, dass sein Bibliothekenverzeichnis in /etc/ld.so.conf steht";
+$template['install']['text31']="Viel Spaß";
+$template['install']['text32']="Dies ist alles, Leute.";
 /* install.php end */
 
 /* license.php start */
@@ -775,383 +771,384 @@ $template['license']['text2']="
 /* license.php end */
 
 /* mailinglist.php start */
-$template['ml']['title']="KVIrc Public Mailing List";
+$template['ml']['title']="öffentliche KVIrc Mailingliste";
 $template['ml']['text1a']="
-	If something goes wrong, or if you have a question, a suggestion, or are simply interested in KVIrc developement, you can join the KVIrc public mailing list.";
+	Falls etwas schief läuft, Du eine Frage oder einen Vorschlag hast oder Einfach an der KVIrc-Entwicklung interessiert bist, kannst Du der öffentlichen KVIrc-Mailingliste beitreten.";
 $template['ml']['text1b']="
-	The developers follow the mailing list and will answer questions as soon as is possible.";
-$template['ml']['text2']="Web interface";
+	Die Entwickler verfolgen die Mailingliste und werden so schnell wie möglich antworten.";
+$template['ml']['text2']="Web-Schnittstelle";
 $template['ml']['text3']="
-	The list has a web interface available <a href=\"http://lists.omnikron.net/mailman/listinfo/kvirc/\">here</a>.<br />
-	The interface allows you to subscribe, unsubscribe and manage your account.";
-$template['ml']['text4']="To subscribe by mail";
+	Die Mailingliste hat <a href=\"http://lists.omikron.net/mailman/listinfo/kvirc/\">hier</a> ein Interface.<br />
+	Über dieses Interface kannst Du die Liste abonnieren, das Abo kündigen und Deine Daten verwalten.":
+$template['ml']['text4']="Um per E-Mail zu abonnieren";
 $template['ml']['text5']="
-	Send an empty mail (empty body, empty subject) to <a href=\"mailto:kvirc-subscribe@lists.omnikron.net\">this address</a> from the address that you want to subscribe.<br />
-	In some minutes you will receive a confirmation request mail that will contain the instructions to complete your subscription.";
-$template['ml']['text6']="To unsubscribe by mail";
-$template['ml']['text7']="
-	Send an empty mail (leave body and subject empty) to <a href=\"mailto:kvirc-unsubscribe@lists.omnikron.net\">this address</a> from the address that you want to unsubscribe.<br />
-	In some minutes you will receive a confirmation request mail that will contain the instructions to complete your unsubscription.";
-$template['ml']['text8']="Mailing list archives";
+	Sende eine leere E-Mail (leerer Hauptteil, leerer Betreff) an <a href=\"mailto:kvirc-subscribe@lists.omnikron.net\">diese Adresse</a>, von der Adresse, mit der Du die Liste abonnieren willst.<br />
+	In einigen Minuten erhälst Du eine Bestätigungsabfrage, die die weitere Vorgehensweise beschreibt.";
+$template['ml']['text6']="Per E-Mail das Abo kündigen";
+$template['ml']['text7']="Sende eine leere E-Mail (Hauptteil und Betreff leer) an <a href=\"mailto:kvirc-unsubscribe@lists.omnikron.net\">diese Adresse</a>, von der Adresse aus, für die Du das Abo kündigen willst.<br />
+	In einigen Minuten erhälst Du eine Bestätigungsabfrage, die die weitere Vorgehensweise beschreibt.";
+$template['ml']['text8']="Mailinglistenarchiv";
 $template['ml']['text9']="
-	The complete archive of the list messages is available <a href=\"http://lists.omnikron.net/pipermail/kvirc/\">here</a>.";
+	Das komplette Archiv der Mailingliste ist <a href=\"http://lists.omnikron.net/pipermail/kvirc/\">hier</a> verfügbar.";
 /* mailinglist.php end */
 
 /* mirroring.php start */
-$template['mirror']['title']="Mirroring the KVIrc Project";
+$template['mirror']['title']="Das KVIrc-Projekt spiegeln";
 $template['mirror']['text1']="
-	This page contains step by step instructions to create a ftp mirror";
+	Diese Seite enthält eine Schritt-für-Schritt-Anleitung, um einen FTP-Spiegel zu erstellen";
 $template['mirror']['text2']="
-	Contributing to the KVIrc project by mirroring its files is really easy.<br />";
-$template['mirror']['text3']="Non european ftp mirrors are especially needed";
-$template['mirror']['title2']="Setting up a mirror of ftp.kvirc.net";
-$template['mirror']['tree']="Requirements";
-$template['mirror']['tree1']="An ftp server";
-$template['mirror']['tree2']="A cron daemon (or equivalent) in order to keep the mirror in sync";
-$template['mirror']['text4']="Setup procedure";
+	Das KVIrc-Projekt durch spiegeln der Dateien zu unterstützen ist wirklich einfach.<br />";
+$template['mirror']['text3']="Aussereuropäische FTP-Spiegel werden insbesondere gebraucht";
+$template['mirror']['title2']="Aufsetzen eines Spiegels von ftp.kvirc.net";
+$template['mirror']['tree']="Voraussetzungen";
+$template['mirror']['tree1']="Einen FTP-Server";
+$template['mirror']['tree2']="Einen cron-Dämon (oder vergleichbares), um den Spiegel synchron zu halten";
+$template['mirror']['text4']="Einrichtungsablauf";
 $template['mirror']['text5']="
-	Setting up an ftp mirror is really easy: it is done by using the mirroring feature of the program";
+	Das einrichten eines FTP-Spiegels ist wirklich einfach: Einfach die Spiegelfähigkeit nutzen von dem Programm";
 $template['mirror']['text6']="
-	The commandline to retrieve the whole kvirc ftp archive is the following:";
-$template['mirror']['text7']="your_ftp_server_root";
+	Die Befehlszeile, um das komplette KVIrc-FTP-Archive zu erhalten, ist die folgende:";
+$template['mirror']['text7']="Dein_FTP_Server_Hauptverzeichnis";
 $template['mirror']['text8']="
-	So all you need to do is to set up your ftp server to accept anonymous connections and instruct cron to sync the mirror every N hours.";
+	Alles was Du machen musst, ist Deinen FTP-Server so einzurichten, dass er anonyme Verbindungen akzeptiert und cron so einstellen, dass der Spiegel alle N Stunden syncoronisiert wird.";
 $template['mirror']['text9']="
-	Now you need to setup the automatic updates.<br />
-	This is usually accomplished by a cron daemon and involves adding a couple of lines to the crontab.<br />
-	An example of such a crontab file might be:";
+	Jetzt brauchst Du die automatische Aktualisierung.<br />
+	Dies wird gewöhlinch durch den cron-Dämon geleistet und erfordert das Hinzufügen mehrerer Zeilen zur crontab.<br />
+	Hier ein solches Beispiel für crontab:";
 $template['mirror']['text10a']="
-	This crontab file tells the cron daemon to run the command";
-$template['mirror']['text10b']="at 6.30 am of every day";
-$template['mirror']['text11a']="In this case";
-$template['mirror']['text11b']="would look as follows:";
-$template['mirror']['text12']="yourdomain";
+	Dieser Eintrag weist cron an, den Befehl";
+$template['mirror']['text10b']="täglich um 6.30 auszuführen.";
+$template['mirror']['text11a']="In diesem Fall würde";
+$template['mirror']['text11b']="wie folgt aussehen:";
+$template['mirror']['text12']="DeineDomain";
 $template['mirror']['text13']="
-	At the moment of writing the complete ftp archive is around 500 MB. If you don't have the space for a complete mirror you can achieve partial mirroring by retrieving only a subset of the ftp.kvirc.net directories.";
+	Zur Zeit der Seitenerstellung umfasst das komplette FTP-Archiv ca. 500 MB. Wenn Du nicht den Platz für einen kompletten Spiegel hast, kannst Du einen Teilspiegel errichten, indem Du nur ausgewählte Verzeichnisse von ftp.kvirx.net spiegelst.";
 $template['mirror']['text14']="
-	Once you have succesfully set up your mirror please drop a mail to <b>pragma at kvirc dot net</b> or to the <a href=\"?id=mailinglist&amp;lang=$lang\">mailing list</a> so we can link you from the main site.";
+	Wenn Du den Spiegelserver erfolgreich eingerichtet hast, schreibe bitte eine E-Mail an <b>pragma at kvirc Punkt net</b> oder an die <a href=\"?id=mailinglist&amp;lang=$lang\">Mailingliste</a>, damit wir ihn auf der Hauptseite verknüpfen können.";
 /* mirroring.php end */
 
 /* news.php start */
-$template['news']['title']="News archives";
-$template['news']['latest']="Latest news";
-$template['news']['error']="Error reading story";
-$template['news']['nonews']="No such news entry.";
-$template['news']['news']="News";
-$template['news']['readmore']="Read more";
+$template['news']['title']="Nachrichtenarchive";
+$template['news']['latest']="Neueste Nachrichten";
+$template['news']['error']="Fehler: Error reading story";					//TODO
+$template['news']['nonews']="Eintrag nicht gefunden.";
+$template['news']['news']="Nachrichten";
+$template['news']['readmore']="weiterlesen";
 /* news.php end */
 
 /* releases.php start */
-$template['releases']['title']="Download Official Releases";
+$template['releases']['title']="Offizielle Ausgaben laden";
 $template['releases']['text1']="
-	Here you can download the <b>official release</b> packages of KVIrc.<br />
-	The official packages are released least frequently but are also the most stable ones.<br />
-	Please select the type of the package that you want to download";
+	Hier kannst Du die <b>offiziellen veröffentlichten</b> Pakete von KVIrc laden.<br />
+	Die offiziellen Pakete werden weniger häufig veröffentlicht, sind dafür aber die stabilsten.<br />
+	Bitte wähle den Typ des Pakets, dass Du laden möchtest";
 $template['releases']['text2']="
-	Below you have a list of available versions for the platform you have selected.<br />Please select the version of the package that you want to download";
+	Unten ist eine Liste verfügbarer Versionen für die von Dir ausgewählte Platform.<br />Bitte wähle die Version des Pakets, die Du laden möchtest";
 $template['releases']['text3']="
-	More than one package group is available for the platform and version that you have selected.<br /><br />Please select the group you want to download";
-$template['releases']['latest']="Latest release";
-$template['releases']['older']="Older releases";
-$template['releases']['available']="Available download locations";
+	Mehr als eine Paketgruppe ist für die gewählte Platform und Version verfügbar.<br /><br />Bitte wähle die Gruppe aus, die Du laden möchtest";
+$template['releases']['latest']="Neueste Ausgabe";
+$template['releases']['older']="Ältere Ausgaben";
+$template['releases']['available']="Verfügbare download locations";			//TODO
 /* releases.php end */
 
 /* require.php start */
-$template['require']['title']="Requirements (3.0.0 branch)";
-$template['require']['tree1']="Unix version (sources):";
-$template['require']['tree1a']="A working UNIX system suitable for compiling stuff";
+$template['require']['title']="Voraussetzungen (3.0.0 Zweig)";
+$template['require']['tree1']="Unix Version (Quelltext):";
+$template['require']['tree1a']="Ein funktionierendes UNIX-System, kompilationstauglich";
 $template['require']['tree1b']="
-	The <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 3.0.5 (older versions <b>might</b> work)";
+	Das <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 3.0.5 (ältere Versionen <b>können</b> funktionieren)";
 $template['require']['tree1c']="
 	<a href=\"http://www.gnu.org/software/automake/\">automake</a> 1.5";
-$template['require']['tree1d']="<a href=\"http://www.zlib.org/\">Zlib library</a>";
+$template['require']['tree1d']="<a href=\"http://www.zlib.org/\">Zlib Bibliothek</a>";
 $template['require']['tree1e']="
-	<a href=\"http://www.cpan.org\">Perl</a> (for generating online documentation)";
+	<a href=\"http://www.cpan.org\">Perl</a> (Um die Online-Dokumentation zu erstellen)";
 $template['require']['tree1f']="
-	<a href=\"http://www.kde.org\">KDE</a> libs linked to <b>the same</b> version of Qt (optional)";
+	<a href=\"http://www.kde.org\">KDE</a> Bibliotheken gegen <b>die gleiche</b> Version von Qt gelinked (optional)";
 $template['require']['tree1g']="
-	Check if your distro split devel libraries; if so you have to install the packages which contains them. Those packages have often \"-dev\" in their name";
-$template['require']['tree2']="Unix version (binaries):";
-$template['require']['tree2a']="A working unix system";
+	Prüfe, ob Deine Distribution separate Entwicklungsbibliotheken hat. Falls ja, musst Du diese Pakete installieren. Diese Pakete haben oft \"-dev\" im Namen";
+$template['require']['tree2']="Unix Version (Binärpakete):";
+$template['require']['tree2a']="Ein funktionierendes Unix System";
 $template['require']['tree2b']="
-	The <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 3.0.5 (older versions <b>might</b> work)";
-$template['require']['tree3']="Windows version (sources):";
+	Das <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 3.0.5 (ältere Versions <b>können</b> funktionieren)";
+$template['require']['tree3']="Windows Version (Quelltext):";
 $template['require']['tree3a']="
-	The free version of the <a href=\"ftp://ftp.trolltech.com\">QT GUI toolkit</a> for Windows >= 2.3.0";
-$template['require']['tree3b']="<a href=\"http://www.zlib.org/\">Zlib library</a>";
-$template['require']['tree3c']="Some luck";
-$template['require']['tree4']="Windows version (binaries):";
-$template['require']['tree4a']="Hopefully nothing";
-$template['require']['tree5']="Mac OS X (source):";
-$template['require']['tree5a']="Follow the instructions in \"doc (INSTALL-MacOS.txt)\"";
-$template['require']['tree6']="Mac OS X (binaries):";
+	Die freie Version vom <a href=\"ftp://ftp.trolltech.com\">QT GUI toolkit</a> für Windows >= 2.3.0";
+$template['require']['tree3b']="<a href=\"http://www.zlib.org/\">Zlib Bibliothek</a>";
+$template['require']['tree3c']="Etwas Glück";
+$template['require']['tree4']="Windows Version (Binärpakete):";
+$template['require']['tree4a']="Hoffentlich nichts";
+$template['require']['tree5']="Mac OS X (Quelltext):";
+$template['require']['tree5a']="Folge den Instruktionen in \"doc (INSTALL-MacOS.txt)\"";
+$template['require']['tree6']="Mac OS X (Binärpakete):";
 $template['require']['tree6a']="
-	Hopefully nothing. Just open the .dmg file and drag the icon into your application folder.";
-$template['require']['titleold']="Requirements (old 2.1.1 branch)";
-$template['require']['treeold1']="A working UNIX system";
-$template['require']['treeold2']="The <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 2.3.0";
-$template['require']['treeold3']="<a href=\"http://www.kde.org\">KDE</a> libs (optional)";
+	Hoffentlich nichts. Öffne einfach die .dmg-Datei und ziehe das Icon in Deinen Applikationsordner.";
+$template['require']['titleold']="Voraussetzungen (alter 2.1.1 Zweig)";
+$template['require']['treeold1']="Ein funktionierendes UNIX System";
+$template['require']['treeold2']="Das <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 2.3.0";
+$template['require']['treeold3']="<a href=\"http://www.kde.org\">KDE</a> Bibliotheken (optional)";
 /* require.php end */
 
 /* screen.php start */
-$template['screen']['title']="Screenshots";
-$template['screen']['text']="Do you have a nice screenshot? Send it to";
-$template['screen']['prev']="previous";
-$template['screen']['next']="next";
-$template['screen']['screen1']="General Option Dialog";
-$template['screen']['screen2']="Script Center";
-$template['screen']['screen3']="URL plugin &amp; an object mail script";
-$template['screen']['screen4']="More dialogs";
-$template['screen']['screen5']="Channel Popup menus";
-$template['screen']['screen6']="Channel Ban &amp; Mode Dialogs";
-$template['screen']['screen7']="Help and directory browser";
-$template['screen']['screen8']="Directory browser";
-$template['screen']['screen9']="KVIrc CVS happily running on Solaris";
-$template['screen']['screen10']="Window list, DCC send and Userlist Popup";
-$template['screen']['screen11']="I/O Graph, Terminal Emulator and Avatars";
-$template['screen']['screen12']="3 active server connections";
-$template['screen']['screen13']="Avatars, I/O Graph and serverlinks";
-$template['screen']['screen14']="Yes! trust your eyes! KVIrc on aberrations :)";
-$template['screen']['screen15']="Help window and the dock widget";
-$template['screen']['screen16']="Fancy Default Theme with Transfers Window";
-$template['screen']['screen17']="Minimalist Theme and one of the contextual pop-up";
+$template['screen']['title']="Bildschirmfotos";
+$template['screen']['text']="Du hast ein schönes Bildschirmfoto? Schick es an";
+$template['screen']['prev']="zurück";
+$template['screen']['next']="weiter";
+$template['screen']['screen1']="Allgemeiner Optionsdialog";
+$template['screen']['screen2']="Skript Center";	
+$template['screen']['screen3']="URL plugin &amp; an object mail script";			//TODO
+$template['screen']['screen4']="Mehr Dialoge";
+$template['screen']['screen5']="Kanal-Aufklappmenüs";
+$template['screen']['screen6']="Kanel Ban &amp; Modus Dialoge";
+$template['screen']['screen7']="Hilfe und Verzeichnisbetrachter";
+$template['screen']['screen8']="Verzeichnisbetrachter";
+$template['screen']['screen9']="KVIrc CVS läuft glücklicher Weise auf Solaris";
+$template['screen']['screen10']="Fensterliste, DCC send und Benutzerlisten-Aufklappmenü";
+$template['screen']['screen11']="E/A Graph, Terminal-Emulation und Avatare";
+$template['screen']['screen12']="3 aktive Server-Verbindungen";
+$template['screen']['screen13']="Avatare, E/A Graph und Server-Verknüpfungen";
+$template['screen']['screen14']="Ja! Trau Deinen Augen! KVIrc auf Abwegen :)";
+$template['screen']['screen15']="Hilfefenster und Andockobjekt";
+$template['screen']['screen16']="Schickes Standardthema mit Übertragungsfenster";
+$template['screen']['screen17']="Minimalistisches Thema und eines der Kontextmenüs";
 $template['screen']['screen18']="
-	Four special windows. File transfers, Log View, Terminal and Shared Files: here to simplify your daily ircing.";
-$template['screen']['screen19']="Are you a scripter? KVIrc has various tools for you.";
-$template['screen']['screen20']="Helix on three servers and a lot of channels";
-$template['screen']['screen21']="Helix connecting thru psyBNC and the nice KVIrc desktop shortcut :D";
+	Vier Spezialfenster: Dateiübertragungen, Protokollansicht, Terminal und freigegebene Dateien; hier um Deinen IRC-Alltag zu vereinfachen";
+$template['screen']['screen19']="Schreibst Du Skripte? KVIrc hat verschiedene Werkzeuge für Dich.";
+$template['screen']['screen20']="Helix auf drei Servern und vielen Kanälen";
+$template['screen']['screen21']="Helix verbindet sich über psyBNC und eine schöne Arbeitsflächenverknüpfung mit KVIrc :D";
 $template['screen']['screen22']="
-	Four servers. Note the tree window on the left showing the most active channels.";
-$template['screen']['screen23']="The DCC exploits don't work with KVIrc :)";
-$template['screen']['screen24']="A snapshot by bongwater: it is running since 10 days :)";
+	Vier Server. Beachte das \"Baumansichts-Fenster\" links, das die aktivsten Kanäle anzeigt.";
+$template['screen']['screen23']="DCC exploits funktionieren nicht mit KVIrc :)";
+$template['screen']['screen24']="Ein snapshot von bongwater: es läuft seit 10 Tagen :)";
 $template['screen']['screen25']="
-	A snapshot by <a href=\"http://kvirc.virg0.org\">etherea`</a>: Time makes no sense";
-$template['screen']['screen26']="A shot by Xemanth^: a 'hackish' KVIrc on windows";
+	Ein snapshot von <a href=\"http://kvirc.virg0.org\">etherea`</a>: Time makes no sense";
+$template['screen']['screen26']="Ein Bild von Xemanth^: ein 'hackish'-KVIrc auf Windows";
 $template['screen']['screen27']="
-	A snapshot by <a href=\"http://kvirc.virg0.org\">etherea`</a>: Pragma's Newsticker in action :)";
+	Ein snapshot von <a href=\"http://kvirc.virg0.org\">etherea`</a>: Pragma's Newsticker in action :)";
 $template['screen']['screen28']="
-	A snapshot by <a href=\"http://hellvis69.altervista.org\">HelLViS69</a>: Clonescanner working :)";
+	Ein snapshot von <a href=\"http://hellvis69.altervista.org\">HelLViS69</a>: Clonescanner arbeitet :)";
 $template['screen']['screen29']="
-	The Twins' script and its <a href=\"?id=addons&amp;lang=$lang&amp;version=3.2.3\">media player</a> on 'Anomalies'. Also  the new namespace scripting environment in the alias editor window.";
+	Das Twins-Skript und sein <a href=\"?id=addons&amp;lang=$lang&amp;version=3.2.3\">Medienspieler</a> auf 'Anomalies'. Ebenso die neue Skript-Namensraumumgebung im Alias-Editorfenster.";
 $template['screen']['screen30']="
-	The SilverIRC theme, the default since KVIrc 3.2.6 after a fresh installation. Screenshot provided by thexception";
+	Das SilverIRC-Thema, die Voreinstellung seit KVIrc 3.2.6 nach einer neuen Installation. Screenshot zur Verfügung gestellt von thexception";
 $template['screen']['screen31']="
-	SilverIRC theme. The theme manager. Screenshot provided by thexception";
-$template['screen']['screen32']="SilverIRC theme. The Aliases Editor. Screenshot provided by thexception";
-$template['screen']['screen33']="SilverIRC theme. The Events Editor. Screenshot provided by thexception";
-$template['screen']['screen34']="SilverIRC theme. The Popups Editor. Screenshot provided by thexception";
+	SilverIRC Thema. Der Themenmanager. Screenshot zur Verfügung gestellt von thexception";
+$template['screen']['screen32']="SilverIRC Thema. Der Alias-Editor. Screenshot zur Verfügung gestellt von thexception";
+$template['screen']['screen33']="SilverIRC Thema. Der Ereigniseditor. Screenshot zur Verfügung gestellt von thexception";
+$template['screen']['screen34']="SilverIRC Thema. Der Aufklappmenü-Editor. Screenshot zur Verfügung gestellt von thexception";
 /* screen.php end */
 
 /* scripts.php start */
-$template['scripts']['title']="Scripts";
-$template['scripts']['text1']="Example scripts are included into the distribution and the SVN";
-$template['scripts']['text2a']="Use";
-$template['scripts']['text2b']="to install the script. The default script should be installed at";
+$template['scripts']['title']="Skripte";
+$template['scripts']['text1']="Beispielskripte liegen den Paketen und der SVN-Version bei";
+$template['scripts']['text2a']="Führe";
+$template['scripts']['text2b']="aus, um das Skript zu installieren. Das Standardskript sollte installiert sein unter";
 $template['scripts']['script1']="
-	Italian script with autojoin, capscontrol, autovoice... Completely configurable via GUI.";
+	Italienisches Skript mit autom. Kanalbetreten, Kontrolle der Feststelltaste, autovoice... Komplett über grafische Oberfläche einstellbar.";
 $template['scripts']['script2']="
-	SaNVirC is a script for KVirc that includes functions like nick identification, autojoin, defense, attack, bots management, an away system, etc.<br /> It was written for IRC-Hispano bots but is very easy to adapt to other servers.";
+	SaNVirC ist ein Skript für KVIrc, dass Funktionen wie Spitznamenidentifikation, autom. Kanalbetreten, Abwehr, Angriff, Bot-Verwaltung, ein Abwesend-System, etc.<br /> Es wurde für IRC-Hispano-Bots geschrieben, lässt sich aber leicht an andere Server anpassen.";
 $template['scripts']['script3']="
-	Savage Script is a script for Gamers with XQF support, system informations, qauth...";
+	Savaga Script ist ein Skript für Spieler mit XQF-Unterstützun, Systeminformationen, qauth...";
 $template['scripts']['script4']="
-	This is the first public release of the script with some improvements for the notify list. It also adds AutoOp, AutoVoice functions, fix OPless chan, etc.";
+	Dies ist die erste öffentliche Ausgabe dieses Skripts mit einigen Verbesserungen für die Benachrichtigungsliste. Es fügt ausserdem AutoOp hinzu, AutoVoice-Funktionen, fix OPlose Räume, etc.";
 /* scripts.php end */
 
 /* snapshots.php start */
-$template['snapshots']['title']="Development Snapshots";
+$template['snapshots']['title']="Entwicklungs-Snapshots";
 $template['snapshots']['text1']="
-	The development snapshots are unofficial packages extracted from the SVN on a non-regular basis. Each snapshot reflects the SVN state on a particular date and you're likely to find a really recent one. The packages have been tested on at least a couple of systems and have a good possibility to compile on yours. There are also some binary builds available.";
+	Die Entwicklungs-Snapshots sind inoffizielle Pakete, die nicht regelmäßig aus dem SVN gebildet werden. Jeder Snapshot spiegelt den SVN-Stand zu einem bestimmten Datum wieder und Du wirst wahrscheinlich einen aktuellen finden. Die Pakete sind zumindest auf ein paar Systemen getestet und die Wahrscheinlichkeit, dass sie auf Deinem System kompilieren ist gut. Es sind auch einige Binärpakete verfügbar.";
 $template['snapshots']['text2']="
-	The source snapshots are kindly provided by the KVIrc Development Team.<br />
-	Honor and Glory! :)";
+	Die Quelltext-Snapshots werden freundlicherweise vom KVIrc-Entwicklungsteam zur Verfügung gestellt.<br />
+	Ehre und Ruhm! :)";
 $template['snapshots']['text3']="
-	To download the latest snapshot you have to dig in 
-	<a href=\"ftp://ftp.kvirc.net/pub/kvirc/snapshots/\">the KVIrc ftp</a> or in the \"snapshots\" subdirectory of one of the ftp mirrors.";
+	Um den aktuellsten Snapshot zu laden, musst Du in
+	<a href=\"ftp://ftp.kvirc.net/pub/kvirc/snapshots/\">dem KVIrc FTP</a> oder im \"snapshots\"-Verzeichnis eines FTP-Spiegels schauen.";
 /* snapshots.php end */
 
 /* splash.php start */
-$template['splash']['title']="Splash Screens";
-$template['splash']['text']="This is a collection of splash screens that KVIrc used in the past.";
-$template['splash']['date']="Release Date";
-$template['splash']['in']="Splash Present in";
+$template['splash']['title']="Begrüßungsbildschirme";
+$template['splash']['text']="Dies ist eine Zusammenstellung von Begrüßungsbildschirmen, die KVirc in der Vergangenheit benutzt hat.";
+$template['splash']['date']="Veröffentlichungsdatum";
+$template['splash']['in']="Bildschirm enthalten in";
 /* splash.php end */
 
 /* status.php start */
-$template['status']['title']="Project Status";
+$template['status']['title']="Projektstatus";
 $template['status']['text']="
-	<p>After 7 years of development KVIrc is a mature and full featured IRC client, an excellent companion for your daily IRC sessions.</p>
-	<p>The latest stable release is <a href=\"/?id=news&amp;story=2005.02.27.16.29.1.story&amp;dir=2005.02&amp;lang=$lang\">3.2.0 \"Realia\"</a>.
-	It has been published on Feb 27 2005.
-	It can be obtained in source form from the <a href=\"?id=download&amp;lang=$lang\">download</a> page.</p>
-	<p>If you are looking for official releases have a look at <a href=\"?id=releases&amp;lang=$lang\">this section</a>, those are released less often but are most stable. Choose your release between Linux, Windows, MacOSX or source package.</p>
-	<p>Snapshots are located <a href=\"?id=snapshots&amp;lang=$lang\">here</a> while SVN are found <a href=\"?id=SVN&amp;lang=$lang\">here</a>.</p>
-	<p>Also be sure to check for <a href=\"?id=install&amp;lang=$lang\">installation notes</a>, <a href=\"?id=tutorials&amp;lang=$lang\">tutorials</a>, <a href=\"?id=translation&amp;lang=$lang\">translations</a> and <a href=\"?id=themes&amp;lang=$lang\">themes</a> for a more customized version of your KVIrc =)</p>";
+	<p>Nach sieben Jahren Entwicklung ist KVIrc ausgereift und ein komplett ausgestattetes IRC-Anwenderprogramm, ein exzellenter Begleiter für Deine täglichen IRC-Sitzungen.</p
+	<p>Die letzte stabile Version is <a href=\"/?id=news&amp;story=2005.02.27.16.29.1.story&amp;dir=2005.02&amp;lang=$lang\">3.2.0 \"Realia\"</a>.
+	Sie wurde am 27. Februar 2005 veröffenticht.
+	Sie kann als Quelltext von der <a href=\"?id=download&amp;lang=$lang\">download</a>-Seite bezogen werden.</p>
+	<p>Wenn Du offizielle Veröffentlichungen suchst, schau mal in <a href=\"?id=releases&amp;lang=$lang\">diese Rubrik</a>, diese werden seltener veröffetnlicht, sind aber die stabisten. Wähle Deine Version zwischen Linux, Windows, MacOSX oder Quelltextpaket.</p>
+	<p>Snapshots befinden sich <a href=\"?id=snapshots&amp;lang=$lang\">hier</a>, während SVN <a href=\"?id=SVN&amp;lang=$lang\">hier</a> gefunden werden kann.</p>
+	<p>Beachte auch die <a href=\"?id=install&amp;lang=$lang\">Installationshinweise</a>, <a href=\"?id=tutorials&amp;lang=$lang\">Tutorien</a>, <a href=\"?id=translation&amp;lang=$lang\">Übersetzungen</a> und <a href=\"?id=themes&amp;lang=$lang\">Themen</a>, um eine mehr angepasste KVIrc-Version zu erhalten =)</p>";
 /* status.php end */
 
 /* SVN.php start */
-$template['svn']['title']="Checking Out SVN";
+$template['svn']['title']="SVN auschecken";
 $template['svn']['text1']="
-	From the SVN server you can download the latest development version of KVIrc.<br />
-	Once you've made sure that Subversion is on your system you only need enter this line:";
+	Vom SVN-Server kannst Du die aktuellste KVIrc-Version laden.<br />
+	Wenn Du sichergestellt hast, dass Subversion auf Deinem System installiert ist, brauchst Du nur noch folgende Zeile eingeben:";
 $template['svn']['text2']="
-	You will be downloading the kvirc core sources.<br />
-	If you want to checkout also the modules sources you have to enter this line:";
+	Damit lädst Du die KVIrc-Kernquellen herunter.<br />
+	Wenn Du auch die Module auschecken willst, musst Du diese Zeile eingeben:";
 $template['svn']['text3']="
-	To compile the executable and the core modules just enter the source directory:";
+	Um das Programm zu kompilieren, wechsele in das Quellenverzeichnis:";
 $template['svn']['text4']="
-	and then follow the common <a href=\"?id=install&amp;lang=$lang\">installation instructions</a>.<br />
-	The latest installation instructions for the SVN version of KVIrc can be also found in the INSTALL file.<br />
-	We're trying to keep the SVN as \"clean\" as possible but it *might* happen that the sources you have downloaded do not compile or run properly.<br />
-	You can also browse trough the SVN via <a href=\"https://SVN.kvirc.de/kvirc/browser/\">https://SVN.kvirc.de/</a>";
+	und folge dann den <a href=\"?id=install&amp;lang=$lang\">Installationsanweisungen</a>.<br />
+	Die aktuellsten Installationsanweisungen für die SVN-Version stehen auch in der Datei INSTALL.<br />
+	Wir versuchen SVN so \"sauber\" wie möglich zu halten, aber es kann passieren, dass die heruntergeladenen Quelltexte nicht kompilieren oder das Programm nicht korrekt läuft.<br />
+	Du kannst auch im SVN stöbern via <a href=\"https://SVN.kvirc.de/kvirc/browser/\">https://SVN.kvirc.de/</a>";
 /* SVN.php end */
 
 /* themes.php start */
-$template['themes']['title']="Themes";
-$template['themes']['text1']="Here you can download some nice themes";
-$template['themes']['text2a']="How can I install a theme";
-$template['themes']['text2b1']="Download the theme";
-$template['themes']['text2b2']="Unpack the downloaded file in";
-$template['themes']['text2b2a']="path to the downloaded theme file";
-$template['themes']['text2b3']="Open the KVIrc's Theme Manager";
-$template['themes']['text2b4']="Double-click the new theme";
-$template['themes']['text2b5']="Enjoy";
-$template['themes']['text3a']="How can I create a theme";
-$template['themes']['text3b1']="There is a small HOWTO, you can find it";
-$template['themes']['text3b2']="here";
-$template['themes']['text3b3']="and an Italian version";
-$template['themes']['text3b4']="The English HOWTO is also included in the KVIrc distribution package";
-$template['themes']['text4a']="I've made a theme. How can I share it";
-$template['themes']['text4b']="You can send it to";
-$template['themes']['text4c']="including a theme name, description, version, nickname, homepage and email, allowing us or not to display it on the page";
-$template['themes']['screenshot']="screenshot";
-$template['themes']['theme1']="An eye-candy based on the Marble icon set.";
-$template['themes']['theme2']="A clear theme with Crystal icons. Some icons are taken from the Marble icon set.";
-$template['themes']['theme3']="A theme with a green background.";
-$template['themes']['theme4']="A dark theme.";
+$template['themes']['title']="Themen";
+$template['themes']['text1']="Hier kannst Du einige schöne Themen herunterladen";
+$template['themes']['text2a']="Wie kann ich ein Thema installieren";
+$template['themes']['text2b1']="Lade das Thema herunter";
+$template['themes']['text2b2']="Entpacke die heruntergeladene Datei in";
+$template['themes']['text2b2a']="Pfad zur heruntergeladenen Themendatei";
+$template['themes']['text2b3']="Öffne den KVIrc Themenmanager";
+$template['themes']['text2b4']="Doppelklicke auf das neue Thema";
+$template['themes']['text2b5']="Viel Spaß";
+$template['themes']['text3a']="Wie kann ich ein Thema erstellen";
+$template['themes']['text3b1']="Es gibt eine kleine Kurzanleitung (englisch), die Du";
+$template['themes']['text3b2']="hier";
+$template['themes']['text3b3']="finden kannst und eine italienische Version";
+$template['themes']['text3b4']="Die englische Kurzanleitung ist auch im KVIrc-Paket enthalten";
+$template['themes']['text4a']="Ich habe ein Thema erstellt. Wie kann ich es mit anderen teilen";	
+$template['themes']['text4b']="Du kannst es an";
+$template['themes']['text4c']="senden, inklusive eines Themennamens, Beschreibung, Version, Spitzname, Homepage und E-Mail, erlaube uns (oder nciht) diese auf der Homepage zu zeigen";
+$template['themes']['screenshot']="Screenshot";
+$template['themes']['theme1']="Eine Augenweide, basierend auf dem Marble-Icon-Set.";
+$template['themes']['theme2']="Ein klares Thema mit Crystal-Icons. Einige Icons sind dem Marble-Icon-Set entnommen.";
+$template['themes']['theme3']="Ein Thema mit grünem Hintergrund.";
+$template['themes']['theme4']="Ein dunkles Thema.";
 $template['themes']['theme5']="White aqua rounded.";
-$template['themes']['theme6']="Just a pink example...";
-$template['themes']['theme7']="A transparent theme meant mainly for use with the KDE background. Set for good visibility and contrast.";
-$template['themes']['theme8']="A quite relaxed theme inspired by the site http://www.PayneReactor.com";
-$template['themes']['theme9']="A nice black theme, based on other crystall theme :)";
-$template['themes']['theme10']="Another dark theme with Slackware logo and a black baghira";
-$template['themes']['theme11']="A dark theme based on XCrystall-black";
-$template['themes']['theme12']="Pure Love. Pure White. A clean, neat pure theme";
-$template['themes']['theme13']="A glass dark theme";
-$template['themes']['theme14']="Yet another dark theme";
-$template['themes']['theme15']="A X-mas theme for KVIrc";
-$template['themes']['theme16']="Perversion is another way of living; darkly theme with less gamma";
-$template['themes']['theme17']="erotica.. mh..";
-$template['themes']['theme18']="Anger is a variation of erotica. Keep on lick your lips!";
-$template['themes']['theme19']="Dark Blue is a variation of marble. Enjoy it";
+$template['themes']['theme6']="Einfach ein rosafarbenes Beispiel...";
+$template['themes']['theme7']="Ein transparentes Thema, hauptsächlich für die Nutzung des KDE-Hintergrunds. Eingestellt für gute Sicht und Kontrast.";
+$template['themes']['theme8']="Ein ziemlich entspanntes Thema, inspiriert durch http://www.PayneReactor.com";
+$template['themes']['theme9']="Ein schönes schwarzes Thema, basierend auf dem anderen Crystall-Thema :)";
+$template['themes']['theme10']="Ein weiteres dunkles Thema mit Slackware-Logo und einem schwarzen Baghira";
+$template['themes']['theme11']="Ein dunkles Thema basierend auf XCrystall-black";
+$template['themes']['theme12']="Pure Liebe. Pures weiß. Ein sauberes, übersichtliches Thema";
+$template['themes']['theme13']="Ein gläsernes dunkles Thema";
+$template['themes']['theme14']="Ein weiteres dunkles Thema";
+$template['themes']['theme15']="Ein Weihnachtsthema für KVIrc";
+$template['themes']['theme16']="Perversion ist eine andere Art zu leben; dunkles Thema mit wenig Gamma";
+$template['themes']['theme17']="Erotica.. mh..";
+$template['themes']['theme18']="Anger ist eine Variation von Erotica. Lecke Deine Lippen weiter!";
+$template['themes']['theme19']="Dark Blue ist eine Abwandlung von marble. Genieße es";
 /* themes.php end */
 
 /* tools.php start */
-$template['tools']['title']="Tools";
-$template['tools']['text1']="Here you can find some KVIrc-related tools";
-$template['tools']['tool1']="KVS syntax highlight for Notepad++";
+$template['tools']['title']="Werkzeuge";
+$template['tools']['text1']="Hier findest Du einige KVIrc-bezoge Werkzeuge";
+$template['tools']['tool1']="KVS-Syntax-Hervorhebung für Notepad++";
 /* tools.php end */
 
 /* translation.php start */
-$template['translation']['title']="Translations";
-$template['translation']['step']="Step";
+$template['translation']['title']="Übersetzungen";
+$template['translation']['step']="Schritt";
 $template['translation']['text1']="
-	In this page you can find some informations on the KVIrc translations status. To see if your language is supported, please look at the list below.";
+	Auf dieser Seite findest Du einige Informationen über den Status der KVIrc-Übersetzungen. Um zu sehen, ob Deine Sprache unterstützt wird, schau bitte unten in die Liste.";
 $template['translation']['text2']="
-	Many people are working hard to support as many languages as possible. To join them all you need to know is your own language: <b>no conding skills are needed</b>.";
+	Viele Leute arbeiten hart, um so viele Sprachen wie möglich zu unterstützen. Um ihnen beizutreten, musst Du nur Deine eigene Sprache kennen, <b>es werden keine Programmierkenntnisse benötigt.</b>";
 $template['translation']['text3']="
-	All translators <b>MUST USE UTF-8</b> as coding standard. Translation files with other standards will be deprecated.";
+	Alle Übersetzer <b>MÜSSEN UTF-8</b> als Kodierungsformat <b>BENUTZEN.</b> Übersetzungsdateien mit anderen Formaten werden abgelehnt.";
 $template['translation']['text4']="
-	If you are interested in translating KVIrc in a new language you can find here a nice How-To.<br />
-	Some language are updated (almost) daily, others need to find a new manteiner. If you want to help to improve the current support of your language, please contact its <b>Last translator</b>, listed here:";
-$template['translation']['text5a']="Don't forget to subscribe to the";
-$template['translation']['text5b']="to keep in touch with the developers!";
-$template['translation']['text6']="This mini-howto describes the procedure for translating KVIrc in a new language";
-$template['translation']['text7']="Getting the right sources.";
+	Wenn Du interessiert bist, KVIrc in eine neue Sprache zu übersetzen, kannst Du hier eine nette Kurzanleitung finden.<br />
+	Einige Sprachen werden (fast) täglich aktualisiert, andere müssen einen neuen Bearbeiter finden. Wenn Du helfen willst, die aktuelle Unterstützung für Deine Sprache zu verbessern, kontaktiere bitte den <b>letzten Bearbeiter,</b> welcher hier gelistet ist:";
+$template['translation']['text5a']="Vergiss nicht die";
+$template['translation']['text5b']="zu abonnieren, um mit den Entwicklern in Verbindung zu bleiben!";
+$template['translation']['text6']="Diese kleine Schritt-für-Schritt-Anleitung beschreibt das Vorgehen, um KVIrc in eine neue Sprache zu übersetzen";
+$template['translation']['text7']="Die richtigen Quellen bekommen.";
 $template['translation']['text8a']="
-	First of all you need the SVN version of KVIrc. To obtain the SVN version you can follow the instructions on";
-$template['translation']['text8b']="The translation stuff is in";
-$template['translation']['text9']="Finding out your language code";
+	Als erstes brauchst Du die SVN-Version von KVIrc. Um die SVN-Version zu erhalten, folge den Anweisungen auf";
+$template['translation']['text8b']="Das Übersetzungsmaterial ist in";
+$template['translation']['text9']="Den Sprachcode herausfinden";
 $template['translation']['text10a']="
-	You must find out the contents of your language code. Usually this is a string formed of at least two letters and it can be found by examining the contents of your \$LANG shell variable or by looking";
-$template['translation']['text10b']="here";
-$template['translation']['text10c']="Examples of such codes are";
-$template['translation']['text11']="Generating the list of messages to translate";
+	Du musst Deinen Sprachcode herausfinden. Normalerweise ist dies eine Zeichenfolge aus mindestens zwei Buchstaben und kann herausgefunden werden, indem man die Shell-Variable \$LANG prüft, oder schaue";
+$template['translation']['text10b']="hier";
+$template['translation']['text10c']="Beispiele für solche Codes sind";
+$template['translation']['text11']="Die Liste der zu übersetzenden Meldungen generieren";
 $template['translation']['text12']="
-	You must perform this step only if it is the first time that KVIrc is translated to your language. If you're going to update an existing translation then you can jump directly to Step 3.<br />
-	Run the command to extract the messages from the sources.";
+	Du musst diese Schritte nur ausführen, wenn dies das erste Mal ist, dass KVIrc in Deine Sprache übersetzt wird. Wenn Du eine bestehende Übersetzung aktualisierst, kannst Du direkt zu Schritt 3 übergehen.<br />
+	Starte den Befehl, um die Nachrichten aus dem Quelltext zu extrahieren.";
 $template['translation']['text13']="
-	A file named <code>kvirc.pot</code> will be created. You have to rename this file to <code>kvirc_xxx.po</code>, where xxx is your language code found in Step 1.";
-$template['translation']['text14']="Translating the messages";
+	Eine Datei namens <code>kvirc.pot</code> wird erstellt. Du musst diese Datei zu <code>kvirc_xxx.po</code> umbenennen, wobei xxx Dein Sprachcode ist, den Du in Schritt 1 herausgefunden hast.";
+$template['translation']['text14']="Die Meldungen übersetzen";
 $template['translation']['text15a']="
-	If you did the Step 2 then you have just created the <code>kvirc_xxx.po</code> file where xxx stands for your language code (found in Step 1).<br />
-	If you jumped directly here from 1 then you need to find and existing <code>kvirc_xxx.po</code> in the <code>kvirc/po/kvirc</code> directory.<br />
-	If there isn't one then go back to Step 2.";
+	Wenn Du Schritt 2 ausgeführt hast, hast Du die Datei <code>kvirc_xxx.po</code> erstellt, wobei xxx für den Sprachcode (aus Schritt 1) steht.<br />
+	Wenn Du direkt von Schritt 1 kommst, dann musst Du die existierende Datei <code>kvirc_xxx.po</code> in dem <code>kvirc/po/kvirc</code>-Verzeichnis finden.<br />
+	Wenn sie nciht dort ist, gehe zurück zu Schritt 2.";
 $template['translation']['text15b']="
-	The file <code>kvirc_xxx.po</code> contains a set of strings like the following one:";
+	Die Datei <code>kvirc_xxx.po</code> enthält eine Reihe von Zeichenketten, wie die folgende:";
++$template['translation']['text100a']="/Pfad/zu/der/Datei/die/die/Zeichenkette/enthält: Zeilennummer";
++$template['translation']['text100b']="Übersetze die Meldung";
++$template['translation']['text100c']="Die Übersetzung kommt hierhin";
 $template['translation']['text16']="
-	The <i>msgid</i> is the original message that needs to be translated and <i>msgstr</i> is the translation (that will be initially empty, when the file <code>kvirc_xxx.po</code> is created).";
+	Die <i>msgid</i> ist die Originalmeldung, die übersetzt werden muss, und <i>msgstr</i> ist die Übersetzung (dies ist zunächst leer, wenn die Datei <code>kvirc_xxx.po</code> erstellt wird).";
 $template['translation']['text17']="
-	The msgid can contain html tags, escapes like \"\\n\" and format specifications like \"%s\". You <b>MUST</b> match the tags, escapes and format specs in the msgstr strings. <b>Keep special attention</b> to the format specifications (%s, %W, %Q...).<br />
-	They must remain in <b>EXACTLY the same order</b> as in the msgid: exchanging the order or writing a wrong format spec will make KVIrc crash sooner or later.";
-$template['translation']['text18']="Adding the translation to the Makefile.am";
-$template['translation']['text19']="
-	Once you have translated some strings you can try to run the translation in KVIrc. If you are updating an existing translation then you can jump directly to Step 5.";
+	Die msgid can HTML-Kennzeichen, Maskierungen wie \"\\n\" und Formatspezifikationen wie \"%s\" enthalten. Du <b>MUSST</b> diese Kennzeichen, Maskierungen und Formatspezifikationen nach msgstr übernehmen. <b> Achte besonders</b> auf die Formatspezifikationen (%s, %W, %Q...).<br />
+	Diese müssen in <b>EXAKT der gleichen Reihenfolge</b> wie in msgid stehen: Ein Vertauschen der Reihenfolge, oder eine falsche Formatspezifikation wird KVIrc früher oder später abstürzen lassen.";
+$template['translation']['text18']="Die Übersetzung zu Makefile.am hinzufügen";
+$template['translation']['text19']="Wenn Du einige Zeichenketten übersetzt hast, kannst Du versuchen, KVIrc mit den Übersetzungen laufen zu lassen. Wenn Du eine bestehende Übersetzung aktualisierst, kannst Du direkt zu Schritt 5 springen.";
 $template['translation']['text20']="
-	You must force the make process to pick up your translation file and compile it. This is again an one time step. In <code>kvirc/src/kvirc</code> there is a file named <code>Makefile.am</code>. You should edit it and add <code>kvirc_xxx.po</code> where the other *.po files are mentioned. You should have no problems in guessing what needs to be added by looking at the other *.po entries in that file.";
-$template['translation']['text21']="Then just run:";
+	Du musst den make_prozess zwingen, Deine Übersetzung zu nutzen und es kompilieren. Dies ist wiederum ein einmaliger Schritt. In <code>kvirc/src/kvirc</code> ist eine Datei namens <code>Makefile.am</code>. Du editierst sie und fügst <code>kvirc_xxx.po</code>dort hinzu, wo die anderen *.po-Dateien genannt werden. Du solltest keine Probleme haben, zu erraten, was hinzugefügt werden muss, wenn Du Dir die anderen *.po Einträge in dieser Datei anschaust.";
+$template['translation']['text21']="Dann starte:";
 $template['translation']['text22']="
-	and you build KVIrc as usual. After it has finished building, run KVIrc after making sure that your \$LANG variable is set correctly.";
-$template['translation']['text23']="Trying the translation";
-$template['translation']['text24']="Run make and wait until it finishes.";
-$template['translation']['text25']="KVIrc should then pick up your translation file and use it.";
-$template['translation']['text26']="Updating the translation when the sources change";
+	und erstelle KVIrc wie gewöhnlich. Nachdem das Erstellen abgeschlossen ist, starte KVIrc, nachdem Du sichergestellt hast, dass Deine \$LANG-Variable richtig gesetzt ist.";
+$template['translation']['text23']="Die Übersetzung testen";
+$template['translation']['text24']="Lass make laufen und warte, bis es fertig ist.";
+$template['translation']['text25']="KVIrc sollte dann Deine Übersetzung annehmen und benutzen.";
+$template['translation']['text26']="Aktualisieren der Übersetzung, wenn die Quellen sich ändern";
 $template['translation']['text27']="
-	While the development goes on new messages are added to the sources and a small part of the existing messages change. When you do a SVN update to obtain the latest sources you should cd to <code>kvirc/po/kvirc</code> and run:";
+	Während der Entwicklung werden neue Meldungen hinzugefügt, und einige der existierenden Meldungen ändern sich. Wenn Du ein \"svn update\" ausführst, um die neusten Quellen zu erhalten, solltest Du ins Verzeichnis <code>kvirc/po/kvirc</code> wechseln und";
 $template['translation']['text28']="
-	This procedure will update your file <code>kvirc_xxx.po</code> with the new messages and mark the old messages as either <i>fuzzy</i> or invalid. The invalid entries must be re-translated completly again while the <i>fuzzy</i> entries have minor changes and can be probably adjusted in few seconds.";
-$template['translation']['text29']="Misc";
+	ausführen. Dies wird Deine Datei <code>kvirc_xxx.po</code> mit den neuesten Meldungen aktualisieren, und alte als entweder <i>fuzzy</i> oder ungültig (invalid). Die ungültigen Einträge müssen erneut übersetzt werden, während die mit <i>fuzzy</i> markierten kleinere Änderungen haben, die wahrscheinlich in Sekunden angepasst werden können.";
+$template['translation']['text29']="Verschiedenes";
 $template['translation']['text30']="
-	If you're in doubt about some translation, you should take a look at how similar sentences have been translated in the KDE *.po files: there should be a translation file for KDE available on the KDE SVN.";
+	Wenn Du Zweifel bei manchen Übersetzungen hast, kannst Du gucken, wie ähnliche Sätze in den KDE *.po-Dateien übersetzt worden sind; dort sollte es eine Übersetzungsdatei geben, verfügbar über KDE SVN.";
 $template['translation']['text31']="
-	Since many of the modules have their own translation files then the procedure above may (but not must) be repeated for the <code>po/modules/*/</code> subdirectories.";
+	Da viele Module ihre eigene Übersetzungsdateien haben, kann (nicht muss) der obige Ablauf für die <code>po/modules/*/</code>-Unterverzeichnisse wiederholt werden.";
 $template['translation']['text32a']="
-	When you're satisfied with your translation you may send your *.po files to";
+	Wenn Du mit der Übersetzung zufrieden bist, kannst Du Deine *.po-Dateien an";
 $template['translation']['text32b']="
-	asking for inclusion in the SVN. If you want to mantain the translation then you may also ask for a writeable SVN account.";
-$template['translation']['text33']="Happy translating :)";
+	schicken, um sie ins SVN aufzunehmen. Wenn Du die Übersetzung pflegen willst, kannst Du auch nach einem SVN-Zugang mit Schreiberlaubnis fragen.";
+$template['translation']['text33']="Föhliches Übersetzen :)";
 /* translation.php end */
 
 /* tutorials.php start */
-$template['tutorials']['title']="Tutorials";
-$template['tutorials']['archive']="Complete archive";
-$template['tutorials']['tutorial']="Tutorial";
-$template['tutorials']['madeby']="made by";
-$template['tutorials']['text1a']="The Art Of Scripting";
-$template['tutorials']['text1b']="A very rich scripting tutorial";
-$template['tutorials']['tree1c']="Language introduction";
-$template['tutorials']['tree1d']="Cicles, conditions and aliases";
-$template['tutorials']['tree1e']="Arrays, dictionaries, objects and classes";
-$template['tutorials']['tree1f']="Events and popups";
-$template['tutorials']['tree1g']="Graphical objects and layout";
-$template['tutorials']['tree1h']="The wrapper class";
-$template['tutorials']['tree1i']="Slots and signals";
-$template['tutorials']['tree1j']="Raw events and actions";
-$template['tutorials']['tree1k']="Sockets and perl";
-$template['tutorials']['text2a']="Win32 KVIrc Compiling";
-$template['tutorials']['text2b']="A tutorial to compile KVIrc under Win32";
-$template['tutorials']['text3a']="KVIrc Scripting Tutorial For Beginners";
-$template['tutorials']['text3b']="A totally beginners guide";
-$template['tutorials']['text4a']="KVIrc Installation Under Win32";
-$template['tutorials']['text4b']="A short tutorial how to install KVIrc, connect to a server and join a channel on windows";
-$template['tutorials']['dropmail']="If you have written a FAQ, tutorial or guide to KVIrc in any language please drop a mail to";
+$template['tutorials']['title']="Tutorien";
+$template['tutorials']['archive']="Komplettes Archiv";
+$template['tutorials']['tutorial']="Tutorium";
+$template['tutorials']['madeby']="erstellt von";
+$template['tutorials']['text1a']="Die Kunst des Skriptens";
+$template['tutorials']['text1b']="Ein umfangreiches Skriptingtutorium";
+$template['tutorials']['tree1c']="Sprachvorstellung";
+$template['tutorials']['tree1d']="Schleifen, Bedingungen und Aliase";
+$template['tutorials']['tree1e']="Felder (Arrays), Verzeichnisse, Objekte und Klassen";
+$template['tutorials']['tree1f']="Ereignisse und Aufklappmenüs";
+$template['tutorials']['tree1g']="Grafische Objekte und Layout";
+$template['tutorials']['tree1h']="Die Wrapper-Klasse";
+$template['tutorials']['tree1i']="Slots und Signale";
+$template['tutorials']['tree1j']="unbearbeitet Ereignisse und Aktionen";
+$template['tutorials']['tree1k']="Sockets und Perl";
+$template['tutorials']['text2a']="Win32 KVIrc Kompilierung";
+$template['tutorials']['text2b']="Ein Tutorium, um KVIrc unter Win32 zu kompilieren";
+$template['tutorials']['text3a']="KVIrc Skript-Tutorium für Anfänger";
+$template['tutorials']['text3b']="Eine Einführung für völlige Anfänger";
+$template['tutorials']['text4a']="KVIrc-Installation unter Win32";
+$template['tutorials']['text4b']="Dieses kurze Tutorium beschreibt, wie man unter Windows KVIrc installiert, sich zu einem Server verbindet und einen Raum betritt";
+$template['tutorials']['dropmail']="Wenn Du ein FAQ, Tutorium oder Anleitung zu KVIrc geschrieben hast, egal in welcher Sprache, sende bitte eine E-Mail an";
 /* tutorials.php end */
 
 /* welcome.php start */
-$template['welcome']['title']="Welcome!";
+$template['welcome']['title']="Willkommen!";
 $template['welcome']['text']="
-	KVIrc is a <a href=\"http://www.gnu.org\">free</a> portable <acronym title=\"Internet Relay Chat\">IRC</acronym> client based on the excellent <a href=\"http://www.trolltech.com\">Qt GUI toolkit</a>.
-	KVirc is being written by <a href=\"http://www.pragmaware.net\">Szymon Stefanek</a> and the KVIrc Development Team with the contribution of many IRC addicted developers around the world.";
-$template['welcome']['text2']="be part of the project!";
-$template['welcome']['alttext']="how to help the KVIrc project";
+	KVIrc ist ein <a href=\"http://www.gnu.org\">freies</a> portables <acronym title=\"Internet Relay Chat\">IRC</acronym>-Anwenderprogramm, basierend auf dem großartigen <a href=\"http://www.trolltech.com\">Qt GUI Toolkit</a>.
+	KVirc wird entwickelt von <a href=\"http://www.pragmaware.net\">Szymon Stefanek</a> und dem KVIrc Entwicklungsteam, mit Unterstützung von vielen IRC-\"süchtigen\" Entwicklern weltweit.";
+$template['welcome']['text2']="sei Teil des Projekts!";
+$template['welcome']['alttext']="Wie kann ich dem KVIrc-Projekt helfen";
 /* welcome.php end */
 ?>
