@@ -121,10 +121,6 @@ search();
 	<div class="page-container">
 		<div class="header">
 			<div class="header-top">
-				<div class="sitename">
-					<h1><a href="." title="KVIrc.net Home">KVIrc.net <span style="font-weight:normal;font-size:50%;">&nbsp;the visual IRC client </span></a></h1>
-					<h2>no boundaries on the net</h2>
-				</div>
 			</div>
 			<div class="header-middle">
 				<div class="nav0">
