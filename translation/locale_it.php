@@ -1046,6 +1046,7 @@ $template['themes']['theme19']="Dark Blue &egrave; una variante di Marble. Diver
 $template['tools']['title']="Strumenti";
 $template['tools']['text1']="Qui puoi trovare alcuni strumenti relativi a KVIrc";
 $template['tools']['tool1']="Sintassi colorata di KVS per Notepad++";
+$template['tools']['tool2']="A simple tcl for eggdrops to make them reply to some CTCP requests";
 /* tools.php end */
 
 /* translation.php start */

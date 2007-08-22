@@ -1044,6 +1044,7 @@ $template['themes']['theme19']="Dark Blue ist eine Abwandlung von marble. Genie√
 $template['tools']['title']="Werkzeuge";
 $template['tools']['text1']="Hier findest Du einige KVIrc-bezoge Werkzeuge";
 $template['tools']['tool1']="KVS-Syntax-Hervorhebung f√ºr Notepad++";
+$template['tools']['tool2']="A simple tcl for eggdrops to make them reply to some CTCP requests";
 /* tools.php end */
 
 /* translation.php start */
