@@ -90,7 +90,7 @@ $template['index']['iakkohome']="iakko's Homepage";
 // help
 $template['index']['helptext1a']="Wenn Du Hilfe brauchst, wende Dich an die";
 $template['index']['helptext1b']="öffentliche KVIrc Mailingliste";
-$template['index']['helptext1c']="oder die entsprechenden IRC-Kanäle zu nutzen:";
+$template['index']['helptext1c']="oder besuche die entsprechenden IRC-Kanäle:";
 // bugs
 $template['index']['bugreport']="Fehlermeldung";
 $template['index']['bugstext']="Fehler können in der KVIrc-Fehlerdatenbank gemeldet und eingesehen werden:";
@@ -349,7 +349,7 @@ $template['faq']['text16a']="Ich erhalte Kompilierfehler wie diesen:<br />
 	&nbsp; &nbsp; Segmentation fault<br />
 	&nbsp; &nbsp; Please submit a full bug report,<br />
 	&nbsp; &nbsp; with preprocessed source if appropriate.<br />
-	&nbsp; &nbsp; See &lt;URL:http:...";                                                //TODO
+	&nbsp; &nbsp; See &lt;URL:http:...";
 $template['faq']['text16b1']="Dieser Fehler kann verschiedene Ursachen haben";
 $template['faq']['text16b1a']="
 	Ein Kompiliererfehler: mein GCC 3.2 20020903 (Standard bei RH 8.0) gibt täglich 5-6 von diesen Fehlern aus. Normalerweise lassen die sich einfach lösen, indem man das Kommando \"make\"  erneut aufruft. <br />
@@ -380,7 +380,7 @@ $template['features']['tree1b']="MDI floatable windows";                      //
 $template['features']['tree1c']="eingebauter Hilfe-Betrachter";
 $template['features']['tree1d']="Unterstützung für Themen (komplett konfigurierbar über eine grafische Schnittstelle oder via Skripte)";
 $template['features']['tree1e']="Pseudo-transparency support (up to the desktop on KDE)";
-$template['features']['tree1f']="Werkzeugleiste via \"Drag &amp; Drop\" veränderbar";			//TODO
+$template['features']['tree1f']="Werkzeugleiste via \"Drag &amp; Drop\" veränderbar";
 $template['features']['tree1g']="Aktivitätsbenachrichtigungs-Popup";
 $template['features']['tree1h']="Statusleiste mit Unterstützung für Minianwendungen";
 $template['features']['tree1i']="Markierung für ungelesenen Text";
@@ -400,7 +400,7 @@ $template['features']['tree4a']="Verbindungen zu mehreren Servern";
 $template['features']['tree4b']="Benachrichtigungslisten (ja, WATCH wird unterstützt)";
 $template['features']['tree4c']="Ignorierlisten";
 $template['features']['tree4d']="Registrierte-Benutzer-Datenbank";
-$template['features']['tree4e']="Lag meter";													//TODO
+$template['features']['tree4e']="Lag meter";
 $template['features']['tree4f']="Konfigurierbare Protokollierung";
 $template['features']['tree4g']="Unterstützung fürStandard-DCC-CHAT und -SEND (mit Wiederaufnahme)";
 $template['features']['tree4h']="Erweiterte DCC-Arten: VOICE, RSEND, GET, RECV";
@@ -830,7 +830,7 @@ $template['mirror']['text14']="
 /* news.php start */
 $template['news']['title']="Nachrichtenarchive";
 $template['news']['latest']="Neueste Nachrichten";
-$template['news']['error']="Fehler: Error reading story";					//TODO
+$template['news']['error']="Fehler: Eintrag nicht gefunden.";
 $template['news']['nonews']="Eintrag nicht gefunden.";
 $template['news']['news']="Nachrichten";
 $template['news']['readmore']="weiterlesen";
@@ -848,7 +848,7 @@ $template['releases']['text3']="
 	Mehr als eine Paketgruppe ist für die gewählte Platform und Version verfügbar.<br /><br />Bitte wähle die Gruppe aus, die Du laden möchtest";
 $template['releases']['latest']="Neueste Ausgabe";
 $template['releases']['older']="Ältere Ausgaben";
-$template['releases']['available']="Verfügbare download locations";			//TODO
+$template['releases']['available']="Verfügbare Orte zum herunterladen";
 /* releases.php end */
 
 /* require.php start */
@@ -1044,7 +1044,7 @@ $template['themes']['theme19']="Dark Blue ist eine Abwandlung von marble. Genie�
 $template['tools']['title']="Werkzeuge";
 $template['tools']['text1']="Hier findest Du einige KVIrc-bezoge Werkzeuge";
 $template['tools']['tool1']="KVS-Syntax-Hervorhebung für Notepad++";
-$template['tools']['tool2']="A simple tcl for eggdrops to make them reply to some CTCP requests";
+$template['tools']['tool2']="Ein einfaches TCL-Skript für eggdrop-Bots, damit diese auf einige CTCP-Anfragen antworten";
 /* tools.php end */
 
 /* translation.php start */
