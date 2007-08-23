@@ -34,7 +34,7 @@ $template['index']['bugtrack']="KVIrc Fehlerdatenbank";
 $template['index']['running']="KVIrc benutzen";
 $template['index']['download']="runterladen";
 $template['index']['releases']="offizielle Veröffentlichungen";
-$template['index']['snapshots']="Momentaufnahme";
+$template['index']['snapshots']="Snapshot";
 $template['index']['svn']="SVN";
 $template['index']['install']="Installation";
 // documentation
@@ -99,7 +99,7 @@ $template['index']['moredocs']="Mehr Dokumentation";
 $template['index']['officialdocs']="offizielle KVIrc Dokumentation";
 $template['index']['docsauto']="automatisch generierter Index";
 // other
-$template['index']['latestscreen']="neueste Bildschirmfotos";
+$template['index']['latestscreen']="neueste Screenshots";
 $template['index']['footer']="Diese Seite ist am besten zu betrachten mit einem Monitor";
 /* index.php end */
 
@@ -118,7 +118,7 @@ $template['custom']['type']="Typ";
 $template['addons']['title']="Zusätze";
 $template['addons']['text1']="Hier kannst Du Zusatz-Skripte für KVIrc finden";
 $template['addons']['text1b']="
-	Jedes von diesen benötigt zumindest Version 3.2.1 (SVN Momentaufnahme).<br />
+	Jedes von diesen benötigt zumindest Version 3.2.1 (SVN Snapshot).<br />
 	Bitte <b>wähle Deine Version</b> von KVIrc";
 $template['addons']['text2']="Um einen Zusatz zu installieren";
 $template['addons']['tree1']="<b>lade</b> den Zusatz und <b>unzip</b> es";
@@ -264,7 +264,7 @@ $template['download']['text3']="
 	Die offiziellen Pakete werden weniger häufig veröffentlicht, sind aber die stabilsten. Jedes offizielle Quelltext-Paket ist gut getestet und wird wahrscheinlich auf Deinem System kompilieren. Du hast auch mehrere Möglichkeiten, ein zu Deinem System passendes Binärpaket zu finden. Die hier abrufbaren hüfig-gestellten-Fragen und die Dokumentation beziehen sich auf diese Pakete.";
 $template['download']['text4']="Entwicklungs-Snapshots";
 $template['download']['text5']="
-	Die Momentaufnahmen des Quelltextes sind inoffizielle Pakete, gewonnen aus dem SVN auf einer nicht regelmäßigen Basis. Jede Momentaufnahme spiegelt den SVN-Status zu einer bestimmten Revision wider und gewöhnlich findest Du eine aktuelle. Diese Pakete wurden zumindest auf ein paar Systemen getestet und eine hohe Wahrscheinlichkeit, dass sie auch auf Deinem System kopilieren. Es sind auch einige Binärpakete verfügbar.";
+	Die Snapshots des Quelltextes sind inoffizielle Pakete, gewonnen aus dem SVN auf einer nicht regelmäßigen Basis. Jeder Snapshot spiegelt den SVN-Status zu einer bestimmten Revision wider und gewöhnlich findest Du eine aktuelle. Diese Pakete wurden zumindest auf ein paar Systemen getestet und eine hohe Wahrscheinlichkeit, dass sie auch auf Deinem System kopilieren. Es sind auch einige Binärpakete verfügbar.";
 $template['download']['text6']="Aktuelle Quellen aus dem SVN";
 $template['download']['text7']="
 	Den aktuellsten Quelltext kann über das SVN-System geladen werden. Wir versuchen SVN so \"suaber\" wie möglich zu halten, aber trotzdem kann nicht garantiert werden, dass der Quelltext kompiliert. Der SVN-Methode stellt nur den Quelltext zur Verfügung, es gibt keine Binärpakete.";
