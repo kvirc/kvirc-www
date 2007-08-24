@@ -34,7 +34,7 @@ $template['index']['bugtrack']="KVIrc Fehlerdatenbank";
 $template['index']['running']="KVIrc benutzen";
 $template['index']['download']="runterladen";
 $template['index']['releases']="offizielle Veröffentlichungen";
-$template['index']['snapshots']="Snapshot";
+$template['index']['snapshots']="Snapshots";
 $template['index']['svn']="SVN";
 $template['index']['install']="Installation";
 // documentation
@@ -65,10 +65,10 @@ $template['index']['contribute']="Zusammenarbeit";
 $template['index']['help']="Hilfe finden";
 $template['index']['donation']="Spenden";
 // KVIrc related
-$template['index']['related']="KVIrc related";
-$template['index']['forum']="forum";
-$template['index']['rusite']="russian site";
-$template['index']['osxsite']="MacOS X builds";
+$template['index']['related']="KVIrc-bezogen";
+$template['index']['forum']="Forum";
+$template['index']['rusite']="russische Seite";
+$template['index']['osxsite']="MacOS X Pakete";
 // other
 $template['index']['quickdnl']="schnell herunterladen";
 // search
