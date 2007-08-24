@@ -51,7 +51,7 @@ search();
 	<script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
 	<!-- Google Analytics end -->
 	<title>KVIrc.net - The Visual IRC Client</title>
-<!-- AKVS head start v1.5 -->
+	<!-- AKVS head start v1.5 -->
 	<style type="text/css">
 	<!--
 	div#akct {
@@ -105,12 +105,12 @@ search();
 	<![if lt IE 7]>
 	<style type="text/css">
 	div#akct a#akpeel:hover {
-			right: -1px;
+		right: -1px;
 	}
 	</style>
 	<![endif]>
 	<![endif]-->
-<!-- AKVS head end -->
+	<!-- AKVS head end -->
 <body>
 	<!-- Google Analytics start -->
 	<script type="text/javascript">
@@ -216,7 +216,13 @@ search();
 						</li>
 					</ul>
 					<ul>
-						<li><a href="http://forum.kvirc.ru/" target="_blank"><?echo $template['index']['forum'];?></a></li>
+						<li><a href="#"><?echo $template['index']['related'];?></a>
+							<ul>
+								<li><a href="http://forum.kvirc.ru/" target="_blank"><?echo $template['index']['forum'];?></a></li>
+								<li><a href="http://www.kvirc.ru/" target="_blank"><?echo $template['index']['rusite'];?></a></li>
+								<li><a href="http://kvirc.dotadata.de/" target="_blank"><?echo $template['index']['osxsite'];?></a></li>
+							</ul>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -343,6 +349,10 @@ search();
 			<p class="credits"><a href="http://validator.w3.org/check/referer" title="Validate XHTML code">XHTML 1.1</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Validate CSS code">CSS 2.0</a> | credits</p>
 		</div>
 	</div>
-<?php if ((stristr($servername, 'kvirc.de')) || (stristr($servername, 'cyconet.org')) || (stristr($servername, 'ipv6.kvirc.net'))){ echo "<div id=\"akct\"><a id=\"akpeel\" href=\"http://www.vorratsdatenspeicherung.de\" target=\"_blank\" title=\"Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!\"><img src=\"http://wiki.vorratsdatenspeicherung.de/images/Akvst.gif\" alt=\"Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!\" /></a><a id=\"akpreload\" href=\"http://wiki.vorratsdatenspeicherung.de/?title=Online_Demo\" target=\"_blank\" title=\"Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:\"><img src=\"http://wiki.vorratsdatenspeicherung.de/images/Akvsi.gif\" alt=\"Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:\" /></a></div>\n"; } ?>
+	<?
+	if ((stristr($servername,'kvirc.de'))||(stristr($servername,'cyconet.org'))||(stristr($servername,'ipv6.kvirc.net'))){
+		echo "<div id=\"akct\"><a id=\"akpeel\" href=\"http://www.vorratsdatenspeicherung.de\" target=\"_blank\" title=\"Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!\"><img src=\"http://wiki.vorratsdatenspeicherung.de/images/Akvst.gif\" alt=\"Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!\" /></a><a id=\"akpreload\" href=\"http://wiki.vorratsdatenspeicherung.de/?title=Online_Demo\" target=\"_blank\" title=\"Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:\"><img src=\"http://wiki.vorratsdatenspeicherung.de/images/Akvsi.gif\" alt=\"Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:\" /></a></div>\n";
+	}
+	?>
 </body>
 </html>

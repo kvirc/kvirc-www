@@ -64,8 +64,11 @@ $template['index']['archive']="Archiv";
 $template['index']['contribute']="Zusammenarbeit";
 $template['index']['help']="Hilfe finden";
 $template['index']['donation']="Spenden";
-// forum
-$template['index']['forum']="Forum";
+// KVIrc related
+$template['index']['related']="KVIrc related";
+$template['index']['forum']="forum";
+$template['index']['rusite']="russian site";
+$template['index']['osxsite']="MacOS X builds";
 // other
 $template['index']['quickdnl']="schnell herunterladen";
 // search
