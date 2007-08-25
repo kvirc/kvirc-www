@@ -146,7 +146,7 @@ $honor=array(
 	array("nick" => "LoSko", "name" => "Lorenzo Marcon", "mail" => "lorenzo.marcon@startrekitalia.REMOVE.THE.ANTISPAM.WORDS.com", "made" => $template['honor']['made23'], "quote" => $template['honor']['quote23'], "image" => "losko"),
 	array("nick" => "Kane", "name" => "Juanjo Avarez", "mail" => "juanjux@yahoo.REMOVE.THE.ANTISPAM.WORDS.es", "made" => $template['honor']['made24'], "quote" => $template['honor']['quote24'], "image" => "unknown"),
 	array("nick" => "|Tom|@IrcNet", "name" => "Thomas Kalla", "mail" => "", "made" => $template['honor']['made37'], "quote" => "", "image" => "unknown"),
-	array("nick" => "^J^", "name" => "Américo Josè Melo", "mail" => "", "made" => $template['honor']['made38'], "quote" => "", "image" => "unknown"),
+	array("nick" => "Ze_M", "name" => "Américo Josè Melo", "mail" => "", "made" => $template['honor']['made38'], "quote" => "", "image" => "zem"),
 	array("nick" => "CGabriel", "name" => "Christopher R. Gabriel", "mail" => "cgabriel@linux.REMOVE.THE.ANTISPAM.WORDS.it", "made" => $template['honor']['made25'], "quote" => $template['honor']['quote25'], "image" => "unknown"),
 	array("nick" => "Drosha", "name" => "Andrew Frolov", "mail" => "", "made" => $template['honor']['made26'], "quote" => $template['honor']['quote26'], "image" => "unknown"),
 	array("nick" => "Number1", "name" => "Christian Strmmen", "mail" => "number1@realityx.REMOVE.THE.ANTISPAM.WORDS.net", "made" => $template['honor']['made27'], "quote" => $template['honor']['quote27'], "image" => "unknown"),
