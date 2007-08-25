@@ -518,7 +518,7 @@ $template['honor']['quote35']="I can program anything I set my mind to!";
 $template['honor']['made36']="Beta testing, migliorie alla struttura delle lingue.";
 $template['honor']['quote36']="...it's enough for 100 IPs per meter on earth, so every lightswitch can have its own IP...then you telnet to your lightswitch and turn it off!";
 $template['honor']['made37']="Porting su MacOSX";
-$template['honor']['made38']="Traduzione portoghese, patch allo script di default.";
+$template['honor']['made38']="Traduzione portoghese, patch allo script di default e pacchettizzatore Mandriva (MDE).";
 $template['honor']['made39']="Traduzione russa";
 /* honor.php end */
 

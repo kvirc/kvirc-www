@@ -515,7 +515,7 @@ $template['honor']['quote35']="Ich kann alles programmieren, woran ich denke!";
 $template['honor']['made36']="Betatester, Sprachstrukturverbesserungen.";
 $template['honor']['quote36']="...es reicht für 100 IPs pro Meter der Erde, so dass jeder Lichtschalter seine eigene IP haben kann...dann kannst du dich per telnet zu deinem Lichtschalter verbinden und ihn ausschalten!";
 $template['honor']['made37']="MacOSX-Portierung";
-$template['honor']['made38']="Portugiesische Übersetzung, Standard-Skript-Patches.";
+$template['honor']['made38']="Portuguese translation, default script patches and Mandriva (MDE) packager.";
 $template['honor']['made39']="Russische Übersetzung";
 /* honor.php end */
 
