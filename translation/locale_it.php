@@ -1050,6 +1050,7 @@ $template['tools']['title']="Strumenti";
 $template['tools']['text1']="Qui puoi trovare alcuni strumenti relativi a KVIrc";
 $template['tools']['tool1']="Sintassi colorata di KVS per Notepad++";
 $template['tools']['tool2']="Una semplice tcl per eggdrop per farlo rispondere ad alcune richieste CTCP";
+$template['tools']['tool3']="Una tcl per eggdrop per farlo rispondere con alcuni trigger che fanno il poll dei feed RSS di SVN e Trac";
 /* tools.php end */
 
 /* translation.php start */
