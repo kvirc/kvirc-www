@@ -515,7 +515,7 @@ $template['honor']['quote35']="Ich kann alles programmieren, woran ich denke!";
 $template['honor']['made36']="Betatester, Sprachstrukturverbesserungen.";
 $template['honor']['quote36']="...es reicht für 100 IPs pro Meter der Erde, so dass jeder Lichtschalter seine eigene IP haben kann...dann kannst du dich per telnet zu deinem Lichtschalter verbinden und ihn ausschalten!";
 $template['honor']['made37']="MacOSX-Portierung";
-$template['honor']['made38']="Portuguese translation, default script patches and Mandriva (MDE) packager.";
+$template['honor']['made38']="Portugiesische Übersetzung, Standardskript-Patches und Mandriva (MDE) Paketierer.";
 $template['honor']['made39']="Russische Übersetzung";
 /* honor.php end */
 
@@ -1048,7 +1048,7 @@ $template['tools']['title']="Werkzeuge";
 $template['tools']['text1']="Hier findest Du einige KVIrc-bezoge Werkzeuge";
 $template['tools']['tool1']="KVS-Syntax-Hervorhebung für Notepad++";
 $template['tools']['tool2']="Ein einfaches TCL-Skript für eggdrop-Bots, damit diese auf einige CTCP-Anfragen antworten";
-$template['tools']['tool3']="A RSS syndacation tcl for eggdrops to make them reply to some triggers which poll the SVN and Trac RSS feeds";
+$template['tools']['tool3']="Ein RSS-Sydikations-TCL-Skript für eggdrop-Bots, um diese per Befehl SVN- und RSS-Feeds abrufen zu lassen.";
 /* tools.php end */
 
 /* translation.php start */
