@@ -207,7 +207,7 @@ $template['contribute']['text2']="Contributing code";
 $template['contribute']['text3']="
 	The main task is obviously code writing. The developement of the KVIrc core and external modules requires a reasonable knowledge of C++.<br />
 	The KVIrc GUI uses the Qt library (and eventually KDE) thus some knowledge of these libraries might be needed too. There are many areas of interest in the source tree: networking, cryptography, data compression, language parsers...<br />
-	Every level of conribution is precious: from two-line patches to core feature implementation and manteinance.";
+	Every level of conribution is precious: from two-line patches to core feature implementation and maintenance.";
 $template['contribute']['text4']="Contributing artwork";
 $template['contribute']['text5']="
 	The \"V\" in KVIrc stands for \"Visual\". Graphics help the users in navigating the program interface and recognizing quickly the many functions the program provides. We need icons, dialog images, splash-screens, logos, a mascotte character... A nice idea would be to implement a complete theme of graphics...";
@@ -226,7 +226,7 @@ $template['contribute']['text11']="
 	This requires yet less coding knowledge than translating messages.";
 $template['contribute']['text12']="Site management/development";
 $template['contribute']['text13']="
-	The web site needs to be extended and mantained.<br />
+	The web site needs to be extended and maintained.<br />
 	For this task you need knowledge of php, xhtml, css and some ideas :)";
 $template['contribute']['text14']="Mirroring";
 $template['contribute']['text15']="
@@ -275,22 +275,22 @@ $template['download']['text7']="
 
 /* faq.php start */
 $template['faq']['title']="FAQ";
-$template['faq']['text1a']="How do i join a channel";
+$template['faq']['text1a']="How do I join a channel";
 $template['faq']['text1b']="Type \"/join #channelname\"";
-$template['faq']['text2a']="I can't compile kvirc (any version)";
+$template['faq']['text2a']="I can't compile KVIrc (any version)";
 $template['faq']['text2b']="
-	READ the instructions in the INSTALL file: the most common problems can be solved by setting the correct enviroinement variables and fiddling with the ./configure options. If the INSTALL file doesn't help you you can try to join #kvirc on IRCNet or FreeNode: there are many experienced users that can try to help you. If you still can't get out of it, you might try posting your error on the KVIrc mailing list";
+	READ the instructions in the INSTALL file: the most common problems can be solved by setting the correct environement variables and fiddling with the ./configure options. If the INSTALL file doesn't help you you can try to join #kvirc on IRCNet or FreeNode: there are many experienced users that can try to help you. If you still can't get out of it, you might try posting your error on the KVIrc mailing list";
 $template['faq']['text3a']="I can't connect to an IPV6 server";
 $template['faq']['text3b1']="
 	First of all make sure that your IPV6 stack is setup correctly.<br />
 	Can you ping6 other IPV6 other machines";
 $template['faq']['text3b2']="
-	Is the IPV6 support enabled in your kvirc executable.<br />
+	Is the IPV6 support enabled in your KVIrc executable.<br />
 	To find it out, try";
 $template['faq']['text3b3']="
 	in the KVIrc commandline. You should get a comma separated list of features compiled in the executable. If the list contains \"IPv6\" then the support is compiled in, otherwise you must check your compilation stage to guess what went wrong.
-	To connect to an IPV6 server you can use /server -i &lt;servername&gt;
-	If you can ping other IPV6 machines, the IPv6 support is compiled in your executable and you still can't connect to an *existing* IPv6 server then you may have found a bug :) Report it";
+	To connect to an IPv6 server you can use /server -i &lt;servername&gt;
+	If you can ping other IPv6 machines, the IPv6 support is compiled in your executable and you still can't connect to an *existing* IPv6 server then you may have found a bug :) Report it";
 $template['faq']['text4a']="How do i autojoin channels";
 $template['faq']['text4b1']="
 	There are many ways to do it.
@@ -433,7 +433,7 @@ $template['help']['text1']="
 $template['help']['text2']="
 	If something goes wrong, or if you have a question, a suggestion, or are simply interested in KVIrc developement, you can join the";
 $template['help']['text3']="
-	The developers follow the mailing list and will answer questions as soon as is possible.";
+	The developers follow the mailing list and will answer questions as soon as possible.";
 $template['help']['text4a']="The official KVIrc support channel is located on the";
 $template['help']['text4b']="Freenode network";
 $template['help']['text4c']="and the channel is obviously named";
@@ -486,7 +486,7 @@ $template['honor']['quote16']="&lt;Grifisx&gt;...damned brackets ! ...there are 
 $template['honor']['made17']="Object classes developer, code improvements, betatesting, bugfixing, exotic scripting, documentation...";
 $template['honor']['quote17']="&lt;Grifisx&gt; The difference between me and you is just that, You see things and you say &quot;Why?&quot; But I dream things that never were and I say...&quot;Why not?";
 $template['honor']['made18']="Internationalization, bugfixing, bughunting, new ideas and more...";
-$template['honor']['made19']="New site creator, site mantainer, Italian translation, scripting, bughunting, Slackware packages, new ideas...";
+$template['honor']['made19']="New site creator, site maintainer, Italian translation, scripting, bughunting, Slackware packages, new ideas...";
 $template['honor']['quote19']="&lt;HelLViS69&gt; Blessed gdb, in the name of ritchie, kerningham and rms";
 $template['honor']['made20']="Italian translation, graphics, true believer";
 $template['honor']['quote20']="Time makes no sense";
@@ -674,8 +674,8 @@ $template['install']['tree2r']="
 	This is also non-critical for kvirc: if the configure script can't find this directory, you will only looose the support for irc:// urls in konqueror";
 $template['install']['tree2s']="Similar to --without-qt-check but for KDE";
 $template['install']['tree2t']="
-	The IPV6 support is compiled by default on the platforms that support it: this option disables it.<br />
-	Even if you have a plain IPV4-only connection, you might want to keep the IPV6 support: you will be able to lookup IPV6 hostnames";
+	The IPv6 support is compiled by default on the platforms that support it: this option disables it.<br />
+	Even if you have a plain IPv4-only connection, you might want to keep the IPv6 support: you will be able to lookup IPv6 hostnames";
 $template['install']['tree2u']="
 	This will disable the use of the system memmove() memcpy() and memset() functions and enable the bundled implementations. Use it if you have undefined references to these functions while compiling";
 $template['install']['tree2v']="
@@ -727,7 +727,7 @@ $template['install']['tree2b4']="
 	Disables completly the X drawing calls (always enabled with Qt >= 3.0.0). This can help if you have font problems in the view window";
 $template['install']['tree2b5']="
 	Do not compile the splash screen code.<br />
-	This will remove you that nice \"banner\" image that pops up while kvirc is starting up. It will maybe help in making an executable smaller by a couple of KB and save a couple of extra milliseconds during the startup. Use it if you're tring to build a performance critical executable and you're short both in memory and CPU time :)";
+	This will remove you that nice \"banner\" image that pops up while kvirc is starting up. It will maybe help in making an executable smaller by a couple of KB and save a couple of extra milliseconds during the startup. Use it if you're trying to build a performance critical executable and you're short both in memory and CPU time :)";
 $template['install']['tree2b6']="
 	This will disable some informational tooltips in the option dialogs. It will help in making a smaller executable and modules. Use this option if you're a KVIrc guru and you don't need tips about using the options";
 $template['install']['tree2b7']="
@@ -782,7 +782,7 @@ $template['ml']['title']="KVIrc Public Mailing List";
 $template['ml']['text1a']="
 	If something goes wrong, or if you have a question, a suggestion, or are simply interested in KVIrc developement, you can join the KVIrc public mailing list.";
 $template['ml']['text1b']="
-	The developers follow the mailing list and will answer questions as soon as is possible.";
+	The developers follow the mailing list and will answer questions as soon as possible.";
 $template['ml']['text2']="Web interface";
 $template['ml']['text3']="
 	The list has a web interface available <a href=\"http://lists.omnikron.net/mailman/listinfo/kvirc/\">here</a>.<br />
@@ -1062,12 +1062,12 @@ $template['translation']['step']="Step";
 $template['translation']['text1']="
 	In this page you can find some informations on the KVIrc translations status. To see if your language is supported, please look at the list below.";
 $template['translation']['text2']="
-	Many people are working hard to support as many languages as possible. To join them all you need to know is your own language: <b>no conding skills are needed</b>.";
+	Many people are working hard to support as many languages as possible. To join them all you need to know is your own language: <b>no coding skills are needed</b>.";
 $template['translation']['text3']="
 	All translators <b>MUST USE UTF-8</b> as coding standard. Translation files with other standards will be deprecated.";
 $template['translation']['text4']="
 	If you are interested in translating KVIrc in a new language you can find here a nice How-To.<br />
-	Some language are updated (almost) daily, others need to find a new manteiner. If you want to help to improve the current support of your language, please contact its <b>Last translator</b>, listed here:";
+	Some languages are updated (almost) daily, others need to find a new maintainer. If you want to help to improve the current support of your language, please contact its <b>Last translator</b>, listed here:";
 $template['translation']['text5a']="Don't forget to subscribe to the";
 $template['translation']['text5b']="to keep in touch with the developers!";
 $template['translation']['text6']="This mini-howto describes the procedure for translating KVIrc in a new language";
