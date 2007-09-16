@@ -23,64 +23,64 @@ $template['index']['croatian']="Croatian";
 $template['index']['latvian']="Latvian";
 
 // the project
-$template['index']['theproject']="the project";
-$template['index']['status']="status";
-$template['index']['features']="features";
-$template['index']['license']="license";
-$template['index']['require']="requirements";
-$template['index']['screens']="screenshots";
-$template['index']['bugtrack']="KVIrc bugtrack";
+$template['index']['theproject']="le projet";
+$template['index']['status']="statut";
+$template['index']['features']="fonctionnalités";
+$template['index']['license']="licence";
+$template['index']['require']="librairies requises";
+$template['index']['screens']="captures d'écrans";
+$template['index']['bugtrack']="rapporter un bug";
 // running kvirc
-$template['index']['running']="running KVIrc";
-$template['index']['download']="download";
-$template['index']['releases']="official releases";
+$template['index']['running']="lancer KVIrc";
+$template['index']['download']="télécharger";
+$template['index']['releases']="releases officieles";
 $template['index']['snapshots']="snapshots";
 $template['index']['svn']="SVN";
 $template['index']['install']="installation";
 // documentation
 $template['index']['docs']="documentation";
 $template['index']['faq']="FAQ";
-$template['index']['kviman']="KVIrc manual";
-$template['index']['tutorials']="tutorials";
-$template['index']['translations']="translations";
+$template['index']['kviman']="manuel KVIrc";
+$template['index']['tutorials']="tutoriels";
+$template['index']['translations']="traductions";
 // graphic suite
-$template['index']['graphsuite']="graphic suite";
-$template['index']['themes']="themes";
-$template['index']['splash']="splash screens";
-$template['index']['banners']="banners";
+$template['index']['graphsuite']="suite graphique";
+$template['index']['themes']="thèmes";
+$template['index']['splash']="écrans de démarrage";
+$template['index']['banners']="bannières";
 $template['index']['arts']="arts";
 // misc
-$template['index']['misc']="misc";
-$template['index']['honor']="honor &amp; glory";
+$template['index']['misc']="divers";
+$template['index']['honor']="honneurs &amp; remerciements";
 $template['index']['scripts']="scripts";
 $template['index']['addons']="addons";
-$template['index']['tools']="tools";
-$template['index']['changelog']="changeLog";
-$template['index']['svncommits']="SVN commits";
+$template['index']['tools']="outils";
+$template['index']['changelog']="changements";
+$template['index']['svncommits']="suivi du SVN";
 // contact
-$template['index']['contact']="contact";
-$template['index']['ml']="KVIrc mailing list";
+$template['index']['contact']="contacts";
+$template['index']['ml']="KVIrc mailing-liste";
 $template['index']['archive']="archive";
 $template['index']['contribute']="collaboration";
-$template['index']['help']="finding help";
-$template['index']['donation']="make a donation";
+$template['index']['help']="trouver de l'aide";
+$template['index']['donation']="faire un don";
 // KVIrc related
 $template['index']['related']="KVIrc related";
 $template['index']['forum']="forum";
-$template['index']['rusite']="russian site";
-$template['index']['osxsite']="MacOS X builds";
+$template['index']['rusite']="site russe";
+$template['index']['osxsite']="paquets MacOS X";
 // other
-$template['index']['quickdnl']="quick download";
+$template['index']['quickdnl']="téléchargement rapide";
 // search
-$template['index']['search']="Search";
+$template['index']['search']="Chercher";
 $template['index']['go']="GO";
 // news
-$template['index']['latestnews']="latest news";
-$template['index']['allnews']="All News";
+$template['index']['latestnews']="dernière news";
+$template['index']['allnews']="Toutes les News";
 // mirrors
-$template['index']['mirrors']="mirrors";
-$template['index']['wwwmirrors']="WWW mirrors";
-$template['index']['ftpmirrors']="FTP mirrors";
+$template['index']['mirrors']="miroirs";
+$template['index']['wwwmirrors']="miroirs WWW";
+$template['index']['ftpmirrors']="miroirs FTP";
 $template['index']['mirrorstext1a']="Contributing to the KVIrc project by mirroring its files is really easy and appreciated; in";
 $template['index']['mirrorstext1b']="this page";
 $template['index']['mirrorstext1c']="you'll find step by step instructions to create a www or ftp mirror (or both).";
