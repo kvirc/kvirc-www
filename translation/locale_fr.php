@@ -68,6 +68,8 @@ $template['index']['donation']="faire un don";
 $template['index']['related']="Liens";
 $template['index']['forum']="forum";
 $template['index']['rusite']="site russe";
+$template['index']['frsite']="french site";
+$template['index']['frforum']="french forum";
 $template['index']['osxsite']="paquets MacOS X";
 // other
 $template['index']['quickdnl']="téléchargement rapide";

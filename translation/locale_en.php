@@ -66,8 +66,10 @@ $template['index']['help']="finding help";
 $template['index']['donation']="make a donation";
 // KVIrc related
 $template['index']['related']="KVIrc related";
-$template['index']['forum']="forum";
+$template['index']['forum']="official forum";
 $template['index']['rusite']="russian site";
+$template['index']['frsite']="french site";
+$template['index']['frforum']="french forum";
 $template['index']['osxsite']="MacOS X builds";
 // other
 $template['index']['quickdnl']="quick download";

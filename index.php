@@ -220,6 +220,8 @@ search();
 							<ul>
 								<li><a href="http://forum.kvirc.ru/" target="_blank"><?echo $template['index']['forum'];?></a></li>
 								<li><a href="http://www.kvirc.ru/" target="_blank"><?echo $template['index']['rusite'];?></a></li>
+								<li><a href="http://kvirc-fr.info/" target="_blank"><?echo $template['index']['frsite'];?></a></li>
+								<li><a href="http://kvircfr.les-forums.com/" target="_blank"><?echo $template['index']['frforum'];?></a></li>
 								<li><a href="http://kvirc.dotadata.de/" target="_blank"><?echo $template['index']['osxsite'];?></a></li>
 							</ul>
 						</li>

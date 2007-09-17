@@ -68,6 +68,8 @@ $template['index']['donation']="Spenden";
 $template['index']['related']="KVIrc-bezogen";
 $template['index']['forum']="Forum";
 $template['index']['rusite']="russische Seite";
+$template['index']['frsite']="french site";
+$template['index']['frforum']="french forum";
 $template['index']['osxsite']="MacOS X Pakete";
 // other
 $template['index']['quickdnl']="schnell herunterladen";
