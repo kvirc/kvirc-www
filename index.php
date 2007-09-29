@@ -47,6 +47,7 @@ search();
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="alternate" type="application/rss+xml" href="rss.php"  title="KVIrc News" />
+	<script type="text/javascript" src="conf/functions.js"></script>
 	<!-- Google Analytics start -->
 	<script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
 	<!-- Google Analytics end -->
@@ -111,6 +112,7 @@ search();
 	<![endif]>
 	<![endif]-->
 	<!-- AKVS head end -->
+</head>
 <body>
 	<!-- Google Analytics start -->
 	<script type="text/javascript">
@@ -157,7 +159,7 @@ search();
 								<li><a href="?id=license&amp;lang=<?echo $lang;?>"><?echo $template['index']['license'];?></a></li>
 								<li><a href="?id=require&amp;lang=<?echo $lang;?>"><?echo $template['index']['require'];?></a></li>
 								<li><a href="?id=screen&amp;lang=<?echo $lang;?>"><?echo $template['index']['screens'];?></a></li>
-								<li><a href="https://svn.kvirc.de/kvirc/" target="_blank" title="KVIrc bugtrack"><?echo $template['index']['bugtrack'];?></a></li>
+								<li><a href="javascript:opendoc('https://svn.kvirc.de/kvirc/');" title="KVIrc bugtrack"><?echo $template['index']['bugtrack'];?></a></li>
 							</ul>
 						</li>
 					</ul>
@@ -200,7 +202,7 @@ search();
 								<li><a href="?id=addons&amp;lang=<?echo $lang;?>"><?echo $template['index']['addons'];?></a></li>
 								<li><a href="?id=tools&amp;lang=<?echo $lang;?>"><?echo $template['index']['tools'];?></a></li>
 								<li><a href="?id=changelog&amp;lang=<?echo $lang;?>"><?echo $template['index']['changelog'];?></a></li>
-								<li><a href="http://cia.vc/stats/project/kvirc" target="_blank" title="CIA commits on KVIrc project"><?echo $template['index']['svncommits'];?></a></li>
+								<li><a href="javascript:opendoc('http://cia.vc/stats/project/kvirc');" title="CIA commits on KVIrc project"><?echo $template['index']['svncommits'];?></a></li>
 							</ul>
 						</li>
 					</ul>
@@ -218,11 +220,11 @@ search();
 					<ul>
 						<li><a href="#"><?echo $template['index']['related'];?></a>
 							<ul>
-								<li><a href="http://forum.kvirc.ru/" target="_blank"><?echo $template['index']['forum'];?></a></li>
-								<li><a href="http://www.kvirc.ru/" target="_blank"><?echo $template['index']['rusite'];?></a></li>
-								<li><a href="http://kvirc-fr.info/" target="_blank"><?echo $template['index']['frsite'];?></a></li>
-								<li><a href="http://kvircfr.les-forums.com/" target="_blank"><?echo $template['index']['frforum'];?></a></li>
-								<li><a href="http://kvirc.dotadata.de/" target="_blank"><?echo $template['index']['osxsite'];?></a></li>
+								<li><a href="javascript:opendoc('http://forum.kvirc.ru/');"><?echo $template['index']['forum'];?></a></li>
+								<li><a href="javascript:opendoc('http://www.kvirc.ru/');"><?echo $template['index']['rusite'];?></a></li>
+								<li><a href="javascript:opendoc('http://kvirc-fr.info/');"><?echo $template['index']['frsite'];?></a></li>
+								<li><a href="javascript:opendoc('http://kvircfr.les-forums.com/');"><?echo $template['index']['frforum'];?></a></li>
+								<li><a href="javascript:opendoc('http://kvirc.dotadata.de/');"><?echo $template['index']['osxsite'];?></a></li>
 							</ul>
 						</li>
 					</ul>
@@ -249,7 +251,7 @@ search();
 		<div class="main">
 			<div class="main-navigation">
 				<div class="round-border-topright"></div>
-				<h1 class="first"><img src="img/internet-news-reader.png" alt="<?echo $template['index']['latestnews'];?>" width="16" height="16" border="0"/><?echo $template['index']['latestnews'];?></h1>
+				<h1 class="first"><img src="img/internet-news-reader.png" alt="<?echo $template['index']['latestnews'];?>" width="16" height="16" class="noborder" /><?echo $template['index']['latestnews'];?></h1>
 
 				<!-- inserire codeswitch news-->
 				<dl class="nav3-grid">
@@ -266,7 +268,7 @@ search();
 					?>
 				</dl>
 
-				<h1><img src="img/internet-web-browser.png" alt="<?echo $template['index']['mirrors'];?>" border="0" /><?echo $template['index']['mirrors'];?></h1>
+				<h1><img src="img/internet-web-browser.png" alt="<?echo $template['index']['mirrors'];?>" class="noborder" /><?echo $template['index']['mirrors'];?></h1>
 				<h3><?echo $template['index']['wwwmirrors'];?></h3>
 				<p>
 					<?
@@ -288,14 +290,14 @@ search();
 					?>
 				</p>
 
-				<h1><img src="img/network-offline.png" alt="<?echo $template['index']['oldlayout'];?>" border="0" /><?echo $template['index']['oldlayout'];?></h1>
+				<h1><img src="img/network-offline.png" alt="<?echo $template['index']['oldlayout'];?>" class="noborder" /><?echo $template['index']['oldlayout'];?></h1>
 				<p>
 					<img src="img/th_oldsite_1.gif" alt="<?echo $template['index']['oldsite'];?>" width="159" height="105" /><br />
-					<a href="http://old.kvirc.de/" title="<?echo $template['index']['oldsite'];?>" target="_blank">old.kvirc.de</a> by istari
+					<a href="javascript:opendoc('http://old.kvirc.de/');" title="<?echo $template['index']['oldsite'];?>">old.kvirc.de</a> by istari
 				</p>
 				<p>
 					<img src="img/th_oldsite_2.gif" alt="<?echo $template['index']['oldsite'];?>" width="159" height="105" /><br />
-					kvirc.virg0.org/old by <a href="http://iakko.net/" title="<?echo $template['index']['iakkohome'];?>" target="_blank">iakko</a>
+					kvirc.virg0.org/old by <a href="javascript:opendoc('http://iakko.net/');" title="<?echo $template['index']['iakkohome'];?>">iakko</a>
 				</p>
 			</div>
  
@@ -316,7 +318,7 @@ search();
 					<p class="center">
 						<img src="img/themes/th_theme_anger.gif" alt="Anger Theme - KVIrc &quot;Anomalies&quot;" /><br />
 
-						<a href="http://kvirc.virg0.org/themes.htm" title="Anger Theme @ kvirc.virg0.org" target="_blank">Anger theme</a> - <a href="mailto:cle [at] virg0 [dot] org" title="mail etherea`">etherea`</a><br />
+						<a href="javascript:opendoc('http://kvirc.virg0.org/themes.htm');" title="Anger Theme @ kvirc.virg0.org">Anger theme</a> - <a href="mailto:cle [at] virg0 [dot] org" title="mail etherea`">etherea`</a><br />
 						KVIrc Anomalies
 					</p>
 				</div>
@@ -333,14 +335,14 @@ search();
 					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
 					<h1 class="orange"><img src="img/media-record.png" alt="<?echo $template['index']['bugreport'];?>" /><?echo $template['index']['bugreport'];?></h1>
 					<p class="center">
-						<?echo $template['index']['bugstext'];?> <a href="https://svn.kvirc.de/kvirc/" title="<?echo $template['index']['bugtrack'];?>" target="_blank"><?echo $template['index']['bugtrack'];?></a>
+						<?echo $template['index']['bugstext'];?> <a href="javascript:opendoc('https://svn.kvirc.de/kvirc/');" title="<?echo $template['index']['bugtrack'];?>"><?echo $template['index']['bugtrack'];?></a>
 					</p>
 				</div>
 				<div class="subcontent-unit-border">
 					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
 					<h1><img src="img/document-open.png" alt="<?echo $template['index']['moredocs'];?>" /><?echo $template['index']['moredocs'];?></h1>
 					<p class="center">
-						<a href="http://www.kvirc.de/docu/" title="<?echo $template['index']['officialdocs'];?>" target="_blank"><?echo $template['index']['officialdocs'];?></a><br /><?echo $template['index']['docsauto'];?>
+						<a href="javascript:opendoc('http://www.kvirc.de/docu/');" title="<?echo $template['index']['officialdocs'];?>"><?echo $template['index']['officialdocs'];?></a><br /><?echo $template['index']['docsauto'];?>
 					</p>
 				</div>
 			</div>
@@ -353,7 +355,7 @@ search();
 	</div>
 	<?
 	if ((stristr($servername,'kvirc.de'))||(stristr($servername,'cyconet.org'))||(stristr($servername,'ipv6.kvirc.net'))){
-		echo "<div id=\"akct\"><a id=\"akpeel\" href=\"http://www.vorratsdatenspeicherung.de\" target=\"_blank\" title=\"Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!\"><img src=\"http://wiki.vorratsdatenspeicherung.de/images/Akvst.gif\" alt=\"Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!\" /></a><a id=\"akpreload\" href=\"http://wiki.vorratsdatenspeicherung.de/?title=Online_Demo\" target=\"_blank\" title=\"Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:\"><img src=\"http://wiki.vorratsdatenspeicherung.de/images/Akvsi.gif\" alt=\"Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:\" /></a></div>\n";
+		echo "<div id=\"akct\"><a id=\"akpeel\" href=\"javascript:opendoc('http://www.vorratsdatenspeicherung.de');\" title=\"Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!\"><img src=\"http://wiki.vorratsdatenspeicherung.de/images/Akvst.gif\" alt=\"Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!\" /></a><a id=\"akpreload\" href=\"javascript:opendoc('http://wiki.vorratsdatenspeicherung.de/?title=Online_Demo');\" title=\"Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:\"><img src=\"http://wiki.vorratsdatenspeicherung.de/images/Akvsi.gif\" alt=\"Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:\" /></a></div>\n";
 	}
 	?>
 </body>
