@@ -350,7 +350,7 @@ search();
 
 		<div class="footer">
 			<p>KVIrc.net | (c) 2007 ./LSD - CreativeCode | <?echo $template['index']['footer'];?></p>
-			<p class="credits"><a href="http://validator.w3.org/check/referer" title="Validate XHTML code">XHTML 1.1</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Validate CSS code">CSS 2.0</a> | credits</p>
+			<p class="credits"><a href="javascript:opendoc('http://validator.w3.org/check/referer');" title="Validate XHTML code">XHTML 1.1</a> | <a href="javascript:opendoc('http://jigsaw.w3.org/css-validator/check/referer');" title="Validate CSS code">CSS 2.0</a> | credits</p>
 		</div>
 	</div>
 	<?
