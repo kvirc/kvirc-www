@@ -988,7 +988,7 @@ $template['status']['text']="
 	<p>Beachte auch die <a href=\"?id=install&amp;lang=$lang\">Installationshinweise</a>, <a href=\"?id=tutorials&amp;lang=$lang\">Tutorien</a>, <a href=\"?id=translation&amp;lang=$lang\">Übersetzungen</a> und <a href=\"?id=themes&amp;lang=$lang\">Themen</a>, um eine mehr angepasste KVIrc-Version zu erhalten =)</p>";
 /* status.php end */
 
-/* SVN.php start */
+/* svn.php start */
 $template['svn']['title']="SVN auschecken";
 $template['svn']['text1']="
 	Vom SVN-Server kannst Du die aktuellste KVIrc-Version laden.<br />
@@ -1002,8 +1002,8 @@ $template['svn']['text4']="
 	und folge dann den <a href=\"?id=install&amp;lang=$lang\">Installationsanweisungen</a>.<br />
 	Die aktuellsten Installationsanweisungen für die SVN-Version stehen auch in der Datei INSTALL.<br />
 	Wir versuchen SVN so \"sauber\" wie möglich zu halten, aber es kann passieren, dass die heruntergeladenen Quelltexte nicht kompilieren oder das Programm nicht korrekt läuft.<br />
-	Du kannst auch im SVN stöbern via <a href=\"https://SVN.kvirc.de/kvirc/browser/\">https://SVN.kvirc.de/</a>";
-/* SVN.php end */
+	Du kannst auch im SVN stöbern via <a href=\"https://svn.kvirc.de/kvirc/browser/\">https://svn.kvirc.de/</a>";
+/* svn.php end */
 
 /* themes.php start */
 $template['themes']['title']="Themen";
