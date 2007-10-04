@@ -39,13 +39,13 @@ echo "<div class=\"column1-unit\">";
 	echo "<h1>".$template['tutorials']['text3a']."</h1>";
 	echo "<h3>".$template['tutorials']['text3b']."</h3>";
 	echo "<ul>";
-	echo "<li><img src=\"img/flags/Germany.png\" alt=\"".$template['index']['german']."\" title=\"".$template['index']['german']."\" />&nbsp;<a href=\"ftp://ftp.kvirc.net/pub/kvirc/tutorials/KVS_scripting_de.pdf\">".$template['tutorials']['tutorial']."</a>, ".$template['tutorials']['madeby']." <a href=\"mailto:thex.email@googlemail.REMOVE.THE.ANTISPAM.WORDS.com\">thexception</a>.</li><br />";
+	echo "<li><img src=\"img/flags/Germany.png\" alt=\"".$template['index']['german']."\" title=\"".$template['index']['german']."\" />&nbsp;<a href=\"ftp://ftp.kvirc.net/pub/kvirc/tutorials/KVS_scripting_de.pdf\">".$template['tutorials']['tutorial']."</a>, ".$template['tutorials']['madeby']." <a href=\"mailto:kvirc@thexception.REMOVE.THE.ANTISPAM.WORDS.net\">thexception</a>.</li><br />";
 	echo "</ul>";
 	
 	echo "<h1>".$template['tutorials']['text4a']."</h1>";
 	echo "<h3>".$template['tutorials']['text4b']."</h3>";
 	echo "<ul>";
-	echo "<li><img src=\"img/flags/Germany.png\" alt=\"".$template['index']['german']."\" title=\"".$template['index']['german']."\" />&nbsp;<a href=\"ftp://ftp.kvirc.net/pub/kvirc/tutorials/Win32_KVIrc_Installation_de.pdf\">".$template['tutorials']['tutorial']."</a>, ".$template['tutorials']['madeby']." <a href=\"mailto:thex.email@googlemail.REMOVE.THE.ANTISPAM.WORDS.com\">thexception</a>.</li><br />";
+	echo "<li><img src=\"img/flags/Germany.png\" alt=\"".$template['index']['german']."\" title=\"".$template['index']['german']."\" />&nbsp;<a href=\"ftp://ftp.kvirc.net/pub/kvirc/tutorials/Win32_KVIrc_Installation_de.pdf\">".$template['tutorials']['tutorial']."</a>, ".$template['tutorials']['madeby']." <a href=\"mailto:kvirc@thexception.REMOVE.THE.ANTISPAM.WORDS.net\">thexception</a>.</li><br />";
 	echo "</ul>";
 
 	echo "<br /><p>".$template['tutorials']['dropmail']." <a href=\"mailto:hellvis69@netsons.REMOVE.THE.ANTISPAM.WORDS.org\">HelLViS69</a> :)</p>";
