@@ -178,7 +178,7 @@ search();
 						<li><a href="#"><?echo $template['index']['docs'];?></a>
 							<ul>
 								<li><a href="?id=faq&amp;lang=<?echo $lang;?>"><?echo $template['index']['faq'];?></a></li>
-								<li><a href="http://www.kvirc.de/docu/"><?echo $template['index']['kviman'];?></a></li>
+								<li><a href="javascript:opendoc('http://kvirc.thexception.net/doc/');"><?echo $template['index']['kviman'];?></a></li>
 								<li><a href="?id=tutorials&amp;lang=<?echo $lang;?>"><?echo $template['index']['tutorials'];?></a></li>
 								<li><a href="?id=translation&amp;lang=<?echo $lang;?>"><?echo $template['index']['translations'];?></a></li>
 							</ul>
