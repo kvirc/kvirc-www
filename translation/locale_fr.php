@@ -109,12 +109,12 @@ $template['index']['footer']="this site is best viewed with a monitor";
 /* index.php end */
 
 /* custom vars start */
-$template['custom']['author']="_Otaku";
+$template['custom']['author']="Auteur";
 $template['custom']['description']="Description";
-$template['custom']['homepage']="http://kvirc-fr.info";
-$template['custom']['download']="Download";
+$template['custom']['homepage']="Page d'accueil";
+$template['custom']['download']="Téléchargement";
 $template['custom']['date']="Date";
-$template['custom']['size']="Size";
+$template['custom']['size']="Taille";
 $template['custom']['version']="Version";
 $template['custom']['type']="Type";
 /* custom vars end */
@@ -132,53 +132,52 @@ $template['addons']['tree2']="
 $template['addons']['tree3']="Pressez le bouton \"<b>Installer un Addon</b>\" à droite";
 $template['addons']['tree4']="
 	Naviguez à l'endroit où vous avez décompressé l'addon et sélectionnez le fichier <b>install.kvs</b>";
-$template['addons']['sorry']="Sorry, no addons were found for the specified version of KVIrc";
-$template['addons']['addon1']="Automatically enters away state after a period of inactivity";
-$template['addons']['addon2']="Provides toolbar buttons for several commonly used channel operations";
-$template['addons']['addon3']="Shows Statistics for a joined channel";
-$template['addons']['addon4']="A simple script to know where a host come from";
+$template['addons']['sorry']="Désolé, aucun addon n'a été trouvé pour la version de KVIrc spécifiée";
+$template['addons']['addon1']="Vous met en Away automatiquement après une période d'inactivité";
+$template['addons']['addon2']="Ajoute des boutons pour la gestion des salons";
+$template['addons']['addon3']="Voir les statistiques d'un salon join";
+$template['addons']['addon4']="Un script simple pour connaitre l'origine d'une adresse";
 $template['addons']['addon5']="Automatically enters cryption-data for your crypted objects";
-$template['addons']['addon6']="Provides shortcuts and toolbar buttons for EZBounce IRC proxy commands";
-$template['addons']['addon7']="A simple one-o-one game";
-$template['addons']['addon8']="A simple F-Server";
-$template['addons']['addon9']="A simple script for lol and kiss with F3-F8 keys and for funny writing";
-$template['addons']['addon10']="A simple script for announcing mp3s that are played and sharing option";
-$template['addons']['addon11']="A nice \"time eater\"";
-$template['addons']['addon12']="Displays RSS news feeds from various sources";
-$template['addons']['addon13']="
-	Allows advertising and eventually sharing the currently played media on IRC channels and queries";
-$template['addons']['addon14']="A simple script to manage public lessons";
-$template['addons']['addon15']="Implements a simple Quiz Bot";
-$template['addons']['addon16']="Allows sending SMS messages through several web-based services";
-$template['addons']['addon17']="It allows the user to warn, kick, and ban who says forbidden words";
-$template['addons']['addon18']="An auto op/voice/ban system for your channels (addon from the Twins script)";
+$template['addons']['addon6']="Ajoute des raccourcis et des boutons pour le proxy IRC EZBounce";
+$template['addons']['addon7']="un simple jeu one-o-one";
+$template['addons']['addon8']="Un simple F-Server (serveur de fichiers)";
+$template['addons']['addon9']="Un simple script de lol et kiss avec les touches F3-F8 et pour des écritures funs";
+$template['addons']['addon10']="Un simple script pour annoncer les mp3 joués et les options de partage";
+$template['addons']['addon11']="Un sympa \"time eater\"";
+$template['addons']['addon12']="Montre les fils RSS de sources variées";
+$template['addons']['addon13']="Permet de montrer et éventuellement de partager sur un salon irc ou en pv un média joué.";
+$template['addons']['addon14']="Permet de gérer des leçons publiques";
+$template['addons']['addon15']="Intègre un simple bot de quizz";
+$template['addons']['addon16']="Permet d'envoyer des SMS à partir d'un service WEB";
+$template['addons']['addon17']="Avertit, kick et ban les users qui disent des mots interdits";
+$template['addons']['addon18']="UN sytème d'auto op/voice/ban pour vos salons (addon du script Twins)";
 $template['addons']['addon19']="
-	Colorizes your input text in channel, queries and DCC chats (addon from the Twins script)";
-$template['addons']['addon20']="A simple lag bar with three different colors (addon from the Twins script)";
+	Colorise votre texte sur les salons, les privés et les DCC chats (addon du script Twins)";
+$template['addons']['addon20']="Un simple indicateur de Lag avec trois différentes couleurs (addon du script Twins)";
 $template['addons']['addon21']="
-	Remote control your media player with a simple user interface, and offer your music to other users (addon from the Twins script)";
-$template['addons']['addon22']="Check previous host of an user";
-$template['addons']['addon23']="Simple icons sets changer. You can choose old icons, new icons with old smiles or new icons";
+	Télécommande de contrôle de votre lecteur multimédia avec une interface utilisateur simple et qui permet de proposer votre musique aux autres utilisateurs (addon du script Twins)";
+$template['addons']['addon22']="Montre l'adresse précédente d'un utilisateur";
+$template['addons']['addon23']="Simple gestionnaire d'icones. Vous pouvez choisir les anciens icones, nouveaux icones avec anciens smiles ou nouveaux";
 /* addons.php end */
 
 /* archive.php start */
-$template['archive']['title']="Mailing List Archive";
+$template['archive']['title']="Archives de la Mailing-Lists";
 $template['archive']['text']="
-	Here you can find the mailing list archives: this is the first place to look at if you have any problem.<br />
-	You can browse the archive manually or use the form below to search in.";
-$template['archive']['search']="Google Search";
-$template['archive']['jan']="January";
-$template['archive']['feb']="February";
-$template['archive']['mar']="March";
-$template['archive']['apr']="April";
-$template['archive']['may']="May";
-$template['archive']['jun']="June";
-$template['archive']['jul']="July";
-$template['archive']['aug']="August";
-$template['archive']['sep']="September";
-$template['archive']['oct']="October";
-$template['archive']['nov']="November";
-$template['archive']['dec']="December";
+	Ici vous pouvez trouver les archives de la mailing-liste: c'est le premier endroit où chercher de l'aide en cas de problème.<br />
+	Vous pouvez regarder les archives manuellement ou avec la recherche.";
+$template['archive']['search']="Recherche Google";
+$template['archive']['jan']="Janvier";
+$template['archive']['feb']="Février";
+$template['archive']['mar']="Mars";
+$template['archive']['apr']="Avril";
+$template['archive']['may']="Mai";
+$template['archive']['jun']="Juin";
+$template['archive']['jul']="Juillet";
+$template['archive']['aug']="Aout";
+$template['archive']['sep']="Septembre";
+$template['archive']['oct']="Octobre";
+$template['archive']['nov']="Novembre";
+$template['archive']['dec']="Décembre";
 /* archive.php end */
 
 /* arts.php start */
