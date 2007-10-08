@@ -16,9 +16,20 @@ echo "<div class=\"column1-unit\">";
 
 		echo "<tr>";
 			echo "<td class=\"data\"><em>".$template['custom']['author'].":</em></td>";
-			if($value['mail']!="")
-				echo "<td><a href=\"mailto:".$value['mail']."\">".$value['author']."</a></td>";
-			else echo "<td>".$value['author']."</td>";
+			if(is_array($value['author'])){
+				echo "<td>";
+				$count=count($value['author']);
+				for($i=0;$i<$count;$i++){
+					if($value['mail'][$i]!="") echo "<a href=\"mailto:".$value['mail'][$i]."\">".$value['author'][$i]."</a>";
+					else echo $value['author'][$i];
+
+					if($i<$count-1) echo " &amp; ";
+				}
+				echo "</td>";
+			} else {
+				if($value['mail']!="") echo "<td><a href=\"mailto:".$value['mail']."\">".$value['author']."</a></td>";
+				else echo "<td>".$value['author']."</td>";
+			}
 		echo "</tr>";
 
 		echo "<tr>";
