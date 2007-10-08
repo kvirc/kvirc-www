@@ -275,7 +275,7 @@ $themes=array(
 //aray("name" => "tool name", "author" => "author name", "mail" => "author mail", "desc" => "description", "url" => "url")
 $tools=array(
 	1 => array("name" => "Notepad++ KVS-Syntax", "author" => "TheXception", "mail" => "kvirc@thexception.REMOVE.THE.ANTISPAM.WORDS.net", "desc" => $template['tools']['tool1'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/tools/kvs-notepad++.zip"),
-	array("name" => "KVIrc TCL", "author" => "HelLViS69", "mail" => "hellvis69@netsons.REMOVE.THE.ANTISPAM.WORDS.org", "desc" => $template['tools']['tool2'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/tools/kvirc-1.0.tcl.bz2"),
+	array("name" => "KVIrc TCL", "author" => "HelLViS69", "mail" => "hellvis69@netsons.REMOVE.THE.ANTISPAM.WORDS.org", "desc" => $template['tools']['tool2'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/tools/kvirc-2.0.tcl.bz2"),
 	array("name" => "KVIrc SVN/Trac Syndacator", "author" => "HelLViS69", "mail" => "hellvis69@netsons.REMOVE.THE.ANTISPAM.WORDS.org", "desc" => $template['tools']['tool3'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/tools/kvircrss-1.0.tcl.bz2")
 );
 ?>
