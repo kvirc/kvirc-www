@@ -278,7 +278,7 @@ $template['download']['text7']="
 $template['faq']['title']="FAQ";
 $template['faq']['text1a']="Come joino un canale";
 $template['faq']['text1b']="Scrivi \"/join #nomedelcanale\"";
-$template['faq']['text2a']="Non riesco a compiplare KVIrc (qualsiasi versione)";
+$template['faq']['text2a']="Non riesco a compilare KVIrc (qualsiasi versione)";
 $template['faq']['text2b']="
 	LEGGI le istruzioni nel file INSTALL: molti problemi comuni possono essere risolti settando le corrette variabili d'ambiente e giocando con le opzioni del ./configure. Se il file INSTALL non ti aiuta puoi provare a entrare su #KVIrc su IRCnet o FreeNode o su #KVIrc.net su Azzurra: ci sono molti utenti esperti che possono aiutarti. Se ancora non riesci a uscirne, puoi postare il tuo errore sulla mailing list";
 $template['faq']['text3a']="Non riesco a connettermi a un server IPv6";
@@ -336,7 +336,7 @@ $template['faq']['text11a']="KVIrc crasha quando un certificato &egrave; usato s
 $template['faq']['text11b']="
 	Questo probabilmente &egrave; un bug della dll SSL fornita con la versione windows di KVIrc.<br />
 	Prova a usare diverse versioni di questa dll";
-$template['faq']['text12a']="/me non supporta il carattere '\$' character";
+$template['faq']['text12a']="/me non supporta il carattere '\$'";
 $template['faq']['text12b']="
 	Questo NON &egrave; un bug: &egrave; una caratteristica. KVIrc supporta (e sostituisce!) le variabili in ogni comando. Puoi usare l'esape al carattere $ usando il carattere backslash: /me ha guadagnato \\\$100 funzioner&agrave; correttamente";
 $template['faq']['text13a']="/me non supporta il carattere '&quot;' (doppio apice)";
@@ -352,7 +352,6 @@ $template['faq']['text15b']="
 	(<b>ATTENZIONE:</b> verranno cancellate tutte le modifiche agli script che hai fatto!)";
 $template['faq']['text16a']="
 	Ho errori di compilazione come questo:<br />
-	I'm getting compile errors like this:<br />
 	&nbsp; &nbsp; In file [somefile]:[someline] internal error:<br />
 	&nbsp; &nbsp; Segmentation fault<br />
 	&nbsp; &nbsp; Please submit a full bug report,<br />
