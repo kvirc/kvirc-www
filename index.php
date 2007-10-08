@@ -12,6 +12,7 @@ $docRoot=$_SERVER['DOCUMENT_ROOT'].dirname($_SERVER['SCRIPT_NAME']);
 
 // Get the page using GET value
 $id=trim(strip_tags(addslashes($_GET['id'])));
+if(strpos($id,"..")===TRUE) header("Location: .");
 
 // Set browser lang
 $lang=setlang();
