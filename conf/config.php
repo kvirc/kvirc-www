@@ -86,7 +86,7 @@ $addons=array(
 	array("name" => "Twins Lag bar: A graphical lag bar", "ver" => "1.0", "min" => "3.2.4", "max" => $current, "author" => "Ahinu", "desc" => $template['addons']['addon20'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/twinslagbar-1.0.zip"),
 	array("name" => "Twins Media Player: Control your player and share you music", "ver" => "1.4", "min" => "3.2.4", "max" => $current, "author" => "Ahinu", "desc" => $template['addons']['addon21'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/twinsmediaplayer-1.4.zip"),
 	array("name" => "Host Check", "ver" => "1.0", "min" => "3.2.6", "max" => $current, "author" => "", "desc" => $template['addons']['addon22'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/hostcheck.tar.gz"),
-	array("name" => "KISS: The KVIrc Icons Style Setup", "ver" => "2.0", "min" => "3.2.6", "max" => $current, "author" => "HelLViS69", "desc" => $template['addons']['addon23'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/KISS-2.0.tar.bz2")
+	array("name" => "KISS: The KVIrc Icons Style Setup", "ver" => "2.1", "min" => "3.2.6", "max" => $current, "author" => "HelLViS69", "desc" => $template['addons']['addon23'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/scripts/KISS-2.1.tar.bz2")
 );
 
 // Archive
