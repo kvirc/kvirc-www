@@ -1043,7 +1043,7 @@ $template['themes']['theme16']="Perversion ist eine andere Art zu leben; dunkles
 $template['themes']['theme17']="Erotica.. mh..";
 $template['themes']['theme18']="Anger ist eine Variation von Erotica. Lecke Deine Lippen weiter!";
 $template['themes']['theme19']="Dark Blue ist eine Abwandlung von marble. Genieße es";
-$template['themes']['theme20']="After many \"dark\" backgrounds, a soft blue for a nice reading";
+$template['themes']['theme20']="Nach vielen \"dunklen\" Hintergründen ein angenehmer blauer zum leichteren Lesen";
 /* themes.php end */
 
 /* tools.php start */
