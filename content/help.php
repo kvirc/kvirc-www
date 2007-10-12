@@ -14,8 +14,8 @@ echo "<div class=\"column1-unit\">";
 
 	echo "<p>".$template['help']['text5']." <a href=\"https://svn.kvirc.de/kvirc/\">".$template['index']['bugtrack']."</a>.</p>";
 	
-	echo "<p>".$template['help']['text6']." <a href=\"mailto:hellvis69@netsons.REMOVE.THE.ANTISPAM.WORDS.org\">HelLViS69</a>.</p>";
+	echo "<p>".$template['help']['text6']." <a href=\"mailto:hellvis69 [at] netsons [dot] org\">HelLViS69</a>.</p>";
 	
-	echo "<p>".$template['help']['text7']." <a href=\"mailto:cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org\">etherea`</a>.</p>";
+	echo "<p>".$template['help']['text7']." <a href=\"mailto:cle [at] virg0 [dot] org\">etherea`</a>.</p>";
 echo "</div>";
 ?>

@@ -26,7 +26,7 @@ echo "<div class=\"column1-unit\">";
 		echo $template['themes']['text3b4'].".</li>";
 
 		echo "<li><b>".$template['themes']['text4a']."?</b><br />";
-		echo $template['themes']['text4b']." <a href=\"mailto:hellvis69@netsons.REMOVE.THE.ANTISPAM.WORDS.org\">HelLViS69</a> ".$template['themes']['text4c'].".</li>";
+		echo $template['themes']['text4b']." <a href=\"mailto:hellvis69 [at] netsons [dot] org\">HelLViS69</a> ".$template['themes']['text4c'].".</li>";
 	echo "</ul>";
 
 foreach($themes as $key => $value){

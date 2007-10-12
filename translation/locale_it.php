@@ -240,7 +240,7 @@ $template['contribute']['text17']="
 	Abbiamo bisogno persone che parlino di KVIrc, scrivano articoli, descrizioni, riviste e che cerchino contributori...";
 $template['contribute']['text18']="Chi contattare";
 $template['contribute']['text19']="
-	Una volta che decidi che vuoi contribuire in qualche modo puoi mandare la tua proposta via mail a <a href=\"mailto:pragma@kvirc.REMOVE.THE.ANTISPAM.WORDS.net\">Pragma</a>.<br />
+	Una volta che decidi che vuoi contribuire in qualche modo puoi mandare la tua proposta via mail a <a href=\"mailto:pragma [at] kvirc [dot] net\">Pragma</a>.<br />
 	Un altro posto dove puoi inviare la tua proposta/disponibilit&agrave; &egrave; il canale <a href=\"irc://chat.ircnet.org/#kvirc\">#KVIrc</a> su IRCNet, <a href=\"irc://irc.azzurra.org/#KVIrc.net\">#KVIrc.net</a> su Azzurra o <a href=\"irc://irc.freenode.org/#kvirc\">#KVIrc</a> su FreeNode (conosciuta come rete OpenProjects).";
 /* contribute.php end */
 

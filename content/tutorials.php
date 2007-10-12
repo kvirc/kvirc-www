@@ -21,11 +21,11 @@ echo "<div class=\"column1-unit\">";
 		<li><img src="img/flags/Italy.png" alt="<?echo $template['index']['italian'];?>" title="<?echo $template['index']['italian'];?>" />&nbsp;<a href="ftp://ftp.kvirc.net/pub/kvirc/tutorials/AOS_Vol.08(Sockets_and_perl)_it.pdf">Vol 08</a>: <?echo $template['tutorials']['tree1k'].", ".$template['tutorials']['madeby'];?> Grifisx</li><br />
 	</ul>
 	<ul>
-		<li><img src="img/flags/United-States.png" alt="<?echo $template['index']['english'];?>" title="<?echo $template['index']['english'];?>" />&nbsp;<a href="ftp://ftp.kvirc.net/pub/kvirc/tutorials/AOS_Vol.00(Language_introduction)_en.pdf">Vol 00</a>: <?echo $template['tutorials']['tree1c'].", ".$template['tutorials']['madeby'];?> <a href="mailto:cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org">etherea`</a></li><br />
-		<li><img src="img/flags/United-States.png" alt="<?echo $template['index']['english'];?>" title="<?echo $template['index']['english'];?>" />&nbsp;<a href="ftp://ftp.kvirc.net/pub/kvirc/tutorials/AOS_Vol.01(Cycles_conditions_and_aliases)_en.pdf">Vol 01</a>: <?echo $template['tutorials']['tree1d'].", ".$template['tutorials']['madeby'];?> <a href="mailto:cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org">etherea`</a></li><br />
-		<li><img src="img/flags/United-States.png" alt="<?echo $template['index']['english'];?>" title="<?echo $template['index']['english'];?>" />&nbsp;<a href="ftp://ftp.kvirc.net/pub/kvirc/tutorials/AOS_Vol.02(Arrays_dictionaries_objects_and_classes)_en.pdf">Vol 02</a>: <?echo $template['tutorials']['tree1e'].", ".$template['tutorials']['madeby'];?> <a href="mailto:cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org">etherea`</a></li><br />
-		<li><img src="img/flags/United-States.png" alt="<?echo $template['index']['english'];?>" title="<?echo $template['index']['english'];?>" />&nbsp;<a href="ftp://ftp.kvirc.net/pub/kvirc/tutorials/AOS_Vol.03(Events_and_popups)_en.pdf">Vol 03</a>: <?echo $template['tutorials']['tree1f'].", ".$template['tutorials']['madeby'];?> <a href="mailto:cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org">etherea`</a></li><br />
-		<li><img src="img/flags/United-States.png" alt="<?echo $template['index']['english'];?>" title="<?echo $template['index']['english'];?>" />&nbsp;<a href="ftp://ftp.kvirc.net/pub/kvirc/tutorials/AOS_Vol.04(Graphical_objects_and_layout)_en.pdf">Vol 04</a>: <?echo $template['tutorials']['tree1g'].", ".$template['tutorials']['madeby'];?> <a href="mailto:sykes@dubh.REMOVE.THE.ANTISPAM.WORDS.id.au">sykes</a></li><br />
+		<li><img src="img/flags/United-States.png" alt="<?echo $template['index']['english'];?>" title="<?echo $template['index']['english'];?>" />&nbsp;<a href="ftp://ftp.kvirc.net/pub/kvirc/tutorials/AOS_Vol.00(Language_introduction)_en.pdf">Vol 00</a>: <?echo $template['tutorials']['tree1c'].", ".$template['tutorials']['madeby'];?> <a href="mailto:cle [at] virg0 [dot] org">etherea`</a></li><br />
+		<li><img src="img/flags/United-States.png" alt="<?echo $template['index']['english'];?>" title="<?echo $template['index']['english'];?>" />&nbsp;<a href="ftp://ftp.kvirc.net/pub/kvirc/tutorials/AOS_Vol.01(Cycles_conditions_and_aliases)_en.pdf">Vol 01</a>: <?echo $template['tutorials']['tree1d'].", ".$template['tutorials']['madeby'];?> <a href="mailto:cle [at] virg0 [dot] org">etherea`</a></li><br />
+		<li><img src="img/flags/United-States.png" alt="<?echo $template['index']['english'];?>" title="<?echo $template['index']['english'];?>" />&nbsp;<a href="ftp://ftp.kvirc.net/pub/kvirc/tutorials/AOS_Vol.02(Arrays_dictionaries_objects_and_classes)_en.pdf">Vol 02</a>: <?echo $template['tutorials']['tree1e'].", ".$template['tutorials']['madeby'];?> <a href="mailto:cle [at] virg0 [dot] org">etherea`</a></li><br />
+		<li><img src="img/flags/United-States.png" alt="<?echo $template['index']['english'];?>" title="<?echo $template['index']['english'];?>" />&nbsp;<a href="ftp://ftp.kvirc.net/pub/kvirc/tutorials/AOS_Vol.03(Events_and_popups)_en.pdf">Vol 03</a>: <?echo $template['tutorials']['tree1f'].", ".$template['tutorials']['madeby'];?> <a href="mailto:cle [at] virg0 [dot] org">etherea`</a></li><br />
+		<li><img src="img/flags/United-States.png" alt="<?echo $template['index']['english'];?>" title="<?echo $template['index']['english'];?>" />&nbsp;<a href="ftp://ftp.kvirc.net/pub/kvirc/tutorials/AOS_Vol.04(Graphical_objects_and_layout)_en.pdf">Vol 04</a>: <?echo $template['tutorials']['tree1g'].", ".$template['tutorials']['madeby'];?> <a href="mailto:sykes [at] dubh [dot] id.au">sykes</a></li><br />
 	</ul>
 
 	<?
@@ -33,21 +33,21 @@ echo "<div class=\"column1-unit\">";
 	echo "<h3>".$template['tutorials']['text2b'].".</h3>";
 	echo "<ul>";
 	echo "<li><img src=\"img/flags/Italy.png\" alt=\"".$template['index']['italian']."\" title=\"".$template['index']['italian']."\" />&nbsp;<a href=\"ftp://ftp.kvirc.net/pub/kvirc/tutorials/Win32_KVIrc_Compiling_it.pdf\">".$template['tutorials']['tutorial']."</a>, ".$template['tutorials']['madeby']." Grifisx.</li><br />";
-	echo "<li><img src=\"img/flags/United-States.png\" alt=\"".$template['index']['english']."\" title=\"".$template['index']['english']."\" />&nbsp;<a href=\"ftp://ftp.kvirc.net/pub/kvirc/tutorials/Win32_KVIrc_Compiling_en.pdf\">".$template['tutorials']['tutorial']."</a>, ".$template['tutorials']['madeby']." <a href=\"mailto:cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org\">etherea`</a>.</li><br />";
+	echo "<li><img src=\"img/flags/United-States.png\" alt=\"".$template['index']['english']."\" title=\"".$template['index']['english']."\" />&nbsp;<a href=\"ftp://ftp.kvirc.net/pub/kvirc/tutorials/Win32_KVIrc_Compiling_en.pdf\">".$template['tutorials']['tutorial']."</a>, ".$template['tutorials']['madeby']." <a href=\"mailto:cle [at] virg0 [dot] org\">etherea`</a>.</li><br />";
 	echo "</ul>";
 
 	echo "<h1>".$template['tutorials']['text3a']."</h1>";
 	echo "<h3>".$template['tutorials']['text3b']."</h3>";
 	echo "<ul>";
-	echo "<li><img src=\"img/flags/Germany.png\" alt=\"".$template['index']['german']."\" title=\"".$template['index']['german']."\" />&nbsp;<a href=\"ftp://ftp.kvirc.net/pub/kvirc/tutorials/KVS_scripting_de.pdf\">".$template['tutorials']['tutorial']."</a>, ".$template['tutorials']['madeby']." <a href=\"mailto:kvirc@thexception.REMOVE.THE.ANTISPAM.WORDS.net\">thexception</a>.</li><br />";
+	echo "<li><img src=\"img/flags/Germany.png\" alt=\"".$template['index']['german']."\" title=\"".$template['index']['german']."\" />&nbsp;<a href=\"ftp://ftp.kvirc.net/pub/kvirc/tutorials/KVS_scripting_de.pdf\">".$template['tutorials']['tutorial']."</a>, ".$template['tutorials']['madeby']." <a href=\"mailto:kvirc [at] thexception [dot] net\">thexception</a>.</li><br />";
 	echo "</ul>";
 	
 	echo "<h1>".$template['tutorials']['text4a']."</h1>";
 	echo "<h3>".$template['tutorials']['text4b']."</h3>";
 	echo "<ul>";
-	echo "<li><img src=\"img/flags/Germany.png\" alt=\"".$template['index']['german']."\" title=\"".$template['index']['german']."\" />&nbsp;<a href=\"ftp://ftp.kvirc.net/pub/kvirc/tutorials/Win32_KVIrc_Installation_de.pdf\">".$template['tutorials']['tutorial']."</a>, ".$template['tutorials']['madeby']." <a href=\"mailto:kvirc@thexception.REMOVE.THE.ANTISPAM.WORDS.net\">thexception</a>.</li><br />";
+	echo "<li><img src=\"img/flags/Germany.png\" alt=\"".$template['index']['german']."\" title=\"".$template['index']['german']."\" />&nbsp;<a href=\"ftp://ftp.kvirc.net/pub/kvirc/tutorials/Win32_KVIrc_Installation_de.pdf\">".$template['tutorials']['tutorial']."</a>, ".$template['tutorials']['madeby']." <a href=\"mailto:kvirc [at] thexception [dot] net\">thexception</a>.</li><br />";
 	echo "</ul>";
 
-	echo "<br /><p>".$template['tutorials']['dropmail']." <a href=\"mailto:hellvis69@netsons.REMOVE.THE.ANTISPAM.WORDS.org\">HelLViS69</a> :)</p>";
+	echo "<br /><p>".$template['tutorials']['dropmail']." <a href=\"mailto:hellvis69 [at] netsons [dot] org\">HelLViS69</a> :)</p>";
 echo "</div>";
 ?>

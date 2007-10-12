@@ -8,7 +8,7 @@ $path="img/honor";
 echo "<h1 class=\"pagetitle\">".$template['honor']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
 	echo "<br /><h3>".$template['honor']['text1']."</h3>";
-	echo "<p>".$template['honor']['text2']." <a href=\"mailto:pragma@kvirc.REMOVE.THE.ANTISPAM.WORDS.net\">Pragma</a>";
+	echo "<p>".$template['honor']['text2']." <a href=\"mailto:pragma [at] kvirc [dot] net\">Pragma</a>";
 
 foreach($honor as $key => $value){
 	if(fmod($key,2)!=0) echo "<div class=\"split\"><div class=\"left\">";
@@ -40,6 +40,6 @@ foreach($honor as $key => $value){
 	if((fmod($key,2)==0)||($key==count($honor))) echo "</div>";
 }
 
-echo "<br /><p>".$template['honor']['text3']." <a href=\"mailto:hellvis69@netsons.REMOVE.THE.ANTISPAM.WORDS.org\">HelLViS69</a></p>";
+echo "<br /><p>".$template['honor']['text3']." <a href=\"mailto:hellvis69 [at] netsons [dot] org\">HelLViS69</a></p>";
 echo "</div>";
 ?>

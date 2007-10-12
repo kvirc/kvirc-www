@@ -11,20 +11,20 @@ echo "<div class=\"column1-unit\">";
 	echo "<p>".$template['translation']['text4']."</p>";
 	?>
 	<ul class="list">
-		<li><?echo $template['index']['bulgarian'];?>: <a href="mailto:bugar@developer.REMOVE.THE.ANTISPAM.WORDS.bg">Bugar</a></li>
-		<!--<li><?echo $template['index']['croatian'];?>: <a href="mailto:">SpeedyGhost</a></li>-->
-		<li><?echo $template['index']['czech'];?>: <a href="mailto:dusan@mirc.REMOVE.THE.ANTISPAM.WORDS.cz">Dusan Hokuv</a></li>
-		<li><?echo $template['index']['dutch'];?>: <a href="mailto:balboy@kvirc.REMOVE.THE.ANTISPAM.WORDS.net">Balboy</a></li>
-		<li><?echo $template['index']['french'];?>: <a href="mailto:ahinu.laman@gmail.REMOVE.THE.ANTISPAM.WORDS.com">Ahinu</a></li>
-		<li><?echo $template['index']['german'];?>: <a href="mailto:crissi99@gmx.REMOVE.THE.ANTISPAM.WORDS.de">Christoph Thielecke</a></li>
-		<li><?echo $template['index']['hungarian'];?>: <a href="mailto:vfiber@gmail.REMOVE.THE.ANTISPAM.WORDS.com">Fiber^</a></li>
-		<li><?echo $template['index']['italian'];?>: <a href="mailto:nate@paranoici.REMOVE.THE.ANTISPAM.WORDS.org">Nate Grey</a>, <a href="mailto:hellvis69@netsons.REMOVE.THE.ANTISPAM.WORDS.org">HelLViS69</a>, <a href="mailto:cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org">etherea`</a></li>
-		<li><?echo $template['index']['polish'];?>: <a href="mailto:kgod@poczta.onet.REMOVE.THE.ANTISPAM.WORDS.pl">Krzysztof Godlewski</a></li>
-		<li><?echo $template['index']['portuguese'];?>: <a href="mailto:mmodem00@netvisao.REMOVE.THE.ANTISPAM.WORDS.pt">Américo José Melo</a></li>
-		<li><?echo $template['index']['brazilian'];?>: <a href="mailto:cabide@brfree.com.REMOVE.THE.ANTISPAM.WORDS.br">Adilson Gonçalves Soares Junior</a></li>
-		<li><?echo $template['index']['russian'];?>: <a href="mailto:spam@kvirc.REMOVE.THE.ANTISPAM.WORDS.ru">Alexey</a></li>
-		<li><?echo $template['index']['serbian'];?>: <a href="mailto:preth@kvsky.REMOVE.THE.ANTISPAM.WORDS.net">Prethorian</a></li>
-		<li><?echo $template['index']['spanish'];?>: <a href="mailto:jsanchezv@teleline.REMOVE.THE.ANTISPAM.WORDS.es">José Luis Sánchez</a></li>
+		<li><?echo $template['index']['bulgarian'];?>: <a href="mailto:bugar [at] developer [dot] bg">Bugar</a></li>
+		<!--<li><?/*echo $template['index']['croatian'];*/?>: <a href="mailto:">SpeedyGhost</a></li>-->
+		<li><?echo $template['index']['czech'];?>: <a href="mailto:dusan [at] mirc [dot] cz">Dusan Hokuv</a></li>
+		<li><?echo $template['index']['dutch'];?>: <a href="mailto:balboy [at] kvirc [dot] net">Balboy</a></li>
+		<li><?echo $template['index']['french'];?>: <a href="mailto:ahinu.laman [at] gmail [dot] com">Ahinu</a></li>
+		<li><?echo $template['index']['german'];?>: <a href="mailto:crissi99 [at] gmx [dot] de">Christoph Thielecke</a></li>
+		<li><?echo $template['index']['hungarian'];?>: <a href="mailto:vfiber [at] gmail [dot] com">Fiber^</a></li>
+		<li><?echo $template['index']['italian'];?>: <a href="mailto:nate [at] paranoici [dot] org">Nate Grey</a>, <a href="mailto:hellvis69 [at] netsons [dot] org">HelLViS69</a>, <a href="mailto:cle [at] virg0 [dot] org">etherea`</a></li>
+		<li><?echo $template['index']['polish'];?>: <a href="mailto:kgod [at] poczta.onet [dot] pl">Krzysztof Godlewski</a></li>
+		<li><?echo $template['index']['portuguese'];?>: <a href="mailto:mmodem00 [at] netvisao [dot] pt">Américo José Melo</a></li>
+		<li><?echo $template['index']['brazilian'];?>: <a href="mailto:cabide [at] brfree [dot] com.br">Adilson Gonçalves Soares Junior</a></li>
+		<li><?echo $template['index']['russian'];?>: <a href="mailto:spam [at] kvirc [dot] ru">Alexey</a></li>
+		<li><?echo $template['index']['serbian'];?>: <a href="mailto:preth [at] kvsky [dot] net">Prethorian</a></li>
+		<li><?echo $template['index']['spanish'];?>: <a href="mailto:jsanchezv [at] teleline [dot] es">José Luis Sánchez</a></li>
 	</ul>
 
 	<?
@@ -96,7 +96,7 @@ echo "<div class=\"column1-unit\">";
 	echo "<h1>".$template['translation']['text29'].":</h1>";
 	echo "<p>".$template['translation']['text30']."</p>";
 	echo "<p>".$template['translation']['text31']."</p>";
-	echo "<p>".$template['translation']['text32a']." <a href=\"mailto:pragma@kvirc.REMOVE.THE.ANTISPAM.WORDS.net\">pragma at kvirc dot net</a> ".$template['translation']['text32b']."</p>";
+	echo "<p>".$template['translation']['text32a']." <a href=\"mailto:pragma [at] kvirc [dot] net\">pragma [at] kvirc [dot] net</a> ".$template['translation']['text32b']."</p>";
 
 	echo "<p>".$template['translation']['text33']."<br />Szymon Stefanek</p>";
 echo "</div>";

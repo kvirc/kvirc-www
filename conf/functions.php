@@ -78,7 +78,7 @@ news format:
 	Long story
 	@@author:
 	author name <mail address>
-	e.g.: Joe Smith &lt;joesmith@example.com&gt;
+	e.g.: Joe Smith &lt;joesmith [at] example [dot] com&gt;
 
 	text
 */
