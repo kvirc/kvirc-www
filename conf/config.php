@@ -269,7 +269,7 @@ $themes=array(
 	array("name" => "erotica", "version" => "0.6.9", "mail" => "cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org", "author" => "etherea`", "desc" => $template['themes']['theme17'], "home" => "http://kvirc.virg0.org", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/erotica-0.6.9.rar", "screen" => "theme_erotica.png", "thumb" => "thumb_erotica.png"),
 	array("name" => "Anger", "version" => "0.0.1", "mail" => "cle@virg0.REMOVE.THE.ANTISPAM.WORDS.org", "author" => "etherea`", "desc" => $template['themes']['theme18'], "home" => "http://kvirc.virg0.org", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/Anger-0.0.1.rar", "screen" => "theme_anger.png", "thumb" => "thumb_anger.png"),
 	array("name" => "Dark Blue", "version" => "0.9.0", "mail" => "lgxco@yahoo.REMOVE.THE.ANTISPAM.WORDS.it", "author" => "Puk", "desc" => $template['themes']['theme19'], "home" => "", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/DarkBlue-0.9.0.kvt", "screen" => "theme_darkblue.png", "thumb" => "thumb_darkblue.png"),
-	array("name" => "Soft Blue", "version" => "2.0", "mail" => "gestenigd@gmail.REMOVE.THE.ANTISPAM.WORDS.com", "author" => "lsd", "desc" => $template['themes']['theme20'], "home" => "http://stato-brodo.blogspot.com", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/Soft_blue-2.0.kvt", "screen" => "theme_softblue.png", "thumb" => "thumb_softblue.png")
+	array("name" => "Soft Blue", "version" => "2.0", "mail" => "gestenigd@gmail.REMOVE.THE.ANTISPAM.WORDS.com", "author" => "lsd", "desc" => $template['themes']['theme20'], "home" => "http://stato-brodo.blogspot.com", "download" => "ftp://ftp.kvirc.net/pub/kvirc/themes/Soft_blue-2.0.kvt", "screen" => "theme_softblue.jpg", "thumb" => "thumb_softblue.jpg")
 );
 
 // Tools
