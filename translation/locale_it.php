@@ -1044,6 +1044,7 @@ $template['themes']['theme16']="La Perversione &egrave; un'altro modo di vivere;
 $template['themes']['theme17']="erotica.. mh..";
 $template['themes']['theme18']="Anger &egrave; una variante di erotica. Leccati le labbra!";
 $template['themes']['theme19']="Dark Blue &egrave; una variante di Marble. Divertiti con lui";
+$template['themes']['theme20']="Dopo tanti sfondi \"dark\" un blue chiaro per una lettura piacevole";
 /* themes.php end */
 
 /* tools.php start */
