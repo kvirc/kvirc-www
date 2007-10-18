@@ -343,7 +343,7 @@ search();
 					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
 					<h1><img src="img/document-open.png" alt="<?echo $template['index']['moredocs'];?>" /><?echo $template['index']['moredocs'];?></h1>
 					<p class="center">
-						<a href="javascript:opendoc('http://www.kvirc.de/docu/');" title="<?echo $template['index']['officialdocs'];?>"><?echo $template['index']['officialdocs'];?></a><br /><?echo $template['index']['docsauto'];?>
+						<a href="javascript:opendoc('http://kvirc.thexception.net/doc/');" title="<?echo $template['index']['officialdocs'];?>"><?echo $template['index']['officialdocs'];?></a><br /><?echo $template['index']['docsauto'];?>
 					</p>
 				</div>
 			</div>
