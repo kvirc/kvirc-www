@@ -11,20 +11,25 @@ echo "<div class=\"column1-unit\">";
 	echo "<p>".$template['translation']['text4']."</p>";
 	?>
 	<ul class="list">
-		<li><?echo $template['index']['bulgarian'];?>: <a href="mailto:bugar [at] developer [dot] bg">Bugar</a></li>
-		<!--<li><?/*echo $template['index']['croatian'];*/?>: <a href="mailto:">SpeedyGhost</a></li>-->
-		<li><?echo $template['index']['czech'];?>: <a href="mailto:dusan [at] mirc [dot] cz">Dusan Hokuv</a></li>
-		<li><?echo $template['index']['dutch'];?>: <a href="mailto:balboy [at] kvirc [dot] net">Balboy</a></li>
-		<li><?echo $template['index']['french'];?>: <a href="mailto:ahinu.laman [at] gmail [dot] com">Ahinu</a></li>
-		<li><?echo $template['index']['german'];?>: <a href="mailto:crissi99 [at] gmx [dot] de">Christoph Thielecke</a></li>
-		<li><?echo $template['index']['hungarian'];?>: <a href="mailto:vfiber [at] gmail [dot] com">Fiber^</a></li>
-		<li><?echo $template['index']['italian'];?>: <a href="mailto:nate [at] paranoici [dot] org">Nate Grey</a>, <a href="mailto:hellvis69 [at] netsons [dot] org">HelLViS69</a>, <a href="mailto:cle [at] virg0 [dot] org">etherea`</a></li>
-		<li><?echo $template['index']['polish'];?>: <a href="mailto:kgod [at] poczta.onet [dot] pl">Krzysztof Godlewski</a></li>
-		<li><?echo $template['index']['portuguese'];?>: <a href="mailto:mmodem00 [at] netvisao [dot] pt">Américo José Melo</a></li>
-		<li><?echo $template['index']['brazilian'];?>: <a href="mailto:cabide [at] brfree [dot] com.br">Adilson Gonçalves Soares Junior</a></li>
-		<li><?echo $template['index']['russian'];?>: <a href="mailto:spam [at] kvirc [dot] ru">Alexey</a></li>
-		<li><?echo $template['index']['serbian'];?>: <a href="mailto:preth [at] kvsky [dot] net">Prethorian</a></li>
-		<li><?echo $template['index']['spanish'];?>: <a href="mailto:jsanchezv [at] teleline [dot] es">José Luis Sánchez</a></li>
+		<?
+		foreach($translators as $key => $value){
+			echo "<li>".$value['lang'].": ";
+			if(is_array($value['nick'])){
+				$count=count($value['nick']);
+				for($i=0;$i<$count;$i++){
+					if($value['mail'][$i]!="") echo "<a href=\"mailto:".$value['mail'][$i]."\">".$value['nick'][$i]."</a>";
+					else echo $value['nick'][$i];
+
+					if($i<$count-1) echo ", ";
+				}
+			} else {
+				if($value['mail']!="") echo "<a href=\"mailto:".$value['mail']."\">".$value['nick']."</a>";
+				else echo $value['nick'];
+			}
+
+			echo "</li>";
+		}
+		?>
 	</ul>
 
 	<?

@@ -181,7 +181,6 @@ search();
 								<li><a href="?id=faq&amp;lang=<?echo $lang;?>"><?echo $template['index']['faq'];?></a></li>
 								<li><a href="javascript:opendoc('http://kvirc.thexception.net/doc/');"><?echo $template['index']['kviman'];?></a></li>
 								<li><a href="?id=tutorials&amp;lang=<?echo $lang;?>"><?echo $template['index']['tutorials'];?></a></li>
-								<li><a href="?id=translation&amp;lang=<?echo $lang;?>"><?echo $template['index']['translations'];?></a></li>
 							</ul>
 						</li>
 					</ul>
@@ -199,6 +198,7 @@ search();
 						<li><a href="#"><?echo $template['index']['misc'];?></a>
 							<ul>
 								<li><a href="?id=honor&amp;lang=<?echo $lang;?>"><?echo $template['index']['honor'];?></a></li>
+								<li><a href="?id=translation&amp;lang=<?echo $lang;?>"><?echo $template['index']['translations'];?></a></li>
 								<li><a href="?id=scripts&amp;lang=<?echo $lang;?>"><?echo $template['index']['scripts'];?></a></li>
 								<li><a href="?id=addons&amp;lang=<?echo $lang;?>"><?echo $template['index']['addons'];?></a></li>
 								<li><a href="?id=tools&amp;lang=<?echo $lang;?>"><?echo $template['index']['tools'];?></a></li>

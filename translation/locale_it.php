@@ -18,7 +18,7 @@ $template['index']['polish']="Polacco";
 $template['index']['portuguese']="Portoghese";
 $template['index']['brazilian']="Brasiliano";
 $template['index']['serbian']="Serbo";
-$template['index']['hungarian']="Hungherese";
+$template['index']['hungarian']="Ungherese";
 $template['index']['croatian']="Croato";
 $template['index']['latvian']="Lettone";
 

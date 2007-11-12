@@ -279,4 +279,25 @@ $tools=array(
 	array("name" => "KVIrc TCL", "author" => array("HelLViS69","CtrlAltCa"), "mail" => array("hellvis69 [at] netsons [dot] org","ctrlaltca [at] gmail [dot] com"), "desc" => $template['tools']['tool2'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/tools/kvirc-2.0.tcl.bz2"),
 	array("name" => "KVIrc SVN/Trac Syndacator", "author" => "HelLViS69", "mail" => "hellvis69 [at] netsons [dot] org", "desc" => $template['tools']['tool3'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/tools/kvircrss-1.0.tcl.bz2")
 );
+
+// Translations (keep 'em in alphabetical order)
+// array("lang" => "language", "nick" => "nick", "mail" => "mail")
+$translators=array(
+	1 => array("lang" => $template['index']['german'], "nick" => "mren", "mail" => "kvirc [at] mrmx [dot] de"),
+	array("lang" => $template['index']['hungarian'], "nick" => "Fiber^", "mail" => "vfiber [at] gmail [dot] com"),
+	array("lang" => $template['index']['italian'], "nick" => array("Nate Grey","HelLViS69","etherea`"), "mail" => array("nate [at] paranoici [dot] org","hellvis69 [at] netsons [dot] org","cle [at] virg0 [dot] org")),
+	array("lang" => $template['index']['portuguese'], "nick" => "Ze_m", "mail" => "mmodem00 [at] netvisao [dot] pt")
+);
+
+/*
+$template['index']['bulgarian'], bugar [at] developer [dot] bg, Bugar
+$template['index']['croatian'], SpeedyGhost
+$template['index']['czech'], dusan [at] mirc [dot] cz, Dusan Hokuv
+$template['index']['dutch'], balboy [at] kvirc [dot] net, Balboy
+$template['index']['french'], ahinu.laman [at] gmail [dot] com, Ahinu
+$template['index']['polish'], kgod [at] poczta.onet [dot] pl, Krzysztof Godlewski
+$template['index']['brazilian'], cabide [at] brfree [dot] com.br, Adilson Gonçalves Soares Junior
+$template['index']['russian'], spam [at] kvirc [dot] ru, Alexey
+$template['index']['serbian'], preth [at] kvsky [dot] net, Prethorian
+*/
 ?>
