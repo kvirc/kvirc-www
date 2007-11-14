@@ -182,7 +182,7 @@ $template['archive']['dec']="Décembre";
 
 /* arts.php start */
 $template['arts']['title']="Arts";
-$template['arts']['text']="A collection of miscelaneous arts related to KVIrc.";
+$template['arts']['text']="Une collection de projets artistiques en rapport avec KVIrc.";
 $template['arts']['desc1']="
 	Six colorful variations of a nice comix-like theme for these splash screen replacements. Just save the choosen image as \$HOME/.kvirc/pics/kvi_splash.png. You can also use these nice splashes as banners or as starting point for your own art.
 	";
@@ -195,15 +195,15 @@ $template['arts']['desc6']="She uses this as splash screen... :)";
 /* banners.php start */
 $template['banners']['title']="Banners";
 $template['banners']['text1']="
-	This is a collection of KVIrc banners made by various artits: just save the image and use it on your own site :)";
-$template['banners']['text2']="Send your banners to";
-$template['banners']['bannerby']="Banners By";
+	Une collection de bannières faites par divers artistes: sauvegardez juste l'image et utilisez la sur votre site :)";
+$template['banners']['text2']="Envoyez votre bannière à";
+$template['banners']['bannerby']="Bannière par";
 /* banners.php end */
 
 /* contribute.php start */
-$template['contribute']['title']="Getting Involved";
+$template['contribute']['title']="Participer";
 $template['contribute']['text1']="
-	The KVIrc project is open to contributions in many ways. You can get involved in different tasks that require various degrees of development skill (from \"almost none\" to \"guru\").";
+	Le projet KVIrc est ouvert aux différentes contributions. La participation requiert différents degrés de connaissances en programmation (allant de \"absolument aucune\" à \"grand gourou\").";
 $template['contribute']['text2']="Contributing code";
 $template['contribute']['text3']="
 	The main task is obviously code writing. The developement of the KVIrc core and external modules requires a reasonable knowledge of C++.<br />
@@ -376,28 +376,28 @@ $template['faq']['text18b']="
 /* faq.php end */
 
 /* features.php start */
-$template['features']['title']="Features";
+$template['features']['title']="Fonctionnalités";
 $template['features']['text1']="
-	Hmmm.. listing the KVIrc features ?<br />
-	Well... why not ?<br />
-	Here are some key-phrases that came in my mind.";
-$template['features']['tree1']="User interface";
-$template['features']['tree1a']="Full GUI Based configuration";
-$template['features']['tree1b']="MDI floatable windows";
-$template['features']['tree1c']="Built-in help browser";
-$template['features']['tree1d']="Themes support (all configurable by GUI or scripting)";
-$template['features']['tree1e']="Pseudo-transparency support (up to the desktop on KDE)";
-$template['features']['tree1f']="Drag &amp; Drop toolbar editing";
-$template['features']['tree1g']="Activity Notifier Pop-Up";
-$template['features']['tree1h']="Status bar with Applet support";
-$template['features']['tree1i']="Unread text mark";
-$template['features']['tree1j']="14 Languages Translations";
-$template['features']['tree2']="Network";
-$template['features']['tree2a']="Proxy support (SOCKSv4, SOCKSv5, HTTP)";
-$template['features']['tree2b']="Full IPv6 support (also for DCC transfers)";
-$template['features']['tree2c']="SSL support (also over IPv6)";
-$template['features']['tree2d']="Micryption support";
-$template['features']['tree3']="Core";
+	Hmmm.. la liste des fonctionnalités de KVIrc ?<br />
+	Bien... Pourquoi pas ?<br />
+	Voici quelques expressions clefs qui sont entrées dans mon esprit.";
+$template['features']['tree1']="Interface utilisateur";
+$template['features']['tree1a']="Configuration graphique complète";
+$template['features']['tree1b']="fenêtres flottantes MDI";
+$template['features']['tree1c']="Navigateur d'aide intégré";
+$template['features']['tree1d']="Support de Thèmes (tout est configurable par un menu ou en scriptant)";
+$template['features']['tree1e']="Pseudo-transparence (bureau KDE)";
+$template['features']['tree1f']="Drag &amp; Barre d'outils éditable";
+$template['features']['tree1g']="Popup de notification d'activité";
+$template['features']['tree1h']="Barre de statut avec support d'applets";
+$template['features']['tree1i']="Marque de texte non-lu";
+$template['features']['tree1j']="14 Languages de Traduction";
+$template['features']['tree2']="Réseau";
+$template['features']['tree2a']="Support de Proxys (SOCKSv4, SOCKSv5, HTTP)";
+$template['features']['tree2b']="Support complet de IPv6 (aussi pour les transferts DCC)";
+$template['features']['tree2c']="Support SSL (aaussi pour IPv6)";
+$template['features']['tree2d']="Support Micryption";
+$template['features']['tree3']="Noyau";
 $template['features']['tree3a']="
 	Modular architecture: unfrequently used features reside in external modules and are loaded only when necessary";
 $template['features']['tree3b']="Extensibility: a huge API for writing extension modules";
@@ -981,15 +981,15 @@ $template['splash']['in']="Splash Present in";
 /* splash.php end */
 
 /* status.php start */
-$template['status']['title']="Project Status";
+$template['status']['title']="Statut du Projet";
 $template['status']['text']="
-	<p>After 7 years of development KVIrc is a mature and full featured IRC client, an excellent companion for your daily IRC sessions.</p>
-	<p>The latest stable release is <a href=\"/?id=news&amp;story=2005.02.27.16.29.1.story&amp;dir=2005.02&amp;lang=$lang\">3.2.0 \"Realia\"</a>.
-	It has been published on Feb 27 2005.
-	It can be obtained in source form from the <a href=\"?id=download&amp;lang=$lang\">download</a> page.</p>
-	<p>If you are looking for official releases have a look at <a href=\"?id=releases&amp;lang=$lang\">this section</a>, those are released less often but are most stable. Choose your release between Linux, Windows, MacOSX or source package.</p>
-	<p>Snapshots are located <a href=\"?id=snapshots&amp;lang=$lang\">here</a> while SVN are found <a href=\"?id=SVN&amp;lang=$lang\">here</a>.</p>
-	<p>Also be sure to check for <a href=\"?id=install&amp;lang=$lang\">installation notes</a>, <a href=\"?id=tutorials&amp;lang=$lang\">tutorials</a>, <a href=\"?id=translation&amp;lang=$lang\">translations</a> and <a href=\"?id=themes&amp;lang=$lang\">themes</a> for a more customized version of your KVIrc =)</p>";
+	<p>Après 7 ans de developpement KVIrc est un client irc mature et complet, un excellent compagnon pour vos utilisations quotidiennes de l'irc.</p>
+	<p>La dernière version stable est <a href=\"/?id=news&amp;story=2005.02.27.16.29.1.story&amp;dir=2005.02&amp;lang=$lang\">3.2.0 \"Realia\"</a>.
+	Elle est sortie le 27 Février 2005.
+	Le code source peut-être obtenu sur <a href=\"?id=download&amp;lang=$lang\">la page de téléchargements</a>.</p>
+	<p>Si vous recherchez la version officielle jettez un oeil sur <a href=\"?id=releases&amp;lang=$lang\">cette section</a>, il y a toutes les version les plus stables. Choisissez entre Linux, Windows, MacOSX ou le paquet source.</p>
+	<p>Les snapshots sont localisés <a href=\"?id=snapshots&amp;lang=$lang\">ici</a> par SVN <a href=\"?id=SVN&amp;lang=$lang\">ici</a>.</p>
+	<p>Pour vous aider à installer : <a href=\"?id=install&amp;lang=$lang\">installation notes</a>, <a href=\"?id=tutorials&amp;lang=$lang\">tutoriels</a>, <a href=\"?id=translation&amp;lang=$lang\">traductions</a> and <a href=\"?id=themes&amp;lang=$lang\">thèmes</a> pour une meilleure customisation de KVIrc =)</p>";
 /* status.php end */
 
 /* svn.php start */
@@ -1157,11 +1157,11 @@ $template['tutorials']['dropmail']="If you have written a FAQ, tutorial or guide
 /* tutorials.php end */
 
 /* welcome.php start */
-$template['welcome']['title']="Welcome!";
+$template['welcome']['title']="Bienvenue!";
 $template['welcome']['text']="
-	KVIrc is a <a href=\"http://www.gnu.org\">free</a> portable <acronym title=\"Internet Relay Chat\">IRC</acronym> client based on the excellent <a href=\"http://www.trolltech.com\">Qt GUI toolkit</a>.
-	KVirc is being written by <a href=\"http://www.pragmaware.net\">Szymon Stefanek</a> and the KVIrc Development Team with the contribution of many IRC addicted developers around the world.";
-$template['welcome']['text2']="be part of the project!";
-$template['welcome']['alttext']="how to help the KVIrc project";
+	KVIrc est un client <acronym title=\"Internet Relay Chat\">IRC</acronym> <a href=\"http://www.gnu.org\">libre</a> et portable basé sur l'excelent <a href=\"http://www.trolltech.com\">Qt GUI toolkit</a>.
+	KVIrc est écrit par <a href=\"http://www.pragmaware.net\">Szymon Stefanek</a> et l'équipe de developpement avec la contribution de nombreux fans de l'irc dans le monde entier.";
+$template['welcome']['text2']="prenez part au projet!";
+$template['welcome']['alttext']="comment aider le projet KVIrc";
 /* welcome.php end */
 ?>
