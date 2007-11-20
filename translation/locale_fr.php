@@ -395,65 +395,65 @@ $template['features']['tree1j']="14 Languages de Traduction";
 $template['features']['tree2']="Réseau";
 $template['features']['tree2a']="Support de Proxys (SOCKSv4, SOCKSv5, HTTP)";
 $template['features']['tree2b']="Support complet de IPv6 (aussi pour les transferts DCC)";
-$template['features']['tree2c']="Support SSL (aaussi pour IPv6)";
+$template['features']['tree2c']="Support SSL (aussi pour IPv6)";
 $template['features']['tree2d']="Support Micryption";
 $template['features']['tree3']="Noyau";
 $template['features']['tree3a']="
-	Modular architecture: unfrequently used features reside in external modules and are loaded only when necessary";
-$template['features']['tree3b']="Extensibility: a huge API for writing extension modules";
-$template['features']['tree3c']="UNICODE support";
+	Architecture modulaire: Les fonctions utilisées résident dans des modules externes et sont chargés seulement quand c'est nécessaire";
+$template['features']['tree3b']="Extensibilité : une API énorme pour écrire des modules d'extension";
+$template['features']['tree3c']="Support de l'UNICODE";
 $template['features']['tree4']="IRC";
-$template['features']['tree4a']="Multiserver connection";
-$template['features']['tree4b']="Notify lists (yes, WATCH is supported)";
-$template['features']['tree4c']="Ignore lists";
-$template['features']['tree4d']="Registered users database";
-$template['features']['tree4e']="Lag meter";
-$template['features']['tree4f']="Configurable logging";
-$template['features']['tree4g']="Standard DCC CHAT and SEND (with resume) support";
-$template['features']['tree4h']="Extended DCC types: VOICE, RSEND, GET, RECV";
-$template['features']['tree4i']="DCC CHAT over SSL";
-$template['features']['tree4j']="DCC bandwidth limit (ability to set it \"on the fly\")";
+$template['features']['tree4a']="Connexion Multiserveurs";
+$template['features']['tree4b']="Liste de Notification";
+$template['features']['tree4c']="Liste d'ignorés";
+$template['features']['tree4d']="Base de donnée des utilisateurs enregistrés";
+$template['features']['tree4e']="Barre de Lagr";
+$template['features']['tree4f']="Configuration des logs";
+$template['features']['tree4g']="Standard DCC CHAT et SEND (avec résume)";
+$template['features']['tree4h']="Autres types de DCC: VOICE, RSEND, GET, RECV";
+$template['features']['tree4i']="DCC CHAT sous SSL";
+$template['features']['tree4j']="Limitation de la bande passantepour les DCC (possibilité de la régler \"à la volée\")";
 $template['features']['tree5']="Scripting";
-$template['features']['tree5a']="Built-in scripting language interpreter";
-$template['features']['tree5a1']="scalars, arrays and hashes...";
+$template['features']['tree5a']="Incorporation d'un interpréteur de language de scripting";
+$template['features']['tree5a1']="scalars, arrays et hashes...";
 $template['features']['tree5a2']="aliases";
 $template['features']['tree5a3']="popups";
 $template['features']['tree5a4']="events";
-$template['features']['tree5a5']="scriptable toolbars";
-$template['features']['tree5a6']="Perl support";
-$template['features']['tree5a7']="Ability to translate scripts (by the means of the tr() function)";
+$template['features']['tree5a5']="Barre d'outils scriptable";
+$template['features']['tree5a6']="Support du Perl";
+$template['features']['tree5a7']="Possibilité de traduire les scripts (grâce à la fonction tr())";
 $template['features']['tree5b']="
-	Objects support in scripting language: yes, now you can do <acronym title=\"Object Oriented Programming\">OOP</acronym>";
-$template['features']['text2']="Hmmm...I hope that's enough to make you curious :D";
+	Support des objets dans le language de scripting: oui, maintenant vous pouvez faire <acronym title=\"De la programmation orientée objet\">OOP</acronym>";
+$template['features']['text2']="Hmmm...Je pense que c'est asser pour éveiller votre curiosité :D";
 /* features.php end */
 
 /* help.php start */
-$template['help']['title']="Help Wanted";
+$template['help']['title']="Recherche d'aide";
 $template['help']['text1']="
-	The first place to look at when you have a problem is the KVIrc mailing list.";
+	Le premier endroit à regarder lorsque vous avez un problème est la mailing-liste.";
 $template['help']['text2']="
-	If something goes wrong, or if you have a question, a suggestion, or are simply interested in KVIrc developement, you can join the";
+	Si ça ne va toujours pas, ou si vous avez une question, une suggestion, ou vous êtes tout simplement interressé par le developpement de KVIrc, vous pouvez joindre en anglais la";
 $template['help']['text3']="
-	The developers follow the mailing list and will answer questions as soon as is possible.";
-$template['help']['text4a']="The official KVIrc support channel is located on the";
-$template['help']['text4b']="Freenode network";
-$template['help']['text4c']="and the channel is obviously named";
-$template['help']['text4d']="The official Italian channel is";
-$template['help']['text4e']="on the";
-$template['help']['text4f']="Azzurra network";
-$template['help']['text4g']="You can also find some movement on the";
-$template['help']['text4h']="IRCNet network";
-$template['help']['text4i']="in the";
-$template['help']['text4j']="channel too :)";
-$template['help']['text5']="Bugs can be reported and viewed by using the";
+	Les développeurs répondront si possible aux questions.";
+$template['help']['text4a']="Le salon officiel de KVIrc (en anglais) est situé sur le";
+$template['help']['text4b']="réseau Freenode";
+$template['help']['text4c']="et le salon est évidemment nommé";
+$template['help']['text4d']="Le salon officiel Italien est";
+$template['help']['text4e']="sur le";
+$template['help']['text4f']="réseau Azzurra";
+$template['help']['text4g']="Vous pouvez aussi trouver des gens sur le";
+$template['help']['text4h']="réseau IRCNet";
+$template['help']['text4i']="dans le";
+$template['help']['text4j']="même salon :)";
+$template['help']['text5']="Les bugs peuvent êtres rapportés et vus en utilisant le";
 $template['help']['text6']="
-	For suggestions, news, corrections and whatever related with the website please drop an email to";
+	Pour les suggestions, nouveautés, corrections et tout ce qui est en rapport avec le site veuillez envoyer un mail à";
 $template['help']['text7']="
-	For any kind of help in graphics, translations, and documentation please contact";
+	Pour n'importe quelle sorte d'aide en graphisme, traductions et documentations veuillez contacter";
 /* help.php end */
 
 /* honor.php start */
-$template['honor']['title']="Honor and Glory";
+$template['honor']['title']="Honneur et Gloire";
 $template['honor']['text1']="This is a list of the people that have contributed in some way to the KVIrc project.";
 $template['honor']['text2']="This list is far from being complete. A lot of more or less \"anonymous\" people have wasted their time, eyes, bandwidth and brain resources on this project. If you're one of those, then well, don't hesitate to contact";
 $template['honor']['text3']="If your avatar doesn't appear, or it's wrong, send me the right picture. If you've found something incorrect, broken links, or missing on this page, please drop an email to";
