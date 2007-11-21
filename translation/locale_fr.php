@@ -261,17 +261,17 @@ $template['donate']['alttext']="Make a donation to the KVIrc Project by PayPal";
 /* donate.php end */
 
 /* download.php start */
-$template['download']['title']="Downloading KVIrc";
-$template['download']['text1']="You can obtain KVIrc in three ways:";
-$template['download']['text2']="Official release packages";
+$template['download']['title']="Télécharger KVIrc";
+$template['download']['text1']="Vous pouvez obtenir KVIrc de trois façons:";
+$template['download']['text2']="Paquets officiels";
 $template['download']['text3']="
-	The official packages are released least frequently but are the most stable ones. Each official source package is well tested and will probably compile on your system. You also have more possibilities to find a binary package suitable for your system. The on-line FAQs and documentation refer to this type of package.";
-$template['download']['text4']="Development snapshots";
+	Les paquets officiels sortent moins fréquemment, mais sont les plus stables. Chaque paquet source officiel est bien évalué et compilera probablement sur votre système. Vous avez aussi plus de possibilités de trouver un paquet binaire approprié pour votre système. Les FAQS (les FOIRES AUX QUESTIONS) en ligne et la documentation se réfèrent à ce type de paquet.";
+$template['download']['text4']="Paquets de développement";
 $template['download']['text5']="
-	The development snapshots are unofficial packages extracted from the SVN on a non-regular basis. Each snapshot reflects the SVN state on a particular revision and you're likely to find a really recent one. The packages have been tested on at least a couple of systems and have a good possibility to compile on yours. There are also some binary builds available.";
-$template['download']['text6']="Up to date sources from SVN";
+	Les paquets de développement sont des paquets officieux extraits du SVN sur une base non-régulière. Chacun reflète l'état du SVN sur une révision particulière et vous allez trouver une version plus récente. Les paquets ont été évalués sur au moins deux ou trois systèmes et ont une bonne possibilité de compiler sur le vôtre. Il y a aussi certain fichiers binaires disponibles.";
+$template['download']['text6']="Sources à jour du SVN";
 $template['download']['text7']="
-	The latest bleeding-edge sources can be downloaded by using the SVN system. We're trying to keep the SVN as \"clean\" as possible but finally the sources are not guaranteed to compile. The SVN method provides only sources: there are no binaries.";
+	Les dernières sources de développement peuvent être téléchargées en utilisant le système SVN. Nous essayons de garder le SVN aussi \ "propres \" que possible mais finalement on ne garantit pas les sources pour compiler. La méthode SVN fournit seulement des sources : il n'y a aucun fichier binaires.";
 /* download.php end */
 
 /* faq.php start */
@@ -861,47 +861,47 @@ $template['releases']['available']="Available download locations";
 /* releases.php end */
 
 /* require.php start */
-$template['require']['title']="Requirements (3.0.0 branch)";
-$template['require']['tree1']="Unix version (sources):";
-$template['require']['tree1a']="A working UNIX system suitable for compiling stuff";
+$template['require']['title']="Requis (branche 3.0.0)";
+$template['require']['tree1']="Version Unix (sources):";
+$template['require']['tree1a']="Un environnement de travail UNIX prêt pour la compilation de KVIrc";
 $template['require']['tree1b']="
-	The <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 3.0.5 (older versions <b>might</b> work)";
+	Le <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 3.0.5 (les anciennes versions <b>peuvent</b> fonctionner)";
 $template['require']['tree1c']="
 	<a href=\"http://www.gnu.org/software/automake/\">automake</a> 1.5";
-$template['require']['tree1d']="<a href=\"http://www.zlib.org/\">Zlib library</a>";
+$template['require']['tree1d']="<a href=\"http://www.zlib.org/\">Librairie Zlib</a>";
 $template['require']['tree1e']="
-	<a href=\"http://www.cpan.org\">Perl</a> (for generating online documentation)";
+	<a href=\"http://www.cpan.org\">Perl</a> (pour générer la documentation en ligne)";
 $template['require']['tree1f']="
-	<a href=\"http://www.kde.org\">KDE</a> libs linked to <b>the same</b> version of Qt (optional)";
+	Librairies <a href=\"http://www.kde.org\">KDE</a> "linkées" à la même version de Qt (optionel)";
 $template['require']['tree1g']="
-	Check if your distro split devel libraries; if so you have to install the packages which contains them. Those packages have often \"-dev\" in their name";
-$template['require']['tree2']="Unix version (binaries):";
-$template['require']['tree2a']="A working unix system";
+	Vérifiez si votre distribution contient des bibliothèques devel correspondantes; si oui, vous devez installer les paquets qui les contiennent. Ces paquets ont souvent \ "-dev \" dans leur nom ";
+$template['require']['tree2']="Version Unix (binaires):";
+$template['require']['tree2a']="Un environnement de travail UNIX prêt";
 $template['require']['tree2b']="
-	The <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 3.0.5 (older versions <b>might</b> work)";
-$template['require']['tree3']="Windows version (sources):";
+	Le <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 3.0.5 (les anciennes versions <b>peuvent</b> fonctionner)";
+$template['require']['tree3']="Version Windows (sources):";
 $template['require']['tree3a']="
-	The free version of the <a href=\"ftp://ftp.trolltech.com\">QT GUI toolkit</a> for Windows >= 2.3.0";
-$template['require']['tree3b']="<a href=\"http://www.zlib.org/\">Zlib library</a>";
-$template['require']['tree3c']="Some luck";
-$template['require']['tree4']="Windows version (binaries):";
-$template['require']['tree4a']="Hopefully nothing";
-$template['require']['tree5']="Mac OS X (source):";
-$template['require']['tree5a']="Follow the instructions in \"doc (INSTALL-MacOS.txt)\"";
-$template['require']['tree6']="Mac OS X (binaries):";
+	Une version libre du <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> pour Windows >= 2.3.0";
+$template['require']['tree3b']="<a href=\"http://www.zlib.org/\">Librairie Zlib</a>";
+$template['require']['tree3c']="Une certaine chance";
+$template['require']['tree4']="Version Windows (binaires):";
+$template['require']['tree4a']="On espère besoin de rien :)";
+$template['require']['tree5']="Mac OS X (sources):";
+$template['require']['tree5a']="Suivez les instructions dans \"doc (INSTALL-MacOS.txt)\"";
+$template['require']['tree6']="Mac OS X (binaires):";
 $template['require']['tree6a']="
-	Hopefully nothing. Just open the .dmg file and drag the icon into your application folder.";
-$template['require']['titleold']="Requirements (old 2.1.1 branch)";
-$template['require']['treeold1']="A working UNIX system";
-$template['require']['treeold2']="The <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 2.3.0";
-$template['require']['treeold3']="<a href=\"http://www.kde.org\">KDE</a> libs (optional)";
+	On espère besoin de rien, juste ouvrir le fichier .dmg et glisser l'icone dans votre dossier.";
+$template['require']['titleold']="Requis (ancienne branche 2.1.1)";
+$template['require']['treeold1']="Un environnement de travail UNIX prêt";
+$template['require']['treeold2']="Le <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 2.3.0";
+$template['require']['treeold3']="Librairies <a href=\"http://www.kde.org\">KDE</a> (optionel)";
 /* require.php end */
 
 /* screen.php start */
-$template['screen']['title']="Screenshots";
-$template['screen']['text']="Do you have a nice screenshot? Send it to";
-$template['screen']['prev']="previous";
-$template['screen']['next']="next";
+$template['screen']['title']="Captures";
+$template['screen']['text']="Vous avez une capture d'écran sympas? Envoyez-la à";
+$template['screen']['prev']="précédente";
+$template['screen']['next']="suivante";
 $template['screen']['screen1']="General Option Dialog";
 $template['screen']['screen2']="Script Center";
 $template['screen']['screen3']="URL plugin &amp; an object mail script";
