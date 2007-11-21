@@ -9,9 +9,9 @@ echo "<div class=\"column1-unit\">";
 
 	echo "<code>svn co https://svn.kvirc.de/svn/trunk/kvirc</code>";
 		
-	echo "<p>".$template['svn']['text2']."</p>";
+	//echo "<p>".$template['svn']['text2']."</p>";
 		
-	echo "<code>svn co https://svn.kvirc.de/svn/trunk/modules</code>";
+	//echo "<code>svn co https://svn.kvirc.de/svn/trunk/modules</code>";
 
 	echo "<p>".$template['svn']['text3']."</p>";
 
