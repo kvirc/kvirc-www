@@ -233,7 +233,7 @@ $template['contribute']['text14']="Mirror";
 $template['contribute']['text15']="
 	Mirror FTP e WWW sono sempre i benvenuti: attualmente non abbiamo mirror fuori dall'Europa.<br />
 	Il sito &egrave; scritto in php e aggiornato via SVN, di conseguenza la macchina che fa il mirror deve avere installato php e un client SVN.<br />
-	L'archivio FTP &egrave; attorno ai 200 MB; possono essere anche fatti mirror parziali.<br />
+	L'archivio FTP &egrave; attorno a 1.2GB; possono essere anche fatti mirror parziali.<br />
 	Informazioni dettagliate per settare un mirror WWW o FTP sono disponibili <a href=\"?id=mirroring&amp;lang=$lang\">qui</a>.";
 $template['contribute']['text16']="Relazioni pubbliche";
 $template['contribute']['text17']="

@@ -234,7 +234,7 @@ $template['contribute']['text14']="Mirroring";
 $template['contribute']['text15']="
 	FTP and WWW mirrors are always welcome: we're actually missing mirrors outside Europe.<br />
 	The www site is written in php and updated via SVN thus the mirroring machine must have a php-capable web server and a SVN client installed.<br />
-	The FTP archive is around 200 MB; partial mirroring schemes can be also arranged.<br />
+	The FTP archive is around 1.2GB; partial mirroring schemes can be also arranged.<br />
 	The detailed instructions for setting up a www or ftp mirror are available <a href=\"?id=mirroring&amp;lang=$lang\">here</a>.";
 $template['contribute']['text16']="Public relations";
 $template['contribute']['text17']="

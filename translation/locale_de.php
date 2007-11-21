@@ -234,7 +234,7 @@ $template['contribute']['text14']="Spiegelung";
 $template['contribute']['text15']="
 	FTP- und WWW-Spiegel sind immer willkommen: Wir bruachen momentan Spiegel ausserhalb Europas.<br />
 	Die Website ist in php geschrieben und wird via SVN aktualisiert, daher muss ein Spiegelserver php-fähig sein und einen SVN-Client installiert haben.<br />
-	Das FTP-Archiv umfasst ca. 200MB; eine teilweise Spiegelung kann ebenso arrangiert werden.<br />
+	Das FTP-Archiv umfasst ca. 1.2GB; eine teilweise Spiegelung kann ebenso arrangiert werden.<br />
 	Eine detailierte Anleitung um einen WWW- oder FTP-SPiegelserver einzurichten ist <a href0\"?id=mirroring&amp;lang=$lang\">hier</a> verfügbar.";
 $template['contribute']['text16']="Öffentlichkeitsarbeit";
 $template['contribute']['text17']="
