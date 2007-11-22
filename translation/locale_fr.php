@@ -872,9 +872,9 @@ $template['require']['tree1d']="<a href=\"http://www.zlib.org/\">Librairie Zlib<
 $template['require']['tree1e']="
 	<a href=\"http://www.cpan.org\">Perl</a> (pour générer la documentation en ligne)";
 $template['require']['tree1f']="
-	Librairies <a href=\"http://www.kde.org\">KDE</a> "linkées" à la même version de Qt (optionel)";
+	Librairies <a href=\"http://www.kde.org\">KDE</a> \"linkées\" à la même version de Qt (optionel)";
 $template['require']['tree1g']="
-	Vérifiez si votre distribution contient des bibliothèques devel correspondantes; si oui, vous devez installer les paquets qui les contiennent. Ces paquets ont souvent \ "-dev \" dans leur nom ";
+	Vérifiez si votre distribution contient des bibliothèques devel correspondantes; si oui, vous devez installer les paquets qui les contiennent. Ces paquets ont souvent \"-dev \" dans leur nom ";
 $template['require']['tree2']="Version Unix (binaires):";
 $template['require']['tree2a']="Un environnement de travail UNIX prêt";
 $template['require']['tree2b']="
