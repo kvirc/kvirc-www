@@ -1132,7 +1132,7 @@ $template['translation']['text33']="Happy translating :)";
 /* translation.php end */
 
 /* tutorials.php start */
-$template['tutorials']['title']="Tutorials";
+$template['tutorials']['title']="Tutoriels";
 $template['tutorials']['archive']="Complete archive";
 $template['tutorials']['tutorial']="Tutorial";
 $template['tutorials']['madeby']="made by";
