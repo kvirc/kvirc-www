@@ -271,7 +271,7 @@ $template['download']['text5']="
 	Les paquets de développement sont des paquets officieux extraits du SVN sur une base non-régulière. Chacun reflète l'état du SVN sur une révision particulière et vous allez trouver une version plus récente. Les paquets ont été évalués sur au moins deux ou trois systèmes et ont une bonne possibilité de compiler sur le vôtre. Il y a aussi certain fichiers binaires disponibles.";
 $template['download']['text6']="Sources à jour du SVN";
 $template['download']['text7']="
-	Les dernières sources de développement peuvent être téléchargées en utilisant le système SVN. Nous essayons de garder le SVN aussi \ "propres \" que possible mais finalement on ne garantit pas les sources pour compiler. La méthode SVN fournit seulement des sources : il n'y a aucun fichier binaires.";
+	Les dernières sources de développement peuvent être téléchargées en utilisant le système SVN. Nous essayons de garder le SVN aussi propres que possible mais finalement on ne garantit pas les sources pour compiler. La méthode SVN fournit seulement des sources, il n'y a aucun fichier binaires.";
 /* download.php end */
 
 /* faq.php start */
