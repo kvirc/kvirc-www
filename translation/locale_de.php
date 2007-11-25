@@ -554,7 +554,7 @@ $template['install']['text12']="
 $template['install']['steptitle1']="Die Voraussetzungen";
 $template['install']['tree1a']="
 	Du brauchst die Qt-Bibliothek.<br />
-		Die kannst die aktuellste Version bei ftp.trolltech.com herunterladen.ybr />
+		Die kannst die aktuellste Version bei ftp.trolltech.com herunterladen.<br />
 		Die Qt-Hauptseite ist www.trolltech.com.<br />
 		Hinweis für die GPL-Fanatiker: Qt IST GPL.<br />
 		Die zumindest benötigte Version ist 3.0.5 (älter Versionen *können* funktionieren)<br />
