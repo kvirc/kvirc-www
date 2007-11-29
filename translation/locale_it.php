@@ -1157,7 +1157,7 @@ $template['tutorials']['dropmail']="Se hai scritto una FAQ, un tutorial o una gu
 $template['welcome']['title']="Benvenuto!";
 $template['welcome']['text']="
 	KVIrc è un client <acronym title=\"Internet Relay Chat\">IRC</acronym> <a href=\"http://www.gnu.org\">libero</a> e portabile basato sull'eccellente <a href=\"http://www.trolltech.com\">Qt GUI toolkit</a>.
-	KVIrc è scritto da <a href=\"http://www.pragmaware.net\">Szymon Stefanek</a> e dal Team di Sviluppo di KVIrc col contributo di molti sviluppatori tossici di IRC in tutto il mondo.";
+	KVIrc è scritto da <a href=\"http://www.pragmaware.net\">Szymon Stefanek</a> e dal Team di Sviluppo di KVIrc col contributo di molti sviluppatori malati di IRC in tutto il mondo.";
 $template['welcome']['text2']="fai parte del progetto!";
 $template['welcome']['alttext']="come aiutare il progetto KVIrc";
 /* welcome.php end */
