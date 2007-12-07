@@ -12,7 +12,7 @@ echo "<div class=\"column1-unit\">";
 	foreach($splash as $key => $value){
 		echo "<h1>".$value['name']."</h1>";
 
-		echo "<a href=\"img/".$value['screen']."\"><img src=\"$path/small_".$value['screen']."\" alt=\"".$value['alt']."\" /></a><br />";
+		echo "<a href=\"$path/".$value['screen']."\"><img src=\"$path/small_".$value['screen']."\" alt=\"".$value['alt']."\" /></a><br />";
 		if($value['motd']!="")
 			echo "<h3><em>\"".$value['motd']."\"</em>"."</h3>";
 		if($value['date']!="")
