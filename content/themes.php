@@ -4,6 +4,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
 $path="img/themes";
+$dpath="ftp://ftp.kvirc.net/pub/kvirc/themes";
 
 echo "<h1 class=\"pagetitle\">".$template['themes']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
@@ -29,6 +30,8 @@ echo "<div class=\"column1-unit\">";
 		echo $template['themes']['text4b']." <a href=\"mailto:hellvis69 [at] netsons [dot] org\">HelLViS69</a> ".$template['themes']['text4c'].".</li>";
 	echo "</ul>";
 
+	echo "<p>".$template['themes']['text5']."</p>";
+
 foreach($themes as $key => $value){
 	if(fmod($key,2)!=0) echo "<div class=\"split\"><div class=\"left\">";
 	else echo "<div class=\"right\">";
@@ -48,7 +51,11 @@ foreach($themes as $key => $value){
 	if($value['home']!="")
 		echo "<a href=\"".$value['home']."\">".$template['custom']['homepage']."</a><br />";
 
-	echo "<a href=\"".$value['download']."\">".$template['custom']['download']."</a>";
+	echo "<a href=\"$dpath/".$value['download']."\">".$template['custom']['download']."</a>";
+
+	if(isset($value['downbig'])&&($value['downbig']!=""))
+		echo " - <a href=\"$dpath/".$value['downbig']."\">".$template['custom']['downbig']."</a>";
+
 	echo "</p>";
 	echo "</div>";
 

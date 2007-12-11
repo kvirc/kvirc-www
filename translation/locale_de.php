@@ -113,6 +113,7 @@ $template['custom']['author']="Autor";
 $template['custom']['description']="Beschreibung";
 $template['custom']['homepage']="Homepage";
 $template['custom']['download']="Download";
+$template['custom']['downbig']="Big";
 $template['custom']['date']="Datum";
 $template['custom']['size']="Größe";
 $template['custom']['version']="Version";
@@ -554,7 +555,7 @@ $template['install']['text12']="
 $template['install']['steptitle1']="Die Voraussetzungen";
 $template['install']['tree1a']="
 	Du brauchst die Qt-Bibliothek.<br />
-		Die kannst die aktuellste Version bei ftp.trolltech.com herunterladen.<br />
+		Die kannst die aktuellste Version bei ftp.trolltech.com herunterladen.ybr />
 		Die Qt-Hauptseite ist www.trolltech.com.<br />
 		Hinweis für die GPL-Fanatiker: Qt IST GPL.<br />
 		Die zumindest benötigte Version ist 3.0.5 (älter Versionen *können* funktionieren)<br />
@@ -1023,6 +1024,7 @@ $template['themes']['text3b4']="Die englische Kurzanleitung ist auch im KVIrc-Pa
 $template['themes']['text4a']="Ich habe ein Thema erstellt. Wie kann ich es mit anderen teilen";	
 $template['themes']['text4b']="Du kannst es an";
 $template['themes']['text4c']="senden, inklusive eines Themennamens, Beschreibung, Version, Spitzname, Homepage und E-Mail, erlaube uns (oder nciht) diese auf der Homepage zu zeigen";
+$template['themes']['text5']="All download are intended to be at resolution 1024x768.<br />If you intend to share a 1280x1024 one, just send it with a 1024x768 version.";
 $template['themes']['screenshot']="Screenshot";
 $template['themes']['theme1']="Eine Augenweide, basierend auf dem Marble-Icon-Set.";
 $template['themes']['theme2']="Ein klares Thema mit Crystal-Icons. Einige Icons sind dem Marble-Icon-Set entnommen.";
@@ -1044,6 +1046,9 @@ $template['themes']['theme17']="Erotica.. mh..";
 $template['themes']['theme18']="Anger ist eine Variation von Erotica. Lecke Deine Lippen weiter!";
 $template['themes']['theme19']="Dark Blue ist eine Abwandlung von marble. Genieße es";
 $template['themes']['theme20']="Nach vielen \"dunklen\" Hintergründen ein angenehmer blauer zum leichteren Lesen";
+$template['themes']['theme21']="A calm, snowy Christmas theme";
+$template['themes']['theme22']="A snowy woods for relaxing at IRC";
+$template['themes']['theme23']="A green theme with KDE logo";
 /* themes.php end */
 
 /* tools.php start */

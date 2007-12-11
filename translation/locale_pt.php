@@ -113,6 +113,7 @@ $template['custom']['author']="Author";
 $template['custom']['description']="Description";
 $template['custom']['homepage']="Homepage";
 $template['custom']['download']="Download";
+$template['custom']['downbig']="Big";
 $template['custom']['date']="Date";
 $template['custom']['size']="Size";
 $template['custom']['version']="Version";
@@ -1028,6 +1029,7 @@ $template['themes']['text3b4']="The English HOWTO is also included in the KVIrc 
 $template['themes']['text4a']="I've made a theme. How can I share it";
 $template['themes']['text4b']="You can send it to";
 $template['themes']['text4c']="including a theme name, description, version, nickname, homepage and email, allowing us or not to display it on the page";
+$template['themes']['text5']="All download are intended to be at resolution 1024x768.<br />If you intend to share a 1280x1024 one, just send it with a 1024x768 version.";
 $template['themes']['screenshot']="screenshot";
 $template['themes']['theme1']="An eye-candy based on the Marble icon set.";
 $template['themes']['theme2']="A clear theme with Crystal icons. Some icons are taken from the Marble icon set.";
@@ -1049,6 +1051,9 @@ $template['themes']['theme17']="erotica.. mh..";
 $template['themes']['theme18']="Anger is a variation of erotica. Keep on lick your lips!";
 $template['themes']['theme19']="Dark Blue is a variation of marble. Enjoy it";
 $template['themes']['theme20']="After many \"dark\" backgrounds, a soft blue for a nice reading";
+$template['themes']['theme21']="A calm, snowy Christmas theme";
+$template['themes']['theme22']="A snowy woods for relaxing at IRC";
+$template['themes']['theme23']="A green theme with KDE logo";
 /* themes.php end */
 
 /* tools.php start */

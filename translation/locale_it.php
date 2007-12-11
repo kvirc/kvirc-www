@@ -113,6 +113,7 @@ $template['custom']['author']="Autore";
 $template['custom']['description']="Descrizione";
 $template['custom']['homepage']="Homepage";
 $template['custom']['download']="Scarica";
+$template['custom']['downbig']="Grande";
 $template['custom']['date']="Data";
 $template['custom']['size']="Dimenzione";
 $template['custom']['version']="Versione";
@@ -1024,6 +1025,7 @@ $template['themes']['text3b4']="La versione inglese dell'HOWTO è inclusa nella 
 $template['themes']['text4a']="Ho fatto un tema. Come lo condivido";
 $template['themes']['text4b']="Puoi mandarlo a";
 $template['themes']['text4c']="col nome del tema, descrizione, versione, nickname, homepage e mail, permettendoci o no di mostrarla sulla pagina";
+$template['themes']['text5']="Tutti i download sono ad una risoluzione di 1024x768.<br />Se intendi condividerne uno a 1280x1024, invialo insieme a una versione a 1024x768.";
 $template['themes']['screenshot']="screenshot";
 $template['themes']['theme1']="Versione caramellosa basata sulle icone Marble.";
 $template['themes']['theme2']="Una versione pulita con le icone Crystal. Alcune icone sono prese dal tema Marble.";
@@ -1045,6 +1047,9 @@ $template['themes']['theme17']="erotica.. mh..";
 $template['themes']['theme18']="Anger è una variante di erotica. Leccati le labbra!";
 $template['themes']['theme19']="Dark Blue è una variante di Marble. Divertiti con lui";
 $template['themes']['theme20']="Dopo tanti sfondi \"dark\" un blue chiaro per una lettura piacevole";
+$template['themes']['theme21']="Un calmo, innevato tema natalizio";
+$template['themes']['theme22']="Un bosco innevato per rilassarsi su IRC";
+$template['themes']['theme23']="Un tema verde col logo di KDE";
 /* themes.php end */
 
 /* tools.php start */
