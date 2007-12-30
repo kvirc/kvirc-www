@@ -287,7 +287,7 @@ $tools=array(
 // array("lang" => "language", "nick" => "nick", "mail" => "mail")
 $translators=array(
 	1 => array("lang" => $template['index']['french'], "nick" => "_Otaku", "mail" => "notakou [at] tiscali [dot] fr"),
-	array("lang" => $template['index']['german'], "nick" => "mren", "mail" => "kvirc [at] mrmx [dot] de"),
+	array("lang" => $template['index']['german'], "nick" => array("mren","Ionic"), "mail" => array("kvirc [at] mrmx [dot] de","ionic [at] ionic [dot] de")),
 	array("lang" => $template['index']['hungarian'], "nick" => "Fiber^", "mail" => "vfiber [at] gmail [dot] com"),
 	array("lang" => $template['index']['italian'], "nick" => array("Nate Grey","HelLViS69","etherea`"), "mail" => array("nate [at] paranoici [dot] org","hellvis69 [at] netsons [dot] org","cle [at] virg0 [dot] org")),
 	array("lang" => $template['index']['portuguese'], "nick" => "Ze_m", "mail" => "mmodem00 [at] netvisao [dot] pt")
