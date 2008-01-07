@@ -67,16 +67,16 @@ $hua = $_SERVER['HTTP_USER_AGENT'];
 
 if((strpos($hua,'Windows') !== false) || (strpos($hua,'WinXP') !== false))
 {
-	$quickdownload_link = $ftp_mirror_link[0]."/3.2.0/binary/win32/kvirc-3.2.0-setup.exe";
-} else if((strpos($hua,'Safari') !== false) || (strpos($hua,'Macintosh') !== false) ||
+	$quickdownload_link = $ftp_mirror_link[0]."/3.2.6/binary/KVIrc-3.2.6-dev-20071114.exe";
+} /*else if((strpos($hua,'Safari') !== false) || (strpos($hua,'Macintosh') !== false) ||
 	(strpos($hua,'Mac OS X') !== false) || (strpos($hua,'Mac_PowerPC') !== false))
 {
 	$quickdownload_link = $ftp_mirror_link[0]."/3.2.0/binary/macosx/KVirc-3.2.0.dmg";
-} else {
-	$quickdownload_link = $ftp_mirror[1]['url']."/3.2.0/source/kvirc-3.2.0.tar.bz2";
+}*/ else {
+	$quickdownload_link = $ftp_mirror[1]['url']."/3.2.6/source/kvirc-3.2.6.tar.bz2";
 }
 
-$quickdownload_version = "3.2.0";
+$quickdownload_version = "3.2.6";
 
 
 
@@ -137,7 +137,6 @@ $p_group[$package_count]       = "slackware";
 $p_author[$package_count]      = "Claudiu Cismaru <claudiu at cnixs dot com>";
 $package_count++;
 
-
 $p_filename[$package_count]    = "kvirc-3.2.0-i386-1-HelLViS69.tgz";
 $p_path[$package_count]        = "3.2.0/binary/slackware";
 $p_description[$package_count] = "KVIrc 3.2.0, Slackware binary package";
@@ -148,8 +147,6 @@ $p_size[$package_count]        = "5229278";
 $p_group[$package_count]       = "slackware";
 $p_author[$package_count]      = "HelLViS69";
 $package_count++;
-
-
 
 $p_filename[$package_count]    = "KVirc-3.2.0-debug.dmg";
 $p_path[$package_count]        = "3.2.0/binary/macosx";
