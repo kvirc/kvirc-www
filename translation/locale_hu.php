@@ -1160,6 +1160,8 @@ $template['tutorials']['text3b']="A totally beginners guide";
 $template['tutorials']['text4a']="KVIrc Installation Under Win32";
 $template['tutorials']['text4b']="A short tutorial how to install KVIrc, connect to a server and join a channel on windows";
 $template['tutorials']['dropmail']="If you have written a FAQ, tutorial or guide to KVIrc in any language please drop a mail to";
+$template['tutorials']['text5a']="Theme HowTo";
+$template['tutorials']['text5b']="A small howto on how to make a good theme";
 /* tutorials.php end */
 
 /* welcome.php start */

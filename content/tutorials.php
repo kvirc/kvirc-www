@@ -48,6 +48,13 @@ echo "<div class=\"column1-unit\">";
 	echo "<li><img src=\"img/flags/Germany.png\" alt=\"".$template['index']['german']."\" title=\"".$template['index']['german']."\" />&nbsp;<a href=\"ftp://ftp.kvirc.net/pub/kvirc/tutorials/Win32_KVIrc_Installation_de.pdf\">".$template['tutorials']['tutorial']."</a>, ".$template['tutorials']['madeby']." <a href=\"mailto:kvirc [at] thexception [dot] net\">thexception</a>.</li><br />";
 	echo "</ul>";
 
+	echo "<h1>".$template['tutorials']['text5a']."</h1>";
+	echo "<h3>".$template['tutorials']['text5b']."</h3>";
+	echo "<ul>";
+	echo "<li><img src=\"img/flags/United-States.png\" alt=\"".$template['index']['english']."\" title=\"".$template['index']['english']."\" />&nbsp;<a href=\"ftp://ftp.kvirc.net/pub/kvirc/tutorials/Themes_HowTo_en.pdf\">".$template['tutorials']['tutorial']."</a>, ".$template['tutorials']['madeby']." <a href=\"mailto:pragma [at] kvirc [dot] net\">Pragma</a>.</li><br />";
+	echo "<li><img src=\"img/flags/Italy.png\" alt=\"".$template['index']['italian']."\" title=\"".$template['index']['italian']."\" />&nbsp;<a href=\"ftp://ftp.kvirc.net/pub/kvirc/tutorials/Themes_HowTo_it.pdf\">".$template['tutorials']['tutorial']."</a>, ".$template['tutorials']['madeby']." <a href=\"mailto:cle [at] virg0 [dot] org\">etherea`</a>.</li><br />";
+	echo "</ul>";
+
 	echo "<br /><p>".$template['tutorials']['dropmail']." <a href=\"mailto:hellvis69 [at] netsons [dot] org\">HelLViS69</a> :)</p>";
 echo "</div>";
 ?>
