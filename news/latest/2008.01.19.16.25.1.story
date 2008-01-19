@@ -7,7 +7,7 @@ HelLViS69 &lt;hellvis69@netsons.org&gt;
 @@body:
  
 
-Since there major changes on SVN we recommend to use revision 1070 of SVN.<br />
+Since there are major changes on SVN we recommend to use revision 1070 of SVN.<br />
 For more info on how to download the latest working snapshot, have a look at
 <a href="?id=svn">svn page</a><br /><br />
 
