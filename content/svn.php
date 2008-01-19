@@ -7,7 +7,7 @@ echo "<h1 class=\"pagetitle\">".$template['svn']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
 	echo "<p>".$template['svn']['text1']."</p>";
 
-	echo "<code>svn co https://svn.kvirc.de/svn/trunk/kvirc</code>";
+	echo "<code>svn --revision 1070 co https://svn.kvirc.de/svn/trunk/kvirc</code>";
 		
 	//echo "<p>".$template['svn']['text2']."</p>";
 		
