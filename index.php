@@ -179,7 +179,7 @@ search();
 						<li><a href="#"><?echo $template['index']['docs'];?></a>
 							<ul>
 								<li><a href="?id=faq&amp;lang=<?echo $lang;?>"><?echo $template['index']['faq'];?></a></li>
-								<li><a href="javascript:opendoc('http://kvirc.thexception.net/doc/');"><?echo $template['index']['kviman'];?></a></li>
+								<li><a href="javascript:opendoc('http://www.kvirc.de/docu/');"><?echo $template['index']['kviman'];?></a></li>
 								<li><a href="?id=tutorials&amp;lang=<?echo $lang;?>"><?echo $template['index']['tutorials'];?></a></li>
 							</ul>
 						</li>
@@ -343,7 +343,7 @@ search();
 					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
 					<h1><img src="img/document-open.png" alt="<?echo $template['index']['moredocs'];?>" /><?echo $template['index']['moredocs'];?></h1>
 					<p class="center">
-						<a href="javascript:opendoc('http://kvirc.thexception.net/doc/');" title="<?echo $template['index']['officialdocs'];?>"><?echo $template['index']['officialdocs'];?></a><br /><?echo $template['index']['docsauto'];?>
+						<a href="javascript:opendoc('http://www.kvirc.de/docu/');" title="<?echo $template['index']['officialdocs'];?>"><?echo $template['index']['officialdocs'];?></a><br /><?echo $template['index']['docsauto'];?>
 					</p>
 				</div>
 			</div>
