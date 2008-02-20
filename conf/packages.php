@@ -67,7 +67,7 @@ $hua = $_SERVER['HTTP_USER_AGENT'];
 
 if((strpos($hua,'Windows') !== false) || (strpos($hua,'WinXP') !== false))
 {
-	$quickdownload_link = $ftp_mirror[1]['url']."/snapshots/win32/KVIrc-3.2.6-dev-20080214.exe";
+	$quickdownload_link = $ftp_mirror[1]['url']."/snapshots/win32/KVIrc-3.2.6-dev-20080220.exe";
 } /*else if((strpos($hua,'Safari') !== false) || (strpos($hua,'Macintosh') !== false) ||
 	(strpos($hua,'Mac OS X') !== false) || (strpos($hua,'Mac_PowerPC') !== false))
 {
