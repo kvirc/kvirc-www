@@ -1050,6 +1050,7 @@ $template['themes']['theme20']="Dopo tanti sfondi \"dark\" un blue chiaro per un
 $template['themes']['theme21']="Un calmo, innevato tema natalizio";
 $template['themes']['theme22']="Un bosco innevato per rilassarsi su IRC";
 $template['themes']['theme23']="Un tema verde col logo di KDE";
+$template['themes']['theme24']="Tema molto minimalista";
 /* themes.php end */
 
 /* tools.php start */

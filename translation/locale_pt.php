@@ -1054,6 +1054,7 @@ $template['themes']['theme20']="After many \"dark\" backgrounds, a soft blue for
 $template['themes']['theme21']="A calm, snowy Christmas theme";
 $template['themes']['theme22']="A snowy woods for relaxing at IRC";
 $template['themes']['theme23']="A green theme with KDE logo";
+$template['themes']['theme24']="Very minimalistic theme";
 /* themes.php end */
 
 /* tools.php start */
