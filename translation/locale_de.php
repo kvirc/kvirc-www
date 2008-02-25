@@ -1049,7 +1049,7 @@ $template['themes']['theme20']="Nach vielen \"dunklen\" Hintergründen ein angen
 $template['themes']['theme21']="Ein ruhiges, verschneites Weihnachtsthema";
 $template['themes']['theme22']="Ein verschneiter Wald zum Entspannen beim IRC";
 $template['themes']['theme23']="Ein grünes Thema mit KDE-Logo";
-$template['themes']['theme24']="Very minimalistic theme";
+$template['themes']['theme24']="Sehr puristisches Thema";
 /* themes.php end */
 
 /* tools.php start */
