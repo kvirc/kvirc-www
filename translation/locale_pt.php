@@ -1055,6 +1055,7 @@ $template['themes']['theme21']="A calm, snowy Christmas theme";
 $template['themes']['theme22']="A snowy woods for relaxing at IRC";
 $template['themes']['theme23']="A green theme with KDE logo";
 $template['themes']['theme24']="Very minimalistic theme";
+$template['themes']['theme25']="A theme with a slightly yellow background based on Pure by etherea`";
 /* themes.php end */
 
 /* tools.php start */

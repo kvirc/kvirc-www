@@ -244,7 +244,7 @@ $splash=array(
 	array("name" => "3.2.0.99 CVS \"Marmalade\" (2)", "screen" => "splash-3.2.0.99.2.png", "alt" => "3.2.0.99", "motd" => "Hello, Hey Joe! You Wanna Give It a Go ?", "date" => "01.08.2005", "present" => ""),
 	array("name" => "3.2.4 CVS \"Anomalies\"", "screen" => "splash-3.2.0.20051230.png", "alt" => "3.2.4", "motd" => "Time makes no sense", "date" => "06.08.2006", "present" => "3.2.0.20051230, 3.2.1, 3.2.2, 3.2.3, 3.2.4"),
 	array("name" => "3.2.6 SVN \"Anomalies\"", "screen" => "splash-3.2.6-svn.png", "alt" => "3.2.6", "motd" => "Time makes no sense", "date" => "12.09.2006", "present" => "3.2.4, 3.2.5, 3.2.6"),
-	//array("name" => "3.4.0 \"Virgo\"", "screen" => "splash-3.4.0.png", "alt" => "3.4.0", "motd" => "", "date" => "13-03-2008", "present" => "")
+	array("name" => "3.4.0 \"Virgo\"", "screen" => "splash-3.4.0.png", "alt" => "3.4.0", "motd" => "", "date" => "13-03-2008", "present" => "")
 );
 
 // Themes
@@ -274,7 +274,8 @@ $themes=array(
 	array("name" => "Snow", "version" => "1.1", "mail" => "youpiter [at] mail [dot] ru", "author" => "Youpiter", "desc" => $template['themes']['theme21'], "home" => "", "download" => "Snow-1-1.kvt", "screen" => "theme_snow.jpg", "thumb" => "thumb_snow.jpg"),
 	array("name" => "Zima", "version" => "1.3", "mail" => "youpiter [at] mail [dot] ru", "author" => "Youpiter", "desc" => $template['themes']['theme22'], "home" => "", "download" => "Zima-1.3.kvt", "screen" => "theme_zima.jpg", "thumb" => "thumb_zima.jpg"),
 	array("name" => "GreenKDE", "version" => "1.0", "mail" => "youpiter [at] mail [dot] ru", "author" => "Youpiter", "desc" => $template['themes']['theme23'], "home" => "", "download" => "GreenKDE-1.0.kvt", "downbig" => "GreenKDE-1.1.2.kvt", "screen" => "theme_greenkde.jpg", "thumb" => "thumb_greenkde.jpg"),
-	array("name" => "Minimalist", "version" => "1.0", "mail" => "", "author" => "Stan", "desc" => $template['themes']['theme24'], "home" => "http://www.stantown.de", "download" => "Minimalist-1.0.kvt", "screen" => "theme_minimalist.png", "thumb" => "thumb_minimalist.png")
+	array("name" => "Minimalist", "version" => "1.0", "mail" => "", "author" => "Stan", "desc" => $template['themes']['theme24'], "home" => "http://www.stantown.de", "download" => "Minimalist-1.0.kvt", "screen" => "theme_minimalist.png", "thumb" => "thumb_minimalist.png"),
+	array("name" => "Slightly Yellow", "version" => "1.0", "mail" => "mren [at] mrmx [dot] de", "author" => "mren_", "desc" => $template['themes']['theme25'], "home" => "", "download" => "Slightly_Yellow-1.0.kvt", "screen" => "theme_slightly.png", "thumb" => "thumb_slightly.png")
 );
 
 // Tools
