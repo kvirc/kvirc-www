@@ -244,7 +244,7 @@ $splash=array(
 	array("name" => "3.2.0.99 CVS \"Marmalade\" (2)", "screen" => "splash-3.2.0.99.2.png", "alt" => "3.2.0.99", "motd" => "Hello, Hey Joe! You Wanna Give It a Go ?", "date" => "01.08.2005", "present" => ""),
 	array("name" => "3.2.4 CVS \"Anomalies\"", "screen" => "splash-3.2.0.20051230.png", "alt" => "3.2.4", "motd" => "Time makes no sense", "date" => "06.08.2006", "present" => "3.2.0.20051230, 3.2.1, 3.2.2, 3.2.3, 3.2.4"),
 	array("name" => "3.2.6 SVN \"Anomalies\"", "screen" => "splash-3.2.6-svn.png", "alt" => "3.2.6", "motd" => "Time makes no sense", "date" => "12.09.2006", "present" => "3.2.4, 3.2.5, 3.2.6"),
-	array("name" => "3.4.0 \"Virgo\"", "screen" => "splash-3.4.0.png", "alt" => "3.4.0", "motd" => "", "date" => "13-03-2008", "present" => "")
+	//array("name" => "3.4.0 \"Virgo\"", "screen" => "splash-3.4.0.png", "alt" => "3.4.0", "motd" => "No matter how dark the night, somehow the Sun rises once again", "date" => "13-03-2008", "present" => "")
 );
 
 // Themes
@@ -267,7 +267,7 @@ $themes=array(
 	array("name" => "Black Heart", "version" => "1.0.0", "mail" => "grifisx [at] barmes.org", "author" => "Grifisx &amp; Noldor", "desc" => $template['themes']['theme14'], "home" => "", "download" => "BlackHeart-1.0.tar.bz2", "screen" => "theme_blackheart.png", "thumb" => "thumb_blackheart.png"),
 	array("name" => "X-KVIrc-mas", "version" => "1.0.0", "mail" => "grifisx [at] barmes.org", "author" => "Grifisx &amp; Noldor", "desc" => $template['themes']['theme15'], "home" => "", "download" => "X-KVIrcmas-1.0.tar.bz2", "screen" => "theme_X-KVIrcmas.png", "thumb" => "thumb_X-KVIrcmas.png"),
 	array("name" => "Words are Perversion", "version" => "1.0.3", "mail" => "cle [at] virg0 [dot] org", "author" => "etherea`", "desc" => $template['themes']['theme16'], "home" => "http://kvirc.virg0.org", "download" => "Words_are_Perversion-1.0.tar.bz2", "screen" => "theme_words.png", "thumb" => "thumb_words.png"),
-	array("name" => "erotica", "version" => "0.6.9", "mail" => "cle [at] virg0 [dot] org", "author" => "etherea`", "desc" => $template['themes']['theme17'], "home" => "http://kvirc.virg0.org", "download" => "erotica-0.6.9.rar", "screen" => "theme_erotica.png", "thumb" => "thumb_erotica.png"),
+	array("name" => "Erotica", "version" => "0.6.9", "mail" => "cle [at] virg0 [dot] org", "author" => "etherea`", "desc" => $template['themes']['theme17'], "home" => "http://kvirc.virg0.org", "download" => "erotica-0.6.9.rar", "screen" => "theme_erotica.png", "thumb" => "thumb_erotica.png"),
 	array("name" => "Anger", "version" => "0.0.1", "mail" => "cle [at] virg0 [dot] org", "author" => "etherea`", "desc" => $template['themes']['theme18'], "home" => "http://kvirc.virg0.org", "download" => "Anger-0.0.1.rar", "screen" => "theme_anger.png", "thumb" => "thumb_anger.png"),
 	array("name" => "Dark Blue", "version" => "0.9.0", "mail" => "lgxco [at] yahoo [dot] it", "author" => "Puk", "desc" => $template['themes']['theme19'], "home" => "", "download" => "DarkBlue-0.9.0.kvt", "screen" => "theme_darkblue.png", "thumb" => "thumb_darkblue.png"),
 	array("name" => "Soft Blue", "version" => "2.0", "mail" => "gestenigd [at] gmail [dot] com", "author" => "lsd", "desc" => $template['themes']['theme20'], "home" => "http://stato-brodo.blogspot.com", "download" => "Soft_blue-2.0.kvt", "screen" => "theme_softblue.jpg", "thumb" => "thumb_softblue.jpg"),
@@ -275,7 +275,8 @@ $themes=array(
 	array("name" => "Zima", "version" => "1.3", "mail" => "youpiter [at] mail [dot] ru", "author" => "Youpiter", "desc" => $template['themes']['theme22'], "home" => "", "download" => "Zima-1.3.kvt", "screen" => "theme_zima.jpg", "thumb" => "thumb_zima.jpg"),
 	array("name" => "GreenKDE", "version" => "1.0", "mail" => "youpiter [at] mail [dot] ru", "author" => "Youpiter", "desc" => $template['themes']['theme23'], "home" => "", "download" => "GreenKDE-1.0.kvt", "downbig" => "GreenKDE-1.1.2.kvt", "screen" => "theme_greenkde.jpg", "thumb" => "thumb_greenkde.jpg"),
 	array("name" => "Minimalist", "version" => "1.0", "mail" => "", "author" => "Stan", "desc" => $template['themes']['theme24'], "home" => "http://www.stantown.de", "download" => "Minimalist-1.0.kvt", "screen" => "theme_minimalist.png", "thumb" => "thumb_minimalist.png"),
-	array("name" => "Slightly Yellow", "version" => "1.0", "mail" => "mren [at] mrmx [dot] de", "author" => "mren_", "desc" => $template['themes']['theme25'], "home" => "", "download" => "Slightly_Yellow-1.0.kvt", "screen" => "theme_slightly.png", "thumb" => "thumb_slightly.png")
+	array("name" => "Slightly Yellow", "version" => "1.0", "mail" => "mren [at] mrmx [dot] de", "author" => "mren_", "desc" => $template['themes']['theme25'], "home" => "", "download" => "Slightly_Yellow-1.0.kvt", "screen" => "theme_slightly.png", "thumb" => "thumb_slightly.png"),
+	array("name" => "YellowIRC", "version" => "1.0", "mail" => "pragma [at] kvirc [dot] net", "author" => "Pragma", "desc" => $template['themes']['theme26'], "home" => "http://pragmaware.net", "download" => "YellowIRC-1.0.0.kvt", "screen" => "theme_yellowirc.png", "thumb" => "thumb_yellowirc.png")
 );
 
 // Tools
@@ -289,7 +290,7 @@ $tools=array(
 // Translations (keep 'em in alphabetical order)
 // array("lang" => "language", "nick" => "nick", "mail" => "mail")
 $translators=array(
-	1 => array("lang" => $template['index']['french'], "nick" => "_Otaku", "mail" => "notakou [at] tiscali [dot] fr"),
+	1 => array("lang" => $template['index']['french'], "nick" => array("Ahinu","_Otaku"), "mail" => array("ahinu.laman [at] gmail [dot] com","notakou [at] tiscali [dot] fr")),
 	array("lang" => $template['index']['german'], "nick" => array("mren","Ionic"), "mail" => array("kvirc [at] mrmx [dot] de","ionic [at] ionic [dot] de")),
 	array("lang" => $template['index']['hungarian'], "nick" => "Fiber^", "mail" => "vfiber [at] gmail [dot] com"),
 	array("lang" => $template['index']['italian'], "nick" => array("Nate Grey","HelLViS69","etherea`"), "mail" => array("nate [at] paranoici [dot] org","hellvis69 [at] netsons [dot] org","cle [at] virg0 [dot] org")),
@@ -301,7 +302,6 @@ $template['index']['bulgarian'], bugar [at] developer [dot] bg, Bugar
 $template['index']['croatian'], SpeedyGhost
 $template['index']['czech'], dusan [at] mirc [dot] cz, Dusan Hokuv
 $template['index']['dutch'], balboy [at] kvirc [dot] net, Balboy
-$template['index']['french'], ahinu.laman [at] gmail [dot] com, Ahinu
 $template['index']['polish'], kgod [at] poczta.onet [dot] pl, Krzysztof Godlewski
 $template['index']['brazilian'], cabide [at] brfree [dot] com.br, Adilson Gonçalves Soares Junior
 $template['index']['russian'], spam [at] kvirc [dot] ru, Alexey

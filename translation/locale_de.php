@@ -1051,6 +1051,7 @@ $template['themes']['theme22']="Ein verschneiter Wald zum Entspannen beim IRC";
 $template['themes']['theme23']="Ein grünes Thema mit KDE-Logo";
 $template['themes']['theme24']="Sehr puristisches Thema";
 $template['themes']['theme25']="Ein Thema mit leicht gelben Hintergrund, basierend auf Pure von etherea`";
+$template['themes']['theme26']="A summer sunny theme";
 /* themes.php end */
 
 /* tools.php start */
