@@ -1012,7 +1012,7 @@ $template['themes']['text1']="Hier kannst Du einige schöne Themen herunterladen
 $template['themes']['text2a']="Wie kann ich ein Thema installieren";
 $template['themes']['text2b1']="Lade das Thema herunter";
 $template['themes']['text2b2']="Öffne den KVIrc Themenmanager";
-$template['themes']['text2b3']="Click the \"Install Theme From Disk\" button";
+$template['themes']['text2b3']="Klicke auf den \"Installiere-Thema-von-Disk\"-Knopf ";
 $template['themes']['text2b4']="Doppelklicke auf das neue Thema";
 $template['themes']['text2b5']="Viel Spaß";
 $template['themes']['text3a']="Wie kann ich ein Thema erstellen";
@@ -1050,7 +1050,7 @@ $template['themes']['theme22']="Ein verschneiter Wald zum Entspannen beim IRC";
 $template['themes']['theme23']="Ein grünes Thema mit KDE-Logo";
 $template['themes']['theme24']="Sehr puristisches Thema";
 $template['themes']['theme25']="Ein Thema mit leicht gelben Hintergrund, basierend auf Pure von etherea`";
-$template['themes']['theme26']="A summer sunny theme";
+$template['themes']['theme26']="Ein sonniges Sommerthema";
 /* themes.php end */
 
 /* tools.php start */
