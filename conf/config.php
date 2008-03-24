@@ -4,8 +4,8 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
 // Some vars
-$current="3.2.6";
-$availVersions=array("3.2.1","3.2.3","3.2.4","3.2.5",$current);
+$current="3.4.0";
+$availVersions=array("3.2.1","3.2.3","3.2.4","3.2.5","3.2.6",$current);
 
 // Get environment
 if((strlen(getenv("SERVER_SOFTWARE")))!="0"){

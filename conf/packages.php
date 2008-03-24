@@ -19,7 +19,7 @@ $platform_description["unix"]   = "Unix flavor binary package";
 $platform_details["unix"]       = "Pre-compiled packages are available for several unix systems (read \"distributions\"). If a package for your exact distribution is not available you might try to install the \"closest match\". If no package works for you, then you have to compile KVIrc from the sources.";
 
 // The available versions
-$version_description["2.1.1"]          = "2.1.1 : Old stable release (May 2001)";
+$version_description["2.1.1"]          = "2.1.1 : Very old stable release (May 2001)";
 $version_details["2.1.1"]              = "The last release of the 2.1.1 branch. You probably don't want this unless you're using a very old system.";
 
 $version_description["3.0.0-beta1"]    = "3.0.0 : Beta 1 (Jun 2002)";
@@ -35,7 +35,10 @@ $version_description["3.0.1"]          = "3.0.1 : Stable (May 2004)";
 $version_details["3.0.1"]              = "A bugfix release for 3.0.0";
 
 $version_description["3.2.0"]          = "3.2.0 : Stable (Feb 2005)";
-$version_details["3.2.0"]              = "The latest stable release. This is the package you want :)";
+$version_details["3.2.0"]              = "The previous stable release.";
+
+$version_description["3.4.0"]          = "3.4.0 : Stable (Mar 2008)";
+$version_details["3.4.0"]              = "The latest stable release. This is the package you want :)";
 
 // The package groups
 $group_description["none"]      = "No group";
@@ -67,20 +70,61 @@ $hua = $_SERVER['HTTP_USER_AGENT'];
 
 if((strpos($hua,'Windows') !== false) || (strpos($hua,'WinXP') !== false))
 {
-	$quickdownload_link = $ftp_mirror[1]['url']."/snapshots/win32/KVIrc-3.2.6-dev-20080303.exe";
+	//$quickdownload_link = $ftp_mirror[1]['url']."/snapshots/win32/KVIrc-3.2.6-dev-20080303.exe";
+	$quickdownload_link = $ftp_mirror[1]['url']."/3.4.0/binary/win32/KVIrc-3.4.0.exe";
+	$quickdownload_version = "3.4.0";
 } /*else if((strpos($hua,'Safari') !== false) || (strpos($hua,'Macintosh') !== false) ||
 	(strpos($hua,'Mac OS X') !== false) || (strpos($hua,'Mac_PowerPC') !== false))
 {
 	$quickdownload_link = $ftp_mirror_link[0]."/3.2.0/binary/macosx/KVirc-3.2.0.dmg";
+	$quickdownload_version = "3.2.0";
 }*/ else {
-	$quickdownload_link = $ftp_mirror[1]['url']."/3.2.6/source/kvirc-3.2.6.tar.bz2";
+	//$quickdownload_link = $ftp_mirror[1]['url']."/3.2.6/source/kvirc-3.2.6.tar.bz2";
+	$quickdownload_link = $ftp_mirror[1]['url']."/3.4.0/source/kvirc-3.4.0.tar.bz2";
+	$quickdownload_version = "3.4.0";
 }
-
-$quickdownload_version = "3.2.6";
-
 
 
 $package_count = 0;
+
+$p_filename[$package_count]    = "kvirc-3.4.0.tar.bz2";
+$p_path[$package_count]        = "3.4.0/source";
+$p_description[$package_count] = "KVIrc 3.4.0, sources (bzipped package)";
+$p_details[$package_count]     = "Source tarball for both unix and windows version. The package is crompressed using the bzip2 program.";
+$p_platform[$package_count]    = "source";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "5311152";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Szymon Stefanek (pragma at kvirc dot net)";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-3.4.0.tar.gz";
+$p_path[$package_count]        = "3.2.0/source";
+$p_description[$package_count] = "KVIrc 3.2.0, sources (gzipped package)";
+$p_details[$package_count]     = "Source tarball for both unix and windows version. The package is compressed using the gzip program, if you have bzip2 grab the *.bz2 format instead.";
+$p_platform[$package_count]    = "source";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "7062650";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Szymon Stefanek (pragma at kvirc dot net)";
+$package_count++;
+
+$p_filename[$package_count]    = "KVIrc-3.4.0.exe";
+$p_path[$package_count]        = "3.4.0/binary/win32";
+$p_description[$package_count] = "KVIrc 3.4.0, Windows binary";
+$p_details[$package_count]     = "The self-installing binary package for Windows built on top of the non-commercial version of the Qt library. Just double click on it after downloading.";
+$p_platform[$package_count]    = "win32";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "6853916";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Noldor (elfonol at gmail dot com)";
+$package_count++;
+
+
+
+
+// Older releases
+
 
 $p_filename[$package_count]    = "kvirc-3.2.0.tar.bz2";
 $p_path[$package_count]        = "3.2.0/source";
@@ -210,7 +254,6 @@ $package_count++;
 
 
 
-// Older releases
 
 $p_filename[$package_count]    = "kvirc-3.0.1.tar.bz2";
 $p_path[$package_count]        = "3.0.1/source";
