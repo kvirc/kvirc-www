@@ -120,7 +120,16 @@ $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "Noldor (elfonol at gmail dot com)";
 $package_count++;
 
-
+$p_filename[$package_count]    = "kvirc-3.4.0-i486-1.tgz";
+$p_path[$package_count]        = "3.4.0/binary/slackware";
+$p_description[$package_count] = "KVIrc 3.4.0, Slackware binary";
+$p_details[$package_count]     = "The self-installing binary package for Slackware built on top of glibc 2.7. Just use pkgtool to install after downloading.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "8386977";
+$p_group[$package_count]       = "slackware";
+$p_author[$package_count]      = "HelLViS69 (hellvis69 at netsons dot org)";
+$package_count++;
 
 
 // Older releases
