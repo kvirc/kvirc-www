@@ -9,32 +9,32 @@ $availVersions=array("3.2.1","3.2.3","3.2.4","3.2.5","3.2.6",$current);
 
 // Get environment
 if((strlen(getenv("SERVER_SOFTWARE")))!="0"){
-        $server=getenv("SERVER_SOFTWARE");
+	$server=getenv("SERVER_SOFTWARE");
 } else {
-        $server=$_SERVER['SERVER_SOFTWARE'];
+	$server=$_SERVER['SERVER_SOFTWARE'];
 }
 
 if((strlen(getenv("SERVER_NAME")))!="0"){
-        $servername=getenv("SERVER_NAME");
+	$servername=getenv("SERVER_NAME");
 } else {
-        $servername=$_SERVER['SERVER_NAME'];
+	$servername=$_SERVER['SERVER_NAME'];
 }
 
 // Get IPv6 environment
 if((strlen(getenv("REMOTE_ADDR")))!="0"){
-        $ip6=getenv("REMOTE_ADDR");
+	$ip6=getenv("REMOTE_ADDR");
 } else {
-        $ip6=$_SERVER['REMOTE_ADDR'];
+	$ip6=$_SERVER['REMOTE_ADDR'];
 }
 
 if(preg_match("/^::ffff:/",$ip6,$blah)){
-        $ip6 =substr($ip6,7);
+ 	$ip6 =substr($ip6,7);
 }
 
 if(preg_match("/:/",$ip6,$blah)){
-        $ip6_mode=1;
+	$ip6_mode=1;
 } else {
-        $ip6_mode=0;
+	$ip6_mode=0;
 }
 
 // WWW mirrors
