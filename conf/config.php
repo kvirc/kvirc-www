@@ -244,7 +244,7 @@ $splash=array(
 	array("name" => "3.2.0.99 CVS \"Marmalade\" (2)", "screen" => "splash-3.2.0.99.2.png", "alt" => "3.2.0.99", "motd" => "Hello, Hey Joe! You Wanna Give It a Go ?", "date" => "01.08.2005", "present" => ""),
 	array("name" => "3.2.4 CVS \"Anomalies\"", "screen" => "splash-3.2.0.20051230.png", "alt" => "3.2.4", "motd" => "Time makes no sense", "date" => "06.08.2006", "present" => "3.2.0.20051230, 3.2.1, 3.2.2, 3.2.3, 3.2.4"),
 	array("name" => "3.2.6 SVN \"Anomalies\"", "screen" => "splash-3.2.6-svn.png", "alt" => "3.2.6", "motd" => "Time makes no sense", "date" => "12.09.2006", "present" => "3.2.4, 3.2.5, 3.2.6"),
-	array("name" => "3.4.0 \"Virgo\"", "screen" => "splash-3.4.0.png", "alt" => "3.4.0", "motd" => "No matter how dark the night, somehow the Sun rises once again", "date" => "13-03-2008", "present" => "")
+	array("name" => "3.4.0 \"Virgo\"", "screen" => "splash-3.4.0.png", "alt" => "3.4.0", "motd" => "No matter how dark the night, somehow the Sun rises once again", "date" => "25-03-2008", "present" => "")
 );
 
 // Themes
