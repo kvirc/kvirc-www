@@ -55,6 +55,7 @@ $www_mirror=array(
 //array("name" => "name", "url" => "ftp url", "desc" => "description")
 $ftp_mirror=array(
 	1 => array("name" => "ftp.kvirc.net", "url" => "ftp://ftp.kvirc.net/pub/kvirc", "desc" => "ftp.kvirc.net: Primary FTP, Oslo, Norway (bandwidth by Norwegian Linux Community)"),
+	array("name" => "ftp.kvirc.ru", "url" => "ftp://ftp.kvirc.ru/pub/kvirc.net", "desc" => "ftp.kvirc.ru: Frankfurt am Main, Germany (managed by CtrlAltCa)"),
 	array("name" => "ftp.kvirc.de", "url" => "ftp://ftp.kvirc.de/pub/kvirc", "desc" => "ftp.kvirc.de: Bayreuth, Germany (bandwidth by cyconet.org)"),
 	array("name" => "kvirc.tradebit.com", "url" => "http://kvirc.tradebit.com/pub", "desc" => "kvirc.tradebit.com: New York, USA (bandwidth by tradebit.com)"),
 	array("name" => "kvirc.imsam.info", "url" => "http://kvirc.imsam.info", "desc" => "kvirc.imsam.info: Nuernberg, Germany (bandwidth by tradebit.com)"),
