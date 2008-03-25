@@ -34,7 +34,7 @@ This will be the last stable release of the 3.* series and also the last
 one using Qt3. From now on we'll be working on major version 4 and
 switching completly to Qt4. This release actually contains a preliminary
 Qt4 support and if you feel brave you might test it by passing
-the "hidden" --enable-qt swtich to configure.<br /><br />
+the "hidden" --enable-qt switch to configure.<br /><br />
 
 To download the latest release give a look at the <a href="?id=releases">download page</a><br /><br />
 
