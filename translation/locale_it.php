@@ -115,7 +115,7 @@ $template['custom']['homepage']="Homepage";
 $template['custom']['download']="Scarica";
 $template['custom']['downbig']="Grande";
 $template['custom']['date']="Data";
-$template['custom']['size']="Dimenzione";
+$template['custom']['size']="Dimensione";
 $template['custom']['version']="Versione";
 $template['custom']['type']="Tipo";
 /* custom vars end */
