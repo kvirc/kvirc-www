@@ -984,9 +984,9 @@ $template['splash']['in']="Splash Present in";
 /* status.php start */
 $template['status']['title']="Project Status";
 $template['status']['text']="
-	<p>After 7 years of development KVIrc is a mature and full featured IRC client, an excellent companion for your daily IRC sessions.</p>
-	<p>The latest stable release is <a href=\"/?id=news&amp;story=2005.02.27.16.29.1.story&amp;dir=2005.02&amp;lang=$lang\">3.2.0 \"Realia\"</a>.
-	It has been published on Feb 27 2005.
+	<p>After 9 years of development KVIrc is a mature and full featured IRC client, an excellent companion for your daily IRC sessions.</p>
+	<p>The latest stable release is <a href=\"?id=news&story=2008.03.25.02.02.1.story&dir=latest&lang=$lang\">3.4.0 \"Virgo\"</a>.
+	It has been published on Mar 25 2008.
 	It can be obtained in source form from the <a href=\"?id=download&amp;lang=$lang\">download</a> page.</p>
 	<p>If you are looking for official releases have a look at <a href=\"?id=releases&amp;lang=$lang\">this section</a>, those are released less often but are most stable. Choose your release between Linux, Windows, MacOSX or source package.</p>
 	<p>Snapshots are located <a href=\"?id=snapshots&amp;lang=$lang\">here</a> while SVN are found <a href=\"?id=SVN&amp;lang=$lang\">here</a>.</p>

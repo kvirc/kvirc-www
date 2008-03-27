@@ -983,8 +983,8 @@ $template['splash']['in']="Splash Presente in";
 /* status.php start */
 $template['status']['title']="Stato del Progetto";
 $template['status']['text']="
-	<p>Dopo 7 anni di sviluppo KVIrc è un client IRC maturo e pieno di caratteristiche, un eccellente compagno per le chattate quotidiane.</p>
-	<p>L'ultima release stabile è <a href=\"/?id=news&amp;story=2005.02.27.16.29.1.story&amp;dir=2005.02&amp;lang=$lang\">3.2.0 \"Realia\"</a>. E' stata pubblicata il 27 Febbraio 2005. Può essere ottenuta come sorgenti dalla pagina di <a href=\"?id=download&amp;lang=$lang\">download</a>.</p>
+	<p>Dopo 9 anni di sviluppo KVIrc è un client IRC maturo e pieno di caratteristiche, un eccellente compagno per le chattate quotidiane.</p>
+	<p>L'ultima release stabile è <a href=\"/?id=news&amp;story=2008.03.25.02.02.1.story&dir=latest&lang=$lang\">3.4.0 \"Virgo\"</a>. E' stata pubblicata il 25 Marzo 2008 e può essere ottenuta come sorgenti dalla pagina di <a href=\"?id=download&amp;lang=$lang\">download</a>.</p>
 	<p>Se stai cercando una release ufficiale dai un occhio a <a href=\"?id=releases&amp;lang=$lang\">questa sezione</a>, sono rilasciate meno spesso ma sono le più stabili. Scegli la tua release tra Linux, MacOS X, Windows o sorgenti.</p>
 	<p>Gli snapshot sono situati <a href=\"?id=snapshots&amp;lang=$lang\">qui</a> mentre l'SVN <a href=\"?id=SVN&amp;lang=$lang\">qui</a>.</p>
 	<p>Accertati di controllare le <a href=\"?id=install&amp;lang=$lang\">note d'installazione</a>, i <a href=\"?id=tutorials&amp;lang=$lang\">tutorial</a>, le <a href=\"?id=translation&amp;lang=$lang\">traduzioni</a> e i <a href=\"?id=themes&amp;lang=$lang\">temi</a> per una più personalizzata versione del tuo KVIrc =)</p>";

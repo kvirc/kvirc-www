@@ -984,7 +984,7 @@ $template['splash']['in']="Splash Present in";
 /* status.php start */
 $template['status']['title']="Statut du Projet";
 $template['status']['text']="
-	<p>Après 7 ans de developpement KVIrc est un client irc mature et complet, un excellent compagnon pour vos utilisations quotidiennes de l'irc.</p>
+	<p>Après 9 ans de developpement KVIrc est un client irc mature et complet, un excellent compagnon pour vos utilisations quotidiennes de l'irc.</p>
 	<p>La dernière version stable est <a href=\"/?id=news&amp;story=2005.02.27.16.29.1.story&amp;dir=2005.02&amp;lang=$lang\">3.2.0 \"Realia\"</a>.
 	Elle est sortie le 27 Février 2005.
 	Le code source peut-être obtenu sur <a href=\"?id=download&amp;lang=$lang\">la page de téléchargements</a>.</p>
