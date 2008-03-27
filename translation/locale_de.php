@@ -980,13 +980,10 @@ $template['splash']['in']="Bildschirm enthalten in";
 /* status.php start */
 $template['status']['title']="Projektstatus";
 $template['status']['text']="
-	<p>After 9 years of development KVIrc is a mature and full featured IRC client, an excellent companion for your daily IRC sessions.</p>
-	<p>The latest stable release is <a href=\"?id=news&story=2008.03.25.02.02.1.story&dir=latest&lang=$lang\">3.4.0 \"Virgo\"</a>.
-	It has been published on Mar 25 2008.
+	<p>Nach 9 Jahren Entwicklung ist KVIrc ein ausgereifter und voll ausgestatteter IRC-Client, ein exzellenter Begleiter für die täglichen IRC-Versammlungen.</p>
+	<p>Die aktuelle stabile Version ist <a href=\"?id=news&story=2008.03.25.02.02.1.story&dir=latest&lang=$lang\">3.4.0 \"Virgo\"</a>.
+	Sie wurde am 25. März 2008 veröffentlicht.
 
-	<p>Nach sieben Jahren Entwicklung ist KVIrc ausgereift und ein komplett ausgestattetes IRC-Anwenderprogramm, ein exzellenter Begleiter für Deine täglichen IRC-Sitzungen.</p
-	<p>Die letzte stabile Version is <a href=\"/?id=news&amp;story=2005.02.27.16.29.1.story&amp;dir=2005.02&amp;lang=$lang\">3.2.0 \"Realia\"</a>.
-	Sie wurde am 27. Februar 2005 veröffenticht.
 	Sie kann als Quelltext von der <a href=\"?id=download&amp;lang=$lang\">download</a>-Seite bezogen werden.</p>
 	<p>Wenn Du offizielle Veröffentlichungen suchst, schau mal in <a href=\"?id=releases&amp;lang=$lang\">diese Rubrik</a>, diese werden seltener veröffetnlicht, sind aber die stabisten. Wähle Deine Version zwischen Linux, Windows, MacOSX oder Quelltextpaket.</p>
 	<p>Snapshots befinden sich <a href=\"?id=snapshots&amp;lang=$lang\">hier</a>, während SVN <a href=\"?id=SVN&amp;lang=$lang\">hier</a> gefunden werden kann.</p>
