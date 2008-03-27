@@ -131,10 +131,30 @@ $p_group[$package_count]       = "slackware";
 $p_author[$package_count]      = "HelLViS69 (hellvis69 at netsons dot org)";
 $package_count++;
 
+$p_filename[$package_count]    = "KVIrc-3.4.0-intel.dmg";
+$p_path[$package_count]        = "3.4.0/binary/macosx";
+$p_description[$package_count] = "KVIrc 3.4.0, Macintosh binary";
+$p_details[$package_count]     = "The self-installing binary package for Machintosh built on Mac OS X Leopard (10.5.2). It should run on Tiger (10.4.x) as well.";
+$p_platform[$package_count]    = "macosx";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "10808707";
+$p_group[$package_count]       = "slackware";
+$p_author[$package_count]      = "Thomas Kalla (xtx@gmx.de)";
+$package_count++;
+
+$p_filename[$package_count]    = "KVIrc-3.4.0-ppc.dmg";
+$p_path[$package_count]        = "3.4.0/binary/macosx";
+$p_description[$package_count] = "KVIrc 3.4.0, Macintosh binary";
+$p_details[$package_count]     = "The self-installing binary package for Machintosh built on Mac OS X Panther (10.3.9).";
+$p_platform[$package_count]    = "macosx";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "11391024";
+$p_group[$package_count]       = "slackware";
+$p_author[$package_count]      = "Thomas Kalla (xtx@gmx.de)";
+$package_count++;
+
 
 // Older releases
-
-
 $p_filename[$package_count]    = "kvirc-3.2.0.tar.bz2";
 $p_path[$package_count]        = "3.2.0/source";
 $p_description[$package_count] = "KVIrc 3.2.0, sources (bzipped package)";
