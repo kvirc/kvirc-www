@@ -265,7 +265,7 @@ $template['donate']['alttext']="Spende an das KVIrc-Projekt via PayPal";
 /* download.php start */
 $template['download']['title']="Lade KVIrc";
 $template['download']['text1']="Du kannst KVIrc auf drei Arten erhalten:";
-$template['download']['text2']="Offiziell veröffentlichte Palete";
+$template['download']['text2']="Offiziell veröffentlichte Pakete";
 $template['download']['text3']="
 	Die offiziellen Pakete werden weniger häufig veröffentlicht, sind aber die stabilsten. Jedes offizielle Quelltext-Paket ist gut getestet und wird wahrscheinlich auf Deinem System kompilieren. Du hast auch mehrere Möglichkeiten, ein zu Deinem System passendes Binärpaket zu finden. Die hier abrufbaren hüfig-gestellten-Fragen und die Dokumentation beziehen sich auf diese Pakete.";
 $template['download']['text4']="Entwicklungs-Snapshots";
