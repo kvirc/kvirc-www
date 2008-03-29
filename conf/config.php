@@ -56,7 +56,6 @@ $www_mirror=array(
 $ftp_mirror=array(
 	1 => array("name" => "ftp.kvirc.net", "url" => "ftp://ftp.kvirc.net/pub/kvirc", "desc" => "ftp.kvirc.net: Primary FTP, Oslo, Norway (bandwidth by Norwegian Linux Community)"),
 	array("name" => "ftp.kvirc.ru", "url" => "ftp://ftp.kvirc.ru/pub/kvirc.net", "desc" => "ftp.kvirc.ru: Frankfurt am Main, Germany (managed by CtrlAltCa)"),
-	array("name" => "kvirc.gmake.de", "url" => "http://kvirc.gmake.de/pub/kvirc", "desc" => "kvirc.gmake.de: Frankfurt am Main, Germany (managed by Kuja^)"),
 	array("name" => "ftp.kvirc.de", "url" => "ftp://ftp.kvirc.de/pub/kvirc", "desc" => "ftp.kvirc.de: Bayreuth, Germany (bandwidth by cyconet.org)"),
 	array("name" => "kvirc.tradebit.com", "url" => "http://kvirc.tradebit.com/pub", "desc" => "kvirc.tradebit.com: New York, USA (bandwidth by tradebit.com)"),
 	array("name" => "kvirc.imsam.info", "url" => "http://kvirc.imsam.info", "desc" => "kvirc.imsam.info: Nuernberg, Germany (bandwidth by tradebit.com)"),
@@ -278,7 +277,8 @@ $themes=array(
 	array("name" => "GreenKDE", "version" => "1.0", "mail" => "youpiter [at] mail [dot] ru", "author" => "Youpiter", "desc" => $template['themes']['theme23'], "home" => "", "download" => "GreenKDE-1.0.kvt", "downbig" => "GreenKDE-1.1.2.kvt", "screen" => "theme_greenkde.jpg", "thumb" => "thumb_greenkde.jpg"),
 	array("name" => "Minimalist", "version" => "1.0", "mail" => "", "author" => "Stan", "desc" => $template['themes']['theme24'], "home" => "http://www.stantown.de", "download" => "Minimalist-1.0.kvt", "screen" => "theme_minimalist.png", "thumb" => "thumb_minimalist.png"),
 	array("name" => "Slightly Yellow", "version" => "1.0", "mail" => "mren [at] mrmx [dot] de", "author" => "mren_", "desc" => $template['themes']['theme25'], "home" => "", "download" => "Slightly_Yellow-1.0.kvt", "screen" => "theme_slightly.png", "thumb" => "thumb_slightly.png"),
-	array("name" => "YellowIRC", "version" => "1.0", "mail" => "pragma [at] kvirc [dot] net", "author" => "Pragma", "desc" => $template['themes']['theme26'], "home" => "http://pragmaware.net", "download" => "YellowIRC-1.0.0.kvt", "screen" => "theme_yellowirc.png", "thumb" => "thumb_yellowirc.png")
+	array("name" => "YellowIRC", "version" => "1.0", "mail" => "pragma [at] kvirc [dot] net", "author" => "Pragma", "desc" => $template['themes']['theme26'], "home" => "http://pragmaware.net", "download" => "YellowIRC-1.0.0.kvt", "screen" => "theme_yellowirc.png", "thumb" => "thumb_yellowirc.png"),
+	array("name" => "Love And Death", "version" => "1.0.5", "mail" => "", "author" => "DanBadJar", "desc" => $template['themes']['theme27'], "home" => "", "download" => "Love_and_Death-1.0.5.kvt", "screen" => "theme_loveanddeath.png", "thumb" => "thumb_loveanddeath.png")
 );
 
 // Tools

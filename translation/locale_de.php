@@ -1052,6 +1052,7 @@ $template['themes']['theme23']="Ein grünes Thema mit KDE-Logo";
 $template['themes']['theme24']="Sehr puristisches Thema";
 $template['themes']['theme25']="Ein Thema mit leicht gelben Hintergrund, basierend auf Pure von etherea`";
 $template['themes']['theme26']="Ein sonniges Sommerthema";
+$template['themes']['theme27']="A dark theme ported from a mirc script";
 /* themes.php end */
 
 /* tools.php start */
