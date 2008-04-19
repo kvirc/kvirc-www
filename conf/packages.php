@@ -99,8 +99,8 @@ $p_author[$package_count]      = "Szymon Stefanek (pragma at kvirc dot net)";
 $package_count++;
 
 $p_filename[$package_count]    = "kvirc-3.4.0.tar.gz";
-$p_path[$package_count]        = "3.2.0/source";
-$p_description[$package_count] = "KVIrc 3.2.0, sources (gzipped package)";
+$p_path[$package_count]        = "3.4.0/source";
+$p_description[$package_count] = "KVIrc 3.4.0, sources (gzipped package)";
 $p_details[$package_count]     = "Source tarball for both unix and windows version. The package is compressed using the gzip program, if you have bzip2 grab the *.bz2 format instead.";
 $p_platform[$package_count]    = "source";
 $p_version[$package_count]     = "3.4.0";
