@@ -1,8 +1,7 @@
 <?
 // Security check
-//if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
-//	echo "<script type=\"text/javascript\">location.href='..';</script>";
-var_dump($checkNetHack);
+if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
+	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
 // Some vars
 $current="3.4.0";
