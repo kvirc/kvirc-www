@@ -50,8 +50,8 @@ $group_details["slackware"]     = "Download this if you have a Slackware linux d
 $group_description["debian"]    = "Debian *.deb binary package";
 $group_details["debian"]        = "Download this if you have a Debian based system. The binary installation is splitted in two or three packages: executable , documentation and developement files";
 
-$group_description["suse"]      = "SuSE linux binary *.rpm";
-$group_details["suse"]          = "Download this if you have a SuSE linux distribution. This kind of package *might* also work on plain RedHat, Mandrake and other systems that can use rpms";
+$group_description["opensuse"]      = "OpenSUSE *.rpm binary package";
+$group_details["opensuse"]          = "Download this if you have an OpenSUSE linux distribution. This kind of package *might* also work on plain RedHat, Mandrake and other systems that can use rpms";
 
 $group_description["fedora"]    = "Fedora linux binary *.rpm";
 $group_details["fedora"]        = "Download this if you have a Fedora linux distribution. This kind of package *might* also work on plain RedHat, Mandrake and other systems that can use rpms";
@@ -151,6 +151,50 @@ $p_version[$package_count]     = "3.4.0";
 $p_size[$package_count]        = "11391024";
 $p_group[$package_count]       = "slackware";
 $p_author[$package_count]      = "Thomas Kalla (xtx@gmx.de)";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-3.4.0-4.3.i586.rpm";
+$p_path[$package_count]        = "3.4.0/binary/opensuse";
+$p_description[$package_count] = "KVIrc 3.4.0, OpenSUSE 10.3 binary";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "6290556";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-devel-3.4.0-4.3.i586.rpm";
+$p_path[$package_count]        = "3.4.0/binary/opensuse";
+$p_description[$package_count] = "KVIrc 3.4.0, OpenSUSE 10.3 binary";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "205661";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-3.4.0-4.3.x86_64.rpm";
+$p_path[$package_count]        = "3.4.0/binary/opensuse";
+$p_description[$package_count] = "KVIrc 3.4.0, OpenSUSE 10.3 binary for 64bit";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "6435643";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-devel-3.4.0-4.3.x86_64.rpm";
+$p_path[$package_count]        = "3.4.0/binary/opensuse";
+$p_description[$package_count] = "KVIrc 3.4.0, OpenSUSE 10.3 binary for 64bit";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "205776";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
 $package_count++;
 
 

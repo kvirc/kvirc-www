@@ -148,6 +148,7 @@ echo "<div class=\"column1-unit\">";
 		} else {
 			// more than 1 group and $group has not been selected
 			// now spit it out
+			echo "<p>";
 			echo $template['releases']['text3'].".<br /><br />";
 	
 			for($i = 0;$i < $av_groups;$i++){
@@ -163,6 +164,7 @@ echo "<div class=\"column1-unit\">";
 				}
 				echo "<br />";
 			}
+			echo "</p>";
 		}
 	}
 	?>
