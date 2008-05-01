@@ -120,6 +120,17 @@ $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "Noldor (elfonol at gmail dot com)";
 $package_count++;
 
+$p_filename[$package_count]    = "KVIrc-3.4.0-classic.exe";
+$p_path[$package_count]        = "3.4.0/binary/win32";
+$p_description[$package_count] = "KVIrc 3.4.0, Windows binary";
+$p_details[$package_count]     = "The self-installing binary package for Windows built on top of the non-commercial version of the Qt library. It uses the classic icon set. Just double click on it after downloading.";
+$p_platform[$package_count]    = "win32";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "6821414";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Noldor (elfonol at gmail dot com)";
+$package_count++;
+
 $p_filename[$package_count]    = "kvirc-3.4.0-i486-1.tgz";
 $p_path[$package_count]        = "3.4.0/binary/slackware";
 $p_description[$package_count] = "KVIrc 3.4.0, Slackware binary";
