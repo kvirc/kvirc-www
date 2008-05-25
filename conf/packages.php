@@ -208,6 +208,38 @@ $p_group[$package_count]       = "opensuse";
 $p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
 $package_count++;
 
+$p_filename[$package_count]    = "kvirc_3.4-0_i386.deb";
+$p_path[$package_count]        = "3.4.0/binary/debian";
+$p_description[$package_count] = "KVIrc 3.4.0, Debian sid binary";
+$p_details[$package_count]     = "The self-installing binary package for Debian.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "3586642";
+$p_group[$package_count]       = "debian";
+$p_author[$package_count]      = "k0sm|k0 (k0smik0 at logorroici dot org)";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-data_3.4-0_all.deb";
+$p_path[$package_count]        = "3.4.0/binary/debian";
+$p_description[$package_count] = "KVIrc 3.4.0, Debian sid binary";
+$p_details[$package_count]     = "The self-installing binary package for Debian.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "3606396";
+$p_group[$package_count]       = "debian";
+$p_author[$package_count]      = "k0sm|k0 (k0smik0 at logorroici dot org)";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-dev_3.4-0_i386.deb";
+$p_path[$package_count]        = "3.4.0/binary/debian";
+$p_description[$package_count] = "KVIrc 3.4.0, Debian sid binary";
+$p_details[$package_count]     = "The self-installing binary package for Debian.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "380016";
+$p_group[$package_count]       = "debian";
+$p_author[$package_count]      = "k0sm|k0 (k0smik0 at logorroici dot org)";
+$package_count++;
 
 // Older releases
 $p_filename[$package_count]    = "kvirc-3.2.0.tar.bz2";
