@@ -1056,6 +1056,7 @@ $template['themes']['theme24']="Very minimalistic theme";
 $template['themes']['theme25']="A theme with a slightly yellow background based on Pure by etherea`";
 $template['themes']['theme26']="A summer sunny theme";
 $template['themes']['theme27']="A dark theme ported from a mirc script";
+$template['themes']['theme28']="A theme which turns your KVIrc into a mIRC";
 /* themes.php end */
 
 /* tools.php start */

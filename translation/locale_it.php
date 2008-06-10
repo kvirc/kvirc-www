@@ -1053,6 +1053,7 @@ $template['themes']['theme24']="Tema molto minimalista";
 $template['themes']['theme25']="Un tema con uno sfondo giallo leggero basato sul tema Pure di etherea`";
 $template['themes']['theme26']="Un tema solare estivo";
 $template['themes']['theme27']="Un tema scuro portato da uno script per mirc";
+$template['themes']['theme28']="Un tema che farà diventare il vostro KVIrc simile a mIRC";
 /* themes.php end */
 
 /* tools.php start */
