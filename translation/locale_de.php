@@ -1062,6 +1062,7 @@ $template['tools']['text1']="Hier findest Du einige KVIrc-bezoge Werkzeuge";
 $template['tools']['tool1']="KVS-Syntax-Hervorhebung für Notepad++";
 $template['tools']['tool2']="Ein einfaches TCL-Skript für eggdrop-Bots, damit diese auf einige CTCP-Anfragen antworten";
 $template['tools']['tool3']="Ein RSS-Sydikations-TCL-Skript für eggdrop-Bots, um diese per Befehl SVN- und RSS-Feeds abrufen zu lassen.";
+$template['tools']['tool4']="A simple script written in TCL to check for GetText translation files and report possible errors";
 /* tools.php end */
 
 /* translation.php start */
