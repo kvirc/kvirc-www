@@ -87,6 +87,7 @@ if((strpos($hua,'Windows') !== false) || (strpos($hua,'WinXP') !== false))
 
 $package_count = 0;
 
+// Sources
 $p_filename[$package_count]    = "kvirc-3.4.0.tar.bz2";
 $p_path[$package_count]        = "3.4.0/source";
 $p_description[$package_count] = "KVIrc 3.4.0, sources (bzipped package)";
@@ -109,6 +110,7 @@ $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "Szymon Stefanek (pragma at kvirc dot net)";
 $package_count++;
 
+// Windows
 $p_filename[$package_count]    = "KVIrc-3.4.0.exe";
 $p_path[$package_count]        = "3.4.0/binary/win32";
 $p_description[$package_count] = "KVIrc 3.4.0, Windows binary";
@@ -120,9 +122,10 @@ $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "Noldor (elfonol at gmail dot com)";
 $package_count++;
 
+// Windows with Classic Icons
 $p_filename[$package_count]    = "KVIrc-3.4.0-classic.exe";
 $p_path[$package_count]        = "3.4.0/binary/win32";
-$p_description[$package_count] = "KVIrc 3.4.0, Windows binary";
+$p_description[$package_count] = "KVIrc 3.4.0, Windows Classic binary";
 $p_details[$package_count]     = "The self-installing binary package for Windows built on top of the non-commercial version of the Qt library. It uses the classic icon set. Just double click on it after downloading.";
 $p_platform[$package_count]    = "win32";
 $p_version[$package_count]     = "3.4.0";
@@ -131,10 +134,11 @@ $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "Noldor (elfonol at gmail dot com)";
 $package_count++;
 
+// Slackware 12.1
 $p_filename[$package_count]    = "kvirc-3.4.0-i486-1.tgz";
 $p_path[$package_count]        = "3.4.0/binary/slackware";
-$p_description[$package_count] = "KVIrc 3.4.0, Slackware binary";
-$p_details[$package_count]     = "The self-installing binary package for Slackware built on top of glibc 2.7. Just use pkgtool to install after downloading.";
+$p_description[$package_count] = "KVIrc 3.4.0, Slackware 12.1 binary";
+$p_details[$package_count]     = "The self-installing binary package for Slackware 12.1 built on top of glibc 2.7. Just use pkgtool to install after downloading.";
 $p_platform[$package_count]    = "unix";
 $p_version[$package_count]     = "3.4.0";
 $p_size[$package_count]        = "8386977";
@@ -142,9 +146,10 @@ $p_group[$package_count]       = "slackware";
 $p_author[$package_count]      = "HelLViS69 (hellvis69 at netsons dot org)";
 $package_count++;
 
+// MacOS X Intel
 $p_filename[$package_count]    = "KVIrc-3.4.0-intel.dmg";
 $p_path[$package_count]        = "3.4.0/binary/macosx";
-$p_description[$package_count] = "KVIrc 3.4.0, Macintosh binary";
+$p_description[$package_count] = "KVIrc 3.4.0, Macintosh Intel binary";
 $p_details[$package_count]     = "The self-installing binary package for Machintosh built on Mac OS X Leopard (10.5.2). It should run on Tiger (10.4.x) as well.";
 $p_platform[$package_count]    = "macosx";
 $p_version[$package_count]     = "3.4.0";
@@ -153,9 +158,10 @@ $p_group[$package_count]       = "slackware";
 $p_author[$package_count]      = "Thomas Kalla (xtx@gmx.de)";
 $package_count++;
 
+// MacOS X PPC
 $p_filename[$package_count]    = "KVIrc-3.4.0-ppc.dmg";
 $p_path[$package_count]        = "3.4.0/binary/macosx";
-$p_description[$package_count] = "KVIrc 3.4.0, Macintosh binary";
+$p_description[$package_count] = "KVIrc 3.4.0, Macintosh PPC binary";
 $p_details[$package_count]     = "The self-installing binary package for Machintosh built on Mac OS X Panther (10.3.9).";
 $p_platform[$package_count]    = "macosx";
 $p_version[$package_count]     = "3.4.0";
@@ -164,10 +170,11 @@ $p_group[$package_count]       = "slackware";
 $p_author[$package_count]      = "Thomas Kalla (xtx@gmx.de)";
 $package_count++;
 
+// openSUSE 10.3
 $p_filename[$package_count]    = "kvirc-3.4.0-4.3.i586.rpm";
-$p_path[$package_count]        = "3.4.0/binary/opensuse";
+$p_path[$package_count]        = "3.4.0/binary/opensuse/10.3";
 $p_description[$package_count] = "KVIrc 3.4.0, OpenSUSE 10.3 binary";
-$p_details[$package_count]     = "The self-installing binary package for OpenSUSE.";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 10.3.";
 $p_platform[$package_count]    = "unix";
 $p_version[$package_count]     = "3.4.0";
 $p_size[$package_count]        = "6290556";
@@ -176,9 +183,9 @@ $p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)"
 $package_count++;
 
 $p_filename[$package_count]    = "kvirc-devel-3.4.0-4.3.i586.rpm";
-$p_path[$package_count]        = "3.4.0/binary/opensuse";
+$p_path[$package_count]        = "3.4.0/binary/opensuse/10.3";
 $p_description[$package_count] = "KVIrc 3.4.0, OpenSUSE 10.3 binary";
-$p_details[$package_count]     = "The self-installing binary package for OpenSUSE.";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 10.3.";
 $p_platform[$package_count]    = "unix";
 $p_version[$package_count]     = "3.4.0";
 $p_size[$package_count]        = "205661";
@@ -186,10 +193,11 @@ $p_group[$package_count]       = "opensuse";
 $p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
 $package_count++;
 
+// openSUSE 10.3 64bit
 $p_filename[$package_count]    = "kvirc-3.4.0-4.3.x86_64.rpm";
-$p_path[$package_count]        = "3.4.0/binary/opensuse";
+$p_path[$package_count]        = "3.4.0/binary/opensuse/10.3";
 $p_description[$package_count] = "KVIrc 3.4.0, OpenSUSE 10.3 binary for 64bit";
-$p_details[$package_count]     = "The self-installing binary package for OpenSUSE.";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 10.3 for 64bit.";
 $p_platform[$package_count]    = "unix";
 $p_version[$package_count]     = "3.4.0";
 $p_size[$package_count]        = "6435643";
@@ -198,9 +206,9 @@ $p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)"
 $package_count++;
 
 $p_filename[$package_count]    = "kvirc-devel-3.4.0-4.3.x86_64.rpm";
-$p_path[$package_count]        = "3.4.0/binary/opensuse";
+$p_path[$package_count]        = "3.4.0/binary/opensuse/10.3";
 $p_description[$package_count] = "KVIrc 3.4.0, OpenSUSE 10.3 binary for 64bit";
-$p_details[$package_count]     = "The self-installing binary package for OpenSUSE.";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 10.3 for 64bit.";
 $p_platform[$package_count]    = "unix";
 $p_version[$package_count]     = "3.4.0";
 $p_size[$package_count]        = "205776";
@@ -208,6 +216,53 @@ $p_group[$package_count]       = "opensuse";
 $p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
 $package_count++;
 
+// openSUSE 11.0
+$p_filename[$package_count]    = "kvirc-3.4.0-4.2.i586.rpm";
+$p_path[$package_count]        = "3.4.0/binary/opensuse/11.0";
+$p_description[$package_count] = "KVIrc 3.4.0, OpenSUSE 11.0 binary";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.0.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "5450961";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-devel-3.4.0-4.2.i586.rpm";
+$p_path[$package_count]        = "3.4.0/binary/opensuse/11.0";
+$p_description[$package_count] = "KVIrc 3.4.0, OpenSUSE 11.0 binary";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.0.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "225143";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+// openSUSE 11.0 64bit
+$p_filename[$package_count]    = "kvirc-3.4.0-4.2.x86_64.rpm";
+$p_path[$package_count]        = "3.4.0/binary/opensuse/11.0";
+$p_description[$package_count] = "KVIrc 3.4.0, OpenSUSE 11.0 binary for 64bit";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.0.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "5535974";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-devel-3.4.0-4.2.x86_64.rpm";
+$p_path[$package_count]        = "3.4.0/binary/opensuse/11.0";
+$p_description[$package_count] = "KVIrc 3.4.0, OpenSUSE 11.0 binary for 64bit";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.0.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "225109";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+// Debian
 $p_filename[$package_count]    = "kvirc_3.4-0_i386.deb";
 $p_path[$package_count]        = "3.4.0/binary/debian";
 $p_description[$package_count] = "KVIrc 3.4.0, Debian sid binary";
