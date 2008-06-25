@@ -1,6 +1,53 @@
+buh :) - 25 June 2008
+   [KVIrc Development Team]
+   - Qt4 porting (wip)
+   - Fixed many bugs
+   - New build system: removed autotools in favour of CMake (thanks to all peple who aid reaching this point :)
+
+   [HelLViS69]
+   - finally updated this file :)
+   - New StatusBar applet: Update Indicator
+   - New KVS command 'continue'
+   - Improved About module
+
+   [Voker57]
+   - New audio support: Phonon (wip)
+
+   [desowin]
+   - New mediaplayer support: added Audacious Media Player and MPRIS backend
+
+
+
+
+02 May 2007 - 12 March 2008
+   [KVIrc Development Team]
+   - A lot of changes documented in the svn log. See http://svn.kvirc.de/kvirc/ for the timeline.
+
+02 May 2007
+   [Alexey]
+   - New KVS functions: $serialize and $unserialize to deal with JSON-serialized strings
+   
+16 Apr 2007
+   [Noldor] (with the input from Pragma and Iakko)
+   - Iakko's notifier is back. New in this version:
+     1) QT4 compatible (on win and macos it is uses fast setWindowOpacity effect instead internal notifier blend())
+	 2) Added Option to disable fadein/out effect useful on slow machine (need test)
+	 3) Fixed strange crash on QT4 and some minor bug in show/hide event. (it is a trick... need to debug)
+	 This a w.i.p. and need some test on linux.
+	 
+12 Apr 2007
+   [TheXception]
+   - Added $system.call to call functions of dll/so files via kvs.
+
+10 Apr 2007
+   [Alexey]
+   - Configurable avatar scaling on load
+   - Human-redable file sized on dcc transfers
+   
 12 Mar 2007
    [Alexey]
    - Added support for remote dns on socks5 proxy
+   - Added option to configure identd output mode
 
 06 Mar 2007
    [Pragma]
