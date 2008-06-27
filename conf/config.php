@@ -290,7 +290,7 @@ $tools=array(
 	1 => array("name" => "Notepad++ KVS-Syntax", "author" => "TheXception", "mail" => "kvirc [at] thexception [dot] net", "desc" => $template['tools']['tool1'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/tools/kvs-notepad++.zip"),
 	array("name" => "KVIrc TCL", "author" => array("HelLViS69","CtrlAltCa"), "mail" => array("hellvis69 [at] netsons [dot] org","ctrlaltca [at] gmail [dot] com"), "desc" => $template['tools']['tool2'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/tools/kvirc-2.0.tcl.bz2"),
 	array("name" => "KVIrc SVN/Trac Syndacator", "author" => "HelLViS69", "mail" => "hellvis69 [at] netsons [dot] org", "desc" => $template['tools']['tool3'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/tools/kvircrss-2.0.tcl.bz2"),
-	array("name" => "GetText Checker", "author" => "aleksanteri", "mail" => "aleksanteri4028 [at] gmail [dot] com", "desc" => $template['tools']['tool4'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/tools/gtc-1.0.tcl.bz2")
+	array("name" => "GetText Checker", "author" => "aleksanteri", "mail" => "aleksanteri4028 [at] gmail [dot] com", "desc" => $template['tools']['tool4'], "url" => "ftp://ftp.kvirc.net/pub/kvirc/tools/gtc-0.2.tcl.bz2")
 );
 
 // Translations (keep 'em in alphabetical order)
