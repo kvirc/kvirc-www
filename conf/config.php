@@ -281,7 +281,8 @@ $themes=array(
 	array("name" => "Slightly Yellow", "version" => "1.0", "mail" => "mren [at] mrmx [dot] de", "author" => "mren_", "desc" => $template['themes']['theme25'], "home" => "", "download" => "Slightly_Yellow-1.0.kvt", "screen" => "theme_slightly.png", "thumb" => "thumb_slightly.png"),
 	array("name" => "YellowIRC", "version" => "1.0", "mail" => "pragma [at] kvirc [dot] net", "author" => "Pragma", "desc" => $template['themes']['theme26'], "home" => "http://pragmaware.net", "download" => "YellowIRC-1.0.0.kvt", "screen" => "theme_yellowirc.png", "thumb" => "thumb_yellowirc.png"),
 	array("name" => "Love And Death", "version" => "1.0.5", "mail" => "", "author" => "DanBadJar", "desc" => $template['themes']['theme27'], "home" => "", "download" => "Love_and_Death-1.0.5.kvt", "screen" => "theme_loveanddeath.png", "thumb" => "thumb_loveanddeath.png"),
-	array("name" => "mIRC", "version" => "1.1", "mail" => "sonichedgehog_hyperblast00 [at] yahoo [dot] com", "author" => "Taoki", "desc" => $template['themes']['theme28'], "home" => "", "download" => "mIRC-1.1.kvt", "screen" => "theme_mirc.png", "thumb" => "thumb_mirc.png")
+	array("name" => "mIRC", "version" => "1.1", "mail" => "sonichedgehog_hyperblast00 [at] yahoo [dot] com", "author" => "Taoki", "desc" => $template['themes']['theme28'], "home" => "", "download" => "mIRC-1.1.kvt", "screen" => "theme_mirc.png", "thumb" => "thumb_mirc.png"),
+	array("name" => "SilverEx_Clone", "version" => "0.1", "mail" => "vampiermsx [at] gmail [dot] com", "author" => "Vampier", "desc" => $template['themes']['theme29'], "home" => "", "download" => "SilverEx_Clone-0.1.kvt", "screen" => "theme_silverexclone.png", "thumb" => "thumb_silverexclone.png")
 );
 
 // Tools

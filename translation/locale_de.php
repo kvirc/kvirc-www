@@ -1054,6 +1054,7 @@ $template['themes']['theme25']="Ein Thema mit leicht gelben Hintergrund, basiere
 $template['themes']['theme26']="Ein sonniges Sommerthema";
 $template['themes']['theme27']="Ein dunkles Thema, portiert von einem mIRC-Skript";
 $template['themes']['theme28']="Ein Thema, dass KVIrc wie mIRC aussehen lässt";
+$template['themes']['theme29']="An ultra minimalistic theme";
 /* themes.php end */
 
 /* tools.php start */
