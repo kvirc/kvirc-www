@@ -1054,7 +1054,7 @@ $template['themes']['theme25']="Ein Thema mit leicht gelben Hintergrund, basiere
 $template['themes']['theme26']="Ein sonniges Sommerthema";
 $template['themes']['theme27']="Ein dunkles Thema, portiert von einem mIRC-Skript";
 $template['themes']['theme28']="Ein Thema, dass KVIrc wie mIRC aussehen lässt";
-$template['themes']['theme29']="An ultra minimalistic theme";
+$template['themes']['theme29']="Ein äußerst minimalistisches Thema";
 /* themes.php end */
 
 /* tools.php start */
@@ -1063,7 +1063,7 @@ $template['tools']['text1']="Hier findest Du einige KVIrc-bezoge Werkzeuge";
 $template['tools']['tool1']="KVS-Syntax-Hervorhebung für Notepad++";
 $template['tools']['tool2']="Ein einfaches TCL-Skript für eggdrop-Bots, damit diese auf einige CTCP-Anfragen antworten";
 $template['tools']['tool3']="Ein RSS-Sydikations-TCL-Skript für eggdrop-Bots, um diese per Befehl SVN- und RSS-Feeds abrufen zu lassen.";
-$template['tools']['tool4']="A simple script written in TCL to check for GetText translation files and report possible errors";
+$template['tools']['tool4']="Ein einfaches TCL-Skript, um gettext-Übersetzungen zu prüfen und evtl. Fehler zu melden";
 /* tools.php end */
 
 /* translation.php start */
