@@ -1030,7 +1030,7 @@ $template['themes']['theme1']="Eine Augenweide, basierend auf dem Marble-Icon-Se
 $template['themes']['theme2']="Ein klares Thema mit Crystal-Icons. Einige Icons sind dem Marble-Icon-Set entnommen.";
 $template['themes']['theme3']="Ein Thema mit grünem Hintergrund.";
 $template['themes']['theme4']="Ein dunkles Thema.";
-$template['themes']['theme5']="White aqua rounded.";
+$template['themes']['theme5']="Aqua, weiß, abgerundete Ecken.";
 $template['themes']['theme6']="Einfach ein rosafarbenes Beispiel...";
 $template['themes']['theme7']="Ein transparentes Thema, hauptsächlich für die Nutzung des KDE-Hintergrunds. Eingestellt für gute Sicht und Kontrast.";
 $template['themes']['theme8']="Ein ziemlich entspanntes Thema, inspiriert durch http://www.PayneReactor.com";
@@ -1055,7 +1055,7 @@ $template['themes']['theme26']="Ein sonniges Sommerthema";
 $template['themes']['theme27']="Ein dunkles Thema, portiert von einem mIRC-Skript";
 $template['themes']['theme28']="Ein Thema, dass KVIrc wie mIRC aussehen lässt";
 $template['themes']['theme29']="Ein äußerst minimalistisches Thema";
-$template['themes']['theme30']="The theme which light your minds";
+$template['themes']['theme30']="Ein Thema, welches Deinen Geist erhellt";
 /* themes.php end */
 
 /* tools.php start */
