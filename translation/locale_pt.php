@@ -1059,6 +1059,7 @@ $template['themes']['theme26']="A summer sunny theme";
 $template['themes']['theme27']="A dark theme ported from a mirc script";
 $template['themes']['theme28']="A theme which turns your KVIrc into a mIRC";
 $template['themes']['theme29']="An ultra minimalistic theme";
+$template['themes']['theme30']="The theme which light your minds";
 /* themes.php end */
 
 /* tools.php start */
