@@ -359,7 +359,7 @@ $template['faq']['text16a']="Ich erhalte Kompilierfehler wie diesen:<br />
 $template['faq']['text16b1']="Dieser Fehler kann verschiedene Ursachen haben";
 $template['faq']['text16b1a']="
 	Ein Kompiliererfehler: mein GCC 3.2 20020903 (Standard bei RH 8.0) gibt täglich 5-6 von diesen Fehlern aus. Normalerweise lassen die sich einfach lösen, indem man das Kommando \"make\"  erneut aufruft. <br />
-	Wenn dies nciht hilft, oder es ziemlich häufig auftritt und es störend ist, kannst Du Deinen Kompilierer aktualisieren";
+	Wenn dies nicht hilft, oder es ziemlich häufig auftritt und es störend ist, kannst Du Deinen Kompilierer aktualisieren";
 $template['faq']['text16b1b']="
 	Eine Speicherverfälschung: Dies ist wirklich häufig. Eine der Speicherbänke gibt manchmal wahllos Bytes zurück. Normalerweise tritt das Problem unter hoher Systemlast auf (z. B. Kern, KDE oder KVIrc Kompilation). Du kannst auf diesen Fehler testen, indem Du verschiedene RAM-Module testest (oder eins nach dem anderen ausbaust, um das defelte zu finden). Du kannst auch das Programm memtest testen und ein Kernel-Patch kann das kaputte Speichermodul ignorieren (wird permanent einer Scheinaufgabe des Kernels zugewiesen).<br />
 	Diese Werkzeuge kasnt Du mit Deiner Lieblingssuchmaschine im Web finden";
@@ -664,13 +664,13 @@ $template['install']['tree2o']="
 	Das configure-Skript sucht die KDE-Headers und -Bibliotheken und wenn es sie findet, aktiviert es die KDE-Unterstützung. Wenn Du die KDE-Unterstützung nicht haben willst, obwohl KDE gefunden wurde, nutze diesen Schalter";
 $template['install']['tree2p']="
 	Suche die KDE-Bibliotheken in &lt;DIR&gt;<br />
-	Wenn \$KDEDIR auf den richtigen Ort zeigt, solltest Du dies nciht brauchen";
+	Wenn \$KDEDIR auf den richtigen Ort zeigt, solltest Du dies nicht brauchen";
 $template['install']['tree2q']="
 	Suche die KDE-Headers in &lt;DIR&gt;<br />
-	Wenn \$KDEDIR auf den richtigen Ort zeigt, solltest Du dies nciht brauchen";
+	Wenn \$KDEDIR auf den richtigen Ort zeigt, solltest Du dies nicht brauchen";
 $template['install']['tree2r']="
 	Installiere die KDE-Service-Protokoll-Dateien nach &lt;DIR&gt;<br />
-	Wenn \$KDEDIR auf den richtigen Ort zeigt, solltest Du dies nciht brauchen<br />
+	Wenn \$KDEDIR auf den richtigen Ort zeigt, solltest Du dies nicht brauchen<br />
 	Dies ist für KVIrc nicht kritisch: Wenn configure dieses Verzeichnis nicht finden kann, verlierst Du nur die Unterstützung für irc://-URLs in Konqueror";
 $template['install']['tree2s']="Wie --without-qt-check, aber für KDE";
 $template['install']['tree2t']="
@@ -699,7 +699,7 @@ $template['install']['tree2a2']="Linke gegen libsocket. Ich vermute, dies wird b
 $template['install']['tree2a3']="Linke gegeb libnsl. Ich vermute, dies wird bei Solaris benötigt";
 $template['install']['tree2a4']="
 	Linke gegen libcompat. Dies kann bei einigen Systemen benötigt sein...<br />
-	aber ich weiß nciht, bei welchen. Wenn Du es hilfreich findest, schick mir ein E-Mail";
+	aber ich weiß nicht, bei welchen. Wenn Du es hilfreich findest, schick mir ein E-Mail";
 $template['install']['tree2a5']="
 	Deaktiviert die Erstellung der Laufzeit-Type-Informationen des Kompiliererscompiler. Dies wird hauptsächlich für Qt-embedded gebraucht";
 $template['install']['tree2a6']="
@@ -736,9 +736,9 @@ $template['install']['tree2b8']="
 	Deaktiviere explizit die DCC-VOICE-Sound-Unterstützung. Dies kann helfen, wenn Du Probleme hast, src/modules/dcc/voice.cpp zu kompilieren. Es deaktiviert die Sound-Unterstützung (und daher ist DCC VOICE nicht benutzbar)";
 $template['install']['tree2b9']="
 	Deaktiviert SSL. Die SSL-Unterstützun ist automatisch aktiviert, wenn configure OpenSSL findet. Diese Option lässt diese Suche aus";
-$template['install']['tree2c1']="Debug stuff...enables memory allocation profiling (Nutze es nicht :)";			//TODO
+$template['install']['tree2c1']="Zum Fehlersuchen...erstellt ein Profil der Speicher-Allokierung (Nutze es nicht :)";
 $template['install']['tree2c2']="
-	Aktiviert malloc() Speicherchecks. Dies gibt eine nette Nachricht aus, wenn Deinem System der Speicher ausgeht... Es kann Dir nciht ersparen, neuen RAM zu kaufen, aber zumindest weißt Du, dass Dein System zu wenig Speicher hat und es nicht die Schuld von KVIrc ist. Eigentlich solltest Du keinen Grund haben, es zu nutzen";
+	Aktiviert malloc() Speicherchecks. Dies gibt eine nette Nachricht aus, wenn Deinem System der Speicher ausgeht... Es kann Dir nicht ersparen, neuen RAM zu kaufen, aber zumindest weißt Du, dass Dein System zu wenig Speicher hat und es nicht die Schuld von KVIrc ist. Eigentlich solltest Du keinen Grund haben, es zu nutzen";
 $template['install']['tree2c3']="
 	Kleinere Hash-Tabellen-Optimierungen: Höhere Speichernutzung, aber schnellere Benutzersuchen. Nutze dies, wenn Du öfters in Kanälen mit vielen Benutzern bist. (Dies ist nicht kritisch)";
 $template['install']['text21']="Schließlich musst Du aufrufen:";
@@ -1023,7 +1023,7 @@ $template['themes']['text3b3']="finden kannst und eine italienische Version";
 $template['themes']['text3b4']="Die englische Kurzanleitung ist auch im KVIrc-Paket enthalten";
 $template['themes']['text4a']="Ich habe ein Thema erstellt. Wie kann ich es mit anderen teilen";	
 $template['themes']['text4b']="Du kannst es an";
-$template['themes']['text4c']="senden, inklusive eines Themennamens, Beschreibung, Version, Spitzname, Homepage und E-Mail, erlaube uns (oder nciht) diese auf der Homepage zu zeigen";
+$template['themes']['text4c']="senden, inklusive eines Themennamens, Beschreibung, Version, Spitzname, Homepage und E-Mail, erlaube uns (oder nicht) diese auf der Homepage zu zeigen";
 $template['themes']['text5']="Alle Downloads sind für eine Auflösung von 1024x768 gedacht.<br />Wenn Du eine 1280x1024-Version verteilen willst, sende sie einfach mit einer 1024x768 Version ein.";
 $template['themes']['screenshot']="Screenshot";
 $template['themes']['theme1']="Eine Augenweide, basierend auf dem Marble-Icon-Set.";
@@ -1101,7 +1101,7 @@ $template['translation']['text14']="Die Meldungen übersetzen";
 $template['translation']['text15a']="
 	Wenn Du Schritt 2 ausgeführt hast, hast Du die Datei <code>kvirc_xxx.po</code> erstellt, wobei xxx für den Sprachcode (aus Schritt 1) steht.<br />
 	Wenn Du direkt von Schritt 1 kommst, dann musst Du die existierende Datei <code>kvirc_xxx.po</code> in dem <code>kvirc/po/kvirc</code>-Verzeichnis finden.<br />
-	Wenn sie nciht dort ist, gehe zurück zu Schritt 2.";
+	Wenn sie nicht dort ist, gehe zurück zu Schritt 2.";
 $template['translation']['text15b']="
 	Die Datei <code>kvirc_xxx.po</code> enthält eine Reihe von Zeichenketten, wie die folgende:";
 +$template['translation']['text100a']="/Pfad/zu/der/Datei/die/die/Zeichenkette/enthält: Zeilennummer";
