@@ -1059,6 +1059,7 @@ $template['themes']['theme27']="A dark theme ported from a mirc script";
 $template['themes']['theme28']="A theme which turns your KVIrc into a mIRC";
 $template['themes']['theme29']="An ultra minimalistic theme";
 $template['themes']['theme30']="The theme which light your minds";
+$template['themes']['theme31']="A theme inspired by R.A. Salvatore's novels about the Drow (Dark Elves) and specifically Drizzt Do'Urden";
 /* themes.php end */
 
 /* tools.php start */

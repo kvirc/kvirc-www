@@ -283,7 +283,8 @@ $themes=array(
 	array("name" => "Love And Death", "version" => "1.0.5", "mail" => "", "author" => "DanBadJar", "desc" => $template['themes']['theme27'], "home" => "", "download" => "Love_and_Death-1.0.5.kvt", "screen" => "theme_loveanddeath.png", "thumb" => "thumb_loveanddeath.png"),
 	array("name" => "mIRC", "version" => "1.1", "mail" => "sonichedgehog_hyperblast00 [at] yahoo [dot] com", "author" => "Taoki", "desc" => $template['themes']['theme28'], "home" => "", "download" => "mIRC-1.1.kvt", "screen" => "theme_mirc.png", "thumb" => "thumb_mirc.png"),
 	array("name" => "SilverEx_Clone", "version" => "0.1", "mail" => "vampiermsx [at] gmail [dot] com", "author" => "Vampier", "desc" => $template['themes']['theme29'], "home" => "", "download" => "SilverEx_Clone-0.1.kvt", "screen" => "theme_silverexclone.png", "thumb" => "thumb_silverexclone.png"),
-	array("name" => "Light My Fire!", "version" => "0.3", "mail" => "k0smik0 [at] logorroici [dot] org", "author" => "k0sm|k0", "desc" => $template['themes']['theme30'], "home" => "", "download" => "Light_My_Fire-0.3.kvt", "screen" => "theme_lightmyfire.png", "thumb" => "thumb_lightmyfire.png")
+	array("name" => "Light My Fire!", "version" => "0.3", "mail" => "k0smik0 [at] logorroici [dot] org", "author" => "k0sm|k0", "desc" => $template['themes']['theme30'], "home" => "", "download" => "Light_My_Fire-0.3.kvt", "screen" => "theme_lightmyfire.png", "thumb" => "thumb_lightmyfire.png"),
+	array("name" => "Drow", "version" => "1.0", "mail" => "yoyo.pete [at] gmail [dot] com", "author" => "YoYo-Pete", "desc" => $template['themes']['theme31'], "home" => "", "download" => "Drow-1.0.kvt", "screen" => "theme_drow.png", "thumb" => "thumb_drow.png")
 
 	// without info, not listed
 	//array("name" => "Burst Rebird", "version" => "0.1", "mail" => "", "author" => "", "desc" => "", "home" => "", "download" => "BurstRebird-0.1.kvt", "screen" => "", "thumb" => ""),
