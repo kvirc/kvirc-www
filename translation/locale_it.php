@@ -1057,6 +1057,7 @@ $template['themes']['theme28']="Un tema che farà diventare il vostro KVIrc simi
 $template['themes']['theme29']="Un tema veramente minimalistico";
 $template['themes']['theme30']="Il tema che ti accende la mente";
 $template['themes']['theme31']="Un tema ispirato ai racconti di R.A. Salvatore sui Drow (Elfi Oscuri) ed in particolare Drizzt Do'Urden";
+$template['themes']['theme32']="...perché tutto il mondo è un bellissimo frattale!";
 /* themes.php end */
 
 /* tools.php start */

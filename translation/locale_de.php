@@ -1057,6 +1057,7 @@ $template['themes']['theme28']="Ein Thema, dass KVIrc wie mIRC aussehen lässt";
 $template['themes']['theme29']="Ein äußerst minimalistisches Thema";
 $template['themes']['theme30']="Ein Thema, welches Deinen Geist erhellt";
 $template['themes']['theme31']="Ein Thema inspiriert durch R.A. Salvatores Romane über die Drow (Dunkelelfen) und besonders Drizzt Do'Urden";
+$template['themes']['theme32']="...because all world is a beautiful fractal!";
 /* themes.php end */
 
 /* tools.php start */
