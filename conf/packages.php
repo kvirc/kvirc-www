@@ -48,16 +48,19 @@ $group_description["slackware"] = "Slackware *.tgz binary package";
 $group_details["slackware"]     = "Download this if you have a Slackware linux distribution.";
 
 $group_description["debian"]    = "Debian *.deb binary package";
-$group_details["debian"]        = "Download this if you have a Debian based system. The binary installation is splitted in two or three packages: executable , documentation and developement files";
+$group_details["debian"]        = "Download this if you have a Debian based system. The binary installation is splitted in two or three packages: executable , documentation and developement files.";
 
-$group_description["opensuse"]      = "OpenSUSE *.rpm binary package";
-$group_details["opensuse"]          = "Download this if you have an OpenSUSE linux distribution. This kind of package *might* also work on plain RedHat, Mandrake and other systems that can use rpms";
+$group_description["opensuse"]  = "OpenSUSE *.rpm binary package";
+$group_details["opensuse"]      = "Download this if you have an OpenSUSE linux distribution. This kind of package *might* also work on plain RedHat, Mandrake and other systems that can use rpms.";
 
 $group_description["fedora"]    = "Fedora linux binary *.rpm";
-$group_details["fedora"]        = "Download this if you have a Fedora linux distribution. This kind of package *might* also work on plain RedHat, Mandrake and other systems that can use rpms";
+$group_details["fedora"]        = "Download this if you have a Fedora linux distribution. This kind of package *might* also work on plain RedHat, Mandrake and other systems that can use rpms.";
 
 $group_description["mandrake"]  = "Mandrake linux binary *.rpm";
 $group_details["mandrake"]      = "Download this if you have a Mandrake linux distribution. This kind of package *might* also work on plain RedHat, SuSE and other rpm-enabled systems.";
+
+$group_description["ubuntu"]    = "Ubuntu *.deb binary package";
+$group_details["ubuntu"]        = "Download this if you have a Ubuntu linux distribution.";
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // The available packages
@@ -294,6 +297,28 @@ $p_version[$package_count]     = "3.4.0";
 $p_size[$package_count]        = "380016";
 $p_group[$package_count]       = "debian";
 $p_author[$package_count]      = "k0sm|k0 (k0smik0 at logorroici dot org)";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc_3.4.0-1_i386.deb";
+$p_path[$package_count]        = "3.4.0/binary/ubuntu";
+$p_description[$package_count] = "KVIrc 3.4.0, Ubuntu 8.04 binary";
+$p_details[$package_count]     = "The self-installing binary package for Ubuntu 8.04.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "7423242";
+$p_group[$package_count]       = "ubuntu";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc_3.4.0-1_amd64.deb";
+$p_path[$package_count]        = "3.4.0/binary/ubuntu";
+$p_description[$package_count] = "KVIrc 3.4.0, Ubuntu 8.04 binary for AMD64";
+$p_details[$package_count]     = "The self-installing binary package for Ubuntu 8.04.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.0";
+$p_size[$package_count]        = "7467628";
+$p_group[$package_count]       = "ubuntu";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
 $package_count++;
 
 // Older releases
