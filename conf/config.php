@@ -37,33 +37,31 @@ if(preg_match("/:/",$ip6,$blah)){
 	$ip6_mode=0;
 }
 
-// WWW mirrors
-//array("name" => "name", "url" => "http url", "desc" => "description", "country" => "country location", "city" => "city location", "sponsor" => "who sponsors")
+// WWW and FTP mirrors
+//array("name" => "name", "url" => "http url", "desc" => "description", "city" => "city location", "maintainer" => "who maintains")
 $www_mirror=array(
-	1 => array("name" => "www.kvirc.net", "url" => "http://www.kvirc.net", "desc" => "www.kvirc.net: Primary www site in Norway (located in Oslo)", "country" => "Norway", "city" => "Oslo", "sponsor" => "Norwegian Linux Community"),
-	array("name" => "www.kvirc.de", "url" => "http://www.kvirc.de", "desc" => "www.kvirc.de: German mirror (located in Bayreuth)", "country" => "Germany", "city" => "Bayreuth", "sponsor" => "Cyconet.org"),
-	array("name" => "kvirc.slackware.it", "url" => "http://kvirc.slackware.it", "desc" => "kvirc.slackware.it: Italian mirror (located in Milano)", "country" => "Italy", "city" => "Milano", "sponsor" => "Slackware.it"),
-	array("name" => "kvirc.visualscripts.com", "url" => "http://kvirc.visualscripts.com", "desc" => "kvirc.visualscripts.com: USA Mirror (located in Texas)", "country" => "United States", "city" => "Houston", "sponsor" => ""),
+	1 => array("name" => "www.kvirc.net", "url" => "http://www.kvirc.net", "desc" => "Primary WWW site", "city" => "Oslo, Norway", "maintainer" => "Norwegian Linux Community"),
+	array("name" => "www.kvirc.de", "url" => "http://www.kvirc.de", "desc" => "German mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
+	array("name" => "kvirc.slackware.it", "url" => "http://kvirc.slackware.it", "desc" => "Italian mirror", "country" => "Italy", "city" => "Milano", "maintainer" => "Slackware.it"),
+	array("name" => "kvirc.visualscripts.com", "url" => "http://kvirc.visualscripts.com", "desc" => "USA mirror", "city" => "Houston, Texas, United States", "maintainer" => "THeLooX"),
 	//array("name" => "www.kvirc.omnikron.net", "url" => "http://www.kvirc.omnikron.net", "desc" => "www.kvirc.omnikron.net: Italian mirror (located in Arezzo)", "country" => "Italy", "city" => "Arezzo", "sponsor" => "Pragma,Iakko and Resio"),
 	//array("name" => "kvirc.trexle.net", "url" => "http://kvirc.trexle.net", "desc" => "kvirc.trexle.net: USA mirror (located in Texas)", "country" => "USA, Texas", "city" => "", "sponsor" => "Hossam Hossny from Texle.com"),
 	//array("name" => "kvirc.paracoda.com", "url" => "http://kvirc.paracoda.com", "desc" => "kvirc.paracoda.com: Canadian mirror (located in Quebec)", "country" => "Canada, Quebec", "city" => "", "sponsor" => "Hossam Hossny from Texle.com"),
 	//array("name" => "kvirc.ipv6.net.au", "url" => "http://kvirc.ipv6.net.au", "desc" => "kvirc.ipv6.net.au: Australian Mirror (located in Brisbane Queensland, IPv4 and IPv6)", "country" => "Australia, Queensland", "city" => "Brisbane", "sponsor" => "Peter Good, IPv6 Australia"),
 	//array("name" => "kvirc.firenze.linux.it", "url" => "http://kvirc.firenze.linux.it", "desc" => "kvirc.firenze.linux.it: Italian mirror (located in Milano)", "country" => "Italy", "city" => "Milano", "sponsor" => "Firenze Linux Users Group"),
-	array("name" => "www.ipv6.kvirc.net", "url" => "http://www.ipv6.kvirc.net", "desc" => "www.ipv6.kvirc.net: German IPv6 Mirror (located in Bayreouth)", "country" => "Germany", "city" => "Bayreuth", "sponsor" => "Cyconet.org")
+	array("name" => "www.ipv6.kvirc.net", "url" => "http://www.ipv6.kvirc.net", "desc" => "German IPv6 mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org")
 );
 
-// FTP mirrors
-//array("name" => "name", "url" => "ftp url", "desc" => "description")
 $ftp_mirror=array(
-	1 => array("name" => "ftp.kvirc.ru", "url" => "ftp://ftp.kvirc.ru/pub/kvirc.net", "desc" => "ftp.kvirc.ru: Frankfurt am Main, Germany (managed by CtrlAltCa)"),
-	array("name" => "ftp.kvirc.de", "url" => "ftp://ftp.kvirc.de/pub/kvirc", "desc" => "ftp.kvirc.de: Bayreuth, Germany (bandwidth by cyconet.org)"),
-	array("name" => "kvirc.gmake.de", "url" => "http://kvirc.gmake.de/pub/kvirc", "desc" => "kvirc.gmake.de: Frankfurt am Main, Germany (managed by Kuja^)"),
-	array("name" => "kvirc-ftp.visualscripts.com", "url" => "http://kvirc-ftp.visualscripts.com", "desc" => "kvirc-ftp.visualscripts.com: Houston, TX, United States (managed by THeLooX)"),
-	array("name" => "dedimarbo.ath.cx", "url" => "ftp://dedimarbo.ath.cx/pub/kvirc/", "desc" => "dedimarbo.ath.cx: Paris, France (managed by MarbolanGos)"),
-	array("name" => "ftp.kvirc.net", "url" => "ftp://ftp.kvirc.net/pub/kvirc", "desc" => "ftp.kvirc.net: Primary FTP, Oslo, Norway (bandwidth by Norwegian Linux Community)"),
-	array("name" => "kvirc.tradebit.com", "url" => "http://kvirc.tradebit.com/pub", "desc" => "kvirc.tradebit.com: New York, USA (bandwidth by tradebit.com)"),
-	array("name" => "kvirc.imsam.info", "url" => "http://kvirc.imsam.info", "desc" => "kvirc.imsam.info: Nuernberg, Germany (bandwidth by tradebit.com)"),
-	array("name" => "kvirc.bcoos.net", "url" => "http://kvirc.bcoos.net", "desc" => "kvirc.bcoos.net: USA (bandwidth by exoops.info)")
+	1 => array("name" => "ftp.kvirc.ru", "url" => "ftp://ftp.kvirc.ru/pub/kvirc.net", "desc" => "German mirror", "city" => "Frankfurt am Main", "country" => "Germany", "maintainer" => "CtrlAltCa"),
+	array("name" => "ftp.kvirc.de", "url" => "ftp://ftp.kvirc.de/pub/kvirc", "desc" => "German mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
+	array("name" => "kvirc.gmake.de", "url" => "http://kvirc.gmake.de/pub/kvirc", "desc" => "German mirror", "city" => "Frankfurt am Main, Germany", "maintainer" => "Kuja^"),
+	array("name" => "kvirc-ftp.visualscripts.com", "url" => "http://kvirc-ftp.visualscripts.com", "desc" => "USA mirror", "city" => "Houston, Texas, United States", "maintainer" => "THeLooX"),
+	array("name" => "dedimarbo.ath.cx", "url" => "ftp://dedimarbo.ath.cx/pub/kvirc/", "desc" => "French mirror", "city" => "Paris, France", "maintainer" => "MarbolanGos"),
+	array("name" => "ftp.kvirc.net", "url" => "ftp://ftp.kvirc.net/pub/kvirc", "desc" => "Primary FTP server", "city" => "Oslo, Norway", "maintainer" => "Norwegian Linux Community"),
+	array("name" => "kvirc.tradebit.com", "url" => "http://kvirc.tradebit.com/pub", "desc" => "USA mirror", "city" => "New York, United States", "maintainer" => "tradebit.com"),
+	array("name" => "kvirc.imsam.info", "url" => "http://kvirc.imsam.info", "desc" => "German mirror", "city" => "Nuernberg, Germany", "maintainer" => "tradebit.com"),
+	array("name" => "kvirc.bcoos.net", "url" => "http://kvirc.bcoos.net", "desc" => "USA mirror", "city" => "United States", "maintainer" => "exoops.info")
 );
 
 // Addons

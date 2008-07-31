@@ -145,3 +145,30 @@ table.pair td {background-color:rgb(237,248,251);}
 table.despair tr.head td {background-color:/*rgb(70,237,148)*/rgb(175,159,255);font-weight:bold;}
 table.despair td.data {background-color:rgb(200,228,255);font-style:italic;font-weight:bold;}
 table.despair td {background-color:rgb(255,240,255);}
+
+/* Popups */
+a.info {
+	position:relative; /* this is the key */
+	z-index:24;
+	background-color:#eef;
+	text-decoration:none;
+}
+a.info:hover {
+	z-index:25;
+	background-color:#eef;
+}
+a.info span { display:none; }
+a.info:hover span {
+	/* the span will display just on :hover state */
+	display:block;
+	position:absolute;
+	top:-50px;
+	left:150px;
+	width: 300px;
+	border:1px solid #0cf;
+	background-color:#cff;
+	color:#000;
+	text-align:center;
+	-moz-border-radius: 0.5em;
+	padding:1em;
+}
