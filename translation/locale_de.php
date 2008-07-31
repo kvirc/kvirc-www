@@ -118,8 +118,8 @@ $template['custom']['date']="Datum";
 $template['custom']['size']="Größe";
 $template['custom']['version']="Version";
 $template['custom']['type']="Typ";
-$template['custom']['city']="City";
-$template['custom']['maintainer']="Maintainer";
+$template['custom']['city']="Stadt";
+$template['custom']['maintainer']="Ansprechpartner";
 /* custom vars end */
 
 /* addons.php start */
