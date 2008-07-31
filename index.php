@@ -274,14 +274,14 @@ search();
 				<p>
 					<?
 					foreach($www_mirror as $key => $value)
-						echo "<a href=\"".$value['url']."\" title=\"".$value['name']." - mirror\">".$value['name']."</a><br />";
+						echo "<a href=\"".$value['url']."\" title=\"".$value['name']." - ".$value['desc']."\">".$value['name']."</a><br />";
 					?>
 				</p>
 				<h3><?echo $template['index']['ftpmirrors'];?></h3>
 				<p>
 					<?
 					foreach($ftp_mirror as $key => $value)
-						echo "<a href=\"".$value['url']."\" title=\"".$value['name']." - mirror\">".$value['name']."</a><br />";
+						echo "<a href=\"".$value['url']."\" title=\"".$value['name']." - ".$value['desc']."\">".$value['name']."</a><br />";
 					?>
 				</p>
 				<p><br />
