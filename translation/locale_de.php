@@ -807,7 +807,7 @@ $template['mirror']['text1']="
 $template['mirror']['text2']="
 	Das KVIrc-Projekt durch spiegeln der Dateien zu unterstützen ist wirklich einfach.<br />";
 $template['mirror']['text3']="Aussereuropäische FTP-Spiegel werden insbesondere gebraucht";
-$template['mirror']['title2']="Aufsetzen eines Spiegels von ftp.kvirc.net";
+$template['mirror']['title2']="Aufsetzen eines Spiegels von ftp-master.admin.kvirc.de";
 $template['mirror']['tree']="Voraussetzungen";
 $template['mirror']['tree1']="Einen FTP-Server";
 $template['mirror']['tree2']="Einen cron-Dämon (oder vergleichbares), um den Spiegel synchron zu halten";

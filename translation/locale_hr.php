@@ -810,7 +810,7 @@ $template['mirror']['text1']="
 $template['mirror']['text2']="
 	Contributing to the KVIrc project by mirroring its files is really easy.<br />";
 $template['mirror']['text3']="Non european ftp mirrors are especially needed";
-$template['mirror']['title2']="Setting up a mirror of ftp.kvirc.net";
+$template['mirror']['title2']="Setting up a mirror of ftp-master.admin.kvirc.de";
 $template['mirror']['tree']="Requirements";
 $template['mirror']['tree1']="An ftp server";
 $template['mirror']['tree2']="A cron daemon (or equivalent) in order to keep the mirror in sync";

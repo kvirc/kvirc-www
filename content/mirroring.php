@@ -26,7 +26,7 @@ echo "<div class=\"column1-unit\">";
 	echo $template['mirror']['text6']."</p>";
 
 	echo "<code>";
-	echo "cd /".$template['mirror']['text7']."/pub/kvirc/ &amp;&amp; wget --mirror -nH --cut-dirs=2 ftp://ftp.kvirc.net/pub/kvirc";
+	echo "cd /".$template['mirror']['text7']."/pub/kvirc/ &amp;&amp; wget --mirror -nH --cut-dirs=2 ftp://ftp-master.admin.kvirc.de/pub/kvirc";
 	echo "</code>";
 
 	echo "<p>".$template['mirror']['text8']."</p>";
@@ -40,7 +40,7 @@ echo "<div class=\"column1-unit\">";
 
 	echo "<code>";
 	echo "#!/bin/bash<br />";
-	echo "cd /".$template['mirror']['text12']."/pub/kvirc/ &amp;&amp; wget --mirror -nH --cut-dirs=2 ftp://ftp.kvirc.net/pub/kvirc/";
+	echo "cd /".$template['mirror']['text12']."/pub/kvirc/ &amp;&amp; wget --mirror -nH --cut-dirs=2 ftp://ftp-master.admin.kvirc.de/pub/kvirc/";
 	echo "</code>";
 
 	echo "<p>".$template['mirror']['text13']."</p>";

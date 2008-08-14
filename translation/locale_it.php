@@ -809,7 +809,7 @@ $template['mirror']['text1']="
 $template['mirror']['text2']="
 	Contribuire al progetto KVIrc creando un mirror dei suoi file è molto semplice.<br />";
 $template['mirror']['text3']="Mirror ftp non europei sono molto graditi";
-$template['mirror']['title2']="Settare un mirror di ftp.kvirc.net";
+$template['mirror']['title2']="Settare un mirror di ftp-master.admin.kvirc.de";
 $template['mirror']['tree']="Requisiti";
 $template['mirror']['tree1']="Un server ftp";
 $template['mirror']['tree2']="Un demone cron (o equivalente) per tenere il mirror sincronizzato";
