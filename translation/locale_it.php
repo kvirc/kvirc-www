@@ -524,6 +524,7 @@ $template['honor']['quote36']="...it's enough for 100 IPs per meter on earth, so
 $template['honor']['made37']="Porting su MacOSX";
 $template['honor']['made38']="Traduzione portoghese, patch allo script di default e pacchettizzatore Mandriva (MDE).";
 $template['honor']['made39']="Traduzione russa";
+$template['honor']['made40']="Caccia ai bug, contributi al codice, port su mingw/win32, supporto agli utenti";
 /* honor.php end */
 
 /* install.php start */
