@@ -150,6 +150,7 @@ $honor=array(
 	array("nick" => "Kane", "name" => "Juanjo Avarez", "mail" => "juanjux [at] yahoo [dot] es", "made" => $template['honor']['made24'], "quote" => $template['honor']['quote24'], "image" => "unknown"),
 	array("nick" => "|Tom| [at] IrcNet", "name" => "Thomas Kalla", "mail" => "", "made" => $template['honor']['made37'], "quote" => "", "image" => "unknown"),
 	array("nick" => "Ze_M", "name" => "Américo Josè Melo", "mail" => "", "made" => $template['honor']['made38'], "quote" => "", "image" => "zem"),
+	array("nick" => "CtrlAltCa", "name" => "Fabio Bas", "mail" => "ctrlaltca [at] libero.it", "made" => $template['honor']['made40'], "quote" => "Can i haz KVIrc?", "image" => "ctrlaltca"),
 	array("nick" => "CGabriel", "name" => "Christopher R. Gabriel", "mail" => "cgabriel [at] linux [dot] it", "made" => $template['honor']['made25'], "quote" => $template['honor']['quote25'], "image" => "unknown"),
 	array("nick" => "Drosha", "name" => "Andrew Frolov", "mail" => "", "made" => $template['honor']['made26'], "quote" => $template['honor']['quote26'], "image" => "unknown"),
 	array("nick" => "Number1", "name" => "Christian Strmmen", "mail" => "number1 [at] realityx [dot] net", "made" => $template['honor']['made27'], "quote" => $template['honor']['quote27'], "image" => "unknown"),
@@ -162,8 +163,7 @@ $honor=array(
 	array("nick" => "marl", "name" => "Giovanni Ferri", "mail" => "giovanni [at] fonderiadigitale [dot] it", "made" => $template['honor']['made34'], "quote" => $template['honor']['quote34'], "image" => "unknown"),
 	array("nick" => "[Anodine]", "name" => "Anodine", "mail" => "", "made" => $template['honor']['made35'], "quote" => $template['honor']['quote35'], "image" => "unknown"),
 	array("nick" => "infected", "name" => "Paul Boehm", "mail" => "", "made" => $template['honor']['made36'], "quote" => $template['honor']['quote36'], "image" => "unknown"),
-	array("nick" => "valeragir", "name" => "Valeriy Girchenko", "mail" => "valeragir [at] mail [dot] ru", "made" => $template['honor']['made39'], "quote" => "", "image" => "unknown"),
-	array("nick" => "CtrlAltCa", "name" => "Fabio Bas", "mail" => "ctrlaltca [at] libero.it", "made" => $template['honor']['made40'], "quote" => "Can i haz KVIrc?", "image" => "ctrlaltca")
+	array("nick" => "valeragir", "name" => "Valeriy Girchenko", "mail" => "valeragir [at] mail [dot] ru", "made" => $template['honor']['made39'], "quote" => "", "image" => "unknown")
 );
 
 // Screenshots
@@ -248,7 +248,8 @@ $splash=array(
 	array("name" => "3.2.0.99 CVS \"Marmalade\" (2)", "screen" => "splash-3.2.0.99.2.png", "alt" => "3.2.0.99", "motd" => "Hello, Hey Joe! You Wanna Give It a Go ?", "date" => "01.08.2005", "present" => ""),
 	array("name" => "3.2.4 CVS \"Anomalies\"", "screen" => "splash-3.2.0.20051230.png", "alt" => "3.2.4", "motd" => "Time makes no sense", "date" => "06.08.2006", "present" => "3.2.0.20051230, 3.2.1, 3.2.2, 3.2.3, 3.2.4"),
 	array("name" => "3.2.6 SVN \"Anomalies\"", "screen" => "splash-3.2.6-svn.png", "alt" => "3.2.6", "motd" => "Time makes no sense", "date" => "12.09.2006", "present" => "3.2.4, 3.2.5, 3.2.6"),
-	array("name" => "3.4.0 \"Virgo\"", "screen" => "splash-3.4.0.png", "alt" => "3.4.0", "motd" => "No matter how dark the night, somehow the Sun rises once again", "date" => "25-03-2008", "present" => "")
+	array("name" => "3.4.0 \"Virgo\"", "screen" => "splash-3.4.0.png", "alt" => "3.4.0", "motd" => "No matter how dark the night, somehow the Sun rises once again", "date" => "25-03-2008", "present" => ""),
+	array("name" => "3.4.1 \"Shiny\"", "screen" => "splash-3.4.1.png", "alt" => "3.4.1", "motd" => "", "date" => "", "present" => "")
 );
 
 // Themes
