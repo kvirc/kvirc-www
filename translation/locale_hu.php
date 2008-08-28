@@ -1073,6 +1073,7 @@ $template['tools']['tool1']="KVS syntax highlight for Notepad++";
 $template['tools']['tool2']="A simple tcl for eggdrops to make them reply to some CTCP requests";
 $template['tools']['tool3']="A RSS syndacation tcl for eggdrops to make them reply to some triggers which poll the SVN and Trac RSS feeds";
 $template['tools']['tool4']="A simple script written in TCL to check for GetText translation files and report possible errors";
+$template['tools']['tool5']="A simple PHP-CLI script which converts KVIrc-formatted logs to plain text stripping color codes and control chars";
 /* tools.php end */
 
 /* translation.php start */
