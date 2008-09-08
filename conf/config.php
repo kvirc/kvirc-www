@@ -53,7 +53,7 @@ $www_mirror=array(
 );
 
 $ftp_mirror=array(
-	1 => array("name" => "ftp.kvirc.ru", "url" => "ftp://ftp.kvirc.ru/pub/kvirc.net", "desc" => "German mirror", "city" => "Frankfurt am Main", "country" => "Germany", "maintainer" => "CtrlAltCa"),
+	1 => array("name" => "ftp.kvirc.ru", "url" => "ftp://ftp.kvirc.ru/pub/kvirc", "desc" => "German mirror", "city" => "Frankfurt am Main", "country" => "Germany", "maintainer" => "CtrlAltCa"),
 	array("name" => "ftp.kvirc.de", "url" => "ftp://ftp.kvirc.de/pub/kvirc", "desc" => "German mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
 	array("name" => "kvirc.gmake.de", "url" => "http://kvirc.gmake.de/pub/kvirc", "desc" => "German mirror", "city" => "Frankfurt am Main, Germany", "maintainer" => "Kuja^"),
 	array("name" => "kvirc-ftp.visualscripts.com", "url" => "http://kvirc-ftp.visualscripts.com", "desc" => "USA mirror", "city" => "Houston, Texas, United States", "maintainer" => "THeLooX"),
