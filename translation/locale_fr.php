@@ -834,7 +834,7 @@ $template['mirror']['text11a']="In this case";
 $template['mirror']['text11b']="would look as follows:";
 $template['mirror']['text12']="yourdomain";
 $template['mirror']['text13']="
-	At the moment of writing the complete ftp archive is around 500 MB. If you don't have the space for a complete mirror you can achieve partial mirroring by retrieving only a subset of the ftp.kvirc.net directories.";
+	At the moment of writing the complete ftp archive is around 1.5 GB. If you don't have the space for a complete mirror you can achieve partial mirroring by retrieving only a subset of the ftp.kvirc.net directories.";
 $template['mirror']['text14']="
 	Once you have succesfully set up your mirror please drop a mail to <b>pragma at kvirc dot net</b> or to the <a href=\"?id=mailinglist&amp;lang=$lang\">mailing list</a> so we can link you from the main site.";
 /* mirroring.php end */
@@ -1063,6 +1063,7 @@ $template['themes']['theme29']="An ultra minimalistic theme";
 $template['themes']['theme30']="The theme which light your minds";
 $template['themes']['theme31']="A theme inspired by R.A. Salvatore's novels about the Drow (Dark Elves) and specifically Drizzt Do'Urden";
 $template['themes']['theme32']="...because all world is a beautiful fractal!";
+$template['themes']['theme33']="A darker techno-looking theme with simple and descriptive icons";
 /* themes.php end */
 
 /* tools.php start */

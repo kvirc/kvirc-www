@@ -287,7 +287,8 @@ $themes=array(
 	array("name" => "SilverEx_Clone", "version" => "0.1", "mail" => "vampiermsx [at] gmail [dot] com", "author" => "Vampier", "desc" => $template['themes']['theme29'], "home" => "", "download" => "SilverEx_Clone-0.1.kvt", "screen" => "theme_silverexclone.png", "thumb" => "thumb_silverexclone.png"),
 	array("name" => "Light My Fire!", "version" => "0.4", "mail" => "k0smik0 [at] logorroici [dot] org", "author" => "k0sm|k0", "desc" => $template['themes']['theme30'], "home" => "", "download" => "Light_My_Fire-0.4.kvt", "screen" => "theme_lightmyfire.png", "thumb" => "thumb_lightmyfire.png"),
 	array("name" => "Drow", "version" => "1.0", "mail" => "yoyo.pete [at] gmail [dot] com", "author" => "YoYo-Pete", "desc" => $template['themes']['theme31'], "home" => "", "download" => "Drow-1.0.kvt", "screen" => "theme_drow.png", "thumb" => "thumb_drow.png"),
-	array("name" => "Fractalize", "version" => "0.6", "mail" => "k0smik0 [at] logorroici [dot] org", "author" => "k0sm|k0", "desc" => $template['themes']['theme32'], "home" => "", "download" => "Fractalize-0.6.kvt", "screen" => "theme_fractalize.png", "thumb" => "thumb_fractalize.png")
+	array("name" => "Fractalize", "version" => "0.6", "mail" => "k0smik0 [at] logorroici [dot] org", "author" => "k0sm|k0", "desc" => $template['themes']['theme32'], "home" => "", "download" => "Fractalize-0.6.kvt", "screen" => "theme_fractalize.png", "thumb" => "thumb_fractalize.png"),
+	array("name" => "System", "version" => "1.0", "mail" => "sonichedgehog_hyperblast00 [at] yahoo [dot] com", "author" => "Taoki", "desc" => $template['themes']['theme33'], "home" => "", "download" => "System-1.0.kvt", "screen" => "theme_system.png", "thumb" => "thumb_system.png")
 
 	// without info, not listed
 	//array("name" => "Burst Rebird", "version" => "0.1", "mail" => "", "author" => "", "desc" => "", "home" => "", "download" => "BurstRebird-0.1.kvt", "screen" => "", "thumb" => ""),

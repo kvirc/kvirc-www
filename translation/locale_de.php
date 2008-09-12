@@ -830,7 +830,7 @@ $template['mirror']['text11a']="In diesem Fall würde";
 $template['mirror']['text11b']="wie folgt aussehen:";
 $template['mirror']['text12']="DeineDomain";
 $template['mirror']['text13']="
-	Zur Zeit der Seitenerstellung umfasst das komplette FTP-Archiv ca. 500 MB. Wenn Du nicht den Platz für einen kompletten Spiegel hast, kannst Du einen Teilspiegel errichten, indem Du nur ausgewählte Verzeichnisse von ftp.kvirx.net spiegelst.";
+	Zur Zeit der Seitenerstellung umfasst das komplette FTP-Archiv ca. 1.5 GB. Wenn Du nicht den Platz für einen kompletten Spiegel hast, kannst Du einen Teilspiegel errichten, indem Du nur ausgewählte Verzeichnisse von ftp.kvirx.net spiegelst.";
 $template['mirror']['text14']="
 	Wenn Du den Spiegelserver erfolgreich eingerichtet hast, schreibe bitte eine E-Mail an <b>pragma at kvirc Punkt net</b> oder an die <a href=\"?id=mailinglist&amp;lang=$lang\">Mailingliste</a>, damit wir ihn auf der Hauptseite verknüpfen können.";
 /* mirroring.php end */
@@ -1060,6 +1060,7 @@ $template['themes']['theme29']="Ein äußerst minimalistisches Thema";
 $template['themes']['theme30']="Ein Thema, welches Deinen Geist erhellt";
 $template['themes']['theme31']="Ein Thema inspiriert durch R.A. Salvatores Romane über die Drow (Dunkelelfen) und besonders Drizzt Do'Urden";
 $template['themes']['theme32']="...weil die ganze Welt ein schönes Fraktal ist!";
+$template['themes']['theme33']="A darker techno-looking theme with simple and descriptive icons";
 /* themes.php end */
 
 /* tools.php start */
