@@ -4,7 +4,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
 $path="img/themes";
-$dpath="ftp://ftp.kvirc.net/pub/kvirc/themes";
+$dpath="ftp://ftp.kvirc.de/pub/kvirc/themes";
 
 echo "<h1 class=\"pagetitle\">".$template['themes']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
@@ -34,23 +34,32 @@ foreach($themes as $key => $value){
 	if(fmod($key,2)!=0) echo "<div class=\"split\"><div class=\"left\">";
 	else echo "<div class=\"right\">";
 
-	echo "<h1>".$value['name']."&nbsp;".$value['version']."</h1>";
+	// We have an array of version number
+	if(is_array($value['version']) && is_array($value['download']))
+		echo "<h1>".$value['name']." ".$value['version'][0]." &amp; ".$value['version'][1]."</h1>";
+	else echo "<h1>".$value['name']." ".$value['version']."</h1>";
 
 	echo "<div class=\"img\"><a href=\"$path/".$value['screen']."\"><img src=\"$path/".$value['thumb']."\" alt=\"".$template['themes']['screenshot']."\" /></a></div>";
 
 	echo "<div class=\"desc\">";
 	echo "<p>";
+	// We have a mail address
 	if($value['mail']!="")
 		echo "<b>".$template['custom']['author'].": </b><a href=\"mailto:".$value['mail']."\">".$value['author']."</a><br />";
 	else echo "<b>".$template['custom']['author'].": </b>".$value['author']."<br />";
 
 	echo "<b>".$template['custom']['description'].": </b>".$value['desc']."<br />";
 
+	// We have an homepage
 	if($value['home']!="")
 		echo "<a href=\"".$value['home']."\">".$template['custom']['homepage']."</a><br />";
 
-	echo "<a href=\"$dpath/".$value['download']."\">".$template['custom']['download']."</a>";
+	// We have an array of download file
+	if(is_array($value['version']) && is_array($value['download']))
+		echo "<a href=\"$dpath/".$value['download'][0]."\">".$template['custom']['download']."</a> - <a href=\"$dpath/".$value['download'][1]."\">".$template['custom']['download']."</a>";
+	else echo "<a href=\"$dpath/".$value['download']."\">".$template['custom']['download']."</a>";
 
+	// We have a bigger theme
 	if(isset($value['downbig'])&&($value['downbig']!=""))
 		echo " - <a href=\"$dpath/".$value['downbig']."\">".$template['custom']['downbig']."</a>";
 
