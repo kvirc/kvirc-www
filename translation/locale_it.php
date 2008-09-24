@@ -973,7 +973,7 @@ $template['snapshots']['text2']="
 	Gli snapshot sorgente sono forniti dal Team di Sviluppo KVIrc.<br />
 	Onore e Gloria! :)";
 $template['snapshots']['text3']="
-	Per scaricare l'ultimo snapshot devi navigare nell'<a href=\"ftp://ftp.kvirc.net/pub/kvirc/snapshots/\">ftp di KVIrc</a> o nella sottodirectory \"snapshots\" di uno dei mirror ftp.";
+	Per scaricare l'ultimo snapshot devi navigare nell'<a href=\"ftp://ftp.kvirc.de/pub/kvirc/snapshots/\">ftp di KVIrc</a> o nella sottodirectory \"snapshots\" di uno dei mirror ftp.";
 /* snapshots.php end */
 
 /* splash.php start */

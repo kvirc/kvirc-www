@@ -974,7 +974,7 @@ $template['snapshots']['text2']="
 	Honor and Glory! :)";
 $template['snapshots']['text3']="
 	To download the latest snapshot you have to dig in 
-	<a href=\"ftp://ftp.kvirc.net/pub/kvirc/snapshots/\">the KVIrc ftp</a> or in the \"snapshots\" subdirectory of one of the ftp mirrors.";
+	<a href=\"ftp://ftp.kvirc.de/pub/kvirc/snapshots/\">the KVIrc ftp</a> or in the \"snapshots\" subdirectory of one of the ftp mirrors.";
 /* snapshots.php end */
 
 /* splash.php start */
