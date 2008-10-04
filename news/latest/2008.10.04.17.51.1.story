@@ -26,7 +26,7 @@ switch at configure stage.</p>
 
 <p>
 You can download this release tarball 
-<a href="ftp://ftp.kvirc.de/pub/kvirc/snapshots/source">clicking here</a>
+<a href="javascript:opendoc('ftp://ftp.kvirc.de/pub/kvirc/snapshots/source');" title="FTP Mirror">clicking here</a>
 </p>
 
 <p>Happy hacking :)<br />
