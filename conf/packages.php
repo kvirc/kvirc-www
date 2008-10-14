@@ -35,10 +35,13 @@ $version_description["3.0.1"]          = "3.0.1 : Stable (May 2004)";
 $version_details["3.0.1"]              = "A bugfix release for 3.0.0";
 
 $version_description["3.2.0"]          = "3.2.0 : Stable (Feb 2005)";
-$version_details["3.2.0"]              = "The previous stable release.";
+$version_details["3.2.0"]              = "Old stable release.";
 
 $version_description["3.4.0"]          = "3.4.0 : Stable (Mar 2008)";
-$version_details["3.4.0"]              = "The latest stable release. This is the package you want :)";
+$version_details["3.4.0"]              = "The previous stable release.";
+
+$version_description["3.4.2"]          = "3.4.2 : Stable (Oct 2008)";
+$version_details["3.4.2"]              = "The latest stable release. This is the package you want :)";
 
 // The package groups
 $group_description["none"]      = "No group";
@@ -73,22 +76,99 @@ $hua = $_SERVER['HTTP_USER_AGENT'];
 
 if((strpos($hua,'Windows') !== false) || (strpos($hua,'WinXP') !== false))
 {
-	//$quickdownload_link = $ftp_mirror[1]['url']."/snapshots/win32/KVIrc-3.2.6-dev-20080303.exe";
-	$quickdownload_link = $ftp_mirror[1]['url']."/3.4.0/binary/win32/KVIrc-3.4.0.exe";
-	$quickdownload_version = "3.4.0";
+	$quickdownload_link = $ftp_mirror[1]['url']."/3.4.2/binary/win32/KVIrc-3.4.2.exe";
+	$quickdownload_version = "3.4.2";
 } /*else if((strpos($hua,'Safari') !== false) || (strpos($hua,'Macintosh') !== false) ||
 	(strpos($hua,'Mac OS X') !== false) || (strpos($hua,'Mac_PowerPC') !== false))
 {
 	$quickdownload_link = $ftp_mirror_link[0]."/3.2.0/binary/macosx/KVirc-3.2.0.dmg";
 	$quickdownload_version = "3.2.0";
 }*/ else {
-	//$quickdownload_link = $ftp_mirror[1]['url']."/3.2.6/source/kvirc-3.2.6.tar.bz2";
-	$quickdownload_link = $ftp_mirror[1]['url']."/3.4.0/source/kvirc-3.4.0.tar.bz2";
-	$quickdownload_version = "3.4.0";
+	$quickdownload_link = $ftp_mirror[1]['url']."/3.4.2/source/kvirc-3.4.2.tar.bz2";
+	$quickdownload_version = "3.4.2";
 }
 
 
 $package_count = 0;
+
+// 3.4.2
+// BZip 2 sources
+$p_filename[$package_count]    = "kvirc-3.4.2.tar.bz2";
+$p_path[$package_count]        = "3.4.2/source";
+$p_description[$package_count] = "KVIrc 3.4.2, sources (bzipped package)";
+$p_details[$package_count]     = "Source tarball for both unix and windows version. The package is crompressed using the bzip2 program.";
+$p_platform[$package_count]    = "source";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "5421405";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Fabio Bas (ctrlaltca at gmail dot com)";
+$package_count++;
+
+// GZip sources
+$p_filename[$package_count]    = "kvirc-3.4.2.tar.gz";
+$p_path[$package_count]        = "3.4.2/source";
+$p_description[$package_count] = "KVIrc 3.4.2, sources (gzipped package)";
+$p_details[$package_count]     = "Source tarball for both unix and windows version. The package is compressed using the gzip program, if you have bzip2 grab the *.bz2 format instead.";
+$p_platform[$package_count]    = "source";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "7143238";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Fabio Bas (ctrlaltca at gmail dot com)";
+$package_count++;
+
+// Slamd64 12.1
+$p_filename[$package_count]    = "kvirc-3.4.2-x86_64_slamd64-1.tgz";
+$p_path[$package_count]        = "3.4.2/binary/slackware";
+$p_description[$package_count] = "KVIrc 3.4.2, Slamd64 12.1 binary";
+$p_details[$package_count]     = "The self-installing binary package for Slamd64 12.1 built on top of glibc 2.7. Just use pkgtool to install after downloading.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "8417994";
+$p_group[$package_count]       = "slackware";
+$p_author[$package_count]      = "Fabio Bas (ctrlaltca at gmail dot com)";
+$package_count++;
+
+// Slackware 12.1
+$p_filename[$package_count]    = "kvirc-3.4.2-i686-1.tgz";
+$p_path[$package_count]        = "3.4.2/binary/slackware";
+$p_description[$package_count] = "KVIrc 3.4.2, Slackware 12.1 binary";
+$p_details[$package_count]     = "The self-installing binary package for Slackware 12.1 built on top of glibc 2.7. Just use pkgtool to install after downloading.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "8682100";
+$p_group[$package_count]       = "slackware";
+$p_author[$package_count]      = "HelLViS69 (hellvis69 at netsons dot org)";
+$package_count++;
+
+// Windows with Classic Icons
+$p_filename[$package_count]    = "KVIrc-3.4.2-classic.exe";
+$p_path[$package_count]        = "3.4.2/binary/win32";
+$p_description[$package_count] = "KVIrc 3.4.2, Windows Classic binary";
+$p_details[$package_count]     = "The self-installing binary package for Windows built on top of the non-commercial version of the Qt library. It uses the classic icon set. Just double click on it after downloading.";
+$p_platform[$package_count]    = "win32";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "6887557";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Noldor (elfonol at gmail dot com)";
+$package_count++;
+
+// Windows
+$p_filename[$package_count]    = "KVIrc-3.4.2.exe";
+$p_path[$package_count]        = "3.4.2/binary/win32";
+$p_description[$package_count] = "KVIrc 3.4.2, Windows binary";
+$p_details[$package_count]     = "The self-installing binary package for Windows built on top of the non-commercial version of the Qt library. Just double click on it after downloading.";
+$p_platform[$package_count]    = "win32";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "6909224";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Noldor (elfonol at gmail dot com)";
+$package_count++;
+
+
+
+// ========================================================================== //
+//                                OLDER RELEASES                              //
+// ========================================================================== //
 
 // Sources
 $p_filename[$package_count]    = "kvirc-3.4.0.tar.bz2";
@@ -321,7 +401,6 @@ $p_group[$package_count]       = "ubuntu";
 $p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
 $package_count++;
 
-// Older releases
 $p_filename[$package_count]    = "kvirc-3.2.0.tar.bz2";
 $p_path[$package_count]        = "3.2.0/source";
 $p_description[$package_count] = "KVIrc 3.2.0, sources (bzipped package)";
@@ -447,10 +526,6 @@ $p_author[$package_count]      = "Andrea Briganti (see <a href=\"http://kbytesys
 $p_group[$package_count]       = "debian";
 $package_count++;
 
-
-
-
-
 $p_filename[$package_count]    = "kvirc-3.0.1.tar.bz2";
 $p_path[$package_count]        = "3.0.1/source";
 $p_description[$package_count] = "KVIrc 3.0.1, sources (bzipped package)";
@@ -513,7 +588,6 @@ $p_size[$package_count]        = "3814547";
 $p_group[$package_count]       = "slackware";
 $package_count++;
 
-
 $p_filename[$package_count]    = "kvirc-3.0.1.exe";
 $p_path[$package_count]        = "3.0.1/binary/win32";
 $p_description[$package_count] = "KVIrc 3.0.01, Windows binary";
@@ -523,7 +597,6 @@ $p_version[$package_count]     = "3.0.1";
 $p_size[$package_count]        = "5904101";
 $p_group[$package_count]       = "none";
 $package_count++;
-
 
 $p_filename[$package_count]    = "kvirc-3.0.0.exe";
 $p_path[$package_count]        = "3.0.0/binary/win32";
@@ -535,7 +608,6 @@ $p_size[$package_count]        = "5937725";
 $p_author[$package_count]      = "Szymon Stefanek (pragma at kvirc dot net)";
 $p_group[$package_count]       = "none";
 $package_count++;
-
 
 $p_filename[$package_count]    = "kvirc-3.0.0.tar.bz2";
 $p_path[$package_count]        = "3.0.0/source";
@@ -556,7 +628,6 @@ $p_version[$package_count]     = "3.0.0";
 $p_size[$package_count]        = "3653347";
 $p_group[$package_count]       = "none";
 $package_count++;
-
 
 $p_filename[$package_count]    = "kvirc-3.0.0-i686-1.tgz";
 $p_path[$package_count]        = "3.0.0/binary/slackware";

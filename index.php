@@ -234,7 +234,7 @@ search();
 			<div class="header-breadcrumbs">
 				<ul>
 					<li><a href="<?echo $quickdownload_link;?>" title="get the latest release"><?echo $template['index']['quickdnl'];?></a></li>
-					<li><a href="ftp://ftp.kvirc.net/pub/kvirc/snapshots/" title="get snapshots"><?echo $template['index']['snapshots'];?></a></li>
+					<li><a href="ftp://ftp.kvirc.de/pub/kvirc/snapshots/" title="get snapshots"><?echo $template['index']['snapshots'];?></a></li>
 					<li><a href="?id=themes&amp;lang=<?echo $lang;?>" title="themes and appearance"><?echo $template['index']['themes'];?></a></li>
 				</ul>
 				<div class="searchform">
