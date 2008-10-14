@@ -141,6 +141,7 @@ $p_author[$package_count]      = "HelLViS69 (hellvis69 at netsons dot org)";
 $package_count++;
 
 // Windows with Classic Icons
+/*
 $p_filename[$package_count]    = "KVIrc-3.4.2-classic.exe";
 $p_path[$package_count]        = "3.4.2/binary/win32";
 $p_description[$package_count] = "KVIrc 3.4.2, Windows Classic binary";
@@ -163,7 +164,7 @@ $p_size[$package_count]        = "6909224";
 $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "Noldor (elfonol at gmail dot com)";
 $package_count++;
-
+*/
 
 
 // ========================================================================== //
