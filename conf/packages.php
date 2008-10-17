@@ -116,18 +116,6 @@ $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "Fabio Bas (ctrlaltca at gmail dot com)";
 $package_count++;
 
-// Slamd64 12.1
-$p_filename[$package_count]    = "kvirc-3.4.2-x86_64_slamd64-1.tgz";
-$p_path[$package_count]        = "3.4.2/binary/slackware";
-$p_description[$package_count] = "KVIrc 3.4.2, Slamd64 12.1 binary";
-$p_details[$package_count]     = "The self-installing binary package for Slamd64 12.1 built on top of glibc 2.7. Just use pkgtool to install after downloading.";
-$p_platform[$package_count]    = "unix";
-$p_version[$package_count]     = "3.4.2";
-$p_size[$package_count]        = "8417994";
-$p_group[$package_count]       = "slackware";
-$p_author[$package_count]      = "Fabio Bas (ctrlaltca at gmail dot com)";
-$package_count++;
-
 // Slackware 12.1
 $p_filename[$package_count]    = "kvirc-3.4.2-i686-1.tgz";
 $p_path[$package_count]        = "3.4.2/binary/slackware";
@@ -140,8 +128,32 @@ $p_group[$package_count]       = "slackware";
 $p_author[$package_count]      = "HelLViS69 (hellvis69 at netsons dot org)";
 $package_count++;
 
-// Windows with Classic Icons
+// Slamd64 12.1
+$p_filename[$package_count]    = "kvirc-3.4.2-x86_64_slamd64-1.tgz";
+$p_path[$package_count]        = "3.4.2/binary/slackware";
+$p_description[$package_count] = "KVIrc 3.4.2, Slamd64 12.1 binary";
+$p_details[$package_count]     = "The self-installing binary package for Slamd64 12.1 built on top of glibc 2.7. Just use pkgtool to install after downloading.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "8417994";
+$p_group[$package_count]       = "slackware";
+$p_author[$package_count]      = "Fabio Bas (ctrlaltca at gmail dot com)";
+$package_count++;
+
+// Bluewhite64 12.1
+$p_filename[$package_count]    = "kvirc-3.4.2-x86_64_bluewhite64-1.tgz";
+$p_path[$package_count]        = "3.4.2/binary/slackware";
+$p_description[$package_count] = "KVIrc 3.4.2, Bluewhite64 12.1 binary";
+$p_details[$package_count]     = "The self-installing binary package for Bluewhite64 12.1 built on top of glibc 2.7. Just use pkgtool to install after downloading.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "7837879";
+$p_group[$package_count]       = "slackware";
+$p_author[$package_count]      = "Kenjiro (jedi dot kenjiro at gmail dot com)";
+$package_count++;
+
 /*
+// Windows with Classic Icons
 $p_filename[$package_count]    = "KVIrc-3.4.2-classic.exe";
 $p_path[$package_count]        = "3.4.2/binary/win32";
 $p_description[$package_count] = "KVIrc 3.4.2, Windows Classic binary";
