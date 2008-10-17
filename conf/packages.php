@@ -48,10 +48,10 @@ $group_description["none"]      = "No group";
 $group_details["none"]          = "This is a dummy package group: if you see this , you have found a bug in our site :D";
 
 $group_description["slackware"] = "Slackware *.tgz binary package";
-$group_details["slackware"]     = "Download this if you have a Slackware linux distribution.";
+$group_details["slackware"]     = "Download this if you have a Slackware based system.";
 
 $group_description["debian"]    = "Debian *.deb binary package";
-$group_details["debian"]        = "Download this if you have a Debian based system. The binary installation is splitted in two or three packages: executable , documentation and developement files.";
+$group_details["debian"]        = "Download this if you have a Debian based system.";
 
 $group_description["opensuse"]  = "OpenSUSE *.rpm binary package";
 $group_details["opensuse"]      = "Download this if you have an OpenSUSE linux distribution. This kind of package *might* also work on plain RedHat, Mandrake and other systems that can use rpms.";
@@ -129,8 +129,8 @@ $p_author[$package_count]      = "HelLViS69 (hellvis69 at netsons dot org)";
 $package_count++;
 
 // Slamd64 12.1
-$p_filename[$package_count]    = "kvirc-3.4.2-x86_64_slamd64-1.tgz";
-$p_path[$package_count]        = "3.4.2/binary/slackware";
+$p_filename[$package_count]    = "kvirc-3.4.2-x86_64-1.tgz";
+$p_path[$package_count]        = "3.4.2/binary/slamd64";
 $p_description[$package_count] = "KVIrc 3.4.2, Slamd64 12.1 binary";
 $p_details[$package_count]     = "The self-installing binary package for Slamd64 12.1 built on top of glibc 2.7. Just use pkgtool to install after downloading.";
 $p_platform[$package_count]    = "unix";
@@ -141,8 +141,8 @@ $p_author[$package_count]      = "Fabio Bas (ctrlaltca at gmail dot com)";
 $package_count++;
 
 // Bluewhite64 12.1
-$p_filename[$package_count]    = "kvirc-3.4.2-x86_64_bluewhite64-1.tgz";
-$p_path[$package_count]        = "3.4.2/binary/slackware";
+$p_filename[$package_count]    = "kvirc-3.4.2-x86_64-1.tgz";
+$p_path[$package_count]        = "3.4.2/binary/bluewhite64";
 $p_description[$package_count] = "KVIrc 3.4.2, Bluewhite64 12.1 binary";
 $p_details[$package_count]     = "The self-installing binary package for Bluewhite64 12.1 built on top of glibc 2.7. Just use pkgtool to install after downloading.";
 $p_platform[$package_count]    = "unix";
@@ -150,6 +150,30 @@ $p_version[$package_count]     = "3.4.2";
 $p_size[$package_count]        = "7837879";
 $p_group[$package_count]       = "slackware";
 $p_author[$package_count]      = "Kenjiro (jedi dot kenjiro at gmail dot com)";
+$package_count++;
+
+// Ubuntu 8.04
+$p_filename[$package_count]    = "kvirc-3.4.2-i386.deb";
+$p_path[$package_count]        = "3.4.2/binary/ubuntu";
+$p_description[$package_count] = "KVIrc 3.4.2, Ubuntu 8.04 binary";
+$p_details[$package_count]     = "The self-installing binary package for Ubuntu 8.04.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "7617176";
+$p_group[$package_count]       = "debian";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// Ubuntu 8.04 amd64
+$p_filename[$package_count]    = "kvirc-3.4.2-amd64.deb";
+$p_path[$package_count]        = "3.4.2/binary/ubuntu";
+$p_description[$package_count] = "KVIrc 3.4.2, Ubuntu 8.04 binary for AMD64";
+$p_details[$package_count]     = "The self-installing binary package for Ubuntu 8.04 for AMD64.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "7792552";
+$p_group[$package_count]       = "debian";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
 $package_count++;
 
 /*
