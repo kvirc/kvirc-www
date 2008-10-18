@@ -176,6 +176,100 @@ $p_group[$package_count]       = "debian";
 $p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
 $package_count++;
 
+// openSUSE 11.0
+$p_filename[$package_count]    = "kvirc-3.4.2-1.1.i586.rpm";
+$p_path[$package_count]        = "3.4.2/binary/opensuse/11.0";
+$p_description[$package_count] = "KVIrc 3.4.2, OpenSUSE 11.0 binary";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.0.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "5567011";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-devel-3.4.2-1.1.i586.rpm";
+$p_path[$package_count]        = "3.4.2/binary/opensuse/11.0";
+$p_description[$package_count] = "KVIrc 3.4.2, OpenSUSE 11.0 devel binary";
+$p_details[$package_count]     = "The self-installing devel binary package for OpenSUSE 11.0.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "225372";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+/*
+// openSUSE 11.0 64bit
+$p_filename[$package_count]    = "";
+$p_path[$package_count]        = "3.4.2/binary/opensuse/11.0";
+$p_description[$package_count] = "KVIrc 3.4.2, OpenSUSE 11.0 binary for 64bit";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.0 64bit.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-devel-3.4.2-1.1.x86_64.rpm";
+$p_path[$package_count]        = "3.4.2/binary/opensuse/11.0";
+$p_description[$package_count] = "KVIrc 3.4.2, OpenSUSE 11.0 binary for 64bit";
+$p_details[$package_count]     = "The self-installing devel binary package for OpenSUSE 11.0 64bit.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "225392";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+*/
+
+// openSUSE 10.3
+$p_filename[$package_count]    = "kvirc-3.4.2-1.1.i586.rpm";
+$p_path[$package_count]        = "3.4.2/binary/opensuse/10.3";
+$p_description[$package_count] = "KVIrc 3.4.2, OpenSUSE 10.3 binary";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 10.3.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "6392791";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-devel-3.4.2-1.1.i586.rpm";
+$p_path[$package_count]        = "3.4.2/binary/opensuse/10.3";
+$p_description[$package_count] = "KVIrc 3.4.2, OpenSUSE 10.3 devel binary";
+$p_details[$package_count]     = "The self-installing devel binary package for OpenSUSE 10.3.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "206087";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+// openSUSE 10.3 64bit
+$p_filename[$package_count]    = "kvirc-3.4.2-1.1.x86_64.rpm";
+$p_path[$package_count]        = "3.4.2/binary/opensuse/10.3";
+$p_description[$package_count] = "KVIrc 3.4.2, OpenSUSE 10.3 binary for 64bit";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 10.3 64bit.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "6532598";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-devel-3.4.2-1.1.x86_64.rpm";
+$p_path[$package_count]        = "3.4.2/binary/opensuse/10.3";
+$p_description[$package_count] = "KVIrc 3.4.2, OpenSUSE 10.3 binary for 64bit";
+$p_details[$package_count]     = "The self-installing devel binary package for OpenSUSE 10.3 64bit.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "205690";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
 /*
 // Windows with Classic Icons
 $p_filename[$package_count]    = "KVIrc-3.4.2-classic.exe";
