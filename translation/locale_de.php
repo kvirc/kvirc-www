@@ -7,12 +7,12 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 // languages
 $template['index']['brazilian']="brasilianisch";
 $template['index']['bulgarian']="bulgarisch";
-$template['index']['catalan']="Catalan";
+$template['index']['catalan']="katalanisch";
 $template['index']['croatian']="kroatisch";
 $template['index']['czech']="tschechisch";
 $template['index']['dutch']="niederländisch";
 $template['index']['english']="englisch";
-$template['index']['finnish']="Finnish";
+$template['index']['finnish']="finnisch";
 $template['index']['french']="französisch";
 $template['index']['german']="deutsch";
 $template['index']['hungarian']="ungarisch";
@@ -23,7 +23,7 @@ $template['index']['portuguese']="portugiesisch";
 $template['index']['russian']="russisch";
 $template['index']['serbian']="serbisch";
 $template['index']['spanish']="spanisch";
-$template['index']['ukrainian']="Ukrainian";
+$template['index']['ukrainian']="ukrainisch";
 
 // the project
 $template['index']['theproject']="das Projekt";
