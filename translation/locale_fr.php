@@ -1088,6 +1088,10 @@ $template['translation']['text3']="
 $template['translation']['text4']="
 	If you are interested in translating KVIrc in a new language you can find here a nice How-To.<br />
 	Some language are updated (almost) daily, others need to find a new manteiner. If you want to help to improve the current support of your language, please contact its <b>Last translator</b>, listed here:";
+$template['translation']['text4a']="unmaintained";
+$template['translation']['text4b']="
+	Talking about \"unmaintained\", we encourage you to help us translating.<br />
+	Send a mail in the mailing list if you are interested :)";
 $template['translation']['text5a']="Don't forget to subscribe to the";
 $template['translation']['text5b']="to keep in touch with the developers!";
 $template['translation']['text6']="This mini-howto describes the procedure for translating KVIrc in a new language";

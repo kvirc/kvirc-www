@@ -307,23 +307,20 @@ $tools=array(
 );
 
 // Translations (keep 'em in alphabetical order)
-// array("lang" => "language", "nick" => "nick", "mail" => "mail")
+// array("lang" => "language", "nick" => "nick", "mail" => "mail", "flag" => "country flag", "unmain" => "unmaintained")
 $translators=array(
-	1 => array("lang" => $template['index']['french'], "nick" => array("Ahinu","_Otaku"), "mail" => array("ahinu.laman [at] gmail [dot] com","notakou [at] tiscali [dot] fr")),
-	array("lang" => $template['index']['german'], "nick" => array("mren","Ionic"), "mail" => array("kvirc [at] mrmx [dot] de","ionic [at] ionic [dot] de")),
-	array("lang" => $template['index']['hungarian'], "nick" => "Fiber^", "mail" => "vfiber [at] gmail [dot] com"),
-	array("lang" => $template['index']['italian'], "nick" => array("Nate Grey","HelLViS69","etherea`"), "mail" => array("nate [at] paranoici [dot] org","hellvis69 [at] netsons [dot] org","cle [at] virg0 [dot] org")),
-	array("lang" => $template['index']['portuguese'], "nick" => "Ze_m", "mail" => "mmodem00 [at] netvisao [dot] pt")
+	1 => array("lang" => $template['index']['brazilian'], "nick" => "Adilson Gonçalves Soares Junior", "mail" => "cabide [at] brfree [dot] com.br", "flag" => "Brazil", "unmain" => 1),
+	array("lang" => $template['index']['bulgarian'], "nick" => "Bugar", "mail" => "bugar [at] developer [dot] bg", "flag" => "Bulgaria", "unmain" => 1),
+	array("lang" => $template['index']['croatian'], "nick" => "SpeedyGhost", "mail" => "speedyghost [at] gmail [dot] com", "flag" => "Croatia", "unmain" => 1),
+	array("lang" => $template['index']['czech'], "nick" => "Dusan Hokuv", "mail" => "dusan [at] mirc [dot] cz", "flag" => "Czech-Republic", "unmain" => 1),
+	array("lang" => $template['index']['dutch'], "nick" => "Balboy", "mail" => "balboy [at] kvirc [dot] net", "flag" => "Netherlands", "unmain" => 1),
+	array("lang" => $template['index']['french'], "nick" => array("Ahinu","_Otaku"), "mail" => array("ahinu.laman [at] gmail [dot] com","notakou [at] tiscali [dot] fr"), "flag" => "France"),
+	array("lang" => $template['index']['german'], "nick" => array("mren","Ionic"), "mail" => array("kvirc [at] mrmx [dot] de","ionic [at] ionic [dot] de"), "flag" => "Germany"),
+	array("lang" => $template['index']['hungarian'], "nick" => "Fiber^", "mail" => "vfiber [at] gmail [dot] com", "flag" => "Hungary"),
+	array("lang" => $template['index']['italian'], "nick" => array("HelLViS69","Nate Grey","etherea`"), "mail" => array("hellvis69 [at] netsons [dot] org","nate [at] paranoici [dot] org","cle [at] virg0 [dot] org"), "flag" => "Italy"),
+	array("lang" => $template['index']['polish'], "nick" => "Krzysztof Godlewski", "mail" => "kgod [at] poczta.onet [dot] pl", "flag" => "Poland", "unmain" => 1),
+	array("lang" => $template['index']['portuguese'], "nick" => "Ze_m", "mail" => "mmodem00 [at] netvisao [dot] pt", "flag" => "Portugal"),
+	array("lang" => $template['index']['russian'], "nick" => "Alexey", "mail" => "spam [at] kvirc [dot] ru", "flag" => "Russia", "unmain" => 1),
+	array("lang" => $template['index']['serbian'], "nick" => "Prethorian", "mail" => "preth [at] kvsky [dot] net", "flag" => "Serbia", "unmain" => 1)
 );
-
-/*
-$template['index']['bulgarian'], bugar [at] developer [dot] bg, Bugar
-$template['index']['croatian'], SpeedyGhost
-$template['index']['czech'], dusan [at] mirc [dot] cz, Dusan Hokuv
-$template['index']['dutch'], balboy [at] kvirc [dot] net, Balboy
-$template['index']['polish'], kgod [at] poczta.onet [dot] pl, Krzysztof Godlewski
-$template['index']['brazilian'], cabide [at] brfree [dot] com.br, Adilson Gonçalves Soares Junior
-$template['index']['russian'], spam [at] kvirc [dot] ru, Alexey
-$template['index']['serbian'], preth [at] kvsky [dot] net, Prethorian
-*/
 ?>

@@ -10,11 +10,14 @@ echo "<div class=\"column1-unit\">";
 	echo "<p>".$template['translation']['text3']."</p>";
 	echo "<p>".$template['translation']['text4']."</p>";
 	?>
-	<ul class="list">
+	<ul>
 		<?
-		foreach($translators as $key => $value){
-			echo "<li>".$value['lang'].": ";
-			if(is_array($value['nick'])){
+		foreach($translators as $key => $value)
+		{
+			echo "<img src=\"./img/flags/".$value['flag'].".png\" alt=\"".$value['lang']."\" title=\"".$value['lang']."\" />";
+			echo "<li>";
+			if(is_array($value['nick']))
+			{
 				$count=count($value['nick']);
 				for($i=0;$i<$count;$i++){
 					if($value['mail'][$i]!="") echo "<a href=\"mailto:".$value['mail'][$i]."\">".$value['nick'][$i]."</a>";
@@ -27,12 +30,17 @@ echo "<div class=\"column1-unit\">";
 				else echo $value['nick'];
 			}
 
+			if(isset($value['unmain']) && ($value['unmain'] == 1))
+				echo " - <b>".$template['translation']['text4a']."</b>";
+
 			echo "</li>";
 		}
 		?>
 	</ul>
 
 	<?
+	echo "<p>".$template['translation']['text4b']."</p>";
+
 	echo "<p>".$template['translation']['text5a']." <a href=\"/?id=mailinglist&amp;lang=$lang\">".$template['index']['ml']."</a> ".$template['translation']['text5b']."</p>";
 
 	echo "<hr />";

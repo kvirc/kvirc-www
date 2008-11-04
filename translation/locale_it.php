@@ -1086,6 +1086,10 @@ $template['translation']['text3']="
 $template['translation']['text4']="
 	Se sei interessato nella traduzione di KVIrc in una nuova lingua puoi trovare un semplice How-to.<br />
 	Alcune lingue sono aggiornate (quasi) giornalmente, altre hanno bisogno di trovare un nuovo mantainer. Se vuoi aiutare a migliorare il supporto corrente della tua lingua, contatta il suo <b>ultimo traduttore</b>, listato qui:";
+$template['translation']['text4a']="non mantenuto";
+$template['translation']['text4b']="
+	Parlando delle traduzioni \"non mantenute\", vi incoraggiamo ad aiutarci nella traduzione.<br />
+	Se sei interessato, manda una mail in mailing list :)";
 $template['translation']['text5a']="Non dimenticarti di iscriverti alla";
 $template['translation']['text5b']="per rimanere in contatto con gli sviluppatori!";
 $template['translation']['text6']="Questo mini-howto descrive la procedura per tradurre KVIrc in una nuova lingua";
