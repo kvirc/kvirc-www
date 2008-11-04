@@ -311,16 +311,20 @@ $tools=array(
 $translators=array(
 	1 => array("lang" => $template['index']['brazilian'], "nick" => "Adilson Gonçalves Soares Junior", "mail" => "cabide [at] brfree [dot] com.br", "flag" => "Brazil", "unmain" => 1),
 	array("lang" => $template['index']['bulgarian'], "nick" => "Bugar", "mail" => "bugar [at] developer [dot] bg", "flag" => "Bulgaria", "unmain" => 1),
+	array("lang" => $template['index']['catalan'], "nick" => "", "mail" => "", "flag" => "Spain", "unmain" => 1),
 	array("lang" => $template['index']['croatian'], "nick" => "SpeedyGhost", "mail" => "speedyghost [at] gmail [dot] com", "flag" => "Croatia", "unmain" => 1),
 	array("lang" => $template['index']['czech'], "nick" => "Dusan Hokuv", "mail" => "dusan [at] mirc [dot] cz", "flag" => "Czech-Republic", "unmain" => 1),
 	array("lang" => $template['index']['dutch'], "nick" => "Balboy", "mail" => "balboy [at] kvirc [dot] net", "flag" => "Netherlands", "unmain" => 1),
+	array("lang" => $template['index']['finnish'], "nick" => "", "mail" => "", "flag" => "Finland", "unmain" => 1),
 	array("lang" => $template['index']['french'], "nick" => array("Ahinu","_Otaku"), "mail" => array("ahinu.laman [at] gmail [dot] com","notakou [at] tiscali [dot] fr"), "flag" => "France"),
-	array("lang" => $template['index']['german'], "nick" => array("mren","Ionic"), "mail" => array("kvirc [at] mrmx [dot] de","ionic [at] ionic [dot] de"), "flag" => "Germany"),
+	array("lang" => $template['index']['german'], "nick" => "mren", "mail" => "kvirc [at] mrmx [dot] de", "flag" => "Germany"),
 	array("lang" => $template['index']['hungarian'], "nick" => "Fiber^", "mail" => "vfiber [at] gmail [dot] com", "flag" => "Hungary"),
-	array("lang" => $template['index']['italian'], "nick" => array("HelLViS69","Nate Grey","etherea`"), "mail" => array("hellvis69 [at] netsons [dot] org","nate [at] paranoici [dot] org","cle [at] virg0 [dot] org"), "flag" => "Italy"),
+	array("lang" => $template['index']['italian'], "nick" => "HelLViS69", "mail" => "hellvis69 [at] netsons [dot] org", "flag" => "Italy"),
 	array("lang" => $template['index']['polish'], "nick" => "Krzysztof Godlewski", "mail" => "kgod [at] poczta.onet [dot] pl", "flag" => "Poland", "unmain" => 1),
 	array("lang" => $template['index']['portuguese'], "nick" => "Ze_m", "mail" => "mmodem00 [at] netvisao [dot] pt", "flag" => "Portugal"),
 	array("lang" => $template['index']['russian'], "nick" => "Alexey", "mail" => "spam [at] kvirc [dot] ru", "flag" => "Russia", "unmain" => 1),
-	array("lang" => $template['index']['serbian'], "nick" => "Prethorian", "mail" => "preth [at] kvsky [dot] net", "flag" => "Serbia", "unmain" => 1)
+	array("lang" => $template['index']['serbian'], "nick" => "Prethorian", "mail" => "preth [at] kvsky [dot] net", "flag" => "Serbia", "unmain" => 1),
+	array("lang" => $template['index']['spanish'], "nick" => "", "mail" => "", "flag" => "Spain", "unmain" => 1),
+	array("lang" => $template['index']['ukrainian'], "nick" => "", "mail" => "", "flag" => "Ukraine", "unmain" => 1)
 );
 ?>

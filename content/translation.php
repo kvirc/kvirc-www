@@ -16,6 +16,7 @@ echo "<div class=\"column1-unit\">";
 		{
 			echo "<img src=\"./img/flags/".$value['flag'].".png\" alt=\"".$value['lang']."\" title=\"".$value['lang']."\" />";
 			echo "<li>";
+
 			if(is_array($value['nick']))
 			{
 				$count=count($value['nick']);
@@ -31,7 +32,11 @@ echo "<div class=\"column1-unit\">";
 			}
 
 			if(isset($value['unmain']) && ($value['unmain'] == 1))
-				echo " - <b>".$template['translation']['text4a']."</b>";
+			{
+				if($value['nick'] != "") echo " - ";
+
+				echo "<b>".$template['translation']['text4a']."</b>";
+			}
 
 			echo "</li>";
 		}

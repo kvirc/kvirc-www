@@ -5,22 +5,25 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 
 /* index.php start */
 // languages
-$template['index']['italian']="italienisch";
-$template['index']['english']="englisch";
-$template['index']['german']="deutsch";
-$template['index']['russian']="russisch";
-$template['index']['french']="französisch";
-$template['index']['spanish']="spanisch";
+$template['index']['brazilian']="brasilianisch";
 $template['index']['bulgarian']="bulgarisch";
+$template['index']['catalan']="Catalan";
+$template['index']['croatian']="kroatisch";
 $template['index']['czech']="tschechisch";
 $template['index']['dutch']="niederländisch";
+$template['index']['english']="englisch";
+$template['index']['finnish']="Finnish";
+$template['index']['french']="französisch";
+$template['index']['german']="deutsch";
+$template['index']['hungarian']="ungarisch";
+$template['index']['italian']="italienisch";
+$template['index']['latvian']="lettisch";
 $template['index']['polish']="polnisch";
 $template['index']['portuguese']="portugiesisch";
-$template['index']['brazilian']="brasilianisch";
+$template['index']['russian']="russisch";
 $template['index']['serbian']="serbisch";
-$template['index']['hungarian']="ungarisch";
-$template['index']['croatian']="kroatisch";
-$template['index']['latvian']="lettisch";
+$template['index']['spanish']="spanisch";
+$template['index']['ukrainian']="Ukrainian";
 
 // the project
 $template['index']['theproject']="das Projekt";
