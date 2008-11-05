@@ -863,40 +863,54 @@ $template['releases']['available']="Verfügbare Orte zum herunterladen";
 /* releases.php end */
 
 /* require.php start */
-$template['require']['title']="Voraussetzungen (3.0.0 Zweig)";
-$template['require']['tree1']="Unix Version (Quelltext):";
-$template['require']['tree1a']="Ein funktionierendes UNIX-System, kompilationstauglich";
+$template['require']['title']="Requirements (4.0 branch)";
+$template['require']['tree1']="Unix version (sources):";
+$template['require']['tree1a']="A working UNIX system suitable for compiling stuff";
 $template['require']['tree1b']="
-	Das <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 3.0.5 (ältere Versionen <b>können</b> funktionieren)";
+	The <a href=\"http://www.trolltech.com\">Qt GUI Toolkit</a> >= 4.4.0";
 $template['require']['tree1c']="
-	<a href=\"http://www.gnu.org/software/automake/\">automake</a> 1.5";
-$template['require']['tree1d']="<a href=\"http://www.zlib.org/\">Zlib Bibliothek</a>";
-$template['require']['tree1e']="
-	<a href=\"http://www.cpan.org\">Perl</a> (Um die Online-Dokumentation zu erstellen)";
+	The <a href=\"http://www.cmake.org\">CMake Makefile generator</a> >= 2.6";
+$template['require']['tree1d']="
+	The C++ compiler, such as <a href=\"http://gcc.gnu.org\">GCC (g++)</a>";
+$template['require']['tree1e']="A decent Pthread implementation";
 $template['require']['tree1f']="
-	<a href=\"http://www.kde.org\">KDE</a> Bibliotheken gegen <b>die gleiche</b> Version von Qt gelinked (optional)";
+	The <a href=\"http://www.zlib.org\">Zlib library</a>, to create and share addons and theme packages";
 $template['require']['tree1g']="
-	Prüfe, ob Deine Distribution separate Entwicklungsbibliotheken hat. Falls ja, musst Du diese Pakete installieren. Diese Pakete haben oft \"-dev\" im Namen";
+	<a href=\"http://www.cpan.org\">Perl</a>, to generate builtin documentation (optional)";
+$template['require']['tree1h']="
+	The <a href=\"http://www.kde.org\">KDE libs</a> linked to <b>the same</b> version of Qt (optional)";
+$template['require']['tree1i']="
+	The <a href=\"http://www.gnu.org/software/gettext\">GNU GetText suite</a> to generate translation files (optional)";
+$template['require']['tree1j']="
+	The <a href=\"http://www.openssl.org\">OpenSSL library</a>, to establish secure connections to the IRC servers (optional)";
+$template['require']['tree1k']="
+	Check if your distro split devel libraries; if so you have to install the packages which contains them. Those packages have often \"-dev\" in their name";
 $template['require']['tree2']="Unix Version (Binärpakete):";
 $template['require']['tree2a']="Ein funktionierendes Unix System";
 $template['require']['tree2b']="
-	Das <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 3.0.5 (ältere Versions <b>können</b> funktionieren)";
+	Das <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 4.4.0";
 $template['require']['tree3']="Windows Version (Quelltext):";
-$template['require']['tree3a']="
-	Die freie Version vom <a href=\"ftp://ftp.trolltech.com\">QT GUI toolkit</a> für Windows >= 2.3.0";
-$template['require']['tree3b']="<a href=\"http://www.zlib.org/\">Zlib Bibliothek</a>";
-$template['require']['tree3c']="Etwas Glück";
+$template['require']['tree3a']="Folge den Instruktionen in \"doc/INSTALL-Win32.txt\"";
 $template['require']['tree4']="Windows Version (Binärpakete):";
 $template['require']['tree4a']="Hoffentlich nichts";
 $template['require']['tree5']="Mac OS X (Quelltext):";
-$template['require']['tree5a']="Folge den Instruktionen in \"doc (INSTALL-MacOS.txt)\"";
+$template['require']['tree5a']="Folge den Instruktionen in \"doc/INSTALL-MacOS.txt\"";
 $template['require']['tree6']="Mac OS X (Binärpakete):";
 $template['require']['tree6a']="
 	Hoffentlich nichts. Öffne einfach die .dmg-Datei und ziehe das Icon in Deinen Applikationsordner.";
-$template['require']['titleold']="Voraussetzungen (alter 2.1.1 Zweig)";
-$template['require']['treeold1']="Ein funktionierendes UNIX System";
-$template['require']['treeold2']="Das <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 2.3.0";
-$template['require']['treeold3']="<a href=\"http://www.kde.org\">KDE</a> Bibliotheken (optional)";
+$template['require']['titleold']="Requirements (old 3.4 branch)";
+$template['require']['treeold1']="Unix version (sources):";
+$template['require']['treeold2']="A working UNIX system suitable for compiling stuff";
+$template['require']['treeold3']="
+	The <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 3.0.5 (older versions <b>might</b> work)";
+$template['require']['treeold4']="
+	<a href=\"http://www.gnu.org/software/automake/\">automake</a> 1.5";
+$template['require']['treeold5']="<a href=\"http://www.zlib.org/\">Zlib library</a>";
+$template['require']['treeold6']="
+	<a href=\"http://www.cpan.org\">Perl</a> (for generating online documentation)";
+$template['require']['treeold1f']="<a href=\"http://www.kde.org\">KDE</a> libs linked to <b>the same</b> version of Qt (optional)";
+$template['require']['treeold7']="
+	Check if your distro split devel libraries; if so you have to install the packages which contains them. Those packages have often \"-dev\" in their name";
 /* require.php end */
 
 /* screen.php start */
