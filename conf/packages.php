@@ -269,13 +269,13 @@ $p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)"
 $package_count++;
 
 // Windows
-$p_filename[$package_count]    = "KVIrc-3.4.2.exe";
+$p_filename[$package_count]    = "KVIrc-3.4.2.1.exe";
 $p_path[$package_count]        = "3.4.2/binary/win32";
 $p_description[$package_count] = "KVIrc 3.4.2, Windows binary";
 $p_details[$package_count]     = "The self-installing binary package for Windows built on top of the non-commercial version of the Qt library. Just double click on it after downloading.";
 $p_platform[$package_count]    = "win32";
 $p_version[$package_count]     = "3.4.2";
-$p_size[$package_count]        = "6958577";
+$p_size[$package_count]        = "7012470";
 $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "CtrlAltCa (ctrlaltca at gmail dot com)";
 $package_count++;
