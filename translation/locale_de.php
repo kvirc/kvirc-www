@@ -1078,7 +1078,7 @@ $template['themes']['theme30']="Ein Thema, welches Deinen Geist erhellt";
 $template['themes']['theme31']="Ein Thema inspiriert durch R.A. Salvatores Romane über die Drow (Dunkelelfen) und besonders Drizzt Do'Urden";
 $template['themes']['theme32']="...weil die ganze Welt ein schönes Fraktal ist!";
 $template['themes']['theme33']="Ein dunkleres technisch aussehendes Thema mit einfachen und beschreibenden Symbolen";
-$template['themes']['theme34']="A theme made by CoreZeam.org portal";
+$template['themes']['theme34']="Dieses Thema wurde vom CoreZeam.org Portal erstellt";
 /* themes.php end */
 
 /* tools.php start */
