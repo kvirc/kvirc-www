@@ -1000,8 +1000,8 @@ $template['splash']['in']="Bildschirm enthalten in";
 $template['status']['title']="Projektstatus";
 $template['status']['text']="
 	<p>Nach 9 Jahren Entwicklung ist KVIrc ein ausgereifter und voll ausgestatteter IRC-Client, ein exzellenter Begleiter für die täglichen IRC-Versammlungen.</p>
-	<p>Die aktuelle stabile Version ist <a href=\"?id=news&story=2008.03.25.02.02.1.story&dir=latest&lang=$lang\">3.4.0 \"Virgo\"</a>.
-	Sie wurde am 25. März 2008 veröffentlicht.
+	<p>Die aktuelle stabile Version ist <a href=\"?id=news&story=2008.10.14.16.59.1.story&dir=latest&lang=$lang\">3.4.2 \"Shiny\"</a>.
+	Sie wurde am 14. Oktober 2008 veröffentlicht.
 
 	Sie kann als Quelltext von der <a href=\"?id=download&amp;lang=$lang\">download</a>-Seite bezogen werden.</p>
 	<p>Wenn Du offizielle Veröffentlichungen suchst, schau mal in <a href=\"?id=releases&amp;lang=$lang\">diese Rubrik</a>, diese werden seltener veröffetnlicht, sind aber die stabilsten. Wähle Deine Version zwischen Linux, Windows, MacOSX oder Quelltextpaket.</p>
@@ -1078,6 +1078,7 @@ $template['themes']['theme30']="Ein Thema, welches Deinen Geist erhellt";
 $template['themes']['theme31']="Ein Thema inspiriert durch R.A. Salvatores Romane über die Drow (Dunkelelfen) und besonders Drizzt Do'Urden";
 $template['themes']['theme32']="...weil die ganze Welt ein schönes Fraktal ist!";
 $template['themes']['theme33']="Ein dunkleres technisch aussehendes Thema mit einfachen und beschreibenden Symbolen";
+$template['themes']['theme34']="A theme made by CoreZeam.org portal";
 /* themes.php end */
 
 /* tools.php start */

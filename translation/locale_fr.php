@@ -1004,8 +1004,8 @@ $template['splash']['in']="Splash Present in";
 $template['status']['title']="Statut du Projet";
 $template['status']['text']="
 	<p>Après 9 ans de developpement KVIrc est un client irc mature et complet, un excellent compagnon pour vos utilisations quotidiennes de l'irc.</p>
-	<p>La dernière version stable est <a href=\"/?id=news&amp;story=2005.02.27.16.29.1.story&amp;dir=2005.02&amp;lang=$lang\">3.2.0 \"Realia\"</a>.
-	Elle est sortie le 27 Février 2005.
+	<p>La dernière version stable est <a href=\"?id=news&story=2008.10.14.16.59.1.story&dir=latest&lang=$lang\">3.4.2 \"Shiny\"</a>.
+	Elle est sortie le 14 October 2008.
 	Le code source peut-être obtenu sur <a href=\"?id=download&amp;lang=$lang\">la page de téléchargements</a>.</p>
 	<p>Si vous recherchez la version officielle jettez un oeil sur <a href=\"?id=releases&amp;lang=$lang\">cette section</a>, il y a toutes les version les plus stables. Choisissez entre Linux, Windows, MacOSX ou le paquet source.</p>
 	<p>Les snapshots sont localisés <a href=\"?id=snapshots&amp;lang=$lang\">ici</a> par SVN <a href=\"?id=SVN&amp;lang=$lang\">ici</a>.</p>
@@ -1081,6 +1081,7 @@ $template['themes']['theme30']="The theme which light your minds";
 $template['themes']['theme31']="A theme inspired by R.A. Salvatore's novels about the Drow (Dark Elves) and specifically Drizzt Do'Urden";
 $template['themes']['theme32']="...because all world is a beautiful fractal!";
 $template['themes']['theme33']="A darker techno-looking theme with simple and descriptive icons";
+$template['themes']['theme34']="A theme made by CoreZeam.org portal";
 /* themes.php end */
 
 /* tools.php start */
