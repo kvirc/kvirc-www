@@ -176,6 +176,52 @@ $p_group[$package_count]       = "debian";
 $p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
 $package_count++;
 
+// openSUSE 11.1
+$p_filename[$package_count]    = "kvirc-3.4.2-3.1.i586.rpm";
+$p_path[$package_count]        = "3.4.2/binary/opensuse/11.1";
+$p_description[$package_count] = "KVIrc 3.4.2, OpenSUSE 11.1 binary";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.1.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "5563848";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-devel-3.4.2-3.1.i586.rpm";
+$p_path[$package_count]        = "3.4.2/binary/opensuse/11.1";
+$p_description[$package_count] = "KVIrc 3.4.2, OpenSUSE 11.1 binary";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.1.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "225641";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+// openSUSE 11.1 64bit
+$p_filename[$package_count]    = "kvirc-3.4.2-3.1.x86_64.rpm";
+$p_path[$package_count]        = "3.4.2/binary/opensuse/11.1";
+$p_description[$package_count] = "KVIrc 3.4.2, OpenSUSE 11.1 binary for 64bit";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.1 64bit.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "5635416";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-devel-3.4.2-3.1.x86_64.rpm";
+$p_path[$package_count]        = "3.4.2/binary/opensuse/11.1";
+$p_description[$package_count] = "KVIrc 3.4.2, OpenSUSE 11.1 binary for 64bit";
+$p_details[$package_count]     = "The self-installing devel binary package for OpenSUSE 11.1 64bit.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "225607";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
 // openSUSE 11.0
 $p_filename[$package_count]    = "kvirc-3.4.2-1.1.i586.rpm";
 $p_path[$package_count]        = "3.4.2/binary/opensuse/11.0";
