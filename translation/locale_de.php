@@ -1192,6 +1192,8 @@ $template['tutorials']['text4b']="Dieses kurze Tutorium beschreibt, wie man unte
 $template['tutorials']['dropmail']="Wenn Du ein FAQ, Tutorium oder Anleitung zu KVIrc geschrieben hast, egal in welcher Sprache, sende bitte eine E-Mail an";
 $template['tutorials']['text5a']="Thema Kurzanleitung";
 $template['tutorials']['text5b']="Ein kleiner Ratgeber, um ein gutes Thema zu erstellen";
+$template['tutorials']['text6a']="Installer Modification Under Win32";
+$template['tutorials']['text6b']="Tutorial on how to repack the windows installer to include a modded default script, theme and whatever";
 /* tutorials.php end */
 
 /* welcome.php start */

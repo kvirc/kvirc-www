@@ -1198,6 +1198,8 @@ $template['tutorials']['text4b']="A short tutorial how to install KVIrc, connect
 $template['tutorials']['dropmail']="If you have written a FAQ, tutorial or guide to KVIrc in any language please drop a mail to";
 $template['tutorials']['text5a']="Theme HowTo";
 $template['tutorials']['text5b']="A small howto on how to make a good theme";
+$template['tutorials']['text6a']="Installer Modification Under Win32";
+$template['tutorials']['text6b']="Tutorial on how to repack the windows installer to include a modded default script, theme and whatever";
 /* tutorials.php end */
 
 /* welcome.php start */
