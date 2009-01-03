@@ -4,7 +4,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
 $path="img/themes";
-$dpath="ftp://ftp.kvirc.de/pub/kvirc/themes";
+$dpath.="/themes";
 
 echo "<h1 class=\"pagetitle\">".$template['themes']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
@@ -21,7 +21,7 @@ echo "<div class=\"column1-unit\">";
 			echo "</ol></li>";
 
 		echo "<li><b>".$template['themes']['text3a']."?</b><br />";
-		echo $template['themes']['text3b1']." <a href=\"ftp://ftp.kvirc.net/pub/kvirc/themes/themes.howto.txt\">".$template['themes']['text3b2']."</a> ".$template['themes']['text3b3']." <a href=\"http://kvirc.virg0.org/docs/themes.howto_it.pdf\">".$template['themes']['text3b2']."</a>.<br />";
+		echo $template['themes']['text3b1']." <a href=\"$dpath/themes.howto.txt\">".$template['themes']['text3b2']."</a> ".$template['themes']['text3b3']." <a href=\"http://kvirc.virg0.org/docs/themes.howto_it.pdf\">".$template['themes']['text3b2']."</a>.<br />";
 		echo $template['themes']['text3b4'].".</li>";
 
 		echo "<li><b>".$template['themes']['text4a']."?</b><br />";

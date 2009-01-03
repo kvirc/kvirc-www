@@ -3,6 +3,7 @@
 if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
+$dpath.="/scripts";
 $numAddons=0;
 $version=trim(strip_tags(addslashes($_GET['version'])));
 if(!$version || !eregi("^[0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}$",$version))
@@ -57,7 +58,7 @@ echo "<div class=\"column1-unit\">";
 
 			echo "<tr>";
 				echo "<td class=\"data\">".$template['custom']['download'].":</td>";
-				echo "<td><a href=\"".$value['url']."\">".basename($value['url'])."</a></td>";
+				echo "<td><a href=\"$dpath/".$value['url']."\">".$value['url']."</a></td>";
 			echo "</tr>";
 
 			echo "</table>";
