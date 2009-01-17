@@ -326,6 +326,74 @@ $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "CtrlAltCa (ctrlaltca at gmail dot com)";
 $package_count++;
 
+// Debian
+$p_filename[$package_count]    = "kvirc_3.4.2-0_i386.deb";
+$p_path[$package_count]        = "3.4.2/binary/debian";
+$p_description[$package_count] = "KVIrc 3.4.2, Debian sid binary";
+$p_details[$package_count]     = "The self-installing binary package for Debian.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "3595356";
+$p_group[$package_count]       = "debian";
+$p_author[$package_count]      = "Kebianizao";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-data_3.4.2-0_all.deb";
+$p_path[$package_count]        = "3.4.2/binary/debian";
+$p_description[$package_count] = "KVIrc 3.4.2, Debian sid binary";
+$p_details[$package_count]     = "The self-installing binary package for Debian.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "3571320";
+$p_group[$package_count]       = "debian";
+$p_author[$package_count]      = "Kebianizao";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-dev_3.4.2-0_i386.deb";
+$p_path[$package_count]        = "3.4.2/binary/debian";
+$p_description[$package_count] = "KVIrc 3.4.2, Debian sid binary";
+$p_details[$package_count]     = "The self-installing binary package for Debian.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "361062";
+$p_group[$package_count]       = "debian";
+$p_author[$package_count]      = "Kebianizao";
+$package_count++;
+
+// Debian 64bit
+$p_filename[$package_count]    = "kvirc_3.4.2-0_amd64.deb";
+$p_path[$package_count]        = "3.4.2/binary/debian";
+$p_description[$package_count] = "KVIrc 3.4.2, Debian sid binary";
+$p_details[$package_count]     = "The self-installing binary package for Debian.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "3727396";
+$p_group[$package_count]       = "debian";
+$p_author[$package_count]      = "Kebianizao";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-data_3.4.2-0_all.deb";
+$p_path[$package_count]        = "3.4.2/binary/debian";
+$p_description[$package_count] = "KVIrc 3.4.2, Debian sid binary";
+$p_details[$package_count]     = "The self-installing binary package for Debian.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "3734430";
+$p_group[$package_count]       = "debian";
+$p_author[$package_count]      = "Kebianizao";
+$package_count++;
+
+$p_filename[$package_count]    = "kvirc-dev_3.4.2-0_amd64.deb";
+$p_path[$package_count]        = "3.4.2/binary/debian";
+$p_description[$package_count] = "KVIrc 3.4.2, Debian sid binary";
+$p_details[$package_count]     = "The self-installing binary package for Debian.";
+$p_platform[$package_count]    = "unix";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "378988";
+$p_group[$package_count]       = "debian";
+$p_author[$package_count]      = "Kebianizao";
+$package_count++;
+
 /*
 // Windows with Classic Icons
 $p_filename[$package_count]    = "KVIrc-3.4.2-classic.exe";
