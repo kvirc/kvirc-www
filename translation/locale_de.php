@@ -1101,12 +1101,12 @@ $template['translation']['text2']="
 $template['translation']['text3']="
 	Alle Übersetzer <b>MÜSSEN UTF-8</b> als Kodierungsformat <b>BENUTZEN.</b> Übersetzungsdateien mit anderen Formaten werden abgelehnt.";
 $template['translation']['text4']="
-	Wenn Du interessiert bist, KVIrc in eine neue Sprache zu übersetzen, kannst Du hier eine nette Kurzanleitung finden.<br />
+	Wenn Du Interesse hast, KVIrc in eine neue Sprache zu übersetzen, findest Du hier eine gute Kurzanleitung.<br />
 	Einige Sprachen werden (fast) täglich aktualisiert, andere müssen einen neuen Bearbeiter finden. Wenn Du helfen willst, die aktuelle Unterstützung für Deine Sprache zu verbessern, kontaktiere bitte den <b>letzten Bearbeiter,</b> welcher hier gelistet ist:";
 $template['translation']['text4a']="nicht gepflegt";
 $template['translation']['text4b']="
 	Wo wir bei \"nicht gepflegt\" sind: Wir ermutigen Dich, uns beim Übersetzen zu helfen.<br />
-	Bei Interesse schick ein E-Mail an die Mailinglist :)";
+	Bei Interesse schick eine E-Mail an die Mailinglist :)";
 $template['translation']['text5a']="Vergiss nicht die";
 $template['translation']['text5b']="zu abonnieren, um mit den Entwicklern in Verbindung zu bleiben!";
 $template['translation']['text6']="Diese kleine Schritt-für-Schritt-Anleitung beschreibt das Vorgehen, um KVIrc in eine neue Sprache zu übersetzen";
@@ -1190,10 +1190,10 @@ $template['tutorials']['text3b']="Eine Einführung für völlige Anfänger";
 $template['tutorials']['text4a']="KVIrc-Installation unter Win32";
 $template['tutorials']['text4b']="Dieses kurze Tutorium beschreibt, wie man unter Windows KVIrc installiert, sich zu einem Server verbindet und einen Raum betritt";
 $template['tutorials']['dropmail']="Wenn Du ein FAQ, Tutorium oder Anleitung zu KVIrc geschrieben hast, egal in welcher Sprache, sende bitte eine E-Mail an";
-$template['tutorials']['text5a']="Thema Kurzanleitung";
+$template['tutorials']['text5a']="Themen-Kurzanleitung";
 $template['tutorials']['text5b']="Ein kleiner Ratgeber, um ein gutes Thema zu erstellen";
-$template['tutorials']['text6a']="Installer Modification Under Win32";
-$template['tutorials']['text6b']="Tutorial on how to repack the windows installer to include a modded default script, theme and whatever";
+$template['tutorials']['text6a']="Installer-Modifikation unter Win32";
+$template['tutorials']['text6b']="Eine Anleitung, um den Windows-Installer neu zu packen und modifizierte Themen, Standard-Skript, usw. beizupacken";
 /* tutorials.php end */
 
 /* welcome.php start */
