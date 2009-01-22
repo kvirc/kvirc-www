@@ -326,7 +326,7 @@ $translators=array(
 	array("lang" => $template['index']['portuguese'], "nick" => "Ze_m", "mail" => "mmodem00 [at] netvisao [dot] pt", "flag" => "Portugal"),
 	array("lang" => $template['index']['russian'], "nick" => "Alexey", "mail" => "spam [at] kvirc [dot] ru", "flag" => "Russia", "unmain" => 1),
 	array("lang" => $template['index']['serbian'], "nick" => "Prethorian", "mail" => "preth [at] kvsky [dot] net", "flag" => "Serbia", "unmain" => 1),
-	array("lang" => $template['index']['spanish'], "nick" => "", "mail" => "", "flag" => "Spain", "unmain" => 1),
+	array("lang" => $template['index']['spanish'], "nick" => "egns", "mail" => "grannost [at] gmail [dot] com", "flag" => "Spain"),
 	array("lang" => $template['index']['ukrainian'], "nick" => "", "mail" => "", "flag" => "Ukraine", "unmain" => 1)
 );
 ?>

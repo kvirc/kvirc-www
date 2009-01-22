@@ -130,10 +130,10 @@ search();
 					<li><a href="?id=<?echo $id;?>&amp;lang=it" title="<?echo $template['index']['italian'];?>"><img src="./img/flags/Italy.png" alt="<?echo $template['index']['italian'];?>" /></a></li>
 					<li><a href="?id=<?echo $id;?>&amp;lang=en" title="<?echo $template['index']['english'];?>"><img src="./img/flags/United-States.png" alt="<?echo $template['index']['english'];?>" /></a></li>
 					<li><a href="?id=<?echo $id;?>&amp;lang=de" title="<?echo $template['index']['german'];?>"><img src="./img/flags/Germany.png" alt="<?echo $template['index']['german'];?>" /></a></li>
+					<li><a href="?id=<?echo $id;?>&amp;lang=es" title="<?echo $template['index']['spanish'];?>"><img src="./img/flags/Spain.png" alt="<?echo $template['index']['spanish'];?>" /></a></li>
 					<?/*
 					<li><a href="?id=<?echo $id;?>&amp;lang=ru" title="<?echo $template['index']['russian'];?>"><img src="./img/flags/Russia.png" alt="<?echo $template['index']['russian'];?>" /></a></li>
 					<li><a href="?id=<?echo $id;?>&amp;lang=fr" title="<?echo $template['index']['french'];?>"><img src="./img/flags/France.png" alt="<?echo $template['index']['french'];?>" /></a></li>
-					<li><a href="?id=<?echo $id;?>&amp;lang=es" title="<?echo $template['index']['spanish'];?>"><img src="./img/flags/Spain.png" alt="<?echo $template['index']['spanish'];?>" /></a></li>
 					<li><a href="?id=<?echo $id;?>&amp;lang=bg" title="<?echo $template['index']['bulgarian'];?>"><img src="./img/flags/Bulgaria.png" alt="<?echo $template['index']['bulgarian'];?>" /></a></li>
 					<li><a href="?id=<?echo $id;?>&amp;lang=cz" title="<?echo $template['index']['czech'];?>"><img src="./img/flags/Czech-Republic.png" alt="<?echo $template['index']['czech'];?>" /></a></li>
 					<li><a href="?id=<?echo $id;?>&amp;lang=nl" title="<?echo $template['index']['dutch'];?>"><img src="./img/flags/Netherlands.png" alt="<?echo $template['index']['dutch'];?>" /></a></li>
