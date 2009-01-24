@@ -1079,6 +1079,7 @@ $template['themes']['theme31']="Ein Thema inspiriert durch R.A. Salvatores Roman
 $template['themes']['theme32']="...weil die ganze Welt ein schönes Fraktal ist!";
 $template['themes']['theme33']="Ein dunkleres technisch aussehendes Thema mit einfachen und beschreibenden Symbolen";
 $template['themes']['theme34']="Dieses Thema wurde vom CoreZeam.org Portal erstellt";
+$template['themes']['theme35']="A black-based theme easy to see and distinguish";
 /* themes.php end */
 
 /* tools.php start */

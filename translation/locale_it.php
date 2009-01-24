@@ -1081,6 +1081,7 @@ $template['themes']['theme31']="Un tema ispirato ai racconti di R.A. Salvatore s
 $template['themes']['theme32']="...perché tutto il mondo è un bellissimo frattale!";
 $template['themes']['theme33']="Un tema scuro tecnologico con icone semplici e descrittive";
 $template['themes']['theme34']="Un tema fatto dal portale CoreZeam.org";
+$template['themes']['theme35']="Un tema nero facile da vedere e distinguere";
 /* themes.php end */
 
 /* tools.php start */

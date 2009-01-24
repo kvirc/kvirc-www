@@ -1084,7 +1084,8 @@ $template['themes']['theme30']="El tema que iluminará vuestras mentes";
 $template['themes']['theme31']="Un tema inspirado en las novelas de R.A. Salvatore sobre el Drow (Dark Elves) y especialmente Drizzt Do'Urden";
 $template['themes']['theme32']="...¡porque todo el mundo es un bonito fractal!";
 $template['themes']['theme33']="Un tema más oscuro al estilo techno y con iconos simples y descriptivos";
-$template['themes']['theme34']="Un tema hecho por el portal CoreZeam.org"; 
+$template['themes']['theme34']="Un tema hecho por el portal CoreZeam.org";
+$template['themes']['theme35']="A black-based theme easy to see and distinguish";
 /* themes.php end */
 
 /* tools.php start */

@@ -1085,6 +1085,7 @@ $template['themes']['theme31']="A theme inspired by R.A. Salvatore's novels abou
 $template['themes']['theme32']="...because all world is a beautiful fractal!";
 $template['themes']['theme33']="A darker techno-looking theme with simple and descriptive icons";
 $template['themes']['theme34']="A theme made by CoreZeam.org portal";
+$template['themes']['theme35']="A black-based theme easy to see and distinguish";
 /* themes.php end */
 
 /* tools.php start */

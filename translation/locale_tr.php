@@ -528,6 +528,7 @@ $template['honor']['quote36']="...it's enough for 100 IPs per meter on earth, so
 $template['honor']['made37']="MacOSX porting";
 $template['honor']['made38']="Portuguese translation, default script patches and Mandriva (MDE) packager.";
 $template['honor']['made39']="Russian translation";
+$template['honor']['made40']="Bugfixing, coding, mingw32 port, user support";
 /* honor.php end */
 
 /* install.php start */
@@ -1009,7 +1010,7 @@ $template['status']['text']="
 	<p>The latest stable release is <a href=\"?id=news&story=2008.10.14.16.59.1.story&dir=latest&lang=$lang\">3.4.2 \"Shiny\"</a>.
 	It has been published on Oct 14 2008.
 	It can be obtained in source form from the <a href=\"?id=download&amp;lang=$lang\">download</a> page.</p>
-	<p>If you are looking for official releases have a look at <a href=\"?id=releases&amp;lang=$lang\">this section</a>, those are released less often but are most stable. Choose your release between Linux, Windows, MacOSX or source package.</p>
+	<p>If you are looking for official releases have a look at <a href=\"?id=releases&amp;lang=$lang\">this section</a>, those are released less often but are most stable. Choose your release between Linux, Windows, MacOS X or source package.</p>
 	<p>Snapshots are located <a href=\"?id=snapshots&amp;lang=$lang\">here</a> while SVN are found <a href=\"?id=SVN&amp;lang=$lang\">here</a>.</p>
 	<p>Also be sure to check for <a href=\"?id=install&amp;lang=$lang\">installation notes</a>, <a href=\"?id=tutorials&amp;lang=$lang\">tutorials</a>, <a href=\"?id=translation&amp;lang=$lang\">translations</a> and <a href=\"?id=themes&amp;lang=$lang\">themes</a> for a more customized version of your KVIrc =)</p>";
 /* status.php end */
@@ -1084,6 +1085,7 @@ $template['themes']['theme31']="A theme inspired by R.A. Salvatore's novels abou
 $template['themes']['theme32']="...because all world is a beautiful fractal!";
 $template['themes']['theme33']="A darker techno-looking theme with simple and descriptive icons";
 $template['themes']['theme34']="A theme made by CoreZeam.org portal";
+$template['themes']['theme35']="A black-based theme easy to see and distinguish";
 /* themes.php end */
 
 /* tools.php start */
