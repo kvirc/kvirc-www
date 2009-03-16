@@ -141,7 +141,7 @@ $honor=array(
 	array("nick" => "iakko", "name" => "Iacopo Palazzi", "mail" => "iakko [at] siena.linux.it_REMOVEFROMUNDERSCORETOTHISPOINT", "made" => $template['honor']['made13'], "quote" => $template['honor']['quote13'], "image" => "iakko"),
 	array("nick" => "Thilo", "name" => "Thilo Schulz", "mail" => "arny [at] ats.s.bawue [dot] de", "made" => $template['honor']['made14'], "quote" => "", "image" => "Thilo"),
 	array("nick" => "Ahinu", "name" => "Ahinu", "mail" => "ahinu.laman [at] gmail [dot] com", "made" => $template['honor']['made15'], "quote" => "", "image" => "ahinu"),
-	array("nick" => "Noldor", "name" => "Alessandro Carbone", "mail" => "Noldor [at] barmes [dot] org", "made" => $template['honor']['made16'], "quote" => $template['honor']['quote16'], "image" => "noldor"),
+        array("nick" => "Noldor", "name" => "Alessandro Carbone", "mail" => "elfonol [at] gmail [dot] com", "made" => $template['honor']['made16'], "quote" => $template['honor']['quote16'], "image" => "noldor"),
 	array("nick" => "Grifisx", "name" => "Tonino Imbesi", "mail" => "", "made" => $template['honor']['made17'], "quote" => $template['honor']['quote17'], "image" => "grifisx"),
 	array("nick" => "Alexey", "name" => "Alexey Uzhva", "mail" => "wizard-ANTISPAM [at] opendoor [dot] ru", "made" => $template['honor']['made18'], "quote" => "", "image" => "alexey"),
 	array("nick" => "HelLViS69", "name" => "Elvio Basello", "mail" => "hellvis69 [at] netsons [dot] org", "made" => $template['honor']['made19'], "quote" => $template['honor']['quote19'], "image" => "hellvis69"),
