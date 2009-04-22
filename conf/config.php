@@ -50,7 +50,8 @@ $www_mirror=array(
 	//array("name" => "kvirc.paracoda.com", "url" => "http://kvirc.paracoda.com", "desc" => "kvirc.paracoda.com: Canadian mirror (located in Quebec)", "country" => "Canada, Quebec", "city" => "", "sponsor" => "Hossam Hossny from Texle.com"),
 	//array("name" => "kvirc.ipv6.net.au", "url" => "http://kvirc.ipv6.net.au", "desc" => "kvirc.ipv6.net.au: Australian Mirror (located in Brisbane Queensland, IPv4 and IPv6)", "country" => "Australia, Queensland", "city" => "Brisbane", "sponsor" => "Peter Good, IPv6 Australia"),
 	//array("name" => "kvirc.firenze.linux.it", "url" => "http://kvirc.firenze.linux.it", "desc" => "kvirc.firenze.linux.it: Italian mirror (located in Milano)", "country" => "Italy", "city" => "Milano", "sponsor" => "Firenze Linux Users Group"),
-	array("name" => "www.ipv6.kvirc.net", "url" => "http://www.ipv6.kvirc.net", "desc" => "German IPv6 mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org")
+	array("name" => "www.ipv6.kvirc.net", "url" => "http://www.ipv6.kvirc.net", "desc" => "German IPv6 mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
+	array("name" => "kvirc.irc4you.de", "url" => "http://kvirc.irc4you.de", "desc" => "German mirror", "city" => "Frankfurt/Main", "maintainer" => "RomeoGolf")
 );
 
 $ftp_mirror=array(
