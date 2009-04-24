@@ -26,7 +26,7 @@ $template['index']['spanish']="spanisch";
 $template['index']['ukrainian']="ukrainisch";
 
 // the project
-$template['index']['theproject']="das Projekt";
+$template['index']['theproject']="Projekt";
 $template['index']['status']="Status";
 $template['index']['features']="Eigenschaften";
 $template['index']['license']="Lizenz";
@@ -34,7 +34,7 @@ $template['index']['require']="Voraussetzungen";
 $template['index']['screens']="Bildschirmfotos";
 $template['index']['bugtrack']="KVIrc Fehlerdatenbank";
 // running kvirc
-$template['index']['running']="KVIrc benutzen";
+$template['index']['running']="KVIrc nutzen";
 $template['index']['download']="runterladen";
 $template['index']['releases']="offizielle Veröffentlichungen";
 $template['index']['snapshots']="Snapshots";
@@ -53,7 +53,7 @@ $template['index']['splash']="Begrüßungsbildschirme";
 $template['index']['banners']="Banner";
 $template['index']['arts']="Kunst";
 // misc
-$template['index']['misc']="Verschiedenes";
+$template['index']['misc']="Diverses";
 $template['index']['honor']="Ehre &amp; Ruhm";
 $template['index']['scripts']="Skripte";
 $template['index']['addons']="Zusätze";
