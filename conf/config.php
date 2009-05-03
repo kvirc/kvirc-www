@@ -51,7 +51,7 @@ $www_mirror=array(
 	//array("name" => "kvirc.ipv6.net.au", "url" => "http://kvirc.ipv6.net.au", "desc" => "kvirc.ipv6.net.au: Australian Mirror (located in Brisbane Queensland, IPv4 and IPv6)", "country" => "Australia, Queensland", "city" => "Brisbane", "sponsor" => "Peter Good, IPv6 Australia"),
 	//array("name" => "kvirc.firenze.linux.it", "url" => "http://kvirc.firenze.linux.it", "desc" => "kvirc.firenze.linux.it: Italian mirror (located in Milano)", "country" => "Italy", "city" => "Milano", "sponsor" => "Firenze Linux Users Group"),
 	array("name" => "www.ipv6.kvirc.net", "url" => "http://www.ipv6.kvirc.net", "desc" => "German IPv6 mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
-	array("name" => "kvirc.irc4you.de", "url" => "http://kvirc.irc4you.de", "desc" => "German mirror", "city" => "Frankfurt/Main", "maintainer" => "RomeoGolf")
+	array("name" => "www.kvirc.eu", "url" => "http://www.kvirc.eu", "desc" => "German mirror", "city" => "Frankfurt/Main", "maintainer" => "RomeoGolf")
 );
 
 $ftp_mirror=array(
@@ -65,7 +65,7 @@ $ftp_mirror=array(
 	array("name" => "kvirc.tradebit.com", "url" => "http://kvirc.tradebit.com/pub", "desc" => "USA mirror", "city" => "New York, United States", "maintainer" => "tradebit.com"),
 	array("name" => "kvirc.imsam.info", "url" => "http://kvirc.imsam.info", "desc" => "German mirror", "city" => "Nuernberg, Germany", "maintainer" => "tradebit.com"),
 	array("name" => "kvirc.bcoos.net", "url" => "http://kvirc.bcoos.net", "desc" => "USA mirror", "city" => "United States", "maintainer" => "exoops.info"),
-	array("name" => "kvirc.irc4you.de", "url" => "http://kvirc.irc4you.de/pub/", "desc" => "German mirror", "city" => "Frankfurt/Main", "maintainer" => "RomeoGolf")
+	array("name" => "kvirc.eu", "url" => "http://www.kvirc.eu/pub", "desc" => "German mirror", "city" => "Frankfurt/Main", "maintainer" => "RomeoGolf")
 );
 
 // Addons
