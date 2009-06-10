@@ -50,8 +50,7 @@ $www_mirror=array(
 	//array("name" => "kvirc.paracoda.com", "url" => "http://kvirc.paracoda.com", "desc" => "kvirc.paracoda.com: Canadian mirror (located in Quebec)", "country" => "Canada, Quebec", "city" => "", "sponsor" => "Hossam Hossny from Texle.com"),
 	//array("name" => "kvirc.ipv6.net.au", "url" => "http://kvirc.ipv6.net.au", "desc" => "kvirc.ipv6.net.au: Australian Mirror (located in Brisbane Queensland, IPv4 and IPv6)", "country" => "Australia, Queensland", "city" => "Brisbane", "sponsor" => "Peter Good, IPv6 Australia"),
 	//array("name" => "kvirc.firenze.linux.it", "url" => "http://kvirc.firenze.linux.it", "desc" => "kvirc.firenze.linux.it: Italian mirror (located in Milano)", "country" => "Italy", "city" => "Milano", "sponsor" => "Firenze Linux Users Group"),
-	array("name" => "www.ipv6.kvirc.net", "url" => "http://www.ipv6.kvirc.net", "desc" => "German IPv6 mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
-	array("name" => "www.kvirc.eu", "url" => "http://www.kvirc.eu", "desc" => "German mirror", "city" => "Frankfurt/Main", "maintainer" => "RomeoGolf")
+	array("name" => "www.ipv6.kvirc.net", "url" => "http://www.ipv6.kvirc.net", "desc" => "German IPv6 mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org")
 );
 
 $ftp_mirror=array(
@@ -64,8 +63,7 @@ $ftp_mirror=array(
 	array("name" => "ftp.kvirc.net", "url" => "ftp://ftp.kvirc.net/pub/kvirc", "desc" => "Primary FTP server", "city" => "Oslo, Norway", "maintainer" => "Norwegian Linux Community"),
 	array("name" => "kvirc.tradebit.com", "url" => "http://kvirc.tradebit.com/pub", "desc" => "USA mirror", "city" => "New York, United States", "maintainer" => "tradebit.com"),
 	array("name" => "kvirc.imsam.info", "url" => "http://kvirc.imsam.info", "desc" => "German mirror", "city" => "Nuernberg, Germany", "maintainer" => "tradebit.com"),
-	array("name" => "kvirc.bcoos.net", "url" => "http://kvirc.bcoos.net", "desc" => "USA mirror", "city" => "United States", "maintainer" => "exoops.info"),
-	array("name" => "kvirc.eu", "url" => "http://www.kvirc.eu/pub", "desc" => "German mirror", "city" => "Frankfurt/Main", "maintainer" => "RomeoGolf")
+	array("name" => "kvirc.bcoos.net", "url" => "http://kvirc.bcoos.net", "desc" => "USA mirror", "city" => "United States", "maintainer" => "exoops.info")
 );
 
 // Addons
@@ -143,7 +141,7 @@ $honor=array(
 	array("nick" => "iakko", "name" => "Iacopo Palazzi", "mail" => "iakko [at] siena.linux.it_REMOVEFROMUNDERSCORETOTHISPOINT", "made" => $template['honor']['made13'], "quote" => $template['honor']['quote13'], "image" => "iakko"),
 	array("nick" => "Thilo", "name" => "Thilo Schulz", "mail" => "arny [at] ats.s.bawue [dot] de", "made" => $template['honor']['made14'], "quote" => "", "image" => "Thilo"),
 	array("nick" => "Ahinu", "name" => "Ahinu", "mail" => "ahinu.laman [at] gmail [dot] com", "made" => $template['honor']['made15'], "quote" => "", "image" => "ahinu"),
-        array("nick" => "Noldor", "name" => "Alessandro Carbone", "mail" => "elfonol [at] gmail [dot] com", "made" => $template['honor']['made16'], "quote" => $template['honor']['quote16'], "image" => "noldor"),
+	array("nick" => "Noldor", "name" => "Alessandro Carbone", "mail" => "Noldor [at] barmes [dot] org", "made" => $template['honor']['made16'], "quote" => $template['honor']['quote16'], "image" => "noldor"),
 	array("nick" => "Grifisx", "name" => "Tonino Imbesi", "mail" => "", "made" => $template['honor']['made17'], "quote" => $template['honor']['quote17'], "image" => "grifisx"),
 	array("nick" => "Alexey", "name" => "Alexey Uzhva", "mail" => "wizard-ANTISPAM [at] opendoor [dot] ru", "made" => $template['honor']['made18'], "quote" => "", "image" => "alexey"),
 	array("nick" => "HelLViS69", "name" => "Elvio Basello", "mail" => "hellvis69 [at] netsons [dot] org", "made" => $template['honor']['made19'], "quote" => $template['honor']['quote19'], "image" => "hellvis69"),
@@ -287,7 +285,7 @@ $themes=array(
 	array("name" => "Slightly Yellow", "version" => "1.0", "mail" => "mren [at] mrmx [dot] de", "author" => "mren_", "desc" => $template['themes']['theme25'], "home" => "", "download" => "Slightly_Yellow-1.0.kvt", "screen" => "theme_slightly.png", "thumb" => "thumb_slightly.png"),
 	array("name" => "YellowIRC", "version" => "1.0", "mail" => "pragma [at] kvirc [dot] net", "author" => "Pragma", "desc" => $template['themes']['theme26'], "home" => "http://pragmaware.net", "download" => "YellowIRC-1.0.kvt", "screen" => "theme_yellowirc.png", "thumb" => "thumb_yellowirc.png"),
 	array("name" => "Love And Death", "version" => "1.0.5", "mail" => "", "author" => "DanBadJar", "desc" => $template['themes']['theme27'], "home" => "", "download" => "Love_and_Death-1.0.5.kvt", "screen" => "theme_loveanddeath.png", "thumb" => "thumb_loveanddeath.png"),
-	array("name" => "mIRC", "version" => "1.2", "mail" => "sonichedgehog_hyperblast00 [at] yahoo [dot] com", "author" => "Taoki", "desc" => $template['themes']['theme28'], "home" => "", "download" => "mIRC-1.2.kvt", "screen" => "theme_mirc.png", "thumb" => "thumb_mirc.png"),
+	array("name" => "mIRC", "version" => "1.4.1", "mail" => "sonichedgehog_hyperblast00 [at] yahoo [dot] com", "author" => "Taoki", "desc" => $template['themes']['theme28'], "home" => "", "download" => "mIRC-1.4.1.kvt", "screen" => "theme_mirc.png", "thumb" => "thumb_mirc.png"),
 	array("name" => "SilverEx_Clone", "version" => "0.1", "mail" => "vampiermsx [at] gmail [dot] com", "author" => "Vampier", "desc" => $template['themes']['theme29'], "home" => "", "download" => "SilverEx_Clone-0.1.kvt", "screen" => "theme_silverexclone.png", "thumb" => "thumb_silverexclone.png"),
 	array("name" => "Light My Fire!", "version" => "0.4", "mail" => "k0smik0 [at] logorroici [dot] org", "author" => "k0sm|k0", "desc" => $template['themes']['theme30'], "home" => "", "download" => "Light_My_Fire-0.4.kvt", "screen" => "theme_lightmyfire.png", "thumb" => "thumb_lightmyfire.png"),
 	array("name" => "Drow", "version" => "1.0", "mail" => "yoyo.pete [at] gmail [dot] com", "author" => "YoYo-Pete", "desc" => $template['themes']['theme31'], "home" => "", "download" => "Drow-1.0.kvt", "screen" => "theme_drow.png", "thumb" => "thumb_drow.png"),
