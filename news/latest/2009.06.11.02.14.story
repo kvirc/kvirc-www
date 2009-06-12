@@ -15,11 +15,13 @@ HelLViS69 (hellvis69 at netsons dot org)
 	<li>the Qt 4.x graphic libraries</li>
 	<li>support for the KDE 4 desktop environment</li>
 	<li>support for Phonon and DBus</li>
-	<li>the makefiles generator CMake, which is fastest, flexible and cool, dropping the old autotools suite</li>
+	<li>the makefiles generator CMake, which is fast, flexible and cool, dropping the old autotools suite</li>
 	<li>many other new features</li>
 </ul></p>
 
 <p>Everyone who wants to improve this wonderful client has just to install it and let us know the problems it contains via the <a href="javascript:opendoc('https://svn.kvirc.de/kvirc/');">bugtracker</a> or the <a href="irc://irc.freenode.org/KVIrc">IRC channel</a>.</p>
+
+<p>For Debian users we suggest to use the <a href="javascript:opendoc('http://packages.debian.org/search?keywords=kvirc&searchon=names&exact=1&suite=all&section=all');">newest package</a> which is  available for your release (as of now it is only in sid)</p>
 
 <p>For (K)Ubuntu users we suggest to use the <a href="javascript:opendoc('http://packages.ubuntu.com/karmic/kvirc');">package from karmic</a> because the one of jaunty is buggy beyond anything.</p>
 
