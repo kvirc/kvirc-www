@@ -355,7 +355,7 @@ search();
 		</div>
 	</div>
 	<?
-	if ((stristr($servername,'kvirc.de'))||(stristr($servername,'cyconet.org'))||(stristr($servername,'ipv6.kvirc.net'))){
+	if (stristr(gethostbyaddr (gethostbyname ($_SERVER["SERVER_NAME"])),'kvirc.de')){
 		echo "<div id=\"akct\"><a id=\"akpeel\" href=\"javascript:opendoc('http://www.vorratsdatenspeicherung.de');\" title=\"Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!\"><img src=\"http://wiki.vorratsdatenspeicherung.de/images/Akvst.gif\" alt=\"Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!\" /></a><a id=\"akpreload\" href=\"javascript:opendoc('http://wiki.vorratsdatenspeicherung.de/?title=Online_Demo');\" title=\"Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:\"><img src=\"http://wiki.vorratsdatenspeicherung.de/images/Akvsi.gif\" alt=\"Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:\" /></a></div>\n";
 	}
 	?>
