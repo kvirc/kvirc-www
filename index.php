@@ -346,6 +346,28 @@ search();
 						<a href="javascript:opendoc('http://www.kvirc.de/docu/');" title="<?echo $template['index']['officialdocs'];?>"><?echo $template['index']['officialdocs'];?></a><br /><?echo $template['index']['docsauto'];?>
 					</p>
 				</div>
+				<div class="subcontent-unit-border-white">
+					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
+					<h1><img src="img/dialog-information.png" alt="<?echo $template['index']['hwdonation'];?>" /><?echo $template['index']['hwdonation'];?></h1>
+					<p class="center">
+						<a href="javascript:opendoc('http://www.waaf.net');" title="waaf.net - the hosting & development company"><img src="img/waaf.net.gif" alt="waaf.net - the hosting & development company" /></a><br />
+						<a href="javascript:opendoc('http://www.waaf.net');" title="waaf.net - the hosting & development company">waaf.net</a> <?echo $template['index']['hwdonationtext'];?>
+						<?if (stristr(gethostbyaddr (gethostbyname ($_SERVER["SERVER_NAME"])),'kvirc.de')){
+							echo $template['index']['hwdonationtextkvirc.de'];
+						}?>
+					</p>
+				</div>
+				<div class="subcontent-unit-border-blue">
+					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
+					<h1><img src="img/dialog-information.png" alt="<?echo $template['index']['tahdonation'];?>" /><?echo $template['index']['tahdonation'];?></h1>
+					<p class="center">
+						<a href="javascript:opendoc('http://www.tmt.de');"><img src="img/tmtlogo.gif" /></a><br />
+						<a href="javascript:opendoc('http://www.tmt.de');">TMT Teleservice</a> <?echo $template['index']['tahdonationtext'];?>
+						<?if (stristr(gethostbyaddr (gethostbyname ($_SERVER["SERVER_NAME"])),'kvirc.de')){
+							echo $template['index']['tahdonationtextkvirc.de'];
+						}?>
+					</p>
+				</div>
 			</div>
 		</div>
 
