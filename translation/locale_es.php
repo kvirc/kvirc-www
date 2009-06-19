@@ -795,7 +795,7 @@ $template['license']['text2']="
 /* mailinglist.php start */
 $template['ml']['title']="Lista de correo pública de KVIrc";
 $template['ml']['text1a']="
-	Si algo mal, o tienes una pregunta, sugerencia, o simplemente estás interesado en el desarrollo de KVIrc, puedes unirte a la lista de correo pública.";
+	Si algo va mal, o tienes una pregunta, sugerencia, o simplemente estás interesado en el desarrollo de KVIrc, puedes unirte a la lista de correo pública.";
 $template['ml']['text1b']="
 	Los desarrolladores siguen la lista de correo y responderán todas las preguntas tan rápido como sea posible.";
 $template['ml']['text2']="Interfaz web";
