@@ -1205,6 +1205,8 @@ $template['tutorials']['text5a']="Theme HowTo";
 $template['tutorials']['text5b']="A small howto on how to make a good theme";
 $template['tutorials']['text6a']="Installer Modification Under Win32";
 $template['tutorials']['text6b']="Tutorial on how to repack the windows installer to include a modded default script, theme and whatever";
+$template['tutorials']['text7a']="Registered Users";
+$template['tutorials']['text7b']="Tutorial on how to manage the registered users database";
 /* tutorials.php end */
 
 /* welcome.php start */

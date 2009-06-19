@@ -1201,6 +1201,8 @@ $template['tutorials']['text5a']="Themen-Kurzanleitung";
 $template['tutorials']['text5b']="Ein kleiner Ratgeber, um ein gutes Thema zu erstellen";
 $template['tutorials']['text6a']="Installer-Modifikation unter Win32";
 $template['tutorials']['text6b']="Eine Anleitung, um den Windows-Installer neu zu packen und modifizierte Themen, Standard-Skript, usw. beizupacken";
+$template['tutorials']['text7a']="Registered Users";
+$template['tutorials']['text7b']="Tutorial on how to manage the registered users database";
 /* tutorials.php end */
 
 /* welcome.php start */

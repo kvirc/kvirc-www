@@ -68,6 +68,12 @@ echo "<div class=\"column1-unit\">";
 		echo "<li><img src=\"img/flags/Germany.png\" alt=\"".$template['index']['german']."\" title=\"".$template['index']['german']."\" />&nbsp;<a href=\"$dpath/Win32_Modify_Installer_de.pdf\">".$template['tutorials']['tutorial']."</a>, ".$template['tutorials']['madeby']." <a href=\"mailto:kvirc [at] thexception [dot] net\">thexception</a>.</li><br />";
 	echo "</ul>";
 
+	echo "<h1>".$template['tutorials']['text7a']."</h1>";
+	echo "<h3>".$template['tutorials']['text7b']."</h3>";
+	echo "<ul>";
+		echo "<li><img src=\"img/flags/Germany.png\" alt=\"".$template['index']['german']."\" title=\"".$template['index']['german']."\" />&nbsp;<a href=\"$dpath/KVIrc_Registered_Users_de.pdf\">".$template['tutorials']['tutorial']."</a>, ".$template['tutorials']['madeby']." <a href=\"mailto:kvirc [at] thexception [dot] net\">thexception</a>.</li><br />";
+	echo "</ul>";
+
 	echo "<p>".$template['tutorials']['dropmail']." <a href=\"mailto:hellvis69 [at] netsons [dot] org\">HelLViS69</a> :)</p>";
 echo "</div>";
 ?>

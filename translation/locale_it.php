@@ -1204,6 +1204,8 @@ $template['tutorials']['text5a']="Come fare un tema";
 $template['tutorials']['text5b']="Una piccola guida su come fare un buon tema";
 $template['tutorials']['text6a']="Modificare l'installer su Win32";
 $template['tutorials']['text6b']="Tutorial su come modificare l'installer di windows per includere parti modificate come lo script di default, un tema e via dicendo";
+$template['tutorials']['text7a']="Utenti Registrati";
+$template['tutorials']['text7b']="Tutorial su come gestire il database degli utenti registrati";
 /* tutorials.php end */
 
 /* welcome.php start */

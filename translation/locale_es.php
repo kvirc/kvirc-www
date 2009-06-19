@@ -1208,6 +1208,8 @@ $template['tutorials']['text5a']="HowTo de temas";
 $template['tutorials']['text5b']="Un pequeño howto sobre cómo hacer un buen tema";
 $template['tutorials']['text6a']="Modificación del instalador bajo Win32";
 $template['tutorials']['text6b']="Un tutorial sobre cómo reempaquetar el instalador de windows para incluir un script por defecto modificado, un nuevo tema o lo que sea"; 
+$template['tutorials']['text7a']="Registered Users";
+$template['tutorials']['text7b']="Tutorial on how to manage the registered users database";
 /* tutorials.php end */
 
 /* welcome.php start */
