@@ -357,7 +357,7 @@ search();
 						}?>
 					</p>
 				</div>
-				<div class="subcontent-unit-border-blue">
+				<div class="subcontent-unit-border-white">
 					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
 					<h1><img src="img/dialog-information.png" alt="<?echo $template['index']['tahdonation'];?>" /><?echo $template['index']['tahdonation'];?></h1>
 					<p class="center">
