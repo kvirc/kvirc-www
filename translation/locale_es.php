@@ -106,6 +106,12 @@ $template['index']['bugstext']="los bugs pueden ser informados y vistos en el si
 $template['index']['moredocs']="documentación";
 $template['index']['officialdocs']="documentación oficial de KVIrc";
 $template['index']['docsauto']="peticiones del índice autogeneradas";
+// hardware, traffic and hosting donation
+$template['index']['hwdonation']="rocket-propelled";
+$template['index']['hwdonationtext']="was so kind to donate hardware for running svn.kvirc.de";
+$template['index']['tahdonation']="lifted into the air";
+$template['index']['tahdonationtext']="is sponsoring hosting and traffic for svn.kvirc.de";
+$template['index']['donationtextkvirc.de']="and this mirror";
 // other
 $template['index']['latestscreen']="última captura";
 $template['index']['footer']="este sitio se ve mejor con un monitor";
@@ -789,7 +795,7 @@ $template['license']['text2']="
 /* mailinglist.php start */
 $template['ml']['title']="Lista de correo pública de KVIrc";
 $template['ml']['text1a']="
-	Si algo va mal, o tienes una pregunta, sugerencia, o simplemente estás interesado en el desarrollo de KVIrc, puedes unirte a la lista de correo pública.";
+	Si algo mal, o tienes una pregunta, sugerencia, o simplemente estás interesado en el desarrollo de KVIrc, puedes unirte a la lista de correo pública.";
 $template['ml']['text1b']="
 	Los desarrolladores siguen la lista de correo y responderán todas las preguntas tan rápido como sea posible.";
 $template['ml']['text2']="Interfaz web";

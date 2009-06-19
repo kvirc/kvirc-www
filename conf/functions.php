@@ -1,6 +1,7 @@
 <?
 // Set site language
-function setlang(){
+function setlang()
+{
 	// Get the language from browser and from querystring
 	$langAuto=substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);
 	$langGet=trim(strip_tags(addslashes($_GET['lang'])));
@@ -16,7 +17,8 @@ function setlang(){
 }
 
 // Compare versions
-function checkVersion($version,$min,$max){
+function checkVersion($version,$min,$max)
+{
 	$version=explode(".",$version);
 	$min=explode(".",$min);
 	$max=explode(".",$max);
@@ -30,9 +32,11 @@ function checkVersion($version,$min,$max){
 }
 
 // Search site
-function search(){
+function search()
+{
 	// Check for a search
-	if(isset($_POST['button'])&&($_POST['button']!="")){
+	if(isset($_POST['button'])&&($_POST['button']!=""))
+	{
 		// Select type of search
 		$type=trim(strip_tags(addslashes($_POST['type'])));
 		if($type=="site") $site="www.kvirc.net";
@@ -47,6 +51,12 @@ function search(){
 		header("Location: $searchUrl");
 		exit();
 	}
+}
+
+function getHostKvircde()
+{
+	// Detection of kvirc.de machines
+	return (stristr(gethostbyaddr(gethostbyname($_SERVER["SERVER_NAME"])),'kvirc.de')) ? 1 : 0;
 }
 
 // News
@@ -83,7 +93,8 @@ news format:
 	text
 */
 
-function news_get_month_name($n){
+function news_get_month_name($n)
+{
 	if($n <= 1)return "Jan";
 	if($n <= 2)return "Feb";
 	if($n <= 3)return "Mar";
@@ -99,14 +110,16 @@ function news_get_month_name($n){
 	return "???";
 }
 
-function news_get_dir_description($dirname){
+function news_get_dir_description($dirname)
+{
 	list($year,$month) = split('\.',$dirname);
 	return news_get_month_name($month)." ".$year;
 }
 
 // gets a filename only and returns
 // a hash with year->yyyy,month->mm,day->dd,hour->hh...
-function news_split_filename($filename,&$data){
+function news_split_filename($filename,&$data)
+{
 	list($year,$month,$day,$hour,$minute,$second,$index,$story) = split('\.',$filename);
 	$data['filename'] = $filename;
 	$data['year'] = $year;
@@ -120,7 +133,8 @@ function news_split_filename($filename,&$data){
 }
 
 // returns false if the file is unreadable
-function news_read_entry($filepath,&$data){
+function news_read_entry($filepath,&$data)
+{
 	$f = @fopen($filepath,"r");
 	if(!$f)return false;
 	$d = fread($f,16000);
@@ -131,8 +145,10 @@ function news_read_entry($filepath,&$data){
 	$section = "unknown";
 	$d = "";
 	$data['filepath'] = $filepath;
-	while($i < $cnt){
-		if(preg_match("/^\\@\\@[A-Za-z]*:/",$lines[$i])){
+	while($i < $cnt)
+	{
+		if(preg_match("/^\\@\\@[A-Za-z]*:/",$lines[$i]))
+		{
 			$data[$section] = $d;
 			$section = substr($lines[$i],2,strlen($lines[$i]) - 3);
 			$d = "";
@@ -147,12 +163,15 @@ function news_read_entry($filepath,&$data){
 }
 
 // returns an array of news file names (sorted by date)
-function news_scan_dir($newsdir,&$arry){
+function news_scan_dir($newsdir,&$arry)
+{
 	$d = opendir($newsdir);
 	if(!$d)return false;
 	$i = 0;
-	while(($file = readdir($d)) !== false){
-		if(preg_match("/[0-9]+\\.[0-9a-zA-Z\\.]+/",$file)){
+	while(($file = readdir($d)) !== false)
+	{
+		if(preg_match("/[0-9]+\\.[0-9a-zA-Z\\.]+/",$file))
+		{
 			$arry[$i] = $newsdir."/".$file;
 			$i++;
 		}

@@ -106,14 +106,12 @@ $template['index']['bugstext']="Fehler können in der KVIrc-Fehlerdatenbank geme
 $template['index']['moredocs']="Mehr Dokumentation";
 $template['index']['officialdocs']="offizielle KVIrc Dokumentation";
 $template['index']['docsauto']="automatisch generierter Index";
-// hardware donation
+// hardware, traffic and hosting donation
 $template['index']['hwdonation']="Raketenantrieb";
 $template['index']['hwdonationtext']="war so freundlich die Hardware zu stiften für den Betrieb von svn.kvirc.de";
-$template['index']['hwdonationtextkvirc.de']=" und diesen Spiegel";
-// traffic and hosting donation
 $template['index']['tahdonation']="In die Luft geschoßen";
 $template['index']['tahdonationtext']="finanziert Hosting und Datentransfer für svn.kvirc.de";
-$template['index']['tahdonationtextkvirc.de']=" und diesen Spiegel";
+$template['index']['donationtextkvirc.de']="und diesen Spiegel";
 // other
 $template['index']['latestscreen']="neueste Screenshots";
 $template['index']['footer']="Diese Seite ist am besten zu betrachten mit einem Monitor";
