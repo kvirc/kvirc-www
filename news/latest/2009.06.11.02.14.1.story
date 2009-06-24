@@ -23,7 +23,7 @@ HelLViS69 (hellvis69 at netsons dot org)
 
 <p>For Debian users we suggest to use the <a href="javascript:opendoc('http://packages.debian.org/search?keywords=kvirc&searchon=names&exact=1&suite=all&section=all');">newest package</a> which is  available for your release (as of now it is only in sid)</p>
 
-<p>For (K)Ubuntu users we suggest to use the <a href="javascript:opendoc('http://packages.ubuntu.com/karmic/kvirc');">package from karmic</a> because the one of jaunty is buggy beyond anything.</p>
+<p>For (K)Ubuntu users we suggest to use the <a href="javascript:opendoc('http://www.rzuser.uni-heidelberg.de/~xt1/ubuntu');">package from ambossarm</a> because the one of Jaunty is buggy beyond anything.</p>
 
 <p> For Windows users we suggest to use <a href="javascript:opendoc('http://unoamolti.net/kvirc');">CtrlAltCa's snapshots</a>.</p>
 
