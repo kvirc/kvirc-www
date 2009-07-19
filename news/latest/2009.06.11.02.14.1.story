@@ -21,7 +21,7 @@ HelLViS69 (hellvis69 at netsons dot org)
 
 <p>Everyone who wants to improve this wonderful client has just to install it and let us know the problems it contains via the <a href="javascript:opendoc('https://svn.kvirc.de/kvirc/');">bugtracker</a> or the <a href="irc://irc.freenode.org/KVIrc">IRC channel</a>.</p>
 
-<p>For Debian users we suggest to use the <a href="javascript:opendoc('http://packages.debian.org/search?keywords=kvirc&searchon=names&exact=1&suite=all&section=all');">newest package</a> which is  available for your release (as of now it is only in sid)</p>
+<p>For Debian users we suggest to use the <a href="javascript:opendoc('http://packages.debian.org/search?keywords=kvirc&searchon=names&exact=1&suite=all&section=all');">newest package</a> which is  available for your release (as of now it is only in Sid). Until krb5 has migrated, you can either build the source package from <a href="javascript:opendoc('http://packages.qa.debian.org/kvirc');">packages.qa.debian.org</a> or check <a href="javascript:opendoc('http://dev.carbon-project.org/debian/kvirc/');">Cùran's homepage</a> for a build for Testing (Squeeze) for your architecture.</p>
 
 <p>For (K)Ubuntu users we suggest to use the <a href="javascript:opendoc('http://www.rzuser.uni-heidelberg.de/~xt1/ubuntu');">package from ambossarm</a> because the one of Jaunty is buggy beyond anything.</p>
 
