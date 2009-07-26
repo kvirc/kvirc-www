@@ -284,7 +284,7 @@ $template['download']['text5']="
 	Die Snapshots des Quelltextes sind inoffizielle Pakete, gewonnen aus dem SVN auf einer nicht regelmäßigen Basis. Jeder Snapshot spiegelt den SVN-Status zu einer bestimmten Revision wider und gewöhnlich findest Du eine aktuelle. Diese Pakete wurden zumindest auf ein paar Systemen getestet und eine hohe Wahrscheinlichkeit, dass sie auch auf Deinem System kopilieren. Es sind auch einige Binärpakete verfügbar.";
 $template['download']['text6']="Aktuelle Quellen aus dem SVN";
 $template['download']['text7']="
-	Den aktuellsten Quelltext kann über das SVN-System geladen werden. Wir versuchen SVN so \"suaber\" wie möglich zu halten, aber trotzdem kann nicht garantiert werden, dass der Quelltext kompiliert. Der SVN-Methode stellt nur den Quelltext zur Verfügung, es gibt keine Binärpakete.";
+	Den aktuellsten Quelltext kann über das SVN-System geladen werden. Wir versuchen SVN so \"sauber\" wie möglich zu halten, aber trotzdem kann nicht garantiert werden, dass der Quelltext kompiliert. Der SVN-Methode stellt nur den Quelltext zur Verfügung, es gibt keine Binärpakete.";
 /* download.php end */
 
 /* faq.php start */
