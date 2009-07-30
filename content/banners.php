@@ -8,7 +8,7 @@ $path="img/banners";
 echo "<h1 class=\"pagetitle\">".$template['banners']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
 	echo "<br /><h3>".$template['banners']['text1']."</h3>";
-	echo "<p>".$template['banners']['text2']." <a href=\"mailto:cle [at] virg0 [dot] org\">etherea`</a></p>";
+	echo "<p>".$template['banners']['text2']." <a href=\"mailto:hell [at] hellvis69.netsons [dot] org\">HelLViS69</a></p>";
 	echo "<hr />";
 
 	echo "<h1>".$template['banners']['bannerby']." Sidhe</h1>";

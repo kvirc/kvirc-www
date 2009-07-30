@@ -9,7 +9,7 @@ $path="img/screenshots";
 
 echo "<h1 class=\"pagetitle\">".$template['screen']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
-echo "<p>".$template['screen']['text']." <a href=\"mailto:hellvis69 [at] netsons [dot] org?subject=Screenshot for KVIrc\">HelLViS69</a>.</p>";
+echo "<p>".$template['screen']['text']." <a href=\"mailto:hell [at] hellvis69.netsons [dot] org?subject=Screenshot for KVIrc\">HelLViS69</a>.</p>";
 echo "<h1>".$screen[$page][0]."</h1>";
 
 for($i=count($screen[$page])-1,$key=1;$i>0;$i--,$key++){

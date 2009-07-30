@@ -25,7 +25,7 @@ echo "<div class=\"column1-unit\">";
 		echo $template['themes']['text3b4'].".</li>";
 
 		echo "<li><b>".$template['themes']['text4a']."?</b><br />";
-		echo $template['themes']['text4b']." <a href=\"mailto:hellvis69 [at] netsons [dot] org\">HelLViS69</a> ".$template['themes']['text4c'].".</li>";
+		echo $template['themes']['text4b']." <a href=\"mailto:hell [at] hellvis69.netsons [dot] org\">HelLViS69</a> ".$template['themes']['text4c'].".</li>";
 	echo "</ul>";
 
 	echo "<p>".$template['themes']['text5']."</p>";

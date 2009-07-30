@@ -140,7 +140,7 @@ echo "<div class=\"column1-unit\">";
 						echo "<b>".$template['releases']['available']."</b><br /><br />";
 						foreach($ftp_mirror as $key=>$value){
 							echo "<a href=\"".$value['url']."/".$p_path[$i]."/".$p_filename[$i]."\">".$p_filename[$i]."</a><br />";
-							echo $value['desc']."<br /><br />";
+							echo $value['desc'].", ".$value['city']."<br /><br />";
 						}
 						echo "</td></tr></table>";
 				}
