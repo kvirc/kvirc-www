@@ -15,8 +15,11 @@ $platform_details["win32"]      = "Self-contained win32 KVIrc executable: it sho
 $platform_description["macosx"] = "MacOSX binary package";
 $platform_details["macosx"]     = "Self-contained MaxOSX KVIrc executable: it should run just after the installation.";
 
-$platform_description["unix"]   = "Unix flavor binary package";
-$platform_details["unix"]       = "Pre-compiled packages are available for several unix systems (read \"distributions\"). If a package for your exact distribution is not available you might try to install the \"closest match\". If no package works for you, then you have to compile KVIrc from the sources.";
+$platform_description["unix"]   = "Linux flavor binary package";
+$platform_details["unix"]       = "Pre-compiled packages are available for several linux systems (read \"distributions\"). If a package for your exact distribution is not available you might try to install the \"closest match\". If no package works for you, then you have to compile KVIrc from the sources.";
+
+$platform_description["freebsd"]   = "FreeBSD port";
+$platform_details["freebsd"]       = "There is a FreeBSD port, which is available as a precompiled binary package or as a source package.";
 
 // The available versions
 $version_description["2.1.1"]          = "2.1.1 : Very old stable release (May 2001)";
@@ -408,7 +411,17 @@ $p_author[$package_count]      = "Noldor (elfonol at gmail dot com)";
 $package_count++;
 */
 
-
+// FreeBsd Port
+$p_filename[$package_count]    = "kvirc-3.4.2_1.tbz";
+$p_path[$package_count]        = "3.4.2/binary/freebsd";
+$p_description[$package_count] = "KVIrc 3.4.2, FreeBSD binary";
+$p_details[$package_count]     = "FreeBSD Port; Can be installed with pkg_add -r kvirc <br/>or compiled by source by doing:<br/>cd /usr/ports/irc/kvirc && make install clean";
+$p_platform[$package_count]    = "freebsd";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "8557506";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Cpet (c dot petrik dot sosa at gmail dot com)";
+$package_count++;
 
 // ========================================================================== //
 //                                OLDER RELEASES                              //
@@ -1175,4 +1188,5 @@ $p_version[$package_count]     = "2.1.1";
 $p_size[$package_count]        = "";
 $p_author[$package_count]      = "Szymon Stefanek (pragma at kvirc dot net)";
 $package_count++;
+
 ?>
