@@ -531,6 +531,8 @@ $template['honor']['quote36']="...es reicht für 100 IPs pro Meter der Erde, so 
 $template['honor']['made37']="MacOSX-Portierung";
 $template['honor']['made38']="Portugiesische Übersetzung, Standardskript-Patches und Mandriva (MDE) Paketierer.";
 $template['honor']['made39']="Russische Übersetzung";
+$template['honor']['made41']="FreeBSD Port mantainer";
+$template['honor']['quote37']="FreeBSD Gimp.";
 /* honor.php end */
 
 /* install.php start */

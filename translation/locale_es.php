@@ -535,6 +535,8 @@ $template['honor']['made37']="Portabilidad a MacOS X";
 $template['honor']['made38']="Traducción al portugués, parches del script por defecto y paquetes de Mandriva.";
 $template['honor']['made39']="Traducción al ruso";
 $template['honor']['made40']="Arreglo de bugs, escritura de código, portabilidad a mingw32, soporte al usuario";
+$template['honor']['made41']="FreeBSD Port mantainer";
+$template['honor']['quote37']="FreeBSD Gimp.";
 /* honor.php end */
 
 /* install.php start */

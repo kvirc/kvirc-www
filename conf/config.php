@@ -165,7 +165,8 @@ $honor=array(
 	array("nick" => "marl", "name" => "Giovanni Ferri", "mail" => "giovanni [at] fonderiadigitale [dot] it", "made" => $template['honor']['made34'], "quote" => $template['honor']['quote34'], "image" => "unknown"),
 	array("nick" => "[Anodine]", "name" => "Anodine", "mail" => "", "made" => $template['honor']['made35'], "quote" => $template['honor']['quote35'], "image" => "unknown"),
 	array("nick" => "infected", "name" => "Paul Boehm", "mail" => "", "made" => $template['honor']['made36'], "quote" => $template['honor']['quote36'], "image" => "unknown"),
-	array("nick" => "valeragir", "name" => "Valeriy Girchenko", "mail" => "valeragir [at] mail [dot] ru", "made" => $template['honor']['made39'], "quote" => "", "image" => "unknown")
+	array("nick" => "valeragir", "name" => "Valeriy Girchenko", "mail" => "valeragir [at] mail [dot] ru", "made" => $template['honor']['made39'], "quote" => "", "image" => "unknown"),
+	array("nick" => "cpet", "name" => "Chris Petrik", "mail" => "chris [at] officialunix [dot] com", "made" => $template['honor']['made41'], "quote" => $template['honor']['quote37'], "image" => "unknown")
 );
 
 // Screenshots

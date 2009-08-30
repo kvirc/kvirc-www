@@ -420,7 +420,7 @@ $p_platform[$package_count]    = "freebsd";
 $p_version[$package_count]     = "3.4.2";
 $p_size[$package_count]        = "8557506";
 $p_group[$package_count]       = "none";
-$p_author[$package_count]      = "Cpet (c dot petrik dot sosa at gmail dot com)";
+$p_author[$package_count]      = "Cpet (chris [at] officialunix [dot] com)";
 $package_count++;
 
 // ========================================================================== //
