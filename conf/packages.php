@@ -6,45 +6,45 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 require_once("config.php");
 
 // The available platforms
-$platform_description["source"] = "Source package (all the platforms)";
-$platform_details["source"]     = "C++ sources: you must to compile them to obtain a working executable. This means that you need a compiler and all the tools needed to compile a program on your system.";
+$platform_description["source"]  = "Source package (all the platforms)";
+$platform_details["source"]      = "C++ sources: you must to compile them to obtain a working executable. This means that you need a compiler and all the tools needed to compile a program on your system.";
 
-$platform_description["win32"]  = "Windows binary package";
-$platform_details["win32"]      = "Self-contained win32 KVIrc executable: it should run just after the installation.";
+$platform_description["win32"]   = "Windows binary package";
+$platform_details["win32"]       = "Self-contained win32 KVIrc executable: it should run just after the installation.";
 
-$platform_description["macosx"] = "MacOSX binary package";
-$platform_details["macosx"]     = "Self-contained MaxOSX KVIrc executable: it should run just after the installation.";
+$platform_description["macosx"]  = "MacOSX binary package";
+$platform_details["macosx"]      = "Self-contained MaxOSX KVIrc executable: it should run just after the installation.";
 
-$platform_description["unix"]   = "Linux flavor binary package";
-$platform_details["unix"]       = "Pre-compiled packages are available for several linux systems (read \"distributions\"). If a package for your exact distribution is not available you might try to install the \"closest match\". If no package works for you, then you have to compile KVIrc from the sources.";
+$platform_description["linux"]   = "Linux flavor binary package";
+$platform_details["linux"]       = "Pre-compiled packages are available for several linux systems (read \"distributions\"). If a package for your exact distribution is not available you might try to install the \"closest match\". If no package works for you, then you have to compile KVIrc from the sources.";
 
-$platform_description["freebsd"]   = "FreeBSD port";
-$platform_details["freebsd"]       = "There is a FreeBSD port, which is available as a precompiled binary package or as a source package.";
+$platform_description["freebsd"] = "FreeBSD binary package";
+$platform_details["freebsd"]     = "There is a FreeBSD port, which is available as a precompiled binary package or as a source package.";
 
 // The available versions
-$version_description["2.1.1"]          = "2.1.1 : Very old stable release (May 2001)";
-$version_details["2.1.1"]              = "The last release of the 2.1.1 branch. You probably don't want this unless you're using a very old system.";
+$version_description["2.1.1"]       = "2.1.1 : Very old stable release (May 2001)";
+$version_details["2.1.1"]           = "The last release of the 2.1.1 branch. You probably don't want this unless you're using a very old system.";
 
-$version_description["3.0.0-beta1"]    = "3.0.0 : Beta 1 (Jun 2002)";
-$version_details["3.0.0-beta1"]        = "Old beta";
+$version_description["3.0.0-beta1"] = "3.0.0 : Beta 1 (Jun 2002)";
+$version_details["3.0.0-beta1"]     = "Old beta";
 
-$version_description["3.0.0-beta2"]    = "3.0.0 : Beta 2 (Jan 2003)";
-$version_details["3.0.0-beta2"]        = "Old beta.";
+$version_description["3.0.0-beta2"] = "3.0.0 : Beta 2 (Jan 2003)";
+$version_details["3.0.0-beta2"]     = "Old beta.";
 
-$version_description["3.0.0"]          = "3.0.0 : Stable (Apr 2004)";
-$version_details["3.0.0"]              = "The first stable release of the 3.* series";
+$version_description["3.0.0"]       = "3.0.0 : Stable (Apr 2004)";
+$version_details["3.0.0"]           = "The first stable release of the 3.* series";
 
-$version_description["3.0.1"]          = "3.0.1 : Stable (May 2004)";
-$version_details["3.0.1"]              = "A bugfix release for 3.0.0";
+$version_description["3.0.1"]       = "3.0.1 : Stable (May 2004)";
+$version_details["3.0.1"]           = "A bugfix release for 3.0.0";
 
-$version_description["3.2.0"]          = "3.2.0 : Stable (Feb 2005)";
-$version_details["3.2.0"]              = "Old stable release.";
+$version_description["3.2.0"]       = "3.2.0 : Stable (Feb 2005)";
+$version_details["3.2.0"]           = "Old stable release.";
 
-$version_description["3.4.0"]          = "3.4.0 : Stable (Mar 2008)";
-$version_details["3.4.0"]              = "The previous stable release.";
+$version_description["3.4.0"]       = "3.4.0 : Stable (Mar 2008)";
+$version_details["3.4.0"]           = "The previous stable release.";
 
-$version_description["3.4.2"]          = "3.4.2 : Stable (Oct 2008)";
-$version_details["3.4.2"]              = "The latest stable release. This is the package you want :)";
+$version_description["3.4.2"]       = "3.4.2 : Stable (Oct 2008)";
+$version_details["3.4.2"]           = "The latest stable release. This is the package you want :)";
 
 // The package groups
 $group_description["none"]      = "No group";
