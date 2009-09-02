@@ -60,7 +60,7 @@ $ftp_mirror=array(
 	array("name" => "kvirc-ftp.visualscripts.com", "url" => "http://kvirc-ftp.visualscripts.com", "desc" => "USA mirror", "city" => "Houston, Texas, United States", "maintainer" => "THeLooX"),
 	array("name" => "dedimarbo.ath.cx", "url" => "ftp://dedimarbo.ath.cx/pub/kvirc/", "desc" => "French mirror", "city" => "Paris, France", "maintainer" => "MarbolanGos"),
 	array("name" => "kvirc.eban-meban.com", "url" => "ftp://kvirc.eban-meban.com", "desc" => "Bulgarian mirror", "city" => "Asenovgrad, Bulgaria", "maintainer" => "lame"),
-	array("name" => "ftp.kvirc.net", "url" => "ftp://ftp.kvirc.net/pub/kvirc", "desc" => "Primary FTP server", "city" => "Oslo, Norway", "maintainer" => "Norwegian Linux Community"),
+	//array("name" => "ftp.kvirc.net", "url" => "ftp://ftp.kvirc.net/pub/kvirc", "desc" => "Primary FTP server", "city" => "Oslo, Norway", "maintainer" => "Norwegian Linux Community"),
 	array("name" => "kvirc.tradebit.com", "url" => "http://kvirc.tradebit.com/pub", "desc" => "USA mirror", "city" => "New York, United States", "maintainer" => "tradebit.com"),
 	array("name" => "kvirc.imsam.info", "url" => "http://kvirc.imsam.info", "desc" => "German mirror", "city" => "Nuernberg, Germany", "maintainer" => "tradebit.com"),
 	array("name" => "kvirc.bcoos.net", "url" => "http://kvirc.bcoos.net", "desc" => "USA mirror", "city" => "United States", "maintainer" => "exoops.info")
