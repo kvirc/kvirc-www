@@ -1,7 +1,7 @@
 @@title:
-Kvirc4 rc1 has been tagged
+KVIrc4 rc1 has been tagged
 @@short:
-Kvirc4 rc1 tagged
+KVIrc4 rc1 tagged
 @@author:
 CtrlAltCa (ctrlaltca at libero dot it)
 @@body:
