@@ -158,7 +158,6 @@ search();
 								<li><a href="?id=status&amp;lang=<?=$lang;?>"><?=$template['index']['status'];?></a></li>
 								<li><a href="?id=features&amp;lang=<?=$lang;?>"><?=$template['index']['features'];?></a></li>
 								<li><a href="?id=license&amp;lang=<?=$lang;?>"><?=$template['index']['license'];?></a></li>
-								<li><a href="?id=require&amp;lang=<?=$lang;?>"><?=$template['index']['require'];?></a></li>
 								<li><a href="?id=screen&amp;lang=<?=$lang;?>"><?=$template['index']['screens'];?></a></li>
 								<li><a href="javascript:opendoc('https://svn.kvirc.de/kvirc/');" title="KVIrc bugtrack"><?=$template['index']['bugtrack'];?></a></li>
 							</ul>
