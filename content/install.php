@@ -20,7 +20,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 </div><br />
 
 <a name="requirements"></a>
-<h1 class="pagetitle"><?=$template['install']['title2']?>:</h1>
+<h1 class="pagetitle"><?=$template['install']['title2']?></h1>
 <div class="column1-unit">
 	<p><?=$template['install']['text2']?>:</p>
 	<ul class="list">
@@ -37,8 +37,8 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 		<li><a href="?id=install&amp;lang=<?=$lang?>#sound">Sound System</a></li>
 	</ul>
 
-	<a name="qt"></a>
-	<br /><h3><b>Qt GUI Toolkit</b></h3>
+	<p><a name="qt"></a></p>
+	<h3><b>Qt GUI Toolkit</b></h3>
 	<p><?=$template['install']['text3']?></p>
 	<p><?=$template['install']['text4']?></p>
 	<p><?=$template['install']['text5a']?>:</p>
@@ -57,15 +57,15 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	<p><?=$template['install']['text10']?>:</p>
 	<code>#LD_LIBRARY_PATH=/opt/qt4.5/lib/ kvirc4</code>
 
-	<a name="cmake"></a>
-	<br /><h3><b>CMake</b></h3>
+	<p><a name="cmake"></a></p>
+	<h3><b>CMake</b></h3>
 	<p><?=$template['install']['text11']?></p>
 	<code># cmake --version</code>
 	<p><?=$template['install']['text8']?>:</p>
 	<code># cmake version 2.6-patch 4</code>
 
-	<a name="cpp"></a>
-	<br /><h3><b>C++ Compiler</b></h3>
+	<p><a name="cpp"></a></p>
+	<h3><b>C++ Compiler</b></h3>
 	<p><?=$template['install']['text12']?>:</p>
 	<code># gcc -v</code>
 	<p><?=$template['install']['text8']?>:</p>
@@ -82,42 +82,42 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	gcc version 4.3.3 (GCC)
 	</code>
 
-	<a name="pthread"></a>
-	<br /><h3><b>Pthread Implementation</b></h3>
+	<p><a name="pthread"></a></p>
+	<h3><b>Pthread Implementation</b></h3>
 	<p><?=$template['install']['text13']?>:</p>
 	<code># find / -name libpthread.so</code>
 	<p><?=$template['install']['text8']?>:</p>
 	<code># /usr/lib64/libpthread.so</code>
 	<p><?=$template['install']['text14']?></p>
 
-	<a name="dl"></a>
-	<br /><h3><b>Dynamic Linker Interface</b></h3>
+	<p><a name="dl"></a></p>
+	<h3><b>Dynamic Linker Interface</b></h3>
 	<p><?=$template['install']['text15']?></p>
 
-	<a name="kde"></a>
-	<br /><h3><b>KDE (<?=$template['custom']['optional']?>)</b></h3>
+	<p><a name="kde"></a></p>
+	<h3><b>KDE (<?=$template['custom']['optional']?>)</b></h3>
 	<p><?=$template['install']['text16a']?>:</p>
 	<code># export KDEDIR="<?=$template['install']['text16b']?>"</code>
 	<p><?=$template['install']['text17']?>:</p>
 	<code># export KDEDIR=/usr</code>
 
-	<a name="gettext"></a>
-	<br /><h3><b>GNU gettext (<?=$template['custom']['optional']?>)</b></h3>
+	<p><a name="gettext"></a></p>
+	<h3><b>GNU gettext (<?=$template['custom']['optional']?>)</b></h3>
 	<p><?=$template['install']['text18']?>:</p>
 	<code># msgfmt --version</code>
 	<p><?=$template['install']['text19']?></p>
 
-	<a name="ssl"></a>
-	<br /><h3><b>OpenSSL (<?=$template['custom']['optional']?>)</b></h3>
+	<p><a name="ssl"></a></p>
+	<h3><b>OpenSSL (<?=$template['custom']['optional']?>)</b></h3>
 	<p><?=$template['install']['text20']?></p>
 
-	<a name="perl"></a>
-	<br /><h3><b>Perl (<?=$template['custom']['optional']?>)</b></h3>
+	<p><a name="perl"></a></p>
+	<h3><b>Perl (<?=$template['custom']['optional']?>)</b></h3>
 	<p><?=$template['install']['text21']?></p>
 	<p><?=$template['install']['text22']?></p>
 
-	<a name="sound"></a>
-	<br /><h3><b>Sound System (<?=$template['custom']['optional']?>)</b></h3>
+	<p><a name="sound"></a></p>
+	<h3><b>Sound System (<?=$template['custom']['optional']?>)</b></h3>
 	<p><?=$template['install']['text23']?>:</p>
 	<code> # find / -name libgsm*</code>
 	<p><?=$template['install']['text8']?>:</p>
@@ -134,7 +134,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 </div><br />
 
 <a name="configure"></a>
-<h1 class="pagetitle"><?=$template['install']['title3']?>:</h1>
+<h1 class="pagetitle"><?=$template['install']['title3']?></h1>
 <div class="column1-unit">
 	<p><?=$template['install']['text27a']?></p>
 	<code>
@@ -221,7 +221,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 </div><br />
 
 <a name="interactive"></a>
-<h1 class="pagetitle"><?=$template['install']['title4']?>:</h1>
+<h1 class="pagetitle"><?=$template['install']['title4']?></h1>
 <div class="column1-unit">
 	<p><?=$template['install']['text31']?></p>
 	<code>
@@ -233,7 +233,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 </div><br />
 
 <a name="compile"></a>
-<h1 class="pagetitle"><?=$template['install']['title5']?>:</h1>
+<h1 class="pagetitle"><?=$template['install']['title5']?></h1>
 <div class="column1-unit">
 	<p><?=$template['install']['text33']?>:</p>
 	<code># make</code>
@@ -245,19 +245,19 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 </div><br />
 
 <a name="compile-mac"></a>
-<h1 class="pagetitle"><?=$template['install']['title6']?>:</h1>
+<h1 class="pagetitle"><?=$template['install']['title6']?></h1>
 <div class="column1-unit">
 	<p><?=$template['install']['text37']?></p>
 </div><br />
 
 <a name="compile-win"></a>
-<h1 class="pagetitle"><?=$template['install']['title7']?>:</h1>
+<h1 class="pagetitle"><?=$template['install']['title7']?></h1>
 <div class="column1-unit">
 	<p><?=$template['install']['text38']?></p>
 </div><br />
 
 <a name="hacker"></a>
-<h1 class="pagetitle"><?=$template['install']['title8']?>:</h1>
+<h1 class="pagetitle"><?=$template['install']['title8']?></h1>
 <div class="column1-unit">
 	<code>
 	# mkdir release &amp;&amp; cd release<br />
@@ -267,14 +267,14 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 </div><br />
 
 <a name="package"></a>
-<h1 class="pagetitle"><?=$template['install']['title9']?>:</h1>
+<h1 class="pagetitle"><?=$template['install']['title9']?></h1>
 <div class="column1-unit">
 	<p><?=$template['install']['text39']?>:</p>
 	<code># make install DESTDIR=/tmp/kvirc-4.0</code>
 	<p><?=$template['install']['text40']?></p>
 </div>
 
-<h1 class="pagetitle"><?=$template['install']['title10']?>:</h1>
+<h1 class="pagetitle"><?=$template['install']['title10']?></h1>
 <div class="column1-unit">
 	<code># kvirc &amp;</code>
 	<p><?=$template['install']['text41']?></p>
