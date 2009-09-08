@@ -15,7 +15,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 		<li><a href="?id=install&amp;lang=<?=$lang?>#compile-mac"><?=$template['install']['title6']?></a></li>
 		<li><a href="?id=install&amp;lang=<?=$lang?>#compile-win"><?=$template['install']['title7']?></a></li>
 		<li><a href="?id=install&amp;lang=<?=$lang?>#hacker"><?=$template['install']['title8']?></a></li>
-		<li><a href="?id=install&amp;lang=<?=$lang?>#package"><?=$template['install']['title8']?></a></li>
+		<li><a href="?id=install&amp;lang=<?=$lang?>#package"><?=$template['install']['title9']?></a></li>
 	</ol>
 </div><br />
 
@@ -23,7 +23,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 <h1 class="pagetitle"><?=$template['install']['title2']?>:</h1>
 <div class="column1-unit">
 	<p><?=$template['install']['text2']?>:</p>
-	<ul>
+	<ul class="list">
 		<li><a href="?id=install&amp;lang=<?=$lang?>#qt">Qt GUI Toolkit 4.5</a> - <a href="javascript:opendoc('http://www.qtsoftware.com');">http://www.qtsoftware.com</a></li>
 		<li><a href="?id=install&amp;lang=<?=$lang?>#cmake">CMake 2.6.4</a> - <a href="javascript:opendoc('http://www.cmake.org');">http://www.cmake.org</a></li>
 		<li><a href="?id=install&amp;lang=<?=$lang?>#cpp">C++ compiler</a> - <a href="javascript:opendoc('http://gcc.gnu.org');">http://gcc.gnu.org</a></li>
@@ -70,10 +70,15 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	<code># gcc -v</code>
 	<p><?=$template['install']['text8']?>:</p>
 	<code>
-	Reading specs from /usr/lib64/gcc/x86_64-slackware-linux/4.3.3/specs
-	Target: x86_64-slackware-linux
-	Configured with: ../gcc-4.3.3/configure --prefix=/usr --libdir=/usr/lib64 --enable-shared --enable-bootstrap --enable-languages=ada,c,c++,fortran,java,objc --enable-threads=posix --enable-checking=release --with-system-zlib --disable-libunwind-exceptions --enable-__cxa_atexit --enable-libssp --with-gnu-ld --verbose --disable-multilib --target=x86_64-slackware-linux --build=x86_64-slackware-linux --host=x86_64-slackware-linux
-	Thread model: posix
+	Reading specs from /usr/lib64/gcc/x86_64-slackware-linux/4.3.3/specs<br />
+	Target: x86_64-slackware-linux<br />
+	Configured with: ../gcc-4.3.3/configure --prefix=/usr --libdir=/usr/lib64<br />
+	--enable-shared --enable-bootstrap --enable-languages=ada,c,c++,fortran,java,objc<br />
+	--enable-threads=posix --enable-checking=release --with-system-zlib<br />
+	--disable-libunwind-exceptions --enable-__cxa_atexit --enable-libssp<br />
+	--with-gnu-ld --verbose --disable-multilib --target=x86_64-slackware-linux<br />
+	--build=x86_64-slackware-linux --host=x86_64-slackware-linux<br />
+	Thread model: posix<br />
 	gcc version 4.3.3 (GCC)
 	</code>
 
@@ -119,9 +124,9 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	<code># /usr/lib64/libgsm.so</code>
 	<p><?=$template['install']['text24']?>:</p>
 	<code>
-	# cd /usr/lib64
-	# ld --whole-archive -shared -o libgsm.so.1 libgsm.a
-	# ln -s libgsm.so.1 libgsm.so
+	# cd /usr/lib64<br />
+	# ld --whole-archive -shared -o libgsm.so.1 libgsm.a<br />
+	# ln -s libgsm.so.1 libgsm.so<br />
 	# ldconfig
 	</code>
 	<p><?=$template['install']['text25']?></p>
@@ -220,8 +225,8 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 <div class="column1-unit">
 	<p><?=$template['install']['text31']?></p>
 	<code>
-	# mkdir release
-	# cd release
+	# mkdir release<br />
+	# cd release<br />
 	# ccmake ..
 	</code>
 	<p><?=$template['install']['text32']?></p>
