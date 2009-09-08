@@ -177,46 +177,44 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 		    <?=$template['install']['tree14']?></li>
 		<li>-DWITHOUT_QTWEBKIT<br />
 		    <?=$template['install']['tree15']?></li>
-		<li>-DWITHOUT_AUDIOFILE<br />
-		    <?=$template['install']['tree16']?></li>
 		<li>-DWITHOUT_KDE4<br />
-		    <?=$template['install']['tree17']?></li>
+		    <?=$template['install']['tree16']?></li>
 		<li>-DWITHOUT_SSL<br />
-		    <?=$template['install']['tree18']?></li>
+		    <?=$template['install']['tree17']?></li>
 		<li>-DWITHOUT_CRYPT<br />
-		    <?=$template['install']['tree19']?></li>
+		    <?=$template['install']['tree18']?></li>
 		<li>-DWITHOUT_IPV6<br />
-		    <?=$template['install']['tree20']?></li>
+		    <?=$template['install']['tree19']?></li>
 		<li>-DWITHOUT_TRANSPARENCY<br />
-		    <?=$template['install']['tree21']?></li>
+		    <?=$template['install']['tree20']?></li>
 		<li>-DWITHOUT_PERL<br />
-		    <?=$template['install']['tree22']?></li>
+		    <?=$template['install']['tree21']?></li>
 		<li>-DWITHOUT_PYTHON<br />
-		    <?=$template['install']['tree23']?></li>
+		    <?=$template['install']['tree22']?></li>
 		<li>-DWITHOUT_IPC<br />
-		    <?=$template['install']['tree24']?></li>
+		    <?=$template['install']['tree23']?></li>
 		<li>-DWITHOUT_GETTEXT<br />
-		    <?=$template['install']['tree25']?></li>
+		    <?=$template['install']['tree24']?></li>
 		<li>-DWITHOUT_DOXYGEN<br />
-		    <?=$template['install']['tree26']?></li>
+		    <?=$template['install']['tree25']?></li>
 		<li>-DWITHOUT_SYSTEM_MEMMOVE<br />
-		    <?=$template['install']['tree27']?></li>
+		    <?=$template['install']['tree26']?></li>
 		<li>-DWITHOUT_GSM<br />
-		    <?=$template['install']['tree28']?></li>
+		    <?=$template['install']['tree27']?></li>
 		<li>-DWITH_ix86_ASM<br />
-		    <?=$template['install']['tree29']?></li>
+		    <?=$template['install']['tree28']?></li>
 		<li>-DWITHOUT_DCC_VOICE<br />
-		    <?=$template['install']['tree30']?></li>
+		    <?=$template['install']['tree29']?></li>
 		<li>-DWITH_MEMORY_PROFILE<br />
-		    <?=$template['install']['tree31']?></li>
+		    <?=$template['install']['tree30']?></li>
 		<li>-DWITH_MEMORY_CHECKS<br />
-		    <?=$template['install']['tree32']?></li>
+		    <?=$template['install']['tree31']?></li>
 		<li>-DMANUAL_REVISION<br />
-		    <?=$template['install']['tree33']?></li>
+		    <?=$template['install']['tree32']?></li>
 		<li>-DWITH_PIZZA<br />
-		    <?=$template['install']['tree34']?></li>
+		    <?=$template['install']['tree33']?></li>
 		<li>-DWITH_BEER<br />
-		    <?=$template['install']['tree35']?></li>
+		    <?=$template['install']['tree34']?></li>
 	</ul>
 </div><br />
 

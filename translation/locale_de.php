@@ -644,16 +644,15 @@ $template['install']['tree12']="Disable Audiofile audio backend support.";
 $template['install']['tree13']="Disable Esd audio backend support.";
 $template['install']['tree14']="Disable Qt-DBus support.";
 $template['install']['tree15']="Disable Qt-WebKit support.";
-$template['install']['tree16']="Disable Audiofile support.";
-$template['install']['tree17']="Disable KDE4 support.";
-$template['install']['tree18']="
+$template['install']['tree16']="Disable KDE4 support.";
+$template['install']['tree17']="
 	Disables the Secure Socket Layer support. The SSL support is automatically enabled if OpenSSL is detected by CMake.";
-$template['install']['tree19']="
+$template['install']['tree18']="
 	Disables the cryptographic engines and the whole cryptography/text transformation support. Produces a slightly smaller executable";
-$template['install']['tree20']="
+$template['install']['tree19']="
 	The IPv6 support is compiled by default on the platforms that support it: this option disables it.<br />
 	Even if you have a plain IPv4-only connection, you might want to keep the IPv6 support: you will be able to lookup IPv6 hostnames.";
-$template['install']['tree21']="
+$template['install']['tree20']="
 	This option disables pseudo-transparency support.<br />
 	The pseudo transparency support makes the KVIrc windows look like semi-transparent (this is NOT real transparency: this is just a nice-looking hack).<br />
 	If KDE support is enabled, KVIrc will have an option that makes all windows use a faded KDE desktop background image as background. Without KDE support you will be able to choose a fake background image and use it as background. (You can still
@@ -661,41 +660,41 @@ $template['install']['tree21']="
 	It is cool-looking but usually eats some memory when enabled.<br />
 	It also eats some executable size.<br />
 	So this option allows to disable the pseudo-transparency.";
-$template['install']['tree22']="
+$template['install']['tree21']="
 	Forcibly disable perl support.<br />
         You will not be able to use perl scripts inside KVIrc.";
-$template['install']['tree23']="
+$template['install']['tree22']="
 	Forcibly disable python support.<br />
         You will not be able to use python scripts inside KVIrc.";
-$template['install']['tree24']="
+$template['install']['tree23']="
 	Disables support for inter-process communication.<br />
 	You will be not able to send remote commands to running KVIrc sessions: this basically means that every time you run the KVIrc executable, a new session will be started.<br />
 	If you don't use this switch, a new session will be started only if no session is running on the same display or \"new session\" has been forced by a commandline switch.<br />
 	If a session is already running, the commandline will be passed to that session via IPC (X-event-based communication).<br />
 	This option saves some KB of the KVIrc executable, so if you're really short in memory, you might use it, otherwise, IPC is a nice feature.";
-$template['install']['tree25']="Disables the use of GetText to generate translation files.";
-$template['install']['tree26']="Disables docs generation through Doxygen.";
-$template['install']['tree27']="
+$template['install']['tree24']="Disables the use of GetText to generate translation files.";
+$template['install']['tree25']="Disables docs generation through Doxygen.";
+$template['install']['tree26']="
 	This will disable the use of the system memmove() memcpy() and memset() functions and enable the bundled implementations. Use it if you have undefined references to these functions while compiling.";
+$template['install']['tree27']="
+	Explicitly disable the usage of the GSM library. This will disable the DCC VOICE GSM codec but might help when the compilation stops complaining of something related to GSM :)";
 $template['install']['tree28']="
-	Explicitly disable the usage of the GSM library. This will disable the DCC VOICE gsm codec but might help when the compilation stops complaining of something related to GSM :)";
-$template['install']['tree29']="
 	KVIrc contains some ix86 assembly routines that *could* performs some things faster (this is not always true, depends on the compiler).<br />
 	You might want to try it if your KVIrc seems to be really slow...";
-$template['install']['tree30']="
+$template['install']['tree29']="
 	Explicitly disable the DCC VOICE sound support. This might help if you have problems in compilation of src/modules/dcc/voice.cpp.<br />
 	It will disable the sound support (and thus make DCC VOICE not usable).";
-$template['install']['tree31']="
+$template['install']['tree30']="
 	Debug stuff... enables memory allocation profiling (don't use it :)";
-$template['install']['tree32']="
+$template['install']['tree31']="
 	Enables malloc() memory checks. This will print a nice message if your system goes out of memory...<br />
 	It can't save you from buying new RAM, but at least you will know that your system went out of memory and it is not a proper kvirc fault.<br />
 	Actually you probably have no reason in using it.";
-$template['install']['tree33']="
+$template['install']['tree32']="
 	Manually set a revision number if subversion is not found on your system.<br />
 	This is useful mostly on windows.";
-$template['install']['tree34']="Add some pizza for dinner :)";
-$template['install']['tree35']="Add some beers to chat :)";
+$template['install']['tree33']="Add some pizza for dinner :)";
+$template['install']['tree34']="Add some beers to chat :)";
 $template['install']['text31']="
 	The CMake build system provide also an interactive mode to configure the environment before compiling.<br />
 	Again, we encourage the \"out-of-source\" building: build all files without dirting the sources directory.";
@@ -724,7 +723,7 @@ $template['install']['text39']="
 	The synthax is";
 $template['install']['text40']="
 	After this step, just follow your distribution's rules to make a good package for the distro you're running.</p>
-	<p>Alternatively, you can try the experimental CPack support included in CMakelist.txt to build a package: in this case, please refer to the CPack documentation.";
+	<p>Alternatively, you can try the experimental CPack support included in CMakeLists.txt to build a package: in this case, please refer to the CPack documentation.";
 $template['install']['text41']="That's all folks.";
 /* install.php end */
 
