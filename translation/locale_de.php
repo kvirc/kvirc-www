@@ -30,7 +30,6 @@ $template['index']['theproject']="Projekt";
 $template['index']['status']="Status";
 $template['index']['features']="Eigenschaften";
 $template['index']['license']="Lizenz";
-$template['index']['require']="Voraussetzungen";
 $template['index']['screens']="Bildschirmfotos";
 $template['index']['bugtrack']="KVIrc Fehlerdatenbank";
 // running kvirc
@@ -129,6 +128,7 @@ $template['custom']['version']="Version";
 $template['custom']['type']="Typ";
 $template['custom']['city']="Stadt";
 $template['custom']['maintainer']="Ansprechpartner";
+$template['custom']['optional']="Optional";
 /* custom vars end */
 
 /* addons.php start */
@@ -537,244 +537,195 @@ $template['honor']['quote37']="FreeBSD Gimp.";
 
 /* install.php start */
 $template['install']['title1']="Installation";
-$template['install']['title2']="Guru Installation";
-$template['install']['title3']="Hacker Installation";
-$template['install']['title4']="Humane (detailierte) Installation";
-$template['install']['text1']="Generelle Anmerkung zur Installation von KVIrc Version 3.2.0";
-$template['install']['text2']="Du MUSST automake 1.5 haben";
-$template['install']['text3']="Wenn Du die SVN-Version von KVIrc kompilierst, starte ./autogen.sh";
-$template['install']['text4']="Pfad zur Qt-Bibliothek";
-$template['install']['text5']="schließlich";
-$template['install']['text6']="Pfad zur KDE-Bibliothek";
-$template['install']['text7']="Wir benutzen hier die GNU-Werkzeuge.";
-$template['install']['text8']="Deine Optionen";
+$template['install']['title2']="Minimal Requirements";
+$template['install']['title3']="Configuring the Environment";
+$template['install']['title4']="Interactive Mode";
+$template['install']['title5']="Compiling";
+$template['install']['title6']="Compiling on MacOS X";
+$template['install']['title7']="Compiling on Win32";
+$template['install']['title8']="Hacker-level Installation";
+$template['install']['title9']="Creating a KVIrc Package";
+$template['install']['title10']="Have fun!";
+$template['install']['text1']="General notes for the installation of the release 4.0 of KVIrc";
+$template['install']['text2']="In order to compile KVIrc 4.0 you need at least these softwares";
+$template['install']['text3']="
+	If your distro has KDE installed then Qt is already installed. If not, simply install qt4 from your distro's repositories.";
+$template['install']['text4']="
+	So before running cmake make sure that the environment variable \$QTDIR points to the right location. This will help in finding the correct version of Qt.";
+$template['install']['text5a']="You might eventually set it with the command";
+$template['install']['text5b']="your qt dir";
+$template['install']['text6']="On my system qt is installed in /usr/lib64/qt so I actually execute";
+$template['install']['text7']="To check you have the right version of Qt, simply run";
+$template['install']['text8']="On my system the output is";
 $template['install']['text9']="
-	Wenn Du kein Guru bist, oder Probleme mit der Installation hast, lies diese Anleitung sorgfältig.";
-$template['install']['step']="Schritt";
+	If you have multiple versions of Qt4 installed in your system and you want to use a specific version, exporting QTDIR won't suffice. Since the CMake module searching for Qt4 uses qmake itself to determine the Qt4 library dir, you can set your PATH to have CMake using using your preferred qmake version";
 $template['install']['text10']="
-	Wenn (und NUR dann) Du die SVN-Version von KVIrc kompilierst, musst Du das configure-Skript generieren.";
+	Please note that compiling with KDE4 support enabled will force kvirc to link against the Qt4 version that KDE4 is using, and this may lead to problems in linking. Disabling KDE4 support is the only known solution at the moment.<br />
+	Note also that you'll need to override the Qt libraries used when running KVIrc";
 $template['install']['text11']="
-	Wenn es nicht erfolgreich durchläuft, überprüfe Deine automake-Version.<br />
-	Du brauchst automake 1.5, ältere Versionen arbeiten NICHT mit der SVN-Version.<br />
-	Du kannst die Version von automake überprüfen mit";
+	This is usually included in the last distros.<br />
+	To check which cmake you have, simply run";
 $template['install']['text12']="
-	Wenn Deine Version von automake kleiner als 1.5 ist, aktualisiere es.<br />
-	Du kannst es finden unter http://www.gnu.org/software/automake (Quelltext), oder in der Paketverwaltung deiner Distribution.<br /><br />
-	Hinweis zur automake-Installation: Standardmäßig installiert sich automake nach /usr/local.<br />
-	Wenn Du eine ältere Version von automake in /usr hast, ist es besser sie zu entfernen: Die Dateien, die gelöscht werden müssen sind /usr/bin/automake, /usr/bin/aclocal, /usr/share/automake und /usr/share/aclocal<br />
-	Wenn Du unsicher bist, die Dateien zu entfernen, benenne sie um.<br />
-	Stelle ebenfalls sicher, dass /usr/local/bin in deinem Pfad (\$PATH) enthalten ist.<br /><br />
-	Wenn Du die Quellen als tar.gz (oder tar.bz2) geladen hast, oder du nicht weißt, was SVN ist, ignoriere diesen Schritt und gehe zum nächsten.";
-$template['install']['steptitle1']="Die Voraussetzungen";
-$template['install']['tree1a']="
-	Du brauchst die Qt-Bibliothek.<br />
-		Du kannst die aktuellste Version bei ftp.trolltech.com herunterladen.<br />
-		Die Qt-Hauptseite ist www.trolltech.com.<br />
-		Hinweis für die GPL-Fanatiker: Qt IST GPL.<br />
-		Die zumindest benötigte Version ist 3.0.5 (älter Versionen *können* funktionieren)<br />
-		Lade und installiere es, indem Du der Anleitung folgst, die der Bibliothek beiliegt";
-$template['install']['tree1b']="
-	Du brauchst eine korrekte pthread-Implementierung.<br />
-		Diese ist normalerweise in Deiner Distributuion enthalten und schon installiert. Die Bibliothek heißt libpthread.so.<br />
-		Du kannst sie suchen mit dem \"find\"-Befehl";
-$template['install']['tree1btext1']="Auf meinem System lautet die Ausgabe";
-$template['install']['tree1btext2']="
-	Wenn Du es nicht hast (das configure-Skript wird es Dir sagen), kannst Du es von Deinem bevorzugten GNU-Spiegel laden.<br />
-		Unter Solaris kannst Du stattdessen die systemeigene Bibliothek libthread.so nutzen, aber Du musst die entsprechenden Option bei configure angeben (siehe unten).<br />
-		FreeBSD hat eine eigene Implementierung von pthread in libc_r und der gcc-Kompilierer hat ein spezielles -pthread Flag, um dagegen zu linken.<br />
-		Wenn Du unter FreeBSD arbeitest, benutze die \"--with-freebsd-pthread\"-configure-Option, und stelle sicher, dass Du keinen anderen pthread-wrapper installiert hast (dieser könnte mit den systemeigenen Header-Dateien kollidieren).";
-$template['install']['tree1btext3']="
-	Das configure-Skript schlägt auch fehl, wenn die Bibliothek irgendwo in Deinem System versteckt ist (z. B. nicht in /lib, /usr/lib oder /usr/local/lib): Du solltest sie wahrscheinlich verschieben";
-$template['install']['tree1c']="
-	Du brauchst die Schnittstellenbibliothek des Dynamischen Linkers libdl.so<br />
-		Diese ist normalerweise auf Deinem System installiert, so dass Du Dich nicht darum kümmern musst, ausser configure beschwert sich darüber. Einige Systeme haben die Schnittstelle in libs integriert. Das configure-Skript kann dieses feststellen";
-$template['install']['tree1d']="
-	(Optional) Wenn Du die KDE-Unterstützung einkompiliert haben möchtest, brauchst Du natürlich KDE. Das Paket kdelibs sollte ausreichen. Bei einigen Distributionen musst Du auch kdelibs-devel installieren";
-$template['install']['tree1e']="
-	(Optional) Wenn Du bei DCC VOICE Unterstützung für den gsm-codec haben möchtest, brauchst Du eine aktuelle Version von libgsm. Diese wird nicht zwangsläufig bei der Kompilierung benötigt, da KVIrc sie zur Laufzeit sucht, wenn DCC VOICE mit gsm-codec gebraucht wird.<br />
-		Du kannst nacht libgsm mit dem \"find\"-Befehl suchen.";	
-$template['install']['tree1etext1']="Die Ausgabe sollte aussehen wie";
-$template['install']['tree1etext2']="
-	Diese Bibliothek is bei den meisten Distributionen enthalten. Einige liefern nur die statische Version der Bibliothek \"libgsm.a\" mit. Wenn das vorherige find etwas in der Art \"/usr/lib/libgsm.a\" ausgegeben hat, kannst Du mit den folgenden Befehlen die dynamische erstellen:";
-$template['install']['tree1etext3']="
-	Wenn Du es gar nicht installiert hast, kannst Du auf der CD Deiner Distribution suchen, oder es aus dem Web laden";
-$template['install']['tree1f']="
-	(Optional) Wenn Du willst, dass das /snd-Plugin verschiedene Audioformate spielt
-		brauchst Du entweder einen laufenden artsd, einen laufenden esd oder eine aktuelle audiofile-Bibliothek.
-		Ohne diese wird KVIrc nur *.au-Dateien abspielen";
-$template['install']['tree1g']="
-	(Optional) Wenn Du die Online-Dokumentation erstellen willst, brauchst Du auch Perl, Version egal (wahrscheinlich)";
-$template['install']['tree1h']="
-	(Optional) Wenn Du SSL-Unterstützung kompiliert haben möchtest
-		brauchst Du die OpenSSL-Bibliothek und -Headers. (libsshl.so und openssl/ssl.h)";
-$template['install']['steptitle2']="Das configure-Skript aufrufen (erfoderlich)";
+	You need a decent C++ compiler. Usually under linux it is gcc from GNU tools. It is preferred to use gcc 4.3.<br />
+	To check your gcc version, just run";
 $template['install']['text13']="
-	Zuerst musst Du das configure-Skript aufrufen, dass einige Infos über Dein System sammelt und die Kompilierung vorbereitet.<br />
-		Du kannst einen \"einfachen Lauf\" probieren und sehen, ob dies reicht... Das configure-Skript versucht schlau zu sein, aber in einigen Fällen wird es versagen.<br /><br />
-		Bevor Du das Skript startest, stelle sicher, dass die Umgebungsvariable \$QTDIR auf das richtige Verzeichnis zeigt. Dies hilft, die richtige Version von Qt zu finden.<br />
-		Du kannst sie setzen mit dem Befehl:";
-$template['install']['text14']="Dein Qt-Verzeichnis";
+	This is usually included in your distribution and is probably already installed. The library is called libpthread.so.<br />
+	You can look for it with the \"find\" command";
+$template['install']['text14']="
+	If you don't have it (CMake will tell you) you can download it from your favorite GNU mirror.<br />
+	The configure script will also fail if the library is hidden somewhere on your system (eg. not in /lib , /usr/lib or /usr/local/lib): you should probably move it.";
 $template['install']['text15']="
-	Auf meinem System ist Qt in /usr/local/kde/qt installiert<br />
-		daher führe ich aus";
-$template['install']['text16']="
-	Wenn Du KDE-Unterstützung kompilieren möchtest, musst Du das gleiche mit \$KDEDIR machen";
-$template['install']['text17']="Dein KDE-Verzeichnis";
-$template['install']['text18']="In meinem Fall ist KDE in /usr/local/kde installier, daher nutze ich";
-$template['install']['text19']="Das configure-Skript hat eine Menge Optionen, die aufgelistet werden können mit";
-$template['install']['text20']="Hier ist eine Liste mit Erklärungen (die gebräuchlichsten stehen oben):";
-$template['install']['tree2a']="
-	Dies ist für Fehlersuche und Problemberichte. Es setzt die Kompilieroptionen, die die Informationen zur Fehlerfindung im lauffähigen KVIrc und den Bibliotheken lässt.
-	In diesem Fall hast Du die Möglichkeit, gdb-Ablaufverfolgungen im Falle eines Absturzes zu erstellen.<br />
-	DU BRAUCHST DIESE OPTION, WENN DU EINEN PROGRAMMABSTURZ MELDEN WILLST";
-$template['install']['tree2b']="
-	Weist den Kopilierer an, pipes anastatt von Dateien während der Kompilation zu verwenden. Pipes helfen, Festplattenbeanspruchung zu senken und verkürzen die Kompilierzeit ein wenig. Nutze diese Option, wenn Deine Platform sie unterstützt";
-$template['install']['tree2c']="
-	Dies ist eine experimentelle Unterstützung für Objektvorverknüpfungen, die spürbar die Startzeit des Programms verbessert. Um es zu nutzen, musst Du das \"objprelink\"-Programm in Deinem Pfad haben. Das objprelink-Programm ist im admin-Verzeichnis enthalten. Um es zu nutzen, musst Du:";
-$template['install']['tree2ctext1']="irgendwo_in_Deinem_Pfad";
-$template['install']['tree2ctext2']="All dieses NACH ./configure und VOR make";
-$template['install']['tree2d']="
-	KVIrc beinhaltet einige ix86 Assemblerroutinen, die einige Dinge beschleunigen können (trifft nicht immer zu, hängt vom Kompilierer ab). Du willst es vielleicht ausprobieren";
-$template['install']['tree2e1']="NUMMER";
-$template['install']['tree2e']="
-	Aktiviert das Kompiliereroptimierungskennzeichen -o&lt;NUMMER&gt;.<br />
-	Mögliche WErte sind 0, 1, 2 und 3 (aber wenn Dein Kompilierer mehr optimierungsstufen unterstützt, kannst Du diese Nummern hier auch nutzen).<br />
-	Verlängert die Kompilierungszeit, produziert aber ein etwas schnelleres Programm";
-$template['install']['tree2f']="
-	Teste nicht, ob pthread funktioniert.<br />
-	Wenn configure während dem pthread-Bibliotheks-Check (pthread library check) fehlschlägt, kannst Du dieses ausprobieren...  (Aber dann musst Du wirklich \"beten\", dass der Test durch \"ungewöhnliche\" Umstände fehlschlug und die Kompilierung erfolgreich verläuft.)";
-$template['install']['tree2g']="
-	Gibt explizit den Pfad zu den X-Header-Dateien an. Du kannst dies nutzen, wenn configure Probleme hat, sie zu finden";
-$template['install']['tree2h']="
-	Gibt explizit den Pfand zu den X-Bibliotheken an. Du kannst dies nutzen, wenn configure Probleme hat, sie zu finden";
-$template['install']['tree2i']="
-	Nutze &lt;NAME&gt; anstatt \"qt\", als Qt-Bibliothekenname.<br />
-	Dies ist nützlich auf Systemen, wo Qt unter einem anderen als dem Standardnamen \"qt\" installiert ist.<br />
-	Es passiert oft, um verschiedene Versionen von Qt zu ermöglichen, dass die Version an den Namen angehangen wird.<br />
-	Bei FreeBSD zum Beispiel ist \"qt\" Qt1.* und \"qt2\" Qt 2.*. Da Du Qt 3.* brauchst, damit KVIrc funktioniert, musst Du --with-qt-name=qt3 angeben.<br />
-	Wenn Du diese Option nutzt, wirst Du wahrscheinlich auch den Pfad/Namen für den moc-Kompilierer mit --with-qt-moc angeben müssen";
-$template['install']['tree2j']="
-	Deaktiviert das Überprüfen, ob die Qt-Version \"multithreaded\" ist. Standardmäßig wird KVIrc versuchen gegen die \"multithreaded\"-Version zu linken, wenn sie auf dem System gefunden wird.<br />
-	HINWEIS: Wenn Du KDE-Unterstützung aktivierst, muss KVIrc gegen die gleiche QT-Version gelinked werden, gegen die auch KDE gelinked ist";
-$template['install']['tree2k']="
-	Suche die Qt-Bibliothek in &lt;DIR&gt;.<br />
-	Du kannst dies benutzen, wenn configure Probleme hat, die Qt-Bibliothek zu finden.<br />
-	Du solltest keine Probleme haben, wenn Du export QTDIR=\"&lt;DIR&gt;\" ausführst, bevor Du configure startest. Es kann aber nützlich sein, wenn Du keine standardmäßige Qt-Installation hast";
-$template['install']['tree2l']="
-	Suche die Qt-Header in &lt;DIR&gt;.<br />
-	Du kannst dies benutzen, wenn configure Probleme hat, die Qt-Header zu finden.<br />
-	Du solltest keine Probleme haben, wenn Du export QTDIR=\"&lt;DIR&gt;\" ausführst, bevor Du configure startest. Es kann aber nützlich sein, wenn Du keine standardmäßige Qt-Installation hast";
-$template['install']['tree2m']="
-	Benutze den Qt-Meta-Objekt-Kompilierer (moc) in &lt;PATH&gt;<br />
-	Der Pfad ist gewöhnlich \$QTDIR/bin/moc und configure wird ihn automatisch finden, wenn Du eine Standard-Qt-Installation hast und \$QTDIR auf das richtige Verzeichnis zeigt.<br />
-	Dieses sollte kein Problem sein, wenn Du export QTDIR=\"&lt;DIR&gt;\" ausführst, bevor Du configure startest. Es kann aber nützlich sein, wenn Du keine Standard-Qt-Installation hast.<br />
-	Dies hilft Dir auch, wenn Du den moc-Kompilierer umbenannt hast, wie z. B. \"moc2\" oder ähnliches...<br />
-	&lt;PATH&gt; ist in diesem Fall der VOLLE Pfad: Verzeichnis/Programmname!";
-$template['install']['tree2n']="
-	Dies deaktiviert das Überprüfen von Qt zur Kompilierungszeit.<br />
-	Wenn dies der einzige Weg ist, KVIrc zu kompilieren und aufzurufen, dann stimmt was mit dem configure-Skript nicht";
-$template['install']['tree2o']="
-	Das configure-Skript sucht die KDE-Headers und -Bibliotheken und wenn es sie findet, aktiviert es die KDE-Unterstützung. Wenn Du die KDE-Unterstützung nicht haben willst, obwohl KDE gefunden wurde, nutze diesen Schalter";
-$template['install']['tree2p']="
-	Suche die KDE-Bibliotheken in &lt;DIR&gt;<br />
-	Wenn \$KDEDIR auf den richtigen Ort zeigt, solltest Du dies nicht brauchen";
-$template['install']['tree2q']="
-	Suche die KDE-Headers in &lt;DIR&gt;<br />
-	Wenn \$KDEDIR auf den richtigen Ort zeigt, solltest Du dies nicht brauchen";
-$template['install']['tree2r']="
-	Installiere die KDE-Service-Protokoll-Dateien nach &lt;DIR&gt;<br />
-	Wenn \$KDEDIR auf den richtigen Ort zeigt, solltest Du dies nicht brauchen<br />
-	Dies ist für KVIrc nicht kritisch: Wenn configure dieses Verzeichnis nicht finden kann, verlierst Du nur die Unterstützung für irc://-URLs in Konqueror";
-$template['install']['tree2s']="Wie --without-qt-check, aber für KDE";
-$template['install']['tree2t']="
-	Die IPv6-Unterstützung wird normalerweise auf Platformen, die dies unterstützuen, einkompiliert. Diese Option unterbindet dies.<br />
-	Selbst wenn Du nur eine reine IPv4-Verbindung hast, kannst Du IPv6-Unterstützung aktiviert lassen, Du kannst dann IPv6-Hostnamen nachschlagen";
-$template['install']['tree2u']="
-	Dies deaktiviert die Nutzung der Systemfunktionen memmove(), memcpy() und memset() und aktiviert die Nutzung der eigenen Implementierung. Nutze dies, wenn Du undefinierte Referenzen (undefined references) zu diesen Funktionen während der Kompilierung hast";
-$template['install']['tree2v']="
-	Dies ist ein hack hauptsächlich für Solaris.<br />
-	Nutze diese Option, wenn sich KVIrc ohne sichtbaren Grund beendet und das System eine Nachricht bezüglich eines \"Alarms\" ausgibt :)";
-$template['install']['tree2w']="
-	Deaktiviert die Verschlüüselungseinheit und die ganze Verschlüsselungs-/Textumwandlungsunterstützung. Erstellt ein etwas kleineres Programm.<br />
-	Falls Du nicht weißt, was Verschlüsselungs-/Textumwandlungsunterstützung ist, empfehle ich Dir, diese Option zu meiden";
-$template['install']['tree2x']="
-	Diese Option deaktiviert die Scheintransparenz-Unterstützung.<br />
-	Die Scheintransparenzunterstützung lässt das KVIrc-Fenster halbtransparent aussehen (dies ist KEINE echte Transparenz, dies ist nur ein gutaussehender hack).<br />
-	Wenn die KDE-Unterstützung eingeschaltet ist, wird KVIrc eine Option haben, das alle Fenster ein abgedunkeltes Bild der KDE-Arbeitsfläche als Hintergrund haben. Ohne KDE-Unterstützung hast Du die Möglichkeit, ein Hintergrundbild einzustellen. (Du kannst weiterhin den Hintergrund der Arbeitsfläche nehmen; dies wird (mehr oder weniger) bei jedem Fenstermanager funktionieren.) Es sieht gut aus, belegt aber einigen Speicher. Es vergrössert auch die Programmdatei.<br />
-	Diese Option erlaubt Dir, die Scheintransparenz zu deaktivieren";
-$template['install']['tree2y']="
-	Wenn Du Solaris nutzt und keine pthread-Bibliothek hast, kannst Du diese Option probieren: Es versucht die Solaris-eigene threading-Bibliothek zu nutzen";
-$template['install']['tree2z']="
-	Wenn Du FreeBSD nutzt, BRAUCHST Du diese Option. Sie aktiviert die Nutzung der FreeBSD-eigenen pthread-Implementierung in libc_r.<br />
-	Dies setzt voraus, dass Du den gcc-Kompilierer nutzt, denn dieser hat einen speziellen Schalter \"-pthread\", der das linken gegen libc_r anstatt der normalen libc ermöglicht";
-$template['install']['tree2a1']="Linke gegen libresolv. Ich vermute, dies wird bei Solaris benötigt";
-$template['install']['tree2a2']="Linke gegen libsocket. Ich vermute, dies wird bei Solaris benötigt";
-$template['install']['tree2a3']="Linke gegeb libnsl. Ich vermute, dies wird bei Solaris benötigt";
-$template['install']['tree2a4']="
-	Linke gegen libcompat. Dies kann bei einigen Systemen benötigt sein...<br />
-	aber ich weiß nicht, bei welchen. Wenn Du es hilfreich findest, schick mir ein E-Mail";
-$template['install']['tree2a5']="
-	Deaktiviert die Erstellung der Laufzeit-Type-Informationen des Kompiliererscompiler. Dies wird hauptsächlich für Qt-embedded gebraucht";
-$template['install']['tree2a6']="
-	Deaktiviere die Nutzung der XBell-Funktion (nötig, wenn Du KVIrc mit qt-embedded kompilieren willst (kein X))";
-$template['install']['tree2a7']="Du brauchst diese Option, um KVIrc mit qt-embedded zu kompilieren";
-$template['install']['tree2a8']="
-	Linke explizit gegen die angegebenen Bibliotheken.<br />
-	Beispiel: --with-other-libs=\"-lmylib -lstrangesystemsupport -lmybraindamagedsyscallfix\"";
-$template['install']['tree2a9']="
-	Füge die angegebenen Bibliothekensuchpfade explizit hinzu.<br />
-	Beispiel: --with-other-ldirs=\"-L/home/pippo/lib/ -L/meine/sicheren/Bibliotheken/\"";
-$template['install']['tree2b1']="
-	Füge die angegebenen include-Suchpfade explizit hinzu.<br />
-	Beispiel: --with-other-idirs=\"-I/home/pippo/include/ -I/tmp/include/\"";
-$template['install']['tree2b2']="
-	Deaktiviere die Inter-Prozess-Kommunikation.<br />
-	Es wird Dir nicht möglich sein, Befehle von ausserhalb an laufende KVIrc-Sitzungen zu senden. Das heißt, dass jedesmal, wenn Du KVIrc aufrufst, eine neue Sitzung gestartet wird.<br />
-	Wenn Du diesen Schalter nicht benutzt, wird eine neue Sitzung nur dann gestertet, falls keine auf dem gleichen Display läuft, oder eine \"neue Sitzung\" über einen Kommandozeilenschalter erzwungen wurde.<br />
-	Wenn eine Sitzung bereits läuft, wird die Kommandozeile an diese Sitzung via IPC (X-basierte Kommunikation) weitergereicht. Diese Option spart einige KB an KVIrc. Du kannst sie nutzen, wenn Du wirklich wenig Speicher hast, andernfalls ist IPC ein nettes Merkmal";
-$template['install']['tree2b3']="
-	Du solltest diese Option nicht brauchen.<br />
-	Sie verhindert die Kompilierung von Code, der auf einem bestimmten Kompilierermerkmal beruht (Sprung zu einer dynamischen Marke mit einem goto). Nicht alle Kompilierer unterstützen dies, aber configure sollte dies automatisch erkennen. Wenn Du Kompilierungsfehler bei kvi_ircview.cpp bekommst, solltest Du diese Option ausprobieren...<br />
-	Dies kann auch helfen, wenn configure scheinbar bei der Prüfung von \"Kompilierunterstützung für dynamische Marken (compiler dynamic label support)\" hängt";
-$template['install']['tree2b4']="
-	Deaktiviert die X-drawing-Aufrufe (immer aktiviert mit Qt >= 3.0.0). Dies kann helfen, wenn Du Probleme mit Schriften im View-Fenster hast";
-$template['install']['tree2b5']="
-	Kompiliere nicht den Begrüßungsbildschirm-Code.<br />
-	Die entfernt das sczöne \"Banner\", das erscheint, während KVIrc startet. Dies hilft, die ausführbare Datei ein paar KB kleiner zu machen und ein paar Millisekunden während des Starts zu sparen. Nutze dies, wenn Du versuchst, ein leistungskritisches Programm zu erstellen und Du sowohl wenig Speicher, als auch wenig CPU-Zeit hast :)";
-$template['install']['tree2b6']="
-	Dies aktiviert einige Kurzinfos in den Optionsdialogen. Es ist hilfreich, um ein kleineres Programm und Module zu erhalten. Nutze diese Option, wenn Du ein KVIrc-Guru bist und keine Tipps für den den Umgang mit den Optionen brauchst";
-$template['install']['tree2b7']="
-	Deaktiviere explizit die Nutzung der GSM-Bibliothek. Dies sperrt den DCC VOICE gsm codec, aber kann vielleicht helfen, wenn die Kompilierung wegen irgendwas bezüglich GSM abbricht :)";
-$template['install']['tree2b8']="
-	Deaktiviere explizit die DCC-VOICE-Sound-Unterstützung. Dies kann helfen, wenn Du Probleme hast, src/modules/dcc/voice.cpp zu kompilieren. Es deaktiviert die Sound-Unterstützung (und daher ist DCC VOICE nicht benutzbar)";
-$template['install']['tree2b9']="
-	Deaktiviert SSL. Die SSL-Unterstützun ist automatisch aktiviert, wenn configure OpenSSL findet. Diese Option lässt diese Suche aus";
-$template['install']['tree2c1']="Zum Fehlersuchen...erstellt ein Profil der Speicher-Allokierung (Nutze es nicht :)";
-$template['install']['tree2c2']="
-	Aktiviert malloc() Speicherchecks. Dies gibt eine nette Nachricht aus, wenn Deinem System der Speicher ausgeht... Es kann Dir nicht ersparen, neuen RAM zu kaufen, aber zumindest weißt Du, dass Dein System zu wenig Speicher hat und es nicht die Schuld von KVIrc ist. Eigentlich solltest Du keinen Grund haben, es zu nutzen";
-$template['install']['tree2c3']="
-	Kleinere Hash-Tabellen-Optimierungen: Höhere Speichernutzung, aber schnellere Benutzersuchen. Nutze dies, wenn Du öfters in Kanälen mit vielen Benutzern bist. (Dies ist nicht kritisch)";
-$template['install']['text21']="Schließlich musst Du aufrufen:";
-$template['install']['text22']="Meine normalen Optionen sind zum Beispiel:";
-$template['install']['text23']="Auf FreeBSD fand ich diese Befehlszeile nützlich:";
-$template['install']['text24']="Wenn das configure-Skript erfolgreich durchgelaufen ist, kannst Du zum nächsten Schritt übergehen.";
-$template['install']['text25']="Kompilieren (erforderlich)";
-$template['install']['text26']="Dieser Schritt ist einfach:";
-$template['install']['text27']="Kreuze Deine Finger und starte";
+	You need the dynamic linker interface library libdl.so.<br />
+	This is usually installed on your system , so don't care until configure complains about it. Some system have the interface builtin in libc.";
+$template['install']['text16a']="
+	If you want to compile the KDE integration support you obviousy need KDE.<br />
+	The kdelibs package should suffice.</p>
+	<p>So before running cmake make sure that the environment variable \$KDEDIR points to the right location.</p>
+	<p>You might eventually set it with the command";
+$template['install']['text16b']="your kde dir";
+$template['install']['text17']="In my case KDE is installed in /usr so I use";
+$template['install']['text18']="
+	If you want the translations to non-english languages to work then you need the GNU gettext package. In particular KVIrc uses the msgfmt program.</p>
+	<p>This is usually included in your distribution and is probably already installed. You can check it by running";
+$template['install']['text19']="
+	KVIrc will not complain if the command above is missing: it will just skip the creation of the translation files.<br />
+	If the command above fails then you need to install the gettext package if you want any language other than english.";
+$template['install']['text20']="
+	If you want the secure socket layer (SSL) support to be compiled you need the OpenSSL library and headers (libssl.so and openssl/ssl.h).";
+$template['install']['text21']="
+	If you want to generate the on-line documentation you also need perl: any version will do (I guess).";
+$template['install']['text22']="
+	If you want perl scripting support to be compiled you need a working perl installation. Your libperl.so MUST be compiled with the MULTIPLICITY option.<br />
+	You can check it with perl -V<br />
+	The way external software can emebed perl has changed between perl version 5.8 and 5.10; KVIrc should play nice with perl if >= 5.004, but 5.10 is strongly suggested, since future updates can break back compatibility.";
+$template['install']['text23']="
+	If you want DCC VOICE to support the GSM codec, you need a recent copy of libgsm.<br />
+	This is not strictly required at compile time since KVIrc will look for the library at run-time, and only if the DCC VOICE with the GSM codec is requested.<br />
+	You can check for libgsm using the \"find\" command";
+$template['install']['text24']="
+	This library is included in most distributions. Some distros ship only the static version of the library \"libgsm.a\": if the previous find returned only something similar to \"/usr/lib64/libgsm.a\", you might create manually the shared archive by running";
+$template['install']['text25']="
+	If you don't have it installed at all, you might have a look in your distribution CD, or download it from the web";
+$template['install']['text26']="
+	If you want the /snd plugin to play various audio formats you either need a running sound system like phonon, a running sound daemon like esd or a reasonably recent audiofile library. Without these KVIrc will be only able to play *.au files.";
+$template['install']['text27']="
+	Since KVIrc 4.0 uses CMake as build system, we have to use it to create the Makefile's rules for make program.<br />
+	To do it, we encourage the \"out-of-source\" building: build all files without dirtying the sources directory.";
+$template['install']['text27b']="your options";
 $template['install']['text28']="
-	Wenn Dein make kein GNU make ist (zum Beispiel auf FreeBSD), solltest Du stattdessen \"gmake\" nutzen.<br />
-	Die Kompilierung dauert zwischen 6-7 Minuten bis hin zu mehreren Stunden, abhänging vom System und dessen Auslastung.<br /><br />
-	Wenn die Kompilierung erfolgreich war, starte";
+	In this way you have just created an out-of-source environment useful to have a clean working directory.<br />
+	Note that the final dots are required or cmake will NOT create the right environment.";
 $template['install']['text29']="
-	Das selbe wie oben: Nutze \"gmake install\", wenn Dein make kein GNU make ist.<br /><br />
-		Die installiert das ausführbare Programm nach /usr/local/bin<br />
-		Falls Du eine vorhergehende KVIrc-Installation hattest, wird der Standard-prefix auf das Verzeichnis zeigen, in dem die alte ausführbare KVIrc-Datei gefunden wurde.<br /><br />
-		Stelle sicher, dass /usr/local/lib in Deiner /etc/ld.so.conf enthalten ist. Falls nicht, füge es hinzu und starte";
-$template['install']['text30']="
-	Wenn Du KDE-Unterstützung gewählt hast, kann es sein, dass die Installation die Dateien unterhalb von \$KDEDIR anstatt /usr/local platziert hat. Dies sollte ok sein, da
-		KDE erfordert, dass sein Bibliothekenverzeichnis in /etc/ld.so.conf steht";
-$template['install']['text31']="Viel Spaß";
-$template['install']['text32']="Dies ist alles, Leute.";
+	The CMake rules support some flags. If you don't specify them, CMake will try to make a good environment for you :)<br />
+	To use these flags, you have to pass a bool value or a string.</p>
+	<p>For example, to install in /usr instead of /usr/local and disable Phonon support, the command would be";
+$template['install']['text30']="Here's a list with explainations";
+$template['install']['tree1']="
+	Compiles the executable with debug symbols.<br />
+        Useful to report bugs.";
+$template['install']['tree2']="Generate verbose output when compiling.";
+$template['install']['tree3']="It will install all stuff under /path directory";
+$template['install']['tree4']="
+	It will install libkvilib and kvirc modules under \${CMAKE_INSTALL_PREFIX}/lib\${LIB_SUFFIX} directory. It defaults to an empty suffix. Mainly used for 64 bit distros (-DLIB_SUFFIX=64).";
+$template['install']['tree5']="
+	Append version information to kvirc and libkvilib, so that different KVIrc versions can cohexist in the same system.";
+$template['install']['tree6']="
+	KVIrc install rules won't try to figure out and set CMAKE_C(XX)_FLAGS; instead, it will let CMake use the ones from environment variables. Activating this flag will override -DDEBUG.";
+$template['install']['tree7']="
+	It will re-initialize the installation path to a good default.<br />
+	Following compilations should use the correct path value cached by CMake.<br />
+	This flag is useful to solve MacOS X install problems.";
+$template['install']['tree8']="Compile universal binary for MacOS X platform";
+$template['install']['tree9']="Use pre-compiled headers";
+$template['install']['tree10']="Disable Phonon audio backend support.";
+$template['install']['tree11']="
+	Disable OSS audio backend support. This automatically disables Audiofile support, too.";
+$template['install']['tree12']="Disable Audiofile audio backend support.";
+$template['install']['tree13']="Disable Esd audio backend support.";
+$template['install']['tree14']="Disable Qt-DBus support.";
+$template['install']['tree15']="Disable Qt-WebKit support.";
+$template['install']['tree16']="Disable Audiofile support.";
+$template['install']['tree17']="Disable KDE4 support.";
+$template['install']['tree18']="
+	Disables the Secure Socket Layer support. The SSL support is automatically enabled if OpenSSL is detected by CMake.";
+$template['install']['tree19']="
+	Disables the cryptographic engines and the whole cryptography/text transformation support. Produces a slightly smaller executable";
+$template['install']['tree20']="
+	The IPv6 support is compiled by default on the platforms that support it: this option disables it.<br />
+	Even if you have a plain IPv4-only connection, you might want to keep the IPv6 support: you will be able to lookup IPv6 hostnames.";
+$template['install']['tree21']="
+	This option disables pseudo-transparency support.<br />
+	The pseudo transparency support makes the KVIrc windows look like semi-transparent (this is NOT real transparency: this is just a nice-looking hack).<br />
+	If KDE support is enabled, KVIrc will have an option that makes all windows use a faded KDE desktop background image as background. Without KDE support you will be able to choose a fake background image and use it as background. (You can still
+        choose your desktop wallpaper: this will (more-or-less) work in all the window managers).<br />
+	It is cool-looking but usually eats some memory when enabled.<br />
+	It also eats some executable size.<br />
+	So this option allows to disable the pseudo-transparency.";
+$template['install']['tree22']="
+	Forcibly disable perl support.<br />
+        You will not be able to use perl scripts inside KVIrc.";
+$template['install']['tree23']="
+	Forcibly disable python support.<br />
+        You will not be able to use python scripts inside KVIrc.";
+$template['install']['tree24']="
+	Disables support for inter-process communication.<br />
+	You will be not able to send remote commands to running KVIrc sessions: this basically means that every time you run the KVIrc executable, a new session will be started.<br />
+	If you don't use this switch, a new session will be started only if no session is running on the same display or \"new session\" has been forced by a commandline switch.<br />
+	If a session is already running, the commandline will be passed to that session via IPC (X-event-based communication).<br />
+	This option saves some KB of the KVIrc executable, so if you're really short in memory, you might use it, otherwise, IPC is a nice feature.";
+$template['install']['tree25']="Disables the use of GetText to generate translation files.";
+$template['install']['tree26']="Disables docs generation through Doxygen.";
+$template['install']['tree27']="
+	This will disable the use of the system memmove() memcpy() and memset() functions and enable the bundled implementations. Use it if you have undefined references to these functions while compiling.";
+$template['install']['tree28']="
+	Explicitly disable the usage of the GSM library. This will disable the DCC VOICE gsm codec but might help when the compilation stops complaining of something related to GSM :)";
+$template['install']['tree29']="
+	KVIrc contains some ix86 assembly routines that *could* performs some things faster (this is not always true, depends on the compiler).<br />
+	You might want to try it if your KVIrc seems to be really slow...";
+$template['install']['tree30']="
+	Explicitly disable the DCC VOICE sound support. This might help if you have problems in compilation of src/modules/dcc/voice.cpp.<br />
+	It will disable the sound support (and thus make DCC VOICE not usable).";
+$template['install']['tree31']="
+	Debug stuff... enables memory allocation profiling (don't use it :)";
+$template['install']['tree32']="
+	Enables malloc() memory checks. This will print a nice message if your system goes out of memory...<br />
+	It can't save you from buying new RAM, but at least you will know that your system went out of memory and it is not a proper kvirc fault.<br />
+	Actually you probably have no reason in using it.";
+$template['install']['tree33']="
+	Manually set a revision number if subversion is not found on your system.<br />
+	This is useful mostly on windows.";
+$template['install']['tree34']="Add some pizza for dinner :)";
+$template['install']['tree35']="Add some beers to chat :)";
+$template['install']['text31']="
+	The CMake build system provide also an interactive mode to configure the environment before compiling.<br />
+	Again, we encourage the \"out-of-source\" building: build all files without dirting the sources directory.";
+$template['install']['text32']="
+	Now you're in interactive mode, just follow the instructions on screen to configure your compilation environment.";
+$template['install']['text33']="This step is easy :)<br />Cross your fingers and run";
+$template['install']['text34']="
+	If your make is not a GNU make (this happens on FreeBSD for example) you should use \"gmake\" instead.<br />
+	The compilation process will take from 3-4 minutes to some hours depending on the machine capabilities and load.<br />
+	If you have a slow cpu but have a couple of computers in a lan you might consider using distcc to distribute the compilation.</p>
+	<p>Once the compilation has been successfull, run";
+$template['install']['text35']="
+	Same as above: use \"gmake install\" if your make is not GNU make.</p>
+	<p>This will install the executable in /usr/local/bin (if you don't have specified a different -DCMAKE_INSTALL_PREFIX option in the cmake rules), the libraries in /usr/local/lib (if you don't have specified a different -DLIB_SUFFIX option in the cmake rules) and the shared data in /usr/local/share/kvirc.</p>
+	<p>Make sure that /usr/local/lib is in your /etc/ld.so.conf , if it isn't there, put it there and run";
+$template['install']['text36']="
+	If you have decided to use the KDE support the installation might have placed all these files in your \$KDEDIR tree instead of /usr/local.<br />
+	In this case you should be OK since KDE requires its library dir to be in /etc/ld.so.conf";
+$template['install']['text37']="
+	There is a detailed compilation and installation HOWTO for MacOS X systems located in the doc/ directory. It's named INSTALL-MacOS.txt";
+$template['install']['text38']="
+	There is a detailed compilation and installation HOWTO for Win32 systems located in the doc/ directory. It's named INSTALL-Win32.txt";
+$template['install']['text39']="
+	CMake supports DESTDIR argument.<br />
+	So, if you want to make a package for your distro, you simply have to pass it at \"make install\" stage: your install files will go to the choosed path.<br />
+	The synthax is";
+$template['install']['text40']="
+	After this step, just follow your distribution's rules to make a good package for the distro you're running.</p>
+	<p>Alternatively, you can try the experimental CPack support included in CMakelist.txt to build a package: in this case, please refer to the CPack documentation.";
+$template['install']['text41']="That's all folks.";
 /* install.php end */
 
 /* license.php start */
@@ -869,57 +820,6 @@ $template['releases']['latest']="Neueste Ausgabe";
 $template['releases']['older']="Ältere Ausgaben";
 $template['releases']['available']="Verfügbare Orte zum herunterladen";
 /* releases.php end */
-
-/* require.php start */
-$template['require']['title']="Voraussetzungen (4.0 Zweig)";
-$template['require']['tree1']="Unix Version (Quelltext):";
-$template['require']['tree1a']="Ein funktionierendes, kompilationstaugliches Unix-System";
-$template['require']['tree1b']="
-	Das <a href=\"http://www.trolltech.com\">Qt GUI Toolkit</a> >= 4.4.0";
-$template['require']['tree1c']="
-	Den <a href=\"http://www.cmake.org\">CMake Makefile Generator</a> >= 2.6";
-$template['require']['tree1d']="
-	Einen C++ Compiler, wie z. B. <a href=\"http://gcc.gnu.org\">GCC (g++)</a>";
-$template['require']['tree1e']="Eine ordentliche Pthread-Implementierung";
-$template['require']['tree1f']="
-	Die <a href=\"http://www.zlib.org\">Zlib-Bibliothek</a>, um Addon- und Themen-Pakete zu erstellen und weiterzugeben";
-$template['require']['tree1g']="
-	<a href=\"http://www.cpan.org\">Perl</a>, um die enthaltene Dokumentation zu erstellen (optional)";
-$template['require']['tree1h']="
-	Die <a href=\"http://www.kde.org\">KDE-Bibliotheken</a> die gegen <b>die gleiche</b> Version von Qt gelinkt ist(optional)";
-$template['require']['tree1i']="
-	Die <a href=\"http://www.gnu.org/software/gettext\">GNU GetText Suite</a>, um die Übersetzungsdateien zu erstellen (optional)";
-$template['require']['tree1j']="
-	Die <a href=\"http://www.openssl.org\">OpenSSL-Bibliothek</a>, um eine sichere Verbindung zu IRC-Servern aufzubauen (optional)";
-$template['require']['tree1k']="
-	Überprüfe, ob Deine Distribution die Entwicklerbibiliotheken splittet; wenn, dann müssen auch die entsprechenden Pakete installiert werden. Diese Pakete haben häufig \"-dev\" in ihrem Namen";
-$template['require']['tree2']="Unix Version (Binärpakete):";
-$template['require']['tree2a']="Ein funktionierendes Unix System";
-$template['require']['tree2b']="
-	Das <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 4.4.0";
-$template['require']['tree3']="Windows Version (Quelltext):";
-$template['require']['tree3a']="Folge den Instruktionen in \"doc/INSTALL-Win32.txt\"";
-$template['require']['tree4']="Windows Version (Binärpakete):";
-$template['require']['tree4a']="Hoffentlich nichts";
-$template['require']['tree5']="Mac OS X (Quelltext):";
-$template['require']['tree5a']="Folge den Instruktionen in \"doc/INSTALL-MacOS.txt\"";
-$template['require']['tree6']="Mac OS X (Binärpakete):";
-$template['require']['tree6a']="
-	Hoffentlich nichts. Öffne einfach die .dmg-Datei und ziehe das Icon in Deinen Applikationsordner.";
-$template['require']['titleold']="Voraussetzungen (alter 3.4 Zweig)";
-$template['require']['treeold1']="Unix Version (Quelltext):";
-$template['require']['treeold2']="Ein funktionierendes, kompilationstaugliches UNIX-System";
-$template['require']['treeold3']="
-	Das <a href=\"http://www.trolltech.com\">QT GUI toolkit</a> >= 3.0.5 (ältere Versionen <b>können</b> funktionieren)";
-$template['require']['treeold4']="
-	<a href=\"http://www.gnu.org/software/automake/\">automake</a> 1.5";
-$template['require']['treeold5']="<a href=\"http://www.zlib.org/\">Zlib-Bibliothek</a>";
-$template['require']['treeold6']="
-	<a href=\"http://www.cpan.org\">Perl</a> (um die Dokumentation zu erstellen)";
-$template['require']['treeold1f']="<a href=\"http://www.kde.org\">KDE</a>-Bibliotheken, die gegen <b>die gleiche</b> Qt-Version gelinkt ist (optional)";
-$template['require']['treeold7']="
-	Überprüfe, ob Deine Distribution die Entwicklerbibiliotheken splittet; wenn, dann müssen auch die entsprechenden Pakete installiert werden. Diese Pakete haben häufig \"-dev\" in ihrem Namen";
-/* require.php end */
 
 /* screen.php start */
 $template['screen']['title']="Bildschirmfotos";
