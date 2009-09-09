@@ -136,7 +136,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 <a name="configure"></a>
 <h1 class="pagetitle"><?=$template['install']['title3']?></h1>
 <div class="column1-unit">
-	<p><?=$template['install']['text27a']?></p>
+	<p><?=$template['install']['text27']?></p>
 	<code>
 	# mkdir release
 	# cd release
