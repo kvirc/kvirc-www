@@ -612,7 +612,7 @@ $template['install']['text25']="
 	If you don't have it installed at all, you might have a look in your distribution CD, or download it from the web";
 $template['install']['text26']="
 	If you want the /snd plugin to play various audio formats you either need a running sound system like phonon, a running sound daemon like esd or a reasonably recent audiofile library. Without these KVIrc will be only able to play *.au files.";
-$template['install']['text27']="
+$template['install']['text27a']="
 	Since KVIrc 4.0 uses CMake as build system, we have to use it to create the Makefile's rules for make program.<br />
 	To do it, we encourage the \"out-of-source\" building: build all files without dirtying the sources directory.";
 $template['install']['text27b']="your options";

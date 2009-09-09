@@ -136,10 +136,10 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 <a name="configure"></a>
 <h1 class="pagetitle"><?=$template['install']['title3']?></h1>
 <div class="column1-unit">
-	<p><?=$template['install']['text27']?></p>
+	<p><?=$template['install']['text27a']?></p>
 	<code>
-	# mkdir release
-	# cd release
+	# mkdir release<br />
+	# cd release<br />
 	# cmake [<?=$template['install']['text27b']?>] ..
 	</code>
 	<p><?=$template['install']['text28']?></p>
