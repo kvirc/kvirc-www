@@ -537,206 +537,205 @@ $template['honor']['quote37']="FreeBSD Gimp.";
 
 /* install.php start */
 $template['install']['title1']="Installation";
-$template['install']['title2']="Minimal Requirements";
-$template['install']['title3']="Configuring the Environment";
-$template['install']['title4']="Interactive Mode";
-$template['install']['title5']="Compiling";
-$template['install']['title6']="Compiling on MacOS X";
-$template['install']['title7']="Compiling on Win32";
+$template['install']['title2']="Minimale Anforderungen";
+$template['install']['title3']="Konfigurieren der Umgebung";
+$template['install']['title4']="Interaktiver Modus";
+$template['install']['title5']="Kompilieren";
+$template['install']['title6']="Kompilieren unter MacOS X";
+$template['install']['title7']="Kompilieren unter Win32";
 $template['install']['title8']="Hacker-level Installation";
-$template['install']['title9']="Creating a KVIrc Package";
-$template['install']['title10']="Have fun!";
-$template['install']['text1']="General notes for the installation of the release 4.0 of KVIrc";
-$template['install']['text2']="In order to compile KVIrc 4.0 you need at least these softwares";
+$template['install']['title9']="Ein KVIrc Paket erstellen";
+$template['install']['title10']="Viel Spaß!";
+$template['install']['text1']="Allgemeine Hinweise zur Installation von KVIrc 4.0";
+$template['install']['text2']="Um KVIrc 4.0 kompilieren zu können, wird mindestens diese Software benötigt";
 $template['install']['text3']="
-	If your distro has KDE installed then Qt is already installed. If not, simply install qt4 from your distro's repositories.";
+	Wenn Ihre Distribution KDE installiert hat, ist auch Qt bereits installiert. Falls nicht, einfach Qt4 aus den Depots Ihrer Distributuin installieren.";
 $template['install']['text4']="
-	So before running cmake make sure that the environment variable \$QTDIR points to the right location. This will help in finding the correct version of Qt.";
-$template['install']['text5a']="You might eventually set it with the command";
-$template['install']['text5b']="your qt dir";
-$template['install']['text6']="On my system qt is installed in /usr/lib64/qt so I actually execute";
-$template['install']['text7']="To check you have the right version of Qt, simply run";
-$template['install']['text8']="On my system the output is";
+	Bevor cmake aufgerufen wird, bitte sicherstellen, dass \$QTDIR auf das richtige Verzeichnis zeigt. Dies erleichtert das auffinden der richtigen Qt-Version.";
+$template['install']['text5a']="Es kann mit diesem Befehl eingestellt werden";
+$template['install']['text5b']="Ihr Qt-Verzeichnis";
+$template['install']['text6']="Auf meinem System ist Qt im Verzeichnis /usr/lib64/qt installiert , daher rufe ich den Befehl so auf";
+$template['install']['text7']="Um sicher zu gehen, dass die richtige Qt-Version installiert ist, einfach aufrufen";
+$template['install']['text8']="Bei mir lautet die Ausgabe";
 $template['install']['text9']="
-	If you have multiple versions of Qt4 installed in your system and you want to use a specific version, exporting QTDIR won't suffice. Since the CMake module searching for Qt4 uses qmake itself to determine the Qt4 library dir, you can set your PATH to have CMake using using your preferred qmake version";
+	Wenn mehrere Versionen von Qt installiert sind und eine bestimmte Version genutzt werden soll, reicht das exportieren von QTDIR nicht aus. Da das CMake-Modul, welches QT4 sucht, selbst qmake aufruft, um das Verzeichnis der Qt4-Bibliotheken zu finden, kann der PATH angepasst werden. Damit kann CMake dazu gebracht werden, die gewünschte qmake-Version zu nutzen";
 $template['install']['text10']="
-	Please note that compiling with KDE4 support enabled will force kvirc to link against the Qt4 version that KDE4 is using, and this may lead to problems in linking. Disabling KDE4 support is the only known solution at the moment.<br />
-	Note also that you'll need to override the Qt libraries used when running KVIrc";
+	Bitte beachten: Kompilieren mit KDE4-Unterstützung veranlasst KVIrc gegen die gleiche Qt4-Version zu linken, die auch KDE4 nutzt. Dies kann zu Link-Problemen führen. Deaktivieren der KDE4-Unterstützung ist die einzige bekannte Lösung zur Zeit.<br />
+	Weiterhin ist zu beachten, dass dann die Qt-Bibliotheken beim Start von KVIrc vorgegeben werden müssen";
 $template['install']['text11']="
-	This is usually included in the last distros.<br />
-	To check which cmake you have, simply run";
+	Dies ist gewöhnlich in neueren Distributionen enthalten.<br />
+	Um dies zu überprüfen reicht folgender Befehl";
 $template['install']['text12']="
-	You need a decent C++ compiler. Usually under linux it is gcc from GNU tools. It is preferred to use gcc 4.3.<br />
-	To check your gcc version, just run";
+	Es wird ein vernünftiger C++  Compiler benötigt. Normal ist unter Linux der gcc von den GNU Tools. Es wird die Version 4.3 von gcc bevorzugt.<br />
+	Um dies zu überpüfen reicht dieser Befehl";
 $template['install']['text13']="
-	This is usually included in your distribution and is probably already installed. The library is called libpthread.so.<br />
-	You can look for it with the \"find\" command";
+	Dies ist normalerweise in der Distribution enthalten und gewöhnlich bereits installiert. Die Bibliothek heißt libpthread.so.<br />
+	Sie kann mit dem Befehl \"find\" gesucht werden";
 $template['install']['text14']="
-	If you don't have it (CMake will tell you) you can download it from your favorite GNU mirror.<br />
-	The configure script will also fail if the library is hidden somewhere on your system (eg. not in /lib , /usr/lib or /usr/local/lib): you should probably move it.";
+	Wenn sie nicht vorhanden ist (CMake wird einen Hinweis ausgeben), kann sie vom bevorzugten GNU-Spiegelserver heruntergeladen werden.<br />
+	Das configure-Skript wird auch fehlschlagen, wenn die Bibliothek irgendwo auf dem System versteckt ist (z. B. nicht in /lib, /usr/lib oder /usr/local/lib): Dann sollte sie wohl verschoben werden.";
 $template['install']['text15']="
-	You need the dynamic linker interface library libdl.so.<br />
-	This is usually installed on your system , so don't care until configure complains about it. Some system have the interface builtin in libc.";
+	Es wird die Bibliothek des dynamischen Linkes benötigt: libdl.so.<br />
+	Diese ist gewöhnlich bereits installiert, solang keine Fehlermeldung deswegen erscheint, braucht man sich nicht hierum zu kümmern. Einie Systeme haben diese Schnittstelle bereits in der libc enthalten.";
 $template['install']['text16a']="
-	If you want to compile the KDE integration support you obviousy need KDE.<br />
-	The kdelibs package should suffice.</p>
-	<p>So before running cmake make sure that the environment variable \$KDEDIR points to the right location.</p>
-	<p>You might eventually set it with the command";
-$template['install']['text16b']="your kde dir";
-$template['install']['text17']="In my case KDE is installed in /usr so I use";
+	Wenn die KDE-Unterstützung mitkompiliert werden soll, wird natürlich KDE benötigt.<br />
+	Das Paket kdelibs sollte ausreichen.</p>
+	<p>Bevor cmake aufgerufen wird, muss sichergestellt sein, dass die Variable \$KDEDIR auf das richtige Verzeichnis zeigt.</p>
+	<p>Diese kann bei Bedarf wie folgt eingestellt werden";
+$template['install']['text16b']="Ihr KDE-Verzeichnis";
+$template['install']['text17']="In meinem Fall ist KDE in /usr installiert, daher nutze ich";
 $template['install']['text18']="
-	If you want the translations to non-english languages to work then you need the GNU gettext package. In particular KVIrc uses the msgfmt program.</p>
-	<p>This is usually included in your distribution and is probably already installed. You can check it by running";
+	Wenn eine andere Sprache als englisch verwendet werden soll, wird das Paket GNU gettext benötigt. Speziell msgfmt wird von KVIrc genutzt.</p>
+	<p>Dies ist gewöhnlich in den Distributionen enthalten und meistens bereits installiert. Dies kann überprüft werden mit";
 $template['install']['text19']="
-	KVIrc will not complain if the command above is missing: it will just skip the creation of the translation files.<br />
-	If the command above fails then you need to install the gettext package if you want any language other than english.";
+	KVIrc wird sich nicht beschweren, wenn das obige Programm fehlt, er wird dann die Erstellung der Übersetzungen überspringen.<br />
+	Wenn der obige Befehl fehlschlägt, muss das Paket gettext installiert werden, wenn eine andere Sprache als Englisch genutzt werden soll.";
 $template['install']['text20']="
-	If you want the secure socket layer (SSL) support to be compiled you need the OpenSSL library and headers (libssl.so and openssl/ssl.h).";
+	Wenn Secure-Socket-Layer-Unterstützung (SSL) mitkompiliert werden soll, werden die OpenSSL-Bibliothek und -Header benötigt (libssl.so und openssl/ssl.h).";
 $template['install']['text21']="
-	If you want to generate the on-line documentation you also need perl: any version will do (I guess).";
+	Wenn die integrierte Dokumentation erstellt werden soll, wird auch Perl benötigt. jede Version sollte funktionieren.";
 $template['install']['text22']="
-	If you want perl scripting support to be compiled you need a working perl installation. Your libperl.so MUST be compiled with the MULTIPLICITY option.<br />
-	You can check it with perl -V<br />
-	The way external software can emebed perl has changed between perl version 5.8 and 5.10; KVIrc should play nice with perl if >= 5.004, but 5.10 is strongly suggested, since future updates can break back compatibility.";
+	Wenn die Unterstützung für Perlskripte kompiliert werden soll, wird eine funktionierende Perl-Installation benötigt. liberl.so MUSS mit der MULTPLICITY-Option kompiliert worden sein.<br />
+	Dies kann mit 'perl -V' überprüft werden.<br />
+	Die Art, wie Programme Perl einbetten können, hat sich von Version 5.8 zu Version 5.10 geändert. KVIrc sollte mit Perl >= 5.004 zusammenarbeiten, aber 5.10 ist stark empfohlen, vor allem, da zukünftige Aktualisierungen die Kompatibilität brechen können.";
 $template['install']['text23']="
-	If you want DCC VOICE to support the GSM codec, you need a recent copy of libgsm.<br />
-	This is not strictly required at compile time since KVIrc will look for the library at run-time, and only if the DCC VOICE with the GSM codec is requested.<br />
-	You can check for libgsm using the \"find\" command";
+	Wenn DCC VOICE den GSM-Codec unterstützen soll, wird eine neue Version von libgsm benötigt.<br />
+	Diese ist nicht unbedingt zur Kompilierzeit erforderlich, da KVIrc diese nur zur Ausführungszeit sucht, wenn DCC VOICE mit GSM-Codec benutzt werden soll.<br />
+	Diese kann mit dem Befehl \"find\" gesucht werden";
 $template['install']['text24']="
-	This library is included in most distributions. Some distros ship only the static version of the library \"libgsm.a\": if the previous find returned only something similar to \"/usr/lib64/libgsm.a\", you might create manually the shared archive by running";
+	Die meisten Distributionen enthalten diese Bibliothek. Einige liefern sie nur als statische Version \"libgsm.a\" aus: Wenn der vorherige 'find'-Befehl nur etwas wie \"/usr/lib64/libgsm.a\" ausgegeben hat, kann mit folgenden Befehlen manuell ein 'dynamisches' Archiv erstellt werden";
 $template['install']['text25']="
-	If you don't have it installed at all, you might have a look in your distribution CD, or download it from the web";
+	Wenn sie gar nicht installiert ist, kann sie über die Distribution nachinstalliert, oder aus dem Web heruntergeladen werden.";
 $template['install']['text26']="
-	If you want the /snd plugin to play various audio formats you either need a running sound system like phonon, a running sound daemon like esd or a reasonably recent audiofile library. Without these KVIrc will be only able to play *.au files.";
+	Wenn das /snd-Modul verschiedene Audioformate abspielen können soll, muss entweder ein Soundsystem wie Phonon, ein Sound-Daemon wie esd oder eine neue Version der audiofile-Bibliothek benutzt werden. Ohne dies wird KVIrc nur *.au Dateien wiedergeben können.";
 $template['install']['text27a']="
-	Since KVIrc 4.0 uses CMake as build system, we have to use it to create the Makefile's rules for make program.<br />
-	To do it, we encourage the \"out-of-source\" building: build all files without dirtying the sources directory.";
-$template['install']['text27b']="your options";
+	Da KVIrc 4.0 CMake als Build-System nutzt, muss dies zur Erstellung der Makefiles für das Programm make genutzt werden.<br />
+	Dafür empfehlen wir die \"außerhalb-der-Quellen\"-Methode: Alle Dateien werden erstellt, ohne das Quellenverzeichnis zu beschmutzen.";
+$template['install']['text27b']="Ihre Optionen";
 $template['install']['text28']="
-	In this way you have just created an out-of-source environment useful to have a clean working directory.<br />
-	Note that the final dots are required or cmake will NOT create the right environment.";
+	Hiermit wurde eine außerhalb-der-Quellen-Umgebung erschaffen; nützlich, um ein sauberes Arbeitsverzeichnis zu haben.<br />
+	Zu beachten ist, dass die abschließenden Punkte für cmake benötigt werden; ansonsten wird cmake NICHT die richtige Umgebung erzeugen.";
 $template['install']['text29']="
-	The CMake rules support some flags. If you don't specify them, CMake will try to make a good environment for you :)<br />
-	To use these flags, you have to pass a bool value or a string.</p>
-	<p>For example, to install in /usr instead of /usr/local and disable Phonon support, the command would be";
-$template['install']['text30']="Here's a list with explainations";
+	Die CMake-Regeln unterstützen einige Flags. Wenn keine angegeben werden, wird CMake versuchen, eine passende Umgebung zu erstellen :)<br />
+	Wenn Flags benutzt weren sollen, müssen diesen ein Wahrheitswert oder eine Zeichenkette übergeben werden.</p>
+	<p> Um z. B. nach /usr zu installieren anstatt nach /usr/local und die Phonon-Unterstützung zu deaktivieren, würde der Befehl so lauten";
+$template['install']['text30']="Hier ist eine Liste mit Erklärungen";
 $template['install']['tree1']="
-	Compiles the executable with debug symbols.<br />
-        Useful to report bugs.";
-$template['install']['tree2']="Generate verbose output when compiling.";
-$template['install']['tree3']="It will install all stuff under /path directory";
+	Kompiliert das Programm mit Symbolen zur Fehlersuche.<br />
+	    Nützlich für Fehlerberichte.";
+$template['install']['tree2']="Ausfürhliche Ausgaben während des Kompilierens erzeugen.";
+$template['install']['tree3']="Dies wird alles unterhalb von /path installieren.";
 $template['install']['tree4']="
-	It will install libkvilib and kvirc modules under \${CMAKE_INSTALL_PREFIX}/lib\${LIB_SUFFIX} directory. It defaults to an empty suffix. Mainly used for 64 bit distros (-DLIB_SUFFIX=64).";
+	libkvilib und die KVIrc Module werden unterhalb des Verzeichnisses \${CMAKE_INSTALL_PREFIX}/lib\${LIB_SUFFIX} installiert. Standard ist ein leeres Suffix. Hauptsächlich bei 64bit Distributionen verwendet (-DLIB_SUFFIX=64).";
 $template['install']['tree5']="
-	Append version information to kvirc and libkvilib, so that different KVIrc versions can cohexist in the same system.";
+	Versionsinformationen an kvirc und libkvilib anhängen, so dass unterschiedliche KVIrc-Versionen nebeneinander auf dem gleichen System existieren können.";
 $template['install']['tree6']="
-	KVIrc install rules won't try to figure out and set CMAKE_C(XX)_FLAGS; instead, it will let CMake use the ones from environment variables. Activating this flag will override -DDEBUG.";
+	Die KVIrc Installationsregeln werden nicht versuchen, CMAKE_C(XX)_FLAGS zu setzen, stattdessen wird CMake diese Variablen aus der Arbeitsumgebung verwenden. Dieses Flag wird -DDEBUG überstimmen.";
 $template['install']['tree7']="
-	It will re-initialize the installation path to a good default.<br />
-	Following compilations should use the correct path value cached by CMake.<br />
-	This flag is useful to solve MacOS X install problems.";
-$template['install']['tree8']="Compile universal binary for MacOS X platform";
-$template['install']['tree9']="Use pre-compiled headers";
-$template['install']['tree10']="Disable Phonon audio backend support.";
+	Dies wird den Installationspfad erneut auf die Standardwerte initialisieren.<br />
+	Nachfolgende Kompilierungen sollten den korrekten Pfad verwenden, der von CMake zwischengespeichert wird.<br />
+	Dieses Flag ist nützlich, um Installationsprobleme unter MacOS X zu beheben.";
+$template['install']['tree8']="Universelles Binärprogramm für die MacOS X Plattform kompilieren.";
+$template['install']['tree9']="Vorkompilierte Header verwenden.";
+$template['install']['tree10']="Phonon Audio Backend Unterstützung deaktivieren.";
 $template['install']['tree11']="
-	Disable OSS audio backend support. This automatically disables Audiofile support, too.";
-$template['install']['tree12']="Disable Audiofile audio backend support.";
-$template['install']['tree13']="Disable Esd audio backend support.";
-$template['install']['tree14']="Disable Qt-DBus support.";
-$template['install']['tree15']="Disable Qt-WebKit support.";
-$template['install']['tree16']="Disable KDE4 support.";
+	OSS Audio Backend Unterstützung geaktivieren. Dies deaktiviert auch die Unterstützung für Audiofile.";
+$template['install']['tree12']="Audiofile Audio Backend Unterstützung deaktivieren.";
+$template['install']['tree13']="Esd Audio Backend Unterstützung deaktivieren.";
+$template['install']['tree14']="Qt-DBus Unterstützung deaktivieren.";
+$template['install']['tree15']="Qt-WebKit Unterstützung deaktivieren.";
+$template['install']['tree16']="KDE4 Unterstützung deaktivieren.";
 $template['install']['tree17']="
-	Disables the Secure Socket Layer support. The SSL support is automatically enabled if OpenSSL is detected by CMake.";
+	Secure Socket Layer Unterstützung deaktivieren. Die SSL-Unterstützung ist automatisch aktiviert, wenn CMake OpenSSL findet.";
 $template['install']['tree18']="
-	Disables the cryptographic engines and the whole cryptography/text transformation support. Produces a slightly smaller executable";
+	Deaktiviert die Kryptografiemodule und die komplette Kryptografie- und Textersetzungsfunktionen. Erzeugt ein etwas kleineres Programm";
 $template['install']['tree19']="
-	The IPv6 support is compiled by default on the platforms that support it: this option disables it.<br />
-	Even if you have a plain IPv4-only connection, you might want to keep the IPv6 support: you will be able to lookup IPv6 hostnames.";
+	Die IPv6-Unterstützung wird standardmäßig auf allen Plattformen aktiviert, die dies unterstützen; diese Option deaktiviert dies.<br />
+	Auch bei reinen IPv4-Verbindungen kann die IPv6 Unterstützung beibehalten werden, um IPv6 Hostnamen aufzulösen.";
 $template['install']['tree20']="
-	This option disables pseudo-transparency support.<br />
-	The pseudo transparency support makes the KVIrc windows look like semi-transparent (this is NOT real transparency: this is just a nice-looking hack).<br />
-	If KDE support is enabled, KVIrc will have an option that makes all windows use a faded KDE desktop background image as background. Without KDE support you will be able to choose a fake background image and use it as background. (You can still
-        choose your desktop wallpaper: this will (more-or-less) work in all the window managers).<br />
-	It is cool-looking but usually eats some memory when enabled.<br />
-	It also eats some executable size.<br />
-	So this option allows to disable the pseudo-transparency.";
+	Diese Option deaktiviert die Pseudotransparenz.<br />
+	Die Pseudotransparenz-Unterstützung lässt das KVIrc-Fenster halbtransparent aussehen (KEINE echte Transparenz, nur ein gutaussehender Hack).<br />
+	Wenn KDE-Unterstützung aktiviert ist, wird KVIrc eine Option haben, die den verblassten KDE-Hintergrund allen KVIrc-Fenstern als Hintergrund zuweist. Ohne KDE-Unterstützung ist es möglich, selbst ein Bild als Hintergrund auszuwählen. (Es kann natürlich auch das Bild des Arbeitsflächenhintergrunds gewählt werden; dies funktioniert bei (fast) allen Fenstermanagern).<br />
+	Es sieht gut aus, aber wird etwas Speicher benötigen, wenn es aktiviert ist.<br />
+	Auch wird es die Programmgröße etwas erhöhen.<br />
+	Diese Option erlaubt das Deaktivieren der Pseudotransparenz.";
 $template['install']['tree21']="
-	Forcibly disable perl support.<br />
-        You will not be able to use perl scripts inside KVIrc.";
+	Perl-Unterstützung ausdrücklich deaktivieren.<br />
+	Es können keine Perl-Skripte innerhalb von KVIrc ausgefphrt werden.";
 $template['install']['tree22']="
-	Forcibly disable python support.<br />
-        You will not be able to use python scripts inside KVIrc.";
+	Python-Unterstützung ausdrücklich deaktivieren.<br />
+	Es können keine Python-Skripte in KVIrc ausgeführt werden.";
 $template['install']['tree23']="
-	Disables support for inter-process communication.<br />
-	You will be not able to send remote commands to running KVIrc sessions: this basically means that every time you run the KVIrc executable, a new session will be started.<br />
-	If you don't use this switch, a new session will be started only if no session is running on the same display or \"new session\" has been forced by a commandline switch.<br />
-	If a session is already running, the commandline will be passed to that session via IPC (X-event-based communication).<br />
-	This option saves some KB of the KVIrc executable, so if you're really short in memory, you might use it, otherwise, IPC is a nice feature.";
-$template['install']['tree24']="Disables the use of GetText to generate translation files.";
-$template['install']['tree25']="Disables docs generation through Doxygen.";
+	Unterstützung fr Inter-Prozess-Kommunikation (IPC) deaktivieren.<br />
+	Dadurch wird es nicht möglich sein, entfernte Befehle an eine laufende KVIrc-Sitzung zu senden: Generell bedeutet dies, dass bei jedem Aufruf von kvirc eine neue Sitzung gestartet wird.<br />
+	Wenn dieser Schalter nicht angegeben wird, wird eine neue Sitzung nur gestarten, falls keine für das aktuelle DISPLAY besteht oder eine neue Sitzung über die Befehlszeile erzwungen wurde
+	Wenn eine Sitzung bereits besteht, wird die Befehlszeile via IPC an die laufende Sitzung weitergeleitet (X-event basierte Kommunikation).<br />
+	Diese Option spart ein paar KB bei der Programmdatei: Wenn wenig Speicher zur Verfügung steht, kann diese Option verwendet werden, sonst ist IPC eine gute Funktion.";
+$template['install']['tree24']="Deaktiviert die Verwendung von GetText zur Erstellung der Übersetzungen.";
+$template['install']['tree25']="Deaktiviert die Erstellung der Dokumentation durch Doxygen.";
 $template['install']['tree26']="
-	This will disable the use of the system memmove() memcpy() and memset() functions and enable the bundled implementations. Use it if you have undefined references to these functions while compiling.";
+	Dies deaktiviert die Nutzung der Systemfunktionen memmove(), memcpy() und memset() und nutzt stattdessen die integrierten Implementationen. Wenn 'undefinierte Referenzen' während des Kompilierens auftreten kann dies genutzt werden.";
 $template['install']['tree27']="
-	Explicitly disable the usage of the GSM library. This will disable the DCC VOICE GSM codec but might help when the compilation stops complaining of something related to GSM :)";
+	Die Verwendung der GSM Bibliothek ausdrücklich deaktivieren. Dies deaktiviert den DCC VOICE GSM codec, kann aber helfen, wenn die Kompilierung wegen eines GSM-bezogenen Fehlers abbricht :)";
 $template['install']['tree28']="
-	KVIrc contains some ix86 assembly routines that *could* performs some things faster (this is not always true, depends on the compiler).<br />
-	You might want to try it if your KVIrc seems to be really slow...";
+	KVIrc enthält einige ix86 Assembler-Routinen, die einige Sachen schneller ausführen *können* (dies hängt stark vom Compiler ab).<br />
+	Wenn KVIrc sich wirklich langsam anfühlt, kann diese Option probiert werden ...";
 $template['install']['tree29']="
-	Explicitly disable the DCC VOICE sound support. This might help if you have problems in compilation of src/modules/dcc/voice.cpp.<br />
-	It will disable the sound support (and thus make DCC VOICE not usable).";
+	Ausdrücklich die DCC VOICE Unterstützung deaktivieren. Bei Kompilierungsproblemen in src/modules/dcc/voice.cpp kann dies helfen.<br />
+	Dies deaktiviert die Sound-Unterstützung (und macht somit DCC VOICE unbrauchbar).";
 $template['install']['tree30']="
-	Debug stuff... enables memory allocation profiling (don't use it :)";
+	Debug Kram ... Aktiviert 'memory allocation profiling' (nicht benutzen :)";
 $template['install']['tree31']="
-	Enables malloc() memory checks. This will print a nice message if your system goes out of memory...<br />
-	It can't save you from buying new RAM, but at least you will know that your system went out of memory and it is not a proper kvirc fault.<br />
-	Actually you probably have no reason in using it.";
+	Aktiviert malloc() Speicherprüfung. Gibt eine schöne Nachricht aus, wenn das System keinen Speicher mehr hat ... <br />
+	Es kann keinen neuen Arbeitsspeicher kaufen, aber zumindest darauf hinweisen, dass das System keinen Speicher mehr zur Verfügung hat und es kein Fehler von KVIrc ist.<br />
+	Eigentlich gibt es wohl keinen Grund, dies zu aktivieren.";
 $template['install']['tree32']="
-	Manually set a revision number if subversion is not found on your system.<br />
-	This is useful mostly on windows.";
-$template['install']['tree33']="Add some pizza for dinner :)";
-$template['install']['tree34']="Add some beers to chat :)";
+	Die Revisionsnummer manuell sezten, wenn Subversion nicht auf dem System gefunden werden kann.<br />
+	Dies ist meistens unter Windows nützlich.";
+$template['install']['tree33']="Pizza zum Essen :)";
+$template['install']['tree34']="Bier zum Chatten :)";
 $template['install']['text31']="
-	The CMake build system provide also an interactive mode to configure the environment before compiling.<br />
-	Again, we encourage the \"out-of-source\" building: build all files without dirting the sources directory.";
+	Das CMake Build System bietet auch einen interaktiven Modus an, um alle Einstellungen vor dem Kompilieren vorzunehmen.<br >
+	Auch hier unterstützen wir das Erstellen \"außerhalb-der-Quellen\": Alles erstellen, ohne das Quellverzeichnis zu verunreinigen.";
 $template['install']['text32']="
-	Now you're in interactive mode, just follow the instructions on screen to configure your compilation environment.";
-$template['install']['text33']="This step is easy :)<br />Cross your fingers and run";
+	Jetzt sind Sie im interaktiven Modus, folgen Sie den Anweisungen auf dem Bildschirm, um die Kompilierumgebung zu erstellen.";
+$template['install']['text33']="Dieser Schritt ist einfach :)<br />Finger kreuzen und rennen";
 $template['install']['text34']="
-	If your make is not a GNU make (this happens on FreeBSD for example) you should use \"gmake\" instead.<br />
-	The compilation process will take from 3-4 minutes to some hours depending on the machine capabilities and load.<br />
-	If you have a slow cpu but have a couple of computers in a lan you might consider using distcc to distribute the compilation.</p>
-	<p>Once the compilation has been successfull, run";
+	Wenn make nciht GNU make ist (z. B. unter FreeBSD), sollte stattdessen \"gmake\" verwendet werden.<br />
+	Die Kompilierung kann zwischen 3-4 Minuten und enigen Stunden dauern, je nach Computer und dessen Auslastung.<br />
+	Wenn es eine langsame CPU ist, aber ein paar davon zur Verfügung stehen, kann distcc (verteiltes Lompilieren) eine Überlegung wert sein.</p>
+	<p>Wenn das Kompilieren erfolgreich beendet ist, diesen Befehl ausführen";
 $template['install']['text35']="
-	Same as above: use \"gmake install\" if your make is not GNU make.</p>
-	<p>This will install the executable in /usr/local/bin (if you don't have specified a different -DCMAKE_INSTALL_PREFIX option in the cmake rules), the libraries in /usr/local/lib (if you don't have specified a different -DLIB_SUFFIX option in the cmake rules) and the shared data in /usr/local/share/kvirc.</p>
-	<p>Make sure that /usr/local/lib is in your /etc/ld.so.conf , if it isn't there, put it there and run";
+	Genau wie oben: \"gmake install\", falls make kein GNU make ist.</p>
+	<p>Dies wird das ausführbare Programm nach /usr/local/bin installieren (falls nichts anderes angegeben wurde bei -DCMAKE_INSTALL_PREFIX), die Bibliotheken nach /usr/local/lib (wenn kein -DLIB_SUFFIX angegeben) und die gemeinsam genutzen Daten nach /usr/local/share/kvirc.</p>
+	<p>Bitte sicherstellen, dass /usr/local/lib in /etc/ld.so.conf enthalten ist; wenn nicht, dort eintragen und dies ausführen";
 $template['install']['text36']="
-	If you have decided to use the KDE support the installation might have placed all these files in your \$KDEDIR tree instead of /usr/local.<br />
-	In this case you should be OK since KDE requires its library dir to be in /etc/ld.so.conf";
+	Bei KDE-Unterstützung kann es sein, dass die Installation alle Dateien unterhalb von \$KDEDIR installiert hat, anstatt unter /usr/local.<br />
+	Dies ist ok, da KDE seine Bibliotheksverzeichnisse bereits in /etc/ld.so.conf benötigt";
 $template['install']['text37']="
-	There is a detailed compilation and installation HOWTO for MacOS X systems located in the doc/ directory. It's named INSTALL-MacOS.txt";
+	Für MacOS X gibt es eine detailierte Kompilierungs- und Installationsanweisung im Verzeichnis doc/. Sie heißtINSTALL-MacOS.txt";
 $template['install']['text38']="
-	There is a detailed compilation and installation HOWTO for Win32 systems located in the doc/ directory. It's named INSTALL-Win32.txt";
+	Für Win32-Systeme gibt es eine ausführliche Kompilierungs- und Installationsanweisung im Verzeichnis doc/. Sie heißtINSTALL-Win32.txt";
 $template['install']['text39']="
-	CMake supports DESTDIR argument.<br />
-	So, if you want to make a package for your distro, you simply have to pass it at \"make install\" stage: your install files will go to the choosed path.<br />
-	The synthax is";
+	CMake unterstützt das Argument DESTDIR.<br />
+	Wenn ein Paket für die eigene Distribution erstellt werden soll, wird dieses  \"make install\" angegeben: Die installierten Dateien werden in diesen Pfad geschrieben.<br />
+	Die Syntax lautet";
 $template['install']['text40']="
-	After this step, just follow your distribution's rules to make a good package for the distro you're running.</p>
-	<p>Alternatively, you can try the experimental CPack support included in CMakeLists.txt to build a package: in this case, please refer to the CPack documentation.";
-$template['install']['text41']="That's all folks.";
+	Nach diesem Schritt einfach den Regeln der jeweiligen Distribution folgen, um das Paket zu erstellen.</p>
+	<p>Alternativ kann die experimentelle CPack-Unterstützung probiert werden, die in CMakeLists.txt enthalten ist: in diesem Fall bitte die CPack-Dokumentation konsultieren.";
+$template['install']['text41']="Das war's, Leute.";
 /* install.php end */
 
 /* license.php start */
-$template['license']['title']="The KVIrc License";
-$template['license']['text']="KVIrc is a free software: it is released under an extended version of the General Public License.";
+$template['license']['title']="Die KVIrc Lizenz";
+$template['license']['text']="KVIrc ist freie Software: Es wird unter einer erweiterten Version der General Public License veröffentlicht.";
 $template['license']['text2']="
-	This is the KVIrc Irc Client license.<br />
-	It is based on the GNU General Public License Version 2.<br />
-	It contains all the GPL terms and conditions and adds a special exception (see Terms and Conditions, clause 13) to the distribution limitations.<br /><br />
-	Note that the GPL below is copyrighted by the Free Software Foundation, but the instance of code that it refers to is copyrighted by Szymon Stefanek and other members of the KVIrc Development Team.<br /><br />
-	The source code for all versions of KVIrc is available at <a href=\"?id=releases&amp;platform=source&amp;lang=$lang\">this url</a>.<br /><br />
-	Have fun!";
+	Dies ist die KVIrc Irc Client Lizenz.<br />
+	Sie  basiert auf der GNU General Public License Version 2.<br />
+	Sie beinhaltet alle Bedingungen und Abmachungen der GPL und fügt eine spezielle Ausnahme für Distributionsbeschränkungen hinzu (siehe 'Terms and Conditions', Punkt 13).<br /><br />
+	Die untenstehende GPL unterliegt dem Copyright der Free Software Foundation, aber die Quelltexte, auf die sie sich bezieht, unterliegen dem Copyright von Szymon Stefanek und anderen Mitgliedern des KVIrc Entwicklungsteams.<br /><br />
+	Der Quelltext aller KVIrc Versionen ist unter <a href=\"?id=releases&amp;platform=source&amp;lang=$lang\">dieser URL</a> verfügbar.<br /><br />
+	Viel Spaß!";
 /* license.php end */
 
 /* mailinglist.php start */
