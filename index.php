@@ -159,7 +159,6 @@ search();
 								<li><a href="?id=features&amp;lang=<?=$lang;?>"><?=$template['index']['features'];?></a></li>
 								<li><a href="?id=license&amp;lang=<?=$lang;?>"><?=$template['index']['license'];?></a></li>
 								<li><a href="?id=screen&amp;lang=<?=$lang;?>"><?=$template['index']['screens'];?></a></li>
-								<li><a href="javascript:opendoc('https://svn.kvirc.de/kvirc/');" title="KVIrc bugtrack"><?=$template['index']['bugtrack'];?></a></li>
 							</ul>
 						</li>
 					</ul>
@@ -214,6 +213,7 @@ search();
 								<li><a href="?id=contribute&amp;lang=<?=$lang;?>"><?=$template['index']['contribute'];?></a></li>
 								<li><a href="?id=help&amp;lang=<?=$lang;?>"><?=$template['index']['help'];?></a></li>
 								<li><a href="?id=donate&amp;lang=<?=$lang;?>"><?=$template['index']['donation'];?></a></li>
+								<li><a href="javascript:opendoc('https://svn.kvirc.de/kvirc/');" title="KVIrc bugtrack"><?=$template['index']['bugtrack'];?></a></li>
 							</ul>
 						</li>
 					</ul>
