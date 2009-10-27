@@ -45,6 +45,7 @@ $template['index']['faq']="FAQ";
 $template['index']['kviman']="manuale di KVIrc";
 $template['index']['tutorials']="tutorial";
 $template['index']['translations']="traduzioni";
+$template['index']['shortcuts']="Scorciatoie tastiera"
 // graphic suite
 $template['index']['graphsuite']="suite grafica";
 $template['index']['themes']="temi";
