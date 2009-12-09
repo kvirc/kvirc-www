@@ -990,6 +990,7 @@ $template['themes']['theme32']="...because all world is a beautiful fractal!";
 $template['themes']['theme33']="A darker techno-looking theme with simple and descriptive icons";
 $template['themes']['theme34']="A theme made by CoreZeam.org portal";
 $template['themes']['theme35']="A black-based theme easy to see and distinguish";
+$template['themes']['theme36']="A pink theme inspired on Hello Kitty";
 /* themes.php end */
 
 /* tools.php start */

@@ -993,6 +993,7 @@ $template['themes']['theme32']="...perché tutto il mondo è un bellissimo fratt
 $template['themes']['theme33']="Un tema scuro tecnologico con icone semplici e descrittive";
 $template['themes']['theme34']="Un tema fatto dal portale CoreZeam.org";
 $template['themes']['theme35']="Un tema nero facile da vedere e distinguere";
+$template['themes']['theme36']="Un tema rosa ispirato a Hello Kitty";
 /* themes.php end */
 
 /* tools.php start */
