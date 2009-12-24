@@ -340,7 +340,7 @@ $template['faq']['text8b']="Nein, Du solltest keins brauchen, aber Du kannst es 
 $template['faq']['text9a']="Wie erstelle ich ein SSL-Zertifikat";
 $template['faq']['text9b']="
 	Ein selbst-signiertes Test-Zertifikat kann durch das CA.pl Perl-Skript erstellt werden, welches in der OpenSSL-Distribution enthalten ist. Es wird in etwa sein wie";
-$template['faq']['text10a']="Ich kann KVIrc nicht dazu bringern, mein SSL-Zertifikat in DCC zu nutzen";
+$template['faq']['text10a']="Ich kann KVIrc nicht dazu bringen, mein SSL-Zertifikat in DCC zu nutzen";
 $template['faq']['text10b']="
 	Das SSL-Protokoll fordert von der \"Client\"-Seite nicht, dass Zertifikat zu senden; es wird nur verwendet, wenn die \"Server\"-Seite es anfordert (dies ist nicht der Fall bei KVIrc).<br />
 	Die Server-Seite kann ein Zertifikat haben, und Du kannst es auf der SSL-Optionen-Seite einstellen.<br />
