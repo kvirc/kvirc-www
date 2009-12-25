@@ -374,7 +374,7 @@ $template['faq']['text16b1a']="
 	Wenn dies nicht hilft, oder es ziemlich häufig auftritt und es störend ist, kannst Du Deinen Kompilierer aktualisieren";
 $template['faq']['text16b1b']="
 	Eine Speicherverfälschung: Dies ist wirklich häufig. Eine der Speicherbänke gibt manchmal wahllos Bytes zurück. Normalerweise tritt das Problem unter hoher Systemlast auf (z. B. Kern, KDE oder KVIrc Kompilation). Du kannst auf diesen Fehler testen, indem Du verschiedene RAM-Module testest (oder eins nach dem anderen ausbaust, um das defelte zu finden). Du kannst auch das Programm memtest testen und ein Kernel-Patch kann das kaputte Speichermodul ignorieren (wird permanent einer Scheinaufgabe des Kernels zugewiesen).<br />
-	Diese Werkzeuge kasnt Du mit Deiner Lieblingssuchmaschine im Web finden";
+	Diese Werkzeuge kannst Du mit Deiner Lieblingssuchmaschine im Web finden";
 $template['faq']['text16b1c']="
 	Ein tieferes Hardware-Problem: Wenn das Aktualisieren des Kompilierers und das tauschen des Speichers keine Verbesserung brachten, *kann* es ein tiefers Hardware-Problem sein: Bus-Fehler, fehlerhafter IDE- (oder SCSI-) Controller, oder sogar ein fehlerhafter Prozessor...";
 $template['faq']['text17a']="KVIrc stürzt ab, wenn eine URL im Ausgabe-Fenster angezeigt wird";
