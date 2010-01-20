@@ -321,7 +321,7 @@ $translators=array(
 	array("lang" => $template['index']['czech'], "nick" => "Dusan Hokuv", "mail" => "dusan [at] mirc [dot] cz", "flag" => "Czech-Republic", "unmain" => 1),
 	array("lang" => $template['index']['dutch'], "nick" => "Balboy", "mail" => "balboy [at] kvirc [dot] net", "flag" => "Netherlands", "unmain" => 1),
 	array("lang" => $template['index']['finnish'], "nick" => "", "mail" => "", "flag" => "Finland", "unmain" => 1),
-	array("lang" => $template['index']['french'], "nick" => array("Ahinu","_Otaku"), "mail" => array("ahinu.laman [at] gmail [dot] com","notakou [at] tiscali [dot] fr"), "flag" => "France"),
+	array("lang" => $template['index']['french'], "nick" => array("Ahinu","_Otaku"), "mail" => array("ahinu.laman [at] gmail [dot] com","notakou [at] tiscali [dot] fr"), "flag" => "France", "unmain" => 1),
 	array("lang" => $template['index']['german'], "nick" => "mren", "mail" => "kvirc [at] mrmx [dot] de", "flag" => "Germany"),
 	array("lang" => $template['index']['hungarian'], "nick" => "Fiber^", "mail" => "vfiber [at] gmail [dot] com", "flag" => "Hungary", "unmain" => 1),
 	array("lang" => $template['index']['italian'], "nick" => "HelLViS69", "mail" => "hell [at] hellvis69.netsons [dot] org", "flag" => "Italy"),
