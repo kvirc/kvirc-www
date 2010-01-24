@@ -704,7 +704,7 @@ $template['install']['text33']="Dieser Schritt ist einfach :)<br />Finger kreuze
 $template['install']['text34']="
 	Wenn make nciht GNU make ist (z. B. unter FreeBSD), sollte stattdessen \"gmake\" verwendet werden.<br />
 	Die Kompilierung kann zwischen 3-4 Minuten und enigen Stunden dauern, je nach Computer und dessen Auslastung.<br />
-	Wenn es eine langsame CPU ist, aber ein paar davon zur Verfügung stehen, kann distcc (verteiltes Lompilieren) eine Überlegung wert sein.</p>
+	Wenn es eine langsame CPU ist, aber ein paar davon zur Verfügung stehen, kann distcc (verteiltes Kompilieren) eine Überlegung wert sein.</p>
 	<p>Wenn das Kompilieren erfolgreich beendet ist, diesen Befehl ausführen";
 $template['install']['text35']="
 	Genau wie oben: \"gmake install\", falls make kein GNU make ist.</p>
