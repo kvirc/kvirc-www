@@ -1044,7 +1044,7 @@ $template['translation']['text16']="
 $template['translation']['text17']="
 	Verranno creati una serie di file .pot nelle sottodirectory di directory_compilazione/po/<br />
 	Ogni file riferisce uno specifico componente di KVIrc: es. il file di traduzione principale è situato in directory_compilazione/po/core/kvirc/kvirc.pot<br />
-	Crea una copia per ognuno di questi file chiamai kvirc_xxx.po dove xxx è il codice della tua lingua trovato al passo 2.";
+	Crea una copia per ognuno di questi file chiamati file_xxx.po dove file è il nome del componente e xxx è il codice della tua lingua trovato al passo 2.";
 $template['translation']['text18']="
 	...e così via per ognuno dei moduli; non sei costretto a tradurre tutti i file per volta, ma creare lo scheletro di ogni componente è una buona cosa.";
 $template['translation']['text19']="Tradurre i messaggi";

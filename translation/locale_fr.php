@@ -1042,7 +1042,7 @@ sources:";
 $template['translation']['text17']="
 	A series of .pot files will be created in the subdirs of build_directory/po/<br />
 	Each file refers to a specific component of KVIrc: eg. the main translation file is located in build_directory/po/core/kvirc/kvirc.pot<br />
-	Create a copy for each of these files named kvirc_xxx.po where xxx is your language code found in step 2.";
+	Create a copy for each of these files named file_xxx.po where file is the name of the component and xxx is your language code found in step 2.";
 $template['translation']['text18']="
 	...and so on for all the other modules; you are not forced to translate all the files at once, but creating the files skeleton for all components is recommended.";
 $template['translation']['text19']="Translating the messages";
