@@ -35,7 +35,7 @@ echo "<div class=\"column1-unit\">";
 			{
 				if($value['nick'] != "") echo " - ";
 
-				echo "<b>".$template['translation']['text4a']."</b>";
+				echo "<b>".$template['translation']['text5']."</b>";
 			}
 
 			echo "</li>";
@@ -44,78 +44,72 @@ echo "<div class=\"column1-unit\">";
 	</ul>
 
 	<?
-	echo "<p>".$template['translation']['text4b']."</p>";
-
-	echo "<p>".$template['translation']['text5a']." <a href=\"/?id=mailinglist&amp;lang=$lang\">".$template['index']['ml']."</a> ".$template['translation']['text5b']."</p>";
+	echo "<p>".$template['translation']['text6a']." <a href=\"/?id=mailinglist&amp;lang=$lang\">".$template['index']['ml']."</a> ".$template['translation']['text6b']."</p>";
 
 	echo "<hr />";
-	echo "<b>".$template['translation']['text6']."</b><br />";
+	echo "<b>".$template['translation']['text7']."</b><br />";
 	echo "<hr />";
 
-	echo "<h1>".$template['translation']['step']." 0: ".$template['translation']['text7']."</h1>";
-	echo "<p>".$template['translation']['text8a']." <a href=\"?id=svn&amp;lang=$lang\">http://www.kvirc.net/?id=svn</a>.<br />".$template['translation']['text8b']." <code>kvirc/po/</code>";
+	echo "<h1>".$template['translation']['step']." 0: ".$template['translation']['text8']."</h1>";
+	echo "<p>".$template['translation']['text9a']." <a href=\"?id=svn&amp;lang=$lang\">http://www.kvirc.net/?id=svn</a>.<br />".$template['translation']['text9b']." kvirc/po/";
 
-	echo "<h1>".$template['translation']['step']." 1: ".$template['translation']['text9']."</h1>";
-	echo "<p>".$template['translation']['text10a']." <a href=\"http://sourceforge.net/projects/translation/\">".$template['translation']['text10b']."</a>.<br />".$template['translation']['text10c']."\"it\", \"en\", \"hu\" or \"pt_BR\".</p>";
+	echo "<h1>".$template['translation']['step']." 1: ".$template['translation']['text10']."</h1>";
+	echo "<p>".$template['translation']['text11'];
 
-	echo "<h1>".$template['translation']['step']." 2: ".$template['translation']['text11']."</h1>";
-	echo "<p>".$template['translation']['text12'].".</p>";
-	?>
+	echo "<h1>".$template['translation']['step']." 2: ".$template['translation']['text12']."</h1>";
+	echo "<p>".$template['translation']['text13']." <a href=\"javascript:opendoc('http://sourceforge.net/projects/translation');\">http://sourceforge.net/projects/translation</a>.<br />".$template['translation']['text14']."\"it\", \"en\", \"hu\" or \"pt_BR\".</p>";
 
-	<code>
-	# cd kvirc/po/kvirc<br />
-	# make messages-extract
-	</code>
-	<?echo "<p>".$template['translation']['text13']."</p>";?>
-
-	<code># mv kvirc.pot kvirc_xxx.po</code>
-
-	<?
-	echo "<h1>".$template['translation']['step']." 3: ".$template['translation']['text14']."</h1>";
-	echo "<p>".$template['translation']['text15a']."</p>";
-	echo "<p>".$template['translation']['text15b']."</p>";
-
-	echo "<code>";
-	echo "#: ".$template['translation']['text100a']."<br />";
-	echo "msgid \"".$template['translation']['text100b']."\"<br />";
-	echo "msgstr \"".$template['translation']['text100c']."\"";
-	echo "</code>";
-
+	echo "<h1>".$template['translation']['step']." 3: ".$template['translation']['text15']."</h1>";
 	echo "<p>".$template['translation']['text16']."</p>";
+	echo "<code># make messages-extract</code>";
 	echo "<p>".$template['translation']['text17']."</p>";
+	?>
+	<code>
+	# cd po/core/kvirc<br />
+	# cp kvirc.pot kvirc_xxx.po<br />
+	# cd ../kvs<br />
+	# cp kvs.pot kvs_xxx.po<br />
+	# cd ../../modules/about<br />
+	# cp about.pot about_xxx.po<br />
+	# cd ../modules/addon<br />
+	# cp addon.pot addon_xxx.po
+	</code>
+	<?
+	echo "<p>".$template['translation']['text18']."</p>";
 
-	echo "<h1>".$template['translation']['step']." 4: ".$template['translation']['text18']."</h1>";
-	echo "<p>".$template['translation']['text19']."</p>";
+	echo "<h1>".$template['translation']['step']." 4: ".$template['translation']['text19']."</h1>";
 	echo "<p>".$template['translation']['text20']."</p>";
 	echo "<p>".$template['translation']['text21']."</p>";
-	?>
-	<code>
-	#./autogen.sh<br />
-	#./configure
-	</code>
-	<?
-	echo "<p>".$template['translation']['text22'].".</p>";
+	echo "<p>".$template['translation']['text22']."</p>";
 
-	echo "<h1>".$template['translation']['step']." 5: ".$template['translation']['text23']."</h1>";
-	echo "<p>".$template['translation']['text24'].".</p>";
-	?>
-	<code>
-	# export LANG="xxx"<br />
-	# kvirc
-	</code>
-	<?
+	echo "<code>";
+	echo "#: ".$template['translation']['text23a']."<br />";
+	echo "msgid \"".$template['translation']['text23b']."\"<br />";
+	echo "msgstr \"".$template['translation']['text23c']."\"";
+	echo "</code>";
+	echo "<p>".$template['translation']['text24']."</p>";
 	echo "<p>".$template['translation']['text25']."</p>";
 
-	echo "<h1>".$template['translation']['step']." 6: ".$template['translation']['text26']."</h1>";
+	echo "<h1>".$template['translation']['step']." 5: ".$template['translation']['text26']."</h1>";
 	echo "<p>".$template['translation']['text27']."</p>";
-	echo "<code># make messages-update</code>";
 	echo "<p>".$template['translation']['text28']."</p>";
 
-	echo "<h1>".$template['translation']['text29'].":</h1>";
+	echo "<h1>".$template['translation']['step']." 6: ".$template['translation']['text29']."</h1>";
 	echo "<p>".$template['translation']['text30']."</p>";
 	echo "<p>".$template['translation']['text31']."</p>";
-	echo "<p>".$template['translation']['text32a']." <a href=\"mailto:pragma [at] kvirc [dot] net\">pragma [at] kvirc [dot] net</a> ".$template['translation']['text32b']."</p>";
+	echo "<code># LANG=\"xxx\" kvirc</code>";
+	echo "<p>".$template['translation']['text32']."</p>";
 
-	echo "<p>".$template['translation']['text33']."<br />Szymon Stefanek</p>";
+	echo "<h1>".$template['translation']['step']." 7: ".$template['translation']['text33']."</h1>";
+	echo "<p>".$template['translation']['text34']."</p>";
+	echo "<code># make messages-update</code>";
+	echo "<p>".$template['translation']['text35']."</p>";
+
+	echo "<h1>".$template['translation']['text36'].":</h1>";
+	echo "<p>".$template['translation']['text37']."</p>";
+	echo "<p>".$template['translation']['text38']."</p>";
+	echo "<p>".$template['translation']['text39']."</p>";
+
+	echo "<p>".$template['translation']['text40']."<br />Szymon Stefanek</p>";
 echo "</div>";
 ?>

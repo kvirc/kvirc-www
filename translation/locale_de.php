@@ -1012,6 +1012,85 @@ $template['translation']['text3']="
 $template['translation']['text4']="
 	Wenn Sie Interesse haben, KVIrc in eine neue Sprache zu übersetzen, finden Sie hier eine gute Kurzanleitung.<br />
 	Einige Sprachen werden (fast) täglich aktualisiert, andere müssen einen neuen Bearbeiter finden. Wenn Sie helfen wollen, die aktuelle Unterstützung für ihre Sprache zu verbessern, kontaktieren Sie bitte den <b>letzten Bearbeiter,</b> welcher hier gelistet ist:";
+$template['translation']['text5']="unmaintained";
+$template['translation']['text6a']="
+	Talking about \"unmaintained\", we encourage you to help us translating.<br />
+	To do so, subscribe to the";
+$template['translation']['text6b']="
+	to keep in touch with the developers and to talk about your interest in translating KVIrc.";
+$template['translation']['text7']="
+	This mini-howto describes the procedure for translating KVIrc in a new language";
+$template['translation']['text8']="Getting the right sources.";
+$template['translation']['text9a']="
+	First of all you need the SVN version of KVIrc. To obtain the SVN version you can follow the instructions on";
+$template['translation']['text9b']="The translation stuff is in";
+$template['translation']['text10']="Initialize the build environment";
+$template['translation']['text11']="
+	Enter the directory containing the KVIrc code and follow the doc/INSTALL documentation on how to run CMake to generate the needed Makefiles.";
+$template['translation']['text12']="Finding out your language code";
+$template['translation']['text13']="
+	You must find out the contents of your language code. Usually this is a string formed of at least two letters and it can be found by examining the contents of your \$LANG shell variable or by looking at";
+$template['translation']['text14']="Examples of such codes are";
+$template['translation']['text15']="Generating the list of messages to translate";
+$template['translation']['text16']="
+	You must perform this step only if it is the first time that KVIrc is translated into your language. If you're going to update an existing translation then you can jump directly to step 4.<br />
+	Enter your build directory and run this command to extract the messages from the
+sources:";
+$template['translation']['text17']="
+	A series of .pot files will be created in the subdirs of build_directory/po/<br />
+	Each file refers to a specific component of KVIrc: eg. the main translation file is located in build_directory/po/core/kvirc/kvirc.pot<br />
+	Create a copy for each of these files named kvirc_xxx.po where xxx is your language code found in step 2.";
+$template['translation']['text18']="
+	...and so on for all the other modules; you are not forced to translate all the files at once, but creating the files skeleton for all components is recommended.";
+$template['translation']['text19']="Translating the messages";
+$template['translation']['text20']="
+	If you just followed step 3 then you have just created the *_xxx.po (eg. kvirc_it.po) files where xxx stands for your language code (found in step 2).<br />
+	If you jumped directly here from 2 then you need to find the existing *_xxx.po files in the kvirc/po subdirectories.<br />
+	If no such files exist for your locale, you probably missed to create them in step 3.";
+$template['translation']['text21']="
+	You can translate *.po files using a simple text editor (that <b>HAVE</b> to support the UTF-8 encoding), but it's strongly advised that you use a translation software such as lokalize for linux/kde or poedit for windows.";
+$template['translation']['text22']="
+	Note on the format of the translation files.<br />
+	The *.po files contains a set of strings like the following one:";
+$template['translation']['text23a']="/path/to/the/file/which/contains/the/string: line number";
+$template['translation']['text23b']="The original english message";
+$template['translation']['text23c']="The translation goes here";
+$template['translation']['text24']="
+	The <i>msgid</i> is the original message that needs to be translated and <i>msgstr</i> is the translation (that will be initially empty, when the kvirc_xxx.po file is created).";
+$template['translation']['text25']="
+	The msgid can contain html tags, escapes like \"\\n\" and format strings like \"%s\". You <b>MUST</b> match the tags, escapes and format specs in the msgstr strings. Keep special attention to the format specifications (%s, %W, %Q, ...).<br />
+	They must remain <b>EXACTLY</b> the same order as in the msgid: exchanging the order or writing a wrong format spec will lead to crashes sooner or later.";
+$template['translation']['text26']="Adding the translation to the install system";
+$template['translation']['text27']="
+	Once you have translated some strings you can try to run the translation in KVIrc. If you are updating an existing translation then you can jump directly to step 6.";
+$template['translation']['text28']="
+	You need to force the build system to pick up your newly created translation files and compile it. This is again an one time step. You'll just need to clean your CMakeCache.txt (located in your build directory) and re-run CMake again for it to pick up the new translation file, then build KVIrc as usual.<br />
+	When it has finished building, move to the next step.";
+$template['translation']['text29']="Trying the translation";
+$template['translation']['text30']="Run make and wait until it finishes.";
+$template['translation']['text31']="
+	Check your \$LANG enviroment variable.<br />
+	If you are translating to same language as your system/user language environment is, there is probably no need to change the language.<br />
+	Otherwise you need to pass the \$LANG variable to the environment when running KVIrc.";
+$template['translation']['text32']="
+	KVIrc should then pick up your translation file and use it.";
+$template['translation']['text33']="Updating the translation when the sources change";
+$template['translation']['text34']="
+	In the process of KVIrc development, new message strings gets added inside the source files, while some others can change or even get removed.<br />
+	When you do a svn update to obtain the latest sources you should then enter your build directory and run:";
+$template['translation']['text35']="
+	This procedure will update your *_xxx.po files with the new messages and mark the old messages as either fuzzy or invalid.<br />
+	The invalid entries must be re-translated completely again while the fuzzy entries have minor changes and can be probably adjusted in few seconds.";
+$template['translation']['text36']="Misc notes";
+$template['translation']['text37']="
+	If you're in doubt about some translation, you could take a look at how similar sentences have been translated in the KDE *.po files, or in other softwares. If you need some further help, contact us on our mailing list or on irc (irc://irc.freenode.net/#KVIrc).";
+$template['translation']['text38']="
+	Since many of the modules have their own translation files then the procedure above may be repeated for the po/modules/*/ subdirectories.<br />
+	Anyway you are not forced to translate all the files at once: a partial translation will work anyway.";
+$template['translation']['text39']="
+	When you're satisfied with your translation you may send your *.po files to the KVIrc mailing list asking for inclusion in the SVN. If you want to maintain the translation in the future then you may also apply for a SVN account.";
+$template['translation']['text40']="Happy translating :)";
+/*
 $template['translation']['text4a']="nicht gepflegt";
 $template['translation']['text4b']="
 	Wo wir bei \"nicht gepflegt\" sind: Wir ermutigen Sie, uns beim Übersetzen zu helfen.<br />
@@ -1068,7 +1147,7 @@ $template['translation']['text29']="Verschiedenes";
 $template['translation']['text30']="
 	Wenn Zweifel bei manchen Übersetzungen bestehen, kann geguckt werden, wie ähnliche Sätze in den KDE *.po-Dateien übersetzt worden sind; dort sollte es eine Übersetzungsdatei geben, verfügbar über KDE SVN.";
 $template['translation']['text31']="
-	Da viele Module ihre eigene Übersetzungsdateien haben, kann (nicht muss) der obige Ablauf für die <code>po/modules/*/</code>-Unterverzeichnisse wiederholt werden.";
+	Da viele Module ihre eigene Übersetzungsdateien haben, kann (nicht muss) der obige Ablauf für die <code>po/modules/*</code>-Unterverzeichnisse wiederholt werden.";
 $template['translation']['text32a']="
 	Wenn Sie mit der Übersetzung zufrieden sind, können Sieihre *.po-Dateien an";
 $template['translation']['text32b']="

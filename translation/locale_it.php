@@ -1017,70 +1017,84 @@ $template['translation']['text3']="
 	Tutti i traduttori <b>DEVONO USARE UTF-8</b> come standard di codifica. I file di traduzione in altri standard saranno deprecati.";
 $template['translation']['text4']="
 	Se sei interessato nella traduzione di KVIrc in una nuova lingua puoi trovare un semplice How-to.<br />
-	Alcune lingue sono aggiornate (quasi) giornalmente, altre hanno bisogno di trovare un nuovo mantainer. Se vuoi aiutare a migliorare il supporto corrente della tua lingua, contatta il suo <b>ultimo traduttore</b>, listato qui:";
-$template['translation']['text4a']="non mantenuto";
-$template['translation']['text4b']="
+	Alcune lingue sono aggiornate (quasi) giornalmente, altre hanno bisogno di trovare un nuovo maintainer. Se vuoi aiutare a migliorare il supporto corrente della tua lingua, contatta il suo <b>ultimo traduttore</b>, listato qui:";
+$template['translation']['text5']="non mantenuto";
+$template['translation']['text6a']="
 	Parlando delle traduzioni \"non mantenute\", vi incoraggiamo ad aiutarci nella traduzione.<br />
-	Se sei interessato, manda una mail in mailing list :)";
-$template['translation']['text5a']="Non dimenticarti di iscriverti alla";
-$template['translation']['text5b']="per rimanere in contatto con gli sviluppatori!";
-$template['translation']['text6']="Questo mini-howto descrive la procedura per tradurre KVIrc in una nuova lingua";
-$template['translation']['text7']="Scaricare i giusti sorgenti";
-$template['translation']['text8a']="
+	Per farlo, iscriviti alla";
+$template['translation']['text6b']="
+	per rimanere in contatto con gli sviluppatori e per parlare del tuo interesse nel tradurre KVIrc.";
+$template['translation']['text7']="
+	Questo mini-howto descrive la procedura per tradurre KVIrc in una nuova lingua";
+$template['translation']['text8']="Scaricare i giusti sorgenti.";
+$template['translation']['text9a']="
 	Prima di tutto hai bisogno l'ultima versione SVN di KVIrc. Per ottenerla puoi seguire le istruzioni su";
-$template['translation']['text8b']="Le traduzioni sono in";
-$template['translation']['text9']="Trovare il tuo codice lingua";
-$template['translation']['text10a']="
-	Devi trovare i contenuti del tuo codice lingua. Solitamente è una stringa formata da almeno due lettere e può essere trovata esaminando il contenuto della tua variabile di shell \$LANG o guardando";
-$template['translation']['text10b']="qui";
-$template['translation']['text10c']="Esempi di questi codici sono";
-$template['translation']['text11']="Generare la lista di messaggi da tradurre";
-$template['translation']['text12']="
-	Devi seguire questo passo solo se è la prima volta che KVIrc viene tradotto nella tua lingua. Se devi aggiornare una traduzione esistente puoi passare direttamente al Passo 3.<br />
-	Esegui il comando per estrarre i messaggi dai sorgenti.";
+$template['translation']['text9b']="Le traduzioni sono in";
+$template['translation']['text10']="Inizializzare l'ambiente di sviluppo";
+$template['translation']['text11']="
+	Entra nella directory contenente il sorgente di KVIrc e segui la documentazione in doc/INSTALL su come eseguire CMake per generare i Makefile necessari.";
+$template['translation']['text12']="Trovare il tuo codice lingua";
 $template['translation']['text13']="
-	Verrà creato un file chiamato <code>kvirc.pot</code>. Devi rinominarlo in <code>kvirc_xxx.po</code>, dove xxx è il codice della tua lingua trovato al Passo 1.";
-$template['translation']['text14']="Tradurre i messaggi";
-$template['translation']['text15a']="
-	Se hai seguito il Passo 2 hai appena creato il file <code>kvirc_xxx.po</code> dove xxx sta per il tuo codice lingua (trovato al Passo 1).<br />
-	Se sei saltato qui direttamente dal Passo 2 allora devi trovare il file <code>kvirc_xxx.po</code> nella directory <code>kvirc/po/kvirc</code>.<br />
-	Se non c'è torna al Passo 2.";
-$template['translation']['text15b']="
-	Il file <code>kvirc_xxx.po</code> contiene un set di stringhe come la seguente:";
-$template['translation']['text100a']="/percorso/al/file/che/contiene/la/stringa: numero della linea";
-$template['translation']['text100b']="Messaggio da tradurre";
-$template['translation']['text100c']="La traduzione va qui";
+	Devi trovare i contenuti del tuo codice lingua. Solitamente è una stringa formata da almeno due lettere e può essere trovata esaminando il contenuto della tua variabile di shell \$LANG o guardando su";
+$template['translation']['text14']="Esempi di questi codici sono";
+$template['translation']['text15']="Generare la lista di messaggi da tradurre";
 $template['translation']['text16']="
-	La stringa <i>msgid</i> è il messaggio originale che deve essere tradotto e la stringa <i>msgstr</i> è la traduzione (che sarà vuota all'inizio, quando il file <code>kvirc_xxx.po</code> viene creato).";
+	Devi seguire questo passo solo se è la prima volta che KVIrc viene tradotto nella tua lingua. Se devi aggiornare una traduzione esistente puoi passare direttamente al passo 4.<br />
+	Entra nella directory di compilazione ed esegui il comando per estrarre i messaggi dai sorgenti:";
 $template['translation']['text17']="
-	La stringa msgid contiene tag html, escape tipo \"\\n\" e formattazioni specifiche come \"%s\". Tu <b>DEVI</b> mantenere i tag, escape e formattazioni nella stringa msgstr. <b>Dai speciale attenzione</b> alle specifiche di formattazione (%s, %W, %Q...).<br />
-	Devono rimanere <b>ESATTAMENTE nello stesso ordine</b> come in msgid: cambiare l'ordine o scrivere una formattazione sbagliata farà crashare KVIrc prima o poi.";
-$template['translation']['text18']="Aggiungere la traduzione al Makefile.am";
-$template['translation']['text19']="
-	Una volta tradotte le stringhe puoi provare a far partire la traduzione in KVIrc. Se stai aggiornando una traduzione esistente puoi passare direttamente al Passo 5.";
+	Verranno creati una serie di file .pot nelle sottodirectory di directory_compilazione/po/<br />
+	Ogni file riferisce uno specifico componente di KVIrc: es. il file di traduzione principale è situato in directory_compilazione/po/core/kvirc/kvirc.pot<br />
+	Crea una copia per ognuno di questi file chiamai kvirc_xxx.po dove xxx è il codice della tua lingua trovato al passo 2.";
+$template['translation']['text18']="
+	...e così via per ognuno dei moduli; non sei costretto a tradurre tutti i file per volta, ma creare lo scheletro di ogni componente è una buona cosa.";
+$template['translation']['text19']="Tradurre i messaggi";
 $template['translation']['text20']="
-	Devi forzare il processo di make a prendere la tua traduzione e compilarla. Questo è ancora un passo che va fatto una sola volta. In <code>kvirc/src/kvirc</code> c'è un file chiamato <code>Makefile.am</code>. Dovresti editarlo e aggiungere <code>kvirc_xxx.po</code> dove sono menzionati gli altri file *.po. Non dovresti aver problemi a trovare cosa va aggiunto guardando le altre voci in quel file.";
-$template['translation']['text21']="Ora esegui:";
+	Se hai seguito il passo 3 hai appena creato i file *_xxx.po dove xxx sta per il codice della tua lingua (trovato al passo 2).<br />
+	Se sei saltato qui direttamente dal passo 2 allora devi trovare i file *_xxx.po nelle sottodirectory kvirc/po/.<br />
+	Se questi file non esistono per la tua lingua, probabilmente hai dimenticato di crearli al passo 3.";
+$template['translation']['text21']="
+	Puoi tradurre i file *.po usando un semplice editor di testo (che <b>HA</b> il supporto alla codifica UTF-8), ma è fortemente consigliato di usare un software per traduzione come lokalize per linux/kde o poedit per windows.";
 $template['translation']['text22']="
-	e compila KVIrc come al solito. Dopo che ha finito di compilare, lancia KVIrc dopo essere certo che la tua variabile \$LANG è settata correttamente.";
-$template['translation']['text23']="Provare la traduzione";
-$template['translation']['text24']="Lancia make e aspetta finché finisce.";
-$template['translation']['text25']="KVIrc dovrebbe prendere la tua traduzione e usarla.";
-$template['translation']['text26']="Aggiornare la traduzione quando il sorgente cambia";
+	Nota sul formato dei file di traduzione.<br />
+	I file *.po contengono un set di stringhe come la seguente:";
+$template['translation']['text23a']="/percorso/al/file/che/contiene/la/stringa: numero linea";
+$template['translation']['text23b']="Il messaggio originale in inglese";
+$template['translation']['text23c']="La traduzione va qui";
+$template['translation']['text24']="
+	La stringa <i>msgid</i> è il messaggio originale che deve essere tradotto e la stringa <i>msgstr</i> è la traduzione (che sarà vuota all'inizio, quando il file kvirc_xxx.po viene creato).";
+$template['translation']['text25']="
+	La stringa msgid può contenere tag html, escape tipo \"\\n\" e formattazioni di stringa come \"%s\". Tu <b>DEVI</b> mantenere i tag, escape e formattazioni nella stringa msgstr. Dai speciale attenzione alle specifiche di formattazione (%s, %W, %Q, ...).<br />
+	Devono rimanere <b>ESATTAMENTE</b> nello stesso ordine come in msgid: cambiare l'ordine o scrivere una formattazione sbagliata porterà a crash prima o poi.";
+$template['translation']['text26']="Aggiungere la traduzione al sistema";
 $template['translation']['text27']="
-	Mentre lo svilupo va avanti vengono aggiunti nuovi messaggi ai sorgenti e una piccola parte dei messaggi esistenti cambiano. Quando esegui un aggiornamento SVN per ottenere gli ultimi sorgenti dovresti entrare nella directory <code>kvirc/po/kvirc</code> ed eseguire:";
+	Una volta tradotte le stringhe puoi provare a far partire la traduzione in KVIrc. Se stai aggiornando una traduzione esistente puoi passare direttamente al passo 6.";
 $template['translation']['text28']="
-	Questa procedura aggiornerà il tuo file <code>kvirc_xxx.po</code> con i nuovi messaggi e marcherà i vecchi come <i>fuzzy</i> o invalidi. Le voci invalide devono essere ri-tradotte completamente mente quelle <i>fuzzy</i> hanno cambiamenti minori e possono essere aggiustate in pochi secondi.";
-$template['translation']['text29']="Misc";
-$template['translation']['text30']="
-	Se sei in dubbio riguardo alcune traduzioni, dovresti guardare a come stringhe simili sono state tradotte nei file *.po di KDE: dovrebbero esserci dei file di traduzione di KDE sul loro SVN.";
+	Devi forzare il processo di compilazione a prendere i tuoi nuovi file di traduzione e compilarli. Questo è ancora un passo che si fa in una sola volta. Hai solo bisogno di cancellare il file CMakeCache.txt (situato nella directory di compilazione) ed eseguire di nuovo CMake per fargli prendere i nuovi file, poi compila KVIrc come sempre.<br />
+	Quando ha finito di compilare, vai al passo successivo.";
+$template['translation']['text29']="Provare la traduzione";
+$template['translation']['text30']="Lancia make e aspetta finché finisce.";
 $template['translation']['text31']="
-	Dal momento che molti moduli hanno la loro traduzione la procedura sopra potrebbe essere (ma non sempre) ripetuta per le sottodirectory <code>po/modules/*/</code>";
-$template['translation']['text32a']="
-	Quando sei soddisfatto della tua traduzione puoi inviare il tuo file *.po a";
-$template['translation']['text32b']="
-	chiedendo l'inclusione nell'SVN. Se vuoi mantenere la traduzione allora puoi chiedere un accesso SVN in scrittura.";
-$template['translation']['text33']="Felice traduzione :)";
+	Controlla la tua variabile d'ambiente \$LANG.<br />
+	Se stai traducendo nella stessa lingua del tuo sistema/ambiente dell'utente, probabilmente non avrai bisogno di cambiare la lingua.<br />
+	Altrimenti devi passare la variabile \$LANG all'ambiente quando esegui KVIrc.";
+$template['translation']['text32']="
+	KVIrc dovrebbe quindi prendere la tua tradizione e usarla.";
+$template['translation']['text33']="Aggiornare la traduzione quando i sorgenti cambiano";
+$template['translation']['text34']="
+	Nel processo di sviluppo di KVIrc, nuovi messaggi vengono aggiunti nei sorgenti, mentre altri vengono modificati o rimossi.<br />
+	Quando fai un aggiornamento da SVN per ottenere gli ultimi sorgenti entra nella directory di compilazione ed esegui:";
+$template['translation']['text35']="
+	Questa procedura aggiornerà i tuoi file *_xxx.po con i nuovi messaggi e segnerà quelli vecchi come fuzzy o invalidi.<br />
+	Le stringhe invalide vanno ritradotte completamente mentre quelle fuzzy hanno cambiamenti minori che possono essere sistemati probabilmente in pochi secondi.";
+$template['translation']['text36']="Note varie";
+$template['translation']['text37']="
+	Se sei in dubbio riguardo alcune traduzioni, potresti guardare a come stringhe simili sono state tradotte nei file *.po di KDE o in altri software. Se hai bisogno di maggiore aiuto, contattaci sulla mailing list oppure su IRC (irc://irc.freenode.net/#KVIrc).";
+$template['translation']['text38']="
+	Dal momento che molti moduli hanno la loro traduzione la procedura sopra potrebbe essere ripetuta per le sottodirectory in po/modules/*/.<br />
+	Comunque non sei costretto a tradurre tutti i file in una sola volta: una traduzione parziale funzionerà in ogni caso.";
+$template['translation']['text39']="
+	Quando sei soddisfatto della tua traduzione puoi inviare i tuoi file *.po alla mailing list di KVIrc chiedendo l'inclusione in SVN. Se vuoi mantenere la traduzione in futuro allora puoi chiedere un accesso SVN.";
+$template['translation']['text40']="Buona traduzione :)";
 /* translation.php end */
 
 /* tutorials.php start */
