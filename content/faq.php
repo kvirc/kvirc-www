@@ -16,7 +16,7 @@ echo "<div class=\"column1-unit\">";
 		echo "<li><b>Q: ".$template['faq']['text3a']."</b><br />";
 		echo "A: ".$template['faq']['text3b1'];
 	        echo "<code># ping6 www.6bone.net</code>";
-		echo $template['faq']['text3b2']."?";
+		echo $template['faq']['text3b2'].":";
 		echo "<code>/echo \$features</code>";
 		echo $template['faq']['text3b3'].".</li>";
 

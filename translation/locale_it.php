@@ -42,6 +42,7 @@ $template['index']['install']="installazione";
 // documentation
 $template['index']['docs']="documentazione";
 $template['index']['faq']="FAQ";
+$template['index']['api']="API";
 $template['index']['kviman']="manuale di KVIrc";
 $template['index']['tutorials']="tutorial";
 $template['index']['translations']="traduzioni";
@@ -299,7 +300,7 @@ $template['faq']['text3b1']="
 	Prima di tutto assicurati che il tuo stack IPv6 sia settato correttamente.<br />
 	Puoi eseguire un ping6 su altre macchine?";
 $template['faq']['text3b2']="
-	Il supporto IPv6 è abilitato nel tuo KVIrc?.<br />
+	Il supporto IPv6 è abilitato nel tuo KVIrc?<br />
 	Per controllare, prova";
 $template['faq']['text3b3']="
 	nella riga di comando di KVIrc. Dovresti ottenere una lista di caratteristiche separate da virgola compilate nell'eseguibile. Se la lista contiene \"IPv6\" il supporto è compilato, altrimenti devi controllare la fase di compilazione per trovare cos'è andato storto.

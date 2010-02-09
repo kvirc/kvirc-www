@@ -42,6 +42,7 @@ $template['index']['install']="Installation";
 // documentation
 $template['index']['docs']="Dokumentation";
 $template['index']['faq']="häufig gestellte Fragen";
+$template['index']['api']="API";
 $template['index']['kviman']="KVIrc Handbuch";
 $template['index']['tutorials']="Tutorien";
 $template['index']['translations']="Übersetzungen";
