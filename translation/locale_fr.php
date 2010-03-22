@@ -992,6 +992,7 @@ $template['themes']['theme33']="A darker techno-looking theme with simple and de
 $template['themes']['theme34']="A theme made by CoreZeam.org portal";
 $template['themes']['theme35']="A black-based theme easy to see and distinguish";
 $template['themes']['theme36']="A pink theme inspired on Hello Kitty";
+$template['themes']['theme37']="Easy-on-eyes refreshing waterfall wallpaper... diffused with light turquoise transparency. Coherent text colors with the source of the message";
 /* themes.php end */
 
 /* tools.php start */

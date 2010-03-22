@@ -989,6 +989,7 @@ $template['themes']['theme33']="Ein dunkleres technisch aussehendes Thema mit ei
 $template['themes']['theme34']="Dieses Thema wurde vom CoreZeam.org Portal erstellt";
 $template['themes']['theme35']="Ein schwarz-basiertes Thema, angenehm zu sehen und zu erkennen";
 $template['themes']['theme36']="Ein rosafarbenes Thema inspiriert von »Hello Kitty«";
+$template['themes']['theme37']="Easy-on-eyes refreshing waterfall wallpaper... diffused with light turquoise transparency. Coherent text colors with the source of the message";
 /* themes.php end */
 
 /* tools.php start */

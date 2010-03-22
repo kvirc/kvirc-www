@@ -995,6 +995,7 @@ $template['themes']['theme33']="Un tema scuro tecnologico con icone semplici e d
 $template['themes']['theme34']="Un tema fatto dal portale CoreZeam.org";
 $template['themes']['theme35']="Un tema nero facile da vedere e distinguere";
 $template['themes']['theme36']="Un tema rosa ispirato a Hello Kitty";
+$template['themes']['theme37']="Uno sfondo rilassante con la sua cascata.. sfumata da una luce turchese. Il colore dei messaggi è coerente alla provenienza";
 /* themes.php end */
 
 /* tools.php start */

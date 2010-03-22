@@ -294,8 +294,8 @@ $themes=array(
 	array("name" => "System", "version" => "1.1", "mail" => "sonichedgehog_hyperblast00 [at] yahoo [dot] com", "author" => "Taoki", "desc" => $template['themes']['theme33'], "home" => "", "download" => "System-1.1.kvt", "screen" => "theme_system.png", "thumb" => "thumb_system.png"),
 	array("name" => "CoreZeam", "version" => "1.0", "mail" => "aerodynamythes [at] aliceadsl [dot] fr", "author" => "leox", "desc" => $template['themes']['theme34'], "home" => "http://corezeam.org/index.php/aide/53-lirc-internet-relay-chat/129-kvirc.html?lang=fr", "download" => "CoreZeam-1.0.0.kvt", "screen" => "theme_corezeam.png", "thumb" => "thumb_corezeam.png"),
 	array("name" => "Black", "version" => "1.4", "mail" => "", "author" => "Radicand", "desc" => $template['themes']['theme35'], "home" => "", "download" => "Black-1.4.kvt", "screen" => "theme_black.png", "thumb" => "thumb_black.png"),
-	array("name" => "Hello Kitty", "version" => "1.0", "mail" => "", "author" => "Sc0rPiOn-BaBy", "desc" => $template['themes']['theme36'], "home" => "", "download" => "HelloKitty-1.0.kvt", "screen" => "theme_hellokitty.png", "thumb" => "thumb_hellokitty.png")
-
+	array("name" => "Hello Kitty", "version" => "1.0", "mail" => "", "author" => "Sc0rPiOn-BaBy", "desc" => $template['themes']['theme36'], "home" => "", "download" => "HelloKitty-1.0.kvt", "screen" => "theme_hellokitty.png", "thumb" => "thumb_hellokitty.png"),
+	array("name" => "CoherEase", "version" => "1.1 GR", "mail" => "", "author" => "Chapoolin", "desc" => $template['themes']['theme37'], "home" => "", "download" => "CoherEase-1.1_GR.kvt", "screen" => "theme_coherease.png", "thumb" => "thumb_coherease.png")
 	// without info, not listed
 	//array("name" => "Burst Rebird", "version" => "0.1", "mail" => "", "author" => "", "desc" => "", "home" => "", "download" => "BurstRebird-0.1.kvt", "screen" => "", "thumb" => ""),
 	//array("name" => "Kvinvision", "version" => "1.0", "mail" => "", "author" => "LoSko", "desc" => "", "home" => "", "download" => "Kvinvision-1.0.kvt", "screen" => "", "thumb" => "")
