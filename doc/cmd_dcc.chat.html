@@ -1,0 +1,218 @@
+<html>
+<head>
+<title>dcc.chat</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>dcc.chat</h1>
+Starts a DCC Chat connection
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Usage</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code>dcc.chat [-s] [-n] [-c] [-u] [-m[=&lt;boolean&gt;]] [-i=&lt;interface&gt;] [-p=&lt;port&gt;] [-a=&lt;fake address&gt;] [-f=&lt;fake port&gt;] &lt;nickname&gt;</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>Attempts a DCC connection to &lt;<a href="doc_irc_masks.html">nickname</a>&gt;.<br>
+The simplest case "dcc.chat &lt;<a href="doc_irc_masks.html">nickname</a>&gt;" will work just as in all
+the other <a href="doc_rfc2812.html">IRC</a> clients, but this command is really more powerful...<br>
+Before attempting to understand the possibilities of this command,
+be sure to know how <a href="doc_dcc_connection.html">dcc negotiation and connections</a> work.
+If the 'i' switch is specified, the local listening socket
+will be bound to the specified &lt;interface&gt; (which is an IP address, IPv4 or IPv6),
+otherwise it will be bound to the interface of the
+current <a href="doc_rfc2812.html">IRC</a> connection.<br>
+You can also specify a local interface name to get the address from (this works only for IPv4 interfaces
+since IPv6 ones seem to be unsupported by the system ioctl() calls at the moment (in Linux at least)).<br>
+Here are some examples:<br>
+-i=215.243.12.12: This will bind to the IPv4 interface with the specified address.<br>
+-i=3ffe:1001::1: This will bind to the IPv6 interface with the specified address.<br>
+-i=ppp0: This will bind to the IPv4 address of the interface ppp0 (if supported by the underlying system).<br>
+The -i switch parameter may serve also as a target address when the -c switch is used.<br>
+If the 'p' switch is specified, the local listening socket
+will be bound to the &lt;port&gt;, otherwise it will be bound to
+a random port chosen by the kernel.<br>
+If the 'a' switch is specified, the requesting CTCP message
+will contain &lt;fake address&gt; as target for the remote user,
+otherwise the CTCP message will contain the real IP address
+of the listening interface.
+If the 'f' switch is specified, the requesting CTCP message
+will contain &lt;fake port&gt; as target for the remote user,
+otherwise the CTCP message will contain the real port of the
+listening socket.
+All these switches are meant to allow maximum flexibility of the
+DCC negotiation, earlier <a href="doc_kvircintro.html">KVIrc</a> releases had serious problems
+with firewalled and/or masqueraded machines. With the -a and -f switches
+you can workaround it.
+If the 'n' switch is specified, <a href="doc_kvircintro.html">KVIrc</a> will NOT send the CTCP request
+to the target user; you will have to do it manually, or the remote user
+will have to connect manually (for example by using dcc.chat -c).
+If the 'c' switch is specified, <a href="doc_kvircintro.html">KVIrc</a> will attempt to connect
+to the remote host specified as &lt;interface&gt; and &lt;port&gt;, instead
+of listening (active connection instead of a passive one).
+In this case the -i and -p switches are mandatory.<br>
+The 'c' switch takes precedence over 'n' (In fact both should
+be mutually exclusive).<br>
+If the 'c' and 'n' switches are missing, this commands
+needs to be executed in a window that is bound to a connected
+<a href="doc_connection_dependant_commands.html">IRC context</a> (you need a third entity to accomplish the negotiation).<br>
+If the 'u' switch is given, the connection attempt will
+never time out; this might be useful if you want to leave
+a listening socket for a friend of yours while you are sleeping
+and have the CTCP processing disabled. The 'u' switch works either
+in active and passive mode.<br>
+If the -m switch is passed, the default boolCreateMinimizedDccChat option
+is overridden with the &lt;boolean&gt; parameter passed. So actually
+by passing -m=1 will create a minimized DCC chat even
+if the <a href="fnc_option.html">$option</a>(boolCreateMinimizedDccChat) returns false.<br>
+In the same way, by passing -m=0 you will create a non minimized DCC chat.
+If no &lt;boolean&gt; value is specified, it defaults to 1.<br>
+-s will cause the DCC chat to be attempted in Secure Sockets Layer mode:
+the connection will be encrypted with a <a href="doc_crypt_engines.html">private key</a> algorithm after a
+public key handshake. -s will work only if the <a href="doc_kvircintro.html">KVIrc</a> executable was compiled
+with SSL support enabled and if the remote end supports it.
+The eventual DCC request will contain the string SCHAT instead of CHAT.<br>
+When requesting a SSL based DCC chat to someone you probably will need a
+certificate. If you don't have one, create it (for example with CA.pl -newcert)
+and set it in the options dialog.
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Switches</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#D5D5D5">
+<tr bgcolor="#E0E0E0"><td><b>-m[=&lt;boolean&gt;] | --minimize[=&lt;boolean&gt;]</b></td></tr>
+<tr><td>If the -m switch is passed, the default boolCreateMinimizedDccChat option is overridden with the &lt;boolean&gt; parameter passed. So actually by passing -m=1 will create a minimized DCC send even if the <a href="fnc_option.html">$option</a>(boolCreateMinimizedDccChat) returns false.<br> In the same way, by passing -m=0 you will create a non minimized DCC send. If no &lt;boolean&gt; value is specified, it defaults to 1.<br></td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-n | --no-ctcp</b></td></tr>
+<tr><td>Do NOT send the CTCP request to the target user, you will have to do it manually, or the remote user will have to connect manually (for example by using dcc.chat -c).<br></td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-c | --connect</b></td></tr>
+<tr><td>Attempt to CONNECT to the remote host specified as &lt;interface&gt; and &lt;port&gt;, instead of listening (active connection instead of a passive one). In this case the -i and -p switches are mandatory.<br> The 'c' switch takes precedence over 'n' (In fact both should be mutually exclusive).<br> If the 'c' and 'n' switches are missing, this commands needs to be executed in a window that is bound to a connected <a href="doc_connection_dependant_commands.html">IRC context</a> (you need a third entity to accomplish the negotiation).<br></td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-i=&lt;interface&gt; | --ip=&lt;interface&gt;</b></td></tr>
+<tr><td>Bind the local listening socket to the specified &lt;interface&gt; (which is an IP address, IPv4 or IPv6). If this switch is NOT specified, the socket is bound to the interface of the current <a href="doc_rfc2812.html">IRC</a> connection (if any) or to "127.0.0.1".<br> You can also specify a local interface name to get the address from (this works only for IPv4 interfaces since IPv6 ones seems to be unsupported by the system ioctl() calls at the moment (for linux at least)).<br> Here go some examples:<br> -i=215.243.12.12: this will bind to the IPv4 interface with the specified address.<br> -i=3ffe:1001::1: this will bind to the IPv6 interface with the specified address.<br> -i=ppp0: this will bind to the IPv4 address of the interface ppp0 (if supported by the underlying system).<br> The -i switch parameter may serve also as a target address when the -c switch is used.<br></td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-p=&lt;port&gt; | --port=&lt;port&gt;</b></td></tr>
+<tr><td>Bind the local listening socket to the specified &lt;port&gt;. If this switch is NOT specified, the port will be a "random" one chosen by the kernel.<br></td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-a=&lt;fake address&gt; | --fake-address=&lt;fake address&gt;</b></td></tr>
+<tr><td>Send the &lt;fake address&gt; as target for the remote client in the requesting CTCP message. If this switch is not given, the CTCP will contain the real IP address of the listening interface.<br></td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-f=&lt;fake port&gt; | --fake-port=&lt;fake port&gt;</b></td></tr>
+<tr><td>Send the &lt;fake port&gt; as target port for the remote client in the requesting CTCP message. If this switch is not given, the CTCP will contain the real port of the listening socket. <br><br> All these switches are meant to allow maximum flexibility of the DCC negotiation, earlier <a href="doc_kvircintro.html">KVIrc</a> releases had serious problems with firewalled and/or masqueraded machines. With the -a and -f switches you can work around it.<br> <br></td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-u | --unlimited</b></td></tr>
+<tr><td>If the 'u' switch is given, the connection attempt will never time out; this might be useful if you want to leave a listening socket for a friend of yours while you are sleeping and have the CTCP processing disabled. The 'u' switch works either in active and passive mode.<br></td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-s | --ssl</b></td></tr>
+<tr><td>Use a Secure Socket Layer for the transfer; the whole communication will be encrypted with a <a href="doc_crypt_engines.html">private key</a> algorithm after a public key handshake.<br> This option will work only if the <a href="doc_kvircintro.html">KVIrc</a> executable has been compiled with SSL support and the remote end supports the SSL <a href="doc_rfc2812.html">protocol</a> too.<br> Please note that this will may down the transfer somewhat.<br> -s can be combined with -t.<br> The CTCP negotiation will use SSEND as parameter (or eventually TSSEND).<br> When requesting a SSL based DCC send to someone you probably will need a certificate. If you don't have one, create it (for example with CA.pl -newcert) and set it in the options dialog.</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-z | --zero-port</b></td></tr>
+<tr><td>Use the 0 port method. This is a dirty hack that allows you to use the CHAT <a href="doc_rfc2812.html">protocol</a> with mIrc receiving clients.</td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Syntax Specification</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code><b>dcc.chat</b> <font color="#8080a0">[</font>-s<font color="#8080a0">]</font> <font color="#8080a0">[</font>-n<font color="#8080a0">]</font> <font color="#8080a0">[</font>-c<font color="#8080a0">]</font> <font color="#8080a0">[</font>-u<font color="#8080a0">]</font> <font color="#8080a0">[</font>-m<font color="#8080a0">[</font>=<font color="#8080a0">&lt;</font>boolean<font color="#8080a0">&gt;</font><font color="#8080a0">]</font><font color="#8080a0">]</font> <font color="#8080a0">[</font>-i=<font color="#8080a0">&lt;</font>interface<font color="#8080a0">&gt;</font><font color="#8080a0">]</font> <font color="#8080a0">[</font>-p=<font color="#8080a0">&lt;</font>port<font color="#8080a0">&gt;</font><font color="#8080a0">]</font> <font color="#8080a0">[</font>-a=<font color="#8080a0">&lt;</font>fake address<font color="#8080a0">&gt;</font><font color="#8080a0">]</font> <font color="#8080a0">[</font>-f=<font color="#8080a0">&lt;</font>fake port<font color="#8080a0">&gt;</font><font color="#8080a0">]</font> <font color="#8080a0">&lt;</font>nickname<font color="#8080a0">&gt;</font></code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Examples</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>Simple examples:
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;# Simple DCC chat to Pragma
+&nbsp;&nbsp;&nbsp;&nbsp;dcc.chat Pragma
+&nbsp;&nbsp;&nbsp;&nbsp;# DCC chat to Pragma, listen on address 127.0.0.1
+&nbsp;&nbsp;&nbsp;&nbsp;dcc.chat -i=127.0.0.1 Pragma
+&nbsp;&nbsp;&nbsp;&nbsp;# DCC chat to Pragma, listen on address 168.0.0.1 and port 1025
+&nbsp;&nbsp;&nbsp;&nbsp;dcc.chat -i=168.0.0.1 -p=1025 Pragma
+</font></code></pre></td></tr></table></p>
+More tricky ones:
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;# DCC chat to Pragma, listen on address 127.0.0.1 and port 1080
+&nbsp;&nbsp;&nbsp;&nbsp;# but tell him to connect to address 212.134.22.11 port 1080
+&nbsp;&nbsp;&nbsp;&nbsp;dcc.chat -i=127.0.0.1 -p=1080 -a=212.134.22.11 Pragma
+&nbsp;&nbsp;&nbsp;&nbsp;# DCC chat to Pragma, listen on address 127.0.0.1 and port 1080
+&nbsp;&nbsp;&nbsp;&nbsp;# but tell him to connect to address 212.134.22.11 port 1090
+&nbsp;&nbsp;&nbsp;&nbsp;dcc.chat -i=127.0.0.1 -p=1080 -a=212.134.22.11 -f=1090 Pragma
+</font></code></pre></td></tr></table></p>
+Now run completely out of bounds. Use dcc.chat connections
+to do various things:
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;# Tricky: simulate a HTTP server
+&nbsp;&nbsp;&nbsp;&nbsp;dcc.chat -n -i=127.0.0.1 -p=80 WebBrowser
+&nbsp;&nbsp;&nbsp;&nbsp;# Now open http://127.0.0.1 with your web browser
+&nbsp;&nbsp;&nbsp;&nbsp;# and type "&lt;html&gt;&lt;body&gt;Hello!&lt;/body&gt;&lt;/html&gt;" :)
+&nbsp;&nbsp;&nbsp;&nbsp;#
+&nbsp;&nbsp;&nbsp;&nbsp;# Tricky 2: simulate the ident daemon (if you have none)
+&nbsp;&nbsp;&nbsp;&nbsp;dcc.chat -n -i=127.0.0.1 -p=113 Client
+&nbsp;&nbsp;&nbsp;&nbsp;#
+&nbsp;&nbsp;&nbsp;&nbsp;# Now a self-DCC connection without the IRC negotiation
+&nbsp;&nbsp;&nbsp;&nbsp;# Src: Setup a listening socket awaiting the "Destination" user connection
+&nbsp;&nbsp;&nbsp;&nbsp;dcc.chat -n -i=127.0.0.1 -p=1080 Dst
+&nbsp;&nbsp;&nbsp;&nbsp;# Dst: Connect to the listening socket at addr 127.0.0.1 and port 1080
+&nbsp;&nbsp;&nbsp;&nbsp;dcc.chat -c -i=127.0.0.1 -p=1080 Src
+&nbsp;&nbsp;&nbsp;&nbsp;# The above example will mess you a bit...
+&nbsp;&nbsp;&nbsp;&nbsp;# Try to guess why in both windows YOU have the same nickname
+&nbsp;&nbsp;&nbsp;&nbsp;# that is probably not Dst nor Src... :)
+</font></code></pre></td></tr></table></p>
+Using the shell ftp proggie is too easy:
+we're <b>real hackers</b> and want to do complicated things...
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;# Connect to the local ftp server and get the list of contents
+&nbsp;&nbsp;&nbsp;&nbsp;/dcc.chat -c -i=127.0.0.1 -p=21 FtpServer
+&nbsp;&nbsp;&nbsp;&nbsp;# Now login, type in the new window (the following lines are NOT commands):
+&nbsp;&nbsp;&nbsp;&nbsp;USER youruser
+&nbsp;&nbsp;&nbsp;&nbsp;PASS yourpass
+&nbsp;&nbsp;&nbsp;&nbsp;# Now enter passive mode
+&nbsp;&nbsp;&nbsp;&nbsp;PASV
+&nbsp;&nbsp;&nbsp;&nbsp;# And watch the line that you have received...sth like
+&nbsp;&nbsp;&nbsp;&nbsp;# 227 Entering passive mode (127,0,0,1,210,195)
+&nbsp;&nbsp;&nbsp;&nbsp;/dcc.chat -c -i=127.0.0.1 -p=$((210 * 256) + 195) FtpList
+&nbsp;&nbsp;&nbsp;&nbsp;# (Change the port numbers accordingly)
+&nbsp;&nbsp;&nbsp;&nbsp;# And then type in the FtpServer window (this is NOT a KVIrc command):
+&nbsp;&nbsp;&nbsp;&nbsp;LIST
+&nbsp;&nbsp;&nbsp;&nbsp;# Then watch the ls output in the FtpList window. :)
+&nbsp;&nbsp;&nbsp;&nbsp;# In this way you can also read ascii files by ftp:
+&nbsp;&nbsp;&nbsp;&nbsp;# Assume that in the previous ls output you have seen
+&nbsp;&nbsp;&nbsp;&nbsp;# a README file.
+&nbsp;&nbsp;&nbsp;&nbsp;# In the FtpServer window type:
+&nbsp;&nbsp;&nbsp;&nbsp;PASV
+&nbsp;&nbsp;&nbsp;&nbsp;# Watch the message
+&nbsp;&nbsp;&nbsp;&nbsp;# 227 Entering passive mode (127,0,0,1,22,227)
+&nbsp;&nbsp;&nbsp;&nbsp;/dcc.chat -c -i=127.0.0.1 -p=$((22 * 256) + 227) README
+&nbsp;&nbsp;&nbsp;&nbsp;# In the FtpServer window type:
+&nbsp;&nbsp;&nbsp;&nbsp;RETR README
+&nbsp;&nbsp;&nbsp;&nbsp;# And read the file in the README window :)
+</font></code></pre></td></tr></table></p>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

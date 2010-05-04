@@ -1,0 +1,177 @@
+<html>
+<head>
+<title>switch</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>switch</h1>
+Another flow control command
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Usage</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code>switch(&lt;expression&gt;)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;case(&lt;value&gt;)[:]&lt;command&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;[break]
+&nbsp;&nbsp;&nbsp;&nbsp;case(&lt;value&gt;)[:]&lt;command&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;[break]
+&nbsp;&nbsp;&nbsp;&nbsp;....
+&nbsp;&nbsp;&nbsp;&nbsp;match(&lt;wildcard_expression&gt;)[:]&lt;command&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;[break]
+&nbsp;&nbsp;&nbsp;&nbsp;....
+&nbsp;&nbsp;&nbsp;&nbsp;regexp(&lt;regular_expression&gt;)[:]&lt;command&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;[break]
+&nbsp;&nbsp;&nbsp;&nbsp;....
+&nbsp;&nbsp;&nbsp;&nbsp;case(&lt;value&gt;)[:]&lt;command&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;[break]
+&nbsp;&nbsp;&nbsp;&nbsp;....
+&nbsp;&nbsp;&nbsp;&nbsp;default[:]&lt;command&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;[break]
+}</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>The switch command is based on the standard C 'switch' keyword.
+It executes conditionally groups of commands chosen from
+a larger set of command groups.<br>
+First &lt;expression&gt; is evaluated (&lt;expression&gt; is any arithmetic or string expression).<br>
+Then the 'match','regexp','case' and 'default' labels are evaluated sequentially
+in the order of appearance.<br>
+<b>case(&lt;value&gt;)[:]&lt;command&gt;</b><br>
+The &lt;value&gt; is evaluated and is compared against the result of &lt;expression&gt;.
+The comparison is case insensitive (if the values are strings).<br>
+If &lt;value&gt; is equal to &lt;expression&gt; then &lt;command&gt; is executed.
+Please note that &lt;command&gt; must be either a single instruction or an instruction block <b>enclosed in braces</b>.
+If &lt;command&gt; contains a <a href="cmd_break.html">break</a> statement inside or if <a href="cmd_break.html">break</a>
+is specified just after the &lt;command&gt; then the execution of the switch is terminated
+otherwise the nex label is evaluated.<br>
+<b>match(&lt;value&gt;)[:]&lt;command&gt;</b><br>
+The &lt;value&gt; is expected to be a <a href="doc_irc_masks.html">wildcard</a> expression (containing '*' and '?' wildcards)
+that is matched against &lt;expression&gt;.<br>
+If there is a match (a complete case insensitive match!) then the related &lt;command&gt;
+is executed. <a href="cmd_brea.html">brea</a> is treated just like in the case label.<br>
+<b>regexp(&lt;value&gt;)[:]&lt;command&gt;</b><br>
+The &lt;value&gt; is expected to be a complete standard regular expression
+that is matched agains &lt;expression&gt;.<br>
+If there is a match (a complete case insensitive match!) then the related &lt;command&gt;
+is executed. <a href="cmd_brea.html">brea</a> is treated just like in the case label.<br>
+<b>default[:]&lt;command&gt;</b><br>
+The default label is executed unconditionally (unless there was a previous label
+that terminated the execution with break).<br>
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Syntax Specification</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code><b>switch</b><b>(</b><font color="#8080a0">&lt;</font>expression<font color="#8080a0">&gt;</font><b>)</b>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;case<b>(</b><font color="#8080a0">&lt;</font>value<font color="#8080a0">&gt;</font><b>)</b><font color="#8080a0">[</font>:<font color="#8080a0">]</font><font color="#8080a0">&lt;</font>command<font color="#8080a0">&gt;</font>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">[</font>break<font color="#8080a0">]</font>
+&nbsp;&nbsp;&nbsp;&nbsp;case<b>(</b><font color="#8080a0">&lt;</font>value<font color="#8080a0">&gt;</font><b>)</b><font color="#8080a0">[</font>:<font color="#8080a0">]</font><font color="#8080a0">&lt;</font>command<font color="#8080a0">&gt;</font>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">[</font>break<font color="#8080a0">]</font>
+&nbsp;&nbsp;&nbsp;&nbsp;....
+&nbsp;&nbsp;&nbsp;&nbsp;match<b>(</b><font color="#8080a0">&lt;</font>wildcard_expression<font color="#8080a0">&gt;</font><b>)</b><font color="#8080a0">[</font>:<font color="#8080a0">]</font><font color="#8080a0">&lt;</font>command<font color="#8080a0">&gt;</font>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">[</font>break<font color="#8080a0">]</font>
+&nbsp;&nbsp;&nbsp;&nbsp;....
+&nbsp;&nbsp;&nbsp;&nbsp;regexp<b>(</b><font color="#8080a0">&lt;</font>regular_expression<font color="#8080a0">&gt;</font><b>)</b><font color="#8080a0">[</font>:<font color="#8080a0">]</font><font color="#8080a0">&lt;</font>command<font color="#8080a0">&gt;</font>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">[</font>break<font color="#8080a0">]</font>
+&nbsp;&nbsp;&nbsp;&nbsp;....
+&nbsp;&nbsp;&nbsp;&nbsp;case<b>(</b><font color="#8080a0">&lt;</font>value<font color="#8080a0">&gt;</font><b>)</b><font color="#8080a0">[</font>:<font color="#8080a0">]</font><font color="#8080a0">&lt;</font>command<font color="#8080a0">&gt;</font>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">[</font>break<font color="#8080a0">]</font>
+&nbsp;&nbsp;&nbsp;&nbsp;....
+&nbsp;&nbsp;&nbsp;&nbsp;default<font color="#8080a0">[</font>:<font color="#8080a0">]</font><font color="#8080a0">&lt;</font>command<font color="#8080a0">&gt;</font>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">[</font>break<font color="#8080a0">]</font>
+}</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Examples</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#207500"># Try to change the 1 below to 2 or 3 to see the results</font>
+%tmp = 1
+switch(%tmp)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;case(1):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo \%tmp was 1!
+&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;case(2)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo \%tmp was 2!
+&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;default:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo \%tmp was not 1 nor 2: it was %tmp!
+&nbsp;&nbsp;&nbsp;&nbsp;break;
+}
+<font color="#207500"># A complexier example: change the 1 in 2 or 3</font>
+%tmp = 1
+switch(%tmp)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;case(1):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo \%tmp was 1!
+&nbsp;&nbsp;&nbsp;&nbsp;case(2)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo \%tmp was 2!
+&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;default:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo \%tmp was either 1 or something different from 2 (%tmp)
+&nbsp;&nbsp;&nbsp;&nbsp;break;
+}
+<font color="#207500"># An example with strings</font>
+%tmp = "This is a test"
+%tmp2 = "This is not a test"
+switch(%tmp)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;case(%tmp2)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo \%tmp == \%tmp2
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;case(%tmp)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# do not break here
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Yeah.. it's stupid.. \%tmp == \%tmp :D"
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;match("*TEST"):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Matched *TEST"
+&nbsp;&nbsp;&nbsp;&nbsp;regexp("[a-zA-Z ]*test"):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Matched [a-zA-Z ]*text"
+&nbsp;&nbsp;&nbsp;&nbsp;regexp("[a-zA-Z ]*not[a-zA-Z ]*"):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Matched [a-zA-Z ]*not[a-zA-Z ]*"
+&nbsp;&nbsp;&nbsp;&nbsp;default:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo This is executed anyway (unless some break was called)
+&nbsp;&nbsp;&nbsp;&nbsp;break;
+}
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

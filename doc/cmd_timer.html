@@ -1,0 +1,165 @@
+<html>
+<head>
+<title>timer</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>timer</h1>
+Starts a timer
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Usage</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code>timer [-s] [-p] (&lt;name&gt;,&lt;delay_in_msecs&gt;[,&lt;callback_param1&gt;[,&lt;callback_param2&gt;[,...]]])
+{
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;callback_command&gt;
+}</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>Starts a new timer named &lt;name&gt; with the specified delay (in milliseconds).<br>
+The timer periodically calls the specified &lt;callback_command&gt; code passing the
+eventual &lt;callback_param&gt; strings as positional parameters.<br>
+If a timer with the same name already exists, it is replaced by this one.<br>
+<b>The &lt;callback_command&gt; is evaluated at timer "shot" time and NOT while
+this command is being parsed. This means that the identifiers that you put
+inside &lt;callback_command&gt; will NOT have the current values.</b>
+The values will be assigned at timer "shot" time.<br>
+This is a common scripters error and problem: if it is not clear, look at the examples below.<br>
+The timer is bound to the window in that this command is executed in.<br>
+If the window gets destroyed, the timer is stopped; unless the -p switch is used.<br>
+The -p switch causes the timer to be persistent across the application and exists until
+the last window has been closed: it is basically rebound to another (random) window when the
+original window is destroyed.<br>
+The -s switch cuases this timer to trigger only once: it will be automatically destroyed after that.<br>
+The time has an associated set of <a href="doc_data_structures.html">extended scope variables</a>:
+the <a href="doc_kvs_datatypes.html">variables</a> that begin with "%:" have their life extended to the whole "life" of the timer.<br>
+Using a very low delay is a common method to perform some background processing: you
+basically split a huge job in small slices and execute them when the timer is triggered
+until you run out of slices. A delay of 0 will cause the timer to be called whenever
+<a href="doc_kvircintro.html">KVIrc</a> has some "idle time" to spend.
+On the other hand, remember that timers are precious resources: many timers running
+with a very low delay will cause <a href="doc_kvircintro.html">KVIrc</a> to slow down.<br>
+Since all the <a href="doc_kvircintro.html">kvirc</a> timers share the same namespace it is a good idea to use
+descriptive timer names: a timer named "a" is likely to be used by two or more scripts
+at once causing one (or both) of them to fail.<br>
+A timer can be stopped at any time by using the <a href="cmd_killtimer.html">killtimer</a> command.
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Switches</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#D5D5D5">
+<tr bgcolor="#E0E0E0"><td><b>-s | --single-shot</b></td></tr>
+<tr><td>Causes the timer to trigger only once (single shot timer)</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-p | --persistent</b></td></tr>
+<tr><td>Creates a persistent timer bound to any existing window</td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Syntax Specification</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code><b>timer</b> <font color="#8080a0">[</font>-s<font color="#8080a0">]</font> <font color="#8080a0">[</font>-p<font color="#8080a0">]</font> <b>(</b><font color="#8080a0">&lt;</font>name<font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>delay_in_msecs<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>callback_param1<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>callback_param2<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,...<font color="#8080a0">]</font><font color="#8080a0">]</font><font color="#8080a0">]</font><b>)</b>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">&lt;</font>callback_command<font color="#8080a0">&gt;</font>
+}</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Examples</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Just a plain timer</font>
+&nbsp;&nbsp;&nbsp;&nbsp;timer(test,1000){ echo "Hello!"; }
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Now watch the timer running</font>
+&nbsp;&nbsp;&nbsp;&nbsp;killtimer test
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Single shot timer</font>
+&nbsp;&nbsp;&nbsp;&nbsp;timer -s (test,1000){ echo "This will fire only once!"; }
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># The call above is equivalent to</font>
+&nbsp;&nbsp;&nbsp;&nbsp;timer(test,1000){ echo "This will file only once!"; killtimer test; }
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Callback parameters: consider the following code</font>
+&nbsp;&nbsp;&nbsp;&nbsp;%parameter = "some string value"
+&nbsp;&nbsp;&nbsp;&nbsp;echo "Before calling /timer \%parameter is \"%parameter\""
+&nbsp;&nbsp;&nbsp;&nbsp;timer -s (test,1000,%parameter){ echo "inside the callback \%parameter is \"%parameter\" but \$0 is \"$0\""; }
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># watch the timer running , and note the behaviour of the %parameter variable</font>
+&nbsp;&nbsp;&nbsp;&nbsp;killtimer test
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Use the extended scope timer variables</font>
+&nbsp;&nbsp;&nbsp;&nbsp;timer(test,1000)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Use the extended scope %:count variable to keep track</font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># of the times that this timer has been called</font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_if.html">if</a>("%:count" == "")%:count = 1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else %:count++
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> "This timer has fired %:count times"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(%:count == 10)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# This will kill the current timer, we don't need to specify the name
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_killtimer.html">killtimer</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Use isTimer to check if the timer exists</font>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> <a href="fnc_istimer.html">$istimer</a>(test)
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Repeat the command above after the 10th timeout...</font>
+</font></code></pre></td></tr></table></p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Execute a command at a precise time</font>
+&nbsp;&nbsp;&nbsp;&nbsp;%secsfrom= $($date("H")*3600+$date("M")*60+$date("S")); #now
+&nbsp;&nbsp;&nbsp;&nbsp;%secsto= $(7*3600+10*60+0); #end time: 07:10:00
+&nbsp;&nbsp;&nbsp;&nbsp;%secsdiff=$(%secsto-%secsfrom); #difference
+&nbsp;&nbsp;&nbsp;&nbsp;if(%secsdiff &lt;= 0)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#we're past that time for today
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%secsdiff+=86400; #60 secs * 60 mins * 24 hours
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;# timer wants msecs
+&nbsp;&nbsp;&nbsp;&nbsp;%msecs = $(%secsdiff*1000);
+&nbsp;&nbsp;&nbsp;&nbsp;timer -s -p (reminder, %msecs)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Hey man it's ten past seven am, time to wake up!"
+&nbsp;&nbsp;&nbsp;&nbsp;}
+</font></code></pre></td></tr></table></p>
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>See also</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><a href="cmd_killtimer.html">killtimer</a>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

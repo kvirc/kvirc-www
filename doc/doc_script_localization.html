@@ -1,0 +1,157 @@
+<html>
+<head>
+<title>Localization of scripts</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>Localization of scripts</h1>
+Explains how to add translation capabilities to your scripts
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><p>
+</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Introduction</div></td></tr><tr><td bgcolor="#EAEAEA">
+</p>
+<p>
+Adding the translated versions of the strings adds a great
+value to your scripts. The <a href="class_process.html">process</a> of translating a part of
+software is called localization. <a href="doc_kvircintro.html">KVIrc</a> offers some commands
+and <a href="doc_kvs_aliasesandfunctions.html">functions</a> for this purpose and this document explains
+briefly how to use them.
+</p>
+<p>
+</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">The big picture</div></td></tr><tr><td bgcolor="#EAEAEA">
+</p>
+<p>
+All of the strings in your <a href="doc_kvs_basicconcepts.html">script</a> are written in a "primary language".
+The most common "primary language" is english, but theoretically
+it can be any language of your choice.
+</p>
+<p>
+By the means of the gettext package programs you extract
+the strings from your <a href="doc_kvs_basicconcepts.html">script</a> and produce a translation file.
+</p>
+<p>
+The translation file is then effectively translated in another
+language and later compiled in a binary form.
+</p>
+<p>
+The binary form translations are then loaded in the <a href="doc_kvircintro.html">KVIrc</a>
+executable at runtime and a function is used to look up the
+translations.
+</p>
+<p>
+</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">How to translate scripts</div></td></tr><tr><td bgcolor="#EAEAEA">
+</p>
+<p>
+Your strings should be surrounded by the <a href="fnc_tr.html">$tr</a>() function in the following way:
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="fnc_tr.html">$tr</a>("your default language text")
+</font></code></pre></td></tr></table></p>
+</p>
+<p>
+Then you should run the xgettext command on your <a href="doc_kvs_basicconcepts.html">script</a> files.
+This is done by a shell commandline similar to the following:<br>
+<pre>xgettext -o myscript.pot -ktr mykvsfile1.<a href="doc_kvs_introduction.html">kvs</a> mykvsfile2.<a href="doc_kvs_introduction.html">kvs</a> ...</pre>
+</p>
+<p>
+Copy the translation file obtained in the following way:<br>
+<pre>cp myscript.pot myscript_XX.pot</pre>
+Where the XX is your country/language code. For example, for Italian
+it would be:<br>
+<pre>cp myscript.pot myscript_it.po</pre>
+</p>
+<p>
+Translate mytranslation_it.po. The format of the po file is straightforward.
+There are msgid lines with the original english text and immediately
+following msgstr lines that must be filled with the corresponding translation.
+For example in Italian you would translate:<br>
+msgid "your default language text"
+msgstr "il tuo testo in linguaggio predefinito"
+</p>
+<p>
+Compile your translation to binary form with the following command:<br>
+<pre>msgfmt -o myscript_it.mo myscript_it.po</pre>
+</p>
+<p>
+Copy the generated *.mo file to the "locale" subdirectory
+in the <a href="doc_kvircintro.html">KVIrc</a>'s local directory (usually $HOME/.<a href="doc_kvircintro.html">kvirc</a>/locale/).
+</p>
+<p>
+Set the system language to the XX above with the following command:<br>
+<pre>export LANG="XX"</pre><br>
+For Italian it would be:<br>
+<pre>export LANG="it"</pre><br>
+</p>
+<p>
+Start <a href="doc_kvircintro.html">KVIrc</a> and type in the commandline:
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000"><a href="cmd_echo.html">echo</a> <a href="fnc_tr.html">$tr</a>("your default language text","myscript")
+</font></code></pre></td></tr></table></p>
+If you did everything well, you should see the translated
+text echoed in the window :)<br>
+</p>
+<p>
+Obviously if you don't set LANG="XX", the same command will
+output the original string unchanged.
+</p>
+<p>
+You can manage translations in several languages by producing
+several *.mo files all with the proper language/country code appended.
+The right *.mo file will be magically loaded by <a href="doc_kvircintro.html">KVIrc</a> that
+will look up the user's LANG <a href="doc_kvs_datatypes.html">variable</a>. (If you don't want
+to use LANG, you can use KVIRC_LANG instead, it will still work).
+</p>
+</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Caveats</div></td></tr><tr><td bgcolor="#EAEAEA">
+</p>
+<p>
+You should NEVER use <a href="doc_kvs_datatypes.html">variables</a> or identifiers inside the $tr() function.
+This because the translation files are generated offline,
+when the string is not evaluated yet (i.e <a href="doc_kvs_datatypes.html">variables</a> ad identifiers
+are not substituted by their actual return values).
+The translation <a href="class_process.html">process</a>, instead, happens at runtime, when
+the <a href="doc_kvs_datatypes.html">variables</a> and identifiers have been substituted by their
+actual values. This would lead to a mismatch between the
+string you look up in the translation catalogue and the
+effectively translated one. If you need to include <a href="doc_kvs_datatypes.html">variables</a>
+in your strings you should compose the string with smaller pieces
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> <a href="fnc_tr.html">$tr</a>("On this <a href="doc_ircintro.html">channel</a>") %number <a href="fnc_tr.html">$tr</a>("users are <a href="doc_operators.html">operators</a>")
+</font></code></pre></td></tr></table></p>
+</p>
+<p>
+The translation <a href="class_process.html">process</a> can be realized only if your
+scripts are written in external files. This makes sense since
+if you're translating the <a href="doc_kvs_basicconcepts.html">script</a> then you will probably want to
+distribute it and the only way to distribute it is on files.
+But well.. this is a caveat.
+</p>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_generic_index_all.html">Miscellaneous</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

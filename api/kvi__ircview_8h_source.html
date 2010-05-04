@@ -198,80 +198,79 @@
 <a name="l00173"></a>00173         <span class="keywordtype">void</span> stopLogging();
 <a name="l00174"></a><a class="code" href="classKviIrcView.html#a348fe7cd0913d9650a0c744f24e20737">00174</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviIrcView.html#a348fe7cd0913d9650a0c744f24e20737">isLogging</a>(){ <span class="keywordflow">return</span> (m_pLogFile != 0); };
 <a name="l00175"></a>00175         <span class="keywordtype">void</span> getLogFileName(QString &amp;buffer);
-<a name="l00176"></a>00176         <span class="comment">//void add2Log(const char *buffer,int buf_len=-1);</span>
-<a name="l00177"></a>00177         <span class="keywordtype">void</span> add2Log(<span class="keyword">const</span> QString &amp;szBuffer,<span class="keywordtype">int</span> iMsgType=0);
-<a name="l00178"></a>00178 
-<a name="l00179"></a>00179         <span class="comment">//==============================================================================================</span>
-<a name="l00180"></a>00180         <span class="comment">// Channel view splitting</span>
-<a name="l00181"></a>00181         <span class="keywordtype">void</span> setMasterView(<a class="code" href="classKviIrcView.html">KviIrcView</a> * v);
-<a name="l00182"></a>00182         <span class="keywordtype">void</span> splitMessagesTo(<a class="code" href="classKviIrcView.html">KviIrcView</a> * v);
-<a name="l00183"></a>00183         <span class="keywordtype">void</span> joinMessagesFrom(<a class="code" href="classKviIrcView.html">KviIrcView</a> * v);
-<a name="l00184"></a>00184         <span class="keywordtype">void</span> appendMessagesFrom(<a class="code" href="classKviIrcView.html">KviIrcView</a> * v);
-<a name="l00185"></a>00185 
-<a name="l00186"></a>00186         <span class="keywordtype">void</span> prevLine();
-<a name="l00187"></a>00187         <span class="keywordtype">void</span> nextLine();
-<a name="l00188"></a>00188         <span class="keywordtype">void</span> nextPage();
-<a name="l00189"></a>00189         <span class="keywordtype">void</span> prevPage();
-<a name="l00190"></a>00190         <span class="keyword">virtual</span> QSize sizeHint() <span class="keyword">const</span>;
-<a name="l00191"></a>00191         <span class="keyword">const</span> QString &amp; lastLineOfText();
-<a name="l00192"></a>00192         <span class="keyword">const</span> QString &amp; lastMessageText();
-<a name="l00193"></a>00193         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFont(<span class="keyword">const</span> QFont &amp;f);
-<a name="l00194"></a>00194 <span class="keyword">public</span> slots:
-<a name="l00195"></a>00195         <span class="keywordtype">void</span> flushLog();
-<a name="l00196"></a>00196         <span class="keywordtype">void</span> showToolsPopup();
-<a name="l00197"></a>00197         <span class="keywordtype">void</span> clearBuffer();
-<a name="l00198"></a>00198         <span class="keywordtype">void</span> toggleToolWidget();
-<a name="l00199"></a>00199         <span class="keywordtype">void</span> increaseFontSize();
-<a name="l00200"></a>00200         <span class="keywordtype">void</span> decreaseFontSize();
-<a name="l00201"></a>00201         <span class="keywordtype">void</span> chooseFont();
-<a name="l00202"></a>00202         <span class="keywordtype">void</span> chooseBackground();
-<a name="l00203"></a>00203         <span class="keywordtype">void</span> resetBackground();
-<a name="l00204"></a>00204 signals:
-<a name="l00205"></a>00205         <span class="keywordtype">void</span> rightClicked();
-<a name="l00206"></a>00206         <span class="keywordtype">void</span> dndEntered();
-<a name="l00207"></a>00207         <span class="keywordtype">void</span> fileDropped(<span class="keyword">const</span> QString &amp;);
-<a name="l00208"></a>00208 <span class="keyword">private</span>:
-<a name="l00209"></a>00209         <span class="keywordtype">void</span> setCursorLine(<a class="code" href="struct__KviIrcViewLine.html">KviIrcViewLine</a> * l);
-<a name="l00210"></a>00210         <a class="code" href="struct__KviIrcViewLine.html">KviIrcViewLine</a> * getVisibleLineAt(<span class="keywordtype">int</span> yPos);
-<a name="l00211"></a>00211         <span class="keywordtype">int</span> getVisibleCharIndexAt(<a class="code" href="struct__KviIrcViewLine.html">KviIrcViewLine</a> * line, <span class="keywordtype">int</span> xPos, <span class="keywordtype">int</span> yPos);
-<a name="l00212"></a>00212         <span class="keywordtype">void</span> getLinkEscapeCommand(QString &amp;buffer,<span class="keyword">const</span> QString &amp;escape_cmd,<span class="keyword">const</span> QString &amp;escape_label);
-<a name="l00213"></a>00213         <span class="keywordtype">void</span> appendLine(<a class="code" href="struct__KviIrcViewLine.html">KviIrcViewLine</a> *ptr,<span class="keywordtype">bool</span> bRepaint);
-<a name="l00214"></a>00214         <span class="keywordtype">void</span> postUpdateEvent();
-<a name="l00215"></a>00215         <span class="keywordtype">void</span> fastScroll(<span class="keywordtype">int</span> lines = 1);
-<a name="l00216"></a>00216         <span class="keyword">const</span> <a class="code" href="kvi__string_8h.html#a2dc1d56cc0b9ac8c459aaef1d056ce2f">kvi_wchar_t</a> * getTextLine(<span class="keywordtype">int</span> msg_type,<span class="keyword">const</span> <a class="code" href="kvi__string_8h.html#a2dc1d56cc0b9ac8c459aaef1d056ce2f">kvi_wchar_t</a> * data_ptr,<a class="code" href="struct__KviIrcViewLine.html">KviIrcViewLine</a> *line_ptr,<span class="keywordtype">bool</span> bEnableTimeStamp = <span class="keyword">true</span>);
-<a name="l00217"></a>00217         <span class="keywordtype">void</span> calculateLineWraps(<a class="code" href="struct__KviIrcViewLine.html">KviIrcViewLine</a> *ptr,<span class="keywordtype">int</span> maxWidth);
-<a name="l00218"></a>00218         <span class="keywordtype">void</span> recalcFontVariables(<span class="keyword">const</span> QFontMetrics &amp;fm,<span class="keyword">const</span> QFontInfo &amp;fi);
-<a name="l00219"></a>00219         <span class="keywordtype">bool</span> checkSelectionBlock(<a class="code" href="struct__KviIrcViewLine.html">KviIrcViewLine</a> * line,<span class="keywordtype">int</span> bufIndex);
-<a name="l00220"></a>00220         <a class="code" href="struct__KviIrcViewWrappedBlock.html">KviIrcViewWrappedBlock</a> * getLinkUnderMouse(<span class="keywordtype">int</span> xPos,<span class="keywordtype">int</span> yPos,QRect * pRect = 0,QString * linkCmd = 0,QString * linkText = 0);
-<a name="l00221"></a>00221         <span class="keywordtype">void</span> doLinkToolTip(<span class="keyword">const</span> QRect &amp;rct,QString &amp;linkCmd,QString &amp;linkText);
-<a name="l00222"></a>00222         <span class="keywordtype">void</span> doMarkerToolTip(<span class="keyword">const</span> QRect &amp;rct);
-<a name="l00223"></a>00223         <span class="keywordtype">bool</span> checkMarkerArea(<span class="keyword">const</span> QRect &amp; area, <span class="keyword">const</span> QPoint &amp; mousePos);
-<a name="l00224"></a>00224         <span class="keywordtype">void</span> addControlCharacter(<a class="code" href="struct__KviIrcViewLineChunk.html">KviIrcViewLineChunk</a> *pC, QString &amp; szSelectionText);
-<a name="l00225"></a>00225 <span class="keyword">protected</span>:
-<a name="l00226"></a>00226         <span class="keyword">virtual</span> <span class="keywordtype">void</span> paintEvent(QPaintEvent *);
-<a name="l00227"></a>00227         <span class="keyword">virtual</span> <span class="keywordtype">void</span> resizeEvent(QResizeEvent *);
-<a name="l00228"></a>00228         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mousePressEvent(QMouseEvent *e);
-<a name="l00229"></a>00229         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseRealPressEvent(QMouseEvent *e);
-<a name="l00230"></a>00230         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseReleaseEvent(QMouseEvent *);
-<a name="l00231"></a>00231         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseDoubleClickEvent(QMouseEvent *e);
-<a name="l00232"></a>00232         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseMoveEvent(QMouseEvent *e);
-<a name="l00233"></a>00233         <span class="keyword">virtual</span> <span class="keywordtype">void</span> timerEvent(QTimerEvent *e);
-<a name="l00234"></a>00234         <span class="keyword">virtual</span> <span class="keywordtype">void</span> dragEnterEvent(QDragEnterEvent *e);
-<a name="l00235"></a>00235         <span class="keyword">virtual</span> <span class="keywordtype">void</span> dropEvent(QDropEvent *e);
-<a name="l00236"></a>00236         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> event(QEvent *e);
-<a name="l00237"></a>00237         <span class="keyword">virtual</span> <span class="keywordtype">void</span> wheelEvent(QWheelEvent *e);
-<a name="l00238"></a>00238         <span class="keyword">virtual</span> <span class="keywordtype">void</span> keyPressEvent(QKeyEvent *e);
-<a name="l00239"></a>00239         <span class="keywordtype">void</span> maybeTip(<span class="keyword">const</span> QPoint &amp;pnt);
-<a name="l00240"></a>00240         <span class="keyword">virtual</span> <span class="keywordtype">void</span> leaveEvent(QEvent *);
-<a name="l00241"></a>00241 <span class="keyword">protected</span> slots:
-<a name="l00242"></a>00242         <span class="keyword">virtual</span> <span class="keywordtype">void</span> scrollBarPositionChanged(<span class="keywordtype">int</span> newValue);
-<a name="l00243"></a>00243         <span class="keywordtype">void</span> masterDead();
-<a name="l00244"></a>00244         <span class="keywordtype">void</span> animatedIconChange();
-<a name="l00245"></a>00245 };
-<a name="l00246"></a>00246 
-<a name="l00247"></a>00247 <span class="preprocessor">#endif //_KVI_IRCVIEW_H_</span>
+<a name="l00176"></a>00176         <span class="keywordtype">void</span> add2Log(<span class="keyword">const</span> QString &amp;szBuffer,<span class="keywordtype">int</span> iMsgType = 0,<span class="keywordtype">bool</span> bPrependDate = <span class="keyword">false</span>);
+<a name="l00177"></a>00177 
+<a name="l00178"></a>00178         <span class="comment">//==============================================================================================</span>
+<a name="l00179"></a>00179         <span class="comment">// Channel view splitting</span>
+<a name="l00180"></a>00180         <span class="keywordtype">void</span> setMasterView(<a class="code" href="classKviIrcView.html">KviIrcView</a> * v);
+<a name="l00181"></a>00181         <span class="keywordtype">void</span> splitMessagesTo(<a class="code" href="classKviIrcView.html">KviIrcView</a> * v);
+<a name="l00182"></a>00182         <span class="keywordtype">void</span> joinMessagesFrom(<a class="code" href="classKviIrcView.html">KviIrcView</a> * v);
+<a name="l00183"></a>00183         <span class="keywordtype">void</span> appendMessagesFrom(<a class="code" href="classKviIrcView.html">KviIrcView</a> * v);
+<a name="l00184"></a>00184 
+<a name="l00185"></a>00185         <span class="keywordtype">void</span> prevLine();
+<a name="l00186"></a>00186         <span class="keywordtype">void</span> nextLine();
+<a name="l00187"></a>00187         <span class="keywordtype">void</span> nextPage();
+<a name="l00188"></a>00188         <span class="keywordtype">void</span> prevPage();
+<a name="l00189"></a>00189         <span class="keyword">virtual</span> QSize sizeHint() <span class="keyword">const</span>;
+<a name="l00190"></a>00190         <span class="keyword">const</span> QString &amp; lastLineOfText();
+<a name="l00191"></a>00191         <span class="keyword">const</span> QString &amp; lastMessageText();
+<a name="l00192"></a>00192         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFont(<span class="keyword">const</span> QFont &amp;f);
+<a name="l00193"></a>00193 <span class="keyword">public</span> slots:
+<a name="l00194"></a>00194         <span class="keywordtype">void</span> flushLog();
+<a name="l00195"></a>00195         <span class="keywordtype">void</span> showToolsPopup();
+<a name="l00196"></a>00196         <span class="keywordtype">void</span> clearBuffer();
+<a name="l00197"></a>00197         <span class="keywordtype">void</span> toggleToolWidget();
+<a name="l00198"></a>00198         <span class="keywordtype">void</span> increaseFontSize();
+<a name="l00199"></a>00199         <span class="keywordtype">void</span> decreaseFontSize();
+<a name="l00200"></a>00200         <span class="keywordtype">void</span> chooseFont();
+<a name="l00201"></a>00201         <span class="keywordtype">void</span> chooseBackground();
+<a name="l00202"></a>00202         <span class="keywordtype">void</span> resetBackground();
+<a name="l00203"></a>00203 signals:
+<a name="l00204"></a>00204         <span class="keywordtype">void</span> rightClicked();
+<a name="l00205"></a>00205         <span class="keywordtype">void</span> dndEntered();
+<a name="l00206"></a>00206         <span class="keywordtype">void</span> fileDropped(<span class="keyword">const</span> QString &amp;);
+<a name="l00207"></a>00207 <span class="keyword">private</span>:
+<a name="l00208"></a>00208         <span class="keywordtype">void</span> setCursorLine(<a class="code" href="struct__KviIrcViewLine.html">KviIrcViewLine</a> * l);
+<a name="l00209"></a>00209         <a class="code" href="struct__KviIrcViewLine.html">KviIrcViewLine</a> * getVisibleLineAt(<span class="keywordtype">int</span> yPos);
+<a name="l00210"></a>00210         <span class="keywordtype">int</span> getVisibleCharIndexAt(<a class="code" href="struct__KviIrcViewLine.html">KviIrcViewLine</a> * line, <span class="keywordtype">int</span> xPos, <span class="keywordtype">int</span> yPos);
+<a name="l00211"></a>00211         <span class="keywordtype">void</span> getLinkEscapeCommand(QString &amp;buffer,<span class="keyword">const</span> QString &amp;escape_cmd,<span class="keyword">const</span> QString &amp;escape_label);
+<a name="l00212"></a>00212         <span class="keywordtype">void</span> appendLine(<a class="code" href="struct__KviIrcViewLine.html">KviIrcViewLine</a> *ptr,<span class="keywordtype">bool</span> bRepaint);
+<a name="l00213"></a>00213         <span class="keywordtype">void</span> postUpdateEvent();
+<a name="l00214"></a>00214         <span class="keywordtype">void</span> fastScroll(<span class="keywordtype">int</span> lines = 1);
+<a name="l00215"></a>00215         <span class="keyword">const</span> <a class="code" href="kvi__string_8h.html#a2dc1d56cc0b9ac8c459aaef1d056ce2f">kvi_wchar_t</a> * getTextLine(<span class="keywordtype">int</span> msg_type,<span class="keyword">const</span> <a class="code" href="kvi__string_8h.html#a2dc1d56cc0b9ac8c459aaef1d056ce2f">kvi_wchar_t</a> * data_ptr,<a class="code" href="struct__KviIrcViewLine.html">KviIrcViewLine</a> *line_ptr,<span class="keywordtype">bool</span> bEnableTimeStamp = <span class="keyword">true</span>);
+<a name="l00216"></a>00216         <span class="keywordtype">void</span> calculateLineWraps(<a class="code" href="struct__KviIrcViewLine.html">KviIrcViewLine</a> *ptr,<span class="keywordtype">int</span> maxWidth);
+<a name="l00217"></a>00217         <span class="keywordtype">void</span> recalcFontVariables(<span class="keyword">const</span> QFontMetrics &amp;fm,<span class="keyword">const</span> QFontInfo &amp;fi);
+<a name="l00218"></a>00218         <span class="keywordtype">bool</span> checkSelectionBlock(<a class="code" href="struct__KviIrcViewLine.html">KviIrcViewLine</a> * line,<span class="keywordtype">int</span> bufIndex);
+<a name="l00219"></a>00219         <a class="code" href="struct__KviIrcViewWrappedBlock.html">KviIrcViewWrappedBlock</a> * getLinkUnderMouse(<span class="keywordtype">int</span> xPos,<span class="keywordtype">int</span> yPos,QRect * pRect = 0,QString * linkCmd = 0,QString * linkText = 0);
+<a name="l00220"></a>00220         <span class="keywordtype">void</span> doLinkToolTip(<span class="keyword">const</span> QRect &amp;rct,QString &amp;linkCmd,QString &amp;linkText);
+<a name="l00221"></a>00221         <span class="keywordtype">void</span> doMarkerToolTip(<span class="keyword">const</span> QRect &amp;rct);
+<a name="l00222"></a>00222         <span class="keywordtype">bool</span> checkMarkerArea(<span class="keyword">const</span> QRect &amp; area, <span class="keyword">const</span> QPoint &amp; mousePos);
+<a name="l00223"></a>00223         <span class="keywordtype">void</span> addControlCharacter(<a class="code" href="struct__KviIrcViewLineChunk.html">KviIrcViewLineChunk</a> *pC, QString &amp; szSelectionText);
+<a name="l00224"></a>00224 <span class="keyword">protected</span>:
+<a name="l00225"></a>00225         <span class="keyword">virtual</span> <span class="keywordtype">void</span> paintEvent(QPaintEvent *);
+<a name="l00226"></a>00226         <span class="keyword">virtual</span> <span class="keywordtype">void</span> resizeEvent(QResizeEvent *);
+<a name="l00227"></a>00227         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mousePressEvent(QMouseEvent *e);
+<a name="l00228"></a>00228         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseRealPressEvent(QMouseEvent *e);
+<a name="l00229"></a>00229         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseReleaseEvent(QMouseEvent *);
+<a name="l00230"></a>00230         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseDoubleClickEvent(QMouseEvent *e);
+<a name="l00231"></a>00231         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseMoveEvent(QMouseEvent *e);
+<a name="l00232"></a>00232         <span class="keyword">virtual</span> <span class="keywordtype">void</span> timerEvent(QTimerEvent *e);
+<a name="l00233"></a>00233         <span class="keyword">virtual</span> <span class="keywordtype">void</span> dragEnterEvent(QDragEnterEvent *e);
+<a name="l00234"></a>00234         <span class="keyword">virtual</span> <span class="keywordtype">void</span> dropEvent(QDropEvent *e);
+<a name="l00235"></a>00235         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> event(QEvent *e);
+<a name="l00236"></a>00236         <span class="keyword">virtual</span> <span class="keywordtype">void</span> wheelEvent(QWheelEvent *e);
+<a name="l00237"></a>00237         <span class="keyword">virtual</span> <span class="keywordtype">void</span> keyPressEvent(QKeyEvent *e);
+<a name="l00238"></a>00238         <span class="keywordtype">void</span> maybeTip(<span class="keyword">const</span> QPoint &amp;pnt);
+<a name="l00239"></a>00239         <span class="keyword">virtual</span> <span class="keywordtype">void</span> leaveEvent(QEvent *);
+<a name="l00240"></a>00240 <span class="keyword">protected</span> slots:
+<a name="l00241"></a>00241         <span class="keyword">virtual</span> <span class="keywordtype">void</span> scrollBarPositionChanged(<span class="keywordtype">int</span> newValue);
+<a name="l00242"></a>00242         <span class="keywordtype">void</span> masterDead();
+<a name="l00243"></a>00243         <span class="keywordtype">void</span> animatedIconChange();
+<a name="l00244"></a>00244 };
+<a name="l00245"></a>00245 
+<a name="l00246"></a>00246 <span class="preprocessor">#endif //_KVI_IRCVIEW_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Apr 17 17:23:30 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue May 4 19:53:54 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>$system.dbus</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>$system.dbus</h1>
+Performs a DBus call
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Usage</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code>$system.dbus(&lt;service&gt;,&lt;path&gt;,&lt;interface&gt;,&lt;method&gt;[,&lt;parameter1&gt;[,&lt;parameter2&gt;[,...]]])</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>This function allows performing simple Dbus calls without executing
+an external process. This feature is available ONLY when KDE support
+is compiled in the executable: this means that this function is absolutely
+non portable (don't use it in scripts that you're going to distribute).
+&lt;application&gt; is the name of the application being called, &lt;objectid&gt; is the
+identifier of the <a href="class_object.html">object</a> called, &lt;function&gt; is the function to be executed
+on the remote <a href="class_object.html">object</a> and &lt;parameter1&gt;,&lt;parameter2&gt;,... is the list of
+parameters to be passed. The &lt;function&gt; name must contain the
+trailing parenthesis and parameter specification (see examples).
+The parameters MUST be in the form "type=value"
+where "type" is the C++ type of the parameter and value
+is the string rappresentation of the parameter data. Currently
+<a href="doc_kvircintro.html">KVIrc</a> supports only QString,QByteArray,bool,int and uint data types.<br>
+The returned value is the string rappresentation of the returned
+data if the return type is known, otherwise it is the name of the data type returned.
+<br>
+If the application name is prefixed with "?" then the call is performed in "remote test"
+mode: no "remote" errors are printed and the function returns 1 if the call executed
+successfully and 0 if the call failed. This can be used with the very first
+call to programmaticaly test if the remote application is running.
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Syntax Specification</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code><font color="#8080a0">&lt;</font><font color="#808080">variant</font><font color="#8080a0">&gt;</font> <b>$system.dbus</b><b>(</b><font color="#8080a0">&lt;</font>service<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>path<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>interface<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>method<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>parameter1<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>parameter2<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,...<font color="#8080a0">]</font><font color="#8080a0">]</font><font color="#8080a0">]</font><b>)</b></code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Examples</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;#get a string list of torrents currently in queue in ktorrent
+&nbsp;&nbsp;&nbsp;&nbsp;echo $system.dbus("org.ktorrent.ktorrent","/KTorrent", "org.ktorrent.KTorrent","torrents")
+&nbsp;&nbsp;&nbsp;&nbsp;#stop a torrent in ktorrent by its name
+&nbsp;&nbsp;&nbsp;&nbsp;echo $system.dbus("org.ktorrent.ktorrent","/KTorrent", "org.ktorrent.KTorrent","stop","QString=Torrent Name")
+&nbsp;&nbsp;&nbsp;&nbsp;#start the kde task manager
+&nbsp;&nbsp;&nbsp;&nbsp;echo $system.dbus("org.freedesktop.ScreenSaver","/App", "org.kde.krunner.App","showTaskManager")
+&nbsp;&nbsp;&nbsp;&nbsp;#get the clipboard contents using dbus
+&nbsp;&nbsp;&nbsp;&nbsp;echo $system.dbus("org.kde.klipper","/klipper", "org.kde.klipper.klipper","getClipboardContents")
+</font></code></pre></td></tr></table></p>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_function_alphabetic_a.html">Functions</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

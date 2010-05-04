@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>Expression evaluation identifier</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>Expression evaluation identifier</h1>
+Expression evaluation identifier
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Usage</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code>$(&lt;expression&gt;)</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>Evaluates &lt;expression&gt; and returns its result.<br>
+If &lt;expression&gt; is a single string, <a href="doc_kvs_datatypes.html">array</a> or <a href="doc_kvs_datatypes.html">hash</a>, it is returned unmodified.<br>
+In any other case the expression evaluation returns a numeric value, either real or integer.<br>
+The expressions are really close to the C ones and have some minor extensions.<br>
+The supported <a href="doc_operators.html">operators</a> are +,-,*,/,|,&,^,||,&&,^^,&gt;&gt;,&lt;&lt;,&lt;,&gt;,&lt;=,&gt;=,==,!= and &lt;&gt; (synonim for !=).<br>
+The following table describes their meaning.<br>
+<table bgcolor="#D5D5D5" width="100%">
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>Operator</b></td><td><b>Description</b></td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a + b</td><td>Arithmetic sum: valid only for numeric operands</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a - b</td><td>Arithmetic subtraction: valid only for numeric operands</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a / b</td><td>Arithmetic division: valid only for numeric operands</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a * b</td><td>Arithmetic multiplication: valid only for numeric operands</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a % b</td><td>Arithmetic modulus: valid only for numeric operands</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a || b</td><td>Logical or: valid only for boolean operands</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a && b</td><td>Logical and: valid only for boolean operands</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a ^^ b</td><td>Logical xor: valid only for boolean operands</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a &gt;&gt; b</td><td>Bitwise shift right: valid only for integer operands</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a &lt;&lt; b</td><td>Bitwise shift left: valid only for integer operands</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a | b</td><td>Bitwise or: valid only for integer operands</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a & b</td><td>Bitwise and: valid only for integer operands</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a ^ b</td><td>Bitwise xor: valid only for integer operands</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a &gt; b</td><td>Greater than: valid for numeric or string operands. Case sensitive</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a &lt; b</td><td>Lower than: valid for numeric or string operands. Case sensitive</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a &gt;= b</td><td>Greater or equal to: valid for numeric or string operands. Case sensitive</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a &lt;= b</td><td>Lower or equal to: valid for numeric or string operands. Case sensitive</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a != b</td><td>Not equal to: valid for numeric or string operands. Case sensitive</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td>a == b</td><td>Equal to: valid for numeric or string operands. Case sensitive</td></tr>
+</table>
+The expressions can contain integer, real or string constants and <a href="doc_kvs_datatypes.html">variable</a> operands.<br>
+The integer constants can be also specified as hexadecimal numbers by prefixing them by '0x'.<br>
+The string constants should be enclosed in quotes.<br>
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Syntax Specification</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code><b>$</b><b>(</b><font color="#8080a0">&lt;</font>expression<font color="#8080a0">&gt;</font><b>)</b></code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Examples</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;echo $(10 + 5 * 100)
+&nbsp;&nbsp;&nbsp;&nbsp;echo $(10 / 3)
+&nbsp;&nbsp;&nbsp;&nbsp;echo $(10 / 3.0)
+&nbsp;&nbsp;&nbsp;&nbsp;echo $(10.0 + 5 * 100)
+&nbsp;&nbsp;&nbsp;&nbsp;echo $(145 & 2)
+&nbsp;&nbsp;&nbsp;&nbsp;echo $("hello" &gt; "ciao")
+&nbsp;&nbsp;&nbsp;&nbsp;echo $(10 == "10")
+&nbsp;&nbsp;&nbsp;&nbsp;%a = 100
+&nbsp;&nbsp;&nbsp;&nbsp;%b = 50.3
+&nbsp;&nbsp;&nbsp;&nbsp;%c = "test"
+&nbsp;&nbsp;&nbsp;&nbsp;echo $(%a + %b)
+&nbsp;&nbsp;&nbsp;&nbsp;echo $("%a%b" + 1)
+&nbsp;&nbsp;&nbsp;&nbsp;echo $(%a + %b &gt; %c)
+&nbsp;&nbsp;&nbsp;&nbsp;echo $(-(10 + 20) * 3)
+&nbsp;&nbsp;&nbsp;&nbsp;echo $(1 ^ 2)
+&nbsp;&nbsp;&nbsp;&nbsp;echo $(1 ^ 1)
+&nbsp;&nbsp;&nbsp;&nbsp;echo $(0xffff == 65535)
+&nbsp;&nbsp;&nbsp;&nbsp;...
+</font></code></pre></td></tr></table></p>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

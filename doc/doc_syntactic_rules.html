@@ -1,0 +1,188 @@
+<html>
+<head>
+<title>Syntactic rules</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>Syntactic rules</h1>
+Syntactic rules of the KVIrc scripting language
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>In the following table you can find a good part of the
+<a href="doc_kvircintro.html">KVIrc</a> scripting language syntactic rules.<br>
+<br>
+&lt;entity&gt; indicates a ENTITY THAT CAN APPEAR EXACTLY ONE TIME.<br>
+[&lt;entity&gt;] indicates an OPTIONAL ENTITY.<br>
+{&lt;entity&gt;} indicates an ENTITY THAT CAN APPEAR ONE OR MORE TIMES.<br>
+'entity' indicates a LITERAL ENTITY: written exactly as it is.<br>
+&lt;entity1&gt;|&lt;entity2&gt; indicates mutually exclusive choices.<br>
+The mutually exclusive choices are often separated in two or more
+rules (productions), to improve <a href="doc_kvs_codingtips.html">readability</a>.<br>
+<table bgcolor="#D5D5D5" width="100%">
+<tr>
+<td>&lt;command buffer&gt;</td>
+<td>[&lt;whitespace&gt;][&lt;command block&gt;]{&lt;command buffer&gt;}</td>
+</tr>
+<tr>
+<td>&lt;command buffer&gt;</td>
+<td>[&lt;whitespace&gt;][&lt;single command&gt;]{&lt;command buffer&gt;}</td>
+</tr>
+<tr>
+<td>&lt;whitespace&gt;</td>
+&nbsp;&nbsp;&nbsp;&nbsp;    <td>{&lt;space&gt;|&lt;tab&gt;|&lt;newline&gt;}['\'&lt;newline&gt;][&lt;whitespace&gt;]</td>
+</tr>
+<tr>
+<td>&lt;space&gt;</td>
+<td>' '['\'&lt;newline&gt;][&lt;space&gt;] (Ascii space character)</td>
+</tr>
+<tr>
+<td>&lt;tab&gt;</td>
+<td>'\t' (Ascii horizontal tabulation character)</td>
+</tr>
+<tr>
+<td>&lt;newline&gt;</td>
+<td>'\n' (Ascii line feed (LF) character)</td>
+</tr>
+<tr>
+<td>&lt;command block&gt;</td>
+<td>'{' &lt;command buffer&gt;[&lt;whitespace&gt;] '}'</td>
+</tr>
+<tr>
+<td>&lt;single command&gt;</td>
+<td>&lt;comment&gt;</td>
+</tr>
+<tr>
+<td>&lt;single command&gt;</td>
+<td>&lt;lvalue command&gt; &lt;command terminator&gt;</td>
+</tr>
+<tr>
+<td>&lt;single command&gt;</td>
+<td>&lt;rvalue command&gt; &lt;command terminator&gt;</td>
+</tr>
+<tr>
+<td>&lt;comment&gt;</td>
+<td>'#' {&lt;non comment terminator&gt;} &lt;comment terminator&gt;</td>
+</tr>
+<tr>
+<td>&lt;comment terminator&gt;</td>
+<td>&lt;newline&gt; | &lt;end of string&gt;</td>
+</tr>
+<tr>
+<td>&lt;end of string&gt;</td>
+<td>No character (internally Ascii character 0)</td>
+</tr>
+<tr>
+<td>&lt;command terminator&gt;</td>
+<td>&lt;newline&gt; | &lt;end of string&gt; | ';'</td>
+</tr>
+<tr>
+<td>&lt;non comment-terminator&gt;</td>
+<td>Any Ascii character except &lt;newline&gt; and &lt;end of string&gt;</td>
+</tr>
+<tr>
+<td>&lt;simple command&gt;</td>
+<td>[&lt;module name&gt;'.']&lt;command name&gt;[&lt;switch list&gt;]{&lt;space&gt;}&lt;command dependant part&gt;</td>
+</tr>
+<tr>
+<td>&lt;lvalue command&gt;</td>
+<td>&lt;<a href="doc_kvs_datatypes.html">variable</a>&gt;[&lt;space&gt;]&lt;operation&gt;</td>
+</tr>
+<tr>
+<td>&lt;lvalue command&gt;</td>
+<td>&lt;<a href="doc_kvs_datatypes.html">variable</a>&gt;'-&gt;'&lt;<a href="class_object.html">object</a> command&gt;</td>
+</tr>
+<tr>
+<td>&lt;lvalue command&gt;</td>
+<td>&lt;identifier&gt;'-&gt;'&lt;<a href="class_object.html">object</a> command&gt;</td>
+</tr>
+<tr>
+<td>&lt;operation&gt;</td>
+<td>&lt;one op <a href="doc_operators.html">operator</a>&gt;</td>
+</tr>
+&nbsp;&nbsp;&nbsp;&nbsp;    <tr>
+<td>&lt;operation&gt;</td>
+<td>&lt;two op <a href="doc_operators.html">operator</a>&gt;[&lt;space&gt;]&lt;param string&gt;</td>
+</tr>
+<tr>
+<td>&lt;switch list&gt;</td>
+<td>{&lt;space&gt;}'-'&lt;alpha char&gt;[{&lt;space&gt;}'='&lt;single parameter&gt;][&lt;switch list&gt;]</td>
+</tr>
+<tr>
+<td>&lt;command name&gt;</td>
+<td>&lt;alphanumeric char&gt;{&lt;alphanumeric char&gt;}</td>
+</tr>
+<tr>
+<td>&lt;module name&gt;</td>
+<td>&lt;alphanumeric char&gt;{&lt;alphanumeric char&gt;}</td>
+</tr>
+<tr>
+<td>&lt;alphanumeric char&gt;</td>
+<td>Ascii characters 'A' to 'Z' , 'a' to 'z' , '0' to '9' and '_'</td>
+</tr>
+<tr>
+<td>&lt;<a href="doc_kvs_datatypes.html">variable</a>&gt;</td>
+<td>&lt;<a href="doc_kvs_datatypes.html">global variable</a>&gt; | &lt;<a href="doc_kvs_datatypes.html">local variable</a>&gt;</td>
+</tr>
+<tr>
+<td>&lt;<a href="doc_kvs_datatypes.html">global variable</a>&gt;</td>
+<td>'%' &lt;uppercase letter&gt; [&lt;alphanumeric char&gt;]['['&lt;param string&gt;']']</td>
+</tr>
+<tr>
+<td>&lt;<a href="doc_kvs_datatypes.html">local variable</a>&gt;</td>
+<td>'%' &lt;lowercase letter&gt; [&lt;alphanumeric char&gt;]['['&lt;param string&gt;']']</td>
+</tr>
+<tr>
+<td>&lt;param string&gt;</td>
+<td>[&lt;single parameter&gt;][&lt;space&gt;[&lt;param string&gt;]]</td>
+</tr>
+<tr>
+<td>&lt;single parameter&gt;</td>
+<td>&lt;<a href="doc_kvs_datatypes.html">variable</a>&gt; | &lt;identifier&gt; | &lt;nonterminator token&gt; | &lt;string&gt;</td>
+</tr>
+<tr>
+<td>&lt;nonterminator token&gt;</td>
+<td>&lt;nonterminator char&gt;['\'&lt;newline&gt;&lt;nonterminator char&gt;]</td>
+</tr>
+<tr>
+<td>&lt;nonterminator char&gt;</td>
+<td>Any ascii character except &lt;space&gt; and &lt;command terminator&gt;</td>
+</tr>
+<tr>
+<td>&lt;command dependant part&gt;</td>
+<td><b>Production in each command help page</b></td>
+</tr>
+</table>
+To be continued...
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

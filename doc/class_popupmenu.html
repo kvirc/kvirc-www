@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>popupmenu class</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>popupmenu class</h1>
+Provides a popup menu.
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Inherits</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><a href="class_object.html">object</a>
+<a href="class_widget.html">widget</a></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>This widget can be used to display a popup menu.Technically, a popup menu consists of a list of menu items.<br>
+You add items with insertItem(). An item is either a string. In addition, items can have an optional icon drawn on the very left side.<br>
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Functions</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#E0E0E0">
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="insertItem">$insertItem(&lt;text:string&gt;,[icon_id:string])</a></font></b></code></td></tr>
+<tr><td>Inserts menu items into a popup menu with optional icon and return the popup identifier.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="insertWidget<br>">$insertWidget(&lt;widget:object&gt;)<br></a></font></b></code></td></tr>
+<tr><td>Inserts widget items int a popup menu and return the popup identifier.<br> The widget is treats as a separator; this means that the item is not selectable and you can, for example, simply insert a label if you need a popup menu with a title.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="insertHandle">$insertHandle(&lt;text_label:string&gt;,&lt;popupmenu:object&gt;,[icon])</a></font></b></code></td></tr>
+<tr><td>Inserts a submenu with optional icon into the popup menu.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="exec">$exec([&lt;widget:objects&gt;,&lt;x:uinteger&gt;,&lt;y:integer&gt;])</a></font></b></code></td></tr>
+<tr><td>If called without paramaters show the popup menu at the current pointer position.<br> With the optional parameters show the popup menu at the coordinate x,y widget parameter relative.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="removeItem">$removeItem(&lt;popup_id:Uinteger&gt;)</a></font></b></code></td></tr>
+<tr><td>Removes the menu item that has the identifier id.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="removeItemAt">$removeItemAt(&lt;index:uinteger&gt;)</a></font></b></code></td></tr>
+<tr><td>Removes the menu item at position index.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="insertSeparator">$insertSeparator(&lt;index:uinteger&gt;)</a></font></b></code></td></tr>
+<tr><td>Inserts a separator at position index.<br> If the index is negative the separator becomes the last menu item.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="activatedEvent">$activatedEvent(&lt;popup_id:uinteger&gt;)</a></font></b></code></td></tr>
+<tr><td>This function is called when a menu item and return the the item id.<br> The default implementation emits the <a href="#activated">$activated</a>() signal.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="highligthtedEvent">$highligthtedEvent(&lt;popup_id:uinteger&gt;)</a></font></b></code></td></tr>
+<tr><td>This function is called when a menu item is highlighted and return the item id.<br> The default implementation emits the <a href="#highlighted">$highlighted</a>() signal.</td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Signals</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#E0E0E0">
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="activated">$activated()</a></font></b></code></td></tr>
+<tr><td>This signal is emitted by the default implementation of <a href="#activatedEvent">$activatedEvent</a>().</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="highlighted">$highlighted()</a></font></b></code></td></tr>
+<tr><td>This signal is emitted by the default implementation of <a href="#highlightedEvent">$highlightedEvent</a>(). <br> |-EXAMPLE POPUP MENU-|<br> |--Start: # First of all we create an array wich will be used to create random colors.<br> %Hex[]=$array(0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F)<br> <br> class (ws,widget)<br> {<br> #In the constructor we create everything that belong to the single widget.<br> &nbsp;&nbsp;&nbsp;&nbsp;constructor<br> &nbsp;&nbsp;&nbsp;&nbsp;{<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#Geometry of the widget and setting-up of popupmenu <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$-&gt;$setGeometry(%X,%Y,100,100)<br> &nbsp;&nbsp;&nbsp;&nbsp;    $$-&gt;%lay=$new(layout,$$)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#Here we generate a cicle to create our labels inside the widget.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%i=0<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while (%i&lt;10)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$-&gt;%label=$new(label,$$)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$-&gt;%label-&gt;$settext("Another class by N\&G")<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#We set our foreground's coulor using the hex arrey in random way.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%color=%Hex[$rand(14)]%Hex[$rand(14)]%Hex[$rand(14)]%Hex[$rand(14)]%Hex[$rand(14)]%Hex[$rand(14)]<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$-&gt;%label-&gt;$setforegroundcolor(%color)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$-&gt;%label-&gt;$setautoresize(1)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#We add the label to the widget's popupmenu.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$-&gt;%lay-&gt;$addwidget($$-&gt;%label,%i,0)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%i++;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#We make the popupmenu relative to this widget: this is merely demonstrative.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#because it creates 25 identical popups.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$-&gt;%Popupmenu=$new(popupmenu,$$)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#we create the label widget wich will be used as popup's title<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$-&gt;%Popuptitle=$new(label)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$-&gt;%Popuptitle-&gt;$settext(&lt;B&gt;&lt;U&gt;"Windows Options"&lt;/B&gt;&lt;/U&gt;)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$-&gt;%Popuptitle-&gt;$setAlignment(Center)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#and we add it.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%A=$$-&gt;%Popuptitle<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$-&gt;%Popupmenu-&gt;$insertwidget(%A)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#Here we keep the various IDs in the arrays<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%Tile[%I]=$$-&gt;%Popupmenu-&gt;$insertItem("Tile",118)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%Cascade[%I]=$$-&gt;%Popupmenu-&gt;$insertItem("Cascade",115)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$-&gt;%Popupmenu-&gt;$insertSeparator(3)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%Closeactw[%I]=$$-&gt;%Popupmenu-&gt;$insertItem("Close Active Window",08)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%Closeallw[%I]=$$-&gt;%Popupmenu-&gt;$insertItem("Close All Window",58)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$-&gt;$show()<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;privateimpl($$-&gt;%Popupmenu,activatedEvent)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%id=$0<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%i = 0<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#with this cicle we control wich of the items has been called  comparing the id given back by the event with our arrays created before;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while (%i&lt;20)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (%id == %Tile[%i]) return %Workspace-&gt;$tile()<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (%id == %Cascade[%i]) return %Workspace-&gt;$cascade()<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (%id == %Closeactw[%i]) return %Workspace-&gt;$closeactivewindow()<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (%id == %Closeallw[%i]) return %Workspace-&gt;$closeallwindows()<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%i ++<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;&nbsp;}<br>    #we activate the popup pushing the right mouse button on the widget<br>   mousepressevent<br> &nbsp;&nbsp;&nbsp;&nbsp;{<br> &nbsp;&nbsp;&nbsp;&nbsp;   if ($0 == 1) $$-&gt;%Popupmenu-&gt;$exec()<br> &nbsp;&nbsp;&nbsp;&nbsp;}<br> }<br> %Workspace=$new(workspace)<br> %Workspace-&gt;$resize(640,480)<br> %I=0<br> %Cicle=1<br> while (%I&lt;20)<br> {<br> &nbsp;&nbsp;&nbsp;&nbsp;%X=$rand(500)<br> &nbsp;&nbsp;&nbsp;&nbsp;%Y=$rand(480)<br> &nbsp;&nbsp;&nbsp;&nbsp;%Widget=$new(ws,%Workspace)<br> &nbsp;&nbsp;&nbsp;&nbsp;%I++<br> }<br> #Let's show! %Workspace-&gt;$show<br> |--End.<br><br></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

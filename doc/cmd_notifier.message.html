@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>notifier.message</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>notifier.message</h1>
+Adds a message to the notifier window
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Usage</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code>notifier.message [-q|quiet] [-n|noanim] [-w[=&lt;window_id&gt;]!] [-i=&lt;image_id&gt;] [-t=&lt;timeout&gt;] &lt;messag&gt;</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>Adds a message to the notifier window.
+The notifier window is shown (if not already visible)
+unless the -q switch is present.
+The new message becomes the current message of the notifier
+unless the user is already typing in the <a href="class_painter.html">input</a> window
+and the typed message would be directed to a different window.
+In that case the message is appended at the end of the
+message queue and the user will be able to scroll to it
+by using the proper notifier buttons.<br>
+The &lt;message&gt; text can contain simple html tags: basically you are
+allowed to use &lt;b&gt; and &lt;i&gt;. The usage of other
+tags is possible but is discouraged since it tends to
+mess up the message display. In particular you should avoid
+any color and/or font specification since the notifier is
+skinnable and you don't know which color will result in a visible text.
+<b>Please note that the user can forcibly disable the notifier
+for a limited period of time (a sort of "don't bug me" option).</b>
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Switches</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#D5D5D5">
+<tr bgcolor="#E0E0E0"><td><b>-n | --noanim</b></td></tr>
+<tr><td>Do not animate</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-w | --windowid</b></td></tr>
+<tr><td>Causes the message gets attacched to the specified window and the user is able to type commands in that window after showing up the notifier input. If the "=&lt;window_id&gt;" part is omitted then the current window is used.<br></td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-i | --icon</b></td></tr>
+<tr><td>If the -i=&lt;image_id&gt; switch is present then the message has the specified image displayed. See the <a href="doc_image_id.html">documentation on the image identifier</a> for more information about the image_id parameter.<br></td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-q | --quiet</b></td></tr>
+<tr><td>If you use -q then you must explicitly call <a href="cmd_notifier.show.html">notifier.show</a> to show the notifier. If the -n switch is present then the show action will not be animated (the notifier will be shown immediately instead of fading in). Obviously -n has no meaning if -q is used.<br></td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-t | --timeout</b></td></tr>
+<tr><td>Set the message lifetime to &lt;timeout&gt; Obviously this option has no meaning if the window is not going to be shown. The timeout may be overriddent by new messages but only in the future. If the timeout expires and is not overridden by any new message then the window will be automatically hidden. A zero timeout disables auto-hiding.</td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Syntax Specification</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code><b>notifier.message</b> <font color="#8080a0">[</font>-q|quiet<font color="#8080a0">]</font> <font color="#8080a0">[</font>-n|noanim<font color="#8080a0">]</font> <font color="#8080a0">[</font>-w<font color="#8080a0">[</font>=<font color="#8080a0">&lt;</font>window_id<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font>!<font color="#8080a0">]</font> <font color="#8080a0">[</font>-i=<font color="#8080a0">&lt;</font>image_id<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font> <font color="#8080a0">[</font>-t=<font color="#8080a0">&lt;</font>timeout<font color="#808080">:integer</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font> <font color="#8080a0">&lt;</font>messag<font color="#808080">:string</font><font color="#8080a0">&gt;</font></code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Examples</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;notifier.message Hello world!
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_notifier.hide.html">notifier.hide</a>
+&nbsp;&nbsp;&nbsp;&nbsp;notifier.message -q This is a hidden message!
+&nbsp;&nbsp;&nbsp;&nbsp;notifier.message -q -i=14 This is a second hidden message with an icon
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_notifier.show.html">notifier.show</a>
+&nbsp;&nbsp;&nbsp;&nbsp;notifier.message -w This message has the current window associated
+&nbsp;&nbsp;&nbsp;&nbsp;notifier.message -w=<a href="fnc_window.html">$window</a> This is equivalent to the above
+&nbsp;&nbsp;&nbsp;&nbsp;notifier.message &lt;b&gt;Bold text&lt;/b&gt; and normal text
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_notifier.hide.html">notifier.hide</a>
+&nbsp;&nbsp;&nbsp;&nbsp;notifier.message -t=10 This message will be shown only for 10 seconds
+</font></code></pre></td></tr></table></p>
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>See also</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><a href="cmd_notifier.show.html">notifier.show</a> <a href="cmd_notifier.hide.html">notifier.hide</a> <a href="fnc_notifier.isenabled.html">$notifier.isenabled</a>()
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

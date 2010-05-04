@@ -221,8 +221,9 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Selects one character at the given position.  <a href="#ab39644510aae5b04cddddc24e45b8054"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInputEditor.html#a98819194c42d11e8ad84f38a4caad236">separate</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Inserts an action separator in the undo stack.  <a href="#a98819194c42d11e8ad84f38a4caad236"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInputEditor.html#a1339e8f268170bd200c14f316a9d5ad4">standardNickCompletion</a> (bool bAddMask, QString &amp;szWord, bool bFirstWordInLine)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Completes the nickname.  <a href="#a1339e8f268170bd200c14f316a9d5ad4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInputEditor.html#a7f0b5e78bf9b58da2532a48f9881b2f0">standardNickCompletion</a> (bool bAddMask, QString &amp;szWord, bool bFirstWordInLine, bool bInCommand)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Completes the nickname specified by szWord (inserts the completed text to the input line).  <a href="#a7f0b5e78bf9b58da2532a48f9881b2f0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInputEditor.html#a9b430032f032a63c89461b0b92ceb710">standardNickCompletionInsertCompletedText</a> (const QString &amp;szReplacedWord, const QString &amp;szCompletedText, bool bFirstWordInLine, bool bInCommand)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInputEditor.html#a623aacf7b4860f990f2a0b1f32c556d2">xPositionFromCharIndex</a> (int iChIdx)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the current position from a given character.  <a href="#a623aacf7b4860f990f2a0b1f32c556d2"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Static Private Member Functions</h2></td></tr>
@@ -363,7 +364,7 @@
 
 <p>References <a class="el" href="kvi__input__editor_8h_source.html#l00162">history</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">Separator</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00164">separator</a>, <a class="el" href="namespaceKviOsInfo.html#ac118c3a07dc4cbbe510f06bafe548511">KviOsInfo::type()</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00163">undoState</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02004">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">insertText()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02025">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">insertText()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>.</p>
 
 </div>
 </div>
@@ -387,7 +388,7 @@
 
 <p>References <a class="el" href="kvi__input__editor_8h_source.html#l00096">g_pLastFontMetrics</a>, <a class="el" href="kvi__options_8h_source.html#l00668">KVI_OPTION_FONT</a>, and <a class="el" href="kvi__options_8h_source.html#l00611">KviOption_fontInput</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00424">KviInput::applyOptions()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00407">KviInput::applyOptions()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>.</p>
 
 </div>
 </div>
@@ -416,7 +417,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>int </dd></dl>
 
-<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00095">g_iInputFontCharWidth</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00438">getLastFontMetrics()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00060">KVI_INPUT_MARGIN</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>.</p>
+<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00095">g_iInputFontCharWidth</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00444">getLastFontMetrics()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00060">KVI_INPUT_MARGIN</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01094">handleDragSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00652">mouseDoubleClickEvent()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>.</p>
 
@@ -440,7 +441,7 @@
 <p>Clears the input line. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l01997">home()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02058">selectOneChar()</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l02018">home()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02079">selectOneChar()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>.</p>
 
@@ -472,7 +473,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__console_8cpp_source.html#l00245">KviConsole::completeChannel()</a>, <a class="el" href="kvi__kvs__kernel_8cpp_source.html#l00114">KviKvsKernel::completeCommand()</a>, <a class="el" href="kvi__app__fs_8cpp_source.html#l00224">KviApp::completeDirectory()</a>, <a class="el" href="kvi__kvs__kernel_8cpp_source.html#l00152">KviKvsKernel::completeFunction()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00500">KviUserListView::completeNickBashLike()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00265">KviConsole::completeServer()</a>, <a class="el" href="kvi__window_8h_source.html#l00206">KviWindow::console()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="namespaceKviQString.html#afe84786f6e548c13eb18c3c6a8f25491">KviQString::equalCIN()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00125">g_pApp</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01690">getWordBeforeCursor()</a>, <a class="el" href="kvi__kvs__kernel_8h_source.html#l00093">KviKvsKernel::instance()</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00664">KVI_OPTION_STRING</a>, <a class="el" href="kvi__out_8h_source.html#l00042">KVI_OUT_SYSTEMMESSAGE</a>, <a class="el" href="kvi__options_8h_source.html#l00229">KviOption_boolBashLikeNickCompletion</a>, <a class="el" href="kvi__options_8h_source.html#l00155">KviOption_boolUseNickCompletionPostfixForFirstWordOnly</a>, <a class="el" href="kvi__options_8h_source.html#l00324">KviOption_boolZshLikeNickCompletion</a>, <a class="el" href="kvi__options_8h_source.html#l00364">KviOption_stringNickCompletionPostfix</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00148">m_pKviWindow</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00138">m_pUserListView</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00139">m_szLastCompletedNick</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="namespaceKviQString.html#a772d51df816f541ea4e7c760c49bf765">KviQString::nullTerminatedArray()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01267">KviWindow::output()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01308">KviWindow::outputNoFmt()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02048">repaintWithCursorOn()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01887">replaceWordBeforeCursor()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01898">standardNickCompletion()</a>, and <a class="el" href="kvi__window_8h_source.html#l00184">KviWindow::windowName()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__console_8cpp_source.html#l00245">KviConsole::completeChannel()</a>, <a class="el" href="kvi__kvs__kernel_8cpp_source.html#l00114">KviKvsKernel::completeCommand()</a>, <a class="el" href="kvi__app__fs_8cpp_source.html#l00224">KviApp::completeDirectory()</a>, <a class="el" href="kvi__kvs__kernel_8cpp_source.html#l00152">KviKvsKernel::completeFunction()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00500">KviUserListView::completeNickBashLike()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00265">KviConsole::completeServer()</a>, <a class="el" href="kvi__window_8h_source.html#l00206">KviWindow::console()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="namespaceKviQString.html#afe84786f6e548c13eb18c3c6a8f25491">KviQString::equalCIN()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00125">g_pApp</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01690">getWordBeforeCursor()</a>, <a class="el" href="kvi__kvs__kernel_8h_source.html#l00093">KviKvsKernel::instance()</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00664">KVI_OPTION_STRING</a>, <a class="el" href="kvi__out_8h_source.html#l00042">KVI_OUT_SYSTEMMESSAGE</a>, <a class="el" href="kvi__options_8h_source.html#l00229">KviOption_boolBashLikeNickCompletion</a>, <a class="el" href="kvi__options_8h_source.html#l00155">KviOption_boolUseNickCompletionPostfixForFirstWordOnly</a>, <a class="el" href="kvi__options_8h_source.html#l00324">KviOption_boolZshLikeNickCompletion</a>, <a class="el" href="kvi__options_8h_source.html#l00364">KviOption_stringNickCompletionPostfix</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00148">m_pKviWindow</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00138">m_pUserListView</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00139">m_szLastCompletedNick</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="namespaceKviQString.html#a772d51df816f541ea4e7c760c49bf765">KviQString::nullTerminatedArray()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01269">KviWindow::output()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01310">KviWindow::outputNoFmt()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02069">repaintWithCursorOn()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01894">replaceWordBeforeCursor()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01923">standardNickCompletion()</a>, and <a class="el" href="kvi__window_8h_source.html#l00184">KviWindow::windowName()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>.</p>
 
@@ -496,7 +497,7 @@
 <p>Copies the text to the system clipboard. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l00845">hasSelection()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02048">repaintWithCursorOn()</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l00845">hasSelection()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02069">repaintWithCursorOn()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>.</p>
 
@@ -522,7 +523,7 @@
 <p>If the system supports the mouse clipboard, the text will be copied there </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l00845">hasSelection()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02048">repaintWithCursorOn()</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l00845">hasSelection()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02069">repaintWithCursorOn()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01057">mouseReleaseEvent()</a>.</p>
 
@@ -546,7 +547,7 @@
 <p>Cuts the selection from the input line. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l02194">addCommand()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">DeleteSelection</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00845">hasSelection()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02048">repaintWithCursorOn()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02058">selectOneChar()</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00154">SetSelection</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l02215">addCommand()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">DeleteSelection</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00845">hasSelection()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02069">repaintWithCursorOn()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02079">selectOneChar()</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00154">SetSelection</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>.</p>
 
@@ -586,7 +587,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00435">drawTextBlock()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00502">extractNextBlock()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00095">g_iInputFontCharWidth</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00438">getLastFontMetrics()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00471">getSubstituteChar()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00063">KVI_INPUT_DEF_BACK</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00064">KVI_INPUT_DEF_FORE</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00058">KVI_INPUT_XTRAPADDING</a>, <a class="el" href="kvi__options_8h_source.html#l00665">KVI_OPTION_COLOR</a>, <a class="el" href="kvi__options_8h_source.html#l00447">KviOption_colorInputControl</a>, <a class="el" href="kvi__options_8h_source.html#l00446">KviOption_colorInputCursor</a>, <a class="el" href="kvi__options_8h_source.html#l00448">KviOption_colorInputForeground</a>, <a class="el" href="kvi__options_8h_source.html#l00444">KviOption_colorInputSelectionBackground</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00121">m_bControlBlock</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00116">m_bCurBold</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00123">m_bCursorOn</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00117">m_bCurUnderline</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00112">m_bIMComposing</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00119">m_iBlockLen</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00120">m_iBlockWidth</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00115">m_iCurBack</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00114">m_iCurFore</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00109">m_iIMLength</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00110">m_iIMSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00111">m_iIMSelectionLength</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00108">m_iIMStart</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00128">m_iLastCursorXPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00599">runUpToTheFirstVisibleChar()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02093">xPositionFromCharIndex()</a>.</p>
+<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00435">drawTextBlock()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00502">extractNextBlock()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00095">g_iInputFontCharWidth</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00444">getLastFontMetrics()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00471">getSubstituteChar()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00063">KVI_INPUT_DEF_BACK</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00064">KVI_INPUT_DEF_FORE</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00058">KVI_INPUT_XTRAPADDING</a>, <a class="el" href="kvi__options_8h_source.html#l00665">KVI_OPTION_COLOR</a>, <a class="el" href="kvi__options_8h_source.html#l00447">KviOption_colorInputControl</a>, <a class="el" href="kvi__options_8h_source.html#l00446">KviOption_colorInputCursor</a>, <a class="el" href="kvi__options_8h_source.html#l00448">KviOption_colorInputForeground</a>, <a class="el" href="kvi__options_8h_source.html#l00444">KviOption_colorInputSelectionBackground</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00121">m_bControlBlock</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00116">m_bCurBold</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00123">m_bCursorOn</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00117">m_bCurUnderline</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00112">m_bIMComposing</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00119">m_iBlockLen</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00120">m_iBlockWidth</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00115">m_iCurBack</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00114">m_iCurFore</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00109">m_iIMLength</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00110">m_iIMSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00111">m_iIMSelectionLength</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00108">m_iIMStart</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00128">m_iLastCursorXPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00599">runUpToTheFirstVisibleChar()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02114">xPositionFromCharIndex()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00225">paintEvent()</a>.</p>
 
@@ -669,7 +670,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00438">getLastFontMetrics()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00063">KVI_INPUT_DEF_BACK</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00064">KVI_INPUT_DEF_FORE</a>, <a class="el" href="kvi__options_8h_source.html#l00665">KVI_OPTION_COLOR</a>, <a class="el" href="kvi__options_8h_source.html#l00670">KVI_OPTION_MIRCCOLOR</a>, <a class="el" href="kvi__options_8h_source.html#l00443">KviOption_colorInputBackground</a>, <a class="el" href="kvi__options_8h_source.html#l00448">KviOption_colorInputForeground</a>, <a class="el" href="kvi__options_8h_source.html#l00445">KviOption_colorInputSelectionForeground</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00116">m_bCurBold</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00117">m_bCurUnderline</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00120">m_iBlockWidth</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00115">m_iCurBack</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00114">m_iCurFore</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00444">getLastFontMetrics()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00063">KVI_INPUT_DEF_BACK</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00064">KVI_INPUT_DEF_FORE</a>, <a class="el" href="kvi__options_8h_source.html#l00665">KVI_OPTION_COLOR</a>, <a class="el" href="kvi__options_8h_source.html#l00670">KVI_OPTION_MIRCCOLOR</a>, <a class="el" href="kvi__options_8h_source.html#l00443">KviOption_colorInputBackground</a>, <a class="el" href="kvi__options_8h_source.html#l00448">KviOption_colorInputForeground</a>, <a class="el" href="kvi__options_8h_source.html#l00445">KviOption_colorInputSelectionForeground</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00116">m_bCurBold</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00117">m_bCurUnderline</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00120">m_iBlockWidth</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00115">m_iCurBack</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00114">m_iCurFore</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>.</p>
 
@@ -713,7 +714,7 @@
 <p>Moves the cursor to the end of the input line. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00128">m_iLastCursorXPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02029">moveRightFirstVisibleCharToShowCursor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02048">repaintWithCursorOn()</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00128">m_iLastCursorXPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02050">moveRightFirstVisibleCharToShowCursor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02069">repaintWithCursorOn()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01032">selectAll()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01049">setText()</a>.</p>
 
@@ -884,7 +885,7 @@
 
 <p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00095">g_iInputFontCharWidth</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02065">charIndexFromXPosition()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00435">drawTextBlock()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02029">moveRightFirstVisibleCharToShowCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00204">sizeHint()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02093">xPositionFromCharIndex()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02086">charIndexFromXPosition()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00435">drawTextBlock()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02050">moveRightFirstVisibleCharToShowCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00204">sizeHint()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02114">xPositionFromCharIndex()</a>.</p>
 
 </div>
 </div>
@@ -956,7 +957,7 @@
 
 <p>References <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01712">completion()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01898">standardNickCompletion()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01712">completion()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01923">standardNickCompletion()</a>.</p>
 
 </div>
 </div>
@@ -978,7 +979,7 @@
 <p>Handles the drag selection. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l02065">charIndexFromXPosition()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00129">m_iSelectionAnchorChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02029">moveRightFirstVisibleCharToShowCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02048">repaintWithCursorOn()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02058">selectOneChar()</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l02086">charIndexFromXPosition()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00129">m_iSelectionAnchorChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02050">moveRightFirstVisibleCharToShowCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02069">repaintWithCursorOn()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02079">selectOneChar()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01077">timerEvent()</a>.</p>
 
@@ -1028,7 +1029,7 @@
 
 <p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l00204">sizeHint()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00402">KviInput::heightHint()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00385">KviInput::heightHint()</a>.</p>
 
 </div>
 </div>
@@ -1050,7 +1051,7 @@
 <p>Moves the cursor to the start of the input line. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02048">repaintWithCursorOn()</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02069">repaintWithCursorOn()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01042">clear()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, and <a class="el" href="kvi__topicw_8cpp_source.html#l00418">KviTopicWidget::switchMode()</a>.</p>
 
@@ -1103,7 +1104,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00112">m_bIMComposing</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00151">m_bReadOnly</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00146">m_bUpdatesEnabled</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00109">m_iIMLength</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00110">m_iIMSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00111">m_iIMSelectionLength</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00108">m_iIMStart</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02048">repaintWithCursorOn()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00965">replaceSegment()</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00112">m_bIMComposing</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00151">m_bReadOnly</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00146">m_bUpdatesEnabled</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00109">m_iIMLength</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00110">m_iIMSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00111">m_iIMSelectionLength</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00108">m_iIMStart</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02069">repaintWithCursorOn()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00965">replaceSegment()</a>.</p>
 
 </div>
 </div>
@@ -1132,9 +1133,9 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l02194">addCommand()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">Insert</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00146">m_bUpdatesEnabled</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00103">m_iMaxBufferSize</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02029">moveRightFirstVisibleCharToShowCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02048">repaintWithCursorOn()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02058">selectOneChar()</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l02215">addCommand()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">Insert</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00146">m_bUpdatesEnabled</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00103">m_iMaxBufferSize</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02050">moveRightFirstVisibleCharToShowCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02069">repaintWithCursorOn()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02079">selectOneChar()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00414">KviInput::insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01670">keyReleaseEvent()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00397">KviInput::insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01670">keyReleaseEvent()</a>.</p>
 
 </div>
 </div>
@@ -1163,9 +1164,9 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l02194">addCommand()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">Insert</a>, <a class="el" href="kvi__options_8h_source.html#l00667">KVI_OPTION_UINT</a>, <a class="el" href="kvi__options_8h_source.html#l00590">KviOption_uintSpacesToExpandTabulationInput</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00146">m_bUpdatesEnabled</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00103">m_iMaxBufferSize</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01132">returnPressed()</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l02215">addCommand()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">Insert</a>, <a class="el" href="kvi__options_8h_source.html#l00667">KVI_OPTION_UINT</a>, <a class="el" href="kvi__options_8h_source.html#l00590">KviOption_uintSpacesToExpandTabulationInput</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00146">m_bUpdatesEnabled</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00103">m_iMaxBufferSize</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01132">returnPressed()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00167">dropEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00831">iconPopupActivated()</a>, <a class="el" href="kvi__topicw_8cpp_source.html#l00644">KviTopicWidget::insertText()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00419">KviInput::insertText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00978">pasteClipboardWithConfirmation()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00993">pasteSelectionWithConfirmation()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00167">dropEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00831">iconPopupActivated()</a>, <a class="el" href="kvi__topicw_8cpp_source.html#l00644">KviTopicWidget::insertText()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00402">KviInput::insertText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00978">pasteClipboardWithConfirmation()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00993">pasteSelectionWithConfirmation()</a>.</p>
 
 </div>
 </div>
@@ -1194,7 +1195,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02058">selectOneChar()</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02079">selectOneChar()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>.</p>
 
@@ -1225,7 +1226,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02029">moveRightFirstVisibleCharToShowCursor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02058">selectOneChar()</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02050">moveRightFirstVisibleCharToShowCursor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02079">selectOneChar()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>.</p>
 
@@ -1271,7 +1272,7 @@
 <p>Returns true is there are some action in the redo stack. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02152">redo()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02173">redo()</a>.</p>
 
 </div>
 </div>
@@ -1293,7 +1294,7 @@
 <p>Returns true is there are some action in the undo stack. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02112">undo()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02133">undo()</a>.</p>
 
 </div>
 </div>
@@ -1313,7 +1314,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__debug_8h_source.html#l00057">__range_valid</a>, <a class="el" href="kvi__input__history_8cpp_source.html#l00071">KviInputHistory::add()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00765">KviPointerList&lt; T &gt;::at()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01042">clear()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01712">completion()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00850">copyToClipboard()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01984">end()</a>, <a class="el" href="classKviInputEditor.html#ae70792f868322f26602021e14cdeb22e">escapePressed()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00845">hasSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01997">home()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00914">KviPointerList&lt; T &gt;::insert()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02004">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">insertText()</a>, <a class="el" href="kvi__input__history_8h_source.html#l00082">KviInputHistory::instance()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01185">internalCursorLeft()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01168">internalCursorRight()</a>, <a class="el" href="kvi__input__history_8h_source.html#l00042">KVI_INPUT_MAX_LOCAL_HISTORY_ENTRIES</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__mirccntrl_8h_source.html#l00126">KVI_TEXT_BOLD</a>, <a class="el" href="kvi__mirccntrl_8h_source.html#l00132">KVI_TEXT_COLOR</a>, <a class="el" href="kvi__mirccntrl_8h_source.html#l00144">KVI_TEXT_CRYPTESCAPE</a>, <a class="el" href="kvi__mirccntrl_8h_source.html#l00146">KVI_TEXT_ICON</a>, <a class="el" href="kvi__mirccntrl_8h_source.html#l00128">KVI_TEXT_RESET</a>, <a class="el" href="kvi__mirccntrl_8h_source.html#l00130">KVI_TEXT_REVERSE</a>, <a class="el" href="kvi__mirccntrl_8h_source.html#l00124">KVI_TEXT_UNDERLINE</a>, <a class="el" href="kvi__texticonwin_8h_source.html#l00044">KVI_TEXTICON_WIN_HEIGHT</a>, <a class="el" href="kvi__options_8h_source.html#l00274">KviOption_boolEnableInputHistory</a>, <a class="el" href="kvi__options_8h_source.html#l00099">KviOption_boolInputHistoryCursorAtEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00112">m_bIMComposing</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00144">m_bLastCompletionFinished</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00151">m_bReadOnly</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00133">m_iCurHistoryIdx</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00132">m_pHistory</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00149">m_pInputParent</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00148">m_pKviWindow</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00147">m_szAltKeyCode</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00135">m_szSaveTextBuffer</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00467">KviIrcView::nextLine()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00469">KviIrcView::nextPage()</a>, <a class="el" href="namespaceKviUserInput.html#a5ac9294b92cf8c4ba5ef983c4e8eba1b">KviUserInput::parseNonCommand()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00978">pasteClipboardWithConfirmation()</a>, <a class="el" href="kvi__texticonwin_8cpp_source.html#l00106">KviTextIconWindow::popup()</a>, <a class="el" href="kvi__colorwin_8cpp_source.html#l00057">KviColorWindow::popup()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00466">KviIrcView::prevLine()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00468">KviIrcView::prevPage()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02152">redo()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00963">KviPointerList&lt; T &gt;::removeLast()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02048">repaintWithCursorOn()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01132">returnPressed()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02058">selectOneChar()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l02068">KviIrcView::toggleToolWidget()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02112">undo()</a>, <a class="el" href="kvi__window_8h_source.html#l00202">KviWindow::view()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02093">xPositionFromCharIndex()</a>.</p>
+<p>References <a class="el" href="kvi__debug_8h_source.html#l00057">__range_valid</a>, <a class="el" href="kvi__input__history_8cpp_source.html#l00071">KviInputHistory::add()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00765">KviPointerList&lt; T &gt;::at()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01042">clear()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01712">completion()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00850">copyToClipboard()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02005">end()</a>, <a class="el" href="classKviInputEditor.html#ae70792f868322f26602021e14cdeb22e">escapePressed()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00845">hasSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02018">home()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00914">KviPointerList&lt; T &gt;::insert()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02025">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">insertText()</a>, <a class="el" href="kvi__input__history_8h_source.html#l00082">KviInputHistory::instance()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01185">internalCursorLeft()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01168">internalCursorRight()</a>, <a class="el" href="kvi__input__history_8h_source.html#l00042">KVI_INPUT_MAX_LOCAL_HISTORY_ENTRIES</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__mirccntrl_8h_source.html#l00126">KVI_TEXT_BOLD</a>, <a class="el" href="kvi__mirccntrl_8h_source.html#l00132">KVI_TEXT_COLOR</a>, <a class="el" href="kvi__mirccntrl_8h_source.html#l00144">KVI_TEXT_CRYPTESCAPE</a>, <a class="el" href="kvi__mirccntrl_8h_source.html#l00146">KVI_TEXT_ICON</a>, <a class="el" href="kvi__mirccntrl_8h_source.html#l00128">KVI_TEXT_RESET</a>, <a class="el" href="kvi__mirccntrl_8h_source.html#l00130">KVI_TEXT_REVERSE</a>, <a class="el" href="kvi__mirccntrl_8h_source.html#l00124">KVI_TEXT_UNDERLINE</a>, <a class="el" href="kvi__texticonwin_8h_source.html#l00044">KVI_TEXTICON_WIN_HEIGHT</a>, <a class="el" href="kvi__options_8h_source.html#l00274">KviOption_boolEnableInputHistory</a>, <a class="el" href="kvi__options_8h_source.html#l00099">KviOption_boolInputHistoryCursorAtEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00112">m_bIMComposing</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00144">m_bLastCompletionFinished</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00151">m_bReadOnly</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00133">m_iCurHistoryIdx</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00132">m_pHistory</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00149">m_pInputParent</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00148">m_pKviWindow</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00147">m_szAltKeyCode</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00135">m_szSaveTextBuffer</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00467">KviIrcView::nextLine()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00469">KviIrcView::nextPage()</a>, <a class="el" href="namespaceKviUserInput.html#a5ac9294b92cf8c4ba5ef983c4e8eba1b">KviUserInput::parseNonCommand()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00978">pasteClipboardWithConfirmation()</a>, <a class="el" href="kvi__texticonwin_8cpp_source.html#l00106">KviTextIconWindow::popup()</a>, <a class="el" href="kvi__colorwin_8cpp_source.html#l00057">KviColorWindow::popup()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00466">KviIrcView::prevLine()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00468">KviIrcView::prevPage()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02173">redo()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00963">KviPointerList&lt; T &gt;::removeLast()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02069">repaintWithCursorOn()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01132">returnPressed()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02079">selectOneChar()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l02066">KviIrcView::toggleToolWidget()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02133">undo()</a>, <a class="el" href="kvi__window_8h_source.html#l00202">KviWindow::view()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02114">xPositionFromCharIndex()</a>.</p>
 
 </div>
 </div>
@@ -1333,7 +1334,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__string_8h_source.html#l00183">KviStr::hasData()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02004">insertChar()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00147">m_szAltKeyCode</a>, and <a class="el" href="kvi__string_8h_source.html#l00423">KviStr::toUShort()</a>.</p>
+<p>References <a class="el" href="kvi__string_8h_source.html#l00183">KviStr::hasData()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02025">insertChar()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00147">m_szAltKeyCode</a>, and <a class="el" href="kvi__string_8h_source.html#l00423">KviStr::toUShort()</a>.</p>
 
 </div>
 </div>
@@ -1377,7 +1378,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l02065">charIndexFromXPosition()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01068">killDragTimer()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l02086">charIndexFromXPosition()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01068">killDragTimer()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>.</p>
 
 </div>
 </div>
@@ -1397,7 +1398,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00067">ACCEL_KEY</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02065">charIndexFromXPosition()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01042">clear()</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00166">KviTalPopupMenu::clear()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00850">copyToClipboard()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01107">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01130">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__app_8cpp_source.html#l00125">g_pApp</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__texticonmanager_8cpp_source.html#l00058">g_pTextIconManager</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00492">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00845">hasSelection()</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00052">KviTalPopupMenu::insertItem()</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00186">KviTalPopupMenu::insertSeparator()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00418">isRedoAvailable()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00412">isUndoAvailable()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01068">killDragTimer()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00062">KVI_INPUT_DRAG_TIMEOUT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00256">KVI_SMALLICON_BIGGRIN</a>, <a class="el" href="kvi__window_8h_source.html#l00083">KVI_WINDOW_TYPE_CHANNEL</a>, <a class="el" href="kvi__window_8h_source.html#l00088">KVI_WINDOW_TYPE_DCCCHAT</a>, <a class="el" href="kvi__window_8h_source.html#l00084">KVI_WINDOW_TYPE_QUERY</a>, <a class="el" href="kvi__texticonmanager_8h_source.html#l00193">KviTextIconManager::lookupTextIcon()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00151">m_bReadOnly</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00104">m_bSpSlowFlag</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00126">m_iDragTimer</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00129">m_iSelectionAnchorChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00150">m_pIconMenu</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00978">pasteClipboardWithConfirmation()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01020">pasteFile()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00993">pasteSelectionWithConfirmation()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01008">pasteSlow()</a>, <a class="el" href="kvi__texticonmanager_8cpp_source.html#l00114">KviTextIcon::pixmap()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02152">redo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02048">repaintWithCursorOn()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01032">selectAll()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02058">selectOneChar()</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00180">KviTalPopupMenu::setItemEnabled()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01014">stopPasteSlow()</a>, <a class="el" href="kvi__texticonmanager_8h_source.html#l00158">KviTextIconManager::textIconDict()</a>, <a class="el" href="kvi__window_8h_source.html#l00189">KviWindow::type()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02112">undo()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02093">xPositionFromCharIndex()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00067">ACCEL_KEY</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02086">charIndexFromXPosition()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01042">clear()</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00166">KviTalPopupMenu::clear()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00850">copyToClipboard()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01107">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01130">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__app_8cpp_source.html#l00125">g_pApp</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__texticonmanager_8cpp_source.html#l00058">g_pTextIconManager</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00492">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00845">hasSelection()</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00052">KviTalPopupMenu::insertItem()</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00186">KviTalPopupMenu::insertSeparator()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00424">isRedoAvailable()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00418">isUndoAvailable()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01068">killDragTimer()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00062">KVI_INPUT_DRAG_TIMEOUT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00256">KVI_SMALLICON_BIGGRIN</a>, <a class="el" href="kvi__window_8h_source.html#l00083">KVI_WINDOW_TYPE_CHANNEL</a>, <a class="el" href="kvi__window_8h_source.html#l00088">KVI_WINDOW_TYPE_DCCCHAT</a>, <a class="el" href="kvi__window_8h_source.html#l00084">KVI_WINDOW_TYPE_QUERY</a>, <a class="el" href="kvi__texticonmanager_8h_source.html#l00193">KviTextIconManager::lookupTextIcon()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00151">m_bReadOnly</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00104">m_bSpSlowFlag</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00126">m_iDragTimer</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00129">m_iSelectionAnchorChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00150">m_pIconMenu</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00978">pasteClipboardWithConfirmation()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01020">pasteFile()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00993">pasteSelectionWithConfirmation()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01008">pasteSlow()</a>, <a class="el" href="kvi__texticonmanager_8cpp_source.html#l00114">KviTextIcon::pixmap()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02173">redo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02069">repaintWithCursorOn()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01032">selectAll()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02079">selectOneChar()</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00180">KviTalPopupMenu::setItemEnabled()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01014">stopPasteSlow()</a>, <a class="el" href="kvi__texticonmanager_8h_source.html#l00158">KviTextIconManager::textIconDict()</a>, <a class="el" href="kvi__window_8h_source.html#l00189">KviWindow::type()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02133">undo()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02114">xPositionFromCharIndex()</a>.</p>
 
 </div>
 </div>
@@ -1456,9 +1457,9 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02029">moveRightFirstVisibleCharToShowCursor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02048">repaintWithCursorOn()</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02050">moveRightFirstVisibleCharToShowCursor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02069">repaintWithCursorOn()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01205">inputMethodEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">insertText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00652">mouseDoubleClickEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02152">redo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01887">replaceWordBeforeCursor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02112">undo()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01205">inputMethodEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">insertText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00652">mouseDoubleClickEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02173">redo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01894">replaceWordBeforeCursor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02133">undo()</a>.</p>
 
 </div>
 </div>
@@ -1480,9 +1481,9 @@
 <p>Moves the internal cursor to the first visibile char to the right. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00095">g_iInputFontCharWidth</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00438">getLastFontMetrics()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00060">KVI_INPUT_MARGIN</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00128">m_iLastCursorXPosition</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>.</p>
+<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00095">g_iInputFontCharWidth</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00444">getLastFontMetrics()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00060">KVI_INPUT_MARGIN</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00128">m_iLastCursorXPosition</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01984">end()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01094">handleDragSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02004">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01168">internalCursorRight()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02005">end()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01094">handleDragSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02025">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01168">internalCursorRight()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>.</p>
 
 </div>
 </div>
@@ -1621,7 +1622,7 @@
 <p>Redo the last undo-ed action. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00154">Delete</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">DeleteSelection</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00162">history</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">Insert</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00418">isRedoAvailable()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00160">KviInputEditor::Command::pos</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">Remove</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">RemoveSelection</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02058">selectOneChar()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00160">KviInputEditor::Command::selEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00160">KviInputEditor::Command::selStart</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">Separator</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">SetSelection</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00158">KviInputEditor::Command::type</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00163">undoState</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00159">KviInputEditor::Command::us</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00154">Delete</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">DeleteSelection</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00162">history</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">Insert</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00424">isRedoAvailable()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00160">KviInputEditor::Command::pos</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">Remove</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">RemoveSelection</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02079">selectOneChar()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00160">KviInputEditor::Command::selEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00160">KviInputEditor::Command::selStart</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">Separator</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">SetSelection</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00158">KviInputEditor::Command::type</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00163">undoState</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00159">KviInputEditor::Command::us</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>.</p>
 
@@ -1645,9 +1646,9 @@
 <p>Removes the selected text. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l02194">addCommand()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">DeleteSelection</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00845">hasSelection()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02048">repaintWithCursorOn()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02058">selectOneChar()</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00154">SetSelection</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l02215">addCommand()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">DeleteSelection</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00845">hasSelection()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02069">repaintWithCursorOn()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02079">selectOneChar()</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00154">SetSelection</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01205">inputMethodEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02004">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">insertText()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01205">inputMethodEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02025">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">insertText()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>.</p>
 
 </div>
 </div>
@@ -1671,7 +1672,7 @@
 
 <p>References <a class="el" href="kvi__input__editor_8h_source.html#l00123">m_bCursorOn</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00146">m_bUpdatesEnabled</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01712">completion()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00850">copyToClipboard()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00860">copyToSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01984">end()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01094">handleDragSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01997">home()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01205">inputMethodEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02004">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00965">replaceSegment()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01887">replaceWordBeforeCursor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01712">completion()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00850">copyToClipboard()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00860">copyToSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02005">end()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01094">handleDragSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02018">home()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01205">inputMethodEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02025">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00965">replaceSegment()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01894">replaceWordBeforeCursor()</a>.</p>
 
 </div>
 </div>
@@ -1718,7 +1719,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>int </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00103">m_iMaxBufferSize</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02048">repaintWithCursorOn()</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00103">m_iMaxBufferSize</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02069">repaintWithCursorOn()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01205">inputMethodEvent()</a>.</p>
 
@@ -1766,9 +1767,9 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00103">m_iMaxBufferSize</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02048">repaintWithCursorOn()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02058">selectOneChar()</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00103">m_iMaxBufferSize</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02069">repaintWithCursorOn()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02079">selectOneChar()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01712">completion()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01898">standardNickCompletion()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01712">completion()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01906">standardNickCompletionInsertCompletedText()</a>.</p>
 
 </div>
 </div>
@@ -1846,7 +1847,7 @@
 <p>Selects all text in the input line. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l01984">end()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l02005">end()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>.</p>
 
@@ -1877,9 +1878,9 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00424">separate()</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00430">separate()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01042">clear()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01094">handleDragSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02004">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01185">internalCursorLeft()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01168">internalCursorRight()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02152">redo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01887">replaceWordBeforeCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01049">setText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01898">standardNickCompletion()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02112">undo()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01042">clear()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01094">handleDragSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02025">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01185">internalCursorLeft()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01168">internalCursorRight()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02173">redo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01894">replaceWordBeforeCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01049">setText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01923">standardNickCompletion()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02133">undo()</a>.</p>
 
 </div>
 </div>
@@ -1901,7 +1902,7 @@
 <p>Inserts an action separator in the undo stack. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02058">selectOneChar()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02079">selectOneChar()</a>.</p>
 
 </div>
 </div>
@@ -1988,9 +1989,9 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l01984">end()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00103">m_iMaxBufferSize</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02058">selectOneChar()</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l02005">end()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00103">m_iMaxBufferSize</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02079">selectOneChar()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__topicw_8cpp_source.html#l00650">KviTopicWidget::complete()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00207">KviInput::inputEditorEnterPressed()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00300">KviInput::multilineEditorButtonToggled()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00407">KviInput::setText()</a>, and <a class="el" href="kvi__topicw_8cpp_source.html#l00418">KviTopicWidget::switchMode()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__topicw_8cpp_source.html#l00650">KviTopicWidget::complete()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00203">KviInput::inputEditorEnterPressed()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00296">KviInput::multilineEditorButtonToggled()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00390">KviInput::setText()</a>, and <a class="el" href="kvi__topicw_8cpp_source.html#l00418">KviTopicWidget::switchMode()</a>.</p>
 
 </div>
 </div>
@@ -2012,13 +2013,13 @@
 <p>Returns the size of the editor. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>QSize </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00438">getLastFontMetrics()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00229">isReadOnly()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00060">KVI_INPUT_MARGIN</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00059">KVI_INPUT_PADDING</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00058">KVI_INPUT_XTRAPADDING</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00444">getLastFontMetrics()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00229">isReadOnly()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00060">KVI_INPUT_MARGIN</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00059">KVI_INPUT_PADDING</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00058">KVI_INPUT_XTRAPADDING</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00199">heightHint()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a1339e8f268170bd200c14f316a9d5ad4"></a><!-- doxytag: member="KviInputEditor::standardNickCompletion" ref="a1339e8f268170bd200c14f316a9d5ad4" args="(bool bAddMask, QString &amp;szWord, bool bFirstWordInLine)" -->
+<a class="anchor" id="a7f0b5e78bf9b58da2532a48f9881b2f0"></a><!-- doxytag: member="KviInputEditor::standardNickCompletion" ref="a7f0b5e78bf9b58da2532a48f9881b2f0" args="(bool bAddMask, QString &amp;szWord, bool bFirstWordInLine, bool bInCommand)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -2038,7 +2039,13 @@
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>bFirstWordInLine</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>bFirstWordInLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>bInCommand</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -2049,20 +2056,65 @@
 </div>
 <div class="memdoc">
 
-<p>Completes the nickname. </p>
+<p>Completes the nickname specified by szWord (inserts the completed text to the input line). </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>bAddMask</em>&nbsp;</td><td>Whether to complete with the mask of the nickname </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>szWord</em>&nbsp;</td><td>The nickname to complete </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>bFirstWordInLine</em>&nbsp;</td><td>Whether to add the suffix from option panel </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>bFirstWordInLine</em>&nbsp;</td><td>Whether the word to complete is the first word in the text line (so the suffix from option panel is added) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>bInCommand</em>&nbsp;</td><td>true if the completion happens inside a kvs command (and thus the completed word should be kvs-escaped) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__userlistview_8cpp_source.html#l00520">KviUserListView::completeNickStandard()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01690">getWordBeforeCursor()</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00664">KVI_OPTION_STRING</a>, <a class="el" href="kvi__options_8h_source.html#l00155">KviOption_boolUseNickCompletionPostfixForFirstWordOnly</a>, <a class="el" href="kvi__options_8h_source.html#l00364">KviOption_stringNickCompletionPostfix</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00144">m_bLastCompletionFinished</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00141">m_iLastCompletionCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00142">m_iLastCompletionCursorXPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00143">m_iLastCompletionFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00128">m_iLastCursorXPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00138">m_pUserListView</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00139">m_szLastCompletedNick</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00140">m_szLastCompletionBuffer</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01887">replaceWordBeforeCursor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02058">selectOneChar()</a>.</p>
+<p>References <a class="el" href="kvi__userlistview_8cpp_source.html#l00520">KviUserListView::completeNickStandard()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01690">getWordBeforeCursor()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00144">m_bLastCompletionFinished</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00099">m_iCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00141">m_iLastCompletionCursorPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00142">m_iLastCompletionCursorXPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00143">m_iLastCompletionFirstVisibleChar</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00128">m_iLastCursorXPosition</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00138">m_pUserListView</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00139">m_szLastCompletedNick</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00140">m_szLastCompletionBuffer</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02079">selectOneChar()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01906">standardNickCompletionInsertCompletedText()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01712">completion()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9b430032f032a63c89461b0b92ceb710"></a><!-- doxytag: member="KviInputEditor::standardNickCompletionInsertCompletedText" ref="a9b430032f032a63c89461b0b92ceb710" args="(const QString &amp;szReplacedWord, const QString &amp;szCompletedText, bool bFirstWordInLine, bool bInCommand)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KviInputEditor::standardNickCompletionInsertCompletedText </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>szReplacedWord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>szCompletedText</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>bFirstWordInLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>bInCommand</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Internal helper for <a class="el" href="classKviInputEditor.html#a7f0b5e78bf9b58da2532a48f9881b2f0" title="Completes the nickname specified by szWord (inserts the completed text to the input...">standardNickCompletion()</a> </p>
+
+<p>References <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00664">KVI_OPTION_STRING</a>, <a class="el" href="kvi__options_8h_source.html#l00155">KviOption_boolUseNickCompletionPostfixForFirstWordOnly</a>, <a class="el" href="kvi__options_8h_source.html#l00364">KviOption_stringNickCompletionPostfix</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01894">replaceWordBeforeCursor()</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01923">standardNickCompletion()</a>.</p>
 
 </div>
 </div>
@@ -2108,7 +2160,7 @@
 <p>Returns the text in the buffer. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>QString </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__topicw_8cpp_source.html#l00629">KviTopicWidget::acceptClicked()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00207">KviInput::inputEditorEnterPressed()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00300">KviInput::multilineEditorButtonToggled()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00291">KviInput::multiLinePaste()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00449">KviInput::text()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__topicw_8cpp_source.html#l00629">KviTopicWidget::acceptClicked()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00203">KviInput::inputEditorEnterPressed()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00296">KviInput::multilineEditorButtonToggled()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00287">KviInput::multiLinePaste()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00432">KviInput::text()</a>.</p>
 
 </div>
 </div>
@@ -2157,7 +2209,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00154">Delete</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">DeleteSelection</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00162">history</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">Insert</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00412">isUndoAvailable()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00160">KviInputEditor::Command::pos</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">Remove</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">RemoveSelection</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02058">selectOneChar()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00160">KviInputEditor::Command::selEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00160">KviInputEditor::Command::selStart</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">Separator</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">SetSelection</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00158">KviInputEditor::Command::type</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00163">undoState</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00159">KviInputEditor::Command::us</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8h_source.html#l00154">Delete</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">DeleteSelection</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00162">history</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">Insert</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00418">isUndoAvailable()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00101">m_iSelectionBegin</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00102">m_iSelectionEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00160">KviInputEditor::Command::pos</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">Remove</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">RemoveSelection</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02079">selectOneChar()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00160">KviInputEditor::Command::selEnd</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00160">KviInputEditor::Command::selStart</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">Separator</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00154">SetSelection</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00158">KviInputEditor::Command::type</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00163">undoState</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00159">KviInputEditor::Command::us</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>.</p>
 
@@ -2188,7 +2240,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>int </dd></dl>
 
-<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00095">g_iInputFontCharWidth</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00438">getLastFontMetrics()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>.</p>
+<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00095">g_iInputFontCharWidth</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00444">getLastFontMetrics()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00100">m_iFirstVisibleChar</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00098">m_szTextBuffer</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>.</p>
 
@@ -2220,7 +2272,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02065">charIndexFromXPosition()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00502">extractNextBlock()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00438">getLastFontMetrics()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02029">moveRightFirstVisibleCharToShowCursor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02093">xPositionFromCharIndex()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02086">charIndexFromXPosition()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00502">extractNextBlock()</a>, <a class="el" href="kvi__input__editor_8h_source.html#l00444">getLastFontMetrics()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02050">moveRightFirstVisibleCharToShowCursor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02114">xPositionFromCharIndex()</a>.</p>
 
 </div>
 </div>
@@ -2265,7 +2317,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02194">addCommand()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02152">redo()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02112">undo()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02215">addCommand()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02173">redo()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02133">undo()</a>.</p>
 
 </div>
 </div>
@@ -2310,7 +2362,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01150">focusInEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01160">focusOutEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02048">repaintWithCursorOn()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01077">timerEvent()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01150">focusInEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01160">focusOutEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02069">repaintWithCursorOn()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01077">timerEvent()</a>.</p>
 
 </div>
 </div>
@@ -2355,7 +2407,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01898">standardNickCompletion()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01923">standardNickCompletion()</a>.</p>
 
 </div>
 </div>
@@ -2400,7 +2452,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01205">inputMethodEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02004">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">insertText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02048">repaintWithCursorOn()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01205">inputMethodEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02025">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">insertText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02069">repaintWithCursorOn()</a>.</p>
 
 </div>
 </div>
@@ -2490,7 +2542,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02194">addCommand()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01984">end()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01690">getWordBeforeCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01094">handleDragSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01997">home()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01205">inputMethodEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02004">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">insertText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01185">internalCursorLeft()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01168">internalCursorRight()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00652">mouseDoubleClickEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02029">moveRightFirstVisibleCharToShowCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01887">replaceWordBeforeCursor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01898">standardNickCompletion()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02215">addCommand()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02005">end()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01690">getWordBeforeCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01094">handleDragSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02018">home()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01205">inputMethodEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02025">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">insertText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01185">internalCursorLeft()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01168">internalCursorRight()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00652">mouseDoubleClickEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02050">moveRightFirstVisibleCharToShowCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01894">replaceWordBeforeCursor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01923">standardNickCompletion()</a>.</p>
 
 </div>
 </div>
@@ -2535,7 +2587,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02065">charIndexFromXPosition()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01984">end()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01094">handleDragSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01997">home()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01185">internalCursorLeft()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00652">mouseDoubleClickEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02029">moveRightFirstVisibleCharToShowCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00599">runUpToTheFirstVisibleChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01898">standardNickCompletion()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02093">xPositionFromCharIndex()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02086">charIndexFromXPosition()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02005">end()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01094">handleDragSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02018">home()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01185">internalCursorLeft()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00652">mouseDoubleClickEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02050">moveRightFirstVisibleCharToShowCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00599">runUpToTheFirstVisibleChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01923">standardNickCompletion()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02114">xPositionFromCharIndex()</a>.</p>
 
 </div>
 </div>
@@ -2610,7 +2662,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01898">standardNickCompletion()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01923">standardNickCompletion()</a>.</p>
 
 </div>
 </div>
@@ -2625,7 +2677,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01898">standardNickCompletion()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01923">standardNickCompletion()</a>.</p>
 
 </div>
 </div>
@@ -2640,7 +2692,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01898">standardNickCompletion()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01923">standardNickCompletion()</a>.</p>
 
 </div>
 </div>
@@ -2655,7 +2707,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01984">end()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02029">moveRightFirstVisibleCharToShowCursor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01898">standardNickCompletion()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02005">end()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02050">moveRightFirstVisibleCharToShowCursor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01923">standardNickCompletion()</a>.</p>
 
 </div>
 </div>
@@ -2670,7 +2722,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02004">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">insertText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00965">replaceSegment()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01887">replaceWordBeforeCursor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01049">setText()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02025">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">insertText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00965">replaceSegment()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01894">replaceWordBeforeCursor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01049">setText()</a>.</p>
 
 </div>
 </div>
@@ -2700,7 +2752,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02194">addCommand()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00850">copyToClipboard()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00860">copyToSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01094">handleDragSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00845">hasSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02004">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01185">internalCursorLeft()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01168">internalCursorRight()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00652">mouseDoubleClickEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02152">redo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01032">selectAll()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02058">selectOneChar()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02112">undo()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02215">addCommand()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00850">copyToClipboard()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00860">copyToSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01094">handleDragSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00845">hasSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02025">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01185">internalCursorLeft()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01168">internalCursorRight()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00652">mouseDoubleClickEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02173">redo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01032">selectAll()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02079">selectOneChar()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02133">undo()</a>.</p>
 
 </div>
 </div>
@@ -2715,7 +2767,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02194">addCommand()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00850">copyToClipboard()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00860">copyToSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01094">handleDragSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00845">hasSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02004">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01185">internalCursorLeft()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01168">internalCursorRight()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00652">mouseDoubleClickEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02152">redo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01032">selectAll()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02058">selectOneChar()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02112">undo()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02215">addCommand()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00850">copyToClipboard()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00860">copyToSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01094">handleDragSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00845">hasSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02025">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01185">internalCursorLeft()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01168">internalCursorRight()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00652">mouseDoubleClickEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02173">redo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01032">selectAll()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02079">selectOneChar()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02133">undo()</a>.</p>
 
 </div>
 </div>
@@ -2790,7 +2842,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01712">completion()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01898">standardNickCompletion()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01712">completion()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01923">standardNickCompletion()</a>.</p>
 
 </div>
 </div>
@@ -2833,7 +2885,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01712">completion()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01898">standardNickCompletion()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01712">completion()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l01923">standardNickCompletion()</a>.</p>
 
 </div>
 </div>
@@ -2848,7 +2900,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01898">standardNickCompletion()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01923">standardNickCompletion()</a>.</p>
 
 </div>
 </div>
@@ -2878,7 +2930,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02065">charIndexFromXPosition()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01042">clear()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01712">completion()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00850">copyToClipboard()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00860">copyToSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00435">drawTextBlock()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01984">end()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00502">extractNextBlock()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01690">getWordBeforeCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01094">handleDragSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02004">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">insertText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01168">internalCursorRight()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00652">mouseDoubleClickEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02029">moveRightFirstVisibleCharToShowCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02152">redo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00965">replaceSegment()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01887">replaceWordBeforeCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01132">returnPressed()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00599">runUpToTheFirstVisibleChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01032">selectAll()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01049">setText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01898">standardNickCompletion()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02112">undo()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02093">xPositionFromCharIndex()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02086">charIndexFromXPosition()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01042">clear()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01712">completion()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00850">copyToClipboard()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00860">copyToSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00904">cut()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00282">drawContents()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00435">drawTextBlock()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02005">end()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00502">extractNextBlock()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01690">getWordBeforeCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01094">handleDragSelection()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02025">insertChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">insertText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01168">internalCursorRight()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01259">keyPressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00652">mouseDoubleClickEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00694">mousePressEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00873">moveCursorTo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02050">moveRightFirstVisibleCharToShowCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02173">redo()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00891">removeSelected()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00965">replaceSegment()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01894">replaceWordBeforeCursor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01132">returnPressed()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00599">runUpToTheFirstVisibleChar()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01032">selectAll()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01049">setText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01923">standardNickCompletion()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02133">undo()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02114">xPositionFromCharIndex()</a>.</p>
 
 </div>
 </div>
@@ -2893,7 +2945,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02194">addCommand()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02215">addCommand()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>.</p>
 
 </div>
 </div>
@@ -2908,7 +2960,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02194">addCommand()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02152">redo()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02112">undo()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l02215">addCommand()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00075">KviInputEditor()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l02173">redo()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02133">undo()</a>.</p>
 
 </div>
 </div>
@@ -2931,7 +2983,7 @@
 <li>src/kvirc/ui/<a class="el" href="kvi__input__editor_8cpp.html">kvi_input_editor.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Apr 17 17:23:32 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue May 4 19:53:55 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

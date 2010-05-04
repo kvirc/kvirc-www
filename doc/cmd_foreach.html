@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>foreach</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>foreach</h1>
+Iteration command
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Usage</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code>foreach [-a] (&lt;variable&gt;,[&lt;item&gt;[,&lt;item&gt;[,&lt;item&gt;[...]]]) &lt;command&gt;</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>Executed &lt;command&gt; while assigning to &lt;<a href="doc_kvs_datatypes.html">variable</a>&gt; each &lt;item&gt;.<br>
+&lt;item&gt; may be a constant , a <a href="doc_kvs_datatypes.html">variable</a> , an <a href="doc_kvs_datatypes.html">array</a> , a <a href="doc_kvs_datatypes.html">dictionary</a> or a function returning
+either a constant string an <a href="doc_kvs_datatypes.html">array</a> reference or a <a href="doc_kvs_datatypes.html">dictionary</a> reference.<br>
+If &lt;item&gt; is an <a href="doc_kvs_datatypes.html">array</a> , a <a href="doc_kvs_datatypes.html">dictionary</a> or a function that returns a <a href="doc_kvs_datatypes.html">dictionary</a> or <a href="doc_kvs_datatypes.html">array</a> reference
+the iteration is done through all the <a href="doc_kvs_datatypes.html">dictionary</a>/<a href="doc_kvs_datatypes.html">array</a> items.<br>
+Please note that the iteration order of <a href="doc_kvs_datatypes.html">dictionary</a> items is undefined.<br>
+You can always break from the loop by using the <a href="cmd_break.html">break</a> command.<br>
+foreach doesn't iterate over empty scalar <a href="doc_kvs_datatypes.html">variables</a> (i.e. the ones set to <a href="fnc_nothing.html">$nothing</a>)
+unless you use the -a switch. (Note that an <a href="doc_kvs_datatypes.html">array</a> with *some* empty entries is NOT empty so
+the iteration is in fact done).
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Switches</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#D5D5D5">
+<tr bgcolor="#E0E0E0"><td><b>-a | --all</b></td></tr>
+<tr><td>Include empty <a href="doc_kvs_datatypes.html">variables</a> in the iteration loop.</td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Syntax Specification</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code><b>foreach</b> <font color="#8080a0">[</font>-a<font color="#8080a0">]</font> <b>(</b><font color="#8080a0">&lt;</font>variable<font color="#8080a0">&gt;</font>,<font color="#8080a0">[</font><font color="#8080a0">&lt;</font>item<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>item<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>item<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>...<font color="#8080a0">]</font><font color="#8080a0">]</font><font color="#8080a0">]</font><b>)</b> <font color="#8080a0">&lt;</font>command<font color="#8080a0">&gt;</font></code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Examples</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;foreach(%i,1,2,3,4,5,6,7,8,9)<a href="cmd_echo.html">echo</a> %i
+&nbsp;&nbsp;&nbsp;&nbsp;foreach(%chan,<a href="fnc_window.list.html">$window.list</a>(channel))<a href="cmd_me.html">me</a> -r=%chan This is a test!
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># This will work too, and will do the same job</font>
+&nbsp;&nbsp;&nbsp;&nbsp;%windows[] = <a href="fnc_window.list.html">$window.list</a>(channel)
+&nbsp;&nbsp;&nbsp;&nbsp;foreach(%chan,%windows[])<a href="cmd_me.html">me</a> -r=%chan This is a test!
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># And this too</font>
+&nbsp;&nbsp;&nbsp;&nbsp;%windows[] = <a href="fnc_window.list.html">$window.list</a>(channel)
+&nbsp;&nbsp;&nbsp;&nbsp;foreach(%key,<a href="fnc_keys.html">$keys</a>(%windows[]))<a href="cmd_me.html">me</a> -r=%windows[%key] This is a test!
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Another interesting example</font>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_alias.html">alias</a>(test){ <a href="cmd_return.html">return</a> <a href="fnc_hash.html">$hash</a>(1,a,2,b,3,c,4,d); };
+&nbsp;&nbsp;&nbsp;&nbsp;foreach(%x,<a href="fnc_keys.html">$keys</a>($test)){ <a href="cmd_echo.html">echo</a> %x, $test{%x}; }
+</font></code></pre></td></tr></table></p>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

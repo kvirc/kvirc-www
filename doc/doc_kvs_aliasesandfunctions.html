@@ -1,0 +1,258 @@
+<html>
+<head>
+<title>KVS Functions and aliases</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>KVS Functions and aliases</h1>
+KVS Functions and aliases
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td></td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Introduction</div></td></tr><tr><td bgcolor="#EAEAEA">
+<p>
+Since you're here, you should already have readed about the <a href="doc_kvs_basicconcepts.html">kvs basic concepts</a>
+and have visited the <a href="doc_commands.html">command index</a>. If you feel ready to take the next step
+then read on.
+</p>
+</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Functions</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+<p>
+<a href="doc_kvs_introduction.html">KVS</a> has many internal <a href="doc_functions.html">functions</a> that can be used as command parameters.<br>
+<b>All the function names start with a literal '$' character.</b><br>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> This window caption is <a href="fnc_window.caption.html">$window.caption</a>
+</font></code></pre></td></tr></table></p>
+The <a href="fnc_window.caption.html">$window.caption</a> <a href="doc_functions.html">function</a>
+is evaluated before the command executes,
+and it is changed into the current window caption text.<br>
+The <a href="doc_functions.html">functions</a> can be used also as switch parameters.<br>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> -w = <a href="fnc_window.html">$window</a> This text will be surely \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; printed in the current window
+</font></code></pre></td></tr></table></p>
+The -w switch allows to redirect the echo text to a specified window --- in this
+case the one that you are typing in.<br>
+<i>(Surprise: in this case the -w switch is useless ,
+since echo prints text to the current window by default...
+but it will work correctly. :)</i>
+</p>
+<p>
+Normal function names can be made of "anycase" letters, digits and underscores,
+with the restriction that the first character is not a digit.<br>
+Some kind of functions can contain a dot '.' character inside the name
+and these are assumed to be module references (see <a href="doc_modules.html">the modules documentation</a>).<br>
+</p>
+<p>
+By now we have seen only simple functions, but there's more...<br>
+The functions can accept parameters; the general syntax for a function call is:<br>
+<b>$&lt;function name&gt;['('&lt;parameter_list&gt;')']</b><br>
+where &lt;parameter_list&gt; is a list of comma separated parameters,
+eventually empty.
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> The word 'neural' is <a href="fnc_str.len.html">$str.len</a>(neural) characters long
+</font></code></pre></td></tr></table></p>
+The function <a href="fnc_str.len.html">$str.len</a> accepts a single parameter and returns the
+length in characters of the parameter string. The returned value is always
+a string: in this case it can be also interpreted as a number.<br>
+When passing an empty list you can avoid the parenthesis.
+(And you have found the "simple" functions shown above).
+So the followind two calls are equal:<br>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> <a href="fnc_window.caption.html">$window.caption</a>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> <a href="fnc_window.caption.html">$window.caption()</a>
+</font></code></pre></td></tr></table></p>
+If you want to pass an "empty" string as the first parameter you have to use
+the following syntax:<br>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> <a href="fnc_str.len.html">$str.len</a>("")
+</font></code></pre></td></tr></table></p>
+Obviously a function is valid as a function parameter.<br>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> <a href="fnc_str.len.html">$str.len</a>(<a href="fnc_window.caption.html">$window.caption</a>)
+</font></code></pre></td></tr></table></p>
+If you want to place a literal '(' or ')' in the function parameters
+you must escape it.
+A special case for when you want to use 'matching' parentheses:
+an opened '(' corresponds to a closed ')'.
+In this case you can omit the 'escape' character.<br>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> The length of '(a+b)' is : <a href="fnc_str.len.html">$str.len</a>( (a+b) )
+</font></code></pre></td></tr></table></p>
+This is useful for algebraic and boolean <a href="doc_expressioneval.html">expressions</a> , like the ones
+accepted by the special function $() (see next paragraphs).<br>
+</p>
+</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Aliases</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+An alias is an user defined command.  It can be used to rename the builtin <a href="doc_kvircintro.html">kvirc</a> commands or functions,
+to automatize complex tasks or as structured programming mean.
+<a href="doc_aliases.html">Aliases</a> can be created or destroyed by using the scriptcenter (graphic interface)
+or from the commandline (or <a href="doc_kvs_basicconcepts.html">script</a>) by using the <a href="cmd_alias.html">alias</a> command.
+Once created, an alias remains stored permanently in the <a href="doc_kvircintro.html">KVIrc</a> configuration files
+until it is explicitly deleted.
+A couple of examples will make the things clear.
+join is a really commonly used command. It might be a good idea to rename it to
+simply "j" .. just to type it faster.
+Nothing easier in <a href="doc_kvircintro.html">KVirc</a>: just try this commandline:
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_alias.html">alias</a>(j){ <a href="cmd_join.html">join</a> $0-; };
+</font></code></pre></td></tr></table></p>
+This will create the alias "j". From this moment you can use /j as it was a normal command.
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">j #<a href="doc_kvircintro.html">kvirc</a>
+</font></code></pre></td></tr></table></p>
+You may have notices the strange $0- function in the alias body: it stands for
+"all parameters passed to the alias". This means that when you call
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;j #<a href="doc_kvircintro.html">kvirc</a> testpassword
+</font></code></pre></td></tr></table></p>
+then both the parameters (#<a href="doc_kvircintro.html">kvirc</a> and testpassword) are passed to the join command.
+The $N functions are special functions that return the positional parameters passed
+to the current <a href="doc_kvs_basicconcepts.html">script</a> context. In an alias the <a href="doc_kvs_basicconcepts.html">script</a> context is the <a href="doc_kvs_basicconcepts.html">script</a> body and
+it is the alias caller that generates the parameters.
+$N (where N is a digit) returns the (N-1)-th positional parameter passed by the caller.
+It returns the parameter numbered N-1 and not N since the parameters are indexed starting
+from zero ($0 is the first parameter!).
+$N-M returns the parameters from (N-1)-th to the (M-1)-th (a parameter range) and $N- returns
+all the parameters from (N-1)-th to the last one. In the example above $0- stands for
+all the parameters starting from the first one.
+</p>
+<p>
+To remove an alias use again the alias command with an empty body:
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_alias.html">alias</a>(j){}
+</font></code></pre></td></tr></table></p>
+This will remove the alias "j" defined above.
+</p>
+<p>
+A common task in <a href="doc_ircintro.html">channel</a> management is the kick & ban action.
+You first ban an user from the <a href="doc_ircintro.html">channel</a> and then eventually kick him
+(obviously assuming that he is actually on the <a href="doc_ircintro.html">channel</a>).
+This involves using two commands: ban and then kick.
+It could be a nice idea to have a single "kb" command to perform this action.
+Well...easy:
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_alias.html">alias</a>(kb){ <a href="cmd_ban.html">ban</a> $0; <a href="cmd_kick.html">kick</a> $0-; };
+</font></code></pre></td></tr></table></p>
+This adds the "kb" alias: it can be called as a normal command:
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;kb spammer You're not welcome here!
+</font></code></pre></td></tr></table></p>
+This will first execute "ban spammer" and then "kick spammer You're not welcome here".
+Our kb is a really simple example... it doesn't check for the validity of the parameters:
+the <a href="doc_ircintro.html">server</a> will warn us if the parameters passed to kb were empty.
+</p>
+<p>
+The alias can be modified at any time by re-using the alias command.
+Let's make our "kb" a bit more intelligent and add a check for the parameters.
+TIP: It is a good idea to write the following examples in a text file and then use /parse &lt;filename&gt; to execute it.
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_alias.html">alias</a>(kb)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_if.html">if</a>("$0" == "")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> "Usage: /kb &lt;<a href="doc_irc_masks.html">nickname</a>&gt; &lt;kick reason&gt;"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_return.html">return</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_ban.html">ban</a> $0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%reason = $1-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_if.html">if</a>("%reason" == "")%reason = "You're not welcome here!"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_kick.html">kick</a> $0 %reason
+&nbsp;&nbsp;&nbsp;&nbsp;}
+</font></code></pre></td></tr></table></p>
+The example above will first check the validity of the &lt;<a href="doc_irc_masks.html">nickname</a>&gt; passed to kb:
+if no <a href="doc_irc_masks.html">nickname</a> was passed , it will warn the user and stop.
+The next step will be the "ban &lt;<a href="doc_irc_masks.html">nickname</a>&gt;" call. Another enchancement is the "default reason":
+we first <a href="doc_operators.html">assign</a> the remaining parameters ($1- means "from $1 to the end") to a temporary <a href="doc_kvs_datatypes.html">variable</a>,
+if the <a href="doc_kvs_datatypes.html">variable</a> is empty , a default kick reason is assigned.
+Finally the "kick &lt;<a href="doc_irc_masks.html">nickname</a>&gt; &lt;reason&gt;" will be executed.
+Get used to looking at the single command documentation pages, they will give
+you the hints necessary to fully understand the above piece of code.
+</p>
+<p>
+<a href="doc_aliases.html">Aliases</a> can be used as a mean for structured programming.
+In large scripts you will SURELY have "common tasks" to perform (like having specially
+colored output or calculating a value from a set of other values)...
+<a href="doc_aliases.html">Aliases</a> are the way of writing the common tasks: they are equivalent to the "procedures"
+or "functions" in many high-level programming languages.
+The alias as a procedure (subroutine or sub-task) has been shown in the "kb" example above:
+it might be commonly called from complexier scripts or other <a href="doc_aliases.html">aliases</a> in case that a
+kick & ban action is needed.
+</p>
+<p>
+The <a href="doc_aliases.html">aliases</a> can be used also as functions.
+Assume that you need really often to calculate the sum of three numbers: a function-alias is the way.
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_alias.html">alias</a>(sum3){ <a href="cmd_return.html">return</a> $($0 + $1 + $2); };
+</font></code></pre></td></tr></table></p>
+This will add the alias "sum3" and make it available both as a command and a function.
+The "return" command sets the return value of a sequence of commands
+(an alias is a sequence of commands...remember ?) and terminates the execution (by returning
+the control to the caller).
+So return $($0 + $1 + $2); will set the return value of the alias to the value
+computed by $($0 + $1 + $2) that actually is the sum of the first three parameters passed.
+You will then use it in the following way:
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;%myfirstsum = $sum3(%somevalue,%someothervalue,4)
+&nbsp;&nbsp;&nbsp;&nbsp;%anothersum = $sum3(12,%somevalue,%anothervalue)
+&nbsp;&nbsp;&nbsp;&nbsp;...
+</font></code></pre></td></tr></table></p>
+Ops.. I've used some <a href="doc_kvs_datatypes.html">variables</a> without actually explaining them... hehe.. please forgive me and read on.
+This example is again really simple , but you might have complexier function-aliases.
+The function-aliases are also normal <a href="doc_aliases.html">aliases</a>.... you can use it as a command:
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;/sum3 1 2 3
+</font></code></pre></td></tr></table></p>
+Is a perfectly valid call.... it's just that it will have no visible results
+(just because a command call implies ignoring the return value.
+In fact there is no difference al all between function-aliases and normal-aliases:
+the caller makes the difference: by calling an alias as a command the return value
+just disappears in hyperspace, by calling an alias as a function , the return value
+is propagated (and in fact "used").
+(There are some "nice" exceptions to this rule...but you don't need to care about it, for now).
+If return is not called inside an alias body , the return value will be just a null value.
+</p>
+<p>
+<a href="doc_aliases.html">Aliases</a> can accept switches just like any other command. The <a href="fnc_sw.html">$sw</a> is there
+exactly for that purpose. Check it out.
+</p>
+</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Special functions</div></td></tr><tr><td bgcolor="#EAEAEA">
+<p>
+We have already seen the positional parameter functions.
+The functions of type <b>$N[-[M]]</b> (where N and M are positive
+numbers starting from 0 and N &lt; M) evaluate to the sequence of
+<b>positional parameters</b> from Nth to Mth."<br>
+If M is omitted , the function evaluate to the sequence of <b>positional
+parameters</b> from Nth to the last one. If the whole -M block is omitted
+the function evaluate to the Nth positional parameter.
+We will discover more on the <b>positional parameters</b> when talking
+of <a href="doc_aliases.html">aliases</a> and <a href="doc_events.html">events</a>.<br>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;$0 evaluates to the 1st positional parameter
+&nbsp;&nbsp;&nbsp;&nbsp;$0-4 evaluates to the parameters from first to 5th
+&nbsp;&nbsp;&nbsp;&nbsp;$41- evaluates to the parameters from 41st to the last avaiable
+</font></code></pre></td></tr></table></p>
+The function <b>$#</b> evaluates to the number of positional parameters available.
+The <b>positional parameter</b> functions do not accept parameters.<br>
+The special function <b>$(&lt;expression&gt;)</b> returns the result
+of the evaluation of the &lt;expression&gt;. In previous versions of <a href="doc_kvircintro.html">KVIrc</a> this
+function was called <a href="fnc_calc.html">$calc</a>.<br>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> $(2 + (3 ^ 7) &lt;= 1 * (3 && 2))
+</font></code></pre></td></tr></table></p>
+The special function <b>${&lt;command sequence&gt;}</b> evaluates to the
+return value of the &lt;command sequence&gt;.<br>
+The special function <b>$$</b> evaluates to the current <a href="class_object.html">object</a> id,
+but it is too early to explain it here...<br>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

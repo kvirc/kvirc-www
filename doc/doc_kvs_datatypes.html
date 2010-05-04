@@ -1,0 +1,426 @@
+<html>
+<head>
+<title>Variables and Data types</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>Variables and Data types</h1>
+All about the KVS variable and datatype management
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td></td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Basic syntax</div></td></tr><tr><td bgcolor="#EAEAEA">
+<p>
+A variable identifier is composed by a '%' (percent) sign followed
+by a sequence of letters, digits or underscores.
+Examples of valid variable names are:
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%i
+&nbsp;&nbsp;&nbsp;&nbsp;%variable
+&nbsp;&nbsp;&nbsp;&nbsp;%MyVar
+&nbsp;&nbsp;&nbsp;&nbsp;%1
+&nbsp;&nbsp;&nbsp;&nbsp;%thisisavar
+&nbsp;&nbsp;&nbsp;&nbsp;%2ndName
+&nbsp;&nbsp;&nbsp;&nbsp;%_hidden
+</font></code></pre></td></tr></table></p>
+<p>
+Variables are created when you <a href="doc_operators.html">assign</a> something to them: there is no need
+for a declaration (unlike other languages such as C/C++, Java or VB).
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># create a variable named %X by assigning the value 10 to it</font>
+&nbsp;&nbsp;&nbsp;&nbsp;%X = 10
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># use the variable</font>
+&nbsp;&nbsp;&nbsp;&nbsp;echo "The value of X is" %X
+</font></code></pre></td></tr></table></p>
+</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Local and global variables</div></td></tr><tr><td bgcolor="#EAEAEA">
+<p>
+Variables can be local or global.
+Local variables preserve their contents only inside the <b>scope</b> of a single <a href="doc_kvs_basicconcepts.html">script</a>.
+Global variables are shared between all the scripts and preserve their contents
+until they are explicitly unset or until <a href="doc_kvircintro.html">KVIrc</a> quits.
+</p>
+<p>
+Local variables start with a <b>lowercase letter</b> while the global ones with an <b>uppercase letter</b>.
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%var = 10; <font color="#207500"># this is a local variable</font>
+&nbsp;&nbsp;&nbsp;&nbsp;%Var = 10; <font color="#207500"># this is a global variable</font>
+</font></code></pre></td></tr></table></p>
+<p>
+You can also force a variable that start with a lowercase letter to be global
+by predeclaring it with the <a href="cmd_global.html">global</a> keyword.<br>
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># copy this <a href="doc_kvs_basicconcepts.html">script</a> to a file and run /<a href="cmd_parse.html">parse</a> &lt;filename&gt;</font>
+&nbsp;&nbsp;&nbsp;&nbsp;global %a
+&nbsp;&nbsp;&nbsp;&nbsp;%a = "The contents of the variable a"
+&nbsp;&nbsp;&nbsp;&nbsp;%b = "The contents of the variable b"
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># %a is a global variable now : all the other scripts can see its value</font>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># %b is a local variable and no other scripts can see its value</font>
+</font></code></pre></td></tr></table></p>
+<p>
+If you have executed the example above from a file (by the means of <a href="cmd_parse.html">parse</a>)
+then now you can type
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> %a
+</font></code></pre></td></tr></table></p>
+<p>
+in the commandline to see the contents of the variable %a.
+If you also try
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> %b
+</font></code></pre></td></tr></table></p>
+<p>
+you will see nothing printed since %b was local to the parsed <a href="doc_kvs_basicconcepts.html">script</a>.
+</p>
+</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Data types</div></td></tr><tr><td bgcolor="#EAEAEA">
+<p>
+<a href="doc_kvs_introduction.html">KVS</a> has three main categories of data types: scalars, arrays and associative
+arrays (also known as dictionaries or hashes).
+</p>
+</td></tr><tr><td bgcolor="#D6E0E8"><div style="font-size:13pt;font-weight:800;">Scalars</div></td></tr><tr><td bgcolor="#EAEAEA">
+<p>
+The scalars are simple variables containing a single value (a string or an integer).
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># %a is a scalar variable</font>
+&nbsp;&nbsp;&nbsp;&nbsp;%a = "This is a string"
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> %a
+&nbsp;&nbsp;&nbsp;&nbsp;%a = 24.5
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> %a
+</font></code></pre></td></tr></table></p>
+</td></tr><tr><td bgcolor="#D6E0E8"><div style="font-size:13pt;font-weight:800;">Arrays</div></td></tr><tr><td bgcolor="#EAEAEA">
+<p>
+Arrays are collections of items indexed by integers. The array items
+are selected by placing the index in square brackets just after the array name.
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%arrayName[index]
+</font></code></pre></td></tr></table></p>
+<p>
+An easy way to create an array is to use the <a href="fnc_array.html">$array</a> function.
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%a = $array("element1","element2","element3"); <font color="#207500"># Create an array with 3 items</font>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_for.html">for</a>(%i=0;%i&lt;3;%i++)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo %a[%i]; <font color="#207500"># Accessing the %i'th element of the array</font>
+&nbsp;&nbsp;&nbsp;&nbsp;}
+</font></code></pre></td></tr></table></p>
+<p>
+Note that in the example above %a refers to the whole array while %a[%i] refers
+to one of its elements, in particular the one with index %i.
+You also create an array by explicitly assigning to one of its elements:
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%a[9] = "This is an array element";
+</font></code></pre></td></tr></table></p>
+<p>
+Array indexes are zero-based so in the example above you have created an array
+with 10 items. You can find out an array's length with the <a href="fnc_length.html">$length</a>() function.
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%a[9] = "This is an array element";
+&nbsp;&nbsp;&nbsp;&nbsp;echo $length(%a)
+</font></code></pre></td></tr></table></p>
+<p>
+Be aware that by making such an <a href="doc_assignment.html">assignment</a> you implicitly consume some memory for
+all the preceeding array items (even if they are unset). This means that
+a simple instruction like the following may eat a huge amount of memory at once:
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%a[1000000] = "An array element faaaaaar away...";
+&nbsp;&nbsp;&nbsp;&nbsp;echo $length(%a)
+</font></code></pre></td></tr></table></p>
+<p><table width="100%" cellpadding="2"><tr><td bgcolor="#F0F0F0"><font color="#909090" size="-1"><p>
+Food for thoughts:
+</p>
+<p>
+<a href="doc_kvircintro.html">KVIrc</a> allocates a pointer for each item in the array. The pointer is
+empty when the item is unset and points to an additional block
+of memory when the item is set. The size of a pointer is platform
+dependant: on the platforms supported by <a href="doc_kvircintro.html">KVIrc</a> it's either 32 or 64 bit.
+The size of the additional block depends both on the platform
+and on the contents of the item... it's average value may
+be around 16 bytes. The array size is determined by the last SET element index.
+All this this means that in the worst case (64 bit assumption) an array in
+that the highest indexed item set is N eats up at least N*8+16 bytes of memory.
+</p>
+</font></td></tr></table></p>
+<p>
+Besides the traditional indexed looping method you
+can also use the <a href="cmd_foreach.html">foreach</a> command to iterate the items of an array.
+Be aware that <a href="cmd_foreach.html">foreach</a> will NOT iterate over unset items in the
+array unless you use the -a switch.
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%Array[0]=Pippo
+&nbsp;&nbsp;&nbsp;&nbsp;%Array[1]=Pluto
+&nbsp;&nbsp;&nbsp;&nbsp;%Array[2]=Paperino
+&nbsp;&nbsp;&nbsp;&nbsp;%Array[5]=Prova
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_foreach.html">foreach</a>(%item,%Array)<a href="cmd_echo.html">echo</a> Got Item: %item
+</font></code></pre></td></tr></table></p>
+<p>
+Note that the items 3 and 4 are simply skipped.
+</p>
+</td></tr><tr><td bgcolor="#D6E0E8"><div style="font-size:13pt;font-weight:800;">Hashes</div></td></tr><tr><td bgcolor="#EAEAEA">
+<p>
+The hashes are collections of items indexed by strings: the word "hash"
+is in fact a shortcut for "hashtable". In literature hashes are also called
+"associative arrays", "dictionaries" or "key-value pair sets".
+The hash items are selected by placing the key in curly brackets
+just after the hash name.
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%hashName{key}
+</font></code></pre></td></tr></table></p>
+<p>
+An easy way to create a hash is to use the <a href="fnc_hash.html">$hash</a> function.
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%a = $hash("key1","value1","key2","value2","key3","value3")
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_foreach.html">foreach</a>(%key,<a href="fnc_keys.html">$keys</a>(%a))
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "KEY:" %key "VALUE:" %a{%key};
+&nbsp;&nbsp;&nbsp;&nbsp;}
+</font></code></pre></td></tr></table></p>
+<p>
+Note that in the example above %a refers to the whole hash while %a{%i} refers
+to one of its elements, in particular the one with the key %key.
+You also create a hash by explicitly assigning to one of its elements:
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%a{"MyKey"} = "MyValue"
+</font></code></pre></td></tr></table></p>
+<p>
+You may have already noticed that the <a href="fnc_keys.html">$keys</a>() function returns
+the array of the hash keys: it is useful to iterate over the hash items.
+</p>
+</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Mutability of variables</div></td></tr><tr><td bgcolor="#EAEAEA">
+<p>
+<a href="doc_kvs_introduction.html">KVS</a> is not strictly typed: any variable can assume different type identities at different times,
+even in the same <a href="doc_kvs_basicconcepts.html">script</a>.
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># %a is a scalar</font>
+&nbsp;&nbsp;&nbsp;&nbsp;%a = "This is a string"
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># %a becomes an array with 3 elements</font>
+&nbsp;&nbsp;&nbsp;&nbsp;%a = $array("element1","element2","element3");
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># %a becomes a hash with two values</font>
+&nbsp;&nbsp;&nbsp;&nbsp;%a = $hash("key1","value1","key2","value2");
+</font></code></pre></td></tr></table></p>
+<p>
+In literature this kind of variable is called <b>variant</b> and this is the
+term that you will find all around the documentation when an explicit
+data type is not requested.
+</p>
+<p>
+Note that array and hash items are variants too. This means that you can have arrays
+of arrays, hashes of arrays of hashes and any other multidimensional combination you like.
+However remember that hash keys are strings and not variants so you can't use an array as hash key.
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># here we eat 256 locations of memory at once :)</font>
+&nbsp;&nbsp;&nbsp;&nbsp;%a[16][16] = 10
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># a hash of hashes: here we eat just two memory locations</font>
+&nbsp;&nbsp;&nbsp;&nbsp;%a{"16"}{"16"} = 10
+</font></code></pre></td></tr></table></p>
+<p>
+In most cases the <a href="doc_kvs_introduction.html">KVS</a> engine manages automatically the conversion between data types.
+For example, when you put an array in a place where a scalar is requested, <a href="doc_kvircintro.html">KVIrc</a>
+automatically transforms it to a scalar string by joining all the items with a comma.
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%a = $array("element1","element2","element3");
+&nbsp;&nbsp;&nbsp;&nbsp;echo %a; <font color="#207500"># echo expects its arguments to be scalar</font>
+</font></code></pre></td></tr></table></p>
+<p>
+Conversely, when you put a scalar in place of an array, <a href="doc_kvircintro.html">KVIrc</a> automatically
+transforms it to an array with a single item. In this way a function like
+<a href="fnc_sort.html">$sort</a> works also with a scalar.
+</p>
+<p>
+In literature the conversions between data types are called <b>casts</b>. When
+the conversion is automatic the cast is said to be <b>implicit</b>.
+</p>
+<p>
+<a href="doc_kvs_introduction.html">KVS</a> handles also the other possible implicit casts: scalar-&gt;hash,hash-&gt;scalar,array-&gt;hash,hash-&gt;array.
+Experiment with it.
+</p>
+</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">More about scalars</div></td></tr><tr><td bgcolor="#EAEAEA">
+<p>
+Internally <a href="doc_kvs_introduction.html">KVS</a> is implicitly typed: the "scalar" data type is in fact
+a set of types that <a href="doc_kvircintro.html">KVIrc</a> manages silently. The types are: integer, string, real, boolean and hobject.
+</p>
+<p>
+Integers are non-floating point numbers. Their allowable range depends on the underlying
+platform integer size: usually 32 or 64 bit.
+</p>
+<p>
+Reals are floating point numbers. Their allowable range and precision depends on the underlying
+platform.
+</p>
+<p>
+Booleans are either true or false values.
+</p>
+<p>
+Hobject stands for Handle to <a href="class_object.html">Object</a> and it is a sort of a C++ pointer.
+Detailed description of <a href="doc_objects.html">objects</a> is in <a href="doc_objects.html">this document</a>.
+</p>
+<p>
+Basically anything else fails in the "string" category.
+</p>
+<p>
+In most cases <a href="doc_kvs_introduction.html">KVS</a> manages all the conversions between data types automatically.
+For example an integer becomes a true boolean when it's non zero and a false boolean
+otherwise, a real becomes an integer by truncating it's fractional part...
+</p>
+<p>
+You can find out the type of a specified variable by using the <a href="fnc_typeof.html">$typeof</a>() function.
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%a = 1
+&nbsp;&nbsp;&nbsp;&nbsp;echo $typeof(%a)
+&nbsp;&nbsp;&nbsp;&nbsp;%a = 1.1
+&nbsp;&nbsp;&nbsp;&nbsp;echo $typeof(%a)
+&nbsp;&nbsp;&nbsp;&nbsp;%a = $true
+&nbsp;&nbsp;&nbsp;&nbsp;echo $typeof(%a)
+&nbsp;&nbsp;&nbsp;&nbsp;%a = "test"
+&nbsp;&nbsp;&nbsp;&nbsp;echo $typeof(%a)
+</font></code></pre></td></tr></table></p>
+<p>
+There is also another subtle type of scalar called "nothing". It stands for an empty (unset) variable.
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%a = $nothing
+&nbsp;&nbsp;&nbsp;&nbsp;echo $typeof(%a)
+</font></code></pre></td></tr></table></p>
+<p>
+Nothing is something in between a data type and a special value for all the other data types:
+it rappresents absence of information.
+This may look a bit confusing but realize that all the unreferenced <a href="doc_kvs_introduction.html">KVS</a> variable are in fact of type "nothing":
+they just don't exist. This means that you can use <a href="fnc_nothing.html">$nothing</a>() to effectively
+unset a variable.
+<p>
+<p>
+Again, when possible, the conversion between nothing and the other data types is
+performed automatically. Nothing becomes an empty string, a null <a href="class_object.html">object</a> handle or an empty array.
+</p>
+</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Explicit casts</div></td></tr><tr><td bgcolor="#EAEAEA">
+<p>
+You can make explicit conversions between some data types by using the casting <a href="doc_kvs_aliasesandfunctions.html">functions</a>.
+<a href="fnc_integer.html">$integer</a>() will attempt to convert the variant parameter to an integer, <a href="fnc_real.html">$real</a>()
+will cast to a floating point value, <a href="fnc_boolean.html">$boolean</a>() will convert to a
+true/false value, <a href="fnc_string.html">$string</a>() will explicitly convert to a string,
+<a href="fnc_array.html">$array</a>() will convert to an array and <a href="fnc_hash.html">$hash</a> will return
+a dictionary. By assigning the special <a href="fnc_nothing.html">$nothing</a>() value you will
+convert to the nothing data type (or simply unset the variable).
+The only explicit conversion that is not possible is to hobject.
+</p>
+<p>
+As stated several times in this document, <a href="doc_kvs_introduction.html">KVS</a> tries to manage the casts automatically
+so you usually don't need to care about it. The explicit casts are provided for
+the very few cases where an automatic conversion would lead to an unexpected value (for your <a href="doc_kvs_basicconcepts.html">script</a>)
+and for writer's clarity.
+</p>
+</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">More about variables lifecycle</div></td></tr><tr><td bgcolor="#EAEAEA">
+<p>
+As stated above variables start their existence when you <a href="doc_operators.html">assign</a> something to them.
+After a variable has been created it persists until it goes out of his scope (remember
+about local and global variables ?) or you explicitly destroy it. You will usually
+not care about it and just leave the <a href="doc_kvs_introduction.html">KVS</a> engine to do his cleaning job but it's still worth
+knowing that you actually can force <a href="doc_kvircintro.html">KVIrc</a> to free the memory used by a variable.
+</p>
+<p>
+The first method to explicitly destroy a variable is to call <a href="cmd_unset.html">unset</a> on it.
+<a href="cmd_unset.html">unset</a> in fact accepts a list of variables so you can destroy more variables at once.
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%a = <a href="fnc_array.html">$array</a>("data","for","a","really","huge","array","of","items")
+&nbsp;&nbsp;&nbsp;&nbsp;%b = 10
+&nbsp;&nbsp;&nbsp;&nbsp;%c = "just a string that eats memory"
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_unset.html">unset</a> %a,%b,%c
+</font></code></pre></td></tr></table></p>
+<p>
+The <a href="doc_kvs_introduction.html">KVS</a> engine treats unset variables just like empty strings. The opposite is also valid: empty
+strings behave like empty (unset) variables. This means that you can <a href="doc_operators.html">assign</a> an empty string
+to a variable to unset it.
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%a = "test"; <font color="#207500"># %a starts his existence</font>
+&nbsp;&nbsp;&nbsp;&nbsp;%b = "test2";
+&nbsp;&nbsp;&nbsp;&nbsp;%a = ""; <font color="#207500"># %a is in fact unset</font>
+&nbsp;&nbsp;&nbsp;&nbsp;%b = ; <font color="#207500"># syntactically this is just the same as above</font>
+</font></code></pre></td></tr></table></p>
+<p>
+Note that because of mutability of variables (explained above) you can use the empty string
+<a href="doc_assignment.html">assignment</a> also to free arrays and hashes.
+</p>
+</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Extended scope variables</div></td></tr><tr><td bgcolor="#EAEAEA">
+<p>
+Beside local and global variables there is a third family of them.
+Variables that have a ':' character just after the leading '%' are <b>extended scope</b> variables.
+"%:index" , "%:Hello" , "%:something.else" are all valid special scope variable names.
+They're actually used in popups and in timers (but later I might find other usages as well :).
+"Extended scope" means that these variables are somewhere in the middle between
+global and local variables. They normally act as local , but in some cases their <b>lifetime</b> and <b>visibility</b>
+may be extended.
+</p>
+<p>
+For example , in the popups , all the special scope variables
+are visible during all the "lifetime" of a popup (so from the prologue code call to
+the moment when the user selects an item and the corresponding code is executed).
+This allows you to pre-calculate some data or conditions in the popup prologue
+and use this data in the popup item conditions and item handlers.
+</p>
+</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Variable evaluation</div></td></tr><tr><td bgcolor="#EAEAEA">
+<p>
+A variable can appear in every place where a parameter
+is expected: so after the command name, after a switch or inside
+an identifier parameters. The <a href="doc_kvs_introduction.html">KVS</a> parser will try to extract the longest possible variable
+name after a literal percent '%' sign everywhere in the parameter string. So the command sequence
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%number = 1st; echo this is my %number variable test
+</font></code></pre></td></tr></table></p>
+<p>
+will first <a href="doc_operators.html">assign</a> "1st" to the variable "%number" and then execute
+"echo this is my 1st variable test". The following example will NOT work as expected.
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%number = 1; echo this is my %numberst variable test
+</font></code></pre></td></tr></table></p>
+<p>
+<a href="doc_kvs_introduction.html">KVS</a> will <a href="doc_operators.html">assign</a> "1" to %number in this case but the next variable
+name extracted will be "%numberst" that is actually empty; so finally
+"echo this is my variable test" will be executed.
+To avoid this problem you can use the backslash escape character:
+</p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%number = 1; echo this is my %number\st variable test
+</font></code></pre></td></tr></table></p>
+</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Putting it all together</div></td></tr><tr><td bgcolor="#EAEAEA">
+<p>
+Variables can be either local, global or have an extended scope. Their start to exist
+when you first <a href="doc_operators.html">assign</a> something to them and they disappear when they go out of their
+scope or you explicitly destroy them.
+</p>
+<p>
+<a href="doc_kvs_introduction.html">KVS</a> has 8 builtin data types: string, integer, real, boolean, hobject, nothing, array and hash.
+The first 6 are scalar data types while the last two are not.
+</p>
+<p>
+When possible, <a href="doc_kvs_introduction.html">KVS</a> manages all the conversions between data types silently.
+In the few cases in that an implicit conversion is not possible you have to manage the conversion
+manually otherwise <a href="doc_kvs_introduction.html">KVS</a> will complain.
+</p>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

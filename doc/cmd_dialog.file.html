@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>dialog.file</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>dialog.file</h1>
+Shows a file dialog
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Usage</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code>dialog.file [-b] (&lt;mode&gt;,&lt;caption&gt;[,&lt;initial_selection[,&lt;file_filter&gt;[,&lt;magic1&gt;[,&lt;magic2&gt;[...]]]]]])
+{
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;callback_command&gt;
+}</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>Shows an openfile dialog box with the specified &lt;caption&gt; , &lt;initial_selection&gt; , and &lt;file_filter&gt;.<br>
+&lt;mode&gt; can be "open" , "openm" , "save" or "dir":<br>
+"open" causes the dialog to return an existing file<br>
+"openm" is similar to open but allows returning multiple files as a comma separated list<br>
+"save" causes the dialog to return any file name (no overwrite confirmation is built in the dialog!)<br>
+"dir" causes the dialog to return an existing directory name<br>
+&lt;mode&gt; defaults to "open".<br>
+&lt;caption&gt; is a text string that will appear in the caption of the dialog box.<br>
+&lt;initial_selection&gt; can be a directory or filename that will be initially selected in the dialog.<br>
+Only files matching &lt;file_filter&gt; are selectable. If filter is an empty string, all files are selectable.<br>
+In the filter string multiple filters can be specified separated by either two semicolons next to each
+other or separated by newlines. To add two filters, one to show all C++ files and one to show all
+header files, the filter string could look like "C++ Files (*.cpp *.cc *.C *.cxx *.c++);;Header Files (*.h *.hxx *.h++)"
+&lt;magic1&gt;,&lt;magic2&gt;... are the magic parameters: evaluated at dialog.message call time and passed
+to the &lt;callback_command&gt; as positional parameters.<br>
+If the -b or -modal switch is specified the dialog will have non-blocking modal behaviour:
+it will appear above its parent widget and block its <a href="class_painter.html">input</a> until it's closed.<br>
+Once the dialog has been shown , the user will select an EXISTING file and click either
+Ok or Cancel. At this point the dialog is hidden and the &lt;callback_command&gt; is executed passing the selected file(s) as $0
+and the magic parameters as positional parameters $1 , $2 , $3....<br>
+If the user clicks "Cancel" or does not select any file the positional parameter $0 will be empty.<br>
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Syntax Specification</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code><b>dialog.file</b> <font color="#8080a0">[</font>-b<font color="#8080a0">]</font> <b>(</b><font color="#8080a0">&lt;</font>mode<font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>caption<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>initial_selection<font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>file_filter<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>magic1<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>magic2<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>...<font color="#8080a0">]</font><font color="#8080a0">]</font><font color="#8080a0">]</font><font color="#8080a0">]</font><font color="#8080a0">]</font><font color="#8080a0">]</font><b>)</b>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">&lt;</font>callback_command<font color="#8080a0">&gt;</font>
+}</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Examples</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;dialog.file(open,Choose an audio file,/home/pragma/TheAudio.au,"Audio files (*.au *.wav *.snd)")
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if("$0" != "")run play $0
+&nbsp;&nbsp;&nbsp;&nbsp;}
+</font></code></pre></td></tr></table></p>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

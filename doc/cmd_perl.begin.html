@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>perl.begin</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>perl.begin</h1>
+Starts a perl code snippet
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Usage</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code>perl.begin [-n] [-q] [(&lt;perl_context&gt;[,&lt;arg0&gt;[,&lt;arg1&gt;[...]]])]
+&lt;perl code&gt;
+perl.end</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>Indicates the beginning of a snipped of perl code.
+The whole code part between perl.begin and perl.end
+is executed in a perl interpreter.
+If perl.end is omitted then it is implicitly assumed
+that the code from perl.begin to the end of the command
+buffer is perl.<br>
+Each perl code execution is bound to a
+perl context (that is in fact a particular instance
+of a perl interpreter). If &lt;perl_context&gt; is not specified
+or it is an empty string then temporary perl interpreter is created
+and destroyed just after the code snippet has terminated execution.
+If &lt;perl_context&gt; is specified then a perl interpreter
+keyed to that context is used: if it was already existing
+then it is reused otherwise it is created.
+Any &lt;perl_context&gt; is persistent: it mantains the function
+declarations and perl <a href="doc_kvs_datatypes.html">variable</a> states until explicitly
+destroyed with <a href="cmd_perl.destroy.html">perl.destroy</a> (or the perlcore
+module is forcibly unloaded).<br>
+The &lt;arg0&gt;,&lt;arg1&gt;,... arguments, if present, are passed
+to the perl code snippet in the @_ <a href="doc_kvs_datatypes.html">array</a> (accessible as $_[0],$_[1]...).<br>
+The return value of the perl code is propagated to the current
+context (just like <a href="cmd_setreturn.html">setreturn</a> was called on it) unless
+the -n switch is used.<br>
+The -q switch prevents from the command from printing any
+warning.<br>
+See the <a href="doc_perl_and_kvs.html">perl scripting documentation</a>
+for more information.
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Switches</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#D5D5D5">
+<tr bgcolor="#E0E0E0"><td><b>-q | --quiet</b></td></tr>
+<tr><td>Prevents the command from printing any warnings.</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-n | --no-return</b></td></tr>
+<tr><td>Prevents the perl <a href="doc_kvs_basicconcepts.html">script</a> return value to be propagated to the current context.</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-f | --fail-on-error</b></td></tr>
+<tr><td>Treat perl errors as <a href="doc_kvs_introduction.html">KVS</a> errors and abort execution of the current script. Incompatible with -q</td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Syntax Specification</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code><b>perl.begin</b> <font color="#8080a0">[</font>-n<font color="#8080a0">]</font> <font color="#8080a0">[</font>-q<font color="#8080a0">]</font> <font color="#8080a0">[</font><b>(</b><font color="#8080a0">&lt;</font>perl_context<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>arg0<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>arg1<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>...<font color="#8080a0">]</font><font color="#8080a0">]</font><font color="#8080a0">]</font><b>)</b><font color="#8080a0">]</font>
+<font color="#8080a0">&lt;</font>perl code<font color="#8080a0">&gt;</font>
+<b>perl.end</b></code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Examples</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;perl.begin
+&nbsp;&nbsp;&nbsp;&nbsp;KVIrc::eval("echo \"Hello World from perl!\"");
+&nbsp;&nbsp;&nbsp;&nbsp;perl.end
+</font></code></pre></td></tr></table></p>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

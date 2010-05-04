@@ -1,0 +1,123 @@
+<html>
+<head>
+<title>dialog.textinput</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>dialog.textinput</h1>
+Shows a dialog that accepts user input as text
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Usage</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code>dialog.textinput [-d=&lt;default text&gt;] [-i=&lt;icon&gt;] [-m] [-b] (&lt;caption&gt;,&lt;info_text&gt;,&lt;button0&gt;[,&lt;button1&gt;[,&lt;button2&gt;[,&lt;magic1&gt;[,&lt;magic2&gt;[...]]]]])
+{
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;callback_command&gt;
+}</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>Shows a text <a href="class_painter.html">input</a> dialog box with the specified &lt;caption&gt; , &lt;info_text&gt; , &lt;icon&gt; and
+buttons.<br>
+&lt;caption&gt; is a text string that will appear in the caption of the dialog box.<br>
+&lt;info_text&gt; is a fixed text string that will appear in the dialog box and can contain HTML formatting.<br>
+&lt;button0&gt; is the text of the first button (on the left).<br>
+&lt;button1&gt; is the text of the second button (if empty or not given at all, only one button will appear in the dialog).<br>
+&lt;button2&gt; is the text of the third button (if empty or not given, only two buttons will appear in the dialog).<br>
+If one of the text strings starts with a "default=" prefix then the button is assumed
+to be the default button of the dialog and will be also activated when the user presses enter.
+If the -m switch is used , the dialog will be a multi-line text <a href="class_painter.html">input</a>, otherwise the user will be able to
+<a href="class_painter.html">input</a> only a single line of text.<br>
+If the -d switch is used , the initial text <a href="class_painter.html">input</a> value is set to &lt;default text&gt;.<br>
+If the -i switch is used , the dialog displays also the icon &lt;icon&gt; , just on the left ot the &lt;info_text&gt;<br>
+If the -b or -modal switch is specified the dialog will have non-blocking modal behaviour:
+it will appear above its parent widget and block its <a href="class_painter.html">input</a> until it's closed.<br>
+In that case &lt;icon&gt; is an <a href="doc_image_id.html">image identifier</a> (can be a relative or absolute
+path to an image file or a signed number (in that case it defines an internal <a href="doc_kvircintro.html">KVIrc</a> image).<br>
+&lt;magic1&gt;,&lt;magic2&gt;... are the magic parameters: evaluated at dialog.textinput call time and passed
+to the &lt;callback_command&gt; as positional parameters.<br>
+Once the dialog has been shown , the user will click one of the buttons. At this point the dialog
+is hidden and the &lt;callback_command&gt; is executed passing the text <a href="class_painter.html">input</a> value in $1, the number of the button clicked
+as $0, and the magic parameters as positional parameters $2 , $3 , $4....<br>
+Please note that if the user closes the window with the window manager close button ,
+the action is interpreted as a button2 click (that is usually sth as "Cancel").<br>
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Switches</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#D5D5D5">
+<tr bgcolor="#E0E0E0"><td><b>-d=&lt;default_text&gt; | --default=&lt;default_text&gt;</b></td></tr>
+<tr><td>Set the initial text <a href="class_painter.html">input</a> value to &lt;default_text&gt;</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-i=&lt;icon&gt; | --icon=&lt;icon&gt;</b></td></tr>
+<tr><td>Display the specified icon, just of the left of the informational text</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-m | --multiline</b></td></tr>
+<tr><td><a href="class_painter.html">Input</a> multiline text instead of single line</td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Syntax Specification</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code><b>dialog.textinput</b> <font color="#8080a0">[</font>-d=<font color="#8080a0">&lt;</font>default text<font color="#8080a0">&gt;</font><font color="#8080a0">]</font> <font color="#8080a0">[</font>-i=<font color="#8080a0">&lt;</font>icon<font color="#8080a0">&gt;</font><font color="#8080a0">]</font> <font color="#8080a0">[</font>-m<font color="#8080a0">]</font> <font color="#8080a0">[</font>-b<font color="#8080a0">]</font> <b>(</b><font color="#8080a0">&lt;</font>caption<font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>info_text<font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>button0<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>button1<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>button2<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>magic1<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>magic2<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>...<font color="#8080a0">]</font><font color="#8080a0">]</font><font color="#8080a0">]</font><font color="#8080a0">]</font><font color="#8080a0">]</font><b>)</b>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">&lt;</font>callback_command<font color="#8080a0">&gt;</font>
+}</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Examples</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000"><font color="#207500"># We need a single line "reason"</font>
+dialog.textinput -d="Working !" (Away,&lt;center&gt;Please enter the &lt;h1&gt;away message&lt;/h1&gt;&lt;/center&gt;,"Ok","Cancel")
+{
+&nbsp;&nbsp;&nbsp;&nbsp;switch($0)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case(0):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;away $1-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Cancelled
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+</font></code></pre></td></tr></table></p>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>$date</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>$date</h1>
+Returns a date/time string using a specified format
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Usage</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code>$date(&lt;format&gt;[,&lt;unixtime&gt;])</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>Returns the string representation of &lt;unixtime&gt; or
+of the current time if &lt;unixtime&gt; is not given,
+based on &lt;format&gt;.<br>
+The &lt;format string&gt; should contain a set of characters
+that will be transformed according to the following rules:<br>
+<br>
+<table bgcolor="#D5D5D5" width="100%">
+<tr><td><b>a</b></td><td>The abbreviated weekday name according to the current locale.</td></tr>
+<tr><td><b>A</b></td><td>The full weekday name according to the current locale.</td></tr>
+<tr><td><b>b</b></td><td>The abbreviated month name according to the current locale.</td></tr>
+<tr><td><b>B</b></td><td>The full month name according to the current locale.</td></tr>
+<tr><td><b>c</b></td><td>The preferred date and time representation for the current locale.</td></tr>
+<tr><td><b>C</b></td><td>The century number (year/100) as a 2-digit integer. (SU)</td></tr>
+<tr><td><b>d</b></td><td>The day of the month as a decimal number (range 01 to 31).</td></tr>
+<tr><td><b>D</b></td><td>Equivalent to m/d/y.</td></tr>
+<tr><td><b>e</b></td><td>Like d, the day of the month as a decimal number, but a leading
+zero is replaced by a space. (SU)</td></tr>
+<tr><td><b>E</b></td><td>Modifier: use alternative format, see below. (SU)</td></tr>
+<tr><td><b>F</b></td><td>Equivalent to Y-m-d (the ISO 8601 date format). (C99)</td></tr>
+<tr><td><b>G</b></td><td>The ISO 8601 year with century as a decimal number. The 4-digit
+year corresponding  to the ISO week number (see V). This has the
+same format and value as y, except that if the ISO week number
+belongs to the previous or next year, that year is used instead.</td></tr>
+<tr><td><b>g</b></td><td>Like G, but without century, i.e., with a 2-digit year (00-99).</td></tr>
+<tr><td><b>h</b></td><td>Equivalent to b.</td></tr>
+<tr><td><b>H</b></td><td>The hour as a decimal number using a 24-hour clock (range 00 to 23).</td></tr>
+<tr><td><b>I</b></td><td>The hour as a decimal number using a 12-hour clock (range 01 to 12).</td></tr>
+<tr><td><b>j</b></td><td>The day of the year as a decimal number (range 001 to 366).</td></tr>
+<tr><td><b>k</b></td><td>The hour (24-hour clock) as a decimal number (range 0 to 23); sin-
+gle digits are preceded by a blank. (See also H.)</td></tr>
+<tr><td><b>l</b></td><td>The hour (12-hour clock) as a decimal number (range 1 to 12); sin-
+gle digits are preceded by a blank. (See also I.)</td></tr>
+<tr><td><b>m</b></td><td>The month as a decimal number (range 01 to 12).</td></tr>
+<tr><td><b>M</b></td><td>The minute as a decimal number (range 00 to 59).</td></tr>
+<tr><td><b>n</b></td><td>A newline character. (SU)</td></tr>
+<tr><td><b>p</b></td><td>Either  `AM' or `PM' according to the given time value, or the cor-
+responding strings for the current locale.  Noon is treated as `pm' and midnight as `am'.</td></tr>
+<tr><td><b>r</b></td><td>The time in a.m. or p.m. notation.  In the  POSIX  locale  this  is
+equivalent to `I:M:S p'.</td></tr>
+<tr><td><b>s</b></td><td>The number of seconds  since  the  Epoch,  i.e.,  since  1970-01-01
+00:00:00 UTC.</td></tr>
+<tr><td><b>S</b></td><td>The second as a decimal number (range 00 to 60).  (The range is up
+to 60 to allow for occasional leap seconds.)</td></tr>
+<tr><td><b>t</b></td><td>A tab character.</td></tr>
+<tr><td><b>T</b></td><td>The time in 24-hour notation (H:M:S). (SU)</td></tr>
+<tr><td><b>u</b></td><td>The day of the week as a decimal, range 1 to  7,  Monday  being  1.
+See also w.</td></tr>
+<tr><td><b>U</b></td><td>The week number of the current year as a decimal number, range 00
+to 53, starting with the first Sunday as the first day of week  01. See also V and W.</td></tr>
+<tr><td><b>V</b></td><td>The ISO 8601:1988 week number of the current year as a decimal num-
+ber, range 01 to 53, where week 1 is the first  week  that  has  at
+least  4 days in the current year, and with Monday as the first day
+of the week. See also U and W.</td></tr>
+<tr><td><b>w</b></td><td>The day of the week as a decimal, range 0 to  6,  Sunday  being  0.</td></tr>
+<tr><td><b>W</b></td><td>The week number of the current year as a decimal number, range 00
+to 53, starting with the first Monday as the first day of week  01.</td></tr>
+<tr><td><b>x</b></td><td>The  preferred  date  representation for the current locale without
+the time.</td></tr>
+<tr><td><b>X</b></td><td>The preferred time representation for the  current  locale  without
+the date.</td></tr>
+<tr><td><b>y</b></td><td>The year as a decimal number without a century (range 00 to 99).</td></tr>
+<tr><td><b>Y</b></td><td>The year as a decimal number including the century.</td></tr>
+<tr><td><b>z</b></td><td>The   time-zone   as  hour  offset  from  GMT.   Required  to  emit
+              RFC822-conformant dates (using "a, d b Y H:M:S z").</td></tr>
+<tr><td><b>Z</b></td><td>The time zone or name or abbreviation.</td></tr>
+<tr><td><b>+</b></td><td>The date and time in date(1) format. (TZ)</td></tr>
+</table>
+WARNING: Please note that this list is taken from the unix version of the strftime
+function and not all the escape codes may be supported by other platforms.
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Syntax Specification</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code><font color="#8080a0">&lt;</font><font color="#808080">string</font><font color="#8080a0">&gt;</font> <b>$date</b><b>(</b><font color="#8080a0">&lt;</font>format<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>unixtime<font color="#808080">:integer</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font><b>)</b></code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Examples</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> $date("d/m/Y H:M:S")
+</font></code></pre></td></tr></table></p>
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>See also</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><a href="fnc_unixtime.html">$unixtime</a>, <a href="fnc_hptimestamp.html">$hptimestamp</a>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_function_alphabetic_a.html">Functions</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

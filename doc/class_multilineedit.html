@@ -1,0 +1,186 @@
+<html>
+<head>
+<title>multilineedit class</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>multilineedit class</h1>
+An editor for inputting larger portions of text
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Inherits</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><a href="class_object.html">object</a>
+<a href="class_widget.html">widget</a></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>This is <a href="class_object.html">class</a> an editor for inputting larger portions of text.
+Besides that, it has unfinished docs.
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Functions</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#E0E0E0">
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; textLine">&lt;string&gt; $textLine(&lt;line:integer&gt;)</a></font></b></code></td></tr>
+<tr><td>Returns the string at line &lt;line&gt;. Note that it can be an empty string.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="insertLine">$insertLine(&lt;text:string&gt;, &lt;line:integer&gt;)</a></font></b></code></td></tr>
+<tr><td>Inserts &lt;text&gt; at line number &lt;line&gt;. If line is less than zero, or larger than the number of rows, the new text is put at the end. If txt contains newline characters, several lines are inserted. The &lt;line&gt; parameter is optional. If it is ommited, the line is put at end.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="removeLine">$removeLine(&lt;line:integer&gt;)</a></font></b></code></td></tr>
+<tr><td>Removes line number &lt;line&gt;.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="insertAt">$insertAt(&lt;txt:string&gt;, &lt;line:uinteger&gt;, &lt;col:uinteger&gt;)</a></font></b></code></td></tr>
+<tr><td>Inserts txt at line number line, after character number col in the line. If txt contains newline characters, new lines are inserted.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;integer&gt; numLines">&lt;integer&gt; $numLines()</a></font></b></code></td></tr>
+<tr><td>Returns number of lines in the widget.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setCursorPosition">$setCursorPosition(&lt;line:integer&gt;, &lt;col:uinteger&gt;, &lt;mark:boolean&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the cursor position to character number col in line number line. The parameters are adjusted to lie within the legal range.<br> If mark is 1, the selection is cleared. otherwise it is extended</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;line,col:integer&gt; cursorPosition">&lt;line,col:integer&gt; $cursorPosition()</a></font></b></code></td></tr>
+<tr><td>Returns current cursor position in "&lt;line:uinteger&gt;, &lt;col:uinteger&gt;" format.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setReadOnly">$setReadOnly(&lt;bReadOnly:boolean&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the editor to be read-only if bReadOnly is 1 or removes the read-only status is ReadOnly is 0</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; atBeginning">&lt;boolean&gt; $atBeginning()</a></font></b></code></td></tr>
+<tr><td>Returns 1(TRUE) if the cursor is placed at the beginning of the text; otherwise returns 0(FALSE).</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; atEnd">&lt;boolean&gt; $atEnd()</a></font></b></code></td></tr>
+<tr><td>Returns 1(TRUE) if the cursor is placed at the end of the text; otherwise returns 0(FALSE).</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setWordWrap">$setWordWrap(&lt;wrap_mode:string&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the word wrap mode to mode. Valid Values are:<br> - NoWrap - Do not wrap the text.<br> - WidgetWidth - Wrap the text at the current width of the widget.<br> - FixedPixelWidth - Wrap the text at a fixed number of pixels from the widget's left side.<br> - FixedColumnWidth - Wrap the text at a fixed number of character columns from the widget's left side.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; wordWrap">&lt;string&gt; $wordWrap()</a></font></b></code></td></tr>
+<tr><td>Returns the word wrap mode. NoWrap, WidgetWidth, FixedPixelWidth, FixedColumnWidth.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; text">&lt;string&gt; $text()</a></font></b></code></td></tr>
+<tr><td>Returns the multiline edit's text.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;integer&gt; length">&lt;integer&gt; $length()</a></font></b></code></td></tr>
+<tr><td>Returns the number of characters in the text This function ignores newlines.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setMaxLines">$setMaxLines(&lt;mac_lines:integer&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the max number of the lines to &lt;a&gt;</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;integer&gt; maxLines">&lt;integer&gt; $maxLines()</a></font></b></code></td></tr>
+<tr><td>Returns the max number of the lines in the multiline edit.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="insert">$insert(&lt;text:string&gt;)</a></font></b></code></td></tr>
+<tr><td>Inserts text at the current cursor position.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="append">$append(&lt;text:string&gt;)</a></font></b></code></td></tr>
+<tr><td>Appends a new paragraph with text to the end of the multiline edit.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="copy">$copy()</a></font></b></code></td></tr>
+<tr><td>Copies any selected text from selection  to the clipboard.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="cut">$cut()</a></font></b></code></td></tr>
+<tr><td>Copies the selected text from selection  to the clipboard and deletes it from the multiline edit.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="paste">$paste()</a></font></b></code></td></tr>
+<tr><td>Pastes the text from the clipboard into the multiline edit at the current cursor position.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setFamily">$setFamily(&lt;font_family:string&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the font family of the current format to fontFamily.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setItalic">$setItalic(&lt;bItalic:boolean&gt;)</a></font></b></code></td></tr>
+<tr><td>If the bool value is 1 sets the current format to italic; otherwise, if it's 0 sets the current format to no-italic.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setBold">$setBold(&lt;bBold:boolean&gt;)</a></font></b></code></td></tr>
+<tr><td>If the bool value is 1 sets the current format to bold; otherwise, if it's 0 sets the current format to no-bold.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setUnderline">$setUnderline(&lt;bUnderline:boolean&gt;)</a></font></b></code></td></tr>
+<tr><td>If the bool value is 1 sets the current format to underline; otherwise, if it's 0 sets the current format to no-underline.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; italic">&lt;boolean&gt; $italic()</a></font></b></code></td></tr>
+<tr><td>Returns 1(TRUE) if the current format is italic; otherwise returns 0(FALSE).</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; bold">&lt;boolean&gt; $bold()</a></font></b></code></td></tr>
+<tr><td>Returns 1(TRUE) if the current format is bold; otherwise returns 0(FALSE).</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; underline">&lt;boolean&gt; $underline()</a></font></b></code></td></tr>
+<tr><td>Returns 1(TRUE) if the current format is underline; otherwise returns 0(FALSE).</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="zoomIn">$zoomIn(&lt;zoom_range:integer&gt;)</a></font></b></code></td></tr>
+<tr><td>Zooms in on the text by making the base font size range points larger.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="zoomOut">$zoomOut(&lt;zoom_range:integer&gt;)</a></font></b></code></td></tr>
+<tr><td>Zooms out on the text by making the base font size range points smaller.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="undo">$undo()</a></font></b></code></td></tr>
+<tr><td>Undoes the last operation.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="redo">$redo()</a></font></b></code></td></tr>
+<tr><td>Redoes the last operation.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="clear">$clear()</a></font></b></code></td></tr>
+<tr><td>Deletes all the text in the multiline edit.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setUndoRedoEnabled">$setUndoRedoEnabled(&lt;bUndoRedo:boolean&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets whether undo/redo is enabled to the bool value.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; isUndoRedoEnabled">&lt;boolean&gt; $isUndoRedoEnabled()</a></font></b></code></td></tr>
+<tr><td>Returns 1 (TRUE) if undo/redo is enabled; otherwise returns 0 (FALSE).</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;integer&gt; undoDepth">&lt;integer&gt; $undoDepth()</a></font></b></code></td></tr>
+<tr><td>Returns the depth of the undo history.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="indent">$indent()</a></font></b></code></td></tr>
+<tr><td>Re-indents the current paragraph.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setText">$setText(&lt;txt:string&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the text edit's text to txt.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setPointSize">$setPointSize(&lt;point_size:integer))</a></font></b></code></td></tr>
+<tr><td>Sets the point size of the font. // findme</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setColor">$setColor(&lt;rgb_value&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the foreground color of this widget to &lt;rgb_value&gt;:valid values are: - hex string: must be a string with 6 hexadecimal digits (like the ones used to specify colors in html pages). The first two digits specify the RED component, the third and fourth digit specify the GREEN component and the last two specify the BLUE component. For example "FFFF00" means full red, full green and no blue that gives a yellow color, "808000" designates a brown color (dark yellow), "A000A0" is a kind of violet. - array(red:integer,green:integer,blue:integer) - red:integer,green:integer,blue:integer.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setModified">$setModified(&lt;bModified:boolean&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets whether the document has been modified by the user. Valid Values are 1(TRUE) or 0(FALSE)</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="insertParagraph">$insertParagraph(&lt;text:string&gt;,&lt;paragraph:integer&gt;)</a></font></b></code></td></tr>
+<tr><td>Inserts text as a new paragraph at position &lt;paragraph&gt;.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="removeParagraph">$removeParagraph(&lt;paragraph:integer&gt;)</a></font></b></code></td></tr>
+<tr><td>Removes the paragraph &lt;paragraph&gt;.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setLinkUnderline">$setLinkUnderline(&lt;bLinkUnderline:boolean&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets to 1 if you want that hypertext links will be underlined; otherwise sets to 0.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setOverwriteMode">$setOverwriteMode(&lt;bOverwrite:boolean&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the Multilineedit edit's overwrite mode to b (1=Enabled or 0=Disabled) .</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setTextFormat">$setTextFormat(&lt;textformat:string&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the text format. Correct values are RichText, PlainText, LogText or AutoText.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; textFormat">&lt;string&gt; $textFormat()</a></font></b></code></td></tr>
+<tr><td>Returns the text format: rich text, plain text, log text or auto text. // findme</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setParagraphBackgroundColor">$setParagraphBackgroundColor(&lt;paragraph:integer&gt;,&lt;exadecimal color value&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the background color of the paragraph &lt;paragraph&gt; to color value specified.<br> Example: %mymultiline-&gt;$setParagraphBackgroundColor(2,0C686F)</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="clearParagraphBackground">$clearParagraphBackground(&lt;paragraph:integer&gt;)</a></font></b></code></td></tr>
+<tr><td>Clear the background color of the paragraph &lt;paragraph&gt;.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="loadFile">$loadFile(&lt;path:string&gt;)</a></font></b></code></td></tr>
+<tr><td>Load the file specified in the &lt;path&gt;, also html files.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; isUndoAvailable ">&lt;boolean&gt; $isUndoAvailable ()</a></font></b></code></td></tr>
+<tr><td>Returns 1(TRUE) if undo is available; otherwise returns 0(FALSE).</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; isRedoAvailable ">&lt;boolean&gt; $isRedoAvailable ()</a></font></b></code></td></tr>
+<tr><td>Returns 1(TRUE) if redo is available; otherwise returns 0(FALSE).</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setAlignment">$setAlignment(&lt;alignment:string&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the alignment of the current paragraph to &lt;alignment&gt;. Valid values are:<br> - AlignAuto - Aligns according to the language.<br> - Qt::AlignLeft - Aligns with the left edge.<br> - Qt::AlignRight - Aligns with the right edge.<br> - Qt::AlignCenter - Centers in both dimensions.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setVerticalAlignment">$setVerticalAlignment(&lt;vertical_alignment:string&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the vertical alignment of the current format to &lt;Valignemnt&gt;. Valid Values are:<br> - AlignNormal - Normal alignment.<br> - AlignSuperScript - Superscript.<br> - AlignSubScript - Subscript.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setAutoFormatting">$setAutoFormatting(&lt;afvalue:string&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the enabled set of auto formatting features to afvalue. Valid values are: <br> - AutoNone - Do not perform any automatic formatting<br> - AutoBulletList - Only automatically format bulletted lists<br> - AutoAll - Apply all available autoformatting</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setWrapPolicy">$setWrapPolicy(&lt;wraph_policy:string&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the word wrap policy, at &lt;wrpl&gt;. Valid values are:<br> - AtWhiteSpace - Don't use this deprecated value (it is a synonym for AtWordBoundary which you should use instead).<br> - Anywhere - Break anywhere, including within words.<br> - AtWordBoundary - Break lines at word boundaries, e.g. spaces or newlines<br> - AtWordOrDocumentBoundary - Break lines at whitespace, e.g. spaces or newlines if possible. Break it anywhere otherwise.<br></td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;integer&gt; paragraphs">&lt;integer&gt; $paragraphs()</a></font></b></code></td></tr>
+<tr><td>Returns the number of paragraphs in the text.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;integer&gt; lines">&lt;integer&gt; $lines()</a></font></b></code></td></tr>
+<tr><td>Returns the number of lines in the multilineedit.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;integer&gt; linesOfParagraph">&lt;integer&gt; $linesOfParagraph(&lt;paragraph:integer&gt;)</a></font></b></code></td></tr>
+<tr><td>Returns the number of lines in paragraph &lt;paragraph&gt;, or -1 if there is no paragraph with index &lt;paragraph&gt;.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;integer&gt; lineOfChar">&lt;integer&gt; $lineOfChar(&lt;paragraph:integer&gt;,&lt;index:integer&gt;)</a></font></b></code></td></tr>
+<tr><td>Returns the line number of the line in paragraph par in which the character at position index appears.<br> If there is no such paragraph or no such character at the index position  -1 is returned.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;integer&gt; paragraphLenght">&lt;integer&gt; $paragraphLenght(&lt;paragraph:integer&gt;)</a></font></b></code></td></tr>
+<tr><td>Returns the length of the paragraph par, or -1 if there is no paragraph with index par.</td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

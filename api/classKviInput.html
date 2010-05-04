@@ -81,19 +81,19 @@
 <tr><td colspan="2"><h2>Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviTalHBox.html">KviTalHBox</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInput.html#a5fbb4bd187f7b844fff38a2bb0e920aa">m_pButtonContainer</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QToolButton *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInput.html#a4be3fa3e15355938e03576a71f53b6f1">m_pCommandlineModeButton</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QLabel *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInput.html#a8a447187b1384c9bd5c521ae324eb58a">m_pHelpLabel</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QToolButton *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInput.html#ad555e2e8d524e42733b8f7859c89149c">m_pHideToolsButton</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QToolButton *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInput.html#a0f027f4ad6fe49e194d680f1b27969d0">m_pHistoryButton</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QToolButton *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInput.html#a0b0f1c9dc8fa42953d63c1490f0f68fb">m_pIconButton</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviInputEditor.html">KviInputEditor</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInput.html#a4050f1fdabc973f06a1f2affac5fa9be">m_pInputEditor</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QGridLayout *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInput.html#a71e4cd25d1a9f994ada269309e291cd4">m_pLayout</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QToolButton *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInput.html#a0ae4f61c9c08d373684f98d6a3b42123">m_pMultiEditorButton</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviScriptEditor.html">KviScriptEditor</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInput.html#a6985cccc9c2db7f0ea90b54182c61aff">m_pMultiLineEditor</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviWindow.html">KviWindow</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInput.html#addc5b51ec36d3144e45351cab28cf94a">m_pWindow</a></td></tr>
 <tr><td colspan="2"><h2>Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInput.html#aee595cfce16ed1711dfc8848e2ad19b0">focusInEvent</a> (QFocusEvent *e)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInput.html#aa80190e8fdda146d51c9ccd9e1640933">keyPressEvent</a> (QKeyEvent *e)</td></tr>
-<tr><td colspan="2"><h2>Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QLabel *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInput.html#a8a447187b1384c9bd5c521ae324eb58a">m_pHelpLabel</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QGridLayout *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInput.html#a71e4cd25d1a9f994ada269309e291cd4">m_pLayout</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInput.html#a723b4e306e8417c2004a23b2b427cfd2">setFocusProxy</a> (QWidget *w)</td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Input handling class. </p>
@@ -133,7 +133,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviInput.html" title="Input handling class.">KviInput</a> </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__tal__tooltip_8cpp_source.html#l00083">KviTalToolTip::add()</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00758">KviIconManager::getBigIcon()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00492">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00363">historyButtonClicked()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00355">iconButtonClicked()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00207">inputEditorEnterPressed()</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00256">KVI_SMALLICON_BIGGRIN</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00098">KVI_SMALLICON_QUITSPLIT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00325">KVI_SMALLICON_SAYKVS</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00324">KVI_SMALLICON_SAYSMILE</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00176">KVI_SMALLICON_TERMINAL</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00131">KVI_SMALLICON_TIME</a>, <a class="el" href="kvi__options_8h_source.html#l00287">KviOption_boolCommandlineInUserFriendlyModeByDefault</a>, <a class="el" href="kvi__options_8h_source.html#l00274">KviOption_boolEnableInputHistory</a>, <a class="el" href="kvi__input_8h_source.html#l00075">m_pButtonContainer</a>, <a class="el" href="kvi__input_8h_source.html#l00079">m_pCommandlineModeButton</a>, <a class="el" href="kvi__input_8h_source.html#l00080">m_pHideToolsButton</a>, <a class="el" href="kvi__input_8h_source.html#l00077">m_pHistoryButton</a>, <a class="el" href="kvi__input_8h_source.html#l00078">m_pIconButton</a>, <a class="el" href="kvi__input_8h_source.html#l00073">m_pInputEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00082">m_pLayout</a>, <a class="el" href="kvi__input_8h_source.html#l00076">m_pMultiEditorButton</a>, <a class="el" href="kvi__input_8h_source.html#l00074">m_pMultiLineEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00072">m_pWindow</a>, <a class="el" href="kvi__input_8cpp_source.html#l00300">multilineEditorButtonToggled()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00101">KviTalHBox::setMargin()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00096">KviTalHBox::setSpacing()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00202">toggleToolButtons()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__tal__tooltip_8cpp_source.html#l00083">KviTalToolTip::add()</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00758">KviIconManager::getBigIcon()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00492">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00346">historyButtonClicked()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00338">iconButtonClicked()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00203">inputEditorEnterPressed()</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00256">KVI_SMALLICON_BIGGRIN</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00098">KVI_SMALLICON_QUITSPLIT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00325">KVI_SMALLICON_SAYKVS</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00324">KVI_SMALLICON_SAYSMILE</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00176">KVI_SMALLICON_TERMINAL</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00131">KVI_SMALLICON_TIME</a>, <a class="el" href="kvi__options_8h_source.html#l00287">KviOption_boolCommandlineInUserFriendlyModeByDefault</a>, <a class="el" href="kvi__options_8h_source.html#l00274">KviOption_boolEnableInputHistory</a>, <a class="el" href="kvi__input_8h_source.html#l00073">m_pButtonContainer</a>, <a class="el" href="kvi__input_8h_source.html#l00077">m_pCommandlineModeButton</a>, <a class="el" href="kvi__input_8h_source.html#l00078">m_pHideToolsButton</a>, <a class="el" href="kvi__input_8h_source.html#l00075">m_pHistoryButton</a>, <a class="el" href="kvi__input_8h_source.html#l00076">m_pIconButton</a>, <a class="el" href="kvi__input_8h_source.html#l00071">m_pInputEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00079">m_pLayout</a>, <a class="el" href="kvi__input_8h_source.html#l00074">m_pMultiEditorButton</a>, <a class="el" href="kvi__input_8h_source.html#l00072">m_pMultiLineEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00070">m_pWindow</a>, <a class="el" href="kvi__input_8cpp_source.html#l00296">multilineEditorButtonToggled()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00101">KviTalHBox::setMargin()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00096">KviTalHBox::setSpacing()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00198">toggleToolButtons()</a>.</p>
 
 </div>
 </div>
@@ -154,7 +154,7 @@
 
 <p>Destroys the input object. </p>
 
-<p>References <a class="el" href="kvi__scripteditor_8cpp_source.html#l00115">KviScriptEditor::destroyInstance()</a>, and <a class="el" href="kvi__input_8h_source.html#l00074">m_pMultiLineEditor</a>.</p>
+<p>References <a class="el" href="kvi__scripteditor_8cpp_source.html#l00115">KviScriptEditor::destroyInstance()</a>, and <a class="el" href="kvi__input_8h_source.html#l00072">m_pMultiLineEditor</a>.</p>
 
 </div>
 </div>
@@ -177,9 +177,9 @@
 <p>Saves and applies the options. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__tal__tooltip_8cpp_source.html#l00083">KviTalToolTip::add()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00146">KviInputEditor::applyOptions()</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00492">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00363">historyButtonClicked()</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00098">KVI_SMALLICON_QUITSPLIT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00131">KVI_SMALLICON_TIME</a>, <a class="el" href="kvi__options_8h_source.html#l00274">KviOption_boolEnableInputHistory</a>, <a class="el" href="kvi__input_8h_source.html#l00077">m_pHistoryButton</a>, and <a class="el" href="kvi__input_8h_source.html#l00073">m_pInputEditor</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__tal__tooltip_8cpp_source.html#l00083">KviTalToolTip::add()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00146">KviInputEditor::applyOptions()</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00492">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00346">historyButtonClicked()</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00098">KVI_SMALLICON_QUITSPLIT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00131">KVI_SMALLICON_TIME</a>, <a class="el" href="kvi__options_8h_source.html#l00274">KviOption_boolEnableInputHistory</a>, <a class="el" href="kvi__input_8h_source.html#l00075">m_pHistoryButton</a>, and <a class="el" href="kvi__input_8h_source.html#l00071">m_pInputEditor</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l01191">KviWindow::applyOptions()</a>, and <a class="el" href="kvi__console_8cpp_source.html#l01053">KviConsole::applyOptions()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l01193">KviWindow::applyOptions()</a>, and <a class="el" href="kvi__console_8cpp_source.html#l01065">KviConsole::applyOptions()</a>.</p>
 
 </div>
 </div>
@@ -219,7 +219,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__input_8h_source.html#l00073">m_pInputEditor</a>, and <a class="el" href="kvi__input_8h_source.html#l00074">m_pMultiLineEditor</a>.</p>
+<p>References <a class="el" href="kvi__input_8h_source.html#l00071">m_pInputEditor</a>, and <a class="el" href="kvi__input_8h_source.html#l00072">m_pMultiLineEditor</a>.</p>
 
 </div>
 </div>
@@ -241,9 +241,9 @@
 <p>Returns the height of the input line. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>int </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l00199">KviInputEditor::heightHint()</a>, <a class="el" href="kvi__input_8h_source.html#l00073">m_pInputEditor</a>, and <a class="el" href="kvi__input_8h_source.html#l00074">m_pMultiLineEditor</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l00199">KviInputEditor::heightHint()</a>, <a class="el" href="kvi__input_8h_source.html#l00071">m_pInputEditor</a>, and <a class="el" href="kvi__input_8h_source.html#l00072">m_pMultiLineEditor</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__query_8cpp_source.html#l00524">KviQuery::resizeEvent()</a>, <a class="el" href="kvi__debugwindow_8cpp_source.html#l00101">KviDebugWindow::resizeEvent()</a>, <a class="el" href="kvi__console_8cpp_source.html#l01081">KviConsole::resizeEvent()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00591">KviChannel::resizeEvent()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00533">KviQuery::sizeHint()</a>, <a class="el" href="kvi__debugwindow_8cpp_source.html#l00108">KviDebugWindow::sizeHint()</a>, <a class="el" href="kvi__console_8cpp_source.html#l01090">KviConsole::sizeHint()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00600">KviChannel::sizeHint()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__query_8cpp_source.html#l00524">KviQuery::resizeEvent()</a>, <a class="el" href="kvi__debugwindow_8cpp_source.html#l00101">KviDebugWindow::resizeEvent()</a>, <a class="el" href="kvi__console_8cpp_source.html#l01093">KviConsole::resizeEvent()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00591">KviChannel::resizeEvent()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00533">KviQuery::sizeHint()</a>, <a class="el" href="kvi__debugwindow_8cpp_source.html#l00108">KviDebugWindow::sizeHint()</a>, <a class="el" href="kvi__console_8cpp_source.html#l01102">KviConsole::sizeHint()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00600">KviChannel::sizeHint()</a>.</p>
 
 </div>
 </div>
@@ -289,7 +289,7 @@
 
 <p>References <a class="el" href="kvi__historywin_8h_source.html#l00042">KVI_HISTORY_WIN_HEIGHT</a>, and <a class="el" href="kvi__historywin_8cpp_source.html#l00269">KviHistoryWindowWidget::popup()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00424">applyOptions()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00214">keyPressEvent()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00407">applyOptions()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00210">keyPressEvent()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00070">KviInput()</a>.</p>
 
 </div>
 </div>
@@ -311,9 +311,9 @@
 <p>Shows the icon popup. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input_8h_source.html#l00078">m_pIconButton</a>, and <a class="el" href="kvi__texticonwin_8cpp_source.html#l00106">KviTextIconWindow::popup()</a>.</p>
+<p>References <a class="el" href="kvi__input_8h_source.html#l00076">m_pIconButton</a>, and <a class="el" href="kvi__texticonwin_8cpp_source.html#l00106">KviTextIconWindow::popup()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00070">KviInput()</a>.</p>
 
 </div>
 </div>
@@ -335,9 +335,9 @@
 <p>Parses the text written and clears the input line. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input_8h_source.html#l00079">m_pCommandlineModeButton</a>, <a class="el" href="kvi__input_8h_source.html#l00073">m_pInputEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00072">m_pWindow</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00044">KviIrcUrl::parse()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01049">KviInputEditor::setText()</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00189">KviInputEditor::text()</a>.</p>
+<p>References <a class="el" href="kvi__input_8h_source.html#l00077">m_pCommandlineModeButton</a>, <a class="el" href="kvi__input_8h_source.html#l00071">m_pInputEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00070">m_pWindow</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00044">KviIrcUrl::parse()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01049">KviInputEditor::setText()</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00189">KviInputEditor::text()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00070">KviInput()</a>.</p>
 
 </div>
 </div>
@@ -366,7 +366,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l02004">KviInputEditor::insertChar()</a>, and <a class="el" href="kvi__input_8h_source.html#l00073">m_pInputEditor</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l02025">KviInputEditor::insertChar()</a>, and <a class="el" href="kvi__input_8h_source.html#l00071">m_pInputEditor</a>.</p>
 
 </div>
 </div>
@@ -395,7 +395,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">KviInputEditor::insertText()</a>, and <a class="el" href="kvi__input_8h_source.html#l00073">m_pInputEditor</a>.</p>
+<p>References <a class="el" href="kvi__input__editor_8cpp_source.html#l00920">KviInputEditor::insertText()</a>, and <a class="el" href="kvi__input_8h_source.html#l00071">m_pInputEditor</a>.</p>
 
 </div>
 </div>
@@ -417,9 +417,9 @@
 <p>Returns true if the buttons on the right are hidden. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="kvi__input_8h_source.html#l00075">m_pButtonContainer</a>.</p>
+<p>References <a class="el" href="kvi__input_8h_source.html#l00073">m_pButtonContainer</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00567">KviWindow::saveProperties()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00202">toggleToolButtons()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00567">KviWindow::saveProperties()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00198">toggleToolButtons()</a>.</p>
 
 </div>
 </div>
@@ -461,7 +461,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__settings_8h_source.html#l00177">debug</a>, <a class="el" href="kvi__scripteditor_8cpp_source.html#l00067">KviScriptEditor::getText()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00363">historyButtonClicked()</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00667">KVI_OPTION_UINT</a>, <a class="el" href="kvi__options_8h_source.html#l00232">KviOption_boolWarnAboutPastingMultipleLines</a>, <a class="el" href="kvi__options_8h_source.html#l00590">KviOption_uintSpacesToExpandTabulationInput</a>, <a class="el" href="kvi__input_8h_source.html#l00079">m_pCommandlineModeButton</a>, <a class="el" href="kvi__input_8h_source.html#l00074">m_pMultiLineEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00072">m_pWindow</a>, <a class="el" href="kvi__input_8cpp_source.html#l00300">multilineEditorButtonToggled()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00044">KviIrcUrl::parse()</a>, and <a class="el" href="kvi__scripteditor_8cpp_source.html#l00042">KviScriptEditor::setText()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__scripteditor_8cpp_source.html#l00067">KviScriptEditor::getText()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00346">historyButtonClicked()</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00667">KVI_OPTION_UINT</a>, <a class="el" href="kvi__options_8h_source.html#l00232">KviOption_boolWarnAboutPastingMultipleLines</a>, <a class="el" href="kvi__options_8h_source.html#l00590">KviOption_uintSpacesToExpandTabulationInput</a>, <a class="el" href="kvi__input_8h_source.html#l00077">m_pCommandlineModeButton</a>, <a class="el" href="kvi__input_8h_source.html#l00072">m_pMultiLineEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00070">m_pWindow</a>, <a class="el" href="kvi__input_8cpp_source.html#l00296">multilineEditorButtonToggled()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00044">KviIrcUrl::parse()</a>, and <a class="el" href="kvi__scripteditor_8cpp_source.html#l00042">KviScriptEditor::setText()</a>.</p>
 
 </div>
 </div>
@@ -490,9 +490,9 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__window_8cpp_source.html#l01096">KviWindow::childrenTreeChanged()</a>, <a class="el" href="kvi__scripteditor_8cpp_source.html#l00100">KviScriptEditor::createInstance()</a>, <a class="el" href="kvi__scripteditor_8cpp_source.html#l00115">KviScriptEditor::destroyInstance()</a>, <a class="el" href="kvi__scripteditor_8cpp_source.html#l00067">KviScriptEditor::getText()</a>, <a class="el" href="kvi__options_8h_source.html#l00667">KVI_OPTION_UINT</a>, <a class="el" href="kvi__options_8h_source.html#l00590">KviOption_uintSpacesToExpandTabulationInput</a>, <a class="el" href="kvi__input_8h_source.html#l00083">m_pHelpLabel</a>, <a class="el" href="kvi__input_8h_source.html#l00073">m_pInputEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00082">m_pLayout</a>, <a class="el" href="kvi__input_8h_source.html#l00076">m_pMultiEditorButton</a>, <a class="el" href="kvi__input_8h_source.html#l00074">m_pMultiLineEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00072">m_pWindow</a>, <a class="el" href="kvi__scripteditor_8cpp_source.html#l00042">KviScriptEditor::setText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01049">KviInputEditor::setText()</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00189">KviInputEditor::text()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__window_8cpp_source.html#l01098">KviWindow::childrenTreeChanged()</a>, <a class="el" href="kvi__scripteditor_8cpp_source.html#l00100">KviScriptEditor::createInstance()</a>, <a class="el" href="kvi__scripteditor_8cpp_source.html#l00115">KviScriptEditor::destroyInstance()</a>, <a class="el" href="kvi__scripteditor_8cpp_source.html#l00067">KviScriptEditor::getText()</a>, <a class="el" href="kvi__options_8h_source.html#l00667">KVI_OPTION_UINT</a>, <a class="el" href="kvi__options_8h_source.html#l00590">KviOption_uintSpacesToExpandTabulationInput</a>, <a class="el" href="kvi__input_8h_source.html#l00080">m_pHelpLabel</a>, <a class="el" href="kvi__input_8h_source.html#l00071">m_pInputEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00079">m_pLayout</a>, <a class="el" href="kvi__input_8h_source.html#l00074">m_pMultiEditorButton</a>, <a class="el" href="kvi__input_8h_source.html#l00072">m_pMultiLineEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00070">m_pWindow</a>, <a class="el" href="kvi__scripteditor_8cpp_source.html#l00042">KviScriptEditor::setText()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01049">KviInputEditor::setText()</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00189">KviInputEditor::text()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00214">keyPressEvent()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00291">multiLinePaste()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00210">keyPressEvent()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00070">KviInput()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00287">multiLinePaste()</a>.</p>
 
 </div>
 </div>
@@ -521,7 +521,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input_8h_source.html#l00073">m_pInputEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00074">m_pMultiLineEditor</a>, <a class="el" href="kvi__input_8cpp_source.html#l00300">multilineEditorButtonToggled()</a>, <a class="el" href="kvi__scripteditor_8cpp_source.html#l00042">KviScriptEditor::setText()</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00189">KviInputEditor::text()</a>.</p>
+<p>References <a class="el" href="kvi__input_8h_source.html#l00071">m_pInputEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00072">m_pMultiLineEditor</a>, <a class="el" href="kvi__input_8cpp_source.html#l00296">multilineEditorButtonToggled()</a>, <a class="el" href="kvi__scripteditor_8cpp_source.html#l00042">KviScriptEditor::setText()</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00189">KviInputEditor::text()</a>.</p>
 
 </div>
 </div>
@@ -550,9 +550,9 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00758">KviIconManager::getBigIcon()</a>, <a class="el" href="kvi__input_8h_source.html#l00075">m_pButtonContainer</a>, and <a class="el" href="kvi__input_8h_source.html#l00080">m_pHideToolsButton</a>.</p>
+<p>References <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00758">KviIconManager::getBigIcon()</a>, <a class="el" href="kvi__input_8h_source.html#l00073">m_pButtonContainer</a>, and <a class="el" href="kvi__input_8h_source.html#l00078">m_pHideToolsButton</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00591">KviWindow::loadProperties()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00202">toggleToolButtons()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00592">KviWindow::loadProperties()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00198">toggleToolButtons()</a>.</p>
 
 </div>
 </div>
@@ -574,9 +574,27 @@
 <p>Sets the focus to the input line. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input_8h_source.html#l00073">m_pInputEditor</a>, and <a class="el" href="kvi__input_8h_source.html#l00074">m_pMultiLineEditor</a>.</p>
+<p>References <a class="el" href="kvi__input_8h_source.html#l00071">m_pInputEditor</a>, and <a class="el" href="kvi__input_8h_source.html#l00072">m_pMultiLineEditor</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__historywin_8cpp_source.html#l00228">KviHistoryWindow::doHide()</a>, <a class="el" href="kvi__ircview__events_8cpp_source.html#l00282">KviIrcView::mousePressEvent()</a>, and <a class="el" href="kvi__ircviewtools_8cpp_source.html#l00199">KviIrcViewToolWidget::~KviIrcViewToolWidget()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a723b4e306e8417c2004a23b2b427cfd2"></a><!-- doxytag: member="KviInput::setFocusProxy" ref="a723b4e306e8417c2004a23b2b427cfd2" args="(QWidget *w)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KviInput::setFocusProxy </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *&nbsp;</td>
+          <td class="paramname"> <em>w</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -605,7 +623,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input_8h_source.html#l00073">m_pInputEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00074">m_pMultiLineEditor</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01049">KviInputEditor::setText()</a>, and <a class="el" href="kvi__scripteditor_8cpp_source.html#l00042">KviScriptEditor::setText()</a>.</p>
+<p>References <a class="el" href="kvi__input_8h_source.html#l00071">m_pInputEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00072">m_pMultiLineEditor</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l01049">KviInputEditor::setText()</a>, and <a class="el" href="kvi__scripteditor_8cpp_source.html#l00042">KviScriptEditor::setText()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__historywin_8cpp_source.html#l00242">KviHistoryWindow::itemSelected()</a>.</p>
 
@@ -636,7 +654,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00591">KviWindow::loadProperties()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00592">KviWindow::loadProperties()</a>.</p>
 
 </div>
 </div>
@@ -658,7 +676,7 @@
 <p>Returns the text written in the input line. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>QString </dd></dl>
 
-<p>References <a class="el" href="kvi__scripteditor_8cpp_source.html#l00067">KviScriptEditor::getText()</a>, <a class="el" href="kvi__input_8h_source.html#l00073">m_pInputEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00074">m_pMultiLineEditor</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00189">KviInputEditor::text()</a>.</p>
+<p>References <a class="el" href="kvi__scripteditor_8cpp_source.html#l00067">KviScriptEditor::getText()</a>, <a class="el" href="kvi__input_8h_source.html#l00071">m_pInputEditor</a>, <a class="el" href="kvi__input_8h_source.html#l00072">m_pMultiLineEditor</a>, and <a class="el" href="kvi__input__editor_8h_source.html#l00189">KviInputEditor::text()</a>.</p>
 
 </div>
 </div>
@@ -680,9 +698,9 @@
 <p>Toggles the buttons. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__input_8cpp_source.html#l00181">isButtonsHidden()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00186">setButtonsHidden()</a>.</p>
+<p>References <a class="el" href="kvi__input_8cpp_source.html#l00179">isButtonsHidden()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00184">setButtonsHidden()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00070">KviInput()</a>.</p>
 
 </div>
 </div>
@@ -698,7 +716,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00181">isButtonsHidden()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00186">setButtonsHidden()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00179">isButtonsHidden()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00070">KviInput()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00184">setButtonsHidden()</a>.</p>
 
 </div>
 </div>
@@ -713,7 +731,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00207">inputEditorEnterPressed()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00214">keyPressEvent()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00203">inputEditorEnterPressed()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00210">keyPressEvent()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00070">KviInput()</a>.</p>
 
 </div>
 </div>
@@ -722,13 +740,13 @@
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QLabel* <a class="el" href="classKviInput.html#a8a447187b1384c9bd5c521ae324eb58a">KviInput::m_pHelpLabel</a><code> [protected]</code></td>
+          <td class="memname">QLabel* <a class="el" href="classKviInput.html#a8a447187b1384c9bd5c521ae324eb58a">KviInput::m_pHelpLabel</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00300">multilineEditorButtonToggled()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00296">multilineEditorButtonToggled()</a>.</p>
 
 </div>
 </div>
@@ -743,7 +761,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00186">setButtonsHidden()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00070">KviInput()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00184">setButtonsHidden()</a>.</p>
 
 </div>
 </div>
@@ -758,7 +776,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00424">applyOptions()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00407">applyOptions()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00070">KviInput()</a>.</p>
 
 </div>
 </div>
@@ -773,7 +791,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00355">iconButtonClicked()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00338">iconButtonClicked()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00070">KviInput()</a>.</p>
 
 </div>
 </div>
@@ -788,7 +806,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00424">applyOptions()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00395">focusInEvent()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00402">heightHint()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00207">inputEditorEnterPressed()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00414">insertChar()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00419">insertText()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00300">multilineEditorButtonToggled()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00291">multiLinePaste()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00388">setFocus()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00407">setText()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00449">text()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00407">applyOptions()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00378">focusInEvent()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00385">heightHint()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00203">inputEditorEnterPressed()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00397">insertChar()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00402">insertText()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00070">KviInput()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00296">multilineEditorButtonToggled()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00287">multiLinePaste()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00371">setFocus()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00390">setText()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00432">text()</a>.</p>
 
 </div>
 </div>
@@ -797,13 +815,13 @@
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QGridLayout* <a class="el" href="classKviInput.html#a71e4cd25d1a9f994ada269309e291cd4">KviInput::m_pLayout</a><code> [protected]</code></td>
+          <td class="memname">QGridLayout* <a class="el" href="classKviInput.html#a71e4cd25d1a9f994ada269309e291cd4">KviInput::m_pLayout</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00300">multilineEditorButtonToggled()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00070">KviInput()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00296">multilineEditorButtonToggled()</a>.</p>
 
 </div>
 </div>
@@ -818,7 +836,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00300">multilineEditorButtonToggled()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00070">KviInput()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00296">multilineEditorButtonToggled()</a>.</p>
 
 </div>
 </div>
@@ -833,7 +851,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00395">focusInEvent()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00402">heightHint()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00214">keyPressEvent()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00300">multilineEditorButtonToggled()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00291">multiLinePaste()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00388">setFocus()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00407">setText()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00449">text()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00175">~KviInput()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00378">focusInEvent()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00385">heightHint()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00210">keyPressEvent()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00070">KviInput()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00296">multilineEditorButtonToggled()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00287">multiLinePaste()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00371">setFocus()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00390">setText()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00432">text()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00173">~KviInput()</a>.</p>
 
 </div>
 </div>
@@ -848,7 +866,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00207">inputEditorEnterPressed()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00214">keyPressEvent()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00300">multilineEditorButtonToggled()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00203">inputEditorEnterPressed()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00210">keyPressEvent()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00070">KviInput()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00296">multilineEditorButtonToggled()</a>.</p>
 
 </div>
 </div>
@@ -857,7 +875,7 @@
 <li>src/kvirc/ui/<a class="el" href="kvi__input_8cpp.html">kvi_input.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Apr 17 17:23:32 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue May 4 19:53:55 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

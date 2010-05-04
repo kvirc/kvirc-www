@@ -1,0 +1,366 @@
+<html>
+<head>
+<title>exec</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>exec</h1>
+Asynchronous execution of external programs
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Usage</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code>exec [switches] (&lt;commandline&gt;[,&lt;magic data:variant&gt;])
+{
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;callback command&gt;
+}</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><b>Overview</b><br>
+Executes the &lt;commandline&gt; by passing it to a command interpreter.
+The &lt;commandline&gt; is executed asynchronously: this means that
+when exec returns the control to the next command, &lt;commandline&gt;
+may be still running.<br>
+<br>
+<b>The callback</b><br>
+The &lt;callback command&gt; is triggered on several <a href="doc_events.html">events</a> related to the
+child <a href="class_process.html">process</a> and it gets passed the following parameters:<br>
+$0 = &lt;<a href="doc_events.html">event</a> cause&gt;<br>
+$1 = &lt;<a href="doc_events.html">event</a> parameter&gt;<br>
+$2 = &lt;magic data&gt;<br>
+The first parameter specifies the <a href="doc_events.html">event</a> cause and contains one of the
+following strings: "stdout","stderr","terminated","started" and "ping".
+<b>By default (if no switches are used) only "stdout" type <a href="doc_events.html">events</a> are triggered</b>.
+The second parameter depends on the <a href="doc_events.html">event</a> cause and contains data sensible
+to each <a href="doc_events.html">event</a> type. The third parameter is the eventual &lt;magic data&gt;
+passed to the exec command call.<br>
+<br>
+<b>Interacting with the process</b><br>
+If you use <a href="cmd_halt.html">halt</a> to terminate
+the callback then the slave <a href="class_process.html">process</a> is killed immediately and
+no other callback <a href="doc_events.html">events</a> are triggered.<br> If you return some non empty string
+then this string will be written to the <a href="class_process.html">process</a> stdin stream. This trick
+can be used to control interactive processes. Please note that you must
+include all the relevant carriage returns and newlines in the return value
+(see <a href="fnc_cr.html">$cr</a> and <a href="fnc_lf.html">$lf</a>).<br>
+<br>
+<b>Startup event</b><br>
+If the -x switch is used then the startup <a href="doc_events.html">event</a> is triggered
+just after the <a href="class_process.html">process</a> has been successfully launched.
+The $0 parameter passed to the callback contains the string "started".
+Parameter $1 contains the pid of the slave <a href="class_process.html">process</a>.<br>
+<br>
+<b>Stdout data event</b><br>
+The stdout data <a href="doc_events.html">event</a> is triggered when the <a href="class_process.html">process</a> prints some output
+on its stdout stream. This <a href="doc_events.html">event</a> is triggered by default and to disable
+it you must use the -n switch. $0 contains the string "stdout".
+If the -b switch is not used then $1 contains a single line of <a href="class_process.html">process</a>
+output with the trailing carriage return and/or line feed stripped.
+If -b is used then $1 contains the whole <a href="class_process.html">process</a> output
+block (eventually empty) with all the cr/lf pairs.<br>
+<br>
+<b>Stderr data event</b><br>
+The stderr data <a href="doc_events.html">event</a> is similar to the stdout one but there are three differences.
+The first one is that the stderr <a href="doc_events.html">event</a> is NOT triggered by default: you must
+use the -e switch to enable it. The second difference is that $0
+contains "stderr" instead of "stdout". The last difference is that $1 contains data
+coming from the slave <a href="class_process.html">process</a> stderr stream.<br>
+<br>
+<b>Termination event</b><br>
+The termination <a href="doc_events.html">event</a> is triggered after the slave <a href="class_process.html">process</a> has terminated its
+execution. You must use the -t switch to enable it since it is
+disabled by default. $0 contains the string "terminated". $1 contains the <a href="class_process.html">process</a> exit
+status value. (Note that if the <a href="class_process.html">process</a> has crashed or has been terminated
+by an external singnal then this value will be 0).<br>
+<br>
+<b>Ping event</b><br>
+The ping <a href="doc_events.html">event</a> is triggered only if the -p=&lt;timeout&gt; switch is passed.<br>
+This <a href="doc_events.html">event</a> may be useful to monitor the <a href="class_process.html">process</a> status while it is not
+emitting any output, to write data to its stdin stream (by the means of <a href="cmd_return.html">return</a>)
+or simply to give some feedback to the user while the slave <a href="class_process.html">process</a> is
+doing a long computation.<br>
+<br>
+<b>The <a href="doc_kvs_datatypes.html">extended scope</a> variables</b><br>
+The &lt;callback command&gt; has a set of <a href="doc_data_types.html">extended scope variables</a>
+that conserve their value during the whole life time of the slave <a href="class_process.html">process</a>.<br>
+These <a href="doc_kvs_datatypes.html">variables</a> can be accessed through the %:&lt;varname&gt; syntax and are
+useful to store <a href="class_process.html">process</a> private data between multiple &lt;callback command&gt; calls.<br>
+<b>Some words about the switches</b><br>
+If the -b switch is used then the &lt;callback command&gt; is called only once
+for the <a href="doc_events.html">events</a> stdout and stderr (if enabled) with the complete output block from the <a href="class_process.html">process</a>.
+With the -b switch the <a href="doc_events.html">events</a> stdout and stderr are triggered once even if the <a href="class_process.html">process</a>
+emits no output.
+The -s=&lt;interpreter&gt; switch may be used to specify the path of the command interpreter
+that is "sh -c" by default on unix machines and "cmd.exe /c" on windows.
+The interpreter executable is searched on the system PATH.
+If the <a href="class_process.html">process</a> can't be started then a warning message is printed in the current window
+unless the -q (quiet) flag is used.<br>
+<br>
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Switches</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#D5D5D5">
+<tr bgcolor="#E0E0E0"><td><b>-q | --quiet</b></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Quiet: do not print any warnings</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-t | --trigger-termination</b></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Trigger the termination <a href="doc_events.html">event</a></td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-x | --trigger-startup</b></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Trigger the startup <a href="doc_events.html">event</a></td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-n | --no-stdout</b></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Do NOT trigger any stdout <a href="doc_events.html">events</a></td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-e | --trigger-stderr</b></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Trigger stderr <a href="doc_events.html">events</a></td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-b | --output-block</b></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Trigger the &lt;callback comand&gt; with the stdout and stderr <a href="doc_events.html">events</a> exactly once, &nbsp;&nbsp;&nbsp;&nbsp;passing the complete block of <a href="class_process.html">process</a> output. The <a href="doc_events.html">events</a> are triggered even &nbsp;&nbsp;&nbsp;&nbsp;if the <a href="class_process.html">process</a> output is empty.</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-k=&lt;maximum run time&gt; | --kill-after=&lt;maximum run time&gt;</b></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Kill the <a href="class_process.html">process</a> unconditionally after &lt;maximum run time&gt; milliseconds. &nbsp;&nbsp;&nbsp;&nbsp;If the -t switch is used then the termination <a href="doc_events.html">event</a> will be &nbsp;&nbsp;&nbsp;&nbsp;triggered just after the <a href="class_process.html">process</a> has been killed.</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-p=&lt;timeout&gt; | --trigger-ping=&lt;timeout&gt;</b></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Trigger &lt;callback command&gt; with "ping" <a href="doc_events.html">events</a> every &lt;timeout&gt; milliseconds.</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-w | --bind-to-window</b></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Kill the <a href="class_process.html">process</a> if the current window is closed. In this case the &nbsp;&nbsp;&nbsp;&nbsp;termination <a href="doc_events.html">event</a> is NOT triggered (since the parent window has been lost). &nbsp;&nbsp;&nbsp;&nbsp;If this switch is not used then the <a href="class_process.html">process</a> is rebound to &nbsp;&nbsp;&nbsp;&nbsp;the active console window and continues running.</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-s=&lt;interpreter command&gt; | --shell=&lt;interpreter command&gt;</b></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Use &lt;interpreter command&gt; instead of the default interpreter "sh -c". &nbsp;&nbsp;&nbsp;&nbsp;The &lt;interpreter command&gt; should be able to launch the interpeter &nbsp;&nbsp;&nbsp;&nbsp;and should contain the necessary arguments in order to allow &nbsp;&nbsp;&nbsp;&nbsp;KVirc to pass the "commandline" by appending it as the last parameter.</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-d | --direct</b></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Use no command interpreter at all: run the command directly. &nbsp;&nbsp;&nbsp;&nbsp;Takes precedence over -s.</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-q | --quiet</b></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Run quietly</td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Syntax Specification</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code><b>exec</b> <font color="#8080a0">[</font>switches<font color="#8080a0">]</font> <b>(</b><font color="#8080a0">&lt;</font>commandline<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>magic data:variant<font color="#8080a0">&gt;</font><font color="#8080a0">]</font><b>)</b>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">&lt;</font>callback command<font color="#8080a0">&gt;</font>
+}</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Examples</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000"><font color="#207500"># Really simple example: print only the stdout of a slave process</font>
+exec("cat /proc/cpuinfo"){ echo $1; };
+<font color="#207500"># Now print only stderr: enable stderr and disable stdout</font>
+exec -e -n ("sed -senseless"){ echo $1; };
+<font color="#207500"># Do it another way: enable stderr and filter out stdout</font>
+exec -e ("sed -senseless"){ if($0 == "stderr")echo $1; }
+<font color="#207500"># Now enable all (almost) events and print them</font>
+exec -e -t -x ("cat /proc/cpuinfo && sed -senseless"){ echo [event:$0] $1; }
+<font color="#207500"># Now see what happens if -b is used</font>
+exec -b -e -t -x ("cat /proc/cpuinfo && sed -senseless"){ echo [event:$0] $1; }
+<font color="#207500"># Run an iterative script and kill it after 20 seconds</font>
+exec -k=20000 ("while true; do sleep 1; echo \"Tic\"; done"){ echo [event:$0] $1; }
+<font color="#207500"># Run a blocking process, kill it after 20 seconds</font>
+<font color="#207500"># and give feedback to the user by the means of ping</font>
+exec -k=20000 -p=1000 -t ("cat")
+{
+&nbsp;&nbsp;&nbsp;&nbsp;if($0 == "ping")echo "[event:$0] Please wait while doing a huge computation ..."
+&nbsp;&nbsp;&nbsp;&nbsp;else if($0 == "terminated")echo "[event:$0] Ok, done :)"
+}
+<font color="#207500"># Do the same but this time use the extended scope vars</font>
+<font color="#207500"># Use also a nicer syntax</font>
+exec -k=20000 -p=1000 -t ("cat")
+{
+&nbsp;&nbsp;&nbsp;&nbsp;switch($0)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case("ping"):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(%:x == 1)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%:x = 0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Tic!"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%:x = 1;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Tac!"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case("terminated"):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Ok, done :)"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+<font color="#207500"># Again do the same but kill the process explicitly</font>
+exec -x -p=1000 -t ("cat")
+{
+&nbsp;&nbsp;&nbsp;&nbsp;switch($0)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case("started"):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Initialize the counter</font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%:x = 10;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case("ping"):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo %:x
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%:x--
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># When the counter reaches zero, kill the process with halt</font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(%:x == 0)halt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case("terminated"):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Boom!"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+<font color="#207500"># Now play with an interactive process</font>
+<font color="#207500"># WARNING: Please note that spam is illegal and generates bad karma</font>
+<font color="#207500"># Try it only with your own e-mail address as recipient</font>
+exec -s -k=60000 -t ("telnet my.mail.server.com 25")
+{
+&nbsp;&nbsp;&nbsp;&nbsp;if($0 == "started")
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%:state = 0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Returning an empty string does not write to stdin</font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;if($1 == "stderr")
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "[stderr] $1"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;if($1 == "terminated")
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "[process terminated]"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;echo "[stdout] $1"
+&nbsp;&nbsp;&nbsp;&nbsp;switch(%:state)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case(0):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Waiting for 220 (ready)</font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if($str.match("220*",$1))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%:state++
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Sending HELO..."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "HELO myhostname$cr$lf";
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case(1):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Waiting for 250 (after the HELO)</font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if($str.match("250*",$1))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%:state++
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Sending MAIL..."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "MAIL From: &lt;myname@mydomain.com&gt;$cr$lf"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "HELO command not accepted: $1"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;halt
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case(2):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Waiting for another 250 (MAIL accepted)</font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if($str.match("250*",$1))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%:state++
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Sending RCPT..."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "RCPT To: &lt;me@myself.org&gt;$cr$lf"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "MAIL command not accepted: $1"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;halt
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case(3):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Waiting for another 250 (RCPT accepted)</font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if($str.match("250*",$1))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%:state++
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Sending DATA..."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "DATA$cr$lf"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "RCPT not accepted: $1"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;halt
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case(4):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Waiting for 354 (ok, go on)</font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if($str.match("354*",$1))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%:state++
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Sending body..."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "This is a test message :)$cr$lf$cr$lf.$cr$lf"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Mail body not accepted: $1"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;halt
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case(5):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># We don't wait anymore :)</font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%:state++
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Sending QUIT..."
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "QUIT$cr$lf"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Usually the mail server closes the connection</font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%:state++
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(%:state &gt; 10)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># But if it does not in few messages</font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Then force the process to die</font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;halt
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+}
+</font></code></pre></td></tr></table></p>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

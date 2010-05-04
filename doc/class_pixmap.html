@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>pixmap class</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>pixmap class</h1>
+This class provide a pixmap.
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Inherits</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><a href="class_object.html">object</a>
+<a href="class_widget.html">widget</a></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>The pixmap <a href="class_object.html">class</a> is an off-screen, pixel-based paint device.
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Functions</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#E0E0E0">
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="fill">$fill(&lt;widget:object&gt;,&lt;x_offset:integer&gt;,&lt;y:offset&gt;)</a></font></b></code></td></tr>
+<tr><td>Fills the pixmap with the widget's background color or pixmap.<br> Note that x_offset, y_offest are offsets in the widget.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="resize">$resize(&lt;width:integer&gt;,&lt;height:integer&gt;)</a></font></b></code></td></tr>
+<tr><td>Resizes the pixmap to w width and h height. Set wh or hg to 0, to have a null pixmap.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="scale">$scale(&lt;width:integer&gt;,&lt;height:integer&gt;,[&lt;aspect_ratio:string&gt;])</a></font></b></code></td></tr>
+<tr><td>                        Scales the pixmap or the animation by sx horizontally and sy vertically. Aspect_ratio values: - IgnoreAspectRatio:the pixmap is scaled ignoring his aspect ratio. - KeepAspectRatio: pixmap is scaled to a rectangle as large as possible inside size, preserving the aspect ratio. - KeepAspectRatioByExpanding, the pixmap is scaled to a rectangle as small as possible outside size, preserving the aspect ratio.                         Default value is KeepAspectRatio.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="load">$load(&lt;file_name:string&gt;)</a></font></b></code></td></tr>
+<tr><td>                        Load a pixmap from the file &lt;file_name&gt;.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="save">$save(&lt;file_name:string&gt;)</a></font></b></code></td></tr>
+<tr><td>                        Save the pixmap or the current animation frame to the file &lt;file_name&gt;.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="loadAnimation">$loadAnimation(&lt;file_name:string&gt;)</a></font></b></code></td></tr>
+<tr><td>                        Load an animation from the file &lt;file_name&gt; and start it.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="startAnimation">$startAnimation()</a></font></b></code></td></tr>
+<tr><td>                        Start the animation.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="stopAnimation">$stopAnimation()</a></font></b></code></td></tr>
+<tr><td>                        Stop the animation.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;integer&gt; height">&lt;integer&gt; $height()</a></font></b></code></td></tr>
+<tr><td>                        Return the height of the pixmap or of the animation.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;integer&gt; width">&lt;integer&gt; $width()</a></font></b></code></td></tr>
+<tr><td>                        Return the width of the pixmap or of the animation.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="frameChangedEvent">$frameChangedEvent()</a></font></b></code></td></tr>
+<tr><td>                        This event is triggered by KVIrc when the current animation frame changes.</td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Signals</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#E0E0E0">
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="frameChanged">$frameChanged()</a></font></b></code></td></tr>
+<tr><td>                        This signal is emitted by the default implementation of <a href="#frameChangedEvent">$frameChangedEvent</a>().<br></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

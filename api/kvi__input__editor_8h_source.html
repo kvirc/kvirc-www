@@ -219,97 +219,96 @@
 <a name="l00374"></a>00374 
 <a name="l00383"></a>00383         <span class="keywordtype">void</span> completion(<span class="keywordtype">bool</span> bShift);
 <a name="l00384"></a>00384 
-<a name="l00392"></a>00392         <span class="keywordtype">void</span> standardNickCompletion(<span class="keywordtype">bool</span> bAddMask, QString &amp; szWord, <span class="keywordtype">bool</span> bFirstWordInLine);
-<a name="l00393"></a>00393 
-<a name="l00399"></a>00399         <span class="keywordtype">void</span> internalCursorRight(<span class="keywordtype">bool</span> bShift);
-<a name="l00400"></a>00400 
-<a name="l00406"></a>00406         <span class="keywordtype">void</span> internalCursorLeft(<span class="keywordtype">bool</span> bShift);
-<a name="l00407"></a>00407 
-<a name="l00412"></a><a class="code" href="classKviInputEditor.html#ad98c1afb3e8f3023367042268f29db0c">00412</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviInputEditor.html#ad98c1afb3e8f3023367042268f29db0c" title="Returns true is there are some action in the undo stack.">isUndoAvailable</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !m_bReadOnly &amp;&amp; undoState; }
+<a name="l00393"></a>00393         <span class="keywordtype">void</span> standardNickCompletion(<span class="keywordtype">bool</span> bAddMask, QString &amp; szWord, <span class="keywordtype">bool</span> bFirstWordInLine, <span class="keywordtype">bool</span> bInCommand);
+<a name="l00394"></a>00394 
+<a name="l00398"></a>00398         <span class="keywordtype">void</span> standardNickCompletionInsertCompletedText(<span class="keyword">const</span> QString &amp;szReplacedWord,<span class="keyword">const</span> QString &amp;szCompletedText,<span class="keywordtype">bool</span> bFirstWordInLine,<span class="keywordtype">bool</span> bInCommand);
+<a name="l00399"></a>00399 
+<a name="l00405"></a>00405         <span class="keywordtype">void</span> internalCursorRight(<span class="keywordtype">bool</span> bShift);
+<a name="l00406"></a>00406 
+<a name="l00412"></a>00412         <span class="keywordtype">void</span> internalCursorLeft(<span class="keywordtype">bool</span> bShift);
 <a name="l00413"></a>00413 
-<a name="l00418"></a><a class="code" href="classKviInputEditor.html#ac5f0da26cc0a8eb8b39bb60b338a3ac2">00418</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviInputEditor.html#ac5f0da26cc0a8eb8b39bb60b338a3ac2" title="Returns true is there are some action in the redo stack.">isRedoAvailable</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !m_bReadOnly &amp;&amp; undoState &lt; (int)history.size(); }
+<a name="l00418"></a><a class="code" href="classKviInputEditor.html#ad98c1afb3e8f3023367042268f29db0c">00418</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviInputEditor.html#ad98c1afb3e8f3023367042268f29db0c" title="Returns true is there are some action in the undo stack.">isUndoAvailable</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !m_bReadOnly &amp;&amp; undoState; }
 <a name="l00419"></a>00419 
-<a name="l00424"></a><a class="code" href="classKviInputEditor.html#a98819194c42d11e8ad84f38a4caad236">00424</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviInputEditor.html#a98819194c42d11e8ad84f38a4caad236" title="Inserts an action separator in the undo stack.">separate</a>() { separator = <span class="keyword">true</span>; }
+<a name="l00424"></a><a class="code" href="classKviInputEditor.html#ac5f0da26cc0a8eb8b39bb60b338a3ac2">00424</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviInputEditor.html#ac5f0da26cc0a8eb8b39bb60b338a3ac2" title="Returns true is there are some action in the redo stack.">isRedoAvailable</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !m_bReadOnly &amp;&amp; undoState &lt; (int)history.size(); }
 <a name="l00425"></a>00425 
-<a name="l00431"></a>00431         <span class="keywordtype">void</span> addCommand(<span class="keyword">const</span> Command&amp; cmd);
-<a name="l00432"></a>00432 
-<a name="l00438"></a><a class="code" href="classKviInputEditor.html#a8f2ad0de204c23b62b73443e450ba470">00438</a>         <span class="keyword">inline</span> <span class="keyword">static</span> QFontMetrics * getLastFontMetrics(<span class="keyword">const</span> QFont &amp; font)
-<a name="l00439"></a>00439         {
-<a name="l00440"></a>00440                 <span class="keywordflow">if</span>(g_pLastFontMetrics)
-<a name="l00441"></a>00441                 {
-<a name="l00442"></a>00442                         <span class="keywordflow">return</span> g_pLastFontMetrics;
-<a name="l00443"></a>00443                 } <span class="keywordflow">else</span> {
-<a name="l00444"></a>00444                         g_pLastFontMetrics = <span class="keyword">new</span> QFontMetrics(font);
-<a name="l00445"></a>00445                         <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> u;
-<a name="l00446"></a>00446                         <span class="keywordflow">for</span>(u=1; u&lt;32; u++)
-<a name="l00447"></a>00447                         {
-<a name="l00448"></a>00448                                 QChar <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a> = getSubstituteChar(u);
-<a name="l00449"></a>00449                                 <a class="code" href="classKviInputEditor.html#a94639d297e3a85b6c3ee6edd9872e2db">KviInputEditor::g_iInputFontCharWidth</a>[u] = g_pLastFontMetrics-&gt;width(c);
-<a name="l00450"></a>00450                                 <span class="keywordflow">if</span>(c != QChar(u))
-<a name="l00451"></a>00451                                         <a class="code" href="classKviInputEditor.html#a94639d297e3a85b6c3ee6edd9872e2db">KviInputEditor::g_iInputFontCharWidth</a>[u] += 4;
-<a name="l00452"></a>00452                         }
-<a name="l00453"></a>00453 
-<a name="l00454"></a>00454                         <span class="keywordflow">for</span>(u=32; u&lt;256; u++)
-<a name="l00455"></a>00455                         {
-<a name="l00456"></a>00456                                 <a class="code" href="classKviInputEditor.html#a94639d297e3a85b6c3ee6edd9872e2db">KviInputEditor::g_iInputFontCharWidth</a>[u] = g_pLastFontMetrics-&gt;width(QChar(u));
-<a name="l00457"></a>00457                         }
-<a name="l00458"></a>00458 
-<a name="l00459"></a>00459                         <span class="keywordflow">return</span> g_pLastFontMetrics;
-<a name="l00460"></a>00460                 }
-<a name="l00461"></a>00461         }
+<a name="l00430"></a><a class="code" href="classKviInputEditor.html#a98819194c42d11e8ad84f38a4caad236">00430</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviInputEditor.html#a98819194c42d11e8ad84f38a4caad236" title="Inserts an action separator in the undo stack.">separate</a>() { separator = <span class="keyword">true</span>; }
+<a name="l00431"></a>00431 
+<a name="l00437"></a>00437         <span class="keywordtype">void</span> addCommand(<span class="keyword">const</span> Command&amp; cmd);
+<a name="l00438"></a>00438 
+<a name="l00444"></a><a class="code" href="classKviInputEditor.html#a8f2ad0de204c23b62b73443e450ba470">00444</a>         <span class="keyword">inline</span> <span class="keyword">static</span> QFontMetrics * getLastFontMetrics(<span class="keyword">const</span> QFont &amp; font)
+<a name="l00445"></a>00445         {
+<a name="l00446"></a>00446                 <span class="keywordflow">if</span>(g_pLastFontMetrics)
+<a name="l00447"></a>00447                         <span class="keywordflow">return</span> g_pLastFontMetrics;
+<a name="l00448"></a>00448                 g_pLastFontMetrics = <span class="keyword">new</span> QFontMetrics(font);
+<a name="l00449"></a>00449                 <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> u;
+<a name="l00450"></a>00450                 <span class="keywordflow">for</span>(u=1; u&lt;32; u++)
+<a name="l00451"></a>00451                 {
+<a name="l00452"></a>00452                         QChar <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a> = getSubstituteChar(u);
+<a name="l00453"></a>00453                         <a class="code" href="classKviInputEditor.html#a94639d297e3a85b6c3ee6edd9872e2db">KviInputEditor::g_iInputFontCharWidth</a>[u] = g_pLastFontMetrics-&gt;width(c);
+<a name="l00454"></a>00454                         <span class="keywordflow">if</span>(c != QChar(u))
+<a name="l00455"></a>00455                                 <a class="code" href="classKviInputEditor.html#a94639d297e3a85b6c3ee6edd9872e2db">KviInputEditor::g_iInputFontCharWidth</a>[u] += 4;
+<a name="l00456"></a>00456                 }
+<a name="l00457"></a>00457 
+<a name="l00458"></a>00458                 <span class="keywordflow">for</span>(u=32; u&lt;256; u++)
+<a name="l00459"></a>00459                 {
+<a name="l00460"></a>00460                         <a class="code" href="classKviInputEditor.html#a94639d297e3a85b6c3ee6edd9872e2db">KviInputEditor::g_iInputFontCharWidth</a>[u] = g_pLastFontMetrics-&gt;width(QChar(u));
+<a name="l00461"></a>00461                 }
 <a name="l00462"></a>00462 
-<a name="l00463"></a>00463 <span class="keyword">public</span> slots:
-<a name="l00469"></a>00469         <span class="keywordtype">void</span> iconPopupActivated(<span class="keywordtype">int</span> iId);
-<a name="l00470"></a>00470 
-<a name="l00478"></a>00478         <span class="keywordtype">void</span> copyToSelection(<span class="keywordtype">bool</span> bDonNotCopyToClipboard = <span class="keyword">true</span>);
-<a name="l00479"></a>00479 
-<a name="l00484"></a>00484         <span class="keywordtype">void</span> copyToClipboard();
-<a name="l00485"></a>00485 
-<a name="l00490"></a>00490         <span class="keywordtype">void</span> removeSelected();
-<a name="l00491"></a>00491 
-<a name="l00496"></a>00496         <span class="keywordtype">void</span> cut();
-<a name="l00497"></a>00497 
-<a name="l00503"></a>00503         <span class="keywordtype">void</span> undo(<span class="keywordtype">int</span> iUntil = -1);
-<a name="l00504"></a>00504 
-<a name="l00509"></a>00509         <span class="keywordtype">void</span> redo();
-<a name="l00510"></a>00510 
-<a name="l00515"></a>00515         <span class="keywordtype">void</span> pasteClipboardWithConfirmation();
-<a name="l00516"></a>00516 
-<a name="l00524"></a>00524         <span class="keywordtype">void</span> pasteSelectionWithConfirmation();
-<a name="l00525"></a>00525 
-<a name="l00530"></a>00530         <span class="keywordtype">void</span> pasteSlow();
-<a name="l00531"></a>00531 
-<a name="l00536"></a>00536         <span class="keywordtype">void</span> stopPasteSlow();
-<a name="l00537"></a>00537 
-<a name="l00542"></a>00542         <span class="keywordtype">void</span> pasteFile();
-<a name="l00543"></a>00543 
-<a name="l00548"></a>00548         <span class="keywordtype">void</span> selectAll();
-<a name="l00549"></a>00549 
-<a name="l00554"></a>00554         <span class="keywordtype">void</span> clear();
-<a name="l00555"></a>00555 signals:
-<a name="l00560"></a>00560         <span class="keywordtype">void</span> escapePressed();
-<a name="l00561"></a>00561 
-<a name="l00566"></a>00566         <span class="keywordtype">void</span> enterPressed();
-<a name="l00567"></a>00567 <span class="keyword">protected</span>:
-<a name="l00568"></a>00568         <span class="keyword">virtual</span> <span class="keywordtype">void</span> drawContents(QPainter *);
-<a name="l00569"></a>00569         <span class="comment">//virtual void resizeEvent(QResizeEvent * e);</span>
-<a name="l00570"></a>00570         <span class="keyword">virtual</span> <span class="keywordtype">void</span> timerEvent(QTimerEvent * e);
-<a name="l00571"></a>00571         <span class="keyword">virtual</span> <span class="keywordtype">void</span> focusInEvent(QFocusEvent * e);
-<a name="l00572"></a>00572         <span class="keyword">virtual</span> <span class="keywordtype">void</span> focusOutEvent(QFocusEvent * e);
-<a name="l00573"></a>00573         <span class="keyword">virtual</span> <span class="keywordtype">void</span> keyPressEvent(QKeyEvent * e);
-<a name="l00574"></a>00574         <span class="keyword">virtual</span> <span class="keywordtype">void</span> keyReleaseEvent(QKeyEvent * e);
-<a name="l00575"></a>00575         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mousePressEvent(QMouseEvent * e);
-<a name="l00576"></a>00576         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseReleaseEvent(QMouseEvent * e);
-<a name="l00577"></a>00577         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseDoubleClickEvent(QMouseEvent * e);
-<a name="l00578"></a>00578         <span class="keyword">virtual</span> <span class="keywordtype">void</span> dragEnterEvent(QDragEnterEvent * e);
-<a name="l00579"></a>00579         <span class="keyword">virtual</span> <span class="keywordtype">void</span> dropEvent(QDropEvent * e);
-<a name="l00580"></a>00580         <span class="keyword">virtual</span> <span class="keywordtype">void</span> inputMethodEvent(QInputMethodEvent * e) ;
-<a name="l00581"></a>00581         <span class="keyword">virtual</span> <span class="keywordtype">void</span> paintEvent(QPaintEvent * e);
-<a name="l00582"></a>00582 };
-<a name="l00583"></a>00583 
-<a name="l00584"></a>00584 <span class="preprocessor">#endif //_KVI_INPUT_EDITOR_H_</span>
+<a name="l00463"></a>00463                 <span class="keywordflow">return</span> g_pLastFontMetrics;
+<a name="l00464"></a>00464         }
+<a name="l00465"></a>00465 
+<a name="l00466"></a>00466 <span class="keyword">public</span> slots:
+<a name="l00472"></a>00472         <span class="keywordtype">void</span> iconPopupActivated(<span class="keywordtype">int</span> iId);
+<a name="l00473"></a>00473 
+<a name="l00481"></a>00481         <span class="keywordtype">void</span> copyToSelection(<span class="keywordtype">bool</span> bDonNotCopyToClipboard = <span class="keyword">true</span>);
+<a name="l00482"></a>00482 
+<a name="l00487"></a>00487         <span class="keywordtype">void</span> copyToClipboard();
+<a name="l00488"></a>00488 
+<a name="l00493"></a>00493         <span class="keywordtype">void</span> removeSelected();
+<a name="l00494"></a>00494 
+<a name="l00499"></a>00499         <span class="keywordtype">void</span> cut();
+<a name="l00500"></a>00500 
+<a name="l00506"></a>00506         <span class="keywordtype">void</span> undo(<span class="keywordtype">int</span> iUntil = -1);
+<a name="l00507"></a>00507 
+<a name="l00512"></a>00512         <span class="keywordtype">void</span> redo();
+<a name="l00513"></a>00513 
+<a name="l00518"></a>00518         <span class="keywordtype">void</span> pasteClipboardWithConfirmation();
+<a name="l00519"></a>00519 
+<a name="l00527"></a>00527         <span class="keywordtype">void</span> pasteSelectionWithConfirmation();
+<a name="l00528"></a>00528 
+<a name="l00533"></a>00533         <span class="keywordtype">void</span> pasteSlow();
+<a name="l00534"></a>00534 
+<a name="l00539"></a>00539         <span class="keywordtype">void</span> stopPasteSlow();
+<a name="l00540"></a>00540 
+<a name="l00545"></a>00545         <span class="keywordtype">void</span> pasteFile();
+<a name="l00546"></a>00546 
+<a name="l00551"></a>00551         <span class="keywordtype">void</span> selectAll();
+<a name="l00552"></a>00552 
+<a name="l00557"></a>00557         <span class="keywordtype">void</span> clear();
+<a name="l00558"></a>00558 signals:
+<a name="l00563"></a>00563         <span class="keywordtype">void</span> escapePressed();
+<a name="l00564"></a>00564 
+<a name="l00569"></a>00569         <span class="keywordtype">void</span> enterPressed();
+<a name="l00570"></a>00570 <span class="keyword">protected</span>:
+<a name="l00571"></a>00571         <span class="keyword">virtual</span> <span class="keywordtype">void</span> drawContents(QPainter *);
+<a name="l00572"></a>00572         <span class="comment">//virtual void resizeEvent(QResizeEvent * e);</span>
+<a name="l00573"></a>00573         <span class="keyword">virtual</span> <span class="keywordtype">void</span> timerEvent(QTimerEvent * e);
+<a name="l00574"></a>00574         <span class="keyword">virtual</span> <span class="keywordtype">void</span> focusInEvent(QFocusEvent * e);
+<a name="l00575"></a>00575         <span class="keyword">virtual</span> <span class="keywordtype">void</span> focusOutEvent(QFocusEvent * e);
+<a name="l00576"></a>00576         <span class="keyword">virtual</span> <span class="keywordtype">void</span> keyPressEvent(QKeyEvent * e);
+<a name="l00577"></a>00577         <span class="keyword">virtual</span> <span class="keywordtype">void</span> keyReleaseEvent(QKeyEvent * e);
+<a name="l00578"></a>00578         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mousePressEvent(QMouseEvent * e);
+<a name="l00579"></a>00579         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseReleaseEvent(QMouseEvent * e);
+<a name="l00580"></a>00580         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseDoubleClickEvent(QMouseEvent * e);
+<a name="l00581"></a>00581         <span class="keyword">virtual</span> <span class="keywordtype">void</span> dragEnterEvent(QDragEnterEvent * e);
+<a name="l00582"></a>00582         <span class="keyword">virtual</span> <span class="keywordtype">void</span> dropEvent(QDropEvent * e);
+<a name="l00583"></a>00583         <span class="keyword">virtual</span> <span class="keywordtype">void</span> inputMethodEvent(QInputMethodEvent * e) ;
+<a name="l00584"></a>00584         <span class="keyword">virtual</span> <span class="keywordtype">void</span> paintEvent(QPaintEvent * e);
+<a name="l00585"></a>00585 };
+<a name="l00586"></a>00586 
+<a name="l00587"></a>00587 <span class="preprocessor">#endif //_KVI_INPUT_EDITOR_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Apr 17 17:23:30 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue May 4 19:53:54 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

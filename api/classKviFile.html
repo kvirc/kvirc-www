@@ -27,6 +27,9 @@
 </div>
 <div class="contents">
 <h1>KviFile Class Reference</h1><!-- doxytag: class="KviFile" --><!-- doxytag: inherits="KviHeapObject" -->
+<p>KVIrc File class.  
+<a href="#_details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="kvi__file_8h_source.html">kvi_file.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for KviFile:</div>
@@ -42,40 +45,67 @@ Inheritance diagram for KviFile:</div>
 <p><a href="classKviFile-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#ad777cec9ee98f6cd6b27aaf8f997dd18">KviFile</a> (const QString &amp;name)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a856d4069babb9fac6d536be97ac761a8">KviFile</a> (const QString &amp;szName)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructs file object.  <a href="#a856d4069babb9fac6d536be97ac761a8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a8bf60a4313b364759b7cf351684807ee">KviFile</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructs file object.  <a href="#a8bf60a4313b364759b7cf351684807ee"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a7832ae5e2d580200b860bc8e292e7582">load</a> (<a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="classKviStr.html">KviStr</a> &gt; *pData)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Loads a file from a list.  <a href="#a7832ae5e2d580200b860bc8e292e7582"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a73bf9deec448882f4f4e201921b4a291">load</a> (QString &amp;szData)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a2d8886953cf5c4d15bb1cf8d3823137c">load</a> (QByteArray &amp;bData)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Loads a file.  <a href="#a73bf9deec448882f4f4e201921b4a291"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a75b69ef9a948ae691bec865b4a9b5865">load</a> (QByteArray &amp;data)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Loads a file.  <a href="#a75b69ef9a948ae691bec865b4a9b5865"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a01ea5b6273c7fbbc670048e99483951c">load</a> (<a class="el" href="classKviStr.html">KviStr</a> &amp;szData)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a9e1ef05640e817723155a0638fe8aa5f">load</a> (<a class="el" href="kvi__inttypes_8h.html#a90dc11f16d55874f11c93318450d617a">kvi_i8_t</a> &amp;t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a6a9b276112b8ecadc31afd7edc1720b2">load</a> (<a class="el" href="kvi__inttypes_8h.html#a2c44b3f772775881b851e8842200110c">kvi_u8_t</a> &amp;t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a69330b22358a1dc3aef9ce46a62827ea">load</a> (kvi_i16_t &amp;t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#aeb132c5be39eebe8ccf5bfe5c60bce71">load</a> (kvi_u16_t &amp;t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a9deaac954f0103669a574bf07830d2e0">load</a> (kvi_i32_t &amp;t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a0f48f91502cc8f7f7f6f39978b6239c6">load</a> (kvi_u32_t &amp;t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a35620c682ee8e2b543412daf70238118">load</a> (<a class="el" href="kvi__inttypes_8h.html#a0384abdf7a85390b11d7189f2e67fd54">kvi_i64_t</a> &amp;t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a9983bb28c2e7201a44a1a5ec334ee882">load</a> (<a class="el" href="kvi__inttypes_8h.html#af17b2bd1a5eb7c50d33fcfc7dd9e3af0">kvi_u64_t</a> &amp;t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a152d2ef311ed6e787b64dcd6d9dc997e">openForReading</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a96ffbe85837a29f9d53f105213d5e16a">openForWriting</a> (bool bAppend=false)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">qint64&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#abbc49e00b6e0e588ffa58052d80b067b">readBlock</a> (char *data, quint64 uLen)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Loads a file.  <a href="#a01ea5b6273c7fbbc670048e99483951c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a65139c4b0a66e709016ff62f9fb46c2a">load</a> (<a class="el" href="kvi__inttypes_8h.html#a90dc11f16d55874f11c93318450d617a">kvi_i8_t</a> &amp;file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Loads a file.  <a href="#a65139c4b0a66e709016ff62f9fb46c2a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a6305c48a77694b53d5e983df530b38b0">load</a> (<a class="el" href="kvi__inttypes_8h.html#a2c44b3f772775881b851e8842200110c">kvi_u8_t</a> &amp;file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Loads a file.  <a href="#a6305c48a77694b53d5e983df530b38b0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a7cd2680a5b064bc49c9380973faf8b33">load</a> (kvi_i16_t &amp;file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Loads a file.  <a href="#a7cd2680a5b064bc49c9380973faf8b33"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a0aa6be54161d485ebc9f774a6cc5cf4e">load</a> (kvi_u16_t &amp;file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Loads a file.  <a href="#a0aa6be54161d485ebc9f774a6cc5cf4e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#ab9e2bb78856e8c3d91d2f2843aafe1cd">load</a> (kvi_i32_t &amp;file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Loads a file.  <a href="#ab9e2bb78856e8c3d91d2f2843aafe1cd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a8ea8893cfb9fb1bae6803d32d5725603">load</a> (kvi_u32_t &amp;file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Loads a file.  <a href="#a8ea8893cfb9fb1bae6803d32d5725603"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a1ddce69fd243dd4993839040b8861db2">load</a> (<a class="el" href="kvi__inttypes_8h.html#a0384abdf7a85390b11d7189f2e67fd54">kvi_i64_t</a> &amp;file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Loads a file.  <a href="#a1ddce69fd243dd4993839040b8861db2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a5f3f3da3be78fe4cd2911e1ac3628bce">load</a> (<a class="el" href="kvi__inttypes_8h.html#af17b2bd1a5eb7c50d33fcfc7dd9e3af0">kvi_u64_t</a> &amp;file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Loads a file.  <a href="#a5f3f3da3be78fe4cd2911e1ac3628bce"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a81b885d3d05e434a90fde27c2c898a0d">save</a> (<a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="classKviStr.html">KviStr</a> &gt; *pData)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Saves a file to a list.  <a href="#a81b885d3d05e434a90fde27c2c898a0d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a1ad98f8a3434fa514e889b620045e7e5">save</a> (const QString &amp;szData)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a7ac78e41044f8177afae6d377610cdb5">save</a> (const QByteArray &amp;bData)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Saves a file.  <a href="#a1ad98f8a3434fa514e889b620045e7e5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a068e1e384c397ede1427fdbc0f900572">save</a> (const QByteArray &amp;data)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Saves a file.  <a href="#a068e1e384c397ede1427fdbc0f900572"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a92351fc31cf341c38dcffefb5d862936">save</a> (const <a class="el" href="classKviStr.html">KviStr</a> &amp;szData)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a06678f88a4d1f45ed4690df9cfe0b291">save</a> (<a class="el" href="kvi__inttypes_8h.html#a90dc11f16d55874f11c93318450d617a">kvi_i8_t</a> t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a20115c43dfdd8ca28e698ba721287966">save</a> (<a class="el" href="kvi__inttypes_8h.html#a2c44b3f772775881b851e8842200110c">kvi_u8_t</a> t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#ae1f04b2a6b6a4cbfc30875aae8a9d99d">save</a> (kvi_i16_t t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#ae1699169c8a1a6081629093cce0b30d6">save</a> (kvi_u16_t t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a6ec9a49cc0bb5f4bdba76673d2e248d1">save</a> (kvi_i32_t t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a93542a7b1d70074f5f278ff411fbebaa">save</a> (kvi_u32_t t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a94992bc7b5015353cdc00c544f66efa6">save</a> (<a class="el" href="kvi__inttypes_8h.html#a0384abdf7a85390b11d7189f2e67fd54">kvi_i64_t</a> t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a9c6324fa3e9aa970e7c57e27051150d2">save</a> (<a class="el" href="kvi__inttypes_8h.html#af17b2bd1a5eb7c50d33fcfc7dd9e3af0">kvi_u64_t</a> t)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a4f1b5b109c9e5008527a36304b446418">skipFirst</a> (const <a class="el" href="classKviStr.html">KviStr</a> &amp;t, unsigned int maxdist=0xffffffff)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#af0a1d0dd0cf6953b047527c4efad14f4">skipFirst</a> (char t, unsigned int maxdist=0xffffffff)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">qint64&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#ab00d27559f66f8f258bc26691da47cbe">writeBlock</a> (const char *data, quint64 uLen)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Saves a file.  <a href="#a92351fc31cf341c38dcffefb5d862936"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#acb43ce13ec56eb89a29fb3443df9480d">save</a> (<a class="el" href="kvi__inttypes_8h.html#a90dc11f16d55874f11c93318450d617a">kvi_i8_t</a> file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Saves a file.  <a href="#acb43ce13ec56eb89a29fb3443df9480d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a9d0fac25f35d56a59c1a8a5e3749c59c">save</a> (<a class="el" href="kvi__inttypes_8h.html#a2c44b3f772775881b851e8842200110c">kvi_u8_t</a> file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Saves a file.  <a href="#a9d0fac25f35d56a59c1a8a5e3749c59c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a97193e911550c43ebd98f4bf3c1f3ed1">save</a> (kvi_i16_t file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Saves a file.  <a href="#a97193e911550c43ebd98f4bf3c1f3ed1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a180b0cad9f60f482c96a1fcc84fe3063">save</a> (kvi_u16_t file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Saves a file.  <a href="#a180b0cad9f60f482c96a1fcc84fe3063"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a734089e7cd80821e4807b10cf80e9b59">save</a> (kvi_i32_t file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Saves a file.  <a href="#a734089e7cd80821e4807b10cf80e9b59"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a6ec12199aba09c656b334a80b4325c91">save</a> (kvi_u32_t file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Saves a file.  <a href="#a6ec12199aba09c656b334a80b4325c91"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a138a834d9f7d45b61e090d126f207999">save</a> (<a class="el" href="kvi__inttypes_8h.html#a0384abdf7a85390b11d7189f2e67fd54">kvi_i64_t</a> file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Saves a file.  <a href="#a138a834d9f7d45b61e090d126f207999"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#ae327498c6e26a85b49d96af2216fd89d">save</a> (<a class="el" href="kvi__inttypes_8h.html#af17b2bd1a5eb7c50d33fcfc7dd9e3af0">kvi_u64_t</a> file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Saves a file.  <a href="#ae327498c6e26a85b49d96af2216fd89d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a9e876a2a0a3ad0f9c2a3365bb4be15cf">skipFirst</a> (const <a class="el" href="classKviStr.html">KviStr</a> &amp;szT, unsigned int uMaxDist=0xffffffff)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Skips the first occurrence of the given string for a given dimension.  <a href="#a9e876a2a0a3ad0f9c2a3365bb4be15cf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a7cff6cd25cddac668cbd0f889bfd26f2">skipFirst</a> (char t, unsigned int uMaxDist=0xffffffff)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Skips the first occurrence of the given char for a given dimension.  <a href="#a7cff6cd25cddac668cbd0f889bfd26f2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFile.html#a0e3aab0d4dad586e01973cdd04409964">~KviFile</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destroys file object.  <a href="#a0e3aab0d4dad586e01973cdd04409964"></a><br/></td></tr>
 </table>
+<hr/><a name="_details"></a><h2>Detailed Description</h2>
+<p>KVIrc File class. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8bf60a4313b364759b7cf351684807ee"></a><!-- doxytag: member="KviFile::KviFile" ref="a8bf60a4313b364759b7cf351684807ee" args="()" -->
 <div class="memitem">
@@ -92,9 +122,12 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
+<p>Constructs file object. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviFile.html" title="KVIrc File class.">KviFile</a> </dd></dl>
+
 </div>
 </div>
-<a class="anchor" id="ad777cec9ee98f6cd6b27aaf8f997dd18"></a><!-- doxytag: member="KviFile::KviFile" ref="ad777cec9ee98f6cd6b27aaf8f997dd18" args="(const QString &amp;name)" -->
+<a class="anchor" id="a856d4069babb9fac6d536be97ac761a8"></a><!-- doxytag: member="KviFile::KviFile" ref="a856d4069babb9fac6d536be97ac761a8" args="(const QString &amp;szName)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -102,13 +135,22 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">KviFile::KviFile </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&nbsp;</td>
-          <td class="paramname"> <em>name</em></td>
+          <td class="paramname"> <em>szName</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Constructs file object. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>szName</em>&nbsp;</td><td>The name of the file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviFile.html" title="KVIrc File class.">KviFile</a> </dd></dl>
 
 </div>
 </div>
@@ -126,6 +168,8 @@ Inheritance diagram for KviFile:</div>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Destroys file object. </p>
 
 </div>
 </div>
@@ -146,7 +190,17 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l01037">KviPointerList&lt; T &gt;::clear()</a>, <a class="el" href="kvi__file_8cpp_source.html#l00128">load()</a>, and <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>.</p>
+<p>Loads a file from a list. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pData</em>&nbsp;</td><td>The list of files to load </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function loads LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
+<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l01037">KviPointerList&lt; T &gt;::clear()</a>, <a class="el" href="kvi__file_8cpp_source.html#l00127">load()</a>, and <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>.</p>
 
 </div>
 </div>
@@ -166,11 +220,21 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__file_8cpp_source.html#l00128">load()</a>, and <a class="el" href="kvi__file_8h_source.html#l00057">readBlock()</a>.</p>
+<p>Loads a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>szData</em>&nbsp;</td><td>The file to load </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function loads LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
+<p>References <a class="el" href="kvi__file_8cpp_source.html#l00127">load()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a2d8886953cf5c4d15bb1cf8d3823137c"></a><!-- doxytag: member="KviFile::load" ref="a2d8886953cf5c4d15bb1cf8d3823137c" args="(QByteArray &amp;bData)" -->
+<a class="anchor" id="a75b69ef9a948ae691bec865b4a9b5865"></a><!-- doxytag: member="KviFile::load" ref="a75b69ef9a948ae691bec865b4a9b5865" args="(QByteArray &amp;data)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -178,7 +242,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::load </td>
           <td>(</td>
           <td class="paramtype">QByteArray &amp;&nbsp;</td>
-          <td class="paramname"> <em>bData</em></td>
+          <td class="paramname"> <em>data</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
@@ -186,7 +250,17 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__file_8cpp_source.html#l00128">load()</a>, and <a class="el" href="kvi__file_8h_source.html#l00057">readBlock()</a>.</p>
+<p>Loads a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>The file to load </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function loads LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
+<p>References <a class="el" href="kvi__file_8cpp_source.html#l00127">load()</a>.</p>
 
 </div>
 </div>
@@ -206,11 +280,21 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__file_8cpp_source.html#l00128">load()</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, <a class="el" href="kvi__file_8h_source.html#l00057">readBlock()</a>, and <a class="el" href="kvi__string_8cpp_source.html#l01180">KviStr::setLength()</a>.</p>
+<p>Loads a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>szData</em>&nbsp;</td><td>The file to load </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function loads LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
+<p>References <a class="el" href="kvi__file_8cpp_source.html#l00127">load()</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, and <a class="el" href="kvi__string_8cpp_source.html#l01180">KviStr::setLength()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9e1ef05640e817723155a0638fe8aa5f"></a><!-- doxytag: member="KviFile::load" ref="a9e1ef05640e817723155a0638fe8aa5f" args="(kvi_i8_t &amp;t)" -->
+<a class="anchor" id="a65139c4b0a66e709016ff62f9fb46c2a"></a><!-- doxytag: member="KviFile::load" ref="a65139c4b0a66e709016ff62f9fb46c2a" args="(kvi_i8_t &amp;file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -218,7 +302,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::load </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="kvi__inttypes_8h.html#a90dc11f16d55874f11c93318450d617a">kvi_i8_t</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>t</em></td>
+          <td class="paramname"> <em>file</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [inline]</code></td>
         </tr>
@@ -226,13 +310,23 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__file_8h_source.html#l00082">load()</a>.</p>
+<p>Loads a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>The file to load </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function loads LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__file_8h_source.html#l00082">load()</a>.</p>
+<p>References <a class="el" href="kvi__file_8h_source.html#l00231">load()</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__file_8h_source.html#l00231">load()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6a9b276112b8ecadc31afd7edc1720b2"></a><!-- doxytag: member="KviFile::load" ref="a6a9b276112b8ecadc31afd7edc1720b2" args="(kvi_u8_t &amp;t)" -->
+<a class="anchor" id="a6305c48a77694b53d5e983df530b38b0"></a><!-- doxytag: member="KviFile::load" ref="a6305c48a77694b53d5e983df530b38b0" args="(kvi_u8_t &amp;file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -240,7 +334,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::load </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="kvi__inttypes_8h.html#a2c44b3f772775881b851e8842200110c">kvi_u8_t</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>t</em></td>
+          <td class="paramname"> <em>file</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
@@ -248,11 +342,19 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__file_8h_source.html#l00057">readBlock()</a>.</p>
+<p>Loads a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>The file to load </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function loads LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a69330b22358a1dc3aef9ce46a62827ea"></a><!-- doxytag: member="KviFile::load" ref="a69330b22358a1dc3aef9ce46a62827ea" args="(kvi_i16_t &amp;t)" -->
+<a class="anchor" id="a7cd2680a5b064bc49c9380973faf8b33"></a><!-- doxytag: member="KviFile::load" ref="a7cd2680a5b064bc49c9380973faf8b33" args="(kvi_i16_t &amp;file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -260,7 +362,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::load </td>
           <td>(</td>
           <td class="paramtype">kvi_i16_t &amp;&nbsp;</td>
-          <td class="paramname"> <em>t</em></td>
+          <td class="paramname"> <em>file</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [inline]</code></td>
         </tr>
@@ -268,13 +370,23 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__file_8h_source.html#l00076">load()</a>.</p>
+<p>Loads a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>The file to load </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function loads LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__file_8h_source.html#l00076">load()</a>.</p>
+<p>References <a class="el" href="kvi__file_8h_source.html#l00215">load()</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__file_8h_source.html#l00215">load()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aeb132c5be39eebe8ccf5bfe5c60bce71"></a><!-- doxytag: member="KviFile::load" ref="aeb132c5be39eebe8ccf5bfe5c60bce71" args="(kvi_u16_t &amp;t)" -->
+<a class="anchor" id="a0aa6be54161d485ebc9f774a6cc5cf4e"></a><!-- doxytag: member="KviFile::load" ref="a0aa6be54161d485ebc9f774a6cc5cf4e" args="(kvi_u16_t &amp;file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -282,7 +394,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::load </td>
           <td>(</td>
           <td class="paramtype">kvi_u16_t &amp;&nbsp;</td>
-          <td class="paramname"> <em>t</em></td>
+          <td class="paramname"> <em>file</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
@@ -290,11 +402,21 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__byteorder_8h_source.html#l00058">kvi_littleEndianToLocalCpu16</a>, and <a class="el" href="kvi__file_8h_source.html#l00057">readBlock()</a>.</p>
+<p>Loads a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>The file to load </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function loads LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
+<p>References <a class="el" href="kvi__byteorder_8h_source.html#l00058">kvi_littleEndianToLocalCpu16</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9deaac954f0103669a574bf07830d2e0"></a><!-- doxytag: member="KviFile::load" ref="a9deaac954f0103669a574bf07830d2e0" args="(kvi_i32_t &amp;t)" -->
+<a class="anchor" id="ab9e2bb78856e8c3d91d2f2843aafe1cd"></a><!-- doxytag: member="KviFile::load" ref="ab9e2bb78856e8c3d91d2f2843aafe1cd" args="(kvi_i32_t &amp;file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -302,7 +424,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::load </td>
           <td>(</td>
           <td class="paramtype">kvi_i32_t &amp;&nbsp;</td>
-          <td class="paramname"> <em>t</em></td>
+          <td class="paramname"> <em>file</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [inline]</code></td>
         </tr>
@@ -310,13 +432,23 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__file_8h_source.html#l00070">load()</a>.</p>
+<p>Loads a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>The file to load </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function loads LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__file_8h_source.html#l00070">load()</a>.</p>
+<p>References <a class="el" href="kvi__file_8h_source.html#l00199">load()</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__file_8h_source.html#l00199">load()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0f48f91502cc8f7f7f6f39978b6239c6"></a><!-- doxytag: member="KviFile::load" ref="a0f48f91502cc8f7f7f6f39978b6239c6" args="(kvi_u32_t &amp;t)" -->
+<a class="anchor" id="a8ea8893cfb9fb1bae6803d32d5725603"></a><!-- doxytag: member="KviFile::load" ref="a8ea8893cfb9fb1bae6803d32d5725603" args="(kvi_u32_t &amp;file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -324,7 +456,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::load </td>
           <td>(</td>
           <td class="paramtype">kvi_u32_t &amp;&nbsp;</td>
-          <td class="paramname"> <em>t</em></td>
+          <td class="paramname"> <em>file</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
@@ -332,11 +464,21 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__byteorder_8h_source.html#l00059">kvi_littleEndianToLocalCpu32</a>, and <a class="el" href="kvi__file_8h_source.html#l00057">readBlock()</a>.</p>
+<p>Loads a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>The file to load </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function loads LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
+<p>References <a class="el" href="kvi__byteorder_8h_source.html#l00059">kvi_littleEndianToLocalCpu32</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a35620c682ee8e2b543412daf70238118"></a><!-- doxytag: member="KviFile::load" ref="a35620c682ee8e2b543412daf70238118" args="(kvi_i64_t &amp;t)" -->
+<a class="anchor" id="a1ddce69fd243dd4993839040b8861db2"></a><!-- doxytag: member="KviFile::load" ref="a1ddce69fd243dd4993839040b8861db2" args="(kvi_i64_t &amp;file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -344,7 +486,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::load </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="kvi__inttypes_8h.html#a0384abdf7a85390b11d7189f2e67fd54">kvi_i64_t</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>t</em></td>
+          <td class="paramname"> <em>file</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [inline]</code></td>
         </tr>
@@ -352,13 +494,23 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__file_8h_source.html#l00064">load()</a>.</p>
+<p>Loads a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>The file to load </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function loads LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__file_8h_source.html#l00064">load()</a>.</p>
+<p>References <a class="el" href="kvi__file_8h_source.html#l00183">load()</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__file_8h_source.html#l00183">load()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9983bb28c2e7201a44a1a5ec334ee882"></a><!-- doxytag: member="KviFile::load" ref="a9983bb28c2e7201a44a1a5ec334ee882" args="(kvi_u64_t &amp;t)" -->
+<a class="anchor" id="a5f3f3da3be78fe4cd2911e1ac3628bce"></a><!-- doxytag: member="KviFile::load" ref="a5f3f3da3be78fe4cd2911e1ac3628bce" args="(kvi_u64_t &amp;file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -366,7 +518,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::load </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="kvi__inttypes_8h.html#af17b2bd1a5eb7c50d33fcfc7dd9e3af0">kvi_u64_t</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>t</em></td>
+          <td class="paramname"> <em>file</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
@@ -374,77 +526,19 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__byteorder_8h_source.html#l00059">kvi_littleEndianToLocalCpu32</a>, and <a class="el" href="kvi__file_8h_source.html#l00057">readBlock()</a>.</p>
+<p>Loads a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>The file to load </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function loads LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__file_8cpp_source.html#l00061">load()</a>, <a class="el" href="kvi__packagefile_8cpp_source.html#l00600">KviPackageReader::readHeaderInternal()</a>, <a class="el" href="kvi__packagefile_8cpp_source.html#l00686">KviPackageReader::unpackFile()</a>, and <a class="el" href="kvi__packagefile_8cpp_source.html#l00926">KviPackageReader::unpackInternal()</a>.</p>
+<p>References <a class="el" href="kvi__byteorder_8h_source.html#l00059">kvi_littleEndianToLocalCpu32</a>.</p>
 
-</div>
-</div>
-<a class="anchor" id="a152d2ef311ed6e787b64dcd6d9dc997e"></a><!-- doxytag: member="KviFile::openForReading" ref="a152d2ef311ed6e787b64dcd6d9dc997e" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool KviFile::openForReading </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Referenced by <a class="el" href="kvi__mediatype_8cpp_source.html#l00374">KviMediaManager::findMediaTypeForRegularFile()</a>, <a class="el" href="kvi__locale_8cpp_source.html#l00424">KviMessageCatalogue::load()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00133">KviConfig::load()</a>, <a class="el" href="kvi__packagefile_8cpp_source.html#l00274">KviPackageWriter::packFile()</a>, <a class="el" href="kvi__packagefile_8cpp_source.html#l00674">KviPackageReader::readHeader()</a>, and <a class="el" href="kvi__packagefile_8cpp_source.html#l00926">KviPackageReader::unpackInternal()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a96ffbe85837a29f9d53f105213d5e16a"></a><!-- doxytag: member="KviFile::openForWriting" ref="a96ffbe85837a29f9d53f105213d5e16a" args="(bool bAppend=false)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool KviFile::openForWriting </td>
-          <td>(</td>
-          <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>bAppend</em> = <code>false</code></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00386">KviHttpRequest::openFile()</a>, <a class="el" href="kvi__packagefile_8cpp_source.html#l00487">KviPackageWriter::packInternal()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00438">KviConfig::save()</a>, and <a class="el" href="kvi__packagefile_8cpp_source.html#l00686">KviPackageReader::unpackFile()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="abbc49e00b6e0e588ffa58052d80b067b"></a><!-- doxytag: member="KviFile::readBlock" ref="abbc49e00b6e0e588ffa58052d80b067b" args="(char *data, quint64 uLen)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">qint64 KviFile::readBlock </td>
-          <td>(</td>
-          <td class="paramtype">char *&nbsp;</td>
-          <td class="paramname"> <em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">quint64&nbsp;</td>
-          <td class="paramname"> <em>uLen</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Referenced by <a class="el" href="kvi__mediatype_8cpp_source.html#l00374">KviMediaManager::findMediaTypeForRegularFile()</a>, <a class="el" href="kvi__locale_8cpp_source.html#l00424">KviMessageCatalogue::load()</a>, <a class="el" href="kvi__file_8cpp_source.html#l00061">load()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00133">KviConfig::load()</a>, <a class="el" href="kvi__packagefile_8cpp_source.html#l00274">KviPackageWriter::packFile()</a>, <a class="el" href="kvi__packagefile_8cpp_source.html#l00600">KviPackageReader::readHeaderInternal()</a>, and <a class="el" href="kvi__packagefile_8cpp_source.html#l00686">KviPackageReader::unpackFile()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__file_8cpp_source.html#l00136">load()</a>, <a class="el" href="kvi__packagefile_8cpp_source.html#l00600">KviPackageReader::readHeaderInternal()</a>, <a class="el" href="kvi__packagefile_8cpp_source.html#l00686">KviPackageReader::unpackFile()</a>, and <a class="el" href="kvi__packagefile_8cpp_source.html#l00926">KviPackageReader::unpackInternal()</a>.</p>
 
 </div>
 </div>
@@ -464,7 +558,17 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, and <a class="el" href="kvi__file_8cpp_source.html#l00120">save()</a>.</p>
+<p>Saves a file to a list. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pData</em>&nbsp;</td><td>The list where file to save is </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function saves LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
+<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, and <a class="el" href="kvi__file_8cpp_source.html#l00067">save()</a>.</p>
 
 </div>
 </div>
@@ -484,11 +588,21 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__file_8cpp_source.html#l00120">save()</a>, <a class="el" href="kvi__qstring_8h_source.html#l00737">KviQString::toUtf8()</a>, and <a class="el" href="kvi__file_8h_source.html#l00056">writeBlock()</a>.</p>
+<p>Saves a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>szData</em>&nbsp;</td><td>The file to save </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function saves LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
+<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__file_8cpp_source.html#l00067">save()</a>, and <a class="el" href="kvi__qstring_8h_source.html#l00737">KviQString::toUtf8()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a7ac78e41044f8177afae6d377610cdb5"></a><!-- doxytag: member="KviFile::save" ref="a7ac78e41044f8177afae6d377610cdb5" args="(const QByteArray &amp;bData)" -->
+<a class="anchor" id="a068e1e384c397ede1427fdbc0f900572"></a><!-- doxytag: member="KviFile::save" ref="a068e1e384c397ede1427fdbc0f900572" args="(const QByteArray &amp;data)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -496,7 +610,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::save </td>
           <td>(</td>
           <td class="paramtype">const QByteArray &amp;&nbsp;</td>
-          <td class="paramname"> <em>bData</em></td>
+          <td class="paramname"> <em>data</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
@@ -504,7 +618,17 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__file_8cpp_source.html#l00120">save()</a>, and <a class="el" href="kvi__file_8h_source.html#l00056">writeBlock()</a>.</p>
+<p>Saves a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>The file to save </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function saves LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
+<p>References <a class="el" href="kvi__file_8cpp_source.html#l00067">save()</a>.</p>
 
 </div>
 </div>
@@ -524,11 +648,21 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__string_8h_source.html#l00176">KviStr::len()</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, <a class="el" href="kvi__file_8cpp_source.html#l00120">save()</a>, and <a class="el" href="kvi__file_8h_source.html#l00056">writeBlock()</a>.</p>
+<p>Saves a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>szData</em>&nbsp;</td><td>The file to save </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function saves LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
+<p>References <a class="el" href="kvi__string_8h_source.html#l00176">KviStr::len()</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, and <a class="el" href="kvi__file_8cpp_source.html#l00067">save()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a06678f88a4d1f45ed4690df9cfe0b291"></a><!-- doxytag: member="KviFile::save" ref="a06678f88a4d1f45ed4690df9cfe0b291" args="(kvi_i8_t t)" -->
+<a class="anchor" id="acb43ce13ec56eb89a29fb3443df9480d"></a><!-- doxytag: member="KviFile::save" ref="acb43ce13ec56eb89a29fb3443df9480d" args="(kvi_i8_t file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -536,7 +670,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::save </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="kvi__inttypes_8h.html#a90dc11f16d55874f11c93318450d617a">kvi_i8_t</a>&nbsp;</td>
-          <td class="paramname"> <em>t</em></td>
+          <td class="paramname"> <em>file</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [inline]</code></td>
         </tr>
@@ -544,13 +678,23 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__file_8h_source.html#l00081">save()</a>.</p>
+<p>Saves a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>The file to save </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function saves LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__file_8h_source.html#l00081">save()</a>.</p>
+<p>References <a class="el" href="kvi__file_8h_source.html#l00135">save()</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__file_8h_source.html#l00135">save()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a20115c43dfdd8ca28e698ba721287966"></a><!-- doxytag: member="KviFile::save" ref="a20115c43dfdd8ca28e698ba721287966" args="(kvi_u8_t t)" -->
+<a class="anchor" id="a9d0fac25f35d56a59c1a8a5e3749c59c"></a><!-- doxytag: member="KviFile::save" ref="a9d0fac25f35d56a59c1a8a5e3749c59c" args="(kvi_u8_t file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -558,7 +702,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::save </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="kvi__inttypes_8h.html#a2c44b3f772775881b851e8842200110c">kvi_u8_t</a>&nbsp;</td>
-          <td class="paramname"> <em>t</em></td>
+          <td class="paramname"> <em>file</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
@@ -566,11 +710,19 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__file_8h_source.html#l00056">writeBlock()</a>.</p>
+<p>Saves a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>The file to save </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function saves LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ae1f04b2a6b6a4cbfc30875aae8a9d99d"></a><!-- doxytag: member="KviFile::save" ref="ae1f04b2a6b6a4cbfc30875aae8a9d99d" args="(kvi_i16_t t)" -->
+<a class="anchor" id="a97193e911550c43ebd98f4bf3c1f3ed1"></a><!-- doxytag: member="KviFile::save" ref="a97193e911550c43ebd98f4bf3c1f3ed1" args="(kvi_i16_t file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -578,7 +730,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::save </td>
           <td>(</td>
           <td class="paramtype">kvi_i16_t&nbsp;</td>
-          <td class="paramname"> <em>t</em></td>
+          <td class="paramname"> <em>file</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [inline]</code></td>
         </tr>
@@ -586,13 +738,23 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__file_8h_source.html#l00075">save()</a>.</p>
+<p>Saves a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>The file to save </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function saves LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__file_8h_source.html#l00075">save()</a>.</p>
+<p>References <a class="el" href="kvi__file_8h_source.html#l00119">save()</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__file_8h_source.html#l00119">save()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae1699169c8a1a6081629093cce0b30d6"></a><!-- doxytag: member="KviFile::save" ref="ae1699169c8a1a6081629093cce0b30d6" args="(kvi_u16_t t)" -->
+<a class="anchor" id="a180b0cad9f60f482c96a1fcc84fe3063"></a><!-- doxytag: member="KviFile::save" ref="a180b0cad9f60f482c96a1fcc84fe3063" args="(kvi_u16_t file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -600,7 +762,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::save </td>
           <td>(</td>
           <td class="paramtype">kvi_u16_t&nbsp;</td>
-          <td class="paramname"> <em>t</em></td>
+          <td class="paramname"> <em>file</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
@@ -608,11 +770,21 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__byteorder_8h_source.html#l00055">kvi_localCpuToLittleEndian16</a>, and <a class="el" href="kvi__file_8h_source.html#l00056">writeBlock()</a>.</p>
+<p>Saves a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>The file to save </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function saves LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
+<p>References <a class="el" href="kvi__byteorder_8h_source.html#l00055">kvi_localCpuToLittleEndian16</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6ec9a49cc0bb5f4bdba76673d2e248d1"></a><!-- doxytag: member="KviFile::save" ref="a6ec9a49cc0bb5f4bdba76673d2e248d1" args="(kvi_i32_t t)" -->
+<a class="anchor" id="a734089e7cd80821e4807b10cf80e9b59"></a><!-- doxytag: member="KviFile::save" ref="a734089e7cd80821e4807b10cf80e9b59" args="(kvi_i32_t file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -620,7 +792,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::save </td>
           <td>(</td>
           <td class="paramtype">kvi_i32_t&nbsp;</td>
-          <td class="paramname"> <em>t</em></td>
+          <td class="paramname"> <em>file</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [inline]</code></td>
         </tr>
@@ -628,13 +800,23 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__file_8h_source.html#l00069">save()</a>.</p>
+<p>Saves a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>The file to save </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function saves LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__file_8h_source.html#l00069">save()</a>.</p>
+<p>References <a class="el" href="kvi__file_8h_source.html#l00103">save()</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__file_8h_source.html#l00103">save()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a93542a7b1d70074f5f278ff411fbebaa"></a><!-- doxytag: member="KviFile::save" ref="a93542a7b1d70074f5f278ff411fbebaa" args="(kvi_u32_t t)" -->
+<a class="anchor" id="a6ec12199aba09c656b334a80b4325c91"></a><!-- doxytag: member="KviFile::save" ref="a6ec12199aba09c656b334a80b4325c91" args="(kvi_u32_t file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -642,7 +824,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::save </td>
           <td>(</td>
           <td class="paramtype">kvi_u32_t&nbsp;</td>
-          <td class="paramname"> <em>t</em></td>
+          <td class="paramname"> <em>file</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
@@ -650,11 +832,21 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__byteorder_8h_source.html#l00056">kvi_localCpuToLittleEndian32</a>, and <a class="el" href="kvi__file_8h_source.html#l00056">writeBlock()</a>.</p>
+<p>Saves a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>The file to save </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function saves LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
+<p>References <a class="el" href="kvi__byteorder_8h_source.html#l00056">kvi_localCpuToLittleEndian32</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a94992bc7b5015353cdc00c544f66efa6"></a><!-- doxytag: member="KviFile::save" ref="a94992bc7b5015353cdc00c544f66efa6" args="(kvi_i64_t t)" -->
+<a class="anchor" id="a138a834d9f7d45b61e090d126f207999"></a><!-- doxytag: member="KviFile::save" ref="a138a834d9f7d45b61e090d126f207999" args="(kvi_i64_t file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -662,7 +854,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::save </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="kvi__inttypes_8h.html#a0384abdf7a85390b11d7189f2e67fd54">kvi_i64_t</a>&nbsp;</td>
-          <td class="paramname"> <em>t</em></td>
+          <td class="paramname"> <em>file</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [inline]</code></td>
         </tr>
@@ -670,13 +862,23 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__file_8h_source.html#l00063">save()</a>.</p>
+<p>Saves a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>The file to save </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function saves LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__file_8h_source.html#l00063">save()</a>.</p>
+<p>References <a class="el" href="kvi__file_8h_source.html#l00087">save()</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__file_8h_source.html#l00087">save()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9c6324fa3e9aa970e7c57e27051150d2"></a><!-- doxytag: member="KviFile::save" ref="a9c6324fa3e9aa970e7c57e27051150d2" args="(kvi_u64_t t)" -->
+<a class="anchor" id="ae327498c6e26a85b49d96af2216fd89d"></a><!-- doxytag: member="KviFile::save" ref="ae327498c6e26a85b49d96af2216fd89d" args="(kvi_u64_t file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -684,7 +886,7 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::save </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="kvi__inttypes_8h.html#af17b2bd1a5eb7c50d33fcfc7dd9e3af0">kvi_u64_t</a>&nbsp;</td>
-          <td class="paramname"> <em>t</em></td>
+          <td class="paramname"> <em>file</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
         </tr>
@@ -692,13 +894,23 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__byteorder_8h_source.html#l00057">kvi_localCpuToLittleEndian64</a>, and <a class="el" href="kvi__file_8h_source.html#l00056">writeBlock()</a>.</p>
+<p>Saves a file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>The file to save </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="warning"><dt><b>Warning:</b></dt><dd>This function saves LITTLE ENDIAN DATA! </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__packagefile_8cpp_source.html#l00274">KviPackageWriter::packFile()</a>, <a class="el" href="kvi__packagefile_8cpp_source.html#l00487">KviPackageWriter::packInternal()</a>, and <a class="el" href="kvi__file_8cpp_source.html#l00055">save()</a>.</p>
+<p>References <a class="el" href="kvi__byteorder_8h_source.html#l00057">kvi_localCpuToLittleEndian64</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__packagefile_8cpp_source.html#l00274">KviPackageWriter::packFile()</a>, <a class="el" href="kvi__packagefile_8cpp_source.html#l00487">KviPackageWriter::packInternal()</a>, and <a class="el" href="kvi__file_8cpp_source.html#l00075">save()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4f1b5b109c9e5008527a36304b446418"></a><!-- doxytag: member="KviFile::skipFirst" ref="a4f1b5b109c9e5008527a36304b446418" args="(const KviStr &amp;t, unsigned int maxdist=0xffffffff)" -->
+<a class="anchor" id="a9e876a2a0a3ad0f9c2a3365bb4be15cf"></a><!-- doxytag: member="KviFile::skipFirst" ref="a9e876a2a0a3ad0f9c2a3365bb4be15cf" args="(const KviStr &amp;szT, unsigned int uMaxDist=0xffffffff)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -706,13 +918,13 @@ Inheritance diagram for KviFile:</div>
           <td class="memname">bool KviFile::skipFirst </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classKviStr.html">KviStr</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>t</em>, </td>
+          <td class="paramname"> <em>szT</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned int&nbsp;</td>
-          <td class="paramname"> <em>maxdist</em> = <code>0xffffffff</code></td><td>&nbsp;</td>
+          <td class="paramname"> <em>uMaxDist</em> = <code>0xffffffff</code></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -723,11 +935,21 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
+<p>Skips the first occurrence of the given string for a given dimension. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>t</em>&nbsp;</td><td>The string to find and skip </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>uMaxDist</em>&nbsp;</td><td>The dimension of the search field </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
 <p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, and <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af0a1d0dd0cf6953b047527c4efad14f4"></a><!-- doxytag: member="KviFile::skipFirst" ref="af0a1d0dd0cf6953b047527c4efad14f4" args="(char t, unsigned int maxdist=0xffffffff)" -->
+<a class="anchor" id="a7cff6cd25cddac668cbd0f889bfd26f2"></a><!-- doxytag: member="KviFile::skipFirst" ref="a7cff6cd25cddac668cbd0f889bfd26f2" args="(char t, unsigned int uMaxDist=0xffffffff)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -741,7 +963,7 @@ Inheritance diagram for KviFile:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned int&nbsp;</td>
-          <td class="paramname"> <em>maxdist</em> = <code>0xffffffff</code></td><td>&nbsp;</td>
+          <td class="paramname"> <em>uMaxDist</em> = <code>0xffffffff</code></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -752,36 +974,17 @@ Inheritance diagram for KviFile:</div>
 </div>
 <div class="memdoc">
 
+<p>Skips the first occurrence of the given char for a given dimension. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>t</em>&nbsp;</td><td>The char to find and skip </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>uMaxDist</em>&nbsp;</td><td>The dimension of the search field </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
 <p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab00d27559f66f8f258bc26691da47cbe"></a><!-- doxytag: member="KviFile::writeBlock" ref="ab00d27559f66f8f258bc26691da47cbe" args="(const char *data, quint64 uLen)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">qint64 KviFile::writeBlock </td>
-          <td>(</td>
-          <td class="paramtype">const char *&nbsp;</td>
-          <td class="paramname"> <em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">quint64&nbsp;</td>
-          <td class="paramname"> <em>uLen</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00255">KviHttpRequest::event()</a>, <a class="el" href="kvi__packagefile_8cpp_source.html#l00274">KviPackageWriter::packFile()</a>, <a class="el" href="kvi__packagefile_8cpp_source.html#l00487">KviPackageWriter::packInternal()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00632">KviHttpRequest::processData()</a>, <a class="el" href="kvi__file_8cpp_source.html#l00055">save()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00438">KviConfig::save()</a>, and <a class="el" href="kvi__packagefile_8cpp_source.html#l00686">KviPackageReader::unpackFile()</a>.</p>
 
 </div>
 </div>
@@ -790,7 +993,7 @@ Inheritance diagram for KviFile:</div>
 <li>src/kvilib/file/<a class="el" href="kvi__file_8cpp.html">kvi_file.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Apr 17 17:23:32 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue May 4 19:53:55 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

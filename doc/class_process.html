@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>process class</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>process class</h1>
+A class to manage process.
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Inherits</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><a href="class_object.html">object</a></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>The Process <a href="class_object.html">class</a>  is used to start external programs and to communicate with them.<br>
+!WARNING AT LAST YOU HAVE TO CLOSE THE PROCESS!
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Functions</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#E0E0E0">
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="addArg">$addArg(&lt;process-name:string&gt;)</a></font></b></code></td></tr>
+<tr><td>With this command you give the process name (or more arguments) for comunication. Es: see the next example.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="start">$start()</a></font></b></code></td></tr>
+<tr><td>Tries to run the process.<br> Es: <br> %process=$new(process);<br> %process-&gt;$addArg("cmd.exe");<br> %process-&gt;$start();<br></td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; readStdout">&lt;string&gt; $readStdout()</a></font></b></code></td></tr>
+<tr><td>Reads the data that the process has written to standard output.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; readStderr">&lt;string&gt; $readStderr()</a></font></b></code></td></tr>
+<tr><td>Reads the data that the process has written to standard error. Es:<br> -------------------Start:<br> class (test,object)<br> {<br> &nbsp;&nbsp;&nbsp;&nbsp;slotReadStdout()<br> &nbsp;&nbsp;&nbsp;&nbsp;{<br> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%stdo = %Process-&gt;$readStdout()<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#%Aoutput-&gt;$append(%stdo);// coming soon in the new texteditor class<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%Aoutput-&gt;$settext(%stdo);<br> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;&nbsp;slotReadStderr()<br> &nbsp;&nbsp;&nbsp;&nbsp;{<br> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%stderr= %Process-&gt;$readStderr()<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#%Aoutput-&gt;$append(%stderr);// coming soon in the new texteditor class<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%Aoutput-&gt;$settext(%stderr);<br> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> }<br> %tt=$new(test)<br> %A=$new(widget)<br> %A-&gt;$setGeometry(100,100,400,300)<br> %layoutA=$new(layout,%A)<br> %Ainput=$new(lineedit,%A)<br> #%Aoutput=$new(textedit,%A)// coming soon in the new texteditor class<br> %Aoutput=$new(label,%A)<br> %bclosekill=$new(button,%A)<br> %bclosekill-&gt;$settext("&CloseKill ")<br> %bkill=$new(button,%A)<br> %bkill-&gt;$settext("&Kill ")<br> %bterminate=$new(button,%A)<br> %bterminate-&gt;$settext("&Ask to Terminate ")<br> %layoutA-&gt;$addwidget(%Ainput,0,0)<br> %layoutA-&gt;$addwidget(%Aoutput,1,0)<br> %layoutA-&gt;$addwidget(%bclosekill,3,0)<br> %layoutA-&gt;$addwidget(%bkill,4,0,)<br> %layoutA-&gt;$addwidget(%bterminate,5,0)<br> %Process=$new(process)<br> %Process-&gt;$addArg("cmd.exe")<br> %Process-&gt;$start();<br> connect %Process readyReadStdout %tt slotReadStdout<br> connect %Process readyReadStderr %tt slotReadStderr<br> privateimpl(%Ainput,returnPressedEvent)<br> { %command=%Ainput-&gt;$text() "\r\n"<br> %Process-&gt;$writeToStdin(%command);<br> %Ainput-&gt;$setText("");<br> }<br> privateimpl(%bclosekill,mousepressevent)<br> {<br> &nbsp;&nbsp;&nbsp;&nbsp;%Process-&gt;$closekill();<br> &nbsp;&nbsp;&nbsp;&nbsp;delete %A;<br> }<br> privateimpl(%bkill,mousepressevent)<br> {<br> &nbsp;&nbsp;&nbsp;&nbsp;%Process-&gt;$kill();<br> &nbsp;&nbsp;&nbsp;&nbsp;delete %A;<br> }<br> privateimpl(%bterminate,mousepressevent)<br> {<br> &nbsp;&nbsp;&nbsp;&nbsp;%Process-&gt;$tryTerminate();<br> &nbsp;&nbsp;&nbsp;&nbsp;delete %A;<br> }<br> %A-&gt;$show();<br> --------------------End.<br></td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="writeToStdin">$writeToStdin(&lt;command:string&gt;)</a></font></b></code></td></tr>
+<tr><td>Whit this command you send a command to the process:</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="closekill">$closekill()</a></font></b></code></td></tr>
+<tr><td>This tries to terminate the process the nice way.<br> If the process is still running after 5 seconds, it terminates the process the hard way.<br> (I think that this is the better way.)<br> Es: %Process-&gt;close_kill();</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="kill">$kill()</a></font></b></code></td></tr>
+<tr><td>Kill the process in hard way.(Bad Idea)</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="tryTerminate">$tryTerminate()</a></font></b></code></td></tr>
+<tr><td>Tries to terminate the process.(It could be well but...)</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="closeStdin">$closeStdin()</a></font></b></code></td></tr>
+<tr><td>Close the standard Input.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; isRunning">&lt;boolean&gt; $isRunning()</a></font></b></code></td></tr>
+<tr><td>Return 1 if the process is running, else return 0.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; normalExit">&lt;boolean&gt; $normalExit()</a></font></b></code></td></tr>
+<tr><td>Returns TRUE if the process has exited normally; otherwise returns FALSE.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="readyReadStdoutEvent">$readyReadStdoutEvent()</a></font></b></code></td></tr>
+<tr><td>This function is invoched by the process when there are new datas.<br> The default implementation emits the <a href="#readyReadStdout">$readyReadStdout</a>() signal.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="readyReadStderrEvent">$readyReadStderrEvent()</a></font></b></code></td></tr>
+<tr><td>This function is invoched by the process when there are new error messages.<br> The default implementation emits the <a href="#readyReadStderr">$readyReadStderr</a>() signal.</td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Signals</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#E0E0E0">
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="readyReadStdout">$readyReadStdout()</a></font></b></code></td></tr>
+<tr><td>This signal is emitted by the default implementation of <a href="#readyReadStdoutEvent">$readyReadStdoutEvent</a>().<br> If you reimplement that function you will have to emit the signal manually (if you still need it).</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="readyReadStderr">$readyReadStderr()</a></font></b></code></td></tr>
+<tr><td>This signal is emitted by the default implementation of <a href="#readyReadStderrEvent">$readyReadStderrEvent</a>().</td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

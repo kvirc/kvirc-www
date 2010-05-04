@@ -1,0 +1,137 @@
+<html>
+<head>
+<title>action.create</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>action.create</h1>
+Defines a new action
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Usage</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code>action.create [-i] [-c] [-l] [-w=&lt;window_types&gt;] [-s] [-t=&lt;category&gt;] (&lt;name&gt;,&lt;visible label:string&gt;,&lt;description&gt;,&lt;big_icon_id&gt;[,&lt;small_icon_id&gt;])
+{
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;action body&gt;
+}</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><p>
+Defines a new <a href="doc_kvs_basicconcepts.html">script</a> action.
+</p>
+<p>
+Each action has an unique &lt;name&gt; that must not collide with any core action
+(i.e. don't use the "kvirc." prefix).
+At any time you can check <a href="cmd_action.list.html">action.list</a> to verify that no core action
+is already using your &lt;name&gt;. If the &lt;name&gt; was already used for a <a href="doc_kvs_basicconcepts.html">script</a> action
+then this action is simply replaced by the new one.
+</p>
+<p>
+Each action has an associated &lt;visible label&gt; that is the name meant to be presented to the user,
+possibly even translated. This label will appear on the toolbar buttons, in the tooltips and
+in the popup menu items. The string will be evaluated just before the actions is displayed
+so the eventual runtime translation will fetch from the correct language catalogue.
+</p>
+<p>
+&lt;description&gt; is the descriptive text that will be displayed in the action choice dialog
+(and maybe in other places).
+The string will be evaluated just before the actions is displayed
+so the eventual runtime translation will fetch from the correct language catalogue.
+</p>
+<p>
+&lt;big_icon_id&gt; is the <a href="doc_image_id.html">image identifier</a> of the icon that will
+appear on the toolbar buttons and in the action choice dialog.
+</p>
+<p>
+&lt;small_icon_id&gt; is optional and is the <a href="doc_image_id.html">image identifier</a> of the icon
+that will appear in the menu items. Since menu items can be also iconless then
+this parameter is optional.
+</p>
+<p>
+&lt;action body&gt; is the callback code snippet that will be triggered when this action is activated
+either by the means of <a href="cmd_action.trigger.html">action.trigger</a>, a toolbar button or a menu item <a href="class_combobox.html">selection</a>.
+An empty &lt;action body&gt; causes this command to behave like <a href="cmd_action.destoy.html">action.destoy</a> &lt;name&gt;.
+</p>
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Switches</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#D5D5D5">
+<tr bgcolor="#E0E0E0"><td><b>-i | --bind-to-context</b></td></tr>
+<tr><td>Specifies that the action needs an <a href="doc_connection_dependant_commands.html">IRC context</a> to be executed. When the current window does not belong to an <a href="doc_connection_dependant_commands.html">IRC context</a> the action is automatically disabled</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-c | --bind-to-connection</b></td></tr>
+<tr><td>Specifies that the action needs an <a href="doc_rfc2812.html">IRC</a> connection to be executed. When the current window has no associated <a href="doc_rfc2812.html">IRC</a> connection the action is automatically disabled. This switch implies -i.</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-l | --enable-at-login</b></td></tr>
+<tr><td>Specifies that the action needs to be enabled at login time, that is when a link to the <a href="doc_ircintro.html">server</a> has been estabilished but the login operations haven't been carried out yet (and thus there is no real <a href="doc_rfc2812.html">IRC</a> connection). This switch requires -c to work.</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-w=&lt;window_types&gt; | --window-types=&lt;window_type&gt;</b></td></tr>
+<tr><td>Causes the action to be enabled only when the active window is one of the specified types. &lt;window_types&gt; may be any combination of the letters 'q' (query), 'c' (<a href="doc_ircintro.html">channel</a>), 'x' (console), 'd' (dccchat). If this switch is omitted then the action is enabled in all the windows.<br></td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-s | --selected-only</b></td></tr>
+<tr><td>Specifies that the action will be activated only if the active window has selected users in the userlist. This switch requires -w with a combination of flags 'q','c' and 'x' (it doesn't work for dcc chat).</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-t=&lt;category&gt; | --category=&lt;category&gt;</b></td></tr>
+<tr><td>Causes the action to belong to the specified category. &lt;category&gt; can be one of "<a href="doc_rfc2812.html">irc</a>","scripting","settings","gui","<a href="doc_ircintro.html">channel</a>","tools" and "generic". If this switch is omitted the "generic" category is automatically assumed. The actions failing in the "tools" category will appear in the "Tools" <a href="doc_kvircintro.html">KVIrc</a> menu too.</td></tr>
+<tr bgcolor="#E0E0E0"><td><b>-k=&lt;key sequence&gt; | --key-sequence=&lt;key sequence&gt;</b></td></tr>
+<tr><td>Specifies that the action will be activated also by the &lt;key sequence&gt; which is a string formed from up to four keyboard codes separated by commas optionally combined with the modifiers "Alt","Ctrl","Shift" and "Meta".<br> Examples of such sequences are: "Ctrl+X", "Ctrl+Alt+F" or "Ctrl+X,Alt+Space".</td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Syntax Specification</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><font color="#802000"><pre><code><b>action.create</b> <font color="#8080a0">[</font>-i<font color="#8080a0">]</font> <font color="#8080a0">[</font>-c<font color="#8080a0">]</font> <font color="#8080a0">[</font>-l<font color="#8080a0">]</font> <font color="#8080a0">[</font>-w=<font color="#8080a0">&lt;</font>window_types<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font> <font color="#8080a0">[</font>-s<font color="#8080a0">]</font> <font color="#8080a0">[</font>-t=<font color="#8080a0">&lt;</font>category<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font> <b>(</b><font color="#8080a0">&lt;</font>name<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>visible label:string<font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>description<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>big_icon_id<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>small_icon_id<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font><b>)</b>
+{
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">&lt;</font>action body<font color="#8080a0">&gt;</font>
+}</code></pre></font></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Examples</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000"></font></code></pre></td></tr></table></p>
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>See also</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><a href="cmd_action.destroy.html">action.destroy</a>, <a href="cmd_action.trigger.html">action.trigger</a>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

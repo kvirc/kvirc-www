@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>tabwidget class</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>tabwidget class</h1>
+Provides a Tab Widget.
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Inherits</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><a href="class_object.html">object</a>
+<a href="class_widget.html">widget</a></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>The tabwidget <a href="class_object.html">class</a> provides a stack of tabbed widgets.<br>
+Each tab is associated with a different widget (called a `page').<br>
+Only the current tab's page is shown in the page area; all the others tabs pages are hidden.<br>
+The user can show a different page by clicking on its tab.<br>
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Functions</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#E0E0E0">
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="addTab">$addTab(&lt;widget:object&gt;,&lt;text_label:string&gt;,[&lt;icon_id&gt;])</a></font></b></code></td></tr>
+<tr><td>Adds another page to the tab view with the text label and optional icon.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="insertTab">$insertTab(&lt;widget:object&gt;,&lt;tex_label:string&gt;,&lt;index:uinteger&gt;)</a></font></b></code></td></tr>
+<tr><td>Inserts another tab and page to the tab view with name and label-text specified.<br> If index is not specified, the tab is simply appended.<br> Otherwise the new tab is inserted at the specified position.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setTabToolTip">$setTabToolTip(&lt;tab_widget:object&gt;,&lt;tooltip:string&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the tab tool tip for the tabwidget to &lt;tooltip&gt;.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="removeTabToolTip">$removeTabToolTip(&lt;tab_widget:object&gt;)</a></font></b></code></td></tr>
+<tr><td>Removes the tab tool tip for the tab. If the page does not have a tip, nothing happens.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setTabLabel">$setTabLabel(&lt;tab_widget&gt;, &lt;label:string&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the tab label for &lt;tab_widget&gt;  to label.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="changeTab">$changeTab(&lt;tab_widget:object&gt;,&lt;label:text&gt;,[&lt;icon_id&gt;])</a></font></b></code></td></tr>
+<tr><td>Defines a new label, and optional icon, for the tab .</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setCurrentPage">$setCurrentPage(&lt;index:uinteger&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the index position of the current tab page to &lt;index&gt;.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;integer&gt; currentPageIndex">&lt;integer&gt; $currentPageIndex()</a></font></b></code></td></tr>
+<tr><td>Returns the current page index.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; tabLabel">&lt;string&gt; $tabLabel(&lt;index:uinteger&gt;)</a></font></b></code></td></tr>
+<tr><td>Returns the tab label of the &lt;index&gt;.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; currentTabLabel">&lt;string&gt; $currentTabLabel()</a></font></b></code></td></tr>
+<tr><td>Returns the label of the current tab.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="removePage">$removePage(&lt;tab_widget:object&gt;)</a></font></b></code></td></tr>
+<tr><td>Remove the page &lt;tab_widget&gt;.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setTabPosition">$setTabPosition(&lt;tab_position:string&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets TabPosition. Valid parameters are : Top, Bottom.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;integer&gt; count">&lt;integer&gt; $count()</a></font></b></code></td></tr>
+<tr><td>This property holds the number of tabs in the tab bar.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="currentChangedEvent">$currentChangedEvent()</a></font></b></code></td></tr>
+<tr><td>This function is invoched when the current tab was changed.<br> The default implementation emits the <a href="#currentChange">$currentChange</a>() signal.</td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Signals</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#E0E0E0">
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="currentChange">$currentChange()</a></font></b></code></td></tr>
+<tr><td>This signal is emitted by the default implementation of <a href="#currentChangedEvent">$currentChangedEvent</a>().<br> If you reimplement that function you will have to emit the signal manually (if you still need it).<br></td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Examples</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;# First we'll create the main tabwidget.
+&nbsp;&nbsp;&nbsp;&nbsp;%Tabwidget=$new(tabwidget)
+&nbsp;&nbsp;&nbsp;&nbsp;%Tabwidget-&gt;$setToolTip("Example of TabWidget class")
+&nbsp;&nbsp;&nbsp;&nbsp;%Tabwidget-&gt;$setMargin(30)
+&nbsp;&nbsp;&nbsp;&nbsp;%Tabwidget-&gt;$setTabPosition(Top)
+&nbsp;&nbsp;&nbsp;&nbsp;# Now we'll create the new widgets and put they in to the main tabwidget.
+&nbsp;&nbsp;&nbsp;&nbsp;%firsttab=$new(widget,%Tabwidget)
+&nbsp;&nbsp;&nbsp;&nbsp;%secondtab=$new(widget,%Tabwidget)
+&nbsp;&nbsp;&nbsp;&nbsp;# Now we'll create the item to put in to tab's pages.
+&nbsp;&nbsp;&nbsp;&nbsp;%layoutfirsttab=$new(layout,%firsttab)
+&nbsp;&nbsp;&nbsp;&nbsp;%labelbt=$new(label,%firsttab)
+&nbsp;&nbsp;&nbsp;&nbsp;%labelbt-&gt;$settext(Botton Tab)
+&nbsp;&nbsp;&nbsp;&nbsp;%labeltt=$new(label,%firsttab)
+&nbsp;&nbsp;&nbsp;&nbsp;%labeltt-&gt;$settext(Top Tab)
+&nbsp;&nbsp;&nbsp;&nbsp;%buttontb=$new(button,%firsttab)
+&nbsp;&nbsp;&nbsp;&nbsp;%buttontb-&gt;$settext("To &Botton")
+&nbsp;&nbsp;&nbsp;&nbsp;%buttontt=$new(button,%firsttab)
+&nbsp;&nbsp;&nbsp;&nbsp;%buttontt-&gt;$settext("To &Top")
+&nbsp;&nbsp;&nbsp;&nbsp;# Now we'll give a layout to all items.
+&nbsp;&nbsp;&nbsp;&nbsp;# This also allows to use privateimpl without making buttons global variables
+&nbsp;&nbsp;&nbsp;&nbsp;%layoutfirsttab-&gt;$addwidget(%labelbt,0,0)
+&nbsp;&nbsp;&nbsp;&nbsp;%layoutfirsttab-&gt;$addwidget(%labeltt,0,1)
+&nbsp;&nbsp;&nbsp;&nbsp;%layoutfirsttab-&gt;$addwidget(%buttontb,1,0)
+&nbsp;&nbsp;&nbsp;&nbsp;%layoutfirsttab-&gt;$addwidget(%buttontt,1,1)
+&nbsp;&nbsp;&nbsp;&nbsp;# Add the page to the main tab.
+&nbsp;&nbsp;&nbsp;&nbsp;%Tabwidget-&gt;$addTab(%firsttab,Top&Button,33)
+&nbsp;&nbsp;&nbsp;&nbsp;# Implementing the action to do when the user click the buttons.
+&nbsp;&nbsp;&nbsp;&nbsp;privateimpl(%buttontb,mousepressevent)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%Tabwidget-&gt;$setTabPosition(Bottom)
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;privateimpl(%buttontt,mousepressevent)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%Tabwidget-&gt;$setTabPosition(Top)
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;# We do the same work  with the second tab's page.
+&nbsp;&nbsp;&nbsp;&nbsp;%layoutsecondtab=$new(layout,%secondtab)
+&nbsp;&nbsp;&nbsp;&nbsp;%labelwp=$new(label,%secondtab)
+&nbsp;&nbsp;&nbsp;&nbsp;%labelwp-&gt;$settext("Enjoy the new Class provided by")
+&nbsp;&nbsp;&nbsp;&nbsp;%layoutsecondtab-&gt;$addwidget(%labelwp,0,0)
+&nbsp;&nbsp;&nbsp;&nbsp;%labelwp-&gt;$setalignment("Center")
+&nbsp;&nbsp;&nbsp;&nbsp;%labelgen=$new(label,%secondtab)
+&nbsp;&nbsp;&nbsp;&nbsp;%labelgen-&gt;$settext(Grifisx \& Noldor)
+&nbsp;&nbsp;&nbsp;&nbsp;%labelgen-&gt;$setalignment("Center")
+&nbsp;&nbsp;&nbsp;&nbsp;%layoutsecondtab-&gt;$addwidget(%labelgen,1,0)
+&nbsp;&nbsp;&nbsp;&nbsp;%Tabwidget-&gt;$addTab(%secondtab,&About,50)
+&nbsp;&nbsp;&nbsp;&nbsp;# Let's show our example.
+&nbsp;&nbsp;&nbsp;&nbsp;%Tabwidget-&gt;$show()
+</font></code></pre></td></tr></table></p>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

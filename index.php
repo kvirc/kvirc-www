@@ -178,7 +178,7 @@ search();
 							<ul>
 								<li><a href="?id=faq&amp;lang=<?=$lang;?>"><?=$template['index']['faq'];?></a></li>
 								<li><a href="javascript:opendoc('api');"><?=$template['index']['api'];?></a></li>
-								<li><a href="javascript:opendoc('http://www.kvirc.de/docu/');"><?=$template['index']['kviman'];?></a></li>
+								<li><a href="javascript:opendoc('doc');"><?=$template['index']['doc'];?></a></li>
 								<li><a href="?id=tutorials&amp;lang=<?=$lang;?>"><?=$template['index']['tutorials'];?></a></li>
 								<li><a href="javascript:opendoc('https://svn.kvirc.de/kvirc/wiki/KeyboardShortcuts');"><?=$template['index']['shortcuts'];?></a></li>
 							</ul>

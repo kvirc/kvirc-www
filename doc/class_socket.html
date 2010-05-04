@@ -1,0 +1,177 @@
+<html>
+<head>
+<title>socket class</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>socket class</h1>
+A Ipv4/Ipv6 TCP socket
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Inherits</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><a href="class_object.html">object</a></td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Description</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>This <a href="class_object.html">class</a> provides a standard TCP/IP socket functionality.<br>
+It can be used either for connecting to a remote host or to listening for incoming connections.<br>
+If the <a href="doc_kvircintro.html">KVIrc</a> executable has been compiled with the IPV6 <a href="doc_rfc2812.html">protocol</a> support , this socket also supports it.<br>
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Functions</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#E0E0E0">
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="status">$status()</a></font></b></code></td></tr>
+<tr><td>Returns the status of the socket :<br> 4=connected<br> 3=listening<br> 2=connecting<br> 1=in dns call<br> 0=disconnected</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="connectTimeout">$connectTimeout()</a></font></b></code></td></tr>
+<tr><td>Returns the value of the connect attempt timeout in milliseconds.<br> This is the timeout after that a connection attempt will be considered as failed if the remote host is not responding. You can set it with <a href="class_socket.html#setconnecttimeout">$setconnecttimeout</a>().</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setConnectTimeout">$setConnectTimeout(&lt;timeout&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the connect timeout for this socket. &lt;timeout&gt; must be a positive value in milliseconds.<br> The default timeout is 60000.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="connect">$connect(&lt;host&gt;,&lt;port&gt;)</a></font></b></code></td></tr>
+<tr><td>Attempts a connection to &lt;host&gt; on port &lt;port&gt;.<br> &lt;host&gt; can be a numeric internet address (either Ipv4 or Ipv6 (if supported)) or a hostname.<br> If a hostname is used, a DNS lookup is performed (the socket enters the "dns call" state).<br> This function returns 1 if the connect attempt can be successfully initiated, 0 otherwise.<br> In fact , this function returns 0 only if the supplied &lt;port&gt; parameter is invalid or the socket is in an incoherent state (already connected or listening): for a newly created socket and with a valid &lt;port&gt; number you can safely ignore the return value.<br> Please note that the connection is asynchronous: when this function returns the socket is NOT connected: it has just initiated the connect attempt and you will be notified of the attempt result by an asynchronous event call: in case of failure , $connectFailedEvent() will be called , in case of succes , $connectEvent() will be called.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="listen">$listen([&lt;port&gt;[,&lt;interface&gt;[,&lt;force_ipv6&gt;]]])</a></font></b></code></td></tr>
+<tr><td>Attempts to listen on the specified &lt;port&gt; and &lt;interface&gt;.<br> If &lt;port&gt; is not passed it is assumed to be 0 , if &lt;interface&gt; is not passed , it is assumed to be "any interface" (INADDR_ANY).<br> Port 0 means that the kernel should choose a "random" port to listen on.<br> If the &lt;interface&gt; is recognized as IPV6 address , and IPV6 is supported , the socket listens in IPV6 mode. If &lt;interface&gt; is an empty string and &lt;force_ipv6&gt; is 1 the socket listens on "any ipv6 interface".<br> This function returns '1' in case of success and '0' in case of failure.<br> On some systems listening in the IPV6 namespace allows to accept also IPV4 connections (this includes linux but not windows afaik).<br> When an incoming connection will arrive , $incomingConnectionEvent() will be called.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="accept">$accept(&lt;socketId&gt;)</a></font></b></code></td></tr>
+<tr><td>This function can be called only from inside $incomingConnectionEvent().<br> &lt;socketId&gt; must be a newly created socket sub-class instance object.<br> The passed object will be set up to handle the incoming connection and this object will remain in listening state (unless you explicitly close it).<br> This function returns '1' in case of success and '0' in case of failure.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="connectEvent">$connectEvent()</a></font></b></code></td></tr>
+<tr><td>This function is called when a connection attempt has been successfully completed. The socket is actually connected to <a href="class_socket.html#remoteip">$remoteip</a>() on <a href="class_socket.html#remoteport">$remoteport</a>(). You can start writing data and you may expect <a href="class_socket.html#dataavailableevent">$dataavailableevent</a>() to be triggered.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="incomingConnectionEvent">$incomingConnectionEvent()</a></font></b></code></td></tr>
+<tr><td>This function is called when an incoming connection arrives over a socket in listening state.<br> You must call <a href="class_socket.html#accept">$accept</a>() passing a newly created socket object to accept and handle the connection.<br> If you don't call <a href="class_socket.html#accept">$accept</a>() the incoming connection will be automatically terminated.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="connectFailedEvent">$connectFailedEvent(&lt;reason&gt;)</a></font></b></code></td></tr>
+<tr><td>This function is called when a connection attempt fails for some reason. &lt;reason&gt; contains the error string.<br> This function may be called only between a call to <a href="class_socket.html#connect">$connect</a>() and the <a href="class_socket.html#connectevent">$connectevent</a>().</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="disconnectEvent">$disconnectEvent([error])</a></font></b></code></td></tr>
+<tr><td>This function is called when a connection is terminated either cleanly or because of an error.<br> [error] is an empty string in case of a "clean" termination (connection closed by the remote host) or is a message describing the socket error that caused the connection to be interrupted.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="dataAvailableEvent">$dataAvailableEvent(&lt;data_length&gt;)</a></font></b></code></td></tr>
+<tr><td>This function is called when some data is available to be read: the &lt;data_length&gt; parameter specifies the length of the available data in bytes.<br> You can use one of the $read* functions to obtain the data.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="read">$read(&lt;length&gt;[,&lt;hobject&gt;])</a></font></b></code></td></tr>
+<tr><td>Reads at most &lt;length&gt; bytes of data from the socket. If &lt;length&gt; is anything "outside" the available data range (&lt;length&gt; &lt; 0 or &lt;length&gt; &gt; available_data_length), this function returns all the available data.<br>                 By default this function can deal ascii data only: NULL characters are transformed to                 ASCII characters 255. You can pass a <a href="class_memorybuffer.html">memorybuffer</a> object to read binary data.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="readHex">$readHex(&lt;length&gt;)</a></font></b></code></td></tr>
+<tr><td>Reads at most &lt;length&gt; bytes of data from the socket. If &lt;length&gt; is anything "outside" the available data range (&lt;length&gt; &lt; 0 or &lt;length&gt; &gt; available_data_length), this function returns all the available data.<br> Returns the data encoded as hexadecimal digit string: this function can deal with binary data too.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="write">$write(&lt;data, files or hobject&gt;[,length])</a></font></b></code></td></tr>
+<tr><td>Writes &lt;data&gt; to the socket.<br>                 This function can deal with binary data passing  a <a href="class_memorybuffer.html">memorybuffer</a> object<br> Please note that when this function finishes it does not mean that the data has reached the remote end.<br> Basically it does not even mean that the data has been sent to the remote host.<br> The data is enqueued for sending and will be sent as soon as possible.<br> If you're going to <a href="cmd_delete.html">delete</a> this object just after the $write call, you should call <a href="class_socket.html#close">$close</a>() just before <a href="cmd_delete.html">delete</a> to ensure the data delivery.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="writeHex">$writeHex(&lt;hex_data&gt;)</a></font></b></code></td></tr>
+<tr><td>Writes &lt;data&gt; to the socket.<br> &lt;data&gt; is expected to be a hexadecimal rappresentation of the bytes to be sent (two HEX characters for each byte). This means that the length of &lt;hex_data&gt; string must be a multiple of 2.<br> Returns the length of the actually decoded and sent data in bytes or -1 in case of error (the string was not a valid hexadecimla rappresentation).<br> Please note that when this function finishes it does not mean that the data has reached the remote end.<br> Basically it does not even mean that the data has been sent to the remote host.<br> The data is enqueued for sending and will be sent as soon as possible.<br> If you're going to <a href="cmd_delete.html">delete</a> this object just after the $writeHex call, you should call <a href="class_socket.html#close">$close</a>() just before <a href="cmd_delete.html">delete</a> to ensure the data delivery.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="close">$close()</a></font></b></code></td></tr>
+<tr><td>Resets this socket state: kills any pending or active connection. After a close() call the socket may be used for a new connection.<br> If there is an active connection, there is a last attempt to flush the pending outgoing data.<br> You don't need to call $close() if you <a href="cmd_delete.html">delete</a> the socket: KVIrc will reset the socket state automatically and free the memory. But if you want to ensure data delivery after a $write call sequece and just before a <a href="cmd_delete.html">delete</a>, $close() is the only chance to do it.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="remoteIp">$remoteIp()</a></font></b></code></td></tr>
+<tr><td>Returns the IP address of the remote end of this socket.<br> The return value is meaningful only if the socket is in connected or connecting state.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setProtocol">$setProtocol(&lt;protocol&gt;)</a></font></b></code></td></tr>
+<tr><td>                Let KVIrc use TCP or UDP protocol</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="remotePort">$remotePort()</a></font></b></code></td></tr>
+<tr><td>Returns the port of the remote end of this socket.<br> The return value is meaningful only if the socket is in connected or connecting state.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="localIp">$localIp()</a></font></b></code></td></tr>
+<tr><td>Returns the IP address of the local end of this socket.<br> The return value is meaningful only if the socket is in connected , listening or connecting state.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="localPort">$localPort()</a></font></b></code></td></tr>
+<tr><td>Returns the port of the local end of this socket.<br> The return value is meaningful only if the socket is in connected , listening or connecting state.</td></tr>
+      </table>
+    </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Examples</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">#Server socket: listen 80 port and answer to requests (multi-threaded)<br>
+<br>
+class (webserver,socket) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;constructor () {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$-&gt;$listen(80, "127.0.0.1")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;incomingConnectionEvent()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%tmp = $new(socket)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$-&gt;$accept(%tmp)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Webserver incoming Conection from: %tmp-&gt;$remoteIp : %tmp-&gt;$remotePort"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%tmp-&gt;$write("HTTP/1.1 200 OK\n\n&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;KVIrc Webserver&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;\n")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%tmp-&gt;$close()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete %tmp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}<br>
+<br>
+#finally start webserver<br>
+%WebS = $new(webserver)<br>
+<br>
+</font></code></pre></td></tr></table></p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">#Client socket - go to google and grab request header<br>
+class (httprequest,socket) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;constructor () <br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+# connect to the server<br>
+$$-&gt;$connect("www.google.de",80)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;destructor()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+# if the socket is still open close it<br>
+if($$-&gt;$status() == 4) $$-&gt;$close()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;connectFailedEvent() <br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+# the connection to the server failed<br>
+echo  "Connection failed: "$0<br>
+                delete $$<br>ite)
+        KVSO_REGISTER_HANDLER_BY_NAME(KviKvsObject_socket,w
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;connectEvent() <br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+# connection is complete<br>
+# send a request to receive the headers only from http://www.google.de/<br>
+$$-&gt;$write("HEAD / HTTP/1.1\r\nHost: www.google.de\r\nConnction: Close\r\nUser-Agent: KVIrc socket\r\n\r\n");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dataAvailableEvent() <br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+# reading the received data<br>
+%newdata  = $$-&gt;$read($0)<br>
+echo %newdata<br>
+#close and delete the socket<br>
+$$-&gt;$close()<br>
+delete $$<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;disconnectEvent() <br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+# connection has been closed<br>
+echo "Connection closed"<br>
+delete $$<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}<br>
+#Creating the socket<br>
+%Temp = $new(httprequest)<br>
+</font></code></pre></td></tr></table></p>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

@@ -1,0 +1,166 @@
+<html>
+<head>
+<title>Aliases</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>Aliases</h1>
+Aliases : user definable command sequences
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>An alias is an user defined command.  It can be used to rename the builtin <a href="doc_kvircintro.html">kvirc</a> commands or <a href="doc_kvs_aliasesandfunctions.html">functions</a>,
+to automatize complex tasks or as structured programming mean.
+Aliases can be created or destroyed by using the scriptcenter (graphic interface)
+or from the commandline (or <a href="doc_kvs_basicconcepts.html">script</a>) by using the <a href="cmd_alias.html">alias</a> command.
+Once created, an alias remains stored permanently in the <a href="doc_kvircintro.html">KVIrc</a> configuration files
+until it is explicitly deleted.
+A couple of examples will make the things clear.
+join is a really commonly used command. It might be a good idea to rename it to
+simply "j" .. just to type it faster.
+Nothing easier in <a href="doc_kvircintro.html">KVirc</a>: just try this commandline:
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_alias.html">alias</a>(j){ <a href="cmd_join.html">join</a> $0-; };
+</font></code></pre></td></tr></table></p>
+This will create the alias "j". From this moment you can use /j as it was a normal command.
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">j #<a href="doc_kvircintro.html">kvirc</a>
+</font></code></pre></td></tr></table></p>
+You may have notices the strange $0- function in the alias body: it stands for
+"all parameters passed to the alias". This means that when you call
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;j #<a href="doc_kvircintro.html">kvirc</a> testpassword
+</font></code></pre></td></tr></table></p>
+then both the parameters (#<a href="doc_kvircintro.html">kvirc</a> and testpassword) are passed to the join command.
+The $N <a href="doc_kvs_aliasesandfunctions.html">functions</a> are special <a href="doc_kvs_aliasesandfunctions.html">functions</a> that return the positional parameters passed
+to the current <a href="doc_kvs_basicconcepts.html">script</a> context. In an alias the <a href="doc_kvs_basicconcepts.html">script</a> context is the <a href="doc_kvs_basicconcepts.html">script</a> body and
+it is the alias caller that generates the parameters.
+$N (where N is a digit) returns the (N-1)-th positional parameter passed by the caller.
+It returns the parameter numbered N-1 and not N since the parameters are indexed starting
+from zero ($0 is the first parameter!).
+$N-M returns the parameters from (N-1)-th to the (M-1)-th (a parameter range) and $N- returns
+all the parameters from (N-1)-th to the last one. In the example above $0- stands for
+all the parameters starting from the first one.
+</p>
+<p>
+To remove an alias use again the alias command with an empty body:
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_alias.html">alias</a>(j){}
+</font></code></pre></td></tr></table></p>
+This will remove the alias "j" defined above.
+</p>
+<p>
+A common task in <a href="doc_ircintro.html">channel</a> management is the kick & ban action.
+You first ban an user from the <a href="doc_ircintro.html">channel</a> and then eventually kick him
+(obviously assuming that he is actually on the <a href="doc_ircintro.html">channel</a>).
+This involves using two commands: ban and then kick.
+It could be a nice idea to have a single "kb" command to perform this action.
+Well...easy:
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_alias.html">alias</a>(kb){ <a href="cmd_ban.html">ban</a> $0; <a href="cmd_kick.html">kick</a> $0-; };
+</font></code></pre></td></tr></table></p>
+This adds the "kb" alias: it can be called as a normal command:
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;kb spammer You're not welcome here!
+</font></code></pre></td></tr></table></p>
+This will first execute "ban spammer" and then "kick spammer You're not welcome here".
+Our kb is a really simple example... it doesn't check for the validity of the parameters:
+the <a href="doc_ircintro.html">server</a> will warn us if the parameters passed to kb were empty.
+</p>
+<p>
+The alias can be modified at any time by re-using the alias command.
+Let's make our "kb" a bit more intelligent and add a check for the parameters.
+TIP: It is a good idea to write the following examples in a text file and then use /parse &lt;filename&gt; to execute it.
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_alias.html">alias</a>(kb)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_if.html">if</a>("$0" == "")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> "Usage: /kb &lt;<a href="doc_irc_masks.html">nickname</a>&gt; &lt;kick reason&gt;"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_return.html">return</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_ban.html">ban</a> $0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%reason = $1-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_if.html">if</a>("%reason" == "")%reason = "You're not welcome here!"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_kick.html">kick</a> $0 %reason
+&nbsp;&nbsp;&nbsp;&nbsp;}
+</font></code></pre></td></tr></table></p>
+The example above will first check the validity of the &lt;<a href="doc_irc_masks.html">nickname</a>&gt; passed to kb:
+if no <a href="doc_irc_masks.html">nickname</a> was passed , it will warn the user and stop.
+The next step will be the "ban &lt;<a href="doc_irc_masks.html">nickname</a>&gt;" call. Another enchancement is the "default reason":
+we first <a href="doc_operators.html">assign</a> the remaining parameters ($1- means "from $1 to the end") to a temporary <a href="doc_kvs_datatypes.html">variable</a>,
+if the <a href="doc_kvs_datatypes.html">variable</a> is empty , a default kick reason is assigned.
+Finally the "kick &lt;<a href="doc_irc_masks.html">nickname</a>&gt; &lt;reason&gt;" will be executed.
+Get used to looking at the single command documentation pages, they will give
+you the hints necessary to fully understand the above piece of code.
+</p>
+<p>
+Aliases can be used as a mean for structured programming.
+In large scripts you will SURELY have "common tasks" to perform (like having specially
+colored output or calculating a value from a set of other values)...
+Aliases are the way of writing the common tasks: they are equivalent to the "procedures"
+or "<a href="doc_kvs_aliasesandfunctions.html">functions</a>" in many high-level programming languages.
+The alias as a procedure (subroutine or sub-task) has been shown in the "kb" example above:
+it might be commonly called from complexier scripts or other aliases in case that a
+kick & ban action is needed.
+</p>
+<p>
+The aliases can be used also as <a href="doc_kvs_aliasesandfunctions.html">functions</a>.
+Assume that you need really often to calculate the sum of three numbers: a function-alias is the way.
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_alias.html">alias</a>(sum3){ <a href="cmd_return.html">return</a> $($0 + $1 + $2); };
+</font></code></pre></td></tr></table></p>
+This will add the alias "sum3" and make it available both as a command and a function.
+The "return" command sets the return value of a sequence of commands
+(an alias is a sequence of commands...remember ?) and terminates the execution (by returning
+the control to the caller).
+So return $($0 + $1 + $2); will set the return value of the alias to the value
+computed by $($0 + $1 + $2) that actually is the sum of the first three parameters passed.
+You will then use it in the following way:
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;%myfirstsum = $sum3(%somevalue,%someothervalue,4)
+&nbsp;&nbsp;&nbsp;&nbsp;%anothersum = $sum3(12,%somevalue,%anothervalue)
+&nbsp;&nbsp;&nbsp;&nbsp;...
+</font></code></pre></td></tr></table></p>
+Ops.. I've used some <a href="doc_kvs_datatypes.html">variables</a> without actually explaining them... hehe.. please forgive me and read on.
+This example is again really simple , but you might have complexier function-aliases.
+The function-aliases are also normal aliases.... you can use it as a command:
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;/sum3 1 2 3
+</font></code></pre></td></tr></table></p>
+Is a perfectly valid call.... it's just that it will have no visible results
+(just because a command call implies ignoring the return value.
+In fact there is no difference al all between function-aliases and normal-aliases:
+the caller makes the difference: by calling an alias as a command the return value
+just disappears in hyperspace, by calling an alias as a function , the return value
+is propagated (and in fact "used").
+(There are some "nice" exceptions to this rule...but you don't need to care about it, for now).
+If return is not called inside an alias body , the return value will be just a null value.
+</p>
+<p>
+Aliases can accept switches just like any other command. The <a href="fnc_sw.html">$sw</a> is there
+exactly for that purpose. Check it out.
+</p>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>

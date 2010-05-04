@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>Binding operator</title>
+<style type="text/css">
+body {
+ font-size: 11pt;
+ margin-left: 8px;
+ margin-right: 8px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+ font-family:Helvetica,Arial,Verdana;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" cellpadding="1" cellspacing="0" border="0">
+ <tr>
+  <td align="left" bgcolor="#FFFFFF">
+    <a href="index.html"><img src="helplogoleft.png" iorder="0"></a>
+  </td>
+  <td align="right" bgcolor="#FFFFFF">
+    <img src="helplogoright.png">
+  </td>
+ </tr>
+</table>
+<table width="100%" cellpadding="3" cellspacing="1" border="0">
+  <tr bgcolor="#BEBEF0">
+    <td>
+      <font color="#31507B">
+      <h1>Binding operator</h1>
+Binding operator
+      </font>
+    </td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>This <a href="doc_operators.html">operator</a> is a really ugly, poor and clueless attempt to reach at least 1% of the
+power of the perl =~ <a href="doc_operators.html">operator</a> :D<br>
+It allows some complex string operations to be performed efficently by operating directly
+on the left operand (in fact this is a lot faster in <a href="doc_kvircintro.html">KVIrc</a> since at least one step of parsing is skipped).<br>
+Its basic syntax is:<br>
+<br><b>&lt;left_operand&gt; =~ &lt;operation&gt;[parameters]</b><br><br>
+Where &lt;operation&gt; may be one of 't','s' and parameters depend on it.<br>
+&lt;left_operand&gt; is the target of the &lt;operation&gt;.<br>
+If &lt;left_operand&gt; is an <a href="doc_kvs_datatypes.html">array</a> or <a href="doc_kvs_datatypes.html">dictionary</a>, the &lt;operation&gt; is executed on each item they contain.<br>
+Operation 't' is the transliteration.<br>
+The complete syntax with parameters is:<br>
+<br><b>&lt;left_operand&gt; =~ t/&lt;search characters&gt;/&lt;replacement characters&gt;/</b><br><br>
+where &lt;search characters&gt; is a string of characters that are replaced with the corresponding
+characters in &lt;replacement characters&gt;.<br>
+This operation can be also named 'y' or 'tr' (to preserve some compatibility with other languages).
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">%A=This is a test string
+echo %A
+%A=~ tr/abcdefghi/ABCDEFGHI/
+echo %A
+</font></code></pre></td></tr></table></p>
+Operation 's' is the substitution.<br>
+The complete syntax with parameters is:<br>
+<br><b>&lt;left_operand&gt; =~ s/&lt;search pattern&gt;/&lt;replacement pattern&gt;/[flags]</b><br><br>
+where &lt;search pattern&gt; is an extended regular expression to be matched in the &lt;left_operand&gt;
+and &lt;replacement string&gt; is a special pattern that will replace any occurence found.<br>
+&lt;search pattern&gt; may contain parentheses to capture parts of the matched text.
+&lt;replacement string&gt; can contain the escape sequences \\N where N is a number between 1 and 9
+to be replaced by the captured text.<br>
+(We use \\N because <a href="doc_kvircintro.html">KVIrc</a> will first unquote the string when parsing...)<br>
+\\0 is a special escape that will be replaced by the entire match (is always valid!).<br>
+[flags] may be a combination of the letters 'g','i' and 'w'.<br>
+'g' causes the search to be global and not stop after the first occurence of &lt;search pattern&gt;.<br>
+'i' causes the search to be case insensitive.<br>
+'w' causes the search pattern to be interpreted as a simple <a href="doc_irc_masks.html">wildcard</a> regular expression.
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Examples</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%A=This is a test string
+&nbsp;&nbsp;&nbsp;&nbsp;echo %A
+&nbsp;&nbsp;&nbsp;&nbsp;%A=~ s/([a-z])i([a-z])/\\1I\\2/
+&nbsp;&nbsp;&nbsp;&nbsp;echo %A
+&nbsp;&nbsp;&nbsp;&nbsp;%A=~ s/([a-z])i([a-z])/\\1@\\2/gi
+&nbsp;&nbsp;&nbsp;&nbsp;echo %A
+</font></code></pre></td></tr></table></p>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%a = ""
+&nbsp;&nbsp;&nbsp;&nbsp;%a &lt;&lt; free
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> %a
+&nbsp;&nbsp;&nbsp;&nbsp;%a .= bsd
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> %a
+&nbsp;&nbsp;&nbsp;&nbsp;%a &lt;&lt; rox
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> %a
+&nbsp;&nbsp;&nbsp;&nbsp;%a &lt;, but linux is better!
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> %a
+</font></code></pre></td></tr></table></p>
+</td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>See also</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><a href="doc_operators.html">operators</a>
+</td>
+  </tr>
+</table>
+<hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+</body>
+</html>
