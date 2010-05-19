@@ -72,42 +72,47 @@
 <a name="l00047"></a><a class="code" href="classKviCustomToolBar.html#abce97f1629f8c4baf36273b1c64fd30f">00047</a>         QWidget                          * m_pMovedChild;
 <a name="l00048"></a><a class="code" href="classKviCustomToolBar.html#a4b805d9ed7169909a1e0fda6bcb19454">00048</a>         QAction                          * m_pMovedAction;
 <a name="l00049"></a><a class="code" href="classKviCustomToolBar.html#a8bb08359b840b78b72e8b4076e746a36">00049</a>         QWidget                          * m_pDraggedChild;
-<a name="l00050"></a>00050 <span class="keyword">public</span>:
-<a name="l00051"></a><a class="code" href="classKviCustomToolBar.html#a43d9d5daaeedf3d35ec27bd0f8b7f55c">00051</a>         <a class="code" href="classKviCustomToolBarDescriptor.html">KviCustomToolBarDescriptor</a> * <a class="code" href="classKviCustomToolBar.html#a43d9d5daaeedf3d35ec27bd0f8b7f55c">descriptor</a>(){ <span class="keywordflow">return</span> m_pDescriptor; };
-<a name="l00052"></a>00052 <span class="keyword">protected</span>:
-<a name="l00053"></a>00053         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviToolBar.html#a0ed8a0cf4288fb28c46f0d5d960646c4">mousePressEvent</a>(QMouseEvent * e);
-<a name="l00054"></a>00054         <span class="keyword">virtual</span> <span class="keywordtype">void</span> dragEnterEvent(QDragEnterEvent * e);
-<a name="l00055"></a>00055         <span class="keyword">virtual</span> <span class="keywordtype">void</span> dragMoveEvent(QDragMoveEvent * e);
-<a name="l00056"></a>00056         <span class="keyword">virtual</span> <span class="keywordtype">void</span> dragLeaveEvent(QDragLeaveEvent * e);
-<a name="l00057"></a>00057         <span class="keyword">virtual</span> <span class="keywordtype">void</span> dropEvent(QDropEvent * e);
-<a name="l00058"></a>00058         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> eventFilter(QObject * o, QEvent * e);
-<a name="l00059"></a>00059         <span class="keywordtype">int</span> dropIndexAt(<span class="keyword">const</span> QPoint &amp; pnt, QWidget * pExclude, <span class="keywordtype">int</span> * piExcludeIdx);
-<a name="l00060"></a>00060         QWidget * widgetAt(<span class="keywordtype">int</span> iIndex);
-<a name="l00061"></a>00061         QAction * actionForWidget(QWidget * pWidget);
-<a name="l00062"></a>00062         <span class="keywordtype">void</span> drag(QWidget * pChild, <span class="keyword">const</span> QPoint &amp; pnt);
-<a name="l00063"></a>00063         <span class="keyword">virtual</span> <span class="keywordtype">void</span> paintEvent(QPaintEvent * e);
-<a name="l00064"></a>00064         <span class="keywordtype">void</span> syncDescriptor();
-<a name="l00065"></a>00065 <span class="keyword">protected</span> slots:
-<a name="l00066"></a>00066         <span class="keywordtype">void</span> beginCustomize();
-<a name="l00067"></a>00067         <span class="keywordtype">void</span> endCustomize();
-<a name="l00068"></a>00068 };
-<a name="l00069"></a>00069 
-<a name="l00070"></a><a class="code" href="classKviCustomToolBarSeparator.html">00070</a> <span class="keyword">class </span><a class="code" href="classKviCustomToolBarSeparator.html">KviCustomToolBarSeparator</a> : <span class="keyword">public</span> QWidget
-<a name="l00071"></a>00071 {
-<a name="l00072"></a>00072         Q_OBJECT
-<a name="l00073"></a>00073 <span class="keyword">public</span>:
-<a name="l00074"></a>00074         <a class="code" href="classKviCustomToolBarSeparator.html#a45352b7df3c201415a6721673cd66204">KviCustomToolBarSeparator</a>(<a class="code" href="classKviCustomToolBar.html">KviCustomToolBar</a> * pParent, <span class="keyword">const</span> <span class="keywordtype">char</span> * pcName);
-<a name="l00075"></a>00075 <span class="keyword">protected</span>:
-<a name="l00076"></a><a class="code" href="classKviCustomToolBarSeparator.html#ad133b7659552dd2a93cfce22f11fb786">00076</a>         <a class="code" href="classKviCustomToolBar.html">KviCustomToolBar</a> * <a class="code" href="classKviCustomToolBarSeparator.html#ad133b7659552dd2a93cfce22f11fb786">m_pToolBar</a>;
-<a name="l00077"></a>00077 <span class="keyword">public</span>:
-<a name="l00078"></a>00078         QSize <a class="code" href="classKviCustomToolBarSeparator.html#a2c54140d7c5b78029b98c2e94964d7d1">sizeHint</a>() <span class="keyword">const</span>;
-<a name="l00079"></a>00079 <span class="keyword">protected</span>:
-<a name="l00080"></a>00080         <span class="keywordtype">void</span> <a class="code" href="classKviCustomToolBarSeparator.html#a6cdd9e4201714354aff26c50e649c90c">paintEvent</a>(QPaintEvent * e);
-<a name="l00081"></a>00081 };
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083 <span class="preprocessor">#endif //_KVI_CUSTOMTOOLBAR_H_</span>
+<a name="l00050"></a><a class="code" href="classKviCustomToolBar.html#a8a5a4f3f9bd2667a2ab539b471cc9ad6">00050</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;void *,bool&gt;</a> * m_pFilteredChildren;
+<a name="l00051"></a>00051 <span class="keyword">public</span>:
+<a name="l00052"></a><a class="code" href="classKviCustomToolBar.html#a43d9d5daaeedf3d35ec27bd0f8b7f55c">00052</a>         <a class="code" href="classKviCustomToolBarDescriptor.html">KviCustomToolBarDescriptor</a> * <a class="code" href="classKviCustomToolBar.html#a43d9d5daaeedf3d35ec27bd0f8b7f55c">descriptor</a>(){ <span class="keywordflow">return</span> m_pDescriptor; };
+<a name="l00053"></a>00053 <span class="keyword">protected</span>:
+<a name="l00054"></a>00054         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviToolBar.html#a0ed8a0cf4288fb28c46f0d5d960646c4">mousePressEvent</a>(QMouseEvent * e);
+<a name="l00055"></a>00055         <span class="keyword">virtual</span> <span class="keywordtype">void</span> dragEnterEvent(QDragEnterEvent * e);
+<a name="l00056"></a>00056         <span class="keyword">virtual</span> <span class="keywordtype">void</span> dragMoveEvent(QDragMoveEvent * e);
+<a name="l00057"></a>00057         <span class="keyword">virtual</span> <span class="keywordtype">void</span> dragLeaveEvent(QDragLeaveEvent * e);
+<a name="l00058"></a>00058         <span class="keyword">virtual</span> <span class="keywordtype">void</span> dropEvent(QDropEvent * e);
+<a name="l00059"></a>00059         <span class="keyword">virtual</span> <span class="keywordtype">void</span> childEvent(QChildEvent * e);
+<a name="l00060"></a>00060         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> eventFilter(QObject * o, QEvent * e);
+<a name="l00061"></a>00061         <span class="keywordtype">int</span> dropIndexAt(<span class="keyword">const</span> QPoint &amp; pnt, QWidget * pExclude, <span class="keywordtype">int</span> * piExcludeIdx);
+<a name="l00062"></a>00062         QWidget * widgetAt(<span class="keywordtype">int</span> iIndex);
+<a name="l00063"></a>00063         QAction * actionForWidget(QWidget * pWidget);
+<a name="l00064"></a>00064         <span class="keywordtype">void</span> drag(QWidget * pChild, <span class="keyword">const</span> QPoint &amp; pnt);
+<a name="l00065"></a>00065         <span class="keywordtype">void</span> filterChild(QObject * o); 
+<a name="l00066"></a>00066         <span class="keywordtype">void</span> unfilterChild(QObject * o); 
+<a name="l00067"></a>00067         <span class="keyword">virtual</span> <span class="keywordtype">void</span> paintEvent(QPaintEvent * e);
+<a name="l00068"></a>00068         <span class="keywordtype">void</span> syncDescriptor();
+<a name="l00069"></a>00069 <span class="keyword">protected</span> slots:
+<a name="l00070"></a>00070         <span class="keywordtype">void</span> beginCustomize();
+<a name="l00071"></a>00071         <span class="keywordtype">void</span> endCustomize();
+<a name="l00072"></a>00072         <span class="keywordtype">void</span> filteredChildDestroyed(); 
+<a name="l00073"></a>00073 };
+<a name="l00074"></a>00074 
+<a name="l00075"></a><a class="code" href="classKviCustomToolBarSeparator.html">00075</a> <span class="keyword">class </span><a class="code" href="classKviCustomToolBarSeparator.html">KviCustomToolBarSeparator</a> : <span class="keyword">public</span> QWidget
+<a name="l00076"></a>00076 {
+<a name="l00077"></a>00077         Q_OBJECT
+<a name="l00078"></a>00078 <span class="keyword">public</span>:
+<a name="l00079"></a>00079         <a class="code" href="classKviCustomToolBarSeparator.html#a45352b7df3c201415a6721673cd66204">KviCustomToolBarSeparator</a>(<a class="code" href="classKviCustomToolBar.html">KviCustomToolBar</a> * pParent, <span class="keyword">const</span> <span class="keywordtype">char</span> * pcName);
+<a name="l00080"></a>00080 <span class="keyword">protected</span>:
+<a name="l00081"></a><a class="code" href="classKviCustomToolBarSeparator.html#ad133b7659552dd2a93cfce22f11fb786">00081</a>         <a class="code" href="classKviCustomToolBar.html">KviCustomToolBar</a> * <a class="code" href="classKviCustomToolBarSeparator.html#ad133b7659552dd2a93cfce22f11fb786">m_pToolBar</a>;
+<a name="l00082"></a>00082 <span class="keyword">public</span>:
+<a name="l00083"></a>00083         QSize <a class="code" href="classKviCustomToolBarSeparator.html#a2c54140d7c5b78029b98c2e94964d7d1">sizeHint</a>() <span class="keyword">const</span>;
+<a name="l00084"></a>00084 <span class="keyword">protected</span>:
+<a name="l00085"></a>00085         <span class="keywordtype">void</span> <a class="code" href="classKviCustomToolBarSeparator.html#a6cdd9e4201714354aff26c50e649c90c">paintEvent</a>(QPaintEvent * e);
+<a name="l00086"></a>00086 };
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="preprocessor">#endif //_KVI_CUSTOMTOOLBAR_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue May 4 19:53:53 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:28 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

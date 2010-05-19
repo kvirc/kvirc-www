@@ -40,6 +40,7 @@
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviScriptEditor.html#ac7cfca89fbb1487588f20f1c19b77f40">setFindLineeditReadOnly</a> (bool b)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviScriptEditor.html#a63de6e48444382cd5e08490667c595e8">setFindText</a> (const QString &amp;text)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviScriptEditor.html#a732c60884db3e97726e3aefb46f4d4d3">setInfoText</a> (const QString &amp;text)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviScriptEditor.html#a7ec5a8ab54a2ad909fab7586453fa9be">setModified</a> (bool)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviScriptEditor.html#a0fef2f4bf01af7ac4a42c521923bade4">setText</a> (const QString &amp;txt)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviScriptEditor.html#afa94b5d4806f965e628d64b080330bca">setText</a> (const QByteArray &amp;txt)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviScriptEditor.html#a40c5a9440475a0d8303b1ed7dae854b3">setText</a> (const char *txt)</td></tr>
@@ -110,7 +111,7 @@
 
 <p>References <a class="el" href="kvi__scripteditor_8cpp_source.html#l00097">editorModuleCreateScriptEditor</a>, <a class="el" href="kvi__modulemanager_8cpp_source.html#l00039">g_pModuleManager</a>, <a class="el" href="kvi__scripteditor_8cpp_source.html#l00091">getDummyEditor()</a>, <a class="el" href="kvi__modulemanager_8cpp_source.html#l00141">KviModuleManager::getModule()</a>, and <a class="el" href="kvi__module_8cpp_source.html#l00205">KviModule::getSymbol()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00296">KviInput::multilineEditorButtonToggled()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00310">KviInput::multiLineEditorButtonToggled()</a>.</p>
 
 </div>
 </div>
@@ -132,7 +133,7 @@
 
 <p>References <a class="el" href="kvi__scripteditor_8cpp_source.html#l00098">editorModuleDestroyScriptEditor</a>, <a class="el" href="kvi__modulemanager_8cpp_source.html#l00039">g_pModuleManager</a>, <a class="el" href="kvi__modulemanager_8cpp_source.html#l00141">KviModuleManager::getModule()</a>, and <a class="el" href="kvi__module_8cpp_source.html#l00205">KviModule::getSymbol()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00296">KviInput::multilineEditorButtonToggled()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00173">KviInput::~KviInput()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00310">KviInput::multiLineEditorButtonToggled()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00180">KviInput::~KviInput()</a>.</p>
 
 </div>
 </div>
@@ -211,7 +212,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__scripteditor_8cpp_source.html#l00084">getText()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00210">KviInput::keyPressEvent()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00296">KviInput::multilineEditorButtonToggled()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00432">KviInput::text()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__scripteditor_8cpp_source.html#l00084">getText()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00226">KviInput::keyPressEvent()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00310">KviInput::multiLineEditorButtonToggled()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00438">KviInput::text()</a>.</p>
 
 </div>
 </div>
@@ -304,6 +305,24 @@
 
 </div>
 </div>
+<a class="anchor" id="a7ec5a8ab54a2ad909fab7586453fa9be"></a><!-- doxytag: member="KviScriptEditor::setModified" ref="a7ec5a8ab54a2ad909fab7586453fa9be" args="(bool)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void KviScriptEditor::setModified </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a0fef2f4bf01af7ac4a42c521923bade4"></a><!-- doxytag: member="KviScriptEditor::setText" ref="a0fef2f4bf01af7ac4a42c521923bade4" args="(const QString &amp;txt)" -->
 <div class="memitem">
 <div class="memproto">
@@ -358,7 +377,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00210">KviInput::keyPressEvent()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00296">KviInput::multilineEditorButtonToggled()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00287">KviInput::multiLinePaste()</a>, <a class="el" href="kvi__scripteditor_8cpp_source.html#l00051">setText()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00390">KviInput::setText()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input_8cpp_source.html#l00226">KviInput::keyPressEvent()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00310">KviInput::multiLineEditorButtonToggled()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00301">KviInput::multiLinePaste()</a>, <a class="el" href="kvi__scripteditor_8cpp_source.html#l00051">setText()</a>, and <a class="el" href="kvi__input_8cpp_source.html#l00395">KviInput::setText()</a>.</p>
 
 </div>
 </div>
@@ -381,7 +400,7 @@
 <li>src/kvirc/ui/<a class="el" href="kvi__scripteditor_8cpp.html">kvi_scripteditor.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue May 4 19:53:59 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:35 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

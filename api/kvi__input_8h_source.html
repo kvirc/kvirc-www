@@ -113,26 +113,32 @@
 <a name="l00165"></a><a class="code" href="classKviInput.html#a21fc6c8f56dece3e788b477797f1f0f0">00165</a>         <span class="keyword">inline</span> <a class="code" href="classKviInputEditor.html" title="Input editor class.">KviInputEditor</a> * <a class="code" href="classKviInput.html#a21fc6c8f56dece3e788b477797f1f0f0" title="Return the instance of the input editor.">editor</a>(){ <span class="keywordflow">return</span> m_pInputEditor; };
 <a name="l00166"></a>00166 
 <a name="l00171"></a><a class="code" href="classKviInput.html#a59a6b67e4612778cfbd02f4589c8afea">00171</a>         <span class="keyword">inline</span> <a class="code" href="classKviInputHistory.html" title="Input history class.">KviInputHistory</a> * <a class="code" href="classKviInput.html#a59a6b67e4612778cfbd02f4589c8afea" title="Return the instance of the input history.">history</a>(){ <span class="keywordflow">return</span> <a class="code" href="classKviInputHistory.html#a8184dff586d425d903225148bd276362" title="Returns the instance of the class.">KviInputHistory::instance</a>(); };
-<a name="l00172"></a>00172 <span class="keyword">public</span> slots:
-<a name="l00178"></a>00178         <span class="keywordtype">void</span> multilineEditorButtonToggled(<span class="keywordtype">bool</span> bOn);
-<a name="l00179"></a>00179 
-<a name="l00184"></a>00184         <span class="keywordtype">void</span> historyButtonClicked();
-<a name="l00185"></a>00185 
-<a name="l00190"></a>00190         <span class="keywordtype">void</span> iconButtonClicked();
-<a name="l00191"></a>00191 
-<a name="l00196"></a>00196         <span class="keywordtype">void</span> inputEditorEnterPressed();
-<a name="l00197"></a>00197 
-<a name="l00202"></a>00202         <span class="keywordtype">void</span> toggleToolButtons();
-<a name="l00203"></a>00203 <span class="keyword">protected</span>:
-<a name="l00204"></a>00204         <span class="comment">//virtual void resizeEvent(QResizeEvent * e);</span>
-<a name="l00205"></a>00205         <span class="keyword">virtual</span> <span class="keywordtype">void</span> focusInEvent(QFocusEvent * e);
-<a name="l00206"></a>00206         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFocusProxy(QWidget * w);
-<a name="l00207"></a>00207         <span class="keyword">virtual</span> <span class="keywordtype">void</span> keyPressEvent(QKeyEvent * e);
-<a name="l00208"></a>00208 };
-<a name="l00209"></a>00209 
-<a name="l00210"></a>00210 <span class="preprocessor">#endif //_KVI_INPUT_H_</span>
+<a name="l00172"></a>00172 <span class="keyword">protected</span>:
+<a name="l00173"></a>00173         <span class="comment">//void installShortcuts();</span>
+<a name="l00174"></a>00174         <span class="keyword">virtual</span> <span class="keywordtype">void</span> focusInEvent(QFocusEvent * e);
+<a name="l00175"></a>00175         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFocusProxy(QWidget * w);
+<a name="l00176"></a>00176         <span class="keyword">virtual</span> <span class="keywordtype">void</span> keyPressEvent(QKeyEvent * e);
+<a name="l00177"></a>00177 <span class="keyword">public</span> slots:
+<a name="l00183"></a>00183         <span class="keywordtype">void</span> multiLineEditorButtonToggled(<span class="keywordtype">bool</span> bOn);
+<a name="l00184"></a>00184 
+<a name="l00189"></a>00189         <span class="keywordtype">void</span> historyButtonClicked();
+<a name="l00190"></a>00190 
+<a name="l00195"></a>00195         <span class="keywordtype">void</span> iconButtonClicked();
+<a name="l00196"></a>00196 
+<a name="l00201"></a>00201         <span class="keywordtype">void</span> inputEditorEnterPressed();
+<a name="l00202"></a>00202 
+<a name="l00207"></a>00207         <span class="keywordtype">void</span> toggleToolButtons();
+<a name="l00208"></a>00208 <span class="comment">//private slots:</span>
+<a name="l00209"></a>00209 <span class="comment">//      /**</span>
+<a name="l00210"></a>00210 <span class="comment">//      * \brief Toggles multiline</span>
+<a name="l00211"></a>00211 <span class="comment">//      * \return void</span>
+<a name="l00212"></a>00212 <span class="comment">//      */</span>
+<a name="l00213"></a>00213 <span class="comment">//      void toggleMultiLine();</span>
+<a name="l00214"></a>00214 };
+<a name="l00215"></a>00215 
+<a name="l00216"></a>00216 <span class="preprocessor">#endif //_KVI_INPUT_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue May 4 19:53:53 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:28 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
