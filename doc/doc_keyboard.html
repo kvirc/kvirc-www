@@ -52,11 +52,12 @@ The list of the common keyboard shortcuts
 <b>Ctrl+V:</b> Paste clipboard contents<br>
 <b>Ctrl+W:</b> Close current window<br>
 <b>Ctrl+X:</b> Cut to clipboard<br>
-<b>Ctrl+Y:</b> Redo last action<br>
+<b>Ctrl+Y:</b> Toggle the commandline's KVS/User-friendly mode<br>
 <b>Ctrl+Z:</b> Undo last action<br>
 <b>Ctrl+Shift+A:</b> Go away/back<br>
 <b>Ctrl+Shift+B:</b> Open "Manage Toolbars" dialog<br>
 <b>Ctrl+Shift+C:</b> Connect/disconnect current <a href="doc_rfc2812.html">irc</a> context<br>
+<b>Ctrl+Shift+D:</b> Open <a href="class_object.html">Class</a> editor<br>
 <b>Ctrl+Shift+E:</b> Open <a href="doc_events.html">Event</a> editor<br>
 <b>Ctrl+Shift+I:</b> Open Identity options<br>
 <b>Ctrl+Shift+L:</b> Open Alias editor<br>
@@ -68,6 +69,7 @@ The list of the common keyboard shortcuts
 <b>Ctrl+Shift+T:</b> Open "Theme Options" dialog<br>
 <b>Ctrl+Shift+U:</b> Open "Registered users" dialog<br>
 <b>Ctrl+Shift+X:</b> Open "Execute Script" dialog<br>
+<b>Ctrl+Shift+Z:</b> Redo last action<br>
 </td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Window handling related keys:</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 <b>Alt+UpArrow:</b> Previous window<br>
 <b>Alt+DownArrow:</b> Next window<br>
@@ -77,17 +79,19 @@ The list of the common keyboard shortcuts
 <b>Alt+PageDown:</b> Next highlighted window<br>
 <b>Ctrl+UpArrow:</b> Maximizes current window<br>
 <b>Ctrl+DownArrow:</b> Minimizes current window<br>
-<b>Shift+&lt;F1-F12&gt;:</b> window switch<br>
 <b>PageUp:</b> Scroll the output window up one page<br>
 <b>PageDown:</b> Scroll the output window down one page<br>
 <b>Shift+PageUp:</b> Scroll the output window up one line<br>
 <b>Shift+PageDown:</b> Scroll the output window down one line<br>
 <b>Ctrl+W:</b> Close current window<br>
 </td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Text editing related hotkeys:</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
-<b>Ctrl+LeftArrow:</b> <a href="class_combobox.html">Selection</a> left to the previous word<br>
-<b>Ctrl+RightArrow:</b> <a href="class_combobox.html">Selection</a> right to the next word<br>
-<b>Ctrl+Shift+LeftArrow:</b> Previous word<br>
-<b>Ctrl+Shift+RightArrow:</b> Next word<br>
+<b>Shift+LeftArrow:</b> Select the previous character<br>
+<b>Shift+RightArrow:</b> Select the next character<br>
+<b>Ctrl+LeftArrow:</b> Move to the beginning of the previous word<br>
+<b>Ctrl+RightArrow:</b> Move to the end of the next word<br>
+<b>Ctrl+Shift+LeftArrow:</b> Select up to the beginning of the previous word<br>
+<b>Ctrl+Shift+RightArrow:</b> Select up to the end of the next word<br>
+<b>Ctrl+Backspace:</b> Delete last word<br>
 <b>Ctrl+&lt;digit&gt;:</b> Script accelerators (see OnAccelKeyPressed)<br>
 <b>F2-F12, Shift+(F1-F12):</b> Script accelerators (see OnAccelKeyPressed)<br>
 <b>Ctrl+B:</b> nsert the 'bold' mIRC text control character<br>
@@ -100,13 +104,13 @@ The list of the common keyboard shortcuts
 <b>Ctrl+X:</b> Cut the selected text<br>
 <b>Ctrl+V:</b> Paste the clipboard contents (same as middle mouse click)<br>
 <b>Ctrl+I:</b> Insert the 'icon' control code and pops up the icon list box<br>
-<b>CursorUp:</b> Move backward in the command history<br>
-<b>CursorDown:</b> Move forward in the command history<br>
+<b>UpArrow:</b> Move backward in the command history and in the history popup<br>
+<b>DownArrow:</b> Move forward in the command history and in the history popup<br>
 <b>Ctrl+PageUp:</b> Open the history popup<br>
-<b>CursorRight:</b> Move the cursor to the right<br>
-<b>CursorLeft:</b> Move the cursor to the left :)<br>
-<b>Shift+CursorLeft:</b> Move the <a href="class_combobox.html">selection</a> to the left<br>
-<b>Shift+RightCursor:</b> Move the <a href="class_combobox.html">selection</a> to the right<br>
+<b>LeftArrow:</b> Move the cursor to the left :)<br>
+<b>RightArrow:</b> Move the cursor to the right<br>
+<b>Shift+LeftArrow:</b> Move the <a href="class_combobox.html">selection</a> to the left<br>
+<b>Shift+RightArrow:</b> Move the <a href="class_combobox.html">selection</a> to the right<br>
 <b>Alt+Enter:</b> Show/hide the multiline editor<br>
 <b>Ctrl+Enter:</b> Send message as plain text, ignoring / commands<br>
 <b>Alt+&lt;numeric_sequence&gt;:</b> Insert the character by ASCII/Unicode code<br>
@@ -118,14 +122,14 @@ The list of the common keyboard shortcuts
 </font></code></pre></td></tr></table></p>
 </td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Completion hotkeys</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 <b>Tab in the first word of <a href="class_painter.html">input</a>:</b> Complete <a href="doc_ircintro.html">nicknames</a> in the current <a href="doc_ircintro.html">channel</a> or query<br>
+<b>Shift+Tab after the first word of <a href="class_painter.html">input</a>:</b> Complete <a href="doc_ircintro.html">nicknames</a> with full mask in the current <a href="doc_ircintro.html">channel</a> or query<br>
 <b>Tab after a leading /:</b> Complete commands<br>
 <b>Tab after a / in the middle of <a href="class_painter.html">input</a>:</b> Complete directories<br>
-<b>Tab after a $:</b> Complete function names<br>
-<b>Shift+Tab after the first word of <a href="class_painter.html">input</a>:</b> Complete <a href="doc_ircintro.html">nicknames</a> with full mask in the current <a href="doc_ircintro.html">channel</a> or query
+<b>Tab after a $:</b> Complete function names
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_generic_index_all.html">Miscellaneous</a>
-<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Wed May 19 22:52:41 2010
 </body>
 </html>

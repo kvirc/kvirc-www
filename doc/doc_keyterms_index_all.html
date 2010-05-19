@@ -405,6 +405,10 @@ body {
   <td>Returns the port of the IRC server of an IRC context</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="fnc_context.serversoftware.html">$context.serverSoftware</a></td>
+  <td>Returns the software running on the irc server, if recognized</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="fnc_context.state.html">$context.state</a></td>
   <td>Returns the state of an IRC context</td>
 </tr>
@@ -543,6 +547,10 @@ body {
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_file.cwd.html">$file.currentdir</a></td>
   <td>Get the current directory</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="fnc_file.digest.html">$file.digest</a></td>
+  <td>Returns the sum of the character codes of the file</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_file.exists.html">$file.exists</a></td>
@@ -1245,20 +1253,16 @@ body {
   <td>Returns the sum of the character codes of the string</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="fnc_str.chop.html">$str.chop</a></td>
+  <td>Returns a string removing n characters from the end of it.</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.cmp.html">$str.cmp</a></td>
   <td>Compare two strings alphabetically</td>
 </tr>
 <tr bgcolor="#EAEAEA">
-  <td><a href="fnc_str.cmpnocase.html">$str.cmpnocase</a></td>
-  <td>Compare two strings alphabetically, case insensitive.</td>
-</tr>
-<tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.contains.html">$str.contains</a></td>
   <td>Returns 1 if the first parameter contains the second</td>
-</tr>
-<tr bgcolor="#EAEAEA">
-  <td><a href="fnc_str.containsnocase.html">$str.containsnocase</a></td>
-  <td>Returns 1 if the first parameter contains the second, case insensitive</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.digest.html">$str.digest</a></td>
@@ -1269,10 +1273,6 @@ body {
   <td>Returns 1 if the two string parameters are equal</td>
 </tr>
 <tr bgcolor="#EAEAEA">
-  <td><a href="fnc_str.equalnocase.html">$str.equalnocase</a></td>
-  <td>Returns 1 if the two string parameters are equal, case insensitive</td>
-</tr>
-<tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.find.html">$str.find</a></td>
   <td>Find the index of the nth ocurrence of a substring in a string</td>
 </tr>
@@ -1281,16 +1281,8 @@ body {
   <td>Find the index of a substring in a string</td>
 </tr>
 <tr bgcolor="#EAEAEA">
-  <td><a href="fnc_str.findfirstnocase.html">$str.findfirstnocase</a></td>
-  <td>Find the index of a substring in a string, case insensitive</td>
-</tr>
-<tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.findlast.html">$str.findlast</a></td>
   <td>Find the last index of a substring in a string</td>
-</tr>
-<tr bgcolor="#EAEAEA">
-  <td><a href="fnc_str.findlastnocase.html">$str.findlastnocase</a></td>
-  <td>Find the last index of a substring in a string, case insensitive</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.fromclipboard.html">$str.fromClipboard</a></td>
@@ -1357,10 +1349,6 @@ body {
   <td>Matches a fixed string against a wildcard expression</td>
 </tr>
 <tr bgcolor="#EAEAEA">
-  <td><a href="fnc_str.matchnocase.html">$str.matchnocase</a></td>
-  <td>Matches a fixed string against a wildcard expression (case insensitive)</td>
-</tr>
-<tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.mid.html">$str.mid</a></td>
   <td>Returns a substring starting from a given index.</td>
 </tr>
@@ -1375,10 +1363,6 @@ body {
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.replace.html">$str.replace</a></td>
   <td>Replace substrings in a string</td>
-</tr>
-<tr bgcolor="#EAEAEA">
-  <td><a href="fnc_str.replacenocase.html">$str.replacenocase</a></td>
-  <td>Replace substrings in a string ignoring case</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.right.html">$str.right</a></td>
@@ -1607,6 +1591,10 @@ body {
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_u.html">$u</a></td>
   <td>Returns the UNDERLINE mIRC control character</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="fnc_uflags.html">$uflags</a></td>
+  <td>Retrieves the user flags of a user</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_unicode.html">$unicode</a></td>
@@ -2705,6 +2693,10 @@ body {
   <td>Requests the admin info from a server</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="cmd_ahost.html">ahost</a></td>
+  <td>DNS lookup</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="cmd_alias.html">alias</a></td>
   <td>Adds a new alias or modifies an existing one</td>
 </tr>
@@ -2867,6 +2859,10 @@ body {
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_class.html">class</a></td>
   <td>Defines a new object class</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="cmd_classeditor.open.html">classeditor.open</a></td>
+  <td>Shows the class editor</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_codepage.html">codepage</a></td>
@@ -3335,10 +3331,6 @@ body {
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_help.html">help</a></td>
   <td>Shows a help document</td>
-</tr>
-<tr bgcolor="#EAEAEA">
-  <td><a href="cmd_ahost.html">host</a></td>
-  <td>DNS lookup</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_host.html">host</a></td>
@@ -4573,12 +4565,24 @@ body {
   <td>Provides a class that can display html pages.</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="cmd_theme.apply.html">theme.apply</a></td>
+  <td>Apply a theme.</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="cmd_theme.dialog.html">theme.dialog</a></td>
   <td>Shows the theme theme management editor</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="fnc_theme.info.html">theme.info</a></td>
+  <td>Return info about a theme.</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="cmd_theme.install.html">theme.install</a></td>
   <td>Shows the theme management editor</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="fnc_theme.list.html">theme.list</a></td>
+  <td>Return a list of the installed themes.</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_theme.screenshot.html">theme.screenshot</a></td>
@@ -4735,14 +4739,6 @@ body {
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_trayicon.show.html">trayicon.show</a></td>
   <td>Shows the dock widget for the current frame window</td>
-</tr>
-<tr bgcolor="#EAEAEA">
-  <td><a href="class_treewidgetitem.html">treewidget treewidgetitem class</a></td>
-  <td>A treewidgetitem class</td>
-</tr>
-<tr bgcolor="#EAEAEA">
-  <td><a href="class_treewidgetitem.html">treewidgetitem class</a></td>
-  <td>A treewidgetitem class</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_trload.html">trload</a></td>
@@ -5014,6 +5010,6 @@ body {
  <td><a href="doc_keyterms_index_all.html">All</a></td></tr></table></td>
   </tr>
 </table>
-<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Wed May 19 22:52:41 2010
 </body>
 </html>

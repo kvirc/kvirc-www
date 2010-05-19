@@ -74,6 +74,7 @@ $tr<!>Translates an english string to the current language<!>fnc_tr.html
 $true<!>The boolean true constant<!>fnc_true.html
 $typeof<!>Returns the internal data type of a variable<!>fnc_typeof.html
 $u<!>Returns the UNDERLINE mIRC control character<!>fnc_u.html
+$uflags<!>Retrieves the user flags of a user<!>fnc_uflags.html
 $unicode<!>Returns the UNICODE code of a sets of characters<!>fnc_unicode.html
 $unixTime<!>Returns the current UNIX time<!>fnc_unixtime.html
 $unserialize<!>Decodes JSON-encoded string<!>fnc_unserialize.html
@@ -145,6 +146,7 @@ $context.serverHostName<!>Returns the IRC server name of an IRC context<!>fnc_co
 $context.serverIpAddress<!>Returns the IRC server ip address of an IRC context<!>fnc_context.serveripaddress.html
 $context.serverIsIPV6<!>Returns the IPV6 state of an IRC context<!>fnc_context.serverisipv6.html
 $context.serverIsSSL<!>Returns the SSL state of an IRC context<!>fnc_context.serverisssl.html
+$context.serverSoftware<!>Returns the software running on the irc server, if recognized<!>fnc_context.serversoftware.html
 $context.serverPassword<!>Returns the password used to login to the server of an IRC context<!>fnc_context.serverpassword.html
 $context.serverPort<!>Returns the port of the IRC server of an IRC context<!>fnc_context.serverport.html
 $context.state<!>Returns the state of an IRC context<!>fnc_context.state.html
@@ -191,6 +193,7 @@ $file.currentdir<!>Get the current directory<!>fnc_file.cwd.html
 $file.globaldir<!>Get the KVIrc global directory<!>fnc_file.globaldir.html
 $file.extractpath<!>Extract the path from a filename<!>fnc_file.extractpath.html
 $file.extractfilename<!>Extract the filename from a file path<!>fnc_file.extractfilename.html
+$file.digest<!>Returns the sum of the character codes of the file<!>fnc_file.digest.html
 $language.detect<!>(Tries to) detect the language and encoding of a string<!>fnc_language.detect.html
 $log.file<!>Returns the current log filename<!>fnc_log.file.html
 $mask.match<!>Matches a mask agains a wildcarded one<!>fnc_mask.match.html
@@ -316,16 +319,11 @@ $str.isnumber<!>Returns 1 if the given string represents a number<!>fnc_str.isnu
 $str.isunsignednumber<!>Returns 1 if the given string represents an unsigned number<!>fnc_str.isunsignednumber.html
 $str.isempty<!>Returns 1 if the given string don't have any character.<!>fnc_str.isempty.html
 $str.contains<!>Returns 1 if the first parameter contains the second<!>fnc_str.contains.html
-$str.containsnocase<!>Returns 1 if the first parameter contains the second, case insensitive<!>fnc_str.containsnocase.html
 $str.equal<!>Returns 1 if the two string parameters are equal<!>fnc_str.equal.html
-$str.equalnocase<!>Returns 1 if the two string parameters are equal, case insensitive<!>fnc_str.equalnocase.html
 $str.cmp<!>Compare two strings alphabetically<!>fnc_str.cmp.html
-$str.cmpnocase<!>Compare two strings alphabetically, case insensitive.<!>fnc_str.cmpnocase.html
 $str.find<!>Find the index of the nth ocurrence of a substring in a string<!>fnc_str.find.html
 $str.findfirst<!>Find the index of a substring in a string<!>fnc_str.findfirst.html
-$str.findfirstnocase<!>Find the index of a substring in a string, case insensitive<!>fnc_str.findfirstnocase.html
 $str.findlast<!>Find the last index of a substring in a string<!>fnc_str.findlast.html
-$str.findlastnocase<!>Find the last index of a substring in a string, case insensitive<!>fnc_str.findlastnocase.html
 $str.left<!>Returns a substring starting from the left until the given index.<!>fnc_str.left.html
 $str.right<!>Returns a substring starting from the right until the given index.<!>fnc_str.right.html
 $str.mid<!>Returns a substring starting from a given index.<!>fnc_str.mid.html
@@ -337,17 +335,16 @@ $str.stripleft<!>Returns a left whitespace stripped string<!>fnc_str.stripleft.h
 $str.stripright<!>Returns a right whitespace stripped string<!>fnc_str.stripright.html
 $str.stripcolors<!>Returns a mirc color codes stripped string<!>fnc_str.stripcolors.html
 $str.replace<!>Replace substrings in a string<!>fnc_str.replace.html
-$str.replacenocase<!>Replace substrings in a string ignoring case<!>fnc_str.replacenocase.html
 $str.urlencode<!>Returns a browser formatted string<!>fnc_str.urlencode.html
 $str.lefttofirst<!>Returns the left part of a string until a given substring<!>fnc_str.lefttofirst.html
 $str.lefttolast<!>Returns the left part of a string until the last ocurrence of a given substring<!>fnc_str.lefttolast.html
 $str.rightfromfirst<!>Returns the right part of a string from the first ocurrence of a given substring<!>fnc_str.rightfromfirst.html
 $str.rightfromlast<!>Returns the right part of a string from the last ocurrence of a given substring<!>fnc_str.rightfromlast.html
 $str.match<!>Matches a fixed string against a wildcard expression<!>fnc_str.match.html
-$str.matchnocase<!>Matches a fixed string against a wildcard expression (case insensitive)<!>fnc_str.matchnocase.html
 $str.word<!>Returns the nth word in a string<!>fnc_str.word.html
 $str.token<!>Returns the nth token in a string<!>fnc_str.token.html
 $str.charsum<!>Returns the sum of the character codes of the string<!>fnc_str.charsum.html
+$str.chop<!>Returns a string removing n characters from the end of it.<!>fnc_str.chop.html
 $str.digest<!>Returns the sum of the character codes of the string<!>fnc_str.digest.html
 $str.join<!>Returns a string joined from several strings<!>fnc_str.join.html
 $str.grep<!>Emulates the GNU Regular Expression Parser<!>fnc_str.grep.html
@@ -367,6 +364,8 @@ $system.hostname<!>Returns the hostname of the machine that KVIrc is running on<
 $system.dbus<!>Performs a DBus call<!>fnc_system.dbus.html
 $system.call<!>Allows to call functions of a plugin<!>fnc_system.call.html
 $texticons.get<!>Retreives texticon data<!>fnc_texticons.get.html
+theme.info<!>Return info about a theme.<!>fnc_theme.info.html
+theme.list<!>Return a list of the installed themes.<!>fnc_theme.list.html
 $tmphighlight.isNickHighlighted<!>Returns 1 if the user is highlighted on this channel, 0 otherwise<!>fnc_tmphighlight.isnickhighlighted.html
 $tmphighlight.isChannelHighlighted<!>Returns 1 if the channel is highlighted on this irc network, 0 otherwise<!>fnc_tmphighlight.ischannelhighlighted.html
 $toolbar.exists<!>Checks if a toolbar exists<!>fnc_toolbar.exists.html

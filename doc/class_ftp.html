@@ -56,22 +56,22 @@ An implementation of the client side of FTP protocol.
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This function is called when some data is available to be read: the &lt;data_length&gt; parameter specifies &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the length of the available data in bytes.<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can use one of the $read* functions to obtain the data.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;id:integer&gt; connect">&lt;id:integer&gt; $connect(&lt;host:string&gt;,&lt;remote_port:integer&gt;)</a></font></b></code></td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Connects to the FTP server host using port port.The command is scheduled, and its execution is performed asynchronously. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The function returns a unique identifier which is passed by commandStarted() and commandFinished().<br></td></tr>
-<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="abort">$abort()</a></font></b></code></td></tr>
-<tr><td>                Aborts the current command and deletes all scheduled commands.</td></tr>
-<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;id:integer&gt; login">&lt;id:integer&gt; $login(&lt;user:string&gt;,&lt;pass:string&gt;)</a></font></b></code></td></tr>
-<tr><td>                Logs in to the FTP server with the username user and the password &lt;pass&gt;.                 The function returns a unique identifier which is passed by commandStarted() and commandFinished().<br></td></tr>
-<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;id:integer&gt; get">&lt;id:integer&gt; $get(&lt;remotefile:string&gt;,&lt;localfile:string&gt;)</a></font></b></code></td></tr>
-<tr><td>                Downloads the &lt;remotefile&gt; file from the server.</td></tr>
-<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;id:integer&gt; cd">&lt;id:integer&gt; $cd(&lt;remotedir:string&gt;)</a></font></b></code></td></tr>
-<tr><td>                Changes the working directory of the server to &lt;remotedir&gt;.</td></tr>
-<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;id:integer&gt; list">&lt;id:integer&gt; $list()</a></font></b></code></td></tr>
-<tr><td>                Lists the contents of directory dir on the FTP server.</td></tr>
-<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="commandFinishedEvent">$commandFinishedEvent(&lt;id:integer&gt;,&lt;error:boolean&gt;)</a></font></b></code></td></tr>
-<tr><td>                Called by KVIrc when the ftp command identified by id has finished.                 error is true if an error occurred during the processing; otherwise error is false.                 The default implementation emits the <a href="#commandFinished">$commandFinished</a>() signal.</td></tr>
-<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="listInfoEvent">$listInfoEvent(&lt;dir_entry_name:string&gt;)</a></font></b></code></td></tr>
-<tr><td>                This event is triggered for each directory entry found by <a href="#list">$list</a>() command.                 The default implementation emits the <a href="#listInfo">$listInfo</a>() signal.</td></tr>
-<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="dataTransferProgressEvent">$dataTransferProgressEvent(&lt;done:integer&gt;,&lt;total:integer&gt;)</a></font></b></code></td></tr>
-<tr><td>                This event is triggered in response to a  [classfnc]get[/classfnc]() or  [classfnc]put[/classfnc]() request to indicate the current progress of the download or upload.                 The default implementation emits the <a href="#dataTransferProgress">$dataTransferProgress</a>() signal.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;abort">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$abort()</a></font></b></code></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aborts the current command and deletes all scheduled commands.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;id:integer&gt; login">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;id:integer&gt; $login(&lt;user:string&gt;,&lt;pass:string&gt;)</a></font></b></code></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logs in to the FTP server with the username user and the password &lt;pass&gt;. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The function returns a unique identifier which is passed by commandStarted() and commandFinished().<br></td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;id:integer&gt; get">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;id:integer&gt; $get(&lt;remotefile:string&gt;,&lt;localfile:string&gt;)</a></font></b></code></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Downloads the &lt;remotefile&gt; file from the server.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;id:integer&gt; cd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;id:integer&gt; $cd(&lt;remotedir:string&gt;)</a></font></b></code></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Changes the working directory of the server to &lt;remotedir&gt;.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;id:integer&gt; list">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;id:integer&gt; $list()</a></font></b></code></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lists the contents of directory dir on the FTP server.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;commandFinishedEvent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$commandFinishedEvent(&lt;id:integer&gt;,&lt;error:boolean&gt;)</a></font></b></code></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called by KVIrc when the ftp command identified by id has finished. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;error is true if an error occurred during the processing; otherwise error is false. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The default implementation emits the <a href="#commandFinished">$commandFinished</a>() signal.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;listInfoEvent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$listInfoEvent(&lt;dir_entry_name:string&gt;)</a></font></b></code></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This event is triggered for each directory entry found by <a href="#list">$list</a>() command. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The default implementation emits the <a href="#listInfo">$listInfo</a>() signal.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dataTransferProgressEvent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dataTransferProgressEvent(&lt;done:integer&gt;,&lt;total:integer&gt;)</a></font></b></code></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This event is triggered in response to a  [classfnc]get[/classfnc]() or  [classfnc]put[/classfnc]() request to indicate the current progress of the download or upload. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The default implementation emits the <a href="#dataTransferProgress">$dataTransferProgress</a>() signal.</td></tr>
       </table>
     </td>
   </tr>
@@ -82,16 +82,16 @@ An implementation of the client side of FTP protocol.
     <td>
       <table bgcolor="#E0E0E0">
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="commandFinished">$commandFinished(&lt;id:integer&gt;,&lt;status:string&gt;,&lt;error:boolean&gt;)</a></font></b></code></td></tr>
-<tr><td>                This signal is emitted by the default implementation of <a href="#commandFinishedEvent">$commandFinishedEvent</a>()</td></tr>
+<tr><td>This signal is emitted by the default implementation of <a href="#commandFinishedEvent">$commandFinishedEvent</a>()</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="listInfo">$listInfo(&lt;dir_entry_name:string&gt;)</a></font></b></code></td></tr>
-<tr><td>                This signal is emitted by the default implementation of <a href="#listInfoEvent">$listInfoEvent</a>()</td></tr>
+<tr><td>This signal is emitted by the default implementation of <a href="#listInfoEvent">$listInfoEvent</a>()</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="dataTransferProgress">$dataTransferProgress(&lt;done:integer&gt;,&lt;total:integer&gt;)</a></font></b></code></td></tr>
-<tr><td>                This signal is emitted by the default implementation of <a href="#dataTransferProgressEvent">$dataTransferProgressEvent</a>()</td></tr>
+<tr><td>This signal is emitted by the default implementation of <a href="#dataTransferProgressEvent">$dataTransferProgressEvent</a>()</td></tr>
       </table>
     </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Mon Jan 25 15:50:02 2010
+<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Wed May 19 22:52:41 2010
 </body>
 </html>
