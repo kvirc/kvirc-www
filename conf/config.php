@@ -296,6 +296,7 @@ $themes=array(
 	array("name" => "Black", "version" => "1.4", "mail" => "", "author" => "Radicand", "desc" => $template['themes']['theme35'], "home" => "", "download" => "Black-1.4.kvt", "screen" => "theme_black.png", "thumb" => "thumb_black.png"),
 	array("name" => "Hello Kitty", "version" => "1.0", "mail" => "", "author" => "Sc0rPiOn-BaBy", "desc" => $template['themes']['theme36'], "home" => "", "download" => "HelloKitty-1.0.kvt", "screen" => "theme_hellokitty.png", "thumb" => "thumb_hellokitty.png"),
 	array("name" => "CoherEase", "version" => "1.1 GR", "mail" => "", "author" => "Chapoolin", "desc" => $template['themes']['theme37'], "home" => "", "download" => "CoherEase-1.1_GR.kvt", "screen" => "theme_coherease.png", "thumb" => "thumb_coherease.png")
+	array("name" => "Celebration", "version" => "0.6.9", "mail" => "etherea [at] kvirc [dot] net", "author" => "etherea", "desc" => $template['themes']['theme38'], "home" => "http://kvirc.virg0.org/", "download" => "http://kvirc.virg0.org/themes/Celebration-0.6.9.kvt", "screen" => "theme_celebration.png", "thumb" => "thumb_celebration.png")
 	// without info, not listed
 	//array("name" => "Burst Rebird", "version" => "0.1", "mail" => "", "author" => "", "desc" => "", "home" => "", "download" => "BurstRebird-0.1.kvt", "screen" => "", "thumb" => ""),
 	//array("name" => "Kvinvision", "version" => "1.0", "mail" => "", "author" => "LoSko", "desc" => "", "home" => "", "download" => "Kvinvision-1.0.kvt", "screen" => "", "thumb" => "")
