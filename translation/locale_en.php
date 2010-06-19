@@ -726,7 +726,7 @@ $template['install']['text38']="
 $template['install']['text39']="
 	CMake supports DESTDIR argument.<br />
 	So, if you want to make a package for your distro, you simply have to pass it at \"make install\" stage: your install files will go to the choosed path.<br />
-	The synthax is";
+	The syntax is";
 $template['install']['text40']="
 	After this step, just follow your distribution's rules to make a good package for the distro you're running.</p>
 	<p>Alternatively, you can try the experimental CPack support included in CMakeLists.txt to build a package: in this case, please refer to the CPack documentation.";
