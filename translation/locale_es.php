@@ -22,7 +22,7 @@ $template['index']['polish']="Polaco";
 $template['index']['portuguese']="Portugués";
 $template['index']['russian']="Ruso";
 $template['index']['serbian']="Serbio";
-$template['index']['spanish']="Español";
+$template['index']['spanish']="Castellano";
 $template['index']['ukrainian']="Ucraniano";
 
 // the project
@@ -43,10 +43,10 @@ $template['index']['install']="instalación";
 $template['index']['docs']="documentación";
 $template['index']['faq']="FAQ";
 $template['index']['api']="API";
-$template['index']['kviman']="manual de KVIrc";
+$template['index']['doc']="manual de KVIrc";
 $template['index']['tutorials']="tutoriales";
 $template['index']['translations']="traducciones";
-$template['index']['shortcuts']="Keyboard shortcuts";
+$template['index']['shortcuts']="atajos de teclado";
 // graphic suite
 $template['index']['graphsuite']="suite gráfica";
 $template['index']['themes']="temas";
@@ -79,7 +79,7 @@ $template['index']['osxsite']="versión MacOS X";
 $template['index']['quickdnl']="descarga rápida";
 // search
 $template['index']['search']="Buscar";
-$template['index']['go']="¡IR";
+$template['index']['go']="¡IR"; // no acabar con !, ya lo pone el php
 // news
 $template['index']['latestnews']="noticias";
 $template['index']['allnews']="Todas las noticias";
@@ -89,11 +89,11 @@ $template['index']['wwwmirrors']="mirrors WWW";
 $template['index']['ftpmirrors']="mirrors FTP";
 $template['index']['mirrorstext1a']="Contribuir al proyecto KVIrc creando y manteniendo un mirror es realmente fácil y apreciado, en";
 $template['index']['mirrorstext1b']="esta página";
-$template['index']['mirrorstext1c']="encontrarás instrucciones paso a paso de como crear un mirror www o ftp (o ambos).";
+$template['index']['mirrorstext1c']="encontrarás instrucciones paso a paso de cómo crear un mirror www o ftp (o ambos).";
 $template['index']['mirrorstext2']="Necesitamos ftps no-europeos.";
 $template['index']['mirrorstitle']="mirrors www y ftp";
 // layouts
-$template['index']['oldlayout']="webs anteriores";
+$template['index']['oldlayout']="webs antiguas	";
 $template['index']['oldsite']="sitio KVIrc antiguo";
 $template['index']['iakkohome']="web de iakko";
 // help
@@ -108,11 +108,11 @@ $template['index']['moredocs']="documentación";
 $template['index']['officialdocs']="documentación oficial de KVIrc";
 $template['index']['docsauto']="peticiones del índice autogeneradas";
 // hardware, traffic and hosting donation
-$template['index']['hwdonation']="rocket-propelled";
-$template['index']['hwdonationtext']="was so kind to donate hardware for running svn.kvirc.de";
-$template['index']['tahdonation']="lifted into the air";
-$template['index']['tahdonationtext']="is sponsoring hosting and traffic for svn.kvirc.de";
-$template['index']['donationtextkvirc.de']="and this mirror";
+$template['index']['hwdonation']="propulsado por";
+$template['index']['hwdonationtext']="fue muy amable donando hardware para svn.kvirc.de";
+$template['index']['tahdonation']="levantado por";
+$template['index']['tahdonationtext']="patrocina el alojamiento y el tráfico de svn.kvirc.de";
+$template['index']['donationtextkvirc.de']="y este mirror";
 // other
 $template['index']['latestscreen']="última captura";
 $template['index']['footer']="este sitio se ve mejor con un monitor";
@@ -210,7 +210,7 @@ $template['arts']['desc6']="Ella usa esta pantalla de inicio... :)";
 /* banners.php start */
 $template['banners']['title']="Banners";
 $template['banners']['text1']="
-	Esta es una colección de banners de KVIrc hecha por varios artistas: simplemente guarda la imagen y úsala en tu propio sitio :)";
+	Ésta es una colección de banners de KVIrc hecha por varios artistas: simplemente guarda la imagen y úsala en tu propio sitio :)";
 $template['banners']['text2']="Envía tus banners a";
 $template['banners']['bannerby']="Banners por";
 /* banners.php end */
@@ -302,7 +302,7 @@ $template['faq']['text3b1']="
 	¿Puedes hacer ping6 a otras máquinas IPV6?";
 $template['faq']['text3b2']="
 	Asegúrate de que el soporte IPV6 está activado en tu ejecutable KVIrc.<br />
-	¿No estás seguro";
+	¿No estás seguro?";
 $template['faq']['text3b3']="
 	Escribe eso en la línea de comandos de KVIrc. Deberías obtener una lista de características compiladas en el ejecutable, separadas por comas. Si la lista contiene \"IPV6\" entonces el soporte está compilado, si no es así deberías recompilar el ejecutable para ver qué está mal.
 	Para conectar a un servidor IPV6 puedes usar /server -i &lt;nombredelservidor&gt;
@@ -542,195 +542,195 @@ $template['honor']['quote37']="FreeBSD Gimp.";
 /* honor.php end */
 
 /* install.php start */
-$template['install']['title1']="Installation";
-$template['install']['title2']="Minimal Requirements";
-$template['install']['title3']="Configuring the Environment";
-$template['install']['title4']="Interactive Mode";
-$template['install']['title5']="Compiling";
-$template['install']['title6']="Compiling on MacOS X";
-$template['install']['title7']="Compiling on Win32";
-$template['install']['title8']="Hacker-level Installation";
-$template['install']['title9']="Creating a KVIrc Package";
-$template['install']['title10']="Have fun!";
-$template['install']['text1']="General notes for the installation of the release 4.0 of KVIrc";
-$template['install']['text2']="In order to compile KVIrc 4.0 you need at least these softwares";
+$template['install']['title1']="Instalación";
+$template['install']['title2']="Requisitos mínimos";
+$template['install']['title3']="Configurando el entorno";
+$template['install']['title4']="Modo interactivo";
+$template['install']['title5']="Compilando";
+$template['install']['title6']="Compilando en Mac OSX";
+$template['install']['title7']="Compilando en Win32";
+$template['install']['title8']="Instalación de nivel hacker";
+$template['install']['title9']="Creando un paquete de KVIrc";
+$template['install']['title10']="¡Diviértete!";
+$template['install']['text1']="Notas generales para la instalación de la versión 4.0 de KVIrc";
+$template['install']['text2']="Para compilar KVIrc 4.0 necesitas al menos lo siguiente";
 $template['install']['text3']="
-	If your distro has KDE installed then Qt is already installed. If not, simply install qt4 from your distro's repositories.";
+	Si tu distro tiene KDE instalado entonces Qt ya está instalado. Si no, simplemente instala qt4 desde los repositorios de tu distro.";
 $template['install']['text4']="
-	So before running cmake make sure that the environment variable \$QTDIR points to the right location. This will help in finding the correct version of Qt.";
-$template['install']['text5a']="You might eventually set it with the command";
-$template['install']['text5b']="your qt dir";
-$template['install']['text6']="On my system qt is installed in /usr/lib64/qt so I actually execute";
-$template['install']['text7']="To check you have the right version of Qt, simply run";
-$template['install']['text8']="On my system the output is";
+	Antes de ejecutar cmake asegúrate de que la variable de entorno \$QTDIR apunta al lugar correcto. Esto ayudará buscando la versión correcta de Qt.";
+$template['install']['text5a']="Puedes configurarlo con el comando";
+$template['install']['text5b']="tu directorio qt";
+$template['install']['text6']="En mi sistema, qt está instalado en /usr/lib64/qt así que ejecuto";
+$template['install']['text7']="Para comprobar si tienes la versión correcta de Qt, simplemente ejecuta";
+$template['install']['text8']="En mi sistema la salida es";
 $template['install']['text9']="
-	If you have multiple versions of Qt4 installed in your system and you want to use a specific version, exporting QTDIR won't suffice. Since the CMake module searching for Qt4 uses qmake itself to determine the Qt4 library dir, you can set your PATH to have CMake using using your preferred qmake version";
+	Si tienes varias versiones de Qt4 instaladas en tu sistema y quieres usar una versión específica, exportando QTDIR no será suficiente. Ya que el módulo CMake que busca Qt4 usa qmake en sí para determinar el directorio de la librería Qt4, puedes configurar tu PATH para que CMake use la versión de qmake que prefieras";
 $template['install']['text10']="
-	Please note that compiling with KDE4 support enabled will force kvirc to link against the Qt4 version that KDE4 is using, and this may lead to problems in linking. Disabling KDE4 support is the only known solution at the moment.<br />
-	Note also that you'll need to override the Qt libraries used when running KVIrc";
+	Ten en cuenta que compilar con soporte de KDE4 forzará a kvirc a vincularse contra la versión de Qt4 que KDE4 está usando, y esto podría dar problemas vinculando. Desactivar el soporte de KDE4 es la única solución conocida ahora mismo.<br />
+	Ten en cuenta también que tendrás que anular las librerías Qt usadas cuando ejecutes KVIrc";
 $template['install']['text11']="
-	This is usually included in the last distros.<br />
-	To check which cmake you have, simply run";
+	Esto normalmente ya está incluido en las distros más actuales.<br />
+	Para comprobar qué cmake tienes, simplemente ejecuta";
 $template['install']['text12']="
-	You need a decent C++ compiler. Usually under linux it is gcc from GNU tools. It is preferred to use gcc 4.3.<br />
-	To check your gcc version, just run";
+	Necesitas un compilador C++ decente. Normalmente en linux es gcc de las GNU tools. Es preferible usar gcc 4.3.<br />
+	Para comprobar tu versión de gcc, ejecuta";
 $template['install']['text13']="
-	This is usually included in your distribution and is probably already installed. The library is called libpthread.so.<br />
-	You can look for it with the \"find\" command";
+	Esto está normalmente incluido en tu distro y probablemente ya esté instalado. La librería se llama libpthread.so.<br />
+	Puedes buscarla con el comando \"find\"";
 $template['install']['text14']="
-	If you don't have it (CMake will tell you) you can download it from your favorite GNU mirror.<br />
-	The configure script will also fail if the library is hidden somewhere on your system (eg. not in /lib , /usr/lib or /usr/local/lib): you should probably move it.";
+	Si no lo tienes (CMake te lo dirá) puedes descargarlo desde tu mirror GNU favorito.<br />
+	El script configure también fallará si la librería está oculta en cualquier lugar de tu sistema (por ejemplo, no está en /lib, /usr/lib o /usr/local/lib): probablemente debas morverla.";
 $template['install']['text15']="
-	You need the dynamic linker interface library libdl.so.<br />
-	This is usually installed on your system , so don't care until configure complains about it. Some system have the interface builtin in libc.";
+	Necesitas la librería de interfaz de vinculador dinámico libdl.so.<br />
+	Esto normalmente ya está instalado en tu sistema, así que no te preocupes hasta que configure te lo pida. Algunos sistemas tienen la interfaz incorporada en libc.";
 $template['install']['text16a']="
-	If you want to compile the KDE integration support you obviousy need KDE.<br />
-	The kdelibs package should suffice.</p>
-	<p>So before running cmake make sure that the environment variable \$KDEDIR points to the right location.</p>
-	<p>You might eventually set it with the command";
-$template['install']['text16b']="your kde dir";
-$template['install']['text17']="In my case KDE is installed in /usr so I use";
+	Si quieres compilar el soporte de integración de KDE necesitas obviamente KDE.<br />
+	El paquete kdelibs debería bastar.</p>
+	<p>Antes de ejecutar cmake asegúrate de que la variable \$KDEDIR apunta al lugar correcto.</p>
+	<p>Puedes configurarlo con el comando";
+$template['install']['text16b']="tu directorio kde";
+$template['install']['text17']="En mi caso KDE está instalado en /usr así que uso";
 $template['install']['text18']="
-	If you want the translations to non-english languages to work then you need the GNU gettext package. In particular KVIrc uses the msgfmt program.</p>
-	<p>This is usually included in your distribution and is probably already installed. You can check it by running";
+	Si quieres que las traducciones a idiomas que no sean el inglés funcionen necesitas el paquete GNU gettext. En particular gettext usa el programa msgfmt.</p>
+	<p>Esto normalmente ya está incluido en tu distro y probablemente ya estará instalado. Puedes comprobarlo con";
 $template['install']['text19']="
-	KVIrc will not complain if the command above is missing: it will just skip the creation of the translation files.<br />
-	If the command above fails then you need to install the gettext package if you want any language other than english.";
+	KVIrc no se quejará si el comando anterior falta: simplemente se saltará la creación de los archivos de traducción.<br />
+	Si el comando anterior falla necesitas instalar el paquete gettext si quieres un idioma que no sea el inglés.";
 $template['install']['text20']="
-	If you want the secure socket layer (SSL) support to be compiled you need the OpenSSL library and headers (libssl.so and openssl/ssl.h).";
+	Si quieres que el soporte de SSL sea compilado necesitas la librería OpenSSL y las cabeceras (libssl.so y openssl/ssl.h).";
 $template['install']['text21']="
-	If you want to generate the on-line documentation you also need perl: any version will do (I guess).";
+	Si quieres generar la documentación on-line también necesitas perl: cualquier versión funcionará (supongo).";
 $template['install']['text22']="
-	If you want perl scripting support to be compiled you need a working perl installation. Your libperl.so MUST be compiled with the MULTIPLICITY option.<br />
-	You can check it with perl -V<br />
-	The way external software can emebed perl has changed between perl version 5.8 and 5.10; KVIrc should play nice with perl if >= 5.004, but 5.10 is strongly suggested, since future updates can break back compatibility.";
+	Si quieres soporte que el scripting en perl sea compilado necesitas una instalación de perl funcional. Tu libperl.so DEBE estar compilado con la opción MULTIPLICITY..<br />
+	Puedes comprobarlo con perl -V<br />
+	La manera en que el software externo puede embeber perl ha cambiado entre perl 5.8 y 5.10; KVIrc debería funcionar correctamente con perl >= 5.004, pero 5.10 es lo más recomendable, ya que actualizaciones futuras pueden romper la compatibilidad.";
 $template['install']['text23']="
-	If you want DCC VOICE to support the GSM codec, you need a recent copy of libgsm.<br />
-	This is not strictly required at compile time since KVIrc will look for the library at run-time, and only if the DCC VOICE with the GSM codec is requested.<br />
-	You can check for libgsm using the \"find\" command";
+	Si quieres que DCC VOICE soporte el códec gsm, necesitas una copia reciente de libgsm.
+	<br/>Esto no es estrictamente requerido en el momento de la compilación ya que KVIrc buscará la librería en tiempo de ejecución, y sólo si se ha pedido un DCC VOICE con el códec gsm.<br />
+        Puedes buscar libgsm usando el comando 'find'.";
 $template['install']['text24']="
-	This library is included in most distributions. Some distros ship only the static version of the library \"libgsm.a\": if the previous find returned only something similar to \"/usr/lib64/libgsm.a\", you might create manually the shared archive by running";
+	Esta librería está incluída en la mayoría de las distribuciones. Algunas distribuciones vienen solo con la versión estática de la librería \"libgsm.a\": si el find previo devolvió algo similar a \"/usr/lib/libgsm.a\" , debes crear manualmente el archivo compartido ejecutando";
 $template['install']['text25']="
-	If you don't have it installed at all, you might have a look in your distribution CD, or download it from the web";
+	Si no la tienes instalada, deberías echarle un vistazo al CD de tu distribución, o descargarla de Internet.";
 $template['install']['text26']="
-	If you want the /snd plugin to play various audio formats you either need a running sound system like phonon, a running sound daemon like esd or a reasonably recent audiofile library. Without these KVIrc will be only able to play *.au files.";
+	Si quieres que el plugin /snd reproduzca varios formatos de audio necesitas o un sistema de sonido como phonon, un demonio como osd ejecutándose o una librería audiofile razonablemente reciente. Si esto, KVIrc sólo será capaz de reproducir archivos *.au.";
 $template['install']['text27a']="
-	Since KVIrc 4.0 uses CMake as build system, we have to use it to create the Makefile's rules for make program.<br />
-	To do it, we encourage the \"out-of-source\" building: build all files without dirtying the sources directory.";
-$template['install']['text27b']="your options";
+	Como KVIrc 4.0 usa CMake como sistema de compilación, tenemos que usarlo para crear los Makefile's para el programa make.<br />
+	Para hacerlo, recomendamos la compilación \"fuera-de-las-fuentes\": compilar todos los archivos sin ensuciar las fuentes.";
+$template['install']['text27b']="tus opciones";
 $template['install']['text28']="
-	In this way you have just created an out-of-source environment useful to have a clean working directory.<br />
-	Note that the final dots are required or cmake will NOT create the right environment.";
+	De esta manera acabas de crear un entorno fuera de las fuentes útil para tener un directorio de trabajo limpio.<br />
+	Ten en cuenta que los puntos del final son requeridos o cmake NO creará el entorno adecuado.";
 $template['install']['text29']="
-	The CMake rules support some flags. If you don't specify them, CMake will try to make a good environment for you :)<br />
-	To use these flags, you have to pass a bool value or a string.</p>
-	<p>For example, to install in /usr instead of /usr/local and disable Phonon support, the command would be";
-$template['install']['text30']="Here's a list with explainations";
+	Las reglas CMake soportan ciertas opciones. Si no las especificas, CMake intentará hacer un entorno bueno para ti :)<br />
+	Para usar esas opciones, tienes que pasarles un valor booleano o una cadena.</p>
+	<p>Por ejemplo, para instalar en /usr en lugar de en /usr/local y desactivar el soporte de Phonon, el comando sería";
+$template['install']['text30']="Aquí hay una lista con explicaciones";
 $template['install']['tree1']="
-	Compiles the executable with debug symbols.<br />
-        Useful to report bugs.";
-$template['install']['tree2']="Generate verbose output when compiling.";
-$template['install']['tree3']="It will install all stuff under /path directory";
+	Compila el ejecutable con símbolos de depuración.<br />
+        Útil para reportar bugs.";
+$template['install']['tree2']="Genera una salida verbosa al compilar.";
+$template['install']['tree3']="Instalará todo bajo el directorio /path";
 $template['install']['tree4']="
-	It will install libkvilib and kvirc modules under \${CMAKE_INSTALL_PREFIX}/lib\${LIB_SUFFIX} directory. It defaults to an empty suffix. Mainly used for 64 bit distros (-DLIB_SUFFIX=64).";
+	Instalará libkvilib y los módulos de kvirc en \${CMAKE_INSTALL_PREFIX}/lib\${LIB_SUFFIX}. Por defecto es un sufijo vacío. Usado mayormente para distros de 64 bits (-DLIB_SUFFIX=64).";
 $template['install']['tree5']="
-	Append version information to kvirc and libkvilib, so that different KVIrc versions can cohexist in the same system.";
+	Añade la información de versioń a kvirc y libkvilib, para que diferentes versiones de KVIrc puedan coexistir en el mismo sistema.";
 $template['install']['tree6']="
-	KVIrc install rules won't try to figure out and set CMAKE_C(XX)_FLAGS; instead, it will let CMake use the ones from environment variables. Activating this flag will override -DDEBUG.";
+	Las reglas de instalación de KVIrc no intentarán buscar y configurar CMAKE_C(XX)_FLAGS; en su lugar, intentará permitir que CMake use las de las variables de entorno. Activando este comando sobrepasarás -DDEBUG.";
 $template['install']['tree7']="
-	It will re-initialize the installation path to a good default.<br />
-	Following compilations should use the correct path value cached by CMake.<br />
-	This flag is useful to solve MacOS X install problems.";
-$template['install']['tree8']="Compile universal binary for MacOS X platform";
-$template['install']['tree9']="Use pre-compiled headers";
-$template['install']['tree10']="Disable Phonon audio backend support.";
+	Reinicializará la ruta de instalación a un buen valor por defecto.<br />
+	Las siguientes compilaciones deberían usar el valor correcto, cacheado por CMake.<br />
+	Este flag es útil para resolver problemas de instalación de Mac OS X.";
+$template['install']['tree8']="Compila un binario universal para la plataforma Mac OS X";
+$template['install']['tree9']="Usa cabeceras pre-compiladas";
+$template['install']['tree10']="Desactiva el soporte del backend de audio Phonon.";
 $template['install']['tree11']="
-	Disable OSS audio backend support. This automatically disables Audiofile support, too.";
-$template['install']['tree12']="Disable Audiofile audio backend support.";
-$template['install']['tree13']="Disable Esd audio backend support.";
-$template['install']['tree14']="Disable Qt-DBus support.";
-$template['install']['tree15']="Disable Qt-WebKit support.";
-$template['install']['tree16']="Disable KDE4 support.";
+	Desactiva el soporte del backend OSS. Ésto desactivará el soporte de Audiofile, también.";
+$template['install']['tree12']="Desactiva el soporte del backend de sonido Audiofile.";
+$template['install']['tree13']="Desactiva el soporte del backend de sonido Esd.";
+$template['install']['tree14']="Desactiva el soporte de Qt-DBus.";
+$template['install']['tree15']="Desactiva el soporte de Qt-WebKit.";
+$template['install']['tree16']="Desactiva el soporte de KDE4.";
 $template['install']['tree17']="
-	Disables the Secure Socket Layer support. The SSL support is automatically enabled if OpenSSL is detected by CMake.";
+	Desactiva el soporte de Secure Socket Layer. El soporte SSL se activa automáticamente si CMake detecta OpenSSL.";
 $template['install']['tree18']="
-	Disables the cryptographic engines and the whole cryptography/text transformation support. Produces a slightly smaller executable";
+	Desactiva los mecanismos de cifrado y todo el soporte de transformación texto/cifrado. Produce un ejecutable ligeramente menor";
 $template['install']['tree19']="
-	The IPv6 support is compiled by default on the platforms that support it: this option disables it.<br />
-	Even if you have a plain IPv4-only connection, you might want to keep the IPv6 support: you will be able to lookup IPv6 hostnames.";
+	El soporte IPv6 está compilado por defecto en las plataformas que lo soportan: esta opción lo desactiva.<br />
+	Aunque sólo tengas una conexión IPv4, puede que quieras mantener el soporte IPv6: podrás resolver hosts IPv6.";
 $template['install']['tree20']="
-	This option disables pseudo-transparency support.<br />
-	The pseudo transparency support makes the KVIrc windows look like semi-transparent (this is NOT real transparency: this is just a nice-looking hack).<br />
-	If KDE support is enabled, KVIrc will have an option that makes all windows use a faded KDE desktop background image as background. Without KDE support you will be able to choose a fake background image and use it as background. (You can still
-        choose your desktop wallpaper: this will (more-or-less) work in all the window managers).<br />
-	It is cool-looking but usually eats some memory when enabled.<br />
-	It also eats some executable size.<br />
-	So this option allows to disable the pseudo-transparency.";
+	Esta opción desactiva el soporte de pseudo-transparencia.<br />
+	La pseudo transparencia hace que las ventanas de KVIrc parezcan semi-transparentes (ésto NO es transparencia real: sólo un hack muy bonito).<br />
+	Si el soporte de KDE está activado, KVIrc tendrá una opción que hace que todas las ventanas usen el fondo del escritorio de KDE como fondo de las ventanas. Sin soporte de KDE podrás elegir una imagen de fondo falsa y usarla de fondo.
+        (Puedes elegir tu fondo de escritorio: ésto funcionará -más o menos- en todos los administradores de ventanas).<br />
+	Es bonito pero normalmente come algo de memoria cuando está activado.<br />
+	También come algo del espacio del ejecutable.<br />
+	Así que esta opción permite desactivar la pseudo-transparencia.";
 $template['install']['tree21']="
-	Forcibly disable perl support.<br />
-        You will not be able to use perl scripts inside KVIrc.";
+	Desactiva el soporte de perl.<br />
+        No podrás usar scripts de perl en KVIrc.";
 $template['install']['tree22']="
-	Forcibly disable python support.<br />
-        You will not be able to use python scripts inside KVIrc.";
+	Desactiva el soporte de python.<br />
+        No podrás usar scripts de python en KVIrc.";
 $template['install']['tree23']="
-	Disables support for inter-process communication.<br />
-	You will be not able to send remote commands to running KVIrc sessions: this basically means that every time you run the KVIrc executable, a new session will be started.<br />
-	If you don't use this switch, a new session will be started only if no session is running on the same display or \"new session\" has been forced by a commandline switch.<br />
-	If a session is already running, the commandline will be passed to that session via IPC (X-event-based communication).<br />
-	This option saves some KB of the KVIrc executable, so if you're really short in memory, you might use it, otherwise, IPC is a nice feature.";
-$template['install']['tree24']="Disables the use of GetText to generate translation files.";
-$template['install']['tree25']="Disables docs generation through Doxygen.";
+	Desactiva el soporte para la comunicación entre procesos.<br />
+	No podrás enviar comandos remotos a sesiones de KVIrc: estos significa básicamente que cada vez que ejecutes KVIrc, una nueva sesión será iniciada.<br />
+	Si no usas este flag, sólo se iniciará una nueva sesión si no hay una sesión ya activa en la misma ventana o si la \"nueva sesión\" ha sido forzada mediante la línea de comandos.<br />
+	Si una sesión ya se está ejecutando, la línea de comandos será pasada a esa sesión vía IPC (comunicación basada en eventos de las X).<br />
+	Esta opción elimina algunos KB del ejecutable de KVIrc, así que si realmente andas corto de memoria, podrías usarla, de otro modo, mantener IPC es interesante.";
+$template['install']['tree24']="Desactiva el uso de GetText para generar las traducciones.";
+$template['install']['tree25']="Desactiva la generación de los documentos mediante Doxygen.";
 $template['install']['tree26']="
-	This will disable the use of the system memmove() memcpy() and memset() functions and enable the bundled implementations. Use it if you have undefined references to these functions while compiling.";
+	Ésto desactivará el uso de memmove() memcpy() y memset() y activa las implementaciones del sistema. Úsalo si tienes referencias no definidas a estas funciones al compilar.";
 $template['install']['tree27']="
-	Explicitly disable the usage of the GSM library. This will disable the DCC VOICE GSM codec but might help when the compilation stops complaining of something related to GSM :)";
+	Desactiva explícitamente el uso de la librería GSM. Ésto desactivará el códec DCC VOICE GSM pero podría ayudar cuando la compilación se parece pidiendo algo relacionado con GSM :)";
 $template['install']['tree28']="
-	KVIrc contains some ix86 assembly routines that *could* performs some things faster (this is not always true, depends on the compiler).<br />
-	You might want to try it if your KVIrc seems to be really slow...";
+	KVIrc contiene algunas rutinas ix86 que *podrían* hacer que las cosas fueran más rápidas (ésto no es siempre cierto, depende del compilador).<br />
+	Podrías intentar usarlo si tu KVIrc parecer ser muy lento...";
 $template['install']['tree29']="
-	Explicitly disable the DCC VOICE sound support. This might help if you have problems in compilation of src/modules/dcc/voice.cpp.<br />
-	It will disable the sound support (and thus make DCC VOICE not usable).";
+	Desactiva explícitamente el soporte de sonido DCC VOICE. Ésto podría ayudar si tienes problemas con la compilación de src/modules/dcc/voice.cpp.<br />
+	Desactivará el soporte de sonido (y por lo tanto hará que DCC VOICE no se pueda usar).";
 $template['install']['tree30']="
-	Debug stuff... enables memory allocation profiling (don't use it :)";
+	Cosas de depuración... activa el profiling de la asignación de memoria (no lo uses :)";
 $template['install']['tree31']="
-	Enables malloc() memory checks. This will print a nice message if your system goes out of memory...<br />
-	It can't save you from buying new RAM, but at least you will know that your system went out of memory and it is not a proper kvirc fault.<br />
-	Actually you probably have no reason in using it.";
+	Activa las comprobaciones de memoria de malloc(). Ésto imprimirá un bonito mensaje si tu sistema se queda sin memoria...<br />
+	No te va a salvar de comprar más RAM, pero por lo menos sabrás que tu sistema se quedó sin memoria y que no es un error de kvirc.<br />
+	Probablemente no tengas razón para usarlo.";
 $template['install']['tree32']="
-	Manually set a revision number if subversion is not found on your system.<br />
-	This is useful mostly on windows.";
-$template['install']['tree33']="Add some pizza for dinner :)";
-$template['install']['tree34']="Add some beers to chat :)";
+	Configura manualmente un número de revisión si subversion no se ha encontrado en tu sistema.<br />
+	Ésto es útil, sobre todo, en Windows.";
+$template['install']['tree33']="Añade algo de pizza para la cena :)";
+$template['install']['tree34']="Añade algunas cervezas para el chat :)";
 $template['install']['text31']="
-	The CMake build system provide also an interactive mode to configure the environment before compiling.<br />
-	Again, we encourage the \"out-of-source\" building: build all files without dirting the sources directory.";
+	El sistema de compilación CMake también da un modo interactivo de configurar el entorno antes de compilar.<br />
+	De nuevo, te recomendamos usar el método de compilación \"fuera-del-código\": compílalo todo sin ensuciar las fuentes.";
 $template['install']['text32']="
-	Now you're in interactive mode, just follow the instructions on screen to configure your compilation environment.";
-$template['install']['text33']="This step is easy :)<br />Cross your fingers and run";
+	Ahora que estás en modo interactivo, simplemente sigue las instrucciones en pantalla para configurar tu entorno de compilación.";
+$template['install']['text33']="Este paso es fácil :)<br />Cruza los dedos y ejecuta";
 $template['install']['text34']="
-	If your make is not a GNU make (this happens on FreeBSD for example) you should use \"gmake\" instead.<br />
-	The compilation process will take from 3-4 minutes to some hours depending on the machine capabilities and load.<br />
-	If you have a slow cpu but have a couple of computers in a lan you might consider using distcc to distribute the compilation.</p>
-	<p>Once the compilation has been successfull, run";
+	Si tu make no es de GNU (ésto pasa en FreeBSD por ejemplo) deberías usar \"gmake\" en su lugar.<br />
+	El proceso de compilación tardará de 3-4 minutos a algunas horas dependiendo de la capacidad y la carga del equipo.<br />
+	Si tienes una CPU lenta pero tienes varios ordenadores en red, podrías considerar usar distcc para distribuir la compilación.</p>
+	<p>Una vez que la compilación ha sido exitosa, ejecuta";
 $template['install']['text35']="
-	Same as above: use \"gmake install\" if your make is not GNU make.</p>
-	<p>This will install the executable in /usr/local/bin (if you don't have specified a different -DCMAKE_INSTALL_PREFIX option in the cmake rules), the libraries in /usr/local/lib (if you don't have specified a different -DLIB_SUFFIX option in the cmake rules) and the shared data in /usr/local/share/kvirc.</p>
-	<p>Make sure that /usr/local/lib is in your /etc/ld.so.conf , if it isn't there, put it there and run";
+	Igual que antes, usa \"gmake install\" si tu make no es de GNU.</p>
+	<p>Ésto instalará el ejecutable en /usr/local/bin (si no has especificado una opción -DCMAKE_INSTALL_PREFIX distinta en las reglas cmake), las librerías en /usr/local/lib (si no has especificado una opción -DLIB_SUFFIX distinta en las reglas cmake) y los datos compartidos /usr/local/share/kvirc.</p>
+	<p>Asegúrate de que /usr/local/lib está en tu /etc/ld.so.conf, y si no está ahí, ponlo ahí y ejecuta";
 $template['install']['text36']="
-	If you have decided to use the KDE support the installation might have placed all these files in your \$KDEDIR tree instead of /usr/local.<br />
-	In this case you should be OK since KDE requires its library dir to be in /etc/ld.so.conf";
+	Si has decidido usar el soporte KDE la instalación puede haber puesto todos estos archivos en \$KDEDIR en lugar de en /usr/local.<br />
+	En este caso, todo está bien ya que KDE requiere que su directorio de librerías esté en /etc/ld.so.conf";
 $template['install']['text37']="
-	There is a detailed compilation and installation HOWTO for MacOS X systems located in the doc/ directory. It's named INSTALL-MacOS.txt";
+	Hay un HOWTO de compilación e instalación para sistemas Mac OS X en el directorio doc/. Se llama INSTALL-MacOS.txt";
 $template['install']['text38']="
-	There is a detailed compilation and installation HOWTO for Win32 systems located in the doc/ directory. It's named INSTALL-Win32.txt";
+	Hay un HOWTO de compilación e instalación para sistemas Mac OS X en el directorio doc/. Se llama INSTALL-Win32.txt";
 $template['install']['text39']="
-	CMake supports DESTDIR argument.<br />
-	So, if you want to make a package for your distro, you simply have to pass it at \"make install\" stage: your install files will go to the choosed path.<br />
-	The synthax is";
+	CMake soporta el argumento DESTDIR.<br />
+	Así que, si quieres hacer un paquete para tu distro, simplemente tienes que pasarlo en la etapa \"make install\": tus archivos irán a la ruta elegida.<br />
+	La sintaxis es";
 $template['install']['text40']="
-	After this step, just follow your distribution's rules to make a good package for the distro you're running.</p>
-	<p>Alternatively, you can try the experimental CPack support included in CMakeLists.txt to build a package: in this case, please refer to the CPack documentation.";
-$template['install']['text41']="That's all folks.";
+	Después de este paso, simplemente sigue las reglas de tu distribución para hacer un buen paquete.</p>
+	<p>Alternativamente, puedes usar el soporte experimental de CPack incluido en CMakeLists.txt para hacer un paquete: en este caso, lee la documentación de CPack.";
+$template['install']['text41']="Eso es todo, amigos.";
 /* install.php end */
 
 /* license.php start */
@@ -948,7 +948,7 @@ $template['themes']['text2b2']="Abre el Administrador de Temas de KVIrc";
 $template['themes']['text2b3']="Haz clic en el botón \"Instalar tema desde el disco\"";
 $template['themes']['text2b4']="Haz doble clic en el nuevo tema";
 $template['themes']['text2b5']="Disfruta";
-$template['themes']['text3a']="¿Cómo puedo crear un tema";
+$template['themes']['text3a']="¿Cómo puedo crear un tema?";
 $template['themes']['text3b1']="Hay un pequeño HOWTO, que puedes encontrar";
 $template['themes']['text3b2']="aquí";
 $template['themes']['text3b3']="y una versión en italiano";
@@ -992,9 +992,9 @@ $template['themes']['theme31']="Un tema inspirado en las novelas de R.A. Salvato
 $template['themes']['theme32']="...¡porque todo el mundo es un bonito fractal!";
 $template['themes']['theme33']="Un tema más oscuro al estilo techno y con iconos simples y descriptivos";
 $template['themes']['theme34']="Un tema hecho por el portal CoreZeam.org";
-$template['themes']['theme35']="A black-based theme easy to see and distinguish";
-$template['themes']['theme36']="A pink theme inspired on Hello Kitty";
-$template['themes']['theme37']="Easy-on-eyes refreshing waterfall wallpaper... diffused with light turquoise transparency. Coherent text colors with the source of the message";
+$template['themes']['theme35']="Un tema negro fácil de ver y distinguir";
+$template['themes']['theme36']="Un tema rosa inspirado en Hello Kitty";
+$template['themes']['theme37']="Fondo refrescante de una cascada de agua... difundido con una ligera transparencia turquesa. Colores del texto coherentes con la fuente del mensaje";
 /* themes.php end */
 
 /* tools.php start */
@@ -1002,9 +1002,9 @@ $template['tools']['title']="Herramientas";
 $template['tools']['text1']="Aquí puedes encontrar algunas herramientas relacionadas con KVIrc";
 $template['tools']['tool1']="Resaltado de la sintaxis KVS para Notepad++";
 $template['tools']['tool2']="Un simple tcl para eggdrops para hacerlos responder a algunas peticiones CTCP";
-$template['tools']['tool3']="Un tcl de sindicación RSS para eggdrops, para hacerlos responder a algunos eventos como cambios en el SVN y feeds RSS de Tracking de bugs";
+$template['tools']['tool3']="Un TCL de sindicación RSS para eggdrops, para hacerlos responder a algunos eventos como cambios en el SVN y feeds RSS de Tracking de bugs";
 $template['tools']['tool4']="Un script simple escrito en TCL para comprobar archivos de traducción GetText e informar de posibles errores";
-$template['tools']['tool5']="Un script PHP-CLI simple que convierte logs formateados de KVIrc en texto plano quitando los códigos de colores y caracteres de control";
+$template['tools']['tool5']="Un script PHP-CLI simple que convierte logs formateados de KVIrc a texto plano quitando los códigos de colores y caracteres de control";
 /* tools.php end */
 
 /* translation.php start */
@@ -1019,148 +1019,83 @@ $template['translation']['text3']="
 $template['translation']['text4']="
 	Si estás interesado en traducir KVIrc en un nuevo idioma puedes encontrar aquí un bonito How-To.<br />
 	Algunos idiomas son actualizados (casi) diariamente, otros necesitan un nuevo mantenedor. Si quieres ayudar a mejor el soporte actual de tu idioma, por favor contacta con su <b>Último traductor</b>, listado aquí:";
-$template['translation']['text5']="unmaintained";
+$template['translation']['text5']="no mantenido";
 $template['translation']['text6a']="
-	Talking about \"unmaintained\", we encourage you to help us translating.<br />
-	To do so, subscribe to the";
+	Con respecto a las traducciones marcadas con \"no mantenido\", te animamos a ayudarnos traduciendo.<br />
+	Para hacerlo, suscríbete a la";
 $template['translation']['text6b']="
-	to keep in touch with the developers and to talk about your interest in translating KVIrc.";
+	para mantenerte en contacto con los desarrolladores y hablar de tu interés en traducir KVIrc.";
 $template['translation']['text7']="
-	This mini-howto describes the procedure for translating KVIrc in a new language";
-$template['translation']['text8']="Getting the right sources.";
+	Este mini-howto describe el procedimiento para traducir KVIrc a un nuevo idioma";
+$template['translation']['text8']="Conseguir el código fuente.";
 $template['translation']['text9a']="
-	First of all you need the SVN version of KVIrc. To obtain the SVN version you can follow the instructions on";
-$template['translation']['text9b']="The translation stuff is in";
-$template['translation']['text10']="Initialize the build environment";
-$template['translation']['text11']="
-	Enter the directory containing the KVIrc code and follow the doc/INSTALL documentation on how to run CMake to generate the needed Makefiles.";
-$template['translation']['text12']="Finding out your language code";
-$template['translation']['text13']="
-	You must find out the contents of your language code. Usually this is a string formed of at least two letters and it can be found by examining the contents of your \$LANG shell variable or by looking at";
-$template['translation']['text14']="Examples of such codes are";
-$template['translation']['text15']="Generating the list of messages to translate";
-$template['translation']['text16']="
-	You must perform this step only if it is the first time that KVIrc is translated into your language. If you're going to update an existing translation then you can jump directly to step 4.<br />
-	Enter your build directory and run this command to extract the messages from the
-sources:";
-$template['translation']['text17']="
-	A series of .pot files will be created in the subdirs of build_directory/po/<br />
-	Each file refers to a specific component of KVIrc: eg. the main translation file is located in build_directory/po/core/kvirc/kvirc.pot<br />
-	Create a copy for each of these files named file_xxx.po where file is the name of the component and xxx is your language code found in step 2.";
-$template['translation']['text18']="
-	...and so on for all the other modules; you are not forced to translate all the files at once, but creating the files skeleton for all components is recommended.";
-$template['translation']['text19']="Translating the messages";
-$template['translation']['text20']="
-	If you just followed step 3 then you have just created the *_xxx.po (eg. kvirc_it.po) files where xxx stands for your language code (found in step 2).<br />
-	If you jumped directly here from 2 then you need to find the existing *_xxx.po files in the kvirc/po subdirectories.<br />
-	If no such files exist for your locale, you probably missed to create them in step 3.";
-$template['translation']['text21']="
-	You can translate *.po files using a simple text editor (that <b>HAVE</b> to support the UTF-8 encoding), but it's strongly advised that you use a translation software such as lokalize for linux/kde or poedit for windows.";
-$template['translation']['text22']="
-	Note on the format of the translation files.<br />
-	The *.po files contains a set of strings like the following one:";
-$template['translation']['text23a']="/path/to/the/file/which/contains/the/string: line number";
-$template['translation']['text23b']="The original english message";
-$template['translation']['text23c']="The translation goes here";
-$template['translation']['text24']="
-	The <i>msgid</i> is the original message that needs to be translated and <i>msgstr</i> is the translation (that will be initially empty, when the kvirc_xxx.po file is created).";
-$template['translation']['text25']="
-	The msgid can contain html tags, escapes like \"\\n\" and format strings like \"%s\". You <b>MUST</b> match the tags, escapes and format specs in the msgstr strings. Keep special attention to the format specifications (%s, %W, %Q, ...).<br />
-	They must remain <b>EXACTLY</b> the same order as in the msgid: exchanging the order or writing a wrong format spec will lead to crashes sooner or later.";
-$template['translation']['text26']="Adding the translation to the install system";
-$template['translation']['text27']="
-	Once you have translated some strings you can try to run the translation in KVIrc. If you are updating an existing translation then you can jump directly to step 6.";
-$template['translation']['text28']="
-	You need to force the build system to pick up your newly created translation files and compile it. This is again an one time step. You'll just need to clean your CMakeCache.txt (located in your build directory) and re-run CMake again for it to pick up the new translation file, then build KVIrc as usual.<br />
-	When it has finished building, move to the next step.";
-$template['translation']['text29']="Trying the translation";
-$template['translation']['text30']="Run make and wait until it finishes.";
-$template['translation']['text31']="
-	Check your \$LANG enviroment variable.<br />
-	If you are translating to same language as your system/user language environment is, there is probably no need to change the language.<br />
-	Otherwise you need to pass the \$LANG variable to the environment when running KVIrc.";
-$template['translation']['text32']="
-	KVIrc should then pick up your translation file and use it.";
-$template['translation']['text33']="Updating the translation when the sources change";
-$template['translation']['text34']="
-	In the process of KVIrc development, new message strings gets added inside the source files, while some others can change or even get removed.<br />
-	When you do a svn update to obtain the latest sources you should then enter your build directory and run:";
-$template['translation']['text35']="
-	This procedure will update your *_xxx.po files with the new messages and mark the old messages as either fuzzy or invalid.<br />
-	The invalid entries must be re-translated completely again while the fuzzy entries have minor changes and can be probably adjusted in few seconds.";
-$template['translation']['text36']="Misc notes";
-$template['translation']['text37']="
-	If you're in doubt about some translation, you could take a look at how similar sentences have been translated in the KDE *.po files, or in other softwares. If you need some further help, contact us on our mailing list or on irc (irc://irc.freenode.net/#KVIrc).";
-$template['translation']['text38']="
-	Since many of the modules have their own translation files then the procedure above may be repeated for the po/modules/*/ subdirectories.<br />
-	Anyway you are not forced to translate all the files at once: a partial translation will work anyway.";
-$template['translation']['text39']="
-	When you're satisfied with your translation you may send your *.po files to the KVIrc mailing list asking for inclusion in the SVN. If you want to maintain the translation in the future then you may also apply for a SVN account.";
-$template['translation']['text40']="Happy translating :)";
-/*
-$template['translation']['text4a']="no mantenido";
-$template['translation']['text4b']="
-	Hablando de \"no mantenido\", te animamos a ayudarnos traduciendo.<br />
-	Envía un mail a la lista de correo si estás interesado :)";
-$template['translation']['text5a']="¡No te olvides de subscribirte a la";
-$template['translation']['text5b']="para mantenerte en contacto con los desarrolladores!";
-$template['translation']['text6']="Este mini-howto describe el procedimiento para traducir KVIrc a un nuevo idioma";
-$template['translation']['text7']="Conseguir el código fuente.";
-$template['translation']['text8a']="
 	Lo primero de todo es conseguir la versión SVN de KVIrc. Para obtenerla puedes seguir las instrucciones de";
-$template['translation']['text8b']="Las cosas de la traducción están en";
-$template['translation']['text9']="Consiguiendo tu código de idioma";
-$template['translation']['text10a']="
-	Debes conseguir los contenidos de tu código de idioma. Normalmente son dos letras o más y puedes encontrarla examinando los contenidos de la variable \$LANG de tu shell o mirando";
-$template['translation']['text10b']="aquí";
-$template['translation']['text10c']="Ejemplos de dichos códigos son";
-$template['translation']['text11']="Generando la lista de mensajes a traducir";
-$template['translation']['text12']="
-	Debes realizar este paso sólo si es la primera vez que KVIrc es traducido a tu idioma. Si vas a actualizar una traducción existente puedes saltar directamente al Paso 3.<br />
-	Ejecuta el comando para extraer los mensajes del código fuente.";
+$template['translation']['text9b']="Las cosas de la traducción están en";
+$template['translation']['text10']="Inicializando el entorno de compilación";
+$template['translation']['text11']="
+	Entra en el directorio que contiene el código de KVIrc y sigue la documentación de doc/INSTALL para saber cómo ejecutar CMake para generar los Makefiles necesarios.";
+$template['translation']['text12']="Consiguiendo tu código de idioma";
 $template['translation']['text13']="
-	Un archivo llamado <code>kvirc.pot</code> será creado. Tienes que renombrar este archivo a <code>kvirc_xxx.po</code> donde xxx es tu código de idioma (el del Paso 1).";
-$template['translation']['text14']="Traduciendo los mensajes";
-$template['translation']['text15a']="
-	Si has hecho el Paso 2 acabas de crear el archivo <code>kvirc_xxx.po</code> donde xxx es tu código de idioma (el del Paso 1).<br />
-	Si has saltado directamente aquí desde el 1 tienes que encontrar el archivo <code>kvirc_xxx.po</code> existente en la carpeta <code>kvirc/po/kvirc</code><br />
-	Si no hay uno vuelve al Paso 2.";
-$template['translation']['text15b']="
-	El archivo <code>kvirc_xxx.po</code> contiene una lista de frases como la siguiente:";
-$template['translation']['text100a']="/ruta/al/archivo/que/contiene/la/frase: número de línea";
-$template['translation']['text100b']="Traduciendo los mensajes";
-$template['translation']['text100c']="La traducción va aquí";
+	Debes conseguir los contenidos de tu código de idioma. Normalmente son dos letras o más y puedes encontrarla examinando los contenidos de la variable \$LANG de tu shell o mirando";
+$template['translation']['text14']="Ejemplos de dichos códigos son";
+$template['translation']['text15']="Generando la lista de mensajes a traducir";
 $template['translation']['text16']="
-	El <i>msgid</i> es el mensaje original que debe ser traducido y <i>msgstr</i> es la traducción (inicialmente estará vacía, cuando el archivo <code>kvirc_xxx.po</code> es creado)";
+	Debes realizar este paso solo si es la primera vez que KVIrc es traducido a tu idioma. Si vas a actualizar una traducción existente puedes saltar directamente al paso 4.<br />
+	Ejecuta este comando para extraer los mensajes del código fuente:";
 $template['translation']['text17']="
-	El msgid puede contener tags html, escapes como \"\\n\" y especificaciones de formato como \"%s\". <b>DEBES</b> dejar las tags, escapes y especificaciones de formato en las cadenas msgstr. <b>Presta especial atención</b> a las especificaciones de formato (%s, %W, %Q...).<br />
-	Deben llevar <b>EXACTAMENTE el mismo orden</b> que en el msgid: cambiando el orden o escribiendo una spec de formato incorrecta hará que KVIrc falle tarde o temprano.";
-$template['translation']['text18']="Añadiendo la traducción al Makefile.am";
-$template['translation']['text19']="
-	Una vez hayas traducido algunas cadenas puedes intentar ejecutar la traducción en KVIrc. Si estás actualizando una traducción existente puedes saltar directamente al Paso 5.";
+	Una serie de archivos .pot serán creados en los subdirectorios de directorio_de_compilacion/po/<br />
+	Cada archivo se refiere a un componente específico de KVIrc: por ejemplo, el archivo de traducción principal está en directorio_de_compilacion/po/core/kvirc/kvirc.pot<br />
+	Crea una copia de cada uno de estos archivos llamada archivo_xxx.po donde archivo es el nombre del componente y xxx es tu código de idioma encontrado en el paso 2.";
+$template['translation']['text18']="
+	...y así sucesivamente para todos los demás módulos; no tienes que traducir todos los archivos de una vez, pero se recomienda crear el esqueleto de archivos para todos los componentes.";
+$template['translation']['text19']="Traduciendo los mensajes";
 $template['translation']['text20']="
-	Debes forzar al proceso make a coger tu traducción y compilarla. Esto es una cosa que debes hacer una sola vez. En <code>kvirc/src/kvirc</code> hay un archivo llamado <code>Makefile.am</code> Debes editarlo y añadir <code>kvirc_xxx.po</code> donde los otros archivos *.po son mencionados. No deberías tener problemas en adivinar que tiene que ser añadido mirando a las otras entradas *.po de ese archivo.";
-$template['translation']['text21']="Entonces simplemente ejecuta:";
+	Si has seguido el paso 3 entonces acabas de crear los archivos *_xxx.po (por ejemplo, kvirc_it.po), donde xxx es tu código de idioma (encontrado en el paso 2).<br />
+	Si has saltado directamente aquí desde el paso 2 entonces tienes que encontrar los archivos *_xxx.po existentes en los subdirectorios kvirc/po.<br />
+	Si dichos archivos no existen para tu idioma, probablemente no los creaste en el paso 3.";
+$template['translation']['text21']="
+	Puedes traducir los archivos *.po usando un editor de texto simple (que <b>TIENE</b> que soportar la codificación UTF-8), pero se recomienda que uses un software de traducción tal como lokalize para linux/kde o poedit para windows.";
 $template['translation']['text22']="
-	y compila KVIrc normalmente. Una vez haya finalizado el proceso, ejecuta KVIrc asegurándote de que la variable \$LANG está configurada correctamente.";
-$template['translation']['text23']="Probando la traducción";
-$template['translation']['text24']="Ejecuta make y espera hasta que acabe";
-$template['translation']['text25']="KVIrc debería coger tu archivo de traducción y usarlo.";
-$template['translation']['text26']="Actualizando la traducción cuando el código fuente cambie";
+	Nota en el formato de los archivos de traducción.<br />
+	Los archivos *.po contienen un número de frases como la siguiente:";
+$template['translation']['text23a']="/ruta/al/archivo/que/contiene/la/frase: número de línea";
+$template['translation']['text23b']="El mensaje original en inglés";
+$template['translation']['text23c']="La traducción va aquí";
+$template['translation']['text24']="
+	El <i>msgid</i> es el mensaje original que necesita ser traducido y <i>msgstr</i> es la traducción (que es inicialmente vacía, cuando el archivo kvirc_xxx.po es creado).";
+$template['translation']['text25']="
+	El msgid puede contener tags html, escapes como \"\\n\" y especificaciones de formato como \"%s\". <b>DEBES</b> dejar las tags, escapes y especificaciones de formato en las cadenas msgstr. <b>Presta especial atención</b> a las especificaciones de formato (%s, %W, %Q...).<br />
+	Deben llevar <b>EXACTAMENTE el mismo orden</b> que en el msgid: cambiando el orden o escribiendo una spec de formato incorrecta harás que KVIrc falle tarde o temprano.";
+$template['translation']['text26']="Añadiendo la traducción al sistema de instalación";
 $template['translation']['text27']="
-	Mientras el desarrollo avanza nuevos mensajes son añadidos a las fuentes y una pequeña parte de los mensajes actuales cambia. Cuando hagas una actualizacion SVN para obtener las últimas fuentes deberías ir al directorio <code>kvirc/po/kvirc</code> y ejecutar:";
+	Una vez hayas traducido algunas cadenas puedes intentar ejecutar la traducción en KVIrc. Si estás actualizando una traducción existente puedes saltar directamente al paso 6.";
 $template['translation']['text28']="
-	Este procedimiento actualizará tu archivo <code>kvirc_xxx.po</code> con los nuevos mensajes y marcará los antiguos mensajes como <i>difusos</i> o no válidos. Las entradas no válidas deben ser traducidas completamente de nuevo mientras que las entradas <i>difusas</i> tienen cambios menores y podrán ser ajustadas probablemente en pocos segundos.";
-$template['translation']['text29']="Miscelánea";
-$template['translation']['text30']="
-	Si tienes dudas sobre alguna traducción, deberías echar un vistazo a como frases similares han sido traducidas en los archivos *.po de KDE: debería haber un archivo de traducción para KDE disponible en el SVN de KDE.";
+	Tienes que forzar al proceso de compilación a coger tus nuevos archivos de traducción y compilarlos. Esto es algo que tendrás que hacer una sola vez. Simplemente tendrás que borrar tu CMakeCache.txt (en el directorio de compilación) y volver a ejecutar CMake de nuevo para que detecte el nuevo archivo de traducción, y compilar KVIrc como normalmente harías.<br />
+	Cuando haya acabado, ve al siguiente paso.";
+$template['translation']['text29']="Probando la traducción";
+$template['translation']['text30']="Ejecuta make y espera a que finalice.";
 $template['translation']['text31']="
-	Ya que muchos módulos tienen sus propios archivos de traducción entonces el procedimiento anterior podría ser repetido para los subdirectorios <code>po/modules/*</code>";
-$template['translation']['text32a']="
-	Cuando estés satisfecho con tu traducción podrías enviar tus archivos *.po a";
-$template['translation']['text32b']="
-	pidiendo su inclusión en el SVN. Si quieres mantener la traducción también podrías pedir una cuenta SVN con acceso a escritura.";
-$template['translation']['text33']="Feliz traducción :)";
+	Comprueba tu variable de entorno \$LANG.<br />
+	Si estás traducciendo al mismo idioma en el que tu usuario/sistema está, probablemente no haya necesidad de cambiar el idioma.<br />
+	De otro modo tendrás que pasar la variable \$LANG al entorno cuando vayas a ejecutar KVIrc.";
+$template['translation']['text32']="
+	KVIrc debería coger tu archivo de traducción y usarlo.";
+$template['translation']['text33']="Actualizando la traducción cuando cambien las fuentes";
+$template['translation']['text34']="
+	En el proceso de desarrollo de KVIrc, se añaden nuevas cadenas dentro de los archivos de fuentes, mientras que otras cambian o incluso son eliminadas.<br />
+	Cuando hagas una actualización de svn para obtener las últimas fuentes deberías entrar a tu directorio de compilación y ejecutar:";
+$template['translation']['text35']="
+	Este procedimiento actualizará tu archivo <code>kvirc_xxx.po</code> con los nuevos mensajes y marcará los antiguos mensajes como <i>difusos</i> o no válidos.
+	Las entradas no válidas deben ser traducidas completamente de nuevo mientras que las entradas <i>difusas</i> tienen cambios menores y podrán ser ajustadas probablemente en pocos segundos.";
+$template['translation']['text36']="Notas";
+$template['translation']['text37']="
+	Si estás dudando sobre alguna traducción, puedes echar un vistazo a cómo frases similares han sido traducidas en los archivos *.po de KDE, o en otros programas. Si necesitas más ayuda, contacta con nuestra lista de correo o en el irc (irc://irc.freenode.net/#KVIrc).";
+$template['translation']['text38']="
+	Ya que muchos de los módulos tienen sus propios archivos de traducción, el procedimiento anterior debe ser repetido para los subdirectorios po/modules/*.<br />
+	De todos modos no tienes por qué traducir todos los archivos de una vez: una traducción parcial funcionará.";
+$template['translation']['text39']="
+	Cuando estés satisfecho con tu traducción puedes mandar tus archivos *.po a la lista de correo, pidiendo su inclusión en el SVN. Si quieres mantener la traducción en el futuro, también puedes pedir una cuenta SVN.";
+$template['translation']['text40']="Feliz traducción :)";
 /* translation.php end */
 
 /* tutorials.php start */
@@ -1190,8 +1125,8 @@ $template['tutorials']['text5a']="HowTo de temas";
 $template['tutorials']['text5b']="Un pequeño howto sobre cómo hacer un buen tema";
 $template['tutorials']['text6a']="Modificación del instalador bajo Win32";
 $template['tutorials']['text6b']="Un tutorial sobre cómo reempaquetar el instalador de windows para incluir un script por defecto modificado, un nuevo tema o lo que sea"; 
-$template['tutorials']['text7a']="Registered Users";
-$template['tutorials']['text7b']="Tutorial on how to manage the registered users database";
+$template['tutorials']['text7a']="Usuarios registrados";
+$template['tutorials']['text7b']="Tutorial que explica cómo administrar la base de datos de usuarios registrados";
 /* tutorials.php end */
 
 /* welcome.php start */
@@ -1200,6 +1135,6 @@ $template['welcome']['text']="
 	KVIrc es un cliente de <acronym title=\"Internet Relay Chat\">IRC</acronym> <a href=\"http://www.gnu.org\">libre</a> y portable basado en el excelente <a href=\"http://www.trolltech.com\">Qt GUI toolkit</a>.
 	KVIrc está siendo escrito por <a href=\"http://www.pragmaware.net\">Szymon Stefanek</a> y el equipo de desarrollo de KVIrc con la contribución de muchos desarrolladores adictos al IRC alrededor del mundo.";
 $template['welcome']['text2']="¡forma parte del proyecto!";
-$template['welcome']['alttext']="como ayudar en el proyecto KVIrc";
+$template['welcome']['alttext']="cómo ayudar en el proyecto KVIrc";
 /* welcome.php end */
 ?>
