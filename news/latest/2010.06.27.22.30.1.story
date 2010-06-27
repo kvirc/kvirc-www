@@ -47,7 +47,7 @@ KVIrc 4.0.0 wouldn't be possible.</p>
 <p>Other kudos go to Markus Rennings (mren), Kai Wasserbäch (Curan),
 Jan Wagner (spy6), Claudia Mongini (etherea), Jose (Zé) Melo (mmodem),
 Alexey Uzhva (alexey), Robert Förster (Dessa), ambossarm, TheXception,
-Voker57, Thomas Kalla, bugslayer, Aeriana, Desowin and obviously to everyone
+Voker57, Thomas Kalla, bugslayer, Aeriana, Desowin, gizmokid and obviously to everyone
 on #kvirc@freenode who provided testing and support.</p>
 
 <p>Well... it's time to play with it. The sources are available
