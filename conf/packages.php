@@ -83,8 +83,8 @@ $hua = $_SERVER['HTTP_USER_AGENT'];
 
 if((strpos($hua,'Windows') !== false) || (strpos($hua,'WinXP') !== false))
 {
-	$quickdownload_link = $ftp_mirror[1]['url']."/3.4.2/binary/win32/KVIrc-3.4.2.exe";
-	$quickdownload_version = "3.4.2";
+	$quickdownload_link = $ftp_mirror[1]['url']."/4.0.0/binary/win32/KVIrc-4.0.0-Insomnia.exe";
+	$quickdownload_version = "4.0.0";
 } /*else if((strpos($hua,'Safari') !== false) || (strpos($hua,'Macintosh') !== false) ||
 	(strpos($hua,'Mac OS X') !== false) || (strpos($hua,'Mac_PowerPC') !== false))
 {
@@ -348,13 +348,13 @@ $p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)"
 $package_count++;
 
 // Windows
-$p_filename[$package_count]    = "KVIrc-3.4.2.1.exe";
-$p_path[$package_count]        = "3.4.2/binary/win32";
-$p_description[$package_count] = "KVIrc 3.4.2, Windows binary";
-$p_details[$package_count]     = "The self-installing binary package for Windows built on top of the non-commercial version of the Qt library. Just double click on it after downloading.";
+$p_filename[$package_count]    = "KVIrc-4.0.0-Insomnia.exe";
+$p_path[$package_count]        = "4.0.0/binary/win32";
+$p_description[$package_count] = "KVIrc 4.0.0, Windows binary";
+$p_details[$package_count]     = "The self-installing binary package for Windows built on top of the LGPL version of the Qt library. Just double click on it after downloading.";
 $p_platform[$package_count]    = "win32";
-$p_version[$package_count]     = "3.4.2";
-$p_size[$package_count]        = "7012470";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "16328086";
 $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "CtrlAltCa (ctrlaltca at gmail dot com)";
 $package_count++;
@@ -427,20 +427,6 @@ $p_group[$package_count]       = "debian";
 $p_author[$package_count]      = "Kebianizao";
 $package_count++;
 
-/*
-// Windows with Classic Icons
-$p_filename[$package_count]    = "KVIrc-3.4.2-classic.exe";
-$p_path[$package_count]        = "3.4.2/binary/win32";
-$p_description[$package_count] = "KVIrc 3.4.2, Windows Classic binary";
-$p_details[$package_count]     = "The self-installing binary package for Windows built on top of the non-commercial version of the Qt library. It uses the classic icon set. Just double click on it after downloading.";
-$p_platform[$package_count]    = "win32";
-$p_version[$package_count]     = "3.4.2";
-$p_size[$package_count]        = "6887557";
-$p_group[$package_count]       = "none";
-$p_author[$package_count]      = "Noldor (elfonol at gmail dot com)";
-$package_count++;
-*/
-
 // FreeBsd Port
 $p_filename[$package_count]    = "kvirc-3.4.2_1.tbz";
 $p_path[$package_count]        = "3.4.2/binary/freebsd";
@@ -478,6 +464,18 @@ $p_version[$package_count]     = "3.4.0";
 $p_size[$package_count]        = "7062650";
 $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "Szymon Stefanek (pragma at kvirc dot net)";
+$package_count++;
+
+// Windows
+$p_filename[$package_count]    = "KVIrc-3.4.2.1.exe";
+$p_path[$package_count]        = "3.4.2/binary/win32";
+$p_description[$package_count] = "KVIrc 3.4.2, Windows binary";
+$p_details[$package_count]     = "The self-installing binary package for Windows built on top of the non-commercial version of the Qt library. Just double click on it after downloading.";
+$p_platform[$package_count]    = "win32";
+$p_version[$package_count]     = "3.4.2";
+$p_size[$package_count]        = "7012470";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "CtrlAltCa (ctrlaltca at gmail dot com)";
 $package_count++;
 
 // Windows
