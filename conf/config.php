@@ -43,7 +43,7 @@ if(preg_match("/:/",$ip6,$blah)){
 $www_mirror=array(
 	1 => array("name" => "www.kvirc.net", "url" => "http://www.kvirc.net", "desc" => "Primary WWW site", "city" => "Oslo, Norway", "maintainer" => "Norwegian Linux Community"),
 	array("name" => "www.kvirc.de", "url" => "http://www.kvirc.de", "desc" => "German mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
-	array("name" => "kvirc.slackware.it", "url" => "http://kvirc.slackware.it", "desc" => "Italian mirror", "country" => "Italy", "city" => "Milano", "maintainer" => "Slackware.it"),
+	//array("name" => "kvirc.slackware.it", "url" => "http://kvirc.slackware.it", "desc" => "Italian mirror", "country" => "Italy", "city" => "Milano", "maintainer" => "Slackware.it"),
 	array("name" => "kvirc.visualscripts.com", "url" => "http://kvirc.visualscripts.com", "desc" => "USA mirror", "city" => "Houston, Texas, United States", "maintainer" => "THeLooX"),
 	//array("name" => "www.kvirc.omnikron.net", "url" => "http://www.kvirc.omnikron.net", "desc" => "www.kvirc.omnikron.net: Italian mirror (located in Arezzo)", "country" => "Italy", "city" => "Arezzo", "sponsor" => "Pragma,Iakko and Resio"),
 	//array("name" => "kvirc.trexle.net", "url" => "http://kvirc.trexle.net", "desc" => "kvirc.trexle.net: USA mirror (located in Texas)", "country" => "USA, Texas", "city" => "", "sponsor" => "Hossam Hossny from Texle.com"),
@@ -61,7 +61,7 @@ $ftp_mirror=array(
 	array("name" => "dedimarbo.ath.cx", "url" => "ftp://dedimarbo.ath.cx/pub/kvirc/", "desc" => "French mirror", "city" => "Paris, France", "maintainer" => "MarbolanGos"),
 	array("name" => "kvirc.eban-meban.com", "url" => "ftp://kvirc.eban-meban.com", "desc" => "Bulgarian mirror", "city" => "Asenovgrad, Bulgaria", "maintainer" => "lame"),
 	//array("name" => "ftp.kvirc.net", "url" => "ftp://ftp.kvirc.net/pub/kvirc", "desc" => "Primary FTP server", "city" => "Oslo, Norway", "maintainer" => "Norwegian Linux Community"),
-	array("name" => "kvirc.tradebit.com", "url" => "http://kvirc.tradebit.com/pub", "desc" => "USA mirror", "city" => "New York, United States", "maintainer" => "tradebit.com"),
+	array("name" => "kvirc.tradebit.com", "url" => "http://kvirc.tradebit.com", "desc" => "USA mirror", "city" => "New York, United States", "maintainer" => "tradebit.com"),
 	array("name" => "kvirc.imsam.info", "url" => "http://kvirc.imsam.info", "desc" => "German mirror", "city" => "Nuernberg, Germany", "maintainer" => "tradebit.com"),
 	array("name" => "kvirc.bcoos.net", "url" => "http://kvirc.bcoos.net", "desc" => "USA mirror", "city" => "United States", "maintainer" => "exoops.info")
 );
