@@ -54,7 +54,7 @@ $version_details["4.0.0"]           = "The latest stable release. This is the pa
 $group_description["none"]      = "No group";
 $group_details["none"]          = "This is a dummy package group: if you see this , you have found a bug in our site :D";
 
-$group_description["slackware"] = "Slackware *.tgz binary package";
+$group_description["slackware"] = "Slackware *.txz binary package";
 $group_details["slackware"]     = "Download this if you have a Slackware based system.";
 
 $group_description["debian"]    = "Debian *.deb binary package";
@@ -123,6 +123,36 @@ $p_size[$package_count]        = "6831235";
 $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "Szymon Tomasz Stefanek (pragma at kvirc dot net)";
 $package_count++;
+
+// 4.0.0
+// Windows
+$p_filename[$package_count]    = "KVIrc-4.0.0-Insomnia.exe";
+$p_path[$package_count]        = "4.0.0/binary/win32";
+$p_description[$package_count] = "KVIrc 4.0.0, Windows binary";
+$p_details[$package_count]     = "The self-installing binary package for Windows built on top of the LGPL version of the Qt library. Just double click on it after downloading.";
+$p_platform[$package_count]    = "win32";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "16328086";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "CtrlAltCa (ctrlaltca at gmail dot com)";
+$package_count++;
+
+// 4.0.0
+// Slackware 13.1
+$p_filename[$package_count]    = "kvirc-4.0.0-x86_64-1hel.txz";
+$p_path[$package_count]        = "4.0.0/binary/slackware";
+$p_description[$package_count] = "KVIrc 4.0.0, Slackware 13.1 binary";
+$p_details[$package_count]     = "The self-installing binary package for Slackware 13.1 built on top of glibc 2.11.1. Just use pkgtool to install after downloading.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "5000612";
+$p_group[$package_count]       = "slackware";
+$p_author[$package_count]      = "HelLViS69 (hell at hellvis69 dot netsons dot org)";
+$package_count++;
+
+// ========================================================================== //
+//                                OLDER RELEASES                              //
+// ========================================================================== //
 
 // 3.4.2
 // BZip 2 sources
@@ -347,18 +377,6 @@ $p_group[$package_count]       = "opensuse";
 $p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
 $package_count++;
 
-// Windows
-$p_filename[$package_count]    = "KVIrc-4.0.0-Insomnia.exe";
-$p_path[$package_count]        = "4.0.0/binary/win32";
-$p_description[$package_count] = "KVIrc 4.0.0, Windows binary";
-$p_details[$package_count]     = "The self-installing binary package for Windows built on top of the LGPL version of the Qt library. Just double click on it after downloading.";
-$p_platform[$package_count]    = "win32";
-$p_version[$package_count]     = "4.0.0";
-$p_size[$package_count]        = "16328086";
-$p_group[$package_count]       = "none";
-$p_author[$package_count]      = "CtrlAltCa (ctrlaltca at gmail dot com)";
-$package_count++;
-
 // Debian
 $p_filename[$package_count]    = "kvirc_3.4.2-0_i386.deb";
 $p_path[$package_count]        = "3.4.2/binary/debian";
@@ -438,10 +456,6 @@ $p_size[$package_count]        = "8557506";
 $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "Cpet (chris [at] officialunix [dot] com)";
 $package_count++;
-
-// ========================================================================== //
-//                                OLDER RELEASES                              //
-// ========================================================================== //
 
 // Sources
 $p_filename[$package_count]    = "kvirc-3.4.0.tar.bz2";

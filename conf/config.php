@@ -4,8 +4,8 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
 // Some vars
-$current="3.4.2";
-$availVersions=array("3.2.1","3.2.3","3.2.4","3.2.5","3.2.6","3.4.0",$current);
+$current="4.0.0";
+$availVersions=array("3.2.1","3.2.3","3.2.4","3.2.5","3.2.6","3.4.0","3.4.2",$current);
 $dpath="ftp://ftp.kvirc.de/pub/kvirc";
 
 // Get environment
@@ -257,7 +257,6 @@ $splash=array(
 
 // Themes
 // array("name" => "name", "version" => "version", "mail" => "mail", "author" => "author", "desc" => "description", "home" => "homepage", "download" => "download", "screen" => "screenshot", "thumb" => "thumbnail")
-
 $themes=array(
 	1 => array("name" => "Marble Theme", "version" => "1.0.4", "mail" => "sbrokka [at] openlug [dot] org", "author" => "Sbrokka", "desc" => $template['themes']['theme1'], "home" => "", "download" => "Marble-1.0.4.kvt", "screen" => "theme_marble.jpg", "thumb" => "thumb_marble.png"),
 	array("name" => "Crystal", "version" => "0.3", "mail" => "trisk-kvirc [at] quasarnet [dot] org", "author" => "Triskelios", "desc" => $template['themes']['theme2'], "home" => "", "download" => "Crystal-0.3.kvt", "screen" => "theme_crystal.jpg", "thumb" => "thumb_crystal.png"),
