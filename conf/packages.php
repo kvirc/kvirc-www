@@ -150,6 +150,58 @@ $p_group[$package_count]       = "slackware";
 $p_author[$package_count]      = "HelLViS69 (hell at hellvis69 dot netsons dot org)";
 $package_count++;
 
+// 4.0.0
+// openSUSE 11.2
+$p_filename[$package_count]    = "kvirc-4.0.0-2.1.x86_64.rpm";
+$p_path[$package_count]        = "4.0.0/binary/opensuse/11.2";
+$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE 11.2 binary";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.2.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "5316809";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+// 4.0.0
+// openSUSE 11.2
+$p_filename[$package_count]    = "kvirc-4.0.0-2.1.i586.rpm";
+$p_path[$package_count]        = "4.0.0/binary/opensuse/11.2";
+$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE 11.2 binary";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.2.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "5057332";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+// 4.0.0
+// openSUSE factory
+$p_filename[$package_count]    = "kvirc-4.0.0-2.1.x86_64.rpm";
+$p_path[$package_count]        = "4.0.0/binary/opensuse/factory";
+$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE Factory binary";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE Factory.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "4761654";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+// 4.0.0
+// openSUSE factory
+$p_filename[$package_count]    = "kvirc-4.0.0-2.1.i586.rpm";
+$p_path[$package_count]        = "4.0.0/binary/opensuse/factory";
+$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE Factory binary";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE Factory.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "4521538";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
 // ========================================================================== //
 //                                OLDER RELEASES                              //
 // ========================================================================== //
