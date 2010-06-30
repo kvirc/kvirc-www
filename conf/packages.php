@@ -132,7 +132,7 @@ $p_description[$package_count] = "KVIrc 4.0.0, Windows binary";
 $p_details[$package_count]     = "The self-installing binary package for Windows built on top of the LGPL version of the Qt library. Just double click on it after downloading.";
 $p_platform[$package_count]    = "win32";
 $p_version[$package_count]     = "4.0.0";
-$p_size[$package_count]        = "16328086";
+$p_size[$package_count]        = "16611211";
 $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "CtrlAltCa (ctrlaltca at gmail dot com)";
 $package_count++;
