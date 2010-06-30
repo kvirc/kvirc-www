@@ -151,6 +151,32 @@ $p_author[$package_count]      = "HelLViS69 (hell at hellvis69 dot netsons dot o
 $package_count++;
 
 // 4.0.0
+// openSUSE 11.1
+$p_filename[$package_count]    = "kvirc-4.0.0-2.2.x86_64.rpm";
+$p_path[$package_count]        = "4.0.0/binary/opensuse/11.1";
+$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE 11.1 binary";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.1.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "5184455";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+// 4.0.0
+// openSUSE 11.1
+$p_filename[$package_count]    = "kvirc-4.0.0-2.2.i586.rpm";
+$p_path[$package_count]        = "4.0.0/binary/opensuse/11.1";
+$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE 11.1 binary";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.1.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "4937338";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+// 4.0.0
 // openSUSE 11.2
 $p_filename[$package_count]    = "kvirc-4.0.0-2.1.x86_64.rpm";
 $p_path[$package_count]        = "4.0.0/binary/opensuse/11.2";
