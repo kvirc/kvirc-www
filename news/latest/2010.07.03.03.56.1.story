@@ -1,7 +1,7 @@
 @@title:
 KVIrc 4.0.0 packaged as portable app
 @@short:
-KVIrc 4.0.0 packaged as portable app
+KVIrc 4.0.0 portable
 @@author:
 Szymon Tomasz Stefanek (pragma at kvirc dot net)
 @@body:
