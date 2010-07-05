@@ -47,6 +47,7 @@ $template['index']['doc']="manual de KVIrc";
 $template['index']['tutorials']="tutoriales";
 $template['index']['translations']="traducciones";
 $template['index']['shortcuts']="atajos de teclado";
+$template['index']['faq2']="FAQ (Wiki) (in Inglés)";
 // graphic suite
 $template['index']['graphsuite']="suite gráfica";
 $template['index']['themes']="temas";

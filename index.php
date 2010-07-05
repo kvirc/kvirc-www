@@ -177,6 +177,7 @@ search();
 						<li><a href="#"><?=$template['index']['docs'];?></a>
 							<ul>
 								<li><a href="?id=faq&amp;lang=<?=$lang;?>"><?=$template['index']['faq'];?></a></li>
+								<li><a href="https://svn.kvirc.de/kvirc/wiki/FAQ"><?=$template['index']['faq2'];?></a></li>
 								<li><a href="javascript:opendoc('api');"><?=$template['index']['api'];?></a></li>
 								<li><a href="javascript:opendoc('doc');"><?=$template['index']['doc'];?></a></li>
 								<li><a href="?id=tutorials&amp;lang=<?=$lang;?>"><?=$template['index']['tutorials'];?></a></li>

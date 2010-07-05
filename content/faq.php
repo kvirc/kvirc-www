@@ -5,6 +5,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 
 echo "<h1 class=\"pagetitle\">".$template['faq']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
+
 	echo "<ul class=\"list\">";
 		echo "<br />";
 		echo "<li><b>Q: ".$template['faq']['text1a']."?</b><br />";
@@ -83,5 +84,6 @@ echo "<div class=\"column1-unit\">";
 		echo "<li><b>Q: ".$template['faq']['text18a']."</b><br />";
 		echo "A: ".$template['faq']['text18b'].".</li>";
 	echo "</ul>";
+	
 echo "</div>";
 ?>
