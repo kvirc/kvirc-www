@@ -47,7 +47,7 @@ $template['index']['doc']="manuel KVIrc";
 $template['index']['tutorials']="tutoriels";
 $template['index']['translations']="traductions";
 $template['index']['shortcuts']="Keyboard shortcuts";
-$template['index']['faq2']="FAQ (Wiki) (in english)";
+$template['index']['faq2']="FAQ (Wiki)";
 // graphic suite
 $template['index']['graphsuite']="suite graphique";
 $template['index']['themes']="thèmes";
