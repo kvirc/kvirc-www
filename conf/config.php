@@ -43,7 +43,7 @@ if(preg_match("/:/",$ip6,$blah)){
 $www_mirror=array(
 	1 => array("name" => "www.kvirc.net", "url" => "http://www.kvirc.net", "desc" => "Primary WWW site", "city" => "Oslo, Norway", "maintainer" => "Norwegian Linux Community"),
 	array("name" => "www.kvirc.de", "url" => "http://www.kvirc.de", "desc" => "German mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
-	//array("name" => "kvirc.slackware.it", "url" => "http://kvirc.slackware.it", "desc" => "Italian mirror", "country" => "Italy", "city" => "Milano", "maintainer" => "Slackware.it"),
+	array("name" => "kvirc.slackware.it", "url" => "http://kvirc.slackware.it", "desc" => "Italian mirror", "country" => "Italy", "city" => "Milano", "maintainer" => "Slackware.it"),
 	array("name" => "kvirc.visualscripts.com", "url" => "http://kvirc.visualscripts.com", "desc" => "USA mirror", "city" => "Houston, Texas, United States", "maintainer" => "THeLooX"),
 	//array("name" => "www.kvirc.omnikron.net", "url" => "http://www.kvirc.omnikron.net", "desc" => "www.kvirc.omnikron.net: Italian mirror (located in Arezzo)", "country" => "Italy", "city" => "Arezzo", "sponsor" => "Pragma,Iakko and Resio"),
 	//array("name" => "kvirc.trexle.net", "url" => "http://kvirc.trexle.net", "desc" => "kvirc.trexle.net: USA mirror (located in Texas)", "country" => "USA, Texas", "city" => "", "sponsor" => "Hossam Hossny from Texle.com"),
