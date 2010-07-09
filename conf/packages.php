@@ -85,12 +85,12 @@ if((strpos($hua,'Windows') !== false) || (strpos($hua,'WinXP') !== false))
 {
 	$quickdownload_link = $ftp_mirror[1]['url']."/4.0.0/binary/win32/KVIrc-4.0.0-Insomnia.exe";
 	$quickdownload_version = "4.0.0";
-} /*else if((strpos($hua,'Safari') !== false) || (strpos($hua,'Macintosh') !== false) ||
+} else if((strpos($hua,'Safari') !== false) || (strpos($hua,'Macintosh') !== false) ||
 	(strpos($hua,'Mac OS X') !== false) || (strpos($hua,'Mac_PowerPC') !== false))
 {
-	$quickdownload_link = $ftp_mirror_link[0]."/3.2.0/binary/macosx/KVirc-3.2.0.dmg";
-	$quickdownload_version = "3.2.0";
-}*/ else {
+	$quickdownload_link = $ftp_mirror_link[0]."/4.0.0/binary/macosx/KVirc-4.0.0.dmg";
+	$quickdownload_version = "4.0.0";
+} else {
 	$quickdownload_link = $ftp_mirror[1]['url']."/4.0.0/source/kvirc-4.0.0.tar.bz2";
 	$quickdownload_version = "4.0.0";
 }
@@ -226,6 +226,21 @@ $p_version[$package_count]     = "4.0.0";
 $p_size[$package_count]        = "4521538";
 $p_group[$package_count]       = "opensuse";
 $p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+// 4.0.0
+// MacOSX
+$p_filename[$package_count]    = "KVIrc-4.0.0.dmg";
+$p_path[$package_count]        = "4.0.0/binary/macosx";
+$p_description[$package_count] = "KVIrc 4.0.0, MacOSX binary";
+$p_details[$package_count]     = "The universal (ppc/i386) bundle for MacOSX built on Leopard 10.5.8. " .
+																	"You need <a href=\"http://qt.nokia.com/downloads/qt-for-open-source-cpp-development-on-mac-os-x\">Qt4.6.3</a> " .
+																	"installed on your system. Copy the bundle to a suitable location and double click.";
+$p_platform[$package_count]    = "macosx";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "12565912";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Thomas Kalla (xtx at gmx dot de)";
 $package_count++;
 
 // ========================================================================== //
