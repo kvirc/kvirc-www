@@ -290,8 +290,8 @@ $package_count++;
 // ubuntu_karmic
 $p_filename[$package_count]    = "kvirc-dbg_4.0.0-1_amd64.deb";
 $p_path[$package_count]        = "4.0.0/binary/ubuntu/karmic";
-$p_description[$package_count] = "KVIrc 4.0.0, Ubuntu Karmic, amd64 architecture, Debug Version";
-$p_details[$package_count]     = "The self-installing binary package for Ubuntu Karmic on amd64. This is the debug version: useful if you want to report bugs. You also need kvirc-data_4.0.0-1_all.deb above.";
+$p_description[$package_count] = "KVIrc 4.0.0, Ubuntu Karmic, amd64 architecture, Debug Symbols";
+$p_details[$package_count]     = "The amd64 debug symbols package for Ubuntu Karmic: useful if you want to report bugs. You also need kvirc_4.0.0-1_amd64.deb and kvirc-data_4.0.0-1_all.deb above.";
 $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
 $p_size[$package_count]        = "783274";
@@ -303,8 +303,8 @@ $package_count++;
 // ubuntu_karmic
 $p_filename[$package_count]    = "kvirc-dbg_4.0.0-1_i386.deb";
 $p_path[$package_count]        = "4.0.0/binary/ubuntu/karmic";
-$p_description[$package_count] = "KVIrc 4.0.0, Ubuntu Karmic, i386 architecture, Debug Version";
-$p_details[$package_count]     = "The self-installing binary package for Ubuntu Karmic on i386. This is the debug version: useful if you want to report bugs. You also need kvirc-data_4.0.0-1_all.deb below.";
+$p_description[$package_count] = "KVIrc 4.0.0, Ubuntu Karmic, i386 architecture, Debug Symbols";
+$p_details[$package_count]     = "The i386 debug symbol package for Ubuntu Karmic: useful if you want to report bugs. You also need kvirc_4.0.0-1_i386.deb and kvirc-data_4.0.0-1_all.deb above.";
 $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
 $p_size[$package_count]        = "776226";
