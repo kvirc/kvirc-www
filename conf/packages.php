@@ -322,7 +322,7 @@ $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
 $p_size[$package_count]        = "4327532";
 $p_group[$package_count]       = "mandriva";
-$p_author[$package_count]      = "Z&acute; (ze at mandriva dot org)";
+$p_author[$package_count]      = "Z&eacute; (ze at mandriva dot org)";
 $package_count++;
 
 // 4.0.0
@@ -335,7 +335,7 @@ $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
 $p_size[$package_count]        = "237139";
 $p_group[$package_count]       = "mandriva";
-$p_author[$package_count]      = "Z&acute; (ze at mandriva dot org)";
+$p_author[$package_count]      = "Z&eacute; (ze at mandriva dot org)";
 $package_count++;
 
 // 4.0.0
@@ -348,7 +348,7 @@ $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
 $p_size[$package_count]        = "16013999";
 $p_group[$package_count]       = "mandriva";
-$p_author[$package_count]      = "Z&acute; (ze at mandriva dot org)";
+$p_author[$package_count]      = "Z&eacute; (ze at mandriva dot org)";
 $package_count++;
 
 // 4.0.0
@@ -361,7 +361,7 @@ $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
 $p_size[$package_count]        = "18660";
 $p_group[$package_count]       = "mandriva";
-$p_author[$package_count]      = "Z&acute; (ze at mandriva dot org)";
+$p_author[$package_count]      = "Z&eacute; (ze at mandriva dot org)";
 $package_count++;
 
 
