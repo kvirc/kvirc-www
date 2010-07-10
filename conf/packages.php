@@ -237,9 +237,7 @@ $package_count++;
 $p_filename[$package_count]    = "KVIrc-4.0.0.dmg";
 $p_path[$package_count]        = "4.0.0/binary/macosx";
 $p_description[$package_count] = "KVIrc 4.0.0, MacOSX binary";
-$p_details[$package_count]     = "The universal (ppc/i386) bundle for MacOSX built on Leopard 10.5.8. " .
-																	"You need <a target=\"_blank\" href=\"http://qt.nokia.com/downloads/qt-for-open-source-cpp-development-on-mac-os-x\">Qt4.6.3</a> " .
-																	"installed on your system. Copy the bundle to a suitable location and double click.";
+$p_details[$package_count]     = "The universal (ppc/i386) bundle for MacOSX built on Leopard 10.5.8. You need <a href=\"javascript:opendoc('http://qt.nokia.com/downloads/qt-for-open-source-cpp-development-on-mac-os-x');\">Qt4.6.3</a> installed on your system. Copy the bundle to a suitable location and double click.";
 $p_platform[$package_count]    = "macosx";
 $p_version[$package_count]     = "4.0.0";
 $p_size[$package_count]        = "12565912";
