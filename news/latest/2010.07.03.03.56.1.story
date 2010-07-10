@@ -13,7 +13,7 @@ and it's fully self-contained. Very useful if you want to bring KVirc
 with you on an USB-stick, with your own settings, run it in an internet
 point and be sure that you're not leaving any information around.</p>
 
-<p>The package is <a href="http://portableapps.com/apps/internet/kvirc_portable">here</a>.</p>
+<p>The package is <a href="javascript:opendoc('http://portableapps.com/apps/internet/kvirc_portable');">here</a>.</p>
 
 <p>Thnx Gizmokid! :)</p>
 
