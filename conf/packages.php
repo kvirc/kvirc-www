@@ -75,6 +75,9 @@ $group_details["ubuntu"]        = "Download this if you have a Ubuntu linux dist
 $group_description["ubuntu_karmic"] = "Ubuntu Karmic *.deb binary package";
 $group_details["ubuntu_karmic"] = "Download this if you have an Ubuntu Karmic linux distribution.";
 
+$group_description["mandriva"] = "Mandriva linux binary *.rpm";
+$group_details["mandriva"] = "Download this if you have a Mandiva linux distribution. This kind of package *might* also work on plain RedHat, SuSE and other rpm-enabled systems.";
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // The available packages
@@ -89,8 +92,7 @@ if((strpos($hua,'Windows') !== false) || (strpos($hua,'WinXP') !== false))
 {
 	$quickdownload_link = $ftp_mirror[1]['url']."/4.0.0/binary/win32/KVIrc-4.0.0-Insomnia.exe";
 	$quickdownload_version = "4.0.0";
-} else if((strpos($hua,'Safari') !== false) || (strpos($hua,'Macintosh') !== false) ||
-	(strpos($hua,'Mac OS X') !== false) || (strpos($hua,'Mac_PowerPC') !== false))
+} else if((strpos($hua,'Macintosh') !== false) || (strpos($hua,'Mac OS X') !== false) || (strpos($hua,'Mac_PowerPC') !== false))
 {
 	$quickdownload_link = $ftp_mirror_link[0]."/4.0.0/binary/macosx/KVirc-4.0.0.dmg";
 	$quickdownload_version = "4.0.0";
@@ -132,7 +134,7 @@ $package_count++;
 // Windows
 $p_filename[$package_count]    = "KVIrc-4.0.0-Insomnia.exe";
 $p_path[$package_count]        = "4.0.0/binary/win32";
-$p_description[$package_count] = "KVIrc 4.0.0, Windows binary";
+$p_description[$package_count] = "KVIrc 4.0.0, Windows binary, 32bit";
 $p_details[$package_count]     = "The self-installing binary package for Windows built on top of the LGPL version of the Qt library. Just double click on it after downloading.";
 $p_platform[$package_count]    = "win32";
 $p_version[$package_count]     = "4.0.0";
@@ -145,7 +147,7 @@ $package_count++;
 // Slackware 13.1
 $p_filename[$package_count]    = "kvirc-4.0.0-x86_64-1hel.txz";
 $p_path[$package_count]        = "4.0.0/binary/slackware";
-$p_description[$package_count] = "KVIrc 4.0.0, Slackware 13.1 binary";
+$p_description[$package_count] = "KVIrc 4.0.0, Slackware 13.1 binary, x86_64";
 $p_details[$package_count]     = "The self-installing binary package for Slackware 13.1 built on top of glibc 2.11.1. Just use pkgtool to install after downloading.";
 $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
@@ -158,7 +160,7 @@ $package_count++;
 // openSUSE 11.1
 $p_filename[$package_count]    = "kvirc-4.0.0-2.2.x86_64.rpm";
 $p_path[$package_count]        = "4.0.0/binary/opensuse/11.1";
-$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE 11.1 binary";
+$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE 11.1 binary, x86_64";
 $p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.1.";
 $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
@@ -171,7 +173,7 @@ $package_count++;
 // openSUSE 11.1
 $p_filename[$package_count]    = "kvirc-4.0.0-2.2.i586.rpm";
 $p_path[$package_count]        = "4.0.0/binary/opensuse/11.1";
-$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE 11.1 binary";
+$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE 11.1 binary, ix86";
 $p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.1.";
 $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
@@ -184,7 +186,7 @@ $package_count++;
 // openSUSE 11.2
 $p_filename[$package_count]    = "kvirc-4.0.0-2.1.x86_64.rpm";
 $p_path[$package_count]        = "4.0.0/binary/opensuse/11.2";
-$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE 11.2 binary";
+$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE 11.2 binary, x86_64";
 $p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.2.";
 $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
@@ -197,7 +199,7 @@ $package_count++;
 // openSUSE 11.2
 $p_filename[$package_count]    = "kvirc-4.0.0-2.1.i586.rpm";
 $p_path[$package_count]        = "4.0.0/binary/opensuse/11.2";
-$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE 11.2 binary";
+$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE 11.2 binary, ix86";
 $p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.2.";
 $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
@@ -210,7 +212,7 @@ $package_count++;
 // openSUSE factory
 $p_filename[$package_count]    = "kvirc-4.0.0-2.1.x86_64.rpm";
 $p_path[$package_count]        = "4.0.0/binary/opensuse/factory";
-$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE Factory binary";
+$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE Factory binary, x86_64";
 $p_details[$package_count]     = "The self-installing binary package for OpenSUSE Factory.";
 $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
@@ -223,7 +225,7 @@ $package_count++;
 // openSUSE factory
 $p_filename[$package_count]    = "kvirc-4.0.0-2.1.i586.rpm";
 $p_path[$package_count]        = "4.0.0/binary/opensuse/factory";
-$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE Factory binary";
+$p_description[$package_count] = "KVIrc 4.0.0, OpenSUSE Factory binary, ix86";
 $p_details[$package_count]     = "The self-installing binary package for OpenSUSE Factory.";
 $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
@@ -308,6 +310,58 @@ $p_version[$package_count]     = "4.0.0";
 $p_size[$package_count]        = "776226";
 $p_group[$package_count]       = "ubuntu_karmic";
 $p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// 4.0.0
+// mandriva
+$p_filename[$package_count]    = "kvirc-4.0.0-1mde2010.1.x86_64.rpm";
+$p_path[$package_count]        = "4.0.0/binary/mandriva/2010.1/x86_64";
+$p_description[$package_count] = "KVIrc 4.0.0, Mandriva 2010.1, x86_64 architecture";
+$p_details[$package_count]     = "The self-installing binary package for Mandriva 2010.1 on x86_64 bit systems. You also need lib64kvirc4-4.0.0-1mde2010.1.x86_64.rpm below.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "4327532";
+$p_group[$package_count]       = "mandriva";
+$p_author[$package_count]      = "Z&acute; (ze at mandriva dot org)";
+$package_count++;
+
+// 4.0.0
+// mandriva
+$p_filename[$package_count]    = "lib64kvirc4-4.0.0-1mde2010.1.x86_64.rpm";
+$p_path[$package_count]        = "4.0.0/binary/mandriva/2010.1/x86_64";
+$p_description[$package_count] = "KVIrc 4.0.0, Mandriva 2010.1, x86_64 architecture";
+$p_details[$package_count]     = "The kvirc library for Mandriva 2010.1 on x86_64 bit systems. This is a dependancy of kvirc-4.0.0-1mde2010.1.x86_64.rpm above.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "237139";
+$p_group[$package_count]       = "mandriva";
+$p_author[$package_count]      = "Z&acute; (ze at mandriva dot org)";
+$package_count++;
+
+// 4.0.0
+// mandriva
+$p_filename[$package_count]    = "kvirc-debug-4.0.0-1mde2010.1.x86_64.rpm";
+$p_path[$package_count]        = "4.0.0/binary/mandriva/2010.1/x86_64";
+$p_description[$package_count] = "KVIrc 4.0.0, Mandriva 2010.1, x86_64 architecture, Debug Version";
+$p_details[$package_count]     = "The self-installing binary package for Mandriva 2010.1 on x86_64 bit systems. This also contains debug symbols and is useful if you want to report kvirc bugs.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "16013999";
+$p_group[$package_count]       = "mandriva";
+$p_author[$package_count]      = "Z&acute; (ze at mandriva dot org)";
+$package_count++;
+
+// 4.0.0
+// mandriva
+$p_filename[$package_count]    = "kvirc-devel-4.0.0-1mde2010.1.x86_64.rpm";
+$p_path[$package_count]        = "4.0.0/binary/mandriva/2010.1/x86_64";
+$p_description[$package_count] = "KVIrc 4.0.0, Mandriva 2010.1, x86_64 architecture, Optional Development Files";
+$p_details[$package_count]     = "Optional development files for the packages above.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "18660";
+$p_group[$package_count]       = "mandriva";
+$p_author[$package_count]      = "Z&acute; (ze at mandriva dot org)";
 $package_count++;
 
 

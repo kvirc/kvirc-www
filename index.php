@@ -236,8 +236,10 @@ search();
 			<div class="header-breadcrumbs">
 				<ul>
 					<li><a href="<?=$quickdownload_link;?>" title="get the latest release"><?=$template['index']['quickdnl'];?></a></li>
+					<!--
 					<li><a href="ftp://ftp.kvirc.de/pub/kvirc/snapshots/" title="get snapshots"><?=$template['index']['snapshots'];?></a></li>
 					<li><a href="?id=themes&amp;lang=<?=$lang;?>" title="themes and appearance"><?=$template['index']['themes'];?></a></li>
+					//-->
 				</ul>
 				<div class="searchform">
 					<form action="<?="?id=$id&amp;lang=$lang";?>" method="post" class="form">
