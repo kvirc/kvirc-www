@@ -314,52 +314,52 @@ $package_count++;
 
 // 4.0.0
 // mandriva
-$p_filename[$package_count]    = "kvirc-4.0.0-1mde2010.1.x86_64.rpm";
+$p_filename[$package_count]    = "kvirc-4.0.0-2mde2010.1.x86_64.rpm";
 $p_path[$package_count]        = "4.0.0/binary/mandriva/2010.1/x86_64";
 $p_description[$package_count] = "KVIrc 4.0.0, Mandriva 2010.1, x86_64 architecture";
 $p_details[$package_count]     = "The self-installing binary package for Mandriva 2010.1 on x86_64 bit systems. You also need lib64kvirc4-4.0.0-1mde2010.1.x86_64.rpm below.";
 $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
-$p_size[$package_count]        = "4327532";
+$p_size[$package_count]        = "4318575";
 $p_group[$package_count]       = "mandriva";
 $p_author[$package_count]      = "Z&eacute; (ze at mandriva dot org)";
 $package_count++;
 
 // 4.0.0
 // mandriva
-$p_filename[$package_count]    = "lib64kvirc4-4.0.0-1mde2010.1.x86_64.rpm";
+$p_filename[$package_count]    = "lib64kvirc4-4.0.0-2mde2010.1.x86_64.rpm";
 $p_path[$package_count]        = "4.0.0/binary/mandriva/2010.1/x86_64";
 $p_description[$package_count] = "KVIrc 4.0.0, Mandriva 2010.1, x86_64 architecture";
 $p_details[$package_count]     = "The kvirc library for Mandriva 2010.1 on x86_64 bit systems. This is a dependancy of kvirc-4.0.0-1mde2010.1.x86_64.rpm above.";
 $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
-$p_size[$package_count]        = "237139";
+$p_size[$package_count]        = "236459";
 $p_group[$package_count]       = "mandriva";
 $p_author[$package_count]      = "Z&eacute; (ze at mandriva dot org)";
 $package_count++;
 
 // 4.0.0
 // mandriva
-$p_filename[$package_count]    = "kvirc-debug-4.0.0-1mde2010.1.x86_64.rpm";
+$p_filename[$package_count]    = "kvirc-debug-4.0.0-2mde2010.1.x86_64.rpm";
 $p_path[$package_count]        = "4.0.0/binary/mandriva/2010.1/x86_64";
 $p_description[$package_count] = "KVIrc 4.0.0, Mandriva 2010.1, x86_64 architecture, Debug Version";
 $p_details[$package_count]     = "The self-installing binary package for Mandriva 2010.1 on x86_64 bit systems. This also contains debug symbols and is useful if you want to report kvirc bugs.";
 $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
-$p_size[$package_count]        = "16013999";
+$p_size[$package_count]        = "15777914";
 $p_group[$package_count]       = "mandriva";
 $p_author[$package_count]      = "Z&eacute; (ze at mandriva dot org)";
 $package_count++;
 
 // 4.0.0
 // mandriva
-$p_filename[$package_count]    = "kvirc-devel-4.0.0-1mde2010.1.x86_64.rpm";
+$p_filename[$package_count]    = "kvirc-devel-4.0.0-2mde2010.1.x86_64.rpm";
 $p_path[$package_count]        = "4.0.0/binary/mandriva/2010.1/x86_64";
 $p_description[$package_count] = "KVIrc 4.0.0, Mandriva 2010.1, x86_64 architecture, Optional Development Files";
 $p_details[$package_count]     = "Optional development files for the packages above.";
 $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
-$p_size[$package_count]        = "18660";
+$p_size[$package_count]        = "18734";
 $p_group[$package_count]       = "mandriva";
 $p_author[$package_count]      = "Z&eacute; (ze at mandriva dot org)";
 $package_count++;
