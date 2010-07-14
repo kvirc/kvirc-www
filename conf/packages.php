@@ -75,6 +75,9 @@ $group_details["ubuntu"]        = "Download this if you have a Ubuntu linux dist
 $group_description["ubuntu_karmic"] = "Ubuntu Karmic *.deb binary package";
 $group_details["ubuntu_karmic"] = "Download this if you have an Ubuntu Karmic linux distribution.";
 
+$group_description["ubuntu_lucid"] = "Ubuntu Lucid *.deb binary package";
+$group_details["ubuntu_lucid"] = "Download this if you have an Ubuntu Lucid linux distribution.";
+
 $group_description["mandriva"] = "Mandriva linux binary *.rpm";
 $group_details["mandriva"] = "Download this if you have a Mandiva linux distribution. This kind of package *might* also work on plain RedHat, SuSE and other rpm-enabled systems.";
 
@@ -309,6 +312,71 @@ $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
 $p_size[$package_count]        = "776226";
 $p_group[$package_count]       = "ubuntu_karmic";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// 4.0.0
+// ubuntu_lucid
+$p_filename[$package_count]    = "kvirc_4.0.0-1_amd64.deb";
+$p_path[$package_count]        = "4.0.0/binary/ubuntu/lucid";
+$p_description[$package_count] = "KVIrc 4.0.0, Ubuntu Lucid, amd64 architecture.";
+$p_details[$package_count]     = "The self-installing binary package for Ubuntu Lucid on amd64. You also need kvirc-data_4.0.0-1_all.deb below.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "2242514";
+$p_group[$package_count]       = "ubuntu_lucid";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// 4.0.0
+// ubuntu_lucid
+$p_filename[$package_count]    = "kvirc_4.0.0-1_i386.deb";
+$p_path[$package_count]        = "4.0.0/binary/ubuntu/lucid";
+$p_description[$package_count] = "KVIrc 4.0.0, Ubuntu Lucid, i386 architecture.";
+$p_details[$package_count]     = "The self-installing binary package for Ubuntu Lucid on i386. You also need kvirc-data_4.0.0-1_all.deb below.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "2026390";
+$p_group[$package_count]       = "ubuntu_lucid";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// 4.0.0
+// ubuntu_lucid
+$p_filename[$package_count]    = "kvirc-data_4.0.0-1_all.deb";
+$p_path[$package_count]        = "4.0.0/binary/ubuntu/lucid";
+$p_description[$package_count] = "KVIrc 4.0.0, Ubuntu Lucid, data files.";
+$p_details[$package_count]     = "Data files for the self-installing binary packages (all architectures). You also need one of the binary packages above.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "2326796";
+$p_group[$package_count]       = "ubuntu_lucid";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// 4.0.0
+// ubuntu_lucid
+$p_filename[$package_count]    = "kvirc-dbg_4.0.0-1_amd64.deb";
+$p_path[$package_count]        = "4.0.0/binary/ubuntu/lucid";
+$p_description[$package_count] = "KVIrc 4.0.0, Ubuntu Karmic, amd64 architecture, Debug Symbols";
+$p_details[$package_count]     = "The amd64 debug symbols package for Ubuntu Lucid: useful if you want to report bugs. You also need kvirc_4.0.0-1_amd64.deb and kvirc-data_4.0.0-1_all.deb above.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "475932";
+$p_group[$package_count]       = "ubuntu_lucid";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// 4.0.0
+// ubuntu_lucid
+$p_filename[$package_count]    = "kvirc-dbg_4.0.0-1_i386.deb";
+$p_path[$package_count]        = "4.0.0/binary/ubuntu/lucid";
+$p_description[$package_count] = "KVIrc 4.0.0, Ubuntu Karmic, i386 architecture, Debug Symbols";
+$p_details[$package_count]     = "The i386 debug symbol package for Ubuntu Lucid: useful if you want to report bugs. You also need kvirc_4.0.0-1_i386.deb and kvirc-data_4.0.0-1_all.deb above.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.0";
+$p_size[$package_count]        = "476392";
+$p_group[$package_count]       = "ubuntu_lucid";
 $p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
 $package_count++;
 
