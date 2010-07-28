@@ -67,6 +67,12 @@ A widget displaying a list of items.
       <table bgcolor="#E0E0E0">
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setSelectionMode">$setSelectionMode(&lt;selection_mode:string&gt;)</a></font></b></code></td></tr>
 <tr><td>Sets the current selection mode specified by the parameter &lt;mode&gt; that can be one of the following string:<br> "single" : only one item can be selected at a time<br> "multi" : multiple items can be selected at a time<br> "extended" : multiple items can be selected but only in a single mouse interaction<br> "none" : no items can be selected<br> The default mode is "single"</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setFlag">$setFlag(&lt;idx:integer&gt;,&lt;flag1:string&gt;, &lt;flag2:string&gt;, ...)</a></font></b></code></td></tr>
+<tr><td>Sets the flags for the item at index idz to the given flags. These determine whether the item can be selected or modified. This is often used to disable an item. Supported flags are: - noitemflag : no flag sets; - selectable : item is selecatble; - editable : item is editable; - dragEnabled : item can dragged; - dropEnabled : item can used as drop target; - userCheckable : item is checkable; - enabled :item is enabled; - tristate : item is checkable with three separate states.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setChecked">$setChecked(&lt;checkstate:bool&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the eventual item check box 'checked state' to &lt;bool&gt;.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;bool&gt; isChecked">&lt;bool&gt; $isChecked()</a></font></b></code></td></tr>
+<tr><td>Returns '1' if the eventual item check box is checked, '0' otherwise.<br></td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; selectionMode">&lt;string&gt; $selectionMode()</a></font></b></code></td></tr>
 <tr><td>Returns the current selection mode</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="insertItem">$insertItem(&lt;text:string&gt;, &lt;index:uint&gt;)</a></font></b></code></td></tr>
@@ -87,16 +93,20 @@ A widget displaying a list of items.
 <tr><td>                Sets the current listbox item.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="clear">$clear()</a></font></b></code></td></tr>
 <tr><td>Removes all the items</td></tr>
-<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="itemEnteredEvent">$itemEnteredEvent()</a></font></b></code></td></tr>
-<tr><td>This function is called by KVIrc when the mouse cursor enters an item.</td></tr>
-<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="selectionChangeEvent">$selectionChangeEvent()</a></font></b></code></td></tr>
-<tr><td>                This function is called by KVIrc when the selection in the listbox changes.</td></tr>
-<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="currentItemChangeEvent">$currentItemChangeEvent()</a></font></b></code></td></tr>
-<tr><td>This function is called by KVIrc when the current item changes.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setFont">$setFont(&lt;idx:integer&gt;,&lt;family:string&gt;,&lt;size:integer&gt;[,&lt;style1:string&gt;, &lt;style2:string&gt;, ...])</a></font></b></code></td></tr>
+<tr><td>Set the font's family, size and style, at index &lt;idx&gt;; valid flag for style are:<br> italic, bold, underline, overline, strikeout, fixedpitch  <br> If you just want to set a style without altering the preset font size and family, you can use $setFont() like this:<br> %widget-&gt;$setFont(0,0,"bold")</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;index:integer&gt; onItemEvent">&lt;index:integer&gt; $onItemEvent()</a></font></b></code></td></tr>
 <tr><td>This function is called by KVIrc when the current item pointed by the mouse changes and gives in $0 the item index.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;array:x,y,width,height&gt; itemRect">&lt;array:x,y,width,height&gt; $itemRect(&lt;item:index&gt;)</a></font></b></code></td></tr>
 <tr><td>Returns the rectangle on the screen that item occupies, or an invalid rectangle if item is 0 or is not currently visible.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="itemEnteredEvent">$itemEnteredEvent()</a></font></b></code></td></tr>
+<tr><td>This function is called by KVIrc when the mouse cursor enters an item.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="selectionChangedEvent">$selectionChangedEvent()</a></font></b></code></td></tr>
+<tr><td>This function is called by KVIrc when the selection in the listbox changes.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="currentItemChangedEvent">$currentItemChangedEvent()</a></font></b></code></td></tr>
+<tr><td>This function is called by KVIrc when the current item changes.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="itemChangedEvent">$itemChangedEvent()</a></font></b></code></td></tr>
+<tr><td>This function is called by KVIrc when the current data item changes (i.e. the user check a ckeckable item) .</td></tr>
       </table>
     </td>
   </tr>
@@ -107,14 +117,18 @@ A widget displaying a list of items.
     <td>
       <table bgcolor="#E0E0E0">
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; currentItemChanged">&lt;string&gt; $currentItemChanged()</a></font></b></code></td></tr>
-<tr><td>This signal is emitted by the default implementation of <a href="#currentItemChangeEvent">$currentItemChangeEvent</a>().<br></td></tr>
+<tr><td>This signal is emitted by the default implementation of <a href="#currentItemChangedEvent">$currentItemChangedEvent</a>().<br></td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; itemChanged">&lt;string&gt; $itemChanged()</a></font></b></code></td></tr>
+<tr><td>This signal is emitted by the default implementation of <a href="#itemChangedEvent">$itemChangedEvent</a>().<br></td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; itemEntered">&lt;string&gt; $itemEntered()</a></font></b></code></td></tr>
 <tr><td>This signal is emitted by the default implementation of <a href="#itemEnteredEvent">$itemEnteredEvent</a>().<br></td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; selectionChanged">&lt;string&gt; $selectionChanged()</a></font></b></code></td></tr>
+<tr><td>This signal is emitted by the default implementation of <a href="#selectionChangedEvent">$selectionChangedEvent</a>().<br></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Wed May 19 22:52:41 2010
+<hr>KVIrc 4.1.0.4701 Documentation<br>Generated by hellvis69 at Wed Jul 28 16:59:08 2010
 </body>
 </html>

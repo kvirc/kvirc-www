@@ -153,8 +153,8 @@ All the other widget-type classes inherit from this one.
 <tr><td>Sets the icon for this widget. This is meaningful only for toplevel widgets. See the <a href="doc_image_id.html">image identifier</a> documentation for the explaination of the &lt;image_id&gt; parameter.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setBackgroundImage">$setBackgroundImage(&lt;image_id&gt;)</a></font></b></code></td></tr>
 <tr><td>Sets the background image for this widget. See the <a href="doc_image_id.html">image identifier</a> documentation for the explaination of the &lt;image_id&gt; parameter. For some kind of widgets, setting a background pixmap may have no effect or have strange results. Experiment with it. To unset the background image call <a href="#setBackgroundColor">$setBackgroundColor</a></td></tr>
-<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setFont">$setFont(&lt;size&gt;,&lt;family&gt;,&lt;style&gt;)</a></font></b></code></td></tr>
-<tr><td>Set the font's size, family and stile, valid flag for style are:<br> &nbsp;&nbsp;&nbsp;&nbsp;italic, bold, underline, overline, strikeout, fixedpitch  <br> If you just want to set a style without altering the preset font size and family, you can use $setFont() like this:<br> &nbsp;&nbsp;&nbsp;&nbsp;%widget-&gt;$setFont(0,0,"bold")</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setFont">$setFont(&lt;family:string&gt;,&lt;size:integer&gt;[,&lt;style1:string&gt;, &lt;style2:string&gt;, ...])</a></font></b></code></td></tr>
+<tr><td>Set the font's family,size and style, valid flag for style are:<br> - italic, bold, underline, overline, strikeout, fixedpitch  <br></td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setWFlags">$setWFlags(&lt;flag1&gt;, &lt;flag2&gt;, ...)</a></font></b></code></td></tr>
 <tr><td>This function sets widget flags, given as parameters. Valid flags are: <pre> TopLevel        - indicates that this widget is a top-level widget<br> Dialog          - indicates that this widget is a top-level window that should be decorated as a dialog<br> Desktop         - indicates that this widget is the desktop<br> Popup           - indicates that this widget is a popup top-level window<br> Title           - gives the window a title bar<br> StaysOnTop      - window stays on top <br> SysMenu         - add a windows system menu<br> Minimize        - add a minimize button for the sysmenu style<br> Maximize        - add a maximixe button for the sysmenu style<br> </pre></td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="centerToScreen">$centerToScreen()</a></font></b></code></td></tr>
@@ -176,6 +176,9 @@ All the other widget-type classes inherit from this one.
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="integer setAttribute">integer $setAttribute(&lt;string&gt;,&lt;bool_flag&gt;)</a></font></b></code></td></tr>
 <tr><td>Sets the attribute attribute on this widget if on is true; otherwise clears the attribute. Valid attributes are: OpaquePaintEvent - Indicates that the widget paints all its pixels when it receives a paint event. NoSystemBackground - Indicates that the widget has no background, i.e. when the widget receives paint events, the background is not automatically repainted. PaintOnScreen - Indicates that the widget wants to draw directly onto the screen. NoMousePropagation - Prohibits mouse events from being propagated to the widget's parent.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setStyleSheet">$setStyleSheet(&lt;string&gt;)</a></font></b></code></td></tr>
+<tr><td>Set a style sheet for this widget.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="customContextMenuRequestedEvent">$customContextMenuRequestedEvent(&lt;x_mouse_pos:integer&gt;,&lt;y_mouse_pos:integer&gt;)</a></font></b></code></td></tr>
+<tr><td>This event is triggered when the user has requested a context menu on the widget (i.e. right clicking on the widget). The x,y coordinates are widget relative.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="array">$array(&lt;red:integer,green:integer,blue:integer) $colorPalette(&lt;color_role:string&gt;&lt;color_group:string&gt;)</a></font></b></code></td></tr>
 <tr><td>Returns the color in color_group(disabled, active or inactive), used for color_role. Valid color role are: Window - A general background color. WindowText - A general foreground color. Base - Used as the background color for text. Text - Used as foreground color for the text. Button - The general button background color. ButtonText - A foreground color used with the Button color. Highlight - A color to indicate a selected item or the current item. HighlightedText - A text color that contrasts with Highlight.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;short_cut_id:integer&gt; setKeyShortCut">&lt;short_cut_id:integer&gt; $setKeyShortCut(&lt;key:char&gt;)</a></font></b></code></td></tr>
@@ -193,50 +196,41 @@ All the other widget-type classes inherit from this one.
     <td><b>Examples</b></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%Widget = $new(widget)
+    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%widget = $new(widget)
 &nbsp;&nbsp;&nbsp;&nbsp;# This is the main container for other elements.
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;$setWindowTitle("This is the widget title")
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;$setGeometry(100,200,170,290)
-&nbsp;&nbsp;&nbsp;&nbsp;# 100 and 200 are distance (pixel) from the left and the top of father widget (in this case the KVIrc window)
-&nbsp;&nbsp;&nbsp;&nbsp;# 300 and 400 are the weight and the height of the widget
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%label = $new(label,%Widget)
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%label-&gt;$setText("This is a text label")
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%label-&gt;$setGeometry(10,10,150,20)
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%lineedit = $new(lineedit,%Widget)
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%lineedit-&gt;$setText("This is a lineedit")
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%lineedit-&gt;$setGeometry(10,40,150,20)
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%multilineedit = $new(multilineedit,%Widget)
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%multilineedit-&gt;$setText("This is a multilineedit")
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%multilineedit-&gt;$setGeometry(10,70,150,40)
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%checkbox = $new(checkbox,%Widget)
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%checkbox-&gt;$setText("This is a checkbox")
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%checkbox-&gt;$setGeometry(10,120,150,20)
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%combobox = $new(combobox,%Widget)
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%combobox-&gt;$setGeometry(10,150,150,20)
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%combobox-&gt;$insertItem("This is a combobox")
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%combobox-&gt;$insertItem("This is a combobox's item")
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%listwidget = $new(listwidget,%Widget)
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%listwidget-&gt;$setGeometry(10,180,150,40)
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%listwidget-&gt;$insertItem("This is another item")
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%listwidget-&gt;$insertItem("This is a listwidget's item")
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%listwidget-&gt;$insertItem("This is a listwidget")
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%radiobutton = $new(radiobutton,%Widget)
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%radiobutton-&gt;$setGeometry(10,230,150,20)
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%radiobutton-&gt;$setText("This is a radiobutton")
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%button = $new(button, %Widget)
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%button-&gt;$setText("Close me")
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;%button-&gt;$setGeometry(10,260,150,20)
-&nbsp;&nbsp;&nbsp;&nbsp;%Widget-&gt;$show()
-&nbsp;&nbsp;&nbsp;&nbsp;# This shows the widget
-&nbsp;&nbsp;&nbsp;&nbsp;privateimpl(%Widget-&gt;%button, mousePressEvent) {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete $$-&gt;$parent()
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# This closes the widget automatically
+&nbsp;&nbsp;&nbsp;&nbsp;%widget-&gt;$setWindowTitle("This is the widget title")
+&nbsp;&nbsp;&nbsp;&nbsp;%box=$new(vbox,%widget)
+&nbsp;&nbsp;&nbsp;&nbsp;%layout=$new(layout,%widget)
+&nbsp;&nbsp;&nbsp;&nbsp;%layout-&gt;$addWidget(%box,0,0)
+&nbsp;&nbsp;&nbsp;&nbsp;%label = $new(label,%box)
+&nbsp;&nbsp;&nbsp;&nbsp;%label-&gt;$setText("This is a text label")
+&nbsp;&nbsp;&nbsp;&nbsp;%lineedit = $new(lineedit,%box)
+&nbsp;&nbsp;&nbsp;&nbsp;%lineedit-&gt;$setText("This is a lineedit")
+&nbsp;&nbsp;&nbsp;&nbsp;%multilineedit = $new(multilineedit,%box)
+&nbsp;&nbsp;&nbsp;&nbsp;%multilineedit-&gt;$setText("This is a multilineedit")
+&nbsp;&nbsp;&nbsp;&nbsp;%checkbox = $new(checkbox,%box)
+&nbsp;&nbsp;&nbsp;&nbsp;%checkbox-&gt;$setText("This is a checkbox")
+&nbsp;&nbsp;&nbsp;&nbsp;%combobox = $new(combobox,%box)
+&nbsp;&nbsp;&nbsp;&nbsp;%combobox-&gt;$insertItem("This is a combobox")
+&nbsp;&nbsp;&nbsp;&nbsp;%combobox-&gt;$insertItem("This is a combobox's item")
+&nbsp;&nbsp;&nbsp;&nbsp;%listbox = $new(listbox,%box)
+&nbsp;&nbsp;&nbsp;&nbsp;%listbox-&gt;$insertItem("This is a listbox item")
+&nbsp;&nbsp;&nbsp;&nbsp;%listbox-&gt;$insertItem("This is another item")
+&nbsp;&nbsp;&nbsp;&nbsp;%radiobutton = $new(radiobutton,%box)
+&nbsp;&nbsp;&nbsp;&nbsp;%radiobutton-&gt;$setText("This is a radiobutton")
+&nbsp;&nbsp;&nbsp;&nbsp;%button = $new(button, %box)
+&nbsp;&nbsp;&nbsp;&nbsp;%button-&gt;$setText("Close me")
+&nbsp;&nbsp;&nbsp;&nbsp;privateimpl(%widget,closeMe)
+&nbsp;&nbsp;&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete $$
 &nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;objects.connect  %button clicked %widget closeMe
+&nbsp;&nbsp;&nbsp;&nbsp;%widget-&gt;$show()
 </font></code></pre></td></tr></table></p>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<hr>KVIrc 4.0.0 Documentation<br>Generated by hellvis69 at Wed May 19 22:52:41 2010
+<hr>KVIrc 4.1.0.4701 Documentation<br>Generated by hellvis69 at Wed Jul 28 16:59:08 2010
 </body>
 </html>
