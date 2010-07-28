@@ -51,7 +51,7 @@ Inheritance diagram for KviSubmenuAction:</div>
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a87cf87419cefdb741a2d8023c52f3aba">addToCustomToolBar</a> (<a class="el" href="classKviCustomToolBar.html">KviCustomToolBar</a> *pTool)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a2daa3e8e19944910a5ef3c72426311b2">addToPopupMenu</a> (<a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *pMenu)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a2e70192802c0358cf553cc52923fff5b">KviSubmenuAction</a> (QObject *pParent, const QString &amp;szName, const QString &amp;szScriptCode, const QString &amp;szVisibleName, const QString &amp;szDescription, <a class="el" href="classKviActionCategory.html">KviActionCategory</a> *pCategory=0, const QString &amp;szBigIcon=QString(), int iSmallIconId=0, unsigned int uFlags=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a7b9881398563eb0f0a5ba2561f898497">KviSubmenuAction</a> (QObject *pParent, const QString &amp;szName, const QString &amp;szScriptCode, const QString &amp;szVisibleName, const QString &amp;szDescription, <a class="el" href="classKviActionCategory.html">KviActionCategory</a> *pCategory=<a class="el" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a>, const QString &amp;szBigIconId=QString(), const QString &amp;szSmallIcoNId=QString(), unsigned int uFlags=0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a94b9a21edec6b6206736d846f99e9325">~KviSubmenuAction</a> ()</td></tr>
 <tr><td colspan="2"><h2>Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a1ff676714d3633a69c5ba0083dd50869">popupAboutToShow</a> ()</td></tr>
@@ -62,7 +62,7 @@ Inheritance diagram for KviSubmenuAction:</div>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a5c7e8ce7530fdbb6bfc323078ba45b13">m_pPopup</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a2e70192802c0358cf553cc52923fff5b"></a><!-- doxytag: member="KviSubmenuAction::KviSubmenuAction" ref="a2e70192802c0358cf553cc52923fff5b" args="(QObject *pParent, const QString &amp;szName, const QString &amp;szScriptCode, const QString &amp;szVisibleName, const QString &amp;szDescription, KviActionCategory *pCategory=0, const QString &amp;szBigIcon=QString(), int iSmallIconId=0, unsigned int uFlags=0)" -->
+<a class="anchor" id="a7b9881398563eb0f0a5ba2561f898497"></a><!-- doxytag: member="KviSubmenuAction::KviSubmenuAction" ref="a7b9881398563eb0f0a5ba2561f898497" args="(QObject *pParent, const QString &amp;szName, const QString &amp;szScriptCode, const QString &amp;szVisibleName, const QString &amp;szDescription, KviActionCategory *pCategory=NULL, const QString &amp;szBigIconId=QString(), const QString &amp;szSmallIcoNId=QString(), unsigned int uFlags=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -100,19 +100,19 @@ Inheritance diagram for KviSubmenuAction:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classKviActionCategory.html">KviActionCategory</a> *&nbsp;</td>
-          <td class="paramname"> <em>pCategory</em> = <code>0</code>, </td>
+          <td class="paramname"> <em>pCategory</em> = <code><a class="el" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const QString &amp;&nbsp;</td>
-          <td class="paramname"> <em>szBigIcon</em> = <code>QString()</code>, </td>
+          <td class="paramname"> <em>szBigIconId</em> = <code>QString()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>iSmallIconId</em> = <code>0</code>, </td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>szSmallIcoNId</em> = <code>QString()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -129,7 +129,7 @@ Inheritance diagram for KviSubmenuAction:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__coreactions_8h_source.html#l00071">m_pPopup</a>.</p>
+<p>References <a class="el" href="kvi__coreactions_8h_source.html#l00081">m_pPopup</a>.</p>
 
 </div>
 </div>
@@ -148,7 +148,7 @@ Inheritance diagram for KviSubmenuAction:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__coreactions_8h_source.html#l00071">m_pPopup</a>.</p>
+<p>References <a class="el" href="kvi__coreactions_8h_source.html#l00081">m_pPopup</a>.</p>
 
 </div>
 </div>
@@ -171,7 +171,7 @@ Inheritance diagram for KviSubmenuAction:</div>
 
 <p>Reimplemented from <a class="el" href="classKviAction.html#a3c0d37b014ff28d31400da70442ed53d">KviAction</a>.</p>
 
-<p>References <a class="el" href="kvi__kvs__action_8cpp_source.html#l00057">KviKvsAction::activate()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00126">KviAction::bigIcon()</a>, <a class="el" href="kvi__action_8h_source.html#l00126">KviAction::isEnabled()</a>, <a class="el" href="kvi__coreactions_8h_source.html#l00071">m_pPopup</a>, <a class="el" href="kvi__action_8h_source.html#l00120">KviAction::name()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00403">KviAction::registerWidget()</a>, <a class="el" href="kvi__kvs__action_8cpp_source.html#l00052">KviKvsAction::scriptCode()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00698">setup()</a>, <a class="el" href="kvi__action_8h_source.html#l00137">KviAction::setupDone()</a>, and <a class="el" href="kvi__action_8cpp_source.html#l00050">KviAction::visibleName()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__action_8cpp_source.html#l00069">KviKvsAction::activate()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00154">KviAction::bigIcon()</a>, <a class="el" href="kvi__action_8h_source.html#l00116">KviAction::isEnabled()</a>, <a class="el" href="kvi__coreactions_8h_source.html#l00081">m_pPopup</a>, <a class="el" href="kvi__action_8h_source.html#l00109">KviAction::name()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00433">KviAction::registerWidget()</a>, <a class="el" href="kvi__kvs__action_8cpp_source.html#l00064">KviKvsAction::scriptCode()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00702">setup()</a>, <a class="el" href="kvi__action_8h_source.html#l00127">KviAction::setupDone()</a>, and <a class="el" href="kvi__action_8cpp_source.html#l00077">KviAction::visibleName()</a>.</p>
 
 </div>
 </div>
@@ -193,7 +193,7 @@ Inheritance diagram for KviSubmenuAction:</div>
 
 <p>Reimplemented from <a class="el" href="classKviAction.html#a62ac15a73381217e5daedf1bac6a097b">KviAction</a>.</p>
 
-<p>References <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00052">KviTalPopupMenu::insertItem()</a>, <a class="el" href="kvi__action_8h_source.html#l00126">KviAction::isEnabled()</a>, <a class="el" href="kvi__coreactions_8h_source.html#l00071">m_pPopup</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00180">KviTalPopupMenu::setItemEnabled()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00698">setup()</a>, <a class="el" href="kvi__action_8h_source.html#l00137">KviAction::setupDone()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00120">KviAction::smallIcon()</a>, and <a class="el" href="kvi__action_8cpp_source.html#l00050">KviAction::visibleName()</a>.</p>
+<p>References <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00052">KviTalPopupMenu::insertItem()</a>, <a class="el" href="kvi__action_8h_source.html#l00116">KviAction::isEnabled()</a>, <a class="el" href="kvi__coreactions_8h_source.html#l00081">m_pPopup</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00180">KviTalPopupMenu::setItemEnabled()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00702">setup()</a>, <a class="el" href="kvi__action_8h_source.html#l00127">KviAction::setupDone()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00147">KviAction::smallIcon()</a>, and <a class="el" href="kvi__action_8cpp_source.html#l00077">KviAction::visibleName()</a>.</p>
 
 </div>
 </div>
@@ -214,7 +214,7 @@ Inheritance diagram for KviSubmenuAction:</div>
 
 <p>Reimplemented in <a class="el" href="classKviJoinChannelAction.html#a5b592caa091ebf5c6921da5b48bb2c8f">KviJoinChannelAction</a>, <a class="el" href="classKviChangeNickAction.html#ac9340c293e9d85d207c48213b9951f53">KviChangeNickAction</a>, <a class="el" href="classKviConnectToServerAction.html#a5a35d85eddc10002233ee15d7aeb1c78">KviConnectToServerAction</a>, <a class="el" href="classKviChangeUserModeAction.html#aa314e78e3da9be37d4599ec5762ca9a2">KviChangeUserModeAction</a>, <a class="el" href="classKviIrcToolsAction.html#a08bbbc71e7bea0e06b9ae08204bb6f0f">KviIrcToolsAction</a>, and <a class="el" href="classKviIrcOperationsAction.html#a22ea4d32f06e16820ac5193ee705a999">KviIrcOperationsAction</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__coreactions_8cpp_source.html#l00698">setup()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__coreactions_8cpp_source.html#l00702">setup()</a>.</p>
 
 </div>
 </div>
@@ -236,7 +236,7 @@ Inheritance diagram for KviSubmenuAction:</div>
 
 <p>Reimplemented in <a class="el" href="classKviJoinChannelAction.html#a4afccb72eb027bea9348ed62204e104e">KviJoinChannelAction</a>, <a class="el" href="classKviChangeNickAction.html#a114a433a6ab288607f33afd796f9fc66">KviChangeNickAction</a>, <a class="el" href="classKviConnectToServerAction.html#a73ccbe8c021986b3b03c92e906b8f519">KviConnectToServerAction</a>, <a class="el" href="classKviChangeUserModeAction.html#a5724108f758a96c97df4fec96e00e831">KviChangeUserModeAction</a>, <a class="el" href="classKviIrcToolsAction.html#a334fcc16f5b9bc6fcfdb6e4d01d0f4df">KviIrcToolsAction</a>, and <a class="el" href="classKviIrcOperationsAction.html#a4a37bae7908bec391f79c587916bd6d1">KviIrcOperationsAction</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__coreactions_8cpp_source.html#l00698">setup()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__coreactions_8cpp_source.html#l00702">setup()</a>.</p>
 
 </div>
 </div>
@@ -257,9 +257,9 @@ Inheritance diagram for KviSubmenuAction:</div>
 
 <p>Reimplemented from <a class="el" href="classKviAction.html#a8773fa578d8687610b66649ca3faa230">KviAction</a>.</p>
 
-<p>References <a class="el" href="classKviAction.html#a0302b98b60d7f6ce7ae767383313e042">KviAction::activated()</a>, <a class="el" href="kvi__coreactions_8h_source.html#l00071">m_pPopup</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00709">popupAboutToShow()</a>, and <a class="el" href="kvi__coreactions_8cpp_source.html#l00713">popupActivated()</a>.</p>
+<p>References <a class="el" href="classKviAction.html#a0302b98b60d7f6ce7ae767383313e042">KviAction::activated()</a>, <a class="el" href="kvi__coreactions_8h_source.html#l00081">m_pPopup</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00713">popupAboutToShow()</a>, and <a class="el" href="kvi__coreactions_8cpp_source.html#l00717">popupActivated()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__coreactions_8cpp_source.html#l00725">addToCustomToolBar()</a>, and <a class="el" href="kvi__coreactions_8cpp_source.html#l00717">addToPopupMenu()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__coreactions_8cpp_source.html#l00729">addToCustomToolBar()</a>, and <a class="el" href="kvi__coreactions_8cpp_source.html#l00721">addToPopupMenu()</a>.</p>
 
 </div>
 </div>
@@ -275,7 +275,7 @@ Inheritance diagram for KviSubmenuAction:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__coreactions_8cpp_source.html#l00725">addToCustomToolBar()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00717">addToPopupMenu()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00671">KviSubmenuAction()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l01140">KviIrcOperationsAction::popupAboutToShow()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l01108">KviIrcToolsAction::popupAboutToShow()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00908">KviChangeUserModeAction::popupAboutToShow()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00860">KviConnectToServerAction::popupAboutToShow()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00809">KviChangeNickAction::popupAboutToShow()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00758">KviJoinChannelAction::popupAboutToShow()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00936">KviChangeUserModeAction::popupActivated()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00869">KviConnectToServerAction::popupActivated()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00823">KviChangeNickAction::popupActivated()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00771">KviJoinChannelAction::popupActivated()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00698">setup()</a>, and <a class="el" href="kvi__coreactions_8cpp_source.html#l00693">~KviSubmenuAction()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__coreactions_8cpp_source.html#l00729">addToCustomToolBar()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00721">addToPopupMenu()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00671">KviSubmenuAction()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l01151">KviIrcOperationsAction::popupAboutToShow()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l01118">KviIrcToolsAction::popupAboutToShow()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00915">KviChangeUserModeAction::popupAboutToShow()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00866">KviConnectToServerAction::popupAboutToShow()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00814">KviChangeNickAction::popupAboutToShow()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00762">KviJoinChannelAction::popupAboutToShow()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00943">KviChangeUserModeAction::popupActivated()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00875">KviConnectToServerAction::popupActivated()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00828">KviChangeNickAction::popupActivated()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00775">KviJoinChannelAction::popupActivated()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00702">setup()</a>, and <a class="el" href="kvi__coreactions_8cpp_source.html#l00697">~KviSubmenuAction()</a>.</p>
 
 </div>
 </div>
@@ -284,7 +284,7 @@ Inheritance diagram for KviSubmenuAction:</div>
 <li>src/kvirc/kernel/<a class="el" href="kvi__coreactions_8cpp.html">kvi_coreactions.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:36 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:27 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -67,68 +67,70 @@
 <a name="l00051"></a>00051 <span class="preprocessor"></span>
 <a name="l00052"></a>00052 <span class="preprocessor">        #ifdef KVIRC_MODULE</span>
 <a name="l00053"></a>00053 <span class="preprocessor"></span>                <span class="comment">// This section is used when compiling kvircmodule.cpp</span>
-<a name="l00054"></a>00054                 <span class="keyword">static</span> PyObject * PyKVIrc_echo(PyObject * pSelf, PyObject * pArgs);
-<a name="l00055"></a>00055                 <span class="keyword">static</span> PyObject * PyKVIrc_say(PyObject * pSelf, PyObject * pArgs);
-<a name="l00056"></a>00056                 <span class="keyword">static</span> PyObject * PyKVIrc_warning(PyObject * pSelf, PyObject * pArgs);
-<a name="l00057"></a>00057                 <span class="keyword">static</span> PyObject * PyKVIrc_getLocal(PyObject * pSelf, PyObject * pArgs);
-<a name="l00058"></a>00058                 <span class="keyword">static</span> PyObject * PyKVIrc_setLocal(PyObject * pSelf, PyObject * pArgs);
-<a name="l00059"></a>00059                 <span class="keyword">static</span> PyObject * PyKVIrc_getGlobal(PyObject * pSelf, PyObject * pArgs);
-<a name="l00060"></a>00060                 <span class="keyword">static</span> PyObject * PyKVIrc_setGlobal(PyObject * pSelf, PyObject * pArgs);
-<a name="l00061"></a>00061                 <span class="keyword">static</span> PyObject * PyKVIrc_eval(PyObject * pSelf, PyObject * pArgs);
-<a name="l00062"></a>00062                 <span class="keyword">static</span> PyObject * PyKVIrc_internalWarning(PyObject * pSelf, PyObject * pArgs);
-<a name="l00063"></a>00063                 <span class="keyword">static</span> PyObject * PyKVIrc_error(PyObject * pSelf, PyObject * pArgs);
-<a name="l00064"></a>00064 <span class="preprocessor">        #else</span>
-<a name="l00065"></a>00065 <span class="preprocessor"></span>                <span class="comment">// This section is used in modules that use kvircmodule&#39;s API</span>
-<a name="l00066"></a>00066                 <span class="keyword">static</span> <span class="keywordtype">void</span> ** PyKVIrc_API;
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068 <span class="preprocessor">                #define PyKVIrc_echo \</span>
-<a name="l00069"></a>00069 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[0])</span>
-<a name="l00070"></a>00070 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_say \</span>
-<a name="l00071"></a>00071 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[1])</span>
-<a name="l00072"></a>00072 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_warning \</span>
-<a name="l00073"></a>00073 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[2])</span>
-<a name="l00074"></a>00074 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_getLocal \</span>
-<a name="l00075"></a>00075 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[3])</span>
-<a name="l00076"></a>00076 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_setLocal \</span>
-<a name="l00077"></a>00077 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[4])</span>
-<a name="l00078"></a>00078 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_getGlobal \</span>
-<a name="l00079"></a>00079 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[5])</span>
-<a name="l00080"></a>00080 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_setGlobal \</span>
-<a name="l00081"></a>00081 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[6])</span>
-<a name="l00082"></a>00082 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_eval \</span>
-<a name="l00083"></a>00083 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[7])</span>
-<a name="l00084"></a>00084 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_internalWarning \</span>
-<a name="l00085"></a>00085 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[8])</span>
-<a name="l00086"></a>00086 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_error \</span>
-<a name="l00087"></a>00087 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[9])</span>
-<a name="l00088"></a>00088 <span class="preprocessor"></span>
-<a name="l00094"></a>00094                 <span class="keyword">static</span> <span class="keywordtype">int</span> import_kvirc()
-<a name="l00095"></a>00095                 {
-<a name="l00096"></a>00096                         PyObject * pModule = PyImport_ImportModule(<span class="stringliteral">&quot;kvirc&quot;</span>);
-<a name="l00097"></a>00097                         <span class="keywordflow">if</span>(pModule)
-<a name="l00098"></a>00098                         {
-<a name="l00099"></a>00099                                 PyObject * pC_API_Object = PyObject_GetAttrString(pModule,<span class="stringliteral">&quot;_C_API&quot;</span>);
-<a name="l00100"></a>00100 
-<a name="l00101"></a>00101                                 <span class="keywordflow">if</span>(!pC_API_Object) <span class="keywordflow">return</span> -1;
+<a name="l00054"></a>00054 <span class="preprocessor">                #if 0</span>
+<a name="l00055"></a>00055 <span class="preprocessor"></span>                PyObject * PyKVIrc_echo(PyObject * pSelf, PyObject * pArgs);
+<a name="l00056"></a>00056                 PyObject * PyKVIrc_say(PyObject * pSelf, PyObject * pArgs);
+<a name="l00057"></a>00057                 PyObject * PyKVIrc_warning(PyObject * pSelf, PyObject * pArgs);
+<a name="l00058"></a>00058                 PyObject * PyKVIrc_getLocal(PyObject * pSelf, PyObject * pArgs);
+<a name="l00059"></a>00059                 PyObject * PyKVIrc_setLocal(PyObject * pSelf, PyObject * pArgs);
+<a name="l00060"></a>00060                 PyObject * PyKVIrc_getGlobal(PyObject * pSelf, PyObject * pArgs);
+<a name="l00061"></a>00061                 PyObject * PyKVIrc_setGlobal(PyObject * pSelf, PyObject * pArgs);
+<a name="l00062"></a>00062                 PyObject * PyKVIrc_eval(PyObject * pSelf, PyObject * pArgs);
+<a name="l00063"></a>00063                 PyObject * PyKVIrc_internalWarning(PyObject * pSelf, PyObject * pArgs);
+<a name="l00064"></a>00064                 PyObject * PyKVIrc_error(PyObject * pSelf, PyObject * pArgs);
+<a name="l00065"></a>00065 <span class="preprocessor">                #endif</span>
+<a name="l00066"></a>00066 <span class="preprocessor"></span><span class="preprocessor">        #else</span>
+<a name="l00067"></a>00067 <span class="preprocessor"></span>                <span class="comment">// This section is used in modules that use kvircmodule&#39;s API</span>
+<a name="l00068"></a>00068                 <span class="keyword">static</span> <span class="keywordtype">void</span> ** PyKVIrc_API;
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070 <span class="preprocessor">                #define PyKVIrc_echo \</span>
+<a name="l00071"></a>00071 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[0])</span>
+<a name="l00072"></a>00072 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_say \</span>
+<a name="l00073"></a>00073 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[1])</span>
+<a name="l00074"></a>00074 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_warning \</span>
+<a name="l00075"></a>00075 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[2])</span>
+<a name="l00076"></a>00076 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_getLocal \</span>
+<a name="l00077"></a>00077 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[3])</span>
+<a name="l00078"></a>00078 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_setLocal \</span>
+<a name="l00079"></a>00079 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[4])</span>
+<a name="l00080"></a>00080 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_getGlobal \</span>
+<a name="l00081"></a>00081 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[5])</span>
+<a name="l00082"></a>00082 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_setGlobal \</span>
+<a name="l00083"></a>00083 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[6])</span>
+<a name="l00084"></a>00084 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_eval \</span>
+<a name="l00085"></a>00085 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[7])</span>
+<a name="l00086"></a>00086 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_internalWarning \</span>
+<a name="l00087"></a>00087 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[8])</span>
+<a name="l00088"></a>00088 <span class="preprocessor"></span><span class="preprocessor">                #define PyKVIrc_error \</span>
+<a name="l00089"></a>00089 <span class="preprocessor">                        (*(int (*)(const char * pcCmd)) PyKVIrc_API[9])</span>
+<a name="l00090"></a>00090 <span class="preprocessor"></span>
+<a name="l00096"></a>00096                 <span class="keyword">static</span> <span class="keywordtype">int</span> import_kvirc()
+<a name="l00097"></a>00097                 {
+<a name="l00098"></a>00098                         PyObject * pModule = PyImport_ImportModule(<span class="stringliteral">&quot;kvirc&quot;</span>);
+<a name="l00099"></a>00099                         <span class="keywordflow">if</span>(pModule)
+<a name="l00100"></a>00100                         {
+<a name="l00101"></a>00101                                 PyObject * pC_API_Object = PyObject_GetAttrString(pModule,<span class="stringliteral">&quot;_C_API&quot;</span>);
 <a name="l00102"></a>00102 
-<a name="l00103"></a>00103                                 <span class="keywordflow">if</span>(PyCObject_Check(pC_API_Object))
-<a name="l00104"></a>00104                                         PyKVIrc_API = (<span class="keywordtype">void</span> **)PyCObject_AsVoidPtr(pC_API_Object);
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106                                 Py_DECREF(pC_API_Object);
-<a name="l00107"></a>00107                         }
-<a name="l00108"></a>00108                         <span class="keywordflow">return</span> 0;
-<a name="l00109"></a>00109                 }
-<a name="l00110"></a>00110 <span class="preprocessor">        #endif // KVIRC_MODULE</span>
-<a name="l00111"></a>00111 <span class="preprocessor"></span>
-<a name="l00112"></a>00112 <span class="preprocessor">#ifdef __cplusplus</span>
-<a name="l00113"></a>00113 <span class="preprocessor"></span>}
-<a name="l00114"></a>00114 <span class="preprocessor">#endif</span>
-<a name="l00115"></a>00115 <span class="preprocessor"></span>
-<a name="l00116"></a>00116 <span class="preprocessor">#endif // COMPILE_PYTHON_SUPPORT</span>
+<a name="l00103"></a>00103                                 <span class="keywordflow">if</span>(!pC_API_Object) <span class="keywordflow">return</span> -1;
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105                                 <span class="keywordflow">if</span>(PyCObject_Check(pC_API_Object))
+<a name="l00106"></a>00106                                         PyKVIrc_API = (<span class="keywordtype">void</span> **)PyCObject_AsVoidPtr(pC_API_Object);
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108                                 Py_DECREF(pC_API_Object);
+<a name="l00109"></a>00109                         }
+<a name="l00110"></a>00110                         <span class="keywordflow">return</span> 0;
+<a name="l00111"></a>00111                 }
+<a name="l00112"></a>00112 <span class="preprocessor">        #endif // KVIRC_MODULE</span>
+<a name="l00113"></a>00113 <span class="preprocessor"></span>
+<a name="l00114"></a>00114 <span class="preprocessor">#ifdef __cplusplus</span>
+<a name="l00115"></a>00115 <span class="preprocessor"></span>}
+<a name="l00116"></a>00116 <span class="preprocessor">#endif</span>
 <a name="l00117"></a>00117 <span class="preprocessor"></span>
-<a name="l00118"></a>00118 <span class="preprocessor">#endif // Py_KVIRCMODULE_H</span>
+<a name="l00118"></a>00118 <span class="preprocessor">#endif // COMPILE_PYTHON_SUPPORT</span>
+<a name="l00119"></a>00119 <span class="preprocessor"></span>
+<a name="l00120"></a>00120 <span class="preprocessor">#endif // Py_KVIRCMODULE_H</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:29 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

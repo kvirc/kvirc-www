@@ -49,6 +49,8 @@ Inheritance diagram for KviServer:</div>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns true if the server is in autoconnect mode.  <a href="#a1f548664bddd373b790f60cd407bb38b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QStringList *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviServer.html#a4965c43cac9be947200b44db39212012">autoJoinChannelList</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the list of the channels in the autojoin list.  <a href="#a4965c43cac9be947200b44db39212012"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviServer.html#a23bf38709093bddf6a76c96a2dd0b972">autoJoinChannelListAsString</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the list of the channels in the autojoin list as a string.  <a href="#a23bf38709093bddf6a76c96a2dd0b972"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviServer.html#aa4e4e6bb6f7a6c67516044ae6e43307f">cacheIp</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns true if the server caches the IP.  <a href="#aa4e4e6bb6f7a6c67516044ae6e43307f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviServer.html#a5aa4190e402fc77028ef2f1e117eb37f">description</a> () const </td></tr>
@@ -108,6 +110,8 @@ Inheritance diagram for KviServer:</div>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Saves the information to the configuration file.  <a href="#a4a4f08e5e3e42480618ca7bbcf8bfc74"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviServer.html#a4aef51f2e189dbc1e0baa7d321507b53">setAutoConnect</a> (bool bAutoConnect)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the autoconnection mode for the server.  <a href="#a4aef51f2e189dbc1e0baa7d321507b53"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviServer.html#a3afea74a9d1e40367e0c3274062b35b6">setAutoJoinChannelList</a> (const QString &amp;szNewChannelList)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the list of channels to mark for autojoin.  <a href="#a3afea74a9d1e40367e0c3274062b35b6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviServer.html#ac1b78052653d68e356624ffa227abc36">setAutoJoinChannelList</a> (QStringList *pNewChannelList)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the list of channels to autojoin after connection The channel list must be allocated with a new!  <a href="#ac1b78052653d68e356624ffa227abc36"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviServer.html#abfb59152aabf0772191c092c90825d31">setCacheIp</a> (bool bSet)</td></tr>
@@ -288,7 +292,7 @@ Inheritance diagram for KviServer:</div>
 <p>Returns true if the server is in autoconnect mode. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -310,7 +314,27 @@ Inheritance diagram for KviServer:</div>
 <p>Returns the list of the channels in the autojoin list. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>QStringList * </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01375">KviIrcConnection::loginComplete()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01392">KviIrcConnection::loginComplete()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a23bf38709093bddf6a76c96a2dd0b972"></a><!-- doxytag: member="KviServer::autoJoinChannelListAsString" ref="a23bf38709093bddf6a76c96a2dd0b972" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QString KviServer::autoJoinChannelListAsString </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns the list of the channels in the autojoin list as a string. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
 </div>
 </div>
@@ -334,7 +358,7 @@ Inheritance diagram for KviServer:</div>
 
 <p>References <a class="el" href="kvi__ircserver_8h_source.html#l00053">KVI_IRCSERVER_FLAG_CACHEIP</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00307">KviIrcConnectionTargetResolver::lookupServerHostname()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00880">KviIrcSocket::proxySendTargetDataV5()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00305">KviIrcConnectionTargetResolver::lookupServerHostname()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00882">KviIrcSocket::proxySendTargetDataV5()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -378,7 +402,7 @@ Inheritance diagram for KviServer:</div>
 
 <p>References <a class="el" href="kvi__ircserver_8h_source.html#l00057">KVI_IRCSERVER_FLAG_CAP</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -402,7 +426,7 @@ Inheritance diagram for KviServer:</div>
 
 <p>References <a class="el" href="kvi__ircserver_8h_source.html#l00056">KVI_IRCSERVER_FLAG_SASL</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -426,7 +450,7 @@ Inheritance diagram for KviServer:</div>
 
 <p>References <a class="el" href="kvi__ircserver_8h_source.html#l00055">KVI_IRCSERVER_FLAG_STARTTLS</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00585">KviIrcContext::connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00701">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00588">KviIrcContext::connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -472,7 +496,7 @@ Inheritance diagram for KviServer:</div>
 
 <p>References <a class="el" href="kvi__time_8h_source.html#l00064">kvi_gettimeofday()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00139">m_szId</a>, and <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>.</p>
 
 </div>
 </div>
@@ -494,7 +518,7 @@ Inheritance diagram for KviServer:</div>
 <p>Returns the hostname of the user associated to the server. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00701">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00215">KviIrcUrl::join()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00656">KviIrcSocket::proxyLoginHttp()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00880">KviIrcSocket::proxySendTargetDataV5()</a>, and <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00215">KviIrcUrl::join()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00658">KviIrcSocket::proxyLoginHttp()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00882">KviIrcSocket::proxySendTargetDataV5()</a>, and <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>.</p>
 
 </div>
 </div>
@@ -516,7 +540,7 @@ Inheritance diagram for KviServer:</div>
 <p>Returns the id of the server. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00585">KviIrcContext::connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00701">KviIrcContext::connectionTerminated()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00588">KviIrcContext::connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">KviIrcContext::connectionTerminated()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>.</p>
 
 </div>
 </div>
@@ -538,7 +562,7 @@ Inheritance diagram for KviServer:</div>
 <p>Returns the user modes of the user associated to the server. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01375">KviIrcConnection::loginComplete()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01392">KviIrcConnection::loginComplete()</a>.</p>
 
 </div>
 </div>
@@ -560,7 +584,7 @@ Inheritance diagram for KviServer:</div>
 <p>Returns the IP address of the server. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00701">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00686">KviIrcSocket::proxyLoginV4()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00880">KviIrcSocket::proxySendTargetDataV5()</a>, and <a class="el" href="kvi__ircsocket_8cpp_source.html#l00243">KviIrcSocket::startConnection()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00688">KviIrcSocket::proxyLoginV4()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00882">KviIrcSocket::proxySendTargetDataV5()</a>, and <a class="el" href="kvi__ircsocket_8cpp_source.html#l00245">KviIrcSocket::startConnection()</a>.</p>
 
 </div>
 </div>
@@ -582,7 +606,7 @@ Inheritance diagram for KviServer:</div>
 <p>Returns the irc URI for the server The URI is in the form irc[[s]6]://name.serverhost.tld. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>QString </dd></dl>
 
-<p>References <a class="el" href="kvi__ircserver_8h_source.html#l00285">isIPv6()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00120">m_uPort</a>, and <a class="el" href="kvi__ircserver_8h_source.html#l00291">useSSL()</a>.</p>
+<p>References <a class="el" href="kvi__ircserver_8h_source.html#l00291">isIPv6()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00120">m_uPort</a>, and <a class="el" href="kvi__ircserver_8h_source.html#l00297">useSSL()</a>.</p>
 
 </div>
 </div>
@@ -606,7 +630,7 @@ Inheritance diagram for KviServer:</div>
 
 <p>References <a class="el" href="kvi__ircserver_8h_source.html#l00052">KVI_IRCSERVER_FLAG_IPV6</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00585">KviIrcContext::connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00701">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00116">KviNetwork::findServer()</a>, <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00481">KviIrcConnectionTargetResolver::haveServerIp()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00158">ircUri()</a>, <a class="el" href="kvi__console_8h_source.html#l00230">KviConsole::isIPv6Connection()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00215">KviIrcUrl::join()</a>, <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00307">KviIrcConnectionTargetResolver::lookupServerHostname()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00880">KviIrcSocket::proxySendTargetDataV5()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>, <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00371">KviIrcConnectionTargetResolver::serverLookupTerminated()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00243">KviIrcSocket::startConnection()</a>, and <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00454">KviIrcConnectionTargetResolver::validateLocalAddress()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00588">KviIrcContext::connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00120">KviNetwork::findServer()</a>, <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00479">KviIrcConnectionTargetResolver::haveServerIp()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00158">ircUri()</a>, <a class="el" href="kvi__console_8h_source.html#l00230">KviConsole::isIPv6Connection()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00215">KviIrcUrl::join()</a>, <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00305">KviIrcConnectionTargetResolver::lookupServerHostname()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00882">KviIrcSocket::proxySendTargetDataV5()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>, <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00369">KviIrcConnectionTargetResolver::serverLookupTerminated()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00245">KviIrcSocket::startConnection()</a>, and <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00452">KviIrcConnectionTargetResolver::validateLocalAddress()</a>.</p>
 
 </div>
 </div>
@@ -626,7 +650,7 @@ Inheritance diagram for KviServer:</div>
 <div class="memdoc">
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__irclink_8cpp_source.html#l00177">KviIrcLink::resolverTerminated()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irclink_8cpp_source.html#l00176">KviIrcLink::resolverTerminated()</a>.</p>
 
 </div>
 </div>
@@ -665,7 +689,7 @@ Inheritance diagram for KviServer:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="kvi__ircserver_8cpp_source.html#l00151">generateUniqueId()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00138">m_bAutoConnect</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00119">m_szDescription</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00135">m_szEncoding</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00139">m_szId</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00131">m_szInitUMode</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00118">m_szIp</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00134">m_szLinkFilter</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00129">m_szNick</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00132">m_szOnConnectCommand</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00133">m_szOnLoginCommand</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00128">m_szPass</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00130">m_szRealName</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00141">m_szSaslNick</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00142">m_szSaslPass</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00136">m_szTextEncoding</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00127">m_szUser</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00124">m_szUserIdentityId</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00120">m_uPort</a>, <a class="el" href="kvi__config_8cpp_source.html#l00823">KviConfig::readBoolEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00907">KviConfig::readIntEntry()</a>, <a class="el" href="kvi__config_8h_source.html#l00130">KviConfig::readQStringEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00624">KviConfig::readStringListEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00928">KviConfig::readUIntEntry()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00176">setAutoJoinChannelList()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00529">setCacheIp()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00507">setEnabledCAP()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00518">setEnabledSASL()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00496">setEnabledSTARTTLS()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00474">setIPv6()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00329">setProxy()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00485">setUseSSL()</a>, and <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>.</p>
+<p>References <a class="el" href="kvi__ircserver_8cpp_source.html#l00151">generateUniqueId()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00138">m_bAutoConnect</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00119">m_szDescription</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00135">m_szEncoding</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00139">m_szId</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00131">m_szInitUMode</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00118">m_szIp</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00134">m_szLinkFilter</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00129">m_szNick</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00132">m_szOnConnectCommand</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00133">m_szOnLoginCommand</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00128">m_szPass</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00130">m_szRealName</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00141">m_szSaslNick</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00142">m_szSaslPass</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00136">m_szTextEncoding</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00127">m_szUser</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00124">m_szUserIdentityId</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00120">m_uPort</a>, <a class="el" href="kvi__config_8cpp_source.html#l00823">KviConfig::readBoolEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00907">KviConfig::readIntEntry()</a>, <a class="el" href="kvi__config_8h_source.html#l00130">KviConfig::readQStringEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00624">KviConfig::readStringListEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00928">KviConfig::readUIntEntry()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00176">setAutoJoinChannelList()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00542">setCacheIp()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00520">setEnabledCAP()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00531">setEnabledSASL()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00509">setEnabledSTARTTLS()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00487">setIPv6()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00335">setProxy()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00498">setUseSSL()</a>, and <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
 
@@ -709,7 +733,7 @@ Inheritance diagram for KviServer:</div>
 <p>Returns the commands to run on server connection. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01108">KviIrcConnection::loginToIrcServer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01126">KviIrcConnection::loginToIrcServer()</a>.</p>
 
 </div>
 </div>
@@ -731,7 +755,7 @@ Inheritance diagram for KviServer:</div>
 <p>Returns the commands to run on server login. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01375">KviIrcConnection::loginComplete()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01392">KviIrcConnection::loginComplete()</a>.</p>
 
 </div>
 </div>
@@ -782,7 +806,7 @@ Inheritance diagram for KviServer:</div>
 <p>Returns the password of the user associated to the server. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00585">KviIrcContext::connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00701">KviIrcContext::connectionTerminated()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00588">KviIrcContext::connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">KviIrcContext::connectionTerminated()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>.</p>
 
 </div>
 </div>
@@ -804,7 +828,7 @@ Inheritance diagram for KviServer:</div>
 <p>Returns the port number. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>kvi_u32_t </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00585">KviIrcContext::connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00701">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00215">KviIrcUrl::join()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00656">KviIrcSocket::proxyLoginHttp()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00686">KviIrcSocket::proxyLoginV4()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00880">KviIrcSocket::proxySendTargetDataV5()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>, and <a class="el" href="kvi__ircsocket_8cpp_source.html#l00243">KviIrcSocket::startConnection()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00588">KviIrcContext::connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00215">KviIrcUrl::join()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00658">KviIrcSocket::proxyLoginHttp()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00688">KviIrcSocket::proxyLoginV4()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00882">KviIrcSocket::proxySendTargetDataV5()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>, and <a class="el" href="kvi__ircsocket_8cpp_source.html#l00245">KviIrcSocket::startConnection()</a>.</p>
 
 </div>
 </div>
@@ -826,7 +850,7 @@ Inheritance diagram for KviServer:</div>
 <p>Returns the proxy server's id. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>int </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00056">proxyServer()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00056">proxyServer()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -956,7 +980,7 @@ Inheritance diagram for KviServer:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__ircserver_8h_source.html#l00273">autoConnect()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00279">autoJoinChannelList()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00315">cacheIp()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00297">enabledCAP()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00309">enabledSASL()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00303">enabledSTARTTLS()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00285">isIPv6()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00119">m_szDescription</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00135">m_szEncoding</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00139">m_szId</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00131">m_szInitUMode</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00118">m_szIp</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00134">m_szLinkFilter</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00129">m_szNick</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00132">m_szOnConnectCommand</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00133">m_szOnLoginCommand</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00128">m_szPass</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00130">m_szRealName</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00141">m_szSaslNick</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00142">m_szSaslPass</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00136">m_szTextEncoding</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00127">m_szUser</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00124">m_szUserIdentityId</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00120">m_uPort</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00149">proxy()</a>, <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00291">useSSL()</a>, and <a class="el" href="kvi__config_8cpp_source.html#l00576">KviConfig::writeEntry()</a>.</p>
+<p>References <a class="el" href="kvi__ircserver_8h_source.html#l00273">autoConnect()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00279">autoJoinChannelList()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00321">cacheIp()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00303">enabledCAP()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00315">enabledSASL()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00309">enabledSTARTTLS()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00291">isIPv6()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00119">m_szDescription</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00135">m_szEncoding</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00139">m_szId</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00131">m_szInitUMode</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00118">m_szIp</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00134">m_szLinkFilter</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00129">m_szNick</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00132">m_szOnConnectCommand</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00133">m_szOnLoginCommand</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00128">m_szPass</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00130">m_szRealName</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00141">m_szSaslNick</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00142">m_szSaslPass</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00136">m_szTextEncoding</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00127">m_szUser</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00124">m_szUserIdentityId</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00120">m_uPort</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00149">proxy()</a>, <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00297">useSSL()</a>, and <a class="el" href="kvi__config_8cpp_source.html#l00576">KviConfig::writeEntry()</a>.</p>
 
 </div>
 </div>
@@ -987,6 +1011,35 @@ Inheritance diagram for KviServer:</div>
 
 </div>
 </div>
+<a class="anchor" id="a3afea74a9d1e40367e0c3274062b35b6"></a><!-- doxytag: member="KviServer::setAutoJoinChannelList" ref="a3afea74a9d1e40367e0c3274062b35b6" args="(const QString &amp;szNewChannelList)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KviServer::setAutoJoinChannelList </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>szNewChannelList</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Sets the list of channels to mark for autojoin. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>szNewChannelList</em>&nbsp;</td><td>A comma separated list of channels </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
+
+<p>References <a class="el" href="kvi__ircserver_8h_source.html#l00137">m_pAutoJoinChannelList</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ac1b78052653d68e356624ffa227abc36"></a><!-- doxytag: member="KviServer::setAutoJoinChannelList" ref="ac1b78052653d68e356624ffa227abc36" args="(QStringList *pNewChannelList)" -->
 <div class="memitem">
 <div class="memproto">
@@ -1014,7 +1067,7 @@ Inheritance diagram for KviServer:</div>
 
 <p>References <a class="el" href="kvi__ircserver_8h_source.html#l00137">m_pAutoJoinChannelList</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>.</p>
 
 </div>
 </div>
@@ -1045,7 +1098,7 @@ Inheritance diagram for KviServer:</div>
 
 <p>References <a class="el" href="kvi__ircserver_8h_source.html#l00053">KVI_IRCSERVER_FLAG_CACHEIP</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00151">KviServerDataBase::makeCurrentServer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00151">KviServerDataBase::makeCurrentServer()</a>.</p>
 
 </div>
 </div>
@@ -1103,7 +1156,7 @@ Inheritance diagram for KviServer:</div>
 
 <p>References <a class="el" href="kvi__ircserver_8h_source.html#l00057">KVI_IRCSERVER_FLAG_CAP</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>.</p>
 
 </div>
 </div>
@@ -1134,7 +1187,7 @@ Inheritance diagram for KviServer:</div>
 
 <p>References <a class="el" href="kvi__ircserver_8h_source.html#l00056">KVI_IRCSERVER_FLAG_SASL</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>.</p>
 
 </div>
 </div>
@@ -1165,7 +1218,7 @@ Inheritance diagram for KviServer:</div>
 
 <p>References <a class="el" href="kvi__ircserver_8h_source.html#l00055">KVI_IRCSERVER_FLAG_STARTTLS</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>.</p>
 
 </div>
 </div>
@@ -1302,7 +1355,7 @@ Inheritance diagram for KviServer:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00371">KviIrcConnectionTargetResolver::serverLookupTerminated()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00369">KviIrcConnectionTargetResolver::serverLookupTerminated()</a>.</p>
 
 </div>
 </div>
@@ -1333,7 +1386,7 @@ Inheritance diagram for KviServer:</div>
 
 <p>References <a class="el" href="kvi__ircserver_8h_source.html#l00052">KVI_IRCSERVER_FLAG_IPV6</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>.</p>
 
 </div>
 </div>
@@ -1522,7 +1575,7 @@ Inheritance diagram for KviServer:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>.</p>
 
 </div>
 </div>
@@ -1715,7 +1768,7 @@ Inheritance diagram for KviServer:</div>
 
 <p>References <a class="el" href="kvi__ircserver_8h_source.html#l00054">KVI_IRCSERVER_FLAG_SSL</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>.</p>
 
 </div>
 </div>
@@ -1803,7 +1856,7 @@ Inheritance diagram for KviServer:</div>
 
 <p>References <a class="el" href="kvi__ircserver_8h_source.html#l00054">KVI_IRCSERVER_FLAG_SSL</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00151">KviIrcConnectionTargetResolver::asyncStartResolve()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00515">KviIrcSocket::connectedToIrcServer()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00585">KviIrcContext::connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00701">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00116">KviNetwork::findServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00158">ircUri()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00215">KviIrcUrl::join()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>, and <a class="el" href="kvi__ircsocket_8cpp_source.html#l00243">KviIrcSocket::startConnection()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00149">KviIrcConnectionTargetResolver::asyncStartResolve()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l00517">KviIrcSocket::connectedToIrcServer()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00588">KviIrcContext::connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00120">KviNetwork::findServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00158">ircUri()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00215">KviIrcUrl::join()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>, and <a class="el" href="kvi__ircsocket_8cpp_source.html#l00245">KviIrcSocket::startConnection()</a>.</p>
 
 </div>
 </div>
@@ -1819,7 +1872,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00046">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00046">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>.</p>
 
 </div>
 </div>
@@ -1864,7 +1917,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00701">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00046">KviServer()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01375">KviIrcConnection::loginComplete()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01108">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00137">~KviServer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00046">KviServer()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01392">KviIrcConnection::loginComplete()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01126">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00137">~KviServer()</a>.</p>
 
 </div>
 </div>
@@ -1879,7 +1932,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00364">KviServerDataBase::importFromMircIni()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00364">KviServerDataBase::importFromMircIni()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -1894,7 +1947,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -1909,7 +1962,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00151">KviIrcConnectionTargetResolver::asyncStartResolve()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00585">KviIrcContext::connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00701">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00116">KviNetwork::findServer()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00364">KviServerDataBase::importFromMircIni()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00158">ircUri()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01108">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00307">KviIrcConnectionTargetResolver::lookupServerHostname()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00151">KviServerDataBase::makeCurrentServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>, <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00371">KviIrcConnectionTargetResolver::serverLookupTerminated()</a>, and <a class="el" href="kvi__irclink_8cpp_source.html#l00344">KviIrcLink::socketStateChange()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00149">KviIrcConnectionTargetResolver::asyncStartResolve()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00588">KviIrcContext::connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00120">KviNetwork::findServer()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00364">KviServerDataBase::importFromMircIni()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00158">ircUri()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01126">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00305">KviIrcConnectionTargetResolver::lookupServerHostname()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00151">KviServerDataBase::makeCurrentServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>, <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00369">KviIrcConnectionTargetResolver::serverLookupTerminated()</a>, and <a class="el" href="kvi__irclink_8cpp_source.html#l00343">KviIrcLink::socketStateChange()</a>.</p>
 
 </div>
 </div>
@@ -1924,7 +1977,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00116">KviNetwork::findServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00151">generateUniqueId()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00120">KviNetwork::findServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00151">generateUniqueId()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -1939,7 +1992,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00585">KviIrcContext::connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00701">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00151">KviServerDataBase::makeCurrentServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00588">KviIrcContext::connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00151">KviServerDataBase::makeCurrentServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -1954,7 +2007,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00667">KviIrcContext::connectionEstabilished()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00307">KviIrcConnectionTargetResolver::lookupServerHostname()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00151">KviServerDataBase::makeCurrentServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>, <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00371">KviIrcConnectionTargetResolver::serverLookupTerminated()</a>, and <a class="el" href="kvi__irclink_8cpp_source.html#l00344">KviIrcLink::socketStateChange()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00670">KviIrcContext::connectionEstabilished()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00305">KviIrcConnectionTargetResolver::lookupServerHostname()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00151">KviServerDataBase::makeCurrentServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>, <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00369">KviIrcConnectionTargetResolver::serverLookupTerminated()</a>, and <a class="el" href="kvi__irclink_8cpp_source.html#l00343">KviIrcLink::socketStateChange()</a>.</p>
 
 </div>
 </div>
@@ -1969,7 +2022,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -1984,7 +2037,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01108">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00151">KviServerDataBase::makeCurrentServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01126">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00151">KviServerDataBase::makeCurrentServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -1999,7 +2052,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -2014,7 +2067,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -2029,7 +2082,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01108">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00151">KviServerDataBase::makeCurrentServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01126">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00151">KviServerDataBase::makeCurrentServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -2044,7 +2097,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01108">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01126">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -2059,7 +2112,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -2074,7 +2127,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -2089,7 +2142,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -2104,7 +2157,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01108">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01126">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -2119,7 +2172,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserver_8cpp_source.html#l00069">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, and <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>.</p>
 
 </div>
 </div>
@@ -2149,7 +2202,7 @@ Inheritance diagram for KviServer:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00151">KviIrcConnectionTargetResolver::asyncStartResolve()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00667">KviIrcContext::connectionEstabilished()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00116">KviNetwork::findServer()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00364">KviServerDataBase::importFromMircIni()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00158">ircUri()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00046">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00182">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00248">save()</a>, and <a class="el" href="kvi__irclink_8cpp_source.html#l00344">KviIrcLink::socketStateChange()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00149">KviIrcConnectionTargetResolver::asyncStartResolve()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00670">KviIrcContext::connectionEstabilished()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00120">KviNetwork::findServer()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00364">KviServerDataBase::importFromMircIni()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00158">ircUri()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00046">KviServer()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">load()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00102">operator=()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00254">save()</a>, and <a class="el" href="kvi__irclink_8cpp_source.html#l00343">KviIrcLink::socketStateChange()</a>.</p>
 
 </div>
 </div>
@@ -2158,7 +2211,7 @@ Inheritance diagram for KviServer:</div>
 <li>src/kvilib/irc/<a class="el" href="kvi__ircserver_8cpp.html">kvi_ircserver.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:35 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:27 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

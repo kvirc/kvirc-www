@@ -57,7 +57,7 @@
 <a name="l00038"></a>00038 <span class="preprocessor">#include &quot;<a class="code" href="kvi__ircconnection_8h.html" title="An abstraction of a connection to an IRC server.">kvi_ircconnection.h</a>&quot;</span>
 <a name="l00039"></a>00039 <span class="preprocessor">#include &quot;<a class="code" href="kvi__input_8h.html" title="Input handling.">kvi_input.h</a>&quot;</span>
 <a name="l00040"></a>00040 <span class="preprocessor">#include &quot;<a class="code" href="kvi__tal__hbox_8h.html" title="Class for horizontal box.">kvi_tal_hbox.h</a>&quot;</span>
-<a name="l00041"></a>00041 <span class="preprocessor">#include &quot;<a class="code" href="kvi__tal__splitter_8h.html" title="Class used to workaround a strange behaviour in QSplitter.">kvi_tal_splitter.h</a>&quot;</span>
+<a name="l00041"></a>00041 <span class="preprocessor">#include &quot;<a class="code" href="kvi__tal__splitter_8h.html" title="Class used to workaround unwanted behaviours in QSplitter.">kvi_tal_splitter.h</a>&quot;</span>
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043 <span class="preprocessor">#ifdef COMPILE_ON_WINDOWS</span>
 <a name="l00044"></a>00044 <span class="preprocessor"></span>        <span class="comment">// The brain-damaged MSVC compiler can&#39;t instantiate QList templates without a destructor definition</span>
@@ -169,7 +169,7 @@
 <a name="l00155"></a><a class="code" href="classKviWindow.html#a6f3ab0ae66c5397962dfc7d39329592d">00155</a>         QString                               m_szPlainTextCaption;
 <a name="l00156"></a><a class="code" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">00156</a>         <a class="code" href="classKviIrcView.html">KviIrcView</a>                          * m_pIrcView;
 <a name="l00157"></a><a class="code" href="classKviWindow.html#ac5bc9ea8c19f88f18d32c65845dade31">00157</a>         <a class="code" href="classKviInput.html" title="Input handling class.">KviInput</a>                            * m_pInput;
-<a name="l00158"></a><a class="code" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">00158</a>         <a class="code" href="classKviTalSplitter.html" title="Toolkit Abstraction Layer: splitter class.">KviTalSplitter</a>                      * m_pSplitter;
+<a name="l00158"></a><a class="code" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">00158</a>         <a class="code" href="kvi__tal__splitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a>                      * m_pSplitter;
 <a name="l00159"></a><a class="code" href="classKviWindow.html#aec571bc9619f7ec16d925f0b4d250a0d">00159</a>         <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>                          * m_pButtonBox;
 <a name="l00160"></a><a class="code" href="classKviWindow.html#a92bf9937a512a4662ee99497a8974d60">00160</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span>                     m_uId;
 <a name="l00161"></a><a class="code" href="classKviWindow.html#a9f380d0c4c92635ac97fbbf1b3cd2b3d">00161</a>         QString                               m_szTextEncoding;
@@ -222,7 +222,7 @@
 <a name="l00208"></a>00208         <span class="comment">// the current IRC connection (if any)</span>
 <a name="l00209"></a>00209         <a class="code" href="classKviIrcConnection.html" title="An abstraction of a connection to an IRC server.">KviIrcConnection</a> * connection();
 <a name="l00210"></a>00210         <span class="comment">// The splitter of this window: it *shouldn&#39;t* be null... but ... well.. who knows ? :D ...better check it</span>
-<a name="l00211"></a><a class="code" href="classKviWindow.html#abd219ee6ceee666dd6a8eb1058065545">00211</a>         <span class="keyword">inline</span> <a class="code" href="classKviTalSplitter.html" title="Toolkit Abstraction Layer: splitter class.">KviTalSplitter</a> * <a class="code" href="classKviWindow.html#abd219ee6ceee666dd6a8eb1058065545">splitter</a>(){ <span class="keywordflow">return</span> m_pSplitter; };
+<a name="l00211"></a><a class="code" href="classKviWindow.html#abd219ee6ceee666dd6a8eb1058065545">00211</a>         <span class="keyword">inline</span> <a class="code" href="kvi__tal__splitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a> * <a class="code" href="classKviWindow.html#abd219ee6ceee666dd6a8eb1058065545">splitter</a>(){ <span class="keywordflow">return</span> m_pSplitter; };
 <a name="l00212"></a>00212         <span class="comment">// The window has ALWAYS a WindowList item</span>
 <a name="l00213"></a><a class="code" href="classKviWindow.html#ad3a7cf1500953268cf147b1678fc2142">00213</a>         <span class="keyword">inline</span> <a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> * <a class="code" href="classKviWindow.html#ad3a7cf1500953268cf147b1678fc2142">windowListItem</a>(){ <span class="keywordflow">return</span> m_pWindowListItem; };
 <a name="l00214"></a>00214         <span class="comment">// The window *might* have a button container</span>
@@ -417,7 +417,7 @@
 <a name="l00403"></a>00403 
 <a name="l00404"></a>00404 <span class="preprocessor">#endif //_KVI_WINDOW_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:29 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

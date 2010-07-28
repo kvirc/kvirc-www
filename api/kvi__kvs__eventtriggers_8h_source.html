@@ -69,7 +69,7 @@
 <a name="l00044"></a>00044 <span class="comment">//</span>
 <a name="l00045"></a>00045 <span class="comment">//</span>
 <a name="l00046"></a>00046 
-<a name="l00047"></a>00047 <span class="comment">// THESE TWO ARE SLOW, but allow reusing the params</span>
+<a name="l00047"></a>00047 <span class="comment">// These two allow reusing the parameter lists (but may require more code)</span>
 <a name="l00048"></a><a class="code" href="kvi__kvs__eventtriggers_8h.html#a60d2d302e8ade9dc24bccbc24cd3e1a3">00048</a> <span class="preprocessor">#define KVS_TRIGGER_EVENT(__idx,__wnd,__parms) \</span>
 <a name="l00049"></a>00049 <span class="preprocessor">        if(KviKvsEventManager::instance()-&gt;hasAppHandlers(__idx)) \</span>
 <a name="l00050"></a>00050 <span class="preprocessor">                KviKvsEventManager::instance()-&gt;trigger(__idx,__wnd,__parms);</span>
@@ -79,7 +79,7 @@
 <a name="l00054"></a>00054 <span class="preprocessor">                KviKvsEventManager::instance()-&gt;trigger(__idx,__wnd,__parms) : false)</span>
 <a name="l00055"></a>00055 <span class="preprocessor"></span>
 <a name="l00056"></a>00056 
-<a name="l00057"></a>00057 <span class="comment">// FAST CALLING MACROS</span>
+<a name="l00057"></a>00057 <span class="comment">// These require less code (but param lists can&#39;t be reused)</span>
 <a name="l00058"></a><a class="code" href="kvi__kvs__eventtriggers_8h.html#a0d79b9bd36e0f3ba87cfcfec6d5e5a11">00058</a> <span class="preprocessor">#define KVS_TRIGGER_EVENT_0(__idx,__wnd) \</span>
 <a name="l00059"></a>00059 <span class="preprocessor">        if(KviKvsEventManager::instance()-&gt;hasAppHandlers(__idx)) \</span>
 <a name="l00060"></a>00060 <span class="preprocessor">        { \</span>
@@ -313,7 +313,7 @@
 <a name="l00288"></a>00288 <span class="preprocessor"></span>
 <a name="l00289"></a>00289 <span class="preprocessor">#endif //!_KVI_KVS_EVENTTRIGGERS_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:28 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:19 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -65,23 +65,26 @@
 <a name="l00040"></a><a class="code" href="classKviKvsObjectFunctionHandler.html#a2fdbf8c6085704f0a8f5c68598214db0a009f34a2f22ac8e00dfe517665df45b8">00040</a>         <span class="keyword">enum</span> <a class="code" href="classKviKvsObjectFunctionHandler.html#a2fdbf8c6085704f0a8f5c68598214db0">Flags</a> { Internal = 1 };
 <a name="l00041"></a>00041 <span class="keyword">protected</span>:
 <a name="l00042"></a><a class="code" href="classKviKvsObjectFunctionHandler.html#ae76681240996e238710dd57dff04024a">00042</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_uFlags;
-<a name="l00043"></a>00043 <span class="keyword">protected</span>:
-<a name="l00044"></a>00044         <a class="code" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uFlags = 0);
-<a name="l00045"></a>00045 <span class="keyword">public</span>:
-<a name="l00046"></a>00046         <span class="keyword">virtual</span> ~<a class="code" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a>();
-<a name="l00047"></a>00047 <span class="keyword">public</span>:
-<a name="l00048"></a><a class="code" href="classKviKvsObjectFunctionHandler.html#adffe697a98200052dadda3f22d7e2fa7">00048</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviKvsObjectFunctionHandler.html#adffe697a98200052dadda3f22d7e2fa7">flags</a>(){ <span class="keywordflow">return</span> m_uFlags; };
-<a name="l00049"></a>00049 <span class="keyword">protected</span>:
-<a name="l00050"></a>00050         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviKvsObjectClass.html#a9c5bd7a7fa1d628256311112bdbf0040">isScriptHandler</a>();
-<a name="l00051"></a>00051         <span class="keyword">virtual</span> QString scriptHandlerCode();
-<a name="l00052"></a>00052         <span class="keyword">virtual</span> <a class="code" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a> * clone() = 0;
-<a name="l00053"></a>00053         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> call(<a class="code" href="classKviKvsObject.html">KviKvsObject</a> * pObject,<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> * pCall) = 0;
-<a name="l00054"></a>00054 };
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057 <span class="preprocessor">#endif //!_KVI_KVS_OBJECT_FUNCTIONHANDLER_H_</span>
+<a name="l00043"></a><a class="code" href="classKviKvsObjectFunctionHandler.html#a3a9ddaa88178c650c9011f9cba5702d0">00043</a>         <span class="keywordtype">bool</span> m_bClone;
+<a name="l00044"></a>00044 <span class="keyword">protected</span>:
+<a name="l00045"></a>00045         <a class="code" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uFlags = 0);
+<a name="l00046"></a>00046 <span class="keyword">public</span>:
+<a name="l00047"></a>00047         <span class="keyword">virtual</span> ~<a class="code" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a>();
+<a name="l00048"></a>00048 <span class="keyword">public</span>:
+<a name="l00049"></a><a class="code" href="classKviKvsObjectFunctionHandler.html#a31ec84da2b8b1021a24e034d4af6fc99">00049</a>         <span class="keywordtype">void</span> <a class="code" href="classKviKvsObjectFunctionHandler.html#a31ec84da2b8b1021a24e034d4af6fc99">setClone</a>(<span class="keywordtype">bool</span> bCl){m_bClone=bCl;};
+<a name="l00050"></a>00050         <span class="keywordtype">bool</span> isClone();
+<a name="l00051"></a><a class="code" href="classKviKvsObjectFunctionHandler.html#adffe697a98200052dadda3f22d7e2fa7">00051</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviKvsObjectFunctionHandler.html#adffe697a98200052dadda3f22d7e2fa7">flags</a>(){ <span class="keywordflow">return</span> m_uFlags; };
+<a name="l00052"></a>00052 <span class="keyword">protected</span>:
+<a name="l00053"></a>00053         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviKvsObjectClass.html#a9c5bd7a7fa1d628256311112bdbf0040">isScriptHandler</a>();
+<a name="l00054"></a>00054         <span class="keyword">virtual</span> QString scriptHandlerCode();
+<a name="l00055"></a>00055         <span class="keyword">virtual</span> <a class="code" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a> * clone() = 0;
+<a name="l00056"></a>00056         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> call(<a class="code" href="classKviKvsObject.html">KviKvsObject</a> * pObject,<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> * pCall) = 0;
+<a name="l00057"></a>00057 };
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060 <span class="preprocessor">#endif //!_KVI_KVS_OBJECT_FUNCTIONHANDLER_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:28 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:19 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

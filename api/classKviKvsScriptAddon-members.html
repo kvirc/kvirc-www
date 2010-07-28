@@ -27,6 +27,7 @@
 </div>
 <div class="contents">
 <h1>KviKvsScriptAddon Member List</h1>This is the complete list of members for <a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a>, including all inherited members.<table>
+  <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#ad8f7189a588ff6348fa9f98579681586">addInstalledFile</a>(const QString &amp;szFileName)</td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#a1dd9426a6993aa4cbd46085f1a8cc803">allocateScripts</a>(const QString &amp;sVisibleNameCode, const QString &amp;szDescriptionCode, const QString &amp;szUninstallCallbackCode)</td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#a00bcec889608471046efd89e16f12ef7">configureCallbackCode</a>()</td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#a025b9f46d018abc19a6b3c096bc24231">description</a>()</td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td></td></tr>
@@ -37,11 +38,13 @@
   <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#a3d642db41a88d8e0c3c27efe0622fe78">helpCallbackCode</a>()</td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#ac62c51ff9d22fd927e35c5bbc5039803">icon</a>()</td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#a987595e864e2538c2cd895571d699dd8">iconId</a>()</td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#a233011850cc9138f632762f9eb73ade0">installedFiles</a>() const </td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#a452e4343ad8b83b5b6e8db9c177ed0ce">KviKvsScriptAddon</a>()</td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#a0be84a6e795474eac58e6948b79120a8">KviKvsScriptAddon</a>(const QString &amp;szName, const QString &amp;szVersion, const QString &amp;szVisibleNameCode, const QString &amp;szDescriptionCode, const QString &amp;szUninstallCallbackCode, const QString &amp;szIconId)</td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#ab0ad2bd1513ff240507e57a42a3ab746">KviKvsScriptAddon</a>(const KviKvsScriptAddon &amp;a)</td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#a0d639e987b80bf2d807a35e6a6b16820">KviKvsScriptAddonManager</a> class</td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td><code> [friend]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#acdb300f67916761db64605d9564b3ffa">load</a>(KviConfig *cfg, const QString &amp;szName)</td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td><code> [protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#a84160ca28ebd64fdd7a6d2ec8030d083">m_lInstalledFiles</a></td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#a24388aa618113813d38575e1b60118ee">m_pConfigureCallback</a></td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#ae66a3251e8f51d2b1c024d80994fcb96">m_pDescriptionScript</a></td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#a1dc955456db5fc18c97fdd986f89b220">m_pHelpCallback</a></td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td><code> [protected]</code></td></tr>
@@ -62,7 +65,7 @@
   <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#afa8cb72b4a3656f55cc683eb4a7a39c3">visibleNameCode</a>()</td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsScriptAddon.html#a2b172f77ef8d7bb5fbc65c3b6583e593">~KviKvsScriptAddon</a>()</td><td><a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:31 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:23 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

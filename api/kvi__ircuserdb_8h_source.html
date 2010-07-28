@@ -192,7 +192,7 @@
 <a name="l00364"></a>00364 
 <a name="l00370"></a><a class="code" href="classKviIrcUserDataBase.html#a1a7eec7d29b7e5c027681f19a503f5eb">00370</a>         <a class="code" href="classKviIrcUserEntry.html" title="A class to handle the entries of the user database.">KviIrcUserEntry</a> * <a class="code" href="classKviIrcUserDataBase.html#a1a7eec7d29b7e5c027681f19a503f5eb" title="Searches for a user in the database.">find</a>(<span class="keyword">const</span> QString &amp; nick){ <span class="keywordflow">return</span> m_pDict-&gt;find(nick); };
 <a name="l00371"></a>00371 
-<a name="l00378"></a>00378         <span class="keywordtype">void</span> removeUser(<span class="keyword">const</span> QString &amp; nick, <a class="code" href="classKviIrcUserEntry.html" title="A class to handle the entries of the user database.">KviIrcUserEntry</a> * e);
+<a name="l00378"></a>00378         <span class="keywordtype">bool</span> removeUser(<span class="keyword">const</span> QString &amp; nick, <a class="code" href="classKviIrcUserEntry.html" title="A class to handle the entries of the user database.">KviIrcUserEntry</a> * e);
 <a name="l00379"></a>00379 
 <a name="l00384"></a><a class="code" href="classKviIrcUserDataBase.html#ae1305651b4560b8030beb7d865096712">00384</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviIrcUserEntry&gt;</a> * <a class="code" href="classKviIrcUserDataBase.html#ae1305651b4560b8030beb7d865096712" title="Returns the database dictionary.">dict</a>(){ <span class="keywordflow">return</span> m_pDict; };
 <a name="l00385"></a>00385 
@@ -217,7 +217,7 @@
 <a name="l00449"></a>00449 
 <a name="l00450"></a>00450 <span class="preprocessor">#endif //_KVI_IRCUSERDB_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:27 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:18 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

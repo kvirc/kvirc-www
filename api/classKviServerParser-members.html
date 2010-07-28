@@ -34,8 +34,8 @@
   <tr class="memlist"><td><a class="el" href="classKviServerParser.html#ae6766c193e7f2876f9de2309a3d013d0">echoCtcpRequest</a>(KviCtcpMessage *msg)</td><td><a class="el" href="classKviServerParser.html">KviServerParser</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviServerParser.html#a6464d27efda1b2da7871d59462cfb0d0">encodeCtcpParameter</a>(const char *param, KviStr &amp;buffer, bool bSpaceBreaks=true)</td><td><a class="el" href="classKviServerParser.html">KviServerParser</a></td><td><code> [static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviServerParser.html#a5934c0bf37ef0d0e61841aeb64c5983f">encodeCtcpParameter</a>(const char *param, QString &amp;buffer, bool bSpaceBreaks=true)</td><td><a class="el" href="classKviServerParser.html">KviServerParser</a></td><td><code> [static]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classKviServerParser.html#a97ce282d83036eb0ec529469d942997f">extractCtcpParameter</a>(const char *msg_ptr, KviStr &amp;buffer, bool bSpaceBreaks=true)</td><td><a class="el" href="classKviServerParser.html">KviServerParser</a></td><td><code> [static]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classKviServerParser.html#adcc286243b43a9cf7ba8a11a67444314">extractCtcpParameter</a>(const char *msg_ptr, QString &amp;buffer, bool bSpaceBreaks=true)</td><td><a class="el" href="classKviServerParser.html">KviServerParser</a></td><td><code> [static]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviServerParser.html#a91cb39cd0179e0bc23b47d447ccccdf5">extractCtcpParameter</a>(const char *msg_ptr, KviStr &amp;buffer, bool bSpaceBreaks=true, bool bSafeOnly=false)</td><td><a class="el" href="classKviServerParser.html">KviServerParser</a></td><td><code> [static]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviServerParser.html#a92e899e365c2483a6d629d644ac0fec2">extractCtcpParameter</a>(const char *msg_ptr, QString &amp;buffer, bool bSpaceBreaks=true, bool bSafeOnly=false)</td><td><a class="el" href="classKviServerParser.html">KviServerParser</a></td><td><code> [static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviServerParser.html#abad60c34bbb767ebc81a29bee0314b2a">KviServerParser</a>()</td><td><a class="el" href="classKviServerParser.html">KviServerParser</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviServerParser.html#a9fd9c1962a144a233938d604a524bb18">m_ctcpReplyParseProcTable</a></td><td><a class="el" href="classKviServerParser.html">KviServerParser</a></td><td><code> [private, static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviServerParser.html#acec1a660aa85c1d2f48aba8ed31337dd">m_ctcpRequestParseProcTable</a></td><td><a class="el" href="classKviServerParser.html">KviServerParser</a></td><td><code> [private, static]</code></td></tr>
@@ -158,7 +158,7 @@
   <tr class="memlist"><td><a class="el" href="classKviServerParser.html#a970c6943edc0de94ef8162ed3e4eda83">replyCtcp</a>(KviCtcpMessage *msg, const QString &amp;data)</td><td><a class="el" href="classKviServerParser.html">KviServerParser</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviServerParser.html#a110a5e587993315a95e5ac006e115a7a">~KviServerParser</a>()</td><td><a class="el" href="classKviServerParser.html">KviServerParser</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:36 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:27 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

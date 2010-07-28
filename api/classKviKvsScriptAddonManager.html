@@ -40,7 +40,7 @@
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddonManager.html#a517d8de226901de415f3799523f887a4">load</a> (const QString &amp;szFileName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddonManager.html#a363e181168fb4146e7cdb7bbdc9a89f4">registerAddon</a> (<a class="el" href="classKviKvsScriptAddonRegistrationData.html">KviKvsScriptAddonRegistrationData</a> *<a class="el" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddonManager.html#aad4e9f54ad55509556aa4f17f6b55b01">save</a> (const QString &amp;szFileName)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddonManager.html#ab4217b6b90de99eefb8ae1fd0f5c886b">unregisterAddon</a> (const QString &amp;szName, <a class="el" href="classKviWindow.html">KviWindow</a> *pWnd, bool bExecuteUninstallCallback=true)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddonManager.html#a4ea3ced887e7408401e188e7e5f694a8">unregisterAddon</a> (const QString &amp;szName, <a class="el" href="classKviWindow.html">KviWindow</a> *pWnd, bool bExecuteUninstallCallback=true, bool bUninstallFiles=true)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddonManager.html#ace9f0b1e259a9a36b85a5a145da5c919">~KviKvsScriptAddonManager</a> ()</td></tr>
 <tr><td colspan="2"><h2>Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddonManager.html#a1df3e529022196658a8b4f5baf64eec3">done</a> ()</td></tr>
@@ -72,9 +72,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00110">m_bLoaded</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00111">m_pAddonDict</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00107">m_pInstance</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00849">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00118">m_bLoaded</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00119">m_pAddonDict</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00115">m_pInstance</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00858">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00250">init()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00263">init()</a>.</p>
 
 </div>
 </div>
@@ -93,7 +93,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00111">m_pAddonDict</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00119">m_pAddonDict</a>.</p>
 
 </div>
 </div>
@@ -113,7 +113,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00302">delayedLoad()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00110">m_bLoaded</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00111">m_pAddonDict</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00315">delayedLoad()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00118">m_bLoaded</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00119">m_pAddonDict</a>.</p>
 
 </div>
 </div>
@@ -132,7 +132,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00619">KviPointerHashTable&lt; Key, T &gt;::clear()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00302">delayedLoad()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00110">m_bLoaded</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00111">m_pAddonDict</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00620">KviPointerHashTable&lt; Key, T &gt;::clear()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00315">delayedLoad()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00118">m_bLoaded</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00119">m_pAddonDict</a>.</p>
 
 </div>
 </div>
@@ -151,9 +151,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l01107">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01130">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__config_8h_source.html#l00092">KviConfig::dict()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00128">KviKvsScriptAddon::load()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00110">m_bLoaded</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00111">m_pAddonDict</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00109">m_szFileName</a>, <a class="el" href="kvi__config_8h_source.html#l00051">KviConfig::Read</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00539">KviPointerHashTable&lt; Key, T &gt;::replace()</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l01116">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01139">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__config_8h_source.html#l00092">KviConfig::dict()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00132">KviKvsScriptAddon::load()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00118">m_bLoaded</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00119">m_pAddonDict</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00117">m_szFileName</a>, <a class="el" href="kvi__config_8h_source.html#l00051">KviConfig::Read</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00540">KviPointerHashTable&lt; Key, T &gt;::replace()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00329">addonDict()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00373">clear()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00349">findAddon()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00342">addonDict()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00408">clear()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00362">findAddon()</a>.</p>
 
 </div>
 </div>
@@ -172,7 +172,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00113">instance()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00121">instance()</a>.</p>
 
 </div>
 </div>
@@ -192,9 +192,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00302">delayedLoad()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00110">m_bLoaded</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00111">m_pAddonDict</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00315">delayedLoad()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00118">m_bLoaded</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00119">m_pAddonDict</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00335">registerAddon()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00355">unregisterAddon()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00348">registerAddon()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00369">unregisterAddon()</a>.</p>
 
 </div>
 </div>
@@ -213,7 +213,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00113">instance()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00237">KviKvsScriptAddonManager()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00121">instance()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00250">KviKvsScriptAddonManager()</a>.</p>
 
 </div>
 </div>
@@ -232,7 +232,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00260">done()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00250">init()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00273">done()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00263">init()</a>.</p>
 
 </div>
 </div>
@@ -252,7 +252,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00110">m_bLoaded</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00109">m_szFileName</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00118">m_bLoaded</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00117">m_szFileName</a>.</p>
 
 </div>
 </div>
@@ -272,7 +272,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00349">findAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00111">m_pAddonDict</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00539">KviPointerHashTable&lt; Key, T &gt;::replace()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00096">KviKvsScriptAddonRegistrationData::szDescriptionScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00098">KviKvsScriptAddonRegistrationData::szIconId</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00093">KviKvsScriptAddonRegistrationData::szName</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00097">KviKvsScriptAddonRegistrationData::szUninstallCallbackScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00094">KviKvsScriptAddonRegistrationData::szVersion</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00095">KviKvsScriptAddonRegistrationData::szVisibleNameScript</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00362">findAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00119">m_pAddonDict</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00540">KviPointerHashTable&lt; Key, T &gt;::replace()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00104">KviKvsScriptAddonRegistrationData::szDescriptionScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00106">KviKvsScriptAddonRegistrationData::szIconId</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00101">KviKvsScriptAddonRegistrationData::szName</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00105">KviKvsScriptAddonRegistrationData::szUninstallCallbackScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00102">KviKvsScriptAddonRegistrationData::szVersion</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00103">KviKvsScriptAddonRegistrationData::szVisibleNameScript</a>.</p>
 
 </div>
 </div>
@@ -292,11 +292,11 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__config_8cpp_source.html#l00069">KviConfig::clear()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01107">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00110">m_bLoaded</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00111">m_pAddonDict</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00109">m_szFileName</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, and <a class="el" href="kvi__config_8h_source.html#l00051">KviConfig::Write</a>.</p>
+<p>References <a class="el" href="kvi__config_8cpp_source.html#l00069">KviConfig::clear()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01116">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00118">m_bLoaded</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00119">m_pAddonDict</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00117">m_szFileName</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, and <a class="el" href="kvi__config_8h_source.html#l00051">KviConfig::Write</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab4217b6b90de99eefb8ae1fd0f5c886b"></a><!-- doxytag: member="KviKvsScriptAddonManager::unregisterAddon" ref="ab4217b6b90de99eefb8ae1fd0f5c886b" args="(const QString &amp;szName, KviWindow *pWnd, bool bExecuteUninstallCallback=true)" -->
+<a class="anchor" id="a4ea3ced887e7408401e188e7e5f694a8"></a><!-- doxytag: member="KviKvsScriptAddonManager::unregisterAddon" ref="a4ea3ced887e7408401e188e7e5f694a8" args="(const QString &amp;szName, KviWindow *pWnd, bool bExecuteUninstallCallback=true, bool bUninstallFiles=true)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -316,7 +316,13 @@
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>bExecuteUninstallCallback</em> = <code>true</code></td><td>&nbsp;</td>
+          <td class="paramname"> <em>bExecuteUninstallCallback</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>bUninstallFiles</em> = <code>true</code></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -327,7 +333,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00218">KviKvsScriptAddon::executeUninstallCallback()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00349">findAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00111">m_pAddonDict</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00553">KviPointerHashTable&lt; Key, T &gt;::remove()</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00849">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00231">KviKvsScriptAddon::executeUninstallCallback()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00362">findAddon()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00127">g_pApp</a>, <a class="el" href="kvi__app__fs_8cpp_source.html#l00109">KviApp::getLocalKvircDirectory()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00069">KviKvsScriptAddon::installedFiles()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00119">m_pAddonDict</a>, <a class="el" href="kvi__app_8h_source.html#l00123">KviApp::None</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00554">KviPointerHashTable&lt; Key, T &gt;::remove()</a>, <a class="el" href="namespaceKviFileUtils.html#ad561f61ad9a0e0c24d97bec0a8a4bdf5">KviFileUtils::removeFile()</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00858">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
 
 </div>
 </div>
@@ -343,7 +349,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00329">addonDict()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00373">clear()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00302">delayedLoad()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00349">findAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00237">KviKvsScriptAddonManager()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00270">load()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00282">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00342">addonDict()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00408">clear()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00315">delayedLoad()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00362">findAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00250">KviKvsScriptAddonManager()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00283">load()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00295">save()</a>.</p>
 
 </div>
 </div>
@@ -358,7 +364,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00329">addonDict()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00373">clear()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00302">delayedLoad()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00349">findAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00237">KviKvsScriptAddonManager()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00335">registerAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00282">save()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00355">unregisterAddon()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00245">~KviKvsScriptAddonManager()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00342">addonDict()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00408">clear()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00315">delayedLoad()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00362">findAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00250">KviKvsScriptAddonManager()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00348">registerAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00295">save()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00369">unregisterAddon()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00258">~KviKvsScriptAddonManager()</a>.</p>
 
 </div>
 </div>
@@ -373,7 +379,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00237">KviKvsScriptAddonManager()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00250">KviKvsScriptAddonManager()</a>.</p>
 
 </div>
 </div>
@@ -388,7 +394,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00302">delayedLoad()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00270">load()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00282">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00315">delayedLoad()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00283">load()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00295">save()</a>.</p>
 
 </div>
 </div>
@@ -397,7 +403,7 @@
 <li>src/kvirc/kvs/<a class="el" href="kvi__kvs__scriptaddonmanager_8cpp.html">kvi_kvs_scriptaddonmanager.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:31 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:23 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -29,6 +29,8 @@
       <li><a href="globals_func.html"><span>Functions</span></a></li>
       <li><a href="globals_vars.html"><span>Variables</span></a></li>
       <li><a href="globals_type.html"><span>Typedefs</span></a></li>
+      <li><a href="globals_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="globals_eval.html"><span>Enumerator</span></a></li>
       <li><a href="globals_defs.html"><span>Defines</span></a></li>
     </ul>
   </div>
@@ -136,6 +138,12 @@ Here is a list of all file members with links to the files they belong to:
 </li>
 <li>KVI_ARGS_RETCODE_STOP
 : <a class="el" href="kvi__main_8cpp.html#ad6a22c91d273a7036d9b876bd816769b">kvi_main.cpp</a>
+</li>
+<li>KVI_ASSERT
+: <a class="el" href="kvi__debug_8h.html#acb8235d766e251808b07c2fdaab97fbc">kvi_debug.h</a>
+</li>
+<li>KVI_ASSERT_MSG
+: <a class="el" href="kvi__debug_8h.html#a00c1fdadcac92bba0790801bd87791ce">kvi_debug.h</a>
 </li>
 <li>KVI_BIGICON_ACTIONS
 : <a class="el" href="kvi__iconmanager_8h.html#a4bbb52227516d7898fc5ed689a4b4def">kvi_iconmanager.h</a>
@@ -564,6 +572,9 @@ Here is a list of all file members with links to the files they belong to:
 <li>KVI_DARKVIOLET
 : <a class="el" href="kvi__mirccntrl_8h.html#aa31e1f9ec1474e93396d9f84b264a3ff">kvi_mirccntrl.h</a>
 </li>
+<li>kvi_debug
+: <a class="el" href="kvi__debug_8h.html#a11fcb3239f8d2d0738ffbdce05b9b1ad">kvi_debug.h</a>
+</li>
 <li>KVI_DEF_BACK
 : <a class="el" href="kvi__ircview_8cpp.html#a25eddbd8d96180c750eda6ed0951afef">kvi_ircview.cpp</a>
 </li>
@@ -633,6 +644,9 @@ Here is a list of all file members with links to the files they belong to:
 <li>kvi_fastmoveodd()
 : <a class="el" href="kvi__memmove_8cpp.html#a7ed6dfb92d6a9a79211c636a1f7b970c">kvi_memmove.cpp</a>
 , <a class="el" href="kvi__memmove_8h.html#a7ed6dfb92d6a9a79211c636a1f7b970c">kvi_memmove.h</a>
+</li>
+<li>kvi_fatal
+: <a class="el" href="kvi__debug_8h.html#aaa054b39e5acfd8ce7541f3cb608be11">kvi_debug.h</a>
 </li>
 <li>kvi_file_offset_t
 : <a class="el" href="kvi__file_8h.html#ad30a9664cc42cb951ca501aad062e8e0">kvi_file.h</a>
@@ -1747,6 +1761,9 @@ Here is a list of all file members with links to the files they belong to:
 <li>KVI_PIXMAP_OPTIONS_PREFIX_LEN
 : <a class="el" href="kvi__options_8h.html#aa360a44a7b703d85ec3984ba9b455aa1">kvi_options.h</a>
 </li>
+<li>KVI_PRETTY_FUNCTION
+: <a class="el" href="kvi__debug_8h.html#ac8ba83cf82b564f4b63e0711ccfd2d67">kvi_debug.h</a>
+</li>
 <li>KVI_PTR2MEMBER
 : <a class="el" href="kvi__settings_8h.html#a10d4e5f4fce6bfa2bd8e2975040be0e4">kvi_settings.h</a>
 </li>
@@ -1761,7 +1778,7 @@ Here is a list of all file members with links to the files they belong to:
 : <a class="el" href="kvi__malloc_8h.html#ada394c1045f27dd46f16cbdf3fa18dee">kvi_malloc.h</a>
 </li>
 <li>KVI_RECENT_CHANNELS_SEPARATOR
-: <a class="el" href="kvi__app_8h.html#ab701fd6f3d72082a80ad0bec4e2375d3">kvi_app.h</a>
+: <a class="el" href="kvi__options_8h.html#ab701fd6f3d72082a80ad0bec4e2375d3">kvi_options.h</a>
 </li>
 <li>KVI_RECT_OPTIONS_PREFIX
 : <a class="el" href="kvi__options_8h.html#a90631400d6460c6e86d496bb523d7e03">kvi_options.h</a>
@@ -1844,6 +1861,9 @@ Here is a list of all file members with links to the files they belong to:
 <li>KVI_SHORTCUTS_INPUT_BACKSPACE
 : <a class="el" href="kvi__shortcuts_8h.html#a832d0b120ae4ee3fc919d0a73eabddcc">kvi_shortcuts.h</a>
 </li>
+<li>KVI_SHORTCUTS_INPUT_BACKSPACE_2
+: <a class="el" href="kvi__shortcuts_8h.html#a97f5d977778b134bfae079c691b9712e">kvi_shortcuts.h</a>
+</li>
 <li>KVI_SHORTCUTS_INPUT_BOLD
 : <a class="el" href="kvi__shortcuts_8h.html#af01e7d44684c23ef87cc87509eae7c16">kvi_shortcuts.h</a>
 </li>
@@ -1870,15 +1890,6 @@ Here is a list of all file members with links to the files they belong to:
 </li>
 <li>KVI_SHORTCUTS_INPUT_DUMMY_2
 : <a class="el" href="kvi__shortcuts_8h.html#ad658a447c571a816e991cdca3fba7f35">kvi_shortcuts.h</a>
-</li>
-<li>KVI_SHORTCUTS_INPUT_DUMMY_3
-: <a class="el" href="kvi__shortcuts_8h.html#ac4e219a5320aa63bade1db78a4c24aa7">kvi_shortcuts.h</a>
-</li>
-<li>KVI_SHORTCUTS_INPUT_DUMMY_4
-: <a class="el" href="kvi__shortcuts_8h.html#ac6b947efc0f0ab1d4d7268641f7152c5">kvi_shortcuts.h</a>
-</li>
-<li>KVI_SHORTCUTS_INPUT_DUMMY_5
-: <a class="el" href="kvi__shortcuts_8h.html#ab4f20969df086407db753ae72697c99b">kvi_shortcuts.h</a>
 </li>
 <li>KVI_SHORTCUTS_INPUT_END
 : <a class="el" href="kvi__shortcuts_8h.html#a6d743bd25ece5ce678ab079a84fc2808">kvi_shortcuts.h</a>
@@ -1957,6 +1968,12 @@ Here is a list of all file members with links to the files they belong to:
 </li>
 <li>KVI_SHORTCUTS_INPUT_RETURN_2
 : <a class="el" href="kvi__shortcuts_8h.html#abaf17e6240fe658cd0ca7174952e0089">kvi_shortcuts.h</a>
+</li>
+<li>KVI_SHORTCUTS_INPUT_RETURN_3
+: <a class="el" href="kvi__shortcuts_8h.html#a3fc694d71290f8137dcbb539e6f3b60c">kvi_shortcuts.h</a>
+</li>
+<li>KVI_SHORTCUTS_INPUT_RETURN_4
+: <a class="el" href="kvi__shortcuts_8h.html#a99bfb827fed0eb31ae76c662c401059b">kvi_shortcuts.h</a>
 </li>
 <li>KVI_SHORTCUTS_INPUT_REVERSE
 : <a class="el" href="kvi__shortcuts_8h.html#a70cb2df58b040414a7728114fea4da67">kvi_shortcuts.h</a>
@@ -3287,6 +3304,15 @@ Here is a list of all file members with links to the files they belong to:
 <li>kvi_timeSpan
 : <a class="el" href="kvi__time_8h.html#a90325ec83dad8587a809fbe5a90147a2">kvi_time.h</a>
 </li>
+<li>KVI_TRACE
+: <a class="el" href="kvi__debug_8h.html#a11e28058a90f415cd6f041efbf669db5">kvi_debug.h</a>
+</li>
+<li>KVI_TRACE_BLOCK
+: <a class="el" href="kvi__debug_8h.html#a6102e7a577988a0b604e5cd60c037855">kvi_debug.h</a>
+</li>
+<li>KVI_TRACE_FUNCTION
+: <a class="el" href="kvi__debug_8h.html#a0420e2c381b6671375a50c28bb73c048">kvi_debug.h</a>
+</li>
 <li>KVI_TRANSPARENT
 : <a class="el" href="kvi__mirccntrl_8h.html#af8ecd11c9fa8e475841ae36e732bca7c">kvi_mirccntrl.h</a>
 </li>
@@ -3390,6 +3416,9 @@ Here is a list of all file members with links to the files they belong to:
 <li>kvi_va_arg
 : <a class="el" href="kvi__stdarg_8h.html#ab9d926c6b7949f23521fa3725055b1a4">kvi_stdarg.h</a>
 </li>
+<li>kvi_va_copy
+: <a class="el" href="kvi__stdarg_8h.html#ae5eeb7774f581c2210156eab0cc80517">kvi_stdarg.h</a>
+</li>
 <li>kvi_va_end
 : <a class="el" href="kvi__stdarg_8h.html#a5bd75ddfe8d5032eb5d11926d7a824a1">kvi_stdarg.h</a>
 </li>
@@ -3426,6 +3455,9 @@ Here is a list of all file members with links to the files they belong to:
 <li>kvi_vsnprintf()
 : <a class="el" href="kvi__string_8cpp.html#a9db1b298bc1a1d013477302570eeea16">kvi_string.cpp</a>
 , <a class="el" href="kvi__string_8h.html#a0f5638abee825975d3b7debfadbae586">kvi_string.h</a>
+</li>
+<li>kvi_warning
+: <a class="el" href="kvi__debug_8h.html#ab904492e574a8225d5f51a66133fe430">kvi_debug.h</a>
 </li>
 <li>kvi_wchar_t
 : <a class="el" href="kvi__string_8h.html#a2dc1d56cc0b9ac8c459aaef1d056ce2f">kvi_string.h</a>
@@ -3523,8 +3555,23 @@ Here is a list of all file members with links to the files they belong to:
 <li>KVI_WINDOWLIST_MIN_WIDTH
 : <a class="el" href="kvi__windowlist_8cpp.html#a3f6de98686166fcd91f08840ab31f526">kvi_windowlist.cpp</a>
 </li>
+<li>KVI_WINDOWLISTBUTTON_BOTTOM_MARGIN
+: <a class="el" href="kvi__windowlist_8cpp.html#a091da11658716b4b9b49b6f84583283f">kvi_windowlist.cpp</a>
+</li>
 <li>KVI_WINDOWLISTBUTTON_CONTEXTINDICATORHEIGHT
 : <a class="el" href="kvi__windowlist_8cpp.html#a1ec0c161e2a24f81b0b7a09c01833fcc">kvi_windowlist.cpp</a>
+</li>
+<li>KVI_WINDOWLISTBUTTON_CONTEXTINDICATORSPACING
+: <a class="el" href="kvi__windowlist_8cpp.html#aa7accab5609c42fa7719bfb4124a97cc">kvi_windowlist.cpp</a>
+</li>
+<li>KVI_WINDOWLISTBUTTON_LEFT_MARGIN
+: <a class="el" href="kvi__windowlist_8cpp.html#ac3d7b98f81ec4e73f543871ffcbe53a3">kvi_windowlist.cpp</a>
+</li>
+<li>KVI_WINDOWLISTBUTTON_RIGHT_MARGIN
+: <a class="el" href="kvi__windowlist_8cpp.html#af028a008420198106c6516b9cb3a56ac">kvi_windowlist.cpp</a>
+</li>
+<li>KVI_WINDOWLISTBUTTON_TOP_MARGIN
+: <a class="el" href="kvi__windowlist_8cpp.html#a34314bec0a5762c9a267576f572782dd">kvi_windowlist.cpp</a>
 </li>
 <li>KVI_WINDOWS_IPC_MESSAGE
 : <a class="el" href="kvi__ipc_8cpp.html#abf1574e685c8388635dd2e094d5d3313">kvi_ipc.cpp</a>
@@ -4380,20 +4427,20 @@ Here is a list of all file members with links to the files they belong to:
 : <a class="el" href="kvi__ircurl_8h.html#a9f0da543e3058ced95aac53760064eb3">kvi_ircurl.h</a>
 </li>
 <li>KviIrcViewLine
-: <a class="el" href="kvi__ircviewprivate_8h.html#a89d7aa0ecc06ffbc087ea284f7556129">kvi_ircviewprivate.h</a>
-, <a class="el" href="kvi__ircview_8h.html#aacb75aa2d99b0a2305fb313cea1fda44">kvi_ircview.h</a>
+: <a class="el" href="kvi__ircview_8h.html#aacb75aa2d99b0a2305fb313cea1fda44">kvi_ircview.h</a>
+, <a class="el" href="kvi__ircviewprivate_8h.html#a89d7aa0ecc06ffbc087ea284f7556129">kvi_ircviewprivate.h</a>
 </li>
 <li>KviIrcViewLineChunk
-: <a class="el" href="kvi__ircview_8h.html#a3585c25241fae5b9d3c5d5214c6e6d24">kvi_ircview.h</a>
-, <a class="el" href="kvi__ircviewprivate_8h.html#ab53ea35bedde2f270b03f54f1498b443">kvi_ircviewprivate.h</a>
+: <a class="el" href="kvi__ircviewprivate_8h.html#ab53ea35bedde2f270b03f54f1498b443">kvi_ircviewprivate.h</a>
+, <a class="el" href="kvi__ircview_8h.html#a3585c25241fae5b9d3c5d5214c6e6d24">kvi_ircview.h</a>
 </li>
 <li>KviIrcViewWrappedBlock
 : <a class="el" href="kvi__ircviewprivate_8h.html#aada10bdce0178862d510dcd2fdeb324b">kvi_ircviewprivate.h</a>
 , <a class="el" href="kvi__ircview_8h.html#aada10bdce0178862d510dcd2fdeb324b">kvi_ircview.h</a>
 </li>
 <li>KviIrcViewWrappedBlockSelectionInfo
-: <a class="el" href="kvi__ircview_8h.html#a8081b737a8df5fb310ed4db483cf925a">kvi_ircview.h</a>
-, <a class="el" href="kvi__ircviewprivate_8h.html#aa6531653528b38d418a5b42492e41c27">kvi_ircviewprivate.h</a>
+: <a class="el" href="kvi__ircviewprivate_8h.html#aa6531653528b38d418a5b42492e41c27">kvi_ircviewprivate.h</a>
+, <a class="el" href="kvi__ircview_8h.html#a8081b737a8df5fb310ed4db483cf925a">kvi_ircview.h</a>
 </li>
 <li>KviKvsCoreCallbackCommandExecRoutine
 : <a class="el" href="kvi__kvs__kernel_8h.html#a3bf10341c2a886fb1195388e1a3bcebe">kvi_kvs_kernel.h</a>
@@ -4434,6 +4481,45 @@ Here is a list of all file members with links to the files they belong to:
 <li>KviKvsObjectFunctionHandlerProc
 : <a class="el" href="kvi__kvs__object__class_8h.html#a089850d0087508bcb889cd286c927fe2">kvi_kvs_object_class.h</a>
 </li>
+<li>KviKvsParameterTypeBool
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#ae6370addd23e4693cce6060f3386b8ac">kvi_kvs_parameterprocessor.h</a>
+</li>
+<li>KviKvsParameterTypeKviKvsArrayCast
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a212090165c925b663d18077819cdc794">kvi_kvs_parameterprocessor.h</a>
+</li>
+<li>KviKvsParameterTypeKviKvsArrayPointer
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a1ac25a4f686f42265b44a8a36149aeb7">kvi_kvs_parameterprocessor.h</a>
+</li>
+<li>KviKvsParameterTypeKviKvsHashPointer
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a8ce1cfd13d634a3fef83dc00ce5edfbf">kvi_kvs_parameterprocessor.h</a>
+</li>
+<li>KviKvsParameterTypeKviKvsVariantList
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a0014904f3d8da0fe3b5f8f9b6162f6df">kvi_kvs_parameterprocessor.h</a>
+</li>
+<li>KviKvsParameterTypeKviKvsVariantPointer
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a3c9b7b31c180509f3fa1e1427edc9113">kvi_kvs_parameterprocessor.h</a>
+</li>
+<li>KviKvsParameterTypeKvsHObjectT
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a4dd667137762235d3bb546dec8b0bf2f">kvi_kvs_parameterprocessor.h</a>
+</li>
+<li>KviKvsParameterTypeKvsIntT
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a962339dc463403c469c01808165a59ed">kvi_kvs_parameterprocessor.h</a>
+</li>
+<li>KviKvsParameterTypeKvsRealT
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a803b4bd38c87bfe2f2bb808bcd5ed151">kvi_kvs_parameterprocessor.h</a>
+</li>
+<li>KviKvsParameterTypeKvsUIntT
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a6436a6cdf154a6f47c651d55bbdc0e05">kvi_kvs_parameterprocessor.h</a>
+</li>
+<li>KviKvsParameterTypeQByteArray
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a619fb11e4f1cc9109569869ea63b1748">kvi_kvs_parameterprocessor.h</a>
+</li>
+<li>KviKvsParameterTypeQString
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a1e92130e6e05dc12532a722da2015694">kvi_kvs_parameterprocessor.h</a>
+</li>
+<li>KviKvsParameterTypeQStringList
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a4e8a9f5bbd0228d84d185b625976082c">kvi_kvs_parameterprocessor.h</a>
+</li>
 <li>KviKvsProcessDescriptorData
 : <a class="el" href="kvi__kvs__processmanager_8h.html#afcc1c1a2fe2df929a0516c015bb6ccca">kvi_kvs_processmanager.h</a>
 </li>
@@ -4450,8 +4536,8 @@ Here is a list of all file members with links to the files they belong to:
 : <a class="el" href="kvi__sparser_8h.html#a7715da13152f21d21a5b6c53d59d52b1">kvi_sparser.h</a>
 </li>
 <li>KviMaskEntry
-: <a class="el" href="kvi__channel_8h.html#a0e989acdcc0ae4da122910be7f54c5dd">kvi_channel.h</a>
-, <a class="el" href="kvi__maskeditor_8h.html#adc038b35038bb59ff035bc34a18b601a">kvi_maskeditor.h</a>
+: <a class="el" href="kvi__maskeditor_8h.html#adc038b35038bb59ff035bc34a18b601a">kvi_maskeditor.h</a>
+, <a class="el" href="kvi__channel_8h.html#a0e989acdcc0ae4da122910be7f54c5dd">kvi_channel.h</a>
 </li>
 <li>KviModuleCtrlRoutine
 : <a class="el" href="kvi__module_8h.html#af5c2a6beb3527deada8bd9d31c867d64">kvi_module.h</a>
@@ -4482,6 +4568,9 @@ Here is a list of all file members with links to the files they belong to:
 </li>
 <li>KviOption_boolAcceptBrokenFileNameDccResumeRequests
 : <a class="el" href="kvi__options_8h.html#a7124d7e8192c191d7ac069bdb4656226">kvi_options.h</a>
+</li>
+<li>KviOption_boolAcceptMismatchedPortDccResumeRequests
+: <a class="el" href="kvi__options_8h.html#aaaac472a06d7bf9c0afb00b876b63482">kvi_options.h</a>
 </li>
 <li>KviOption_boolAlwaysDisconnectClosingConnectedConsole
 : <a class="el" href="kvi__options_8h.html#a7b1bf575bc5a9a69cdaa26c93e502751">kvi_options.h</a>
@@ -4669,11 +4758,14 @@ Here is a list of all file members with links to the files they belong to:
 <li>KviOption_boolDisableWhoRequestOnJoin
 : <a class="el" href="kvi__options_8h.html#a9a90a54d68d0201ee34e2885cfb922ce">kvi_options.h</a>
 </li>
-<li>KviOption_boolDoNotStretchAvatars
-: <a class="el" href="kvi__options_8h.html#ad4d8338626e111549755898c9c1a4d9a">kvi_options.h</a>
-</li>
 <li>KviOption_boolDoNotSuggestRestoreDefaultScript
 : <a class="el" href="kvi__options_8h.html#a82d6f52def2c865dc19190a45d837d02">kvi_options.h</a>
+</li>
+<li>KviOption_boolDoNotUpscaleAvatars
+: <a class="el" href="kvi__options_8h.html#ad3967a2ab42bea92f9e600732b556fe5">kvi_options.h</a>
+</li>
+<li>KviOption_boolDontShowNotifierIfActiveWindowIsFullScreen
+: <a class="el" href="kvi__options_8h.html#a0bb0cf318ebcf8f662ccea01350c0133">kvi_options.h</a>
 </li>
 <li>KviOption_boolDrawEmoticons
 : <a class="el" href="kvi__options_8h.html#ace84a491a8bc4a7567dfe68255eb66b4">kvi_options.h</a>
@@ -4693,6 +4785,15 @@ Here is a list of all file members with links to the files they belong to:
 <li>KviOption_boolEnableAwayListUpdates
 : <a class="el" href="kvi__options_8h.html#a3c8a45274f69aee858ebdc8da384c7f7">kvi_options.h</a>
 </li>
+<li>KviOption_boolEnableChannelLinkToolTip
+: <a class="el" href="kvi__options_8h.html#a69b6176b33886d9af7bb87dd1e3e87fd">kvi_options.h</a>
+</li>
+<li>KviOption_boolEnableEscapeLinkToolTip
+: <a class="el" href="kvi__options_8h.html#afd17d696cb3ad2de28f3df8efda8fe3a">kvi_options.h</a>
+</li>
+<li>KviOption_boolEnableHostLinkToolTip
+: <a class="el" href="kvi__options_8h.html#a974a811aaaa75782213da0f2619da7d6">kvi_options.h</a>
+</li>
 <li>KviOption_boolEnableIgnoreOnNotice
 : <a class="el" href="kvi__options_8h.html#adcf2ce55b823a34b53a336f00615ee88">kvi_options.h</a>
 </li>
@@ -4702,14 +4803,26 @@ Here is a list of all file members with links to the files they belong to:
 <li>KviOption_boolEnableInputHistory
 : <a class="el" href="kvi__options_8h.html#ab322e9600f96b7e48c5f55b423205e84">kvi_options.h</a>
 </li>
+<li>KviOption_boolEnableModeLinkToolTip
+: <a class="el" href="kvi__options_8h.html#a15f560a480ec901f3a6581b8740c1a92">kvi_options.h</a>
+</li>
+<li>KviOption_boolEnableNickLinkToolTip
+: <a class="el" href="kvi__options_8h.html#af96f546996193477cc9b508f19a166be">kvi_options.h</a>
+</li>
 <li>KviOption_boolEnableNotifier
 : <a class="el" href="kvi__options_8h.html#aca6df37a143c0d4b14f263eb0d0f6c9f">kvi_options.h</a>
 </li>
 <li>KviOption_boolEnableQueryTracing
 : <a class="el" href="kvi__options_8h.html#a268aef7a2aa2837f3dd56209ba4288fa">kvi_options.h</a>
 </li>
+<li>KviOption_boolEnableServerLinkToolTip
+: <a class="el" href="kvi__options_8h.html#a4114da64457e5ffca0675e975b34b5a7">kvi_options.h</a>
+</li>
 <li>KviOption_boolEnableTrayIconFlashing
 : <a class="el" href="kvi__options_8h.html#a71435b8eb8e00a2672975bc48cb04534">kvi_options.h</a>
+</li>
+<li>KviOption_boolEnableUrlLinkToolTip
+: <a class="el" href="kvi__options_8h.html#aedc13d8b4e4accfefc64b69194f6f0f2">kvi_options.h</a>
 </li>
 <li>KviOption_boolEnableVisualEffects
 : <a class="el" href="kvi__options_8h.html#ae0e37cb5b789a233ee2f206f621a81b7">kvi_options.h</a>
@@ -5196,6 +5309,9 @@ Here is a list of all file members with links to the files they belong to:
 </li>
 <li>KviOption_boolWarnAboutPastingMultipleLines
 : <a class="el" href="kvi__options_8h.html#afa82ad621fea2b18b85d352c03989c5f">kvi_options.h</a>
+</li>
+<li>KviOption_boolWheelScrollsWindowsList
+: <a class="el" href="kvi__options_8h.html#a5919e2d1ce3a5eb704c50638f44e488a">kvi_options.h</a>
 </li>
 <li>KviOption_boolWhoisRepliesToActiveWindow
 : <a class="el" href="kvi__options_8h.html#a8e456b7b8339857241504ec7b92764b8">kvi_options.h</a>
@@ -5911,6 +6027,9 @@ Here is a list of all file members with links to the files they belong to:
 <li>KviSharedFileList
 : <a class="el" href="kvi__sharedfiles_8h.html#a6dc03e2b396e25186a2537bf55db9ba8">kvi_sharedfiles.h</a>
 </li>
+<li>KviTalSplitter
+: <a class="el" href="kvi__tal__splitter_8h.html#acac78135c0b3a48113c305a401adddfd">kvi_tal_splitter.h</a>
+</li>
 <li>KviTextIconAssocEntry
 : <a class="el" href="kvi__texticonmanager_8h.html#a0a5f9dc88fc47adcfeb073268e35f82d">kvi_texticonmanager.h</a>
 </li>
@@ -5936,7 +6055,7 @@ Here is a list of all file members with links to the files they belong to:
 : <a class="el" href="kvi__kvs__types_8h.html#ac9044d831e7a8b855ec6563e745cec21">kvi_kvs_types.h</a>
 </li>
 <li>KVS_PARAMETER
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a6da48c679b5e7fa3347ef061f2d7207b">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#abc4383fa5a903a64d8abf31711793a87">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PARAMETER_IGNORED
 : <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a8b856d1f00a4c46aa4fbb36660e2040f">kvi_kvs_parameterprocessor.h</a>
@@ -5954,64 +6073,64 @@ Here is a list of all file members with links to the files they belong to:
 : <a class="el" href="kvi__kvs__parameterprocessor_8h.html#ad7b50ae4c63b983cd951cbb78aee04e4">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_ARRAY
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a6d834accca06247f25a2e7ae817fdaa9">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a1ac25a4f686f42265b44a8a36149aeb7a2f2cf190b53b0fca4025a5b2e788004c">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_ARRAYCAST
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#aa93f2f1c7bf24e1b49d73c4153e58986">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a212090165c925b663d18077819cdc794ac3e59f7fb46b826ceadaf2d649f20a91">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_BOOL
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#ad7e99b72464fa37210dc5ea1b31d84f5">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#ae6370addd23e4693cce6060f3386b8acabe3fa7de6741aa53414c96df114d0dfe">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_BOOLEAN
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#aaa7aaebf4bc71243a0345ce7a8d9dd8b">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#ae6370addd23e4693cce6060f3386b8aca1f3a00e028ca1fb8bbb4d3a658801691">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_CSTRING
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a636dbe2c021c49ecd2809d29b566cd11">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a619fb11e4f1cc9109569869ea63b1748a5c5efdef85f4425073719db37f7dbcfd">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_DOUBLE
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#ab171ceef38aa3468d42fe5bd07bb5f4b">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a803b4bd38c87bfe2f2bb808bcd5ed151a83d611eb5974b333fd63cec3895497b4">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_HASH
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a793e3ce88eac294c703277a0f371c619">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a8ce1cfd13d634a3fef83dc00ce5edfbfa197d680ee54d84006fa0899ace620fce">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_HOBJECT
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a664f1aa9f5db39ca811a2c79b95ff55a">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a4dd667137762235d3bb546dec8b0bf2faaac847b27158bc64640a57f3405e4a14">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_IGNORE
 : <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a9e1995e546d09bba393c5071b6fde7ba">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_INT
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a7ad4ed20748a0c9324cc2e6365660a25">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a962339dc463403c469c01808165a59eda35462ab0be254dd552209d8543796806">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_INTEGER
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a1598b9c7de60f23dbfc4b380fa5e15d9">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a962339dc463403c469c01808165a59eda23c3eb6d29586a275429290ce24ca343">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_NONEMPTYCSTRING
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a00b0981a91724279b92f3ced270a6819">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a619fb11e4f1cc9109569869ea63b1748a2471b06cd9e699c49e33bf98d5a3c8eb">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_NONEMPTYSTRING
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#ada065cf9b301327ddc1f5ff571b874c3">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a1e92130e6e05dc12532a722da2015694a5bedacb89808fe97b766d91eace5da34">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_REAL
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a987203a2176c40353d288a42b1bfbc9b">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a803b4bd38c87bfe2f2bb808bcd5ed151a2804e449ae2f743db72d56b9324eccfe">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_STRING
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#ad323de5f92e25abc48e16d848c5e962a">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a1e92130e6e05dc12532a722da2015694adb7d10a8ccf6a03ff248bb4ab1f8908e">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_STRINGLIST
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a1375edb76dc5dfcf9c9979e5cb2ad560">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a4e8a9f5bbd0228d84d185b625976082caea7609a76f18b010b9e4580082356315">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_UINT
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a57c30bb9d96a76e96c5241d00c1fbebf">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a6436a6cdf154a6f47c651d55bbdc0e05a7c91329cce3e60d08a68e73e2bc47863">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_UNSIGNEDINTEGER
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#ad64de632c500b2a84308472b7464c228">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a6436a6cdf154a6f47c651d55bbdc0e05a7abae6ad936a946f39c7392936166926">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_VARIANT
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a7d9b03ce9bf7612233752e8815cc66ce">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a3c9b7b31c180509f3fa1e1427edc9113a1ccf8f925e0f8404feccce1fe9ed7bf4">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PT_VARIANTLIST
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#ae33055fcd74871b59631b356362e4f25">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a0014904f3d8da0fe3b5f8f9b6162f6dfa7f7e7931976bca8590a211cd00ba6a84">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>kvs_real_t
 : <a class="el" href="kvi__kvs__types_8h.html#ac0c941372331edcdc89698f6f68c866c">kvi_kvs_types.h</a>
@@ -6258,7 +6377,7 @@ Here is a list of all file members with links to the files they belong to:
 </li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:36 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:28 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

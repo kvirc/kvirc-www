@@ -168,110 +168,114 @@
 <a name="l00274"></a>00274 
 <a name="l00279"></a><a class="code" href="classKviServer.html#a4965c43cac9be947200b44db39212012">00279</a>         <span class="keyword">inline</span> QStringList * <a class="code" href="classKviServer.html#a4965c43cac9be947200b44db39212012" title="Returns the list of the channels in the autojoin list.">autoJoinChannelList</a>(){ <span class="keywordflow">return</span> m_pAutoJoinChannelList; };
 <a name="l00280"></a>00280 
-<a name="l00285"></a><a class="code" href="classKviServer.html#ae6c0c4321c2ac91ef75a4d5417fdff34">00285</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviServer.html#ae6c0c4321c2ac91ef75a4d5417fdff34" title="Returns true if the server uses IPv6.">isIPv6</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (m_uFlags &amp; <a class="code" href="kvi__ircserver_8h.html#a1e131956a6feeba4a82161c9283ade1b">KVI_IRCSERVER_FLAG_IPV6</a>); };
+<a name="l00285"></a><a class="code" href="classKviServer.html#a23bf38709093bddf6a76c96a2dd0b972">00285</a>         <span class="keyword">inline</span> <span class="keyword">const</span> QString <a class="code" href="classKviServer.html#a23bf38709093bddf6a76c96a2dd0b972" title="Returns the list of the channels in the autojoin list as a string.">autoJoinChannelListAsString</a>(){ <span class="keywordflow">return</span> m_pAutoJoinChannelList ? m_pAutoJoinChannelList-&gt;join(<span class="stringliteral">&quot;,&quot;</span>) : <span class="stringliteral">&quot;&quot;</span>; };
 <a name="l00286"></a>00286 
-<a name="l00291"></a><a class="code" href="classKviServer.html#a4515545ce63283fc92126208906b0a3a">00291</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviServer.html#a4515545ce63283fc92126208906b0a3a" title="Returns true if the server uses SSL.">useSSL</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (m_uFlags &amp; <a class="code" href="kvi__ircserver_8h.html#afea02738e6db67070c7375c03f1371ba">KVI_IRCSERVER_FLAG_SSL</a>); };
+<a name="l00291"></a><a class="code" href="classKviServer.html#ae6c0c4321c2ac91ef75a4d5417fdff34">00291</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviServer.html#ae6c0c4321c2ac91ef75a4d5417fdff34" title="Returns true if the server uses IPv6.">isIPv6</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (m_uFlags &amp; <a class="code" href="kvi__ircserver_8h.html#a1e131956a6feeba4a82161c9283ade1b">KVI_IRCSERVER_FLAG_IPV6</a>); };
 <a name="l00292"></a>00292 
-<a name="l00297"></a><a class="code" href="classKviServer.html#a8fd6431cb58e72cbe52577199e781c10">00297</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviServer.html#a8fd6431cb58e72cbe52577199e781c10" title="Returns true if the CAP protocol is enabled for this server.">enabledCAP</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (m_uFlags &amp; <a class="code" href="kvi__ircserver_8h.html#a1c9445446a72d30a442af169e62497e0">KVI_IRCSERVER_FLAG_CAP</a>); };
+<a name="l00297"></a><a class="code" href="classKviServer.html#a4515545ce63283fc92126208906b0a3a">00297</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviServer.html#a4515545ce63283fc92126208906b0a3a" title="Returns true if the server uses SSL.">useSSL</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (m_uFlags &amp; <a class="code" href="kvi__ircserver_8h.html#afea02738e6db67070c7375c03f1371ba">KVI_IRCSERVER_FLAG_SSL</a>); };
 <a name="l00298"></a>00298 
-<a name="l00303"></a><a class="code" href="classKviServer.html#a1e1ac16961ace9a3d30639fb4557745f">00303</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviServer.html#a1e1ac16961ace9a3d30639fb4557745f" title="Returns true if the STARTTLS protocol is enabled for this server.">enabledSTARTTLS</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (m_uFlags &amp; <a class="code" href="kvi__ircserver_8h.html#aa50bfcb00328cfbd25e2ba460b5022ee">KVI_IRCSERVER_FLAG_STARTTLS</a>); };
+<a name="l00303"></a><a class="code" href="classKviServer.html#a8fd6431cb58e72cbe52577199e781c10">00303</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviServer.html#a8fd6431cb58e72cbe52577199e781c10" title="Returns true if the CAP protocol is enabled for this server.">enabledCAP</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (m_uFlags &amp; <a class="code" href="kvi__ircserver_8h.html#a1c9445446a72d30a442af169e62497e0">KVI_IRCSERVER_FLAG_CAP</a>); };
 <a name="l00304"></a>00304 
-<a name="l00309"></a><a class="code" href="classKviServer.html#a28af1b439238087077a74b37b4b36b15">00309</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviServer.html#a28af1b439238087077a74b37b4b36b15" title="Returns true if the SASL protocol is enabled for this server.">enabledSASL</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (m_uFlags &amp; <a class="code" href="kvi__ircserver_8h.html#a748880b1542a698916b1844d538fc59a">KVI_IRCSERVER_FLAG_SASL</a>); };
+<a name="l00309"></a><a class="code" href="classKviServer.html#a1e1ac16961ace9a3d30639fb4557745f">00309</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviServer.html#a1e1ac16961ace9a3d30639fb4557745f" title="Returns true if the STARTTLS protocol is enabled for this server.">enabledSTARTTLS</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (m_uFlags &amp; <a class="code" href="kvi__ircserver_8h.html#aa50bfcb00328cfbd25e2ba460b5022ee">KVI_IRCSERVER_FLAG_STARTTLS</a>); };
 <a name="l00310"></a>00310 
-<a name="l00315"></a><a class="code" href="classKviServer.html#aa4e4e6bb6f7a6c67516044ae6e43307f">00315</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviServer.html#aa4e4e6bb6f7a6c67516044ae6e43307f" title="Returns true if the server caches the IP.">cacheIp</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (m_uFlags &amp; <a class="code" href="kvi__ircserver_8h.html#ad61882b406b151d1366898cdd74df46e">KVI_IRCSERVER_FLAG_CACHEIP</a>); };
+<a name="l00315"></a><a class="code" href="classKviServer.html#a28af1b439238087077a74b37b4b36b15">00315</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviServer.html#a28af1b439238087077a74b37b4b36b15" title="Returns true if the SASL protocol is enabled for this server.">enabledSASL</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (m_uFlags &amp; <a class="code" href="kvi__ircserver_8h.html#a748880b1542a698916b1844d538fc59a">KVI_IRCSERVER_FLAG_SASL</a>); };
 <a name="l00316"></a>00316 
-<a name="l00322"></a>00322         QString ircUri();
-<a name="l00323"></a>00323 
-<a name="l00329"></a><a class="code" href="classKviServer.html#a71501e3cb605c6c6067c26a47fa34c34">00329</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#a71501e3cb605c6c6067c26a47fa34c34" title="Sets the proxy server for the server.">setProxy</a>(<span class="keywordtype">int</span> iProxy){ m_iProxy = iProxy; };
-<a name="l00330"></a>00330 
-<a name="l00336"></a><a class="code" href="classKviServer.html#aebb124fa2c84e93c483959fb8d64654c">00336</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#aebb124fa2c84e93c483959fb8d64654c" title="Sets the IP for the server.">setIp</a>(<span class="keyword">const</span> QString &amp; szIp){ m_szIp = szIp; };
-<a name="l00337"></a>00337 
-<a name="l00343"></a><a class="code" href="classKviServer.html#a87ab4a69184f8c114e78312b1b5f9fc8">00343</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#a87ab4a69184f8c114e78312b1b5f9fc8" title="Sets the port for the server.">setPort</a>(kvi_u32_t uPort){ m_uPort = uPort; };
-<a name="l00344"></a>00344 
-<a name="l00350"></a><a class="code" href="classKviServer.html#ab23b5a02e84376365904afcb10f89b2b">00350</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#ab23b5a02e84376365904afcb10f89b2b" title="Sets the hostname for the server.">setHostName</a>(<span class="keyword">const</span> QString &amp; szHost){ m_szHostname = szHost; };
-<a name="l00351"></a>00351 
-<a name="l00357"></a><a class="code" href="classKviServer.html#adf3fce41fbad7ac7ed47ddc64ef52cf5">00357</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#adf3fce41fbad7ac7ed47ddc64ef52cf5" title="Sets the description for the server.">setDescription</a>(<span class="keyword">const</span> QString &amp; szDesc){ m_szDescription = szDesc; };
-<a name="l00358"></a>00358 
-<a name="l00364"></a><a class="code" href="classKviServer.html#a988fcff5a4cb6b3adb577e279bb4c8eb">00364</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#a988fcff5a4cb6b3adb577e279bb4c8eb" title="Sets the username of the user associated to the server.">setUserName</a>(<span class="keyword">const</span> QString &amp; szUser){ m_szUser = szUser; };
-<a name="l00365"></a>00365 
-<a name="l00371"></a><a class="code" href="classKviServer.html#aeeea392df6fafd047b2f1adb8a81783c">00371</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#aeeea392df6fafd047b2f1adb8a81783c" title="Sets the password of the user associated to the server.">setPassword</a>(<span class="keyword">const</span> QString &amp; szPass){ m_szPass = szPass; };
-<a name="l00372"></a>00372 
-<a name="l00378"></a><a class="code" href="classKviServer.html#ab435b435b0d2929a07de5ccd96a93ea8">00378</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#ab435b435b0d2929a07de5ccd96a93ea8" title="Sets the nickname of the user associated to the server.">setNickName</a>(<span class="keyword">const</span> QString &amp; szNick){ m_szNick = szNick; };
-<a name="l00379"></a>00379 
-<a name="l00385"></a><a class="code" href="classKviServer.html#a417c7228d6fb47a4aedb1066804fb4f0">00385</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#a417c7228d6fb47a4aedb1066804fb4f0" title="Sets the password used for sasl auth.">setSaslPass</a>(<span class="keyword">const</span> QString &amp; szPass){ m_szSaslPass = szPass; };
-<a name="l00386"></a>00386 
-<a name="l00392"></a><a class="code" href="classKviServer.html#afe4ae0d0941b75c9bdc8c821a8869a30">00392</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#afe4ae0d0941b75c9bdc8c821a8869a30" title="Sets the nickname used for sasl auth.">setSaslNick</a>(<span class="keyword">const</span> QString &amp; szNick){ m_szSaslNick = szNick; };
-<a name="l00393"></a>00393 
-<a name="l00399"></a><a class="code" href="classKviServer.html#aef3612c6da50743b5f40df533b9f8792">00399</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#aef3612c6da50743b5f40df533b9f8792" title="Sets the realname of the user associated to the server.">setRealName</a>(<span class="keyword">const</span> QString &amp; szReal){ m_szRealName = szReal; };
-<a name="l00400"></a>00400 
-<a name="l00409"></a><a class="code" href="classKviServer.html#aa3eb6aa31de7940272c3e7fe38eff0c4">00409</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#aa3eb6aa31de7940272c3e7fe38eff0c4" title="Sets the encoding associated to the server Some information as nickname and channel...">setEncoding</a>(<span class="keyword">const</span> QString &amp; szEncoding){ m_szEncoding = szEncoding; };
-<a name="l00410"></a>00410 
-<a name="l00417"></a><a class="code" href="classKviServer.html#a5f227e3bad2ae657ca74f5778561d8fe">00417</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#a5f227e3bad2ae657ca74f5778561d8fe" title="Sets the encoding associated to the server This is the default encoding when talking...">setTextEncoding</a>(<span class="keyword">const</span> QString &amp; szEncoding){ m_szTextEncoding = szEncoding; };
-<a name="l00418"></a>00418 
-<a name="l00424"></a><a class="code" href="classKviServer.html#acee74e864509e02aa6f916c3c5ebda69">00424</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#acee74e864509e02aa6f916c3c5ebda69" title="Sets the user modes of the user associated to the server.">setInitUMode</a>(<span class="keyword">const</span> QString &amp; szUMode){ m_szInitUMode = szUMode; };
-<a name="l00425"></a>00425 
-<a name="l00431"></a><a class="code" href="classKviServer.html#afc34f71c66c336492ed6e268238c33e7">00431</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#afc34f71c66c336492ed6e268238c33e7" title="Sets the commands to run on server connection.">setOnConnectCommand</a>(<span class="keyword">const</span> QString &amp; szCmd){ m_szOnConnectCommand = szCmd; };
-<a name="l00432"></a>00432 
-<a name="l00438"></a><a class="code" href="classKviServer.html#a211b3c61bafa85b4ce09ec709144401a">00438</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#a211b3c61bafa85b4ce09ec709144401a" title="Sets the commands to run on server login.">setOnLoginCommand</a>(<span class="keyword">const</span> QString &amp; szCmd){ m_szOnLoginCommand = szCmd; };
-<a name="l00439"></a>00439 
-<a name="l00445"></a><a class="code" href="classKviServer.html#af8d3ea44bf483ca733b476d4a309e415">00445</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#af8d3ea44bf483ca733b476d4a309e415">setLinkFilter</a>(<span class="keyword">const</span> QString &amp; szFilter){ m_szLinkFilter = szFilter; };
-<a name="l00446"></a>00446 
-<a name="l00453"></a>00453         <span class="keywordtype">void</span> setAutoJoinChannelList(QStringList * pNewChannelList);
-<a name="l00454"></a>00454 
-<a name="l00460"></a><a class="code" href="classKviServer.html#a4aef51f2e189dbc1e0baa7d321507b53">00460</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#a4aef51f2e189dbc1e0baa7d321507b53" title="Sets the autoconnection mode for the server.">setAutoConnect</a>(<span class="keywordtype">bool</span> bAutoConnect) { m_bAutoConnect = bAutoConnect; };
-<a name="l00461"></a>00461 
-<a name="l00467"></a><a class="code" href="classKviServer.html#ab1c9b996a9ff61880abb7d4c3a5e79f7">00467</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#ab1c9b996a9ff61880abb7d4c3a5e79f7" title="Sets the id of the user associated to the server.">setUserIdentityId</a>(<span class="keyword">const</span> QString &amp; szUserIdentityId){ m_szUserIdentityId = szUserIdentityId; };
-<a name="l00468"></a>00468 
-<a name="l00474"></a><a class="code" href="classKviServer.html#a3f1382e383f4324c35441c817409e82b">00474</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> setIPv6(<span class="keywordtype">bool</span> bSet)
-<a name="l00475"></a>00475         {
-<a name="l00476"></a>00476                 <span class="keywordflow">if</span>(bSet)m_uFlags |= <a class="code" href="kvi__ircserver_8h.html#a1e131956a6feeba4a82161c9283ade1b">KVI_IRCSERVER_FLAG_IPV6</a>;
-<a name="l00477"></a>00477                 <span class="keywordflow">else</span> m_uFlags &amp;= ((<span class="keywordtype">unsigned</span> short)~<a class="code" href="kvi__ircserver_8h.html#a1e131956a6feeba4a82161c9283ade1b">KVI_IRCSERVER_FLAG_IPV6</a>);
-<a name="l00478"></a>00478         };
-<a name="l00479"></a>00479 
-<a name="l00485"></a><a class="code" href="classKviServer.html#a5e72e50465cebe36cf7368b88c30603f">00485</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> setUseSSL(<span class="keywordtype">bool</span> bSet)
-<a name="l00486"></a>00486         {
-<a name="l00487"></a>00487                 <span class="keywordflow">if</span>(bSet)m_uFlags |= <a class="code" href="kvi__ircserver_8h.html#afea02738e6db67070c7375c03f1371ba">KVI_IRCSERVER_FLAG_SSL</a>;
-<a name="l00488"></a>00488                 <span class="keywordflow">else</span> m_uFlags &amp;= ((<span class="keywordtype">unsigned</span> short)~<a class="code" href="kvi__ircserver_8h.html#afea02738e6db67070c7375c03f1371ba">KVI_IRCSERVER_FLAG_SSL</a>);
-<a name="l00489"></a>00489         };
-<a name="l00490"></a>00490 
-<a name="l00496"></a><a class="code" href="classKviServer.html#a1a5d500a5a978ea851adc5912d081b5b">00496</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> setEnabledSTARTTLS(<span class="keywordtype">bool</span> bSet)
-<a name="l00497"></a>00497         {
-<a name="l00498"></a>00498                 <span class="keywordflow">if</span>(bSet)m_uFlags |= <a class="code" href="kvi__ircserver_8h.html#aa50bfcb00328cfbd25e2ba460b5022ee">KVI_IRCSERVER_FLAG_STARTTLS</a>;
-<a name="l00499"></a>00499                 <span class="keywordflow">else</span> m_uFlags &amp;= ((<span class="keywordtype">unsigned</span> short)~<a class="code" href="kvi__ircserver_8h.html#aa50bfcb00328cfbd25e2ba460b5022ee">KVI_IRCSERVER_FLAG_STARTTLS</a>);
-<a name="l00500"></a>00500         };
-<a name="l00501"></a>00501 
-<a name="l00507"></a><a class="code" href="classKviServer.html#a1f6d1e17f4edb540e01a20369d843097">00507</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> setEnabledCAP(<span class="keywordtype">bool</span> bSet)
-<a name="l00508"></a>00508         {
-<a name="l00509"></a>00509                 <span class="keywordflow">if</span>(bSet)m_uFlags |= <a class="code" href="kvi__ircserver_8h.html#a1c9445446a72d30a442af169e62497e0">KVI_IRCSERVER_FLAG_CAP</a>;
-<a name="l00510"></a>00510                 <span class="keywordflow">else</span> m_uFlags &amp;= ((<span class="keywordtype">unsigned</span> short)~<a class="code" href="kvi__ircserver_8h.html#a1c9445446a72d30a442af169e62497e0">KVI_IRCSERVER_FLAG_CAP</a>);
-<a name="l00511"></a>00511         };
-<a name="l00512"></a>00512 
-<a name="l00518"></a><a class="code" href="classKviServer.html#aea3b5c9138bd07f31d8f5129a1b8b6de">00518</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> setEnabledSASL(<span class="keywordtype">bool</span> bSet)
-<a name="l00519"></a>00519         {
-<a name="l00520"></a>00520                 <span class="keywordflow">if</span>(bSet)m_uFlags |= <a class="code" href="kvi__ircserver_8h.html#a748880b1542a698916b1844d538fc59a">KVI_IRCSERVER_FLAG_SASL</a>;
-<a name="l00521"></a>00521                 <span class="keywordflow">else</span> m_uFlags &amp;= ((<span class="keywordtype">unsigned</span> short)~<a class="code" href="kvi__ircserver_8h.html#a748880b1542a698916b1844d538fc59a">KVI_IRCSERVER_FLAG_SASL</a>);
-<a name="l00522"></a>00522         };
-<a name="l00523"></a>00523 
-<a name="l00529"></a><a class="code" href="classKviServer.html#abfb59152aabf0772191c092c90825d31">00529</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> setCacheIp(<span class="keywordtype">bool</span> bSet)
-<a name="l00530"></a>00530         {
-<a name="l00531"></a>00531                 <span class="keywordflow">if</span>(bSet) m_uFlags |= <a class="code" href="kvi__ircserver_8h.html#ad61882b406b151d1366898cdd74df46e">KVI_IRCSERVER_FLAG_CACHEIP</a>;
-<a name="l00532"></a>00532                 <span class="keywordflow">else</span> m_uFlags &amp;= ((<span class="keywordtype">unsigned</span> short)~<a class="code" href="kvi__ircserver_8h.html#ad61882b406b151d1366898cdd74df46e">KVI_IRCSERVER_FLAG_CACHEIP</a>);
-<a name="l00533"></a>00533         };
-<a name="l00534"></a>00534 
-<a name="l00539"></a>00539         <span class="keywordtype">void</span> generateUniqueId();
-<a name="l00540"></a>00540 
-<a name="l00546"></a><a class="code" href="classKviServer.html#a789093519816047106db62f725d375b5">00546</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#a789093519816047106db62f725d375b5" title="Sets an unique id for the server.">setId</a>(<span class="keyword">const</span> QString &amp; szId){ m_szId = szId; <span class="keywordflow">if</span>(m_szId.isEmpty()) generateUniqueId(); };
+<a name="l00321"></a><a class="code" href="classKviServer.html#aa4e4e6bb6f7a6c67516044ae6e43307f">00321</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviServer.html#aa4e4e6bb6f7a6c67516044ae6e43307f" title="Returns true if the server caches the IP.">cacheIp</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (m_uFlags &amp; <a class="code" href="kvi__ircserver_8h.html#ad61882b406b151d1366898cdd74df46e">KVI_IRCSERVER_FLAG_CACHEIP</a>); };
+<a name="l00322"></a>00322 
+<a name="l00328"></a>00328         QString ircUri();
+<a name="l00329"></a>00329 
+<a name="l00335"></a><a class="code" href="classKviServer.html#a71501e3cb605c6c6067c26a47fa34c34">00335</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#a71501e3cb605c6c6067c26a47fa34c34" title="Sets the proxy server for the server.">setProxy</a>(<span class="keywordtype">int</span> iProxy){ m_iProxy = iProxy; };
+<a name="l00336"></a>00336 
+<a name="l00342"></a><a class="code" href="classKviServer.html#aebb124fa2c84e93c483959fb8d64654c">00342</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#aebb124fa2c84e93c483959fb8d64654c" title="Sets the IP for the server.">setIp</a>(<span class="keyword">const</span> QString &amp; szIp){ m_szIp = szIp; };
+<a name="l00343"></a>00343 
+<a name="l00349"></a><a class="code" href="classKviServer.html#a87ab4a69184f8c114e78312b1b5f9fc8">00349</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#a87ab4a69184f8c114e78312b1b5f9fc8" title="Sets the port for the server.">setPort</a>(kvi_u32_t uPort){ m_uPort = uPort; };
+<a name="l00350"></a>00350 
+<a name="l00356"></a><a class="code" href="classKviServer.html#ab23b5a02e84376365904afcb10f89b2b">00356</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#ab23b5a02e84376365904afcb10f89b2b" title="Sets the hostname for the server.">setHostName</a>(<span class="keyword">const</span> QString &amp; szHost){ m_szHostname = szHost; };
+<a name="l00357"></a>00357 
+<a name="l00363"></a><a class="code" href="classKviServer.html#adf3fce41fbad7ac7ed47ddc64ef52cf5">00363</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#adf3fce41fbad7ac7ed47ddc64ef52cf5" title="Sets the description for the server.">setDescription</a>(<span class="keyword">const</span> QString &amp; szDesc){ m_szDescription = szDesc; };
+<a name="l00364"></a>00364 
+<a name="l00370"></a><a class="code" href="classKviServer.html#a988fcff5a4cb6b3adb577e279bb4c8eb">00370</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#a988fcff5a4cb6b3adb577e279bb4c8eb" title="Sets the username of the user associated to the server.">setUserName</a>(<span class="keyword">const</span> QString &amp; szUser){ m_szUser = szUser; };
+<a name="l00371"></a>00371 
+<a name="l00377"></a><a class="code" href="classKviServer.html#aeeea392df6fafd047b2f1adb8a81783c">00377</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#aeeea392df6fafd047b2f1adb8a81783c" title="Sets the password of the user associated to the server.">setPassword</a>(<span class="keyword">const</span> QString &amp; szPass){ m_szPass = szPass; };
+<a name="l00378"></a>00378 
+<a name="l00384"></a><a class="code" href="classKviServer.html#ab435b435b0d2929a07de5ccd96a93ea8">00384</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#ab435b435b0d2929a07de5ccd96a93ea8" title="Sets the nickname of the user associated to the server.">setNickName</a>(<span class="keyword">const</span> QString &amp; szNick){ m_szNick = szNick; };
+<a name="l00385"></a>00385 
+<a name="l00391"></a><a class="code" href="classKviServer.html#a417c7228d6fb47a4aedb1066804fb4f0">00391</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#a417c7228d6fb47a4aedb1066804fb4f0" title="Sets the password used for sasl auth.">setSaslPass</a>(<span class="keyword">const</span> QString &amp; szPass){ m_szSaslPass = szPass; };
+<a name="l00392"></a>00392 
+<a name="l00398"></a><a class="code" href="classKviServer.html#afe4ae0d0941b75c9bdc8c821a8869a30">00398</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#afe4ae0d0941b75c9bdc8c821a8869a30" title="Sets the nickname used for sasl auth.">setSaslNick</a>(<span class="keyword">const</span> QString &amp; szNick){ m_szSaslNick = szNick; };
+<a name="l00399"></a>00399 
+<a name="l00405"></a><a class="code" href="classKviServer.html#aef3612c6da50743b5f40df533b9f8792">00405</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#aef3612c6da50743b5f40df533b9f8792" title="Sets the realname of the user associated to the server.">setRealName</a>(<span class="keyword">const</span> QString &amp; szReal){ m_szRealName = szReal; };
+<a name="l00406"></a>00406 
+<a name="l00415"></a><a class="code" href="classKviServer.html#aa3eb6aa31de7940272c3e7fe38eff0c4">00415</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#aa3eb6aa31de7940272c3e7fe38eff0c4" title="Sets the encoding associated to the server Some information as nickname and channel...">setEncoding</a>(<span class="keyword">const</span> QString &amp; szEncoding){ m_szEncoding = szEncoding; };
+<a name="l00416"></a>00416 
+<a name="l00423"></a><a class="code" href="classKviServer.html#a5f227e3bad2ae657ca74f5778561d8fe">00423</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#a5f227e3bad2ae657ca74f5778561d8fe" title="Sets the encoding associated to the server This is the default encoding when talking...">setTextEncoding</a>(<span class="keyword">const</span> QString &amp; szEncoding){ m_szTextEncoding = szEncoding; };
+<a name="l00424"></a>00424 
+<a name="l00430"></a><a class="code" href="classKviServer.html#acee74e864509e02aa6f916c3c5ebda69">00430</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#acee74e864509e02aa6f916c3c5ebda69" title="Sets the user modes of the user associated to the server.">setInitUMode</a>(<span class="keyword">const</span> QString &amp; szUMode){ m_szInitUMode = szUMode; };
+<a name="l00431"></a>00431 
+<a name="l00437"></a><a class="code" href="classKviServer.html#afc34f71c66c336492ed6e268238c33e7">00437</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#afc34f71c66c336492ed6e268238c33e7" title="Sets the commands to run on server connection.">setOnConnectCommand</a>(<span class="keyword">const</span> QString &amp; szCmd){ m_szOnConnectCommand = szCmd; };
+<a name="l00438"></a>00438 
+<a name="l00444"></a><a class="code" href="classKviServer.html#a211b3c61bafa85b4ce09ec709144401a">00444</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#a211b3c61bafa85b4ce09ec709144401a" title="Sets the commands to run on server login.">setOnLoginCommand</a>(<span class="keyword">const</span> QString &amp; szCmd){ m_szOnLoginCommand = szCmd; };
+<a name="l00445"></a>00445 
+<a name="l00451"></a><a class="code" href="classKviServer.html#af8d3ea44bf483ca733b476d4a309e415">00451</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#af8d3ea44bf483ca733b476d4a309e415">setLinkFilter</a>(<span class="keyword">const</span> QString &amp; szFilter){ m_szLinkFilter = szFilter; };
+<a name="l00452"></a>00452 
+<a name="l00459"></a>00459         <span class="keywordtype">void</span> setAutoJoinChannelList(QStringList * pNewChannelList);
+<a name="l00460"></a>00460 
+<a name="l00466"></a>00466         <span class="keywordtype">void</span> setAutoJoinChannelList(<span class="keyword">const</span> QString &amp; szNewChannelList);
+<a name="l00467"></a>00467 
+<a name="l00473"></a><a class="code" href="classKviServer.html#a4aef51f2e189dbc1e0baa7d321507b53">00473</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#a4aef51f2e189dbc1e0baa7d321507b53" title="Sets the autoconnection mode for the server.">setAutoConnect</a>(<span class="keywordtype">bool</span> bAutoConnect) { m_bAutoConnect = bAutoConnect; };
+<a name="l00474"></a>00474 
+<a name="l00480"></a><a class="code" href="classKviServer.html#ab1c9b996a9ff61880abb7d4c3a5e79f7">00480</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#ab1c9b996a9ff61880abb7d4c3a5e79f7" title="Sets the id of the user associated to the server.">setUserIdentityId</a>(<span class="keyword">const</span> QString &amp; szUserIdentityId){ m_szUserIdentityId = szUserIdentityId; };
+<a name="l00481"></a>00481 
+<a name="l00487"></a><a class="code" href="classKviServer.html#a3f1382e383f4324c35441c817409e82b">00487</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> setIPv6(<span class="keywordtype">bool</span> bSet)
+<a name="l00488"></a>00488         {
+<a name="l00489"></a>00489                 <span class="keywordflow">if</span>(bSet)m_uFlags |= <a class="code" href="kvi__ircserver_8h.html#a1e131956a6feeba4a82161c9283ade1b">KVI_IRCSERVER_FLAG_IPV6</a>;
+<a name="l00490"></a>00490                 <span class="keywordflow">else</span> m_uFlags &amp;= ((<span class="keywordtype">unsigned</span> short)~<a class="code" href="kvi__ircserver_8h.html#a1e131956a6feeba4a82161c9283ade1b">KVI_IRCSERVER_FLAG_IPV6</a>);
+<a name="l00491"></a>00491         };
+<a name="l00492"></a>00492 
+<a name="l00498"></a><a class="code" href="classKviServer.html#a5e72e50465cebe36cf7368b88c30603f">00498</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> setUseSSL(<span class="keywordtype">bool</span> bSet)
+<a name="l00499"></a>00499         {
+<a name="l00500"></a>00500                 <span class="keywordflow">if</span>(bSet)m_uFlags |= <a class="code" href="kvi__ircserver_8h.html#afea02738e6db67070c7375c03f1371ba">KVI_IRCSERVER_FLAG_SSL</a>;
+<a name="l00501"></a>00501                 <span class="keywordflow">else</span> m_uFlags &amp;= ((<span class="keywordtype">unsigned</span> short)~<a class="code" href="kvi__ircserver_8h.html#afea02738e6db67070c7375c03f1371ba">KVI_IRCSERVER_FLAG_SSL</a>);
+<a name="l00502"></a>00502         };
+<a name="l00503"></a>00503 
+<a name="l00509"></a><a class="code" href="classKviServer.html#a1a5d500a5a978ea851adc5912d081b5b">00509</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> setEnabledSTARTTLS(<span class="keywordtype">bool</span> bSet)
+<a name="l00510"></a>00510         {
+<a name="l00511"></a>00511                 <span class="keywordflow">if</span>(bSet)m_uFlags |= <a class="code" href="kvi__ircserver_8h.html#aa50bfcb00328cfbd25e2ba460b5022ee">KVI_IRCSERVER_FLAG_STARTTLS</a>;
+<a name="l00512"></a>00512                 <span class="keywordflow">else</span> m_uFlags &amp;= ((<span class="keywordtype">unsigned</span> short)~<a class="code" href="kvi__ircserver_8h.html#aa50bfcb00328cfbd25e2ba460b5022ee">KVI_IRCSERVER_FLAG_STARTTLS</a>);
+<a name="l00513"></a>00513         };
+<a name="l00514"></a>00514 
+<a name="l00520"></a><a class="code" href="classKviServer.html#a1f6d1e17f4edb540e01a20369d843097">00520</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> setEnabledCAP(<span class="keywordtype">bool</span> bSet)
+<a name="l00521"></a>00521         {
+<a name="l00522"></a>00522                 <span class="keywordflow">if</span>(bSet)m_uFlags |= <a class="code" href="kvi__ircserver_8h.html#a1c9445446a72d30a442af169e62497e0">KVI_IRCSERVER_FLAG_CAP</a>;
+<a name="l00523"></a>00523                 <span class="keywordflow">else</span> m_uFlags &amp;= ((<span class="keywordtype">unsigned</span> short)~<a class="code" href="kvi__ircserver_8h.html#a1c9445446a72d30a442af169e62497e0">KVI_IRCSERVER_FLAG_CAP</a>);
+<a name="l00524"></a>00524         };
+<a name="l00525"></a>00525 
+<a name="l00531"></a><a class="code" href="classKviServer.html#aea3b5c9138bd07f31d8f5129a1b8b6de">00531</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> setEnabledSASL(<span class="keywordtype">bool</span> bSet)
+<a name="l00532"></a>00532         {
+<a name="l00533"></a>00533                 <span class="keywordflow">if</span>(bSet)m_uFlags |= <a class="code" href="kvi__ircserver_8h.html#a748880b1542a698916b1844d538fc59a">KVI_IRCSERVER_FLAG_SASL</a>;
+<a name="l00534"></a>00534                 <span class="keywordflow">else</span> m_uFlags &amp;= ((<span class="keywordtype">unsigned</span> short)~<a class="code" href="kvi__ircserver_8h.html#a748880b1542a698916b1844d538fc59a">KVI_IRCSERVER_FLAG_SASL</a>);
+<a name="l00535"></a>00535         };
+<a name="l00536"></a>00536 
+<a name="l00542"></a><a class="code" href="classKviServer.html#abfb59152aabf0772191c092c90825d31">00542</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> setCacheIp(<span class="keywordtype">bool</span> bSet)
+<a name="l00543"></a>00543         {
+<a name="l00544"></a>00544                 <span class="keywordflow">if</span>(bSet) m_uFlags |= <a class="code" href="kvi__ircserver_8h.html#ad61882b406b151d1366898cdd74df46e">KVI_IRCSERVER_FLAG_CACHEIP</a>;
+<a name="l00545"></a>00545                 <span class="keywordflow">else</span> m_uFlags &amp;= ((<span class="keywordtype">unsigned</span> short)~<a class="code" href="kvi__ircserver_8h.html#ad61882b406b151d1366898cdd74df46e">KVI_IRCSERVER_FLAG_CACHEIP</a>);
+<a name="l00546"></a>00546         };
 <a name="l00547"></a>00547 
-<a name="l00554"></a>00554         <span class="keywordtype">bool</span> <a class="code" href="namespaceKviTheme.html#abac3f12de939692411bdae6dcb59050d">load</a>(<a class="code" href="classKviConfig.html">KviConfig</a> * cfg, <span class="keyword">const</span> QString &amp; szPrefix);
-<a name="l00555"></a>00555 
-<a name="l00562"></a>00562         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#afc947a792aac67a66d0402e09682ac13">save</a>(<a class="code" href="classKviConfig.html">KviConfig</a> * cfg, <span class="keyword">const</span> QString &amp; szPrefix);
-<a name="l00563"></a>00563 
-<a name="l00569"></a>00569         <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classKviServer.html" title="The class which manages the irc servers.">KviServer</a> &amp; <a class="code" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>);
-<a name="l00570"></a>00570 };
-<a name="l00571"></a>00571 
-<a name="l00572"></a>00572 <span class="preprocessor">#endif //_KVI_IRCSERVER_H_</span>
+<a name="l00552"></a>00552         <span class="keywordtype">void</span> generateUniqueId();
+<a name="l00553"></a>00553 
+<a name="l00559"></a><a class="code" href="classKviServer.html#a789093519816047106db62f725d375b5">00559</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviServer.html#a789093519816047106db62f725d375b5" title="Sets an unique id for the server.">setId</a>(<span class="keyword">const</span> QString &amp; szId){ m_szId = szId; <span class="keywordflow">if</span>(m_szId.isEmpty()) generateUniqueId(); };
+<a name="l00560"></a>00560 
+<a name="l00567"></a>00567         <span class="keywordtype">bool</span> <a class="code" href="namespaceKviTheme.html#abac3f12de939692411bdae6dcb59050d">load</a>(<a class="code" href="classKviConfig.html">KviConfig</a> * cfg, <span class="keyword">const</span> QString &amp; szPrefix);
+<a name="l00568"></a>00568 
+<a name="l00575"></a>00575         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#afc947a792aac67a66d0402e09682ac13">save</a>(<a class="code" href="classKviConfig.html">KviConfig</a> * cfg, <span class="keyword">const</span> QString &amp; szPrefix);
+<a name="l00576"></a>00576 
+<a name="l00582"></a>00582         <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> <a class="code" href="classKviServer.html" title="The class which manages the irc servers.">KviServer</a> &amp; <a class="code" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>);
+<a name="l00583"></a>00583 };
+<a name="l00584"></a>00584 
+<a name="l00585"></a>00585 <span class="preprocessor">#endif //_KVI_IRCSERVER_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:27 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:18 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

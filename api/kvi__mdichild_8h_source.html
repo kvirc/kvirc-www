@@ -68,68 +68,68 @@
 <a name="l00062"></a>00062         ~<a class="code" href="classKviMdiChild.html" title="Class of an MDI window.">KviMdiChild</a>();
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064 <span class="keyword">public</span>:
-<a name="l00069"></a><a class="code" href="classKviMdiChild.html#a3098a440d2c15ef29c63db7d794ed2bf">00069</a>         <span class="keyword">enum</span> <a class="code" href="classKviMdiChild.html#a3098a440d2c15ef29c63db7d794ed2bf" title="This is the state of the child window.">MdiChildState</a> {
-<a name="l00070"></a><a class="code" href="classKviMdiChild.html#a3098a440d2c15ef29c63db7d794ed2bfaf85482aa50d3194f752b4d00bbbe5340">00070</a>                 Maximized = 0, 
-<a name="l00071"></a><a class="code" href="classKviMdiChild.html#a3098a440d2c15ef29c63db7d794ed2bfa192faf9d5cd3aaf8d9dd2119f3f5a448">00071</a>                 Minimized,     
-<a name="l00072"></a><a class="code" href="classKviMdiChild.html#a3098a440d2c15ef29c63db7d794ed2bfae5f5f4db84297532461f0ac10eafdd3f">00072</a>                 Normal         
-<a name="l00073"></a>00073         };
-<a name="l00074"></a>00074 <span class="keyword">protected</span>:
-<a name="l00076"></a><a class="code" href="classKviMdiChild.html#a9a8f26ee716a64ba56691f204b3d58cb">00076</a>         <a class="code" href="classKviMdiManager.html" title="Handles all MDI windows.">KviMdiManager</a> * m_pManager;
-<a name="l00077"></a>00077 <span class="keyword">private</span>:
-<a name="l00079"></a><a class="code" href="classKviMdiChild.html#a872a4c7ab771b22b74538774304d93c1">00079</a>         QWidget       * m_pClient;
-<a name="l00081"></a><a class="code" href="classKviMdiChild.html#aa9f79809e446131e6103c8e631919f01">00081</a>         QRect           m_restoredGeometry;
-<a name="l00083"></a><a class="code" href="classKviMdiChild.html#a040c42e3d88326240b7c7f2198fb5135">00083</a>         QPixmap         m_pIcon;
-<a name="l00085"></a><a class="code" href="classKviMdiChild.html#a55bf0fbfba52c7790768dc898d1cb001">00085</a>         QString         m_szPlainCaption;
-<a name="l00086"></a>00086 <span class="keyword">private</span>:
-<a name="l00091"></a>00091         <span class="keywordtype">void</span> updateCaption();
-<a name="l00092"></a>00092 
-<a name="l00093"></a>00093 <span class="keyword">public</span>:
-<a name="l00098"></a>00098         QRect restoredGeometry();
-<a name="l00099"></a>00099 
-<a name="l00105"></a>00105         <span class="keywordtype">void</span> setRestoredGeometry(<span class="keyword">const</span> QRect &amp; r);
-<a name="l00106"></a>00106 
-<a name="l00113"></a>00113         <span class="keywordtype">void</span> setClient(QWidget * w);
-<a name="l00114"></a>00114 
-<a name="l00119"></a><a class="code" href="classKviMdiChild.html#ae7a0921bf628f05763461b1e934db37c">00119</a>         QWidget * <a class="code" href="classKviMdiChild.html#ae7a0921bf628f05763461b1e934db37c" title="Returns the currently in the window visible widget.">client</a>() { <span class="keywordflow">return</span> m_pClient; };
-<a name="l00120"></a>00120 
-<a name="l00125"></a>00125         <span class="keywordtype">void</span> unsetClient();
-<a name="l00126"></a>00126 
-<a name="l00133"></a>00133         MdiChildState state();
-<a name="l00134"></a>00134 
-<a name="l00139"></a><a class="code" href="classKviMdiChild.html#aa989153fb7e0a2e9a50ecdc283451e6a">00139</a>         <span class="keyword">const</span> QString &amp; <a class="code" href="classKviMdiChild.html#aa989153fb7e0a2e9a50ecdc283451e6a" title="Returns plain text caption.">plainCaption</a>() { <span class="keywordflow">return</span> m_szPlainCaption; };
-<a name="l00140"></a>00140 
-<a name="l00146"></a>00146         <span class="keywordtype">void</span> setWindowTitle(<span class="keyword">const</span> QString &amp; szPlain);
-<a name="l00147"></a>00147 
-<a name="l00153"></a>00153         <span class="keywordtype">void</span> setIcon(QPixmap pix);
-<a name="l00154"></a>00154 
-<a name="l00159"></a>00159         <span class="keyword">const</span> QPixmap * icon();
-<a name="l00160"></a>00160 
-<a name="l00165"></a><a class="code" href="classKviMdiChild.html#a63bbdcd69010a99bca55665407bbd657">00165</a>         <span class="keyword">inline</span> <a class="code" href="classKviMdiManager.html" title="Handles all MDI windows.">KviMdiManager</a> * <a class="code" href="classKviMdiChild.html#a63bbdcd69010a99bca55665407bbd657" title="Returns the current KviMdiManager of the subwindow.">manager</a>(){ <span class="keywordflow">return</span> m_pManager; };
-<a name="l00166"></a>00166 
-<a name="l00171"></a>00171         <span class="keywordtype">void</span> activate();
-<a name="l00172"></a>00172 <span class="keyword">protected</span>:
-<a name="l00177"></a>00177         <span class="keyword">virtual</span> <span class="keywordtype">void</span> moveEvent(QMoveEvent * e);
-<a name="l00178"></a>00178 
-<a name="l00183"></a>00183         <span class="keyword">virtual</span> <span class="keywordtype">void</span> closeEvent(QCloseEvent * e);
-<a name="l00184"></a>00184 <span class="keyword">public</span> slots:
-<a name="l00189"></a>00189         <span class="keywordtype">void</span> maximize();
-<a name="l00190"></a>00190 
-<a name="l00195"></a>00195         <span class="keywordtype">void</span> minimize();
-<a name="l00196"></a>00196 
-<a name="l00201"></a>00201         <span class="keywordtype">void</span> restore();
-<a name="l00202"></a>00202 
-<a name="l00211"></a>00211         <span class="keywordtype">void</span> windowStateChangedEvent( Qt::WindowStates oldState, Qt::WindowStates newState );
-<a name="l00212"></a>00212 
-<a name="l00213"></a>00213 <span class="keyword">private</span> slots:
-<a name="l00218"></a>00218         <span class="keywordtype">void</span> updateSystemPopup();
-<a name="l00219"></a>00219 
-<a name="l00224"></a>00224         <span class="keywordtype">void</span> transparencyWorkaround();
-<a name="l00225"></a>00225         
-<a name="l00226"></a>00226 };
-<a name="l00227"></a>00227 
-<a name="l00228"></a>00228 <span class="preprocessor">#endif //_KVI_MDICHILD_H_</span>
+<a name="l00069"></a><a class="code" href="classKviMdiChild.html#a3098a440d2c15ef29c63db7d794ed2bf">00069</a>         <span class="keyword">enum</span> <a class="code" href="classKviMdiChild.html#a3098a440d2c15ef29c63db7d794ed2bf" title="This is the state of the child window.">MdiChildState</a>
+<a name="l00070"></a>00070         {
+<a name="l00071"></a><a class="code" href="classKviMdiChild.html#a3098a440d2c15ef29c63db7d794ed2bfaf85482aa50d3194f752b4d00bbbe5340">00071</a>                 Maximized = 0, 
+<a name="l00072"></a><a class="code" href="classKviMdiChild.html#a3098a440d2c15ef29c63db7d794ed2bfa192faf9d5cd3aaf8d9dd2119f3f5a448">00072</a>                 Minimized,     
+<a name="l00073"></a><a class="code" href="classKviMdiChild.html#a3098a440d2c15ef29c63db7d794ed2bfae5f5f4db84297532461f0ac10eafdd3f">00073</a>                 Normal         
+<a name="l00074"></a>00074         };
+<a name="l00075"></a>00075 <span class="keyword">protected</span>:
+<a name="l00077"></a><a class="code" href="classKviMdiChild.html#a9a8f26ee716a64ba56691f204b3d58cb">00077</a>         <a class="code" href="classKviMdiManager.html" title="Handles all MDI windows.">KviMdiManager</a> * m_pManager;
+<a name="l00078"></a>00078 <span class="keyword">private</span>:
+<a name="l00080"></a><a class="code" href="classKviMdiChild.html#a872a4c7ab771b22b74538774304d93c1">00080</a>         QWidget * m_pClient;
+<a name="l00082"></a><a class="code" href="classKviMdiChild.html#a040c42e3d88326240b7c7f2198fb5135">00082</a>         QPixmap m_pIcon;
+<a name="l00084"></a><a class="code" href="classKviMdiChild.html#a55bf0fbfba52c7790768dc898d1cb001">00084</a>         QString m_szPlainCaption;
+<a name="l00085"></a>00085 <span class="keyword">private</span>:
+<a name="l00090"></a>00090         <span class="keywordtype">void</span> updateCaption();
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 <span class="keyword">public</span>:
+<a name="l00097"></a>00097         QRect restoredGeometry();
+<a name="l00098"></a>00098 
+<a name="l00104"></a>00104         <span class="keywordtype">void</span> setRestoredGeometry(<span class="keyword">const</span> QRect &amp; r);
+<a name="l00105"></a>00105 
+<a name="l00112"></a>00112         <span class="keywordtype">void</span> setClient(QWidget * w);
+<a name="l00113"></a>00113 
+<a name="l00118"></a><a class="code" href="classKviMdiChild.html#ae7a0921bf628f05763461b1e934db37c">00118</a>         QWidget * <a class="code" href="classKviMdiChild.html#ae7a0921bf628f05763461b1e934db37c" title="Returns the currently in the window visible widget.">client</a>() { <span class="keywordflow">return</span> m_pClient; };
+<a name="l00119"></a>00119 
+<a name="l00124"></a>00124         <span class="keywordtype">void</span> unsetClient();
+<a name="l00125"></a>00125 
+<a name="l00132"></a>00132         MdiChildState state();
+<a name="l00133"></a>00133 
+<a name="l00138"></a><a class="code" href="classKviMdiChild.html#aa989153fb7e0a2e9a50ecdc283451e6a">00138</a>         <span class="keyword">const</span> QString &amp; <a class="code" href="classKviMdiChild.html#aa989153fb7e0a2e9a50ecdc283451e6a" title="Returns plain text caption.">plainCaption</a>() { <span class="keywordflow">return</span> m_szPlainCaption; };
+<a name="l00139"></a>00139 
+<a name="l00145"></a>00145         <span class="keywordtype">void</span> setWindowTitle(<span class="keyword">const</span> QString &amp; szPlain);
+<a name="l00146"></a>00146 
+<a name="l00152"></a>00152         <span class="keywordtype">void</span> setIcon(QPixmap pix);
+<a name="l00153"></a>00153 
+<a name="l00158"></a>00158         <span class="keyword">const</span> QPixmap * icon();
+<a name="l00159"></a>00159 
+<a name="l00164"></a><a class="code" href="classKviMdiChild.html#a63bbdcd69010a99bca55665407bbd657">00164</a>         <span class="keyword">inline</span> <a class="code" href="classKviMdiManager.html" title="Handles all MDI windows.">KviMdiManager</a> * <a class="code" href="classKviMdiChild.html#a63bbdcd69010a99bca55665407bbd657" title="Returns the current KviMdiManager of the subwindow.">manager</a>(){ <span class="keywordflow">return</span> m_pManager; };
+<a name="l00165"></a>00165 
+<a name="l00170"></a>00170         <span class="keywordtype">void</span> activate();
+<a name="l00171"></a>00171 <span class="keyword">protected</span>:
+<a name="l00176"></a>00176         <span class="keyword">virtual</span> <span class="keywordtype">void</span> moveEvent(QMoveEvent * e);
+<a name="l00177"></a>00177 
+<a name="l00182"></a>00182         <span class="keyword">virtual</span> <span class="keywordtype">void</span> closeEvent(QCloseEvent * e);
+<a name="l00183"></a>00183 <span class="keyword">public</span> slots:
+<a name="l00188"></a>00188         <span class="keywordtype">void</span> maximize();
+<a name="l00189"></a>00189 
+<a name="l00194"></a>00194         <span class="keywordtype">void</span> minimize();
+<a name="l00195"></a>00195 
+<a name="l00200"></a>00200         <span class="keywordtype">void</span> restore();
+<a name="l00201"></a>00201 
+<a name="l00210"></a>00210         <span class="keywordtype">void</span> windowStateChangedEvent( Qt::WindowStates oldState, Qt::WindowStates newState );
+<a name="l00211"></a>00211 
+<a name="l00212"></a>00212 <span class="keyword">private</span> slots:
+<a name="l00217"></a>00217         <span class="keywordtype">void</span> updateSystemPopup();
+<a name="l00218"></a>00218 
+<a name="l00223"></a>00223         <span class="keywordtype">void</span> transparencyWorkaround();
+<a name="l00224"></a>00224         
+<a name="l00225"></a>00225 };
+<a name="l00226"></a>00226 
+<a name="l00227"></a>00227 <span class="preprocessor">#endif //_KVI_MDICHILD_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:29 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

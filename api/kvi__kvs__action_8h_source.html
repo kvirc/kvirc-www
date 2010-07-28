@@ -60,25 +60,27 @@
 <a name="l00035"></a>00035 <span class="keyword">protected</span>:
 <a name="l00036"></a><a class="code" href="classKviKvsAction.html#a86c8ae089618a7055c6797a75029c872">00036</a>         QString m_szScript;
 <a name="l00037"></a>00037 <span class="keyword">public</span>:
-<a name="l00038"></a>00038         <a class="code" href="classKviKvsAction.html">KviKvsAction</a>(QObject * pParent,
-<a name="l00039"></a>00039                 <span class="keyword">const</span> QString &amp;szName,
-<a name="l00040"></a>00040                 <span class="keyword">const</span> QString &amp;szScriptCode,
-<a name="l00041"></a>00041                 <span class="keyword">const</span> QString &amp;szVisibleName,
-<a name="l00042"></a>00042                 <span class="keyword">const</span> QString &amp;szDescription,
-<a name="l00043"></a>00043                 <a class="code" href="classKviActionCategory.html">KviActionCategory</a> * pCategory = 0,
-<a name="l00044"></a>00044                 <span class="keyword">const</span> QString &amp;szBigIcon = QString(),
-<a name="l00045"></a>00045                 <span class="keywordtype">int</span> iSmallIconId = 0,
-<a name="l00046"></a>00046                 <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uFlags = 0,
-<a name="l00047"></a>00047                 <span class="keyword">const</span> QString &amp;szKeySequence = QString());
-<a name="l00048"></a>00048         ~<a class="code" href="classKviKvsAction.html">KviKvsAction</a>();
-<a name="l00049"></a>00049 <span class="keyword">public</span>:
-<a name="l00050"></a>00050         <span class="keyword">const</span> QString &amp; scriptCode();
-<a name="l00051"></a>00051         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviAction.html#aed74e4ed874a520568b2d0be6a33dd1e">activate</a>();
-<a name="l00052"></a>00052 };
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="preprocessor">#endif //!_KVI_KVSACTION_H_</span>
+<a name="l00038"></a>00038         <a class="code" href="classKviKvsAction.html">KviKvsAction</a>(
+<a name="l00039"></a>00039                         QObject * pParent,
+<a name="l00040"></a>00040                         <span class="keyword">const</span> QString &amp;szName,
+<a name="l00041"></a>00041                         <span class="keyword">const</span> QString &amp;szScriptCode,
+<a name="l00042"></a>00042                         <span class="keyword">const</span> QString &amp;szVisibleName,
+<a name="l00043"></a>00043                         <span class="keyword">const</span> QString &amp;szDescription,
+<a name="l00044"></a>00044                         <a class="code" href="classKviActionCategory.html">KviActionCategory</a> * pCategory = <a class="code" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a>,
+<a name="l00045"></a>00045                         <span class="keyword">const</span> QString &amp;szBigIconId = QString(),
+<a name="l00046"></a>00046                         <span class="keyword">const</span> QString &amp;szSmallIconId = QString(),
+<a name="l00047"></a>00047                         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uFlags = 0,
+<a name="l00048"></a>00048                         <span class="keyword">const</span> QString &amp;szKeySequence = QString()
+<a name="l00049"></a>00049                 );
+<a name="l00050"></a>00050         ~<a class="code" href="classKviKvsAction.html">KviKvsAction</a>();
+<a name="l00051"></a>00051 <span class="keyword">public</span>:
+<a name="l00052"></a>00052         <span class="keyword">const</span> QString &amp; scriptCode();
+<a name="l00053"></a>00053         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviAction.html#aed74e4ed874a520568b2d0be6a33dd1e">activate</a>();
+<a name="l00054"></a>00054 };
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 <span class="preprocessor">#endif //!_KVI_KVSACTION_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:28 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:19 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

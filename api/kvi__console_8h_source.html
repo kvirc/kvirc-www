@@ -239,7 +239,7 @@
 <a name="l00229"></a>00229 
 <a name="l00230"></a><a class="code" href="classKviConsole.html#a011a60c2f1d0e3e31c768cc259d080c9">00230</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviConsole.html#a011a60c2f1d0e3e31c768cc259d080c9">KviConsole::isIPv6Connection</a>()
 <a name="l00231"></a>00231 {
-<a name="l00232"></a>00232         <a class="code" href="kvi__debug_8h.html#a1968523b39316c7aba7f04c8462936cc">__range_valid</a>(<a class="code" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">connection</a>());
+<a name="l00232"></a>00232         <a class="code" href="kvi__debug_8h.html#acb8235d766e251808b07c2fdaab97fbc" title="__GNUC__">KVI_ASSERT</a>(<a class="code" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">connection</a>());
 <a name="l00233"></a>00233         <span class="keywordflow">return</span> <a class="code" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">connection</a>()-&gt;<a class="code" href="classKviIrcConnection.html#a1a6fd7a82e80720927b7aa860eab3300" title="Returns the target of this connection.">target</a>()-&gt;<a class="code" href="classKviIrcConnectionTarget.html#afaffdb268935b58fc62fff0ad19622d2">server</a>()-&gt;<a class="code" href="classKviServer.html#ae6c0c4321c2ac91ef75a4d5417fdff34" title="Returns true if the server uses IPv6.">isIPv6</a>();
 <a name="l00234"></a>00234 }
 <a name="l00235"></a>00235 
@@ -255,7 +255,7 @@
 <a name="l00245"></a>00245 
 <a name="l00246"></a>00246 <span class="preprocessor">#endif //_KVI_CONSOLE_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:28 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

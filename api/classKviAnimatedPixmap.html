@@ -48,9 +48,9 @@ Inheritance diagram for KviAnimatedPixmap:</div>
 <tr><td class="memItemLeft" align="right" valign="top">uint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#afa06bcd5f905d5f1b86b0a0264d0089a">framesCount</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#a3834554ea4c35c1f951540103d1375fe">isStarted</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#a3cfa3beee60e3ba0a4a165fe7dae9fc9">isValid</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#a45beaacaa4fdfdfc4207d6cca57f95c8">KviAnimatedPixmap</a> (<a class="el" href="classKviAnimatedPixmap.html">KviAnimatedPixmap</a> *source)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#a700fea444148427f556dc15381eb68ae">KviAnimatedPixmap</a> (const <a class="el" href="classKviAnimatedPixmap.html">KviAnimatedPixmap</a> &amp;source)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#a7c70d02e7324b35a1ff8090ba05caeb5">KviAnimatedPixmap</a> (QString fileName)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#a53483b0681e173a4560e44bf226c6bbf">nextFrame</a> (bool bScheduleNext)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#a4e4ea1ec5dcc551bf73ade6cb86efcf4">nextFrame</a> (bool bEmitSignalAndScheduleNext)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPixmap *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#a12e7f2c672b325fc16a28dc9527951f8">pixmap</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#af17255c485a918c67b125049487aee1b">resize</a> (QSize newSize, Qt::AspectRatioMode ratioMode)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QSize &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#a5e65844164d836a6627ff9dec016ab9c">size</a> ()</td></tr>
@@ -58,17 +58,17 @@ Inheritance diagram for KviAnimatedPixmap:</div>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#afc764a6393e1222607ad0c53cf2b8c6f">stop</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#a5e61a8922de6f381d9f487a264483357">~KviAnimatedPixmap</a> ()</td></tr>
 <tr><td colspan="2"><h2>Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#a16bcddb87e5da92b19009fa5e76ed9ea">m_bStarted</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviAnimatedPixmapCache_1_1Data.html">KviAnimatedPixmapCache::Data</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#a51a4fc00add483e8af1df68cd5d6973e">m_lFrames</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#ae8c80cb6981ead02ceefc21d6ac7744b">m_iStarted</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviAnimatedPixmapCache_1_1Data.html">KviAnimatedPixmapCache::Data</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#ae0e5167c2b5703913b433efed79cc006">m_pFrameData</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#a88adf1e4a254928d3dd4af0984755230">m_szFileName</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">uint&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAnimatedPixmap.html#abc065f55222f2c700075c162f3b911b4">m_uCurrentFrameNumber</a></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>This class should not be here, because we already have QMovie with the same functionality.</p>
 <p>But QMovie is really stupid, bacause: 1) It does not support infinitive animation. It relies on image metadata to determine loop count. So most of pics will be played only once.</p>
-<p>2) It dublicates QPixmap while we calls currentFrame(), that's a very big overload for us.</p>
+<p>2) It duplicates QPixmap while we calls currentFrame(), that's a very big overload for us.</p>
 <p>3) If we try to scale QMovie by using built-in scale mechanism, it will manually scale each frame each time, we will call currentFrame(). So if we plan to play movie 10,100,1000 times, it will scale image 10,100,1000 times too:(</p>
-<p>4) <a class="el" href="classKviAnimatedPixmap.html">KviAnimatedPixmap</a> uses internal cache mechanism with <a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a> class. It's managed inside <a class="el" href="classKviAnimatedPixmap.html">KviAnimatedPixmap</a> and <a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a>. No othet actions needed to perform caching.</p>
+<p>4) <a class="el" href="classKviAnimatedPixmap.html">KviAnimatedPixmap</a> uses internal cache mechanism with <a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a> class. It's managed inside <a class="el" href="classKviAnimatedPixmap.html">KviAnimatedPixmap</a> and <a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a>. No other actions needed to perform caching.</p>
 <p>So... Here is my workaround. It's working in this way: You should create new pixmap with constructor <a class="el" href="classKviAnimatedPixmap.html#a7c70d02e7324b35a1ff8090ba05caeb5">KviAnimatedPixmap(QString fileName)</a>. It will automagically look at cache and use it, if possible.</p>
 <p><a class="el" href="classKviAnimatedPixmap.html">KviAnimatedPixmap</a> stores animation as a set of QPixmap's, and delays. when started (see <a class="el" href="classKviAnimatedPixmap.html#a735ea6bd0d25b101d73bf3700e268cbb">start()</a>) it emits <a class="el" href="classKviAnimatedPixmap.html#a4d4ce111bceecaaca2247e4c1f1a6fa0">frameChanged()</a> events at the frame change.</p>
 <p>You should use <a class="el" href="classKviAnimatedPixmap.html#a12e7f2c672b325fc16a28dc9527951f8">pixmap()</a> methd to access the current frame.</p>
@@ -90,7 +90,7 @@ Inheritance diagram for KviAnimatedPixmap:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="namespaceKviTheme.html#abac3f12de939692411bdae6dcb59050d">KviTheme::load()</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00075">m_bStarted</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00072">m_lFrames</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00074">m_uCurrentFrameNumber</a>, and <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00063">start()</a>.</p>
+<p>References <a class="el" href="namespaceKviTheme.html#abac3f12de939692411bdae6dcb59050d">KviTheme::load()</a>, and <a class="el" href="kvi__animatedpixmap_8h_source.html#l00072">m_pFrameData</a>.</p>
 
 </div>
 </div>
@@ -109,18 +109,18 @@ Inheritance diagram for KviAnimatedPixmap:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__animatedpixmapcache_8cpp_source.html#l00160">KviAnimatedPixmapCache::free()</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00072">m_lFrames</a>, and <a class="el" href="kvi__animatedpixmapcache_8cpp_source.html#l00271">KviAnimatedPixmapCache::notifyDelete()</a>.</p>
+<p>References <a class="el" href="kvi__animatedpixmapcache_8h_source.html#l00152">KviAnimatedPixmapCache::free()</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00072">m_pFrameData</a>, and <a class="el" href="kvi__animatedpixmapcache_8h_source.html#l00159">KviAnimatedPixmapCache::notifyDelete()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a45beaacaa4fdfdfc4207d6cca57f95c8"></a><!-- doxytag: member="KviAnimatedPixmap::KviAnimatedPixmap" ref="a45beaacaa4fdfdfc4207d6cca57f95c8" args="(KviAnimatedPixmap *source)" -->
+<a class="anchor" id="a700fea444148427f556dc15381eb68ae"></a><!-- doxytag: member="KviAnimatedPixmap::KviAnimatedPixmap" ref="a700fea444148427f556dc15381eb68ae" args="(const KviAnimatedPixmap &amp;source)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">KviAnimatedPixmap::KviAnimatedPixmap </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviAnimatedPixmap.html">KviAnimatedPixmap</a> *&nbsp;</td>
+          <td class="paramtype">const <a class="el" href="classKviAnimatedPixmap.html">KviAnimatedPixmap</a> &amp;&nbsp;</td>
           <td class="paramname"> <em>source</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td></td>
@@ -129,7 +129,7 @@ Inheritance diagram for KviAnimatedPixmap:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__animatedpixmap_8h_source.html#l00141">framesCount()</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00093">isStarted()</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00072">m_lFrames</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00074">m_uCurrentFrameNumber</a>, <a class="el" href="kvi__animatedpixmapcache_8h_source.html#l00081">KviAnimatedPixmapCache::Data::refs</a>, and <a class="el" href="kvi__animatedpixmapcache_8cpp_source.html#l00233">KviAnimatedPixmapCache::scheduleFrameChange()</a>.</p>
+<p>References <a class="el" href="kvi__animatedpixmap_8h_source.html#l00072">m_pFrameData</a>, and <a class="el" href="kvi__animatedpixmapcache_8h_source.html#l00083">KviAnimatedPixmapCache::Data::refs</a>.</p>
 
 </div>
 </div>
@@ -166,7 +166,7 @@ Inheritance diagram for KviAnimatedPixmap:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00080">nextFrame()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00092">nextFrame()</a>.</p>
 
 </div>
 </div>
@@ -185,8 +185,6 @@ Inheritance diagram for KviAnimatedPixmap:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00042">KviAnimatedPixmap()</a>, and <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00063">start()</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a3834554ea4c35c1f951540103d1375fe"></a><!-- doxytag: member="KviAnimatedPixmap::isStarted" ref="a3834554ea4c35c1f951540103d1375fe" args="()" -->
@@ -203,8 +201,6 @@ Inheritance diagram for KviAnimatedPixmap:</div>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Referenced by <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00042">KviAnimatedPixmap()</a>, <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00063">start()</a>, and <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00072">stop()</a>.</p>
 
 </div>
 </div>
@@ -225,7 +221,7 @@ Inheritance diagram for KviAnimatedPixmap:</div>
 
 </div>
 </div>
-<a class="anchor" id="a53483b0681e173a4560e44bf226c6bbf"></a><!-- doxytag: member="KviAnimatedPixmap::nextFrame" ref="a53483b0681e173a4560e44bf226c6bbf" args="(bool bScheduleNext)" -->
+<a class="anchor" id="a4e4ea1ec5dcc551bf73ade6cb86efcf4"></a><!-- doxytag: member="KviAnimatedPixmap::nextFrame" ref="a4e4ea1ec5dcc551bf73ade6cb86efcf4" args="(bool bEmitSignalAndScheduleNext)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -233,7 +229,7 @@ Inheritance diagram for KviAnimatedPixmap:</div>
           <td class="memname">void KviAnimatedPixmap::nextFrame </td>
           <td>(</td>
           <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>bScheduleNext</em></td>
+          <td class="paramname"> <em>bEmitSignalAndScheduleNext</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -243,7 +239,7 @@ Inheritance diagram for KviAnimatedPixmap:</div>
 
 <p>Implements <a class="el" href="classKviAnimatedPixmapInterface.html#a754cad22e3ee4726f1741adf655ada75">KviAnimatedPixmapInterface</a>.</p>
 
-<p>References <a class="el" href="classKviAnimatedPixmap.html#a4d4ce111bceecaaca2247e4c1f1a6fa0">frameChanged()</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00075">m_bStarted</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00072">m_lFrames</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00074">m_uCurrentFrameNumber</a>, and <a class="el" href="kvi__animatedpixmapcache_8cpp_source.html#l00233">KviAnimatedPixmapCache::scheduleFrameChange()</a>.</p>
+<p>References <a class="el" href="classKviAnimatedPixmap.html#a4d4ce111bceecaaca2247e4c1f1a6fa0">frameChanged()</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00075">m_iStarted</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00072">m_pFrameData</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00074">m_uCurrentFrameNumber</a>, and <a class="el" href="kvi__animatedpixmapcache_8h_source.html#l00137">KviAnimatedPixmapCache::scheduleFrameChange()</a>.</p>
 
 </div>
 </div>
@@ -262,9 +258,9 @@ Inheritance diagram for KviAnimatedPixmap:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__animatedpixmapcache_8cpp_source.html#l00241">KviAnimatedPixmapCache::dummyPixmap()</a>.</p>
+<p>References <a class="el" href="kvi__animatedpixmapcache_8cpp_source.html#l00237">KviAnimatedPixmapCache::dummyPixmap()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00438">KviUserListView::animatedAvatarUpdated()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01682">KviUserListViewArea::paintEvent()</a>, and <a class="el" href="kvi__ircview_8cpp_source.html#l00967">KviIrcView::paintEvent()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00410">KviUserListView::animatedAvatarUpdated()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01648">KviUserListViewArea::paintEvent()</a>, and <a class="el" href="kvi__ircview_8cpp_source.html#l00998">KviIrcView::paintEvent()</a>.</p>
 
 </div>
 </div>
@@ -293,9 +289,9 @@ Inheritance diagram for KviAnimatedPixmap:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__animatedpixmap_8h_source.html#l00072">m_lFrames</a>, and <a class="el" href="kvi__animatedpixmap_8h_source.html#l00149">size()</a>.</p>
+<p>References <a class="el" href="kvi__animatedpixmap_8h_source.html#l00072">m_pFrameData</a>, and <a class="el" href="kvi__animatedpixmap_8h_source.html#l00149">size()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__avatar_8cpp_source.html#l00130">KviAvatar::forSize()</a>, and <a class="el" href="kvi__avatar_8cpp_source.html#l00096">KviAvatar::KviAvatar()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__avatar_8cpp_source.html#l00127">KviAvatar::forSize()</a>, and <a class="el" href="kvi__avatar_8cpp_source.html#l00096">KviAvatar::KviAvatar()</a>.</p>
 
 </div>
 </div>
@@ -314,7 +310,7 @@ Inheritance diagram for KviAnimatedPixmap:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__avatar_8cpp_source.html#l00096">KviAvatar::KviAvatar()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00220">KviUserListEntry::recalcSize()</a>, and <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00094">resize()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__avatar_8cpp_source.html#l00096">KviAvatar::KviAvatar()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00222">KviUserListEntry::recalcSize()</a>, and <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00110">resize()</a>.</p>
 
 </div>
 </div>
@@ -333,9 +329,9 @@ Inheritance diagram for KviAnimatedPixmap:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__animatedpixmap_8h_source.html#l00141">framesCount()</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00093">isStarted()</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00075">m_bStarted</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00072">m_lFrames</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00074">m_uCurrentFrameNumber</a>, and <a class="el" href="kvi__animatedpixmapcache_8cpp_source.html#l00233">KviAnimatedPixmapCache::scheduleFrameChange()</a>.</p>
+<p>References <a class="el" href="kvi__animatedpixmap_8h_source.html#l00075">m_iStarted</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00072">m_pFrameData</a>, <a class="el" href="kvi__animatedpixmap_8h_source.html#l00074">m_uCurrentFrameNumber</a>, and <a class="el" href="kvi__animatedpixmapcache_8h_source.html#l00137">KviAnimatedPixmapCache::scheduleFrameChange()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00357">KviUserListView::applyOptions()</a>, <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00032">KviAnimatedPixmap()</a>, <a class="el" href="kvi__avatar_8cpp_source.html#l00096">KviAvatar::KviAvatar()</a>, <a class="el" href="kvi__texticonmanager_8cpp_source.html#l00065">KviTextIcon::KviTextIcon()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00121">KviUserListEntry::updateAvatarData()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__texticonmanager_8cpp_source.html#l00065">KviTextIcon::KviTextIcon()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00127">KviUserListEntry::updateAvatarData()</a>.</p>
 
 </div>
 </div>
@@ -354,40 +350,40 @@ Inheritance diagram for KviAnimatedPixmap:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__animatedpixmap_8h_source.html#l00093">isStarted()</a>, and <a class="el" href="kvi__animatedpixmap_8h_source.html#l00075">m_bStarted</a>.</p>
+<p>References <a class="el" href="kvi__animatedpixmap_8h_source.html#l00075">m_iStarted</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00357">KviUserListView::applyOptions()</a>, <a class="el" href="kvi__texticonmanager_8cpp_source.html#l00065">KviTextIcon::KviTextIcon()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00121">KviUserListEntry::updateAvatarData()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00114">KviUserListEntry::detachAvatarData()</a>, and <a class="el" href="kvi__texticonmanager_8cpp_source.html#l00065">KviTextIcon::KviTextIcon()</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a16bcddb87e5da92b19009fa5e76ed9ea"></a><!-- doxytag: member="KviAnimatedPixmap::m_bStarted" ref="a16bcddb87e5da92b19009fa5e76ed9ea" args="" -->
+<a class="anchor" id="ae8c80cb6981ead02ceefc21d6ac7744b"></a><!-- doxytag: member="KviAnimatedPixmap::m_iStarted" ref="ae8c80cb6981ead02ceefc21d6ac7744b" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classKviAnimatedPixmap.html#a16bcddb87e5da92b19009fa5e76ed9ea">KviAnimatedPixmap::m_bStarted</a><code> [protected]</code></td>
+          <td class="memname">int <a class="el" href="classKviAnimatedPixmap.html#ae8c80cb6981ead02ceefc21d6ac7744b">KviAnimatedPixmap::m_iStarted</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00032">KviAnimatedPixmap()</a>, <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00080">nextFrame()</a>, <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00063">start()</a>, and <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00072">stop()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00092">nextFrame()</a>, <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00067">start()</a>, and <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00082">stop()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a51a4fc00add483e8af1df68cd5d6973e"></a><!-- doxytag: member="KviAnimatedPixmap::m_lFrames" ref="a51a4fc00add483e8af1df68cd5d6973e" args="" -->
+<a class="anchor" id="ae0e5167c2b5703913b433efed79cc006"></a><!-- doxytag: member="KviAnimatedPixmap::m_pFrameData" ref="ae0e5167c2b5703913b433efed79cc006" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviAnimatedPixmapCache_1_1Data.html">KviAnimatedPixmapCache::Data</a>* <a class="el" href="classKviAnimatedPixmap.html#a51a4fc00add483e8af1df68cd5d6973e">KviAnimatedPixmap::m_lFrames</a><code> [protected]</code></td>
+          <td class="memname"><a class="el" href="classKviAnimatedPixmapCache_1_1Data.html">KviAnimatedPixmapCache::Data</a>* <a class="el" href="classKviAnimatedPixmap.html#ae0e5167c2b5703913b433efed79cc006">KviAnimatedPixmap::m_pFrameData</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00032">KviAnimatedPixmap()</a>, <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00080">nextFrame()</a>, <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00094">resize()</a>, <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00063">start()</a>, and <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00057">~KviAnimatedPixmap()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00032">KviAnimatedPixmap()</a>, <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00092">nextFrame()</a>, <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00110">resize()</a>, <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00067">start()</a>, and <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00059">~KviAnimatedPixmap()</a>.</p>
 
 </div>
 </div>
@@ -415,7 +411,7 @@ Inheritance diagram for KviAnimatedPixmap:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00032">KviAnimatedPixmap()</a>, <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00080">nextFrame()</a>, and <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00063">start()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00092">nextFrame()</a>, and <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00067">start()</a>.</p>
 
 </div>
 </div>
@@ -424,7 +420,7 @@ Inheritance diagram for KviAnimatedPixmap:</div>
 <li>src/kvilib/ext/<a class="el" href="kvi__animatedpixmap_8cpp.html">kvi_animatedpixmap.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:30 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:21 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

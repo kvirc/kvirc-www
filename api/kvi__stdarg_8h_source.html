@@ -82,14 +82,23 @@
 <a name="l00057"></a>00057 <span class="preprocessor"></span><span class="preprocessor">#else</span>
 <a name="l00058"></a><a class="code" href="kvi__stdarg_8h.html#a746867d135c6f1c89d50a5d35295e962">00058</a> <span class="preprocessor"></span><span class="preprocessor">        #define kvi_va_start_by_reference va_start</span>
 <a name="l00059"></a>00059 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00060"></a><a class="code" href="kvi__stdarg_8h.html#ab9d926c6b7949f23521fa3725055b1a4">00060</a> <span class="preprocessor"></span><span class="preprocessor">#define kvi_va_arg va_arg</span>
-<a name="l00061"></a><a class="code" href="kvi__stdarg_8h.html#a5bd75ddfe8d5032eb5d11926d7a824a1">00061</a> <span class="preprocessor"></span><span class="preprocessor">#define kvi_va_end va_end</span>
-<a name="l00062"></a>00062 <span class="preprocessor"></span>
-<a name="l00063"></a>00063 
+<a name="l00060"></a>00060 <span class="preprocessor"></span>
+<a name="l00061"></a><a class="code" href="kvi__stdarg_8h.html#ab9d926c6b7949f23521fa3725055b1a4">00061</a> <span class="preprocessor">#define kvi_va_arg va_arg</span>
+<a name="l00062"></a><a class="code" href="kvi__stdarg_8h.html#a5bd75ddfe8d5032eb5d11926d7a824a1">00062</a> <span class="preprocessor"></span><span class="preprocessor">#define kvi_va_end va_end</span>
+<a name="l00063"></a>00063 <span class="preprocessor"></span>
 <a name="l00064"></a>00064 
-<a name="l00065"></a>00065 <span class="preprocessor">#endif //_KVI_STDARG_H_</span>
+<a name="l00065"></a>00065 <span class="preprocessor">#ifdef va_copy</span>
+<a name="l00066"></a>00066 <span class="preprocessor"></span><span class="preprocessor">        #define kvi_va_copy(a,b) va_copy(a,b)</span>
+<a name="l00067"></a>00067 <span class="preprocessor"></span><span class="preprocessor">#elif defined(__va_copy)</span>
+<a name="l00068"></a>00068 <span class="preprocessor"></span><span class="preprocessor">        #define kvi_va_copy(a,b) __va_copy(a,b)</span>
+<a name="l00069"></a>00069 <span class="preprocessor"></span><span class="preprocessor">#else</span>
+<a name="l00070"></a><a class="code" href="kvi__stdarg_8h.html#ae5eeb7774f581c2210156eab0cc80517">00070</a> <span class="preprocessor"></span><span class="preprocessor">        #define kvi_va_copy(a,b) ((a) = (b))</span>
+<a name="l00071"></a>00071 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00072"></a>00072 <span class="preprocessor"></span>
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074 <span class="preprocessor">#endif //_KVI_STDARG_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:27 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:18 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

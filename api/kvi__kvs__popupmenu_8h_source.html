@@ -284,39 +284,40 @@
 <a name="l00259"></a>00259         <span class="keywordtype">void</span> addSeparator(<span class="keyword">const</span> QString &amp;szItemName,<span class="keyword">const</span> QString &amp;szCondition);
 <a name="l00260"></a>00260         <span class="keywordtype">void</span> addLabel(<span class="keyword">const</span> QString &amp;szItemName,<span class="keyword">const</span> QString &amp;szText,<span class="keyword">const</span> QString &amp;szIcon,<span class="keyword">const</span> QString &amp;szCondition);
 <a name="l00261"></a>00261         <span class="keywordtype">void</span> addItem(<span class="keyword">const</span> QString &amp;szItemName,<span class="keyword">const</span> QString &amp;szCode,<span class="keyword">const</span> QString &amp;szText,<span class="keyword">const</span> QString &amp;szIcon,<span class="keyword">const</span> QString &amp;szCondition);
-<a name="l00262"></a>00262         <span class="keywordtype">void</span> addExtPopup(<span class="keyword">const</span> QString &amp;szItemName,<span class="keyword">const</span> QString &amp;szPopupName,<span class="keyword">const</span> QString szText,<span class="keyword">const</span> QString &amp;szIcon,<span class="keyword">const</span> QString &amp;szCondition);
+<a name="l00262"></a>00262         <span class="keywordtype">void</span> addExtPopup(<span class="keyword">const</span> QString &amp;szItemName,<span class="keyword">const</span> QString &amp;szPopupName,<span class="keyword">const</span> QString &amp;szText,<span class="keyword">const</span> QString &amp;szIcon,<span class="keyword">const</span> QString &amp;szCondition);
 <a name="l00263"></a>00263         <span class="keywordtype">void</span> doPopup(<span class="keyword">const</span> QPoint &amp; pnt,<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * wnd,<a class="code" href="classKviKvsVariantList.html">KviKvsVariantList</a> * pParams,<span class="keywordtype">bool</span> bTestMode = <span class="keyword">false</span>);
 <a name="l00264"></a><a class="code" href="classKviKvsPopupMenu.html#a9d0cafa7de96f9b3a9f30a3b29c6eb58">00264</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviKvsPopupMenu.html#a9d0cafa7de96f9b3a9f30a3b29c6eb58">isEmpty</a>(){ <span class="keywordflow">return</span> m_pItemList-&gt;isEmpty() &amp;&amp; m_pPrologues-&gt;isEmpty() &amp;&amp; m_pEpilogues-&gt;isEmpty(); };
 <a name="l00265"></a>00265         <span class="keywordtype">void</span> doClear();
 <a name="l00266"></a>00266         <span class="keywordtype">void</span> addPrologue(<span class="keyword">const</span> QString &amp;szItemName,<span class="keyword">const</span> QString &amp;szCode);
 <a name="l00267"></a>00267         <span class="keywordtype">void</span> addEpilogue(<span class="keyword">const</span> QString &amp;szItemName,<span class="keyword">const</span> QString &amp;szCode);
 <a name="l00268"></a>00268         <span class="keywordtype">bool</span> removeItemByName(<span class="keyword">const</span> QString &amp;szItemName,<span class="keywordtype">bool</span> bRecursive);
-<a name="l00269"></a><a class="code" href="classKviKvsPopupMenu.html#a531179fdaea5dbcaf8610e2fc47159dd">00269</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviKvsScript&gt;</a> * <a class="code" href="classKviKvsPopupMenu.html#a531179fdaea5dbcaf8610e2fc47159dd">epilogues</a>(){ <span class="keywordflow">return</span> m_pEpilogues; };
-<a name="l00270"></a><a class="code" href="classKviKvsPopupMenu.html#ae203928310d007787574fc12488c7959">00270</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviKvsScript&gt;</a> * <a class="code" href="classKviKvsPopupMenu.html#ae203928310d007787574fc12488c7959">prologues</a>(){ <span class="keywordflow">return</span> m_pPrologues; };
-<a name="l00271"></a><a class="code" href="classKviKvsPopupMenu.html#a65eb2f38852d7ea4590e3e4f9e7f7756">00271</a>         <a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * <a class="code" href="classKviKvsPopupMenu.html#a65eb2f38852d7ea4590e3e4f9e7f7756">parentPopup</a>(){ <span class="keywordflow">return</span> m_pParentPopup; };
-<a name="l00272"></a>00272         <span class="keywordtype">void</span> generateDefPopup(QString &amp;buffer);
-<a name="l00273"></a><a class="code" href="classKviKvsPopupMenu.html#aafa4d237ad3ad6231e4b0a25faaab747">00273</a>         <span class="keywordtype">void</span> <a class="code" href="classKviKvsPopupMenu.html#aafa4d237ad3ad6231e4b0a25faaab747">setParentPopup</a>(<a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * par){ m_pParentPopup = par; };
-<a name="l00274"></a>00274         <span class="keywordtype">void</span> generateDefPopupCore(QString &amp;buffer);
-<a name="l00275"></a>00275 <span class="keyword">protected</span>:
-<a name="l00276"></a>00276         <span class="keywordtype">void</span> addItemInternal(<a class="code" href="classKviKvsPopupMenuItem.html">KviKvsPopupMenuItem</a> * it);
-<a name="l00277"></a>00277         <span class="keywordtype">void</span> executePrologues(<a class="code" href="classKviKvsPopupMenuTopLevelData.html">KviKvsPopupMenuTopLevelData</a> * pData);
-<a name="l00278"></a>00278         <span class="keywordtype">void</span> executeEpilogues(<a class="code" href="classKviKvsPopupMenuTopLevelData.html">KviKvsPopupMenuTopLevelData</a> * pData);
-<a name="l00279"></a>00279         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#abac3f12de939692411bdae6dcb59050d">load</a>(<span class="keyword">const</span> QString &amp;prefix,<a class="code" href="classKviConfig.html">KviConfig</a> * cfg);
-<a name="l00280"></a>00280         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#afc947a792aac67a66d0402e09682ac13">save</a>(<span class="keyword">const</span> QString &amp;prefix,<a class="code" href="classKviConfig.html">KviConfig</a> * cfg);
-<a name="l00281"></a>00281 <span class="keyword">private</span> slots:
-<a name="l00282"></a>00282         <span class="keywordtype">void</span> setupMenuContents();
-<a name="l00283"></a>00283 <span class="keyword">protected</span>:
-<a name="l00284"></a>00284         <span class="keywordtype">void</span> clearMenuContents();
-<a name="l00285"></a>00285 <span class="keyword">protected</span> slots:
-<a name="l00286"></a>00286         <span class="keywordtype">void</span> itemClicked(<span class="keywordtype">int</span> itemId);
-<a name="l00287"></a>00287 signals:
-<a name="l00288"></a>00288         <span class="keywordtype">void</span> testModeItemClicked(<a class="code" href="classKviKvsPopupMenuItem.html">KviKvsPopupMenuItem</a> * it);
-<a name="l00289"></a>00289 };
-<a name="l00290"></a>00290 
+<a name="l00269"></a>00269         <a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * findChildPopupByName(<span class="keyword">const</span> QString &amp;szItemName);
+<a name="l00270"></a><a class="code" href="classKviKvsPopupMenu.html#a531179fdaea5dbcaf8610e2fc47159dd">00270</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviKvsScript&gt;</a> * <a class="code" href="classKviKvsPopupMenu.html#a531179fdaea5dbcaf8610e2fc47159dd">epilogues</a>(){ <span class="keywordflow">return</span> m_pEpilogues; };
+<a name="l00271"></a><a class="code" href="classKviKvsPopupMenu.html#ae203928310d007787574fc12488c7959">00271</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviKvsScript&gt;</a> * <a class="code" href="classKviKvsPopupMenu.html#ae203928310d007787574fc12488c7959">prologues</a>(){ <span class="keywordflow">return</span> m_pPrologues; };
+<a name="l00272"></a><a class="code" href="classKviKvsPopupMenu.html#a65eb2f38852d7ea4590e3e4f9e7f7756">00272</a>         <a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * <a class="code" href="classKviKvsPopupMenu.html#a65eb2f38852d7ea4590e3e4f9e7f7756">parentPopup</a>(){ <span class="keywordflow">return</span> m_pParentPopup; };
+<a name="l00273"></a>00273         <span class="keywordtype">void</span> generateDefPopup(QString &amp;buffer);
+<a name="l00274"></a><a class="code" href="classKviKvsPopupMenu.html#aafa4d237ad3ad6231e4b0a25faaab747">00274</a>         <span class="keywordtype">void</span> <a class="code" href="classKviKvsPopupMenu.html#aafa4d237ad3ad6231e4b0a25faaab747">setParentPopup</a>(<a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * par){ m_pParentPopup = par; };
+<a name="l00275"></a>00275         <span class="keywordtype">void</span> generateDefPopupCore(QString &amp;buffer);
+<a name="l00276"></a>00276 <span class="keyword">protected</span>:
+<a name="l00277"></a>00277         <span class="keywordtype">void</span> addItemInternal(<a class="code" href="classKviKvsPopupMenuItem.html">KviKvsPopupMenuItem</a> * it);
+<a name="l00278"></a>00278         <span class="keywordtype">void</span> executePrologues(<a class="code" href="classKviKvsPopupMenuTopLevelData.html">KviKvsPopupMenuTopLevelData</a> * pData);
+<a name="l00279"></a>00279         <span class="keywordtype">void</span> executeEpilogues(<a class="code" href="classKviKvsPopupMenuTopLevelData.html">KviKvsPopupMenuTopLevelData</a> * pData);
+<a name="l00280"></a>00280         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#abac3f12de939692411bdae6dcb59050d">load</a>(<span class="keyword">const</span> QString &amp;prefix,<a class="code" href="classKviConfig.html">KviConfig</a> * cfg);
+<a name="l00281"></a>00281         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#afc947a792aac67a66d0402e09682ac13">save</a>(<span class="keyword">const</span> QString &amp;prefix,<a class="code" href="classKviConfig.html">KviConfig</a> * cfg);
+<a name="l00282"></a>00282 <span class="keyword">private</span> slots:
+<a name="l00283"></a>00283         <span class="keywordtype">void</span> setupMenuContents();
+<a name="l00284"></a>00284 <span class="keyword">protected</span>:
+<a name="l00285"></a>00285         <span class="keywordtype">void</span> clearMenuContents();
+<a name="l00286"></a>00286 <span class="keyword">protected</span> slots:
+<a name="l00287"></a>00287         <span class="keywordtype">void</span> itemClicked(<span class="keywordtype">int</span> itemId);
+<a name="l00288"></a>00288 signals:
+<a name="l00289"></a>00289         <span class="keywordtype">void</span> testModeItemClicked(<a class="code" href="classKviKvsPopupMenuItem.html">KviKvsPopupMenuItem</a> * it);
+<a name="l00290"></a>00290 };
 <a name="l00291"></a>00291 
-<a name="l00292"></a>00292 <span class="preprocessor">#endif //!_KVI_KVS_POPUPMENU_H_</span>
+<a name="l00292"></a>00292 
+<a name="l00293"></a>00293 <span class="preprocessor">#endif //!_KVI_KVS_POPUPMENU_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:28 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:19 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

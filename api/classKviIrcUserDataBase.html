@@ -54,8 +54,8 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the registered user, if any, or 0.  <a href="#a3b8c430da557cecc38c4c2023d8241ff"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviRegisteredUser.html">KviRegisteredUser</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcUserDataBase.html#a4bc8dca38c08ee107e64831d804faed5">registeredUser</a> (const QString &amp;nick)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the registered user, if any, or 0.  <a href="#a4bc8dca38c08ee107e64831d804faed5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcUserDataBase.html#ac43280a726288ce3ab756dde65394545">removeUser</a> (const QString &amp;nick, <a class="el" href="classKviIrcUserEntry.html">KviIrcUserEntry</a> *e)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Deletes a user from the database.  <a href="#ac43280a726288ce3ab756dde65394545"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcUserDataBase.html#afe25599e5fd447d9cd3e311c2a10fd7f">removeUser</a> (const QString &amp;nick, <a class="el" href="classKviIrcUserEntry.html">KviIrcUserEntry</a> *e)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Decrements the user reference count and if it reaches 0 then deletes the user from the database.  <a href="#afe25599e5fd447d9cd3e311c2a10fd7f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcUserDataBase.html#aeab868b49cb222dc1aa20d1226cb5ea6">setupConnectionWithReguserDb</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize the database by connecting signals and slots.  <a href="#aeab868b49cb222dc1aa20d1226cb5ea6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcUserDataBase.html#a04d6c22e3929452d47d88b860d3935f5">~KviIrcUserDataBase</a> ()</td></tr>
@@ -94,7 +94,7 @@
 <p>Constructs the Irc user database object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviIrcUserDataBase.html" title="The class which manages the user database.">KviIrcUserDataBase</a> </dd></dl>
 
-<p>References <a class="el" href="kvi__ircuserdb_8h_source.html#l00348">m_pDict</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00849">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>, and <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00251">setupConnectionWithReguserDb()</a>.</p>
+<p>References <a class="el" href="kvi__ircuserdb_8h_source.html#l00348">m_pDict</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00858">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>, and <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00260">setupConnectionWithReguserDb()</a>.</p>
 
 </div>
 </div>
@@ -138,7 +138,7 @@
 <p>Clears the database. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__ircuserdb_8h_source.html#l00348">m_pDict</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00849">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="kvi__ircuserdb_8h_source.html#l00348">m_pDict</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00858">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
 
 </div>
 </div>
@@ -167,9 +167,9 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>QColor * </dd></dl>
 
-<p>References <a class="el" href="kvi__ircuserdb_8h_source.html#l00370">find()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00108">KviIrcUserEntry::m_bNotFoundRegUserLoockup</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00112">KviIrcUserEntry::m_cachedColor</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00110">KviIrcUserEntry::m_szLastRegisteredMatchNick</a>, and <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00212">registeredUser()</a>.</p>
+<p>References <a class="el" href="kvi__ircuserdb_8h_source.html#l00370">find()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00108">KviIrcUserEntry::m_bNotFoundRegUserLoockup</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00112">KviIrcUserEntry::m_cachedColor</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00110">KviIrcUserEntry::m_szLastRegisteredMatchNick</a>, and <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00216">registeredUser()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00179">KviUserListEntry::color()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01682">KviUserListViewArea::paintEvent()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00181">KviUserListEntry::color()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01648">KviUserListViewArea::paintEvent()</a>.</p>
 
 </div>
 </div>
@@ -218,7 +218,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviIrcUserEntry.html" title="A class to handle the entries of the user database.">KviIrcUserEntry</a> * </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__console_8cpp_source.html#l01034">KviConsole::currentAvatar()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00151">customColor()</a>, <a class="el" href="kvi__ircview__events_8cpp_source.html#l00848">KviIrcView::doLinkToolTip()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00225">KviQuery::getInfoLabelText()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00135">KviQuery::getInfoLabelTipText()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00515">KviIsOnNotifyListManager::handleIsOn()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00138">haveCustomColor()</a>, <a class="el" href="kvi__kvs__coresimplecommands__mr_8cpp_source.html#l01000">KviKvsCoreSimpleCommands::KVSCSC()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01375">KviIrcConnection::loginComplete()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01108">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00673">KviConsole::outputPrivmsg()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01559">KviServerParser::parseCtcpReplyAvatar()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01800">KviServerParser::parseCtcpReplyUserinfo()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l00549">KviServerParser::parseLiteralKick()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l01399">KviServerParser::parseLiteralNick()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01132">KviServerParser::parseNumericWhoisAway()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01383">KviServerParser::parseNumericWhoisServer()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01165">KviServerParser::parseNumericWhoisUser()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00756">KviServerParser::parseNumericWhoReply()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">KviUserListView::partInternal()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00166">registeredUser()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00986">KviConsole::setAvatar()</a>, <a class="el" href="kvi__console_8cpp_source.html#l01052">KviConsole::setAvatarFromOptions()</a>, and <a class="el" href="kvi__ircconnection_8cpp_source.html#l00930">KviIrcConnection::userInfoReceived()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__console_8cpp_source.html#l01043">KviConsole::currentAvatar()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00155">customColor()</a>, <a class="el" href="kvi__ircview__events_8cpp_source.html#l00849">KviIrcView::doLinkToolTip()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00227">KviQuery::getInfoLabelText()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00137">KviQuery::getInfoLabelTipText()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00515">KviIsOnNotifyListManager::handleIsOn()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00142">haveCustomColor()</a>, <a class="el" href="kvi__kvs__coresimplecommands__mr_8cpp_source.html#l01000">KviKvsCoreSimpleCommands::KVSCSC()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01392">KviIrcConnection::loginComplete()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01126">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00683">KviConsole::outputPrivmsg()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01564">KviServerParser::parseCtcpReplyAvatar()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01805">KviServerParser::parseCtcpReplyUserinfo()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l00549">KviServerParser::parseLiteralKick()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l01450">KviServerParser::parseLiteralNick()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01135">KviServerParser::parseNumericWhoisAway()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01386">KviServerParser::parseNumericWhoisServer()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01168">KviServerParser::parseNumericWhoisUser()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00758">KviServerParser::parseNumericWhoReply()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00170">registeredUser()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00995">KviConsole::setAvatar()</a>, <a class="el" href="kvi__console_8cpp_source.html#l01061">KviConsole::setAvatarFromOptions()</a>, and <a class="el" href="kvi__ircconnection_8cpp_source.html#l00948">KviIrcConnection::userInfoReceived()</a>.</p>
 
 </div>
 </div>
@@ -247,9 +247,9 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="kvi__ircuserdb_8h_source.html#l00370">find()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00108">KviIrcUserEntry::m_bNotFoundRegUserLoockup</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00113">KviIrcUserEntry::m_bUseCustomColor</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00110">KviIrcUserEntry::m_szLastRegisteredMatchNick</a>, and <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00212">registeredUser()</a>.</p>
+<p>References <a class="el" href="kvi__ircuserdb_8h_source.html#l00370">find()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00108">KviIrcUserEntry::m_bNotFoundRegUserLoockup</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00113">KviIrcUserEntry::m_bUseCustomColor</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00110">KviIrcUserEntry::m_szLastRegisteredMatchNick</a>, and <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00216">registeredUser()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00179">KviUserListEntry::color()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01682">KviUserListViewArea::paintEvent()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00181">KviUserListEntry::color()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01648">KviUserListViewArea::paintEvent()</a>.</p>
 
 </div>
 </div>
@@ -295,9 +295,9 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviIrcUserEntry.html" title="A class to handle the entries of the user database.">KviIrcUserEntry</a> * </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00499">KviPointerHashTable&lt; Key, T &gt;::insert()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00104">KviIrcUserEntry::m_nRefs</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00348">m_pDict</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00091">KviIrcUserEntry::m_szHost</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00090">KviIrcUserEntry::m_szUser</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00500">KviPointerHashTable&lt; Key, T &gt;::insert()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00104">KviIrcUserEntry::m_nRefs</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00348">m_pDict</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00091">KviIrcUserEntry::m_szHost</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00090">KviIrcUserEntry::m_szUser</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00789">KviUserListView::join()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00763">KviUserListView::join()</a>.</p>
 
 </div>
 </div>
@@ -319,9 +319,9 @@
 <p>Slot called when the database is cleared. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l01107">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00108">KviIrcUserEntry::m_bNotFoundRegUserLoockup</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00348">m_pDict</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00109">KviIrcUserEntry::m_szRegisteredUserName</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l01116">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00108">KviIrcUserEntry::m_bNotFoundRegUserLoockup</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00348">m_pDict</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00109">KviIrcUserEntry::m_szRegisteredUserName</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00251">setupConnectionWithReguserDb()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00260">setupConnectionWithReguserDb()</a>.</p>
 
 </div>
 </div>
@@ -367,7 +367,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviRegisteredUser.html" title="_KVI_REGUSERDB_CPP_">KviRegisteredUser</a> * </dd></dl>
 
-<p>References <a class="el" href="kvi__ircuserdb_8h_source.html#l00370">find()</a>, <a class="el" href="kvi__regusersdb_8cpp_source.html#l00579">KviRegisteredUserDataBase::findMatchingUser()</a>, <a class="el" href="namespaceKviStringConversion.html#a4c8d5c093e90715824cc9576f5317547">KviStringConversion::fromString()</a>, <a class="el" href="kvi__regusersdb_8cpp_source.html#l00125">g_pRegisteredUserDataBase</a>, <a class="el" href="kvi__regusersdb_8cpp_source.html#l00263">KviRegisteredUser::getBoolProperty()</a>, <a class="el" href="kvi__regusersdb_8cpp_source.html#l00254">KviRegisteredUser::getProperty()</a>, <a class="el" href="kvi__regusersdb_8cpp_source.html#l00344">KviRegisteredUserDataBase::getUser()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00242">KviIrcUserEntry::hasHost()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00236">KviIrcUserEntry::hasUser()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00272">KviIrcUserEntry::host()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00108">KviIrcUserEntry::m_bNotFoundRegUserLoockup</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00113">KviIrcUserEntry::m_bUseCustomColor</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00112">KviIrcUserEntry::m_cachedColor</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00110">KviIrcUserEntry::m_szLastRegisteredMatchNick</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00109">KviIrcUserEntry::m_szRegisteredUserName</a>, <a class="el" href="kvi__regusersdb_8h_source.html#l00088">KviRegisteredUser::name()</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00266">KviIrcUserEntry::user()</a>.</p>
+<p>References <a class="el" href="kvi__ircuserdb_8h_source.html#l00370">find()</a>, <a class="el" href="kvi__regusersdb_8cpp_source.html#l00580">KviRegisteredUserDataBase::findMatchingUser()</a>, <a class="el" href="namespaceKviStringConversion.html#a4c8d5c093e90715824cc9576f5317547">KviStringConversion::fromString()</a>, <a class="el" href="kvi__regusersdb_8cpp_source.html#l00125">g_pRegisteredUserDataBase</a>, <a class="el" href="kvi__regusersdb_8cpp_source.html#l00264">KviRegisteredUser::getBoolProperty()</a>, <a class="el" href="kvi__regusersdb_8cpp_source.html#l00255">KviRegisteredUser::getProperty()</a>, <a class="el" href="kvi__regusersdb_8cpp_source.html#l00345">KviRegisteredUserDataBase::getUser()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00242">KviIrcUserEntry::hasHost()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00236">KviIrcUserEntry::hasUser()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00272">KviIrcUserEntry::host()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00108">KviIrcUserEntry::m_bNotFoundRegUserLoockup</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00113">KviIrcUserEntry::m_bUseCustomColor</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00112">KviIrcUserEntry::m_cachedColor</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00110">KviIrcUserEntry::m_szLastRegisteredMatchNick</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00109">KviIrcUserEntry::m_szRegisteredUserName</a>, <a class="el" href="kvi__regusersdb_8h_source.html#l00088">KviRegisteredUser::name()</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00266">KviIrcUserEntry::user()</a>.</p>
 
 </div>
 </div>
@@ -398,7 +398,7 @@
 
 <p>References <a class="el" href="kvi__ircuserdb_8h_source.html#l00370">find()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00272">KviIrcUserEntry::host()</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00266">KviIrcUserEntry::user()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__console_8cpp_source.html#l00590">KviConsole::applyHighlighting()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00889">KviConsole::avatarChanged()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00922">KviConsole::checkDefaultAvatar()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00179">KviUserListEntry::color()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00151">customColor()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00138">haveCustomColor()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00802">KviServerParser::parseCtcpRequest()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01707">KviServerParser::parseCtcpRequestDcc()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l01513">KviServerParser::parseLiteralInvite()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l01010">KviServerParser::parseLiteralNotice()</a>, and <a class="el" href="kvi__sp__literal_8cpp_source.html#l00700">KviServerParser::parseLiteralPrivmsg()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__console_8cpp_source.html#l00600">KviConsole::applyHighlighting()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00899">KviConsole::avatarChanged()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00932">KviConsole::checkDefaultAvatar()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00181">KviUserListEntry::color()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00155">customColor()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00142">haveCustomColor()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00808">KviServerParser::parseCtcpRequest()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01712">KviServerParser::parseCtcpRequestDcc()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l01564">KviServerParser::parseLiteralInvite()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l01061">KviServerParser::parseLiteralNotice()</a>, and <a class="el" href="kvi__sp__literal_8cpp_source.html#l00706">KviServerParser::parseLiteralPrivmsg()</a>.</p>
 
 </div>
 </div>
@@ -427,9 +427,9 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l01107">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00108">KviIrcUserEntry::m_bNotFoundRegUserLoockup</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00348">m_pDict</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00109">KviIrcUserEntry::m_szRegisteredUserName</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l01116">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00108">KviIrcUserEntry::m_bNotFoundRegUserLoockup</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00348">m_pDict</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00109">KviIrcUserEntry::m_szRegisteredUserName</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00251">setupConnectionWithReguserDb()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00260">setupConnectionWithReguserDb()</a>.</p>
 
 </div>
 </div>
@@ -458,9 +458,9 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l01107">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00108">KviIrcUserEntry::m_bNotFoundRegUserLoockup</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00348">m_pDict</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00109">KviIrcUserEntry::m_szRegisteredUserName</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l01116">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00108">KviIrcUserEntry::m_bNotFoundRegUserLoockup</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00348">m_pDict</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00109">KviIrcUserEntry::m_szRegisteredUserName</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00251">setupConnectionWithReguserDb()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00260">setupConnectionWithReguserDb()</a>.</p>
 
 </div>
 </div>
@@ -489,18 +489,18 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l01107">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00108">KviIrcUserEntry::m_bNotFoundRegUserLoockup</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00348">m_pDict</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00109">KviIrcUserEntry::m_szRegisteredUserName</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l01116">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00108">KviIrcUserEntry::m_bNotFoundRegUserLoockup</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00348">m_pDict</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00109">KviIrcUserEntry::m_szRegisteredUserName</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00251">setupConnectionWithReguserDb()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00260">setupConnectionWithReguserDb()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac43280a726288ce3ab756dde65394545"></a><!-- doxytag: member="KviIrcUserDataBase::removeUser" ref="ac43280a726288ce3ab756dde65394545" args="(const QString &amp;nick, KviIrcUserEntry *e)" -->
+<a class="anchor" id="afe25599e5fd447d9cd3e311c2a10fd7f"></a><!-- doxytag: member="KviIrcUserDataBase::removeUser" ref="afe25599e5fd447d9cd3e311c2a10fd7f" args="(const QString &amp;nick, KviIrcUserEntry *e)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void KviIrcUserDataBase::removeUser </td>
+          <td class="memname">bool KviIrcUserDataBase::removeUser </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&nbsp;</td>
           <td class="paramname"> <em>nick</em>, </td>
@@ -520,7 +520,7 @@
 </div>
 <div class="memdoc">
 
-<p>Deletes a user from the database. </p>
+<p>Decrements the user reference count and if it reaches 0 then deletes the user from the database. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>nick</em>&nbsp;</td><td>The nickname of the user </td></tr>
@@ -528,11 +528,11 @@
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if the reference count reached 0 and false otherwise (so true if the user was completely deleted from the db) </dd></dl>
 
-<p>References <a class="el" href="kvi__ircuserdb_8h_source.html#l00104">KviIrcUserEntry::m_nRefs</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00348">m_pDict</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00553">KviPointerHashTable&lt; Key, T &gt;::remove()</a>.</p>
+<p>References <a class="el" href="kvi__ircuserdb_8h_source.html#l00104">KviIrcUserEntry::m_nRefs</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00348">m_pDict</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00554">KviPointerHashTable&lt; Key, T &gt;::remove()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">KviUserListView::partInternal()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">KviUserListView::removeAllEntries()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">KviUserListView::partInternal()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">KviUserListView::removeAllEntries()</a>.</p>
 
 </div>
 </div>
@@ -554,9 +554,9 @@
 <p>Initialize the database by connecting signals and slots. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__regusersdb_8cpp_source.html#l00125">g_pRegisteredUserDataBase</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00298">registeredDatabaseCleared()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00286">registeredUserAdded()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00272">registeredUserChanged()</a>, and <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00259">registeredUserRemoved()</a>.</p>
+<p>References <a class="el" href="kvi__regusersdb_8cpp_source.html#l00125">g_pRegisteredUserDataBase</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00307">registeredDatabaseCleared()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00295">registeredUserAdded()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00281">registeredUserChanged()</a>, and <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00268">registeredUserRemoved()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00117">KviIrcUserDataBase()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00121">KviIrcUserDataBase()</a>.</p>
 
 </div>
 </div>
@@ -572,7 +572,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00220">clear()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00227">insertUser()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00117">KviIrcUserDataBase()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00298">registeredDatabaseCleared()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00286">registeredUserAdded()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00272">registeredUserChanged()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00259">registeredUserRemoved()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00245">removeUser()</a>, and <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00133">~KviIrcUserDataBase()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00224">clear()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00231">insertUser()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00121">KviIrcUserDataBase()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00307">registeredDatabaseCleared()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00295">registeredUserAdded()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00281">registeredUserChanged()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00268">registeredUserRemoved()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00249">removeUser()</a>, and <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00137">~KviIrcUserDataBase()</a>.</p>
 
 </div>
 </div>
@@ -581,7 +581,7 @@
 <li>src/kvilib/irc/<a class="el" href="kvi__ircuserdb_8cpp.html">kvi_ircuserdb.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:31 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:22 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

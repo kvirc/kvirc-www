@@ -37,14 +37,13 @@ Inheritance diagram for KviTalHBox:</div>
  <div class="center">
   <img src="classKviTalHBox.png" usemap="#KviTalHBox_map" alt=""/>
   <map id="KviTalHBox_map" name="KviTalHBox_map">
-<area href="classKviColorSelector.html" alt="KviColorSelector" shape="rect" coords="167,56,324,80"/>
-<area href="classKviFileSelector.html" alt="KviFileSelector" shape="rect" coords="167,112,324,136"/>
-<area href="classKviFontSelector.html" alt="KviFontSelector" shape="rect" coords="167,168,324,192"/>
-<area href="classKviMircTextColorSelector.html" alt="KviMircTextColorSelector" shape="rect" coords="167,224,324,248"/>
-<area href="classKviPasswordLineEdit.html" alt="KviPasswordLineEdit" shape="rect" coords="167,280,324,304"/>
-<area href="classKviPasswordSelector.html" alt="KviPasswordSelector" shape="rect" coords="167,336,324,360"/>
-<area href="classKviStringSelector.html" alt="KviStringSelector" shape="rect" coords="167,392,324,416"/>
-<area href="classKviUIntSelector.html" alt="KviUIntSelector" shape="rect" coords="167,448,324,472"/>
+<area href="classKviColorSelector.html" alt="KviColorSelector" shape="rect" coords="0,56,157,80"/>
+<area href="classKviFontSelector.html" alt="KviFontSelector" shape="rect" coords="167,56,324,80"/>
+<area href="classKviMircTextColorSelector.html" alt="KviMircTextColorSelector" shape="rect" coords="334,56,491,80"/>
+<area href="classKviPasswordLineEdit.html" alt="KviPasswordLineEdit" shape="rect" coords="501,56,658,80"/>
+<area href="classKviPasswordSelector.html" alt="KviPasswordSelector" shape="rect" coords="668,56,825,80"/>
+<area href="classKviStringSelector.html" alt="KviStringSelector" shape="rect" coords="835,56,992,80"/>
+<area href="classKviUIntSelector.html" alt="KviUIntSelector" shape="rect" coords="1002,56,1159,80"/>
 </map>
  </div>
 </div>
@@ -52,6 +51,8 @@ Inheritance diagram for KviTalHBox:</div>
 <p><a href="classKviTalHBox-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviTalHBox.html#a1897c95909c88fd0e2353cfad1ca5c79">addSpacing</a> (int iSpace)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adds a non-stretchable spacing item.  <a href="#a1897c95909c88fd0e2353cfad1ca5c79"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviTalHBox.html#a9d0bb3c5b898dff87fc686452697d6ed">addStretch</a> (int iStretch)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adds the stretch factor.  <a href="#a9d0bb3c5b898dff87fc686452697d6ed"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviTalHBox.html#a236475a27c689656dabf2d23da97f8fa">KviTalHBox</a> (QWidget *pParent, char *pcName=0)</td></tr>
@@ -135,6 +136,37 @@ Inheritance diagram for KviTalHBox:</div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a1897c95909c88fd0e2353cfad1ca5c79"></a><!-- doxytag: member="KviTalHBox::addSpacing" ref="a1897c95909c88fd0e2353cfad1ca5c79" args="(int iSpace)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KviTalHBox::addSpacing </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>iSpace</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Adds a non-stretchable spacing item. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>iSpace</em>&nbsp;</td><td>the width of the item </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
+
+<p>References <a class="el" href="kvi__tal__hbox_8h_source.html#l00061">m_pLayout</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00225">KviPasswordLineEdit::KviPasswordLineEdit()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00169">KviPasswordSelector::KviPasswordSelector()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a9d0bb3c5b898dff87fc686452697d6ed"></a><!-- doxytag: member="KviTalHBox::addStretch" ref="a9d0bb3c5b898dff87fc686452697d6ed" args="(int iStretch)" -->
 <div class="memitem">
 <div class="memproto">
@@ -279,7 +311,7 @@ Inheritance diagram for KviTalHBox:</div>
 
 <p>References <a class="el" href="kvi__tal__hbox_8h_source.html#l00061">m_pLayout</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel::KviChannel()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput::KviInput()</a>, and <a class="el" href="kvi__tal__wizard_8cpp_source.html#l00145">KviTalWizard::KviTalWizard()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel::KviChannel()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput::KviInput()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00225">KviPasswordLineEdit::KviPasswordLineEdit()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00169">KviPasswordSelector::KviPasswordSelector()</a>, and <a class="el" href="kvi__tal__wizard_8cpp_source.html#l00145">KviTalWizard::KviTalWizard()</a>.</p>
 
 </div>
 </div>
@@ -310,7 +342,7 @@ Inheritance diagram for KviTalHBox:</div>
 
 <p>References <a class="el" href="kvi__tal__hbox_8h_source.html#l00061">m_pLayout</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel::KviChannel()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00557">KviColorSelector::KviColorSelector()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00384">KviFileSelector::KviFileSelector()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00611">KviFontSelector::KviFontSelector()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput::KviInput()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00656">KviMircTextColorSelector::KviMircTextColorSelector()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00222">KviPasswordLineEdit::KviPasswordLineEdit()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00169">KviPasswordSelector::KviPasswordSelector()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00131">KviStringSelector::KviStringSelector()</a>, <a class="el" href="kvi__tal__wizard_8cpp_source.html#l00145">KviTalWizard::KviTalWizard()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00067">KviUIntSelector::KviUIntSelector()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel::KviChannel()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00586">KviColorSelector::KviColorSelector()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00640">KviFontSelector::KviFontSelector()</a>, <a class="el" href="kvi__input_8cpp_source.html#l00072">KviInput::KviInput()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00686">KviMircTextColorSelector::KviMircTextColorSelector()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00225">KviPasswordLineEdit::KviPasswordLineEdit()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00169">KviPasswordSelector::KviPasswordSelector()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00131">KviStringSelector::KviStringSelector()</a>, <a class="el" href="kvi__tal__wizard_8cpp_source.html#l00145">KviTalWizard::KviTalWizard()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00067">KviUIntSelector::KviUIntSelector()</a>.</p>
 
 </div>
 </div>
@@ -351,7 +383,7 @@ Inheritance diagram for KviTalHBox:</div>
 
 <p>References <a class="el" href="kvi__tal__hbox_8h_source.html#l00061">m_pLayout</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel::KviChannel()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00557">KviColorSelector::KviColorSelector()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00384">KviFileSelector::KviFileSelector()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00611">KviFontSelector::KviFontSelector()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00656">KviMircTextColorSelector::KviMircTextColorSelector()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00222">KviPasswordLineEdit::KviPasswordLineEdit()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00169">KviPasswordSelector::KviPasswordSelector()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00068">KviQuery::KviQuery()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00131">KviStringSelector::KviStringSelector()</a>, <a class="el" href="kvi__tal__wizard_8cpp_source.html#l00145">KviTalWizard::KviTalWizard()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00067">KviUIntSelector::KviUIntSelector()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel::KviChannel()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00586">KviColorSelector::KviColorSelector()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00640">KviFontSelector::KviFontSelector()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00686">KviMircTextColorSelector::KviMircTextColorSelector()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00225">KviPasswordLineEdit::KviPasswordLineEdit()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00169">KviPasswordSelector::KviPasswordSelector()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00068">KviQuery::KviQuery()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00131">KviStringSelector::KviStringSelector()</a>, <a class="el" href="kvi__tal__wizard_8cpp_source.html#l00145">KviTalWizard::KviTalWizard()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00067">KviUIntSelector::KviUIntSelector()</a>.</p>
 
 </div>
 </div>
@@ -367,7 +399,7 @@ Inheritance diagram for KviTalHBox:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00116">addStretch()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00071">childEvent()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00055">KviTalHBox()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00106">setAlignment()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00101">setMargin()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00096">setSpacing()</a>, and <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00091">setStretchFactor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00121">addSpacing()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00116">addStretch()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00071">childEvent()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00055">KviTalHBox()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00106">setAlignment()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00101">setMargin()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00096">setSpacing()</a>, and <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00091">setStretchFactor()</a>.</p>
 
 </div>
 </div>
@@ -376,7 +408,7 @@ Inheritance diagram for KviTalHBox:</div>
 <li>src/kvilib/tal/<a class="el" href="kvi__tal__hbox_8cpp.html">kvi_tal_hbox.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:36 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:27 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

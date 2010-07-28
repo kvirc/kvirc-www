@@ -26,7 +26,7 @@
   </div>
 </div>
 <div class="contents">
-<h1>KviFileSelector Class Reference</h1><!-- doxytag: class="KviFileSelector" --><!-- doxytag: inherits="KviTalHBox,KviSelectorInterface" -->
+<h1>KviFileSelector Class Reference</h1><!-- doxytag: class="KviFileSelector" --><!-- doxytag: inherits="KviSelectorInterface" -->
 <p><code>#include &lt;<a class="el" href="kvi__selectors_8h_source.html">kvi_selectors.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for KviFileSelector:</div>
@@ -34,8 +34,7 @@ Inheritance diagram for KviFileSelector:</div>
  <div class="center">
   <img src="classKviFileSelector.png" usemap="#KviFileSelector_map" alt=""/>
   <map id="KviFileSelector_map" name="KviFileSelector_map">
-<area href="classKviTalHBox.html" alt="KviTalHBox" shape="rect" coords="0,0,130,24"/>
-<area href="classKviSelectorInterface.html" alt="KviSelectorInterface" shape="rect" coords="140,0,270,24"/>
+<area href="classKviSelectorInterface.html" alt="KviSelectorInterface" shape="rect" coords="70,0,200,24"/>
 <area href="classKviDirectorySelector.html" alt="KviDirectorySelector" shape="rect" coords="0,112,130,136"/>
 <area href="classKviSoundSelector.html" alt="KviSoundSelector" shape="rect" coords="140,112,270,136"/>
 </map>
@@ -46,7 +45,8 @@ Inheritance diagram for KviFileSelector:</div>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileSelector.html#ad03244e379cd4afb3eb244daeaf13e95">Flags</a> { <a class="el" href="classKviFileSelector.html#ad03244e379cd4afb3eb244daeaf13e95a7c4e6724b2bd1665bdb9e4352b059a95">ChooseSaveFileName</a> =  1, 
-<a class="el" href="classKviFileSelector.html#ad03244e379cd4afb3eb244daeaf13e95a26dd0ae8f94e4da47de35e0e52e77b58">DontConfirmOverwrite</a> =  2
+<a class="el" href="classKviFileSelector.html#ad03244e379cd4afb3eb244daeaf13e95a26dd0ae8f94e4da47de35e0e52e77b58">DontConfirmOverwrite</a> =  2, 
+<a class="el" href="classKviFileSelector.html#ad03244e379cd4afb3eb244daeaf13e95a29b45b6c180ecac6e0e5a269ab47a703">VerticalLayout</a> =  4
  }</td></tr>
 <tr><td colspan="2"><h2>Public Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileSelector.html#af4b53dea12d3ddb0093c1171fbc7e84e">setEnabled</a> (bool bEnabled)</td></tr>
@@ -62,6 +62,7 @@ Inheritance diagram for KviFileSelector:</div>
 <tr><td colspan="2"><h2>Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileSelector.html#acd29b7d3f89880cd4747f0ee27be62a4">select</a> ()</td></tr>
 <tr><td colspan="2"><h2>Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QGridLayout *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileSelector.html#a8742e921ec0a42c3a1c8868ba447fd2b">m_Layout</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPushButton *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileSelector.html#a336744e1de555763c7a724c0b9ec8678">m_pButton</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QLabel *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileSelector.html#a4003d538ae82536998e9a60b3c65e21a">m_pLabel</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QLineEdit *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileSelector.html#a78d99ed8acc4b4e62b21ec383fbec3d7">m_pLineEdit</a></td></tr>
@@ -88,6 +89,8 @@ Inheritance diagram for KviFileSelector:</div>
 <tr><td valign="top"><em><a class="anchor" id="ad03244e379cd4afb3eb244daeaf13e95a7c4e6724b2bd1665bdb9e4352b059a95"></a><!-- doxytag: member="ChooseSaveFileName" ref="ad03244e379cd4afb3eb244daeaf13e95a7c4e6724b2bd1665bdb9e4352b059a95" args="" -->ChooseSaveFileName</em>&nbsp;</td><td>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="ad03244e379cd4afb3eb244daeaf13e95a26dd0ae8f94e4da47de35e0e52e77b58"></a><!-- doxytag: member="DontConfirmOverwrite" ref="ad03244e379cd4afb3eb244daeaf13e95a26dd0ae8f94e4da47de35e0e52e77b58" args="" -->DontConfirmOverwrite</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="ad03244e379cd4afb3eb244daeaf13e95a29b45b6c180ecac6e0e5a269ab47a703"></a><!-- doxytag: member="VerticalLayout" ref="ad03244e379cd4afb3eb244daeaf13e95a29b45b6c180ecac6e0e5a269ab47a703" args="" -->VerticalLayout</em>&nbsp;</td><td>
 </td></tr>
 </table>
 </dd>
@@ -145,7 +148,7 @@ Inheritance diagram for KviFileSelector:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00417">browseClicked()</a>, <a class="el" href="kvi__selectors_8h_source.html#l00239">m_pButton</a>, <a class="el" href="kvi__selectors_8h_source.html#l00237">m_pLabel</a>, <a class="el" href="kvi__selectors_8h_source.html#l00238">m_pLineEdit</a>, <a class="el" href="kvi__selectors_8h_source.html#l00240">m_pOption</a>, <a class="el" href="kvi__selectors_8h_source.html#l00242">m_szFilter</a>, <a class="el" href="kvi__selectors_8h_source.html#l00241">m_uFlags</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00409">setEnabled()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00096">KviTalHBox::setSpacing()</a>, and <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00091">KviTalHBox::setStretchFactor()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00446">browseClicked()</a>, <a class="el" href="kvi__selectors_8h_source.html#l00244">m_Layout</a>, <a class="el" href="kvi__selectors_8h_source.html#l00240">m_pButton</a>, <a class="el" href="kvi__selectors_8h_source.html#l00238">m_pLabel</a>, <a class="el" href="kvi__selectors_8h_source.html#l00239">m_pLineEdit</a>, <a class="el" href="kvi__selectors_8h_source.html#l00241">m_pOption</a>, <a class="el" href="kvi__selectors_8h_source.html#l00243">m_szFilter</a>, <a class="el" href="kvi__selectors_8h_source.html#l00242">m_uFlags</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00438">setEnabled()</a>, and <a class="el" href="kvi__selectors_8h_source.html#l00235">VerticalLayout</a>.</p>
 
 </div>
 </div>
@@ -182,9 +185,9 @@ Inheritance diagram for KviFileSelector:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__selectors_8cpp_source.html#l00427">select()</a>.</p>
+<p>References <a class="el" href="kvi__selectors_8cpp_source.html#l00456">select()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00384">KviFileSelector()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00389">KviFileSelector()</a>.</p>
 
 </div>
 </div>
@@ -205,7 +208,7 @@ Inheritance diagram for KviFileSelector:</div>
 
 <p>Reimplemented from <a class="el" href="classKviSelectorInterface.html#a2dac18af8c22c2ab82aff348a770eed3">KviSelectorInterface</a>.</p>
 
-<p>References <a class="el" href="kvi__selectors_8h_source.html#l00238">m_pLineEdit</a>, and <a class="el" href="kvi__selectors_8h_source.html#l00240">m_pOption</a>.</p>
+<p>References <a class="el" href="kvi__selectors_8h_source.html#l00239">m_pLineEdit</a>, and <a class="el" href="kvi__selectors_8h_source.html#l00241">m_pOption</a>.</p>
 
 </div>
 </div>
@@ -226,9 +229,9 @@ Inheritance diagram for KviFileSelector:</div>
 
 <p>Reimplemented in <a class="el" href="classKviDirectorySelector.html#ad2c9316523905635cc0d84ad5fe99b39">KviDirectorySelector</a>.</p>
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__filedialog_8cpp_source.html#l00077">KviFileDialog::askForOpenFileName()</a>, <a class="el" href="kvi__filedialog_8cpp_source.html#l00134">KviFileDialog::askForSaveFileName()</a>, <a class="el" href="kvi__selectors_8h_source.html#l00233">ChooseSaveFileName</a>, <a class="el" href="kvi__selectors_8h_source.html#l00234">DontConfirmOverwrite</a>, <a class="el" href="kvi__selectors_8h_source.html#l00238">m_pLineEdit</a>, <a class="el" href="kvi__selectors_8h_source.html#l00240">m_pOption</a>, <a class="el" href="kvi__selectors_8h_source.html#l00242">m_szFilter</a>, <a class="el" href="kvi__selectors_8h_source.html#l00241">m_uFlags</a>, and <a class="el" href="classKviFileSelector.html#a58b1aec15281862ddc3d9c1d5661423f">selectionChanged()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__filedialog_8cpp_source.html#l00077">KviFileDialog::askForOpenFileName()</a>, <a class="el" href="kvi__filedialog_8cpp_source.html#l00134">KviFileDialog::askForSaveFileName()</a>, <a class="el" href="kvi__selectors_8h_source.html#l00233">ChooseSaveFileName</a>, <a class="el" href="kvi__selectors_8h_source.html#l00234">DontConfirmOverwrite</a>, <a class="el" href="kvi__selectors_8h_source.html#l00239">m_pLineEdit</a>, <a class="el" href="kvi__selectors_8h_source.html#l00241">m_pOption</a>, <a class="el" href="kvi__selectors_8h_source.html#l00243">m_szFilter</a>, <a class="el" href="kvi__selectors_8h_source.html#l00242">m_uFlags</a>, and <a class="el" href="classKviFileSelector.html#a58b1aec15281862ddc3d9c1d5661423f">selectionChanged()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00417">browseClicked()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00446">browseClicked()</a>.</p>
 
 </div>
 </div>
@@ -248,7 +251,7 @@ Inheritance diagram for KviFileSelector:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00453">KviDirectorySelector::select()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00427">select()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00482">KviDirectorySelector::select()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00456">select()</a>.</p>
 
 </div>
 </div>
@@ -270,9 +273,9 @@ Inheritance diagram for KviFileSelector:</div>
 
 <p>Reimplemented in <a class="el" href="classKviSoundSelector.html#a9e072e4f7fd5e5a5c8d3d00fcff52aca">KviSoundSelector</a>.</p>
 
-<p>References <a class="el" href="kvi__selectors_8h_source.html#l00239">m_pButton</a>, <a class="el" href="kvi__selectors_8h_source.html#l00237">m_pLabel</a>, and <a class="el" href="kvi__selectors_8h_source.html#l00238">m_pLineEdit</a>.</p>
+<p>References <a class="el" href="kvi__selectors_8h_source.html#l00240">m_pButton</a>, <a class="el" href="kvi__selectors_8h_source.html#l00238">m_pLabel</a>, and <a class="el" href="kvi__selectors_8h_source.html#l00239">m_pLineEdit</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00384">KviFileSelector()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00389">KviFileSelector()</a>.</p>
 
 </div>
 </div>
@@ -292,7 +295,7 @@ Inheritance diagram for KviFileSelector:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__selectors_8h_source.html#l00238">m_pLineEdit</a>.</p>
+<p>References <a class="el" href="kvi__selectors_8h_source.html#l00239">m_pLineEdit</a>.</p>
 
 </div>
 </div>
@@ -332,6 +335,21 @@ Inheritance diagram for KviFileSelector:</div>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a8742e921ec0a42c3a1c8868ba447fd2b"></a><!-- doxytag: member="KviFileSelector::m_Layout" ref="a8742e921ec0a42c3a1c8868ba447fd2b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QGridLayout* <a class="el" href="classKviFileSelector.html#a8742e921ec0a42c3a1c8868ba447fd2b">KviFileSelector::m_Layout</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00389">KviFileSelector()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00793">KviSoundSelector::KviSoundSelector()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a336744e1de555763c7a724c0b9ec8678"></a><!-- doxytag: member="KviFileSelector::m_pButton" ref="a336744e1de555763c7a724c0b9ec8678" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -343,7 +361,7 @@ Inheritance diagram for KviFileSelector:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00384">KviFileSelector()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00409">setEnabled()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00389">KviFileSelector()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00438">setEnabled()</a>.</p>
 
 </div>
 </div>
@@ -358,7 +376,7 @@ Inheritance diagram for KviFileSelector:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00384">KviFileSelector()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00409">setEnabled()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00389">KviFileSelector()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00438">setEnabled()</a>.</p>
 
 </div>
 </div>
@@ -373,7 +391,7 @@ Inheritance diagram for KviFileSelector:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00404">commit()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00384">KviFileSelector()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00774">KviSoundSelector::playSound()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00453">KviDirectorySelector::select()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00427">select()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00409">setEnabled()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00422">setSelection()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00433">commit()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00389">KviFileSelector()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00810">KviSoundSelector::playSound()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00482">KviDirectorySelector::select()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00456">select()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00438">setEnabled()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00451">setSelection()</a>.</p>
 
 </div>
 </div>
@@ -388,7 +406,7 @@ Inheritance diagram for KviFileSelector:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00404">commit()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00384">KviFileSelector()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00427">select()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00433">commit()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00389">KviFileSelector()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00456">select()</a>.</p>
 
 </div>
 </div>
@@ -403,7 +421,7 @@ Inheritance diagram for KviFileSelector:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00384">KviFileSelector()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00427">select()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00389">KviFileSelector()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00456">select()</a>.</p>
 
 </div>
 </div>
@@ -418,7 +436,7 @@ Inheritance diagram for KviFileSelector:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00384">KviFileSelector()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00427">select()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__selectors_8cpp_source.html#l00389">KviFileSelector()</a>, <a class="el" href="kvi__selectors_8cpp_source.html#l00793">KviSoundSelector::KviSoundSelector()</a>, and <a class="el" href="kvi__selectors_8cpp_source.html#l00456">select()</a>.</p>
 
 </div>
 </div>
@@ -441,7 +459,7 @@ Inheritance diagram for KviFileSelector:</div>
 <li>src/kvirc/ui/<a class="el" href="kvi__selectors_8cpp.html">kvi_selectors.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:30 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:22 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -29,6 +29,8 @@
       <li><a href="globals_func.html"><span>Functions</span></a></li>
       <li><a href="globals_vars.html"><span>Variables</span></a></li>
       <li><a href="globals_type.html"><span>Typedefs</span></a></li>
+      <li><a href="globals_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="globals_eval.html"><span>Enumerator</span></a></li>
       <li class="current"><a href="globals_defs.html"><span>Defines</span></a></li>
     </ul>
   </div>
@@ -132,6 +134,12 @@
 </li>
 <li>KVI_ARGS_RETCODE_STOP
 : <a class="el" href="kvi__main_8cpp.html#ad6a22c91d273a7036d9b876bd816769b">kvi_main.cpp</a>
+</li>
+<li>KVI_ASSERT
+: <a class="el" href="kvi__debug_8h.html#acb8235d766e251808b07c2fdaab97fbc">kvi_debug.h</a>
+</li>
+<li>KVI_ASSERT_MSG
+: <a class="el" href="kvi__debug_8h.html#a00c1fdadcac92bba0790801bd87791ce">kvi_debug.h</a>
 </li>
 <li>KVI_BIGICON_ACTIONS
 : <a class="el" href="kvi__iconmanager_8h.html#a4bbb52227516d7898fc5ed689a4b4def">kvi_iconmanager.h</a>
@@ -553,6 +561,9 @@
 <li>KVI_DARKVIOLET
 : <a class="el" href="kvi__mirccntrl_8h.html#aa31e1f9ec1474e93396d9f84b264a3ff">kvi_mirccntrl.h</a>
 </li>
+<li>kvi_debug
+: <a class="el" href="kvi__debug_8h.html#a11fcb3239f8d2d0738ffbdce05b9b1ad">kvi_debug.h</a>
+</li>
 <li>KVI_DEF_BACK
 : <a class="el" href="kvi__ircview_8cpp.html#a25eddbd8d96180c750eda6ed0951afef">kvi_ircview.cpp</a>
 </li>
@@ -606,6 +617,9 @@
 </li>
 <li>KVI_DNS_THREAD_EVENT_DATA
 : <a class="el" href="kvi__dns_8h.html#abf7c123a7f24ea7d420ccbede21cf11d">kvi_dns.h</a>
+</li>
+<li>kvi_fatal
+: <a class="el" href="kvi__debug_8h.html#aaa054b39e5acfd8ce7541f3cb608be11">kvi_debug.h</a>
 </li>
 <li>kvi_file_offset_t
 : <a class="el" href="kvi__file_8h.html#ad30a9664cc42cb951ca501aad062e8e0">kvi_file.h</a>
@@ -1623,6 +1637,9 @@
 <li>KVI_PIXMAP_OPTIONS_PREFIX_LEN
 : <a class="el" href="kvi__options_8h.html#aa360a44a7b703d85ec3984ba9b455aa1">kvi_options.h</a>
 </li>
+<li>KVI_PRETTY_FUNCTION
+: <a class="el" href="kvi__debug_8h.html#ac8ba83cf82b564f4b63e0711ccfd2d67">kvi_debug.h</a>
+</li>
 <li>KVI_PTR2MEMBER
 : <a class="el" href="kvi__settings_8h.html#a10d4e5f4fce6bfa2bd8e2975040be0e4">kvi_settings.h</a>
 </li>
@@ -1633,7 +1650,7 @@
 : <a class="el" href="kvi__malloc_8h.html#ada394c1045f27dd46f16cbdf3fa18dee">kvi_malloc.h</a>
 </li>
 <li>KVI_RECENT_CHANNELS_SEPARATOR
-: <a class="el" href="kvi__app_8h.html#ab701fd6f3d72082a80ad0bec4e2375d3">kvi_app.h</a>
+: <a class="el" href="kvi__options_8h.html#ab701fd6f3d72082a80ad0bec4e2375d3">kvi_options.h</a>
 </li>
 <li>KVI_RECT_OPTIONS_PREFIX
 : <a class="el" href="kvi__options_8h.html#a90631400d6460c6e86d496bb523d7e03">kvi_options.h</a>
@@ -1704,6 +1721,9 @@
 <li>KVI_SHORTCUTS_INPUT_BACKSPACE
 : <a class="el" href="kvi__shortcuts_8h.html#a832d0b120ae4ee3fc919d0a73eabddcc">kvi_shortcuts.h</a>
 </li>
+<li>KVI_SHORTCUTS_INPUT_BACKSPACE_2
+: <a class="el" href="kvi__shortcuts_8h.html#a97f5d977778b134bfae079c691b9712e">kvi_shortcuts.h</a>
+</li>
 <li>KVI_SHORTCUTS_INPUT_BOLD
 : <a class="el" href="kvi__shortcuts_8h.html#af01e7d44684c23ef87cc87509eae7c16">kvi_shortcuts.h</a>
 </li>
@@ -1730,15 +1750,6 @@
 </li>
 <li>KVI_SHORTCUTS_INPUT_DUMMY_2
 : <a class="el" href="kvi__shortcuts_8h.html#ad658a447c571a816e991cdca3fba7f35">kvi_shortcuts.h</a>
-</li>
-<li>KVI_SHORTCUTS_INPUT_DUMMY_3
-: <a class="el" href="kvi__shortcuts_8h.html#ac4e219a5320aa63bade1db78a4c24aa7">kvi_shortcuts.h</a>
-</li>
-<li>KVI_SHORTCUTS_INPUT_DUMMY_4
-: <a class="el" href="kvi__shortcuts_8h.html#ac6b947efc0f0ab1d4d7268641f7152c5">kvi_shortcuts.h</a>
-</li>
-<li>KVI_SHORTCUTS_INPUT_DUMMY_5
-: <a class="el" href="kvi__shortcuts_8h.html#ab4f20969df086407db753ae72697c99b">kvi_shortcuts.h</a>
 </li>
 <li>KVI_SHORTCUTS_INPUT_END
 : <a class="el" href="kvi__shortcuts_8h.html#a6d743bd25ece5ce678ab079a84fc2808">kvi_shortcuts.h</a>
@@ -1817,6 +1828,12 @@
 </li>
 <li>KVI_SHORTCUTS_INPUT_RETURN_2
 : <a class="el" href="kvi__shortcuts_8h.html#abaf17e6240fe658cd0ca7174952e0089">kvi_shortcuts.h</a>
+</li>
+<li>KVI_SHORTCUTS_INPUT_RETURN_3
+: <a class="el" href="kvi__shortcuts_8h.html#a3fc694d71290f8137dcbb539e6f3b60c">kvi_shortcuts.h</a>
+</li>
+<li>KVI_SHORTCUTS_INPUT_RETURN_4
+: <a class="el" href="kvi__shortcuts_8h.html#a99bfb827fed0eb31ae76c662c401059b">kvi_shortcuts.h</a>
 </li>
 <li>KVI_SHORTCUTS_INPUT_REVERSE
 : <a class="el" href="kvi__shortcuts_8h.html#a70cb2df58b040414a7728114fea4da67">kvi_shortcuts.h</a>
@@ -3033,6 +3050,15 @@
 <li>kvi_timeSpan
 : <a class="el" href="kvi__time_8h.html#a90325ec83dad8587a809fbe5a90147a2">kvi_time.h</a>
 </li>
+<li>KVI_TRACE
+: <a class="el" href="kvi__debug_8h.html#a11e28058a90f415cd6f041efbf669db5">kvi_debug.h</a>
+</li>
+<li>KVI_TRACE_BLOCK
+: <a class="el" href="kvi__debug_8h.html#a6102e7a577988a0b604e5cd60c037855">kvi_debug.h</a>
+</li>
+<li>KVI_TRACE_FUNCTION
+: <a class="el" href="kvi__debug_8h.html#a0420e2c381b6671375a50c28bb73c048">kvi_debug.h</a>
+</li>
 <li>KVI_TRANSPARENT
 : <a class="el" href="kvi__mirccntrl_8h.html#af8ecd11c9fa8e475841ae36e732bca7c">kvi_mirccntrl.h</a>
 </li>
@@ -3126,6 +3152,9 @@
 <li>kvi_va_arg
 : <a class="el" href="kvi__stdarg_8h.html#ab9d926c6b7949f23521fa3725055b1a4">kvi_stdarg.h</a>
 </li>
+<li>kvi_va_copy
+: <a class="el" href="kvi__stdarg_8h.html#ae5eeb7774f581c2210156eab0cc80517">kvi_stdarg.h</a>
+</li>
 <li>kvi_va_end
 : <a class="el" href="kvi__stdarg_8h.html#a5bd75ddfe8d5032eb5d11926d7a824a1">kvi_stdarg.h</a>
 </li>
@@ -3158,6 +3187,9 @@
 </li>
 <li>KVI_VERSION_BRANCH
 : <a class="el" href="kvi__settings_8h.html#a4715ce0ec993eb1217bd424092be3cfa">kvi_settings.h</a>
+</li>
+<li>kvi_warning
+: <a class="el" href="kvi__debug_8h.html#ab904492e574a8225d5f51a66133fe430">kvi_debug.h</a>
 </li>
 <li>KVI_WHITE
 : <a class="el" href="kvi__mirccntrl_8h.html#a59168b20a863378a769cc404c4f5e801">kvi_mirccntrl.h</a>
@@ -3252,8 +3284,23 @@
 <li>KVI_WINDOWLIST_MIN_WIDTH
 : <a class="el" href="kvi__windowlist_8cpp.html#a3f6de98686166fcd91f08840ab31f526">kvi_windowlist.cpp</a>
 </li>
+<li>KVI_WINDOWLISTBUTTON_BOTTOM_MARGIN
+: <a class="el" href="kvi__windowlist_8cpp.html#a091da11658716b4b9b49b6f84583283f">kvi_windowlist.cpp</a>
+</li>
 <li>KVI_WINDOWLISTBUTTON_CONTEXTINDICATORHEIGHT
 : <a class="el" href="kvi__windowlist_8cpp.html#a1ec0c161e2a24f81b0b7a09c01833fcc">kvi_windowlist.cpp</a>
+</li>
+<li>KVI_WINDOWLISTBUTTON_CONTEXTINDICATORSPACING
+: <a class="el" href="kvi__windowlist_8cpp.html#aa7accab5609c42fa7719bfb4124a97cc">kvi_windowlist.cpp</a>
+</li>
+<li>KVI_WINDOWLISTBUTTON_LEFT_MARGIN
+: <a class="el" href="kvi__windowlist_8cpp.html#ac3d7b98f81ec4e73f543871ffcbe53a3">kvi_windowlist.cpp</a>
+</li>
+<li>KVI_WINDOWLISTBUTTON_RIGHT_MARGIN
+: <a class="el" href="kvi__windowlist_8cpp.html#af028a008420198106c6516b9cb3a56ac">kvi_windowlist.cpp</a>
+</li>
+<li>KVI_WINDOWLISTBUTTON_TOP_MARGIN
+: <a class="el" href="kvi__windowlist_8cpp.html#a34314bec0a5762c9a267576f572782dd">kvi_windowlist.cpp</a>
 </li>
 <li>KVI_WINDOWS_IPC_MESSAGE
 : <a class="el" href="kvi__ipc_8cpp.html#abf1574e685c8388635dd2e094d5d3313">kvi_ipc.cpp</a>
@@ -4074,6 +4121,9 @@
 <li>KviOption_boolAcceptBrokenFileNameDccResumeRequests
 : <a class="el" href="kvi__options_8h.html#a7124d7e8192c191d7ac069bdb4656226">kvi_options.h</a>
 </li>
+<li>KviOption_boolAcceptMismatchedPortDccResumeRequests
+: <a class="el" href="kvi__options_8h.html#aaaac472a06d7bf9c0afb00b876b63482">kvi_options.h</a>
+</li>
 <li>KviOption_boolAlwaysDisconnectClosingConnectedConsole
 : <a class="el" href="kvi__options_8h.html#a7b1bf575bc5a9a69cdaa26c93e502751">kvi_options.h</a>
 </li>
@@ -4260,11 +4310,14 @@
 <li>KviOption_boolDisableWhoRequestOnJoin
 : <a class="el" href="kvi__options_8h.html#a9a90a54d68d0201ee34e2885cfb922ce">kvi_options.h</a>
 </li>
-<li>KviOption_boolDoNotStretchAvatars
-: <a class="el" href="kvi__options_8h.html#ad4d8338626e111549755898c9c1a4d9a">kvi_options.h</a>
-</li>
 <li>KviOption_boolDoNotSuggestRestoreDefaultScript
 : <a class="el" href="kvi__options_8h.html#a82d6f52def2c865dc19190a45d837d02">kvi_options.h</a>
+</li>
+<li>KviOption_boolDoNotUpscaleAvatars
+: <a class="el" href="kvi__options_8h.html#ad3967a2ab42bea92f9e600732b556fe5">kvi_options.h</a>
+</li>
+<li>KviOption_boolDontShowNotifierIfActiveWindowIsFullScreen
+: <a class="el" href="kvi__options_8h.html#a0bb0cf318ebcf8f662ccea01350c0133">kvi_options.h</a>
 </li>
 <li>KviOption_boolDrawEmoticons
 : <a class="el" href="kvi__options_8h.html#ace84a491a8bc4a7567dfe68255eb66b4">kvi_options.h</a>
@@ -4284,6 +4337,15 @@
 <li>KviOption_boolEnableAwayListUpdates
 : <a class="el" href="kvi__options_8h.html#a3c8a45274f69aee858ebdc8da384c7f7">kvi_options.h</a>
 </li>
+<li>KviOption_boolEnableChannelLinkToolTip
+: <a class="el" href="kvi__options_8h.html#a69b6176b33886d9af7bb87dd1e3e87fd">kvi_options.h</a>
+</li>
+<li>KviOption_boolEnableEscapeLinkToolTip
+: <a class="el" href="kvi__options_8h.html#afd17d696cb3ad2de28f3df8efda8fe3a">kvi_options.h</a>
+</li>
+<li>KviOption_boolEnableHostLinkToolTip
+: <a class="el" href="kvi__options_8h.html#a974a811aaaa75782213da0f2619da7d6">kvi_options.h</a>
+</li>
 <li>KviOption_boolEnableIgnoreOnNotice
 : <a class="el" href="kvi__options_8h.html#adcf2ce55b823a34b53a336f00615ee88">kvi_options.h</a>
 </li>
@@ -4293,14 +4355,26 @@
 <li>KviOption_boolEnableInputHistory
 : <a class="el" href="kvi__options_8h.html#ab322e9600f96b7e48c5f55b423205e84">kvi_options.h</a>
 </li>
+<li>KviOption_boolEnableModeLinkToolTip
+: <a class="el" href="kvi__options_8h.html#a15f560a480ec901f3a6581b8740c1a92">kvi_options.h</a>
+</li>
+<li>KviOption_boolEnableNickLinkToolTip
+: <a class="el" href="kvi__options_8h.html#af96f546996193477cc9b508f19a166be">kvi_options.h</a>
+</li>
 <li>KviOption_boolEnableNotifier
 : <a class="el" href="kvi__options_8h.html#aca6df37a143c0d4b14f263eb0d0f6c9f">kvi_options.h</a>
 </li>
 <li>KviOption_boolEnableQueryTracing
 : <a class="el" href="kvi__options_8h.html#a268aef7a2aa2837f3dd56209ba4288fa">kvi_options.h</a>
 </li>
+<li>KviOption_boolEnableServerLinkToolTip
+: <a class="el" href="kvi__options_8h.html#a4114da64457e5ffca0675e975b34b5a7">kvi_options.h</a>
+</li>
 <li>KviOption_boolEnableTrayIconFlashing
 : <a class="el" href="kvi__options_8h.html#a71435b8eb8e00a2672975bc48cb04534">kvi_options.h</a>
+</li>
+<li>KviOption_boolEnableUrlLinkToolTip
+: <a class="el" href="kvi__options_8h.html#aedc13d8b4e4accfefc64b69194f6f0f2">kvi_options.h</a>
 </li>
 <li>KviOption_boolEnableVisualEffects
 : <a class="el" href="kvi__options_8h.html#ae0e37cb5b789a233ee2f206f621a81b7">kvi_options.h</a>
@@ -4787,6 +4861,9 @@
 </li>
 <li>KviOption_boolWarnAboutPastingMultipleLines
 : <a class="el" href="kvi__options_8h.html#afa82ad621fea2b18b85d352c03989c5f">kvi_options.h</a>
+</li>
+<li>KviOption_boolWheelScrollsWindowsList
+: <a class="el" href="kvi__options_8h.html#a5919e2d1ce3a5eb704c50638f44e488a">kvi_options.h</a>
 </li>
 <li>KviOption_boolWhoisRepliesToActiveWindow
 : <a class="el" href="kvi__options_8h.html#a8e456b7b8339857241504ec7b92764b8">kvi_options.h</a>
@@ -5478,8 +5555,11 @@
 <li>KVIRC_MODULE_STRUCTURE_SYMBOL
 : <a class="el" href="kvi__module_8h.html#a9fcd1dffb80929748ce09188bf422e87">kvi_module.h</a>
 </li>
+<li>KviTalSplitter
+: <a class="el" href="kvi__tal__splitter_8h.html#acac78135c0b3a48113c305a401adddfd">kvi_tal_splitter.h</a>
+</li>
 <li>KVS_PARAMETER
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a6da48c679b5e7fa3347ef061f2d7207b">kvi_kvs_parameterprocessor.h</a>
+: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#abc4383fa5a903a64d8abf31711793a87">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_PARAMETER_IGNORED
 : <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a8b856d1f00a4c46aa4fbb36660e2040f">kvi_kvs_parameterprocessor.h</a>
@@ -5496,65 +5576,8 @@
 <li>KVS_PF_OPTIONAL
 : <a class="el" href="kvi__kvs__parameterprocessor_8h.html#ad7b50ae4c63b983cd951cbb78aee04e4">kvi_kvs_parameterprocessor.h</a>
 </li>
-<li>KVS_PT_ARRAY
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a6d834accca06247f25a2e7ae817fdaa9">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_ARRAYCAST
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#aa93f2f1c7bf24e1b49d73c4153e58986">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_BOOL
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#ad7e99b72464fa37210dc5ea1b31d84f5">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_BOOLEAN
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#aaa7aaebf4bc71243a0345ce7a8d9dd8b">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_CSTRING
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a636dbe2c021c49ecd2809d29b566cd11">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_DOUBLE
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#ab171ceef38aa3468d42fe5bd07bb5f4b">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_HASH
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a793e3ce88eac294c703277a0f371c619">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_HOBJECT
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a664f1aa9f5db39ca811a2c79b95ff55a">kvi_kvs_parameterprocessor.h</a>
-</li>
 <li>KVS_PT_IGNORE
 : <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a9e1995e546d09bba393c5071b6fde7ba">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_INT
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a7ad4ed20748a0c9324cc2e6365660a25">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_INTEGER
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a1598b9c7de60f23dbfc4b380fa5e15d9">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_NONEMPTYCSTRING
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a00b0981a91724279b92f3ced270a6819">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_NONEMPTYSTRING
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#ada065cf9b301327ddc1f5ff571b874c3">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_REAL
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a987203a2176c40353d288a42b1bfbc9b">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_STRING
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#ad323de5f92e25abc48e16d848c5e962a">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_STRINGLIST
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a1375edb76dc5dfcf9c9979e5cb2ad560">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_UINT
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a57c30bb9d96a76e96c5241d00c1fbebf">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_UNSIGNEDINTEGER
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#ad64de632c500b2a84308472b7464c228">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_VARIANT
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#a7d9b03ce9bf7612233752e8815cc66ce">kvi_kvs_parameterprocessor.h</a>
-</li>
-<li>KVS_PT_VARIANTLIST
-: <a class="el" href="kvi__kvs__parameterprocessor_8h.html#ae33055fcd74871b59631b356362e4f25">kvi_kvs_parameterprocessor.h</a>
 </li>
 <li>KVS_TRIGGER_EVENT
 : <a class="el" href="kvi__kvs__eventtriggers_8h.html#a60d2d302e8ade9dc24bccbc24cd3e1a3">kvi_kvs_eventtriggers.h</a>
@@ -5795,7 +5818,7 @@
 </li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:36 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:28 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

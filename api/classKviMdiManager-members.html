@@ -29,14 +29,15 @@
 <h1>KviMdiManager Member List</h1>This is the complete list of members for <a class="el" href="classKviMdiManager.html">KviMdiManager</a>, including all inherited members.<table>
   <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#a45b2d9d17cfecb43028c481cbf473b5b">cascadeMaximized</a>()</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td><code> [slot]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#a5b609902434e58d2e57c5b19693f11f5">cascadeWindows</a>()</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td><code> [slot]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#a3140be68fd240cca4fbdca9156775d85">destroyChild</a>(KviMdiChild *lpC, bool bFocusTopChild=true)</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#afe27e4cfc3795a8bc85bc6f3185008fa">destroyChild</a>(KviMdiChild *lpC)</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#a6d753b6258c5542fbb80189d53a4cf9d">ensureNoMaximized</a>()</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#a365df13fd61a318c3bbde9627af4d9e0">eventFilter</a>(QObject *obj, QEvent *event)</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#adc011c14b3da3a91669add2d94ac1e42">expandHorizontal</a>()</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td><code> [slot]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#a23cab148b93f2ce73564dc6f80ca08e3">expandVertical</a>()</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td><code> [slot]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#a04e6174d92fce1b728072357914eb929">fillWindowPopup</a>()</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td><code> [protected, slot]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#ac60b1b671b6a3fdadd8d34016c2a7252">focusPreviousTopChild</a>()</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#a979f40e56dbf51bd1a36a14fad2c3387">focusPreviousTopChild</a>(KviMdiChild *pExcludeThis=NULL)</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#a1e62a39d62fafc9e6e66f1394d4ca390">getVisibleChildCount</a>()</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#a935f2105ef728e182f47969dfff0c288">hideChild</a>(KviMdiChild *lpC)</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#a03bb39a9f0673f11423418c757752687">isInSDIMode</a>()</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#aba1d0337ef0e45cd03cebd181e83e282">KviMdiChild</a> class</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td><code> [friend]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#ab27420dd736160abffc65ea8b36ca645">KviMdiManager</a>(QWidget *pParent, KviFrame *pFrm, const char *pcName)</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td></td></tr>
@@ -63,7 +64,7 @@
   <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#adb52b0daf76494f4d1b324c6ffa4fab8">windowPopup</a>()</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviMdiManager.html#a1883a264f0f2a58920770d56f40ec4d1">~KviMdiManager</a>()</td><td><a class="el" href="classKviMdiManager.html">KviMdiManager</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:35 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:26 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

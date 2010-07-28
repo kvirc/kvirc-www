@@ -42,6 +42,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 <p><a href="classKviKvsScriptAddon-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#ad8f7189a588ff6348fa9f98579681586">addInstalledFile</a> (const QString &amp;szFileName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#a00bcec889608471046efd89e16f12ef7">configureCallbackCode</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#a025b9f46d018abc19a6b3c096bc24231">description</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#a3e2f94abdceca783a2f4e126f48e9f5d">descriptionCode</a> ()</td></tr>
@@ -50,6 +51,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#a3d642db41a88d8e0c3c27efe0622fe78">helpCallbackCode</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPixmap *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#ac62c51ff9d22fd927e35c5bbc5039803">icon</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#a987595e864e2538c2cd895571d699dd8">iconId</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const QStringList &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#a233011850cc9138f632762f9eb73ade0">installedFiles</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#ab0ad2bd1513ff240507e57a42a3ab746">KviKvsScriptAddon</a> (const <a class="el" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a> &amp;a)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#ad18595bce703081773b3dffc5f42a094">name</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#acda2e910c67f1986f49212244d868460">setConfigureCallback</a> (const QString &amp;szConfigureCallbackCode)</td></tr>
@@ -67,6 +69,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#acdb300f67916761db64605d9564b3ffa">load</a> (<a class="el" href="classKviConfig.html">KviConfig</a> *cfg, const QString &amp;szName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#a8e6726c877f1f6ba2846249ba7799f6c">save</a> (<a class="el" href="classKviConfig.html">KviConfig</a> *cfg)</td></tr>
 <tr><td colspan="2"><h2>Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QStringList&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#a84160ca28ebd64fdd7a6d2ec8030d083">m_lInstalledFiles</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviKvsScript.html">KviKvsScript</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#a24388aa618113813d38575e1b60118ee">m_pConfigureCallback</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviKvsScript.html">KviKvsScript</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#ae66a3251e8f51d2b1c024d80994fcb96">m_pDescriptionScript</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviKvsScript.html">KviKvsScript</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#a1dc955456db5fc18c97fdd986f89b220">m_pHelpCallback</a></td></tr>
@@ -96,7 +99,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00061">m_pConfigureCallback</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00059">m_pDescriptionScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00062">m_pHelpCallback</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00060">m_pUninstallCallback</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00058">m_pVisibleNameScript</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00062">m_pConfigureCallback</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00060">m_pDescriptionScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00063">m_pHelpCallback</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00061">m_pUninstallCallback</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00059">m_pVisibleNameScript</a>.</p>
 
 </div>
 </div>
@@ -149,7 +152,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00188">allocateScripts()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00061">m_pConfigureCallback</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00062">m_pHelpCallback</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00200">allocateScripts()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00062">m_pConfigureCallback</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00063">m_pHelpCallback</a>.</p>
 
 </div>
 </div>
@@ -169,7 +172,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00188">allocateScripts()</a>, <a class="el" href="kvi__kvs__script_8cpp_source.html#l00103">KviKvsScript::code()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00061">m_pConfigureCallback</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00059">m_pDescriptionScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00062">m_pHelpCallback</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00060">m_pUninstallCallback</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00058">m_pVisibleNameScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00065">m_szIconId</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00056">m_szName</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00057">m_szVersion</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00150">setConfigureCallback()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00169">setHelpCallback()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00200">allocateScripts()</a>, <a class="el" href="kvi__kvs__script_8cpp_source.html#l00103">KviKvsScript::code()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00062">m_pConfigureCallback</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00060">m_pDescriptionScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00063">m_pHelpCallback</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00061">m_pUninstallCallback</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00059">m_pVisibleNameScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00066">m_szIconId</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00057">m_szName</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00058">m_szVersion</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00162">setConfigureCallback()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00181">setHelpCallback()</a>.</p>
 
 </div>
 </div>
@@ -188,11 +191,32 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00061">m_pConfigureCallback</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00059">m_pDescriptionScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00062">m_pHelpCallback</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00060">m_pUninstallCallback</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00058">m_pVisibleNameScript</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00062">m_pConfigureCallback</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00060">m_pDescriptionScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00063">m_pHelpCallback</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00061">m_pUninstallCallback</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00059">m_pVisibleNameScript</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ad8f7189a588ff6348fa9f98579681586"></a><!-- doxytag: member="KviKvsScriptAddon::addInstalledFile" ref="ad8f7189a588ff6348fa9f98579681586" args="(const QString &amp;szFileName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KviKvsScriptAddon::addInstalledFile </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>szFileName</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Register a file to be uninstalled after the uninstall callback. The file name *MUST* be relative to the local kvirc directory. </p>
+
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00067">m_lInstalledFiles</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a1dd9426a6993aa4cbd46085f1a8cc803"></a><!-- doxytag: member="KviKvsScriptAddon::allocateScripts" ref="a1dd9426a6993aa4cbd46085f1a8cc803" args="(const QString &amp;sVisibleNameCode, const QString &amp;szDescriptionCode, const QString &amp;szUninstallCallbackCode)" -->
 <div class="memitem">
 <div class="memproto">
@@ -224,9 +248,9 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__script_8h_source.html#l00081">KviKvsScript::InstructionList</a>, <a class="el" href="kvi__kvs__script_8cpp_source.html#l00073">KviKvsScript::KviKvsScript()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00059">m_pDescriptionScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00060">m_pUninstallCallback</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00058">m_pVisibleNameScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00056">m_szName</a>, and <a class="el" href="kvi__kvs__script_8h_source.html#l00083">KviKvsScript::Parameter</a>.</p>
+<p>References <a class="el" href="kvi__kvs__script_8h_source.html#l00081">KviKvsScript::InstructionList</a>, <a class="el" href="kvi__kvs__script_8cpp_source.html#l00073">KviKvsScript::KviKvsScript()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00060">m_pDescriptionScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00061">m_pUninstallCallback</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00059">m_pVisibleNameScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00057">m_szName</a>, and <a class="el" href="kvi__kvs__script_8h_source.html#l00083">KviKvsScript::Parameter</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00036">KviKvsScriptAddon()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00128">load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00040">KviKvsScriptAddon()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00132">load()</a>.</p>
 
 </div>
 </div>
@@ -245,9 +269,9 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__script_8cpp_source.html#l00103">KviKvsScript::code()</a>, <a class="el" href="kvi__qstring_8cpp_source.html#l00050">KviQString::Empty</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00061">m_pConfigureCallback</a>.</p>
+<p>References <a class="el" href="kvi__kvs__script_8cpp_source.html#l00103">KviKvsScript::code()</a>, <a class="el" href="kvi__qstring_8cpp_source.html#l00050">KviQString::Empty</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00062">m_pConfigureCallback</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00206">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00218">save()</a>.</p>
 
 </div>
 </div>
@@ -266,7 +290,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__script_8cpp_source.html#l00103">KviKvsScript::code()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00059">m_pDescriptionScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00063">m_szDescription</a>, and <a class="el" href="kvi__kvs__script_8cpp_source.html#l00180">KviKvsScript::run()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__script_8cpp_source.html#l00103">KviKvsScript::code()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00060">m_pDescriptionScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00064">m_szDescription</a>, and <a class="el" href="kvi__kvs__script_8cpp_source.html#l00180">KviKvsScript::run()</a>.</p>
 
 </div>
 </div>
@@ -285,9 +309,9 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__script_8cpp_source.html#l00103">KviKvsScript::code()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00059">m_pDescriptionScript</a>.</p>
+<p>References <a class="el" href="kvi__kvs__script_8cpp_source.html#l00103">KviKvsScript::code()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00060">m_pDescriptionScript</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00206">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00218">save()</a>.</p>
 
 </div>
 </div>
@@ -307,7 +331,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00061">m_pConfigureCallback</a>, and <a class="el" href="kvi__kvs__script_8cpp_source.html#l00180">KviKvsScript::run()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00062">m_pConfigureCallback</a>, and <a class="el" href="kvi__kvs__script_8cpp_source.html#l00180">KviKvsScript::run()</a>.</p>
 
 </div>
 </div>
@@ -327,7 +351,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00062">m_pHelpCallback</a>, and <a class="el" href="kvi__kvs__script_8cpp_source.html#l00180">KviKvsScript::run()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00063">m_pHelpCallback</a>, and <a class="el" href="kvi__kvs__script_8cpp_source.html#l00180">KviKvsScript::run()</a>.</p>
 
 </div>
 </div>
@@ -347,9 +371,9 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00060">m_pUninstallCallback</a>, and <a class="el" href="kvi__kvs__script_8cpp_source.html#l00180">KviKvsScript::run()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00061">m_pUninstallCallback</a>, and <a class="el" href="kvi__kvs__script_8cpp_source.html#l00180">KviKvsScript::run()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00355">KviKvsScriptAddonManager::unregisterAddon()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00369">KviKvsScriptAddonManager::unregisterAddon()</a>.</p>
 
 </div>
 </div>
@@ -368,9 +392,9 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__script_8cpp_source.html#l00103">KviKvsScript::code()</a>, <a class="el" href="kvi__qstring_8cpp_source.html#l00050">KviQString::Empty</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00062">m_pHelpCallback</a>.</p>
+<p>References <a class="el" href="kvi__kvs__script_8cpp_source.html#l00103">KviKvsScript::code()</a>, <a class="el" href="kvi__qstring_8cpp_source.html#l00050">KviQString::Empty</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00063">m_pHelpCallback</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00206">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00218">save()</a>.</p>
 
 </div>
 </div>
@@ -389,7 +413,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00758">KviIconManager::getBigIcon()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00364">KVI_BIGICON_KVS</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00065">m_szIconId</a>.</p>
+<p>References <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00757">KviIconManager::getBigIcon()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00364">KVI_BIGICON_KVS</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00066">m_szIconId</a>.</p>
 
 </div>
 </div>
@@ -407,6 +431,25 @@ Inheritance diagram for KviKvsScriptAddon:</div>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a233011850cc9138f632762f9eb73ade0"></a><!-- doxytag: member="KviKvsScriptAddon::installedFiles" ref="a233011850cc9138f632762f9eb73ade0" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QStringList&amp; KviKvsScriptAddon::installedFiles </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00369">KviKvsScriptAddonManager::unregisterAddon()</a>.</p>
 
 </div>
 </div>
@@ -435,9 +478,9 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00188">allocateScripts()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00065">m_szIconId</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00056">m_szName</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00057">m_szVersion</a>, <a class="el" href="kvi__config_8h_source.html#l00130">KviConfig::readQStringEntry()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00150">setConfigureCallback()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00169">setHelpCallback()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00200">allocateScripts()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00067">m_lInstalledFiles</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00066">m_szIconId</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00057">m_szName</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00058">m_szVersion</a>, <a class="el" href="kvi__config_8h_source.html#l00130">KviConfig::readQStringEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00624">KviConfig::readStringListEntry()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00162">setConfigureCallback()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00181">setHelpCallback()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00302">KviKvsScriptAddonManager::delayedLoad()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00315">KviKvsScriptAddonManager::delayedLoad()</a>.</p>
 
 </div>
 </div>
@@ -474,7 +517,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00116">configureCallbackCode()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00106">descriptionCode()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00122">helpCallbackCode()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00065">m_szIconId</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00056">m_szName</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00057">m_szVersion</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00111">uninstallCallbackCode()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00101">visibleNameCode()</a>, and <a class="el" href="kvi__config_8cpp_source.html#l00576">KviConfig::writeEntry()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00120">configureCallbackCode()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00110">descriptionCode()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00126">helpCallbackCode()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00067">m_lInstalledFiles</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00066">m_szIconId</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00057">m_szName</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00058">m_szVersion</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00115">uninstallCallbackCode()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00105">visibleNameCode()</a>, and <a class="el" href="kvi__config_8cpp_source.html#l00576">KviConfig::writeEntry()</a>.</p>
 
 </div>
 </div>
@@ -494,9 +537,9 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__script_8h_source.html#l00081">KviKvsScript::InstructionList</a>, <a class="el" href="kvi__kvs__script_8cpp_source.html#l00073">KviKvsScript::KviKvsScript()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00061">m_pConfigureCallback</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00056">m_szName</a>.</p>
+<p>References <a class="el" href="kvi__kvs__script_8h_source.html#l00081">KviKvsScript::InstructionList</a>, <a class="el" href="kvi__kvs__script_8cpp_source.html#l00073">KviKvsScript::KviKvsScript()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00062">m_pConfigureCallback</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00057">m_szName</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00050">KviKvsScriptAddon()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00128">load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00054">KviKvsScriptAddon()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00132">load()</a>.</p>
 
 </div>
 </div>
@@ -516,9 +559,9 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__script_8h_source.html#l00081">KviKvsScript::InstructionList</a>, <a class="el" href="kvi__kvs__script_8cpp_source.html#l00073">KviKvsScript::KviKvsScript()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00062">m_pHelpCallback</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00056">m_szName</a>.</p>
+<p>References <a class="el" href="kvi__kvs__script_8h_source.html#l00081">KviKvsScript::InstructionList</a>, <a class="el" href="kvi__kvs__script_8cpp_source.html#l00073">KviKvsScript::KviKvsScript()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00063">m_pHelpCallback</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00057">m_szName</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00050">KviKvsScriptAddon()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00128">load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00054">KviKvsScriptAddon()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00132">load()</a>.</p>
 
 </div>
 </div>
@@ -537,9 +580,9 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__script_8cpp_source.html#l00103">KviKvsScript::code()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00060">m_pUninstallCallback</a>.</p>
+<p>References <a class="el" href="kvi__kvs__script_8cpp_source.html#l00103">KviKvsScript::code()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00061">m_pUninstallCallback</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00206">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00218">save()</a>.</p>
 
 </div>
 </div>
@@ -575,7 +618,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__script_8cpp_source.html#l00103">KviKvsScript::code()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00058">m_pVisibleNameScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00064">m_szVisibleName</a>, and <a class="el" href="kvi__kvs__script_8cpp_source.html#l00180">KviKvsScript::run()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__script_8cpp_source.html#l00103">KviKvsScript::code()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00059">m_pVisibleNameScript</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00065">m_szVisibleName</a>, and <a class="el" href="kvi__kvs__script_8cpp_source.html#l00180">KviKvsScript::run()</a>.</p>
 
 </div>
 </div>
@@ -594,9 +637,9 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__script_8cpp_source.html#l00103">KviKvsScript::code()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00058">m_pVisibleNameScript</a>.</p>
+<p>References <a class="el" href="kvi__kvs__script_8cpp_source.html#l00103">KviKvsScript::code()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html#l00059">m_pVisibleNameScript</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00206">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00218">save()</a>.</p>
 
 </div>
 </div>
@@ -615,6 +658,21 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a84160ca28ebd64fdd7a6d2ec8030d083"></a><!-- doxytag: member="KviKvsScriptAddon::m_lInstalledFiles" ref="a84160ca28ebd64fdd7a6d2ec8030d083" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QStringList <a class="el" href="classKviKvsScriptAddon.html#a84160ca28ebd64fdd7a6d2ec8030d083">KviKvsScriptAddon::m_lInstalledFiles</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00155">addInstalledFile()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00132">load()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00218">save()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a24388aa618113813d38575e1b60118ee"></a><!-- doxytag: member="KviKvsScriptAddon::m_pConfigureCallback" ref="a24388aa618113813d38575e1b60118ee" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -626,7 +684,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00116">configureCallbackCode()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00224">executeConfigureCallback()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00036">KviKvsScriptAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00150">setConfigureCallback()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00073">~KviKvsScriptAddon()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00120">configureCallbackCode()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00237">executeConfigureCallback()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00040">KviKvsScriptAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00162">setConfigureCallback()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00077">~KviKvsScriptAddon()</a>.</p>
 
 </div>
 </div>
@@ -641,7 +699,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00188">allocateScripts()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00094">description()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00106">descriptionCode()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00050">KviKvsScriptAddon()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00073">~KviKvsScriptAddon()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00200">allocateScripts()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00098">description()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00110">descriptionCode()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00054">KviKvsScriptAddon()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00077">~KviKvsScriptAddon()</a>.</p>
 
 </div>
 </div>
@@ -656,7 +714,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00230">executeHelpCallback()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00122">helpCallbackCode()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00036">KviKvsScriptAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00169">setHelpCallback()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00073">~KviKvsScriptAddon()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00243">executeHelpCallback()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00126">helpCallbackCode()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00040">KviKvsScriptAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00181">setHelpCallback()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00077">~KviKvsScriptAddon()</a>.</p>
 
 </div>
 </div>
@@ -671,7 +729,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00188">allocateScripts()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00218">executeUninstallCallback()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00050">KviKvsScriptAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00111">uninstallCallbackCode()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00073">~KviKvsScriptAddon()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00200">allocateScripts()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00231">executeUninstallCallback()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00054">KviKvsScriptAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00115">uninstallCallbackCode()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00077">~KviKvsScriptAddon()</a>.</p>
 
 </div>
 </div>
@@ -686,7 +744,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00188">allocateScripts()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00050">KviKvsScriptAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00087">visibleName()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00101">visibleNameCode()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00073">~KviKvsScriptAddon()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00200">allocateScripts()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00054">KviKvsScriptAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00091">visibleName()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00105">visibleNameCode()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00077">~KviKvsScriptAddon()</a>.</p>
 
 </div>
 </div>
@@ -701,7 +759,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00094">description()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00098">description()</a>.</p>
 
 </div>
 </div>
@@ -716,7 +774,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00082">icon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00050">KviKvsScriptAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00128">load()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00206">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00086">icon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00054">KviKvsScriptAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00132">load()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00218">save()</a>.</p>
 
 </div>
 </div>
@@ -731,7 +789,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00188">allocateScripts()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00050">KviKvsScriptAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00128">load()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00206">save()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00150">setConfigureCallback()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00169">setHelpCallback()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00200">allocateScripts()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00054">KviKvsScriptAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00132">load()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00218">save()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00162">setConfigureCallback()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00181">setHelpCallback()</a>.</p>
 
 </div>
 </div>
@@ -746,7 +804,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00050">KviKvsScriptAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00128">load()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00206">save()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00054">KviKvsScriptAddon()</a>, <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00132">load()</a>, and <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00218">save()</a>.</p>
 
 </div>
 </div>
@@ -761,7 +819,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00087">visibleName()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__scriptaddonmanager_8cpp_source.html#l00091">visibleName()</a>.</p>
 
 </div>
 </div>
@@ -770,7 +828,7 @@ Inheritance diagram for KviKvsScriptAddon:</div>
 <li>src/kvirc/kvs/<a class="el" href="kvi__kvs__scriptaddonmanager_8cpp.html">kvi_kvs_scriptaddonmanager.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:31 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:23 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

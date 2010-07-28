@@ -54,106 +54,110 @@
 <a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="kvi__qstring_8h.html" title="Helper functions for the QString class.">kvi_qstring.h</a>&quot;</span>
 <a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerhashtable_8h.html" title="Pointer Hash Table.">kvi_pointerhashtable.h</a>&quot;</span>
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033 <span class="keyword">class </span><a class="code" href="classKviConfig.html">KviConfig</a>;
-<a name="l00034"></a>00034 <span class="keyword">class </span><a class="code" href="classKviKvsScript.html" title="The KVIrc Script class.">KviKvsScript</a>;
-<a name="l00035"></a>00035 <span class="keyword">class </span><a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>;
-<a name="l00036"></a>00036 <span class="keyword">class </span>QPixmap;
-<a name="l00037"></a>00037 
-<a name="l00038"></a><a class="code" href="classKviKvsScriptAddon.html">00038</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a> : <span class="keyword">public</span> <a class="code" href="classKviHeapObject.html">KviHeapObject</a>
-<a name="l00039"></a>00039 {
-<a name="l00040"></a><a class="code" href="classKviKvsScriptAddon.html#a0d639e987b80bf2d807a35e6a6b16820">00040</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classKviKvsScriptAddonManager.html">KviKvsScriptAddonManager</a>;
-<a name="l00041"></a>00041 <span class="keyword">protected</span>:
-<a name="l00042"></a>00042         <a class="code" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a>();
-<a name="l00043"></a>00043         <a class="code" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a>(
-<a name="l00044"></a>00044                         <span class="keyword">const</span> QString &amp;szName,
-<a name="l00045"></a>00045                         <span class="keyword">const</span> QString &amp;szVersion,
-<a name="l00046"></a>00046                         <span class="keyword">const</span> QString &amp;szVisibleNameCode,
-<a name="l00047"></a>00047                         <span class="keyword">const</span> QString &amp;szDescriptionCode,
-<a name="l00048"></a>00048                         <span class="keyword">const</span> QString &amp;szUninstallCallbackCode,
-<a name="l00049"></a>00049                         <span class="keyword">const</span> QString &amp;szIconId
-<a name="l00050"></a>00050                 );
-<a name="l00051"></a>00051 <span class="keyword">public</span>:
-<a name="l00052"></a>00052         <a class="code" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a>(<span class="keyword">const</span> <a class="code" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a> &amp;a);
-<a name="l00053"></a>00053 <span class="keyword">public</span>: <span class="comment">// KviDict wants that... how to restrict the deletion to KviKvsScriptAddonManager only ?</span>
-<a name="l00054"></a>00054         ~<a class="code" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a>();
-<a name="l00055"></a>00055 <span class="keyword">protected</span>:
-<a name="l00056"></a><a class="code" href="classKviKvsScriptAddon.html#a7dc1b1fc2d4f1f42d951f83abf33de10">00056</a>         QString        m_szName;              <span class="comment">// the short name of the addon</span>
-<a name="l00057"></a><a class="code" href="classKviKvsScriptAddon.html#ae76fa7eabc6623428f237de3bef17c55">00057</a>         QString        m_szVersion;           <span class="comment">// x.y.z</span>
-<a name="l00058"></a><a class="code" href="classKviKvsScriptAddon.html#a5ef05cdbe8426946b5e1bad71973edf5">00058</a>         <a class="code" href="classKviKvsScript.html" title="The KVIrc Script class.">KviKvsScript</a> * m_pVisibleNameScript;  <span class="comment">// the visible name, possibly translated</span>
-<a name="l00059"></a><a class="code" href="classKviKvsScriptAddon.html#ae66a3251e8f51d2b1c024d80994fcb96">00059</a>         <a class="code" href="classKviKvsScript.html" title="The KVIrc Script class.">KviKvsScript</a> * m_pDescriptionScript;  <span class="comment">// the description, possibly translated</span>
-<a name="l00060"></a><a class="code" href="classKviKvsScriptAddon.html#a42464e7519b8182c6d33bed419b8210a">00060</a>         <a class="code" href="classKviKvsScript.html" title="The KVIrc Script class.">KviKvsScript</a> * m_pUninstallCallback;  <span class="comment">// uninstall callback</span>
-<a name="l00061"></a><a class="code" href="classKviKvsScriptAddon.html#a24388aa618113813d38575e1b60118ee">00061</a>         <a class="code" href="classKviKvsScript.html" title="The KVIrc Script class.">KviKvsScript</a> * m_pConfigureCallback;  <span class="comment">// configure callback</span>
-<a name="l00062"></a><a class="code" href="classKviKvsScriptAddon.html#a1dc955456db5fc18c97fdd986f89b220">00062</a>         <a class="code" href="classKviKvsScript.html" title="The KVIrc Script class.">KviKvsScript</a> * m_pHelpCallback;       <span class="comment">// help callback</span>
-<a name="l00063"></a><a class="code" href="classKviKvsScriptAddon.html#af8cd3e67d611f1fbfe979c85452f3b65">00063</a>         QString        m_szDescription;       <span class="comment">// parsed description</span>
-<a name="l00064"></a><a class="code" href="classKviKvsScriptAddon.html#a39a44cfe624ee5403dcb8b9985d70295">00064</a>         QString        m_szVisibleName;       <span class="comment">// parsed visible name</span>
-<a name="l00065"></a><a class="code" href="classKviKvsScriptAddon.html#a2d83bed4ebc0b58fd584c8c582636f37">00065</a>         QString        m_szIconId;
-<a name="l00066"></a>00066 <span class="keyword">public</span>:
-<a name="l00067"></a><a class="code" href="classKviKvsScriptAddon.html#ad18595bce703081773b3dffc5f42a094">00067</a>         <span class="keyword">const</span> QString &amp;<a class="code" href="classKviKvsScriptAddon.html#ad18595bce703081773b3dffc5f42a094">name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_szName; };
-<a name="l00068"></a><a class="code" href="classKviKvsScriptAddon.html#aaa1cf60abe52416b6e142f866dfd41a5">00068</a>         <span class="keyword">const</span> QString &amp;<a class="code" href="classKviKvsScriptAddon.html#aaa1cf60abe52416b6e142f866dfd41a5">version</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_szVersion; };
-<a name="l00069"></a>00069         <span class="keyword">const</span> QString &amp;visibleName();
-<a name="l00070"></a>00070         <span class="keyword">const</span> QString &amp;description();
-<a name="l00071"></a>00071         <span class="keyword">const</span> QString &amp;visibleNameCode();
-<a name="l00072"></a>00072         <span class="keyword">const</span> QString &amp;descriptionCode();
-<a name="l00073"></a>00073         <span class="keyword">const</span> QString &amp;uninstallCallbackCode();
-<a name="l00074"></a>00074         <span class="keyword">const</span> QString &amp;configureCallbackCode();
-<a name="l00075"></a>00075         <span class="keyword">const</span> QString &amp;helpCallbackCode();
-<a name="l00076"></a><a class="code" href="classKviKvsScriptAddon.html#a987595e864e2538c2cd895571d699dd8">00076</a>         <span class="keyword">const</span> QString &amp;<a class="code" href="classKviKvsScriptAddon.html#a987595e864e2538c2cd895571d699dd8">iconId</a>(){ <span class="keywordflow">return</span> m_szIconId; };
-<a name="l00077"></a>00077         QPixmap * icon();
-<a name="l00078"></a>00078         <span class="keywordtype">void</span> setConfigureCallback(<span class="keyword">const</span> QString &amp;szConfigureCallbackCode);
-<a name="l00079"></a>00079         <span class="keywordtype">void</span> setHelpCallback(<span class="keyword">const</span> QString &amp;szHelpCallbackCode);
-<a name="l00080"></a>00080         <span class="keywordtype">void</span> executeConfigureCallback(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * pWnd);
-<a name="l00081"></a>00081         <span class="keywordtype">void</span> executeHelpCallback(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * pWnd);
-<a name="l00082"></a>00082 <span class="keyword">protected</span>:
-<a name="l00083"></a>00083         <span class="keywordtype">bool</span> <a class="code" href="namespaceKviTheme.html#abac3f12de939692411bdae6dcb59050d">load</a>(<a class="code" href="classKviConfig.html">KviConfig</a> * cfg,<span class="keyword">const</span> QString &amp;szName);
-<a name="l00084"></a>00084         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#afc947a792aac67a66d0402e09682ac13">save</a>(<a class="code" href="classKviConfig.html">KviConfig</a> * cfg);
-<a name="l00085"></a>00085         <span class="keywordtype">void</span> executeUninstallCallback(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * pWnd);
-<a name="l00086"></a>00086         <span class="comment">// this assumes that the script pointers are clean (i.e. not needing to be freed!)</span>
-<a name="l00087"></a>00087         <span class="keywordtype">void</span> allocateScripts(<span class="keyword">const</span> QString &amp;sVisibleNameCode,<span class="keyword">const</span> QString &amp;szDescriptionCode,<span class="keyword">const</span> QString &amp;szUninstallCallbackCode);
-<a name="l00088"></a>00088 };
-<a name="l00089"></a>00089 
-<a name="l00090"></a><a class="code" href="classKviKvsScriptAddonRegistrationData.html">00090</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsScriptAddonRegistrationData.html">KviKvsScriptAddonRegistrationData</a>
-<a name="l00091"></a>00091 {
-<a name="l00092"></a>00092 <span class="keyword">public</span>:
-<a name="l00093"></a><a class="code" href="classKviKvsScriptAddonRegistrationData.html#a2401187e2043fcbc66451fecb67044e8">00093</a>         QString szName;                      <span class="comment">// the addon name</span>
-<a name="l00094"></a><a class="code" href="classKviKvsScriptAddonRegistrationData.html#ad2a541f657e8c5e093d26e41291975d0">00094</a>         QString szVersion;                   <span class="comment">// the addon version in form x.y.z</span>
-<a name="l00095"></a><a class="code" href="classKviKvsScriptAddonRegistrationData.html#ac0ecd5703ad31c979a4a0536b485e0b7">00095</a>         QString szVisibleNameScript;         <span class="comment">// the code that evaluates to the visible name, possibly translated</span>
-<a name="l00096"></a><a class="code" href="classKviKvsScriptAddonRegistrationData.html#aa8903e9486ae5d593f2737c76b02b943">00096</a>         QString szDescriptionScript;         <span class="comment">// the code that evaluates to the description, possibly translated</span>
-<a name="l00097"></a><a class="code" href="classKviKvsScriptAddonRegistrationData.html#a38164a552c769c28ff57469a3482b444">00097</a>         QString szUninstallCallbackScript;   <span class="comment">// the uninstall callback code, will be executed at uninstallation</span>
-<a name="l00098"></a><a class="code" href="classKviKvsScriptAddonRegistrationData.html#a40608ee26ed62d54e4f50536d411ceb0">00098</a>         QString szIconId;                    <span class="comment">// the icon identifier (scaled to 32x32 atm)</span>
-<a name="l00099"></a>00099 };
-<a name="l00100"></a>00100 
-<a name="l00101"></a><a class="code" href="classKviKvsScriptAddonManager.html">00101</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsScriptAddonManager.html">KviKvsScriptAddonManager</a>
-<a name="l00102"></a>00102 {
-<a name="l00103"></a>00103 <span class="keyword">public</span>:
-<a name="l00104"></a>00104         <a class="code" href="classKviKvsScriptAddonManager.html">KviKvsScriptAddonManager</a>();
-<a name="l00105"></a>00105         ~<a class="code" href="classKviKvsScriptAddonManager.html">KviKvsScriptAddonManager</a>();
-<a name="l00106"></a>00106 <span class="keyword">protected</span>:
-<a name="l00107"></a><a class="code" href="classKviKvsScriptAddonManager.html#a02c9a3629fba5fd5b9968be098d63059">00107</a>         <span class="keyword">static</span> <a class="code" href="classKviKvsScriptAddonManager.html">KviKvsScriptAddonManager</a>  * m_pInstance;
-<a name="l00108"></a>00108         <span class="comment">// this class implements delayed loading</span>
-<a name="l00109"></a><a class="code" href="classKviKvsScriptAddonManager.html#a5a6df1f1225df4a3a2ac13b6c12b6ddb">00109</a>         QString                            m_szFileName;  <span class="comment">// the file name that we will load from</span>
-<a name="l00110"></a><a class="code" href="classKviKvsScriptAddonManager.html#a308c08a8e3d567db0d65def334feb1ee">00110</a>         <span class="keywordtype">bool</span>                               m_bLoaded;     <span class="comment">// have we loaded stuff from disk yet ?</span>
-<a name="l00111"></a><a class="code" href="classKviKvsScriptAddonManager.html#a04b7c5b70fdb1eccea5439402231c437">00111</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviKvsScriptAddon&gt;</a>         * m_pAddonDict;  <span class="comment">// all the registered addons</span>
-<a name="l00112"></a>00112 <span class="keyword">public</span>:
-<a name="l00113"></a><a class="code" href="classKviKvsScriptAddonManager.html#a9efb8b785424819f6f0691149c627c31">00113</a>         <span class="keyword">static</span> <a class="code" href="classKviKvsScriptAddonManager.html">KviKvsScriptAddonManager</a> * <a class="code" href="classKviKvsScriptAddonManager.html#a9efb8b785424819f6f0691149c627c31">instance</a>(){ <span class="keywordflow">return</span> m_pInstance; };
-<a name="l00114"></a>00114         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="namespaceKviStringConversion.html#a25090e2ca3b1e82492fb33ebc2ed0f1d">init</a>(); <span class="comment">// called by KviKvs::init()</span>
-<a name="l00115"></a>00115         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="namespaceKviLocale.html#a0516e82ea3996ded16e7bd66399c4e60">done</a>(); <span class="comment">// called by KviKvs::done()</span>
-<a name="l00116"></a>00116 
-<a name="l00117"></a>00117         <span class="keywordtype">bool</span> registerAddon(<a class="code" href="classKviKvsScriptAddonRegistrationData.html">KviKvsScriptAddonRegistrationData</a> * <a class="code" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>);
-<a name="l00118"></a>00118         <a class="code" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a> * findAddon(<span class="keyword">const</span> QString &amp;szName);
-<a name="l00119"></a>00119         <span class="keywordtype">bool</span> unregisterAddon(<span class="keyword">const</span> QString &amp;szName,<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * pWnd,<span class="keywordtype">bool</span> bExecuteUninstallCallback = <span class="keyword">true</span>);
-<a name="l00120"></a>00120         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviKvsScriptAddon&gt;</a> * addonDict();
-<a name="l00121"></a>00121 
-<a name="l00122"></a>00122         <span class="keywordtype">void</span> clear();
-<a name="l00123"></a>00123         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#abac3f12de939692411bdae6dcb59050d">load</a>(<span class="keyword">const</span> QString &amp;szFileName); <span class="comment">// called in the KviKvs namespace</span>
-<a name="l00124"></a>00124         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#afc947a792aac67a66d0402e09682ac13">save</a>(<span class="keyword">const</span> QString &amp;szFileName); <span class="comment">// called in the KViKvs namespace</span>
-<a name="l00125"></a>00125 <span class="keyword">protected</span>:
-<a name="l00126"></a>00126         <span class="keywordtype">void</span> delayedLoad();
-<a name="l00127"></a>00127 };
-<a name="l00128"></a>00128 
-<a name="l00129"></a>00129 <span class="preprocessor">#endif //!_KVI_KVS_SCRIPTADDONMANAGER_H_</span>
+<a name="l00032"></a>00032 <span class="preprocessor">#include &lt;QStringList&gt;</span>
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 <span class="keyword">class </span><a class="code" href="classKviConfig.html">KviConfig</a>;
+<a name="l00035"></a>00035 <span class="keyword">class </span><a class="code" href="classKviKvsScript.html" title="The KVIrc Script class.">KviKvsScript</a>;
+<a name="l00036"></a>00036 <span class="keyword">class </span><a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>;
+<a name="l00037"></a>00037 <span class="keyword">class </span>QPixmap;
+<a name="l00038"></a>00038 
+<a name="l00039"></a><a class="code" href="classKviKvsScriptAddon.html">00039</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a> : <span class="keyword">public</span> <a class="code" href="classKviHeapObject.html">KviHeapObject</a>
+<a name="l00040"></a>00040 {
+<a name="l00041"></a><a class="code" href="classKviKvsScriptAddon.html#a0d639e987b80bf2d807a35e6a6b16820">00041</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classKviKvsScriptAddonManager.html">KviKvsScriptAddonManager</a>;
+<a name="l00042"></a>00042 <span class="keyword">protected</span>:
+<a name="l00043"></a>00043         <a class="code" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a>();
+<a name="l00044"></a>00044         <a class="code" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a>(
+<a name="l00045"></a>00045                         <span class="keyword">const</span> QString &amp;szName,
+<a name="l00046"></a>00046                         <span class="keyword">const</span> QString &amp;szVersion,
+<a name="l00047"></a>00047                         <span class="keyword">const</span> QString &amp;szVisibleNameCode,
+<a name="l00048"></a>00048                         <span class="keyword">const</span> QString &amp;szDescriptionCode,
+<a name="l00049"></a>00049                         <span class="keyword">const</span> QString &amp;szUninstallCallbackCode,
+<a name="l00050"></a>00050                         <span class="keyword">const</span> QString &amp;szIconId
+<a name="l00051"></a>00051                 );
+<a name="l00052"></a>00052 <span class="keyword">public</span>:
+<a name="l00053"></a>00053         <a class="code" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a>(<span class="keyword">const</span> <a class="code" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a> &amp;a);
+<a name="l00054"></a>00054 <span class="keyword">public</span>: <span class="comment">// KviDict wants that... how to restrict the deletion to KviKvsScriptAddonManager only ?</span>
+<a name="l00055"></a>00055         ~<a class="code" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a>();
+<a name="l00056"></a>00056 <span class="keyword">protected</span>:
+<a name="l00057"></a><a class="code" href="classKviKvsScriptAddon.html#a7dc1b1fc2d4f1f42d951f83abf33de10">00057</a>         QString        m_szName;              <span class="comment">// the short name of the addon</span>
+<a name="l00058"></a><a class="code" href="classKviKvsScriptAddon.html#ae76fa7eabc6623428f237de3bef17c55">00058</a>         QString        m_szVersion;           <span class="comment">// x.y.z</span>
+<a name="l00059"></a><a class="code" href="classKviKvsScriptAddon.html#a5ef05cdbe8426946b5e1bad71973edf5">00059</a>         <a class="code" href="classKviKvsScript.html" title="The KVIrc Script class.">KviKvsScript</a> * m_pVisibleNameScript;  <span class="comment">// the visible name, possibly translated</span>
+<a name="l00060"></a><a class="code" href="classKviKvsScriptAddon.html#ae66a3251e8f51d2b1c024d80994fcb96">00060</a>         <a class="code" href="classKviKvsScript.html" title="The KVIrc Script class.">KviKvsScript</a> * m_pDescriptionScript;  <span class="comment">// the description, possibly translated</span>
+<a name="l00061"></a><a class="code" href="classKviKvsScriptAddon.html#a42464e7519b8182c6d33bed419b8210a">00061</a>         <a class="code" href="classKviKvsScript.html" title="The KVIrc Script class.">KviKvsScript</a> * m_pUninstallCallback;  <span class="comment">// uninstall callback</span>
+<a name="l00062"></a><a class="code" href="classKviKvsScriptAddon.html#a24388aa618113813d38575e1b60118ee">00062</a>         <a class="code" href="classKviKvsScript.html" title="The KVIrc Script class.">KviKvsScript</a> * m_pConfigureCallback;  <span class="comment">// configure callback</span>
+<a name="l00063"></a><a class="code" href="classKviKvsScriptAddon.html#a1dc955456db5fc18c97fdd986f89b220">00063</a>         <a class="code" href="classKviKvsScript.html" title="The KVIrc Script class.">KviKvsScript</a> * m_pHelpCallback;       <span class="comment">// help callback</span>
+<a name="l00064"></a><a class="code" href="classKviKvsScriptAddon.html#af8cd3e67d611f1fbfe979c85452f3b65">00064</a>         QString        m_szDescription;       <span class="comment">// parsed description</span>
+<a name="l00065"></a><a class="code" href="classKviKvsScriptAddon.html#a39a44cfe624ee5403dcb8b9985d70295">00065</a>         QString        m_szVisibleName;       <span class="comment">// parsed visible name</span>
+<a name="l00066"></a><a class="code" href="classKviKvsScriptAddon.html#a2d83bed4ebc0b58fd584c8c582636f37">00066</a>         QString        m_szIconId;            <span class="comment">// the id of the associated icon</span>
+<a name="l00067"></a><a class="code" href="classKviKvsScriptAddon.html#a84160ca28ebd64fdd7a6d2ec8030d083">00067</a>         QStringList    m_lInstalledFiles;     <span class="comment">// the list of the installed files</span>
+<a name="l00068"></a>00068 <span class="keyword">public</span>:
+<a name="l00069"></a><a class="code" href="classKviKvsScriptAddon.html#a233011850cc9138f632762f9eb73ade0">00069</a>         <span class="keyword">const</span> QStringList &amp;<a class="code" href="classKviKvsScriptAddon.html#a233011850cc9138f632762f9eb73ade0">installedFiles</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_lInstalledFiles; };
+<a name="l00070"></a><a class="code" href="classKviKvsScriptAddon.html#ad18595bce703081773b3dffc5f42a094">00070</a>         <span class="keyword">const</span> QString &amp;<a class="code" href="classKviKvsScriptAddon.html#ad18595bce703081773b3dffc5f42a094">name</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_szName; };
+<a name="l00071"></a><a class="code" href="classKviKvsScriptAddon.html#aaa1cf60abe52416b6e142f866dfd41a5">00071</a>         <span class="keyword">const</span> QString &amp;<a class="code" href="classKviKvsScriptAddon.html#aaa1cf60abe52416b6e142f866dfd41a5">version</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_szVersion; };
+<a name="l00072"></a>00072         <span class="keyword">const</span> QString &amp;visibleName();
+<a name="l00073"></a>00073         <span class="keyword">const</span> QString &amp;description();
+<a name="l00074"></a>00074         <span class="keyword">const</span> QString &amp;visibleNameCode();
+<a name="l00075"></a>00075         <span class="keyword">const</span> QString &amp;descriptionCode();
+<a name="l00076"></a>00076         <span class="keyword">const</span> QString &amp;uninstallCallbackCode();
+<a name="l00077"></a>00077         <span class="keyword">const</span> QString &amp;configureCallbackCode();
+<a name="l00078"></a>00078         <span class="keyword">const</span> QString &amp;helpCallbackCode();
+<a name="l00079"></a><a class="code" href="classKviKvsScriptAddon.html#a987595e864e2538c2cd895571d699dd8">00079</a>         <span class="keyword">const</span> QString &amp;<a class="code" href="classKviKvsScriptAddon.html#a987595e864e2538c2cd895571d699dd8">iconId</a>(){ <span class="keywordflow">return</span> m_szIconId; };
+<a name="l00080"></a>00080         QPixmap * icon();
+<a name="l00085"></a>00085         <span class="keywordtype">void</span> addInstalledFile(<span class="keyword">const</span> QString &amp;szFileName);
+<a name="l00086"></a>00086         <span class="keywordtype">void</span> setConfigureCallback(<span class="keyword">const</span> QString &amp;szConfigureCallbackCode);
+<a name="l00087"></a>00087         <span class="keywordtype">void</span> setHelpCallback(<span class="keyword">const</span> QString &amp;szHelpCallbackCode);
+<a name="l00088"></a>00088         <span class="keywordtype">void</span> executeConfigureCallback(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * pWnd);
+<a name="l00089"></a>00089         <span class="keywordtype">void</span> executeHelpCallback(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * pWnd);
+<a name="l00090"></a>00090 <span class="keyword">protected</span>:
+<a name="l00091"></a>00091         <span class="keywordtype">bool</span> <a class="code" href="namespaceKviTheme.html#abac3f12de939692411bdae6dcb59050d">load</a>(<a class="code" href="classKviConfig.html">KviConfig</a> * cfg,<span class="keyword">const</span> QString &amp;szName);
+<a name="l00092"></a>00092         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#afc947a792aac67a66d0402e09682ac13">save</a>(<a class="code" href="classKviConfig.html">KviConfig</a> * cfg);
+<a name="l00093"></a>00093         <span class="keywordtype">void</span> executeUninstallCallback(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * pWnd);
+<a name="l00094"></a>00094         <span class="comment">// this assumes that the script pointers are clean (i.e. not needing to be freed!)</span>
+<a name="l00095"></a>00095         <span class="keywordtype">void</span> allocateScripts(<span class="keyword">const</span> QString &amp;sVisibleNameCode,<span class="keyword">const</span> QString &amp;szDescriptionCode,<span class="keyword">const</span> QString &amp;szUninstallCallbackCode);
+<a name="l00096"></a>00096 };
+<a name="l00097"></a>00097 
+<a name="l00098"></a><a class="code" href="classKviKvsScriptAddonRegistrationData.html">00098</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsScriptAddonRegistrationData.html">KviKvsScriptAddonRegistrationData</a>
+<a name="l00099"></a>00099 {
+<a name="l00100"></a>00100 <span class="keyword">public</span>:
+<a name="l00101"></a><a class="code" href="classKviKvsScriptAddonRegistrationData.html#a2401187e2043fcbc66451fecb67044e8">00101</a>         QString szName;                      <span class="comment">// the addon name</span>
+<a name="l00102"></a><a class="code" href="classKviKvsScriptAddonRegistrationData.html#ad2a541f657e8c5e093d26e41291975d0">00102</a>         QString szVersion;                   <span class="comment">// the addon version in form x.y.z</span>
+<a name="l00103"></a><a class="code" href="classKviKvsScriptAddonRegistrationData.html#ac0ecd5703ad31c979a4a0536b485e0b7">00103</a>         QString szVisibleNameScript;         <span class="comment">// the code that evaluates to the visible name, possibly translated</span>
+<a name="l00104"></a><a class="code" href="classKviKvsScriptAddonRegistrationData.html#aa8903e9486ae5d593f2737c76b02b943">00104</a>         QString szDescriptionScript;         <span class="comment">// the code that evaluates to the description, possibly translated</span>
+<a name="l00105"></a><a class="code" href="classKviKvsScriptAddonRegistrationData.html#a38164a552c769c28ff57469a3482b444">00105</a>         QString szUninstallCallbackScript;   <span class="comment">// the uninstall callback code, will be executed at uninstallation</span>
+<a name="l00106"></a><a class="code" href="classKviKvsScriptAddonRegistrationData.html#a40608ee26ed62d54e4f50536d411ceb0">00106</a>         QString szIconId;                    <span class="comment">// the icon identifier (scaled to 32x32 atm)</span>
+<a name="l00107"></a>00107 };
+<a name="l00108"></a>00108 
+<a name="l00109"></a><a class="code" href="classKviKvsScriptAddonManager.html">00109</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsScriptAddonManager.html">KviKvsScriptAddonManager</a>
+<a name="l00110"></a>00110 {
+<a name="l00111"></a>00111 <span class="keyword">public</span>:
+<a name="l00112"></a>00112         <a class="code" href="classKviKvsScriptAddonManager.html">KviKvsScriptAddonManager</a>();
+<a name="l00113"></a>00113         ~<a class="code" href="classKviKvsScriptAddonManager.html">KviKvsScriptAddonManager</a>();
+<a name="l00114"></a>00114 <span class="keyword">protected</span>:
+<a name="l00115"></a><a class="code" href="classKviKvsScriptAddonManager.html#a02c9a3629fba5fd5b9968be098d63059">00115</a>         <span class="keyword">static</span> <a class="code" href="classKviKvsScriptAddonManager.html">KviKvsScriptAddonManager</a>  * m_pInstance;
+<a name="l00116"></a>00116         <span class="comment">// this class implements delayed loading</span>
+<a name="l00117"></a><a class="code" href="classKviKvsScriptAddonManager.html#a5a6df1f1225df4a3a2ac13b6c12b6ddb">00117</a>         QString                            m_szFileName;  <span class="comment">// the file name that we will load from</span>
+<a name="l00118"></a><a class="code" href="classKviKvsScriptAddonManager.html#a308c08a8e3d567db0d65def334feb1ee">00118</a>         <span class="keywordtype">bool</span>                               m_bLoaded;     <span class="comment">// have we loaded stuff from disk yet ?</span>
+<a name="l00119"></a><a class="code" href="classKviKvsScriptAddonManager.html#a04b7c5b70fdb1eccea5439402231c437">00119</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviKvsScriptAddon&gt;</a>         * m_pAddonDict;  <span class="comment">// all the registered addons</span>
+<a name="l00120"></a>00120 <span class="keyword">public</span>:
+<a name="l00121"></a><a class="code" href="classKviKvsScriptAddonManager.html#a9efb8b785424819f6f0691149c627c31">00121</a>         <span class="keyword">static</span> <a class="code" href="classKviKvsScriptAddonManager.html">KviKvsScriptAddonManager</a> * <a class="code" href="classKviKvsScriptAddonManager.html#a9efb8b785424819f6f0691149c627c31">instance</a>(){ <span class="keywordflow">return</span> m_pInstance; };
+<a name="l00122"></a>00122         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="namespaceKviStringConversion.html#a25090e2ca3b1e82492fb33ebc2ed0f1d">init</a>(); <span class="comment">// called by KviKvs::init()</span>
+<a name="l00123"></a>00123         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="namespaceKviLocale.html#a0516e82ea3996ded16e7bd66399c4e60">done</a>(); <span class="comment">// called by KviKvs::done()</span>
+<a name="l00124"></a>00124 
+<a name="l00125"></a>00125         <span class="keywordtype">bool</span> registerAddon(<a class="code" href="classKviKvsScriptAddonRegistrationData.html">KviKvsScriptAddonRegistrationData</a> * <a class="code" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>);
+<a name="l00126"></a>00126         <a class="code" href="classKviKvsScriptAddon.html">KviKvsScriptAddon</a> * findAddon(<span class="keyword">const</span> QString &amp;szName);
+<a name="l00127"></a>00127         <span class="keywordtype">bool</span> unregisterAddon(<span class="keyword">const</span> QString &amp;szName,<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * pWnd,<span class="keywordtype">bool</span> bExecuteUninstallCallback = <span class="keyword">true</span>,<span class="keywordtype">bool</span> bUninstallFiles = <span class="keyword">true</span>);
+<a name="l00128"></a>00128         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviKvsScriptAddon&gt;</a> * addonDict();
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130         <span class="keywordtype">void</span> clear();
+<a name="l00131"></a>00131         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#abac3f12de939692411bdae6dcb59050d">load</a>(<span class="keyword">const</span> QString &amp;szFileName); <span class="comment">// called in the KviKvs namespace</span>
+<a name="l00132"></a>00132         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#afc947a792aac67a66d0402e09682ac13">save</a>(<span class="keyword">const</span> QString &amp;szFileName); <span class="comment">// called in the KViKvs namespace</span>
+<a name="l00133"></a>00133 <span class="keyword">protected</span>:
+<a name="l00134"></a>00134         <span class="keywordtype">void</span> delayedLoad();
+<a name="l00135"></a>00135 };
+<a name="l00136"></a>00136 
+<a name="l00137"></a>00137 <span class="preprocessor">#endif //!_KVI_KVS_SCRIPTADDONMANAGER_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:28 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:19 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

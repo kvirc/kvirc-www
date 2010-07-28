@@ -52,14 +52,14 @@ Inheritance diagram for KviKvsAction:</div>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAction.html#afdbef2de2c0e7c7f005263fabb81e0c8">activate</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAction.html#aef3cd244bd11f76492bababfe6c60b61">KviKvsAction</a> (QObject *pParent, const QString &amp;szName, const QString &amp;szScriptCode, const QString &amp;szVisibleName, const QString &amp;szDescription, <a class="el" href="classKviActionCategory.html">KviActionCategory</a> *pCategory=0, const QString &amp;szBigIcon=QString(), int iSmallIconId=0, unsigned int uFlags=0, const QString &amp;szKeySequence=QString())</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAction.html#a2f6dd5d8b24d2842ffdadd242392785c">KviKvsAction</a> (QObject *pParent, const QString &amp;szName, const QString &amp;szScriptCode, const QString &amp;szVisibleName, const QString &amp;szDescription, <a class="el" href="classKviActionCategory.html">KviActionCategory</a> *pCategory=<a class="el" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a>, const QString &amp;szBigIconId=QString(), const QString &amp;szSmallIconId=QString(), unsigned int uFlags=0, const QString &amp;szKeySequence=QString())</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAction.html#a4f6ba0632e490fa359572b303bcf27fe">scriptCode</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAction.html#aedd8bc156d2888bd559274d87fce4fdd">~KviKvsAction</a> ()</td></tr>
 <tr><td colspan="2"><h2>Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAction.html#a86c8ae089618a7055c6797a75029c872">m_szScript</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aef3cd244bd11f76492bababfe6c60b61"></a><!-- doxytag: member="KviKvsAction::KviKvsAction" ref="aef3cd244bd11f76492bababfe6c60b61" args="(QObject *pParent, const QString &amp;szName, const QString &amp;szScriptCode, const QString &amp;szVisibleName, const QString &amp;szDescription, KviActionCategory *pCategory=0, const QString &amp;szBigIcon=QString(), int iSmallIconId=0, unsigned int uFlags=0, const QString &amp;szKeySequence=QString())" -->
+<a class="anchor" id="a2f6dd5d8b24d2842ffdadd242392785c"></a><!-- doxytag: member="KviKvsAction::KviKvsAction" ref="a2f6dd5d8b24d2842ffdadd242392785c" args="(QObject *pParent, const QString &amp;szName, const QString &amp;szScriptCode, const QString &amp;szVisibleName, const QString &amp;szDescription, KviActionCategory *pCategory=NULL, const QString &amp;szBigIconId=QString(), const QString &amp;szSmallIconId=QString(), unsigned int uFlags=0, const QString &amp;szKeySequence=QString())" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -97,19 +97,19 @@ Inheritance diagram for KviKvsAction:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classKviActionCategory.html">KviActionCategory</a> *&nbsp;</td>
-          <td class="paramname"> <em>pCategory</em> = <code>0</code>, </td>
+          <td class="paramname"> <em>pCategory</em> = <code><a class="el" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const QString &amp;&nbsp;</td>
-          <td class="paramname"> <em>szBigIcon</em> = <code>QString()</code>, </td>
+          <td class="paramname"> <em>szBigIconId</em> = <code>QString()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>iSmallIconId</em> = <code>0</code>, </td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>szSmallIconId</em> = <code>QString()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -151,7 +151,7 @@ Inheritance diagram for KviKvsAction:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__action_8cpp_source.html#l00076">KviAction::unregisterAccelerator()</a>.</p>
+<p>References <a class="el" href="kvi__action_8cpp_source.html#l00103">KviAction::unregisterAccelerator()</a>.</p>
 
 </div>
 </div>
@@ -173,9 +173,9 @@ Inheritance diagram for KviKvsAction:</div>
 
 <p>Reimplemented from <a class="el" href="classKviAction.html#aed74e4ed874a520568b2d0be6a33dd1e">KviAction</a>.</p>
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__action_8h_source.html#l00126">KviAction::isEnabled()</a>, <a class="el" href="kvi__kvs__action_8h_source.html#l00036">m_szScript</a>, and <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__action_8h_source.html#l00116">KviAction::isEnabled()</a>, <a class="el" href="kvi__kvs__action_8h_source.html#l00036">m_szScript</a>, and <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__coreactions_8cpp_source.html#l01077">KviGoAwayAction::addToCustomToolBar()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00725">KviSubmenuAction::addToCustomToolBar()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l01042">KviGoAwayAction::addToPopupMenu()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00869">KviConnectToServerAction::popupActivated()</a>, and <a class="el" href="kvi__coreactions_8cpp_source.html#l00823">KviChangeNickAction::popupActivated()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__coreactions_8cpp_source.html#l01086">KviGoAwayAction::addToCustomToolBar()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00729">KviSubmenuAction::addToCustomToolBar()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l01051">KviGoAwayAction::addToPopupMenu()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00875">KviConnectToServerAction::popupActivated()</a>, and <a class="el" href="kvi__coreactions_8cpp_source.html#l00828">KviChangeNickAction::popupActivated()</a>.</p>
 
 </div>
 </div>
@@ -196,7 +196,7 @@ Inheritance diagram for KviKvsAction:</div>
 
 <p>References <a class="el" href="kvi__kvs__action_8h_source.html#l00036">m_szScript</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__coreactions_8cpp_source.html#l00725">KviSubmenuAction::addToCustomToolBar()</a>, and <a class="el" href="kvi__kvs__useraction_8cpp_source.html#l00092">KviKvsUserAction::exportToKvs()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__coreactions_8cpp_source.html#l00729">KviSubmenuAction::addToCustomToolBar()</a>, and <a class="el" href="kvi__kvs__useraction_8cpp_source.html#l00117">KviKvsUserAction::exportToKvs()</a>.</p>
 
 </div>
 </div>
@@ -212,7 +212,7 @@ Inheritance diagram for KviKvsAction:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__action_8cpp_source.html#l00057">activate()</a>, <a class="el" href="kvi__kvs__action_8cpp_source.html#l00031">KviKvsAction()</a>, <a class="el" href="kvi__kvs__useraction_8cpp_source.html#l00218">KviKvsUserAction::load()</a>, <a class="el" href="kvi__kvs__useraction_8cpp_source.html#l00256">KviKvsUserAction::save()</a>, and <a class="el" href="kvi__kvs__action_8cpp_source.html#l00052">scriptCode()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__action_8cpp_source.html#l00069">activate()</a>, <a class="el" href="kvi__kvs__action_8cpp_source.html#l00031">KviKvsAction()</a>, <a class="el" href="kvi__kvs__useraction_8cpp_source.html#l00284">KviKvsUserAction::load()</a>, <a class="el" href="kvi__kvs__useraction_8cpp_source.html#l00322">KviKvsUserAction::save()</a>, and <a class="el" href="kvi__kvs__action_8cpp_source.html#l00064">scriptCode()</a>.</p>
 
 </div>
 </div>
@@ -221,7 +221,7 @@ Inheritance diagram for KviKvsAction:</div>
 <li>src/kvirc/kvs/<a class="el" href="kvi__kvs__action_8cpp.html">kvi_kvs_action.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:31 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:22 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

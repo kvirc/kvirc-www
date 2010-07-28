@@ -33,20 +33,18 @@
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRegisteredChannelDataBase.html#a5b6f25a2b4350248c3262d08b7d5b2dc">add</a> (<a class="el" href="classKviRegisteredChannel.html">KviRegisteredChannel</a> *<a class="el" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; const <br class="typebreak"/>
-char <br class="typebreak"/>
-*, <a class="el" href="kvi__regchan_8h.html#aa1cbc3dbd13796a6a787bfa529a85af1">KviRegisteredChannelList</a> &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRegisteredChannelDataBase.html#add88033f7828f462f0f674c1937afe41">channelDict</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviRegisteredChannel.html">KviRegisteredChannel</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRegisteredChannelDataBase.html#a47c7a8859d5a4d1e03456779c8ec2d74">find</a> (const char *name, const char *net)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviRegisteredChannel.html">KviRegisteredChannel</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRegisteredChannelDataBase.html#a6423c4cb0afbbccd8cfac336439450c9">findExact</a> (const char *name, const char *netmask)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QHash&lt; QString, <br class="typebreak"/>
+<a class="el" href="kvi__regchan_8h.html#aa1cbc3dbd13796a6a787bfa529a85af1">KviRegisteredChannelList</a> * &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRegisteredChannelDataBase.html#ab2b64bc0e95a478317138d0854c2b489">channelDict</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviRegisteredChannel.html">KviRegisteredChannel</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRegisteredChannelDataBase.html#a195189df9583ec7d8de8458fe04f1c37">find</a> (const QString &amp;name, const QString &amp;net)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviRegisteredChannel.html">KviRegisteredChannel</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRegisteredChannelDataBase.html#ad861d64ccb5dd123e2c3f0f22d9c6d46">findExact</a> (const QString &amp;name, const QString &amp;netmask)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRegisteredChannelDataBase.html#a705edd2e033a10756f14e3919d45d0df">KviRegisteredChannelDataBase</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRegisteredChannelDataBase.html#ad6edd23b3ea9e8dbdcec02e6ee579e40">load</a> (const QString &amp;filename)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRegisteredChannelDataBase.html#ae8779931dfaafaf05c66ce9226255a1f">remove</a> (<a class="el" href="classKviRegisteredChannel.html">KviRegisteredChannel</a> *<a class="el" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRegisteredChannelDataBase.html#a803baf0f5ed0b90fd3bb614e7f72402d">save</a> (const QString &amp;filename)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRegisteredChannelDataBase.html#a39faa5c0b9df0cb93ed0588ddfe868ff">~KviRegisteredChannelDataBase</a> ()</td></tr>
 <tr><td colspan="2"><h2>Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; const <br class="typebreak"/>
-char <br class="typebreak"/>
-*, <a class="el" href="kvi__regchan_8h.html#aa1cbc3dbd13796a6a787bfa529a85af1">KviRegisteredChannelList</a> &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRegisteredChannelDataBase.html#a98ed2a5c9a6336f25ca681d1261dd7fd">m_pChannelDict</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QHash&lt; QString, <br class="typebreak"/>
+<a class="el" href="kvi__regchan_8h.html#aa1cbc3dbd13796a6a787bfa529a85af1">KviRegisteredChannelList</a> * &gt; *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRegisteredChannelDataBase.html#af8021d17dd8cd038388bbe103349e83d">m_pChannelDict</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a705edd2e033a10756f14e3919d45d0df"></a><!-- doxytag: member="KviRegisteredChannelDataBase::KviRegisteredChannelDataBase" ref="a705edd2e033a10756f14e3919d45d0df" args="()" -->
@@ -64,7 +62,7 @@ char <br class="typebreak"/>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__regchan_8h_source.html#l00061">m_pChannelDict</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00849">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="kvi__regchan_8h_source.html#l00084">m_pChannelDict</a>.</p>
 
 </div>
 </div>
@@ -83,7 +81,7 @@ char <br class="typebreak"/>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__regchan_8h_source.html#l00061">m_pChannelDict</a>.</p>
+<p>References <a class="el" href="kvi__regchan_8h_source.html#l00084">m_pChannelDict</a>.</p>
 
 </div>
 </div>
@@ -104,18 +102,18 @@ char <br class="typebreak"/>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l01107">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01130">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__regchan_8cpp_source.html#l00114">findExact()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00499">KviPointerHashTable&lt; Key, T &gt;::insert()</a>, <a class="el" href="kvi__regchan_8h_source.html#l00061">m_pChannelDict</a>, <a class="el" href="kvi__regchan_8h_source.html#l00045">KviRegisteredChannel::name()</a>, <a class="el" href="kvi__regchan_8h_source.html#l00046">KviRegisteredChannel::netMask()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02180">KviStr::occurences()</a>, <a class="el" href="kvi__regchan_8h_source.html#l00047">KviRegisteredChannel::property()</a>, <a class="el" href="kvi__regchan_8h_source.html#l00044">KviRegisteredChannel::propertyDict()</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, and <a class="el" href="kvi__regchan_8h_source.html#l00049">KviRegisteredChannel::setProperty()</a>.</p>
+<p>References <a class="el" href="kvi__regchan_8cpp_source.html#l00123">findExact()</a>, <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>, <a class="el" href="kvi__regchan_8h_source.html#l00084">m_pChannelDict</a>, <a class="el" href="kvi__regchan_8h_source.html#l00050">KviRegisteredChannel::name()</a>, <a class="el" href="kvi__regchan_8h_source.html#l00055">KviRegisteredChannel::netMask()</a>, <a class="el" href="kvi__regchan_8h_source.html#l00060">KviRegisteredChannel::property()</a>, <a class="el" href="kvi__regchan_8h_source.html#l00045">KviRegisteredChannel::propertyDict()</a>, and <a class="el" href="kvi__regchan_8h_source.html#l00065">KviRegisteredChannel::setProperty()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__regchan_8cpp_source.html#l00056">load()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="add88033f7828f462f0f674c1937afe41"></a><!-- doxytag: member="KviRegisteredChannelDataBase::channelDict" ref="add88033f7828f462f0f674c1937afe41" args="()" -->
+<a class="anchor" id="ab2b64bc0e95a478317138d0854c2b489"></a><!-- doxytag: member="KviRegisteredChannelDataBase::channelDict" ref="ab2b64bc0e95a478317138d0854c2b489" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;const char *,<a class="el" href="kvi__regchan_8h.html#aa1cbc3dbd13796a6a787bfa529a85af1">KviRegisteredChannelList</a>&gt;* KviRegisteredChannelDataBase::channelDict </td>
+          <td class="memname">QHash&lt;QString,<a class="el" href="kvi__regchan_8h.html#aa1cbc3dbd13796a6a787bfa529a85af1">KviRegisteredChannelList</a> *&gt;* KviRegisteredChannelDataBase::channelDict </td>
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
@@ -127,20 +125,20 @@ char <br class="typebreak"/>
 
 </div>
 </div>
-<a class="anchor" id="a47c7a8859d5a4d1e03456779c8ec2d74"></a><!-- doxytag: member="KviRegisteredChannelDataBase::find" ref="a47c7a8859d5a4d1e03456779c8ec2d74" args="(const char *name, const char *net)" -->
+<a class="anchor" id="a195189df9583ec7d8de8458fe04f1c37"></a><!-- doxytag: member="KviRegisteredChannelDataBase::find" ref="a195189df9583ec7d8de8458fe04f1c37" args="(const QString &amp;name, const QString &amp;net)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classKviRegisteredChannel.html">KviRegisteredChannel</a> * KviRegisteredChannelDataBase::find </td>
           <td>(</td>
-          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
           <td class="paramname"> <em>name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
           <td class="paramname"> <em>net</em></td><td>&nbsp;</td>
         </tr>
         <tr>
@@ -152,24 +150,24 @@ char <br class="typebreak"/>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__string_8h_source.html#l00505">kvi_matchString</a>, and <a class="el" href="kvi__regchan_8h_source.html#l00061">m_pChannelDict</a>.</p>
+<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__regchan_8h_source.html#l00084">m_pChannelDict</a>, and <a class="el" href="namespaceKviQString.html#abca3c64eda067ceefe7341bfec52e71a">KviQString::matchWildExpressions()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6423c4cb0afbbccd8cfac336439450c9"></a><!-- doxytag: member="KviRegisteredChannelDataBase::findExact" ref="a6423c4cb0afbbccd8cfac336439450c9" args="(const char *name, const char *netmask)" -->
+<a class="anchor" id="ad861d64ccb5dd123e2c3f0f22d9c6d46"></a><!-- doxytag: member="KviRegisteredChannelDataBase::findExact" ref="ad861d64ccb5dd123e2c3f0f22d9c6d46" args="(const QString &amp;name, const QString &amp;netmask)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classKviRegisteredChannel.html">KviRegisteredChannel</a> * KviRegisteredChannelDataBase::findExact </td>
           <td>(</td>
-          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
           <td class="paramname"> <em>name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
           <td class="paramname"> <em>netmask</em></td><td>&nbsp;</td>
         </tr>
         <tr>
@@ -181,9 +179,9 @@ char <br class="typebreak"/>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__string_8cpp_source.html#l00926">kvi_strEqualCI()</a>, and <a class="el" href="kvi__regchan_8h_source.html#l00061">m_pChannelDict</a>.</p>
+<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, and <a class="el" href="kvi__regchan_8h_source.html#l00084">m_pChannelDict</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__regchan_8cpp_source.html#l00145">add()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__regchan_8cpp_source.html#l00161">add()</a>.</p>
 
 </div>
 </div>
@@ -203,9 +201,9 @@ char <br class="typebreak"/>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__regchan_8cpp_source.html#l00145">add()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00619">KviPointerHashTable&lt; Key, T &gt;::clear()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01107">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01130">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02503">KviStr::cutToLast()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__config_8h_source.html#l00092">KviConfig::dict()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02490">KviStr::leftToLast()</a>, <a class="el" href="kvi__regchan_8h_source.html#l00061">m_pChannelDict</a>, <a class="el" href="kvi__config_8h_source.html#l00051">KviConfig::Read</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, <a class="el" href="kvi__regchan_8h_source.html#l00049">KviRegisteredChannel::setProperty()</a>, and <a class="el" href="kvi__qstring_8h_source.html#l00737">KviQString::toUtf8()</a>.</p>
+<p>References <a class="el" href="kvi__regchan_8cpp_source.html#l00161">add()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01116">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01139">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="namespaceKviQString.html#a65afbf89c936bde960c2bba3ad8b996c">KviQString::cutToLast()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__config_8h_source.html#l00092">KviConfig::dict()</a>, <a class="el" href="namespaceKviQString.html#ad4c180ef542441cf827209355be0df6f">KviQString::leftToLast()</a>, <a class="el" href="kvi__regchan_8h_source.html#l00084">m_pChannelDict</a>, <a class="el" href="kvi__config_8h_source.html#l00051">KviConfig::Read</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, and <a class="el" href="kvi__regchan_8h_source.html#l00065">KviRegisteredChannel::setProperty()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l00201">KviApp::setup()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l00205">KviApp::setup()</a>.</p>
 
 </div>
 </div>
@@ -225,7 +223,7 @@ char <br class="typebreak"/>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__regchan_8h_source.html#l00061">m_pChannelDict</a>, <a class="el" href="kvi__regchan_8h_source.html#l00045">KviRegisteredChannel::name()</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00553">KviPointerHashTable&lt; Key, T &gt;::remove()</a>.</p>
+<p>References <a class="el" href="kvi__debug_8h_source.html#l00165">KVI_TRACE_FUNCTION</a>, <a class="el" href="kvi__regchan_8h_source.html#l00084">m_pChannelDict</a>, and <a class="el" href="kvi__regchan_8h_source.html#l00050">KviRegisteredChannel::name()</a>.</p>
 
 </div>
 </div>
@@ -245,25 +243,25 @@ char <br class="typebreak"/>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__config_8cpp_source.html#l00069">KviConfig::clear()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01107">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01130">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="kvi__string_8h_source.html#l00118">KviStr::Format</a>, <a class="el" href="kvi__regchan_8h_source.html#l00061">m_pChannelDict</a>, <a class="el" href="kvi__config_8h_source.html#l00081">KviConfig::preserveEmptyGroups()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, <a class="el" href="kvi__config_8h_source.html#l00051">KviConfig::Write</a>, and <a class="el" href="kvi__config_8cpp_source.html#l00576">KviConfig::writeEntry()</a>.</p>
+<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__config_8cpp_source.html#l00069">KviConfig::clear()</a>, <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>, <a class="el" href="kvi__regchan_8h_source.html#l00084">m_pChannelDict</a>, <a class="el" href="kvi__config_8h_source.html#l00081">KviConfig::preserveEmptyGroups()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, <a class="el" href="kvi__config_8h_source.html#l00051">KviConfig::Write</a>, and <a class="el" href="kvi__config_8cpp_source.html#l00576">KviConfig::writeEntry()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01317">KviApp::saveRegisteredChannels()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01331">KviApp::saveRegisteredChannels()</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a98ed2a5c9a6336f25ca681d1261dd7fd"></a><!-- doxytag: member="KviRegisteredChannelDataBase::m_pChannelDict" ref="a98ed2a5c9a6336f25ca681d1261dd7fd" args="" -->
+<a class="anchor" id="af8021d17dd8cd038388bbe103349e83d"></a><!-- doxytag: member="KviRegisteredChannelDataBase::m_pChannelDict" ref="af8021d17dd8cd038388bbe103349e83d" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;const char *,<a class="el" href="kvi__regchan_8h.html#aa1cbc3dbd13796a6a787bfa529a85af1">KviRegisteredChannelList</a>&gt;* <a class="el" href="classKviRegisteredChannelDataBase.html#a98ed2a5c9a6336f25ca681d1261dd7fd">KviRegisteredChannelDataBase::m_pChannelDict</a><code> [protected]</code></td>
+          <td class="memname">QHash&lt;QString,<a class="el" href="kvi__regchan_8h.html#aa1cbc3dbd13796a6a787bfa529a85af1">KviRegisteredChannelList</a> *&gt;* <a class="el" href="classKviRegisteredChannelDataBase.html#af8021d17dd8cd038388bbe103349e83d">KviRegisteredChannelDataBase::m_pChannelDict</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__regchan_8cpp_source.html#l00145">add()</a>, <a class="el" href="kvi__regchan_8cpp_source.html#l00102">find()</a>, <a class="el" href="kvi__regchan_8cpp_source.html#l00114">findExact()</a>, <a class="el" href="kvi__regchan_8cpp_source.html#l00045">KviRegisteredChannelDataBase()</a>, <a class="el" href="kvi__regchan_8cpp_source.html#l00056">load()</a>, <a class="el" href="kvi__regchan_8cpp_source.html#l00125">remove()</a>, <a class="el" href="kvi__regchan_8cpp_source.html#l00078">save()</a>, and <a class="el" href="kvi__regchan_8cpp_source.html#l00051">~KviRegisteredChannelDataBase()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__regchan_8cpp_source.html#l00161">add()</a>, <a class="el" href="kvi__regchan_8cpp_source.html#l00107">find()</a>, <a class="el" href="kvi__regchan_8cpp_source.html#l00123">findExact()</a>, <a class="el" href="kvi__regchan_8cpp_source.html#l00045">KviRegisteredChannelDataBase()</a>, <a class="el" href="kvi__regchan_8cpp_source.html#l00056">load()</a>, <a class="el" href="kvi__regchan_8cpp_source.html#l00139">remove()</a>, <a class="el" href="kvi__regchan_8cpp_source.html#l00082">save()</a>, and <a class="el" href="kvi__regchan_8cpp_source.html#l00050">~KviRegisteredChannelDataBase()</a>.</p>
 
 </div>
 </div>
@@ -272,7 +270,7 @@ char <br class="typebreak"/>
 <li>src/kvilib/ext/<a class="el" href="kvi__regchan_8cpp.html">kvi_regchan.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:35 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:27 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

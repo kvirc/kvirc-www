@@ -48,7 +48,9 @@ Inheritance diagram for KviNetwork:</div>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviNetwork.html#a7e19a94f8af95c87be9343824804d612">autoConnect</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns true if the network has the autoconnect state on.  <a href="#a7e19a94f8af95c87be9343824804d612"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QStringList *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviNetwork.html#a9925cab3a095d893b74407858d77a922">autoJoinChannelList</a> ()</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns a list of channels with autojoin flag.  <a href="#a9925cab3a095d893b74407858d77a922"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the list of channels with autojoin flag.  <a href="#a9925cab3a095d893b74407858d77a922"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviNetwork.html#a82a81d8a5fe29015b7d358e8b77c7e00">autoJoinChannelListAsString</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the list of channels with autojoin flag as a string.  <a href="#a82a81d8a5fe29015b7d358e8b77c7e00"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviNetwork.html#a60465557f3eb9f56d2a652047de5257d">copyFrom</a> (const <a class="el" href="classKviNetwork.html">KviNetwork</a> &amp;<a class="el" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Carbon copy.  <a href="#a60465557f3eb9f56d2a652047de5257d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviServer.html">KviServer</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviNetwork.html#aad40fb23dd7074eeb7d5229fd7bddf00">currentServer</a> ()</td></tr>
@@ -85,6 +87,8 @@ Inheritance diagram for KviNetwork:</div>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns a list of servers associated to the network.  <a href="#aaf695a713ec44bd3e99bb45114c2fb1f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviNetwork.html#a5d07ebac477d4838637bde08e5154ce3">setAutoConnect</a> (bool bAutoConnect)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the autoconnect flag.  <a href="#a5d07ebac477d4838637bde08e5154ce3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviNetwork.html#a9b3d3c1ba040b98b9a2ba6c7ebf0e877">setAutoJoinChannelList</a> (const QString &amp;szNewChannelList)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the list of channels to mark for autojoin.  <a href="#a9b3d3c1ba040b98b9a2ba6c7ebf0e877"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviNetwork.html#aaa199bee4c5bc572a89c7379e6a8d980">setAutoJoinChannelList</a> (QStringList *pNewChannelList)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the list of channels to mark for autojoin.  <a href="#aaa199bee4c5bc572a89c7379e6a8d980"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviNetwork.html#a787a887ddd61ff1dcb8c7227b33ddfb8">setCurrentServer</a> (<a class="el" href="classKviServer.html">KviServer</a> *srv)</td></tr>
@@ -169,7 +173,7 @@ Inheritance diagram for KviNetwork:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviNetwork.html" title="Network handling class.">KviNetwork</a> </dd></dl>
 
-<p>References <a class="el" href="kvi__network_8h_source.html#l00082">m_bAutoConnect</a>, <a class="el" href="kvi__network_8h_source.html#l00080">m_pChannelList</a>, <a class="el" href="kvi__network_8h_source.html#l00087">m_pCurrentServer</a>, <a class="el" href="kvi__network_8h_source.html#l00081">m_pNickServRuleSet</a>, <a class="el" href="kvi__network_8h_source.html#l00086">m_pServerList</a>, <a class="el" href="kvi__network_8h_source.html#l00070">m_szName</a>, and <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="kvi__network_8h_source.html#l00083">m_bAutoConnect</a>, <a class="el" href="kvi__network_8h_source.html#l00081">m_pChannelList</a>, <a class="el" href="kvi__network_8h_source.html#l00088">m_pCurrentServer</a>, <a class="el" href="kvi__network_8h_source.html#l00082">m_pNickServRuleSet</a>, <a class="el" href="kvi__network_8h_source.html#l00087">m_pServerList</a>, <a class="el" href="kvi__network_8h_source.html#l00071">m_szName</a>, and <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>.</p>
 
 </div>
 </div>
@@ -198,7 +202,7 @@ Inheritance diagram for KviNetwork:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviNetwork.html" title="Network handling class.">KviNetwork</a> </dd></dl>
 
-<p>References <a class="el" href="kvi__network_8cpp_source.html#l00070">copyFrom()</a>, <a class="el" href="kvi__network_8h_source.html#l00080">m_pChannelList</a>, <a class="el" href="kvi__network_8h_source.html#l00081">m_pNickServRuleSet</a>, <a class="el" href="kvi__network_8h_source.html#l00086">m_pServerList</a>, and <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="kvi__network_8cpp_source.html#l00074">copyFrom()</a>, <a class="el" href="kvi__network_8h_source.html#l00081">m_pChannelList</a>, <a class="el" href="kvi__network_8h_source.html#l00082">m_pNickServRuleSet</a>, <a class="el" href="kvi__network_8h_source.html#l00087">m_pServerList</a>, and <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>.</p>
 
 </div>
 </div>
@@ -219,7 +223,7 @@ Inheritance diagram for KviNetwork:</div>
 
 <p>Destroys the network object. </p>
 
-<p>References <a class="el" href="kvi__network_8h_source.html#l00080">m_pChannelList</a>, <a class="el" href="kvi__network_8h_source.html#l00081">m_pNickServRuleSet</a>, and <a class="el" href="kvi__network_8h_source.html#l00086">m_pServerList</a>.</p>
+<p>References <a class="el" href="kvi__network_8h_source.html#l00081">m_pChannelList</a>, <a class="el" href="kvi__network_8h_source.html#l00082">m_pNickServRuleSet</a>, and <a class="el" href="kvi__network_8h_source.html#l00087">m_pServerList</a>.</p>
 
 </div>
 </div>
@@ -259,10 +263,30 @@ Inheritance diagram for KviNetwork:</div>
 </div>
 <div class="memdoc">
 
-<p>Returns a list of channels with autojoin flag. </p>
+<p>Returns the list of channels with autojoin flag. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>QStringList * </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01375">KviIrcConnection::loginComplete()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01392">KviIrcConnection::loginComplete()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a82a81d8a5fe29015b7d358e8b77c7e00"></a><!-- doxytag: member="KviNetwork::autoJoinChannelListAsString" ref="a82a81d8a5fe29015b7d358e8b77c7e00" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QString KviNetwork::autoJoinChannelListAsString </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns the list of channels with autojoin flag as a string. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
 </div>
 </div>
@@ -291,9 +315,9 @@ Inheritance diagram for KviNetwork:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__network_8h_source.html#l00082">m_bAutoConnect</a>, <a class="el" href="kvi__network_8h_source.html#l00080">m_pChannelList</a>, <a class="el" href="kvi__network_8h_source.html#l00081">m_pNickServRuleSet</a>, <a class="el" href="kvi__network_8h_source.html#l00071">m_szDescription</a>, <a class="el" href="kvi__network_8h_source.html#l00072">m_szEncoding</a>, <a class="el" href="kvi__network_8h_source.html#l00070">m_szName</a>, <a class="el" href="kvi__network_8h_source.html#l00074">m_szNickName</a>, <a class="el" href="kvi__network_8h_source.html#l00078">m_szOnConnectCommand</a>, <a class="el" href="kvi__network_8h_source.html#l00079">m_szOnLoginCommand</a>, <a class="el" href="kvi__network_8h_source.html#l00077">m_szPass</a>, <a class="el" href="kvi__network_8h_source.html#l00076">m_szRealName</a>, <a class="el" href="kvi__network_8h_source.html#l00073">m_szTextEncoding</a>, <a class="el" href="kvi__network_8h_source.html#l00083">m_szUserIdentityId</a>, and <a class="el" href="kvi__network_8h_source.html#l00075">m_szUserName</a>.</p>
+<p>References <a class="el" href="kvi__network_8h_source.html#l00083">m_bAutoConnect</a>, <a class="el" href="kvi__network_8h_source.html#l00081">m_pChannelList</a>, <a class="el" href="kvi__network_8h_source.html#l00082">m_pNickServRuleSet</a>, <a class="el" href="kvi__network_8h_source.html#l00072">m_szDescription</a>, <a class="el" href="kvi__network_8h_source.html#l00073">m_szEncoding</a>, <a class="el" href="kvi__network_8h_source.html#l00071">m_szName</a>, <a class="el" href="kvi__network_8h_source.html#l00075">m_szNickName</a>, <a class="el" href="kvi__network_8h_source.html#l00079">m_szOnConnectCommand</a>, <a class="el" href="kvi__network_8h_source.html#l00080">m_szOnLoginCommand</a>, <a class="el" href="kvi__network_8h_source.html#l00078">m_szPass</a>, <a class="el" href="kvi__network_8h_source.html#l00077">m_szRealName</a>, <a class="el" href="kvi__network_8h_source.html#l00074">m_szTextEncoding</a>, <a class="el" href="kvi__network_8h_source.html#l00084">m_szUserIdentityId</a>, and <a class="el" href="kvi__network_8h_source.html#l00076">m_szUserName</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00031">KviNetwork()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00029">KviNetwork()</a>.</p>
 
 </div>
 </div>
@@ -315,7 +339,7 @@ Inheritance diagram for KviNetwork:</div>
 <p>Returns the current server. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviServer.html" title="The class which manages the irc servers.">KviServer</a> </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__network_8h_source.html#l00087">m_pCurrentServer</a>, and <a class="el" href="kvi__network_8h_source.html#l00086">m_pServerList</a>.</p>
+<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__network_8h_source.html#l00088">m_pCurrentServer</a>, and <a class="el" href="kvi__network_8h_source.html#l00087">m_pServerList</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">KviIrcContext::connectToCurrentServer()</a>.</p>
 
@@ -389,7 +413,7 @@ Inheritance diagram for KviNetwork:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviServer.html" title="The class which manages the irc servers.">KviServer</a> </dd></dl>
 
-<p>References <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00285">KviServer::isIPv6()</a>, <a class="el" href="kvi__network_8h_source.html#l00086">m_pServerList</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">KviServer::m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00139">KviServer::m_szId</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00120">KviServer::m_uPort</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, and <a class="el" href="kvi__ircserver_8h_source.html#l00291">KviServer::useSSL()</a>.</p>
+<p>References <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00291">KviServer::isIPv6()</a>, <a class="el" href="kvi__network_8h_source.html#l00087">m_pServerList</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">KviServer::m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00139">KviServer::m_szId</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00120">KviServer::m_uPort</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, and <a class="el" href="kvi__ircserver_8h_source.html#l00297">KviServer::useSSL()</a>.</p>
 
 </div>
 </div>
@@ -418,7 +442,7 @@ Inheritance diagram for KviNetwork:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviServer.html" title="The class which manages the irc servers.">KviServer</a> </dd></dl>
 
-<p>References <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__network_8h_source.html#l00086">m_pServerList</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, and <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>.</p>
+<p>References <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__network_8h_source.html#l00087">m_pServerList</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, and <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>.</p>
 
 </div>
 </div>
@@ -447,7 +471,7 @@ Inheritance diagram for KviNetwork:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, and <a class="el" href="kvi__network_8h_source.html#l00086">m_pServerList</a>.</p>
+<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, and <a class="el" href="kvi__network_8h_source.html#l00087">m_pServerList</a>.</p>
 
 </div>
 </div>
@@ -469,7 +493,7 @@ Inheritance diagram for KviNetwork:</div>
 <p>Returns the name of the network. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00078">KviServerDataBase::addNetwork()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00089">KviServerDataBase::currentNetwork()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01108">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00151">KviServerDataBase::makeCurrentServer()</a>, <a class="el" href="kvi__ircconnectiontarget_8cpp_source.html#l00050">KviIrcConnectionTarget::networkName()</a>, and <a class="el" href="kvi__mdichild_8cpp_source.html#l00226">KviMdiChild::setClient()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00078">KviServerDataBase::addNetwork()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01126">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00151">KviServerDataBase::makeCurrentServer()</a>, <a class="el" href="kvi__ircconnectiontarget_8cpp_source.html#l00050">KviIrcConnectionTarget::networkName()</a>, and <a class="el" href="kvi__mdichild_8cpp_source.html#l00227">KviMdiChild::setClient()</a>.</p>
 
 </div>
 </div>
@@ -491,7 +515,7 @@ Inheritance diagram for KviNetwork:</div>
 <p>Returns the nickname of the user associated to the network. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01108">KviIrcConnection::loginToIrcServer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01126">KviIrcConnection::loginToIrcServer()</a>.</p>
 
 </div>
 </div>
@@ -513,7 +537,7 @@ Inheritance diagram for KviNetwork:</div>
 <p>Returns a set of rules for the NickServ. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviNickServRuleSet.html">KviNickServRuleSet</a> * </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01010">KviServerParser::parseLiteralNotice()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01061">KviServerParser::parseLiteralNotice()</a>.</p>
 
 </div>
 </div>
@@ -535,7 +559,7 @@ Inheritance diagram for KviNetwork:</div>
 <p>Returns the commands to run on network connect. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01108">KviIrcConnection::loginToIrcServer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01126">KviIrcConnection::loginToIrcServer()</a>.</p>
 
 </div>
 </div>
@@ -557,7 +581,7 @@ Inheritance diagram for KviNetwork:</div>
 <p>Returns the commands to run on network login. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01375">KviIrcConnection::loginComplete()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01392">KviIrcConnection::loginComplete()</a>.</p>
 
 </div>
 </div>
@@ -579,7 +603,7 @@ Inheritance diagram for KviNetwork:</div>
 <p>Returns the password of the user associated to the network. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01108">KviIrcConnection::loginToIrcServer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01126">KviIrcConnection::loginToIrcServer()</a>.</p>
 
 </div>
 </div>
@@ -601,7 +625,7 @@ Inheritance diagram for KviNetwork:</div>
 <p>Returns the realname of the user associated to the network. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01108">KviIrcConnection::loginToIrcServer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01126">KviIrcConnection::loginToIrcServer()</a>.</p>
 
 </div>
 </div>
@@ -654,6 +678,35 @@ Inheritance diagram for KviNetwork:</div>
 
 </div>
 </div>
+<a class="anchor" id="a9b3d3c1ba040b98b9a2ba6c7ebf0e877"></a><!-- doxytag: member="KviNetwork::setAutoJoinChannelList" ref="a9b3d3c1ba040b98b9a2ba6c7ebf0e877" args="(const QString &amp;szNewChannelList)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KviNetwork::setAutoJoinChannelList </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>szNewChannelList</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Sets the list of channels to mark for autojoin. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>szNewChannelList</em>&nbsp;</td><td>A comma separated list of channels </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
+
+<p>References <a class="el" href="kvi__network_8h_source.html#l00081">m_pChannelList</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aaa199bee4c5bc572a89c7379e6a8d980"></a><!-- doxytag: member="KviNetwork::setAutoJoinChannelList" ref="aaa199bee4c5bc572a89c7379e6a8d980" args="(QStringList *pNewChannelList)" -->
 <div class="memitem">
 <div class="memproto">
@@ -679,7 +732,7 @@ Inheritance diagram for KviNetwork:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__network_8h_source.html#l00080">m_pChannelList</a>.</p>
+<p>References <a class="el" href="kvi__network_8h_source.html#l00081">m_pChannelList</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
 
@@ -710,7 +763,7 @@ Inheritance diagram for KviNetwork:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00806">KviPointerList&lt; T &gt;::findRef()</a>, <a class="el" href="kvi__network_8h_source.html#l00087">m_pCurrentServer</a>, and <a class="el" href="kvi__network_8h_source.html#l00086">m_pServerList</a>.</p>
+<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00806">KviPointerList&lt; T &gt;::findRef()</a>, <a class="el" href="kvi__network_8h_source.html#l00088">m_pCurrentServer</a>, and <a class="el" href="kvi__network_8h_source.html#l00087">m_pServerList</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00106">KviServerDataBase::makeCurrentBestServerInNetwork()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00151">KviServerDataBase::makeCurrentServer()</a>.</p>
 
@@ -852,7 +905,7 @@ Inheritance diagram for KviNetwork:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__network_8h_source.html#l00081">m_pNickServRuleSet</a>.</p>
+<p>References <a class="el" href="kvi__network_8h_source.html#l00082">m_pNickServRuleSet</a>.</p>
 
 </div>
 </div>
@@ -1103,7 +1156,7 @@ Inheritance diagram for KviNetwork:</div>
 <p>Returns the username of the user associated to the network. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01108">KviIrcConnection::loginToIrcServer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01126">KviIrcConnection::loginToIrcServer()</a>.</p>
 
 </div>
 </div>
@@ -1133,7 +1186,7 @@ Inheritance diagram for KviNetwork:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00070">copyFrom()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00040">KviNetwork()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00074">copyFrom()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00038">KviNetwork()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
 
 </div>
 </div>
@@ -1148,7 +1201,7 @@ Inheritance diagram for KviNetwork:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00070">copyFrom()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00031">KviNetwork()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00058">setAutoJoinChannelList()</a>, and <a class="el" href="kvi__network_8cpp_source.html#l00051">~KviNetwork()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00074">copyFrom()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00029">KviNetwork()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00056">setAutoJoinChannelList()</a>, and <a class="el" href="kvi__network_8cpp_source.html#l00049">~KviNetwork()</a>.</p>
 
 </div>
 </div>
@@ -1163,7 +1216,7 @@ Inheritance diagram for KviNetwork:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00143">currentServer()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00040">KviNetwork()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>, and <a class="el" href="kvi__network_8cpp_source.html#l00138">setCurrentServer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00147">currentServer()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00038">KviNetwork()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>, and <a class="el" href="kvi__network_8cpp_source.html#l00142">setCurrentServer()</a>.</p>
 
 </div>
 </div>
@@ -1178,7 +1231,7 @@ Inheritance diagram for KviNetwork:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00070">copyFrom()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00031">KviNetwork()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00064">setNickServRuleSet()</a>, and <a class="el" href="kvi__network_8cpp_source.html#l00051">~KviNetwork()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00074">copyFrom()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00029">KviNetwork()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00068">setNickServRuleSet()</a>, and <a class="el" href="kvi__network_8cpp_source.html#l00049">~KviNetwork()</a>.</p>
 
 </div>
 </div>
@@ -1193,7 +1246,7 @@ Inheritance diagram for KviNetwork:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00143">currentServer()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00106">findServer()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00364">KviServerDataBase::importFromMircIni()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00101">insertServer()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00031">KviNetwork()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00106">KviServerDataBase::makeCurrentBestServerInNetwork()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00138">setCurrentServer()</a>, and <a class="el" href="kvi__network_8cpp_source.html#l00051">~KviNetwork()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00147">currentServer()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00110">findServer()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00364">KviServerDataBase::importFromMircIni()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00105">insertServer()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00029">KviNetwork()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00106">KviServerDataBase::makeCurrentBestServerInNetwork()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00142">setCurrentServer()</a>, and <a class="el" href="kvi__network_8cpp_source.html#l00049">~KviNetwork()</a>.</p>
 
 </div>
 </div>
@@ -1208,7 +1261,7 @@ Inheritance diagram for KviNetwork:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00070">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00074">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
 
 </div>
 </div>
@@ -1223,7 +1276,7 @@ Inheritance diagram for KviNetwork:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00070">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00074">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
 
 </div>
 </div>
@@ -1238,7 +1291,7 @@ Inheritance diagram for KviNetwork:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00070">copyFrom()</a>, and <a class="el" href="kvi__network_8cpp_source.html#l00040">KviNetwork()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00074">copyFrom()</a>, and <a class="el" href="kvi__network_8cpp_source.html#l00038">KviNetwork()</a>.</p>
 
 </div>
 </div>
@@ -1253,7 +1306,7 @@ Inheritance diagram for KviNetwork:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00070">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00074">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
 
 </div>
 </div>
@@ -1268,7 +1321,7 @@ Inheritance diagram for KviNetwork:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00070">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00074">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
 
 </div>
 </div>
@@ -1283,7 +1336,7 @@ Inheritance diagram for KviNetwork:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00070">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00074">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
 
 </div>
 </div>
@@ -1298,7 +1351,7 @@ Inheritance diagram for KviNetwork:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00070">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00074">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
 
 </div>
 </div>
@@ -1313,7 +1366,7 @@ Inheritance diagram for KviNetwork:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00070">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00074">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
 
 </div>
 </div>
@@ -1328,7 +1381,7 @@ Inheritance diagram for KviNetwork:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00070">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00074">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
 
 </div>
 </div>
@@ -1343,7 +1396,7 @@ Inheritance diagram for KviNetwork:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00070">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00074">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
 
 </div>
 </div>
@@ -1358,7 +1411,7 @@ Inheritance diagram for KviNetwork:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00070">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__network_8cpp_source.html#l00074">copyFrom()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">KviServerDataBase::load()</a>.</p>
 
 </div>
 </div>
@@ -1367,7 +1420,7 @@ Inheritance diagram for KviNetwork:</div>
 <li>src/kvilib/irc/<a class="el" href="kvi__network_8cpp.html">kvi_network.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:35 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:27 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

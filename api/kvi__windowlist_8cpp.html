@@ -49,7 +49,12 @@
 <tr><td colspan="2"><h2>Defines</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__windowlist_8cpp.html#a910d5cb8026845fe248f5cd09312198b">_KVI_DEBUG_CHECK_RANGE_</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__windowlist_8cpp.html#a3f6de98686166fcd91f08840ab31f526">KVI_WINDOWLIST_MIN_WIDTH</a>&nbsp;&nbsp;&nbsp;120</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__windowlist_8cpp.html#a1ec0c161e2a24f81b0b7a09c01833fcc">KVI_WINDOWLISTBUTTON_CONTEXTINDICATORHEIGHT</a>&nbsp;&nbsp;&nbsp;6</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__windowlist_8cpp.html#a091da11658716b4b9b49b6f84583283f">KVI_WINDOWLISTBUTTON_BOTTOM_MARGIN</a>&nbsp;&nbsp;&nbsp;6</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__windowlist_8cpp.html#a1ec0c161e2a24f81b0b7a09c01833fcc">KVI_WINDOWLISTBUTTON_CONTEXTINDICATORHEIGHT</a>&nbsp;&nbsp;&nbsp;4</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__windowlist_8cpp.html#aa7accab5609c42fa7719bfb4124a97cc">KVI_WINDOWLISTBUTTON_CONTEXTINDICATORSPACING</a>&nbsp;&nbsp;&nbsp;1</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__windowlist_8cpp.html#ac3d7b98f81ec4e73f543871ffcbe53a3">KVI_WINDOWLISTBUTTON_LEFT_MARGIN</a>&nbsp;&nbsp;&nbsp;6</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__windowlist_8cpp.html#af028a008420198106c6516b9cb3a56ac">KVI_WINDOWLISTBUTTON_RIGHT_MARGIN</a>&nbsp;&nbsp;&nbsp;6</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__windowlist_8cpp.html#a34314bec0a5762c9a267576f572782dd">KVI_WINDOWLISTBUTTON_TOP_MARGIN</a>&nbsp;&nbsp;&nbsp;6</td></tr>
 <tr><td colspan="2"><h2>Variables</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPixmap *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__windowlist_8cpp.html#a9c095c5c83fa0e34e42016bbe70bc42d">g_pActivityMeterPixmap</a></td></tr>
 </table>
@@ -78,7 +83,22 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__windowlist_8cpp_source.html#l00434">KviClassicWindowList::KviClassicWindowList()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__windowlist_8cpp_source.html#l00474">KviClassicWindowList::KviClassicWindowList()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a091da11658716b4b9b49b6f84583283f"></a><!-- doxytag: member="kvi_windowlist.cpp::KVI_WINDOWLISTBUTTON_BOTTOM_MARGIN" ref="a091da11658716b4b9b49b6f84583283f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KVI_WINDOWLISTBUTTON_BOTTOM_MARGIN&nbsp;&nbsp;&nbsp;6</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="kvi__windowlist_8cpp_source.html#l00513">KviClassicWindowList::calcButtonHeight()</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00289">KviWindowListButton::drawButtonLabel()</a>.</p>
 
 </div>
 </div>
@@ -87,13 +107,73 @@
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KVI_WINDOWLISTBUTTON_CONTEXTINDICATORHEIGHT&nbsp;&nbsp;&nbsp;6</td>
+          <td class="memname">#define KVI_WINDOWLISTBUTTON_CONTEXTINDICATORHEIGHT&nbsp;&nbsp;&nbsp;4</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__windowlist_8cpp_source.html#l00473">KviClassicWindowList::calcButtonHeight()</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00274">KviWindowListButton::drawButtonLabel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__windowlist_8cpp_source.html#l00513">KviClassicWindowList::calcButtonHeight()</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00289">KviWindowListButton::drawButtonLabel()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa7accab5609c42fa7719bfb4124a97cc"></a><!-- doxytag: member="kvi_windowlist.cpp::KVI_WINDOWLISTBUTTON_CONTEXTINDICATORSPACING" ref="aa7accab5609c42fa7719bfb4124a97cc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KVI_WINDOWLISTBUTTON_CONTEXTINDICATORSPACING&nbsp;&nbsp;&nbsp;1</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="kvi__windowlist_8cpp_source.html#l00513">KviClassicWindowList::calcButtonHeight()</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00289">KviWindowListButton::drawButtonLabel()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3d7b98f81ec4e73f543871ffcbe53a3"></a><!-- doxytag: member="kvi_windowlist.cpp::KVI_WINDOWLISTBUTTON_LEFT_MARGIN" ref="ac3d7b98f81ec4e73f543871ffcbe53a3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KVI_WINDOWLISTBUTTON_LEFT_MARGIN&nbsp;&nbsp;&nbsp;6</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="kvi__windowlist_8cpp_source.html#l00289">KviWindowListButton::drawButtonLabel()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af028a008420198106c6516b9cb3a56ac"></a><!-- doxytag: member="kvi_windowlist.cpp::KVI_WINDOWLISTBUTTON_RIGHT_MARGIN" ref="af028a008420198106c6516b9cb3a56ac" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KVI_WINDOWLISTBUTTON_RIGHT_MARGIN&nbsp;&nbsp;&nbsp;6</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="kvi__windowlist_8cpp_source.html#l00289">KviWindowListButton::drawButtonLabel()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a34314bec0a5762c9a267576f572782dd"></a><!-- doxytag: member="kvi_windowlist.cpp::KVI_WINDOWLISTBUTTON_TOP_MARGIN" ref="a34314bec0a5762c9a267576f572782dd" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KVI_WINDOWLISTBUTTON_TOP_MARGIN&nbsp;&nbsp;&nbsp;6</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="kvi__windowlist_8cpp_source.html#l00513">KviClassicWindowList::calcButtonHeight()</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00289">KviWindowListButton::drawButtonLabel()</a>.</p>
 
 </div>
 </div>
@@ -112,7 +192,7 @@
 </div>
 </div>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:30 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:21 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

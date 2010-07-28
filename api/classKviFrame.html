@@ -107,6 +107,7 @@ Inheritance diagram for KviFrame:</div>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFrame.html#a131fd00809f95b16c56e0110da5e8ee4">childWindowCloseRequest</a> (<a class="el" href="classKviWindow.html">KviWindow</a> *wnd)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFrame.html#a3e2cb606f2f77a0498f05148423638ca">childWindowSelectionStateChange</a> (<a class="el" href="classKviWindow.html">KviWindow</a> *pWnd, bool bGotSelectionNow)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFrame.html#a89a5c4724998499b5e42910206280921">closeEvent</a> (QCloseEvent *e)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFrame.html#aac961d73f8fa6d3b6a5da0ac51016e34">contextMenuEvent</a> (QContextMenuEvent *event)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFrame.html#ababfcf72b6d8811a381ff7bc46391223">createWindowList</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviMdiChild.html">KviMdiChild</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFrame.html#a513621e8abd9e58255181df10c7e868c">dockWindow</a> (<a class="el" href="classKviWindow.html">KviWindow</a> *wnd, bool bCascade=true, QRect *setGeom=0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFrame.html#a5ee80dcd571ed362f5d9afa75870d88e">focusNextPrevChild</a> (bool next)</td></tr>
@@ -163,7 +164,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00850">applyOptions()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01023">createWindowList()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00125">g_pApp</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00090">g_pFrame</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00492">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00290">installAccelerators()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00086">KVI_DEFAULT_FRAME_CAPTION</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00663">KVI_OPTION_RECT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00054">KVI_SMALLICON_KVIRC</a>, <a class="el" href="kvi__frame_8h_source.html#l00085">KviMdiManager</a>, <a class="el" href="kvi__options_8h_source.html#l00334">KviOption_boolFrameIsMaximized</a>, <a class="el" href="kvi__options_8h_source.html#l00266">KviOption_boolStatusBarVisible</a>, <a class="el" href="kvi__options_8h_source.html#l00113">KviOption_boolUseBigIcons</a>, <a class="el" href="kvi__options_8h_source.html#l00081">KviOption_rectFrameGeometry</a>, <a class="el" href="kvi__statusbar_8cpp_source.html#l00176">KviStatusBar::load()</a>, <a class="el" href="kvi__frame_8h_source.html#l00105">m_pActiveContext</a>, <a class="el" href="kvi__frame_8h_source.html#l00107">m_pDockExtension</a>, <a class="el" href="kvi__frame_8h_source.html#l00099">m_pMdi</a>, <a class="el" href="kvi__frame_8h_source.html#l00098">m_pMenuBar</a>, <a class="el" href="kvi__frame_8h_source.html#l00100">m_pModuleExtensionToolBarList</a>, <a class="el" href="kvi__frame_8h_source.html#l00097">m_pSplitter</a>, <a class="el" href="kvi__frame_8h_source.html#l00102">m_pStatusBar</a>, <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l01112">setUsesBigPixmaps()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00859">applyOptions()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01035">createWindowList()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00127">g_pApp</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00090">g_pFrame</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00492">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00290">installAccelerators()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00086">KVI_DEFAULT_FRAME_CAPTION</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00673">KVI_OPTION_RECT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00054">KVI_SMALLICON_KVIRC</a>, <a class="el" href="kvi__frame_8h_source.html#l00085">KviMdiManager</a>, <a class="el" href="kvi__options_8h_source.html#l00334">KviOption_boolFrameIsMaximized</a>, <a class="el" href="kvi__options_8h_source.html#l00266">KviOption_boolStatusBarVisible</a>, <a class="el" href="kvi__options_8h_source.html#l00113">KviOption_boolUseBigIcons</a>, <a class="el" href="kvi__options_8h_source.html#l00081">KviOption_rectFrameGeometry</a>, <a class="el" href="kvi__statusbar_8cpp_source.html#l00176">KviStatusBar::load()</a>, <a class="el" href="kvi__frame_8h_source.html#l00105">m_pActiveContext</a>, <a class="el" href="kvi__frame_8h_source.html#l00107">m_pDockExtension</a>, <a class="el" href="kvi__frame_8h_source.html#l00099">m_pMdi</a>, <a class="el" href="kvi__frame_8h_source.html#l00098">m_pMenuBar</a>, <a class="el" href="kvi__frame_8h_source.html#l00100">m_pModuleExtensionToolBarList</a>, <a class="el" href="kvi__frame_8h_source.html#l00097">m_pSplitter</a>, <a class="el" href="kvi__frame_8h_source.html#l00102">m_pStatusBar</a>, <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l01125">setUsesBigPixmaps()</a>.</p>
 
 </div>
 </div>
@@ -182,7 +183,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00765">KviPointerList&lt; T &gt;::at()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00403">closeWindow()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__frame_8h_source.html#l00073">KviDockExtension::die()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00536">KviApp::frameDestructorCallback()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00125">g_pApp</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00090">g_pFrame</a>, <a class="el" href="kvi__customtoolbarmanager_8h_source.html#l00047">KviCustomToolBarManager::instance()</a>, <a class="el" href="kvi__mdimanager_8h_source.html#l00146">KviMdiManager::isInSDIMode()</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00663">KVI_OPTION_RECT</a>, <a class="el" href="kvi__window_8h_source.html#l00082">KVI_WINDOW_TYPE_CONSOLE</a>, <a class="el" href="kvi__options_8h_source.html#l00334">KviOption_boolFrameIsMaximized</a>, <a class="el" href="kvi__options_8h_source.html#l00248">KviOption_boolMdiManagerInSdiMode</a>, <a class="el" href="kvi__options_8h_source.html#l00241">KviOption_boolShowDockExtension</a>, <a class="el" href="kvi__options_8h_source.html#l00266">KviOption_boolStatusBarVisible</a>, <a class="el" href="kvi__options_8h_source.html#l00113">KviOption_boolUseBigIcons</a>, <a class="el" href="kvi__options_8h_source.html#l00081">KviOption_rectFrameGeometry</a>, <a class="el" href="kvi__frame_8h_source.html#l00107">m_pDockExtension</a>, <a class="el" href="kvi__frame_8h_source.html#l00099">m_pMdi</a>, <a class="el" href="kvi__frame_8h_source.html#l00100">m_pModuleExtensionToolBarList</a>, <a class="el" href="kvi__frame_8h_source.html#l00102">m_pStatusBar</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00265">saveModuleExtensionToolBars()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00985">saveToolBarPositions()</a>, <a class="el" href="kvi__customtoolbarmanager_8cpp_source.html#l00141">KviCustomToolBarManager::storeVisibilityState()</a>, <a class="el" href="kvi__window_8h_source.html#l00189">KviWindow::type()</a>, and <a class="el" href="kvi__tal__mainwindow_8cpp_source.html#l00050">KviTalMainWindow::usesBigPixmaps()</a>.</p>
+<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00765">KviPointerList&lt; T &gt;::at()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00403">closeWindow()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__frame_8h_source.html#l00073">KviDockExtension::die()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00544">KviApp::frameDestructorCallback()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00127">g_pApp</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00090">g_pFrame</a>, <a class="el" href="kvi__customtoolbarmanager_8h_source.html#l00047">KviCustomToolBarManager::instance()</a>, <a class="el" href="kvi__mdimanager_8h_source.html#l00152">KviMdiManager::isInSDIMode()</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00673">KVI_OPTION_RECT</a>, <a class="el" href="kvi__window_8h_source.html#l00082">KVI_WINDOW_TYPE_CONSOLE</a>, <a class="el" href="kvi__options_8h_source.html#l00334">KviOption_boolFrameIsMaximized</a>, <a class="el" href="kvi__options_8h_source.html#l00248">KviOption_boolMdiManagerInSdiMode</a>, <a class="el" href="kvi__options_8h_source.html#l00241">KviOption_boolShowDockExtension</a>, <a class="el" href="kvi__options_8h_source.html#l00266">KviOption_boolStatusBarVisible</a>, <a class="el" href="kvi__options_8h_source.html#l00113">KviOption_boolUseBigIcons</a>, <a class="el" href="kvi__options_8h_source.html#l00081">KviOption_rectFrameGeometry</a>, <a class="el" href="kvi__frame_8h_source.html#l00107">m_pDockExtension</a>, <a class="el" href="kvi__frame_8h_source.html#l00099">m_pMdi</a>, <a class="el" href="kvi__frame_8h_source.html#l00100">m_pModuleExtensionToolBarList</a>, <a class="el" href="kvi__frame_8h_source.html#l00102">m_pStatusBar</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00265">saveModuleExtensionToolBars()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00997">saveToolBarPositions()</a>, <a class="el" href="kvi__customtoolbarmanager_8cpp_source.html#l00141">KviCustomToolBarManager::storeVisibilityState()</a>, <a class="el" href="kvi__window_8h_source.html#l00189">KviWindow::type()</a>, and <a class="el" href="kvi__tal__mainwindow_8cpp_source.html#l00050">KviTalMainWindow::usesBigPixmaps()</a>.</p>
 
 </div>
 </div>
@@ -244,7 +245,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00691">childConnectionAwayStateChange()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00123">KviStatusBarAwayIndicator::KviStatusBarAwayIndicator()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00694">childConnectionAwayStateChange()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00123">KviStatusBarAwayIndicator::KviStatusBarAwayIndicator()</a>.</p>
 
 </div>
 </div>
@@ -263,7 +264,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00670">childConnectionLagChange()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00241">KviStatusBarLagIndicator::KviStatusBarLagIndicator()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00673">childConnectionLagChange()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00241">KviStatusBarLagIndicator::KviStatusBarLagIndicator()</a>.</p>
 
 </div>
 </div>
@@ -282,7 +283,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00684">childConnectionNickNameChange()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00687">childConnectionNickNameChange()</a>.</p>
 
 </div>
 </div>
@@ -301,7 +302,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00677">childConnectionServerInfoChange()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00680">childConnectionServerInfoChange()</a>.</p>
 
 </div>
 </div>
@@ -320,7 +321,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00698">childConnectionUserModeChange()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00701">childConnectionUserModeChange()</a>.</p>
 
 </div>
 </div>
@@ -339,7 +340,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__coreactions_8cpp_source.html#l00605">KviConnectAction::activate()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00333">KviAction::activeContextChanged()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00987">KviGoAwayAction::activeContextStateChanged()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00547">KviConnectAction::activeContextStateChanged()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00348">KviAction::activeContextStateChanged()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00186">KviAction::activeWindowChanged()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l01042">KviGoAwayAction::addToPopupMenu()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00611">KviConnectAction::addToPopupMenu()</a>, <a class="el" href="kvi__statusbar_8cpp_source.html#l00530">KviStatusBar::mouseDoubleClickEvent()</a>, <a class="el" href="kvi__statusbar_8cpp_source.html#l00657">KviStatusBar::setPermanentMessage()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00131">KviAction::setup()</a>, <a class="el" href="kvi__menubar_8cpp_source.html#l00217">KviMenuBar::setupMainPopup()</a>, <a class="el" href="kvi__statusbar_8cpp_source.html#l00307">KviStatusBar::tipRequest()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00309">KviStatusBarLagIndicator::updateDisplay()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00141">KviStatusBarAwayIndicator::updateDisplay()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__coreactions_8cpp_source.html#l00605">KviConnectAction::activate()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00363">KviAction::activeContextChanged()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00996">KviGoAwayAction::activeContextStateChanged()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00547">KviConnectAction::activeContextStateChanged()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00378">KviAction::activeContextStateChanged()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00216">KviAction::activeWindowChanged()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l01051">KviGoAwayAction::addToPopupMenu()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00611">KviConnectAction::addToPopupMenu()</a>, <a class="el" href="kvi__statusbar_8cpp_source.html#l00530">KviStatusBar::mouseDoubleClickEvent()</a>, <a class="el" href="kvi__statusbar_8cpp_source.html#l00657">KviStatusBar::setPermanentMessage()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00161">KviAction::setup()</a>, <a class="el" href="kvi__menubar_8cpp_source.html#l00218">KviMenuBar::setupMainPopup()</a>, <a class="el" href="kvi__statusbar_8cpp_source.html#l00307">KviStatusBar::tipRequest()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00309">KviStatusBarLagIndicator::updateDisplay()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00141">KviStatusBarAwayIndicator::updateDisplay()</a>.</p>
 
 </div>
 </div>
@@ -358,7 +359,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00705">childWindowActivated()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00123">KviStatusBarAwayIndicator::KviStatusBarAwayIndicator()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00241">KviStatusBarLagIndicator::KviStatusBarLagIndicator()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00708">childWindowActivated()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00123">KviStatusBarAwayIndicator::KviStatusBarAwayIndicator()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00241">KviStatusBarLagIndicator::KviStatusBarLagIndicator()</a>.</p>
 
 </div>
 </div>
@@ -377,7 +378,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00664">childContextStateChange()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00123">KviStatusBarAwayIndicator::KviStatusBarAwayIndicator()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00241">KviStatusBarLagIndicator::KviStatusBarLagIndicator()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00667">childContextStateChange()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00123">KviStatusBarAwayIndicator::KviStatusBarAwayIndicator()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00241">KviStatusBarLagIndicator::KviStatusBarLagIndicator()</a>.</p>
 
 </div>
 </div>
@@ -396,7 +397,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00705">childWindowActivated()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00708">childWindowActivated()</a>.</p>
 
 </div>
 </div>
@@ -416,7 +417,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00657">childWindowSelectionStateChange()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00660">childWindowSelectionStateChange()</a>.</p>
 
 </div>
 </div>
@@ -445,9 +446,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00705">childWindowActivated()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::context()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00374">KviWindow::createWindowListItem()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00547">dockWindow()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__window_8cpp_source.html#l00523">KviWindow::getConfigGroupName()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00555">KviConfig::hasGroup()</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00094">KviOption_boolWindowsRememberProperties</a>, <a class="el" href="kvi__window_8cpp_source.html#l00592">KviWindow::loadProperties()</a>, <a class="el" href="kvi__frame_8h_source.html#l00105">m_pActiveContext</a>, <a class="el" href="kvi__frame_8h_source.html#l00099">m_pMdi</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, <a class="el" href="kvi__window_8cpp_source.html#l01144">KviWindow::maximize()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00823">KviConfig::readBoolEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00842">KviConfig::readRectEntry()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00929">KviWindow::setFocus()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00088">KviMdiChild::setRestoredGeometry()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00132">KviMdiManager::showAndActivate()</a>, <a class="el" href="kvi__window_8h_source.html#l00326">KviWindow::triggerCreationEvents()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00360">KviWindow::typeString()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l00909">KviWindow::youAreUndocked()</a>.</p>
+<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00708">childWindowActivated()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::context()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00374">KviWindow::createWindowListItem()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00550">dockWindow()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__window_8cpp_source.html#l00524">KviWindow::getConfigGroupName()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00555">KviConfig::hasGroup()</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00094">KviOption_boolWindowsRememberProperties</a>, <a class="el" href="kvi__window_8cpp_source.html#l00593">KviWindow::loadProperties()</a>, <a class="el" href="kvi__frame_8h_source.html#l00105">m_pActiveContext</a>, <a class="el" href="kvi__frame_8h_source.html#l00099">m_pMdi</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, <a class="el" href="kvi__window_8cpp_source.html#l01145">KviWindow::maximize()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00823">KviConfig::readBoolEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00842">KviConfig::readRectEntry()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00930">KviWindow::setFocus()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00088">KviMdiChild::setRestoredGeometry()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00132">KviMdiManager::showAndActivate()</a>, <a class="el" href="kvi__window_8h_source.html#l00326">KviWindow::triggerCreationEvents()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00360">KviWindow::typeString()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l00910">KviWindow::youAreUndocked()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00583">KviIrcConnection::createChannel()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00578">createNewConsole()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00601">KviIrcConnection::createQuery()</a>, and <a class="el" href="kvi__debugwindow_8cpp_source.html#l00060">KviDebugWindow::getInstance()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00607">KviIrcConnection::createChannel()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00581">createNewConsole()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00625">KviIrcConnection::createQuery()</a>, and <a class="el" href="kvi__debugwindow_8cpp_source.html#l00060">KviDebugWindow::getInstance()</a>.</p>
 
 </div>
 </div>
@@ -466,9 +467,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__texticonmanager_8cpp_source.html#l00186">KviTextIconManager::applyOptions()</a>, <a class="el" href="kvi__windowlist_8cpp_source.html#l00164">KviWindowListBase::applyOptions()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__texticonmanager_8cpp_source.html#l00058">g_pTextIconManager</a>, <a class="el" href="kvi__frame_8h_source.html#l00099">m_pMdi</a>, <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, and <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>.</p>
+<p>References <a class="el" href="kvi__texticonmanager_8cpp_source.html#l00186">KviTextIconManager::applyOptions()</a>, <a class="el" href="kvi__windowlist_8cpp_source.html#l00169">KviWindowListBase::applyOptions()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__texticonmanager_8cpp_source.html#l00058">g_pTextIconManager</a>, <a class="el" href="kvi__frame_8h_source.html#l00099">m_pMdi</a>, <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, and <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>, and <a class="el" href="kvi__app_8cpp_source.html#l01181">KviApp::updateGui()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>, and <a class="el" href="kvi__app_8cpp_source.html#l01199">KviApp::updateGui()</a>.</p>
 
 </div>
 </div>
@@ -488,7 +489,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00705">childWindowActivated()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, and <a class="el" href="kvi__window_8cpp_source.html#l01209">KviWindow::lostUserFocus()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00708">childWindowActivated()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, and <a class="el" href="kvi__window_8cpp_source.html#l01208">KviWindow::lostUserFocus()</a>.</p>
 
 </div>
 </div>
@@ -510,7 +511,7 @@ Inheritance diagram for KviFrame:</div>
 
 <p>References <a class="el" href="classKviFrame.html#a43d37f4c6ab334a4a0a367b6134ab9e5">activeConnectionAwayStateChanged()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00197">KviIrcConnection::context()</a>, and <a class="el" href="kvi__frame_8h_source.html#l00105">m_pActiveContext</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00918">KviIrcConnection::changeAwayState()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00936">KviIrcConnection::changeAwayState()</a>.</p>
 
 </div>
 </div>
@@ -554,7 +555,7 @@ Inheritance diagram for KviFrame:</div>
 
 <p>References <a class="el" href="classKviFrame.html#a112202a6bc0ed9e87d27f62d7b65b9f4">activeConnectionNickNameChanged()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00197">KviIrcConnection::context()</a>, and <a class="el" href="kvi__frame_8h_source.html#l00105">m_pActiveContext</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01344">KviIrcConnection::nickChange()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01362">KviIrcConnection::nickChange()</a>.</p>
 
 </div>
 </div>
@@ -598,7 +599,7 @@ Inheritance diagram for KviFrame:</div>
 
 <p>References <a class="el" href="classKviFrame.html#adc3302948b6edd025ae58bb704987e6d">activeConnectionUserModeChanged()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00197">KviIrcConnection::context()</a>, and <a class="el" href="kvi__frame_8h_source.html#l00105">m_pActiveContext</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01356">KviIrcConnection::changeUserMode()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01374">KviIrcConnection::changeUserMode()</a>.</p>
 
 </div>
 </div>
@@ -649,9 +650,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviFrame.html#a5b45dde2ffdfd37e622757cbc3eafda2">activeContextChanged()</a>, <a class="el" href="classKviFrame.html#a9674909a9bfd81b839d614ff8bad8633">activeWindowChanged()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00492">KviIrcView::clearUnreaded()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::context()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00068">KviEvent_OnWindowActivated</a>, <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00058">KVS_TRIGGER_EVENT_0</a>, <a class="el" href="kvi__window_8cpp_source.html#l01209">KviWindow::lostUserFocus()</a>, <a class="el" href="kvi__frame_8h_source.html#l00105">m_pActiveContext</a>, <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, <a class="el" href="kvi__windowlist_8h_source.html#l00099">KviWindowListBase::setActiveItem()</a>, <a class="el" href="kvi__window_8h_source.html#l00202">KviWindow::view()</a>, and <a class="el" href="kvi__window_8h_source.html#l00213">KviWindow::windowListItem()</a>.</p>
+<p>References <a class="el" href="classKviFrame.html#a5b45dde2ffdfd37e622757cbc3eafda2">activeContextChanged()</a>, <a class="el" href="classKviFrame.html#a9674909a9bfd81b839d614ff8bad8633">activeWindowChanged()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00510">KviIrcView::clearUnreaded()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::context()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00068">KviEvent_OnWindowActivated</a>, <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00058">KVS_TRIGGER_EVENT_0</a>, <a class="el" href="kvi__window_8cpp_source.html#l01208">KviWindow::lostUserFocus()</a>, <a class="el" href="kvi__frame_8h_source.html#l00105">m_pActiveContext</a>, <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, <a class="el" href="kvi__windowlist_8h_source.html#l00099">KviWindowListBase::setActiveItem()</a>, <a class="el" href="kvi__window_8h_source.html#l00202">KviWindow::view()</a>, and <a class="el" href="kvi__window_8h_source.html#l00213">KviWindow::windowListItem()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00921">KviWindow::activateSelf()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00451">addWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00732">changeEvent()</a>, and <a class="el" href="kvi__mdimanager_8cpp_source.html#l00603">KviMdiManager::slotSubWindowActivated()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00922">KviWindow::activateSelf()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00452">addWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00735">changeEvent()</a>, and <a class="el" href="kvi__mdimanager_8cpp_source.html#l00618">KviMdiManager::slotSubWindowActivated()</a>.</p>
 
 </div>
 </div>
@@ -673,7 +674,7 @@ Inheritance diagram for KviFrame:</div>
 
 <p>References <a class="el" href="kvi__frame_8cpp_source.html#l00403">closeWindow()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00873">KviWindow::closeEvent()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00874">KviWindow::closeEvent()</a>.</p>
 
 </div>
 </div>
@@ -704,7 +705,7 @@ Inheritance diagram for KviFrame:</div>
 
 <p>References <a class="el" href="classKviFrame.html#aeab14fa5def82c73c71b7438332c6670">activeWindowSelectionStateChanged()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">KviUserListView::insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02095">KviUserListViewArea::keyPressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02161">KviUserListViewArea::mouseMoveEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02017">KviUserListViewArea::mousePressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">KviUserListView::partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">KviUserListView::removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01160">KviUserListView::select()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">KviUserListView::insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02044">KviUserListViewArea::keyPressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02110">KviUserListViewArea::mouseMoveEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01966">KviUserListViewArea::mousePressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">KviUserListView::partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">KviUserListView::removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01133">KviUserListView::select()</a>.</p>
 
 </div>
 </div>
@@ -724,7 +725,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__app_8cpp_source.html#l01448">KviApp::destroyFrame()</a>, <a class="el" href="kvi__frame_8h_source.html#l00155">dockExtension()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00339">executeInternalCommand()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00125">g_pApp</a>, <a class="el" href="kvi__internalcmd_8h_source.html#l00038">KVI_INTERNALCOMMAND_TRAYICON_SHOW</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__window_8h_source.html#l00082">KVI_WINDOW_TYPE_CONSOLE</a>, <a class="el" href="kvi__options_8h_source.html#l00292">KviOption_boolCloseInTray</a>, <a class="el" href="kvi__options_8h_source.html#l00253">KviOption_boolConfirmCloseWhenThereAreConnections</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, and <a class="el" href="namespaceKviMessageBox.html#ab46640cb0a56989d2f71e773bc54e5d4">KviMessageBox::warning()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__app_8cpp_source.html#l01462">KviApp::destroyFrame()</a>, <a class="el" href="kvi__frame_8h_source.html#l00155">dockExtension()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00339">executeInternalCommand()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00127">g_pApp</a>, <a class="el" href="kvi__internalcmd_8h_source.html#l00038">KVI_INTERNALCOMMAND_TRAYICON_SHOW</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__window_8h_source.html#l00082">KVI_WINDOW_TYPE_CONSOLE</a>, <a class="el" href="kvi__options_8h_source.html#l00292">KviOption_boolCloseInTray</a>, <a class="el" href="kvi__options_8h_source.html#l00253">KviOption_boolConfirmCloseWhenThereAreConnections</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, and <a class="el" href="namespaceKviMessageBox.html#ab46640cb0a56989d2f71e773bc54e5d4">KviMessageBox::warning()</a>.</p>
 
 </div>
 </div>
@@ -744,9 +745,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00598">consoleCount()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00156">KviMdiManager::destroyChild()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__window_8cpp_source.html#l00523">KviWindow::getConfigGroupName()</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00063">KviEvent_OnFrameWindowDestroyed</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00059">KviEvent_OnKVIrcShutdown</a>, <a class="el" href="kvi__options_8h_source.html#l00094">KviOption_boolWindowsRememberProperties</a>, <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00058">KVS_TRIGGER_EVENT_0</a>, <a class="el" href="kvi__frame_8h_source.html#l00105">m_pActiveContext</a>, <a class="el" href="kvi__frame_8h_source.html#l00099">m_pMdi</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, <a class="el" href="kvi__window_8h_source.html#l00204">KviWindow::mdiParent()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l01065">KviPointerList&lt; T &gt;::removeRef()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00345">saveWindowProperties()</a>, and <a class="el" href="kvi__window_8h_source.html#l00327">KviWindow::triggerDestructionEvents()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00601">consoleCount()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00162">KviMdiManager::destroyChild()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__window_8cpp_source.html#l00524">KviWindow::getConfigGroupName()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00156">KviMdiManager::hideChild()</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00063">KviEvent_OnFrameWindowDestroyed</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00059">KviEvent_OnKVIrcShutdown</a>, <a class="el" href="kvi__options_8h_source.html#l00094">KviOption_boolWindowsRememberProperties</a>, <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00058">KVS_TRIGGER_EVENT_0</a>, <a class="el" href="kvi__frame_8h_source.html#l00105">m_pActiveContext</a>, <a class="el" href="kvi__frame_8h_source.html#l00099">m_pMdi</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, <a class="el" href="kvi__window_8h_source.html#l00204">KviWindow::mdiParent()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l01065">KviPointerList&lt; T &gt;::removeRef()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00345">saveWindowProperties()</a>, and <a class="el" href="kvi__window_8h_source.html#l00327">KviWindow::triggerDestructionEvents()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00631">childWindowCloseRequest()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00188">KviIrcContext::closeAllContextWindows()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00156">KviIrcContext::closeAllDeadChannels()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00172">KviIrcContext::closeAllDeadQueries()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l00549">KviServerParser::parseLiteralKick()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l01399">KviServerParser::parseLiteralNick()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l00308">KviServerParser::parseLiteralPart()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00170">~KviFrame()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00634">childWindowCloseRequest()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00188">KviIrcContext::closeAllContextWindows()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00156">KviIrcContext::closeAllDeadChannels()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00172">KviIrcContext::closeAllDeadQueries()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l00549">KviServerParser::parseLiteralKick()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l01450">KviServerParser::parseLiteralNick()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l00308">KviServerParser::parseLiteralPart()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00170">~KviFrame()</a>.</p>
 
 </div>
 </div>
@@ -767,7 +768,25 @@ Inheritance diagram for KviFrame:</div>
 
 <p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__window_8h_source.html#l00082">KVI_WINDOW_TYPE_CONSOLE</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, and <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__console_8cpp_source.html#l00494">KviConsole::closeEvent()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00403">closeWindow()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__console_8cpp_source.html#l00504">KviConsole::closeEvent()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00403">closeWindow()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aac961d73f8fa6d3b6a5da0ac51016e34"></a><!-- doxytag: member="KviFrame::contextMenuEvent" ref="aac961d73f8fa6d3b6a5da0ac51016e34" args="(QContextMenuEvent *event)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KviFrame::contextMenuEvent </td>
+          <td>(</td>
+          <td class="paramtype">QContextMenuEvent *&nbsp;</td>
+          <td class="paramname"> <em>event</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -787,9 +806,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00451">addWindow()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__customtoolbarmanager_8cpp_source.html#l00164">KviCustomToolBarManager::createToolBarsVisibleAtStartup()</a>, <a class="el" href="kvi__actionmanager_8cpp_source.html#l00237">KviActionManager::delayedRegisterAccelerators()</a>, <a class="el" href="kvi__actionmanager_8h_source.html#l00066">KviActionManager::instance()</a>, <a class="el" href="kvi__customtoolbarmanager_8h_source.html#l00047">KviCustomToolBarManager::instance()</a>, <a class="el" href="kvi__console_8h_source.html#l00074">KVI_CONSOLE_FLAG_FIRSTINFRAME</a>, <a class="el" href="kvi__frame_8h_source.html#l00081">KviConsole</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00250">restoreModuleExtensionToolBars()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00997">restoreToolBarPositions()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00452">addWindow()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__customtoolbarmanager_8cpp_source.html#l00164">KviCustomToolBarManager::createToolBarsVisibleAtStartup()</a>, <a class="el" href="kvi__actionmanager_8cpp_source.html#l00237">KviActionManager::delayedRegisterAccelerators()</a>, <a class="el" href="kvi__actionmanager_8h_source.html#l00066">KviActionManager::instance()</a>, <a class="el" href="kvi__customtoolbarmanager_8h_source.html#l00047">KviCustomToolBarManager::instance()</a>, <a class="el" href="kvi__console_8h_source.html#l00074">KVI_CONSOLE_FLAG_FIRSTINFRAME</a>, <a class="el" href="kvi__frame_8h_source.html#l00081">KviConsole</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00250">restoreModuleExtensionToolBars()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l01009">restoreToolBarPositions()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01418">KviApp::createFrame()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00573">newConsole()</a>, and <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01432">KviApp::createFrame()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00576">newConsole()</a>, and <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>.</p>
 
 </div>
 </div>
@@ -808,9 +827,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__windowlist_8h_source.html#l00111">KviWindowListBase::currentDockArea()</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00170">KviOption_boolUseTreeWindowListWindowList</a>, and <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>.</p>
+<p>References <a class="el" href="kvi__windowlist_8h_source.html#l00111">KviWindowListBase::currentDockArea()</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00170">KviOption_boolUseTreeWindowListWindowList</a>, and <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l01048">recreateWindowList()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l01060">recreateWindowList()</a>.</p>
 
 </div>
 </div>
@@ -831,7 +850,7 @@ Inheritance diagram for KviFrame:</div>
 
 <p>References <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, and <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00873">fillToolBarsPopup()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00882">fillToolBarsPopup()</a>.</p>
 
 </div>
 </div>
@@ -850,7 +869,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__windowlist_8cpp_source.html#l00534">KviClassicWindowList::addItem()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00492">KviIrcView::clearUnreaded()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00755">closeEvent()</a>, <a class="el" href="kvi__windowlist__tree_8cpp_source.html#l00115">KviTreeWindowListItem::highlight()</a>, <a class="el" href="kvi__windowlist_8cpp_source.html#l00418">KviWindowListButton::highlight()</a>, <a class="el" href="kvi__windowlist_8cpp_source.html#l00546">KviClassicWindowList::removeItem()</a>, <a class="el" href="kvi__windowlist__tree_8cpp_source.html#l00390">KviTreeWindowList::setActiveItem()</a>, <a class="el" href="kvi__windowlist_8cpp_source.html#l00557">KviClassicWindowList::setActiveItem()</a>, <a class="el" href="kvi__menubar_8cpp_source.html#l00217">KviMenuBar::setupMainPopup()</a>, <a class="el" href="kvi__windowlist__tree_8cpp_source.html#l00106">KviTreeWindowListItem::unhighlight()</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00410">KviWindowListButton::unhighlight()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__windowlist_8cpp_source.html#l00580">KviClassicWindowList::addItem()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00510">KviIrcView::clearUnreaded()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00758">closeEvent()</a>, <a class="el" href="kvi__windowlist__tree_8cpp_source.html#l00116">KviTreeWindowListItem::highlight()</a>, <a class="el" href="kvi__windowlist_8cpp_source.html#l00454">KviWindowListButton::highlight()</a>, <a class="el" href="kvi__windowlist_8cpp_source.html#l00593">KviClassicWindowList::removeItem()</a>, <a class="el" href="kvi__windowlist__tree_8cpp_source.html#l00422">KviTreeWindowList::setActiveItem()</a>, <a class="el" href="kvi__windowlist_8cpp_source.html#l00605">KviClassicWindowList::setActiveItem()</a>, <a class="el" href="kvi__windowlist__tree_8cpp_source.html#l00107">KviTreeWindowListItem::unhighlight()</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00444">KviWindowListButton::unhighlight()</a>.</p>
 
 </div>
 </div>
@@ -885,9 +904,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8h_source.html#l00099">m_pMdi</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00124">KviMdiManager::manageChild()</a>, <a class="el" href="kvi__window_8h_source.html#l00204">KviWindow::mdiParent()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00226">KviMdiChild::setClient()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l00902">KviWindow::youAreDocked()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8h_source.html#l00099">m_pMdi</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00124">KviMdiManager::manageChild()</a>, <a class="el" href="kvi__window_8h_source.html#l00204">KviWindow::mdiParent()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00227">KviMdiChild::setClient()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l00903">KviWindow::youAreDocked()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00451">addWindow()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l00844">KviWindow::dock()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00452">addWindow()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l00845">KviWindow::dock()</a>.</p>
 
 </div>
 </div>
@@ -907,9 +926,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00608">firstConsole()</a>, <a class="el" href="kvi__internalcmd_8cpp_source.html#l00076">kvi_getInternalCommandBuffer()</a>, and <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00611">firstConsole()</a>, <a class="el" href="kvi__internalcmd_8cpp_source.html#l00076">kvi_getInternalCommandBuffer()</a>, and <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__menubar_8cpp_source.html#l00164">KviMenuBar::actionTriggered()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00755">closeEvent()</a>, <a class="el" href="kvi__app_8cpp_source.html#l01418">KviApp::createFrame()</a>, <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00481">KviIrcConnectionTargetResolver::haveServerIp()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00498">KviIrcConnection::linkAttemptFailed()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00467">KviIrcConnection::linkTerminated()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01375">KviIrcConnection::loginComplete()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01298">KviApp::optionResetUpdate()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00201">KviApp::setup()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00289">KviIrcConnection::start()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00199">KviConsole::triggerCreationEvents()</a>, and <a class="el" href="kvi__ircconnection_8cpp_source.html#l00109">KviIrcConnection::~KviIrcConnection()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__menubar_8cpp_source.html#l00164">KviMenuBar::actionTriggered()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00758">closeEvent()</a>, <a class="el" href="kvi__app_8cpp_source.html#l01432">KviApp::createFrame()</a>, <a class="el" href="kvi__ircconnectiontargetresolver_8cpp_source.html#l00479">KviIrcConnectionTargetResolver::haveServerIp()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00522">KviIrcConnection::linkAttemptFailed()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00491">KviIrcConnection::linkTerminated()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01392">KviIrcConnection::loginComplete()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01307">KviApp::optionResetUpdate()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00205">KviApp::setup()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00289">KviIrcConnection::start()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00201">KviConsole::triggerCreationEvents()</a>, and <a class="el" href="kvi__ircconnection_8cpp_source.html#l00109">KviIrcConnection::~KviIrcConnection()</a>.</p>
 
 </div>
 </div>
@@ -929,9 +948,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00166">KviTalPopupMenu::clear()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01107">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00935">customizeToolBars()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__moduleextension_8cpp_source.html#l00033">g_pModuleExtensionManager</a>, <a class="el" href="kvi__moduleextension_8cpp_source.html#l00098">KviModuleExtensionManager::getExtensionList()</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00736">KviIconManager::getImage()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00492">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00052">KviTalPopupMenu::insertItem()</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00186">KviTalPopupMenu::insertSeparator()</a>, <a class="el" href="kvi__customtoolbarmanager_8h_source.html#l00047">KviCustomToolBarManager::instance()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00274">KVI_SMALLICON_TOOLBAR</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00281">moduleExtensionToolBar()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00136">KviTalPopupMenu::setItemChecked()</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00143">KviTalPopupMenu::setItemParameter()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00940">toolbarsPopupSelected()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00166">KviTalPopupMenu::clear()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01116">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00947">customizeToolBars()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__moduleextension_8cpp_source.html#l00033">g_pModuleExtensionManager</a>, <a class="el" href="kvi__moduleextension_8cpp_source.html#l00098">KviModuleExtensionManager::getExtensionList()</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00716">KviIconManager::getImage()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00492">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00052">KviTalPopupMenu::insertItem()</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00186">KviTalPopupMenu::insertSeparator()</a>, <a class="el" href="kvi__customtoolbarmanager_8h_source.html#l00047">KviCustomToolBarManager::instance()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00274">KVI_SMALLICON_TOOLBAR</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00281">moduleExtensionToolBar()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00136">KviTalPopupMenu::setItemChecked()</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00143">KviTalPopupMenu::setItemParameter()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00952">toolbarsPopupSelected()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__toolbar_8cpp_source.html#l00063">KviToolBar::mousePressEvent()</a>, and <a class="el" href="kvi__menubar_8cpp_source.html#l00333">KviMenuBar::setupToolbarsPopup()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__toolbar_8cpp_source.html#l00063">KviToolBar::mousePressEvent()</a>, and <a class="el" href="kvi__menubar_8cpp_source.html#l00329">KviMenuBar::setupToolbarsPopup()</a>.</p>
 
 </div>
 </div>
@@ -950,9 +969,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__debug_8h_source.html#l00057">__range_valid</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__window_8h_source.html#l00082">KVI_WINDOW_TYPE_CONSOLE</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, and <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>.</p>
+<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>, <a class="el" href="kvi__window_8h_source.html#l00082">KVI_WINDOW_TYPE_CONSOLE</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, and <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01636">KviApp::activeConsole()</a>, <a class="el" href="kvi__app_8cpp_source.html#l01418">KviApp::createFrame()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00339">executeInternalCommand()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00832">KviApp::ipcMessage()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00719">KviApp::loadDefaultScript()</a>, <a class="el" href="kvi__modulemanager_8cpp_source.html#l00153">KviModuleManager::loadModule()</a>, <a class="el" href="kvi__menubar_8cpp_source.html#l00258">KviMenuBar::newConnectionToServer()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00250">restoreModuleExtensionToolBars()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00940">toolbarsPopupSelected()</a>, <a class="el" href="kvi__menubar_8cpp_source.html#l00325">KviMenuBar::toolsPopupSelected()</a>, and <a class="el" href="kvi__modulemanager_8cpp_source.html#l00274">KviModuleManager::unloadModule()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01650">KviApp::activeConsole()</a>, <a class="el" href="kvi__app_8cpp_source.html#l01432">KviApp::createFrame()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00339">executeInternalCommand()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00847">KviApp::ipcMessage()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00734">KviApp::loadDefaultScript()</a>, <a class="el" href="kvi__modulemanager_8cpp_source.html#l00153">KviModuleManager::loadModule()</a>, <a class="el" href="kvi__menubar_8cpp_source.html#l00250">KviMenuBar::newConnectionToServer()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00250">restoreModuleExtensionToolBars()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00952">toolbarsPopupSelected()</a>, <a class="el" href="kvi__menubar_8cpp_source.html#l00321">KviMenuBar::toolsPopupSelected()</a>, and <a class="el" href="kvi__modulemanager_8cpp_source.html#l00274">KviModuleManager::unloadModule()</a>.</p>
 
 </div>
 </div>
@@ -1010,7 +1029,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00334">accelActivated()</a>, <a class="el" href="kvi__shortcuts_8h_source.html#l00162">KVI_SHORTCUTS_WIN_MAXIMIZE</a>, <a class="el" href="kvi__shortcuts_8h_source.html#l00163">KVI_SHORTCUTS_WIN_MINIMIZE</a>, <a class="el" href="kvi__shortcuts_8h_source.html#l00157">KVI_SHORTCUTS_WIN_NEXT</a>, <a class="el" href="kvi__shortcuts_8h_source.html#l00159">KVI_SHORTCUTS_WIN_NEXT_CONTEXT</a>, <a class="el" href="kvi__shortcuts_8h_source.html#l00161">KVI_SHORTCUTS_WIN_NEXT_HIGHLIGHT</a>, <a class="el" href="kvi__shortcuts_8h_source.html#l00156">KVI_SHORTCUTS_WIN_PREV</a>, <a class="el" href="kvi__shortcuts_8h_source.html#l00158">KVI_SHORTCUTS_WIN_PREV_CONTEXT</a>, <a class="el" href="kvi__shortcuts_8h_source.html#l00160">KVI_SHORTCUTS_WIN_PREV_HIGHLIGHT</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01070">maximizeWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01077">minimizeWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01097">switchToNextHighlightedWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01087">switchToNextWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01107">switchToNextWindowInContext()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01092">switchToPrevHighlightedWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01082">switchToPrevWindow()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l01102">switchToPrevWindowInContext()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00334">accelActivated()</a>, <a class="el" href="kvi__shortcuts_8h_source.html#l00162">KVI_SHORTCUTS_WIN_MAXIMIZE</a>, <a class="el" href="kvi__shortcuts_8h_source.html#l00163">KVI_SHORTCUTS_WIN_MINIMIZE</a>, <a class="el" href="kvi__shortcuts_8h_source.html#l00157">KVI_SHORTCUTS_WIN_NEXT</a>, <a class="el" href="kvi__shortcuts_8h_source.html#l00159">KVI_SHORTCUTS_WIN_NEXT_CONTEXT</a>, <a class="el" href="kvi__shortcuts_8h_source.html#l00161">KVI_SHORTCUTS_WIN_NEXT_HIGHLIGHT</a>, <a class="el" href="kvi__shortcuts_8h_source.html#l00156">KVI_SHORTCUTS_WIN_PREV</a>, <a class="el" href="kvi__shortcuts_8h_source.html#l00158">KVI_SHORTCUTS_WIN_PREV_CONTEXT</a>, <a class="el" href="kvi__shortcuts_8h_source.html#l00160">KVI_SHORTCUTS_WIN_PREV_HIGHLIGHT</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01083">maximizeWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01090">minimizeWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01110">switchToNextHighlightedWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01100">switchToNextWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01120">switchToNextWindowInContext()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01105">switchToPrevHighlightedWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01095">switchToPrevWindow()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l01115">switchToPrevWindowInContext()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>.</p>
 
@@ -1048,7 +1067,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__corefunctions__af_8cpp_source.html#l00677">KviKvsCoreFunctions::KVSCF()</a>, and <a class="el" href="kvi__menubar_8cpp_source.html#l00170">KviMenuBar::setupSettingsPopup()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__corefunctions__af_8cpp_source.html#l00678">KviKvsCoreFunctions::KVSCF()</a>, and <a class="el" href="kvi__menubar_8cpp_source.html#l00170">KviMenuBar::setupSettingsPopup()</a>.</p>
 
 </div>
 </div>
@@ -1068,7 +1087,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__window_8cpp_source.html#l01165">KviWindow::isMaximized()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01144">KviWindow::maximize()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l01174">KviWindow::restore()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__window_8cpp_source.html#l01164">KviWindow::isMaximized()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01145">KviWindow::maximize()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l01173">KviWindow::restore()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00290">installAccelerators()</a>.</p>
 
@@ -1089,7 +1108,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__menubar_8cpp_source.html#l00044">KviMenuBar::KviMenuBar()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01682">KviUserListViewArea::paintEvent()</a>, <a class="el" href="kvi__themedlineedit_8cpp_source.html#l00066">KviThemedLineEdit::paintEvent()</a>, <a class="el" href="kvi__themedlabel_8cpp_source.html#l00066">KviThemedLabel::paintEvent()</a>, <a class="el" href="kvi__themedcombobox_8cpp_source.html#l00077">KviThemedComboBox::paintEvent()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00967">KviIrcView::paintEvent()</a>, <a class="el" href="kvi__irctoolbar_8cpp_source.html#l00180">KviToolBarGraphicalApplet::paintEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00229">KviInputEditor::paintEvent()</a>, and <a class="el" href="kvi__coreactions_8cpp_source.html#l00051">register_core_actions()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__menubar_8cpp_source.html#l00044">KviMenuBar::KviMenuBar()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01648">KviUserListViewArea::paintEvent()</a>, <a class="el" href="kvi__themedlineedit_8cpp_source.html#l00068">KviThemedLineEdit::paintEvent()</a>, <a class="el" href="kvi__themedlabel_8cpp_source.html#l00068">KviThemedLabel::paintEvent()</a>, <a class="el" href="kvi__themedcombobox_8cpp_source.html#l00077">KviThemedComboBox::paintEvent()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00998">KviIrcView::paintEvent()</a>, <a class="el" href="kvi__irctoolbar_8cpp_source.html#l00180">KviToolBarGraphicalApplet::paintEvent()</a>, <a class="el" href="kvi__input__editor_8cpp_source.html#l00231">KviInputEditor::paintEvent()</a>, and <a class="el" href="kvi__coreactions_8cpp_source.html#l00051">register_core_actions()</a>.</p>
 
 </div>
 </div>
@@ -1109,7 +1128,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, and <a class="el" href="kvi__window_8cpp_source.html#l01133">KviWindow::minimize()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, and <a class="el" href="kvi__window_8cpp_source.html#l01134">KviWindow::minimize()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00290">installAccelerators()</a>.</p>
 
@@ -1133,7 +1152,7 @@ Inheritance diagram for KviFrame:</div>
 
 <p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__frame_8h_source.html#l00100">m_pModuleExtensionToolBarList</a>, and <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00873">fillToolBarsPopup()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00940">toolbarsPopupSelected()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00882">fillToolBarsPopup()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00952">toolbarsPopupSelected()</a>.</p>
 
 </div>
 </div>
@@ -1153,7 +1172,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__options_8h_source.html#l00663">KVI_OPTION_RECT</a>, <a class="el" href="kvi__options_8h_source.html#l00081">KviOption_rectFrameGeometry</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00827">updatePseudoTransparency()</a>.</p>
+<p>References <a class="el" href="kvi__options_8h_source.html#l00673">KVI_OPTION_RECT</a>, <a class="el" href="kvi__options_8h_source.html#l00081">KviOption_rectFrameGeometry</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00836">updatePseudoTransparency()</a>.</p>
 
 </div>
 </div>
@@ -1172,7 +1191,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00578">createNewConsole()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00581">createNewConsole()</a>.</p>
 
 </div>
 </div>
@@ -1191,9 +1210,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8cpp_source.html#l01023">createWindowList()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00374">KviWindow::createWindowListItem()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00380">KviWindow::destroyWindowListItem()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__windowlist_8h_source.html#l00099">KviWindowListBase::setActiveItem()</a>, and <a class="el" href="kvi__window_8h_source.html#l00213">KviWindow::windowListItem()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8cpp_source.html#l01035">createWindowList()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00374">KviWindow::createWindowListItem()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00381">KviWindow::destroyWindowListItem()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__windowlist_8h_source.html#l00099">KviWindowListBase::setActiveItem()</a>, and <a class="el" href="kvi__window_8h_source.html#l00213">KviWindow::windowListItem()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01298">KviApp::optionResetUpdate()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01307">KviApp::optionResetUpdate()</a>.</p>
 
 </div>
 </div>
@@ -1235,7 +1254,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__options_8h_source.html#l00663">KVI_OPTION_RECT</a>, and <a class="el" href="kvi__options_8h_source.html#l00081">KviOption_rectFrameGeometry</a>.</p>
+<p>References <a class="el" href="kvi__options_8h_source.html#l00673">KVI_OPTION_RECT</a>, and <a class="el" href="kvi__options_8h_source.html#l00081">KviOption_rectFrameGeometry</a>.</p>
 
 </div>
 </div>
@@ -1254,9 +1273,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__moduleextension_8cpp_source.html#l00179">KviModuleExtensionManager::allocateExtension()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00608">firstConsole()</a>, <a class="el" href="kvi__moduleextension_8cpp_source.html#l00033">g_pModuleExtensionManager</a>, <a class="el" href="kvi__options_8h_source.html#l00671">KVI_OPTION_STRINGLIST</a>, and <a class="el" href="kvi__options_8h_source.html#l00419">KviOption_stringlistModuleExtensionToolbars</a>.</p>
+<p>References <a class="el" href="kvi__moduleextension_8cpp_source.html#l00179">KviModuleExtensionManager::allocateExtension()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00611">firstConsole()</a>, <a class="el" href="kvi__moduleextension_8cpp_source.html#l00033">g_pModuleExtensionManager</a>, <a class="el" href="kvi__options_8h_source.html#l00681">KVI_OPTION_STRINGLIST</a>, and <a class="el" href="kvi__options_8h_source.html#l00429">KviOption_stringlistModuleExtensionToolbars</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00578">createNewConsole()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00581">createNewConsole()</a>.</p>
 
 </div>
 </div>
@@ -1275,9 +1294,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__app_8h_source.html#l00125">KviApp::Config</a>, <a class="el" href="kvi__settings_8h_source.html#l00177">debug</a>, <a class="el" href="kvi__app_8cpp_source.html#l00125">g_pApp</a>, <a class="el" href="kvi__app__fs_8cpp_source.html#l00109">KviApp::getLocalKvircDirectory()</a>, <a class="el" href="kvi__confignames_8h_source.html#l00077">KVI_CONFIGFILE_TOOLBARS</a>, and <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>.</p>
+<p>References <a class="el" href="kvi__app_8h_source.html#l00123">KviApp::Config</a>, <a class="el" href="kvi__settings_8h_source.html#l00177">debug</a>, <a class="el" href="kvi__app_8cpp_source.html#l00127">g_pApp</a>, <a class="el" href="kvi__app__fs_8cpp_source.html#l00109">KviApp::getLocalKvircDirectory()</a>, <a class="el" href="kvi__confignames_8h_source.html#l00077">KVI_CONFIGFILE_TOOLBARS</a>, and <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00578">createNewConsole()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00581">createNewConsole()</a>.</p>
 
 </div>
 </div>
@@ -1296,7 +1315,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__options_8h_source.html#l00671">KVI_OPTION_STRINGLIST</a>, <a class="el" href="kvi__options_8h_source.html#l00419">KviOption_stringlistModuleExtensionToolbars</a>, <a class="el" href="kvi__frame_8h_source.html#l00100">m_pModuleExtensionToolBarList</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, and <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>.</p>
+<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__options_8h_source.html#l00681">KVI_OPTION_STRINGLIST</a>, <a class="el" href="kvi__options_8h_source.html#l00429">KviOption_stringlistModuleExtensionToolbars</a>, <a class="el" href="kvi__frame_8h_source.html#l00100">m_pModuleExtensionToolBarList</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, and <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00170">~KviFrame()</a>.</p>
 
@@ -1317,7 +1336,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__app_8h_source.html#l00125">KviApp::Config</a>, <a class="el" href="kvi__app_8cpp_source.html#l00125">g_pApp</a>, <a class="el" href="kvi__app__fs_8cpp_source.html#l00109">KviApp::getLocalKvircDirectory()</a>, and <a class="el" href="kvi__confignames_8h_source.html#l00077">KVI_CONFIGFILE_TOOLBARS</a>.</p>
+<p>References <a class="el" href="kvi__app_8h_source.html#l00123">KviApp::Config</a>, <a class="el" href="kvi__app_8cpp_source.html#l00127">g_pApp</a>, <a class="el" href="kvi__app__fs_8cpp_source.html#l00109">KviApp::getLocalKvircDirectory()</a>, and <a class="el" href="kvi__confignames_8h_source.html#l00077">KVI_CONFIGFILE_TOOLBARS</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00170">~KviFrame()</a>.</p>
 
@@ -1348,9 +1367,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__config_8cpp_source.html#l00078">KviConfig::clearGroup()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01107">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01130">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="kvi__settings_8h_source.html#l00177">debug</a>, <a class="el" href="kvi__config_8h_source.html#l00092">KviConfig::dict()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01183">KviWindow::externalGeometry()</a>, <a class="el" href="kvi__config_8h_source.html#l00098">KviConfig::groupsCount()</a>, <a class="el" href="kvi__window_8h_source.html#l00177">KviWindow::isDocked()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01165">KviWindow::isMaximized()</a>, <a class="el" href="kvi__window_8h_source.html#l00204">KviWindow::mdiParent()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00567">KviWindow::saveProperties()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, and <a class="el" href="kvi__config_8cpp_source.html#l00576">KviConfig::writeEntry()</a>.</p>
+<p>References <a class="el" href="kvi__config_8cpp_source.html#l00078">KviConfig::clearGroup()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01116">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01139">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="kvi__settings_8h_source.html#l00177">debug</a>, <a class="el" href="kvi__config_8h_source.html#l00092">KviConfig::dict()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01182">KviWindow::externalGeometry()</a>, <a class="el" href="kvi__config_8h_source.html#l00098">KviConfig::groupsCount()</a>, <a class="el" href="kvi__window_8h_source.html#l00177">KviWindow::isDocked()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01164">KviWindow::isMaximized()</a>, <a class="el" href="kvi__window_8h_source.html#l00204">KviWindow::mdiParent()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00568">KviWindow::saveProperties()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, and <a class="el" href="kvi__config_8cpp_source.html#l00576">KviConfig::writeEntry()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00403">closeWindow()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l00815">KviWindow::savePropertiesAsDefault()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00403">closeWindow()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l00816">KviWindow::savePropertiesAsDefault()</a>.</p>
 
 </div>
 </div>
@@ -1370,9 +1389,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l00850">KviWindow::delayedAutoRaise()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01156">KviWindow::isMinimized()</a>, <a class="el" href="kvi__frame_8h_source.html#l00099">m_pMdi</a>, <a class="el" href="kvi__window_8h_source.html#l00204">KviWindow::mdiParent()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01174">KviWindow::restore()</a>, and <a class="el" href="kvi__mdimanager_8cpp_source.html#l00132">KviMdiManager::showAndActivate()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l00851">KviWindow::delayedAutoRaise()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01157">KviWindow::isMinimized()</a>, <a class="el" href="kvi__frame_8h_source.html#l00099">m_pMdi</a>, <a class="el" href="kvi__window_8h_source.html#l00204">KviWindow::mdiParent()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01173">KviWindow::restore()</a>, and <a class="el" href="kvi__mdimanager_8cpp_source.html#l00132">KviMdiManager::showAndActivate()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00844">KviWindow::dock()</a>, <a class="el" href="kvi__windowlist__tree_8cpp_source.html#l00182">KviTreeWindowListTreeWidget::mousePressEvent()</a>, <a class="el" href="kvi__windowlist_8cpp_source.html#l00225">KviWindowListButton::mousePressEvent()</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00124">KviWindowListBase::switchWindow()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00845">KviWindow::dock()</a>, <a class="el" href="kvi__windowlist__tree_8cpp_source.html#l00214">KviTreeWindowListTreeWidget::mousePressEvent()</a>, <a class="el" href="kvi__windowlist_8cpp_source.html#l00231">KviWindowListButton::mousePressEvent()</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00129">KviWindowListBase::switchWindow()</a>.</p>
 
 </div>
 </div>
@@ -1421,7 +1440,7 @@ Inheritance diagram for KviFrame:</div>
 
 <p>Reimplemented from <a class="el" href="classKviTalMainWindow.html#a87843128292eedd1fb088e844e5ccfd3">KviTalMainWindow</a>.</p>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l01107">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00292">KviPointerListIterator&lt; T &gt;::current()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__customtoolbarmanager_8h_source.html#l00047">KviCustomToolBarManager::instance()</a>, and <a class="el" href="kvi__frame_8h_source.html#l00100">m_pModuleExtensionToolBarList</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l01116">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00292">KviPointerListIterator&lt; T &gt;::current()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__customtoolbarmanager_8h_source.html#l00047">KviCustomToolBarManager::instance()</a>, and <a class="el" href="kvi__frame_8h_source.html#l00100">m_pModuleExtensionToolBarList</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>, <a class="el" href="kvi__toolbar_8cpp_source.html#l00096">KviToolBar::setBigIcons()</a>, and <a class="el" href="kvi__toolbar_8cpp_source.html#l00101">KviToolBar::setSmallIcons()</a>.</p>
 
@@ -1478,7 +1497,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00124">KviWindowListBase::switchWindow()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00129">KviWindowListBase::switchWindow()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00290">installAccelerators()</a>.</p>
 
@@ -1500,9 +1519,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00124">KviWindowListBase::switchWindow()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00129">KviWindowListBase::switchWindow()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__mdimanager_8cpp_source.html#l00620">KviMdiManager::eventFilter()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00290">installAccelerators()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__mdimanager_8cpp_source.html#l00635">KviMdiManager::eventFilter()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00290">installAccelerators()</a>.</p>
 
 </div>
 </div>
@@ -1522,7 +1541,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00124">KviWindowListBase::switchWindow()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00129">KviWindowListBase::switchWindow()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00290">installAccelerators()</a>.</p>
 
@@ -1544,7 +1563,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00124">KviWindowListBase::switchWindow()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00129">KviWindowListBase::switchWindow()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00290">installAccelerators()</a>.</p>
 
@@ -1566,9 +1585,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00124">KviWindowListBase::switchWindow()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00129">KviWindowListBase::switchWindow()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__mdimanager_8cpp_source.html#l00620">KviMdiManager::eventFilter()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00290">installAccelerators()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__mdimanager_8cpp_source.html#l00635">KviMdiManager::eventFilter()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00290">installAccelerators()</a>.</p>
 
 </div>
 </div>
@@ -1588,7 +1607,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00124">KviWindowListBase::switchWindow()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, and <a class="el" href="kvi__windowlist_8cpp_source.html#l00129">KviWindowListBase::switchWindow()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00290">installAccelerators()</a>.</p>
 
@@ -1629,9 +1648,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__moduleextension_8cpp_source.html#l00179">KviModuleExtensionManager::allocateExtension()</a>, <a class="el" href="kvi__customtoolbardescriptor_8cpp_source.html#l00146">KviCustomToolBarDescriptor::createToolBar()</a>, <a class="el" href="kvi__customtoolbarmanager_8cpp_source.html#l00095">KviCustomToolBarManager::findDescriptorByInternalId()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00608">firstConsole()</a>, <a class="el" href="kvi__moduleextension_8cpp_source.html#l00033">g_pModuleExtensionManager</a>, <a class="el" href="kvi__customtoolbarmanager_8h_source.html#l00047">KviCustomToolBarManager::instance()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00281">moduleExtensionToolBar()</a>, and <a class="el" href="kvi__customtoolbardescriptor_8h_source.html#l00059">KviCustomToolBarDescriptor::toolBar()</a>.</p>
+<p>References <a class="el" href="kvi__moduleextension_8cpp_source.html#l00179">KviModuleExtensionManager::allocateExtension()</a>, <a class="el" href="kvi__customtoolbardescriptor_8cpp_source.html#l00146">KviCustomToolBarDescriptor::createToolBar()</a>, <a class="el" href="kvi__customtoolbarmanager_8cpp_source.html#l00095">KviCustomToolBarManager::findDescriptorByInternalId()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00611">firstConsole()</a>, <a class="el" href="kvi__moduleextension_8cpp_source.html#l00033">g_pModuleExtensionManager</a>, <a class="el" href="kvi__customtoolbarmanager_8h_source.html#l00047">KviCustomToolBarManager::instance()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00281">moduleExtensionToolBar()</a>, and <a class="el" href="kvi__customtoolbardescriptor_8h_source.html#l00059">KviCustomToolBarDescriptor::toolBar()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00873">fillToolBarsPopup()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00882">fillToolBarsPopup()</a>.</p>
 
 </div>
 </div>
@@ -1651,9 +1670,9 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__mdimanager_8cpp_source.html#l00156">KviMdiManager::destroyChild()</a>, <a class="el" href="kvi__frame_8h_source.html#l00099">m_pMdi</a>, <a class="el" href="kvi__window_8h_source.html#l00204">KviWindow::mdiParent()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00929">KviWindow::setFocus()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00244">KviMdiChild::unsetClient()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l00909">KviWindow::youAreUndocked()</a>.</p>
+<p>References <a class="el" href="kvi__mdimanager_8cpp_source.html#l00162">KviMdiManager::destroyChild()</a>, <a class="el" href="kvi__frame_8h_source.html#l00099">m_pMdi</a>, <a class="el" href="kvi__window_8h_source.html#l00204">KviWindow::mdiParent()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00930">KviWindow::setFocus()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00246">KviMdiChild::unsetClient()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l00910">KviWindow::youAreUndocked()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00839">KviWindow::undock()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00840">KviWindow::undock()</a>.</p>
 
 </div>
 </div>
@@ -1718,7 +1737,7 @@ Inheritance diagram for KviFrame:</div>
 
 <p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__frame_8h_source.html#l00099">m_pMdi</a>, <a class="el" href="kvi__frame_8h_source.html#l00101">m_pWindowList</a>, <a class="el" href="kvi__frame_8h_source.html#l00104">m_pWinList</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, and <a class="el" href="kvi__windowlist_8h_source.html#l00107">KviWindowListBase::updatePseudoTransparency()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00840">moveEvent()</a>, and <a class="el" href="kvi__app_8cpp_source.html#l01109">KviApp::updatePseudoTransparency()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00849">moveEvent()</a>, and <a class="el" href="kvi__app_8cpp_source.html#l01127">KviApp::updatePseudoTransparency()</a>.</p>
 
 </div>
 </div>
@@ -1799,7 +1818,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00578">createNewConsole()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00581">createNewConsole()</a>.</p>
 
 </div>
 </div>
@@ -1881,7 +1900,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l00201">KviApp::setup()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l00205">KviApp::setup()</a>.</p>
 
 </div>
 </div>
@@ -1936,7 +1955,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00652">activeConnection()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00451">addWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00691">childConnectionAwayStateChange()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00670">childConnectionLagChange()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00684">childConnectionNickNameChange()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00677">childConnectionServerInfoChange()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00698">childConnectionUserModeChange()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00664">childContextStateChange()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00705">childWindowActivated()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00403">closeWindow()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00655">activeConnection()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00452">addWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00694">childConnectionAwayStateChange()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00673">childConnectionLagChange()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00687">childConnectionNickNameChange()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00680">childConnectionServerInfoChange()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00701">childConnectionUserModeChange()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00667">childContextStateChange()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00708">childWindowActivated()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00403">closeWindow()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>.</p>
 
 </div>
 </div>
@@ -1966,7 +1985,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00451">addWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00850">applyOptions()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00403">closeWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00547">dockWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00642">setActiveWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00560">undockWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00827">updatePseudoTransparency()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00170">~KviFrame()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00452">addWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00859">applyOptions()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00403">closeWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00550">dockWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00645">setActiveWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00563">undockWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00836">updatePseudoTransparency()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00170">~KviFrame()</a>.</p>
 
 </div>
 </div>
@@ -1996,7 +2015,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00281">moduleExtensionToolBar()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00240">registerModuleExtensionToolBar()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00265">saveModuleExtensionToolBars()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01112">setUsesBigPixmaps()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00245">unregisterModuleExtensionToolBar()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00170">~KviFrame()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00281">moduleExtensionToolBar()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00240">registerModuleExtensionToolBar()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00265">saveModuleExtensionToolBars()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01125">setUsesBigPixmaps()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00245">unregisterModuleExtensionToolBar()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00170">~KviFrame()</a>.</p>
 
 </div>
 </div>
@@ -2026,7 +2045,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00859">toggleStatusBar()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00170">~KviFrame()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00868">toggleStatusBar()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00170">~KviFrame()</a>.</p>
 
 </div>
 </div>
@@ -2041,7 +2060,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00850">applyOptions()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00705">childWindowActivated()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01023">createWindowList()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00374">KviWindow::createWindowListItem()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00380">KviWindow::destroyWindowListItem()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01048">recreateWindowList()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00997">restoreToolBarPositions()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01097">switchToNextHighlightedWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01087">switchToNextWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01107">switchToNextWindowInContext()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01092">switchToPrevHighlightedWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01082">switchToPrevWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01102">switchToPrevWindowInContext()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00827">updatePseudoTransparency()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00859">applyOptions()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00708">childWindowActivated()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01035">createWindowList()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00374">KviWindow::createWindowListItem()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00381">KviWindow::destroyWindowListItem()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01060">recreateWindowList()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01009">restoreToolBarPositions()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01110">switchToNextHighlightedWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01100">switchToNextWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01120">switchToNextWindowInContext()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01105">switchToPrevHighlightedWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01095">switchToPrevWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01115">switchToPrevWindowInContext()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00836">updatePseudoTransparency()</a>.</p>
 
 </div>
 </div>
@@ -2056,7 +2075,7 @@ Inheritance diagram for KviFrame:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00451">addWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00850">applyOptions()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00755">closeEvent()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00403">closeWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00598">consoleCount()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00608">firstConsole()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00618">firstNotConnectedConsole()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01048">recreateWindowList()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00636">unhighlightWindowsOfContext()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00827">updatePseudoTransparency()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00170">~KviFrame()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00452">addWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00859">applyOptions()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00758">closeEvent()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00403">closeWindow()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00601">consoleCount()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00611">firstConsole()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00621">firstNotConnectedConsole()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00092">KviFrame()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l01060">recreateWindowList()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00639">unhighlightWindowsOfContext()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00836">updatePseudoTransparency()</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00170">~KviFrame()</a>.</p>
 
 </div>
 </div>
@@ -2065,7 +2084,7 @@ Inheritance diagram for KviFrame:</div>
 <li>src/kvirc/ui/<a class="el" href="kvi__frame_8cpp.html">kvi_frame.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:30 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:22 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

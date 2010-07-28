@@ -45,8 +45,8 @@ Inheritance diagram for KviUserListView:</div>
 <p><a href="classKviUserListView-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Slots</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListView.html#a75ae0a808653dcee36f3382266adad72">animatedAvatarUpdated</a> ()</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when an animated avatar is updated (every frame).  <a href="#a75ae0a808653dcee36f3382266adad72"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListView.html#a400dab3305ec39fa9c27b6c30d5e3a32">animatedAvatarUpdated</a> (<a class="el" href="classKviUserListEntry.html">KviUserListEntry</a> *e)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when an animated avatar is updated (every frame).  <a href="#a400dab3305ec39fa9c27b6c30d5e3a32"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListView.html#a2bbb9e6ae367d754bcf2b98195a336e8">appendSelectedNicknames</a> (QString &amp;szBuffer)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Appends the selected nicknames to the buffer.  <a href="#a2bbb9e6ae367d754bcf2b98195a336e8"></a><br/></td></tr>
@@ -291,7 +291,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviUserListView.html" title="User list view management class.">KviUserListView</a> </dd></dl>
 
-<p>References <a class="el" href="kvi__tal__tooltip_8cpp_source.html#l00083">KviTalToolTip::add()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00357">applyOptions()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00225">KviUserListToolTip</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00224">KviUserListViewArea</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00268">m_ibEntries</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00260">m_iChanAdminCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00259">m_iChanOwnerCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00269">m_ieEntries</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00262">m_iHalfOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00270">m_iIEntries</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00261">m_iOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00257">m_iSelectedCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00265">m_iTotalHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00264">m_iUserOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00263">m_iVoiceCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00256">m_pIrcUserDataBase</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00252">m_pTailItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00267">m_pToolTip</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00254">m_pUsersLabel</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00849">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="kvi__tal__tooltip_8cpp_source.html#l00083">KviTalToolTip::add()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00337">applyOptions()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00225">KviUserListToolTip</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00224">KviUserListViewArea</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00268">m_ibEntries</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00260">m_iChanAdminCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00259">m_iChanOwnerCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00269">m_ieEntries</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00262">m_iHalfOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00270">m_iIEntries</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00261">m_iOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00257">m_iSelectedCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00265">m_iTotalHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00264">m_iUserOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00263">m_iVoiceCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00256">m_pIrcUserDataBase</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00252">m_pTailItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00267">m_pToolTip</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00254">m_pUsersLabel</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00858">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
 
 </div>
 </div>
@@ -312,19 +312,20 @@ Inheritance diagram for KviUserListView:</div>
 
 <p>Destroys the user list view object. </p>
 
-<p>References <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00267">m_pToolTip</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00254">m_pUsersLabel</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">removeAllEntries()</a>.</p>
+<p>References <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00267">m_pToolTip</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00254">m_pUsersLabel</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">removeAllEntries()</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a75ae0a808653dcee36f3382266adad72"></a><!-- doxytag: member="KviUserListView::animatedAvatarUpdated" ref="a75ae0a808653dcee36f3382266adad72" args="()" -->
+<a class="anchor" id="a400dab3305ec39fa9c27b6c30d5e3a32"></a><!-- doxytag: member="KviUserListView::animatedAvatarUpdated" ref="a400dab3305ec39fa9c27b6c30d5e3a32" args="(KviUserListEntry *e)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void KviUserListView::animatedAvatarUpdated </td>
           <td>(</td>
-          <td class="paramname"></td>
+          <td class="paramtype"><a class="el" href="classKviUserListEntry.html">KviUserListEntry</a> *&nbsp;</td>
+          <td class="paramname"> <em>e</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [slot]</code></td>
         </tr>
@@ -335,7 +336,9 @@ Inheritance diagram for KviUserListView:</div>
 <p>Called when an animated avatar is updated (every frame). </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00667">KVI_OPTION_UINT</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00070">KVI_USERLIST_BORDER_WIDTH</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00064">KVI_USERLISTVIEW_GRIDTYPE_DOTGRID</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00063">KVI_USERLISTVIEW_GRIDTYPE_PLAINGRID</a>, <a class="el" href="kvi__options_8h_source.html#l00309">KviOption_boolDrawGenderIcons</a>, <a class="el" href="kvi__options_8h_source.html#l00277">KviOption_boolShowAvatarsInUserlist</a>, <a class="el" href="kvi__options_8h_source.html#l00219">KviOption_boolShowUserChannelIcons</a>, <a class="el" href="kvi__options_8h_source.html#l00220">KviOption_boolShowUserChannelState</a>, <a class="el" href="kvi__options_8h_source.html#l00146">KviOption_boolUserListViewDrawGrid</a>, <a class="el" href="kvi__options_8h_source.html#l00557">KviOption_uintUserListViewGridType</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00162">KviUserListEntry::m_bSelected</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00161">KviUserListEntry::m_iHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00831">KviUserListViewArea::m_iTopItemOffset</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00165">KviUserListEntry::m_pConnectedAnimation</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, and <a class="el" href="kvi__animatedpixmap_8h_source.html#l00122">KviAnimatedPixmap::pixmap()</a>.</p>
+<p>References <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00677">KVI_OPTION_UINT</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00070">KVI_USERLIST_BORDER_WIDTH</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00064">KVI_USERLISTVIEW_GRIDTYPE_DOTGRID</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00063">KVI_USERLISTVIEW_GRIDTYPE_PLAINGRID</a>, <a class="el" href="kvi__options_8h_source.html#l00309">KviOption_boolDrawGenderIcons</a>, <a class="el" href="kvi__options_8h_source.html#l00277">KviOption_boolShowAvatarsInUserlist</a>, <a class="el" href="kvi__options_8h_source.html#l00219">KviOption_boolShowUserChannelIcons</a>, <a class="el" href="kvi__options_8h_source.html#l00220">KviOption_boolShowUserChannelState</a>, <a class="el" href="kvi__options_8h_source.html#l00146">KviOption_boolUserListViewDrawGrid</a>, <a class="el" href="kvi__options_8h_source.html#l00567">KviOption_uintUserListViewGridType</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_bSelected</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00162">KviUserListEntry::m_iHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00831">KviUserListViewArea::m_iTopItemOffset</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00166">KviUserListEntry::m_pAvatarPixmap</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00164">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, and <a class="el" href="kvi__animatedpixmap_8h_source.html#l00122">KviAnimatedPixmap::pixmap()</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00171">KviUserListEntry::avatarFrameChanged()</a>.</p>
 
 </div>
 </div>
@@ -364,9 +367,9 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__userlistview_8h_source.html#l00162">KviUserListEntry::m_bSelected</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_pNext</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00154">KviUserListEntry::m_szNick</a>.</p>
+<p>References <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_bSelected</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00164">KviUserListEntry::m_pNext</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00155">KviUserListEntry::m_szNick</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00325">emitDoubleClick()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00299">emitRightClick()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00305">emitDoubleClick()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00279">emitRightClick()</a>.</p>
 
 </div>
 </div>
@@ -388,9 +391,9 @@ Inheritance diagram for KviUserListView:</div>
 <p>Applies the options. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00668">KVI_OPTION_FONT</a>, <a class="el" href="kvi__options_8h_source.html#l00317">KviOption_boolEnableAnimatedAvatars</a>, <a class="el" href="kvi__options_8h_source.html#l00612">KviOption_fontUserListView</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00266">m_iFontHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00161">KviUserListEntry::m_iHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00265">m_iTotalHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00165">KviUserListEntry::m_pConnectedAnimation</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00829">KviUserListViewArea::m_pScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00254">m_pUsersLabel</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00220">KviUserListEntry::recalcSize()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01400">resizeEvent()</a>, <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00063">KviAnimatedPixmap::start()</a>, <a class="el" href="kvi__animatedpixmap_8cpp_source.html#l00072">KviAnimatedPixmap::stop()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00351">updateScrollBarRange()</a>.</p>
+<p>References <a class="el" href="kvi__options_8h_source.html#l00678">KVI_OPTION_FONT</a>, <a class="el" href="kvi__options_8h_source.html#l00622">KviOption_fontUserListView</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00266">m_iFontHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00162">KviUserListEntry::m_iHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00265">m_iTotalHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00164">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00829">KviUserListViewArea::m_pScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00254">m_pUsersLabel</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00222">KviUserListEntry::recalcSize()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01366">resizeEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00127">KviUserListEntry::updateAvatarData()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00331">updateScrollBarRange()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__query_8cpp_source.html#l00511">KviQuery::applyOptions()</a>, <a class="el" href="kvi__console_8cpp_source.html#l01065">KviConsole::applyOptions()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00285">KviChannel::applyOptions()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__query_8cpp_source.html#l00521">KviQuery::applyOptions()</a>, <a class="el" href="kvi__console_8cpp_source.html#l01074">KviConsole::applyOptions()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00287">KviChannel::applyOptions()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>.</p>
 
 </div>
 </div>
@@ -419,9 +422,9 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00832">KviUserListViewArea::m_bIgnoreScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00161">KviUserListEntry::m_iHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00830">KviUserListViewArea::m_iLastScrollBarVal</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00265">m_iTotalHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00829">KviUserListViewArea::m_pScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00220">KviUserListEntry::recalcSize()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00121">KviUserListEntry::updateAvatarData()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00351">updateScrollBarRange()</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00832">KviUserListViewArea::m_bIgnoreScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00162">KviUserListEntry::m_iHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00830">KviUserListViewArea::m_iLastScrollBarVal</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00265">m_iTotalHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00164">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00829">KviUserListViewArea::m_pScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00222">KviUserListEntry::recalcSize()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00127">KviUserListEntry::updateAvatarData()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00331">updateScrollBarRange()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__console_8cpp_source.html#l00865">KviConsole::avatarChangedUpdateWindows()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01108">KviIrcConnection::loginToIrcServer()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01272">nickChange()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__console_8cpp_source.html#l00875">KviConsole::avatarChangedUpdateWindows()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01126">KviIrcConnection::loginToIrcServer()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01242">nickChange()</a>.</p>
 
 </div>
 </div>
@@ -508,9 +511,9 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="namespaceKviQString.html#afe84786f6e548c13eb18c3c6a8f25491">KviQString::equalCIN()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00272">KviIrcUserEntry::host()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00155">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00154">KviUserListEntry::m_szNick</a>, <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00266">KviIrcUserEntry::user()</a>.</p>
+<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="namespaceKviQString.html#afe84786f6e548c13eb18c3c6a8f25491">KviQString::equalCIN()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00272">KviIrcUserEntry::host()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00156">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00164">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00155">KviUserListEntry::m_szNick</a>, <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00266">KviIrcUserEntry::user()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01423">KviInputEditor::completion()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01432">KviInputEditor::completion()</a>.</p>
 
 </div>
 </div>
@@ -564,9 +567,9 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="namespaceKviQString.html#a74c5efa341f3452010d9df7daf03ab5c">KviQString::cmpCIN()</a>, <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00272">KviIrcUserEntry::host()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00155">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00154">KviUserListEntry::m_szNick</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00266">KviIrcUserEntry::user()</a>.</p>
+<p>References <a class="el" href="namespaceKviQString.html#a74c5efa341f3452010d9df7daf03ab5c">KviQString::cmpCIN()</a>, <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00272">KviIrcUserEntry::host()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00156">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00164">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00155">KviUserListEntry::m_szNick</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00266">KviIrcUserEntry::user()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01634">KviInputEditor::standardNickCompletion()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__input__editor_8cpp_source.html#l01643">KviInputEditor::standardNickCompletion()</a>.</p>
 
 </div>
 </div>
@@ -608,9 +611,9 @@ Inheritance diagram for KviUserListView:</div>
 <p>Emits the double click signal. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__kvs__variantlist_8h_source.html#l00061">KviKvsVariantList::append()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01143">appendSelectedNicknames()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00731">KviApp::checkSuggestRestoreDefaultScript()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00125">g_pApp</a>, <a class="el" href="kvi__kvs__eventmanager_8h_source.html#l00057">KviKvsEventManager::hasAppHandlers()</a>, <a class="el" href="kvi__kvs__eventmanager_8h_source.html#l00051">KviKvsEventManager::instance()</a>, <a class="el" href="kvi__window_8h_source.html#l00083">KVI_WINDOW_TYPE_CHANNEL</a>, <a class="el" href="kvi__window_8h_source.html#l00082">KVI_WINDOW_TYPE_CONSOLE</a>, <a class="el" href="kvi__window_8h_source.html#l00084">KVI_WINDOW_TYPE_QUERY</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00360">KviEvent_OnChannelNickDefaultActionRequest</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00359">KviEvent_OnNickLinkDefaultActionRequest</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00077">KviEvent_OnNotifyListDefaultActionRequest</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00361">KviEvent_OnQueryNickDefaultActionRequest</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, <a class="el" href="kvi__kvs__eventmanager_8h_source.html#l00092">KviKvsEventManager::trigger()</a>, and <a class="el" href="kvi__window_8h_source.html#l00189">KviWindow::type()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__variantlist_8h_source.html#l00061">KviKvsVariantList::append()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01116">appendSelectedNicknames()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00746">KviApp::checkSuggestRestoreDefaultScript()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00127">g_pApp</a>, <a class="el" href="kvi__kvs__eventmanager_8h_source.html#l00057">KviKvsEventManager::hasAppHandlers()</a>, <a class="el" href="kvi__kvs__eventmanager_8h_source.html#l00051">KviKvsEventManager::instance()</a>, <a class="el" href="kvi__window_8h_source.html#l00083">KVI_WINDOW_TYPE_CHANNEL</a>, <a class="el" href="kvi__window_8h_source.html#l00082">KVI_WINDOW_TYPE_CONSOLE</a>, <a class="el" href="kvi__window_8h_source.html#l00084">KVI_WINDOW_TYPE_QUERY</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00360">KviEvent_OnChannelNickDefaultActionRequest</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00359">KviEvent_OnNickLinkDefaultActionRequest</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00077">KviEvent_OnNotifyListDefaultActionRequest</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00361">KviEvent_OnQueryNickDefaultActionRequest</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, <a class="el" href="kvi__kvs__eventmanager_8h_source.html#l00092">KviKvsEventManager::trigger()</a>, and <a class="el" href="kvi__window_8h_source.html#l00189">KviWindow::type()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l02156">KviUserListViewArea::mouseDoubleClickEvent()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l02105">KviUserListViewArea::mouseDoubleClickEvent()</a>.</p>
 
 </div>
 </div>
@@ -632,9 +635,9 @@ Inheritance diagram for KviUserListView:</div>
 <p>Emits the right click signal. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__kvs__variantlist_8h_source.html#l00061">KviKvsVariantList::append()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01143">appendSelectedNicknames()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00731">KviApp::checkSuggestRestoreDefaultScript()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00125">g_pApp</a>, <a class="el" href="kvi__kvs__eventmanager_8h_source.html#l00057">KviKvsEventManager::hasAppHandlers()</a>, <a class="el" href="kvi__kvs__eventmanager_8h_source.html#l00051">KviKvsEventManager::instance()</a>, <a class="el" href="kvi__window_8h_source.html#l00083">KVI_WINDOW_TYPE_CHANNEL</a>, <a class="el" href="kvi__window_8h_source.html#l00082">KVI_WINDOW_TYPE_CONSOLE</a>, <a class="el" href="kvi__window_8h_source.html#l00084">KVI_WINDOW_TYPE_QUERY</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00128">KviEvent_OnChannelNickPopupRequest</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00126">KviEvent_OnNickLinkPopupRequest</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00129">KviEvent_OnNotifyListPopupRequest</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00127">KviEvent_OnQueryNickPopupRequest</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, <a class="el" href="kvi__kvs__eventmanager_8h_source.html#l00092">KviKvsEventManager::trigger()</a>, and <a class="el" href="kvi__window_8h_source.html#l00189">KviWindow::type()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__variantlist_8h_source.html#l00061">KviKvsVariantList::append()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01116">appendSelectedNicknames()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00746">KviApp::checkSuggestRestoreDefaultScript()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00127">g_pApp</a>, <a class="el" href="kvi__kvs__eventmanager_8h_source.html#l00057">KviKvsEventManager::hasAppHandlers()</a>, <a class="el" href="kvi__kvs__eventmanager_8h_source.html#l00051">KviKvsEventManager::instance()</a>, <a class="el" href="kvi__window_8h_source.html#l00083">KVI_WINDOW_TYPE_CHANNEL</a>, <a class="el" href="kvi__window_8h_source.html#l00082">KVI_WINDOW_TYPE_CONSOLE</a>, <a class="el" href="kvi__window_8h_source.html#l00084">KVI_WINDOW_TYPE_QUERY</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00128">KviEvent_OnChannelNickPopupRequest</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00126">KviEvent_OnNickLinkPopupRequest</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00129">KviEvent_OnNotifyListPopupRequest</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00127">KviEvent_OnQueryNickPopupRequest</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, <a class="el" href="kvi__kvs__eventmanager_8h_source.html#l00092">KviKvsEventManager::trigger()</a>, and <a class="el" href="kvi__window_8h_source.html#l00189">KviWindow::type()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l02017">KviUserListViewArea::mousePressEvent()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l01966">KviUserListViewArea::mousePressEvent()</a>.</p>
 
 </div>
 </div>
@@ -663,9 +666,9 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00831">triggerUpdate()</a>.</p>
+<p>References <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00805">triggerUpdate()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00660">KviChannel::setDeadChan()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00473">KviQuery::setDeadQuery()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00220">KviChannel::~KviChannel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00670">KviChannel::setDeadChan()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00483">KviQuery::setDeadQuery()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00222">KviChannel::~KviChannel()</a>.</p>
 
 </div>
 </div>
@@ -715,7 +718,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00638">KviChannel::addHighlightedUser()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l01164">KviWatchNotifyListManager::doMatchUser()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00672">KviIsOnNotifyListManager::doMatchUser()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00983">KviStupidNotifyListManager::handleIsOn()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00515">KviIsOnNotifyListManager::handleIsOn()</a>, and <a class="el" href="kvi__notifylist_8cpp_source.html#l01230">KviWatchNotifyListManager::handleWatchReply()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00648">KviChannel::addHighlightedUser()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l01164">KviWatchNotifyListManager::doMatchUser()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00672">KviIsOnNotifyListManager::doMatchUser()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00983">KviStupidNotifyListManager::handleIsOn()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00515">KviIsOnNotifyListManager::handleIsOn()</a>, and <a class="el" href="kvi__notifylist_8cpp_source.html#l01230">KviWatchNotifyListManager::handleWatchReply()</a>.</p>
 
 </div>
 </div>
@@ -784,7 +787,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>int </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00156">KviUserListEntry::m_iFlags</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00157">KviUserListEntry::m_iFlags</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>.</p>
 
 </div>
 </div>
@@ -844,9 +847,9 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>char </dd></dl>
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l01381">KviWindow::connection()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00156">KviUserListEntry::m_iFlags</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, <a class="el" href="kvi__ircconnectionserverinfo_8cpp_source.html#l00177">KviIrcConnectionServerInfo::modePrefixChar()</a>, and <a class="el" href="kvi__ircconnection_8h_source.html#l00257">KviIrcConnection::serverInfo()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l01380">KviWindow::connection()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00157">KviUserListEntry::m_iFlags</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, <a class="el" href="kvi__ircconnectionserverinfo_8cpp_source.html#l00185">KviIrcConnectionServerInfo::modePrefixChar()</a>, and <a class="el" href="kvi__ircconnection_8h_source.html#l00257">KviIrcConnection::serverInfo()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l01682">KviUserListViewArea::paintEvent()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01055">prependUserFlag()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l01648">KviUserListViewArea::paintEvent()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01028">prependUserFlag()</a>.</p>
 
 </div>
 </div>
@@ -875,7 +878,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>kvi_time_t </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00159">KviUserListEntry::m_joinTime</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00160">KviUserListEntry::m_joinTime</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>.</p>
 
 </div>
 </div>
@@ -904,7 +907,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>kvi_time_t </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00158">KviUserListEntry::m_lastActionTime</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00159">KviUserListEntry::m_lastActionTime</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>.</p>
 
 </div>
 </div>
@@ -942,7 +945,7 @@ Inheritance diagram for KviUserListView:</div>
 </li>
 </ul>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00057">KVI_USERFLAG_CHANADMIN</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00058">KVI_USERFLAG_CHANOWNER</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00055">KVI_USERFLAG_HALFOP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00060">KVI_USERFLAG_MODEMASK</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00056">KVI_USERFLAG_OP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00053">KVI_USERFLAG_USEROP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00054">KVI_USERFLAG_VOICE</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00156">KviUserListEntry::m_iFlags</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00057">KVI_USERFLAG_CHANADMIN</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00058">KVI_USERFLAG_CHANOWNER</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00055">KVI_USERFLAG_HALFOP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00060">KVI_USERFLAG_MODEMASK</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00056">KVI_USERFLAG_OP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00053">KVI_USERFLAG_USEROP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00054">KVI_USERFLAG_VOICE</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00157">KviUserListEntry::m_iFlags</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>.</p>
 
 </div>
 </div>
@@ -1001,9 +1004,9 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00657">KviFrame::childWindowSelectionStateChange()</a>, <a class="el" href="namespaceKviQString.html#a38f26d58e8d0ace42de557f42ccd64de">KviQString::cmpCI()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00090">g_pFrame</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00177">KviUserListEntry::globalData()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00499">KviPointerHashTable&lt; Key, T &gt;::insert()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00230">KviIrcUserEntry::isIrcOp()</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00057">KVI_USERFLAG_CHANADMIN</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00058">KVI_USERFLAG_CHANOWNER</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00055">KVI_USERFLAG_HALFOP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00056">KVI_USERFLAG_OP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00053">KVI_USERFLAG_USEROP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00054">KVI_USERFLAG_VOICE</a>, <a class="el" href="kvi__options_8h_source.html#l00319">KviOption_boolPlaceNickWithNonAlphaCharsAtEnd</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00832">KviUserListViewArea::m_bIgnoreScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00162">KviUserListEntry::m_bSelected</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00260">m_iChanAdminCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00259">m_iChanOwnerCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00156">KviUserListEntry::m_iFlags</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00262">m_iHalfOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00161">KviUserListEntry::m_iHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00258">m_iIrcOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00830">KviUserListViewArea::m_iLastScrollBarVal</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00261">m_iOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00257">m_iSelectedCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00831">KviUserListViewArea::m_iTopItemOffset</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00265">m_iTotalHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00264">m_iUserOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00263">m_iVoiceCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00164">KviUserListEntry::m_pPrev</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00829">KviUserListViewArea::m_pScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00252">m_pTailItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00154">KviUserListEntry::m_szNick</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00831">triggerUpdate()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00351">updateScrollBarRange()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01312">updateUsersLabel()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00660">KviFrame::childWindowSelectionStateChange()</a>, <a class="el" href="namespaceKviQString.html#a38f26d58e8d0ace42de557f42ccd64de">KviQString::cmpCI()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00090">g_pFrame</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00178">KviUserListEntry::globalData()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00500">KviPointerHashTable&lt; Key, T &gt;::insert()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00230">KviIrcUserEntry::isIrcOp()</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00057">KVI_USERFLAG_CHANADMIN</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00058">KVI_USERFLAG_CHANOWNER</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00055">KVI_USERFLAG_HALFOP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00056">KVI_USERFLAG_OP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00053">KVI_USERFLAG_USEROP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00054">KVI_USERFLAG_VOICE</a>, <a class="el" href="kvi__options_8h_source.html#l00319">KviOption_boolPlaceNickWithNonAlphaCharsAtEnd</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00832">KviUserListViewArea::m_bIgnoreScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_bSelected</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00260">m_iChanAdminCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00259">m_iChanOwnerCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00157">KviUserListEntry::m_iFlags</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00262">m_iHalfOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00162">KviUserListEntry::m_iHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00258">m_iIrcOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00830">KviUserListViewArea::m_iLastScrollBarVal</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00261">m_iOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00257">m_iSelectedCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00831">KviUserListViewArea::m_iTopItemOffset</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00265">m_iTotalHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00264">m_iUserOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00263">m_iVoiceCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00164">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00165">KviUserListEntry::m_pPrev</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00829">KviUserListViewArea::m_pScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00252">m_pTailItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00155">KviUserListEntry::m_szNick</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00805">triggerUpdate()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00331">updateScrollBarRange()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01278">updateUsersLabel()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00789">join()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00763">join()</a>.</p>
 
 </div>
 </div>
@@ -1284,9 +1287,9 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * </dd></dl>
 
-<p>References <a class="el" href="kvi__userlistview_8cpp_source.html#l00070">KVI_USERLIST_BORDER_WIDTH</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00161">KviUserListEntry::m_iHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00831">KviUserListViewArea::m_iTopItemOffset</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>.</p>
+<p>References <a class="el" href="kvi__userlistview_8cpp_source.html#l00070">KVI_USERLIST_BORDER_WIDTH</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00162">KviUserListEntry::m_iHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00831">KviUserListViewArea::m_iTopItemOffset</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00164">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l01539">maybeTip()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02161">KviUserListViewArea::mouseMoveEvent()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l02017">KviUserListViewArea::mousePressEvent()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l01505">maybeTip()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02110">KviUserListViewArea::mouseMoveEvent()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01966">KviUserListViewArea::mousePressEvent()</a>.</p>
 
 </div>
 </div>
@@ -1315,9 +1318,9 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="kvi__userlistview_8cpp_source.html#l00070">KVI_USERLIST_BORDER_WIDTH</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00161">KviUserListEntry::m_iHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00831">KviUserListViewArea::m_iTopItemOffset</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>.</p>
+<p>References <a class="el" href="kvi__userlistview_8cpp_source.html#l00070">KVI_USERLIST_BORDER_WIDTH</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00162">KviUserListEntry::m_iHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00831">KviUserListViewArea::m_iTopItemOffset</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00164">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00941">userAction()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00892">userActionVerifyMask()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00914">userAction()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00865">userActionVerifyMask()</a>.</p>
 
 </div>
 </div>
@@ -1370,9 +1373,9 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00227">KviIrcUserDataBase::insertUser()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00057">KVI_USERFLAG_CHANADMIN</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00058">KVI_USERFLAG_CHANOWNER</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00055">KVI_USERFLAG_HALFOP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00056">KVI_USERFLAG_OP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00053">KVI_USERFLAG_USEROP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00054">KVI_USERFLAG_VOICE</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00223">KviUserListEntry</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00156">KviUserListEntry::m_iFlags</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00256">m_pIrcUserDataBase</a>, <a class="el" href="classKviUserListView.html#afcdaee2623b0ffadf155498450f8c955">setChanAdmin()</a>, <a class="el" href="classKviUserListView.html#a446e6f4fdef04cbda3e5fefd33dce680">setChanOwner()</a>, <a class="el" href="classKviUserListView.html#a4b33311c418ac1586dcd5b0474fa8228">setHalfOp()</a>, <a class="el" href="classKviUserListView.html#a7a56db0aeac8f06201496c46f611964b">setOp()</a>, <a class="el" href="classKviUserListView.html#a58a6ccd948780da9b7d79d6964e71012">setUserOp()</a>, and <a class="el" href="classKviUserListView.html#a067f03c04b18fb076870aa0c0f6f548e">setVoice()</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00231">KviIrcUserDataBase::insertUser()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00057">KVI_USERFLAG_CHANADMIN</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00058">KVI_USERFLAG_CHANOWNER</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00055">KVI_USERFLAG_HALFOP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00056">KVI_USERFLAG_OP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00053">KVI_USERFLAG_USEROP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00054">KVI_USERFLAG_VOICE</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00223">KviUserListEntry</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00157">KviUserListEntry::m_iFlags</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00256">m_pIrcUserDataBase</a>, <a class="el" href="classKviUserListView.html#afcdaee2623b0ffadf155498450f8c955">setChanAdmin()</a>, <a class="el" href="classKviUserListView.html#a446e6f4fdef04cbda3e5fefd33dce680">setChanOwner()</a>, <a class="el" href="classKviUserListView.html#a4b33311c418ac1586dcd5b0474fa8228">setHalfOp()</a>, <a class="el" href="classKviUserListView.html#a7a56db0aeac8f06201496c46f611964b">setOp()</a>, <a class="el" href="classKviUserListView.html#a58a6ccd948780da9b7d79d6964e71012">setUserOp()</a>, and <a class="el" href="classKviUserListView.html#a067f03c04b18fb076870aa0c0f6f548e">setVoice()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01108">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01272">nickChange()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00154">KviNotifyListManager::notifyOnLine()</a>, and <a class="el" href="kvi__query_8cpp_source.html#l00383">KviQuery::setTarget()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01126">KviIrcConnection::loginToIrcServer()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01242">nickChange()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00154">KviNotifyListManager::notifyOnLine()</a>, and <a class="el" href="kvi__query_8cpp_source.html#l00393">KviQuery::setTarget()</a>.</p>
 
 </div>
 </div>
@@ -1411,7 +1414,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__window_8h_source.html#l00206">KviWindow::console()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00125">KviUserListToolTip::doTip()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00282">KviConsole::getUserTipText()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00230">KviIrcUserEntry::isIrcOp()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01433">itemAt()</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00667">KVI_OPTION_UINT</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__options_8h_source.html#l00261">KviOption_boolShowUserListViewToolTips</a>, <a class="el" href="kvi__options_8h_source.html#l00594">KviOption_uintOutputDatetimeFormat</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00159">KviUserListEntry::m_joinTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00158">KviUserListEntry::m_lastActionTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00155">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00154">KviUserListEntry::m_szNick</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__window_8h_source.html#l00206">KviWindow::console()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00125">KviUserListToolTip::doTip()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00284">KviConsole::getUserTipText()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00230">KviIrcUserEntry::isIrcOp()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01399">itemAt()</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00677">KVI_OPTION_UINT</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__options_8h_source.html#l00261">KviOption_boolShowUserListViewToolTips</a>, <a class="el" href="kvi__options_8h_source.html#l00604">KviOption_uintOutputDatetimeFormat</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00160">KviUserListEntry::m_joinTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00159">KviUserListEntry::m_lastActionTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00156">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00155">KviUserListEntry::m_szNick</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00084">KviUserListToolTip::maybeTip()</a>.</p>
 
@@ -1435,7 +1438,7 @@ Inheritance diagram for KviUserListView:</div>
 <p>Returns the next selected nickname in the list. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>QString * </dd></dl>
 
-<p>References <a class="el" href="kvi__userlistview_8h_source.html#l00162">KviUserListEntry::m_bSelected</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00253">m_pIterator</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_pNext</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00154">KviUserListEntry::m_szNick</a>.</p>
+<p>References <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_bSelected</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00253">m_pIterator</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00164">KviUserListEntry::m_pNext</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00155">KviUserListEntry::m_szNick</a>.</p>
 
 </div>
 </div>
@@ -1474,9 +1477,9 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="kvi__debug_8h_source.html#l00058">__range_invalid</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00843">avatarChanged()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00110">KviIrcUserEntry::forgetAvatar()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00134">KviIrcUserEntry::gender()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00272">KviIrcUserEntry::host()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00218">KviIrcUserEntry::isBot()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00789">join()</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__useraction_8h_source.html#l00064">KVI_USERACTION_NICK</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00162">KviUserListEntry::m_bSelected</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00156">KviUserListEntry::m_iFlags</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00159">KviUserListEntry::m_joinTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00155">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00537">part()</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00266">KviIrcUserEntry::user()</a>.</p>
+<p>References <a class="el" href="kvi__userlistview_8cpp_source.html#l00817">avatarChanged()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00114">KviIrcUserEntry::forgetAvatar()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00134">KviIrcUserEntry::gender()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00272">KviIrcUserEntry::host()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00218">KviIrcUserEntry::isBot()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00763">join()</a>, <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__useraction_8h_source.html#l00064">KVI_USERACTION_NICK</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_bSelected</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00157">KviUserListEntry::m_iFlags</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00160">KviUserListEntry::m_joinTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00156">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00537">part()</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00266">KviIrcUserEntry::user()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01375">KviIrcConnection::loginComplete()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00444">KviQuery::nickChange()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01279">KviChannel::nickChange()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01344">KviIrcConnection::nickChange()</a>, and <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00902">KviServerParser::parseLoginNicknameProblem()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01392">KviIrcConnection::loginComplete()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00454">KviQuery::nickChange()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01289">KviChannel::nickChange()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01362">KviIrcConnection::nickChange()</a>, and <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00904">KviServerParser::parseLoginNicknameProblem()</a>.</p>
 
 </div>
 </div>
@@ -1525,7 +1528,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l01272">nickChange()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00220">KviNotifyListManager::notifyOffLine()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01287">KviChannel::part()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01342">partAllButOne()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l01242">nickChange()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00220">KviNotifyListManager::notifyOffLine()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01297">KviChannel::part()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01308">partAllButOne()</a>.</p>
 
 </div>
 </div>
@@ -1547,9 +1550,9 @@ Inheritance diagram for KviUserListView:</div>
 <p>Parts from all channels. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00831">triggerUpdate()</a>.</p>
+<p>References <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00805">triggerUpdate()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__console_8cpp_source.html#l00487">KviConsole::connectionDetached()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00660">KviChannel::setDeadChan()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00473">KviQuery::setDeadQuery()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00220">KviChannel::~KviChannel()</a>, and <a class="el" href="kvi__query_8cpp_source.html#l00112">KviQuery::~KviQuery()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__console_8cpp_source.html#l00497">KviConsole::connectionDetached()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00670">KviChannel::setDeadChan()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00483">KviQuery::setDeadQuery()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00222">KviChannel::~KviChannel()</a>, and <a class="el" href="kvi__query_8cpp_source.html#l00114">KviQuery::~KviQuery()</a>.</p>
 
 </div>
 </div>
@@ -1578,7 +1581,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l01107">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01130">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00537">part()</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l01116">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01139">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00537">part()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__notifylist_8cpp_source.html#l01122">KviWatchNotifyListManager::start()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00938">KviStupidNotifyListManager::start()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00364">KviIsOnNotifyListManager::start()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l01157">KviWatchNotifyListManager::stop()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l01051">KviStupidNotifyListManager::stop()</a>, and <a class="el" href="kvi__notifylist_8cpp_source.html#l00890">KviIsOnNotifyListManager::stop()</a>.</p>
 
@@ -1619,7 +1622,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00657">KviFrame::childWindowSelectionStateChange()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00370">KviIrcUserDataBase::find()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00090">g_pFrame</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00230">KviIrcUserEntry::isIrcOp()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00057">KVI_USERFLAG_CHANADMIN</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00058">KVI_USERFLAG_CHANOWNER</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00055">KVI_USERFLAG_HALFOP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00056">KVI_USERFLAG_OP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00053">KVI_USERFLAG_USEROP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00054">KVI_USERFLAG_VOICE</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00832">KviUserListViewArea::m_bIgnoreScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00162">KviUserListEntry::m_bSelected</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00260">m_iChanAdminCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00259">m_iChanOwnerCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00156">KviUserListEntry::m_iFlags</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00262">m_iHalfOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00161">KviUserListEntry::m_iHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00258">m_iIrcOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00830">KviUserListViewArea::m_iLastScrollBarVal</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00261">m_iOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00257">m_iSelectedCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00265">m_iTotalHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00264">m_iUserOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00263">m_iVoiceCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00155">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00256">m_pIrcUserDataBase</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00164">KviUserListEntry::m_pPrev</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00829">KviUserListViewArea::m_pScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00252">m_pTailItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00553">KviPointerHashTable&lt; Key, T &gt;::remove()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00245">KviIrcUserDataBase::removeUser()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00116">KviUserListEntry::resetAvatarConnection()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00831">triggerUpdate()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00351">updateScrollBarRange()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01312">updateUsersLabel()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00660">KviFrame::childWindowSelectionStateChange()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00114">KviUserListEntry::detachAvatarData()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00090">g_pFrame</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00230">KviIrcUserEntry::isIrcOp()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00057">KVI_USERFLAG_CHANADMIN</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00058">KVI_USERFLAG_CHANOWNER</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00055">KVI_USERFLAG_HALFOP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00056">KVI_USERFLAG_OP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00053">KVI_USERFLAG_USEROP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00054">KVI_USERFLAG_VOICE</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00832">KviUserListViewArea::m_bIgnoreScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_bSelected</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00260">m_iChanAdminCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00259">m_iChanOwnerCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00157">KviUserListEntry::m_iFlags</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00262">m_iHalfOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00162">KviUserListEntry::m_iHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00258">m_iIrcOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00830">KviUserListViewArea::m_iLastScrollBarVal</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00261">m_iOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00257">m_iSelectedCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00265">m_iTotalHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00264">m_iUserOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00263">m_iVoiceCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00156">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00256">m_pIrcUserDataBase</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00164">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00165">KviUserListEntry::m_pPrev</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00829">KviUserListViewArea::m_pScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00252">m_pTailItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00554">KviPointerHashTable&lt; Key, T &gt;::remove()</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00249">KviIrcUserDataBase::removeUser()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00805">triggerUpdate()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00331">updateScrollBarRange()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01278">updateUsersLabel()</a>.</p>
 
 </div>
 </div>
@@ -1658,7 +1661,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__userlistview_8cpp_source.html#l01047">getUserFlag()</a>.</p>
+<p>References <a class="el" href="kvi__userlistview_8cpp_source.html#l01020">getUserFlag()</a>.</p>
 
 </div>
 </div>
@@ -1681,9 +1684,9 @@ Inheritance diagram for KviUserListView:</div>
 <p>All counters will be reset </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00657">KviFrame::childWindowSelectionStateChange()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00619">KviPointerHashTable&lt; Key, T &gt;::clear()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01107">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01130">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00090">g_pFrame</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00832">KviUserListViewArea::m_bIgnoreScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00260">m_iChanAdminCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00259">m_iChanOwnerCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00262">m_iHalfOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00830">KviUserListViewArea::m_iLastScrollBarVal</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00261">m_iOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00257">m_iSelectedCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00831">KviUserListViewArea::m_iTopItemOffset</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00265">m_iTotalHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00264">m_iUserOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00263">m_iVoiceCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00256">m_pIrcUserDataBase</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00829">KviUserListViewArea::m_pScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00245">KviIrcUserDataBase::removeUser()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00116">KviUserListEntry::resetAvatarConnection()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00351">updateScrollBarRange()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00660">KviFrame::childWindowSelectionStateChange()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00620">KviPointerHashTable&lt; Key, T &gt;::clear()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01116">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01139">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00090">g_pFrame</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00832">KviUserListViewArea::m_bIgnoreScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00260">m_iChanAdminCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00259">m_iChanOwnerCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00262">m_iHalfOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00830">KviUserListViewArea::m_iLastScrollBarVal</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00261">m_iOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00257">m_iSelectedCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00831">KviUserListViewArea::m_iTopItemOffset</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00265">m_iTotalHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00264">m_iUserOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00263">m_iVoiceCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00256">m_pIrcUserDataBase</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00829">KviUserListViewArea::m_pScrollBar</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00250">m_pTopItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, <a class="el" href="kvi__ircuserdb_8cpp_source.html#l00249">KviIrcUserDataBase::removeUser()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00331">updateScrollBarRange()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l01394">partAll()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00290">~KviUserListView()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l01360">partAll()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00270">~KviUserListView()</a>.</p>
 
 </div>
 </div>
@@ -1703,9 +1706,9 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00278">KviOption_boolShowUserListStatisticLabel</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00254">m_pUsersLabel</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00351">updateScrollBarRange()</a>.</p>
+<p>References <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00278">KviOption_boolShowUserListStatisticLabel</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00254">m_pUsersLabel</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00331">updateScrollBarRange()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00357">applyOptions()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l01098">KviWindow::childrenTreeChanged()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00337">applyOptions()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l01099">KviWindow::childrenTreeChanged()</a>.</p>
 
 </div>
 </div>
@@ -1734,7 +1737,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00657">KviFrame::childWindowSelectionStateChange()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01107">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00090">g_pFrame</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00162">KviUserListEntry::m_bSelected</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00257">m_iSelectedCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>.</p>
+<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00660">KviFrame::childWindowSelectionStateChange()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01116">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00090">g_pFrame</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_bSelected</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00257">m_iSelectedCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00271">m_pKviWindow</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__ircview__events_8cpp_source.html#l00331">KviIrcView::mouseRealPressEvent()</a>.</p>
 
@@ -1797,7 +1800,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00789">join()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00763">join()</a>.</p>
 
 </div>
 </div>
@@ -1836,7 +1839,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00789">join()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00763">join()</a>.</p>
 
 </div>
 </div>
@@ -1875,7 +1878,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00789">join()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00763">join()</a>.</p>
 
 </div>
 </div>
@@ -1923,9 +1926,9 @@ Inheritance diagram for KviUserListView:</div>
 </li>
 </ul>
 
-<p>References <a class="el" href="kvi__userlistview_8h_source.html#l00268">m_ibEntries</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00269">m_ieEntries</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00270">m_iIEntries</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01312">updateUsersLabel()</a>.</p>
+<p>References <a class="el" href="kvi__userlistview_8h_source.html#l00268">m_ibEntries</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00269">m_ieEntries</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00270">m_iIEntries</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01278">updateUsersLabel()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01597">KviChannel::setMask()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01607">KviChannel::setMask()</a>.</p>
 
 </div>
 </div>
@@ -1964,7 +1967,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00789">join()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00763">join()</a>.</p>
 
 </div>
 </div>
@@ -1993,7 +1996,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__console_8cpp_source.html#l00479">KviConsole::connectionAttached()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00487">KviConsole::connectionDetached()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00703">KviChannel::setAliveChan()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00492">KviQuery::setAliveQuery()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00660">KviChannel::setDeadChan()</a>, and <a class="el" href="kvi__query_8cpp_source.html#l00473">KviQuery::setDeadQuery()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__console_8cpp_source.html#l00489">KviConsole::connectionAttached()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00497">KviConsole::connectionDetached()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00713">KviChannel::setAliveChan()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00502">KviQuery::setAliveQuery()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00670">KviChannel::setDeadChan()</a>, and <a class="el" href="kvi__query_8cpp_source.html#l00483">KviQuery::setDeadQuery()</a>.</p>
 
 </div>
 </div>
@@ -2032,7 +2035,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00789">join()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00763">join()</a>.</p>
 
 </div>
 </div>
@@ -2071,7 +2074,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00789">join()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00763">join()</a>.</p>
 
 </div>
 </div>
@@ -2094,9 +2097,9 @@ Inheritance diagram for KviUserListView:</div>
 <p>This function will updates the scrollbar range, the users label, and the view area </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00351">updateScrollBarRange()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01312">updateUsersLabel()</a>.</p>
+<p>References <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00331">updateScrollBarRange()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01278">updateUsersLabel()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00414">enableUpdates()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01394">partAll()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00402">updateArea()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00941">userAction()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00892">userActionVerifyMask()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00386">enableUpdates()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01360">partAll()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00374">updateArea()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00914">userAction()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00865">userActionVerifyMask()</a>.</p>
 
 </div>
 </div>
@@ -2118,9 +2121,9 @@ Inheritance diagram for KviUserListView:</div>
 <p>Updates the list view area. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00831">triggerUpdate()</a>.</p>
+<p>References <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00805">triggerUpdate()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00855">KviServerParser::parseNumericEndOfWho()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00857">KviServerParser::parseNumericEndOfWho()</a>.</p>
 
 </div>
 </div>
@@ -2144,7 +2147,7 @@ Inheritance diagram for KviUserListView:</div>
 
 <p>References <a class="el" href="kvi__userlistview_8cpp_source.html#l00070">KVI_USERLIST_BORDER_WIDTH</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00265">m_iTotalHeight</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00829">KviUserListViewArea::m_pScrollBar</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00255">m_pViewArea</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00357">applyOptions()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00843">avatarChanged()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">removeAllEntries()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01400">resizeEvent()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00831">triggerUpdate()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00337">applyOptions()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00817">avatarChanged()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">removeAllEntries()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01366">resizeEvent()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00805">triggerUpdate()</a>.</p>
 
 </div>
 </div>
@@ -2166,9 +2169,9 @@ Inheritance diagram for KviUserListView:</div>
 <p>Updates the users label. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__string_8cpp_source.html#l01524">KviStr::append()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00475">KviPointerHashTable&lt; Key, T &gt;::count()</a>, <a class="el" href="kvi__string_8h_source.html#l00118">KviStr::Format</a>, <a class="el" href="kvi__options_8h_source.html#l00662">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00278">KviOption_boolShowUserListStatisticLabel</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00268">m_ibEntries</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00260">m_iChanAdminCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00259">m_iChanOwnerCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00269">m_ieEntries</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00262">m_iHalfOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00270">m_iIEntries</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00261">m_iOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00264">m_iUserOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00263">m_iVoiceCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00254">m_pUsersLabel</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, and <a class="el" href="kvi__string_8cpp_source.html#l02628">KviStr::sprintf()</a>.</p>
+<p>References <a class="el" href="kvi__string_8cpp_source.html#l01521">KviStr::append()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00476">KviPointerHashTable&lt; Key, T &gt;::count()</a>, <a class="el" href="kvi__string_8h_source.html#l00118">KviStr::Format</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00278">KviOption_boolShowUserListStatisticLabel</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00268">m_ibEntries</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00260">m_iChanAdminCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00259">m_iChanOwnerCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00269">m_ieEntries</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00262">m_iHalfOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00270">m_iIEntries</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00261">m_iOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00264">m_iUserOpCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00263">m_iVoiceCount</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00254">m_pUsersLabel</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, and <a class="el" href="kvi__string_8cpp_source.html#l02702">KviStr::sprintf()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00421">setMaskEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00831">triggerUpdate()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00393">setMaskEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00805">triggerUpdate()</a>.</p>
 
 </div>
 </div>
@@ -2208,7 +2211,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01418">itemVisible()</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00157">KviUserListEntry::m_iTemperature</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00158">KviUserListEntry::m_lastActionTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00831">triggerUpdate()</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01384">itemVisible()</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00158">KviUserListEntry::m_iTemperature</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00159">KviUserListEntry::m_lastActionTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00805">triggerUpdate()</a>.</p>
 
 </div>
 </div>
@@ -2262,7 +2265,7 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="namespaceKviQString.html#acc32a090b6a136607fa21f93af080216">KviQString::equalCS()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01418">itemVisible()</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00157">KviUserListEntry::m_iTemperature</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00158">KviUserListEntry::m_lastActionTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00155">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00183">KviIrcUserEntry::setHost()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00155">KviIrcUserEntry::setUser()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00831">triggerUpdate()</a>.</p>
+<p>References <a class="el" href="namespaceKviQString.html#acc32a090b6a136607fa21f93af080216">KviQString::equalCS()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01384">itemVisible()</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00158">KviUserListEntry::m_iTemperature</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00159">KviUserListEntry::m_lastActionTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00156">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00183">KviIrcUserEntry::setHost()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00155">KviIrcUserEntry::setUser()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00805">triggerUpdate()</a>.</p>
 
 </div>
 </div>
@@ -2302,9 +2305,9 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__ircmask_8h_source.html#l00205">KviIrcMask::hasHost()</a>, <a class="el" href="kvi__ircmask_8h_source.html#l00199">KviIrcMask::hasUser()</a>, <a class="el" href="kvi__ircmask_8h_source.html#l00193">KviIrcMask::host()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01418">itemVisible()</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00157">KviUserListEntry::m_iTemperature</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00158">KviUserListEntry::m_lastActionTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00155">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__ircmask_8h_source.html#l00177">KviIrcMask::nick()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00183">KviIrcUserEntry::setHost()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00155">KviIrcUserEntry::setUser()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00831">triggerUpdate()</a>, and <a class="el" href="kvi__ircmask_8h_source.html#l00185">KviIrcMask::user()</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__ircmask_8h_source.html#l00205">KviIrcMask::hasHost()</a>, <a class="el" href="kvi__ircmask_8h_source.html#l00199">KviIrcMask::hasUser()</a>, <a class="el" href="kvi__ircmask_8h_source.html#l00193">KviIrcMask::host()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01384">itemVisible()</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00158">KviUserListEntry::m_iTemperature</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00159">KviUserListEntry::m_lastActionTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00156">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__ircmask_8h_source.html#l00177">KviIrcMask::nick()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00183">KviIrcUserEntry::setHost()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00155">KviIrcUserEntry::setUser()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00805">triggerUpdate()</a>, and <a class="el" href="kvi__ircmask_8h_source.html#l00185">KviIrcMask::user()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__query_8cpp_source.html#l00713">KviQuery::ownAction()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00347">KviQuery::userAction()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01504">KviChannel::userAction()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__query_8cpp_source.html#l00723">KviQuery::ownAction()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00357">KviQuery::userAction()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01514">KviChannel::userAction()</a>.</p>
 
 </div>
 </div>
@@ -2372,9 +2375,9 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="namespaceKviQString.html#acc32a090b6a136607fa21f93af080216">KviQString::equalCS()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00446">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00272">KviIrcUserEntry::host()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01418">itemVisible()</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00157">KviUserListEntry::m_iTemperature</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00158">KviUserListEntry::m_lastActionTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00155">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00183">KviIrcUserEntry::setHost()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00155">KviIrcUserEntry::setUser()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00831">triggerUpdate()</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00266">KviIrcUserEntry::user()</a>.</p>
+<p>References <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="namespaceKviQString.html#acc32a090b6a136607fa21f93af080216">KviQString::equalCS()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00272">KviIrcUserEntry::host()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01384">itemVisible()</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00158">KviUserListEntry::m_iTemperature</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00159">KviUserListEntry::m_lastActionTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00156">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00183">KviIrcUserEntry::setHost()</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00155">KviIrcUserEntry::setUser()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00805">triggerUpdate()</a>, and <a class="el" href="kvi__ircuserdb_8h_source.html#l00266">KviIrcUserEntry::user()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__query_8cpp_source.html#l00347">KviQuery::userAction()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__query_8cpp_source.html#l00357">KviQuery::userAction()</a>.</p>
 
 </div>
 </div>
@@ -2423,9 +2426,9 @@ Inheritance diagram for KviUserListView:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00475">KviPointerHashTable&lt; Key, T &gt;::count()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00087">_KviUserListViewUserStats::iAvgTemperature</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00230">KviIrcUserEntry::isIrcOp()</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00057">KVI_USERFLAG_CHANADMIN</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00058">KVI_USERFLAG_CHANOWNER</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00055">KVI_USERFLAG_HALFOP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00056">KVI_USERFLAG_OP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00053">KVI_USERFLAG_USEROP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00054">KVI_USERFLAG_VOICE</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00156">KviUserListEntry::m_iFlags</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00157">KviUserListEntry::m_iTemperature</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00158">KviUserListEntry::m_lastActionTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00155">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00163">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00076">_KviUserListViewUserStats::uActive</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00077">_KviUserListViewUserStats::uActiveOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00082">_KviUserListViewUserStats::uChanAdmin</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00081">_KviUserListViewUserStats::uChanOwner</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00084">_KviUserListViewUserStats::uHalfOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00078">_KviUserListViewUserStats::uHot</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00079">_KviUserListViewUserStats::uHotOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00080">_KviUserListViewUserStats::uIrcOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00083">_KviUserListViewUserStats::uOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00075">_KviUserListViewUserStats::uTotal</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00086">_KviUserListViewUserStats::uUserOp</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00085">_KviUserListViewUserStats::uVoiced</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00476">KviPointerHashTable&lt; Key, T &gt;::count()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00087">_KviUserListViewUserStats::iAvgTemperature</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00230">KviIrcUserEntry::isIrcOp()</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00057">KVI_USERFLAG_CHANADMIN</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00058">KVI_USERFLAG_CHANOWNER</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00055">KVI_USERFLAG_HALFOP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00056">KVI_USERFLAG_OP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00053">KVI_USERFLAG_USEROP</a>, <a class="el" href="kvi__ircuserdb_8h_source.html#l00054">KVI_USERFLAG_VOICE</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00157">KviUserListEntry::m_iFlags</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00158">KviUserListEntry::m_iTemperature</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00159">KviUserListEntry::m_lastActionTime</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00249">m_pEntryDict</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00156">KviUserListEntry::m_pGlobalData</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00251">m_pHeadItem</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00164">KviUserListEntry::m_pNext</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00076">_KviUserListViewUserStats::uActive</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00077">_KviUserListViewUserStats::uActiveOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00082">_KviUserListViewUserStats::uChanAdmin</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00081">_KviUserListViewUserStats::uChanOwner</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00084">_KviUserListViewUserStats::uHalfOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00078">_KviUserListViewUserStats::uHot</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00079">_KviUserListViewUserStats::uHotOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00080">_KviUserListViewUserStats::uIrcOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00083">_KviUserListViewUserStats::uOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00075">_KviUserListViewUserStats::uTotal</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00086">_KviUserListViewUserStats::uUserOp</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00085">_KviUserListViewUserStats::uVoiced</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00770">KviChannel::getWindowListTipText()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00780">KviChannel::getWindowListTipText()</a>.</p>
 
 </div>
 </div>
@@ -2467,7 +2470,7 @@ Inheritance diagram for KviUserListView:</div>
 <p>Returns the window associated to the userlist. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l01682">KviUserListViewArea::paintEvent()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l01648">KviUserListViewArea::paintEvent()</a>.</p>
 
 </div>
 </div>
@@ -2522,7 +2525,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00789">join()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00763">join()</a>.</p>
 
 </div>
 </div>
@@ -2537,7 +2540,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>.</p>
 
 </div>
 </div>
@@ -2552,7 +2555,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>.</p>
 
 </div>
 </div>
@@ -2568,7 +2571,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00421">setMaskEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01312">updateUsersLabel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00393">setMaskEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01278">updateUsersLabel()</a>.</p>
 
 </div>
 </div>
@@ -2583,7 +2586,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01312">updateUsersLabel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01278">updateUsersLabel()</a>.</p>
 
 </div>
 </div>
@@ -2598,7 +2601,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01312">updateUsersLabel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01278">updateUsersLabel()</a>.</p>
 
 </div>
 </div>
@@ -2613,7 +2616,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00421">setMaskEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01312">updateUsersLabel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00393">setMaskEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01278">updateUsersLabel()</a>.</p>
 
 </div>
 </div>
@@ -2628,7 +2631,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00357">applyOptions()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01682">KviUserListViewArea::paintEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00220">KviUserListEntry::recalcSize()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l02009">KviUserListViewArea::resizeEvent()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00337">applyOptions()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01648">KviUserListViewArea::paintEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00222">KviUserListEntry::recalcSize()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01958">KviUserListViewArea::resizeEvent()</a>.</p>
 
 </div>
 </div>
@@ -2643,7 +2646,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01312">updateUsersLabel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01278">updateUsersLabel()</a>.</p>
 
 </div>
 </div>
@@ -2658,7 +2661,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00421">setMaskEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01312">updateUsersLabel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00393">setMaskEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01278">updateUsersLabel()</a>.</p>
 
 </div>
 </div>
@@ -2673,7 +2676,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>.</p>
 
 </div>
 </div>
@@ -2688,7 +2691,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01312">updateUsersLabel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01278">updateUsersLabel()</a>.</p>
 
 </div>
 </div>
@@ -2703,7 +2706,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02095">KviUserListViewArea::keyPressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02161">KviUserListViewArea::mouseMoveEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02017">KviUserListViewArea::mousePressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01160">select()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02044">KviUserListViewArea::keyPressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02110">KviUserListViewArea::mouseMoveEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01966">KviUserListViewArea::mousePressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01133">select()</a>.</p>
 
 </div>
 </div>
@@ -2718,7 +2721,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00357">applyOptions()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00843">avatarChanged()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00351">updateScrollBarRange()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00337">applyOptions()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00817">avatarChanged()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00331">updateScrollBarRange()</a>.</p>
 
 </div>
 </div>
@@ -2733,7 +2736,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01312">updateUsersLabel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01278">updateUsersLabel()</a>.</p>
 
 </div>
 </div>
@@ -2748,7 +2751,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01312">updateUsersLabel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01278">updateUsersLabel()</a>.</p>
 
 </div>
 </div>
@@ -2763,7 +2766,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00843">avatarChanged()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01062">flags()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01005">getUserJoinTime()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01014">getUserLastActionTime()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01023">getUserModeLevel()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00789">join()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02017">KviUserListViewArea::mousePressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01272">nickChange()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01342">partAllButOne()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">removeAllEntries()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01160">select()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01312">updateUsersLabel()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00941">userAction()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00892">userActionVerifyMask()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01463">userStats()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00290">~KviUserListView()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00817">avatarChanged()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01035">flags()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00978">getUserJoinTime()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00987">getUserLastActionTime()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00996">getUserModeLevel()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00763">join()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01966">KviUserListViewArea::mousePressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01242">nickChange()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01308">partAllButOne()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">removeAllEntries()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01133">select()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01278">updateUsersLabel()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00914">userAction()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00865">userActionVerifyMask()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01429">userStats()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00270">~KviUserListView()</a>.</p>
 
 </div>
 </div>
@@ -2778,7 +2781,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l01143">appendSelectedNicknames()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00357">applyOptions()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00843">avatarChanged()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00493">completeNickBashLike()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00513">completeNickStandard()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02095">KviUserListViewArea::keyPressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02017">KviUserListViewArea::mousePressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01463">userStats()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l01116">appendSelectedNicknames()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00337">applyOptions()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00817">avatarChanged()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00467">completeNickBashLike()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00487">completeNickStandard()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02044">KviUserListViewArea::keyPressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01966">KviUserListViewArea::mousePressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01429">userStats()</a>.</p>
 
 </div>
 </div>
@@ -2793,7 +2796,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00789">join()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">removeAllEntries()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00763">join()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">removeAllEntries()</a>.</p>
 
 </div>
 </div>
@@ -2808,7 +2811,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l01128">nextSelectedNickname()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l01101">nextSelectedNickname()</a>.</p>
 
 </div>
 </div>
@@ -2823,7 +2826,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00179">KviUserListEntry::color()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00325">emitDoubleClick()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00299">emitRightClick()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01047">getUserFlag()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02095">KviUserListViewArea::keyPressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01539">maybeTip()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02161">KviUserListViewArea::mouseMoveEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02017">KviUserListViewArea::mousePressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01682">KviUserListViewArea::paintEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01160">select()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00181">KviUserListEntry::color()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00305">emitDoubleClick()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00279">emitRightClick()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01020">getUserFlag()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02044">KviUserListViewArea::keyPressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01505">maybeTip()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02110">KviUserListViewArea::mouseMoveEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01966">KviUserListViewArea::mousePressEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01648">KviUserListViewArea::paintEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01133">select()</a>.</p>
 
 </div>
 </div>
@@ -2838,7 +2841,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02161">KviUserListViewArea::mouseMoveEvent()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02110">KviUserListViewArea::mouseMoveEvent()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>.</p>
 
 </div>
 </div>
@@ -2853,7 +2856,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00290">~KviUserListView()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00270">~KviUserListView()</a>.</p>
 
 </div>
 </div>
@@ -2868,7 +2871,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00438">animatedAvatarUpdated()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00357">applyOptions()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00843">avatarChanged()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01433">itemAt()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01418">itemVisible()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02161">KviUserListViewArea::mouseMoveEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01682">KviUserListViewArea::paintEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01625">KviUserListViewArea::scrollBarMoved()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00410">animatedAvatarUpdated()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00337">applyOptions()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00817">avatarChanged()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01399">itemAt()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01384">itemVisible()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l02110">KviUserListViewArea::mouseMoveEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01648">KviUserListViewArea::paintEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">removeAllEntries()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01591">KviUserListViewArea::scrollBarMoved()</a>.</p>
 
 </div>
 </div>
@@ -2883,7 +2886,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00357">applyOptions()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01400">resizeEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01312">updateUsersLabel()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00290">~KviUserListView()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00337">applyOptions()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01366">resizeEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01278">updateUsersLabel()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00270">~KviUserListView()</a>.</p>
 
 </div>
 </div>
@@ -2898,7 +2901,7 @@ Inheritance diagram for KviUserListView:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00438">animatedAvatarUpdated()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00357">applyOptions()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00843">avatarChanged()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00414">enableUpdates()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00585">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01433">itemAt()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01418">itemVisible()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00256">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01182">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01358">removeAllEntries()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01400">resizeEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01160">select()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00831">triggerUpdate()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00402">updateArea()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00351">updateScrollBarRange()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00290">~KviUserListView()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__userlistview_8cpp_source.html#l00410">animatedAvatarUpdated()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00337">applyOptions()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00817">avatarChanged()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00386">enableUpdates()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00559">insertUserEntry()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01399">itemAt()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01384">itemVisible()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00236">KviUserListView()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01155">partInternal()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01324">removeAllEntries()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01366">resizeEvent()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01133">select()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00805">triggerUpdate()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00374">updateArea()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00331">updateScrollBarRange()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00270">~KviUserListView()</a>.</p>
 
 </div>
 </div>
@@ -2907,7 +2910,7 @@ Inheritance diagram for KviUserListView:</div>
 <li>src/kvirc/ui/<a class="el" href="kvi__userlistview_8cpp.html">kvi_userlistview.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:36 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:28 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

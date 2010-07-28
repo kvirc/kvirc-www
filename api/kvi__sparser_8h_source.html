@@ -285,8 +285,8 @@
 <a name="l00260"></a>00260         <span class="keyword">static</span> <span class="keywordtype">void</span> encodeCtcpParameter(<span class="keyword">const</span> <span class="keywordtype">char</span> * param,QString &amp;buffer,<span class="keywordtype">bool</span> bSpaceBreaks = <span class="keyword">true</span>);
 <a name="l00261"></a>00261         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * decodeCtcpEscape(<span class="keyword">const</span> <span class="keywordtype">char</span> * msg_ptr,<a class="code" href="classKviStr.html">KviStr</a> &amp;buffer);
 <a name="l00262"></a>00262         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * decodeCtcpEscape(<span class="keyword">const</span> <span class="keywordtype">char</span> * msg_ptr,QByteArray &amp;buffer);
-<a name="l00263"></a>00263         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * extractCtcpParameter(<span class="keyword">const</span> <span class="keywordtype">char</span> * msg_ptr,<a class="code" href="classKviStr.html">KviStr</a> &amp;buffer,<span class="keywordtype">bool</span> bSpaceBreaks = <span class="keyword">true</span>);
-<a name="l00264"></a>00264         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * extractCtcpParameter(<span class="keyword">const</span> <span class="keywordtype">char</span> * msg_ptr,QString &amp;buffer,<span class="keywordtype">bool</span> bSpaceBreaks = <span class="keyword">true</span>);
+<a name="l00263"></a>00263         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * extractCtcpParameter(<span class="keyword">const</span> <span class="keywordtype">char</span> * msg_ptr,<a class="code" href="classKviStr.html">KviStr</a> &amp;buffer,<span class="keywordtype">bool</span> bSpaceBreaks = <span class="keyword">true</span>, <span class="keywordtype">bool</span> bSafeOnly=<span class="keyword">false</span>);
+<a name="l00264"></a>00264         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * extractCtcpParameter(<span class="keyword">const</span> <span class="keywordtype">char</span> * msg_ptr,QString &amp;buffer,<span class="keywordtype">bool</span> bSpaceBreaks = <span class="keyword">true</span>, <span class="keywordtype">bool</span> bSafeOnly=<span class="keyword">false</span>);
 <a name="l00265"></a>00265 };
 <a name="l00266"></a>00266 
 <a name="l00267"></a>00267 <span class="preprocessor">#ifndef _KVI_SPARSER_CPP_</span>
@@ -296,7 +296,7 @@
 <a name="l00271"></a>00271 
 <a name="l00272"></a>00272 <span class="preprocessor">#endif //_KVI_SPARSER_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:28 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

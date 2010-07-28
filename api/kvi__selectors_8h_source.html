@@ -246,7 +246,7 @@
 <a name="l00221"></a>00221 };
 <a name="l00222"></a>00222 
 <a name="l00223"></a>00223 
-<a name="l00224"></a><a class="code" href="classKviFileSelector.html">00224</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviFileSelector.html">KviFileSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
+<a name="l00224"></a><a class="code" href="classKviFileSelector.html">00224</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviFileSelector.html">KviFileSelector</a> : <span class="keyword">public</span> QWidget, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
 <a name="l00225"></a>00225 {
 <a name="l00226"></a>00226         Q_OBJECT
 <a name="l00227"></a><a class="code" href="classKviFileSelector.html#ae425a752dedf156942a3e2166ee0a661">00227</a>         Q_PROPERTY(QString tmpFile READ tmpFile WRITE setTmpFile)
@@ -256,197 +256,199 @@
 <a name="l00231"></a>00231 <span class="keyword">public</span>:
 <a name="l00232"></a><a class="code" href="classKviFileSelector.html#ad03244e379cd4afb3eb244daeaf13e95">00232</a>         <span class="keyword">enum</span> <a class="code" href="classKviFileSelector.html#ad03244e379cd4afb3eb244daeaf13e95">Flags</a> {
 <a name="l00233"></a><a class="code" href="classKviFileSelector.html#ad03244e379cd4afb3eb244daeaf13e95a7c4e6724b2bd1665bdb9e4352b059a95">00233</a>                 ChooseSaveFileName = 1,
-<a name="l00234"></a><a class="code" href="classKviFileSelector.html#ad03244e379cd4afb3eb244daeaf13e95a26dd0ae8f94e4da47de35e0e52e77b58">00234</a>                 DontConfirmOverwrite = 2
-<a name="l00235"></a>00235         };
-<a name="l00236"></a>00236 <span class="keyword">protected</span>:
-<a name="l00237"></a><a class="code" href="classKviFileSelector.html#a4003d538ae82536998e9a60b3c65e21a">00237</a>         QLabel      * m_pLabel;
-<a name="l00238"></a><a class="code" href="classKviFileSelector.html#a78d99ed8acc4b4e62b21ec383fbec3d7">00238</a>         QLineEdit   * m_pLineEdit;
-<a name="l00239"></a><a class="code" href="classKviFileSelector.html#a336744e1de555763c7a724c0b9ec8678">00239</a>         QPushButton * m_pButton;
-<a name="l00240"></a><a class="code" href="classKviFileSelector.html#a6186d006857640522de3696480839e38">00240</a>         QString     * m_pOption;
-<a name="l00241"></a><a class="code" href="classKviFileSelector.html#a9b5a5de2dd4c307e990070e62a29b896">00241</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>  m_uFlags;
-<a name="l00242"></a><a class="code" href="classKviFileSelector.html#a77eef922a645719a643f4a4d3b76e1c5">00242</a>         QString       m_szFilter;
-<a name="l00243"></a>00243 <span class="keyword">public</span>:
-<a name="l00244"></a><a class="code" href="classKviFileSelector.html#a8ce68f40ef34633ba805d4d6e8a70b72">00244</a>         QString <a class="code" href="classKviFileSelector.html#a8ce68f40ef34633ba805d4d6e8a70b72">tmpFile</a>(){ <span class="keywordflow">return</span> m_pLineEdit-&gt;text(); };
-<a name="l00245"></a><a class="code" href="classKviFileSelector.html#a2fd7220a04ed68a49fb4542cf7518521">00245</a>         <span class="keywordtype">void</span> <a class="code" href="classKviFileSelector.html#a2fd7220a04ed68a49fb4542cf7518521">setTmpFile</a>(QString &amp; szFile){ m_pLineEdit-&gt;setText(szFile); };
-<a name="l00246"></a>00246         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSelectorInterface.html#a2dac18af8c22c2ab82aff348a770eed3">commit</a>();
-<a name="l00247"></a>00247         <span class="keywordtype">void</span> setSelection(<span class="keyword">const</span> QString &amp;szSelection);
-<a name="l00248"></a>00248 signals:
-<a name="l00249"></a>00249         <span class="keywordtype">void</span> selectionChanged(<span class="keyword">const</span> QString &amp;szNewValue);
-<a name="l00250"></a>00250 <span class="keyword">public</span> slots:
-<a name="l00251"></a>00251         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span> bEnabled);
-<a name="l00252"></a>00252 <span class="keyword">private</span> slots:
-<a name="l00253"></a>00253         <span class="keywordtype">void</span> browseClicked();
-<a name="l00254"></a>00254 <span class="keyword">protected</span>:
-<a name="l00255"></a>00255         <span class="keyword">virtual</span> <span class="keywordtype">void</span> select();
-<a name="l00256"></a>00256 };
-<a name="l00257"></a>00257 
-<a name="l00258"></a><a class="code" href="classKviDirectorySelector.html">00258</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviDirectorySelector.html">KviDirectorySelector</a> : <span class="keyword">public</span> <a class="code" href="classKviFileSelector.html">KviFileSelector</a>
-<a name="l00259"></a>00259 {
-<a name="l00260"></a>00260         Q_OBJECT
-<a name="l00261"></a>00261 <span class="keyword">public</span>:
-<a name="l00262"></a>00262         <a class="code" href="classKviDirectorySelector.html">KviDirectorySelector</a>(QWidget * par,<span class="keyword">const</span> QString &amp; txt,QString * pOption,<span class="keywordtype">bool</span> bEnabled);
-<a name="l00263"></a><a class="code" href="classKviDirectorySelector.html#a438ef245a9aac2064fca04d783d5109e">00263</a>         <a class="code" href="classKviDirectorySelector.html#a438ef245a9aac2064fca04d783d5109e">~KviDirectorySelector</a>(){};
-<a name="l00264"></a>00264 <span class="keyword">protected</span>:
-<a name="l00265"></a>00265         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviFileSelector.html#acd29b7d3f89880cd4747f0ee27be62a4">select</a>();
-<a name="l00266"></a>00266 };
-<a name="l00267"></a>00267 
-<a name="l00268"></a>00268 
-<a name="l00269"></a><a class="code" href="classKviColorSelector.html">00269</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviColorSelector.html">KviColorSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
-<a name="l00270"></a>00270 {
-<a name="l00271"></a>00271         Q_OBJECT
-<a name="l00272"></a>00272 <span class="keyword">public</span>:
-<a name="l00273"></a>00273         <a class="code" href="classKviColorSelector.html">KviColorSelector</a>(QWidget * par,<span class="keyword">const</span> QString &amp; txt,QColor * pOption,<span class="keywordtype">bool</span> bEnabled);
-<a name="l00274"></a><a class="code" href="classKviColorSelector.html#a7490a6e60b19f3e74b6e24846c6d1063">00274</a>         <a class="code" href="classKviColorSelector.html#a7490a6e60b19f3e74b6e24846c6d1063">~KviColorSelector</a>(){};
-<a name="l00275"></a>00275 <span class="keyword">private</span>:
-<a name="l00276"></a>00276         QLabel      * m_pLabel;
-<a name="l00277"></a><a class="code" href="classKviColorSelector.html#aa0e87d4c9053453eedeadbe0ccb23343">00277</a>         QColor      * m_pOption;
-<a name="l00278"></a><a class="code" href="classKviColorSelector.html#a02a60d08cc370ed8ccbb3bfcf2f6f6e8">00278</a>         QColor        m_memColor;
-<a name="l00279"></a><a class="code" href="classKviColorSelector.html#a5282f6653e3858ca4fc612204a302b19">00279</a>         QPushButton * m_pButton;
-<a name="l00280"></a>00280 <span class="keyword">public</span>:
-<a name="l00281"></a><a class="code" href="classKviColorSelector.html#a0e10525b3ff80e37e470ab786a9b19c2">00281</a>         QString <a class="code" href="classKviColorSelector.html#a0e10525b3ff80e37e470ab786a9b19c2">textForSearch</a>(){<span class="keywordflow">return</span> m_pLabel-&gt;text();};
-<a name="l00282"></a><a class="code" href="classKviColorSelector.html#adad3c2f9abd87a0602fe54d2f8c29390">00282</a>         QWidget *<a class="code" href="classKviColorSelector.html#adad3c2f9abd87a0602fe54d2f8c29390">widgetToHighlight</a>(){<span class="keywordflow">return</span> (QWidget *)m_pLabel;};
-<a name="l00283"></a>00283         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSelectorInterface.html#a2dac18af8c22c2ab82aff348a770eed3">commit</a>();
-<a name="l00284"></a><a class="code" href="classKviColorSelector.html#af209fe79ca19de36818fe11c58d37a23">00284</a>         QColor <a class="code" href="classKviColorSelector.html#af209fe79ca19de36818fe11c58d37a23">getColor</a>(){ <span class="keywordflow">return</span> m_memColor; };
-<a name="l00285"></a>00285         <span class="keywordtype">void</span> forceColor(QColor clr);
-<a name="l00286"></a>00286 <span class="keyword">private</span>:
-<a name="l00287"></a>00287         <span class="keywordtype">void</span> setButtonPalette(QColor * pOption);
-<a name="l00288"></a>00288 <span class="keyword">private</span> slots:
-<a name="l00289"></a>00289         <span class="keywordtype">void</span> changeClicked();
-<a name="l00290"></a>00290 <span class="keyword">public</span> slots:
-<a name="l00291"></a>00291         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span> bEnabled);
-<a name="l00292"></a>00292 };
-<a name="l00293"></a>00293 
-<a name="l00294"></a><a class="code" href="classKviFontSelector.html">00294</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviFontSelector.html">KviFontSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
-<a name="l00295"></a>00295 {
-<a name="l00296"></a>00296         Q_OBJECT
-<a name="l00297"></a>00297 <span class="keyword">public</span>:
-<a name="l00298"></a>00298         <a class="code" href="classKviFontSelector.html">KviFontSelector</a>(QWidget * par,<span class="keyword">const</span> QString &amp; txt,QFont * pOption,<span class="keywordtype">bool</span> bEnabled);
-<a name="l00299"></a><a class="code" href="classKviFontSelector.html#a54d3308147c0811686e90b6f2a003d91">00299</a>         <a class="code" href="classKviFontSelector.html#a54d3308147c0811686e90b6f2a003d91">~KviFontSelector</a>(){};
-<a name="l00300"></a>00300 <span class="keyword">private</span>:
-<a name="l00301"></a>00301         QLabel      * m_pLabel;
-<a name="l00302"></a><a class="code" href="classKviFontSelector.html#aba8a60bf4e991530f02f21457b15c4cc">00302</a>         QFont       * m_pOption;
-<a name="l00303"></a><a class="code" href="classKviFontSelector.html#a8988b6010d58ceb518409e87ffc5ced1">00303</a>         QPushButton * m_pButton;
-<a name="l00304"></a>00304 <span class="keyword">public</span>:
-<a name="l00305"></a>00305         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSelectorInterface.html#a2dac18af8c22c2ab82aff348a770eed3">commit</a>();
-<a name="l00306"></a><a class="code" href="classKviFontSelector.html#a0084513691a5296faa29dadbc8fc9e07">00306</a>         QString <a class="code" href="classKviFontSelector.html#a0084513691a5296faa29dadbc8fc9e07">textForSearch</a>(){<span class="keywordflow">return</span> m_pLabel-&gt;text();};
-<a name="l00307"></a><a class="code" href="classKviFontSelector.html#a4ffed6272587077dda2890ee9641decf">00307</a>         QWidget *<a class="code" href="classKviFontSelector.html#a4ffed6272587077dda2890ee9641decf">widgetToHighlight</a>(){<span class="keywordflow">return</span> (QWidget *)m_pLabel;};
-<a name="l00308"></a>00308 <span class="keyword">private</span>:
-<a name="l00309"></a>00309         <span class="keywordtype">void</span> setButtonFont(QFont * pOption);
-<a name="l00310"></a>00310 <span class="keyword">public</span> slots:
-<a name="l00311"></a>00311         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span> bEnabled);
-<a name="l00312"></a>00312 <span class="keyword">private</span> slots:
-<a name="l00313"></a>00313         <span class="keywordtype">void</span> changeClicked();
-<a name="l00314"></a>00314 };
-<a name="l00315"></a>00315 
-<a name="l00316"></a><a class="code" href="classKviStringListSelector.html">00316</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviStringListSelector.html">KviStringListSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalVBox.html" title="Toolkit Abstraction Layer: vbox class.">KviTalVBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
-<a name="l00317"></a>00317 {
-<a name="l00318"></a>00318         Q_OBJECT
-<a name="l00319"></a>00319 <span class="keyword">public</span>:
-<a name="l00320"></a>00320         <a class="code" href="classKviStringListSelector.html">KviStringListSelector</a>(QWidget * par,<span class="keyword">const</span> QString &amp; txt,QStringList * pOption,<span class="keywordtype">bool</span> bEnabled);
-<a name="l00321"></a>00321         ~<a class="code" href="classKviStringListSelector.html">KviStringListSelector</a>();
-<a name="l00322"></a>00322 <span class="keyword">private</span>:
-<a name="l00323"></a><a class="code" href="classKviStringListSelector.html#a77001376e0294549d9824620d6b70dc7">00323</a>         QLabel      * m_pLabel;
-<a name="l00324"></a><a class="code" href="classKviStringListSelector.html#ac4b0e28cbf97c94f41a501d0d46b9ea7">00324</a>         <a class="code" href="classKviTalListWidget.html">KviTalListWidget</a>    * m_pListWidget;
-<a name="l00325"></a><a class="code" href="classKviStringListSelector.html#a2811f9e26ed0b3ee1ac79ba45377793d">00325</a>         QLineEdit   * m_pLineEdit;
-<a name="l00326"></a><a class="code" href="classKviStringListSelector.html#a4c752714027f1ce6b8def9809846ca77">00326</a>         QPushButton * m_pAddButton;
-<a name="l00327"></a><a class="code" href="classKviStringListSelector.html#a89fb6b0aef7de888da4af6694857187b">00327</a>         QPushButton * m_pRemoveButton;
-<a name="l00328"></a><a class="code" href="classKviStringListSelector.html#afdef0e104cf8fe31ed6c5a875a7c14d6">00328</a>         QStringList * m_pOption;
-<a name="l00329"></a>00329 <span class="keyword">public</span>:
-<a name="l00330"></a>00330         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSelectorInterface.html#a2dac18af8c22c2ab82aff348a770eed3">commit</a>();
-<a name="l00331"></a><a class="code" href="classKviStringListSelector.html#a466870833d98160b188904e84193545a">00331</a>         QString <a class="code" href="classKviStringListSelector.html#a466870833d98160b188904e84193545a">textForSearch</a>(){<span class="keywordflow">return</span> m_pLabel-&gt;text();};
-<a name="l00332"></a><a class="code" href="classKviStringListSelector.html#ae2cb2e7d5cf8d8b247e9ae23ec71477a">00332</a>         QWidget *<a class="code" href="classKviStringListSelector.html#ae2cb2e7d5cf8d8b247e9ae23ec71477a">widgetToHighlight</a>(){<span class="keywordflow">return</span> (QWidget *)m_pLabel;};
-<a name="l00333"></a>00333         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span> bEnabled);
-<a name="l00334"></a>00334 <span class="keyword">private</span> slots:
-<a name="l00335"></a>00335         <span class="keywordtype">void</span> textChanged(<span class="keyword">const</span> QString &amp;str);
-<a name="l00336"></a>00336         <span class="keywordtype">void</span> itemSelectionChanged();
-<a name="l00337"></a>00337         <span class="keywordtype">void</span> addClicked();
-<a name="l00338"></a>00338         <span class="keywordtype">void</span> removeClicked();
-<a name="l00339"></a>00339 };
-<a name="l00340"></a>00340 
-<a name="l00341"></a>00341 <span class="keyword">class </span><a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>;
+<a name="l00234"></a><a class="code" href="classKviFileSelector.html#ad03244e379cd4afb3eb244daeaf13e95a26dd0ae8f94e4da47de35e0e52e77b58">00234</a>                 DontConfirmOverwrite = 2,
+<a name="l00235"></a><a class="code" href="classKviFileSelector.html#ad03244e379cd4afb3eb244daeaf13e95a29b45b6c180ecac6e0e5a269ab47a703">00235</a>                 VerticalLayout = 4
+<a name="l00236"></a>00236         };
+<a name="l00237"></a>00237 <span class="keyword">protected</span>:
+<a name="l00238"></a><a class="code" href="classKviFileSelector.html#a4003d538ae82536998e9a60b3c65e21a">00238</a>         QLabel      * m_pLabel;
+<a name="l00239"></a><a class="code" href="classKviFileSelector.html#a78d99ed8acc4b4e62b21ec383fbec3d7">00239</a>         QLineEdit   * m_pLineEdit;
+<a name="l00240"></a><a class="code" href="classKviFileSelector.html#a336744e1de555763c7a724c0b9ec8678">00240</a>         QPushButton * m_pButton;
+<a name="l00241"></a><a class="code" href="classKviFileSelector.html#a6186d006857640522de3696480839e38">00241</a>         QString     * m_pOption;
+<a name="l00242"></a><a class="code" href="classKviFileSelector.html#a9b5a5de2dd4c307e990070e62a29b896">00242</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>  m_uFlags;
+<a name="l00243"></a><a class="code" href="classKviFileSelector.html#a77eef922a645719a643f4a4d3b76e1c5">00243</a>         QString       m_szFilter;
+<a name="l00244"></a><a class="code" href="classKviFileSelector.html#a8742e921ec0a42c3a1c8868ba447fd2b">00244</a>         QGridLayout * m_Layout;
+<a name="l00245"></a>00245 <span class="keyword">public</span>:
+<a name="l00246"></a><a class="code" href="classKviFileSelector.html#a8ce68f40ef34633ba805d4d6e8a70b72">00246</a>         QString <a class="code" href="classKviFileSelector.html#a8ce68f40ef34633ba805d4d6e8a70b72">tmpFile</a>(){ <span class="keywordflow">return</span> m_pLineEdit-&gt;text(); };
+<a name="l00247"></a><a class="code" href="classKviFileSelector.html#a2fd7220a04ed68a49fb4542cf7518521">00247</a>         <span class="keywordtype">void</span> <a class="code" href="classKviFileSelector.html#a2fd7220a04ed68a49fb4542cf7518521">setTmpFile</a>(QString &amp; szFile){ m_pLineEdit-&gt;setText(szFile); };
+<a name="l00248"></a>00248         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSelectorInterface.html#a2dac18af8c22c2ab82aff348a770eed3">commit</a>();
+<a name="l00249"></a>00249         <span class="keywordtype">void</span> setSelection(<span class="keyword">const</span> QString &amp;szSelection);
+<a name="l00250"></a>00250 signals:
+<a name="l00251"></a>00251         <span class="keywordtype">void</span> selectionChanged(<span class="keyword">const</span> QString &amp;szNewValue);
+<a name="l00252"></a>00252 <span class="keyword">public</span> slots:
+<a name="l00253"></a>00253         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span> bEnabled);
+<a name="l00254"></a>00254 <span class="keyword">private</span> slots:
+<a name="l00255"></a>00255         <span class="keywordtype">void</span> browseClicked();
+<a name="l00256"></a>00256 <span class="keyword">protected</span>:
+<a name="l00257"></a>00257         <span class="keyword">virtual</span> <span class="keywordtype">void</span> select();
+<a name="l00258"></a>00258 };
+<a name="l00259"></a>00259 
+<a name="l00260"></a><a class="code" href="classKviDirectorySelector.html">00260</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviDirectorySelector.html">KviDirectorySelector</a> : <span class="keyword">public</span> <a class="code" href="classKviFileSelector.html">KviFileSelector</a>
+<a name="l00261"></a>00261 {
+<a name="l00262"></a>00262         Q_OBJECT
+<a name="l00263"></a>00263 <span class="keyword">public</span>:
+<a name="l00264"></a>00264         <a class="code" href="classKviDirectorySelector.html">KviDirectorySelector</a>(QWidget * par,<span class="keyword">const</span> QString &amp; txt,QString * pOption,<span class="keywordtype">bool</span> bEnabled,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uFlags = 0);
+<a name="l00265"></a><a class="code" href="classKviDirectorySelector.html#a438ef245a9aac2064fca04d783d5109e">00265</a>         <a class="code" href="classKviDirectorySelector.html#a438ef245a9aac2064fca04d783d5109e">~KviDirectorySelector</a>(){};
+<a name="l00266"></a>00266 <span class="keyword">protected</span>:
+<a name="l00267"></a>00267         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviFileSelector.html#acd29b7d3f89880cd4747f0ee27be62a4">select</a>();
+<a name="l00268"></a>00268 };
+<a name="l00269"></a>00269 
+<a name="l00270"></a>00270 
+<a name="l00271"></a><a class="code" href="classKviColorSelector.html">00271</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviColorSelector.html">KviColorSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
+<a name="l00272"></a>00272 {
+<a name="l00273"></a>00273         Q_OBJECT
+<a name="l00274"></a>00274 <span class="keyword">public</span>:
+<a name="l00275"></a>00275         <a class="code" href="classKviColorSelector.html">KviColorSelector</a>(QWidget * par,<span class="keyword">const</span> QString &amp; txt,QColor * pOption,<span class="keywordtype">bool</span> bEnabled);
+<a name="l00276"></a><a class="code" href="classKviColorSelector.html#a7490a6e60b19f3e74b6e24846c6d1063">00276</a>         <a class="code" href="classKviColorSelector.html#a7490a6e60b19f3e74b6e24846c6d1063">~KviColorSelector</a>(){};
+<a name="l00277"></a>00277 <span class="keyword">private</span>:
+<a name="l00278"></a>00278         QLabel      * m_pLabel;
+<a name="l00279"></a><a class="code" href="classKviColorSelector.html#aa0e87d4c9053453eedeadbe0ccb23343">00279</a>         QColor      * m_pOption;
+<a name="l00280"></a><a class="code" href="classKviColorSelector.html#a02a60d08cc370ed8ccbb3bfcf2f6f6e8">00280</a>         QColor        m_memColor;
+<a name="l00281"></a><a class="code" href="classKviColorSelector.html#a5282f6653e3858ca4fc612204a302b19">00281</a>         QPushButton * m_pButton;
+<a name="l00282"></a>00282 <span class="keyword">public</span>:
+<a name="l00283"></a><a class="code" href="classKviColorSelector.html#a0e10525b3ff80e37e470ab786a9b19c2">00283</a>         QString <a class="code" href="classKviColorSelector.html#a0e10525b3ff80e37e470ab786a9b19c2">textForSearch</a>(){<span class="keywordflow">return</span> m_pLabel-&gt;text();};
+<a name="l00284"></a><a class="code" href="classKviColorSelector.html#adad3c2f9abd87a0602fe54d2f8c29390">00284</a>         QWidget *<a class="code" href="classKviColorSelector.html#adad3c2f9abd87a0602fe54d2f8c29390">widgetToHighlight</a>(){<span class="keywordflow">return</span> (QWidget *)m_pLabel;};
+<a name="l00285"></a>00285         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSelectorInterface.html#a2dac18af8c22c2ab82aff348a770eed3">commit</a>();
+<a name="l00286"></a><a class="code" href="classKviColorSelector.html#af209fe79ca19de36818fe11c58d37a23">00286</a>         QColor <a class="code" href="classKviColorSelector.html#af209fe79ca19de36818fe11c58d37a23">getColor</a>(){ <span class="keywordflow">return</span> m_memColor; };
+<a name="l00287"></a>00287         <span class="keywordtype">void</span> forceColor(QColor clr);
+<a name="l00288"></a>00288 <span class="keyword">private</span>:
+<a name="l00289"></a>00289         <span class="keywordtype">void</span> setButtonPalette(QColor * pOption);
+<a name="l00290"></a>00290 <span class="keyword">private</span> slots:
+<a name="l00291"></a>00291         <span class="keywordtype">void</span> changeClicked();
+<a name="l00292"></a>00292 <span class="keyword">public</span> slots:
+<a name="l00293"></a>00293         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span> bEnabled);
+<a name="l00294"></a>00294 };
+<a name="l00295"></a>00295 
+<a name="l00296"></a><a class="code" href="classKviFontSelector.html">00296</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviFontSelector.html">KviFontSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
+<a name="l00297"></a>00297 {
+<a name="l00298"></a>00298         Q_OBJECT
+<a name="l00299"></a>00299 <span class="keyword">public</span>:
+<a name="l00300"></a>00300         <a class="code" href="classKviFontSelector.html">KviFontSelector</a>(QWidget * par,<span class="keyword">const</span> QString &amp; txt,QFont * pOption,<span class="keywordtype">bool</span> bEnabled);
+<a name="l00301"></a><a class="code" href="classKviFontSelector.html#a54d3308147c0811686e90b6f2a003d91">00301</a>         <a class="code" href="classKviFontSelector.html#a54d3308147c0811686e90b6f2a003d91">~KviFontSelector</a>(){};
+<a name="l00302"></a>00302 <span class="keyword">private</span>:
+<a name="l00303"></a>00303         QLabel      * m_pLabel;
+<a name="l00304"></a><a class="code" href="classKviFontSelector.html#aba8a60bf4e991530f02f21457b15c4cc">00304</a>         QFont       * m_pOption;
+<a name="l00305"></a><a class="code" href="classKviFontSelector.html#a8988b6010d58ceb518409e87ffc5ced1">00305</a>         QPushButton * m_pButton;
+<a name="l00306"></a>00306 <span class="keyword">public</span>:
+<a name="l00307"></a>00307         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSelectorInterface.html#a2dac18af8c22c2ab82aff348a770eed3">commit</a>();
+<a name="l00308"></a><a class="code" href="classKviFontSelector.html#a0084513691a5296faa29dadbc8fc9e07">00308</a>         QString <a class="code" href="classKviFontSelector.html#a0084513691a5296faa29dadbc8fc9e07">textForSearch</a>(){<span class="keywordflow">return</span> m_pLabel-&gt;text();};
+<a name="l00309"></a><a class="code" href="classKviFontSelector.html#a4ffed6272587077dda2890ee9641decf">00309</a>         QWidget *<a class="code" href="classKviFontSelector.html#a4ffed6272587077dda2890ee9641decf">widgetToHighlight</a>(){<span class="keywordflow">return</span> (QWidget *)m_pLabel;};
+<a name="l00310"></a>00310 <span class="keyword">private</span>:
+<a name="l00311"></a>00311         <span class="keywordtype">void</span> setButtonFont(QFont * pOption);
+<a name="l00312"></a>00312 <span class="keyword">public</span> slots:
+<a name="l00313"></a>00313         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span> bEnabled);
+<a name="l00314"></a>00314 <span class="keyword">private</span> slots:
+<a name="l00315"></a>00315         <span class="keywordtype">void</span> changeClicked();
+<a name="l00316"></a>00316 };
+<a name="l00317"></a>00317 
+<a name="l00318"></a><a class="code" href="classKviStringListSelector.html">00318</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviStringListSelector.html">KviStringListSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalVBox.html" title="Toolkit Abstraction Layer: vbox class.">KviTalVBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
+<a name="l00319"></a>00319 {
+<a name="l00320"></a>00320         Q_OBJECT
+<a name="l00321"></a>00321 <span class="keyword">public</span>:
+<a name="l00322"></a>00322         <a class="code" href="classKviStringListSelector.html">KviStringListSelector</a>(QWidget * par,<span class="keyword">const</span> QString &amp; txt,QStringList * pOption,<span class="keywordtype">bool</span> bEnabled);
+<a name="l00323"></a>00323         ~<a class="code" href="classKviStringListSelector.html">KviStringListSelector</a>();
+<a name="l00324"></a>00324 <span class="keyword">private</span>:
+<a name="l00325"></a><a class="code" href="classKviStringListSelector.html#a77001376e0294549d9824620d6b70dc7">00325</a>         QLabel      * m_pLabel;
+<a name="l00326"></a><a class="code" href="classKviStringListSelector.html#ac4b0e28cbf97c94f41a501d0d46b9ea7">00326</a>         <a class="code" href="classKviTalListWidget.html">KviTalListWidget</a>    * m_pListWidget;
+<a name="l00327"></a><a class="code" href="classKviStringListSelector.html#a2811f9e26ed0b3ee1ac79ba45377793d">00327</a>         QLineEdit   * m_pLineEdit;
+<a name="l00328"></a><a class="code" href="classKviStringListSelector.html#a4c752714027f1ce6b8def9809846ca77">00328</a>         QPushButton * m_pAddButton;
+<a name="l00329"></a><a class="code" href="classKviStringListSelector.html#a89fb6b0aef7de888da4af6694857187b">00329</a>         QPushButton * m_pRemoveButton;
+<a name="l00330"></a><a class="code" href="classKviStringListSelector.html#afdef0e104cf8fe31ed6c5a875a7c14d6">00330</a>         QStringList * m_pOption;
+<a name="l00331"></a>00331 <span class="keyword">public</span>:
+<a name="l00332"></a>00332         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSelectorInterface.html#a2dac18af8c22c2ab82aff348a770eed3">commit</a>();
+<a name="l00333"></a><a class="code" href="classKviStringListSelector.html#a466870833d98160b188904e84193545a">00333</a>         QString <a class="code" href="classKviStringListSelector.html#a466870833d98160b188904e84193545a">textForSearch</a>(){<span class="keywordflow">return</span> m_pLabel-&gt;text();};
+<a name="l00334"></a><a class="code" href="classKviStringListSelector.html#ae2cb2e7d5cf8d8b247e9ae23ec71477a">00334</a>         QWidget *<a class="code" href="classKviStringListSelector.html#ae2cb2e7d5cf8d8b247e9ae23ec71477a">widgetToHighlight</a>(){<span class="keywordflow">return</span> (QWidget *)m_pLabel;};
+<a name="l00335"></a>00335         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span> bEnabled);
+<a name="l00336"></a>00336 <span class="keyword">private</span> slots:
+<a name="l00337"></a>00337         <span class="keywordtype">void</span> textChanged(<span class="keyword">const</span> QString &amp;str);
+<a name="l00338"></a>00338         <span class="keywordtype">void</span> itemSelectionChanged();
+<a name="l00339"></a>00339         <span class="keywordtype">void</span> addClicked();
+<a name="l00340"></a>00340         <span class="keywordtype">void</span> removeClicked();
+<a name="l00341"></a>00341 };
 <a name="l00342"></a>00342 
-<a name="l00343"></a><a class="code" href="classKviMircTextColorSelector.html">00343</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviMircTextColorSelector.html">KviMircTextColorSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
-<a name="l00344"></a>00344 {
-<a name="l00345"></a>00345         Q_OBJECT
-<a name="l00346"></a>00346 <span class="keyword">public</span>:
-<a name="l00347"></a>00347         <a class="code" href="classKviMircTextColorSelector.html">KviMircTextColorSelector</a>(QWidget * par,<span class="keyword">const</span> QString &amp;txt,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * uFore,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * uBack,<span class="keywordtype">bool</span> bEnabled);
-<a name="l00348"></a>00348         ~<a class="code" href="classKviMircTextColorSelector.html">KviMircTextColorSelector</a>();
-<a name="l00349"></a>00349 <span class="keyword">private</span>:
-<a name="l00350"></a><a class="code" href="classKviMircTextColorSelector.html#a2970d84b46aeb64d390e083b36dc6f1d">00350</a>         QLabel *m_pLabel;
-<a name="l00351"></a><a class="code" href="classKviMircTextColorSelector.html#a3ce9d2546e28882a6ec4bee79fcc1a5a">00351</a>         QPushButton * m_pButton;
-<a name="l00352"></a><a class="code" href="classKviMircTextColorSelector.html#ad2ca496be5cd554d0e5d90c73a11af03">00352</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * m_pUFore;
-<a name="l00353"></a><a class="code" href="classKviMircTextColorSelector.html#a983c9ed08b4e99dfc9e5f4bf611fa9ff">00353</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * m_pUBack;
-<a name="l00354"></a><a class="code" href="classKviMircTextColorSelector.html#aea4abb25397f6acc8a2d31ff06351ea7">00354</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_uFore;
-<a name="l00355"></a><a class="code" href="classKviMircTextColorSelector.html#aad965ec8f47816a8373a9eb0e5d669a5">00355</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_uBack;
-<a name="l00356"></a><a class="code" href="classKviMircTextColorSelector.html#a2c8b3493f9887d6742dbc8e4d0bc487b">00356</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * m_pContextPopup;
-<a name="l00357"></a><a class="code" href="classKviMircTextColorSelector.html#adbe4bf5bba05f56d16005ef8bcb8a1bf">00357</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * m_pForePopup;
-<a name="l00358"></a><a class="code" href="classKviMircTextColorSelector.html#ac8f0430ed8ce48276cdb0cdc40692b30">00358</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * m_pBackPopup;
-<a name="l00359"></a>00359 <span class="keyword">public</span>:
-<a name="l00360"></a>00360         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSelectorInterface.html#a2dac18af8c22c2ab82aff348a770eed3">commit</a>();
-<a name="l00361"></a>00361         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span> bEnabled);
-<a name="l00362"></a>00362 <span class="keyword">protected</span> slots:
-<a name="l00363"></a>00363         <span class="keywordtype">void</span> buttonClicked();
-<a name="l00364"></a>00364         <span class="keywordtype">void</span> foreSelected(<span class="keywordtype">int</span>);
-<a name="l00365"></a>00365         <span class="keywordtype">void</span> backSelected(<span class="keywordtype">int</span>);
-<a name="l00366"></a>00366 <span class="keyword">protected</span>:
-<a name="l00367"></a>00367         <span class="keywordtype">void</span> setButtonPalette();
-<a name="l00368"></a>00368 };
-<a name="l00369"></a>00369 
-<a name="l00370"></a>00370 
-<a name="l00371"></a><a class="code" href="classKviSoundSelector.html">00371</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviSoundSelector.html">KviSoundSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviFileSelector.html">KviFileSelector</a>
-<a name="l00372"></a>00372 {
-<a name="l00373"></a>00373         Q_OBJECT
-<a name="l00374"></a>00374 <span class="keyword">public</span>:
-<a name="l00375"></a>00375         <a class="code" href="classKviSoundSelector.html">KviSoundSelector</a>(QWidget * par,<span class="keyword">const</span> QString &amp; txt,QString * pOption,<span class="keywordtype">bool</span> bEnabled);
-<a name="l00376"></a>00376         ~<a class="code" href="classKviSoundSelector.html">KviSoundSelector</a>();
-<a name="l00377"></a>00377 <span class="keyword">protected</span>:
-<a name="l00378"></a><a class="code" href="classKviSoundSelector.html#a77a5f255cf88336a18f5b5d41d2503ec">00378</a>         QPushButton     *m_pPlayButton;
-<a name="l00379"></a>00379 <span class="keyword">private</span> slots:
-<a name="l00380"></a>00380         <span class="keywordtype">void</span> playSound();
-<a name="l00381"></a>00381 <span class="keyword">public</span>:
-<a name="l00382"></a>00382         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviFileSelector.html#af4b53dea12d3ddb0093c1171fbc7e84e">setEnabled</a>(<span class="keywordtype">bool</span> bEnabled);
-<a name="l00383"></a>00383 };
-<a name="l00384"></a>00384 
-<a name="l00385"></a><a class="code" href="classKviChanTreeViewItem.html">00385</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviChanTreeViewItem.html">KviChanTreeViewItem</a> : <span class="keyword">public</span> QTreeWidgetItem
-<a name="l00386"></a>00386 {
-<a name="l00387"></a>00387 <span class="keyword">private</span>:
-<a name="l00388"></a><a class="code" href="classKviChanTreeViewItem.html#ab988a435136882c770e0ff36a7067ffe">00388</a>         QString m_szPass;
-<a name="l00389"></a>00389 <span class="keyword">public</span>:
-<a name="l00390"></a>00390         <a class="code" href="classKviChanTreeViewItem.html">KviChanTreeViewItem</a>(QTreeWidget* pList,QString szChan,QString szPass);
-<a name="l00391"></a><a class="code" href="classKviChanTreeViewItem.html#ab38e73c0dd00f240c48936f9d59dcd90">00391</a>         <a class="code" href="classKviChanTreeViewItem.html#ab38e73c0dd00f240c48936f9d59dcd90">~KviChanTreeViewItem</a>() {};
-<a name="l00392"></a>00392 
-<a name="l00393"></a><a class="code" href="classKviChanTreeViewItem.html#aec76b0aa4260d9e0878b4d04551383b5">00393</a>         <span class="keyword">const</span> QString&amp; <a class="code" href="classKviChanTreeViewItem.html#aec76b0aa4260d9e0878b4d04551383b5">pass</a>() { <span class="keywordflow">return</span> m_szPass; }
-<a name="l00394"></a>00394 };
-<a name="l00395"></a>00395 
-<a name="l00396"></a><a class="code" href="classKviChannelListSelector.html">00396</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviChannelListSelector.html">KviChannelListSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalVBox.html" title="Toolkit Abstraction Layer: vbox class.">KviTalVBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
-<a name="l00397"></a>00397 {
-<a name="l00398"></a>00398         Q_OBJECT
-<a name="l00399"></a>00399 <span class="keyword">public</span>:
-<a name="l00400"></a>00400         <a class="code" href="classKviChannelListSelector.html">KviChannelListSelector</a>(QWidget * par,<span class="keyword">const</span> QString &amp; txt,QStringList * pOption,<span class="keywordtype">bool</span> bEnabled);
-<a name="l00401"></a>00401         ~<a class="code" href="classKviChannelListSelector.html">KviChannelListSelector</a>();
-<a name="l00402"></a>00402 <span class="keyword">private</span>:
-<a name="l00403"></a><a class="code" href="classKviChannelListSelector.html#a89b57a5d0a37b226f74ccbe563d85706">00403</a>         QLabel       * m_pLabel;
-<a name="l00404"></a><a class="code" href="classKviChannelListSelector.html#a3f75804c7b9e3b429851de06e3fd79e8">00404</a>         QTreeWidget    * m_pTreeWidget;
-<a name="l00405"></a><a class="code" href="classKviChannelListSelector.html#a4a3018b7964d16057b66853db5acd43e">00405</a>         QLineEdit    * m_pChanLineEdit;
-<a name="l00406"></a><a class="code" href="classKviChannelListSelector.html#aee069f3efe028420c47b2b45a779a80a">00406</a>         QLineEdit    * m_pPassLineEdit;
-<a name="l00407"></a><a class="code" href="classKviChannelListSelector.html#aaf4e9b46dd41b0cb217fc3dfa9011bab">00407</a>         QPushButton  * m_pAddButton;
-<a name="l00408"></a><a class="code" href="classKviChannelListSelector.html#ac056da90c1d685b5208f58f6110fb9c4">00408</a>         QPushButton  * m_pRemoveButton;
-<a name="l00409"></a><a class="code" href="classKviChannelListSelector.html#ab393af71a9f3f51fc19e231900713108">00409</a>         QStringList  * m_pOption;
-<a name="l00410"></a>00410 <span class="keyword">public</span>:
-<a name="l00411"></a>00411         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSelectorInterface.html#a2dac18af8c22c2ab82aff348a770eed3">commit</a>();
-<a name="l00412"></a><a class="code" href="classKviChannelListSelector.html#a078947e10e1fb34f1d30cc72db08d03e">00412</a>         QString <a class="code" href="classKviChannelListSelector.html#a078947e10e1fb34f1d30cc72db08d03e">textForSearch</a>(){<span class="keywordflow">return</span> m_pLabel-&gt;text();};
-<a name="l00413"></a><a class="code" href="classKviChannelListSelector.html#a962ace51e82aaa66fb7c71ca9113c4e3">00413</a>         QWidget *<a class="code" href="classKviChannelListSelector.html#a962ace51e82aaa66fb7c71ca9113c4e3">widgetToHighlight</a>(){<span class="keywordflow">return</span> (QWidget *)m_pLabel;};
-<a name="l00414"></a>00414         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span> bEnabled);
-<a name="l00415"></a>00415 <span class="keyword">private</span> slots:
-<a name="l00416"></a>00416         <span class="keywordtype">void</span> textChanged(<span class="keyword">const</span> QString &amp;str);
-<a name="l00417"></a>00417         <span class="keywordtype">void</span> itemSelectionChanged();
-<a name="l00418"></a>00418         <span class="keywordtype">void</span> addClicked();
-<a name="l00419"></a>00419         <span class="keywordtype">void</span> removeClicked();
-<a name="l00420"></a>00420 };
-<a name="l00421"></a>00421 
-<a name="l00422"></a>00422 <span class="preprocessor">#endif //!_KVI_SELECTORS_H_</span>
+<a name="l00343"></a>00343 <span class="keyword">class </span><a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>;
+<a name="l00344"></a>00344 
+<a name="l00345"></a><a class="code" href="classKviMircTextColorSelector.html">00345</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviMircTextColorSelector.html">KviMircTextColorSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
+<a name="l00346"></a>00346 {
+<a name="l00347"></a>00347         Q_OBJECT
+<a name="l00348"></a>00348 <span class="keyword">public</span>:
+<a name="l00349"></a>00349         <a class="code" href="classKviMircTextColorSelector.html">KviMircTextColorSelector</a>(QWidget * par,<span class="keyword">const</span> QString &amp;txt,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * uFore,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * uBack,<span class="keywordtype">bool</span> bEnabled);
+<a name="l00350"></a>00350         ~<a class="code" href="classKviMircTextColorSelector.html">KviMircTextColorSelector</a>();
+<a name="l00351"></a>00351 <span class="keyword">private</span>:
+<a name="l00352"></a><a class="code" href="classKviMircTextColorSelector.html#a2970d84b46aeb64d390e083b36dc6f1d">00352</a>         QLabel *m_pLabel;
+<a name="l00353"></a><a class="code" href="classKviMircTextColorSelector.html#a3ce9d2546e28882a6ec4bee79fcc1a5a">00353</a>         QPushButton * m_pButton;
+<a name="l00354"></a><a class="code" href="classKviMircTextColorSelector.html#ad2ca496be5cd554d0e5d90c73a11af03">00354</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * m_pUFore;
+<a name="l00355"></a><a class="code" href="classKviMircTextColorSelector.html#a983c9ed08b4e99dfc9e5f4bf611fa9ff">00355</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * m_pUBack;
+<a name="l00356"></a><a class="code" href="classKviMircTextColorSelector.html#aea4abb25397f6acc8a2d31ff06351ea7">00356</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_uFore;
+<a name="l00357"></a><a class="code" href="classKviMircTextColorSelector.html#aad965ec8f47816a8373a9eb0e5d669a5">00357</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_uBack;
+<a name="l00358"></a><a class="code" href="classKviMircTextColorSelector.html#a2c8b3493f9887d6742dbc8e4d0bc487b">00358</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * m_pContextPopup;
+<a name="l00359"></a><a class="code" href="classKviMircTextColorSelector.html#adbe4bf5bba05f56d16005ef8bcb8a1bf">00359</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * m_pForePopup;
+<a name="l00360"></a><a class="code" href="classKviMircTextColorSelector.html#ac8f0430ed8ce48276cdb0cdc40692b30">00360</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * m_pBackPopup;
+<a name="l00361"></a>00361 <span class="keyword">public</span>:
+<a name="l00362"></a>00362         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSelectorInterface.html#a2dac18af8c22c2ab82aff348a770eed3">commit</a>();
+<a name="l00363"></a>00363         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span> bEnabled);
+<a name="l00364"></a>00364 <span class="keyword">protected</span> slots:
+<a name="l00365"></a>00365         <span class="keywordtype">void</span> buttonClicked();
+<a name="l00366"></a>00366         <span class="keywordtype">void</span> foreSelected(<span class="keywordtype">int</span>);
+<a name="l00367"></a>00367         <span class="keywordtype">void</span> backSelected(<span class="keywordtype">int</span>);
+<a name="l00368"></a>00368 <span class="keyword">protected</span>:
+<a name="l00369"></a>00369         <span class="keywordtype">void</span> setButtonPalette();
+<a name="l00370"></a>00370 };
+<a name="l00371"></a>00371 
+<a name="l00372"></a>00372 
+<a name="l00373"></a><a class="code" href="classKviSoundSelector.html">00373</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviSoundSelector.html">KviSoundSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviFileSelector.html">KviFileSelector</a>
+<a name="l00374"></a>00374 {
+<a name="l00375"></a>00375         Q_OBJECT
+<a name="l00376"></a>00376 <span class="keyword">public</span>:
+<a name="l00377"></a>00377         <a class="code" href="classKviSoundSelector.html">KviSoundSelector</a>(QWidget * par,<span class="keyword">const</span> QString &amp; txt,QString * pOption,<span class="keywordtype">bool</span> bEnabled);
+<a name="l00378"></a>00378         ~<a class="code" href="classKviSoundSelector.html">KviSoundSelector</a>();
+<a name="l00379"></a>00379 <span class="keyword">protected</span>:
+<a name="l00380"></a><a class="code" href="classKviSoundSelector.html#a77a5f255cf88336a18f5b5d41d2503ec">00380</a>         QPushButton     *m_pPlayButton;
+<a name="l00381"></a>00381 <span class="keyword">private</span> slots:
+<a name="l00382"></a>00382         <span class="keywordtype">void</span> playSound();
+<a name="l00383"></a>00383 <span class="keyword">public</span>:
+<a name="l00384"></a>00384         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviFileSelector.html#af4b53dea12d3ddb0093c1171fbc7e84e">setEnabled</a>(<span class="keywordtype">bool</span> bEnabled);
+<a name="l00385"></a>00385 };
+<a name="l00386"></a>00386 
+<a name="l00387"></a><a class="code" href="classKviChanTreeViewItem.html">00387</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviChanTreeViewItem.html">KviChanTreeViewItem</a> : <span class="keyword">public</span> QTreeWidgetItem
+<a name="l00388"></a>00388 {
+<a name="l00389"></a>00389 <span class="keyword">private</span>:
+<a name="l00390"></a><a class="code" href="classKviChanTreeViewItem.html#ab988a435136882c770e0ff36a7067ffe">00390</a>         QString m_szPass;
+<a name="l00391"></a>00391 <span class="keyword">public</span>:
+<a name="l00392"></a>00392         <a class="code" href="classKviChanTreeViewItem.html">KviChanTreeViewItem</a>(QTreeWidget* pList,QString szChan,QString szPass);
+<a name="l00393"></a><a class="code" href="classKviChanTreeViewItem.html#ab38e73c0dd00f240c48936f9d59dcd90">00393</a>         <a class="code" href="classKviChanTreeViewItem.html#ab38e73c0dd00f240c48936f9d59dcd90">~KviChanTreeViewItem</a>() {};
+<a name="l00394"></a>00394 
+<a name="l00395"></a><a class="code" href="classKviChanTreeViewItem.html#aec76b0aa4260d9e0878b4d04551383b5">00395</a>         <span class="keyword">const</span> QString&amp; <a class="code" href="classKviChanTreeViewItem.html#aec76b0aa4260d9e0878b4d04551383b5">pass</a>() { <span class="keywordflow">return</span> m_szPass; }
+<a name="l00396"></a>00396 };
+<a name="l00397"></a>00397 
+<a name="l00398"></a><a class="code" href="classKviChannelListSelector.html">00398</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviChannelListSelector.html">KviChannelListSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalVBox.html" title="Toolkit Abstraction Layer: vbox class.">KviTalVBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
+<a name="l00399"></a>00399 {
+<a name="l00400"></a>00400         Q_OBJECT
+<a name="l00401"></a>00401 <span class="keyword">public</span>:
+<a name="l00402"></a>00402         <a class="code" href="classKviChannelListSelector.html">KviChannelListSelector</a>(QWidget * par,<span class="keyword">const</span> QString &amp; txt,QStringList * pOption,<span class="keywordtype">bool</span> bEnabled);
+<a name="l00403"></a>00403         ~<a class="code" href="classKviChannelListSelector.html">KviChannelListSelector</a>();
+<a name="l00404"></a>00404 <span class="keyword">private</span>:
+<a name="l00405"></a><a class="code" href="classKviChannelListSelector.html#a89b57a5d0a37b226f74ccbe563d85706">00405</a>         QLabel       * m_pLabel;
+<a name="l00406"></a><a class="code" href="classKviChannelListSelector.html#a3f75804c7b9e3b429851de06e3fd79e8">00406</a>         QTreeWidget    * m_pTreeWidget;
+<a name="l00407"></a><a class="code" href="classKviChannelListSelector.html#a4a3018b7964d16057b66853db5acd43e">00407</a>         QLineEdit    * m_pChanLineEdit;
+<a name="l00408"></a><a class="code" href="classKviChannelListSelector.html#aee069f3efe028420c47b2b45a779a80a">00408</a>         QLineEdit    * m_pPassLineEdit;
+<a name="l00409"></a><a class="code" href="classKviChannelListSelector.html#aaf4e9b46dd41b0cb217fc3dfa9011bab">00409</a>         QPushButton  * m_pAddButton;
+<a name="l00410"></a><a class="code" href="classKviChannelListSelector.html#ac056da90c1d685b5208f58f6110fb9c4">00410</a>         QPushButton  * m_pRemoveButton;
+<a name="l00411"></a><a class="code" href="classKviChannelListSelector.html#ab393af71a9f3f51fc19e231900713108">00411</a>         QStringList  * m_pOption;
+<a name="l00412"></a>00412 <span class="keyword">public</span>:
+<a name="l00413"></a>00413         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSelectorInterface.html#a2dac18af8c22c2ab82aff348a770eed3">commit</a>();
+<a name="l00414"></a><a class="code" href="classKviChannelListSelector.html#a078947e10e1fb34f1d30cc72db08d03e">00414</a>         QString <a class="code" href="classKviChannelListSelector.html#a078947e10e1fb34f1d30cc72db08d03e">textForSearch</a>(){<span class="keywordflow">return</span> m_pLabel-&gt;text();};
+<a name="l00415"></a><a class="code" href="classKviChannelListSelector.html#a962ace51e82aaa66fb7c71ca9113c4e3">00415</a>         QWidget *<a class="code" href="classKviChannelListSelector.html#a962ace51e82aaa66fb7c71ca9113c4e3">widgetToHighlight</a>(){<span class="keywordflow">return</span> (QWidget *)m_pLabel;};
+<a name="l00416"></a>00416         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span> bEnabled);
+<a name="l00417"></a>00417 <span class="keyword">private</span> slots:
+<a name="l00418"></a>00418         <span class="keywordtype">void</span> textChanged(<span class="keyword">const</span> QString &amp;str);
+<a name="l00419"></a>00419         <span class="keywordtype">void</span> itemSelectionChanged();
+<a name="l00420"></a>00420         <span class="keywordtype">void</span> addClicked();
+<a name="l00421"></a>00421         <span class="keywordtype">void</span> removeClicked();
+<a name="l00422"></a>00422 };
+<a name="l00423"></a>00423 
+<a name="l00424"></a>00424 <span class="preprocessor">#endif //!_KVI_SELECTORS_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:29 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

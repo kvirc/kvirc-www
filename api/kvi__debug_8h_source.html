@@ -52,30 +52,147 @@
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 <span class="preprocessor">#include &lt;QtGlobal&gt;</span>
 <a name="l00029"></a>00029 
-<a name="l00037"></a>00037 <span class="comment">//=============================================================================</span>
-<a name="l00038"></a>00038 <span class="comment">//</span>
-<a name="l00039"></a>00039 <span class="comment">// You can enable ALL the debugging output by uncommenting the next line</span>
-<a name="l00040"></a>00040 <span class="comment">// #define _KVI_DEBUG_CHECK_RANGE_</span>
-<a name="l00041"></a>00041 <span class="comment">//</span>
-<a name="l00042"></a>00042 <span class="comment">//=============================================================================</span>
-<a name="l00043"></a>00043 
-<a name="l00053"></a>00053 <span class="preprocessor">#ifdef _KVI_DEBUG_CHECK_RANGE_</span>
-<a name="l00054"></a>00054 <span class="preprocessor"></span><span class="preprocessor">        #define __range_valid(_expr) if(!(_expr))debug(&quot;[kvirc]: ASSERT FAILED: \&quot;%s\&quot; is false in %s (%d)&quot;,#_expr,__FILE__,__LINE__)</span>
-<a name="l00055"></a>00055 <span class="preprocessor"></span><span class="preprocessor">        #define __range_invalid(_expr) if(_expr)debug(&quot;[kvirc]: ASSERT FAILED: \&quot;%s\&quot; is true in %s (%d)&quot;,#_expr,__FILE__,__LINE__)</span>
-<a name="l00056"></a>00056 <span class="preprocessor"></span><span class="preprocessor">#else</span>
-<a name="l00057"></a><a class="code" href="kvi__debug_8h.html#a1968523b39316c7aba7f04c8462936cc">00057</a> <span class="preprocessor"></span><span class="preprocessor">        #define __range_valid(_expr)</span>
-<a name="l00058"></a><a class="code" href="kvi__debug_8h.html#af4fe8bead40c35d6432292d242d5b768">00058</a> <span class="preprocessor"></span><span class="preprocessor">        #define __range_invalid(_expr)</span>
-<a name="l00059"></a>00059 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00060"></a>00060 <span class="preprocessor"></span>
-<a name="l00061"></a>00061 <span class="preprocessor">#if defined(_KVI_DEBUG_) || defined(__KVI_DEBUG__)</span>
-<a name="l00062"></a>00062 <span class="preprocessor"></span><span class="preprocessor">        #define __ASSERT(_expr) if(!(_expr))debug(&quot;[kvirc]: ASSERT FAILED: \&quot;%s\&quot; is false in %s (%d)&quot;,#_expr,__FILE__,__LINE__)</span>
-<a name="l00063"></a>00063 <span class="preprocessor"></span><span class="preprocessor">#else</span>
-<a name="l00064"></a><a class="code" href="kvi__debug_8h.html#a5bdf218fc400375133d04c5a823df1d4">00064</a> <span class="preprocessor"></span><span class="preprocessor">        #define __ASSERT(_expr)</span>
-<a name="l00065"></a>00065 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00066"></a>00066 <span class="preprocessor"></span>
-<a name="l00067"></a>00067 <span class="preprocessor">#endif //_KVI_DEBUG_H_</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;kvi_sysconfig.h&quot;</span>
+<a name="l00031"></a>00031 
+<a name="l00039"></a>00039 <span class="preprocessor">#if 0</span>
+<a name="l00040"></a>00040 <span class="preprocessor"></span>
+<a name="l00041"></a>00041 <span class="comment">//=============================================================================</span>
+<a name="l00042"></a>00042 <span class="comment">//</span>
+<a name="l00043"></a>00043 <span class="comment">// You can enable ALL the debugging output by uncommenting the next line</span>
+<a name="l00044"></a>00044 <span class="comment">// #define _KVI_DEBUG_CHECK_RANGE_</span>
+<a name="l00045"></a>00045 <span class="comment">//</span>
+<a name="l00046"></a>00046 <span class="comment">//=============================================================================</span>
+<a name="l00047"></a>00047 
+<a name="l00056"></a>00056 <span class="preprocessor">#ifdef _KVI_DEBUG_CHECK_RANGE_</span>
+<a name="l00057"></a>00057 <span class="preprocessor"></span><span class="preprocessor">        #define KVI_ASSERT(_expr) if(!(_expr))debug(&quot;[kvirc]: ASSERT FAILED: \&quot;%s\&quot; is false in %s (%d)&quot;,#_expr,__FILE__,__LINE__)</span>
+<a name="l00058"></a>00058 <span class="preprocessor"></span><span class="preprocessor">        #define __range_invalid(_expr) if(_expr)debug(&quot;[kvirc]: ASSERT FAILED: \&quot;%s\&quot; is true in %s (%d)&quot;,#_expr,__FILE__,__LINE__)</span>
+<a name="l00059"></a>00059 <span class="preprocessor"></span><span class="preprocessor">#else</span>
+<a name="l00060"></a>00060 <span class="preprocessor"></span><span class="preprocessor">        #define KVI_ASSERT(_expr)</span>
+<a name="l00061"></a>00061 <span class="preprocessor"></span><span class="preprocessor">        #define __range_invalid(_expr)</span>
+<a name="l00062"></a>00062 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00063"></a>00063 <span class="preprocessor"></span>
+<a name="l00064"></a>00064 <span class="preprocessor">#if defined(_KVI_DEBUG_) || defined(__KVI_DEBUG__)</span>
+<a name="l00065"></a>00065 <span class="preprocessor"></span><span class="preprocessor">        #define __ASSERT(_expr) if(!(_expr))debug(&quot;[kvirc]: ASSERT FAILED: \&quot;%s\&quot; is false in %s (%d)&quot;,#_expr,__FILE__,__LINE__)</span>
+<a name="l00066"></a>00066 <span class="preprocessor"></span><span class="preprocessor">#else</span>
+<a name="l00067"></a>00067 <span class="preprocessor"></span><span class="preprocessor">        #define __ASSERT(_expr)</span>
+<a name="l00068"></a>00068 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00069"></a>00069 <span class="preprocessor"></span>
+<a name="l00070"></a>00070 <span class="preprocessor">#endif</span>
+<a name="l00071"></a>00071 <span class="preprocessor"></span>
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073 <span class="preprocessor">#include &lt;stdlib.h&gt;</span> <span class="comment">// abort</span>
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075 <span class="preprocessor">#ifdef __GNUC__</span>
+<a name="l00076"></a>00076 <span class="preprocessor"></span>
+<a name="l00077"></a>00077 <span class="preprocessor">        #define kvi_debug(fmt,arg...) qDebug(fmt,##arg)</span>
+<a name="l00078"></a>00078 <span class="preprocessor"></span><span class="preprocessor">        #define kvi_warning(fmt,arg...) qWarning(fmt,##arg)</span>
+<a name="l00079"></a>00079 <span class="preprocessor"></span><span class="preprocessor">        #define kvi_fatal(fmt,arg...) do { qFatal(fmt,##arg); abort(); } while(0) </span>
+<a name="l00080"></a>00080 <span class="preprocessor"></span><span class="preprocessor">        #define KVI_PRETTY_FUNCTION __PRETTY_FUNCTION__</span>
+<a name="l00081"></a>00081 <span class="preprocessor"></span>
+<a name="l00082"></a>00082 <span class="preprocessor">#else //!__GNUC__</span>
+<a name="l00083"></a>00083 <span class="preprocessor"></span>
+<a name="l00084"></a>00084         <span class="comment">// assume MSVC</span>
+<a name="l00085"></a>00085 
+<a name="l00086"></a><a class="code" href="kvi__debug_8h.html#a11fcb3239f8d2d0738ffbdce05b9b1ad">00086</a> <span class="preprocessor">        #define kvi_debug(fmt,...) qDebug(fmt,__VA_ARGS__)</span>
+<a name="l00087"></a><a class="code" href="kvi__debug_8h.html#ab904492e574a8225d5f51a66133fe430">00087</a> <span class="preprocessor"></span><span class="preprocessor">        #define kvi_warning(fmt,...) qWarning(fmt,__VA_ARGS__)</span>
+<a name="l00088"></a><a class="code" href="kvi__debug_8h.html#aaa054b39e5acfd8ce7541f3cb608be11">00088</a> <span class="preprocessor"></span><span class="preprocessor">        #define kvi_fatal(fmt,...) do { qFatal(fmt,__VA_ARGS__); abort(); } while(0) </span>
+<a name="l00089"></a><a class="code" href="kvi__debug_8h.html#ac8ba83cf82b564f4b63e0711ccfd2d67">00089</a> <span class="preprocessor"></span><span class="preprocessor">        #define KVI_PRETTY_FUNCTION __FUNCTION__</span>
+<a name="l00090"></a>00090 <span class="preprocessor"></span>
+<a name="l00091"></a>00091 <span class="preprocessor">#endif //!__GNUC__</span>
+<a name="l00092"></a>00092 <span class="preprocessor"></span>
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 <span class="preprocessor">#ifdef COMPILE_DEBUG_MODE</span>
+<a name="l00095"></a>00095 <span class="preprocessor"></span>
+<a name="l00096"></a>00096 <span class="preprocessor">        #define KVI_ASSERT(__condition__) \</span>
+<a name="l00097"></a>00097 <span class="preprocessor">                        do { \</span>
+<a name="l00098"></a>00098 <span class="preprocessor">                                if(!(__condition__)) \</span>
+<a name="l00099"></a>00099 <span class="preprocessor">                                        qFatal(&quot;[ASSERT FAILED] (&quot; # __condition__ &quot;) in %s at %s:%u&quot;,KVI_PRETTY_FUNCTION,__FILE__,__LINE__); \</span>
+<a name="l00100"></a>00100 <span class="preprocessor">                        } while(0)</span>
+<a name="l00101"></a>00101 <span class="preprocessor"></span>
+<a name="l00102"></a>00102 <span class="preprocessor">        #define KVI_ASSERT_MSG(__condition__,__message__) \</span>
+<a name="l00103"></a>00103 <span class="preprocessor">                        do { \</span>
+<a name="l00104"></a>00104 <span class="preprocessor">                                if(!(__condition__)) \</span>
+<a name="l00105"></a>00105 <span class="preprocessor">                                { \</span>
+<a name="l00106"></a>00106 <span class="preprocessor">                                        qFatal(&quot;[ASSERT FAILED] (&quot; # __condition__ &quot;) in %s at %s:%u&quot;,KVI_PRETTY_FUNCTION,__FILE__,__LINE__); \</span>
+<a name="l00107"></a>00107 <span class="preprocessor">                                        qFatal(&quot;[ASSERT FAILED] &quot; __message__); \</span>
+<a name="l00108"></a>00108 <span class="preprocessor">                                } \</span>
+<a name="l00109"></a>00109 <span class="preprocessor">                        } while(0)</span>
+<a name="l00110"></a>00110 <span class="preprocessor"></span>
+<a name="l00111"></a>00111 <span class="preprocessor">        #include &quot;<a class="code" href="kvi__debugcontext_8h.html">kvi_debugcontext.h</a>&quot;</span>
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113         <span class="comment">// The following two macros are used to create unique variable names</span>
+<a name="l00114"></a>00114         <span class="comment">// by the means of the __LINE__ builtin macro.</span>
+<a name="l00115"></a>00115         <span class="comment">// The ## token paste operator must be called inside a macro and must</span>
+<a name="l00116"></a>00116         <span class="comment">// preceede a macro parameter. This is why we can&#39;t use directly</span>
+<a name="l00117"></a>00117         <span class="comment">//</span>
+<a name="l00118"></a>00118         <span class="comment">// #define UNIQUEVARIABLE int name ## __LINE__</span>
+<a name="l00119"></a>00119         <span class="comment">//</span>
+<a name="l00120"></a>00120         <span class="comment">// We need something like</span>
+<a name="l00121"></a>00121         <span class="comment">//</span>
+<a name="l00122"></a>00122         <span class="comment">// #define PASTE(x,y) x ## y</span>
+<a name="l00123"></a>00123         <span class="comment">// #define UNIQUEVARIABLE int PASTE(x,__LINE__)</span>
+<a name="l00124"></a>00124         <span class="comment">//</span>
+<a name="l00125"></a>00125         <span class="comment">// But this doesn&#39;t work since the specification of the token pasting operator is</span>
+<a name="l00126"></a>00126         <span class="comment">//</span>
+<a name="l00127"></a>00127         <span class="comment">// &quot;If a formal parameter in a macro definition is preceded or followed by the token-pasting operator,</span>
+<a name="l00128"></a>00128         <span class="comment">// the formal parameter is immediately replaced by the __unexpanded__ actual argument. Macro expansion </span>
+<a name="l00129"></a>00129         <span class="comment">// is __not performed__ on the argument prior to replacement.&quot;</span>
+<a name="l00130"></a>00130         <span class="comment">//</span>
+<a name="l00131"></a>00131         <span class="comment">// So to actually have __LINE__ expanded we need another level of indirection</span>
+<a name="l00132"></a>00132         <span class="comment">//</span>
+<a name="l00133"></a>00133         <span class="comment">// #define PASTE(x,y) x ## y</span>
+<a name="l00134"></a>00134         <span class="comment">// #define EXPAND_Y_AND_THEN_PASTE(x,y) PASTE(x,y)</span>
+<a name="l00135"></a>00135         <span class="comment">// #define UNIQUEVARIABLE int EXPAND_Y_AND_THEN_PASTE(x,__LINE__)</span>
+<a name="l00136"></a>00136 
+<a name="l00137"></a>00137 <span class="preprocessor">        #define KVI_TRACE_HACK_TOKENPASTE_2(x,y) x ## y</span>
+<a name="l00138"></a>00138 <span class="preprocessor"></span><span class="preprocessor">        #define KVI_TRACE_HACK_TOKENPASTE_1(x,y) KVI_TRACE_HACK_TOKENPASTE_2(x,y)</span>
+<a name="l00139"></a>00139 <span class="preprocessor"></span>
+<a name="l00140"></a>00140 <span class="preprocessor">        #ifdef __GNUC__</span>
+<a name="l00141"></a>00141 <span class="preprocessor"></span><span class="preprocessor">                #define KVI_TRACE_FUNCTION \</span>
+<a name="l00142"></a>00142 <span class="preprocessor">                                KviDebugContext KVI_TRACE_HACK_TOKENPASTE_1(ctx,__LINE__)(__PRETTY_FUNCTION__)</span>
+<a name="l00143"></a>00143 <span class="preprocessor"></span>
+<a name="l00144"></a>00144 <span class="preprocessor">                #define KVI_TRACE_BLOCK(_szBlockDescription) \</span>
+<a name="l00145"></a>00145 <span class="preprocessor">                                KviDebugContext KVI_TRACE_HACK_TOKENPASTE_1(ctx,__LINE__)(&quot;%s - %s&quot;,__PRETTY_FUNCTION__,_szBlockDescription)</span>
+<a name="l00146"></a>00146 <span class="preprocessor"></span>                
+<a name="l00147"></a>00147 <span class="preprocessor">                #define KVI_TRACE(_szFmt,arg...) KviDebugContext::trace(_szFmt,##arg)</span>
+<a name="l00148"></a>00148 <span class="preprocessor"></span>
+<a name="l00149"></a>00149 <span class="preprocessor">        #else</span>
+<a name="l00150"></a>00150 <span class="preprocessor"></span><span class="preprocessor">                #define KVI_TRACE_FUNCTION \</span>
+<a name="l00151"></a>00151 <span class="preprocessor">                                KviDebugContext KVI_TRACE_HACK_TOKENPASTE_1(ctx,__LINE__)(__FUNCTION__)</span>
+<a name="l00152"></a>00152 <span class="preprocessor"></span>
+<a name="l00153"></a>00153 <span class="preprocessor">                #define KVI_TRACE_BLOCK(_szBlockDescription) \</span>
+<a name="l00154"></a>00154 <span class="preprocessor">                                KviDebugContext KVI_TRACE_HACK_TOKENPASTE_1(ctx,__LINE__)(&quot;%s - %s&quot;,__FUNCTION__,_szBlockDescription)</span>
+<a name="l00155"></a>00155 <span class="preprocessor"></span>
+<a name="l00156"></a>00156 <span class="preprocessor">                #define KVI_TRACE(_szFmt,...) KviDebugContext::trace(_szFmt,__VA_ARGS__)</span>
+<a name="l00157"></a>00157 <span class="preprocessor"></span>
+<a name="l00158"></a>00158 <span class="preprocessor">        #endif</span>
+<a name="l00159"></a>00159 <span class="preprocessor"></span>
+<a name="l00160"></a>00160 <span class="preprocessor">#else //!COMPILE_DEBUG_MODE</span>
+<a name="l00161"></a>00161 <span class="preprocessor"></span>
+<a name="l00162"></a><a class="code" href="kvi__debug_8h.html#acb8235d766e251808b07c2fdaab97fbc">00162</a> <span class="preprocessor">        #define KVI_ASSERT(__condition__) do { } while(0)</span>
+<a name="l00163"></a><a class="code" href="kvi__debug_8h.html#a00c1fdadcac92bba0790801bd87791ce">00163</a> <span class="preprocessor"></span><span class="preprocessor">        #define KVI_ASSERT_MSG(__condition__,__message__) do { } while(0)</span>
+<a name="l00164"></a>00164 <span class="preprocessor"></span>
+<a name="l00165"></a><a class="code" href="kvi__debug_8h.html#a0420e2c381b6671375a50c28bb73c048">00165</a> <span class="preprocessor">        #define KVI_TRACE_FUNCTION \</span>
+<a name="l00166"></a>00166 <span class="preprocessor">                        do { } while(0)</span>
+<a name="l00167"></a>00167 <span class="preprocessor"></span>
+<a name="l00168"></a><a class="code" href="kvi__debug_8h.html#a6102e7a577988a0b604e5cd60c037855">00168</a> <span class="preprocessor">        #define KVI_TRACE_BLOCK(_szBlockDescription) \</span>
+<a name="l00169"></a>00169 <span class="preprocessor">                        do { } while(0)</span>
+<a name="l00170"></a>00170 <span class="preprocessor"></span>
+<a name="l00171"></a>00171 <span class="preprocessor">        #ifdef __GNUC__</span>
+<a name="l00172"></a>00172 <span class="preprocessor"></span><span class="preprocessor">                #define KVI_TRACE(_szFmt,arg...) do { } while(0)</span>
+<a name="l00173"></a>00173 <span class="preprocessor"></span><span class="preprocessor">        #else</span>
+<a name="l00174"></a><a class="code" href="kvi__debug_8h.html#a11e28058a90f415cd6f041efbf669db5">00174</a> <span class="preprocessor"></span><span class="preprocessor">                #define KVI_TRACE(_szFmt,...) do { } while(0)</span>
+<a name="l00175"></a>00175 <span class="preprocessor"></span><span class="preprocessor">        #endif </span>
+<a name="l00176"></a>00176 <span class="preprocessor"></span>        
+<a name="l00177"></a>00177 <span class="preprocessor">#endif //!COMPILE_DEBUG_MODE</span>
+<a name="l00178"></a>00178 <span class="preprocessor"></span>
+<a name="l00179"></a>00179 
+<a name="l00180"></a>00180 
+<a name="l00181"></a>00181 
+<a name="l00182"></a>00182 
+<a name="l00183"></a>00183 <span class="preprocessor">#endif //_KVI_DEBUG_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:26 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:18 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

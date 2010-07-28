@@ -100,8 +100,6 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The widget docked into our MDI window.  <a href="#a872a4c7ab771b22b74538774304d93c1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPixmap&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiChild.html#a040c42e3d88326240b7c7f2198fb5135">m_pIcon</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Contains the current window Icon.  <a href="#a040c42e3d88326240b7c7f2198fb5135"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QRect&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiChild.html#aa9f79809e446131e6103c8e631919f01">m_restoredGeometry</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Saves the geometry of the window for restoring it's position.  <a href="#aa9f79809e446131e6103c8e631919f01"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiChild.html#a55bf0fbfba52c7790768dc898d1cb001">m_szPlainCaption</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Caption as plain text.  <a href="#a55bf0fbfba52c7790768dc898d1cb001"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Friends</h2></td></tr>
@@ -174,7 +172,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviMdiChild.html" title="Class of an MDI window.">KviMdiChild</a> </dd></dl>
 
-<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00079">m_pClient</a>, <a class="el" href="kvi__mdichild_8h_source.html#l00076">m_pManager</a>, <a class="el" href="kvi__mdichild_8h_source.html#l00081">m_restoredGeometry</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00083">transparencyWorkaround()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00259">updateSystemPopup()</a>, and <a class="el" href="kvi__mdichild_8cpp_source.html#l00136">windowStateChangedEvent()</a>.</p>
+<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00080">m_pClient</a>, <a class="el" href="kvi__mdichild_8h_source.html#l00077">m_pManager</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00083">transparencyWorkaround()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00261">updateSystemPopup()</a>, and <a class="el" href="kvi__mdichild_8cpp_source.html#l00137">windowStateChangedEvent()</a>.</p>
 
 </div>
 </div>
@@ -195,7 +193,7 @@
 
 <p>Destroys the Mdi child object. </p>
 
-<p>References <a class="el" href="kvi__mdimanager_8cpp_source.html#l00176">KviMdiManager::focusPreviousTopChild()</a>, <a class="el" href="kvi__mdichild_8h_source.html#l00079">m_pClient</a>, and <a class="el" href="kvi__mdichild_8h_source.html#l00076">m_pManager</a>.</p>
+<p>References <a class="el" href="kvi__mdimanager_8cpp_source.html#l00182">KviMdiManager::focusPreviousTopChild()</a>, <a class="el" href="kvi__mdichild_8h_source.html#l00080">m_pClient</a>, and <a class="el" href="kvi__mdichild_8h_source.html#l00077">m_pManager</a>.</p>
 
 </div>
 </div>
@@ -218,9 +216,9 @@
 <p>Activates this subwindow. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00076">m_pManager</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00151">KviMdiManager::setTopChild()</a>, and <a class="el" href="kvi__mdimanager_8cpp_source.html#l00146">KviMdiManager::topChild()</a>.</p>
+<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00077">m_pManager</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00151">KviMdiManager::setTopChild()</a>, and <a class="el" href="kvi__mdimanager_8cpp_source.html#l00146">KviMdiManager::topChild()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00921">KviWindow::activateSelf()</a>, and <a class="el" href="kvi__mdimanager_8cpp_source.html#l00132">KviMdiManager::showAndActivate()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00922">KviWindow::activateSelf()</a>, and <a class="el" href="kvi__mdimanager_8cpp_source.html#l00132">KviMdiManager::showAndActivate()</a>.</p>
 
 </div>
 </div>
@@ -263,7 +261,7 @@
 <p>Hooks into close event to make user decisions possible. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l00868">KviWindow::delayedClose()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l00869">KviWindow::delayedClose()</a>.</p>
 
 </div>
 </div>
@@ -285,9 +283,9 @@
 <p>Returns current window icon. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QPixmap * </dd></dl>
 
-<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00083">m_pIcon</a>.</p>
+<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00082">m_pIcon</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__mdimanager_8cpp_source.html#l00219">KviMdiManager::fillWindowPopup()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__mdimanager_8cpp_source.html#l00234">KviMdiManager::fillWindowPopup()</a>.</p>
 
 </div>
 </div>
@@ -329,7 +327,7 @@
 <p>Maximizes this window. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__mdimanager_8cpp_source.html#l00176">KviMdiManager::focusPreviousTopChild()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l01144">KviWindow::maximize()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__mdimanager_8cpp_source.html#l00182">KviMdiManager::focusPreviousTopChild()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l01145">KviWindow::maximize()</a>.</p>
 
 </div>
 </div>
@@ -351,7 +349,7 @@
 <p>Minimizes this window. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l01133">KviWindow::minimize()</a>, and <a class="el" href="kvi__mdimanager_8cpp_source.html#l00434">KviMdiManager::minimizeAll()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l01134">KviWindow::minimize()</a>, and <a class="el" href="kvi__mdimanager_8cpp_source.html#l00449">KviMdiManager::minimizeAll()</a>.</p>
 
 </div>
 </div>
@@ -374,7 +372,7 @@
 <p>Updates the widget background when moving. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00079">m_pClient</a>.</p>
+<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00080">m_pClient</a>.</p>
 
 </div>
 </div>
@@ -416,7 +414,7 @@
 <p>Restore it's latest postition/state. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__mdimanager_8cpp_source.html#l00335">KviMdiManager::ensureNoMaximized()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00318">KviMdiManager::menuActivated()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01174">KviWindow::restore()</a>, and <a class="el" href="kvi__mdimanager_8cpp_source.html#l00451">KviMdiManager::restoreAll()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__mdimanager_8cpp_source.html#l00350">KviMdiManager::ensureNoMaximized()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00333">KviMdiManager::menuActivated()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01173">KviWindow::restore()</a>, and <a class="el" href="kvi__mdimanager_8cpp_source.html#l00466">KviMdiManager::restoreAll()</a>.</p>
 
 </div>
 </div>
@@ -438,7 +436,7 @@
 <p>Read the current geometry. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>QRect </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l01183">KviWindow::externalGeometry()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l01182">KviWindow::externalGeometry()</a>.</p>
 
 </div>
 </div>
@@ -468,9 +466,9 @@
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 <dl class="warning"><dt><b>Warning:</b></dt><dd>The widget has to inherit of KviWindow! </dd></dl>
 
-<p>References <a class="el" href="kvi__debug_8h_source.html#l00057">__range_valid</a>, <a class="el" href="kvi__string_8h_source.html#l00118">KviStr::Format</a>, <a class="el" href="kvi__mdichild_8h_source.html#l00079">m_pClient</a>, <a class="el" href="kvi__network_8h_source.html#l00093">KviNetwork::name()</a>, <a class="el" href="kvi__ircconnectiontarget_8h_source.html#l00053">KviIrcConnectionTarget::network()</a>, and <a class="el" href="kvi__ircconnection_8h_source.html#l00207">KviIrcConnection::target()</a>.</p>
+<p>References <a class="el" href="kvi__string_8h_source.html#l00118">KviStr::Format</a>, <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>, <a class="el" href="kvi__mdichild_8h_source.html#l00080">m_pClient</a>, <a class="el" href="kvi__network_8h_source.html#l00094">KviNetwork::name()</a>, <a class="el" href="kvi__ircconnectiontarget_8h_source.html#l00053">KviIrcConnectionTarget::network()</a>, and <a class="el" href="kvi__ircconnection_8h_source.html#l00207">KviIrcConnection::target()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00547">KviFrame::dockWindow()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00550">KviFrame::dockWindow()</a>.</p>
 
 </div>
 </div>
@@ -499,7 +497,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00083">m_pIcon</a>.</p>
+<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00082">m_pIcon</a>.</p>
 
 </div>
 </div>
@@ -528,9 +526,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00081">m_restoredGeometry</a>.</p>
-
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00451">KviFrame::addWindow()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00452">KviFrame::addWindow()</a>.</p>
 
 </div>
 </div>
@@ -559,9 +555,9 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00085">m_szPlainCaption</a>.</p>
+<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00084">m_szPlainCaption</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00645">KviWindow::updateCaption()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__window_8cpp_source.html#l00646">KviWindow::updateCaption()</a>.</p>
 
 </div>
 </div>
@@ -584,9 +580,9 @@
 <dl class="return"><dt><b>Returns:</b></dt><dd>MdiChildState</dd></dl>
 <p>For details see the MdiChildState declaration </p>
 
-<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00070">Maximized</a>, <a class="el" href="kvi__mdichild_8h_source.html#l00071">Minimized</a>, and <a class="el" href="kvi__mdichild_8h_source.html#l00072">Normal</a>.</p>
+<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00071">Maximized</a>, <a class="el" href="kvi__mdichild_8h_source.html#l00072">Minimized</a>, and <a class="el" href="kvi__mdichild_8h_source.html#l00073">Normal</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__mdimanager_8cpp_source.html#l00371">KviMdiManager::cascadeMaximized()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00335">KviMdiManager::ensureNoMaximized()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00414">KviMdiManager::expandHorizontal()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00394">KviMdiManager::expandVertical()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00219">KviMdiManager::fillWindowPopup()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00176">KviMdiManager::focusPreviousTopChild()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00318">KviMdiManager::menuActivated()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00434">KviMdiManager::minimizeAll()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00451">KviMdiManager::restoreAll()</a>, and <a class="el" href="kvi__mdimanager_8cpp_source.html#l00509">KviMdiManager::tileAllInternal()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__mdimanager_8cpp_source.html#l00386">KviMdiManager::cascadeMaximized()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00350">KviMdiManager::ensureNoMaximized()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00429">KviMdiManager::expandHorizontal()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00409">KviMdiManager::expandVertical()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00234">KviMdiManager::fillWindowPopup()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00182">KviMdiManager::focusPreviousTopChild()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00333">KviMdiManager::menuActivated()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00449">KviMdiManager::minimizeAll()</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00466">KviMdiManager::restoreAll()</a>, and <a class="el" href="kvi__mdimanager_8cpp_source.html#l00524">KviMdiManager::tileAllInternal()</a>.</p>
 
 </div>
 </div>
@@ -630,9 +626,9 @@
 <p>Removes the client widget. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__debug_8h_source.html#l00057">__range_valid</a>, and <a class="el" href="kvi__mdichild_8h_source.html#l00079">m_pClient</a>.</p>
+<p>References <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>, and <a class="el" href="kvi__mdichild_8h_source.html#l00080">m_pClient</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00560">KviFrame::undockWindow()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00563">KviFrame::undockWindow()</a>.</p>
 
 </div>
 </div>
@@ -654,9 +650,9 @@
 <p>Updates the caption of the child. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00079">m_pClient</a>.</p>
+<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00080">m_pClient</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__mdichild_8cpp_source.html#l00136">windowStateChangedEvent()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__mdichild_8cpp_source.html#l00137">windowStateChangedEvent()</a>.</p>
 
 </div>
 </div>
@@ -678,7 +674,7 @@
 <p>Updates the system popup. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00079">m_pClient</a>.</p>
+<p>References <a class="el" href="kvi__mdichild_8h_source.html#l00080">m_pClient</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__mdichild_8cpp_source.html#l00057">KviMdiChild()</a>.</p>
 
@@ -720,7 +716,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__mdimanager_8cpp_source.html#l00176">KviMdiManager::focusPreviousTopChild()</a>, <a class="el" href="kvi__mdichild_8h_source.html#l00076">m_pManager</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00168">KviMdiManager::setIsInSDIMode()</a>, and <a class="el" href="kvi__mdichild_8cpp_source.html#l00202">updateCaption()</a>.</p>
+<p>References <a class="el" href="kvi__mdimanager_8cpp_source.html#l00182">KviMdiManager::focusPreviousTopChild()</a>, <a class="el" href="kvi__mdichild_8h_source.html#l00077">m_pManager</a>, <a class="el" href="kvi__mdimanager_8cpp_source.html#l00174">KviMdiManager::setIsInSDIMode()</a>, and <a class="el" href="kvi__mdichild_8cpp_source.html#l00203">updateCaption()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__mdichild_8cpp_source.html#l00057">KviMdiChild()</a>.</p>
 
@@ -754,7 +750,7 @@
 
 <p>The widget docked into our MDI window. </p>
 
-<p>Referenced by <a class="el" href="kvi__mdichild_8cpp_source.html#l00057">KviMdiChild()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00211">moveEvent()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00226">setClient()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00244">unsetClient()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00202">updateCaption()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00259">updateSystemPopup()</a>, and <a class="el" href="kvi__mdichild_8cpp_source.html#l00073">~KviMdiChild()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__mdichild_8cpp_source.html#l00057">KviMdiChild()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00212">moveEvent()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00227">setClient()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00246">unsetClient()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00203">updateCaption()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00261">updateSystemPopup()</a>, and <a class="el" href="kvi__mdichild_8cpp_source.html#l00073">~KviMdiChild()</a>.</p>
 
 </div>
 </div>
@@ -771,7 +767,7 @@
 
 <p>Contains the current window Icon. </p>
 
-<p>Referenced by <a class="el" href="kvi__mdichild_8cpp_source.html#l00125">icon()</a>, and <a class="el" href="kvi__mdichild_8cpp_source.html#l00119">setIcon()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__mdichild_8cpp_source.html#l00126">icon()</a>, and <a class="el" href="kvi__mdichild_8cpp_source.html#l00120">setIcon()</a>.</p>
 
 </div>
 </div>
@@ -788,24 +784,7 @@
 
 <p>Contains the according <a class="el" href="classKviMdiManager.html" title="Handles all MDI windows.">KviMdiManager</a> object. </p>
 
-<p>Referenced by <a class="el" href="kvi__mdichild_8cpp_source.html#l00253">activate()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00057">KviMdiChild()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00136">windowStateChangedEvent()</a>, and <a class="el" href="kvi__mdichild_8cpp_source.html#l00073">~KviMdiChild()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa9f79809e446131e6103c8e631919f01"></a><!-- doxytag: member="KviMdiChild::m_restoredGeometry" ref="aa9f79809e446131e6103c8e631919f01" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">QRect <a class="el" href="classKviMdiChild.html#aa9f79809e446131e6103c8e631919f01">KviMdiChild::m_restoredGeometry</a><code> [private]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Saves the geometry of the window for restoring it's position. </p>
-
-<p>Referenced by <a class="el" href="kvi__mdichild_8cpp_source.html#l00057">KviMdiChild()</a>, and <a class="el" href="kvi__mdichild_8cpp_source.html#l00088">setRestoredGeometry()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__mdichild_8cpp_source.html#l00255">activate()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00057">KviMdiChild()</a>, <a class="el" href="kvi__mdichild_8cpp_source.html#l00137">windowStateChangedEvent()</a>, and <a class="el" href="kvi__mdichild_8cpp_source.html#l00073">~KviMdiChild()</a>.</p>
 
 </div>
 </div>
@@ -822,7 +801,7 @@
 
 <p>Caption as plain text. </p>
 
-<p>Referenced by <a class="el" href="kvi__mdichild_8cpp_source.html#l00130">setWindowTitle()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__mdichild_8cpp_source.html#l00131">setWindowTitle()</a>.</p>
 
 </div>
 </div>
@@ -831,7 +810,7 @@
 <li>src/kvirc/ui/<a class="el" href="kvi__mdichild_8cpp.html">kvi_mdichild.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:35 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:26 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

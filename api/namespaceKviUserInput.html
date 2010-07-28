@@ -30,6 +30,8 @@
 <a href="#_details">More...</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviUserInput.html#abeaa8a24bdf37d0cd612bbc596261665">escapeString</a> (QString &amp;szData)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Escapes any kvs special character from a string.  <a href="#abeaa8a24bdf37d0cd612bbc596261665"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviUserInput.html#ac23fb8060cb0085e908da3924459ce7f">parse</a> (QString &amp;szData, <a class="el" href="classKviWindow.html">KviWindow</a> *pWindow, const QString &amp;szContext=<a class="el" href="namespaceKviQString.html#aa14b9dc45e5d3b528f26e523d7c96b3e">KviQString::Empty</a>, bool bUserFriendlyCommandline=false)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns false if szData is a command and it fails to run.  <a href="#ac23fb8060cb0085e908da3924459ce7f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviUserInput.html#a7e05f43e35335d5288afe9d95a2c1bdd">parseCommand</a> (const QString &amp;szData, <a class="el" href="classKviWindow.html">KviWindow</a> *pWindow, const QString &amp;szContext=<a class="el" href="namespaceKviQString.html#aa14b9dc45e5d3b528f26e523d7c96b3e">KviQString::Empty</a>, bool bUserFriendlyCommandline=false)</td></tr>
@@ -40,6 +42,35 @@
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Namespace that contains parsing function for the user input. </p>
 <hr/><h2>Function Documentation</h2>
+<a class="anchor" id="abeaa8a24bdf37d0cd612bbc596261665"></a><!-- doxytag: member="KviUserInput::escapeString" ref="abeaa8a24bdf37d0cd612bbc596261665" args="(QString &amp;szData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">KVIRC_API void KviUserInput::escapeString </td>
+          <td>(</td>
+          <td class="paramtype">QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>szData</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Escapes any kvs special character from a string. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>szData</em>&nbsp;</td><td>The string to escape </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
+
+<p>Referenced by <a class="el" href="kvi__kvs__corefunctions__af_8cpp_source.html#l01020">KviKvsCoreFunctions::KVSCF()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ac23fb8060cb0085e908da3924459ce7f"></a><!-- doxytag: member="KviUserInput::parse" ref="ac23fb8060cb0085e908da3924459ce7f" args="(QString &amp;szData, KviWindow *pWindow, const QString &amp;szContext=KviQString::Empty, bool bUserFriendlyCommandline=false)" -->
 <div class="memitem">
 <div class="memproto">
@@ -180,12 +211,12 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__kvs__coresimplecommands__sz_8cpp_source.html#l00080">KviKvsCoreSimpleCommands::KVSCSC()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02231">KviInputEditor::sendPlain()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__coresimplecommands__sz_8cpp_source.html#l00080">KviKvsCoreSimpleCommands::KVSCSC()</a>, and <a class="el" href="kvi__input__editor_8cpp_source.html#l02240">KviInputEditor::sendPlain()</a>.</p>
 
 </div>
 </div>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:36 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:28 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

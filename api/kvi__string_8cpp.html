@@ -32,7 +32,6 @@
 <code>#include &quot;<a class="el" href="kvi__qstring_8h_source.html">kvi_qstring.h</a>&quot;</code><br/>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Defines</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__string_8cpp.html#a910d5cb8026845fe248f5cd09312198b">_KVI_DEBUG_CHECK_RANGE_</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__string_8cpp.html#ae8fea321460e3d49582bd259524135c0">_KVI_STRING_CPP_</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__string_8cpp.html#a4035b67d81bad0fd6c9a8639c3e4e970">NOT_AT_END</a>(__str)&nbsp;&nbsp;&nbsp;(*__str &amp;&amp; (*__str != terminator))</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__string_8cpp.html#a4035b67d81bad0fd6c9a8639c3e4e970">NOT_AT_END</a>(__str)&nbsp;&nbsp;&nbsp;(*__str &amp;&amp; (*__str != terminator))</td></tr>
@@ -65,19 +64,6 @@
 <tr><td class="memItemLeft" align="right" valign="top">unsigned char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__string_8cpp.html#afcb480ec1df18d8c3160261fe3208dc8">iso88591_toUpper_map</a> [256]</td></tr>
 </table>
 <hr/><h2>Define Documentation</h2>
-<a class="anchor" id="a910d5cb8026845fe248f5cd09312198b"></a><!-- doxytag: member="kvi_string.cpp::_KVI_DEBUG_CHECK_RANGE_" ref="a910d5cb8026845fe248f5cd09312198b" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define _KVI_DEBUG_CHECK_RANGE_</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="ae8fea321460e3d49582bd259524135c0"></a><!-- doxytag: member="kvi_string.cpp::_KVI_STRING_CPP_" ref="ae8fea321460e3d49582bd259524135c0" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -125,7 +111,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__string_8cpp_source.html#l00327">kvi_matchStringWithTerminator()</a>, and <a class="el" href="kvi__string_8cpp_source.html#l00543">kvi_matchWildExprWithTerminator()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__string_8cpp_source.html#l00324">kvi_matchStringWithTerminator()</a>, and <a class="el" href="kvi__string_8cpp_source.html#l00540">kvi_matchWildExprWithTerminator()</a>.</p>
 
 </div>
 </div>
@@ -146,7 +132,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__string_8cpp_source.html#l01401">KviStr::base64ToBuffer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__string_8cpp_source.html#l01398">KviStr::base64ToBuffer()</a>.</p>
 
 </div>
 </div>
@@ -166,7 +152,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__string_8cpp_source.html#l02045">KviStr::hexDecode()</a>, and <a class="el" href="kvi__string_8cpp_source.html#l01306">KviStr::hexToBuffer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__string_8cpp_source.html#l02042">KviStr::hexDecode()</a>, and <a class="el" href="kvi__string_8cpp_source.html#l01303">KviStr::hexToBuffer()</a>.</p>
 
 </div>
 </div>
@@ -201,7 +187,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__debug_8h_source.html#l00057">__range_valid</a>, <a class="el" href="kvi__memmove_8cpp_source.html#l00218">kvi_fastmove()</a>, <a class="el" href="kvi__malloc_8h_source.html#l00084">kvi_realloc</a>, <a class="el" href="kvi__string_8h_source.html#l00166">KviStr::m_len</a>, and <a class="el" href="kvi__string_8h_source.html#l00165">KviStr::m_ptr</a>.</p>
+<p>References <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>, <a class="el" href="kvi__memmove_8cpp_source.html#l00218">kvi_fastmove()</a>, <a class="el" href="kvi__malloc_8h_source.html#l00084">kvi_realloc</a>, <a class="el" href="kvi__string_8h_source.html#l00166">KviStr::m_len</a>, and <a class="el" href="kvi__string_8h_source.html#l00165">KviStr::m_ptr</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__notifylist_8cpp_source.html#l00983">KviStupidNotifyListManager::handleIsOn()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00515">KviIsOnNotifyListManager::handleIsOn()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00786">KviIsOnNotifyListManager::handleUserhost()</a>, and <a class="el" href="kvi__parameterlist_8cpp_source.html#l00104">KviParameterList::KviParameterList()</a>.</p>
 
@@ -238,7 +224,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__debug_8h_source.html#l00057">__range_valid</a>, <a class="el" href="kvi__memmove_8cpp_source.html#l00218">kvi_fastmove()</a>, <a class="el" href="kvi__malloc_8h_source.html#l00084">kvi_realloc</a>, <a class="el" href="kvi__string_8h_source.html#l00166">KviStr::m_len</a>, and <a class="el" href="kvi__string_8h_source.html#l00165">KviStr::m_ptr</a>.</p>
+<p>References <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>, <a class="el" href="kvi__memmove_8cpp_source.html#l00218">kvi_fastmove()</a>, <a class="el" href="kvi__malloc_8h_source.html#l00084">kvi_realloc</a>, <a class="el" href="kvi__string_8h_source.html#l00166">KviStr::m_len</a>, and <a class="el" href="kvi__string_8h_source.html#l00165">KviStr::m_ptr</a>.</p>
 
 </div>
 </div>
@@ -279,9 +265,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__debug_8h_source.html#l00057">__range_valid</a>, <a class="el" href="kvi__stdarg_8h_source.html#l00060">kvi_va_arg</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, and <a class="el" href="kvi__qstring_8h_source.html#l00737">KviQString::toUtf8()</a>.</p>
+<p>References <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>, <a class="el" href="kvi__stdarg_8h_source.html#l00061">kvi_va_arg</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, and <a class="el" href="kvi__qstring_8h_source.html#l00789">KviQString::toUtf8()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00712">KviIrcConnection::sendFmtData()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00736">KviIrcConnection::sendFmtData()</a>.</p>
 
 </div>
 </div>
@@ -514,9 +500,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__debug_8h_source.html#l00057">__range_valid</a>.</p>
+<p>References <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__string_8h_source.html#l00546">kvi_compare()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__string_8h_source.html#l00550">kvi_compare()</a>.</p>
 
 </div>
 </div>
@@ -545,7 +531,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__debug_8h_source.html#l00057">__range_valid</a>.</p>
+<p>References <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>.</p>
 
 </div>
 </div>
@@ -574,9 +560,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__debug_8h_source.html#l00057">__range_valid</a>.</p>
+<p>References <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__app__setup_8cpp_source.html#l00106">KviApp::checkFileAssociations()</a>, <a class="el" href="kvi__string_8h_source.html#l00269">KviStr::equalsCI()</a>, <a class="el" href="kvi__regchan_8cpp_source.html#l00114">KviRegisteredChannelDataBase::findExact()</a>, <a class="el" href="kvi__mediatype_8cpp_source.html#l00101">KviMediaManager::findMediaTypeByFileMask()</a>, <a class="el" href="kvi__mediatype_8cpp_source.html#l00090">KviMediaManager::findMediaTypeByIanaType()</a>, <a class="el" href="kvi__main_8cpp_source.html#l00070">parseArgs()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01707">KviServerParser::parseCtcpRequestDcc()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00204">KviServerParser::parseNumeric005()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00452">KviHttpRequest::processHeader()</a>, and <a class="el" href="kvi__proxydb_8cpp_source.html#l00068">KviProxy::setNamedProtocol()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__app__setup_8cpp_source.html#l00115">KviApp::checkFileAssociations()</a>, <a class="el" href="kvi__string_8h_source.html#l00271">KviStr::equalsCI()</a>, <a class="el" href="kvi__mediatype_8cpp_source.html#l00101">KviMediaManager::findMediaTypeByFileMask()</a>, <a class="el" href="kvi__mediatype_8cpp_source.html#l00090">KviMediaManager::findMediaTypeByIanaType()</a>, <a class="el" href="kvi__main_8cpp_source.html#l00070">parseArgs()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01712">KviServerParser::parseCtcpRequestDcc()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00204">KviServerParser::parseNumeric005()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00456">KviHttpRequest::processHeader()</a>, and <a class="el" href="kvi__proxydb_8cpp_source.html#l00068">KviProxy::setNamedProtocol()</a>.</p>
 
 </div>
 </div>
@@ -611,9 +597,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__debug_8h_source.html#l00057">__range_valid</a>.</p>
+<p>References <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__app__setup_8cpp_source.html#l00106">KviApp::checkFileAssociations()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02226">KviStr::contains()</a>, <a class="el" href="kvi__string_8h_source.html#l00273">KviStr::equalsCIN()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02951">KviStr::ext_contains()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02659">KviStr::find()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02727">KviStr::findFirstIdx()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02780">KviStr::findLastIdx()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02693">KviStr::findRev()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02180">KviStr::occurences()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00044">KviIrcUrl::parse()</a>, <a class="el" href="kvi__main_8cpp_source.html#l00070">parseArgs()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00204">KviServerParser::parseNumeric005()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l01191">KviIrcSocket::proxyHandleHttpFinalReply()</a>, and <a class="el" href="kvi__menubar_8cpp_source.html#l00106">KviMenuBar::setupHelpPopup()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__app__setup_8cpp_source.html#l00115">KviApp::checkFileAssociations()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02223">KviStr::contains()</a>, <a class="el" href="kvi__string_8h_source.html#l00275">KviStr::equalsCIN()</a>, <a class="el" href="kvi__string_8cpp_source.html#l03025">KviStr::ext_contains()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02733">KviStr::find()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02801">KviStr::findFirstIdx()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02854">KviStr::findLastIdx()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02767">KviStr::findRev()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02177">KviStr::occurences()</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00044">KviIrcUrl::parse()</a>, <a class="el" href="kvi__main_8cpp_source.html#l00070">parseArgs()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00204">KviServerParser::parseNumeric005()</a>, <a class="el" href="kvi__ircsocket_8cpp_source.html#l01193">KviIrcSocket::proxyHandleHttpFinalReply()</a>, and <a class="el" href="kvi__menubar_8cpp_source.html#l00106">KviMenuBar::setupHelpPopup()</a>.</p>
 
 </div>
 </div>
@@ -642,7 +628,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__debug_8h_source.html#l00057">__range_valid</a>.</p>
+<p>References <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>.</p>
 
 </div>
 </div>
@@ -677,7 +663,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__debug_8h_source.html#l00057">__range_valid</a>.</p>
+<p>References <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>.</p>
 
 </div>
 </div>
@@ -712,7 +698,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__debug_8h_source.html#l00057">__range_valid</a>.</p>
+<p>References <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>.</p>
 
 </div>
 </div>
@@ -753,9 +739,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__debug_8h_source.html#l00057">__range_valid</a>, <a class="el" href="kvi__stdarg_8h_source.html#l00060">kvi_va_arg</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, and <a class="el" href="kvi__qstring_8h_source.html#l00737">KviQString::toUtf8()</a>.</p>
+<p>References <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>, <a class="el" href="kvi__stdarg_8h_source.html#l00061">kvi_va_arg</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, and <a class="el" href="kvi__qstring_8h_source.html#l00789">KviQString::toUtf8()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__string_8cpp_source.html#l01561">KviStr::append()</a>, <a class="el" href="kvi__string_8cpp_source.html#l01079">KviStr::KviStr()</a>, and <a class="el" href="kvi__string_8cpp_source.html#l02628">KviStr::sprintf()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__string_8cpp_source.html#l01558">KviStr::append()</a>, <a class="el" href="kvi__string_8cpp_source.html#l01076">KviStr::KviStr()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02702">KviStr::sprintf()</a>, and <a class="el" href="kvi__string_8cpp_source.html#l02671">KviStr::vsprintf()</a>.</p>
 
 </div>
 </div>
@@ -775,7 +761,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircview_8cpp_source.html#l02387">KviIrcView::getLinkUnderMouse()</a>, <a class="el" href="kvi__string_8cpp_source.html#l01143">KviStr::KviStr()</a>, and <a class="el" href="kvi__ircview_8cpp_source.html#l00967">KviIrcView::paintEvent()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircview_8cpp_source.html#l02460">KviIrcView::getLinkUnderMouse()</a>, <a class="el" href="kvi__string_8cpp_source.html#l01140">KviStr::KviStr()</a>, and <a class="el" href="kvi__ircview_8cpp_source.html#l00998">KviIrcView::paintEvent()</a>.</p>
 
 </div>
 </div>
@@ -791,7 +777,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__string_8cpp_source.html#l01347">KviStr::bufferToBase64()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__string_8cpp_source.html#l01344">KviStr::bufferToBase64()</a>.</p>
 
 </div>
 </div>
@@ -819,7 +805,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__string_8cpp_source.html#l01243">KviStr::bufferToHex()</a>, and <a class="el" href="kvi__string_8cpp_source.html#l01944">KviStr::hexEncodeWithTable()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__string_8cpp_source.html#l01240">KviStr::bufferToHex()</a>, and <a class="el" href="kvi__string_8cpp_source.html#l01941">KviStr::hexEncodeWithTable()</a>.</p>
 
 </div>
 </div>
@@ -834,7 +820,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__string_8cpp_source.html#l01727">KviStr::toLowerISO88591()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__string_8cpp_source.html#l01724">KviStr::toLowerISO88591()</a>.</p>
 
 </div>
 </div>
@@ -849,12 +835,12 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__string_8cpp_source.html#l01671">KviStr::toUpperISO88591()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__string_8cpp_source.html#l01668">KviStr::toUpperISO88591()</a>.</p>
 
 </div>
 </div>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:29 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

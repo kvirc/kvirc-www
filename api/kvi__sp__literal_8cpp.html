@@ -71,6 +71,11 @@
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__literal_8cpp.html#a9fe577077927704cd8a31faccf4a527a">CHANUSER_MODE</a>(__modechar, __chanfunc, __evmeset, __evmeunset, __evset, __evunset, __icomeset, __icomeunset, __icoset, __icounset)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__literal_8cpp.html#a4efca77eae98dc1e5b345388500dd740">CHANUSER_MODE_PARAM</a>(__modechar)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__literal_8cpp.html#a5782c144982be37f0cf38d9e4d5ce35e">DECRYPT_IF_NEEDED</a>(_target, _txt, _type, _type2, _buffer, _retptr, _retmsgtype)&nbsp;&nbsp;&nbsp;_retptr = _txt; _retmsgtype = _type;</td></tr>
+<tr><td colspan="2"><h2>Enumerations</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__literal_8cpp.html#a887fc3eb6ea86a5f8c0f5f8a755d2479">PrivmsgIdentifyMsgCapState</a> { <a class="el" href="kvi__sp__literal_8cpp.html#a887fc3eb6ea86a5f8c0f5f8a755d2479ad89767c59091c4d245cf6164ef0f8add">IdentifyMsgCapNotUsed</a>, 
+<a class="el" href="kvi__sp__literal_8cpp.html#a887fc3eb6ea86a5f8c0f5f8a755d2479a1160bf8df1069850923375840b05afe8">IdentifyMsgCapUsedNotIdentified</a>, 
+<a class="el" href="kvi__sp__literal_8cpp.html#a887fc3eb6ea86a5f8c0f5f8a755d2479aa8f570d6b3ab7c8bcf16622ae933f6c7">IdentifyMsgCapUsedIdentified</a>
+ }</td></tr>
 <tr><td colspan="2"><h2>Variables</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviNickServRuleSet.html">KviNickServRuleSet</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__literal_8cpp.html#a1f65a9feaec0cf60b91d16bcf26082ee">g_pNickServRuleSet</a></td></tr>
 </table>
@@ -156,7 +161,7 @@
                                         iIconForCompactMode= (bSet ? (bIsMe ? __icomeset : __icoset) : (bIsMe ? __icomeunset : __icounset)); \
                         <span class="keywordflow">break</span>;
 </pre></div>
-<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01656">KviServerParser::parseChannelMode()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01707">KviServerParser::parseChannelMode()</a>.</p>
 
 </div>
 </div>
@@ -221,7 +226,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01656">KviServerParser::parseChannelMode()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01707">KviServerParser::parseChannelMode()</a>.</p>
 
 </div>
 </div>
@@ -262,7 +267,7 @@
                                 iIconForCompactMode=<a class="code" href="kvi__out_8h.html#a4e1c7879311aacb93f93c456fc4d631d">KVI_OUT_CHANMODE</a>; \
                 <span class="keywordflow">break</span>;
 </pre></div>
-<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01656">KviServerParser::parseChannelMode()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01707">KviServerParser::parseChannelMode()</a>.</p>
 
 </div>
 </div>
@@ -312,7 +317,31 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01010">KviServerParser::parseLiteralNotice()</a>, and <a class="el" href="kvi__sp__literal_8cpp_source.html#l00700">KviServerParser::parseLiteralPrivmsg()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01061">KviServerParser::parseLiteralNotice()</a>, and <a class="el" href="kvi__sp__literal_8cpp_source.html#l00706">KviServerParser::parseLiteralPrivmsg()</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Enumeration Type Documentation</h2>
+<a class="anchor" id="a887fc3eb6ea86a5f8c0f5f8a755d2479"></a><!-- doxytag: member="kvi_sp_literal.cpp::PrivmsgIdentifyMsgCapState" ref="a887fc3eb6ea86a5f8c0f5f8a755d2479" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="kvi__sp__literal_8cpp.html#a887fc3eb6ea86a5f8c0f5f8a755d2479">PrivmsgIdentifyMsgCapState</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a887fc3eb6ea86a5f8c0f5f8a755d2479ad89767c59091c4d245cf6164ef0f8add"></a><!-- doxytag: member="IdentifyMsgCapNotUsed" ref="a887fc3eb6ea86a5f8c0f5f8a755d2479ad89767c59091c4d245cf6164ef0f8add" args="" -->IdentifyMsgCapNotUsed</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a887fc3eb6ea86a5f8c0f5f8a755d2479a1160bf8df1069850923375840b05afe8"></a><!-- doxytag: member="IdentifyMsgCapUsedNotIdentified" ref="a887fc3eb6ea86a5f8c0f5f8a755d2479a1160bf8df1069850923375840b05afe8" args="" -->IdentifyMsgCapUsedNotIdentified</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a887fc3eb6ea86a5f8c0f5f8a755d2479aa8f570d6b3ab7c8bcf16622ae933f6c7"></a><!-- doxytag: member="IdentifyMsgCapUsedIdentified" ref="a887fc3eb6ea86a5f8c0f5f8a755d2479aa8f570d6b3ab7c8bcf16622ae933f6c7" args="" -->IdentifyMsgCapUsedIdentified</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
 
 </div>
 </div>
@@ -328,12 +357,12 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01324">KviApp::saveNickServ()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00201">KviApp::setup()</a>, and <a class="el" href="kvi__app_8cpp_source.html#l00550">KviApp::~KviApp()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01338">KviApp::saveNickServ()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00205">KviApp::setup()</a>, and <a class="el" href="kvi__app_8cpp_source.html#l00558">KviApp::~KviApp()</a>.</p>
 
 </div>
 </div>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:29 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:21 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

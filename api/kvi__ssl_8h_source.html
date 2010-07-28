@@ -68,8 +68,8 @@
 <a name="l00043"></a>00043         ~KviSSLCertificate();
 <a name="l00044"></a>00044 <span class="keyword">protected</span>:
 <a name="l00045"></a>00045         X509 * m_pX509;
-<a name="l00046"></a>00046         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;const char *,KviStr&gt;</a> * m_pSubject;
-<a name="l00047"></a>00047         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;const char *,KviStr&gt;</a> * m_pIssuer;
+<a name="l00046"></a>00046         <a class="code" href="classKviPointerHashTable.html" title="A fast pointer hash table implementation.">KviPointerHashTable&lt;const char *,KviStr&gt;</a> * m_pSubject;
+<a name="l00047"></a>00047         <a class="code" href="classKviPointerHashTable.html" title="A fast pointer hash table implementation.">KviPointerHashTable&lt;const char *,KviStr&gt;</a> * m_pIssuer;
 <a name="l00048"></a>00048         <span class="keywordtype">int</span>                  m_iPubKeyBits;
 <a name="l00049"></a>00049         <a class="code" href="classKviStr.html">KviStr</a>               m_szPubKeyType;
 <a name="l00050"></a>00050         <span class="keywordtype">int</span>                  m_iSerialNumber;
@@ -82,8 +82,8 @@
 <a name="l00057"></a>00057         <span class="keywordtype">void</span> extractPubKeyInfo();
 <a name="l00058"></a>00058         <span class="keywordtype">void</span> extractSerialNumber();
 <a name="l00059"></a>00059         <span class="keywordtype">void</span> extractSignature();
-<a name="l00060"></a>00060         <span class="keyword">const</span> <span class="keywordtype">char</span> * dictEntry(<a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;const char *,KviStr&gt;</a> * dict,<span class="keyword">const</span> <span class="keywordtype">char</span> * entry);
-<a name="l00061"></a>00061         <span class="keywordtype">void</span> splitX509String(<a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;const char *,KviStr&gt;</a> * dict,<span class="keyword">const</span> <span class="keywordtype">char</span> * t);
+<a name="l00060"></a>00060         <span class="keyword">const</span> <span class="keywordtype">char</span> * dictEntry(<a class="code" href="classKviPointerHashTable.html" title="A fast pointer hash table implementation.">KviPointerHashTable&lt;const char *,KviStr&gt;</a> * dict,<span class="keyword">const</span> <span class="keywordtype">char</span> * entry);
+<a name="l00061"></a>00061         <span class="keywordtype">void</span> splitX509String(<a class="code" href="classKviPointerHashTable.html" title="A fast pointer hash table implementation.">KviPointerHashTable&lt;const char *,KviStr&gt;</a> * dict,<span class="keyword">const</span> <span class="keywordtype">char</span> * t);
 <a name="l00062"></a>00062 <span class="comment">//      void getPKeyType(int type,KviStr &amp;buffer);</span>
 <a name="l00063"></a>00063 <span class="keyword">public</span>:
 <a name="l00064"></a>00064         <span class="keywordtype">void</span> setX509(X509 * x509);
@@ -210,7 +210,7 @@
 <a name="l00185"></a>00185 <span class="preprocessor"></span>
 <a name="l00186"></a>00186 <span class="preprocessor">#endif //_KVI_SSL_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:27 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:18 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

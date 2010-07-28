@@ -30,7 +30,7 @@
   <tr class="memlist"><td><a class="el" href="classKviTalPopupMenu.html#a19a220bf4456e830e0a36f772ebdb37b">actionsDict</a></td><td><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviTalPopupMenu.html#ab0cc2326c73c7465471d3293a1d5fbd8">activated</a>(int)</td><td><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a></td><td><code> [signal]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsPopupMenu.html#a7ffde09cf96dbd9d05863aaf26db5ae5">addEpilogue</a>(const QString &amp;szItemName, const QString &amp;szCode)</td><td><a class="el" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classKviKvsPopupMenu.html#a7bbb04d63c95b2b78bc16a5129496c5d">addExtPopup</a>(const QString &amp;szItemName, const QString &amp;szPopupName, const QString szText, const QString &amp;szIcon, const QString &amp;szCondition)</td><td><a class="el" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviKvsPopupMenu.html#a007e4e74b03ba2665f3afa2c4b272791">addExtPopup</a>(const QString &amp;szItemName, const QString &amp;szPopupName, const QString &amp;szText, const QString &amp;szIcon, const QString &amp;szCondition)</td><td><a class="el" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsPopupMenu.html#ac02f04e11538b14a4e0ddc94faad1946">addItem</a>(const QString &amp;szItemName, const QString &amp;szCode, const QString &amp;szText, const QString &amp;szIcon, const QString &amp;szCondition)</td><td><a class="el" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsPopupMenu.html#ac7c78592d16e87cb8f51801e02a67bbf">addItemInternal</a>(KviKvsPopupMenuItem *it)</td><td><a class="el" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsPopupMenu.html#a88a74a2b2fcefe7cd7df2967de457a9f">addLabel</a>(const QString &amp;szItemName, const QString &amp;szText, const QString &amp;szIcon, const QString &amp;szCondition)</td><td><a class="el" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a></td><td></td></tr>
@@ -45,6 +45,7 @@
   <tr class="memlist"><td><a class="el" href="classKviKvsPopupMenu.html#a531179fdaea5dbcaf8610e2fc47159dd">epilogues</a>()</td><td><a class="el" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsPopupMenu.html#aeda8f729dbf1c3650d4e1d2d659b1d65">executeEpilogues</a>(KviKvsPopupMenuTopLevelData *pData)</td><td><a class="el" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsPopupMenu.html#a7e3370e2fbb2d0f3d36930dc360a6592">executePrologues</a>(KviKvsPopupMenuTopLevelData *pData)</td><td><a class="el" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a></td><td><code> [protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviKvsPopupMenu.html#a38d17f337f8cc98357b9cf041248e40d">findChildPopupByName</a>(const QString &amp;szItemName)</td><td><a class="el" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsPopupMenu.html#a365c6c7220070135de8544ecbcb25d39">generateDefPopup</a>(QString &amp;buffer)</td><td><a class="el" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsPopupMenu.html#a0e7622d15fc14363a9a169ed2927bc3e">generateDefPopupCore</a>(QString &amp;buffer)</td><td><a class="el" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviTalPopupMenu.html#aca5434dcab1d9b0ab5c252bb62b0c52a">getAction</a>(int id)</td><td><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a></td><td></td></tr>
@@ -99,7 +100,7 @@
   <tr class="memlist"><td><a class="el" href="classKviKvsPopupMenu.html#abad007c6963ac155bbf83b5d58e2c08e">~KviKvsPopupMenu</a>()</td><td><a class="el" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviTalPopupMenu.html#a4f9ae191b4dcff405afbbd6fec7ace0f">~KviTalPopupMenu</a>()</td><td><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a></td><td><code> [virtual]</code></td></tr>
 </table></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:31 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:22 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

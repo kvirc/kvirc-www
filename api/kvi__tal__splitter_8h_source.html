@@ -50,31 +50,12 @@
 <a name="l00025"></a>00025 <span class="comment">//</span>
 <a name="l00026"></a>00026 <span class="comment">//=============================================================================</span>
 <a name="l00027"></a>00027 
-<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00035"></a>00035 <span class="preprocessor">#include &lt;QSplitter&gt;</span>
-<a name="l00036"></a>00036 
-<a name="l00042"></a><a class="code" href="classKviTalSplitter.html">00042</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a09a0d53ffdd5e355c085794b3f60d5ed">KVILIB_API</a> <a class="code" href="classKviTalSplitter.html" title="Toolkit Abstraction Layer: splitter class.">KviTalSplitter</a> : <span class="keyword">public</span> QSplitter
-<a name="l00043"></a>00043 {
-<a name="l00044"></a>00044         Q_OBJECT
-<a name="l00045"></a>00045 <span class="keyword">public</span>:
-<a name="l00052"></a>00052         <a class="code" href="classKviTalSplitter.html" title="Toolkit Abstraction Layer: splitter class.">KviTalSplitter</a>(Qt::Orientation orientation, QWidget * pParent = 0);
-<a name="l00053"></a>00053 
-<a name="l00057"></a>00057         <span class="keyword">virtual</span> ~<a class="code" href="classKviTalSplitter.html" title="Toolkit Abstraction Layer: splitter class.">KviTalSplitter</a>();
-<a name="l00058"></a>00058 <span class="keyword">private</span>:
-<a name="l00059"></a><a class="code" href="classKviTalSplitter.html#ad0f8b9f265f08fe240367110745b98ab">00059</a>         <span class="keywordtype">bool</span> bHasValidSizes;
-<a name="l00060"></a><a class="code" href="classKviTalSplitter.html#a9f553d5840795ff581a5e48008ed260b">00060</a>         QList&lt;int&gt; oldSizes;
-<a name="l00061"></a>00061 <span class="keyword">public</span>:
-<a name="l00066"></a>00066         QList&lt;int&gt; sizes();
-<a name="l00067"></a>00067 
-<a name="l00073"></a>00073         <span class="keywordtype">void</span> setSizes(QList&lt;int&gt; sizes);
-<a name="l00074"></a>00074 <span class="keyword">protected</span> slots:
-<a name="l00075"></a>00075         <span class="keywordtype">void</span> splitterHasMoved(<span class="keywordtype">int</span> pos, <span class="keywordtype">int</span> index);
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077 };
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079 <span class="preprocessor">#endif // _KVI_TAL_SPLITTER_H_</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &lt;QSplitter&gt;</span>
+<a name="l00035"></a><a class="code" href="kvi__tal__splitter_8h.html#acac78135c0b3a48113c305a401adddfd">00035</a> <span class="preprocessor">#define KviTalSplitter QSplitter</span>
+<a name="l00036"></a>00036 <span class="preprocessor"></span>
+<a name="l00037"></a>00037 <span class="preprocessor">#endif // _KVI_TAL_SPLITTER_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:27 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:18 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

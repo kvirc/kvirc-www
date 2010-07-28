@@ -62,6 +62,7 @@ Inheritance diagram for KviHttpRequestThread:</div>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviHttpRequestThread.html#aeccf0445b03bd793943cb73957d4a025">selectForReadStep</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviHttpRequestThread.html#a3e3cea60ecc49dd6947d576320dcc2a2">selectForWrite</a> (int iTimeoutInSecs)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviHttpRequestThread.html#a2d3424ad7ad03e24485003cf45d6c2d5">sendBuffer</a> (const char *buffer, int bufLen, int iTimeoutInSecs)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviHttpRequestThread.html#ac6e55aed7f93acbefd651f02a8533fe7">setConnectionTimeout</a> (unsigned int uTimeout)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviHttpRequestThread.html#a42394faaaf5a646fe49fcee44bc4f5c4">sslFailure</a> ()</td></tr>
 <tr><td colspan="2"><h2>Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviHttpRequestThread.html#a445df18d6ae96b3a5304f29344dcd749">m_bUseSSL</a></td></tr>
@@ -72,6 +73,7 @@ Inheritance diagram for KviHttpRequestThread:</div>
 <tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviHttpRequestThread.html#aa6a1121a76a9d41f35d83d448dd35827">m_szIp</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviHttpRequestThread.html#a293f8151b0b34bd60379a9ae982315b0">m_szPath</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviHttpRequestThread.html#a568c2101d2a3604b1567cb948c18a81b">m_szPostData</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviHttpRequestThread.html#a2565e5fdbe0c2bb7823536416ffb781a">m_uConnectionTimeout</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviHttpRequestThread.html#ac2b136c321ed2a89e388f10b88f185df">m_uContentOffset</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned short&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviHttpRequestThread.html#a3680290199e8aa6a16c567851273d077">m_uPort</a></td></tr>
 <tr><td colspan="2"><h2>Friends</h2></td></tr>
@@ -169,7 +171,7 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__socket_8h_source.html#l00074">KVI_INVALID_SOCKET</a>, <a class="el" href="kvi__http_8h_source.html#l00190">m_bUseSSL</a>, <a class="el" href="kvi__http_8h_source.html#l00185">m_eRequestMethod</a>, <a class="el" href="kvi__http_8h_source.html#l00179">m_pRequest</a>, <a class="el" href="kvi__http_8h_source.html#l00189">m_sock</a>, <a class="el" href="kvi__http_8h_source.html#l00181">m_szHost</a>, <a class="el" href="kvi__http_8h_source.html#l00182">m_szIp</a>, <a class="el" href="kvi__http_8h_source.html#l00183">m_szPath</a>, <a class="el" href="kvi__http_8h_source.html#l00186">m_szPostData</a>, <a class="el" href="kvi__http_8h_source.html#l00184">m_uContentOffset</a>, and <a class="el" href="kvi__http_8h_source.html#l00188">m_uPort</a>.</p>
+<p>References <a class="el" href="kvi__socket_8h_source.html#l00074">KVI_INVALID_SOCKET</a>, <a class="el" href="kvi__http_8h_source.html#l00199">m_bUseSSL</a>, <a class="el" href="kvi__http_8h_source.html#l00194">m_eRequestMethod</a>, <a class="el" href="kvi__http_8h_source.html#l00188">m_pRequest</a>, <a class="el" href="kvi__http_8h_source.html#l00198">m_sock</a>, <a class="el" href="kvi__http_8h_source.html#l00190">m_szHost</a>, <a class="el" href="kvi__http_8h_source.html#l00191">m_szIp</a>, <a class="el" href="kvi__http_8h_source.html#l00192">m_szPath</a>, <a class="el" href="kvi__http_8h_source.html#l00195">m_szPostData</a>, <a class="el" href="kvi__http_8h_source.html#l00200">m_uConnectionTimeout</a>, <a class="el" href="kvi__http_8h_source.html#l00193">m_uContentOffset</a>, and <a class="el" href="kvi__http_8h_source.html#l00197">m_uPort</a>.</p>
 
 </div>
 </div>
@@ -206,9 +208,9 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00111">__tr_no_lookup</a>, <a class="el" href="kvi__http_8cpp_source.html#l00907">failure()</a>, <a class="el" href="namespaceKviError.html#afc733bb703e4d3214635a73db17769f2">KviError::getUntranslatedDescription()</a>, <a class="el" href="kvi__socket_8h_source.html#l00074">KVI_INVALID_SOCKET</a>, <a class="el" href="kvi__socket_8h_source.html#l00185">kvi_socket_connect()</a>, <a class="el" href="kvi__socket_8h_source.html#l00110">kvi_socket_create()</a>, <a class="el" href="kvi__socket_8h_source.html#l00360">kvi_socket_error()</a>, <a class="el" href="kvi__socket_8h_source.html#l00303">kvi_socket_getsockopt()</a>, <a class="el" href="kvi__socket_8h_source.html#l00089">KVI_SOCKET_PF_INET</a>, <a class="el" href="kvi__socket_8h_source.html#l00194">kvi_socket_recoverableConnectError()</a>, <a class="el" href="kvi__socket_8h_source.html#l00203">kvi_socket_recoverableError()</a>, <a class="el" href="kvi__socket_8h_source.html#l00156">kvi_socket_setNonBlocking()</a>, <a class="el" href="kvi__socket_8h_source.html#l00093">KVI_SOCKET_TYPE_STREAM</a>, <a class="el" href="kvi__error_8h_source.html#l00037">KviError_unknownError</a>, <a class="el" href="kvi__http_8h_source.html#l00190">m_bUseSSL</a>, <a class="el" href="kvi__http_8h_source.html#l00189">m_sock</a>, <a class="el" href="kvi__http_8h_source.html#l00182">m_szIp</a>, <a class="el" href="kvi__http_8h_source.html#l00188">m_uPort</a>, <a class="el" href="kvi__http_8cpp_source.html#l01225">selectForRead()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00918">selectForWrite()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00974">sslFailure()</a>, <a class="el" href="namespaceKviNetUtils.html#a4a3d61f8a4694e12eac24536add81f70">KviNetUtils::stringIpToBinaryIp()</a>, and <a class="el" href="namespaceKviError.html#a246bcff078b0f629c40eb6ff8491ac56">KviError::translateSystemError()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00111">__tr_no_lookup</a>, <a class="el" href="kvi__http_8cpp_source.html#l00912">failure()</a>, <a class="el" href="namespaceKviError.html#afc733bb703e4d3214635a73db17769f2">KviError::getUntranslatedDescription()</a>, <a class="el" href="kvi__socket_8h_source.html#l00074">KVI_INVALID_SOCKET</a>, <a class="el" href="kvi__socket_8h_source.html#l00185">kvi_socket_connect()</a>, <a class="el" href="kvi__socket_8h_source.html#l00110">kvi_socket_create()</a>, <a class="el" href="kvi__socket_8h_source.html#l00360">kvi_socket_error()</a>, <a class="el" href="kvi__socket_8h_source.html#l00303">kvi_socket_getsockopt()</a>, <a class="el" href="kvi__socket_8h_source.html#l00089">KVI_SOCKET_PF_INET</a>, <a class="el" href="kvi__socket_8h_source.html#l00194">kvi_socket_recoverableConnectError()</a>, <a class="el" href="kvi__socket_8h_source.html#l00203">kvi_socket_recoverableError()</a>, <a class="el" href="kvi__socket_8h_source.html#l00156">kvi_socket_setNonBlocking()</a>, <a class="el" href="kvi__socket_8h_source.html#l00093">KVI_SOCKET_TYPE_STREAM</a>, <a class="el" href="kvi__error_8h_source.html#l00037">KviError_unknownError</a>, <a class="el" href="kvi__http_8h_source.html#l00199">m_bUseSSL</a>, <a class="el" href="kvi__http_8h_source.html#l00198">m_sock</a>, <a class="el" href="kvi__http_8h_source.html#l00191">m_szIp</a>, <a class="el" href="kvi__http_8h_source.html#l00200">m_uConnectionTimeout</a>, <a class="el" href="kvi__http_8h_source.html#l00197">m_uPort</a>, <a class="el" href="kvi__http_8cpp_source.html#l01237">selectForRead()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00923">selectForWrite()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00980">sslFailure()</a>, <a class="el" href="namespaceKviNetUtils.html#a4a3d61f8a4694e12eac24536add81f70">KviNetUtils::stringIpToBinaryIp()</a>, and <a class="el" href="namespaceKviError.html#a246bcff078b0f629c40eb6ff8491ac56">KviError::translateSystemError()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l01354">runInternal()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l01366">runInternal()</a>.</p>
 
 </div>
 </div>
@@ -228,9 +230,9 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__thread_8h_source.html#l00253">KVI_THREAD_EVENT_ERROR</a>, <a class="el" href="kvi__http_8h_source.html#l00179">m_pRequest</a>, and <a class="el" href="kvi__thread_8cpp_source.html#l00576">KviThread::postEvent()</a>.</p>
+<p>References <a class="el" href="kvi__thread_8h_source.html#l00253">KVI_THREAD_EVENT_ERROR</a>, <a class="el" href="kvi__http_8h_source.html#l00188">m_pRequest</a>, and <a class="el" href="kvi__thread_8cpp_source.html#l00576">KviThread::postEvent()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00988">connectToRemoteHost()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01257">readDataStep()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01354">runInternal()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01225">selectForRead()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01180">selectForReadStep()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00918">selectForWrite()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01085">sendBuffer()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l00974">sslFailure()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00994">connectToRemoteHost()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01269">readDataStep()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01366">runInternal()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01237">selectForRead()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01192">selectForReadStep()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00923">selectForWrite()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01093">sendBuffer()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l00980">sslFailure()</a>.</p>
 
 </div>
 </div>
@@ -251,7 +253,7 @@ Inheritance diagram for KviHttpRequestThread:</div>
 
 <p>References <a class="el" href="kvi__settings_8h_source.html#l00177">debug</a>, <a class="el" href="kvi__thread_8cpp_source.html#l00623">KviSensitiveThread::dequeueEvent()</a>, and <a class="el" href="kvi__thread_8h_source.html#l00237">KVI_THREAD_EVENT_TERMINATE</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l01225">selectForRead()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00918">selectForWrite()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01085">sendBuffer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l01237">selectForRead()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00923">selectForWrite()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01093">sendBuffer()</a>.</p>
 
 </div>
 </div>
@@ -270,9 +272,9 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__http_8cpp_source.html#l00907">failure()</a>, <a class="el" href="namespaceKviError.html#afc733bb703e4d3214635a73db17769f2">KviError::getUntranslatedDescription()</a>, <a class="el" href="kvi__socket_8h_source.html#l00360">kvi_socket_error()</a>, <a class="el" href="kvi__socket_8h_source.html#l00282">kvi_socket_read</a>, <a class="el" href="kvi__thread_8h_source.html#l00257">KVI_THREAD_EVENT_BINARYDATA</a>, <a class="el" href="kvi__thread_8h_source.html#l00245">KVI_THREAD_EVENT_SUCCESS</a>, <a class="el" href="kvi__http_8h_source.html#l00179">m_pRequest</a>, <a class="el" href="kvi__http_8h_source.html#l00189">m_sock</a>, <a class="el" href="kvi__thread_8cpp_source.html#l00576">KviThread::postEvent()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01225">selectForRead()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00918">selectForWrite()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00974">sslFailure()</a>, and <a class="el" href="namespaceKviError.html#a246bcff078b0f629c40eb6ff8491ac56">KviError::translateSystemError()</a>.</p>
+<p>References <a class="el" href="kvi__http_8cpp_source.html#l00912">failure()</a>, <a class="el" href="namespaceKviError.html#afc733bb703e4d3214635a73db17769f2">KviError::getUntranslatedDescription()</a>, <a class="el" href="kvi__socket_8h_source.html#l00360">kvi_socket_error()</a>, <a class="el" href="kvi__socket_8h_source.html#l00282">kvi_socket_read</a>, <a class="el" href="kvi__thread_8h_source.html#l00257">KVI_THREAD_EVENT_BINARYDATA</a>, <a class="el" href="kvi__thread_8h_source.html#l00245">KVI_THREAD_EVENT_SUCCESS</a>, <a class="el" href="kvi__http_8h_source.html#l00188">m_pRequest</a>, <a class="el" href="kvi__http_8h_source.html#l00198">m_sock</a>, <a class="el" href="kvi__http_8h_source.html#l00200">m_uConnectionTimeout</a>, <a class="el" href="kvi__thread_8cpp_source.html#l00576">KviThread::postEvent()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01237">selectForRead()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00923">selectForWrite()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00980">sslFailure()</a>, and <a class="el" href="namespaceKviError.html#a246bcff078b0f629c40eb6ff8491ac56">KviError::translateSystemError()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l01354">runInternal()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l01366">runInternal()</a>.</p>
 
 </div>
 </div>
@@ -293,7 +295,7 @@ Inheritance diagram for KviHttpRequestThread:</div>
 
 <p>Reimplemented from <a class="el" href="classKviThread.html#a513141c8ede49ede4b1a904bc30fdabd">KviThread</a>.</p>
 
-<p>References <a class="el" href="kvi__socket_8h_source.html#l00074">KVI_INVALID_SOCKET</a>, <a class="el" href="kvi__socket_8h_source.html#l00139">kvi_socket_close</a>, <a class="el" href="kvi__socket_8h_source.html#l00127">kvi_socket_isValid()</a>, <a class="el" href="kvi__http_8h_source.html#l00189">m_sock</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01354">runInternal()</a>.</p>
+<p>References <a class="el" href="kvi__socket_8h_source.html#l00074">KVI_INVALID_SOCKET</a>, <a class="el" href="kvi__socket_8h_source.html#l00139">kvi_socket_close</a>, <a class="el" href="kvi__socket_8h_source.html#l00127">kvi_socket_isValid()</a>, <a class="el" href="kvi__http_8h_source.html#l00198">m_sock</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01366">runInternal()</a>.</p>
 
 </div>
 </div>
@@ -312,9 +314,9 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00111">__tr_no_lookup</a>, <a class="el" href="kvi__string_8cpp_source.html#l01524">KviStr::append()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00988">connectToRemoteHost()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00907">failure()</a>, <a class="el" href="kvi__string_8h_source.html#l00118">KviStr::Format</a>, <a class="el" href="kvi__http_8h_source.html#l00164">Get</a>, <a class="el" href="kvi__http_8h_source.html#l00164">Head</a>, <a class="el" href="kvi__http_8cpp_source.html#l00045">KVI_HTTP_REQUEST_THREAD_EVENT_CONNECTED</a>, <a class="el" href="kvi__http_8cpp_source.html#l00046">KVI_HTTP_REQUEST_THREAD_EVENT_REQUESTSENT</a>, <a class="el" href="kvi__http_8h_source.html#l00190">m_bUseSSL</a>, <a class="el" href="kvi__http_8h_source.html#l00185">m_eRequestMethod</a>, <a class="el" href="kvi__http_8h_source.html#l00179">m_pRequest</a>, <a class="el" href="kvi__http_8h_source.html#l00181">m_szHost</a>, <a class="el" href="kvi__http_8h_source.html#l00183">m_szPath</a>, <a class="el" href="kvi__http_8h_source.html#l00186">m_szPostData</a>, <a class="el" href="kvi__http_8h_source.html#l00184">m_uContentOffset</a>, <a class="el" href="kvi__http_8h_source.html#l00164">Post</a>, <a class="el" href="kvi__thread_8cpp_source.html#l00576">KviThread::postEvent()</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01257">readDataStep()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01085">sendBuffer()</a>, and <a class="el" href="kvi__qstring_8h_source.html#l00737">KviQString::toUtf8()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00111">__tr_no_lookup</a>, <a class="el" href="kvi__string_8cpp_source.html#l01521">KviStr::append()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00994">connectToRemoteHost()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00912">failure()</a>, <a class="el" href="kvi__string_8h_source.html#l00118">KviStr::Format</a>, <a class="el" href="kvi__http_8h_source.html#l00172">Get</a>, <a class="el" href="kvi__http_8h_source.html#l00172">Head</a>, <a class="el" href="kvi__http_8cpp_source.html#l00045">KVI_HTTP_REQUEST_THREAD_EVENT_CONNECTED</a>, <a class="el" href="kvi__http_8cpp_source.html#l00046">KVI_HTTP_REQUEST_THREAD_EVENT_REQUESTSENT</a>, <a class="el" href="kvi__http_8h_source.html#l00199">m_bUseSSL</a>, <a class="el" href="kvi__http_8h_source.html#l00194">m_eRequestMethod</a>, <a class="el" href="kvi__http_8h_source.html#l00188">m_pRequest</a>, <a class="el" href="kvi__http_8h_source.html#l00190">m_szHost</a>, <a class="el" href="kvi__http_8h_source.html#l00192">m_szPath</a>, <a class="el" href="kvi__http_8h_source.html#l00195">m_szPostData</a>, <a class="el" href="kvi__http_8h_source.html#l00193">m_uContentOffset</a>, <a class="el" href="kvi__http_8h_source.html#l00172">Post</a>, <a class="el" href="kvi__thread_8cpp_source.html#l00576">KviThread::postEvent()</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01269">readDataStep()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01093">sendBuffer()</a>, and <a class="el" href="kvi__qstring_8h_source.html#l00789">KviQString::toUtf8()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l01330">run()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l01342">run()</a>.</p>
 
 </div>
 </div>
@@ -334,9 +336,9 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00111">__tr_no_lookup</a>, <a class="el" href="kvi__http_8cpp_source.html#l00907">failure()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00884">processInternalEvents()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01180">selectForReadStep()</a>, and <a class="el" href="kvi__thread_8cpp_source.html#l00545">KviThread::usleep()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00111">__tr_no_lookup</a>, <a class="el" href="kvi__http_8cpp_source.html#l00912">failure()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00889">processInternalEvents()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01192">selectForReadStep()</a>, and <a class="el" href="kvi__thread_8cpp_source.html#l00545">KviThread::usleep()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00988">connectToRemoteHost()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01257">readDataStep()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01085">sendBuffer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00994">connectToRemoteHost()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01269">readDataStep()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01093">sendBuffer()</a>.</p>
 
 </div>
 </div>
@@ -355,9 +357,9 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__http_8cpp_source.html#l00907">failure()</a>, <a class="el" href="namespaceKviError.html#afc733bb703e4d3214635a73db17769f2">KviError::getUntranslatedDescription()</a>, <a class="el" href="kvi__socket_8h_source.html#l00360">kvi_socket_error()</a>, <a class="el" href="kvi__socket_8h_source.html#l00249">kvi_socket_select()</a>, <a class="el" href="kvi__http_8h_source.html#l00189">m_sock</a>, and <a class="el" href="namespaceKviError.html#a246bcff078b0f629c40eb6ff8491ac56">KviError::translateSystemError()</a>.</p>
+<p>References <a class="el" href="kvi__http_8cpp_source.html#l00912">failure()</a>, <a class="el" href="namespaceKviError.html#afc733bb703e4d3214635a73db17769f2">KviError::getUntranslatedDescription()</a>, <a class="el" href="kvi__socket_8h_source.html#l00360">kvi_socket_error()</a>, <a class="el" href="kvi__socket_8h_source.html#l00249">kvi_socket_select()</a>, <a class="el" href="kvi__http_8h_source.html#l00198">m_sock</a>, and <a class="el" href="namespaceKviError.html#a246bcff078b0f629c40eb6ff8491ac56">KviError::translateSystemError()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l01225">selectForRead()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l01237">selectForRead()</a>.</p>
 
 </div>
 </div>
@@ -377,9 +379,9 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00111">__tr_no_lookup</a>, <a class="el" href="kvi__http_8cpp_source.html#l00907">failure()</a>, <a class="el" href="namespaceKviError.html#afc733bb703e4d3214635a73db17769f2">KviError::getUntranslatedDescription()</a>, <a class="el" href="kvi__socket_8h_source.html#l00360">kvi_socket_error()</a>, <a class="el" href="kvi__socket_8h_source.html#l00249">kvi_socket_select()</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__http_8h_source.html#l00189">m_sock</a>, <a class="el" href="kvi__http_8cpp_source.html#l00884">processInternalEvents()</a>, <a class="el" href="namespaceKviError.html#a246bcff078b0f629c40eb6ff8491ac56">KviError::translateSystemError()</a>, and <a class="el" href="kvi__thread_8cpp_source.html#l00545">KviThread::usleep()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00111">__tr_no_lookup</a>, <a class="el" href="kvi__http_8cpp_source.html#l00912">failure()</a>, <a class="el" href="namespaceKviError.html#afc733bb703e4d3214635a73db17769f2">KviError::getUntranslatedDescription()</a>, <a class="el" href="kvi__socket_8h_source.html#l00360">kvi_socket_error()</a>, <a class="el" href="kvi__socket_8h_source.html#l00249">kvi_socket_select()</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__http_8h_source.html#l00198">m_sock</a>, <a class="el" href="kvi__http_8cpp_source.html#l00889">processInternalEvents()</a>, <a class="el" href="namespaceKviError.html#a246bcff078b0f629c40eb6ff8491ac56">KviError::translateSystemError()</a>, and <a class="el" href="kvi__thread_8cpp_source.html#l00545">KviThread::usleep()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00988">connectToRemoteHost()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01257">readDataStep()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01085">sendBuffer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00994">connectToRemoteHost()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01269">readDataStep()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01093">sendBuffer()</a>.</p>
 
 </div>
 </div>
@@ -414,9 +416,31 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00111">__tr_no_lookup</a>, <a class="el" href="kvi__http_8cpp_source.html#l00907">failure()</a>, <a class="el" href="namespaceKviError.html#afc733bb703e4d3214635a73db17769f2">KviError::getUntranslatedDescription()</a>, <a class="el" href="kvi__socket_8h_source.html#l00360">kvi_socket_error()</a>, <a class="el" href="kvi__socket_8h_source.html#l00264">kvi_socket_send()</a>, <a class="el" href="kvi__http_8h_source.html#l00189">m_sock</a>, <a class="el" href="kvi__http_8cpp_source.html#l00884">processInternalEvents()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01225">selectForRead()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00918">selectForWrite()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00974">sslFailure()</a>, <a class="el" href="namespaceKviError.html#a246bcff078b0f629c40eb6ff8491ac56">KviError::translateSystemError()</a>, and <a class="el" href="kvi__thread_8cpp_source.html#l00545">KviThread::usleep()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00111">__tr_no_lookup</a>, <a class="el" href="kvi__http_8cpp_source.html#l00912">failure()</a>, <a class="el" href="namespaceKviError.html#afc733bb703e4d3214635a73db17769f2">KviError::getUntranslatedDescription()</a>, <a class="el" href="kvi__socket_8h_source.html#l00360">kvi_socket_error()</a>, <a class="el" href="kvi__socket_8h_source.html#l00264">kvi_socket_send()</a>, <a class="el" href="kvi__http_8h_source.html#l00198">m_sock</a>, <a class="el" href="kvi__http_8h_source.html#l00200">m_uConnectionTimeout</a>, <a class="el" href="kvi__http_8cpp_source.html#l00889">processInternalEvents()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01237">selectForRead()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00923">selectForWrite()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00980">sslFailure()</a>, <a class="el" href="namespaceKviError.html#a246bcff078b0f629c40eb6ff8491ac56">KviError::translateSystemError()</a>, and <a class="el" href="kvi__thread_8cpp_source.html#l00545">KviThread::usleep()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l01354">runInternal()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l01366">runInternal()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac6e55aed7f93acbefd651f02a8533fe7"></a><!-- doxytag: member="KviHttpRequestThread::setConnectionTimeout" ref="ac6e55aed7f93acbefd651f02a8533fe7" args="(unsigned int uTimeout)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KviHttpRequestThread::setConnectionTimeout </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&nbsp;</td>
+          <td class="paramname"> <em>uTimeout</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>References <a class="el" href="kvi__http_8h_source.html#l00200">m_uConnectionTimeout</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00222">KviHttpRequest::haveServerIp()</a>.</p>
 
 </div>
 </div>
@@ -435,9 +459,9 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00111">__tr_no_lookup</a>, <a class="el" href="kvi__http_8cpp_source.html#l00907">failure()</a>, and <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00111">__tr_no_lookup</a>, <a class="el" href="kvi__http_8cpp_source.html#l00912">failure()</a>, and <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00988">connectToRemoteHost()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01257">readDataStep()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01085">sendBuffer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00994">connectToRemoteHost()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01269">readDataStep()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01093">sendBuffer()</a>.</p>
 
 </div>
 </div>
@@ -467,7 +491,7 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00988">connectToRemoteHost()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00853">KviHttpRequestThread()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01354">runInternal()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00994">connectToRemoteHost()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00857">KviHttpRequestThread()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01366">runInternal()</a>.</p>
 
 </div>
 </div>
@@ -482,7 +506,7 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00853">KviHttpRequestThread()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01354">runInternal()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00857">KviHttpRequestThread()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01366">runInternal()</a>.</p>
 
 </div>
 </div>
@@ -497,7 +521,7 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00907">failure()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00853">KviHttpRequestThread()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01257">readDataStep()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01354">runInternal()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00912">failure()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00857">KviHttpRequestThread()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01269">readDataStep()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01366">runInternal()</a>.</p>
 
 </div>
 </div>
@@ -512,7 +536,7 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00988">connectToRemoteHost()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00853">KviHttpRequestThread()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01257">readDataStep()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01330">run()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01180">selectForReadStep()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00918">selectForWrite()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01085">sendBuffer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00994">connectToRemoteHost()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00857">KviHttpRequestThread()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01269">readDataStep()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01342">run()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01192">selectForReadStep()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00923">selectForWrite()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01093">sendBuffer()</a>.</p>
 
 </div>
 </div>
@@ -527,7 +551,7 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00853">KviHttpRequestThread()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01354">runInternal()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00857">KviHttpRequestThread()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01366">runInternal()</a>.</p>
 
 </div>
 </div>
@@ -542,7 +566,7 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00988">connectToRemoteHost()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l00853">KviHttpRequestThread()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00994">connectToRemoteHost()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l00857">KviHttpRequestThread()</a>.</p>
 
 </div>
 </div>
@@ -557,7 +581,7 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00853">KviHttpRequestThread()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01354">runInternal()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00857">KviHttpRequestThread()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01366">runInternal()</a>.</p>
 
 </div>
 </div>
@@ -572,7 +596,22 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00853">KviHttpRequestThread()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01354">runInternal()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00857">KviHttpRequestThread()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01366">runInternal()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2565e5fdbe0c2bb7823536416ffb781a"></a><!-- doxytag: member="KviHttpRequestThread::m_uConnectionTimeout" ref="a2565e5fdbe0c2bb7823536416ffb781a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int <a class="el" href="classKviHttpRequestThread.html#a2565e5fdbe0c2bb7823536416ffb781a">KviHttpRequestThread::m_uConnectionTimeout</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00994">connectToRemoteHost()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00857">KviHttpRequestThread()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01269">readDataStep()</a>, <a class="el" href="kvi__http_8cpp_source.html#l01093">sendBuffer()</a>, and <a class="el" href="kvi__http_8h_source.html#l00205">setConnectionTimeout()</a>.</p>
 
 </div>
 </div>
@@ -587,7 +626,7 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00853">KviHttpRequestThread()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01354">runInternal()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00857">KviHttpRequestThread()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l01366">runInternal()</a>.</p>
 
 </div>
 </div>
@@ -602,7 +641,7 @@ Inheritance diagram for KviHttpRequestThread:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00988">connectToRemoteHost()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l00853">KviHttpRequestThread()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__http_8cpp_source.html#l00994">connectToRemoteHost()</a>, and <a class="el" href="kvi__http_8cpp_source.html#l00857">KviHttpRequestThread()</a>.</p>
 
 </div>
 </div>
@@ -611,7 +650,7 @@ Inheritance diagram for KviHttpRequestThread:</div>
 <li>src/kvilib/net/<a class="el" href="kvi__http_8cpp.html">kvi_http.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 20 00:32:30 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:22 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
