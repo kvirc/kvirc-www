@@ -17,17 +17,16 @@ patch for a security issue related to DCC handshakes (secunia advisory SA40727).
 and everyone is encouraged to upgrade.</p>
 
 <p>As usual, the bugs for this release should be reported by using the bugtrack
-system available at <a href="https://svn.kvirc.de/kvirc/" target="_blank">https://svn.kvirc.de/kvirc/</a></p>
+system available at <a href="javascript:opendoc('https://svn.kvirc.de/kvirc');">https://svn.kvirc.de/kvirc</a></p>
 
 <p>The sources are available
-<a href="?id=releases&platform=source&version=4.0.2">here</a>.
+<a href="javascript:opendoc('?id=releases&platform=source&version=4.0.2');">here</a>.
 Binaries for various platforms will be available in
-<a href="?id=releases">the download section</a>
+<a href="javascript:opendoc('?id=releases');">the download section</a>
 in the next days and I'm sure that you'll be able to find kvirc 4.0.2 in your
 favorite distribution repository very soon.</p>
 
 <p>Have fun :)</p>
 
 <p>Szymon Tomasz Stefanek and <b>The KVIrc Development Team</b></p>
-
 
