@@ -225,7 +225,7 @@ search();
 							<ul>
 								<li><a href="javascript:opendoc('http://forum.kvirc.ru/');"><?=$template['index']['forum'];?></a></li>
 								<li><a href="javascript:opendoc('http://www.kvirc.ru/');"><?=$template['index']['rusite'];?></a></li>
-								<li><a href="javascript:opendoc('http://kvirc-fr.info/');"><?=$template['index']['frsite'];?></a></li>
+								<li><a href="javascript:opendoc('http://kvirc.fr/');"><?=$template['index']['frsite'];?></a></li>
 								<li><a href="javascript:opendoc('http://kvircfr.les-forums.com/');"><?=$template['index']['frforum'];?></a></li>
 								<li><a href="javascript:opendoc('http://kvirc.dotadata.de/');"><?=$template['index']['osxsite'];?></a></li>
 							</ul>
