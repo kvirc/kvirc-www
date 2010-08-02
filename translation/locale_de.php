@@ -1100,6 +1100,7 @@ $template['tutorials']['title']="Tutorien";
 $template['tutorials']['archive']="Komplettes Archiv";
 $template['tutorials']['tutorial']="Tutorium";
 $template['tutorials']['madeby']="erstellt von";
+$template['tutorials']['old']="outdated";
 $template['tutorials']['text1a']="Die Kunst des Skriptens";
 $template['tutorials']['text1b']="Ein umfangreiches Skriptingtutorium";
 $template['tutorials']['tree1c']="Sprachvorstellung";
