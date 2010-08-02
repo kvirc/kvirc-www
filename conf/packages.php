@@ -96,8 +96,8 @@ $hua = $_SERVER['HTTP_USER_AGENT'];
 
 if((strpos($hua,'Windows') !== false) || (strpos($hua,'WinXP') !== false))
 {
-	$quickdownload_link = $ftp_mirror[1]['url']."/4.0.0/binary/win32/KVIrc-4.0.0-Insomnia.exe";
-	$quickdownload_version = "4.0.0";
+	$quickdownload_link = $ftp_mirror[1]['url']."/4.0.2/binary/win32/KVIrc-4.0.2-Insomnia.exe";
+	$quickdownload_version = "4.0.2";
 } else if((strpos($hua,'Macintosh') !== false) || (strpos($hua,'Mac OS X') !== false) || (strpos($hua,'Mac_PowerPC') !== false))
 {
 	$quickdownload_link = $ftp_mirror_link[0]."/4.0.0/binary/macosx/KVirc-4.0.0.dmg";
@@ -141,6 +141,18 @@ $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "Szymon Tomasz Stefanek (pragma at kvirc dot net)";
 $package_count++;
 
+// 4.0.2
+// Windows
+$p_filename[$package_count]    = "KVIrc-4.0.2-Insomnia.exe";
+$p_path[$package_count]        = "4.0.2/binary/win32";
+$p_description[$package_count] = "KVIrc 4.0.2, Windows binary, 32bit";
+$p_details[$package_count]     = "The self-installing binary package for Windows built on top of the LGPL version of the Qt library. Just double click on it after downloading.";
+$p_platform[$package_count]    = "win32";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "17035771";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Gizmokid2005";
+$package_count++;
 
 //============================================================================================================================================
 // 4.0.0
