@@ -139,15 +139,15 @@ $template['custom']['optional']="Optional";
 $template['addons']['title']="Erweiterungen";
 $template['addons']['text1']="Hier sind zusätzliche Skripte für KVIrc zu finden";
 $template['addons']['text1b']="
-	Jede dieser Erweiterungen benötigt mindestens die KVIrc-Version 3.2.1 (SVN Snapshot).<br />
-	Bitte die <b>entsprechende Version</b> von KVIrc auswählen";
+	Jede dieser Erweiterungen benötigt mindestens die KVIrc-Version 4.0.0.<br />
+	Bitte die <b>entsprechende Version</b> von KVIrc auswählen:";
 $template['addons']['text2']="Um eine Erweiterung zu installieren";
-$template['addons']['tree1']="die Erweiterung <b>herunterladen</b> und mit <b>unzip</b> entpacken";
+$template['addons']['tree1']="die Erweiterung <b>herunterladen</b>";
 $template['addons']['tree2']="
-	Mit <b>Strg+Alt+M</b> den Erweiterungsmanager-Dialog öffnen (oder über das Einstellungsmenü).";
-$template['addons']['tree3']="Anschließend auf der rechten Seite auf\"<b>Erweiterung installieren</b>\" klicken";
+	Mit <b>Strg+Alt+N</b> den Erweiterungsmanager-Dialog öffnen (oder über das Einstellungsmenü).";
+$template['addons']['tree3']="Press the \"<b>Install Addon Package From Disk</b>\" button";
 $template['addons']['tree4']="
-	Den Ort suchen, an dem die Erweiterung entpackt wurde und die Datei <b>install.kvs</b> auswählen";
+	Navigate to the place where you have the addon package and select it";
 $template['addons']['sorry']="Entschuldigung, es wurden keine Erweiterungen für die ausgewählte KVIrc-Version gefunden";
 $template['addons']['addon1']="Wechselt automatisch in den away-Status nach einer bestimmten Zeit der Inaktivität.";
 $template['addons']['addon2']="Stellt Werkzeugleistenknöpfe für einige häufig benötigte Channel-Tätigkeiten bereit";

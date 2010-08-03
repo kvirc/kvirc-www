@@ -7,7 +7,7 @@ $dpath.="/scripts";
 $numAddons=0;
 $version=trim(strip_tags(addslashes($_GET['version'])));
 if(!$version || !eregi("^[0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}$",$version))
-	$version="3.2.1";
+	$version="4.0.0";
 
 echo "<h1 class=\"pagetitle\">".$template['addons']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
@@ -20,13 +20,14 @@ echo "<div class=\"column1-unit\">";
 		echo "<input type=\"hidden\" name=\"id\" value=\"addons\" />";
 		echo "<input type=\"hidden\" name=\"lang\" value=\"$lang\" />";
 		echo "<select name=\"version\" onchange=\"this.form.submit();\">";
-			foreach($availVersions as $KVIrcVersion){
+			foreach($availVersions as $KVIrcVersion)
+			{
 				if($KVIrcVersion==$version)
 					echo "<option value=\"$KVIrcVersion\" selected=\"selected\">$KVIrcVersion</option>";
 				else echo "<option value=\"$KVIrcVersion\">$KVIrcVersion</option>";
 			}
 		echo "</select>";
-		echo "<input type=\"submit\" value=\"Ok\" />";
+		echo "<input type=\"submit\" value=\"OK\" />";
 		echo "</p>";
 	echo "</form>";
 
@@ -38,8 +39,10 @@ echo "<div class=\"column1-unit\">";
 		echo "<li>".$template['addons']['tree4']."</li>";
 	echo "</ul>";
 
-	foreach($addons as $key => $value){
-		if(checkVersion($version,$value['min'],$value['max'])){
+	foreach($addons as $key => $value)
+	{
+		if(checkVersion($version,$value['min'],$value['max']))
+		{
 			if(fmod($key,2)==0)
 				echo "<table class=\"pair\">";
 			else echo "<table class=\"despair\">";

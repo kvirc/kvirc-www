@@ -138,15 +138,15 @@ $template['custom']['optional']="Optional";
 $template['addons']['title']="Addons";
 $template['addons']['text1']="Aquí puedes encontrar addons basados en scripts para KVIrc";
 $template['addons']['text1b']="
-	Todos estos addons requieren, como mínimo, la versión 3.2.1.<br />
-	Por favor, <b>elige tu versión</b> de KVIrc.";
+	Todos estos addons requieren, como mínimo, la versión 4.0.0.<br />
+	Por favor, <b>elige tu versión</b> de KVIrc:";
 $template['addons']['text2']="Para instalar un addon";
-$template['addons']['tree1']="<b>Descarga</b> el addon y <b>descomprímelo</b> en cualquier parte";
+$template['addons']['tree1']="<b>Descarga</b> el addon";
 $template['addons']['tree2']="
-	Pulsa <b>CTRL+Alt+M</b> para abrir el Gestor de Funcionalidades Adicionales (o ábrelo desde el menú de Configuración)";
-$template['addons']['tree3']="Pulsa el botón \"<b>Instalar Funcionalidad Adicional</b>\", en la parte derecha";
+	Pulsa <b>CTRL+Alt+N</b> para abrir el Gestor de Funcionalidades Adicionales (o ábrelo desde el menú de Configuración)";
+$template['addons']['tree3']="Press the \"<b>Install Addon Package From Disk</b>\" button";
 $template['addons']['tree4']="
-	Ve hasta el lugar donde hayas descomprimido el addon y selecciona el archivo <b>install.kvs</b>";
+	Navigate to the place where you have the addon package and select it";
 $template['addons']['sorry']="Lo siento, no hemos encontrado addons para la versión especificada de KVIrc";
 $template['addons']['addon1']="Entra automáticamente en estado ausente después de un período de inactividad";
 $template['addons']['addon2']="Provee botones en la barra de herramientas para operaciones de canal usadas frecuentemente";

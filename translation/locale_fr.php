@@ -138,15 +138,15 @@ $template['custom']['optional']="Optional";
 $template['addons']['title']="Addons";
 $template['addons']['text1']="Vous pouvez trouver ici divers addons pour KVIrc";
 $template['addons']['text1b']="
-	Tous requièrent une version supérieure à la 3.2.1 (snapshot SVN).<br />
-	<b>choisissez votre version</b> de KVIrc";
+	Tous requièrent une version supérieure à la 4.0.0.<br />
+	<b>choisissez votre version</b> de KVIrc:";
 $template['addons']['text2']="Pour installer un addon";
-$template['addons']['tree1']="<b>Téléchargez</b> l'addon et <b>décompressez</b> le quelque part";
+$template['addons']['tree1']="<b>Téléchargez</b> l'addon";
 $template['addons']['tree2']="
-	Appuyez sur <b>CTRL+Alt+M</b> pour ouvrir la boite de gestion des addons (ou ouvrez le depuis le menu)";
-$template['addons']['tree3']="Pressez le bouton \"<b>Installer un Addon</b>\" à droite";
+	Appuyez sur <b>CTRL+Alt+N</b> pour ouvrir la boite de gestion des addons (ou ouvrez le depuis le menu)";
+$template['addons']['tree3']="Press the \"<b>Install Addon Package From Disk</b>\" button";
 $template['addons']['tree4']="
-	Naviguez à l'endroit où vous avez décompressé l'addon et sélectionnez le fichier <b>install.kvs</b>";
+	Navigate to the place where you have the addon package and select it";
 $template['addons']['sorry']="Désolé, aucun addon n'a été trouvé pour la version de KVIrc spécifiée";
 $template['addons']['addon1']="Vous met en Away automatiquement après une période d'inactivité";
 $template['addons']['addon2']="Ajoute des boutons pour la gestion des salons";

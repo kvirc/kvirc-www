@@ -5,7 +5,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 
 // Some vars
 $current="4.0.2";
-$availVersions=array("3.2.1","3.2.3","3.2.4","3.2.5","3.2.6","3.4.0","3.4.2","4.0.0",$current);
+$availVersions=array("4.0.0",$current);
 $dpath="ftp://ftp.kvirc.de/pub/kvirc";
 
 // Get environment

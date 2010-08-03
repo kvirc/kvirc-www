@@ -138,15 +138,15 @@ $template['custom']['optional']="Opzionale";
 $template['addons']['title']="Addon";
 $template['addons']['text1']="Qui puoi trovare un set di addon per KVIrc";
 $template['addons']['text1b']="
-	Tutti questi addon richiedono almeno la versione 3.2.1 (snapshot SVN).<br />
-	<b>Scegli la versione</b> di KVIrc";
+	Tutti questi addon richiedono almeno la versione 4.0.0.<br />
+	<b>Scegli la versione</b> di KVIrc:";
 $template['addons']['text2']="Per installare un addon";
-$template['addons']['tree1']="<b>Scarica</b> l'addon e <b>decomprimilo</b> da qualche parte";
+$template['addons']['tree1']="<b>Scarica</b> l'addon";
 $template['addons']['tree2']="
-	Premi <b>CTRL+Alt+M</b> per aprire il Gestore degli Addon (o aprilo dal menu Impostazioni)";
-$template['addons']['tree3']="Premi il pulsante \"<b>Installa Addon</b>\" sulla destra";
+	Premi <b>CTRL+Alt+N</b> per aprire il Gestore degli Addon (o aprilo dal menu Impostazioni)";
+$template['addons']['tree3']="Premi il pulsante \"<b>Installa Addon Dal Disco</b>\"";
 $template['addons']['tree4']="
-	Naviga fino al punto dove hai decompresso l'addon e seleziona il file <b>install.kvs</b>";
+	Naviga fino al punto dove hai decompresso l'addon e selezionalo";
 $template['addons']['sorry']="Spiacente, non sono stati trovati addon per la versione di KVIrc specificata";
 $template['addons']['addon1']="Dopo un periodo di inattività va automaticamente in away";
 $template['addons']['addon2']="Fornisce dei pulsanti sulla toolbar per diverse operazioni sul canale";
