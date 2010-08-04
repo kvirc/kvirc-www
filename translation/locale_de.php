@@ -133,6 +133,7 @@ $template['custom']['type']="Typ";
 $template['custom']['city']="Stadt";
 $template['custom']['maintainer']="Ansprechpartner";
 $template['custom']['optional']="Optional";
+$template['custom']['showhide']="Show / hide all";
 /* custom vars end */
 
 /* addons.php start */

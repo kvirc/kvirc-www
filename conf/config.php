@@ -67,8 +67,13 @@ $ftp_mirror=array(
 );
 
 // Addons
-//aray("name" => "name", "ver" => "addon version", "min" => "min KVIrc version", "max" => "max KVIrc version", "author" => "author", "desc" => "description", "url" => "url")
+//aray("name" => "name", "ver" => "addon version", "min" => "min KVIrc version", "max" => "max KVIrc version", "author" => [array(]"author"[,"author2")], "mail" => [array(]"author mail"[,"author2 mail")], "short" => "short description", "desc" => "description", "url" => "url", "screen" => [array(]"screenshot"[,"screenshot2")])
 $addons=array(
+	1 => array("name" => "Test", "ver" => "1.0.0", "min" => "4.0.0", "max" => $current, "author" => "HelLViS69", "mail" => "test [at] test [dot] org", "short" => "Fake package", "desc" => "This is a fake package to test the new addon page", "url" => "Test-1.0.0.kva", "screen" => array("test.png","erotica.png")),
+	array("name" => "Test", "ver" => "2.0.0", "min" => "4.0.2", "max" => $current, "author" => array("HelLViS69","Test"), "mail" => array("","test [at] test [dot] org"), "short" => "Fake package", "desc" => "This is a fake package to test the new addon page", "url" => "Test-2.0.0.kva", "screen" => "test.png")
+
+	/*
+	These addons must be converted in .kva package
 	1 => array("name" => "Auto Away: Automatic Away", "ver" => "1.0.0", "min" => "3.2.1", "max" => $current, "author" => "Szymon Stefanek", "desc" => $template['addons']['addon1'], "url" => "autoaway.1.0.0.zip"),
 	array("name" => "Chan Ops: Channel Operations", "ver" => "1.0.0", "min" => "3.2.1", "max" => $current, "author" => "Szymon Stefanek", "desc" => $template['addons']['addon2'], "url" => "chanops.1.0.0.zip"),
 	array("name" => "Chan Stats: Channel Statistics", "ver" => "1.1.1", "min" => "3.2.1", "max" => $current, "author" => "g00dsP33D", "desc" => $template['addons']['addon3'], "url" => "chanstats.1.1.1.zip"),
@@ -92,6 +97,7 @@ $addons=array(
 	array("name" => "Twins Media Player: Control your player and share you music", "ver" => "1.4", "min" => "3.2.4", "max" => $current, "author" => "Ahinu", "desc" => $template['addons']['addon21'], "url" => "twinsmediaplayer-1.4.zip"),
 	array("name" => "Host Check", "ver" => "1.0", "min" => "3.2.6", "max" => $current, "author" => "", "desc" => $template['addons']['addon22'], "url" => "hostcheck.tar.gz"),
 	array("name" => "KISS: The KVIrc Icons Style Setup", "ver" => "2.1", "min" => "3.2.6", "max" => $current, "author" => "HelLViS69", "desc" => $template['addons']['addon23'], "url" => "KISS-2.1.tar.bz2")
+	*/
 );
 
 // Archive

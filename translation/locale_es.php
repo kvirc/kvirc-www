@@ -132,6 +132,7 @@ $template['custom']['type']="Tipo";
 $template['custom']['city']="Ciudad";
 $template['custom']['maintainer']="Mantenedor";
 $template['custom']['optional']="Optional";
+$template['custom']['showhide']="Show / hide all";
 /* custom vars end */
 
 /* addons.php start */
