@@ -69,9 +69,6 @@ $ftp_mirror=array(
 // Addons
 //aray("name" => "name", "ver" => "addon version", "min" => "min KVIrc version", "max" => "max KVIrc version", "author" => [array(]"author"[,"author2")], "mail" => [array(]"author mail"[,"author2 mail")], "short" => "short description", "desc" => "description", "url" => "url", "screen" => [array(]"screenshot"[,"screenshot2")])
 $addons=array(
-	1 => array("name" => "Test", "ver" => "1.0.0", "min" => "4.0.0", "max" => $current, "author" => "HelLViS69", "mail" => "test [at] test [dot] org", "short" => "Fake package", "desc" => "This is a fake package to test the new addon page", "url" => "Test-1.0.0.kva", "screen" => array("test.png","erotica.png")),
-	array("name" => "Test", "ver" => "2.0.0", "min" => "4.0.2", "max" => $current, "author" => array("HelLViS69","Test"), "mail" => array("","test [at] test [dot] org"), "short" => "Fake package", "desc" => "This is a fake package to test the new addon page", "url" => "Test-2.0.0.kva", "screen" => "test.png")
-
 	/*
 	These addons must be converted in .kva package
 	1 => array("name" => "Auto Away: Automatic Away", "ver" => "1.0.0", "min" => "3.2.1", "max" => $current, "author" => "Szymon Stefanek", "desc" => $template['addons']['addon1'], "url" => "autoaway.1.0.0.zip"),
