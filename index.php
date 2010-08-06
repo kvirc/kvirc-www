@@ -177,7 +177,7 @@ search();
 						<li><a href="#"><?=$template['index']['docs'];?></a>
 							<ul>
 								<li><a href="?id=faq&amp;lang=<?=$lang;?>"><?=$template['index']['faq'];?></a></li>
-								<li><a href="https://svn.kvirc.de/kvirc/wiki/FAQ"><?=$template['index']['faq2'];?></a></li>
+								<li><a href="javascript:opendoc('https://svn.kvirc.de/kvirc/wiki/FAQ');"><?=$template['index']['faq2'];?></a></li>
 								<li><a href="javascript:opendoc('api');"><?=$template['index']['api'];?></a></li>
 								<li><a href="javascript:opendoc('doc');"><?=$template['index']['doc'];?></a></li>
 								<li><a href="?id=tutorials&amp;lang=<?=$lang;?>"><?=$template['index']['tutorials'];?></a></li>
@@ -347,7 +347,7 @@ search();
 					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
 					<h1><img src="img/document-open.png" alt="<?=$template['index']['moredocs'];?>" /><?=$template['index']['moredocs'];?></h1>
 					<p class="center">
-						<a href="javascript:opendoc('http://www.kvirc.de/docu/');" title="<?=$template['index']['officialdocs'];?>"><?=$template['index']['officialdocs'];?></a><br /><?=$template['index']['docsauto'];?>
+						<a href="javascript:opendoc('http://www.kvirc.net/doc');" title="<?=$template['index']['officialdocs'];?>"><?=$template['index']['officialdocs'];?></a><br /><?=$template['index']['docsauto'];?>
 					</p>
 				</div>
 				<div class="subcontent-unit-border-white">
