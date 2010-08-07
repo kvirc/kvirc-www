@@ -294,37 +294,37 @@ $template['download']['text7']="
 $template['faq']['title']="FAQ";
 $template['faq']['text1a']="Comment je peux joindre un salon";
 $template['faq']['text1b']="Tapez \"/join #nomdusalon\"";
-$template['faq']['text2a']="I can't compile kvirc (any version)";
+$template['faq']['text2a']="Je n'arrive pas à compiler kvirc";
 $template['faq']['text2b']="
-	READ the instructions in the INSTALL file: the most common problems can be solved by setting the correct enviroinement variables and fiddling with the ./configure options. If the INSTALL file doesn't help you you can try to join #kvirc on IRCNet or FreeNode: there are many experienced users that can try to help you. If you still can't get out of it, you might try posting your error on the KVIrc mailing list";
-$template['faq']['text3a']="I can't connect to an IPV6 server";
+	Lisez les instructions présentes dans le fichier INSTALL, la pluspart des problêmes peuvent être résolus en choisissants les bonnes variables de configuration lors du ./configuration. Si malgré ceci vous n'y arrivez pas, vous pouvez rejoindre le salon #kvirc sur le réseau FreeNode, des utlisateurs expérimentés tenteront de vous aider. Enfin, vous pouvez aussi poster votre problême sur le liste de diffusion de KVIRC";
+$template['faq']['text3a']="Je n'arrive pas à me connecter à un serveur en IPV6";
 $template['faq']['text3b1']="
-	First of all make sure that your IPV6 stack is setup correctly.<br />
-	Can you ping6 other IPV6 other machines";
+	Assurez-vous tout d'abord que votre pile d'IPV6 est correctement installée.<br />
+	Vous pouvez faire un ping sur une autre machine en IPV6 :";
 $template['faq']['text3b2']="
-	Is the IPV6 support enabled in your kvirc executable.<br />
-	To find it out, try";
+	Est-ce que le support de l'IPV6 est activé dans votre version de KVIrc?<br />
+	Pour le découvrir, essayez :";
 $template['faq']['text3b3']="
-	in the KVIrc commandline. You should get a comma separated list of features compiled in the executable. If the list contains \"IPv6\" then the support is compiled in, otherwise you must check your compilation stage to guess what went wrong.
-	To connect to an IPV6 server you can use /server -i &lt;servername&gt;
-	If you can ping other IPV6 machines, the IPv6 support is compiled in your executable and you still can't connect to an *existing* IPv6 server then you may have found a bug :) Report it";
-$template['faq']['text4a']="How do i autojoin channels";
+	dans la ligne de commande de KVIrc. Vous devriez obtenir une liste des fonctions compilées dans l'executable. Si la liste contient \"IPv6\" c'est qu'il est bien compilé, autrement vous devrez reprendre la compilation pour trouver le problême.
+	Pour se connecter à un serveur en IPV6, vous pouvez utiliser /server -i &lt;nomduserveur&gt;
+	Si vous pouvez pinger une autre machine en IPV6, et que vous avez bien le support IPV6 dans votre executable mais que vous ne pouvez toujours pas vous connecter à un serveur IPV6, c'est que vous avez probablement trouvé un bug, reportez-le.  ;)";
+$template['faq']['text4a']="Comment je peux joindre automatiquement des salons?";
 $template['faq']['text4b1']="
-	There are many ways to do it.
-	For example";
+	Il y a différentes manières pour ça.
+	Par exemple";
 $template['faq']['text4b2']="
-	Select \"Scripting/Events\" from the KVIrc menu<br />
-	Lookup the \"OnIrc\" entry in the left pane of the window that pops up.<br />
-	Right-click on that entry and select \"Add handler\".<br />
-	A \"default\" handler will be created. In the right pane write:<br />
-	join #kvirc<br />
-	join #kde-users<br />
-	join #somechannel<br />
+	Sélectionnez \"Scripting/Editer les Evènements\" dans le menu de KVIrc<br />
+	Cherchez \"OnIrc\" dans le panneau de gauche.<br />
+	Faites un clique-droit dessus et choisissez \"New handler\".<br />
+	Un handler \"default\" va être créé dans le panneau de droite, on y met ensuite les salons voulus :<br />
+	join #kvirc-fr<br />
+	join #andaris<br />
+	join #etc<br />
 	....<br />
-	Now click OK and you're done: you have just created a handler for an event.<br />
-	Reconnect to a server and KVIrc will autojoin the channels that you have selected";
+	Cliquez sur OK et c'est bon : vous venez de creer un handler pour un évènement.<br />
+	Reconnectez-vous au serveur et KVIrc rejoindra automatiquement les salons sélectionnés";
 $template['faq']['text4b3']="
-	Another option (nicer, if you use several servers) is to go to the servers options page and click the button labeled 'Advanced' on the entry for the single server.<br />
+	Une autre option (sympa si vous avez beaucoup de serveurs) est d'aller dans le menu des options serveurs et de cliquer sur le bouton Avancée.<br />
 	There is a server-specific \"On connect execute...\" event";
 $template['faq']['text5a']="On Windows KVIrc seems to slow-down sometimes";
 $template['faq']['text5b']="
