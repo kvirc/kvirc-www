@@ -1,6 +1,6 @@
 <?
 $url = "ssl://svn.kvirc.de";
-$handle = fsockopen($url,80,$errno,$errstr,30);
+$handle = fsockopen($url,443,$errno,$errstr,30);
 if(!$handle)
 {
 	$error = "$errstr ($errno)";
