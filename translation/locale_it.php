@@ -1106,7 +1106,6 @@ $template['tutorials']['title']="Tutorial";
 $template['tutorials']['archive']="Archivio completo";
 $template['tutorials']['tutorial']="Tutorial";
 $template['tutorials']['madeby']="scritto da";
-$template['tutorials']['old']="non aggiornato";
 $template['tutorials']['text1a']="The Art Of Scripting";
 $template['tutorials']['text1b']="Un tutorial molto ricco sullo scripting";
 $template['tutorials']['tree1c']="Introduzione al linguaggio";
