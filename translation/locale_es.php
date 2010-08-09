@@ -131,8 +131,8 @@ $template['custom']['version']="Versión";
 $template['custom']['type']="Tipo";
 $template['custom']['city']="Ciudad";
 $template['custom']['maintainer']="Mantenedor";
-$template['custom']['optional']="Optional";
-$template['custom']['showhide']="Show / hide all";
+$template['custom']['optional']="Opcional";
+$template['custom']['showhide']="Mostrar / ocultar todos";
 /* custom vars end */
 
 /* addons.php start */
@@ -503,7 +503,7 @@ $template['honor']['made16']="Desarrollador de clases de objetos, mejoras del c�
 $template['honor']['quote16']="&lt;Grifisx&gt;...damned brackets ! ...there are always too many...<br />&lt;Noldor&gt;....or too few...";
 $template['honor']['made17']="Desarrollador de clases de objetos, mejoras del código, betatesting, solución de errores, scripting exótico, documentación...";
 $template['honor']['quote17']="&lt;Grifisx&gt; The difference between me and you is just that, You see things and you say &quot;Why?&quot; But I dream things that never were and I say...&quot;Why not?";
-$template['honor']['made18']="Internationalización, solución de bugs, caza de bugs, nuevas ideas y más...";
+$template['honor']['made18']="Internacionalización, solución de bugs, caza de bugs, nuevas ideas y más...";
 $template['honor']['made19']="Creador del nuevo sitio, mantenedor del sitio, traducción al italiano, scripting, caza de bugs, paquetes Slackware, nuevas ideas...";
 $template['honor']['quote19']="&lt;HelLViS69&gt; Blessed gdb, in the name of ritchie, kerningham and rms";
 $template['honor']['made20']="Traducción al italiano, gráficos, verdadera creyente";
