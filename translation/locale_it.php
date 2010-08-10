@@ -997,7 +997,9 @@ $template['themes']['theme33']="Un tema scuro tecnologico con icone semplici e d
 $template['themes']['theme34']="Un tema fatto dal portale CoreZeam.org";
 $template['themes']['theme35']="Un tema nero facile da vedere e distinguere";
 $template['themes']['theme36']="Un tema rosa ispirato a Hello Kitty";
-$template['themes']['theme37']="Uno sfondo rilassante con la sua cascata.. sfumata da una luce turchese. Il colore dei messaggi � coerente alla provenienza";
+$template['themes']['theme37']="Uno sfondo rilassante con la sua cascata.. sfumata da una luce turchese. Il colore dei messaggi è coerente alla provenienza";
+$template['themes']['theme38']="Celebration è un tema roseo, pulito; i temi puliti non sono i miei favoriti ma questo è una sorta di celebrazione: la tua vita, il tuo mondo, il tuo amore";
+$template['themes']['theme39']="Un bel tema chiaro con uno sfondo verde ad alta risoluzione e le icone del canale vecchio stile";
 /* themes.php end */
 
 /* tools.php start */

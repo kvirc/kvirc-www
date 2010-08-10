@@ -69,6 +69,9 @@ $ftp_mirror=array(
 // Addons
 //aray("name" => "name", "ver" => "addon version", "min" => "min KVIrc version", "max" => "max KVIrc version", "author" => [array(]"author"[,"author2")], "mail" => [array(]"author mail"[,"author2 mail")], "short" => "short description", "desc" => "description", "url" => "url", "screen" => [array(]"screenshot"[,"screenshot2")])
 $addons=array(
+	1 => array("name" => "Test", "ver" => "1.0.0", "min" => "4.0.0", "max" => $current, "author" => "HelLViS69", "mail" => "test [at] test [dot] org", "short" => "Fake package", "desc" => "This is a fake package to test the new addon page", "url" => "Test-1.0.0.kva", "screen" => array("test.png","erotica.png")),
+	array("name" => "Test", "ver" => "2.0.0", "min" => "4.0.2", "max" => $current, "author" => array("HelLViS69","Test"), "mail" => array("","test [at] test [dot] org"), "short" => "Fake package", "desc" => "This is a fake package to test the new addon page", "url" => "Test-2.0.0.kva", "screen" => "test.png")
+
 	/*
 	These addons must be converted in .kva package
 	1 => array("name" => "Auto Away: Automatic Away", "ver" => "1.0.0", "min" => "3.2.1", "max" => $current, "author" => "Szymon Stefanek", "desc" => $template['addons']['addon1'], "url" => "autoaway.1.0.0.zip"),
@@ -298,7 +301,8 @@ $themes=array(
 	array("name" => "Black", "version" => "1.4", "mail" => "", "author" => "Radicand", "desc" => $template['themes']['theme35'], "home" => "", "download" => "Black-1.4.kvt", "screen" => "theme_black.png", "thumb" => "thumb_black.png"),
 	array("name" => "Hello Kitty", "version" => "1.0", "mail" => "", "author" => "Sc0rPiOn-BaBy", "desc" => $template['themes']['theme36'], "home" => "", "download" => "HelloKitty-1.0.kvt", "screen" => "theme_hellokitty.png", "thumb" => "thumb_hellokitty.png"),
 	array("name" => "CoherEase", "version" => "1.1 GR", "mail" => "", "author" => "Chapoolin", "desc" => $template['themes']['theme37'], "home" => "", "download" => "CoherEase-1.1_GR.kvt", "screen" => "theme_coherease.png", "thumb" => "thumb_coherease.png"),
-	array("name" => "Celebration", "version" => "0.6.9", "mail" => "etherea [at] kvirc [dot] net", "author" => "etherea", "desc" => $template['themes']['theme38'], "home" => "http://kvirc.virg0.org/", "download" => "http://kvirc.virg0.org/themes/Celebration-0.6.9.kvt", "screen" => "theme_celebration.png", "thumb" => "thumb_celebration.png")
+	array("name" => "Celebration", "version" => "0.6.9", "mail" => "etherea [at] kvirc [dot] net", "author" => "etherea", "desc" => $template['themes']['theme38'], "home" => "http://kvirc.virg0.org", "download" => "Celebration-0.6.9.kvt", "screen" => "theme_celebration.png", "thumb" => "thumb_celebration.png"),
+	array("name" => "Savannah", "version" => "1.5", "mail" => "kult [at] tsure [dot] ru", "author" => "Kult", "desc" => $template['themes']['theme39'], "home" => "http://irc.tsure.ru", "download" => "Savannah-1.5.kvt", "screen" => "theme_savannah.png", "thumb" => "thumb_savannah.png")
 	// without info, not listed
 	//array("name" => "Burst Rebird", "version" => "0.1", "mail" => "", "author" => "", "desc" => "", "home" => "", "download" => "BurstRebird-0.1.kvt", "screen" => "", "thumb" => ""),
 	//array("name" => "Kvinvision", "version" => "1.0", "mail" => "", "author" => "LoSko", "desc" => "", "home" => "", "download" => "Kvinvision-1.0.kvt", "screen" => "", "thumb" => "")

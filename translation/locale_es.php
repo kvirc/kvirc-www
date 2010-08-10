@@ -997,6 +997,8 @@ $template['themes']['theme34']="Un tema hecho por el portal CoreZeam.org";
 $template['themes']['theme35']="Un tema negro fácil de ver y distinguir";
 $template['themes']['theme36']="Un tema rosa inspirado en Hello Kitty";
 $template['themes']['theme37']="Fondo refrescante de una cascada de agua... difundido con una ligera transparencia turquesa. Colores del texto coherentes con la fuente del mensaje";
+$template['themes']['theme38']="Celebration is a quite pinkish theme, a clear one; the clear themes are not my faves but this is a kind of celebration: your life, your world, your love";
+$template['themes']['theme39']="A nice bright theme with a delicate high-resolution green background and old-style channel status icons";
 /* themes.php end */
 
 /* tools.php start */
