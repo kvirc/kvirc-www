@@ -133,7 +133,7 @@ $template['custom']['type']="Typ";
 $template['custom']['city']="Stadt";
 $template['custom']['maintainer']="Ansprechpartner";
 $template['custom']['optional']="Optional";
-$template['custom']['showhide']="Show / hide all";
+$template['custom']['showhide']="Alle anzeigen/ausblenden";
 /* custom vars end */
 
 /* addons.php start */
@@ -146,9 +146,9 @@ $template['addons']['text2']="Um eine Erweiterung zu installieren";
 $template['addons']['tree1']="die Erweiterung <b>herunterladen</b>";
 $template['addons']['tree2']="
 	Mit <b>Strg+Alt+N</b> den Erweiterungsmanager-Dialog öffnen (oder über das Einstellungsmenü).";
-$template['addons']['tree3']="Press the \"<b>Install Addon Package From Disk</b>\" button";
+$template['addons']['tree3']="Klicke auf den »<b>Installiere Erweiterungspaket von Festplatte</b>«-Knopf";
 $template['addons']['tree4']="
-	Navigate to the place where you have the addon package and select it";
+	Gehen Sie zu dem Ort, wo das Erweiterungspaket gespeichert wurde und wählen es aus";
 $template['addons']['sorry']="Entschuldigung, es wurden keine Erweiterungen für die ausgewählte KVIrc-Version gefunden";
 $template['addons']['addon1']="Wechselt automatisch in den away-Status nach einer bestimmten Zeit der Inaktivität.";
 $template['addons']['addon2']="Stellt Werkzeugleistenknöpfe für einige häufig benötigte Channel-Tätigkeiten bereit";
@@ -993,8 +993,8 @@ $template['themes']['theme34']="Dieses Thema wurde vom CoreZeam.org Portal erste
 $template['themes']['theme35']="Ein schwarz-basiertes Thema, angenehm zu sehen und zu erkennen";
 $template['themes']['theme36']="Ein rosafarbenes Thema inspiriert von »Hello Kitty«";
 $template['themes']['theme37']="Easy-on-eyes refreshing waterfall wallpaper... diffused with light turquoise transparency. Coherent text colors with the source of the message";
-$template['themes']['theme38']="Celebration is a quite pinkish theme, a clear one; the clear themes are not my faves but this is a kind of celebration: your life, your world, your love";
-$template['themes']['theme39']="A nice bright theme with a delicate high-resolution green background and old-style channel status icons";
+$template['themes']['theme38']="Celebration ist ein ziemlich pinkes Thema, aber sauber; die suaberen Themen sind nicht meine Favoriten, aber dieses ist eine Art Feier: das Leben, die Welt, die Liebe";
+$template['themes']['theme39']="Ein nettes helles Thema mit einem zarten hochaufgelöstem grünen Hintergrund und alten Raumstatussymbolen";
 /* themes.php end */
 
 /* tools.php start */
