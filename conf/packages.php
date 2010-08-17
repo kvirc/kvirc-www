@@ -167,10 +167,218 @@ $p_group[$package_count]       = "slackware";
 $p_author[$package_count]      = "HelLViS69 (hell at hellvis69 dot netsons dot org)";
 $package_count++;
 
-//============================================================================================================================================
-// 4.0.0
-//============================================================================================================================================
+// 4.0.2
+// Ubuntu Karmic
+$p_filename[$package_count]    = "kvirc_4.0.2-1_amd64.deb";
+$p_path[$package_count]        = "4.0.2/binary/ubuntu/karmic";
+$p_description[$package_count] = "KVIrc 4.0.2, Ubuntu Karmic, amd64 architecture.";
+$p_details[$package_count]     = "The self-installing binary package for Ubuntu Karmic on amd64. You also need kvirc-data_4.0.2-1_all.deb below.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "3319744";
+$p_group[$package_count]       = "ubuntu_karmic";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
 
+// 4.0.2
+// Ubuntu Karmic
+$p_filename[$package_count]    = "kvirc_4.0.2-1_i386.deb";
+$p_path[$package_count]        = "4.0.2/binary/ubuntu/karmic";
+$p_description[$package_count] = "KVIrc 4.0.2, Ubuntu Karmic, i386 architecture.";
+$p_details[$package_count]     = "The self-installing binary package for Ubuntu Karmic on i386. You also need kvirc-data_4.0.2-1_all.deb below.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "2984480";
+$p_group[$package_count]       = "ubuntu_karmic";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// 4.0.2
+// Ubuntu Karmic
+$p_filename[$package_count]    = "kvirc-data_4.0.2-1_all.deb";
+$p_path[$package_count]        = "4.0.2/binary/ubuntu/karmic";
+$p_description[$package_count] = "KVIrc 4.0.2, Ubuntu Karmic, data files.";
+$p_details[$package_count]     = "Data files for the self-installing binary packages (all architectures). You also need one of the binary packages above.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "3626430";
+$p_group[$package_count]       = "ubuntu_karmic";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// 4.0.2
+// Ubuntu Karmic
+$p_filename[$package_count]    = "kvirc-dbg_4.0.2-1_amd64.deb";
+$p_path[$package_count]        = "4.0.2/binary/ubuntu/karmic";
+$p_description[$package_count] = "KVIrc 4.0.2, Ubuntu Karmic, amd64 architecture, Debug Symbols";
+$p_details[$package_count]     = "The amd64 debug symbols package for Ubuntu Karmic: useful if you want to report bugs. You also need kvirc_4.0.2-1_amd64.deb and kvirc-data_4.0.2-1_all.deb above.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "783828";
+$p_group[$package_count]       = "ubuntu_karmic";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// 4.0.2
+// Ubuntu Karmic
+$p_filename[$package_count]    = "kvirc-dbg_4.0.2-1_i386.deb";
+$p_path[$package_count]        = "4.0.2/binary/ubuntu/karmic";
+$p_description[$package_count] = "KVIrc 4.0.2, Ubuntu Karmic, i386 architecture, Debug Symbols";
+$p_details[$package_count]     = "The i386 debug symbol package for Ubuntu Karmic: useful if you want to report bugs. You also need kvirc_4.0.2-1_i386.deb and kvirc-data_4.0.2-1_all.deb above.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "777258";
+$p_group[$package_count]       = "ubuntu_karmic";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// 4.0.2
+// Ubuntu Lucid
+$p_filename[$package_count]    = "kvirc_4.0.2-1_amd64.deb";
+$p_path[$package_count]        = "4.0.2/binary/ubuntu/lucid";
+$p_description[$package_count] = "KVIrc 4.0.2, Ubuntu Lucid, amd64 architecture.";
+$p_details[$package_count]     = "The self-installing binary package for Ubuntu Lucid on amd64. You also need kvirc-data_4.0.2-1_all.deb below.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "2245198";
+$p_group[$package_count]       = "ubuntu_lucid";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// 4.0.2
+// Ubuntu Lucid
+$p_filename[$package_count]    = "kvirc_4.0.2-1_i386.deb";
+$p_path[$package_count]        = "4.0.2/binary/ubuntu/lucid";
+$p_description[$package_count] = "KVIrc 4.0.2, Ubuntu Lucid, i386 architecture.";
+$p_details[$package_count]     = "The self-installing binary package for Ubuntu Lucid on i386. You also need kvirc-data_4.0.2-1_all.deb below.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "2029624";
+$p_group[$package_count]       = "ubuntu_lucid";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// 4.0.2
+// Ubuntu Lucid
+$p_filename[$package_count]    = "kvirc-data_4.0.2-1_all.deb";
+$p_path[$package_count]        = "4.0.2/binary/ubuntu/lucid";
+$p_description[$package_count] = "KVIrc 4.0.2, Ubuntu Lucid, data files.";
+$p_details[$package_count]     = "Data files for the self-installing binary packages (all architectures). You also need one of the binary packages above.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "2356674";
+$p_group[$package_count]       = "ubuntu_lucid";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// 4.0.2
+// Ubuntu Lucid
+$p_filename[$package_count]    = "kvirc-dbg_4.0.2-1_amd64.deb";
+$p_path[$package_count]        = "4.0.2/binary/ubuntu/lucid";
+$p_description[$package_count] = "KVIrc 4.0.2, Ubuntu Karmic, amd64 architecture, Debug Symbols";
+$p_details[$package_count]     = "The amd64 debug symbols package for Ubuntu Lucid: useful if you want to report bugs. You also need kvirc_4.0.2-1_amd64.deb and kvirc-data_4.0.2-1_all.deb above.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "475022";
+$p_group[$package_count]       = "ubuntu_lucid";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// 4.0.2
+// Ubuntu Lucid
+$p_filename[$package_count]    = "kvirc-dbg_4.0.2-1_i386.deb";
+$p_path[$package_count]        = "4.0.2/binary/ubuntu/lucid";
+$p_description[$package_count] = "KVIrc 4.0.2, Ubuntu Karmic, i386 architecture, Debug Symbols";
+$p_details[$package_count]     = "The i386 debug symbol package for Ubuntu Lucid: useful if you want to report bugs. You also need kvirc_4.0.2-1_i386.deb and kvirc-data_4.0.2-1_all.deb above.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "475654";
+$p_group[$package_count]       = "ubuntu_lucid";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// 4.0.2
+// openSUSE 11.2
+$p_filename[$package_count]    = "kvirc-4.0.2-1.1.x86_64.rpm";
+$p_path[$package_count]        = "4.0.2/binary/opensuse/11.2";
+$p_description[$package_count] = "KVIrc 4.0.2, OpenSUSE 11.2 binary, x86_64";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.2.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "5360608";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+// 4.0.2
+// openSUSE 11.2
+$p_filename[$package_count]    = "kvirc-4.0.2-1.1.i586.rpm";
+$p_path[$package_count]        = "4.0.2/binary/opensuse/11.2";
+$p_description[$package_count] = "KVIrc 4.0.2, OpenSUSE 11.2 binary, i586";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.2.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "5102449";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+// 4.0.2
+// openSUSE 11.3
+$p_filename[$package_count]    = "kvirc-4.0.2-1.1.x86_64.rpm";
+$p_path[$package_count]        = "4.0.2/binary/opensuse/11.3";
+$p_description[$package_count] = "KVIrc 4.0.2, OpenSUSE 11.3 binary, x86_64";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.3";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "4795474";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+// 4.0.2
+// openSUSE 11.3
+$p_filename[$package_count]    = "kvirc-4.0.2-1.1.i586.rpm";
+$p_path[$package_count]        = "4.0.2/binary/opensuse/11.3";
+$p_description[$package_count] = "KVIrc 4.0.2, OpenSUSE 11.3 binary, i586";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE 11.3";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "4555259";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+// 4.0.2
+// openSUSE factory
+$p_filename[$package_count]    = "kvirc-4.0.2-1.2.x86_64.rpm";
+$p_path[$package_count]        = "4.0.2/binary/opensuse/factory";
+$p_description[$package_count] = "KVIrc 4.0.2, OpenSUSE Factory binary, x86_64";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE Factory.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "4790242";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+// 4.0.2
+// openSUSE factory
+$p_filename[$package_count]    = "kvirc-4.0.2-1.2.i586.rpm";
+$p_path[$package_count]        = "4.0.2/binary/opensuse/factory";
+$p_description[$package_count] = "KVIrc 4.0.2, OpenSUSE Factory binary, i586";
+$p_details[$package_count]     = "The self-installing binary package for OpenSUSE Factory.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "4547025";
+$p_group[$package_count]       = "opensuse";
+$p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
+$package_count++;
+
+
+//================================================================================================
+// 4.0.0
+//================================================================================================
 
 // 4.0.0
 // BZip 2 sources
