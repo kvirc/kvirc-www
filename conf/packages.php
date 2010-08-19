@@ -375,6 +375,19 @@ $p_group[$package_count]       = "opensuse";
 $p_author[$package_count]      = "Klaas Tammling (webmaster at st-city dot net)";
 $package_count++;
 
+// 4.0.2
+// MacOSX
+$p_filename[$package_count]    = "KVIrc-4.0.2.dmg";
+$p_path[$package_count]        = "4.0.2/binary/macosx";
+$p_description[$package_count] = "KVIrc 4.0.2, MacOSX binary";
+$p_details[$package_count]     = "The universal (ppc/i386) bundle for MacOSX built on Snow Leopard 10.6.4. You need <a href=\"javascript:opendoc('http://qt.nokia.com/downloads/qt-for-open-source-cpp-development-on-mac-os-x');\">Qt4.6.3</a> installed on your system. Copy the bundle to a suitable location and double click.";
+$p_platform[$package_count]    = "macosx";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "12168084";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Gizmokid2005 (gizmokid2005 at gmail dot com)";
+$package_count++;
+
 
 //================================================================================================
 // 4.0.0
