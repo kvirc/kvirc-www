@@ -50,7 +50,8 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a39d4fa37001887c2224b80f325966f25">binaryDataReceived</a> (const <a class="el" href="classKviDataBuffer.html">KviDataBuffer</a> &amp;)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#aba7ddd0c5765cde7b8a76b62536b1fc6">requestCompleted</a> (bool status)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a227a1ddde9237342951afe78487d225a">responseReceived</a> (const QString &amp;)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#af61b4b5f54465382fa1d1649a0c82b4f">toggleContext</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#ab0ff96bacf4e5c98d0bced8971d18045">toggleRevision</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a86b1c4f6bbb4497d9c5b59ce895b7d0d">toggleStartup</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a30955f6b64f281879b286fafb8f93eb6">updateDisplay</a> ()</td></tr>
 <tr><td colspan="2"><h2>Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#afe241d6a5dd4f31f64eafc5ba4994de4">checkVersion</a> ()</td></tr>
@@ -64,6 +65,7 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a2cb783dee539de971e1eb137e967d963">m_bCheckDone</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a7a7338eb3abb074301e0b4a9d5f88ba5">m_bCheckFailed</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#af1f719663b44983c0236fd0e5b011c86">m_bUpdateOnStartup</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a37818adcbcad7d9eb341e64d928ecc2d">m_bUpdateRevision</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a3b016110cb8912d119031dd13f083ea4">m_bUpdateStatus</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviHttpRequest.html">KviHttpRequest</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a66536c765ce88f6a3fbc8134e635be08">m_pHttpRequest</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#adf3101843da5a051e16aa035130ba0c5">m_szHttpResponse</a></td></tr>
@@ -95,7 +97,7 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00492">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00332">KVI_SMALLICON_NOTUPDATE</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00235">m_bCheckDone</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00236">m_bCheckFailed</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00238">m_bUpdateOnStartup</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00237">m_bUpdateStatus</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00232">m_pHttpRequest</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00656">updateDisplay()</a>.</p>
+<p>References <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00494">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00331">KVI_SMALLICON_NOTUPDATE</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00236">m_bCheckDone</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00237">m_bCheckFailed</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00239">m_bUpdateOnStartup</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00240">m_bUpdateRevision</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00238">m_bUpdateStatus</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00233">m_pHttpRequest</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00657">updateDisplay()</a>.</p>
 
 </div>
 </div>
@@ -133,9 +135,9 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="namespaceKviMiscUtils.html#aef5bebdb5a87b962604af0a1a8da0b55">KviMiscUtils::compareVersions()</a>, <a class="el" href="kvi__databuffer_8h_source.html#l00044">KviDataBuffer::data()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00760">getNewVersion()</a>, <a class="el" href="kvi__settings_8h_source.html#l00136">KVI_VERSION</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00238">m_bUpdateOnStartup</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00237">m_bUpdateStatus</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00234">m_szNewVersion</a>, <a class="el" href="kvi__databuffer_8h_source.html#l00043">KviDataBuffer::size()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00656">updateDisplay()</a>.</p>
+<p>References <a class="el" href="namespaceKviBuildInfo.html#a0010cfae4c632165686566441f2cbbd1">KviBuildInfo::buildRevision()</a>, <a class="el" href="namespaceKviMiscUtils.html#aef5bebdb5a87b962604af0a1a8da0b55">KviMiscUtils::compareVersions()</a>, <a class="el" href="kvi__databuffer_8h_source.html#l00044">KviDataBuffer::data()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00795">getNewVersion()</a>, <a class="el" href="kvi__settings_8h_source.html#l00135">KVI_VERSION</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00239">m_bUpdateOnStartup</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00240">m_bUpdateRevision</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00238">m_bUpdateStatus</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00235">m_szNewVersion</a>, <a class="el" href="kvi__databuffer_8h_source.html#l00043">KviDataBuffer::size()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00657">updateDisplay()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00703">checkVersion()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00717">checkVersion()</a>.</p>
 
 </div>
 </div>
@@ -154,9 +156,9 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00738">binaryDataReceived()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00123">KviHttpRequest::get()</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00235">m_bCheckDone</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00232">m_pHttpRequest</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00754">requestCompleted()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00727">responseReceived()</a>, and <a class="el" href="kvi__http_8h_source.html#l00058">KviHttpRequest::WholeFile</a>.</p>
+<p>References <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00761">binaryDataReceived()</a>, <a class="el" href="kvi__http_8cpp_source.html#l00123">KviHttpRequest::get()</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00236">m_bCheckDone</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00240">m_bUpdateRevision</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00233">m_pHttpRequest</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00789">requestCompleted()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00750">responseReceived()</a>, and <a class="el" href="kvi__http_8h_source.html#l00058">KviHttpRequest::WholeFile</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00675">loadState()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00719">mouseDoubleClickEvent()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00685">loadState()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00739">mouseDoubleClickEvent()</a>.</p>
 
 </div>
 </div>
@@ -178,7 +180,7 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 
 <p>Reimplemented from <a class="el" href="classKviStatusBarApplet.html#a66f111cb0b022e75bcbba3ff8d4dbf6b">KviStatusBarApplet</a>.</p>
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00052">KviTalPopupMenu::insertItem()</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00238">m_bUpdateOnStartup</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00136">KviTalPopupMenu::setItemChecked()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00664">toggleContext()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00052">KviTalPopupMenu::insertItem()</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00239">m_bUpdateOnStartup</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00240">m_bUpdateRevision</a>, <a class="el" href="kvi__tal__popupmenu_8cpp_source.html#l00136">KviTalPopupMenu::setItemChecked()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00670">toggleRevision()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00665">toggleStartup()</a>.</p>
 
 </div>
 </div>
@@ -197,9 +199,9 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="namespaceKviBuildInfo.html#a952e0887b5449b314848420341876ce0">KviBuildInfo::buildSystemName()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00089">g_pActiveWindow</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00234">m_szNewVersion</a>, and <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>.</p>
+<p>References <a class="el" href="namespaceKviBuildInfo.html#a952e0887b5449b314848420341876ce0">KviBuildInfo::buildSystemName()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00091">g_pActiveWindow</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00240">m_bUpdateRevision</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00235">m_szNewVersion</a>, and <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00738">binaryDataReceived()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00719">mouseDoubleClickEvent()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00761">binaryDataReceived()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00739">mouseDoubleClickEvent()</a>.</p>
 
 </div>
 </div>
@@ -230,7 +232,7 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 
 <p>Reimplemented from <a class="el" href="classKviStatusBarApplet.html#ad8685fb65a00511a491c492d61f0680c">KviStatusBarApplet</a>.</p>
 
-<p>References <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00703">checkVersion()</a>, <a class="el" href="kvi__string_8h_source.html#l00118">KviStr::Format</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00238">m_bUpdateOnStartup</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, and <a class="el" href="kvi__config_8cpp_source.html#l00823">KviConfig::readBoolEntry()</a>.</p>
+<p>References <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00717">checkVersion()</a>, <a class="el" href="kvi__string_8h_source.html#l00118">KviStr::Format</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00239">m_bUpdateOnStartup</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00240">m_bUpdateRevision</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, and <a class="el" href="kvi__config_8cpp_source.html#l00823">KviConfig::readBoolEntry()</a>.</p>
 
 </div>
 </div>
@@ -250,7 +252,7 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00703">checkVersion()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00760">getNewVersion()</a>, and <a class="el" href="kvi__statusbarapplet_8h_source.html#l00237">m_bUpdateStatus</a>.</p>
+<p>References <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00717">checkVersion()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00795">getNewVersion()</a>, and <a class="el" href="kvi__statusbarapplet_8h_source.html#l00238">m_bUpdateStatus</a>.</p>
 
 </div>
 </div>
@@ -270,9 +272,9 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__statusbarapplet_8h_source.html#l00232">m_pHttpRequest</a>.</p>
+<p>References <a class="el" href="kvi__statusbarapplet_8h_source.html#l00233">m_pHttpRequest</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00703">checkVersion()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00717">checkVersion()</a>.</p>
 
 </div>
 </div>
@@ -292,9 +294,9 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__statusbarapplet_8h_source.html#l00236">m_bCheckFailed</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00233">m_szHttpResponse</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00656">updateDisplay()</a>.</p>
+<p>References <a class="el" href="kvi__statusbarapplet_8h_source.html#l00237">m_bCheckFailed</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00234">m_szHttpResponse</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00657">updateDisplay()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00703">checkVersion()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00717">checkVersion()</a>.</p>
 
 </div>
 </div>
@@ -325,7 +327,7 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 
 <p>Reimplemented from <a class="el" href="classKviStatusBarApplet.html#a8ecb371e20e0e37c0533bf5339c68012">KviStatusBarApplet</a>.</p>
 
-<p>References <a class="el" href="kvi__string_8h_source.html#l00118">KviStr::Format</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00238">m_bUpdateOnStartup</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, and <a class="el" href="kvi__config_8cpp_source.html#l00576">KviConfig::writeEntry()</a>.</p>
+<p>References <a class="el" href="kvi__string_8h_source.html#l00118">KviStr::Format</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00239">m_bUpdateOnStartup</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00240">m_bUpdateRevision</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, and <a class="el" href="kvi__config_8cpp_source.html#l00576">KviConfig::writeEntry()</a>.</p>
 
 </div>
 </div>
@@ -345,7 +347,7 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00689">CreateStatusBarUpdateIndicator()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00492">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00331">KVI_SMALLICON_UPDATE</a>, and <a class="el" href="kvi__statusbar_8cpp_source.html#l00476">KviStatusBar::registerAppletDescriptor()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00703">CreateStatusBarUpdateIndicator()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00494">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00330">KVI_SMALLICON_UPDATE</a>, and <a class="el" href="kvi__statusbar_8cpp_source.html#l00476">KviStatusBar::registerAppletDescriptor()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__statusbar_8cpp_source.html#l00054">KviStatusBar::KviStatusBar()</a>.</p>
 
@@ -369,16 +371,16 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 
 <p>Reimplemented from <a class="el" href="classKviStatusBarApplet.html#a468465357c6e955203731a3bfb9352c5">KviStatusBarApplet</a>.</p>
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00235">m_bCheckDone</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00236">m_bCheckFailed</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00237">m_bUpdateStatus</a>, and <a class="el" href="kvi__statusbarapplet_8h_source.html#l00233">m_szHttpResponse</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00236">m_bCheckDone</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00237">m_bCheckFailed</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00238">m_bUpdateStatus</a>, and <a class="el" href="kvi__statusbarapplet_8h_source.html#l00234">m_szHttpResponse</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af61b4b5f54465382fa1d1649a0c82b4f"></a><!-- doxytag: member="KviStatusBarUpdateIndicator::toggleContext" ref="af61b4b5f54465382fa1d1649a0c82b4f" args="()" -->
+<a class="anchor" id="ab0ff96bacf4e5c98d0bced8971d18045"></a><!-- doxytag: member="KviStatusBarUpdateIndicator::toggleRevision" ref="ab0ff96bacf4e5c98d0bced8971d18045" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void KviStatusBarUpdateIndicator::toggleContext </td>
+          <td class="memname">void KviStatusBarUpdateIndicator::toggleRevision </td>
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
@@ -388,9 +390,30 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__statusbarapplet_8h_source.html#l00238">m_bUpdateOnStartup</a>.</p>
+<p>References <a class="el" href="kvi__statusbarapplet_8h_source.html#l00240">m_bUpdateRevision</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00238">m_bUpdateStatus</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00657">updateDisplay()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00669">fillContextPopup()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00677">fillContextPopup()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a86b1c4f6bbb4497d9c5b59ce895b7d0d"></a><!-- doxytag: member="KviStatusBarUpdateIndicator::toggleStartup" ref="a86b1c4f6bbb4497d9c5b59ce895b7d0d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KviStatusBarUpdateIndicator::toggleStartup </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>References <a class="el" href="kvi__statusbarapplet_8h_source.html#l00239">m_bUpdateOnStartup</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00677">fillContextPopup()</a>.</p>
 
 </div>
 </div>
@@ -409,9 +432,9 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00492">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00333">KVI_SMALLICON_FAILUPDATE</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00332">KVI_SMALLICON_NOTUPDATE</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00331">KVI_SMALLICON_UPDATE</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00236">m_bCheckFailed</a>, and <a class="el" href="kvi__statusbarapplet_8h_source.html#l00237">m_bUpdateStatus</a>.</p>
+<p>References <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00494">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00332">KVI_SMALLICON_FAILUPDATE</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00331">KVI_SMALLICON_NOTUPDATE</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00330">KVI_SMALLICON_UPDATE</a>, <a class="el" href="kvi__statusbarapplet_8h_source.html#l00237">m_bCheckFailed</a>, and <a class="el" href="kvi__statusbarapplet_8h_source.html#l00238">m_bUpdateStatus</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00738">binaryDataReceived()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00637">KviStatusBarUpdateIndicator()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00727">responseReceived()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00761">binaryDataReceived()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00637">KviStatusBarUpdateIndicator()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00750">responseReceived()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00670">toggleRevision()</a>.</p>
 
 </div>
 </div>
@@ -427,7 +450,7 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00703">checkVersion()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00637">KviStatusBarUpdateIndicator()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00783">tipText()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00717">checkVersion()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00637">KviStatusBarUpdateIndicator()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00826">tipText()</a>.</p>
 
 </div>
 </div>
@@ -442,7 +465,7 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00637">KviStatusBarUpdateIndicator()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00727">responseReceived()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00783">tipText()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00656">updateDisplay()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00637">KviStatusBarUpdateIndicator()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00750">responseReceived()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00826">tipText()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00657">updateDisplay()</a>.</p>
 
 </div>
 </div>
@@ -457,7 +480,22 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00738">binaryDataReceived()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00669">fillContextPopup()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00637">KviStatusBarUpdateIndicator()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00675">loadState()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00683">saveState()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00664">toggleContext()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00761">binaryDataReceived()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00677">fillContextPopup()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00637">KviStatusBarUpdateIndicator()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00685">loadState()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00695">saveState()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00665">toggleStartup()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a37818adcbcad7d9eb341e64d928ecc2d"></a><!-- doxytag: member="KviStatusBarUpdateIndicator::m_bUpdateRevision" ref="a37818adcbcad7d9eb341e64d928ecc2d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classKviStatusBarUpdateIndicator.html#a37818adcbcad7d9eb341e64d928ecc2d">KviStatusBarUpdateIndicator::m_bUpdateRevision</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00761">binaryDataReceived()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00717">checkVersion()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00677">fillContextPopup()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00795">getNewVersion()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00637">KviStatusBarUpdateIndicator()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00685">loadState()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00695">saveState()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00670">toggleRevision()</a>.</p>
 
 </div>
 </div>
@@ -472,7 +510,7 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00738">binaryDataReceived()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00637">KviStatusBarUpdateIndicator()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00719">mouseDoubleClickEvent()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00783">tipText()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00656">updateDisplay()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00761">binaryDataReceived()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00637">KviStatusBarUpdateIndicator()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00739">mouseDoubleClickEvent()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00826">tipText()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00670">toggleRevision()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00657">updateDisplay()</a>.</p>
 
 </div>
 </div>
@@ -487,7 +525,7 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00703">checkVersion()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00637">KviStatusBarUpdateIndicator()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00754">requestCompleted()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00717">checkVersion()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00637">KviStatusBarUpdateIndicator()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00789">requestCompleted()</a>.</p>
 
 </div>
 </div>
@@ -502,7 +540,7 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00727">responseReceived()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00783">tipText()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00750">responseReceived()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00826">tipText()</a>.</p>
 
 </div>
 </div>
@@ -517,7 +555,7 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00738">binaryDataReceived()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00760">getNewVersion()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00761">binaryDataReceived()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00795">getNewVersion()</a>.</p>
 
 </div>
 </div>
@@ -526,7 +564,7 @@ Inheritance diagram for KviStatusBarUpdateIndicator:</div>
 <li>src/kvirc/ui/<a class="el" href="kvi__statusbarapplet_8cpp.html">kvi_statusbarapplet.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:27 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:27 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

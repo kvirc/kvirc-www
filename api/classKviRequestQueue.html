@@ -41,6 +41,8 @@
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Removes the channel from the queue stack.  <a href="#a78913e8ad45c930752601621d9c80955"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRequestQueue.html#acca62fc0c0e65915d49bc5c8ea1cb392">enqueueChannel</a> (<a class="el" href="classKviChannel.html">KviChannel</a> *pChan)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Enqueues the channel in the queue stack.  <a href="#acca62fc0c0e65915d49bc5c8ea1cb392"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRequestQueue.html#a381b2744d8665e2269d722f6b9578e30">isQueued</a> (<a class="el" href="classKviChannel.html">KviChannel</a> *pChan)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Checks if a channel is in the queue stack.  <a href="#a381b2744d8665e2269d722f6b9578e30"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRequestQueue.html#ac71181ed8cbda46a866002baf7a44976">KviRequestQueue</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructs the request queue objects.  <a href="#ac71181ed8cbda46a866002baf7a44976"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviRequestQueue.html#a53bf32aa195fca13cd51c3673a174ef9">~KviRequestQueue</a> ()</td></tr>
@@ -123,7 +125,7 @@
 <p>Constructs the request queue objects. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviRequestQueue.html" title="Class to enqueue commands to IRC server.">KviRequestQueue</a> </dd></dl>
 
-<p>References <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00079">m_curType</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00078">m_timer</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00069">Mode</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00074">timerSlot()</a>.</p>
+<p>References <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00079">m_curType</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00078">m_timer</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00069">Mode</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00075">timerSlot()</a>.</p>
 
 </div>
 </div>
@@ -144,7 +146,7 @@
 
 <p>Destroys the request queue objects. </p>
 
-<p>References <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00078">m_timer</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00074">timerSlot()</a>.</p>
+<p>References <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00078">m_timer</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00075">timerSlot()</a>.</p>
 
 </div>
 </div>
@@ -169,7 +171,7 @@
 
 <p>References <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00077">m_channels</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00079">m_curType</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00078">m_timer</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00069">Mode</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">KviIrcContext::connectionTerminated()</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00074">timerSlot()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00712">KviIrcContext::connectionTerminated()</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00075">timerSlot()</a>.</p>
 
 </div>
 </div>
@@ -200,7 +202,7 @@
 
 <p>References <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00077">m_channels</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00078">m_timer</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00668">KviIrcConnection::unregisterChannel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00673">KviIrcConnection::unregisterChannel()</a>.</p>
 
 </div>
 </div>
@@ -229,9 +231,36 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__options_8h_source.html#l00677">KVI_OPTION_UINT</a>, <a class="el" href="kvi__options_8h_source.html#l00605">KviOption_uintOnJoinRequestsDelay</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00077">m_channels</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00078">m_timer</a>.</p>
+<p>References <a class="el" href="kvi__options_8h_source.html#l00678">KVI_OPTION_UINT</a>, <a class="el" href="kvi__options_8h_source.html#l00606">KviOption_uintOnJoinRequestsDelay</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00077">m_channels</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00078">m_timer</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l00164">KviServerParser::parseLiteralJoin()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a381b2744d8665e2269d722f6b9578e30"></a><!-- doxytag: member="KviRequestQueue::isQueued" ref="a381b2744d8665e2269d722f6b9578e30" args="(KviChannel *pChan)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool KviRequestQueue::isQueued </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classKviChannel.html">KviChannel</a> *&nbsp;</td>
+          <td class="paramname"> <em>pChan</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Checks if a channel is in the queue stack. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pChan</em>&nbsp;</td><td>The channel to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
 </div>
 </div>
@@ -253,9 +282,9 @@
 <p>Performs time based requests. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00074">Ban</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00070">BanException</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00067">clearAll()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01380">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00255">KviIrcConnection::encodeText()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00152">KviIrcConnectionServerInfo::getNeedsOpToListModeseI()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00071">Invite</a>, <a class="el" href="classKviChannel.html#a50170318e02fec78c2df5aff153d66e1">KviChannel::isMeOp()</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__options_8h_source.html#l00238">KviOption_boolDisableBanExceptionListRequestOnJoin</a>, <a class="el" href="kvi__options_8h_source.html#l00237">KviOption_boolDisableBanListRequestOnJoin</a>, <a class="el" href="kvi__options_8h_source.html#l00239">KviOption_boolDisableInviteListRequestOnJoin</a>, <a class="el" href="kvi__options_8h_source.html#l00332">KviOption_boolDisableQuietBanListRequestOnJoin</a>, <a class="el" href="kvi__options_8h_source.html#l00240">KviOption_boolDisableWhoRequestOnJoin</a>, <a class="el" href="kvi__lagmeter_8cpp_source.html#l00180">KviLagMeter::lagCheckRegister()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00341">KviIrcConnection::lagMeter()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00077">m_channels</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00079">m_curType</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00078">m_timer</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00069">Mode</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00073">QuietBan</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00736">KviIrcConnection::sendFmtData()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00257">KviIrcConnection::serverInfo()</a>, <a class="el" href="kvi__ircconnectionstatedata_8h_source.html#l00094">KviIrcConnectionStateData::setLastSentChannelWhoRequest()</a>, <a class="el" href="kvi__channel_8h_source.html#l00477">KviChannel::setSentBanExceptionListRequest()</a>, <a class="el" href="kvi__channel_8h_source.html#l00459">KviChannel::setSentBanListRequest()</a>, <a class="el" href="kvi__channel_8h_source.html#l00441">KviChannel::setSentInviteListRequest()</a>, <a class="el" href="kvi__channel_8h_source.html#l00495">KviChannel::setSentQuietBanListRequest()</a>, <a class="el" href="kvi__channel_8h_source.html#l00429">KviChannel::setSentWhoRequest()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02702">KviStr::sprintf()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00271">KviIrcConnection::stateData()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00162">KviIrcConnectionServerInfo::supportsModeq()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00161">KviIrcConnectionServerInfo::supportsModesIe()</a>, <a class="el" href="kvi__channel_8h_source.html#l00284">KviChannel::target()</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00072">Who</a>.</p>
+<p>References <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00074">Ban</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00070">BanException</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00068">clearAll()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00257">KviIrcConnection::encodeText()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00193">KviIrcConnectionServerInfo::getNeedsOpToListModeseI()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00071">Invite</a>, <a class="el" href="classKviChannel.html#a50170318e02fec78c2df5aff153d66e1">KviChannel::isMeOp()</a>, <a class="el" href="kvi__options_8h_source.html#l00673">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__options_8h_source.html#l00238">KviOption_boolDisableBanExceptionListRequestOnJoin</a>, <a class="el" href="kvi__options_8h_source.html#l00237">KviOption_boolDisableBanListRequestOnJoin</a>, <a class="el" href="kvi__options_8h_source.html#l00239">KviOption_boolDisableInviteListRequestOnJoin</a>, <a class="el" href="kvi__options_8h_source.html#l00332">KviOption_boolDisableQuietBanListRequestOnJoin</a>, <a class="el" href="kvi__options_8h_source.html#l00240">KviOption_boolDisableWhoRequestOnJoin</a>, <a class="el" href="kvi__lagmeter_8cpp_source.html#l00180">KviLagMeter::lagCheckRegister()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00339">KviIrcConnection::lagMeter()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00077">m_channels</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00079">m_curType</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00078">m_timer</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00069">Mode</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00073">QuietBan</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00741">KviIrcConnection::sendFmtData()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01802">KviChannel::serverInfo()</a>, <a class="el" href="kvi__ircconnectionstatedata_8h_source.html#l00094">KviIrcConnectionStateData::setLastSentChannelWhoRequest()</a>, <a class="el" href="kvi__channel_8h_source.html#l00384">KviChannel::setSentListRequest()</a>, <a class="el" href="kvi__channel_8h_source.html#l00372">KviChannel::setSentWhoRequest()</a>, <a class="el" href="kvi__string_8cpp_source.html#l02717">KviStr::sprintf()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00269">KviIrcConnection::stateData()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00200">KviIrcConnectionServerInfo::supportedListModes()</a>, <a class="el" href="kvi__channel_8h_source.html#l00245">KviChannel::target()</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html#l00072">Who</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00034">KviRequestQueue()</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00040">~KviRequestQueue()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00035">KviRequestQueue()</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00041">~KviRequestQueue()</a>.</p>
 
 </div>
 </div>
@@ -271,7 +300,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00067">clearAll()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00057">dequeueChannel()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00045">enqueueChannel()</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00074">timerSlot()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00068">clearAll()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00058">dequeueChannel()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00046">enqueueChannel()</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00075">timerSlot()</a>.</p>
 
 </div>
 </div>
@@ -286,7 +315,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00067">clearAll()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00034">KviRequestQueue()</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00074">timerSlot()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00068">clearAll()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00035">KviRequestQueue()</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00075">timerSlot()</a>.</p>
 
 </div>
 </div>
@@ -301,7 +330,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00067">clearAll()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00057">dequeueChannel()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00045">enqueueChannel()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00034">KviRequestQueue()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00074">timerSlot()</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00040">~KviRequestQueue()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00068">clearAll()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00058">dequeueChannel()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00046">enqueueChannel()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00035">KviRequestQueue()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00075">timerSlot()</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00041">~KviRequestQueue()</a>.</p>
 
 </div>
 </div>
@@ -310,7 +339,7 @@
 <li>src/kvirc/kernel/<a class="el" href="kvi__ircconnectionrequestqueue_8cpp.html">kvi_ircconnectionrequestqueue.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:27 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:27 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -61,10 +61,10 @@
 <a name="l00036"></a>00036 <span class="preprocessor">#include &quot;<a class="code" href="kvi__tal__mainwindow_8h.html" title="Toolkit Abstraction Layer class.">kvi_tal_mainwindow.h</a>&quot;</span>
 <a name="l00037"></a>00037 <span class="preprocessor">#include &quot;<a class="code" href="kvi__qstring_8h.html" title="Helper functions for the QString class.">kvi_qstring.h</a>&quot;</span>
 <a name="l00038"></a>00038 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerlist_8h.html" title="C++ Template based double linked pointer list class.">kvi_pointerlist.h</a>&quot;</span>
-<a name="l00039"></a>00039 <span class="preprocessor">#include &quot;<a class="code" href="kvi__mdimanager_8h.html" title="The MDI-manager.">kvi_mdimanager.h</a>&quot;</span>
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041 <span class="keyword">class </span><a class="code" href="classKviMenuBar.html">KviMenuBar</a>;
-<a name="l00042"></a>00042 <span class="keyword">class </span><a class="code" href="classKviMdiChild.html" title="Class of an MDI window.">KviMdiChild</a>;
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 <span class="keyword">class </span><a class="code" href="classKviMenuBar.html">KviMenuBar</a>;
+<a name="l00041"></a>00041 <span class="keyword">class </span><a class="code" href="classKviMdiChild.html" title="Class of an MDI window.">KviMdiChild</a>;
+<a name="l00042"></a>00042 <span class="keyword">class </span><a class="code" href="classKviMdiManager.html" title="Handles all MDI windows.">KviMdiManager</a>;
 <a name="l00043"></a>00043 <span class="keyword">class </span><a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>;
 <a name="l00044"></a>00044 <span class="keyword">class </span><a class="code" href="classKviConsole.html">KviConsole</a>;
 <a name="l00045"></a>00045 <span class="keyword">class </span><a class="code" href="classKviWindowListBase.html">KviWindowListBase</a>;
@@ -100,7 +100,7 @@
 <a name="l00075"></a>00075 
 <a name="l00076"></a>00076 
 <a name="l00077"></a>00077 
-<a name="l00078"></a><a class="code" href="classKviFrame.html">00078</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviFrame.html">KviFrame</a> : <span class="keyword">public</span> <a class="code" href="classKviTalMainWindow.html" title="Toolkit Abstraction Layer: mainwindow class.">KviTalMainWindow</a> <span class="comment">// , public KviIrcContextManager</span>
+<a name="l00078"></a><a class="code" href="classKviFrame.html">00078</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviFrame.html">KviFrame</a> : <span class="keyword">public</span> <a class="code" href="classKviTalMainWindow.html" title="Toolkit Abstraction Layer: mainwindow class.">KviTalMainWindow</a> <span class="comment">//, public KviIrcContextManager</span>
 <a name="l00079"></a>00079 {
 <a name="l00080"></a><a class="code" href="classKviFrame.html#ab9eedab802565576146aacfe265731e1">00080</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>;
 <a name="l00081"></a><a class="code" href="classKviFrame.html#aedeaff32eb02125814a99ef628e95203">00081</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classKviConsole.html">KviConsole</a>;
@@ -265,7 +265,7 @@
 <a name="l00245"></a>00245 <span class="preprocessor"></span>
 <a name="l00246"></a>00246 <span class="preprocessor">#endif //_KVI_FRAME_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:21 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

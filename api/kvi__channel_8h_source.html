@@ -81,405 +81,344 @@
 <a name="l00062"></a><a class="code" href="kvi__channel_8h.html#a0e989acdcc0ae4da122910be7f54c5dd">00062</a> <span class="preprocessor"></span>        <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct__KviMaskEntry.html">_KviMaskEntry</a> <a class="code" href="struct__KviMaskEntry.html">KviMaskEntry</a>; <span class="comment">// kvi_maskeditor.h</span>
 <a name="l00063"></a>00063 <span class="preprocessor">#endif</span>
 <a name="l00064"></a>00064 <span class="preprocessor"></span>
-<a name="l00083"></a><a class="code" href="kvi__channel_8h.html#ac2bca9175f41d08cb8891d4645d4d12c">00083</a> <span class="preprocessor">#define KVI_CHANNEL_STATE_HAVEALLNAMES 1</span>
-<a name="l00084"></a><a class="code" href="kvi__channel_8h.html#af3ee9c5ffaa9d2f1748739711f8ea1c4">00084</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_HAVEBANLIST (1 &lt;&lt; 1)</span>
-<a name="l00085"></a><a class="code" href="kvi__channel_8h.html#ac0cb4fb70971275532539a8e2c4493b7">00085</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_HAVEWHOLIST (1 &lt;&lt; 2)</span>
-<a name="l00086"></a><a class="code" href="kvi__channel_8h.html#a5dcb4cd7eed0f01e30ac9a7c321397b3">00086</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_HAVEBANEXCEPTIONLIST (1 &lt;&lt; 3)</span>
-<a name="l00087"></a><a class="code" href="kvi__channel_8h.html#a1a256268a6339e52a2e684561adeac9a">00087</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_HAVEINVITELIST (1 &lt;&lt; 4)</span>
-<a name="l00088"></a><a class="code" href="kvi__channel_8h.html#af1fd4a2b0b70d37a71947b5ebea317c8">00088</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_HAVEQUIETBANLIST (1 &lt;&lt; 5)</span>
-<a name="l00089"></a><a class="code" href="kvi__channel_8h.html#ab041e74dc71245629dc36a2efd8e90f7">00089</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_DEADCHAN (1 &lt;&lt; 6)</span>
-<a name="l00090"></a><a class="code" href="kvi__channel_8h.html#a4f506ff1b9e5cb2a2e890152090680f5">00090</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_SENTBANLISTREQUEST (1 &lt;&lt; 7)</span>
-<a name="l00091"></a><a class="code" href="kvi__channel_8h.html#a4ed13d9f4fe8d6d048bc0098cbbf2aed">00091</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_SENTBANEXCEPTIONLISTREQUEST (1 &lt;&lt; 8)</span>
-<a name="l00092"></a><a class="code" href="kvi__channel_8h.html#a8d20fb3d58caa0a88dc6625d54b9fa52">00092</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_SENTINVITELISTREQUEST (1 &lt;&lt; 9)</span>
-<a name="l00093"></a><a class="code" href="kvi__channel_8h.html#adb3ccfd0da673b0502b6f45c71393405">00093</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_SENTQUIETBANLISTREQUEST (1 &lt;&lt; 10)</span>
-<a name="l00094"></a><a class="code" href="kvi__channel_8h.html#a1a1c73afae80a1bf37c872510071dd4f">00094</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_SENTWHOREQUEST (1 &lt;&lt; 11)</span>
-<a name="l00095"></a><a class="code" href="kvi__channel_8h.html#ab03684eed8b148c99042d705aaf861f0">00095</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_SENTPART (1 &lt;&lt; 12)</span>
-<a name="l00096"></a><a class="code" href="kvi__channel_8h.html#a11b16fca416cbea1c4da09a2686ffccd">00096</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_SYNCHRONIZED (1 &lt;&lt; 13)</span>
-<a name="l00097"></a><a class="code" href="kvi__channel_8h.html#ac450c7a76adfa1292d5dcca41ef41748">00097</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_NOCLOSEONPART (1 &lt;&lt; 14)</span>
-<a name="l00098"></a><a class="code" href="kvi__channel_8h.html#a78172d72d3ba7d9a9c9c59410808a2ea">00098</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_SENTSYNCWHOREQUEST (1 &lt;&lt; 15)</span>
-<a name="l00099"></a>00099 <span class="preprocessor"></span>
-<a name="l00108"></a><a class="code" href="kvi__channel_8h.html#a7538f1d80e55a293866695ba3eed97b6">00108</a> <span class="preprocessor">#define KVI_CHANACTIVITY_LIMIT_ICE 5</span>
-<a name="l00109"></a><a class="code" href="kvi__channel_8h.html#acd4fb493958912ba9dec6212bd380cfc">00109</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANACTIVITY_LIMIT_VERYCOLD 10</span>
-<a name="l00110"></a><a class="code" href="kvi__channel_8h.html#a8bf25f3f03cd8a0632f6f4abf2dc0108">00110</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANACTIVITY_LIMIT_COLD 20</span>
-<a name="l00111"></a><a class="code" href="kvi__channel_8h.html#aeec29a733a2d8054f964b0ff444dd159">00111</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANACTIVITY_LIMIT_UNDEFINED 30</span>
-<a name="l00112"></a><a class="code" href="kvi__channel_8h.html#a7f109ec1c5792ed90e88984105f5b777">00112</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANACTIVITY_LIMIT_HOT 50</span>
-<a name="l00113"></a><a class="code" href="kvi__channel_8h.html#af2ff9f22c45ce834600bddd89386f34d">00113</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANACTIVITY_LIMIT_VERYHOT 70</span>
-<a name="l00114"></a>00114 <span class="preprocessor"></span>
-<a name="l00118"></a>00118 <span class="preprocessor">#ifndef AVERAGE_CHANNEL_USERS</span>
-<a name="l00119"></a>00119 <span class="preprocessor"></span><span class="preprocessor">        #define AVERAGE_CHANNEL_USERS 101</span>
-<a name="l00120"></a>00120 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00121"></a>00121 <span class="preprocessor"></span>
-<a name="l00126"></a><a class="code" href="kvi__channel_8h.html#a472a41ddde96f0ce714b583496c0d441">00126</a> <span class="preprocessor">#define KVI_CHANNEL_ACTION_HISTORY_MAX_COUNT 40</span>
-<a name="l00127"></a><a class="code" href="kvi__channel_8h.html#aa1a0cae8b235ca5e1cbbb4cdbc1d7d47">00127</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_ACTION_HISTORY_MAX_TIMESPAN 600</span>
-<a name="l00128"></a>00128 <span class="preprocessor"></span>
-<a name="l00134"></a><a class="code" href="struct__KviChannelAction.html">00134</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct__KviChannelAction.html" title="A struct which holds the channel actions.">_KviChannelAction</a>
-<a name="l00135"></a>00135 {
-<a name="l00136"></a><a class="code" href="struct__KviChannelAction.html#a0d6039330e3909efbb31218008209203">00136</a>         QString      <a class="code" href="struct__KviChannelAction.html#a0d6039330e3909efbb31218008209203">szNick</a>;       <span class="comment">// action source nick</span>
-<a name="l00137"></a><a class="code" href="struct__KviChannelAction.html#a623a2f3701ea6dcbb73fcc637e56cf6b">00137</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct__KviChannelAction.html#a623a2f3701ea6dcbb73fcc637e56cf6b">uActionType</a>;  <span class="comment">// type of the action</span>
-<a name="l00138"></a><a class="code" href="struct__KviChannelAction.html#aa86028cc0b254961e7a5019eed4e63fe">00138</a>         <a class="code" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a>   <a class="code" href="struct__KviChannelAction.html#aa86028cc0b254961e7a5019eed4e63fe">tTime</a>;        <span class="comment">// time of the action</span>
-<a name="l00139"></a><a class="code" href="struct__KviChannelAction.html#af58698edf2ff1d599d225f82899df1ad">00139</a>         <span class="keywordtype">int</span>          <a class="code" href="struct__KviChannelAction.html#af58698edf2ff1d599d225f82899df1ad">iTemperature</a>; <span class="comment">// temperature of the action</span>
-<a name="l00140"></a>00140 } <a class="code" href="struct__KviChannelAction.html" title="A struct which holds the channel actions.">KviChannelAction</a>;
-<a name="l00141"></a>00141 
-<a name="l00147"></a><a class="code" href="struct__KviChannelActivityStats.html">00147</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct__KviChannelActivityStats.html" title="A struct which holds the activity stats.">_KviChannelActivityStats</a>
-<a name="l00148"></a>00148 {
-<a name="l00149"></a><a class="code" href="struct__KviChannelActivityStats.html#a0d055f4fa38c4dab801d5946c169dd5c">00149</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        <a class="code" href="struct__KviChannelActivityStats.html#a0d055f4fa38c4dab801d5946c169dd5c">uActionCount</a>;              <span class="comment">// number of actions in the history</span>
-<a name="l00150"></a><a class="code" href="struct__KviChannelActivityStats.html#a5a21a5d97a32a3c0e8fb9e0f5ddc2be5">00150</a>         <span class="keywordtype">bool</span>                <a class="code" href="struct__KviChannelActivityStats.html#a5a21a5d97a32a3c0e8fb9e0f5ddc2be5">bStatsInaccurate</a>;          <span class="comment">// the stats are inaccurate because we have just joined the chan</span>
-<a name="l00151"></a><a class="code" href="struct__KviChannelActivityStats.html#a63c95ebccb66e662cfd9a7abf6015d37">00151</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        <a class="code" href="struct__KviChannelActivityStats.html#a63c95ebccb66e662cfd9a7abf6015d37">uLastActionTimeSpan</a>;       <span class="comment">// the timespan between the last action and now</span>
-<a name="l00152"></a><a class="code" href="struct__KviChannelActivityStats.html#a42e368863c132ea1a8e98869bd4ed99a">00152</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        <a class="code" href="struct__KviChannelActivityStats.html#a42e368863c132ea1a8e98869bd4ed99a">uFirstActionTimeSpan</a>;      <span class="comment">// the time span between the first and the last action</span>
-<a name="l00153"></a><a class="code" href="struct__KviChannelActivityStats.html#a0bbaf77234471ab424e25fd9602448f9">00153</a>         <span class="keywordtype">double</span>              <a class="code" href="struct__KviChannelActivityStats.html#a0bbaf77234471ab424e25fd9602448f9">dActionsPerMinute</a>;         <span class="comment">// average number of actions per minute in the lastActionTimeSpan</span>
-<a name="l00154"></a><a class="code" href="struct__KviChannelActivityStats.html#ae0dc4bf241fca3c9949a177388ccf98d">00154</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        <a class="code" href="struct__KviChannelActivityStats.html#ae0dc4bf241fca3c9949a177388ccf98d">uActionsInTheLastMinute</a>;   <span class="comment">// number of actions in the last minute</span>
-<a name="l00155"></a><a class="code" href="struct__KviChannelActivityStats.html#a2487437ad2fcc77238ce55f805428c36">00155</a>         <span class="keywordtype">int</span>                 <a class="code" href="struct__KviChannelActivityStats.html#a2487437ad2fcc77238ce55f805428c36">iAverageActionTemperature</a>; <span class="comment">// the average chan temperature</span>
-<a name="l00156"></a><a class="code" href="struct__KviChannelActivityStats.html#aa9985d8656496310568f148d89338f20">00156</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        <a class="code" href="struct__KviChannelActivityStats.html#aa9985d8656496310568f148d89338f20">uHotActionCount</a>;
-<a name="l00157"></a><a class="code" href="struct__KviChannelActivityStats.html#a9559a0591b0912e194213a70eae0bc0b">00157</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        <a class="code" href="struct__KviChannelActivityStats.html#a9559a0591b0912e194213a70eae0bc0b">uHotActionPercent</a>;
-<a name="l00158"></a><a class="code" href="struct__KviChannelActivityStats.html#a1c5899e8e93128ca6424d0744a9d8a6f">00158</a>         QStringList         <a class="code" href="struct__KviChannelActivityStats.html#a1c5899e8e93128ca6424d0744a9d8a6f">lTalkingUsers</a>;             <span class="comment">// users that seem to be talking NOW</span>
-<a name="l00159"></a><a class="code" href="struct__KviChannelActivityStats.html#ae1249646135b47b08ad354e2fbc15a0f">00159</a>         QStringList         <a class="code" href="struct__KviChannelActivityStats.html#ae1249646135b47b08ad354e2fbc15a0f">lWereTalkingUsers</a>;
-<a name="l00160"></a>00160 } <a class="code" href="struct__KviChannelActivityStats.html" title="A struct which holds the activity stats.">KviChannelActivityStats</a>;
-<a name="l00161"></a>00161 
-<a name="l00166"></a><a class="code" href="classKviChannel.html">00166</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviChannel.html" title="The class which manages a channel.">KviChannel</a> : <span class="keyword">public</span> <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>
-<a name="l00167"></a>00167 {
-<a name="l00168"></a>00168         Q_OBJECT
-<a name="l00169"></a>00169 <span class="keyword">public</span>:
-<a name="l00177"></a>00177         <a class="code" href="classKviChannel.html" title="The class which manages a channel.">KviChannel</a>(<a class="code" href="classKviFrame.html">KviFrame</a> * lpFrm, <a class="code" href="classKviConsole.html">KviConsole</a> * lpConsole, <span class="keyword">const</span> QString &amp; szName);
-<a name="l00178"></a>00178 
-<a name="l00182"></a>00182         ~<a class="code" href="classKviChannel.html" title="The class which manages a channel.">KviChannel</a>();
-<a name="l00183"></a>00183 <span class="keyword">protected</span>:
-<a name="l00184"></a><a class="code" href="classKviChannel.html#a3b51568330c381be078d24cbd95ec959">00184</a>         <a class="code" href="kvi__tal__splitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a>                       * m_pTopSplitter;
-<a name="l00185"></a><a class="code" href="classKviChannel.html#a2c4c392118edeaabcc8227ecf14d0b27">00185</a>         <a class="code" href="kvi__tal__splitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a>                       * m_pVertSplitter;
-<a name="l00186"></a><a class="code" href="classKviChannel.html#ae84b507a26ed11840c64a9a21846bbfd">00186</a>         QToolButton                          * m_pDoubleViewButton;
-<a name="l00187"></a><a class="code" href="classKviChannel.html#a07006c130f460f38d4f89e303f273462">00187</a>         <a class="code" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a>              * m_pListViewButton;
-<a name="l00188"></a><a class="code" href="classKviChannel.html#a94e01a0a7201b426a4ed87d354632aa9">00188</a>         <a class="code" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a>              * m_pBanEditorButton;
-<a name="l00189"></a><a class="code" href="classKviChannel.html#a406a57267e90f4267f21f9a5541a55fd">00189</a>         <a class="code" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a>              * m_pBanExceptionEditorButton;
-<a name="l00190"></a><a class="code" href="classKviChannel.html#aa8b8d16d48a399f5357d2fe07e9ccfe7">00190</a>         <a class="code" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a>              * m_pInviteEditorButton;
-<a name="l00191"></a><a class="code" href="classKviChannel.html#ade507a87d051417076b6bcbda0688b2a">00191</a>         <a class="code" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a>              * m_pQuietBanEditorButton;
-<a name="l00192"></a><a class="code" href="classKviChannel.html#af35da68758a28f1d0d732bce938c1788">00192</a>         <a class="code" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a>              * m_pModeEditorButton;
-<a name="l00193"></a><a class="code" href="classKviChannel.html#a3d19eee14317fecc973f0151f78c5ea0">00193</a>         <a class="code" href="classKviMaskEditor.html">KviMaskEditor</a>                        * m_pBanEditor;
-<a name="l00194"></a><a class="code" href="classKviChannel.html#a3c398403540d39eb50868ac10b61a5d1">00194</a>         <a class="code" href="classKviMaskEditor.html">KviMaskEditor</a>                        * m_pBanExceptionEditor;
-<a name="l00195"></a><a class="code" href="classKviChannel.html#a5a0edf053092b90d141bd77ee88c9bc7">00195</a>         <a class="code" href="classKviMaskEditor.html">KviMaskEditor</a>                        * m_pInviteEditor;
-<a name="l00196"></a><a class="code" href="classKviChannel.html#ab36289350f922d0ca1f9133e36721df1">00196</a>         <a class="code" href="classKviMaskEditor.html">KviMaskEditor</a>                        * m_pQuietBanEditor;
-<a name="l00197"></a><a class="code" href="classKviChannel.html#adcc33f374489aa5aef70e07af8c0d648">00197</a>         <a class="code" href="classKviModeEditor.html">KviModeEditor</a>                        * m_pModeEditor;
-<a name="l00198"></a><a class="code" href="classKviChannel.html#a8077e8cdc07cc7f41d152deb75627cf6">00198</a>         <a class="code" href="classKviIrcView.html">KviIrcView</a>                           * m_pMessageView;
-<a name="l00199"></a><a class="code" href="classKviChannel.html#af8dc864d26311d2a3db04de0c4f43523">00199</a>         <a class="code" href="classKviTopicWidget.html">KviTopicWidget</a>                       * m_pTopicWidget;
-<a name="l00200"></a><a class="code" href="classKviChannel.html#a2758155a08aee6e0a13b72f853f08f8c">00200</a>         <a class="code" href="classKviUserListView.html" title="User list view management class.">KviUserListView</a>                      * m_pUserListView;
-<a name="l00201"></a><a class="code" href="classKviChannel.html#ad942773057a5a872b27b7669a94c209a">00201</a>         <a class="code" href="classKviModeWidget.html">KviModeWidget</a>                        * m_pModeWidget;
-<a name="l00202"></a><a class="code" href="classKviChannel.html#a98484fda3d8b3b4dcbde2be9771ad95a">00202</a>         <span class="keywordtype">int</span>                                    m_iStateFlags;
-<a name="l00203"></a><a class="code" href="classKviChannel.html#ac7957a48dcda442bd24829ece4610734">00203</a>         QString                                m_szChannelMode;
-<a name="l00204"></a><a class="code" href="classKviChannel.html#aaf533e0f3e6f459f9fde27868a3e3c54">00204</a>         QString                                m_szChannelKey;
-<a name="l00205"></a><a class="code" href="classKviChannel.html#a8c35a8f254d6fd8306d963779eaa81f3">00205</a>         QString                                m_szChannelLimit;
-<a name="l00206"></a><a class="code" href="classKviChannel.html#a709f44ffc8375fceff3bd80dcd13f2bc">00206</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviMaskEntry&gt;</a>         * m_pBanList;
-<a name="l00207"></a><a class="code" href="classKviChannel.html#a40c9f190598a548cc4be8033874c1130">00207</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviMaskEntry&gt;</a>         * m_pBanExceptionList;
-<a name="l00208"></a><a class="code" href="classKviChannel.html#ae2ade8dfa87d7ffb2019e700f841b4e7">00208</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviMaskEntry&gt;</a>         * m_pInviteList;
-<a name="l00209"></a><a class="code" href="classKviChannel.html#a630ec9d0378fc8ba813bca62d4e7f5a6">00209</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviMaskEntry&gt;</a>         * m_pQuietBanList;
-<a name="l00210"></a><a class="code" href="classKviChannel.html#a8ee1edda14c923c36f5d1368014d0f17">00210</a>         <a class="code" href="classKviPixmap.html">KviPixmap</a>                              m_privateBackground;
-<a name="l00211"></a><a class="code" href="classKviChannel.html#a00ac729656dc76fa9e33067a08f72de4">00211</a>         QDateTime                              m_joinTime;
-<a name="l00212"></a><a class="code" href="classKviChannel.html#abd02e126b3ab6098ca3c9b80f6337c24">00212</a>         QString                                m_szNameWithUserFlag;
-<a name="l00213"></a><a class="code" href="classKviChannel.html#a2e69bb81f51fe87a76767271f4d5a7c6">00213</a>         QStringList                          * m_pTmpHighLighted;
-<a name="l00214"></a><a class="code" href="classKviChannel.html#a05d25b46a24131f6329db936c4c3df48">00214</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>                           m_uActionHistoryHotActionCount;
-<a name="l00215"></a><a class="code" href="classKviChannel.html#a0eab770c9ef95e8b341a1ebaf0088c32">00215</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviChannelAction&gt;</a>     * m_pActionHistory;
-<a name="l00216"></a><a class="code" href="classKviChannel.html#ad1dd6ecb07ae23e014cfdf234bac3a18">00216</a>         <a class="code" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a>                             m_tLastReceivedWhoReply;
-<a name="l00217"></a><a class="code" href="classKviChannel.html#aedd578270c2a92dd6951bf31c424915f">00217</a>         QList&lt;int&gt;                             m_VertSplitterSizesList;
-<a name="l00218"></a><a class="code" href="classKviChannel.html#ad9b3fbb07cae1b3741f42ee61b12e31a">00218</a>         <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>                           * m_pButtonContainer;
-<a name="l00219"></a>00219 <span class="keyword">public</span>:
-<a name="l00224"></a><a class="code" href="classKviChannel.html#ac58b9fe3de2c5f10107b2caa6cdc9933">00224</a>         <a class="code" href="classKviUserListView.html" title="User list view management class.">KviUserListView</a> * <a class="code" href="classKviChannel.html#ac58b9fe3de2c5f10107b2caa6cdc9933" title="Returns the user listview object.">userListView</a>(){ <span class="keywordflow">return</span> m_pUserListView; };
-<a name="l00225"></a>00225 
-<a name="l00230"></a><a class="code" href="classKviChannel.html#a56565fec9c825f4a1d28a1883388ca64">00230</a>         <a class="code" href="classKviTopicWidget.html">KviTopicWidget</a> * <a class="code" href="classKviChannel.html#a56565fec9c825f4a1d28a1883388ca64" title="Returns the topic widget object.">topicWidget</a>(){ <span class="keywordflow">return</span> m_pTopicWidget; };
-<a name="l00231"></a>00231 
-<a name="l00236"></a><a class="code" href="classKviChannel.html#abc07d3f6b6a436f41cc0a2994e423346">00236</a>         <a class="code" href="classKviIrcView.html">KviIrcView</a> * <a class="code" href="classKviChannel.html#abc07d3f6b6a436f41cc0a2994e423346" title="Returns the irc view object.">messageView</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pMessageView; };
-<a name="l00237"></a>00237 
-<a name="l00242"></a><a class="code" href="classKviChannel.html#acb82f353506beccea03934ec15433a66">00242</a>         QFrame * <a class="code" href="classKviChannel.html#acb82f353506beccea03934ec15433a66" title="Returns the button container object.">buttonContainer</a>() { <span class="keywordflow">return</span> (QFrame*)m_pButtonContainer; };
-<a name="l00243"></a>00243 
-<a name="l00248"></a><a class="code" href="classKviChannel.html#a577d6f9548edb3060f62a1adf31fa254">00248</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviMaskEntry&gt;</a> * <a class="code" href="classKviChannel.html#a577d6f9548edb3060f62a1adf31fa254" title="Returns the list of bans set.">banList</a>(){ <span class="keywordflow">return</span> m_pBanList; };
-<a name="l00249"></a>00249 
-<a name="l00254"></a><a class="code" href="classKviChannel.html#a8e15133c17eb8e181bdb33e873fb8cbb">00254</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviMaskEntry&gt;</a> * <a class="code" href="classKviChannel.html#a8e15133c17eb8e181bdb33e873fb8cbb" title="Returns the list of ban exceptions set.">banExceptionList</a>(){ <span class="keywordflow">return</span> m_pBanExceptionList; };
-<a name="l00255"></a>00255 
-<a name="l00260"></a><a class="code" href="classKviChannel.html#ab79e733e1dccd76ea45089852efb91b2">00260</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviMaskEntry&gt;</a> * <a class="code" href="classKviChannel.html#ab79e733e1dccd76ea45089852efb91b2" title="Returns the list of invites set.">inviteList</a>(){ <span class="keywordflow">return</span> m_pInviteList; };
-<a name="l00261"></a>00261 
-<a name="l00266"></a><a class="code" href="classKviChannel.html#a7b1a0c4063b0d70cd7194d4a7aff4cf9">00266</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviMaskEntry&gt;</a> * <a class="code" href="classKviChannel.html#a7b1a0c4063b0d70cd7194d4a7aff4cf9" title="Returns the list of quiet bans set.">quietBanList</a>(){ <span class="keywordflow">return</span> m_pQuietBanList; };
-<a name="l00267"></a>00267 
-<a name="l00272"></a><a class="code" href="classKviChannel.html#a1325dd46dc464b119a2fda7c0c2f8dae">00272</a>         QString * <a class="code" href="classKviChannel.html#a1325dd46dc464b119a2fda7c0c2f8dae" title="Returns the first selected nickname in the userlist.">firstSelectedNickname</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;firstSelectedNickname(); };
-<a name="l00273"></a>00273 
-<a name="l00278"></a><a class="code" href="classKviChannel.html#a759c72ddf5e7032643375e3b2be5f754">00278</a>         QString * <a class="code" href="classKviChannel.html#a759c72ddf5e7032643375e3b2be5f754" title="Returns the next selected nickname in the userlist.">nextSelectedNickname</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;nextSelectedNickname(); };
-<a name="l00279"></a>00279 
-<a name="l00284"></a><a class="code" href="classKviChannel.html#a36565979756c991e3f2bf3edcd080acc">00284</a>         <span class="keyword">virtual</span> <span class="keyword">const</span> QString &amp; <a class="code" href="classKviChannel.html#a36565979756c991e3f2bf3edcd080acc" title="Returns the name of the channel.">target</a>(){ <span class="keywordflow">return</span> <a class="code" href="classKviWindow.html#a1a9d026251bc4cf03e3718f9d0af77ac">windowName</a>(); };
-<a name="l00285"></a>00285 
-<a name="l00290"></a><a class="code" href="classKviChannel.html#a1c8b54b99fb56438684a16722d2faa34">00290</a>         <span class="keyword">const</span> QString &amp; <a class="code" href="classKviChannel.html#a1c8b54b99fb56438684a16722d2faa34" title="Returns the name of the channel with user flags.">nameWithUserFlag</a>(){ <span class="keywordflow">return</span> m_szNameWithUserFlag; };
-<a name="l00291"></a>00291 
-<a name="l00297"></a>00297         <span class="keywordtype">void</span> getChannelActivityStats(<a class="code" href="struct__KviChannelActivityStats.html" title="A struct which holds the activity stats.">KviChannelActivityStats</a> * <a class="code" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>);
-<a name="l00298"></a>00298 
-<a name="l00303"></a><a class="code" href="classKviChannel.html#a0743f6f4caf625ead99964d92f85dafb">00303</a>         <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#a0743f6f4caf625ead99964d92f85dafb" title="Returns the number of selected users.">selectedCount</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;selectedCount(); };
-<a name="l00304"></a>00304 
-<a name="l00309"></a><a class="code" href="classKviChannel.html#a7afc53ed2dbd3df9eff914be393d3ea7">00309</a>         <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#a7afc53ed2dbd3df9eff914be393d3ea7" title="Returns the number of users with chanowner status.">chanOwnerCount</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;chanOwnerCount(); };
-<a name="l00310"></a>00310 
-<a name="l00315"></a><a class="code" href="classKviChannel.html#acb2f371c48dcec876895d2b901cdbaaf">00315</a>         <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#acb2f371c48dcec876895d2b901cdbaaf" title="Returns the number of users with chanadmin status.">chanAdminCount</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;chanAdminCount(); };
-<a name="l00316"></a>00316 
-<a name="l00321"></a><a class="code" href="classKviChannel.html#a307aec0ab4fc67e396e0e3c852100b2a">00321</a>         <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#a307aec0ab4fc67e396e0e3c852100b2a" title="Returns the number of users with op status.">opCount</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;opCount(); };
-<a name="l00322"></a>00322 
-<a name="l00327"></a><a class="code" href="classKviChannel.html#af06bb33f41b27e9cedf36dc6572b875a">00327</a>         <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#af06bb33f41b27e9cedf36dc6572b875a" title="Returns the number of users with halfop status.">halfOpCount</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;halfOpCount(); };
-<a name="l00328"></a>00328 
-<a name="l00333"></a><a class="code" href="classKviChannel.html#ae44e01c303db9e6be0a9198935db09e5">00333</a>         <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#ae44e01c303db9e6be0a9198935db09e5" title="Returns the number of users with voice status.">voiceCount</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;voiceCount(); };
-<a name="l00334"></a>00334 
-<a name="l00339"></a><a class="code" href="classKviChannel.html#a6432101dfd97c3ee26b18b32f2e0022f">00339</a>         <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#a6432101dfd97c3ee26b18b32f2e0022f" title="Returns the number of users with userop status.">userOpCount</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;userOpCount(); };
-<a name="l00340"></a>00340 
-<a name="l00345"></a><a class="code" href="classKviChannel.html#a30ea2aa11fcc4b61248f470849742064">00345</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#a30ea2aa11fcc4b61248f470849742064" title="Returns the number of users.">count</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;count(); };
-<a name="l00346"></a>00346 
-<a name="l00351"></a><a class="code" href="classKviChannel.html#afdfa2fd1a13db7ed73fcc2ac76d04f78">00351</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#afdfa2fd1a13db7ed73fcc2ac76d04f78" title="Returns the number of ban masks.">banCount</a>(){ <span class="keywordflow">return</span> m_pBanList-&gt;count(); };
-<a name="l00352"></a>00352 
-<a name="l00357"></a><a class="code" href="classKviChannel.html#a04aafbfed2d3c596039912c551473f36">00357</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#a04aafbfed2d3c596039912c551473f36" title="Returns the number of ban exceptions masks list.">banExceptionCount</a>(){ <span class="keywordflow">return</span> m_pBanExceptionList-&gt;count(); };
-<a name="l00358"></a>00358 
-<a name="l00363"></a><a class="code" href="classKviChannel.html#ab990b0db10b1500267472ba01151d6cc">00363</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#ab990b0db10b1500267472ba01151d6cc" title="Returns the number of invite masks.">inviteCount</a>(){ <span class="keywordflow">return</span> m_pInviteList-&gt;count(); };
-<a name="l00364"></a>00364 
-<a name="l00369"></a><a class="code" href="classKviChannel.html#a6c86ed016f41466543799dc375643329">00369</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#a6c86ed016f41466543799dc375643329" title="Returns the number of quiet ban masks.">quietBanCount</a>(){ <span class="keywordflow">return</span> m_pQuietBanList-&gt;count(); };
-<a name="l00370"></a>00370 
-<a name="l00386"></a>00386         <span class="keywordtype">void</span> setMask(<span class="keywordtype">char</span> cFlag, <span class="keyword">const</span> QString &amp; szMask, <span class="keywordtype">bool</span> bAdd, <span class="keyword">const</span> QString &amp; szSetBy, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uSetAt);
-<a name="l00387"></a>00387 
-<a name="l00392"></a><a class="code" href="classKviChannel.html#a120fe57c336b74e581cf5bc30f9ccf5d">00392</a>         <a class="code" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a> <a class="code" href="classKviChannel.html#a120fe57c336b74e581cf5bc30f9ccf5d" title="Returns the time of the last received WHO reply.">lastReceivedWhoReply</a>(){ <span class="keywordflow">return</span> m_tLastReceivedWhoReply; };
-<a name="l00393"></a>00393 
-<a name="l00399"></a><a class="code" href="classKviChannel.html#ae29e80f44f109ca9db8855e33716646e">00399</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#ae29e80f44f109ca9db8855e33716646e" title="Sets the time of the last received WHO reply.">setLastReceivedWhoReply</a>(<a class="code" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a> tTime){ m_tLastReceivedWhoReply = tTime; };
-<a name="l00400"></a>00400 
-<a name="l00405"></a><a class="code" href="classKviChannel.html#a8b9fbad79d2fd5378fb161e6cd30606b">00405</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a8b9fbad79d2fd5378fb161e6cd30606b" title="Returns true if we have sent the sync WHO request.">sentSyncWhoRequest</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#a78172d72d3ba7d9a9c9c59410808a2ea">KVI_CHANNEL_STATE_SENTSYNCWHOREQUEST</a>); };
-<a name="l00406"></a>00406 
-<a name="l00411"></a><a class="code" href="classKviChannel.html#a2c039e54a2d478951dd5193d675ead67">00411</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a2c039e54a2d478951dd5193d675ead67" title="Sets the sync WHO request flag.">setSentSyncWhoRequest</a>(){ m_iStateFlags |= <a class="code" href="kvi__channel_8h.html#a78172d72d3ba7d9a9c9c59410808a2ea">KVI_CHANNEL_STATE_SENTSYNCWHOREQUEST</a>; };
-<a name="l00412"></a>00412 
-<a name="l00417"></a><a class="code" href="classKviChannel.html#af52d89a53e17537dafb614571999efc5">00417</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#af52d89a53e17537dafb614571999efc5" title="Clears the sync WHO request flag.">clearSentSyncWhoRequest</a>(){ m_iStateFlags ^= <a class="code" href="kvi__channel_8h.html#a78172d72d3ba7d9a9c9c59410808a2ea">KVI_CHANNEL_STATE_SENTSYNCWHOREQUEST</a>; };
-<a name="l00418"></a>00418 
-<a name="l00423"></a><a class="code" href="classKviChannel.html#a3851e4ca65bc6b7486d1a639a87ac154">00423</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a3851e4ca65bc6b7486d1a639a87ac154" title="Returns true if we have sent the WHO request.">sentWhoRequest</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#a1a1c73afae80a1bf37c872510071dd4f">KVI_CHANNEL_STATE_SENTWHOREQUEST</a>); };
-<a name="l00424"></a>00424 
-<a name="l00429"></a><a class="code" href="classKviChannel.html#a112e3a18420a636f45c806b95c1cf8f2">00429</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a112e3a18420a636f45c806b95c1cf8f2" title="Sets the WHO request flag.">setSentWhoRequest</a>(){ m_iStateFlags |= <a class="code" href="kvi__channel_8h.html#a1a1c73afae80a1bf37c872510071dd4f">KVI_CHANNEL_STATE_SENTWHOREQUEST</a>; };
-<a name="l00430"></a>00430 
-<a name="l00435"></a><a class="code" href="classKviChannel.html#a418c0b408772a5a91b6e458955bc9822">00435</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a418c0b408772a5a91b6e458955bc9822" title="Returns true if we have sent the invite list request.">sentInviteListRequest</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#a8d20fb3d58caa0a88dc6625d54b9fa52">KVI_CHANNEL_STATE_SENTINVITELISTREQUEST</a>); };
-<a name="l00436"></a>00436 
-<a name="l00441"></a><a class="code" href="classKviChannel.html#a0daa19d486748d25d91e2c7003056c28">00441</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a0daa19d486748d25d91e2c7003056c28" title="Sets the invite request flag.">setSentInviteListRequest</a>(){ m_iStateFlags |= <a class="code" href="kvi__channel_8h.html#a8d20fb3d58caa0a88dc6625d54b9fa52">KVI_CHANNEL_STATE_SENTINVITELISTREQUEST</a>; };
-<a name="l00442"></a>00442 
-<a name="l00447"></a><a class="code" href="classKviChannel.html#a4bc8859f94f17e53dc353c81a2e29bf3">00447</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a4bc8859f94f17e53dc353c81a2e29bf3" title="Clears the invite request flag.">setInviteListDone</a>(){ m_iStateFlags ^= <a class="code" href="kvi__channel_8h.html#a8d20fb3d58caa0a88dc6625d54b9fa52">KVI_CHANNEL_STATE_SENTINVITELISTREQUEST</a>; };
-<a name="l00448"></a>00448 
-<a name="l00453"></a><a class="code" href="classKviChannel.html#a7f14e80c1e2ef7e9f0a0a94ae90e6159">00453</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a7f14e80c1e2ef7e9f0a0a94ae90e6159" title="Returns true if we have sent the ban list request.">sentBanListRequest</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#a4f506ff1b9e5cb2a2e890152090680f5">KVI_CHANNEL_STATE_SENTBANLISTREQUEST</a>); };
-<a name="l00454"></a>00454 
-<a name="l00459"></a><a class="code" href="classKviChannel.html#af50e3a372e9aa603002f80828b6260c5">00459</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#af50e3a372e9aa603002f80828b6260c5" title="Sets the ban request flag.">setSentBanListRequest</a>(){ m_iStateFlags |= <a class="code" href="kvi__channel_8h.html#a4f506ff1b9e5cb2a2e890152090680f5">KVI_CHANNEL_STATE_SENTBANLISTREQUEST</a>; };
-<a name="l00460"></a>00460 
-<a name="l00465"></a><a class="code" href="classKviChannel.html#ac90d0d65fe87a22760869d10a2d64301">00465</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#ac90d0d65fe87a22760869d10a2d64301" title="Clears the ban request flag.">setBanListDone</a>(){ m_iStateFlags ^= <a class="code" href="kvi__channel_8h.html#a4f506ff1b9e5cb2a2e890152090680f5">KVI_CHANNEL_STATE_SENTBANLISTREQUEST</a>; };
-<a name="l00466"></a>00466 
-<a name="l00471"></a><a class="code" href="classKviChannel.html#a11520e5cf91fb959e196f922a770c0f2">00471</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a11520e5cf91fb959e196f922a770c0f2" title="Returns true if we have sent the ban exception list request.">sentBanExceptionListRequest</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#a4ed13d9f4fe8d6d048bc0098cbbf2aed">KVI_CHANNEL_STATE_SENTBANEXCEPTIONLISTREQUEST</a>); };
-<a name="l00472"></a>00472 
-<a name="l00477"></a><a class="code" href="classKviChannel.html#ab6e9b7c01d8fbe4124ba55b0dd90b9bd">00477</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#ab6e9b7c01d8fbe4124ba55b0dd90b9bd" title="Sets the ban exception request flag.">setSentBanExceptionListRequest</a>(){ m_iStateFlags |= <a class="code" href="kvi__channel_8h.html#a4ed13d9f4fe8d6d048bc0098cbbf2aed">KVI_CHANNEL_STATE_SENTBANEXCEPTIONLISTREQUEST</a>; };
-<a name="l00478"></a>00478 
-<a name="l00483"></a><a class="code" href="classKviChannel.html#a30505e51034a9340250a199e40850036">00483</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a30505e51034a9340250a199e40850036" title="Clears the ban exception request flag.">setBanExceptionListDone</a>(){ m_iStateFlags ^= <a class="code" href="kvi__channel_8h.html#a4ed13d9f4fe8d6d048bc0098cbbf2aed">KVI_CHANNEL_STATE_SENTBANEXCEPTIONLISTREQUEST</a>; };
-<a name="l00484"></a>00484 
-<a name="l00489"></a><a class="code" href="classKviChannel.html#a8b56326463c81f76eb4aae569b7d5d8a">00489</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a8b56326463c81f76eb4aae569b7d5d8a" title="Returns true if we have sent the quiet ban list request.">sentQuietBanListRequest</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#adb3ccfd0da673b0502b6f45c71393405">KVI_CHANNEL_STATE_SENTQUIETBANLISTREQUEST</a>); };
-<a name="l00490"></a>00490 
-<a name="l00495"></a><a class="code" href="classKviChannel.html#af38f207868e2bc69007a55104a38fbd1">00495</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#af38f207868e2bc69007a55104a38fbd1" title="Sets the quiet ban request flag.">setSentQuietBanListRequest</a>(){ m_iStateFlags |= <a class="code" href="kvi__channel_8h.html#adb3ccfd0da673b0502b6f45c71393405">KVI_CHANNEL_STATE_SENTQUIETBANLISTREQUEST</a>; };
-<a name="l00496"></a>00496 
-<a name="l00501"></a><a class="code" href="classKviChannel.html#ab03f8b0d320174f64bc84190db1f946d">00501</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#ab03f8b0d320174f64bc84190db1f946d" title="Clears the quiet ban request flag.">setQuietBanListDone</a>(){ m_iStateFlags ^= <a class="code" href="kvi__channel_8h.html#adb3ccfd0da673b0502b6f45c71393405">KVI_CHANNEL_STATE_SENTQUIETBANLISTREQUEST</a>; };
-<a name="l00502"></a>00502 
-<a name="l00507"></a><a class="code" href="classKviChannel.html#aa0d2f060fbf06729980d5d8ded021518">00507</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#aa0d2f060fbf06729980d5d8ded021518" title="Returns true if the channel has all names.">hasAllNames</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#ac2bca9175f41d08cb8891d4645d4d12c">KVI_CHANNEL_STATE_HAVEALLNAMES</a>); };
-<a name="l00508"></a>00508 
-<a name="l00513"></a><a class="code" href="classKviChannel.html#a7f8030192ea9d2a42fa3fe733398bb63">00513</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a7f8030192ea9d2a42fa3fe733398bb63" title="Sets the existance of all names.">setHasAllNames</a>(){ m_iStateFlags |= <a class="code" href="kvi__channel_8h.html#ac2bca9175f41d08cb8891d4645d4d12c">KVI_CHANNEL_STATE_HAVEALLNAMES</a>; checkChannelSync(); };
-<a name="l00514"></a>00514 
-<a name="l00519"></a><a class="code" href="classKviChannel.html#ae3df982a41e59678eb7e4ec3cd9fd91d">00519</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#ae3df982a41e59678eb7e4ec3cd9fd91d" title="Returns true if the channel has an invite list.">hasInviteList</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#a1a256268a6339e52a2e684561adeac9a">KVI_CHANNEL_STATE_HAVEINVITELIST</a>); checkChannelSync(); };
-<a name="l00520"></a>00520 
-<a name="l00525"></a><a class="code" href="classKviChannel.html#a19792ff7bdda1cf6991eaa979410b443">00525</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a19792ff7bdda1cf6991eaa979410b443" title="Sets the existance of the invite list.">setHasInviteList</a>(){ m_iStateFlags |= <a class="code" href="kvi__channel_8h.html#a1a256268a6339e52a2e684561adeac9a">KVI_CHANNEL_STATE_HAVEINVITELIST</a>; };
-<a name="l00526"></a>00526 
-<a name="l00531"></a><a class="code" href="classKviChannel.html#a72d4c8617bfa254543f563f07afddf97">00531</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a72d4c8617bfa254543f563f07afddf97" title="Returns true if the channel has a WHO list.">hasWhoList</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#ac0cb4fb70971275532539a8e2c4493b7">KVI_CHANNEL_STATE_HAVEWHOLIST</a>); };
+<a name="l00075"></a><a class="code" href="kvi__channel_8h.html#ac2bca9175f41d08cb8891d4645d4d12c">00075</a> <span class="preprocessor">#define KVI_CHANNEL_STATE_HAVEALLNAMES 1</span>
+<a name="l00076"></a><a class="code" href="kvi__channel_8h.html#ac0cb4fb70971275532539a8e2c4493b7">00076</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_HAVEWHOLIST (1 &lt;&lt; 2)</span>
+<a name="l00077"></a><a class="code" href="kvi__channel_8h.html#ab041e74dc71245629dc36a2efd8e90f7">00077</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_DEADCHAN (1 &lt;&lt; 3)</span>
+<a name="l00078"></a><a class="code" href="kvi__channel_8h.html#a1a1c73afae80a1bf37c872510071dd4f">00078</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_SENTWHOREQUEST (1 &lt;&lt; 4)</span>
+<a name="l00079"></a><a class="code" href="kvi__channel_8h.html#ab03684eed8b148c99042d705aaf861f0">00079</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_SENTPART (1 &lt;&lt; 5)</span>
+<a name="l00080"></a><a class="code" href="kvi__channel_8h.html#a11b16fca416cbea1c4da09a2686ffccd">00080</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_SYNCHRONIZED (1 &lt;&lt; 6)</span>
+<a name="l00081"></a><a class="code" href="kvi__channel_8h.html#ac450c7a76adfa1292d5dcca41ef41748">00081</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_NOCLOSEONPART (1 &lt;&lt; 7)</span>
+<a name="l00082"></a><a class="code" href="kvi__channel_8h.html#a78172d72d3ba7d9a9c9c59410808a2ea">00082</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_SENTSYNCWHOREQUEST (1 &lt;&lt; 8)</span>
+<a name="l00083"></a>00083 <span class="preprocessor"></span>
+<a name="l00084"></a><a class="code" href="kvi__channel_8h.html#a10818e4ca1d5e0ca7874f0d3c1f8d554">00084</a> <span class="preprocessor">#define KVI_CHANNEL_STATE_MODELIST_NONE 0</span>
+<a name="l00085"></a><a class="code" href="kvi__channel_8h.html#a92e37370aa5727b301ced117abc24054">00085</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_MODELIST_REQUEST 1</span>
+<a name="l00086"></a><a class="code" href="kvi__channel_8h.html#ad901043b817bcfba302e69e8aaef1623">00086</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_STATE_MODELIST_GOTIT 2</span>
+<a name="l00087"></a>00087 <span class="preprocessor"></span>
+<a name="l00096"></a><a class="code" href="kvi__channel_8h.html#a7538f1d80e55a293866695ba3eed97b6">00096</a> <span class="preprocessor">#define KVI_CHANACTIVITY_LIMIT_ICE 5</span>
+<a name="l00097"></a><a class="code" href="kvi__channel_8h.html#acd4fb493958912ba9dec6212bd380cfc">00097</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANACTIVITY_LIMIT_VERYCOLD 10</span>
+<a name="l00098"></a><a class="code" href="kvi__channel_8h.html#a8bf25f3f03cd8a0632f6f4abf2dc0108">00098</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANACTIVITY_LIMIT_COLD 20</span>
+<a name="l00099"></a><a class="code" href="kvi__channel_8h.html#aeec29a733a2d8054f964b0ff444dd159">00099</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANACTIVITY_LIMIT_UNDEFINED 30</span>
+<a name="l00100"></a><a class="code" href="kvi__channel_8h.html#a7f109ec1c5792ed90e88984105f5b777">00100</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANACTIVITY_LIMIT_HOT 50</span>
+<a name="l00101"></a><a class="code" href="kvi__channel_8h.html#af2ff9f22c45ce834600bddd89386f34d">00101</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANACTIVITY_LIMIT_VERYHOT 70</span>
+<a name="l00102"></a>00102 <span class="preprocessor"></span>
+<a name="l00106"></a>00106 <span class="preprocessor">#ifndef AVERAGE_CHANNEL_USERS</span>
+<a name="l00107"></a>00107 <span class="preprocessor"></span><span class="preprocessor">        #define AVERAGE_CHANNEL_USERS 101</span>
+<a name="l00108"></a>00108 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00109"></a>00109 <span class="preprocessor"></span>
+<a name="l00114"></a><a class="code" href="kvi__channel_8h.html#a472a41ddde96f0ce714b583496c0d441">00114</a> <span class="preprocessor">#define KVI_CHANNEL_ACTION_HISTORY_MAX_COUNT 40</span>
+<a name="l00115"></a><a class="code" href="kvi__channel_8h.html#aa1a0cae8b235ca5e1cbbb4cdbc1d7d47">00115</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_CHANNEL_ACTION_HISTORY_MAX_TIMESPAN 600</span>
+<a name="l00116"></a>00116 <span class="preprocessor"></span>
+<a name="l00122"></a><a class="code" href="struct__KviChannelAction.html">00122</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct__KviChannelAction.html" title="A struct which holds the channel actions.">_KviChannelAction</a>
+<a name="l00123"></a>00123 {
+<a name="l00124"></a><a class="code" href="struct__KviChannelAction.html#a0d6039330e3909efbb31218008209203">00124</a>         QString      <a class="code" href="struct__KviChannelAction.html#a0d6039330e3909efbb31218008209203">szNick</a>;       <span class="comment">// action source nick</span>
+<a name="l00125"></a><a class="code" href="struct__KviChannelAction.html#a623a2f3701ea6dcbb73fcc637e56cf6b">00125</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct__KviChannelAction.html#a623a2f3701ea6dcbb73fcc637e56cf6b">uActionType</a>;  <span class="comment">// type of the action</span>
+<a name="l00126"></a><a class="code" href="struct__KviChannelAction.html#aa86028cc0b254961e7a5019eed4e63fe">00126</a>         <a class="code" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a>   <a class="code" href="struct__KviChannelAction.html#aa86028cc0b254961e7a5019eed4e63fe">tTime</a>;        <span class="comment">// time of the action</span>
+<a name="l00127"></a><a class="code" href="struct__KviChannelAction.html#af58698edf2ff1d599d225f82899df1ad">00127</a>         <span class="keywordtype">int</span>          <a class="code" href="struct__KviChannelAction.html#af58698edf2ff1d599d225f82899df1ad">iTemperature</a>; <span class="comment">// temperature of the action</span>
+<a name="l00128"></a>00128 } <a class="code" href="struct__KviChannelAction.html" title="A struct which holds the channel actions.">KviChannelAction</a>;
+<a name="l00129"></a>00129 
+<a name="l00135"></a><a class="code" href="struct__KviChannelActivityStats.html">00135</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct__KviChannelActivityStats.html" title="A struct which holds the activity stats.">_KviChannelActivityStats</a>
+<a name="l00136"></a>00136 {
+<a name="l00137"></a><a class="code" href="struct__KviChannelActivityStats.html#a0d055f4fa38c4dab801d5946c169dd5c">00137</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        <a class="code" href="struct__KviChannelActivityStats.html#a0d055f4fa38c4dab801d5946c169dd5c">uActionCount</a>;              <span class="comment">// number of actions in the history</span>
+<a name="l00138"></a><a class="code" href="struct__KviChannelActivityStats.html#a5a21a5d97a32a3c0e8fb9e0f5ddc2be5">00138</a>         <span class="keywordtype">bool</span>                <a class="code" href="struct__KviChannelActivityStats.html#a5a21a5d97a32a3c0e8fb9e0f5ddc2be5">bStatsInaccurate</a>;          <span class="comment">// the stats are inaccurate because we have just joined the chan</span>
+<a name="l00139"></a><a class="code" href="struct__KviChannelActivityStats.html#a63c95ebccb66e662cfd9a7abf6015d37">00139</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        <a class="code" href="struct__KviChannelActivityStats.html#a63c95ebccb66e662cfd9a7abf6015d37">uLastActionTimeSpan</a>;       <span class="comment">// the timespan between the last action and now</span>
+<a name="l00140"></a><a class="code" href="struct__KviChannelActivityStats.html#a42e368863c132ea1a8e98869bd4ed99a">00140</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        <a class="code" href="struct__KviChannelActivityStats.html#a42e368863c132ea1a8e98869bd4ed99a">uFirstActionTimeSpan</a>;      <span class="comment">// the time span between the first and the last action</span>
+<a name="l00141"></a><a class="code" href="struct__KviChannelActivityStats.html#a0bbaf77234471ab424e25fd9602448f9">00141</a>         <span class="keywordtype">double</span>              <a class="code" href="struct__KviChannelActivityStats.html#a0bbaf77234471ab424e25fd9602448f9">dActionsPerMinute</a>;         <span class="comment">// average number of actions per minute in the lastActionTimeSpan</span>
+<a name="l00142"></a><a class="code" href="struct__KviChannelActivityStats.html#ae0dc4bf241fca3c9949a177388ccf98d">00142</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        <a class="code" href="struct__KviChannelActivityStats.html#ae0dc4bf241fca3c9949a177388ccf98d">uActionsInTheLastMinute</a>;   <span class="comment">// number of actions in the last minute</span>
+<a name="l00143"></a><a class="code" href="struct__KviChannelActivityStats.html#a2487437ad2fcc77238ce55f805428c36">00143</a>         <span class="keywordtype">int</span>                 <a class="code" href="struct__KviChannelActivityStats.html#a2487437ad2fcc77238ce55f805428c36">iAverageActionTemperature</a>; <span class="comment">// the average chan temperature</span>
+<a name="l00144"></a><a class="code" href="struct__KviChannelActivityStats.html#aa9985d8656496310568f148d89338f20">00144</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        <a class="code" href="struct__KviChannelActivityStats.html#aa9985d8656496310568f148d89338f20">uHotActionCount</a>;
+<a name="l00145"></a><a class="code" href="struct__KviChannelActivityStats.html#a9559a0591b0912e194213a70eae0bc0b">00145</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>        <a class="code" href="struct__KviChannelActivityStats.html#a9559a0591b0912e194213a70eae0bc0b">uHotActionPercent</a>;
+<a name="l00146"></a><a class="code" href="struct__KviChannelActivityStats.html#a1c5899e8e93128ca6424d0744a9d8a6f">00146</a>         QStringList         <a class="code" href="struct__KviChannelActivityStats.html#a1c5899e8e93128ca6424d0744a9d8a6f">lTalkingUsers</a>;             <span class="comment">// users that seem to be talking NOW</span>
+<a name="l00147"></a><a class="code" href="struct__KviChannelActivityStats.html#ae1249646135b47b08ad354e2fbc15a0f">00147</a>         QStringList         <a class="code" href="struct__KviChannelActivityStats.html#ae1249646135b47b08ad354e2fbc15a0f">lWereTalkingUsers</a>;
+<a name="l00148"></a>00148 } <a class="code" href="struct__KviChannelActivityStats.html" title="A struct which holds the activity stats.">KviChannelActivityStats</a>;
+<a name="l00149"></a>00149 
+<a name="l00154"></a><a class="code" href="classKviChannel.html">00154</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviChannel.html" title="The class which manages a channel.">KviChannel</a> : <span class="keyword">public</span> <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>
+<a name="l00155"></a>00155 {
+<a name="l00156"></a>00156         Q_OBJECT
+<a name="l00157"></a>00157 <span class="keyword">public</span>:
+<a name="l00165"></a>00165         <a class="code" href="classKviChannel.html" title="The class which manages a channel.">KviChannel</a>(<a class="code" href="classKviFrame.html">KviFrame</a> * lpFrm, <a class="code" href="classKviConsole.html">KviConsole</a> * lpConsole, <span class="keyword">const</span> QString &amp; szName);
+<a name="l00166"></a>00166 
+<a name="l00170"></a>00170         ~<a class="code" href="classKviChannel.html" title="The class which manages a channel.">KviChannel</a>();
+<a name="l00171"></a>00171 <span class="keyword">protected</span>:
+<a name="l00172"></a><a class="code" href="classKviChannel.html#a3b51568330c381be078d24cbd95ec959">00172</a>         <a class="code" href="kvi__tal__splitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a>                       * m_pTopSplitter;
+<a name="l00173"></a><a class="code" href="classKviChannel.html#a2c4c392118edeaabcc8227ecf14d0b27">00173</a>         <a class="code" href="kvi__tal__splitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a>                       * m_pVertSplitter;
+<a name="l00174"></a><a class="code" href="classKviChannel.html#ae84b507a26ed11840c64a9a21846bbfd">00174</a>         QToolButton                          * m_pDoubleViewButton;
+<a name="l00175"></a><a class="code" href="classKviChannel.html#a07006c130f460f38d4f89e303f273462">00175</a>         <a class="code" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a>              * m_pListViewButton;
+<a name="l00176"></a><a class="code" href="classKviChannel.html#af35da68758a28f1d0d732bce938c1788">00176</a>         <a class="code" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a>              * m_pModeEditorButton;
+<a name="l00177"></a><a class="code" href="classKviChannel.html#a5451ac0c36fdc2ebb8ae90829e046146">00177</a>         QMap&lt;char, KviWindowToolPageButton*&gt;   m_pListEditorButtons;
+<a name="l00178"></a><a class="code" href="classKviChannel.html#acc3f1efce1b27df6a04be0cef316b28a">00178</a>         QMap&lt;char, KviMaskEditor*&gt;             m_pListEditors;
+<a name="l00179"></a><a class="code" href="classKviChannel.html#adcc33f374489aa5aef70e07af8c0d648">00179</a>         <a class="code" href="classKviModeEditor.html">KviModeEditor</a>                        * m_pModeEditor;
+<a name="l00180"></a><a class="code" href="classKviChannel.html#a8077e8cdc07cc7f41d152deb75627cf6">00180</a>         <a class="code" href="classKviIrcView.html">KviIrcView</a>                           * m_pMessageView;
+<a name="l00181"></a><a class="code" href="classKviChannel.html#af8dc864d26311d2a3db04de0c4f43523">00181</a>         <a class="code" href="classKviTopicWidget.html">KviTopicWidget</a>                       * m_pTopicWidget;
+<a name="l00182"></a><a class="code" href="classKviChannel.html#a2758155a08aee6e0a13b72f853f08f8c">00182</a>         <a class="code" href="classKviUserListView.html" title="User list view management class.">KviUserListView</a>                      * m_pUserListView;
+<a name="l00183"></a><a class="code" href="classKviChannel.html#ad942773057a5a872b27b7669a94c209a">00183</a>         <a class="code" href="classKviModeWidget.html">KviModeWidget</a>                        * m_pModeWidget;
+<a name="l00184"></a><a class="code" href="classKviChannel.html#a98484fda3d8b3b4dcbde2be9771ad95a">00184</a>         <span class="keywordtype">int</span>                                    m_iStateFlags;
+<a name="l00185"></a><a class="code" href="classKviChannel.html#abf0d964edc6ff24914e2a1d58d571980">00185</a>         QString                                m_szSentModeRequests;
+<a name="l00186"></a><a class="code" href="classKviChannel.html#ac7957a48dcda442bd24829ece4610734">00186</a>         QString                                m_szChannelMode;
+<a name="l00187"></a><a class="code" href="classKviChannel.html#a7a9347df42387dbafbdb59d2917cca45">00187</a>         QMap&lt;char, QString&gt;                    m_szChannelParameterModes;
+<a name="l00188"></a><a class="code" href="classKviChannel.html#a02aca489b4eb5f85fb95a19022410e80">00188</a>         QMap&lt;char, KviPointerList&lt;KviMaskEntry&gt;*&gt; m_pModeLists;
+<a name="l00189"></a><a class="code" href="classKviChannel.html#a8ee1edda14c923c36f5d1368014d0f17">00189</a>         <a class="code" href="classKviPixmap.html">KviPixmap</a>                              m_privateBackground;
+<a name="l00190"></a><a class="code" href="classKviChannel.html#a00ac729656dc76fa9e33067a08f72de4">00190</a>         QDateTime                              m_joinTime;
+<a name="l00191"></a><a class="code" href="classKviChannel.html#abd02e126b3ab6098ca3c9b80f6337c24">00191</a>         QString                                m_szNameWithUserFlag;
+<a name="l00192"></a><a class="code" href="classKviChannel.html#a2e69bb81f51fe87a76767271f4d5a7c6">00192</a>         QStringList                          * m_pTmpHighLighted;
+<a name="l00193"></a><a class="code" href="classKviChannel.html#a05d25b46a24131f6329db936c4c3df48">00193</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>                           m_uActionHistoryHotActionCount;
+<a name="l00194"></a><a class="code" href="classKviChannel.html#a0eab770c9ef95e8b341a1ebaf0088c32">00194</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviChannelAction&gt;</a>     * m_pActionHistory;
+<a name="l00195"></a><a class="code" href="classKviChannel.html#ad1dd6ecb07ae23e014cfdf234bac3a18">00195</a>         <a class="code" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a>                             m_tLastReceivedWhoReply;
+<a name="l00196"></a><a class="code" href="classKviChannel.html#aedd578270c2a92dd6951bf31c424915f">00196</a>         QList&lt;int&gt;                             m_VertSplitterSizesList;
+<a name="l00197"></a><a class="code" href="classKviChannel.html#ad9b3fbb07cae1b3741f42ee61b12e31a">00197</a>         <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>                           * m_pButtonContainer;
+<a name="l00198"></a>00198 <span class="keyword">public</span>:
+<a name="l00203"></a><a class="code" href="classKviChannel.html#ac58b9fe3de2c5f10107b2caa6cdc9933">00203</a>         <a class="code" href="classKviUserListView.html" title="User list view management class.">KviUserListView</a> * <a class="code" href="classKviChannel.html#ac58b9fe3de2c5f10107b2caa6cdc9933" title="Returns the user listview object.">userListView</a>(){ <span class="keywordflow">return</span> m_pUserListView; };
+<a name="l00204"></a>00204 
+<a name="l00209"></a><a class="code" href="classKviChannel.html#a56565fec9c825f4a1d28a1883388ca64">00209</a>         <a class="code" href="classKviTopicWidget.html">KviTopicWidget</a> * <a class="code" href="classKviChannel.html#a56565fec9c825f4a1d28a1883388ca64" title="Returns the topic widget object.">topicWidget</a>(){ <span class="keywordflow">return</span> m_pTopicWidget; };
+<a name="l00210"></a>00210 
+<a name="l00215"></a><a class="code" href="classKviChannel.html#abc07d3f6b6a436f41cc0a2994e423346">00215</a>         <a class="code" href="classKviIrcView.html">KviIrcView</a> * <a class="code" href="classKviChannel.html#abc07d3f6b6a436f41cc0a2994e423346" title="Returns the irc view object.">messageView</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pMessageView; };
+<a name="l00216"></a>00216 
+<a name="l00221"></a><a class="code" href="classKviChannel.html#acb82f353506beccea03934ec15433a66">00221</a>         QFrame * <a class="code" href="classKviChannel.html#acb82f353506beccea03934ec15433a66" title="Returns the button container object.">buttonContainer</a>() { <span class="keywordflow">return</span> (QFrame*)m_pButtonContainer; };
+<a name="l00222"></a>00222 
+<a name="l00227"></a><a class="code" href="classKviChannel.html#af4466715383ede38bc4d6dce34e927a1">00227</a>         <span class="keyword">inline</span> <a class="code" href="classKviPointerList.html" title="A template double linked list of pointers.">KviPointerList&lt;KviMaskEntry&gt;</a> * <a class="code" href="classKviChannel.html#af4466715383ede38bc4d6dce34e927a1" title="Returns a list of masks for a specific mode.">modeMasks</a>(<span class="keywordtype">char</span> cMode){ <span class="keywordflow">if</span>(m_pModeLists.contains(cMode)) <span class="keywordflow">return</span> m_pModeLists.value(cMode); <span class="keywordflow">return</span> 0; };
+<a name="l00228"></a>00228 
+<a name="l00233"></a><a class="code" href="classKviChannel.html#a1325dd46dc464b119a2fda7c0c2f8dae">00233</a>         QString * <a class="code" href="classKviChannel.html#a1325dd46dc464b119a2fda7c0c2f8dae" title="Returns the first selected nickname in the userlist.">firstSelectedNickname</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;firstSelectedNickname(); };
+<a name="l00234"></a>00234 
+<a name="l00239"></a><a class="code" href="classKviChannel.html#a759c72ddf5e7032643375e3b2be5f754">00239</a>         QString * <a class="code" href="classKviChannel.html#a759c72ddf5e7032643375e3b2be5f754" title="Returns the next selected nickname in the userlist.">nextSelectedNickname</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;nextSelectedNickname(); };
+<a name="l00240"></a>00240 
+<a name="l00245"></a><a class="code" href="classKviChannel.html#a36565979756c991e3f2bf3edcd080acc">00245</a>         <span class="keyword">virtual</span> <span class="keyword">const</span> QString &amp; <a class="code" href="classKviChannel.html#a36565979756c991e3f2bf3edcd080acc" title="Returns the name of the channel.">target</a>(){ <span class="keywordflow">return</span> <a class="code" href="classKviWindow.html#a1a9d026251bc4cf03e3718f9d0af77ac">windowName</a>(); };
+<a name="l00246"></a>00246 
+<a name="l00251"></a><a class="code" href="classKviChannel.html#a1c8b54b99fb56438684a16722d2faa34">00251</a>         <span class="keyword">const</span> QString &amp; <a class="code" href="classKviChannel.html#a1c8b54b99fb56438684a16722d2faa34" title="Returns the name of the channel with user flags.">nameWithUserFlag</a>(){ <span class="keywordflow">return</span> m_szNameWithUserFlag; };
+<a name="l00252"></a>00252 
+<a name="l00258"></a>00258         <span class="keywordtype">void</span> getChannelActivityStats(<a class="code" href="struct__KviChannelActivityStats.html" title="A struct which holds the activity stats.">KviChannelActivityStats</a> * <a class="code" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>);
+<a name="l00259"></a>00259 
+<a name="l00264"></a><a class="code" href="classKviChannel.html#a0743f6f4caf625ead99964d92f85dafb">00264</a>         <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#a0743f6f4caf625ead99964d92f85dafb" title="Returns the number of selected users.">selectedCount</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;selectedCount(); };
+<a name="l00265"></a>00265 
+<a name="l00270"></a><a class="code" href="classKviChannel.html#a7afc53ed2dbd3df9eff914be393d3ea7">00270</a>         <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#a7afc53ed2dbd3df9eff914be393d3ea7" title="Returns the number of users with chanowner status.">chanOwnerCount</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;chanOwnerCount(); };
+<a name="l00271"></a>00271 
+<a name="l00276"></a><a class="code" href="classKviChannel.html#acb2f371c48dcec876895d2b901cdbaaf">00276</a>         <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#acb2f371c48dcec876895d2b901cdbaaf" title="Returns the number of users with chanadmin status.">chanAdminCount</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;chanAdminCount(); };
+<a name="l00277"></a>00277 
+<a name="l00282"></a><a class="code" href="classKviChannel.html#a307aec0ab4fc67e396e0e3c852100b2a">00282</a>         <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#a307aec0ab4fc67e396e0e3c852100b2a" title="Returns the number of users with op status.">opCount</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;opCount(); };
+<a name="l00283"></a>00283 
+<a name="l00288"></a><a class="code" href="classKviChannel.html#af06bb33f41b27e9cedf36dc6572b875a">00288</a>         <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#af06bb33f41b27e9cedf36dc6572b875a" title="Returns the number of users with halfop status.">halfOpCount</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;halfOpCount(); };
+<a name="l00289"></a>00289 
+<a name="l00294"></a><a class="code" href="classKviChannel.html#ae44e01c303db9e6be0a9198935db09e5">00294</a>         <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#ae44e01c303db9e6be0a9198935db09e5" title="Returns the number of users with voice status.">voiceCount</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;voiceCount(); };
+<a name="l00295"></a>00295 
+<a name="l00300"></a><a class="code" href="classKviChannel.html#a6432101dfd97c3ee26b18b32f2e0022f">00300</a>         <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#a6432101dfd97c3ee26b18b32f2e0022f" title="Returns the number of users with userop status.">userOpCount</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;userOpCount(); };
+<a name="l00301"></a>00301 
+<a name="l00306"></a><a class="code" href="classKviChannel.html#a30ea2aa11fcc4b61248f470849742064">00306</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#a30ea2aa11fcc4b61248f470849742064" title="Returns the number of users.">count</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;count(); };
+<a name="l00307"></a>00307 
+<a name="l00312"></a><a class="code" href="classKviChannel.html#aabd98bfb13ce86234d3a9a7101177df0">00312</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviChannel.html#aabd98bfb13ce86234d3a9a7101177df0" title="Returns the number of masks is a channel mode list.">maskCount</a>(<span class="keywordtype">char</span> cMode){ <span class="keywordflow">if</span>(m_pModeLists.contains(cMode)) <span class="keywordflow">return</span> m_pModeLists.value(cMode)-&gt;count(); <span class="keywordflow">return</span> 0; };
+<a name="l00313"></a>00313 
+<a name="l00329"></a>00329         <span class="keywordtype">void</span> setMask(<span class="keywordtype">char</span> cMode, <span class="keyword">const</span> QString &amp; szMask, <span class="keywordtype">bool</span> bAdd, <span class="keyword">const</span> QString &amp; szSetBy, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uSetAt);
+<a name="l00330"></a>00330 
+<a name="l00335"></a><a class="code" href="classKviChannel.html#a120fe57c336b74e581cf5bc30f9ccf5d">00335</a>         <a class="code" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a> <a class="code" href="classKviChannel.html#a120fe57c336b74e581cf5bc30f9ccf5d" title="Returns the time of the last received WHO reply.">lastReceivedWhoReply</a>(){ <span class="keywordflow">return</span> m_tLastReceivedWhoReply; };
+<a name="l00336"></a>00336 
+<a name="l00342"></a><a class="code" href="classKviChannel.html#ae29e80f44f109ca9db8855e33716646e">00342</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#ae29e80f44f109ca9db8855e33716646e" title="Sets the time of the last received WHO reply.">setLastReceivedWhoReply</a>(<a class="code" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a> tTime){ m_tLastReceivedWhoReply = tTime; };
+<a name="l00343"></a>00343 
+<a name="l00348"></a><a class="code" href="classKviChannel.html#a8b9fbad79d2fd5378fb161e6cd30606b">00348</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a8b9fbad79d2fd5378fb161e6cd30606b" title="Returns true if we have sent the sync WHO request.">sentSyncWhoRequest</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#a78172d72d3ba7d9a9c9c59410808a2ea">KVI_CHANNEL_STATE_SENTSYNCWHOREQUEST</a>); };
+<a name="l00349"></a>00349 
+<a name="l00354"></a><a class="code" href="classKviChannel.html#a2c039e54a2d478951dd5193d675ead67">00354</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a2c039e54a2d478951dd5193d675ead67" title="Sets the sync WHO request flag.">setSentSyncWhoRequest</a>(){ m_iStateFlags |= <a class="code" href="kvi__channel_8h.html#a78172d72d3ba7d9a9c9c59410808a2ea">KVI_CHANNEL_STATE_SENTSYNCWHOREQUEST</a>; };
+<a name="l00355"></a>00355 
+<a name="l00360"></a><a class="code" href="classKviChannel.html#af52d89a53e17537dafb614571999efc5">00360</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#af52d89a53e17537dafb614571999efc5" title="Clears the sync WHO request flag.">clearSentSyncWhoRequest</a>(){ m_iStateFlags ^= <a class="code" href="kvi__channel_8h.html#a78172d72d3ba7d9a9c9c59410808a2ea">KVI_CHANNEL_STATE_SENTSYNCWHOREQUEST</a>; };
+<a name="l00361"></a>00361 
+<a name="l00366"></a><a class="code" href="classKviChannel.html#a3851e4ca65bc6b7486d1a639a87ac154">00366</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a3851e4ca65bc6b7486d1a639a87ac154" title="Returns true if we have sent the WHO request.">sentWhoRequest</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#a1a1c73afae80a1bf37c872510071dd4f">KVI_CHANNEL_STATE_SENTWHOREQUEST</a>); };
+<a name="l00367"></a>00367 
+<a name="l00372"></a><a class="code" href="classKviChannel.html#a112e3a18420a636f45c806b95c1cf8f2">00372</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a112e3a18420a636f45c806b95c1cf8f2" title="Sets the WHO request flag.">setSentWhoRequest</a>(){ m_iStateFlags |= <a class="code" href="kvi__channel_8h.html#a1a1c73afae80a1bf37c872510071dd4f">KVI_CHANNEL_STATE_SENTWHOREQUEST</a>; };
+<a name="l00373"></a>00373 
+<a name="l00378"></a><a class="code" href="classKviChannel.html#a778e76fa420290ac4407b4c32401bb91">00378</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a778e76fa420290ac4407b4c32401bb91" title="Returns true if we have sent a list request for a specific channel mode.">sentListRequest</a>(<span class="keywordtype">char</span> cMode){ <span class="keywordflow">return</span> m_szSentModeRequests.contains(cMode); };
+<a name="l00379"></a>00379 
+<a name="l00384"></a><a class="code" href="classKviChannel.html#a6ba1d36cbf6449f04a46e9f6c4550fa4">00384</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a6ba1d36cbf6449f04a46e9f6c4550fa4" title="Sets the &amp;quot;sent request&amp;quot; flag for a specific channel mode.">setSentListRequest</a>(<span class="keywordtype">char</span> cMode){ m_szSentModeRequests.append(cMode); };
+<a name="l00385"></a>00385 
+<a name="l00390"></a><a class="code" href="classKviChannel.html#a0c630090a36587fbaa5cae3c7f02b5ff">00390</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a0c630090a36587fbaa5cae3c7f02b5ff" title="Clears the &amp;quot;sent request&amp;quot; flag for a specific chanel mode.">setListRequestDone</a>(<span class="keywordtype">char</span> cMode){ m_szSentModeRequests.remove(cMode); checkChannelSync(); };
+<a name="l00391"></a>00391 
+<a name="l00396"></a><a class="code" href="classKviChannel.html#aa0d2f060fbf06729980d5d8ded021518">00396</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#aa0d2f060fbf06729980d5d8ded021518" title="Returns true if the channel has all names.">hasAllNames</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#ac2bca9175f41d08cb8891d4645d4d12c">KVI_CHANNEL_STATE_HAVEALLNAMES</a>); };
+<a name="l00397"></a>00397 
+<a name="l00402"></a><a class="code" href="classKviChannel.html#a7f8030192ea9d2a42fa3fe733398bb63">00402</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a7f8030192ea9d2a42fa3fe733398bb63" title="Sets the existance of all names.">setHasAllNames</a>(){ m_iStateFlags |= <a class="code" href="kvi__channel_8h.html#ac2bca9175f41d08cb8891d4645d4d12c">KVI_CHANNEL_STATE_HAVEALLNAMES</a>; checkChannelSync(); };
+<a name="l00403"></a>00403 
+<a name="l00408"></a><a class="code" href="classKviChannel.html#ae3df982a41e59678eb7e4ec3cd9fd91d">00408</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#ae3df982a41e59678eb7e4ec3cd9fd91d" title="Returns true if the channel has an invite list.">hasInviteList</a>(){ <span class="keywordflow">return</span> m_pModeLists.contains(<span class="charliteral">&#39;I&#39;</span>); };
+<a name="l00409"></a>00409 
+<a name="l00414"></a><a class="code" href="classKviChannel.html#a72d4c8617bfa254543f563f07afddf97">00414</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a72d4c8617bfa254543f563f07afddf97" title="Returns true if the channel has a WHO list.">hasWhoList</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#ac0cb4fb70971275532539a8e2c4493b7">KVI_CHANNEL_STATE_HAVEWHOLIST</a>); };
+<a name="l00415"></a>00415 
+<a name="l00420"></a><a class="code" href="classKviChannel.html#a0aa33f2392020ac8e476c1be3b50e5d3">00420</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a0aa33f2392020ac8e476c1be3b50e5d3" title="Sets the existance of the WHO list.">setHasWhoList</a>(){ m_iStateFlags |= <a class="code" href="kvi__channel_8h.html#ac0cb4fb70971275532539a8e2c4493b7">KVI_CHANNEL_STATE_HAVEWHOLIST</a>; checkChannelSync(); };
+<a name="l00421"></a>00421 
+<a name="l00426"></a><a class="code" href="classKviChannel.html#a39f6356d869a5f20f7f17f4f94da6257">00426</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a39f6356d869a5f20f7f17f4f94da6257" title="Returns true if the channel has a ban list.">hasBanList</a>(){ <span class="keywordflow">return</span> m_pModeLists.contains(<span class="charliteral">&#39;b&#39;</span>); };
+<a name="l00427"></a>00427 
+<a name="l00432"></a><a class="code" href="classKviChannel.html#ab7b21cb93ba644f669545894a9af2ff3">00432</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#ab7b21cb93ba644f669545894a9af2ff3" title="Returns true if the channel has a ban exception list.">hasBanExceptionList</a>(){ <span class="keywordflow">return</span> m_pModeLists.contains(<span class="charliteral">&#39;e&#39;</span>); };
+<a name="l00433"></a>00433 
+<a name="l00438"></a><a class="code" href="classKviChannel.html#a5f0c9d8b02dcbc85eb702f0e6d611d8a">00438</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a5f0c9d8b02dcbc85eb702f0e6d611d8a" title="Returns true if the channel has a quiet ban list.">hasQuietBanList</a>(){ <span class="keywordflow">return</span> m_pModeLists.contains(<span class="charliteral">&#39;q&#39;</span>); };
+<a name="l00439"></a>00439 
+<a name="l00444"></a><a class="code" href="classKviChannel.html#a337cce04648e3c955f5a534b5b58b14e">00444</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a337cce04648e3c955f5a534b5b58b14e" title="Returns true if the channel has to be closed on part.">closeOnPart</a>(){ <span class="keywordflow">return</span> !(m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#ac450c7a76adfa1292d5dcca41ef41748">KVI_CHANNEL_STATE_NOCLOSEONPART</a>); };
+<a name="l00445"></a>00445 
+<a name="l00452"></a>00452         <span class="keywordtype">void</span> partMessageSent(<span class="keywordtype">bool</span> bCloseOnPart = <span class="keyword">true</span>, <span class="keywordtype">bool</span> bShowMessage = <span class="keyword">true</span>);
+<a name="l00453"></a>00453 
+<a name="l00460"></a>00460         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviWindow.html#aed24fe66e4f3813c32d1595975bf825f">activityMeter</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * puActivityValue, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * puActivityTemperature);
+<a name="l00461"></a>00461 
+<a name="l00466"></a>00466         <span class="keywordtype">void</span> setDeadChan();
+<a name="l00467"></a>00467 
+<a name="l00472"></a><a class="code" href="classKviChannel.html#a8efc2623d53a06785af66438b83515a2">00472</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a8efc2623d53a06785af66438b83515a2" title="Returns true if the channel is dead.">isDeadChan</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#ab041e74dc71245629dc36a2efd8e90f7">KVI_CHANNEL_STATE_DEADCHAN</a>); };
+<a name="l00473"></a>00473 
+<a name="l00478"></a>00478         <span class="keywordtype">void</span> setAliveChan();
+<a name="l00479"></a>00479 
+<a name="l00486"></a><a class="code" href="classKviChannel.html#aa4a1207684d6fbb4090fb4483f5ccf0d">00486</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#aa4a1207684d6fbb4090fb4483f5ccf0d" title="Prepends the user flag to the nickname.">prependUserFlag</a>(<span class="keyword">const</span> QString &amp; szNick, QString &amp; szBuffer){ m_pUserListView-&gt;prependUserFlag(szNick,szBuffer); };
+<a name="l00487"></a>00487 
+<a name="l00493"></a><a class="code" href="classKviChannel.html#a46c9b72c0beca41b15a8b31305bd444f">00493</a>         <span class="keywordtype">char</span> <a class="code" href="classKviChannel.html#a46c9b72c0beca41b15a8b31305bd444f" title="Returns the flag of a user.">getUserFlag</a>(<span class="keyword">const</span> QString &amp; szNick){ <span class="keywordflow">return</span> m_pUserListView-&gt;getUserFlag(szNick); };
+<a name="l00494"></a>00494 
+<a name="l00499"></a>00499         <span class="keyword">virtual</span> QSize sizeHint() <span class="keyword">const</span>;
+<a name="l00500"></a>00500 
+<a name="l00506"></a><a class="code" href="classKviChannel.html#a4f103ce6cd5ea19ea31950de9e8db772">00506</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a4f103ce6cd5ea19ea31950de9e8db772" title="Enables or disable the userlist updates.">enableUserListUpdates</a>(<span class="keywordtype">bool</span> bEnable){ m_pUserListView-&gt;enableUpdates(bEnable); };
+<a name="l00507"></a>00507 
+<a name="l00516"></a><a class="code" href="classKviChannel.html#ad8d11717af0693a8ef3eb4bd900c5fce">00516</a>         <a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * <a class="code" href="classKviChannel.html#ad8d11717af0693a8ef3eb4bd900c5fce" title="Called when a user joins the channel.">join</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser = QString(), <span class="keyword">const</span> QString &amp; szHost = QString(), <span class="keywordtype">int</span> iFlags = 0){ <span class="keywordflow">return</span> m_pUserListView-&gt;join(szNick,szUser,szHost,iFlags); };
+<a name="l00517"></a>00517 
+<a name="l00523"></a><a class="code" href="classKviChannel.html#a3d5c47136c0fde30cae7c80e78707f1c">00523</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a3d5c47136c0fde30cae7c80e78707f1c" title="Returns true if the avatar of a user is changed.">avatarChanged</a>(<span class="keyword">const</span> QString &amp; szNick){ <span class="keywordflow">return</span> m_pUserListView-&gt;avatarChanged(szNick); };
+<a name="l00524"></a>00524 
+<a name="l00531"></a><a class="code" href="classKviChannel.html#abf4a25fd6d1f901d638cb31f968d3340">00531</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#abf4a25fd6d1f901d638cb31f968d3340" title="Sets the chan owner mode.">setChanOwner</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bChanOwner){ <span class="keywordflow">return</span> m_pUserListView-&gt;setChanOwner(szNick,bChanOwner); };
 <a name="l00532"></a>00532 
-<a name="l00537"></a><a class="code" href="classKviChannel.html#a0aa33f2392020ac8e476c1be3b50e5d3">00537</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a0aa33f2392020ac8e476c1be3b50e5d3" title="Sets the existance of the WHO list.">setHasWhoList</a>(){ m_iStateFlags |= <a class="code" href="kvi__channel_8h.html#ac0cb4fb70971275532539a8e2c4493b7">KVI_CHANNEL_STATE_HAVEWHOLIST</a>; checkChannelSync(); };
-<a name="l00538"></a>00538 
-<a name="l00543"></a><a class="code" href="classKviChannel.html#a39f6356d869a5f20f7f17f4f94da6257">00543</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a39f6356d869a5f20f7f17f4f94da6257" title="Returns true if the channel has a ban list.">hasBanList</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#af3ee9c5ffaa9d2f1748739711f8ea1c4">KVI_CHANNEL_STATE_HAVEBANLIST</a>); };
-<a name="l00544"></a>00544 
-<a name="l00549"></a><a class="code" href="classKviChannel.html#a9d9016bf0f8fd72500a2333e8564c8e7">00549</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a9d9016bf0f8fd72500a2333e8564c8e7" title="Sets the existance of the ban list.">setHasBanList</a>(){ m_iStateFlags |= <a class="code" href="kvi__channel_8h.html#af3ee9c5ffaa9d2f1748739711f8ea1c4">KVI_CHANNEL_STATE_HAVEBANLIST</a>; checkChannelSync(); };
-<a name="l00550"></a>00550 
-<a name="l00555"></a><a class="code" href="classKviChannel.html#ab7b21cb93ba644f669545894a9af2ff3">00555</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#ab7b21cb93ba644f669545894a9af2ff3" title="Returns true if the channel has a ban exception list.">hasBanExceptionList</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#a5dcb4cd7eed0f01e30ac9a7c321397b3">KVI_CHANNEL_STATE_HAVEBANEXCEPTIONLIST</a>); };
+<a name="l00539"></a><a class="code" href="classKviChannel.html#a36ed7f723f0b0e5c8478aeb28ab6029e">00539</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a36ed7f723f0b0e5c8478aeb28ab6029e" title="Sets the chan admin mode.">setChanAdmin</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bChanAdmin){ <span class="keywordflow">return</span> m_pUserListView-&gt;setChanAdmin(szNick,bChanAdmin); };
+<a name="l00540"></a>00540 
+<a name="l00547"></a><a class="code" href="classKviChannel.html#a85f24c9a6945456f904124e31b479249">00547</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a85f24c9a6945456f904124e31b479249" title="Sets the operator mode.">setOp</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bOp){ <span class="keywordflow">return</span> m_pUserListView-&gt;setOp(szNick,bOp); };
+<a name="l00548"></a>00548 
+<a name="l00555"></a><a class="code" href="classKviChannel.html#a4656b2639b6caab5218549cfb90f3051">00555</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a4656b2639b6caab5218549cfb90f3051" title="Sets the half operator mode.">setHalfOp</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bHalfOp){ <span class="keywordflow">return</span> m_pUserListView-&gt;setHalfOp(szNick,bHalfOp); };
 <a name="l00556"></a>00556 
-<a name="l00561"></a><a class="code" href="classKviChannel.html#af1f545f527cf9a5b1efd3f86c1873a5f">00561</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#af1f545f527cf9a5b1efd3f86c1873a5f" title="Sets the existance of the ban exception list.">setHasBanExceptionList</a>(){ m_iStateFlags |= <a class="code" href="kvi__channel_8h.html#a5dcb4cd7eed0f01e30ac9a7c321397b3">KVI_CHANNEL_STATE_HAVEBANEXCEPTIONLIST</a>; checkChannelSync(); };
-<a name="l00562"></a>00562 
-<a name="l00567"></a><a class="code" href="classKviChannel.html#a5f0c9d8b02dcbc85eb702f0e6d611d8a">00567</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a5f0c9d8b02dcbc85eb702f0e6d611d8a" title="Returns true if the channel has a quiet ban list.">hasQuietBanList</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#af1fd4a2b0b70d37a71947b5ebea317c8">KVI_CHANNEL_STATE_HAVEQUIETBANLIST</a>); };
-<a name="l00568"></a>00568 
-<a name="l00573"></a><a class="code" href="classKviChannel.html#a3d34c390c4f00f06e13c7138d8d2e29f">00573</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a3d34c390c4f00f06e13c7138d8d2e29f" title="Sets the existance of the quiet ban list.">setHasQuietBanList</a>(){ m_iStateFlags |= <a class="code" href="kvi__channel_8h.html#af1fd4a2b0b70d37a71947b5ebea317c8">KVI_CHANNEL_STATE_HAVEQUIETBANLIST</a>; checkChannelSync(); };
-<a name="l00574"></a>00574 
-<a name="l00579"></a><a class="code" href="classKviChannel.html#a337cce04648e3c955f5a534b5b58b14e">00579</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a337cce04648e3c955f5a534b5b58b14e" title="Returns true if the channel has to be closed on part.">closeOnPart</a>(){ <span class="keywordflow">return</span> !(m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#ac450c7a76adfa1292d5dcca41ef41748">KVI_CHANNEL_STATE_NOCLOSEONPART</a>); };
+<a name="l00563"></a><a class="code" href="classKviChannel.html#a82807748cfa5606a161b61321e22f16b">00563</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a82807748cfa5606a161b61321e22f16b" title="Sets the voice mode.">setVoice</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bVoice){ <span class="keywordflow">return</span> m_pUserListView-&gt;setVoice(szNick,bVoice); };
+<a name="l00564"></a>00564 
+<a name="l00571"></a><a class="code" href="classKviChannel.html#aee386257d004c2ad62e479817a5f7852">00571</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#aee386257d004c2ad62e479817a5f7852" title="Sets the user operator mode.">setUserOp</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bUserOp){ <span class="keywordflow">return</span> m_pUserListView-&gt;setUserOp(szNick,bUserOp); };
+<a name="l00572"></a>00572 
+<a name="l00579"></a><a class="code" href="classKviChannel.html#a89ecceaf916a6c359e0e0d83160de9e2">00579</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a89ecceaf916a6c359e0e0d83160de9e2" title="Returns true if the user is a chan owner.">isChanOwner</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>){ <span class="keywordflow">return</span> m_pUserListView-&gt;isChanOwner(szNick,bAtLeast); };
 <a name="l00580"></a>00580 
-<a name="l00587"></a>00587         <span class="keywordtype">void</span> partMessageSent(<span class="keywordtype">bool</span> bCloseOnPart = <span class="keyword">true</span>, <span class="keywordtype">bool</span> bShowMessage = <span class="keyword">true</span>);
+<a name="l00587"></a><a class="code" href="classKviChannel.html#a386836a484a1315d1cac303e5fb7b918">00587</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a386836a484a1315d1cac303e5fb7b918" title="Returns true if the user is a chan admin.">isChanAdmin</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>){ <span class="keywordflow">return</span> m_pUserListView-&gt;isChanAdmin(szNick,bAtLeast); };
 <a name="l00588"></a>00588 
-<a name="l00595"></a>00595         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviWindow.html#aed24fe66e4f3813c32d1595975bf825f">activityMeter</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * puActivityValue, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * puActivityTemperature);
+<a name="l00595"></a><a class="code" href="classKviChannel.html#a51a468dc1e6c33790e613b48a2aae640">00595</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a51a468dc1e6c33790e613b48a2aae640" title="Returns true if the user is an operator.">isOp</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>){ <span class="keywordflow">return</span> m_pUserListView-&gt;isOp(szNick,bAtLeast); };
 <a name="l00596"></a>00596 
-<a name="l00601"></a>00601         <span class="keywordtype">void</span> setDeadChan();
-<a name="l00602"></a>00602 
-<a name="l00607"></a><a class="code" href="classKviChannel.html#a8efc2623d53a06785af66438b83515a2">00607</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a8efc2623d53a06785af66438b83515a2" title="Returns true if the channel is dead.">isDeadChan</a>(){ <span class="keywordflow">return</span> (m_iStateFlags &amp; <a class="code" href="kvi__channel_8h.html#ab041e74dc71245629dc36a2efd8e90f7">KVI_CHANNEL_STATE_DEADCHAN</a>); };
-<a name="l00608"></a>00608 
-<a name="l00613"></a>00613         <span class="keywordtype">void</span> setAliveChan();
-<a name="l00614"></a>00614 
-<a name="l00621"></a><a class="code" href="classKviChannel.html#aa4a1207684d6fbb4090fb4483f5ccf0d">00621</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#aa4a1207684d6fbb4090fb4483f5ccf0d" title="Prepends the user flag to the nickname.">prependUserFlag</a>(<span class="keyword">const</span> QString &amp; szNick, QString &amp; szBuffer){ m_pUserListView-&gt;prependUserFlag(szNick,szBuffer); };
-<a name="l00622"></a>00622 
-<a name="l00628"></a><a class="code" href="classKviChannel.html#a46c9b72c0beca41b15a8b31305bd444f">00628</a>         <span class="keywordtype">char</span> <a class="code" href="classKviChannel.html#a46c9b72c0beca41b15a8b31305bd444f" title="Returns the flag of a user.">getUserFlag</a>(<span class="keyword">const</span> QString &amp; szNick){ <span class="keywordflow">return</span> m_pUserListView-&gt;getUserFlag(szNick); };
-<a name="l00629"></a>00629 
-<a name="l00634"></a>00634         <span class="keyword">virtual</span> QSize sizeHint() <span class="keyword">const</span>;
-<a name="l00635"></a>00635 
-<a name="l00641"></a><a class="code" href="classKviChannel.html#a4f103ce6cd5ea19ea31950de9e8db772">00641</a>         <span class="keywordtype">void</span> <a class="code" href="classKviChannel.html#a4f103ce6cd5ea19ea31950de9e8db772" title="Enables or disable the userlist updates.">enableUserListUpdates</a>(<span class="keywordtype">bool</span> bEnable){ m_pUserListView-&gt;enableUpdates(bEnable); };
-<a name="l00642"></a>00642 
-<a name="l00651"></a><a class="code" href="classKviChannel.html#ad8d11717af0693a8ef3eb4bd900c5fce">00651</a>         <a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * <a class="code" href="classKviChannel.html#ad8d11717af0693a8ef3eb4bd900c5fce" title="Called when a user joins the channel.">join</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser = QString(), <span class="keyword">const</span> QString &amp; szHost = QString(), <span class="keywordtype">int</span> iFlags = 0){ <span class="keywordflow">return</span> m_pUserListView-&gt;join(szNick,szUser,szHost,iFlags); };
-<a name="l00652"></a>00652 
-<a name="l00658"></a><a class="code" href="classKviChannel.html#a3d5c47136c0fde30cae7c80e78707f1c">00658</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a3d5c47136c0fde30cae7c80e78707f1c" title="Returns true if the avatar of a user is changed.">avatarChanged</a>(<span class="keyword">const</span> QString &amp; szNick){ <span class="keywordflow">return</span> m_pUserListView-&gt;avatarChanged(szNick); };
-<a name="l00659"></a>00659 
-<a name="l00666"></a><a class="code" href="classKviChannel.html#abf4a25fd6d1f901d638cb31f968d3340">00666</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#abf4a25fd6d1f901d638cb31f968d3340" title="Sets the chan owner mode.">setChanOwner</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bChanOwner){ <span class="keywordflow">return</span> m_pUserListView-&gt;setChanOwner(szNick,bChanOwner); };
-<a name="l00667"></a>00667 
-<a name="l00674"></a><a class="code" href="classKviChannel.html#a36ed7f723f0b0e5c8478aeb28ab6029e">00674</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a36ed7f723f0b0e5c8478aeb28ab6029e" title="Sets the chan admin mode.">setChanAdmin</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bChanAdmin){ <span class="keywordflow">return</span> m_pUserListView-&gt;setChanAdmin(szNick,bChanAdmin); };
-<a name="l00675"></a>00675 
-<a name="l00682"></a><a class="code" href="classKviChannel.html#a85f24c9a6945456f904124e31b479249">00682</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a85f24c9a6945456f904124e31b479249" title="Sets the operator mode.">setOp</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bOp){ <span class="keywordflow">return</span> m_pUserListView-&gt;setOp(szNick,bOp); };
-<a name="l00683"></a>00683 
-<a name="l00690"></a><a class="code" href="classKviChannel.html#a4656b2639b6caab5218549cfb90f3051">00690</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a4656b2639b6caab5218549cfb90f3051" title="Sets the half operator mode.">setHalfOp</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bHalfOp){ <span class="keywordflow">return</span> m_pUserListView-&gt;setHalfOp(szNick,bHalfOp); };
-<a name="l00691"></a>00691 
-<a name="l00698"></a><a class="code" href="classKviChannel.html#a82807748cfa5606a161b61321e22f16b">00698</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a82807748cfa5606a161b61321e22f16b" title="Sets the voice mode.">setVoice</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bVoice){ <span class="keywordflow">return</span> m_pUserListView-&gt;setVoice(szNick,bVoice); };
-<a name="l00699"></a>00699 
-<a name="l00706"></a><a class="code" href="classKviChannel.html#aee386257d004c2ad62e479817a5f7852">00706</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#aee386257d004c2ad62e479817a5f7852" title="Sets the user operator mode.">setUserOp</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bUserOp){ <span class="keywordflow">return</span> m_pUserListView-&gt;setUserOp(szNick,bUserOp); };
-<a name="l00707"></a>00707 
-<a name="l00714"></a><a class="code" href="classKviChannel.html#a89ecceaf916a6c359e0e0d83160de9e2">00714</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a89ecceaf916a6c359e0e0d83160de9e2" title="Returns true if the user is a chan owner.">isChanOwner</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>){ <span class="keywordflow">return</span> m_pUserListView-&gt;isChanOwner(szNick,bAtLeast); };
-<a name="l00715"></a>00715 
-<a name="l00722"></a><a class="code" href="classKviChannel.html#a386836a484a1315d1cac303e5fb7b918">00722</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a386836a484a1315d1cac303e5fb7b918" title="Returns true if the user is a chan admin.">isChanAdmin</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>){ <span class="keywordflow">return</span> m_pUserListView-&gt;isChanAdmin(szNick,bAtLeast); };
-<a name="l00723"></a>00723 
-<a name="l00730"></a><a class="code" href="classKviChannel.html#a51a468dc1e6c33790e613b48a2aae640">00730</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a51a468dc1e6c33790e613b48a2aae640" title="Returns true if the user is an operator.">isOp</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>){ <span class="keywordflow">return</span> m_pUserListView-&gt;isOp(szNick,bAtLeast); };
-<a name="l00731"></a>00731 
-<a name="l00738"></a><a class="code" href="classKviChannel.html#ae665a9862fc9c35ae68a93876f343dcd">00738</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#ae665a9862fc9c35ae68a93876f343dcd" title="Returns true if the user is a half operator.">isHalfOp</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>){ <span class="keywordflow">return</span> m_pUserListView-&gt;isHalfOp(szNick,bAtLeast); };
+<a name="l00603"></a><a class="code" href="classKviChannel.html#ae665a9862fc9c35ae68a93876f343dcd">00603</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#ae665a9862fc9c35ae68a93876f343dcd" title="Returns true if the user is a half operator.">isHalfOp</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>){ <span class="keywordflow">return</span> m_pUserListView-&gt;isHalfOp(szNick,bAtLeast); };
+<a name="l00604"></a>00604 
+<a name="l00611"></a><a class="code" href="classKviChannel.html#a39b937776693bb423682d1e9ffd65f10">00611</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a39b937776693bb423682d1e9ffd65f10" title="Returns true if the user is a voice.">isVoice</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>){ <span class="keywordflow">return</span> m_pUserListView-&gt;isVoice(szNick,bAtLeast); };
+<a name="l00612"></a>00612 
+<a name="l00619"></a><a class="code" href="classKviChannel.html#aaa180858fa0f9e57bb5c0fa32b680c4c">00619</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#aaa180858fa0f9e57bb5c0fa32b680c4c" title="Returns true if the user is a user operator.">isUserOp</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>){ <span class="keywordflow">return</span> m_pUserListView-&gt;isUserOp(szNick,bAtLeast); };
+<a name="l00620"></a>00620 
+<a name="l00626"></a>00626         <span class="keywordtype">bool</span> isMeIrcOp(<span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
+<a name="l00627"></a>00627 
+<a name="l00633"></a>00633         <span class="keywordtype">bool</span> isMeChanOwner(<span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
+<a name="l00634"></a>00634 
+<a name="l00640"></a>00640         <span class="keywordtype">bool</span> isMeChanAdmin(<span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
+<a name="l00641"></a>00641 
+<a name="l00647"></a>00647         <span class="keywordtype">bool</span> isMeOp(<span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
+<a name="l00648"></a>00648 
+<a name="l00654"></a>00654         <span class="keywordtype">bool</span> isMeHalfOp(<span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
+<a name="l00655"></a>00655 
+<a name="l00661"></a>00661         <span class="keywordtype">bool</span> isMeVoice(<span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
+<a name="l00662"></a>00662 
+<a name="l00668"></a>00668         <span class="keywordtype">bool</span> isMeUserOp(<span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
+<a name="l00669"></a>00669 
+<a name="l00676"></a>00676         <span class="keywordtype">void</span> userAction(<a class="code" href="classKviIrcMask.html" title="Irc user mask handling.">KviIrcMask</a> * user, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uActionType);
+<a name="l00677"></a>00677 
+<a name="l00684"></a>00684         <span class="keywordtype">void</span> userAction(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uActionType);
+<a name="l00685"></a>00685 
+<a name="l00694"></a>00694         <span class="keywordtype">void</span> userAction(<span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser, <span class="keyword">const</span> QString &amp; szHost, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uActionType);
+<a name="l00695"></a>00695 
+<a name="l00703"></a>00703         <span class="keywordtype">void</span> channelAction(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uActionType, <span class="keywordtype">int</span> iTemperature);
+<a name="l00704"></a>00704 
+<a name="l00711"></a>00711         <span class="keywordtype">bool</span> nickChange(<span class="keyword">const</span> QString &amp; szOldNick, <span class="keyword">const</span> QString &amp; szNewNick);
+<a name="l00712"></a>00712 
+<a name="l00718"></a>00718         <span class="keywordtype">bool</span> part(<span class="keyword">const</span> QString &amp; szNick);
+<a name="l00719"></a>00719 
+<a name="l00725"></a><a class="code" href="classKviChannel.html#a5888c99874eef876b6ba9e2daa6339f7">00725</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a5888c99874eef876b6ba9e2daa6339f7" title="Returns true if the user is on the channel.">isOn</a>(<span class="keyword">const</span> QString &amp; szNick){ <span class="keywordflow">return</span> (m_pUserListView-&gt;findEntry(szNick) != 0); };
+<a name="l00726"></a>00726 
+<a name="l00732"></a><a class="code" href="classKviChannel.html#a37d1cdcc1f732c3a8908600235ffa019">00732</a>         <a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * <a class="code" href="classKviChannel.html#a37d1cdcc1f732c3a8908600235ffa019" title="Searches for a user in the userlist.">findEntry</a>(<span class="keyword">const</span> QString &amp; szNick){ <span class="keywordflow">return</span> m_pUserListView-&gt;findEntry(szNick); };
+<a name="l00733"></a>00733 
+<a name="l00738"></a>00738         <span class="keywordtype">int</span> myFlags();
 <a name="l00739"></a>00739 
-<a name="l00746"></a><a class="code" href="classKviChannel.html#a39b937776693bb423682d1e9ffd65f10">00746</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a39b937776693bb423682d1e9ffd65f10" title="Returns true if the user is a voice.">isVoice</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>){ <span class="keywordflow">return</span> m_pUserListView-&gt;isVoice(szNick,bAtLeast); };
-<a name="l00747"></a>00747 
-<a name="l00754"></a><a class="code" href="classKviChannel.html#aaa180858fa0f9e57bb5c0fa32b680c4c">00754</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#aaa180858fa0f9e57bb5c0fa32b680c4c" title="Returns true if the user is a user operator.">isUserOp</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>){ <span class="keywordflow">return</span> m_pUserListView-&gt;isUserOp(szNick,bAtLeast); };
-<a name="l00755"></a>00755 
-<a name="l00761"></a>00761         <span class="keywordtype">bool</span> isMeIrcOp(<span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
-<a name="l00762"></a>00762 
-<a name="l00768"></a>00768         <span class="keywordtype">bool</span> isMeChanOwner(<span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
-<a name="l00769"></a>00769 
-<a name="l00775"></a>00775         <span class="keywordtype">bool</span> isMeChanAdmin(<span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
+<a name="l00744"></a>00744         <span class="keywordtype">void</span> updateModeLabel();
+<a name="l00745"></a>00745 
+<a name="l00752"></a>00752         <span class="keyword">virtual</span> <span class="keywordtype">void</span> outputMessage(<span class="keywordtype">int</span> iMsgType, <span class="keyword">const</span> QString &amp; szMsg);
+<a name="l00753"></a>00753 
+<a name="l00760"></a>00760         <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a84791485798762785432f48ab9bbdfe1">ownMessage</a>(<span class="keyword">const</span> QString &amp; szBuffer, <span class="keywordtype">bool</span> bUserFeedback = <span class="keyword">true</span>);
+<a name="l00761"></a>00761 
+<a name="l00767"></a>00767         <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a7cbab6cf8d74e8aeb0d70a275ec6325d">ownAction</a>(<span class="keyword">const</span> QString &amp; szBuffer);
+<a name="l00768"></a>00768 
+<a name="l00775"></a>00775         <span class="keywordtype">void</span> setChannelMode(<span class="keywordtype">char</span> cMode, <span class="keywordtype">bool</span> bAdd);
 <a name="l00776"></a>00776 
-<a name="l00782"></a>00782         <span class="keywordtype">bool</span> isMeOp(<span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
-<a name="l00783"></a>00783 
-<a name="l00789"></a>00789         <span class="keywordtype">bool</span> isMeHalfOp(<span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
-<a name="l00790"></a>00790 
-<a name="l00796"></a>00796         <span class="keywordtype">bool</span> isMeVoice(<span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
-<a name="l00797"></a>00797 
-<a name="l00803"></a>00803         <span class="keywordtype">bool</span> isMeUserOp(<span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
+<a name="l00781"></a><a class="code" href="classKviChannel.html#a67cb917f9646c0f583c31e9983ac6726">00781</a>         QString <a class="code" href="classKviChannel.html#a67cb917f9646c0f583c31e9983ac6726" title="Returns only the plain (parameter-less) channel modes (eg: mi).">plainChannelMode</a>() { <span class="keywordflow">return</span> m_szChannelMode; };
+<a name="l00782"></a>00782 
+<a name="l00788"></a>00788         <span class="keywordtype">void</span> getChannelModeString(QString &amp; szBuffer);
+<a name="l00789"></a>00789 
+<a name="l00795"></a>00795         <span class="keywordtype">void</span> getChannelModeStringWithEmbeddedParams(QString &amp; szBuffer);
+<a name="l00796"></a>00796 
+<a name="l00803"></a>00803         <span class="keywordtype">void</span> setChannelModeWithParam(<span class="keywordtype">char</span> cMode, QString &amp; szParam);
 <a name="l00804"></a>00804 
-<a name="l00811"></a>00811         <span class="keywordtype">void</span> userAction(<a class="code" href="classKviIrcMask.html" title="Irc user mask handling.">KviIrcMask</a> * user, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uActionType);
-<a name="l00812"></a>00812 
-<a name="l00819"></a>00819         <span class="keywordtype">void</span> userAction(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uActionType);
-<a name="l00820"></a>00820 
-<a name="l00829"></a>00829         <span class="keywordtype">void</span> userAction(<span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser, <span class="keyword">const</span> QString &amp; szHost, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uActionType);
-<a name="l00830"></a>00830 
-<a name="l00838"></a>00838         <span class="keywordtype">void</span> channelAction(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uActionType, <span class="keywordtype">int</span> iTemperature);
+<a name="l00810"></a><a class="code" href="classKviChannel.html#a2c46a3bb88bca134fe130987aace0f9b">00810</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a2c46a3bb88bca134fe130987aace0f9b" title="Returns true if the channel has a mode with parameter set (eg. mode k).">hasChannelMode</a>(<span class="keywordtype">char</span> cMode) { <span class="keywordflow">return</span> m_szChannelParameterModes.contains(cMode); };
+<a name="l00811"></a>00811 
+<a name="l00817"></a><a class="code" href="classKviChannel.html#ae3355e933e67eee3e4ad69e5583b9df0">00817</a>         QString <a class="code" href="classKviChannel.html#ae3355e933e67eee3e4ad69e5583b9df0" title="Returns the value (parameter) for a channel mode (eg. the password for mode k).">channelModeParam</a>(<span class="keywordtype">char</span> cMode)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_szChannelParameterModes.value(cMode); };
+<a name="l00818"></a>00818 
+<a name="l00824"></a>00824         <span class="keywordtype">void</span> addHighlightedUser(<span class="keyword">const</span> QString &amp; szNick);
+<a name="l00825"></a>00825 
+<a name="l00831"></a>00831         <span class="keywordtype">void</span> removeHighlightedUser(<span class="keyword">const</span> QString &amp; szNick);
+<a name="l00832"></a>00832 
+<a name="l00838"></a><a class="code" href="classKviChannel.html#a8bb175f3e3232395d98b7d19fce7c208">00838</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a8bb175f3e3232395d98b7d19fce7c208" title="Returns true if the user is highlighted.">isHighlightedUser</a>(<span class="keyword">const</span> QString &amp; szNick) { <span class="keywordflow">return</span> m_pTmpHighLighted-&gt;contains(szNick,Qt::CaseInsensitive); };
 <a name="l00839"></a>00839 
-<a name="l00846"></a>00846         <span class="keywordtype">bool</span> nickChange(<span class="keyword">const</span> QString &amp; szOldNick, <span class="keyword">const</span> QString &amp; szNewNick);
-<a name="l00847"></a>00847 
-<a name="l00853"></a>00853         <span class="keywordtype">bool</span> part(<span class="keyword">const</span> QString &amp; szNick);
-<a name="l00854"></a>00854 
-<a name="l00860"></a><a class="code" href="classKviChannel.html#a5888c99874eef876b6ba9e2daa6339f7">00860</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a5888c99874eef876b6ba9e2daa6339f7" title="Returns true if the user is on the channel.">isOn</a>(<span class="keyword">const</span> QString &amp; szNick){ <span class="keywordflow">return</span> (m_pUserListView-&gt;findEntry(szNick) != 0); };
-<a name="l00861"></a>00861 
-<a name="l00867"></a><a class="code" href="classKviChannel.html#a37d1cdcc1f732c3a8908600235ffa019">00867</a>         <a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * <a class="code" href="classKviChannel.html#a37d1cdcc1f732c3a8908600235ffa019" title="Searches for a user in the userlist.">findEntry</a>(<span class="keyword">const</span> QString &amp; szNick){ <span class="keywordflow">return</span> m_pUserListView-&gt;findEntry(szNick); };
+<a name="l00844"></a>00844         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a68b1bbdef6450872b12077757b9796e5">lostUserFocus</a>();
+<a name="l00845"></a>00845 
+<a name="l00851"></a>00851         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#aa50f7093107ec733e3e6957460e57684">getWindowListTipText</a>(QString &amp; szBuffer);
+<a name="l00852"></a>00852 
+<a name="l00857"></a>00857         <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#acfd21072b816db05ebd9fd7507e67807">unhighlight</a>();
+<a name="l00858"></a>00858 
+<a name="l00867"></a>00867         <span class="keywordtype">void</span> pasteLastLog();
 <a name="l00868"></a>00868 
-<a name="l00873"></a>00873         <span class="keywordtype">int</span> myFlags();
-<a name="l00874"></a>00874 
-<a name="l00879"></a>00879         <span class="keywordtype">void</span> updateModeLabel();
-<a name="l00880"></a>00880 
-<a name="l00887"></a>00887         <span class="keyword">virtual</span> <span class="keywordtype">void</span> outputMessage(<span class="keywordtype">int</span> iMsgType, <span class="keyword">const</span> QString &amp; szMsg);
-<a name="l00888"></a>00888 
-<a name="l00894"></a>00894         <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a3eef229888f90cb75494524ed4452a26">ownMessage</a>(<span class="keyword">const</span> QString &amp; szBuffer);
-<a name="l00895"></a>00895 
-<a name="l00901"></a>00901         <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a7cbab6cf8d74e8aeb0d70a275ec6325d">ownAction</a>(<span class="keyword">const</span> QString &amp; szBuffer);
-<a name="l00902"></a>00902 
-<a name="l00909"></a>00909         <span class="keywordtype">void</span> setChannelMode(<span class="keywordtype">char</span> cMode, <span class="keywordtype">bool</span> bAdd);
-<a name="l00910"></a>00910 
-<a name="l00915"></a><a class="code" href="classKviChannel.html#a8382448695d0734e643acfd9cf217755">00915</a>         QString <a class="code" href="classKviChannel.html#a8382448695d0734e643acfd9cf217755" title="Returns the channel mode.">channelMode</a>() { <span class="keywordflow">return</span> m_szChannelMode; };
-<a name="l00916"></a>00916 
-<a name="l00922"></a>00922         <span class="keywordtype">void</span> getChannelModeString(QString &amp; szBuffer);
-<a name="l00923"></a>00923 
-<a name="l00929"></a>00929         <span class="keywordtype">void</span> setChannelLimit(<span class="keyword">const</span> <span class="keywordtype">char</span> * pcLimit);
-<a name="l00930"></a>00930 
-<a name="l00935"></a><a class="code" href="classKviChannel.html#a7e798bb1f27dff211345bbc682355c5d">00935</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a7e798bb1f27dff211345bbc682355c5d" title="Returns true if the channel has a limit set.">hasChannelLimit</a>(){ <span class="keywordflow">return</span> !m_szChannelLimit.isEmpty(); };
-<a name="l00936"></a>00936 
-<a name="l00941"></a><a class="code" href="classKviChannel.html#a29fbed4cf6b55627ed69655b68ea856d">00941</a>         QString &amp; <a class="code" href="classKviChannel.html#a29fbed4cf6b55627ed69655b68ea856d" title="Returns the limit number.">channelLimit</a>(){ <span class="keywordflow">return</span> m_szChannelLimit; };
-<a name="l00942"></a>00942 
-<a name="l00948"></a>00948         <span class="keywordtype">void</span> setChannelKey(<span class="keyword">const</span> <span class="keywordtype">char</span> * pcKey);
-<a name="l00949"></a>00949 
-<a name="l00954"></a><a class="code" href="classKviChannel.html#a9135722cc97e23b0f69b25dc8eb8a690">00954</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a9135722cc97e23b0f69b25dc8eb8a690" title="Returns true if the channel has a key set.">hasChannelKey</a>() { <span class="keywordflow">return</span> !m_szChannelKey.isEmpty(); };
-<a name="l00955"></a>00955 
-<a name="l00960"></a><a class="code" href="classKviChannel.html#ad74915bf1dc0a0e6961cf1edd7315500">00960</a>         QString &amp; <a class="code" href="classKviChannel.html#ad74915bf1dc0a0e6961cf1edd7315500" title="Returns the channel key.">channelKey</a>(){ <span class="keywordflow">return</span> m_szChannelKey; };
-<a name="l00961"></a>00961 
-<a name="l00967"></a>00967         <span class="keywordtype">void</span> addHighlightedUser(<span class="keyword">const</span> QString &amp; szNick);
-<a name="l00968"></a>00968 
-<a name="l00974"></a>00974         <span class="keywordtype">void</span> removeHighlightedUser(<span class="keyword">const</span> QString &amp; szNick);
-<a name="l00975"></a>00975 
-<a name="l00981"></a><a class="code" href="classKviChannel.html#a8bb175f3e3232395d98b7d19fce7c208">00981</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviChannel.html#a8bb175f3e3232395d98b7d19fce7c208" title="Returns true if the user is highlighted.">isHighlightedUser</a>(<span class="keyword">const</span> QString &amp; szNick) { <span class="keywordflow">return</span> m_pTmpHighLighted-&gt;contains(szNick,Qt::CaseInsensitive); };
-<a name="l00982"></a>00982 
-<a name="l00987"></a>00987         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a68b1bbdef6450872b12077757b9796e5">lostUserFocus</a>();
+<a name="l00877"></a>00877         QByteArray loadLogFile(<span class="keyword">const</span> QString &amp; szFileName, <span class="keywordtype">bool</span> bGzip);
+<a name="l00878"></a>00878         
+<a name="l00883"></a>00883         <a class="code" href="classKviIrcConnectionServerInfo.html">KviIrcConnectionServerInfo</a> * serverInfo();
+<a name="l00884"></a>00884 <span class="keyword">protected</span>:
+<a name="l00891"></a>00891         <span class="keywordtype">bool</span> <a class="code" href="classKviWindow.html#a15be80f6314810ba42764f98cf3928a0">eventFilter</a>(QObject * o, QEvent * e);
+<a name="l00892"></a>00892 
+<a name="l00897"></a>00897         <span class="keyword">virtual</span> QPixmap * <a class="code" href="classKviWindow.html#a4264947cba43ceaec2f0e5bae43f6f7c">myIconPtr</a>();
+<a name="l00898"></a>00898 
+<a name="l00903"></a>00903         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a62b040dc4fdd6dab69d5102a652b48ca">fillCaptionBuffers</a>();
+<a name="l00904"></a>00904 
+<a name="l00910"></a>00910         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#ae1f643830fe2fa462c72674e4c17e900">getConfigGroupName</a>(QString &amp; szBuffer);
+<a name="l00911"></a>00911 
+<a name="l00917"></a>00917         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#af0bffcf61e408d06eb4a91502d958ec6">saveProperties</a>(<a class="code" href="classKviConfig.html">KviConfig</a> * cfg);
+<a name="l00918"></a>00918 
+<a name="l00924"></a>00924         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a6b18c93e9174a259fd56745d207a5730">loadProperties</a>(<a class="code" href="classKviConfig.html">KviConfig</a> * cfg);
+<a name="l00925"></a>00925 
+<a name="l00930"></a>00930         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a372021c3ba0dcd30af1531e1910ea89f">applyOptions</a>();
+<a name="l00931"></a>00931 
+<a name="l00937"></a>00937         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#ac7c99002bd21758ecf43e312a78c3010">getBaseLogFileName</a>(QString &amp; szBuffer);
+<a name="l00938"></a>00938 
+<a name="l00943"></a>00943         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a497d86458ff9baa8b5fd5123c77d7c73">triggerCreationEvents</a>();
+<a name="l00944"></a>00944 
+<a name="l00955"></a>00955         <span class="keywordtype">void</span> internalMask(<span class="keyword">const</span> QString &amp; szMask, <span class="keywordtype">bool</span> bAdd, <span class="keyword">const</span> QString &amp; szSetBy, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uSetAt, <a class="code" href="classKviPointerList.html" title="A template double linked list of pointers.">KviPointerList&lt;KviMaskEntry&gt;</a> * l, <a class="code" href="classKviMaskEditor.html">KviMaskEditor</a> ** ppEd);
+<a name="l00956"></a>00956 
+<a name="l00961"></a>00961         <span class="keywordtype">void</span> checkChannelSync();
+<a name="l00962"></a>00962 
+<a name="l00972"></a>00972         <span class="keywordtype">void</span> showDoubleView(<span class="keywordtype">bool</span> bShow);
+<a name="l00973"></a>00973 
+<a name="l00978"></a>00978         <span class="keywordtype">void</span> fixActionHistory();
+<a name="l00979"></a>00979 
+<a name="l00987"></a>00987         <span class="keywordtype">void</span> getTalkingUsersStats(QString &amp; szBuffer, QStringList &amp; list, <span class="keywordtype">bool</span> bPast);
 <a name="l00988"></a>00988 
-<a name="l00994"></a>00994         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#aa50f7093107ec733e3e6957460e57684">getWindowListTipText</a>(QString &amp; szBuffer);
+<a name="l00994"></a>00994         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a1c93c505b5bf784bf7b398d8829be246">preprocessMessage</a>(QString &amp; szMessage);
 <a name="l00995"></a>00995 
-<a name="l01000"></a>01000         <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#acfd21072b816db05ebd9fd7507e67807">unhighlight</a>();
-<a name="l01001"></a>01001 
-<a name="l01010"></a>01010         <span class="keywordtype">void</span> pasteLastLog();
-<a name="l01011"></a>01011 
-<a name="l01020"></a>01020         QByteArray loadLogFile(<span class="keyword">const</span> QString &amp; szFileName, <span class="keywordtype">bool</span> bGzip);
-<a name="l01021"></a>01021 <span class="keyword">protected</span>:
-<a name="l01028"></a>01028         <span class="keywordtype">bool</span> <a class="code" href="classKviWindow.html#a15be80f6314810ba42764f98cf3928a0">eventFilter</a>(QObject * o, QEvent * e);
-<a name="l01029"></a>01029 
-<a name="l01034"></a>01034         <span class="keyword">virtual</span> QPixmap * <a class="code" href="classKviWindow.html#a4264947cba43ceaec2f0e5bae43f6f7c">myIconPtr</a>();
-<a name="l01035"></a>01035 
-<a name="l01040"></a>01040         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a62b040dc4fdd6dab69d5102a652b48ca">fillCaptionBuffers</a>();
+<a name="l00996"></a>00996         <span class="keyword">virtual</span> <span class="keywordtype">void</span> resizeEvent(QResizeEvent * e);
+<a name="l00997"></a>00997         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a71e069ef208c7e1f7d22b96fb890637f">closeEvent</a>(QCloseEvent * e);
+<a name="l00998"></a>00998 <span class="keyword">private</span> slots:
+<a name="l01003"></a>01003         <span class="keywordtype">void</span> toggleDoubleView();
+<a name="l01004"></a>01004 
+<a name="l01009"></a>01009         <span class="keywordtype">void</span> toggleListView();
+<a name="l01010"></a>01010 
+<a name="l01015"></a>01015         <span class="keywordtype">void</span> toggleListModeEditor();
+<a name="l01016"></a>01016 
+<a name="l01021"></a>01021         <span class="keywordtype">void</span> toggleModeEditor();
+<a name="l01022"></a>01022 
+<a name="l01026"></a>01026         <span class="keywordtype">void</span> modeSelectorDone();
+<a name="l01027"></a>01027 
+<a name="l01033"></a>01033         <span class="keywordtype">void</span> topicSelected(<span class="keyword">const</span> QString &amp; szTopic);
+<a name="l01034"></a>01034 
+<a name="l01040"></a>01040         <span class="keywordtype">void</span> setMode(QString &amp; szMode);
 <a name="l01041"></a>01041 
-<a name="l01047"></a>01047         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#ae1f643830fe2fa462c72674e4c17e900">getConfigGroupName</a>(QString &amp; szBuffer);
-<a name="l01048"></a>01048 
-<a name="l01054"></a>01054         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#af0bffcf61e408d06eb4a91502d958ec6">saveProperties</a>(<a class="code" href="classKviConfig.html">KviConfig</a> * cfg);
-<a name="l01055"></a>01055 
-<a name="l01061"></a>01061         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a6b18c93e9174a259fd56745d207a5730">loadProperties</a>(<a class="code" href="classKviConfig.html">KviConfig</a> * cfg);
-<a name="l01062"></a>01062 
-<a name="l01067"></a>01067         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a372021c3ba0dcd30af1531e1910ea89f">applyOptions</a>();
-<a name="l01068"></a>01068 
-<a name="l01074"></a>01074         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#ac7c99002bd21758ecf43e312a78c3010">getBaseLogFileName</a>(QString &amp; szBuffer);
-<a name="l01075"></a>01075 
-<a name="l01080"></a>01080         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a497d86458ff9baa8b5fd5123c77d7c73">triggerCreationEvents</a>();
-<a name="l01081"></a>01081 
-<a name="l01091"></a>01091         <span class="keywordtype">void</span> toggleEditor(<a class="code" href="classKviMaskEditor.html">KviMaskEditor</a> ** ppEd, <a class="code" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a> ** ppBtn, <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviMaskEntry&gt;</a> * l, <span class="keywordtype">char</span> cFlag, <span class="keyword">const</span> <span class="keywordtype">char</span> * pcEdName);
-<a name="l01092"></a>01092 
-<a name="l01103"></a>01103         <span class="keywordtype">void</span> internalMask(<span class="keyword">const</span> QString &amp; szMask, <span class="keywordtype">bool</span> bAdd, <span class="keyword">const</span> QString &amp; szSetBy, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uSetAt, <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviMaskEntry&gt;</a> * l, <a class="code" href="classKviMaskEditor.html">KviMaskEditor</a> ** ppEd);
-<a name="l01104"></a>01104 
-<a name="l01109"></a>01109         <span class="keywordtype">void</span> checkChannelSync();
-<a name="l01110"></a>01110 
-<a name="l01120"></a>01120         <span class="keywordtype">void</span> showDoubleView(<span class="keywordtype">bool</span> bShow);
-<a name="l01121"></a>01121 
-<a name="l01126"></a>01126         <span class="keywordtype">void</span> fixActionHistory();
-<a name="l01127"></a>01127 
-<a name="l01135"></a>01135         <span class="keywordtype">void</span> getTalkingUsersStats(QString &amp; szBuffer, QStringList &amp; list, <span class="keywordtype">bool</span> bPast);
-<a name="l01136"></a>01136 
-<a name="l01142"></a>01142         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a1c93c505b5bf784bf7b398d8829be246">preprocessMessage</a>(QString &amp; szMessage);
-<a name="l01143"></a>01143 
-<a name="l01144"></a>01144         <span class="keyword">virtual</span> <span class="keywordtype">void</span> resizeEvent(QResizeEvent * e);
-<a name="l01145"></a>01145         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a71e069ef208c7e1f7d22b96fb890637f">closeEvent</a>(QCloseEvent * e);
-<a name="l01146"></a>01146 <span class="keyword">private</span> slots:
-<a name="l01151"></a>01151         <span class="keywordtype">void</span> toggleDoubleView();
-<a name="l01152"></a>01152 
-<a name="l01157"></a>01157         <span class="keywordtype">void</span> toggleListView();
-<a name="l01158"></a>01158 
-<a name="l01163"></a>01163         <span class="keywordtype">void</span> toggleBanEditor();
-<a name="l01164"></a>01164 
-<a name="l01169"></a>01169         <span class="keywordtype">void</span> toggleBanExceptionEditor();
-<a name="l01170"></a>01170 
-<a name="l01175"></a>01175         <span class="keywordtype">void</span> toggleInviteEditor();
-<a name="l01176"></a>01176 
-<a name="l01181"></a>01181         <span class="keywordtype">void</span> toggleQuietBanEditor();
-<a name="l01182"></a>01182 
-<a name="l01187"></a>01187         <span class="keywordtype">void</span> toggleModeEditor();
-<a name="l01188"></a>01188 
-<a name="l01192"></a>01192         <span class="keywordtype">void</span> modeSelectorDone();
-<a name="l01193"></a>01193 
-<a name="l01199"></a>01199         <span class="keywordtype">void</span> topicSelected(<span class="keyword">const</span> QString &amp; szTopic);
-<a name="l01200"></a>01200 
-<a name="l01206"></a>01206         <span class="keywordtype">void</span> setMode(<span class="keyword">const</span> <span class="keywordtype">char</span> * pcMode);
-<a name="l01207"></a>01207 
-<a name="l01214"></a>01214         <span class="keywordtype">void</span> textViewRightClicked();
-<a name="l01215"></a>01215 
-<a name="l01222"></a>01222         <span class="keywordtype">void</span> removeMasks(<a class="code" href="classKviMaskEditor.html">KviMaskEditor</a> * pEd, <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviMaskEntry&gt;</a> * pList);
-<a name="l01223"></a>01223 
-<a name="l01228"></a>01228         <span class="keywordtype">void</span> toggleToolButtons();
-<a name="l01229"></a>01229 };
-<a name="l01230"></a>01230 
-<a name="l01231"></a>01231 <span class="preprocessor">#endif //_KVI_CHANNEL_H_</span>
+<a name="l01048"></a>01048         <span class="keywordtype">void</span> textViewRightClicked();
+<a name="l01049"></a>01049 
+<a name="l01056"></a>01056         <span class="keywordtype">void</span> removeMasks(<a class="code" href="classKviMaskEditor.html">KviMaskEditor</a> * pEd, <a class="code" href="classKviPointerList.html" title="A template double linked list of pointers.">KviPointerList&lt;KviMaskEntry&gt;</a> * pList);
+<a name="l01057"></a>01057 
+<a name="l01062"></a>01062         <span class="keywordtype">void</span> toggleToolButtons();
+<a name="l01063"></a>01063 };
+<a name="l01064"></a>01064 
+<a name="l01065"></a>01065 <span class="preprocessor">#endif //_KVI_CHANNEL_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:21 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

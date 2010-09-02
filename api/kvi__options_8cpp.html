@@ -70,7 +70,7 @@
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__options_8cpp.html#addf175bf9771ef447cef88ae19a7b9d2">READ_ALL_OPTIONS</a>(_num, _table, _readFnc)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__options_8cpp.html#a108565ab71346344883a8bc8d64b19c6">READ_OPTIONS</a>(_num, _table, _readFnc)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__options_8cpp.html#a108565ab71346344883a8bc8d64b19c6">READ_OPTIONS</a>(_num, _table, _readFnc)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__options_8cpp.html#aabd8e233e59eb8dd315086db888d10d1">RECT_OPTION</a>(_txt, _val, _flags)&nbsp;&nbsp;&nbsp;KviRectOption(KVI_RECT_OPTIONS_PREFIX _txt, _val , _flags)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__options_8cpp.html#aabd8e233e59eb8dd315086db888d10d1">RECT_OPTION</a>(_txt, _val, _flags)&nbsp;&nbsp;&nbsp;KviRectOption(KVI_RECT_OPTIONS_PREFIX _txt, _val, _flags)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__options_8cpp.html#ad1ddbbfe1b3fe6e70c5da05e4cedec6d">RUN_THE_BROWSER</a>&nbsp;&nbsp;&nbsp;&quot;run x-www-browser $0&quot;</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__options_8cpp.html#a773248292e566f129b33b889ca9ad359">SET_OPTION_VALUE</a>(__numOpt, __table, __prefix, __prefixLen)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__options_8cpp.html#a40813809970558e68910d1f57aeb122b">STRING_OPTION</a>(_txt, _val, _flags)&nbsp;&nbsp;&nbsp;KviStringOption(KVI_STRING_OPTIONS_PREFIX _txt,_val,_flags)</td></tr>
@@ -213,8 +213,8 @@
 </div>
 <div class="memdoc">
 <b>Value:</b><div class="fragment"><pre class="fragment">KviFontOption( \
-                <a class="code" href="kvi__options_8h.html#a265c2249706a10fd816db106e2ae646b">KVI_FONT_OPTIONS_PREFIX</a> _name , \
-                QFont(_face,_size) , \
+                <a class="code" href="kvi__options_8h.html#a265c2249706a10fd816db106e2ae646b">KVI_FONT_OPTIONS_PREFIX</a> _name, \
+                QFont(_face,_size), \
                 _flags | KviOption_groupTheme \
         )
 </pre></div>
@@ -263,7 +263,7 @@
                         <span class="keywordflow">return</span> <span class="keyword">false</span>; \
                 }
 </pre></div>
-<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01272">KviApp::getOptionString()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01273">KviApp::getOptionString()</a>.</p>
 
 </div>
 </div>
@@ -332,7 +332,7 @@
 <b>Value:</b><div class="fragment"><pre class="fragment">wnd-&gt;output(<a class="code" href="kvi__out_8h.html#a782fecb30336d31ce4730ed189452798">KVI_OUT_SYSTEMMESSAGE</a>,<span class="stringliteral">&quot;%c%s%c&quot;</span>,<a class="code" href="kvi__mirccntrl_8h.html#a68bd8a29949f4f4cc52231741782e910">KVI_TEXT_BOLD</a>,__txt,<a class="code" href="kvi__mirccntrl_8h.html#a68bd8a29949f4f4cc52231741782e910">KVI_TEXT_BOLD</a>); \
                 <span class="keywordflow">for</span>(i = 0;i &lt; __num;i++)wnd-&gt;outputNoFmt(<a class="code" href="kvi__out_8h.html#a782fecb30336d31ce4730ed189452798">KVI_OUT_SYSTEMMESSAGE</a>,__table[i].name);
 </pre></div>
-<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01248">KviApp::listAvailableOptions()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01249">KviApp::listAvailableOptions()</a>.</p>
 
 </div>
 </div>
@@ -402,7 +402,7 @@
 </div>
 <div class="memdoc">
 <b>Value:</b><div class="fragment"><pre class="fragment">KviMsgTypeOption( \
-                <a class="code" href="kvi__options_8h.html#a01f76661dff334541e176b1720c07864">KVI_MSGTYPE_OPTIONS_PREFIX</a> _name , \
+                <a class="code" href="kvi__options_8h.html#a01f76661dff334541e176b1720c07864">KVI_MSGTYPE_OPTIONS_PREFIX</a> _name, \
                 <a class="code" href="classKviMsgType.html">KviMsgType</a>(_text,_icon,<a class="code" href="kvi__mirccntrl_8h.html#aaee6aa2f929c1f4d3db0da1ef8b324b6">KVI_BLACK</a>,<a class="code" href="kvi__mirccntrl_8h.html#af8ecd11c9fa8e475841ae36e732bca7c">KVI_TRANSPARENT</a>,<span class="keyword">true</span>,_levl), \
                 KviOption_sectFlagMsgType | KviOption_groupTheme \
         )
@@ -450,7 +450,7 @@
 </div>
 <div class="memdoc">
 <b>Value:</b><div class="fragment"><pre class="fragment">KviMsgTypeOption( \
-                <a class="code" href="kvi__options_8h.html#a01f76661dff334541e176b1720c07864">KVI_MSGTYPE_OPTIONS_PREFIX</a> _name , \
+                <a class="code" href="kvi__options_8h.html#a01f76661dff334541e176b1720c07864">KVI_MSGTYPE_OPTIONS_PREFIX</a> _name, \
                 <a class="code" href="classKviMsgType.html">KviMsgType</a>(_text,_icon,_fore,_back,<span class="keyword">true</span>,_levl), \
                 KviOption_sectFlagMsgType | KviOption_groupTheme \
         )
@@ -478,7 +478,7 @@
 </div>
 <div class="memdoc">
 <b>Value:</b><div class="fragment"><pre class="fragment">KviPixmapOption( \
-                <a class="code" href="kvi__options_8h.html#aba85d6925635ae2297d4b59ffe91c0b3">KVI_PIXMAP_OPTIONS_PREFIX</a> _name , \
+                <a class="code" href="kvi__options_8h.html#aba85d6925635ae2297d4b59ffe91c0b3">KVI_PIXMAP_OPTIONS_PREFIX</a> _name, \
                 <a class="code" href="classKviPixmap.html">KviPixmap</a>(), \
                 _flags | KviOption_resetUpdateGui)
 </pre></div>
@@ -592,7 +592,7 @@
                 prg += 3; \
                 <a class="code" href="kvi__splash_8h.html#a94051c6b1d120262110fb85d30eb8c48">KVI_SPLASH_SET_PROGRESS</a>(prg)
 </pre></div>
-<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l00893">KviApp::loadOptions()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l00894">KviApp::loadOptions()</a>.</p>
 
 </div>
 </div>
@@ -616,7 +616,7 @@
           <td class="paramtype">_flags&nbsp;</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
-          <td>&nbsp;&nbsp;&nbsp;KviRectOption(KVI_RECT_OPTIONS_PREFIX _txt, _val , _flags)</td>
+          <td>&nbsp;&nbsp;&nbsp;KviRectOption(KVI_RECT_OPTIONS_PREFIX _txt, _val, _flags)</td>
         </tr>
       </table>
 </div>
@@ -681,7 +681,7 @@
                         <span class="keywordflow">return</span> <span class="keyword">false</span>; \
                 }
 </pre></div>
-<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01406">KviApp::setCommonOptionValue()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01407">KviApp::setCommonOptionValue()</a>.</p>
 
 </div>
 </div>
@@ -790,8 +790,8 @@
 </div>
 <div class="memdoc">
 <b>Value:</b><div class="fragment"><pre class="fragment">KviUIntOption( \
-                <a class="code" href="kvi__options_8h.html#a8cc768d5d92321cf05f00e2ffc1592eb">KVI_UINT_OPTIONS_PREFIX</a> _name , \
-                _value , \
+                <a class="code" href="kvi__options_8h.html#a8cc768d5d92321cf05f00e2ffc1592eb">KVI_UINT_OPTIONS_PREFIX</a> _name, \
+                _value, \
                 _flags \
         )
 </pre></div>
@@ -851,7 +851,7 @@
                 cfg.writeEntry(_table[i].<a class="code" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">name</a>,_table[i].option); \
         }
 </pre></div>
-<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l00940">KviApp::saveOptions()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l00941">KviApp::saveOptions()</a>.</p>
 
 </div>
 </div>
@@ -881,7 +881,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__options_8cpp_source.html#l00873">options_section_table</a>, and <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>.</p>
+<p>References <a class="el" href="kvi__options_8cpp_source.html#l00874">options_section_table</a>, and <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>.</p>
 
 </div>
 </div>
@@ -897,7 +897,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__optionswidget_8cpp_source.html#l00271">KviOptionsWidget::addBoolSelector()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01272">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01248">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00893">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00940">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01406">KviApp::setCommonOptionValue()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__optionswidget_8cpp_source.html#l00271">KviOptionsWidget::addBoolSelector()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01273">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01249">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00894">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00941">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01407">KviApp::setCommonOptionValue()</a>.</p>
 
 </div>
 </div>
@@ -912,7 +912,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__optionswidget_8cpp_source.html#l00495">KviOptionsWidget::addColorSelector()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01272">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01248">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00893">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00940">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01406">KviApp::setCommonOptionValue()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__optionswidget_8cpp_source.html#l00495">KviOptionsWidget::addColorSelector()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01273">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01249">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00894">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00941">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01407">KviApp::setCommonOptionValue()</a>.</p>
 
 </div>
 </div>
@@ -953,7 +953,7 @@
 
 }
 </pre></div>
-<p>Referenced by <a class="el" href="kvi__optionswidget_8cpp_source.html#l00578">KviOptionsWidget::addFontSelector()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01272">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01248">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00893">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00940">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01406">KviApp::setCommonOptionValue()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__optionswidget_8cpp_source.html#l00578">KviOptionsWidget::addFontSelector()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01273">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01249">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00894">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00941">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01407">KviApp::setCommonOptionValue()</a>.</p>
 
 </div>
 </div>
@@ -979,7 +979,7 @@
 
 }
 </pre></div>
-<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01272">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01248">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00893">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00940">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01406">KviApp::setCommonOptionValue()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01273">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01249">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00894">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00941">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01407">KviApp::setCommonOptionValue()</a>.</p>
 
 </div>
 </div>
@@ -996,7 +996,7 @@
 
 <p>xml parser </p>
 
-<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01307">KviApp::optionResetUpdate()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01308">KviApp::optionResetUpdate()</a>.</p>
 
 </div>
 </div>
@@ -1030,7 +1030,7 @@
 
 }
 </pre></div>
-<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01272">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01248">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00893">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00940">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01406">KviApp::setCommonOptionValue()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01273">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01249">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00894">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00941">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01407">KviApp::setCommonOptionValue()</a>.</p>
 
 </div>
 </div>
@@ -1045,7 +1045,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01272">KviApp::getOptionString()</a>, <a class="el" href="kvi__kvs__corefunctions__mr_8cpp_source.html#l00227">KviKvsCoreFunctions::KVSCF()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01248">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00893">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00940">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01406">KviApp::setCommonOptionValue()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01273">KviApp::getOptionString()</a>, <a class="el" href="kvi__kvs__corefunctions__mr_8cpp_source.html#l00227">KviKvsCoreFunctions::KVSCF()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01249">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00894">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00941">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01407">KviApp::setCommonOptionValue()</a>.</p>
 
 </div>
 </div>
@@ -1073,7 +1073,7 @@
 
 }
 </pre></div>
-<p>Referenced by <a class="el" href="kvi__optionswidget_8cpp_source.html#l00304">KviOptionsWidget::addPixmapSelector()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01272">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01248">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00893">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00940">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01366">KviApp::setOptionValue()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__optionswidget_8cpp_source.html#l00304">KviOptionsWidget::addPixmapSelector()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01273">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01249">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00894">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00941">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01367">KviApp::setOptionValue()</a>.</p>
 
 </div>
 </div>
@@ -1094,7 +1094,7 @@
 
 }
 </pre></div>
-<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01272">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01248">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00893">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00940">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01406">KviApp::setCommonOptionValue()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l01273">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01249">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00894">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00941">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01407">KviApp::setCommonOptionValue()</a>.</p>
 
 </div>
 </div>
@@ -1120,7 +1120,7 @@
 
 }
 </pre></div>
-<p>Referenced by <a class="el" href="kvi__optionswidget_8cpp_source.html#l00466">KviOptionsWidget::addStringListSelector()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01272">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01248">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00893">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00940">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01406">KviApp::setCommonOptionValue()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__optionswidget_8cpp_source.html#l00466">KviOptionsWidget::addStringListSelector()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01273">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01249">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00894">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00941">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01407">KviApp::setCommonOptionValue()</a>.</p>
 
 </div>
 </div>
@@ -1135,7 +1135,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__optionswidget_8cpp_source.html#l00138">KviOptionsWidget::addDirectorySelector()</a>, <a class="el" href="kvi__optionswidget_8cpp_source.html#l00183">KviOptionsWidget::addFileSelector()</a>, <a class="el" href="kvi__optionswidget_8cpp_source.html#l00433">KviOptionsWidget::addPasswordSelector()</a>, <a class="el" href="kvi__optionswidget_8cpp_source.html#l00227">KviOptionsWidget::addSoundSelector()</a>, <a class="el" href="kvi__optionswidget_8cpp_source.html#l00393">KviOptionsWidget::addStringSelector()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01272">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01248">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00893">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00940">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01406">KviApp::setCommonOptionValue()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__optionswidget_8cpp_source.html#l00138">KviOptionsWidget::addDirectorySelector()</a>, <a class="el" href="kvi__optionswidget_8cpp_source.html#l00183">KviOptionsWidget::addFileSelector()</a>, <a class="el" href="kvi__optionswidget_8cpp_source.html#l00433">KviOptionsWidget::addPasswordSelector()</a>, <a class="el" href="kvi__optionswidget_8cpp_source.html#l00227">KviOptionsWidget::addSoundSelector()</a>, <a class="el" href="kvi__optionswidget_8cpp_source.html#l00393">KviOptionsWidget::addStringSelector()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01273">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01249">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00894">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00941">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01407">KviApp::setCommonOptionValue()</a>.</p>
 
 </div>
 </div>
@@ -1150,7 +1150,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__optionswidget_8cpp_source.html#l00535">KviOptionsWidget::addMircTextColorSelector()</a>, <a class="el" href="kvi__optionswidget_8cpp_source.html#l00337">KviOptionsWidget::addUIntSelector()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01272">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01248">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00893">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00940">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01406">KviApp::setCommonOptionValue()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__optionswidget_8cpp_source.html#l00535">KviOptionsWidget::addMircTextColorSelector()</a>, <a class="el" href="kvi__optionswidget_8cpp_source.html#l00337">KviOptionsWidget::addUIntSelector()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01273">KviApp::getOptionString()</a>, <a class="el" href="kvi__options_8cpp_source.html#l01249">KviApp::listAvailableOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00894">KviApp::loadOptions()</a>, <a class="el" href="kvi__options_8cpp_source.html#l00941">KviApp::saveOptions()</a>, and <a class="el" href="kvi__options_8cpp_source.html#l01407">KviApp::setCommonOptionValue()</a>.</p>
 
 </div>
 </div>
@@ -1175,12 +1175,12 @@
         <span class="stringliteral">&quot;Recent&quot;</span>,        <span class="stringliteral">&quot;Geometry&quot;</span>
 }
 </pre></div>
-<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l00884">config_set_section()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__options_8cpp_source.html#l00885">config_set_section()</a>.</p>
 
 </div>
 </div>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:21 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:21 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

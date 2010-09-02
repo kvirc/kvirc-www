@@ -47,7 +47,7 @@ Inheritance diagram for KviMaskEditor:</div>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMaskEditor.html#a84e6117694dd38b38d9c9d7ac87eee00">addMask</a> (<a class="el" href="struct__KviMaskEntry.html">KviMaskEntry</a> *e)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMaskEditor.html#a92d6bcd094822b8eb49dc1c76614c988">clear</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMaskEditor.html#af99afd4865802c3b17163827a3be33df">flag</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMaskEditor.html#af48014960b2439896cabc6b9ceda92ca">KviMaskEditor</a> (QWidget *par, <a class="el" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a> *button, <a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="struct__KviMaskEntry.html">KviMaskEntry</a> &gt; *maskList, char flag, const char *nam)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMaskEditor.html#ae28ae76acb7dc90f01c0542564d4aa73">KviMaskEditor</a> (QWidget *par, <a class="el" href="classKviChannel.html">KviChannel</a> *pChannel, <a class="el" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a> *button, <a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="struct__KviMaskEntry.html">KviMaskEntry</a> &gt; *maskList, char cMode, const char *name)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMaskEditor.html#a1349a8bd6c41fc225f874e5d460f89de">removeMask</a> (<a class="el" href="struct__KviMaskEntry.html">KviMaskEntry</a> *e)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMaskEditor.html#ade471db6869a13c4605f077ce45ebfe8">~KviMaskEditor</a> ()</td></tr>
 <tr><td colspan="2"><h2>Protected Slots</h2></td></tr>
@@ -59,12 +59,13 @@ Inheritance diagram for KviMaskEditor:</div>
 <tr><td class="memItemLeft" align="right" valign="top">char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMaskEditor.html#ab4ef87791b64044a30c5537b654b9ece">m_cFlag</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMaskEditor.html#a881f957570c48edd5eadce1c664fb9f5">m_iIconId</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPushButton *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMaskEditor.html#acc026c694fe3ad22019fad9a3def119e">m_pAddButton</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviChannel.html">KviChannel</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMaskEditor.html#a8e8beff4fee08ffc75086fb73aa7d04f">m_pChannel</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QTreeWidget *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMaskEditor.html#ad8de0341a275d895211729c2fa80ad01">m_pMaskBox</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPushButton *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMaskEditor.html#ad45417b5de9054167123da6a39705c0e">m_pRemoveMask</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QLineEdit *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMaskEditor.html#ab5bd95e4d63fb361b4431d0254670a29">m_pSearch</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="af48014960b2439896cabc6b9ceda92ca"></a><!-- doxytag: member="KviMaskEditor::KviMaskEditor" ref="af48014960b2439896cabc6b9ceda92ca" args="(QWidget *par, KviWindowToolPageButton *button, KviPointerList&lt; KviMaskEntry &gt; *maskList, char flag, const char *nam)" -->
+<a class="anchor" id="ae28ae76acb7dc90f01c0542564d4aa73"></a><!-- doxytag: member="KviMaskEditor::KviMaskEditor" ref="ae28ae76acb7dc90f01c0542564d4aa73" args="(QWidget *par, KviChannel *pChannel, KviWindowToolPageButton *button, KviPointerList&lt; KviMaskEntry &gt; *maskList, char cMode, const char *name)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -73,6 +74,12 @@ Inheritance diagram for KviMaskEditor:</div>
           <td>(</td>
           <td class="paramtype">QWidget *&nbsp;</td>
           <td class="paramname"> <em>par</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classKviChannel.html">KviChannel</a> *&nbsp;</td>
+          <td class="paramname"> <em>pChannel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -90,13 +97,13 @@ Inheritance diagram for KviMaskEditor:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char&nbsp;</td>
-          <td class="paramname"> <em>flag</em>, </td>
+          <td class="paramname"> <em>cMode</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&nbsp;</td>
-          <td class="paramname"> <em>nam</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>name</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -107,7 +114,7 @@ Inheritance diagram for KviMaskEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00275">addClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00294">addMask()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00492">KviIconManager::getSmallIcon()</a>, <a class="el" href="classKviChannel.html#a36a47275838e4d947eeb464590f94b08">KviChannel::isMeChanAdmin()</a>, <a class="el" href="classKviChannel.html#ab3ac78e679bf45db52f9d80c58683f13">KviChannel::isMeChanOwner()</a>, <a class="el" href="classKviChannel.html#a7e3fe5c82aed9c894ed80c2c608186d3">KviChannel::isMeHalfOp()</a>, <a class="el" href="classKviChannel.html#a50170318e02fec78c2df5aff153d66e1">KviChannel::isMeOp()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00325">itemDoubleClicked()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00105">KVI_SMALLICON_BAN</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00107">KVI_SMALLICON_BANEXCEPT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00278">KVI_SMALLICON_DELETEITEM</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00109">KVI_SMALLICON_INVITEEXCEPT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00276">KVI_SMALLICON_NEWITEM</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00066">KVI_SMALLICON_UNHANDLED</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00106">m_cFlag</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00107">m_iIconId</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00104">m_pAddButton</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00102">m_pMaskBox</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00103">m_pRemoveMask</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00105">m_pSearch</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00254">removeClicked()</a>, and <a class="el" href="kvi__maskeditor_8cpp_source.html#l00235">searchTextChanged()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00272">addClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00289">addMask()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00214">KviIrcConnectionServerInfo::getChannelModeDescription()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00494">KviIconManager::getSmallIcon()</a>, <a class="el" href="classKviChannel.html#a36a47275838e4d947eeb464590f94b08">KviChannel::isMeChanAdmin()</a>, <a class="el" href="classKviChannel.html#ab3ac78e679bf45db52f9d80c58683f13">KviChannel::isMeChanOwner()</a>, <a class="el" href="classKviChannel.html#a7e3fe5c82aed9c894ed80c2c608186d3">KviChannel::isMeHalfOp()</a>, <a class="el" href="classKviChannel.html#a50170318e02fec78c2df5aff153d66e1">KviChannel::isMeOp()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00320">itemDoubleClicked()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00105">KVI_SMALLICON_BAN</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00107">KVI_SMALLICON_BANEXCEPT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00277">KVI_SMALLICON_DELETEITEM</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00109">KVI_SMALLICON_INVITEEXCEPT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00275">KVI_SMALLICON_NEWITEM</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00107">m_cFlag</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00108">m_iIconId</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00105">m_pAddButton</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00102">m_pChannel</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00103">m_pMaskBox</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00104">m_pRemoveMask</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00106">m_pSearch</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00251">removeClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00232">searchTextChanged()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01802">KviChannel::serverInfo()</a>.</p>
 
 </div>
 </div>
@@ -144,9 +151,9 @@ Inheritance diagram for KviMaskEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l01380">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8cpp_source.html#l00034">KviIrcConnectionUserInfo::hasUserMode()</a>, <a class="el" href="classKviChannel.html#a36a47275838e4d947eeb464590f94b08">KviChannel::isMeChanAdmin()</a>, <a class="el" href="classKviChannel.html#ab3ac78e679bf45db52f9d80c58683f13">KviChannel::isMeChanOwner()</a>, <a class="el" href="classKviChannel.html#a7e3fe5c82aed9c894ed80c2c608186d3">KviChannel::isMeHalfOp()</a>, <a class="el" href="classKviChannel.html#a50170318e02fec78c2df5aff153d66e1">KviChannel::isMeOp()</a>, and <a class="el" href="kvi__ircconnection_8h_source.html#l00243">KviIrcConnection::userInfo()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8cpp_source.html#l00034">KviIrcConnectionUserInfo::hasUserMode()</a>, <a class="el" href="classKviChannel.html#a36a47275838e4d947eeb464590f94b08">KviChannel::isMeChanAdmin()</a>, <a class="el" href="classKviChannel.html#ab3ac78e679bf45db52f9d80c58683f13">KviChannel::isMeChanOwner()</a>, <a class="el" href="classKviChannel.html#a7e3fe5c82aed9c894ed80c2c608186d3">KviChannel::isMeHalfOp()</a>, <a class="el" href="classKviChannel.html#a50170318e02fec78c2df5aff153d66e1">KviChannel::isMeOp()</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00102">m_pChannel</a>, and <a class="el" href="kvi__ircconnection_8h_source.html#l00241">KviIrcConnection::userInfo()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00126">KviMaskEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00127">KviMaskEditor()</a>.</p>
 
 </div>
 </div>
@@ -166,9 +173,9 @@ Inheritance diagram for KviMaskEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00492">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00107">m_iIconId</a>, and <a class="el" href="kvi__maskeditor_8h_source.html#l00102">m_pMaskBox</a>.</p>
+<p>References <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00494">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00108">m_iIconId</a>, and <a class="el" href="kvi__maskeditor_8h_source.html#l00103">m_pMaskBox</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00126">KviMaskEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00127">KviMaskEditor()</a>.</p>
 
 </div>
 </div>
@@ -187,9 +194,7 @@ Inheritance diagram for KviMaskEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__maskeditor_8h_source.html#l00102">m_pMaskBox</a>.</p>
-
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00670">KviChannel::setDeadChan()</a>.</p>
+<p>References <a class="el" href="kvi__maskeditor_8h_source.html#l00103">m_pMaskBox</a>.</p>
 
 </div>
 </div>
@@ -208,7 +213,7 @@ Inheritance diagram for KviMaskEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00105">KviMaskInputDialog::accept()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00557">KviChannel::removeMasks()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00106">KviMaskInputDialog::accept()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00550">KviChannel::removeMasks()</a>.</p>
 
 </div>
 </div>
@@ -237,9 +242,9 @@ Inheritance diagram for KviMaskEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l01380">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8cpp_source.html#l00034">KviIrcConnectionUserInfo::hasUserMode()</a>, <a class="el" href="classKviChannel.html#a36a47275838e4d947eeb464590f94b08">KviChannel::isMeChanAdmin()</a>, <a class="el" href="classKviChannel.html#ab3ac78e679bf45db52f9d80c58683f13">KviChannel::isMeChanOwner()</a>, <a class="el" href="classKviChannel.html#a7e3fe5c82aed9c894ed80c2c608186d3">KviChannel::isMeHalfOp()</a>, <a class="el" href="classKviChannel.html#a50170318e02fec78c2df5aff153d66e1">KviChannel::isMeOp()</a>, and <a class="el" href="kvi__ircconnection_8h_source.html#l00243">KviIrcConnection::userInfo()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8cpp_source.html#l00034">KviIrcConnectionUserInfo::hasUserMode()</a>, <a class="el" href="classKviChannel.html#a36a47275838e4d947eeb464590f94b08">KviChannel::isMeChanAdmin()</a>, <a class="el" href="classKviChannel.html#ab3ac78e679bf45db52f9d80c58683f13">KviChannel::isMeChanOwner()</a>, <a class="el" href="classKviChannel.html#a7e3fe5c82aed9c894ed80c2c608186d3">KviChannel::isMeHalfOp()</a>, <a class="el" href="classKviChannel.html#a50170318e02fec78c2df5aff153d66e1">KviChannel::isMeOp()</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00102">m_pChannel</a>, and <a class="el" href="kvi__ircconnection_8h_source.html#l00241">KviIrcConnection::userInfo()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00126">KviMaskEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00127">KviMaskEditor()</a>.</p>
 
 </div>
 </div>
@@ -258,9 +263,9 @@ Inheritance diagram for KviMaskEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00102">m_pMaskBox</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00054">KviMaskItem::mask()</a>, <a class="el" href="classKviMaskEditor.html#a5e9e8fcf3ff5e3c2c9ae7c09c50be84f">removeMasks()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00043">_KviMaskEntry::szMask</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00044">_KviMaskEntry::szSetBy</a>, and <a class="el" href="kvi__maskeditor_8h_source.html#l00045">_KviMaskEntry::uSetAt</a>.</p>
+<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00103">m_pMaskBox</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00054">KviMaskItem::mask()</a>, <a class="el" href="classKviMaskEditor.html#a5e9e8fcf3ff5e3c2c9ae7c09c50be84f">removeMasks()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00043">_KviMaskEntry::szMask</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00044">_KviMaskEntry::szSetBy</a>, and <a class="el" href="kvi__maskeditor_8h_source.html#l00045">_KviMaskEntry::uSetAt</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00126">KviMaskEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00127">KviMaskEditor()</a>.</p>
 
 </div>
 </div>
@@ -280,7 +285,7 @@ Inheritance diagram for KviMaskEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00102">m_pMaskBox</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00054">KviMaskItem::mask()</a>, and <a class="el" href="kvi__maskeditor_8h_source.html#l00043">_KviMaskEntry::szMask</a>.</p>
+<p>References <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00103">m_pMaskBox</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00054">KviMaskItem::mask()</a>, and <a class="el" href="kvi__maskeditor_8h_source.html#l00043">_KviMaskEntry::szMask</a>.</p>
 
 </div>
 </div>
@@ -309,7 +314,7 @@ Inheritance diagram for KviMaskEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00254">removeClicked()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00251">removeClicked()</a>.</p>
 
 </div>
 </div>
@@ -329,9 +334,9 @@ Inheritance diagram for KviMaskEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__maskeditor_8h_source.html#l00102">m_pMaskBox</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00054">KviMaskItem::mask()</a>, and <a class="el" href="kvi__maskeditor_8h_source.html#l00043">_KviMaskEntry::szMask</a>.</p>
+<p>References <a class="el" href="kvi__maskeditor_8h_source.html#l00103">m_pMaskBox</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00054">KviMaskItem::mask()</a>, and <a class="el" href="kvi__maskeditor_8h_source.html#l00043">_KviMaskEntry::szMask</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00126">KviMaskEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00127">KviMaskEditor()</a>.</p>
 
 </div>
 </div>
@@ -347,7 +352,7 @@ Inheritance diagram for KviMaskEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00126">KviMaskEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00127">KviMaskEditor()</a>.</p>
 
 </div>
 </div>
@@ -362,7 +367,7 @@ Inheritance diagram for KviMaskEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00294">addMask()</a>, and <a class="el" href="kvi__maskeditor_8cpp_source.html#l00126">KviMaskEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00289">addMask()</a>, and <a class="el" href="kvi__maskeditor_8cpp_source.html#l00127">KviMaskEditor()</a>.</p>
 
 </div>
 </div>
@@ -377,7 +382,22 @@ Inheritance diagram for KviMaskEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00126">KviMaskEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00127">KviMaskEditor()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8e8beff4fee08ffc75086fb73aa7d04f"></a><!-- doxytag: member="KviMaskEditor::m_pChannel" ref="a8e8beff4fee08ffc75086fb73aa7d04f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classKviChannel.html">KviChannel</a>* <a class="el" href="classKviMaskEditor.html#a8e8beff4fee08ffc75086fb73aa7d04f">KviMaskEditor::m_pChannel</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00272">addClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00320">itemDoubleClicked()</a>, and <a class="el" href="kvi__maskeditor_8cpp_source.html#l00127">KviMaskEditor()</a>.</p>
 
 </div>
 </div>
@@ -392,7 +412,7 @@ Inheritance diagram for KviMaskEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00294">addMask()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00315">clear()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00126">KviMaskEditor()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00254">removeClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00301">removeMask()</a>, and <a class="el" href="kvi__maskeditor_8cpp_source.html#l00235">searchTextChanged()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00289">addMask()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00310">clear()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00127">KviMaskEditor()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00251">removeClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00296">removeMask()</a>, and <a class="el" href="kvi__maskeditor_8cpp_source.html#l00232">searchTextChanged()</a>.</p>
 
 </div>
 </div>
@@ -407,7 +427,7 @@ Inheritance diagram for KviMaskEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00126">KviMaskEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00127">KviMaskEditor()</a>.</p>
 
 </div>
 </div>
@@ -422,7 +442,7 @@ Inheritance diagram for KviMaskEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00126">KviMaskEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00127">KviMaskEditor()</a>.</p>
 
 </div>
 </div>
@@ -431,7 +451,7 @@ Inheritance diagram for KviMaskEditor:</div>
 <li>src/kvirc/ui/<a class="el" href="kvi__maskeditor_8cpp.html">kvi_maskeditor.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:26 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:26 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

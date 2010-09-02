@@ -63,11 +63,14 @@
 <tr><td colspan="2"><h2>Defines</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__numeric_8cpp.html#ae147a804624fadc93930a1da68320d71">IS_CHANNEL_TYPE_FLAG</a>(_qchar)&nbsp;&nbsp;&nbsp;(msg-&gt;connection()-&gt;serverInfo()-&gt;supportedChannelTypes().indexOf(_qchar) != -1)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__numeric_8cpp.html#a79dcc09320fc4dd7ab675e1f720fee75">IS_USER_MODE_PREFIX</a>(_qchar)&nbsp;&nbsp;&nbsp;(msg-&gt;connection()-&gt;serverInfo()-&gt;supportedModePrefixes().indexOf(_qchar) != -1)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__numeric_8cpp.html#a004cdb98aa5eec53d8f01510c01fec80">PARSE_NUMERIC_ENDOFLIST</a>(__funcname, __setGotIt, __didSendRequest, __setDone, __daicon, __szWhatQString)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__numeric_8cpp.html#a29de025dff1b743859e74634046f1d1c">PARSE_NUMERIC_LIST</a>(__funcname, __modechar, __sentRequest, __ico, __szWhatQString)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__numeric_8cpp.html#aa85964f9210b50fe3151ef91dd525a40">PARSE_NUMERIC_ENDOFLIST</a>(__funcname, __modechar, __daicon, __szWhatQString)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__numeric_8cpp.html#af8411b426bbe4e557b14009e97ae111c">PARSE_NUMERIC_LIST</a>(__funcname, __modechar, __ico, __szWhatQString)</td></tr>
 <tr><td colspan="2"><h2>Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__numeric_8cpp.html#a3ec87c71dc8dc8cf44584b61b8a6985e">getDateTimeStringFromCharTimeT</a> (QString &amp;szBuffer, const char *time_t_string)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__numeric_8cpp.html#a536c1f69c5af4958527b4dad5b258392">PARSE_NUMERIC_LIST</a> (parseNumericExceptList,'e', sentBanExceptionListRequest, KVI_OUT_BANEXCEPT, __tr2qs(&quot;Ban exception listing&quot;))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__numeric_8cpp.html#a745a31636f4e880aa74af04a24365d0e">PARSE_NUMERIC_LIST</a> (parseNumericReopList,'R', KVI_OUT_BAN, __tr2qs(&quot;Reop masks listing&quot;))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__numeric_8cpp.html#a1d7533c279ebd9cd80d85363c8c1010f">PARSE_NUMERIC_LIST</a> (parseNumericAList,'a', KVI_OUT_BAN, __tr2qs(&quot;Admin/protected nicks listing&quot;))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__numeric_8cpp.html#a7ee6c21d76ab137706ad18f81f7d7344">PARSE_NUMERIC_LIST</a> (parseNumericQList,'q', KVI_OUT_BAN, __tr2qs(&quot;Owner listing&quot;))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__numeric_8cpp.html#adf3a76131f635c015145f2c597d5b02f">PARSE_NUMERIC_LIST</a> (parseNumericExceptList,'e', KVI_OUT_BANEXCEPT, __tr2qs(&quot;Ban exception listing&quot;))</td></tr>
 </table>
 <hr/><h2>Define Documentation</h2>
 <a class="anchor" id="ae147a804624fadc93930a1da68320d71"></a><!-- doxytag: member="kvi_sp_numeric.cpp::IS_CHANNEL_TYPE_FLAG" ref="ae147a804624fadc93930a1da68320d71" args="(_qchar)" -->
@@ -86,7 +89,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00593">KviServerParser::parseNumericChannelModeIs()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00857">KviServerParser::parseNumericEndOfWho()</a>, and <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01251">KviServerParser::parseNumericWhoisChannels()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00630">KviServerParser::parseNumericChannelModeIs()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00905">KviServerParser::parseNumericEndOfWho()</a>, and <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01307">KviServerParser::parseNumericWhoisChannels()</a>.</p>
 
 </div>
 </div>
@@ -106,11 +109,11 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01251">KviServerParser::parseNumericWhoisChannels()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01307">KviServerParser::parseNumericWhoisChannels()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a004cdb98aa5eec53d8f01510c01fec80"></a><!-- doxytag: member="kvi_sp_numeric.cpp::PARSE_NUMERIC_ENDOFLIST" ref="a004cdb98aa5eec53d8f01510c01fec80" args="(__funcname, __setGotIt, __didSendRequest, __setDone, __daicon, __szWhatQString)" -->
+<a class="anchor" id="aa85964f9210b50fe3151ef91dd525a40"></a><!-- doxytag: member="kvi_sp_numeric.cpp::PARSE_NUMERIC_ENDOFLIST" ref="aa85964f9210b50fe3151ef91dd525a40" args="(__funcname, __modechar, __daicon, __szWhatQString)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -122,17 +125,7 @@
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">__setGotIt, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">__didSendRequest, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">__setDone, </td>
+          <td class="paramtype">__modechar, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -156,10 +149,9 @@
                 <a class="code" href="classKviChannel.html" title="The class which manages a channel.">KviChannel</a> * chan = msg-&gt;connection()-&gt;findChannel(szChan); \
                 <span class="keywordflow">if</span>(chan) \
                 { \
-                        chan-&gt;__setGotIt(); \
-                        <span class="keywordflow">if</span>(chan-&gt;__didSendRequest()) \
+                        <span class="keywordflow">if</span>(chan-&gt;<a class="code" href="classKviChannel.html#a778e76fa420290ac4407b4c32401bb91" title="Returns true if we have sent a list request for a specific channel mode.">sentListRequest</a>(__modechar)) \
                         { \
-                                chan-&gt;__setDone(); \
+                                chan-&gt;<a class="code" href="classKviChannel.html#a0c630090a36587fbaa5cae3c7f02b5ff" title="Clears the &amp;quot;sent request&amp;quot; flag for a specific chanel mode.">setListRequestDone</a>(__modechar); \
                                 <span class="keywordflow">return</span>; \
                         } \
                 } \
@@ -173,7 +165,7 @@
 </pre></div>
 </div>
 </div>
-<a class="anchor" id="a29de025dff1b743859e74634046f1d1c"></a><!-- doxytag: member="kvi_sp_numeric.cpp::PARSE_NUMERIC_LIST" ref="a29de025dff1b743859e74634046f1d1c" args="(__funcname, __modechar, __sentRequest, __ico, __szWhatQString)" -->
+<a class="anchor" id="af8411b426bbe4e557b14009e97ae111c"></a><!-- doxytag: member="kvi_sp_numeric.cpp::PARSE_NUMERIC_LIST" ref="af8411b426bbe4e557b14009e97ae111c" args="(__funcname, __modechar, __ico, __szWhatQString)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -186,11 +178,6 @@
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">__modechar, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">__sentRequest, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -219,8 +206,8 @@
                 <a class="code" href="classKviChannel.html" title="The class which manages a channel.">KviChannel</a> * chan = msg-&gt;connection()-&gt;findChannel(szChan); \
                 <span class="keywordflow">if</span>(chan) \
                 { \
-                        chan-&gt;<a class="code" href="classKviChannel.html#a8364a9f3918246e544c328c453258e9b" title="Called when someone sets a mask in the channel&amp;#39;s lists.">setMask</a>(__modechar,banmask,<span class="keyword">true</span>,bansetby,QString(msg-&gt;safeParam(4)).toUInt()); \
-                        <span class="keywordflow">if</span>(chan-&gt;__sentRequest())<span class="keywordflow">return</span>; \
+                        chan-&gt;<a class="code" href="classKviChannel.html#a5181316c91f760742ef0cf2ff587a7fb" title="Called when someone sets a channel mode that is stored in a list; these modes require...">setMask</a>(__modechar,banmask,<span class="keyword">true</span>,bansetby,QString(msg-&gt;safeParam(4)).toUInt()); \
+                        <span class="keywordflow">if</span>(chan-&gt;<a class="code" href="classKviChannel.html#a778e76fa420290ac4407b4c32401bb91" title="Returns true if we have sent a list request for a specific channel mode.">sentListRequest</a>(__modechar))<span class="keywordflow">return</span>; \
                 } \
                 <span class="keywordflow">if</span>(!msg-&gt;haltOutput()) \
                 { \
@@ -259,13 +246,130 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__options_8h_source.html#l00677">KVI_OPTION_UINT</a>, <a class="el" href="kvi__options_8h_source.html#l00604">KviOption_uintOutputDatetimeFormat</a>, and <a class="el" href="kvi__string_8h_source.html#l00425">KviStr::toUInt()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__options_8h_source.html#l00678">KVI_OPTION_UINT</a>, <a class="el" href="kvi__options_8h_source.html#l00605">KviOption_uintOutputDatetimeFormat</a>, and <a class="el" href="kvi__string_8h_source.html#l00425">KviStr::toUInt()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00642">KviServerParser::parseNumeric367()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00679">KviServerParser::parseNumeric367()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a536c1f69c5af4958527b4dad5b258392"></a><!-- doxytag: member="kvi_sp_numeric.cpp::PARSE_NUMERIC_LIST" ref="a536c1f69c5af4958527b4dad5b258392" args="(parseNumericExceptList,'e', sentBanExceptionListRequest, KVI_OUT_BANEXCEPT, __tr2qs(&quot;Ban exception listing&quot;))" -->
+<a class="anchor" id="a745a31636f4e880aa74af04a24365d0e"></a><!-- doxytag: member="kvi_sp_numeric.cpp::PARSE_NUMERIC_LIST" ref="a745a31636f4e880aa74af04a24365d0e" args="(parseNumericReopList,'R', KVI_OUT_BAN, __tr2qs(&quot;Reop masks listing&quot;))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PARSE_NUMERIC_LIST </td>
+          <td>(</td>
+          <td class="paramtype">parseNumericReopList&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'R'&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KVI_OUT_BAN&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__tr2qs(&quot;Reop masks listing&quot;)&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1d7533c279ebd9cd80d85363c8c1010f"></a><!-- doxytag: member="kvi_sp_numeric.cpp::PARSE_NUMERIC_LIST" ref="a1d7533c279ebd9cd80d85363c8c1010f" args="(parseNumericAList,'a', KVI_OUT_BAN, __tr2qs(&quot;Admin/protected nicks listing&quot;))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PARSE_NUMERIC_LIST </td>
+          <td>(</td>
+          <td class="paramtype">parseNumericAList&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'a'&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KVI_OUT_BAN&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__tr2qs(&quot;Admin/protected nicks listing&quot;)&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7ee6c21d76ab137706ad18f81f7d7344"></a><!-- doxytag: member="kvi_sp_numeric.cpp::PARSE_NUMERIC_LIST" ref="a7ee6c21d76ab137706ad18f81f7d7344" args="(parseNumericQList,'q', KVI_OUT_BAN, __tr2qs(&quot;Owner listing&quot;))" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PARSE_NUMERIC_LIST </td>
+          <td>(</td>
+          <td class="paramtype">parseNumericQList&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">'q'&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">KVI_OUT_BAN&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">__tr2qs(&quot;Owner listing&quot;)&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adf3a76131f635c015145f2c597d5b02f"></a><!-- doxytag: member="kvi_sp_numeric.cpp::PARSE_NUMERIC_LIST" ref="adf3a76131f635c015145f2c597d5b02f" args="(parseNumericExceptList,'e', KVI_OUT_BANEXCEPT, __tr2qs(&quot;Ban exception listing&quot;))" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -279,12 +383,6 @@
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">'e'&nbsp;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">sentBanExceptionListRequest&nbsp;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>
@@ -311,7 +409,7 @@
 </div>
 </div>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:21 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:22 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

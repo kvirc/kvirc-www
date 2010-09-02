@@ -49,16 +49,19 @@ Inheritance diagram for KviKvsObjectScriptFunctionHandler:</div>
 <a class="el" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectScriptFunctionHandler.html#a8769c5ccbf3ac1dc5805d6019053ef79">clone</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectScriptFunctionHandler.html#a2b21fdef48fcb046ae18148c95c24161">isScriptHandler</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectScriptFunctionHandler.html#a583f2159750caf9dcefb0ae26384dca8">KviKvsObjectScriptFunctionHandler</a> (const <a class="el" href="classKviKvsObjectScriptFunctionHandler.html">KviKvsObjectScriptFunctionHandler</a> &amp;h)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectScriptFunctionHandler.html#ad09a33e7c1d11ff30a8d72f7ca673905">KviKvsObjectScriptFunctionHandler</a> (const QString &amp;szScriptContext, const QString &amp;szCode, unsigned int uFlags=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectScriptFunctionHandler.html#a16436f5c5afd37a7a9ed96173d945051">KviKvsObjectScriptFunctionHandler</a> (const QString &amp;szScriptContext, const QString &amp;szCode, const QString &amp;szReminder, unsigned int uFlags=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectScriptFunctionHandler.html#ae6d970ff619968eca9691c26cf012a1a">reminder</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectScriptFunctionHandler.html#a33c9b7f193fb5abc52fbc21d209d0e36">scriptHandlerCode</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectScriptFunctionHandler.html#a3c9093b4f33b36847a6f8af7bc9550c0">setReminder</a> (const QString &amp;szReminder)</td></tr>
 <tr><td colspan="2"><h2>Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviKvsScript.html">KviKvsScript</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectScriptFunctionHandler.html#aa00d4ff91172180a9283fd7fd459b41f">m_pHandler</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectScriptFunctionHandler.html#a7e184bcccba6fe9ce87d8ce1634ce59c">m_szReminder</a></td></tr>
 <tr><td colspan="2"><h2>Friends</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectScriptFunctionHandler.html#add7408b412cdf9cb8e8a815bc5d3d9f1">KviKvsObject</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectScriptFunctionHandler.html#ab336134694912ecdc05aa99711513f08">KviKvsObjectClass</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad09a33e7c1d11ff30a8d72f7ca673905"></a><!-- doxytag: member="KviKvsObjectScriptFunctionHandler::KviKvsObjectScriptFunctionHandler" ref="ad09a33e7c1d11ff30a8d72f7ca673905" args="(const QString &amp;szScriptContext, const QString &amp;szCode, unsigned int uFlags=0)" -->
+<a class="anchor" id="a16436f5c5afd37a7a9ed96173d945051"></a><!-- doxytag: member="KviKvsObjectScriptFunctionHandler::KviKvsObjectScriptFunctionHandler" ref="a16436f5c5afd37a7a9ed96173d945051" args="(const QString &amp;szScriptContext, const QString &amp;szCode, const QString &amp;szReminder, unsigned int uFlags=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -77,6 +80,12 @@ Inheritance diagram for KviKvsObjectScriptFunctionHandler:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>szReminder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">unsigned int&nbsp;</td>
           <td class="paramname"> <em>uFlags</em> = <code>0</code></td><td>&nbsp;</td>
         </tr>
@@ -89,9 +98,9 @@ Inheritance diagram for KviKvsObjectScriptFunctionHandler:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__script_8h_source.html#l00081">KviKvsScript::InstructionList</a>, and <a class="el" href="kvi__kvs__object__functionhandlerimpl_8h_source.html#l00065">m_pHandler</a>.</p>
+<p>References <a class="el" href="kvi__kvs__script_8h_source.html#l00081">KviKvsScript::InstructionList</a>, <a class="el" href="kvi__kvs__object__functionhandlerimpl_8h_source.html#l00065">m_pHandler</a>, and <a class="el" href="kvi__kvs__object__functionhandlerimpl_8h_source.html#l00066">m_szReminder</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__kvs__object__functionhandlerimpl_8cpp_source.html#l00133">clone()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__object__functionhandlerimpl_8cpp_source.html#l00138">clone()</a>.</p>
 
 </div>
 </div>
@@ -206,6 +215,27 @@ Inheritance diagram for KviKvsObjectScriptFunctionHandler:</div>
 
 </div>
 </div>
+<a class="anchor" id="ae6d970ff619968eca9691c26cf012a1a"></a><!-- doxytag: member="KviKvsObjectScriptFunctionHandler::reminder" ref="ae6d970ff619968eca9691c26cf012a1a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString KviKvsObjectScriptFunctionHandler::reminder </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classKviKvsObjectFunctionHandler.html#a8e783acb793fb2374372f7f046337afe">KviKvsObjectFunctionHandler</a>.</p>
+
+<p>References <a class="el" href="kvi__kvs__object__functionhandlerimpl_8h_source.html#l00066">m_szReminder</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a33c9b7f193fb5abc52fbc21d209d0e36"></a><!-- doxytag: member="KviKvsObjectScriptFunctionHandler::scriptHandlerCode" ref="a33c9b7f193fb5abc52fbc21d209d0e36" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -224,6 +254,26 @@ Inheritance diagram for KviKvsObjectScriptFunctionHandler:</div>
 <p>Reimplemented from <a class="el" href="classKviKvsObjectFunctionHandler.html#ae5a141b6c86df77083619f0f4390ab71">KviKvsObjectFunctionHandler</a>.</p>
 
 <p>References <a class="el" href="kvi__kvs__script_8cpp_source.html#l00103">KviKvsScript::code()</a>, and <a class="el" href="kvi__kvs__object__functionhandlerimpl_8h_source.html#l00065">m_pHandler</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3c9093b4f33b36847a6f8af7bc9550c0"></a><!-- doxytag: member="KviKvsObjectScriptFunctionHandler::setReminder" ref="a3c9093b4f33b36847a6f8af7bc9550c0" args="(const QString &amp;szReminder)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void KviKvsObjectScriptFunctionHandler::setReminder </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>szReminder</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classKviKvsObjectFunctionHandler.html#a301774160459e333c5e4d19729abd65e">KviKvsObjectFunctionHandler</a>.</p>
 
 </div>
 </div>
@@ -270,7 +320,22 @@ Inheritance diagram for KviKvsObjectScriptFunctionHandler:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__object__functionhandlerimpl_8cpp_source.html#l00138">call()</a>, <a class="el" href="kvi__kvs__object__functionhandlerimpl_8cpp_source.html#l00105">KviKvsObjectScriptFunctionHandler()</a>, <a class="el" href="kvi__kvs__object__functionhandlerimpl_8cpp_source.html#l00128">scriptHandlerCode()</a>, and <a class="el" href="kvi__kvs__object__functionhandlerimpl_8cpp_source.html#l00118">~KviKvsObjectScriptFunctionHandler()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__object__functionhandlerimpl_8cpp_source.html#l00143">call()</a>, <a class="el" href="kvi__kvs__object__functionhandlerimpl_8cpp_source.html#l00105">KviKvsObjectScriptFunctionHandler()</a>, <a class="el" href="kvi__kvs__object__functionhandlerimpl_8cpp_source.html#l00129">scriptHandlerCode()</a>, and <a class="el" href="kvi__kvs__object__functionhandlerimpl_8cpp_source.html#l00119">~KviKvsObjectScriptFunctionHandler()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7e184bcccba6fe9ce87d8ce1634ce59c"></a><!-- doxytag: member="KviKvsObjectScriptFunctionHandler::m_szReminder" ref="a7e184bcccba6fe9ce87d8ce1634ce59c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString <a class="el" href="classKviKvsObjectScriptFunctionHandler.html#a7e184bcccba6fe9ce87d8ce1634ce59c">KviKvsObjectScriptFunctionHandler::m_szReminder</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="kvi__kvs__object__functionhandlerimpl_8cpp_source.html#l00105">KviKvsObjectScriptFunctionHandler()</a>, and <a class="el" href="kvi__kvs__object__functionhandlerimpl_8cpp_source.html#l00133">reminder()</a>.</p>
 
 </div>
 </div>
@@ -279,7 +344,7 @@ Inheritance diagram for KviKvsObjectScriptFunctionHandler:</div>
 <li>src/kvirc/kvs/<a class="el" href="kvi__kvs__object__functionhandlerimpl_8cpp.html">kvi_kvs_object_functionhandlerimpl.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:22 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:23 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

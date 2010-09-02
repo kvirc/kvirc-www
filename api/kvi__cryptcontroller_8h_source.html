@@ -69,10 +69,10 @@
 <a name="l00044"></a>00044         <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> KviCryptSessionInfo : <span class="keyword">public</span> <a class="code" href="classKviHeapObject.html">KviHeapObject</a>
 <a name="l00045"></a>00045         {
 <a name="l00046"></a>00046         <span class="keyword">public</span>:
-<a name="l00047"></a>00047                 <a class="code" href="classKviCryptEngine.html">KviCryptEngine</a> * pEngine;
-<a name="l00048"></a>00048                 <a class="code" href="classKviStr.html">KviStr</a>           szEngineName;
-<a name="l00049"></a>00049                 <span class="keywordtype">bool</span>             bDoEncrypt;
-<a name="l00050"></a>00050                 <span class="keywordtype">bool</span>             bDoDecrypt;
+<a name="l00047"></a>00047                 <a class="code" href="classKviCryptEngine.html">KviCryptEngine</a> * m_pEngine;
+<a name="l00048"></a>00048                 QString          m_szEngineName;
+<a name="l00049"></a>00049                 <span class="keywordtype">bool</span>             m_bDoEncrypt;
+<a name="l00050"></a>00050                 <span class="keywordtype">bool</span>             m_bDoDecrypt;
 <a name="l00051"></a>00051         };
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053         <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> KviEngineListBoxItem : <span class="keyword">public</span> <a class="code" href="classKviTalListWidgetText.html">KviTalListWidgetText</a>
@@ -82,61 +82,57 @@
 <a name="l00057"></a>00057                 KviEngineListBoxItem(<a class="code" href="classKviTalListWidget.html">KviTalListWidget</a> * lb,KviCryptEngineDescription * <a class="code" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>,<span class="keyword">const</span> <span class="keywordtype">char</span> * modName);
 <a name="l00058"></a>00058                 ~KviEngineListBoxItem();
 <a name="l00059"></a>00059         <span class="keyword">public</span>:
-<a name="l00060"></a>00060                 <a class="code" href="classKviStr.html">KviStr</a> m_szName;
-<a name="l00061"></a>00061                 <a class="code" href="classKviStr.html">KviStr</a> m_szAuthor;
-<a name="l00062"></a>00062                 <a class="code" href="classKviStr.html">KviStr</a> m_szDescription;
-<a name="l00063"></a>00063                 <a class="code" href="classKviStr.html">KviStr</a> m_szModuleName;
-<a name="l00064"></a>00064                 <span class="keywordtype">int</span> m_iFlags;
+<a name="l00060"></a>00060                 QString m_szName;
+<a name="l00061"></a>00061                 QString m_szAuthor;
+<a name="l00062"></a>00062                 QString m_szDescription;
+<a name="l00063"></a>00063                 QString m_szModuleName;
+<a name="l00064"></a>00064                 <span class="keywordtype">int</span>     m_iFlags;
 <a name="l00065"></a>00065         };
 <a name="l00066"></a>00066 
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068         <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> KviCryptController : <span class="keyword">public</span> <a class="code" href="classKviWindowToolWidget.html">KviWindowToolWidget</a>
-<a name="l00069"></a>00069         {
-<a name="l00070"></a>00070                 Q_OBJECT
-<a name="l00071"></a>00071         <span class="keyword">public</span>:
-<a name="l00072"></a>00072                 KviCryptController(QWidget * parent,<a class="code" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a>* button,<span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">name</a>,<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * wnd,KviCryptSessionInfo * cur);
-<a name="l00073"></a>00073                 ~KviCryptController();
-<a name="l00074"></a>00074         <span class="keyword">protected</span>:
-<a name="l00075"></a>00075                 <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>            * m_pWindow;
-<a name="l00076"></a>00076                 <a class="code" href="classKviTalListWidget.html">KviTalListWidget</a>     * m_pListBox;
-<a name="l00077"></a>00077                 QPushButton          * m_pOkButton;
-<a name="l00078"></a>00078                 QCheckBox            * m_pEnableCheck;
-<a name="l00079"></a>00079                 QLabel               * m_pDescriptionLabel;
-<a name="l00080"></a>00080                 QLabel               * m_pAuthorLabel;
-<a name="l00081"></a>00081                 QCheckBox            * m_pEnableEncrypt;
-<a name="l00082"></a>00082                 QLabel               * m_pEncryptKeyLabel;
-<a name="l00083"></a>00083                 QLineEdit            * m_pEncryptKeyEdit;
-<a name="l00084"></a>00084                 QCheckBox            * m_pEncryptHexKeyCheck;
-<a name="l00085"></a>00085                 QCheckBox            * m_pEnableDecrypt;
-<a name="l00086"></a>00086                 QLabel               * m_pDecryptKeyLabel;
-<a name="l00087"></a>00087                 QLineEdit            * m_pDecryptKeyEdit;
-<a name="l00088"></a>00088                 QCheckBox            * m_pDecryptHexKeyCheck;
-<a name="l00089"></a>00089                 KviEngineListBoxItem * m_pLastItem;
-<a name="l00090"></a>00090                 KviCryptSessionInfo  * m_pSessionInfo;
-<a name="l00091"></a>00091         <span class="keyword">private</span> slots:
-<a name="l00092"></a>00092                 <span class="keywordtype">void</span> enableCheckToggled(<span class="keywordtype">bool</span> bChecked);
-<a name="l00093"></a>00093                 <span class="keywordtype">void</span> engineHighlighted(QListWidgetItem *it, QListWidgetItem *);
-<a name="l00094"></a>00094                 <span class="keywordtype">void</span> okClicked();
-<a name="l00095"></a>00095         <span class="keyword">public</span>:
-<a name="l00096"></a>00096                 KviCryptSessionInfo * getNewSessionInfo();
-<a name="l00097"></a>00097                 <span class="keyword">static</span> KviCryptSessionInfo * allocateCryptSessionInfo();
-<a name="l00098"></a>00098                 <span class="keyword">static</span> <span class="keywordtype">void</span> destroyCryptSessionInfo(KviCryptSessionInfo ** inf);
-<a name="l00099"></a>00099         <span class="keyword">private</span>:
-<a name="l00100"></a>00100                 <span class="keywordtype">void</span> fillEngineList();
-<a name="l00101"></a>00101                 <span class="keywordtype">void</span> noEnginesAvailable();
-<a name="l00102"></a>00102                 <span class="keywordtype">void</span> enableWidgets(<span class="keywordtype">bool</span> bEnabled);
-<a name="l00103"></a>00103                 <span class="keywordtype">bool</span> initializeEngine(<a class="code" href="classKviCryptEngine.html">KviCryptEngine</a> * eng);
-<a name="l00104"></a>00104         signals:
-<a name="l00105"></a>00105                 <span class="keywordtype">void</span> <a class="code" href="namespaceKviLocale.html#a0516e82ea3996ded16e7bd66399c4e60">done</a>();
-<a name="l00106"></a>00106         };
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108 
-<a name="l00109"></a>00109 <span class="preprocessor">#endif //COMPILE_CRYPT_SUPPORT</span>
-<a name="l00110"></a>00110 <span class="preprocessor"></span>
-<a name="l00111"></a>00111 
-<a name="l00112"></a>00112 <span class="preprocessor">#endif //!_KVI_CRYPTCONTROLLER_H_</span>
+<a name="l00067"></a>00067         <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> KviCryptController : <span class="keyword">public</span> <a class="code" href="classKviWindowToolWidget.html">KviWindowToolWidget</a>
+<a name="l00068"></a>00068         {
+<a name="l00069"></a>00069                 Q_OBJECT
+<a name="l00070"></a>00070         <span class="keyword">public</span>:
+<a name="l00071"></a>00071                 KviCryptController(QWidget * pParent, <a class="code" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a> * pButton, <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * pWnd, KviCryptSessionInfo * pInfo);
+<a name="l00072"></a>00072                 ~KviCryptController();
+<a name="l00073"></a>00073         <span class="keyword">protected</span>:
+<a name="l00074"></a>00074                 <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>            * m_pWindow;
+<a name="l00075"></a>00075                 <a class="code" href="classKviTalListWidget.html">KviTalListWidget</a>     * m_pListBox;
+<a name="l00076"></a>00076                 QPushButton          * m_pOkButton;
+<a name="l00077"></a>00077                 QCheckBox            * m_pEnableCheck;
+<a name="l00078"></a>00078                 QLabel               * m_pDescriptionLabel;
+<a name="l00079"></a>00079                 QLabel               * m_pAuthorLabel;
+<a name="l00080"></a>00080                 QCheckBox            * m_pEnableEncrypt;
+<a name="l00081"></a>00081                 QLabel               * m_pEncryptKeyLabel;
+<a name="l00082"></a>00082                 QLineEdit            * m_pEncryptKeyEdit;
+<a name="l00083"></a>00083                 QCheckBox            * m_pEncryptHexKeyCheck;
+<a name="l00084"></a>00084                 QCheckBox            * m_pEnableDecrypt;
+<a name="l00085"></a>00085                 QLabel               * m_pDecryptKeyLabel;
+<a name="l00086"></a>00086                 QLineEdit            * m_pDecryptKeyEdit;
+<a name="l00087"></a>00087                 QCheckBox            * m_pDecryptHexKeyCheck;
+<a name="l00088"></a>00088                 KviEngineListBoxItem * m_pLastItem;
+<a name="l00089"></a>00089                 KviCryptSessionInfo  * m_pSessionInfo;
+<a name="l00090"></a>00090         <span class="keyword">private</span> slots:
+<a name="l00091"></a>00091                 <span class="keywordtype">void</span> enableCheckToggled(<span class="keywordtype">bool</span> bChecked);
+<a name="l00092"></a>00092                 <span class="keywordtype">void</span> engineHighlighted(QListWidgetItem * pItem, QListWidgetItem *);
+<a name="l00093"></a>00093                 <span class="keywordtype">void</span> okClicked();
+<a name="l00094"></a>00094         <span class="keyword">public</span>:
+<a name="l00095"></a>00095                 KviCryptSessionInfo * getNewSessionInfo();
+<a name="l00096"></a>00096                 <span class="keyword">static</span> KviCryptSessionInfo * allocateCryptSessionInfo();
+<a name="l00097"></a>00097                 <span class="keyword">static</span> <span class="keywordtype">void</span> destroyCryptSessionInfo(KviCryptSessionInfo ** ppInfo);
+<a name="l00098"></a>00098         <span class="keyword">private</span>:
+<a name="l00099"></a>00099                 <span class="keywordtype">void</span> fillEngineList();
+<a name="l00100"></a>00100                 <span class="keywordtype">void</span> noEnginesAvailable();
+<a name="l00101"></a>00101                 <span class="keywordtype">void</span> enableWidgets(<span class="keywordtype">bool</span> bEnabled);
+<a name="l00102"></a>00102                 <span class="keywordtype">bool</span> initializeEngine(<a class="code" href="classKviCryptEngine.html">KviCryptEngine</a> * pEngine);
+<a name="l00103"></a>00103         signals:
+<a name="l00104"></a>00104                 <span class="keywordtype">void</span> <a class="code" href="namespaceKviLocale.html#a0516e82ea3996ded16e7bd66399c4e60">done</a>();
+<a name="l00105"></a>00105         };
+<a name="l00106"></a>00106 <span class="preprocessor">#endif //COMPILE_CRYPT_SUPPORT</span>
+<a name="l00107"></a>00107 <span class="preprocessor"></span>
+<a name="l00108"></a>00108 <span class="preprocessor">#endif //!_KVI_CRYPTCONTROLLER_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:21 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

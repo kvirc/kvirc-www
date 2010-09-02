@@ -57,24 +57,27 @@
 <a name="l00032"></a>00032 <span class="preprocessor">#include &quot;<a class="code" href="kvi__sockettype_8h.html">kvi_sockettype.h</a>&quot;</span>
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034 <span class="keyword">class </span><a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>;
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <span class="keyword">namespace </span>KviSSLMaster
-<a name="l00037"></a>00037 {
-<a name="l00038"></a>00038         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">void</span> printSSLCipherInfo(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * wnd,<span class="keyword">const</span> <span class="keywordtype">char</span> * description,KviSSLCipherInfo * <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00039"></a>00039         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">void</span> printSSLCertificate(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * wnd,<span class="keyword">const</span> <span class="keywordtype">char</span> * description,KviSSLCertificate * <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">void</span> printSSLConnectionInfo(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * wnd,KviSSL * <a class="code" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>);
-<a name="l00042"></a>00042 
-<a name="l00043"></a>00043         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> KviSSL * allocSSL(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * wnd,<a class="code" href="kvi__sockettype_8h.html#a3b53a24633251eb79395235a51453c0c">kvi_socket_t</a> sock,KviSSL::Method m,<span class="keyword">const</span> <span class="keywordtype">char</span> * contextString = 0);
-<a name="l00044"></a>00044         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">void</span> freeSSL(KviSSL * <a class="code" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>);
-<a name="l00045"></a>00045 }
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047 <span class="preprocessor">#endif</span>
-<a name="l00048"></a>00048 <span class="preprocessor"></span>
+<a name="l00035"></a>00035 <span class="keyword">class </span><a class="code" href="classKviKvsVariant.html">KviKvsVariant</a>;
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 <span class="keyword">namespace </span>KviSSLMaster
+<a name="l00038"></a>00038 {
+<a name="l00039"></a>00039         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">void</span> printSSLCipherInfo(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * wnd,<span class="keyword">const</span> <span class="keywordtype">char</span> * description,KviSSLCipherInfo * <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00040"></a>00040         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">void</span> printSSLCertificate(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * wnd,<span class="keyword">const</span> <span class="keywordtype">char</span> * description,KviSSLCertificate * <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">void</span> printSSLConnectionInfo(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * wnd,KviSSL * <a class="code" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>);
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> KviSSL * allocSSL(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * wnd,<a class="code" href="kvi__sockettype_8h.html#a3b53a24633251eb79395235a51453c0c">kvi_socket_t</a> sock,KviSSL::Method m,<span class="keyword">const</span> <span class="keywordtype">char</span> * contextString = 0);
+<a name="l00045"></a>00045         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">void</span> freeSSL(KviSSL * <a class="code" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>);
+<a name="l00046"></a>00046         
+<a name="l00047"></a>00047         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">bool</span> getSSLCertInfo(KviSSLCertificate * pCert, QString szQuery, QString szOptionalParam, <a class="code" href="classKviKvsVariant.html">KviKvsVariant</a> * pRetBuffer);
+<a name="l00048"></a>00048 }
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050 <span class="preprocessor">#endif //_KVI_SSLMASTER_H_</span>
+<a name="l00050"></a>00050 <span class="preprocessor">#endif</span>
+<a name="l00051"></a>00051 <span class="preprocessor"></span>
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053 <span class="preprocessor">#endif //_KVI_SSLMASTER_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:19 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:20 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

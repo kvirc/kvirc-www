@@ -107,9 +107,9 @@ Inheritance diagram for KviIrcMask:</div>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcMask.html#aebf372022663893b5895963c2f340cf5">matches</a> (const <a class="el" href="classKviIrcMask.html">KviIrcMask</a> &amp;mask) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Wild external matches (this and external are wild).  <a href="#aebf372022663893b5895963c2f340cf5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcMask.html#a9554ada18396eb5604a35c02ce46bed9">matchesFixed</a> (const <a class="el" href="classKviIrcMask.html">KviIrcMask</a> &amp;mask) const </td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fixed external matches (this is wild , external is fixed).  <a href="#a9554ada18396eb5604a35c02ce46bed9"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fixed external matches (this is wild, external is fixed).  <a href="#a9554ada18396eb5604a35c02ce46bed9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcMask.html#a25d2f39897489a0fa3c2bf4f73581ff0">matchesFixed</a> (const QString &amp;nick, const QString &amp;user, const QString &amp;host) const </td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fixed external matches (this is wild , external is fixed).  <a href="#a25d2f39897489a0fa3c2bf4f73581ff0"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fixed external matches (this is wild, external is fixed).  <a href="#a25d2f39897489a0fa3c2bf4f73581ff0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcMask.html#acff9ecb3f18ef93495ccd85652221144">nick</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the nickname of this user.  <a href="#acff9ecb3f18ef93495ccd85652221144"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcMask.html#a1e432ec8081f8fd8539e3ca6c23bba59">nonWildChars</a> ()</td></tr>
@@ -488,7 +488,7 @@ Inheritance diagram for KviIrcMask:</div>
 <p>Returns true if the hostname is set in the mask. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00528">KviServerParser::parseNumericTopicWhoTime()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00937">KviUserListView::userAction()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00565">KviServerParser::parseNumericTopicWhoTime()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00937">KviUserListView::userAction()</a>.</p>
 
 </div>
 </div>
@@ -559,7 +559,7 @@ Inheritance diagram for KviIrcMask:</div>
 <p>Returns true if the username is set in the mask. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00528">KviServerParser::parseNumericTopicWhoTime()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00937">KviUserListView::userAction()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00565">KviServerParser::parseNumericTopicWhoTime()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00937">KviUserListView::userAction()</a>.</p>
 
 </div>
 </div>
@@ -606,7 +606,7 @@ Inheritance diagram for KviIrcMask:</div>
 <p>In the worst case you get a string == "*" </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__notifylist_8cpp_source.html#l01164">KviWatchNotifyListManager::doMatchUser()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00672">KviIsOnNotifyListManager::doMatchUser()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00960">KviServerParser::echoCtcpReply()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00993">KviServerParser::echoCtcpRequest()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00886">KviServerParser::parseCtcpReply()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01564">KviServerParser::parseCtcpReplyAvatar()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01061">KviServerParser::parseCtcpReplyPing()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00808">KviServerParser::parseCtcpRequest()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01377">KviServerParser::parseCtcpRequestAction()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01712">KviServerParser::parseCtcpRequestDcc()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01350">KviServerParser::parseCtcpRequestPage()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00528">KviServerParser::parseNumericTopicWhoTime()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00937">KviUserListView::userAction()</a>, and <a class="el" href="kvi__query_8cpp_source.html#l00379">KviQuery::userAction()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__notifylist_8cpp_source.html#l01164">KviWatchNotifyListManager::doMatchUser()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00672">KviIsOnNotifyListManager::doMatchUser()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00971">KviServerParser::echoCtcpReply()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01004">KviServerParser::echoCtcpRequest()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00897">KviServerParser::parseCtcpReply()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01575">KviServerParser::parseCtcpReplyAvatar()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01072">KviServerParser::parseCtcpReplyPing()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00808">KviServerParser::parseCtcpRequest()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01388">KviServerParser::parseCtcpRequestAction()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01723">KviServerParser::parseCtcpRequestDcc()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01361">KviServerParser::parseCtcpRequestPage()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00565">KviServerParser::parseNumericTopicWhoTime()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00937">KviUserListView::userAction()</a>, and <a class="el" href="kvi__query_8cpp_source.html#l00379">KviQuery::userAction()</a>.</p>
 
 </div>
 </div>
@@ -636,7 +636,7 @@ Inheritance diagram for KviIrcMask:</div>
 <div class="memdoc">
 
 <p>Returns in szMask the specified (if possible) mask of this user. </p>
-<p>If the host or username are not known , the mask may contain less information than requested. </p>
+<p>If the host or username are not known, the mask may contain less information than requested. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>szMask</em>&nbsp;</td><td>The mask of the user </td></tr>
@@ -647,7 +647,7 @@ Inheritance diagram for KviIrcMask:</div>
 
 <p>References <a class="el" href="kvi__ircmask_8cpp_source.html#l00656">getHostDomainMask()</a>, <a class="el" href="kvi__ircmask_8cpp_source.html#l00616">getIpDomainMaskLen()</a>, <a class="el" href="kvi__ircmask_8cpp_source.html#l00667">getLargeHostDomainMask()</a>, <a class="el" href="kvi__ircmask_8cpp_source.html#l00634">getLargeIpDomainMaskLen()</a>, <a class="el" href="kvi__ircmask_8cpp_source.html#l00692">hasMaskedIp()</a>, <a class="el" href="kvi__ircmask_8cpp_source.html#l00286">hasNumericHost()</a>, <a class="el" href="kvi__ircmask_8h_source.html#l00052">m_szHost</a>, <a class="el" href="kvi__ircmask_8h_source.html#l00050">m_szNick</a>, <a class="el" href="kvi__ircmask_8h_source.html#l00051">m_szUser</a>, <a class="el" href="kvi__ircmask_8h_source.html#l00053">m_szWild</a>, <a class="el" href="kvi__ircmask_8cpp_source.html#l00365">maskTable</a>, and <a class="el" href="kvi__ircmask_8h_source.html#l00091">NickUserHost</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__console_8cpp_source.html#l00284">KviConsole::getUserTipText()</a>, <a class="el" href="kvi__kvs__corefunctions__mr_8cpp_source.html#l00103">KviKvsCoreFunctions::KVSCF()</a>, <a class="el" href="kvi__avatarcache_8cpp_source.html#l00110">KviAvatarCache::lookup()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01497">KviServerParser::parseCtcpRequestAvatar()</a>, <a class="el" href="kvi__avatarcache_8cpp_source.html#l00097">KviAvatarCache::remove()</a>, and <a class="el" href="kvi__avatarcache_8cpp_source.html#l00077">KviAvatarCache::replace()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__console_8cpp_source.html#l00292">KviConsole::getUserTipText()</a>, <a class="el" href="kvi__kvs__corefunctions__mr_8cpp_source.html#l00103">KviKvsCoreFunctions::KVSCF()</a>, <a class="el" href="kvi__avatarcache_8cpp_source.html#l00110">KviAvatarCache::lookup()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01508">KviServerParser::parseCtcpRequestAvatar()</a>, <a class="el" href="kvi__avatarcache_8cpp_source.html#l00097">KviAvatarCache::remove()</a>, and <a class="el" href="kvi__avatarcache_8cpp_source.html#l00077">KviAvatarCache::replace()</a>.</p>
 
 </div>
 </div>
@@ -727,7 +727,7 @@ Inheritance diagram for KviIrcMask:</div>
 </div>
 <div class="memdoc">
 
-<p>Fixed external matches (this is wild , external is fixed). </p>
+<p>Fixed external matches (this is wild, external is fixed). </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>mask</em>&nbsp;</td><td>The make of the user </td></tr>
@@ -771,7 +771,7 @@ Inheritance diagram for KviIrcMask:</div>
 </div>
 <div class="memdoc">
 
-<p>Fixed external matches (this is wild , external is fixed). </p>
+<p>Fixed external matches (this is wild, external is fixed). </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>nick</em>&nbsp;</td><td>The nickname of the user </td></tr>
@@ -784,7 +784,7 @@ Inheritance diagram for KviIrcMask:</div>
 
 <p>References <a class="el" href="kvi__ircmask_8h_source.html#l00052">m_szHost</a>, <a class="el" href="kvi__ircmask_8h_source.html#l00050">m_szNick</a>, <a class="el" href="kvi__ircmask_8h_source.html#l00051">m_szUser</a>, and <a class="el" href="namespaceKviQString.html#a73201f6b63483e608df3ca5c347c8e65">KviQString::matchString()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircmask_8h_source.html#l00262">matchedBy()</a>, and <a class="el" href="kvi__sp__literal_8cpp_source.html#l01707">KviServerParser::parseChannelMode()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircmask_8h_source.html#l00262">matchedBy()</a>, and <a class="el" href="kvi__sp__literal_8cpp_source.html#l01704">KviServerParser::parseChannelMode()</a>.</p>
 
 </div>
 </div>
@@ -807,7 +807,7 @@ Inheritance diagram for KviIrcMask:</div>
 <p>In the worst case you get a string == "*" </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__regusersdb_8cpp_source.html#l00373">KviRegisteredUserDataBase::addMask()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l01164">KviWatchNotifyListManager::doMatchUser()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00672">KviIsOnNotifyListManager::doMatchUser()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00960">KviServerParser::echoCtcpReply()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00993">KviServerParser::echoCtcpRequest()</a>, <a class="el" href="kvi__regusersdb_8cpp_source.html#l00614">KviRegisteredUserDataBase::findExactMask()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00886">KviServerParser::parseCtcpReply()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01564">KviServerParser::parseCtcpReplyAvatar()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01061">KviServerParser::parseCtcpReplyPing()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01805">KviServerParser::parseCtcpReplyUserinfo()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00808">KviServerParser::parseCtcpRequest()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01377">KviServerParser::parseCtcpRequestAction()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01712">KviServerParser::parseCtcpRequestDcc()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01350">KviServerParser::parseCtcpRequestPage()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00528">KviServerParser::parseNumericTopicWhoTime()</a>, <a class="el" href="kvi__regusersdb_8cpp_source.html#l00516">KviRegisteredUserDataBase::removeMaskByPointer()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00947">KviServerParser::replyCtcp()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00937">KviUserListView::userAction()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00379">KviQuery::userAction()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01528">KviChannel::userAction()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__regusersdb_8cpp_source.html#l00373">KviRegisteredUserDataBase::addMask()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l01164">KviWatchNotifyListManager::doMatchUser()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00672">KviIsOnNotifyListManager::doMatchUser()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00971">KviServerParser::echoCtcpReply()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01004">KviServerParser::echoCtcpRequest()</a>, <a class="el" href="kvi__regusersdb_8cpp_source.html#l00614">KviRegisteredUserDataBase::findExactMask()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00897">KviServerParser::parseCtcpReply()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01575">KviServerParser::parseCtcpReplyAvatar()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01072">KviServerParser::parseCtcpReplyPing()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01816">KviServerParser::parseCtcpReplyUserinfo()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00808">KviServerParser::parseCtcpRequest()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01388">KviServerParser::parseCtcpRequestAction()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01723">KviServerParser::parseCtcpRequestDcc()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01361">KviServerParser::parseCtcpRequestPage()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00565">KviServerParser::parseNumericTopicWhoTime()</a>, <a class="el" href="kvi__regusersdb_8cpp_source.html#l00516">KviRegisteredUserDataBase::removeMaskByPointer()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00958">KviServerParser::replyCtcp()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00937">KviUserListView::userAction()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00379">KviQuery::userAction()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01554">KviChannel::userAction()</a>.</p>
 
 </div>
 </div>
@@ -1001,7 +1001,7 @@ Inheritance diagram for KviIrcMask:</div>
 <p>In the worst case you get a string == "*" </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>const QString &amp; </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__regusersdb_8cpp_source.html#l00373">KviRegisteredUserDataBase::addMask()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l01164">KviWatchNotifyListManager::doMatchUser()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00672">KviIsOnNotifyListManager::doMatchUser()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00960">KviServerParser::echoCtcpReply()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00993">KviServerParser::echoCtcpRequest()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00886">KviServerParser::parseCtcpReply()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01564">KviServerParser::parseCtcpReplyAvatar()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01061">KviServerParser::parseCtcpReplyPing()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00808">KviServerParser::parseCtcpRequest()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01377">KviServerParser::parseCtcpRequestAction()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01712">KviServerParser::parseCtcpRequestDcc()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01350">KviServerParser::parseCtcpRequestPage()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00528">KviServerParser::parseNumericTopicWhoTime()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00937">KviUserListView::userAction()</a>, and <a class="el" href="kvi__query_8cpp_source.html#l00379">KviQuery::userAction()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__regusersdb_8cpp_source.html#l00373">KviRegisteredUserDataBase::addMask()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l01164">KviWatchNotifyListManager::doMatchUser()</a>, <a class="el" href="kvi__notifylist_8cpp_source.html#l00672">KviIsOnNotifyListManager::doMatchUser()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00971">KviServerParser::echoCtcpReply()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01004">KviServerParser::echoCtcpRequest()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00897">KviServerParser::parseCtcpReply()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01575">KviServerParser::parseCtcpReplyAvatar()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01072">KviServerParser::parseCtcpReplyPing()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l00808">KviServerParser::parseCtcpRequest()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01388">KviServerParser::parseCtcpRequestAction()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01723">KviServerParser::parseCtcpRequestDcc()</a>, <a class="el" href="kvi__sp__ctcp_8cpp_source.html#l01361">KviServerParser::parseCtcpRequestPage()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00565">KviServerParser::parseNumericTopicWhoTime()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00937">KviUserListView::userAction()</a>, and <a class="el" href="kvi__query_8cpp_source.html#l00379">KviQuery::userAction()</a>.</p>
 
 </div>
 </div>
@@ -1098,7 +1098,7 @@ Inheritance diagram for KviIrcMask:</div>
 <li>src/kvilib/irc/<a class="el" href="kvi__ircmask_8cpp.html">kvi_ircmask.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:22 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:23 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

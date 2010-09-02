@@ -30,20 +30,20 @@
 <p><a href="classKviSmartTextCodec-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSmartTextCodec.html#ab999017e6ce487bcb40d7f1c719487a3">KviSmartTextCodec</a> (const char *szName, const char *szChildCodecName, bool bSendInUtf8)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSmartTextCodec.html#a78e77ef721f55c2330db4a262a7e6b6e">KviSmartTextCodec</a> (const char *szName, QTextCodec *pChildCodec, bool bSendInUtf8)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSmartTextCodec.html#a34d01bd3a5ee07af4a69d179636f0b71">mibEnum</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSmartTextCodec.html#afc50e0af00f542f825b5744424d054a2">name</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSmartTextCodec.html#a06a5740c9bc581b8301b5087bff249a8">ok</a> ()</td></tr>
 <tr><td colspan="2"><h2>Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSmartTextCodec.html#aa02085d9e83bb65fa0d714603afb406a">convertFromUnicode</a> (const QChar *input, int number, ConverterState *state) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSmartTextCodec.html#aafc216938c7be18a1637e63afd5f1d6c">convertToUnicode</a> (const char *chars, int len, ConverterState *state) const </td></tr>
-<tr><td colspan="2"><h2>Protected Attributes</h2></td></tr>
+<tr><td colspan="2"><h2>Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QTextCodec *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSmartTextCodec.html#ad3254fd713a9ae836febfd481091a919">m_pRecvCodec</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QTextCodec *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSmartTextCodec.html#a8b007fa647af71fd04468a9c2ee2d98c">m_pSendCodec</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QByteArray&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSmartTextCodec.html#a25ab4cfad07984320797ac7d1ff9e3cf">m_szName</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab999017e6ce487bcb40d7f1c719487a3"></a><!-- doxytag: member="KviSmartTextCodec::KviSmartTextCodec" ref="ab999017e6ce487bcb40d7f1c719487a3" args="(const char *szName, const char *szChildCodecName, bool bSendInUtf8)" -->
+<a class="anchor" id="a78e77ef721f55c2330db4a262a7e6b6e"></a><!-- doxytag: member="KviSmartTextCodec::KviSmartTextCodec" ref="a78e77ef721f55c2330db4a262a7e6b6e" args="(const char *szName, QTextCodec *pChildCodec, bool bSendInUtf8)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -56,8 +56,8 @@
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&nbsp;</td>
-          <td class="paramname"> <em>szChildCodecName</em>, </td>
+          <td class="paramtype">QTextCodec *&nbsp;</td>
+          <td class="paramname"> <em>pChildCodec</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -74,7 +74,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="namespaceKviLocale.html#ab284a0e7f8849b08abd5aa0f2c9443c0">KviLocale::codecForName()</a>, <a class="el" href="kvi__settings_8h_source.html#l00177">debug</a>, <a class="el" href="kvi__locale_8cpp_source.html#l00052">g_pUtf8TextCodec</a>, <a class="el" href="kvi__locale_8cpp_source.html#l00262">m_pRecvCodec</a>, <a class="el" href="kvi__locale_8cpp_source.html#l00263">m_pSendCodec</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00261">m_szName</a>.</p>
+<p>References <a class="el" href="namespaceKviLocale.html#ab284a0e7f8849b08abd5aa0f2c9443c0">KviLocale::codecForName()</a>, <a class="el" href="kvi__locale_8cpp_source.html#l00052">g_pUtf8TextCodec</a>, <a class="el" href="kvi__locale_8cpp_source.html#l00253">m_pRecvCodec</a>, <a class="el" href="kvi__locale_8cpp_source.html#l00254">m_pSendCodec</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00252">m_szName</a>.</p>
 
 </div>
 </div>
@@ -110,7 +110,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8cpp_source.html#l00263">m_pSendCodec</a>.</p>
+<p>References <a class="el" href="kvi__locale_8cpp_source.html#l00254">m_pSendCodec</a>.</p>
 
 </div>
 </div>
@@ -145,7 +145,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8cpp_source.html#l00052">g_pUtf8TextCodec</a>, <a class="el" href="kvi__locale_8cpp_source.html#l00233">g_utf8_validate()</a>, <a class="el" href="kvi__locale_8cpp_source.html#l00262">m_pRecvCodec</a>, and <a class="el" href="kvi__numeric_8h_source.html#l00383">NULL</a>.</p>
+<p>References <a class="el" href="kvi__locale_8cpp_source.html#l00052">g_pUtf8TextCodec</a>, <a class="el" href="kvi__locale_8cpp_source.html#l00227">g_utf8_validate()</a>, <a class="el" href="kvi__locale_8cpp_source.html#l00253">m_pRecvCodec</a>, and <a class="el" href="kvi__numeric_8h_source.html#l00383">NULL</a>.</p>
 
 </div>
 </div>
@@ -181,7 +181,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8cpp_source.html#l00261">m_szName</a>.</p>
+<p>References <a class="el" href="kvi__locale_8cpp_source.html#l00252">m_szName</a>.</p>
 
 </div>
 </div>
@@ -200,7 +200,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8cpp_source.html#l00052">g_pUtf8TextCodec</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00262">m_pRecvCodec</a>.</p>
+<p>References <a class="el" href="kvi__locale_8cpp_source.html#l00052">g_pUtf8TextCodec</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00253">m_pRecvCodec</a>.</p>
 
 </div>
 </div>
@@ -210,13 +210,13 @@
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QTextCodec* <a class="el" href="classKviSmartTextCodec.html#ad3254fd713a9ae836febfd481091a919">KviSmartTextCodec::m_pRecvCodec</a><code> [protected]</code></td>
+          <td class="memname">QTextCodec* <a class="el" href="classKviSmartTextCodec.html#ad3254fd713a9ae836febfd481091a919">KviSmartTextCodec::m_pRecvCodec</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00300">convertToUnicode()</a>, <a class="el" href="kvi__locale_8cpp_source.html#l00265">KviSmartTextCodec()</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00290">ok()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00289">convertToUnicode()</a>, <a class="el" href="kvi__locale_8cpp_source.html#l00256">KviSmartTextCodec()</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00279">ok()</a>.</p>
 
 </div>
 </div>
@@ -225,13 +225,13 @@
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QTextCodec* <a class="el" href="classKviSmartTextCodec.html#a8b007fa647af71fd04468a9c2ee2d98c">KviSmartTextCodec::m_pSendCodec</a><code> [protected]</code></td>
+          <td class="memname">QTextCodec* <a class="el" href="classKviSmartTextCodec.html#a8b007fa647af71fd04468a9c2ee2d98c">KviSmartTextCodec::m_pSendCodec</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00296">convertFromUnicode()</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00265">KviSmartTextCodec()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00285">convertFromUnicode()</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00256">KviSmartTextCodec()</a>.</p>
 
 </div>
 </div>
@@ -240,13 +240,13 @@
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QByteArray <a class="el" href="classKviSmartTextCodec.html#a25ab4cfad07984320797ac7d1ff9e3cf">KviSmartTextCodec::m_szName</a><code> [protected]</code></td>
+          <td class="memname">QByteArray <a class="el" href="classKviSmartTextCodec.html#a25ab4cfad07984320797ac7d1ff9e3cf">KviSmartTextCodec::m_szName</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00265">KviSmartTextCodec()</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00294">name()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00256">KviSmartTextCodec()</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00283">name()</a>.</p>
 
 </div>
 </div>
@@ -254,7 +254,7 @@
 <li>src/kvilib/system/<a class="el" href="kvi__locale_8cpp.html">kvi_locale.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:27 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:27 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

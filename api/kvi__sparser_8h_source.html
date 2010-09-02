@@ -176,127 +176,133 @@
 <a name="l00151"></a>00151         <span class="keywordtype">void</span> parseNumericEndOfInviteList(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
 <a name="l00152"></a>00152         <span class="keywordtype">void</span> parseNumericExceptList(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
 <a name="l00153"></a>00153         <span class="keywordtype">void</span> parseNumericEndOfExceptList(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00154"></a>00154         <span class="keywordtype">void</span> parseNumericWhoReply(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00155"></a>00155         <span class="keywordtype">void</span> parseNumericEndOfWho(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00156"></a>00156         <span class="keywordtype">void</span> parseNumericNicknameProblem(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00157"></a>00157         <span class="keywordtype">void</span> parseNumericWhoisAway(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *);
-<a name="l00158"></a>00158         <span class="keywordtype">void</span> parseNumericWhoisUser(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00159"></a>00159         <span class="keywordtype">void</span> parseNumericWhoisChannels(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00160"></a>00160         <span class="keywordtype">void</span> parseNumericWhoisIdle(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00161"></a>00161         <span class="keywordtype">void</span> parseNumericWhoisServer(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00162"></a>00162         <span class="keywordtype">void</span> parseNumericWhoisOther(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00163"></a>00163         <span class="keywordtype">void</span> parseNumericWhoisAuth(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00164"></a>00164         <span class="keywordtype">void</span> parseNumericWhowasUser(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00165"></a>00165         <span class="keywordtype">void</span> parseNumericEndOfWhois(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00166"></a>00166         <span class="keywordtype">void</span> parseNumericEndOfWhowas(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00167"></a>00167         <span class="keywordtype">void</span> parseNumericNoSuchNick(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00168"></a>00168         <span class="keywordtype">void</span> parseNumericCreationTime(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00169"></a>00169         <span class="keywordtype">void</span> parseNumericIsOn(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00170"></a>00170         <span class="keywordtype">void</span> parseNumericUnavailResource(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00171"></a>00171         <span class="keywordtype">void</span> parseNumericLinks(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00172"></a>00172         <span class="keywordtype">void</span> parseNumericEndOfLinks(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00173"></a>00173         <span class="keywordtype">void</span> parseNumericUserhost(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00174"></a>00174         <span class="keywordtype">void</span> parseLoginNicknameProblem(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00175"></a>00175         <span class="keywordtype">void</span> parseNumericBackFromAway(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *);
-<a name="l00176"></a>00176         <span class="keywordtype">void</span> parseNumericAway(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *);
-<a name="l00177"></a>00177         <span class="keywordtype">void</span> parseNumericWatch(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00178"></a>00178         <span class="keywordtype">void</span> parseNumericList(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00179"></a>00179         <span class="keywordtype">void</span> parseNumericListStart(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00180"></a>00180         <span class="keywordtype">void</span> parseNumericListEnd(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00181"></a>00181         <span class="keywordtype">void</span> parseNumericCantJoinChannel(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00182"></a>00182         <span class="keywordtype">void</span> parseNumericStats(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00183"></a>00183         <span class="keywordtype">void</span> parseNumericUserMode(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
-<a name="l00184"></a>00184         <span class="keywordtype">void</span> parseNumericCodePageSet(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
-<a name="l00185"></a>00185         <span class="keywordtype">void</span> parseNumericCodePageScheme(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
-<a name="l00186"></a>00186         <span class="keywordtype">void</span> parseNumeric020(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00187"></a>00187         <span class="keywordtype">void</span> parseNumericCannotSend(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00188"></a>00188         <span class="keywordtype">void</span> parseNumericNoSuchChannel(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00189"></a>00189         <span class="keywordtype">void</span> parseNumericNoSuchServer(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00190"></a>00190         <span class="keywordtype">void</span> parseNumericTime(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00191"></a>00191         <span class="keywordtype">void</span> parseNumericInfoEnd(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00192"></a>00192         <span class="keywordtype">void</span> parseNumericInfoStart(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00193"></a>00193         <span class="keywordtype">void</span> parseNumericInfo(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00194"></a>00194         <span class="keywordtype">void</span> parseNumericInviting(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00195"></a>00195         <span class="keywordtype">void</span> parseNumericCommandSyntax(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00196"></a>00196         <span class="keywordtype">void</span> parseNumericServerAdminInfoAdminContact(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00197"></a>00197         <span class="keywordtype">void</span> parseNumericServerAdminInfoAdminName(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00198"></a>00198         <span class="keywordtype">void</span> parseNumericServerAdminInfoServerName(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00199"></a>00199         <span class="keywordtype">void</span> parseNumericServerAdminInfoTitle(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00200"></a>00200         <span class="keywordtype">void</span> parseNumericCannotSendColor(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00201"></a>00201         <span class="keywordtype">void</span> parseNumericEndOfStats(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00202"></a>00202         <span class="keywordtype">void</span> otherChannelError(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00203"></a>00203         <span class="keywordtype">void</span> parseCommandSyntaxHelp(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00204"></a>00204         <span class="keywordtype">void</span> parseCommandHelp(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00205"></a>00205         <span class="keywordtype">void</span> parseCommandEndOfHelp(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00206"></a>00206         <span class="keywordtype">void</span> parseChannelHelp(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00207"></a>00207 
-<a name="l00208"></a>00208         <span class="keywordtype">void</span> parseLiteralPing(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00209"></a>00209         <span class="keywordtype">void</span> parseLiteralJoin(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00210"></a>00210         <span class="keywordtype">void</span> parseLiteralTopic(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00211"></a>00211         <span class="keywordtype">void</span> parseLiteralPart(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00212"></a>00212         <span class="keywordtype">void</span> parseLiteralPrivmsg(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00213"></a>00213         <span class="keywordtype">void</span> parseLiteralNotice(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00214"></a>00214         <span class="keywordtype">void</span> parseLiteralQuit(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00215"></a>00215         <span class="keywordtype">void</span> parseLiteralNick(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00216"></a>00216         <span class="keywordtype">void</span> parseLiteralMode(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00217"></a>00217         <span class="keywordtype">void</span> parseLiteralKick(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00218"></a>00218         <span class="keywordtype">void</span> parseLiteralInvite(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00219"></a>00219         <span class="keywordtype">void</span> parseLiteralWallops(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00220"></a>00220         <span class="keywordtype">void</span> parseLiteralPong(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00221"></a>00221         <span class="keywordtype">void</span> parseLiteralError(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
-<a name="l00222"></a>00222         <span class="keywordtype">void</span> parseChannelMode(<span class="keyword">const</span> QString &amp;szNick,<span class="keyword">const</span> QString &amp;szUser,<span class="keyword">const</span> QString &amp;szHost,<a class="code" href="classKviChannel.html" title="The class which manages a channel.">KviChannel</a> * chan,<a class="code" href="classKviStr.html">KviStr</a> &amp;modefl,<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg,<span class="keywordtype">int</span> curParam);
-<a name="l00223"></a>00223         <span class="keywordtype">void</span> parseUserMode(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg,<span class="keyword">const</span> <span class="keywordtype">char</span> * modeflptr);
-<a name="l00224"></a>00224         <span class="keywordtype">void</span> parseLiteralCap(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
-<a name="l00225"></a>00225         <span class="keywordtype">void</span> parseLiteralAuthenticate(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
-<a name="l00226"></a>00226         
-<a name="l00227"></a>00227         <span class="keywordtype">void</span> parseCtcpRequest(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00228"></a>00228         <span class="keywordtype">void</span> parseCtcpReply(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00229"></a>00229         <span class="keywordtype">void</span> echoCtcpRequest(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00230"></a>00230         <span class="keywordtype">void</span> echoCtcpReply(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00231"></a>00231         <span class="keywordtype">void</span> replyCtcp(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg,<span class="keyword">const</span> QString &amp;data);
-<a name="l00232"></a>00232         <span class="keywordtype">bool</span> checkCtcpFlood(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00233"></a>00233         <span class="keywordtype">void</span> parseCtcpRequestPing(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00234"></a>00234         <span class="keywordtype">void</span> parseCtcpRequestVersion(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00235"></a>00235         <span class="keywordtype">void</span> parseCtcpRequestUserinfo(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00236"></a>00236         <span class="keywordtype">void</span> parseCtcpRequestClientinfo(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00237"></a>00237         <span class="keywordtype">void</span> parseCtcpRequestFinger(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00238"></a>00238         <span class="keywordtype">void</span> parseCtcpRequestSource(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00239"></a>00239         <span class="keywordtype">void</span> parseCtcpRequestAction(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00240"></a>00240         <span class="keywordtype">void</span> parseCtcpRequestTime(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00241"></a>00241         <span class="keywordtype">void</span> parseCtcpRequestAvatar(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00242"></a>00242         <span class="keywordtype">void</span> parseCtcpRequestDcc(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00243"></a>00243         <span class="keywordtype">void</span> parseCtcpRequestPage(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00244"></a>00244         <span class="keywordtype">void</span> parseCtcpReplyAvatar(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00245"></a>00245         <span class="keywordtype">void</span> parseCtcpReplyUserinfo(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00246"></a>00246         <span class="keywordtype">void</span> parseCtcpReplyGeneric(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00247"></a>00247         <span class="keywordtype">void</span> parseCtcpReplyPing(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00248"></a>00248         <span class="keywordtype">void</span> parseCtcpReplyLagcheck(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
-<a name="l00249"></a>00249 <span class="comment">//      void parseCtcpReply(const char * msg_ptr,KviIrcUser &amp;source,const char * target);</span>
-<a name="l00250"></a>00250         <span class="comment">// STARTTLS support</span>
-<a name="l00251"></a>00251         <span class="keywordtype">void</span> parseNumericStartTls(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
-<a name="l00252"></a>00252         <span class="keywordtype">void</span> parseNumericNotRegistered(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
-<a name="l00253"></a>00253         <span class="comment">//sasl</span>
-<a name="l00254"></a>00254         <span class="keywordtype">void</span> parseNumericSaslSuccess(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
-<a name="l00255"></a>00255         <span class="keywordtype">void</span> parseNumericSaslLogin(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
-<a name="l00256"></a>00256         <span class="keywordtype">void</span> parseNumericSaslFail(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
-<a name="l00257"></a>00257         
-<a name="l00258"></a>00258 <span class="keyword">public</span>:
-<a name="l00259"></a>00259         <span class="keyword">static</span> <span class="keywordtype">void</span> encodeCtcpParameter(<span class="keyword">const</span> <span class="keywordtype">char</span> * param,<a class="code" href="classKviStr.html">KviStr</a> &amp;buffer,<span class="keywordtype">bool</span> bSpaceBreaks = <span class="keyword">true</span>);
-<a name="l00260"></a>00260         <span class="keyword">static</span> <span class="keywordtype">void</span> encodeCtcpParameter(<span class="keyword">const</span> <span class="keywordtype">char</span> * param,QString &amp;buffer,<span class="keywordtype">bool</span> bSpaceBreaks = <span class="keyword">true</span>);
-<a name="l00261"></a>00261         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * decodeCtcpEscape(<span class="keyword">const</span> <span class="keywordtype">char</span> * msg_ptr,<a class="code" href="classKviStr.html">KviStr</a> &amp;buffer);
-<a name="l00262"></a>00262         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * decodeCtcpEscape(<span class="keyword">const</span> <span class="keywordtype">char</span> * msg_ptr,QByteArray &amp;buffer);
-<a name="l00263"></a>00263         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * extractCtcpParameter(<span class="keyword">const</span> <span class="keywordtype">char</span> * msg_ptr,<a class="code" href="classKviStr.html">KviStr</a> &amp;buffer,<span class="keywordtype">bool</span> bSpaceBreaks = <span class="keyword">true</span>, <span class="keywordtype">bool</span> bSafeOnly=<span class="keyword">false</span>);
-<a name="l00264"></a>00264         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * extractCtcpParameter(<span class="keyword">const</span> <span class="keywordtype">char</span> * msg_ptr,QString &amp;buffer,<span class="keywordtype">bool</span> bSpaceBreaks = <span class="keyword">true</span>, <span class="keywordtype">bool</span> bSafeOnly=<span class="keyword">false</span>);
-<a name="l00265"></a>00265 };
-<a name="l00266"></a>00266 
-<a name="l00267"></a>00267 <span class="preprocessor">#ifndef _KVI_SPARSER_CPP_</span>
-<a name="l00268"></a>00268 <span class="preprocessor"></span>        <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviServerParser.html">KviServerParser</a> * <a class="code" href="kvi__sparser_8cpp.html#acf24308945f7e43232aba68894f537a4">g_pServerParser</a>;
-<a name="l00269"></a>00269 <span class="preprocessor">#endif</span>
-<a name="l00270"></a>00270 <span class="preprocessor"></span>
-<a name="l00271"></a>00271 
-<a name="l00272"></a>00272 <span class="preprocessor">#endif //_KVI_SPARSER_H_</span>
+<a name="l00154"></a>00154         <span class="keywordtype">void</span> parseNumericQList(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00155"></a>00155         <span class="keywordtype">void</span> parseNumericEndOfQList(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00156"></a>00156         <span class="keywordtype">void</span> parseNumericAList(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00157"></a>00157         <span class="keywordtype">void</span> parseNumericEndOfAList(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00158"></a>00158         <span class="keywordtype">void</span> parseNumericReopList(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00159"></a>00159         <span class="keywordtype">void</span> parseNumericEndOfReopList(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00160"></a>00160         <span class="keywordtype">void</span> parseNumericWhoReply(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00161"></a>00161         <span class="keywordtype">void</span> parseNumericEndOfWho(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00162"></a>00162         <span class="keywordtype">void</span> parseNumericNicknameProblem(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00163"></a>00163         <span class="keywordtype">void</span> parseNumericWhoisAway(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *);
+<a name="l00164"></a>00164         <span class="keywordtype">void</span> parseNumericWhoisUser(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00165"></a>00165         <span class="keywordtype">void</span> parseNumericWhoisChannels(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00166"></a>00166         <span class="keywordtype">void</span> parseNumericWhoisIdle(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00167"></a>00167         <span class="keywordtype">void</span> parseNumericWhoisServer(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00168"></a>00168         <span class="keywordtype">void</span> parseNumericWhoisOther(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00169"></a>00169         <span class="keywordtype">void</span> parseNumericWhoisAuth(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00170"></a>00170         <span class="keywordtype">void</span> parseNumericWhowasUser(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00171"></a>00171         <span class="keywordtype">void</span> parseNumericEndOfWhois(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00172"></a>00172         <span class="keywordtype">void</span> parseNumericEndOfWhowas(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00173"></a>00173         <span class="keywordtype">void</span> parseNumericNoSuchNick(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00174"></a>00174         <span class="keywordtype">void</span> parseNumericCreationTime(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00175"></a>00175         <span class="keywordtype">void</span> parseNumericIsOn(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00176"></a>00176         <span class="keywordtype">void</span> parseNumericUnavailResource(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00177"></a>00177         <span class="keywordtype">void</span> parseNumericLinks(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00178"></a>00178         <span class="keywordtype">void</span> parseNumericEndOfLinks(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00179"></a>00179         <span class="keywordtype">void</span> parseNumericUserhost(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00180"></a>00180         <span class="keywordtype">void</span> parseLoginNicknameProblem(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00181"></a>00181         <span class="keywordtype">void</span> parseNumericBackFromAway(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *);
+<a name="l00182"></a>00182         <span class="keywordtype">void</span> parseNumericAway(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *);
+<a name="l00183"></a>00183         <span class="keywordtype">void</span> parseNumericWatch(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00184"></a>00184         <span class="keywordtype">void</span> parseNumericList(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00185"></a>00185         <span class="keywordtype">void</span> parseNumericListStart(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00186"></a>00186         <span class="keywordtype">void</span> parseNumericListEnd(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00187"></a>00187         <span class="keywordtype">void</span> parseNumericCantJoinChannel(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00188"></a>00188         <span class="keywordtype">void</span> parseNumericStats(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00189"></a>00189         <span class="keywordtype">void</span> parseNumericUserMode(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
+<a name="l00190"></a>00190         <span class="keywordtype">void</span> parseNumericCodePageSet(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
+<a name="l00191"></a>00191         <span class="keywordtype">void</span> parseNumericCodePageScheme(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
+<a name="l00192"></a>00192         <span class="keywordtype">void</span> parseNumeric020(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00193"></a>00193         <span class="keywordtype">void</span> parseNumericCannotSend(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00194"></a>00194         <span class="keywordtype">void</span> parseNumericNoSuchChannel(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00195"></a>00195         <span class="keywordtype">void</span> parseNumericNoSuchServer(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00196"></a>00196         <span class="keywordtype">void</span> parseNumericTime(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00197"></a>00197         <span class="keywordtype">void</span> parseNumericInfoEnd(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00198"></a>00198         <span class="keywordtype">void</span> parseNumericInfoStart(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00199"></a>00199         <span class="keywordtype">void</span> parseNumericInfo(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00200"></a>00200         <span class="keywordtype">void</span> parseNumericInviting(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00201"></a>00201         <span class="keywordtype">void</span> parseNumericCommandSyntax(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00202"></a>00202         <span class="keywordtype">void</span> parseNumericServerAdminInfoAdminContact(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00203"></a>00203         <span class="keywordtype">void</span> parseNumericServerAdminInfoAdminName(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00204"></a>00204         <span class="keywordtype">void</span> parseNumericServerAdminInfoServerName(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00205"></a>00205         <span class="keywordtype">void</span> parseNumericServerAdminInfoTitle(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00206"></a>00206         <span class="keywordtype">void</span> parseNumericCannotSendColor(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00207"></a>00207         <span class="keywordtype">void</span> parseNumericEndOfStats(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00208"></a>00208         <span class="keywordtype">void</span> otherChannelError(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00209"></a>00209         <span class="keywordtype">void</span> parseCommandSyntaxHelp(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00210"></a>00210         <span class="keywordtype">void</span> parseCommandHelp(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00211"></a>00211         <span class="keywordtype">void</span> parseCommandEndOfHelp(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00212"></a>00212         <span class="keywordtype">void</span> parseChannelHelp(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00213"></a>00213 
+<a name="l00214"></a>00214         <span class="keywordtype">void</span> parseLiteralPing(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00215"></a>00215         <span class="keywordtype">void</span> parseLiteralJoin(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00216"></a>00216         <span class="keywordtype">void</span> parseLiteralTopic(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00217"></a>00217         <span class="keywordtype">void</span> parseLiteralPart(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00218"></a>00218         <span class="keywordtype">void</span> parseLiteralPrivmsg(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00219"></a>00219         <span class="keywordtype">void</span> parseLiteralNotice(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00220"></a>00220         <span class="keywordtype">void</span> parseLiteralQuit(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00221"></a>00221         <span class="keywordtype">void</span> parseLiteralNick(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00222"></a>00222         <span class="keywordtype">void</span> parseLiteralMode(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00223"></a>00223         <span class="keywordtype">void</span> parseLiteralKick(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00224"></a>00224         <span class="keywordtype">void</span> parseLiteralInvite(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00225"></a>00225         <span class="keywordtype">void</span> parseLiteralWallops(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00226"></a>00226         <span class="keywordtype">void</span> parseLiteralPong(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00227"></a>00227         <span class="keywordtype">void</span> parseLiteralError(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg);
+<a name="l00228"></a>00228         <span class="keywordtype">void</span> parseChannelMode(<span class="keyword">const</span> QString &amp;szNick,<span class="keyword">const</span> QString &amp;szUser,<span class="keyword">const</span> QString &amp;szHost,<a class="code" href="classKviChannel.html" title="The class which manages a channel.">KviChannel</a> * chan,<a class="code" href="classKviStr.html">KviStr</a> &amp;modefl,<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg,<span class="keywordtype">int</span> curParam);
+<a name="l00229"></a>00229         <span class="keywordtype">void</span> parseUserMode(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> *msg,<span class="keyword">const</span> <span class="keywordtype">char</span> * modeflptr);
+<a name="l00230"></a>00230         <span class="keywordtype">void</span> parseLiteralCap(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
+<a name="l00231"></a>00231         <span class="keywordtype">void</span> parseLiteralAuthenticate(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
+<a name="l00232"></a>00232         
+<a name="l00233"></a>00233         <span class="keywordtype">void</span> parseCtcpRequest(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00234"></a>00234         <span class="keywordtype">void</span> parseCtcpReply(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00235"></a>00235         <span class="keywordtype">void</span> echoCtcpRequest(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00236"></a>00236         <span class="keywordtype">void</span> echoCtcpReply(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00237"></a>00237         <span class="keywordtype">void</span> replyCtcp(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg,<span class="keyword">const</span> QString &amp;data);
+<a name="l00238"></a>00238         <span class="keywordtype">bool</span> checkCtcpFlood(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00239"></a>00239         <span class="keywordtype">void</span> parseCtcpRequestPing(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00240"></a>00240         <span class="keywordtype">void</span> parseCtcpRequestVersion(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00241"></a>00241         <span class="keywordtype">void</span> parseCtcpRequestUserinfo(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00242"></a>00242         <span class="keywordtype">void</span> parseCtcpRequestClientinfo(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00243"></a>00243         <span class="keywordtype">void</span> parseCtcpRequestFinger(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00244"></a>00244         <span class="keywordtype">void</span> parseCtcpRequestSource(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00245"></a>00245         <span class="keywordtype">void</span> parseCtcpRequestAction(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00246"></a>00246         <span class="keywordtype">void</span> parseCtcpRequestTime(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00247"></a>00247         <span class="keywordtype">void</span> parseCtcpRequestAvatar(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00248"></a>00248         <span class="keywordtype">void</span> parseCtcpRequestDcc(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00249"></a>00249         <span class="keywordtype">void</span> parseCtcpRequestPage(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00250"></a>00250         <span class="keywordtype">void</span> parseCtcpReplyAvatar(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00251"></a>00251         <span class="keywordtype">void</span> parseCtcpReplyUserinfo(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00252"></a>00252         <span class="keywordtype">void</span> parseCtcpReplyGeneric(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00253"></a>00253         <span class="keywordtype">void</span> parseCtcpReplyPing(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00254"></a>00254         <span class="keywordtype">void</span> parseCtcpReplyLagcheck(<a class="code" href="struct__KviCtcpMessage.html">KviCtcpMessage</a> *msg);
+<a name="l00255"></a>00255 <span class="comment">//      void parseCtcpReply(const char * msg_ptr,KviIrcUser &amp;source,const char * target);</span>
+<a name="l00256"></a>00256         <span class="comment">// STARTTLS support</span>
+<a name="l00257"></a>00257         <span class="keywordtype">void</span> parseNumericStartTls(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
+<a name="l00258"></a>00258         <span class="keywordtype">void</span> parseNumericNotRegistered(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
+<a name="l00259"></a>00259         <span class="comment">//sasl</span>
+<a name="l00260"></a>00260         <span class="keywordtype">void</span> parseNumericSaslSuccess(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
+<a name="l00261"></a>00261         <span class="keywordtype">void</span> parseNumericSaslLogin(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
+<a name="l00262"></a>00262         <span class="keywordtype">void</span> parseNumericSaslFail(<a class="code" href="classKviIrcMessage.html">KviIrcMessage</a> * msg);
+<a name="l00263"></a>00263         
+<a name="l00264"></a>00264 <span class="keyword">public</span>:
+<a name="l00265"></a>00265         <span class="keyword">static</span> <span class="keywordtype">void</span> encodeCtcpParameter(<span class="keyword">const</span> <span class="keywordtype">char</span> * param,<a class="code" href="classKviStr.html">KviStr</a> &amp;buffer,<span class="keywordtype">bool</span> bSpaceBreaks = <span class="keyword">true</span>);
+<a name="l00266"></a>00266         <span class="keyword">static</span> <span class="keywordtype">void</span> encodeCtcpParameter(<span class="keyword">const</span> <span class="keywordtype">char</span> * param,QString &amp;buffer,<span class="keywordtype">bool</span> bSpaceBreaks = <span class="keyword">true</span>);
+<a name="l00267"></a>00267         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * decodeCtcpEscape(<span class="keyword">const</span> <span class="keywordtype">char</span> * msg_ptr,<a class="code" href="classKviStr.html">KviStr</a> &amp;buffer);
+<a name="l00268"></a>00268         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * decodeCtcpEscape(<span class="keyword">const</span> <span class="keywordtype">char</span> * msg_ptr,QByteArray &amp;buffer);
+<a name="l00269"></a>00269         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * extractCtcpParameter(<span class="keyword">const</span> <span class="keywordtype">char</span> * msg_ptr,<a class="code" href="classKviStr.html">KviStr</a> &amp;buffer,<span class="keywordtype">bool</span> bSpaceBreaks = <span class="keyword">true</span>, <span class="keywordtype">bool</span> bSafeOnly=<span class="keyword">false</span>);
+<a name="l00270"></a>00270         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * extractCtcpParameter(<span class="keyword">const</span> <span class="keywordtype">char</span> * msg_ptr,QString &amp;buffer,<span class="keywordtype">bool</span> bSpaceBreaks = <span class="keyword">true</span>, <span class="keywordtype">bool</span> bSafeOnly=<span class="keyword">false</span>);
+<a name="l00271"></a>00271 };
+<a name="l00272"></a>00272 
+<a name="l00273"></a>00273 <span class="preprocessor">#ifndef _KVI_SPARSER_CPP_</span>
+<a name="l00274"></a>00274 <span class="preprocessor"></span>        <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviServerParser.html">KviServerParser</a> * <a class="code" href="kvi__sparser_8cpp.html#acf24308945f7e43232aba68894f537a4">g_pServerParser</a>;
+<a name="l00275"></a>00275 <span class="preprocessor">#endif</span>
+<a name="l00276"></a>00276 <span class="preprocessor"></span>
+<a name="l00277"></a>00277 
+<a name="l00278"></a>00278 <span class="preprocessor">#endif //_KVI_SPARSER_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:21 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

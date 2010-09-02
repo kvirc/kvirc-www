@@ -60,40 +60,42 @@
 <a name="l00035"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html">00035</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html">KviKvsTreeNodeSpecialCommandClassFunctionDefinition</a> : <span class="keyword">public</span> <a class="code" href="classKviKvsTreeNode.html" title="Treenode class.">KviKvsTreeNode</a>
 <a name="l00036"></a>00036 {
 <a name="l00037"></a>00037 <span class="keyword">public</span>:
-<a name="l00038"></a>00038         <a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html">KviKvsTreeNodeSpecialCommandClassFunctionDefinition</a>(<span class="keyword">const</span> QChar * pLocation,<span class="keyword">const</span> QString &amp;szName,<span class="keyword">const</span> QString &amp;szBuffer,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uHandlerFlags);
+<a name="l00038"></a>00038         <a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html">KviKvsTreeNodeSpecialCommandClassFunctionDefinition</a>(<span class="keyword">const</span> QChar * pLocation,<span class="keyword">const</span> QString &amp;szName,<span class="keyword">const</span> QString &amp;szBuffer, <span class="keyword">const</span> QString &amp;szReminder,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uHandlerFlags);
 <a name="l00039"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#ab211a16ddf92d43b49771a615067622f">00039</a>         <span class="keyword">virtual</span> <a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#ab211a16ddf92d43b49771a615067622f">~KviKvsTreeNodeSpecialCommandClassFunctionDefinition</a>(){};
 <a name="l00040"></a>00040 <span class="keyword">protected</span>:
 <a name="l00041"></a>00041         QString m_szName;
-<a name="l00042"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#aedb2e0819dbdec4220861d6dd890ea5d">00042</a>         QString m_szBuffer;
-<a name="l00043"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#af911727ea0983243098fbd6a0cd945ac">00043</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_uHandlerFlags;
-<a name="l00044"></a>00044 <span class="keyword">public</span>:
-<a name="l00045"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#ac6544dfee61f44e2134c74973155771a">00045</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#ac6544dfee61f44e2134c74973155771a">handlerFlags</a>(){ <span class="keywordflow">return</span> m_uHandlerFlags; };
-<a name="l00046"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#a85e0d6897de22436d63a20937130f657">00046</a>         <span class="keyword">const</span> QString &amp; <a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#a85e0d6897de22436d63a20937130f657">name</a>(){ <span class="keywordflow">return</span> m_szName; };
-<a name="l00047"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#a7a9099a97fd51ec1f4350488d42ed697">00047</a>         <span class="keyword">const</span> QString &amp; <a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#a7a9099a97fd51ec1f4350488d42ed697">buffer</a>(){ <span class="keywordflow">return</span> m_szBuffer; };
-<a name="l00048"></a>00048         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNode.html#a797af0a9a3fd882049a07d08c8f6a31f" title="Sets the buffer.">contextDescription</a>(QString &amp;szBuffer);
-<a name="l00049"></a>00049         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNode.html#ad49069675321c8e752c7c33b5ad60fb0" title="Dumps the tree.">dump</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * prefix);
-<a name="l00050"></a>00050 };
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 
+<a name="l00042"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#a2e21d0f39633e93e7117b18fc413d591">00042</a>         QString m_szReminder;
+<a name="l00043"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#aedb2e0819dbdec4220861d6dd890ea5d">00043</a>         QString m_szBuffer;
+<a name="l00044"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#af911727ea0983243098fbd6a0cd945ac">00044</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_uHandlerFlags;
+<a name="l00045"></a>00045 <span class="keyword">public</span>:
+<a name="l00046"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#ac6544dfee61f44e2134c74973155771a">00046</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#ac6544dfee61f44e2134c74973155771a">handlerFlags</a>(){ <span class="keywordflow">return</span> m_uHandlerFlags; };
+<a name="l00047"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#a85e0d6897de22436d63a20937130f657">00047</a>         <span class="keyword">const</span> QString &amp; <a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#a85e0d6897de22436d63a20937130f657">name</a>(){ <span class="keywordflow">return</span> m_szName; };
+<a name="l00048"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#a344fb267ebe76f2c187c9e7d39325ba5">00048</a>         <span class="keyword">const</span> QString &amp; <a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#a344fb267ebe76f2c187c9e7d39325ba5">reminder</a>(){ <span class="keywordflow">return</span> m_szReminder; };
+<a name="l00049"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#a7a9099a97fd51ec1f4350488d42ed697">00049</a>         <span class="keyword">const</span> QString &amp; <a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html#a7a9099a97fd51ec1f4350488d42ed697">buffer</a>(){ <span class="keywordflow">return</span> m_szBuffer; };
+<a name="l00050"></a>00050         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNode.html#a797af0a9a3fd882049a07d08c8f6a31f" title="Sets the buffer.">contextDescription</a>(QString &amp;szBuffer);
+<a name="l00051"></a>00051         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNode.html#ad49069675321c8e752c7c33b5ad60fb0" title="Dumps the tree.">dump</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * prefix);
+<a name="l00052"></a>00052 };
 <a name="l00053"></a>00053 
-<a name="l00054"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html">00054</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html">KviKvsTreeNodeSpecialCommandClass</a> : <span class="keyword">public</span> <a class="code" href="classKviKvsTreeNodeSpecialCommand.html">KviKvsTreeNodeSpecialCommand</a>
-<a name="l00055"></a>00055 {
-<a name="l00056"></a>00056 <span class="keyword">public</span>:
-<a name="l00057"></a>00057         <a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html">KviKvsTreeNodeSpecialCommandClass</a>(<span class="keyword">const</span> QChar * pLocation,<a class="code" href="classKviKvsTreeNodeDataList.html">KviKvsTreeNodeDataList</a> * pParams);
-<a name="l00058"></a>00058         <span class="keyword">virtual</span> ~<a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html">KviKvsTreeNodeSpecialCommandClass</a>();
-<a name="l00059"></a>00059 <span class="keyword">protected</span>:
-<a name="l00060"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html#acda5473933483e1a12fbf6f8dec72334">00060</a>         <a class="code" href="classKviKvsTreeNodeDataList.html">KviKvsTreeNodeDataList</a> * m_pParams;
-<a name="l00061"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html#a2a59c02a8be1f3c0a5f1885b3760c16b">00061</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviKvsTreeNodeSpecialCommandClassFunctionDefinition&gt;</a> * m_pFunctions;
-<a name="l00062"></a>00062 <span class="keyword">public</span>:
-<a name="l00063"></a>00063         <span class="keywordtype">void</span> addFunctionDefinition(<a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html">KviKvsTreeNodeSpecialCommandClassFunctionDefinition</a> * pDef);
-<a name="l00064"></a>00064         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNodeSpecialCommand.html#a2a44b1f5588b93077e88614bc2c4f610" title="Sets the buffer as Instruction.">contextDescription</a>(QString &amp;szBuffer);
-<a name="l00065"></a>00065         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNodeSpecialCommand.html#a22bf0faf4b0b88eb66968f20990898ed" title="Dumps the instructions tree.">dump</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * prefix);
-<a name="l00066"></a>00066         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviKvsTreeNodeInstruction.html#a1df7c65d485256c48b749c5a4bad0120" title="This is the main entry point to the tree visit.">execute</a>(<a class="code" href="classKviKvsRunTimeContext.html">KviKvsRunTimeContext</a> * <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00067"></a>00067 };
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="preprocessor">#endif //!_KVI_KVS_TREENODE_SPECIALCOMMANDCLASS_H_</span>
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 
+<a name="l00056"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html">00056</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html">KviKvsTreeNodeSpecialCommandClass</a> : <span class="keyword">public</span> <a class="code" href="classKviKvsTreeNodeSpecialCommand.html">KviKvsTreeNodeSpecialCommand</a>
+<a name="l00057"></a>00057 {
+<a name="l00058"></a>00058 <span class="keyword">public</span>:
+<a name="l00059"></a>00059         <a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html">KviKvsTreeNodeSpecialCommandClass</a>(<span class="keyword">const</span> QChar * pLocation,<a class="code" href="classKviKvsTreeNodeDataList.html">KviKvsTreeNodeDataList</a> * pParams);
+<a name="l00060"></a>00060         <span class="keyword">virtual</span> ~<a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html">KviKvsTreeNodeSpecialCommandClass</a>();
+<a name="l00061"></a>00061 <span class="keyword">protected</span>:
+<a name="l00062"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html#acda5473933483e1a12fbf6f8dec72334">00062</a>         <a class="code" href="classKviKvsTreeNodeDataList.html">KviKvsTreeNodeDataList</a> * m_pParams;
+<a name="l00063"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html#a2a59c02a8be1f3c0a5f1885b3760c16b">00063</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviKvsTreeNodeSpecialCommandClassFunctionDefinition&gt;</a> * m_pFunctions;
+<a name="l00064"></a>00064 <span class="keyword">public</span>:
+<a name="l00065"></a>00065         <span class="keywordtype">void</span> addFunctionDefinition(<a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html">KviKvsTreeNodeSpecialCommandClassFunctionDefinition</a> * pDef);
+<a name="l00066"></a>00066         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNodeSpecialCommand.html#a2a44b1f5588b93077e88614bc2c4f610" title="Sets the buffer as Instruction.">contextDescription</a>(QString &amp;szBuffer);
+<a name="l00067"></a>00067         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNodeSpecialCommand.html#a22bf0faf4b0b88eb66968f20990898ed" title="Dumps the instructions tree.">dump</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * prefix);
+<a name="l00068"></a>00068         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviKvsTreeNodeInstruction.html#a1df7c65d485256c48b749c5a4bad0120" title="This is the main entry point to the tree visit.">execute</a>(<a class="code" href="classKviKvsRunTimeContext.html">KviKvsRunTimeContext</a> * <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00069"></a>00069 };
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="preprocessor">#endif //!_KVI_KVS_TREENODE_SPECIALCOMMANDCLASS_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:19 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:20 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

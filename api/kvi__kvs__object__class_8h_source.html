@@ -106,33 +106,37 @@
 <a name="l00081"></a>00081             <span class="keywordflow">if</span> (pFunctionHandler) <span class="keywordflow">return</span> pFunctionHandler-&gt;<a class="code" href="classKviKvsObjectFunctionHandler.html#a71133fca54fc810eb08f80e14d9c71bc">isScriptHandler</a>();
 <a name="l00082"></a>00082             <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">false</span>;
 <a name="l00083"></a>00083         };
-<a name="l00084"></a><a class="code" href="classKviKvsObjectClass.html#a05b3f407cd466241a234334841553a09">00084</a>         <span class="keyword">const</span> QString &amp; <a class="code" href="classKviKvsObjectClass.html#a05b3f407cd466241a234334841553a09">name</a>(){ <span class="keywordflow">return</span> m_szName; };
-<a name="l00085"></a><a class="code" href="classKviKvsObjectClass.html#a8e27f9ccc3eb4b348e9e015c6da594b6">00085</a>         <a class="code" href="classKviKvsObjectClass.html">KviKvsObjectClass</a> * <a class="code" href="classKviKvsObjectClass.html#a8e27f9ccc3eb4b348e9e015c6da594b6">parentClass</a>(){ <span class="keywordflow">return</span> m_pParentClass; };
-<a name="l00086"></a>00086         <span class="comment">// pProc CAN&#39;T be zero here!</span>
-<a name="l00087"></a>00087         <span class="keywordtype">void</span> registerFunctionHandler(<span class="keyword">const</span> QString &amp; szFunctionName,<a class="code" href="kvi__kvs__object__class_8h.html#a089850d0087508bcb889cd286c927fe2">KviKvsObjectFunctionHandlerProc</a> pProc,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uFlags = 0);
-<a name="l00088"></a>00088         <span class="keywordtype">void</span> registerFunctionHandler(<span class="keyword">const</span> QString &amp; szFunctionName,<span class="keyword">const</span> QString &amp;szBuffer,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uFlags = 0);
-<a name="l00089"></a>00089 
-<a name="l00090"></a>00090         <span class="comment">// registers an empty handler that returns &quot;nothing&quot;</span>
-<a name="l00091"></a>00091         <span class="keywordtype">void</span> registerStandardNothingReturnFunctionHandler(<span class="keyword">const</span> QString &amp; szFunc);
-<a name="l00092"></a>00092         <span class="comment">// retisters an empty handler that returns $true</span>
-<a name="l00093"></a>00093         <span class="keywordtype">void</span> registerStandardTrueReturnFunctionHandler(<span class="keyword">const</span> QString &amp; szFunc);
-<a name="l00094"></a>00094         <span class="comment">// retisters an empty handler that returns $false</span>
-<a name="l00095"></a>00095         <span class="keywordtype">void</span> registerStandardFalseReturnFunctionHandler(<span class="keyword">const</span> QString &amp; szFunc);
-<a name="l00096"></a>00096 
-<a name="l00097"></a><a class="code" href="classKviKvsObjectClass.html#abb3c0c7326831ec78a390b2eee650563">00097</a>         <a class="code" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a> * <a class="code" href="classKviKvsObjectClass.html#abb3c0c7326831ec78a390b2eee650563">lookupFunctionHandler</a>(<span class="keyword">const</span> QString &amp; szFunc){ <span class="keywordflow">return</span> m_pFunctionHandlers-&gt;find(szFunc); };
-<a name="l00098"></a>00098         <a class="code" href="classKviKvsObject.html">KviKvsObject</a> * allocateInstance(<a class="code" href="classKviKvsObject.html">KviKvsObject</a> * pParent,<span class="keyword">const</span> QString &amp;szName,<a class="code" href="classKviKvsRunTimeContext.html">KviKvsRunTimeContext</a> * pContext,<a class="code" href="classKviKvsVariantList.html">KviKvsVariantList</a> * pParams);
-<a name="l00099"></a>00099 
-<a name="l00100"></a>00100         <span class="keywordtype">bool</span> <a class="code" href="namespaceKviTheme.html#afc947a792aac67a66d0402e09682ac13">save</a>(<span class="keyword">const</span> QString &amp;szFileName);
-<a name="l00101"></a>00101         <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="namespaceKviTheme.html#abac3f12de939692411bdae6dcb59050d">load</a>(<span class="keyword">const</span> QString &amp;szFileName);
-<a name="l00102"></a>00102         <span class="keywordtype">void</span> getFunctionCode(QString &amp;szCode,<a class="code" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a> &amp;h);
-<a name="l00103"></a><a class="code" href="classKviKvsObjectClass.html#ad131703278ab8f6fb325031ff066ca59">00103</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviKvsObjectFunctionHandler&gt;</a> * <a class="code" href="classKviKvsObjectClass.html#ad131703278ab8f6fb325031ff066ca59">getHandlers</a>(){<span class="keywordflow">return</span> m_pFunctionHandlers;};
-<a name="l00104"></a>00104 
-<a name="l00105"></a>00105 };
-<a name="l00106"></a>00106 
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108 <span class="preprocessor">#endif //!_KVI_KVS_OBJECTCLASS_H_</span>
+<a name="l00084"></a>00084         <span class="keywordtype">void</span> setReminder(<span class="keyword">const</span> QString &amp;szReminder,<a class="code" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a> *h);
+<a name="l00085"></a>00085         QString reminder(<a class="code" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a> *h);
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087 
+<a name="l00088"></a><a class="code" href="classKviKvsObjectClass.html#a05b3f407cd466241a234334841553a09">00088</a>         <span class="keyword">const</span> QString &amp; <a class="code" href="classKviKvsObjectClass.html#a05b3f407cd466241a234334841553a09">name</a>(){ <span class="keywordflow">return</span> m_szName; };
+<a name="l00089"></a><a class="code" href="classKviKvsObjectClass.html#a8e27f9ccc3eb4b348e9e015c6da594b6">00089</a>         <a class="code" href="classKviKvsObjectClass.html">KviKvsObjectClass</a> * <a class="code" href="classKviKvsObjectClass.html#a8e27f9ccc3eb4b348e9e015c6da594b6">parentClass</a>(){ <span class="keywordflow">return</span> m_pParentClass; };
+<a name="l00090"></a>00090         <span class="comment">// pProc CAN&#39;T be zero here!</span>
+<a name="l00091"></a>00091         <span class="keywordtype">void</span> registerFunctionHandler(<span class="keyword">const</span> QString &amp; szFunctionName,<a class="code" href="kvi__kvs__object__class_8h.html#a089850d0087508bcb889cd286c927fe2">KviKvsObjectFunctionHandlerProc</a> pProc,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uFlags = 0);
+<a name="l00092"></a>00092         <span class="keywordtype">void</span> registerFunctionHandler(<span class="keyword">const</span> QString &amp; szFunctionName,<span class="keyword">const</span> QString &amp;szBuffer,<span class="keyword">const</span> QString &amp;szReminder,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uFlags = 0);
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094         <span class="comment">// registers an empty handler that returns &quot;nothing&quot;</span>
+<a name="l00095"></a>00095         <span class="keywordtype">void</span> registerStandardNothingReturnFunctionHandler(<span class="keyword">const</span> QString &amp; szFunc);
+<a name="l00096"></a>00096         <span class="comment">// retisters an empty handler that returns $true</span>
+<a name="l00097"></a>00097         <span class="keywordtype">void</span> registerStandardTrueReturnFunctionHandler(<span class="keyword">const</span> QString &amp; szFunc);
+<a name="l00098"></a>00098         <span class="comment">// retisters an empty handler that returns $false</span>
+<a name="l00099"></a>00099         <span class="keywordtype">void</span> registerStandardFalseReturnFunctionHandler(<span class="keyword">const</span> QString &amp; szFunc);
+<a name="l00100"></a>00100 
+<a name="l00101"></a><a class="code" href="classKviKvsObjectClass.html#abb3c0c7326831ec78a390b2eee650563">00101</a>         <a class="code" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a> * <a class="code" href="classKviKvsObjectClass.html#abb3c0c7326831ec78a390b2eee650563">lookupFunctionHandler</a>(<span class="keyword">const</span> QString &amp; szFunc){ <span class="keywordflow">return</span> m_pFunctionHandlers-&gt;find(szFunc); };
+<a name="l00102"></a>00102         <a class="code" href="classKviKvsObject.html">KviKvsObject</a> * allocateInstance(<a class="code" href="classKviKvsObject.html">KviKvsObject</a> * pParent,<span class="keyword">const</span> QString &amp;szName,<a class="code" href="classKviKvsRunTimeContext.html">KviKvsRunTimeContext</a> * pContext,<a class="code" href="classKviKvsVariantList.html">KviKvsVariantList</a> * pParams);
+<a name="l00103"></a>00103 
+<a name="l00104"></a>00104         <span class="keywordtype">bool</span> <a class="code" href="namespaceKviTheme.html#afc947a792aac67a66d0402e09682ac13">save</a>(<span class="keyword">const</span> QString &amp;szFileName);
+<a name="l00105"></a>00105         <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="namespaceKviTheme.html#abac3f12de939692411bdae6dcb59050d">load</a>(<span class="keyword">const</span> QString &amp;szFileName);
+<a name="l00106"></a>00106         <span class="keywordtype">void</span> getFunctionCode(QString &amp;szCode,<a class="code" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a> &amp;h);
+<a name="l00107"></a><a class="code" href="classKviKvsObjectClass.html#ad131703278ab8f6fb325031ff066ca59">00107</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviKvsObjectFunctionHandler&gt;</a> * <a class="code" href="classKviKvsObjectClass.html#ad131703278ab8f6fb325031ff066ca59">getHandlers</a>(){<span class="keywordflow">return</span> m_pFunctionHandlers;};
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109 };
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112 <span class="preprocessor">#endif //!_KVI_KVS_OBJECTCLASS_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:19 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:20 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -31,8 +31,8 @@
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#abbdc9a37c7e2d6b62f02ec4449267ceb">asynchronousConnectionData</a>()</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#ae3138d4eec2a9425231e73ba3acd52f5">beginAsynchronousConnect</a>(unsigned int uDelayInMSecs)</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a6e64fb176d5d6d0f3913f7509254e289">closeAllContextWindows</a>()</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a25e50c5e7f63ffa194127bfe2a7e6b8e">closeAllDeadChannels</a>()</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a3714d5a592b42d9a4ff5d2d3d1f67ae6">closeAllDeadQueries</a>()</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a25e50c5e7f63ffa194127bfe2a7e6b8e">closeAllDeadChannels</a>()</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td><code> [slot]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a3714d5a592b42d9a4ff5d2d3d1f67ae6">closeAllDeadQueries</a>()</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td><code> [slot]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#aada992ca73a5874d97370197523a626c">connectButtonClicked</a>()</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a37935b83b79ed751ecdb29442dcd09b6ad5dd4111d3e1ee25b2d9738558ece6fa">Connected</a> enum value</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a37935b83b79ed751ecdb29442dcd09b6a24258d4fa79791f40b171fd1986a5f30">Connecting</a> enum value</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td></td></tr>
@@ -49,6 +49,7 @@
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#aba83bef82141c767d090a8da4de1b628">destroyConnection</a>()</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a7a2b73b296d856c80107c0b1880de716">findDeadChannel</a>(const QString &amp;name)</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a3a4daa27bf9ddaf450dd97013869c024">findDeadQuery</a>(const QString &amp;nick)</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a6d84e3fd247147df757fbcd91cf9248b">firstDeadChannel</a>()</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a6bf239f7cc116aba56a2fd51187c720d">firstDeadQuery</a>()</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a3dde302fcbb1e129c71bd56410c64e0c">frame</a>()</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#afcffd858672be4bf96c6c950eee15477">id</a>()</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td><code> [inline]</code></td></tr>
@@ -90,8 +91,8 @@
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#acf4c54783b3674f191451d77d3113247">setLinksWindowPointer</a>(KviExternalServerDataParser *l)</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a1c9d1b52eaad632903243db2a17ebe28">setListWindowPointer</a>(KviExternalServerDataParser *l)</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#ad142712971a1ad322f0db9f75cc96928">setState</a>(State eState)</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td><code> [protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a6238f72e0d517fb2a051672378a810ac">state</a>()</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a37935b83b79ed751ecdb29442dcd09b6">State</a> enum name</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a6238f72e0d517fb2a051672378a810ac">state</a>()</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a320ea81cf4a928a1299c4984321d902a">stateChanged</a>()</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td><code> [signal]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#aa4b1bfab0f1bf1870b138f0e72d12d65">terminateConnectionRequest</a>(bool bForce, const QString &amp;szQuitMessage=QString(), bool bSimulateUnexpectedDisconnect=false)</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#afad2b0adc2c042425195ef9773f73327">timerEvent</a>(QTimerEvent *e)</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td><code> [protected, virtual]</code></td></tr>
@@ -102,7 +103,7 @@
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#a25f1f9c34982288806c1ee673db443a6">unregisterDeadQuery</a>(KviQuery *q)</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcContext.html#aa5ea381468ea0daf7ca3f19260d7ab36">~KviIrcContext</a>()</td><td><a class="el" href="classKviIrcContext.html">KviIrcContext</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:22 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:23 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

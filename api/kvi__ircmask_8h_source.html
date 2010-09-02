@@ -116,13 +116,13 @@
 <a name="l00147"></a>00147 
 <a name="l00155"></a><a class="code" href="classKviIrcMask.html#a7f2ba8feccc73a830c278c41345134e1">00155</a>         <span class="keywordtype">void</span> <a class="code" href="classKviIrcMask.html#a7f2ba8feccc73a830c278c41345134e1" title="Sets the host for this user.">setHost</a>(<span class="keyword">const</span> QString &amp;szHost){ m_szHost = szHost.isEmpty() ? m_szWild : szHost; };
 <a name="l00156"></a>00156 
-<a name="l00157"></a>00157         <span class="comment">// Sets the host , nick and username extracting it from an irc mask:</span>
+<a name="l00157"></a>00157         <span class="comment">// Sets the host, nick and username extracting it from an irc mask:</span>
 <a name="l00158"></a>00158         <span class="comment">// nick!user@host</span>
 <a name="l00159"></a>00159         <span class="comment">// The mask is terminated by end-of string null character or a character equal to c in the string.</span>
 <a name="l00160"></a>00160         <span class="comment">// Returns the pointer to the end of the mask in the szMask string.(c or null-terminator)</span>
 <a name="l00161"></a>00161         <span class="comment">//const char * setMask(const QString &amp;szMask,char c=&#39; &#39;);</span>
 <a name="l00162"></a>00162 
-<a name="l00163"></a>00163         <span class="comment">// Sets the host , nick and username extracting it from an userhost mask:</span>
+<a name="l00163"></a>00163         <span class="comment">// Sets the host, nick and username extracting it from an userhost mask:</span>
 <a name="l00164"></a>00164         <span class="comment">// nick[*]=&lt;+|-&gt;user@host</span>
 <a name="l00165"></a>00165         <span class="comment">// The mask is terminated by end-of string null char or a space character.</span>
 <a name="l00166"></a>00166         <span class="comment">// Returns the pointer to the next non-space char in the szMask string or to the null-terminator</span>
@@ -157,11 +157,11 @@
 <a name="l00254"></a>00254         <span class="keywordtype">bool</span> matchesFixed(<span class="keyword">const</span> <a class="code" href="classKviIrcMask.html" title="Irc user mask handling.">KviIrcMask</a> &amp; mask) <span class="keyword">const</span>;
 <a name="l00255"></a>00255 
 <a name="l00261"></a>00261         <span class="comment">//bool matchedBy(const QString &amp;szMask) const;</span>
-<a name="l00262"></a><a class="code" href="classKviIrcMask.html#af4ba632b705daf8b28dc9aa520168417">00262</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviIrcMask.html#af4ba632b705daf8b28dc9aa520168417" title="Fixed internal matches (this is fixed, external is wild).">matchedBy</a>(<span class="keyword">const</span> <a class="code" href="classKviIrcMask.html" title="Irc user mask handling.">KviIrcMask</a> &amp; mask)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mask.<a class="code" href="classKviIrcMask.html#a25d2f39897489a0fa3c2bf4f73581ff0" title="Fixed external matches (this is wild , external is fixed).">matchesFixed</a>(*<span class="keyword">this</span>); };
+<a name="l00262"></a><a class="code" href="classKviIrcMask.html#af4ba632b705daf8b28dc9aa520168417">00262</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviIrcMask.html#af4ba632b705daf8b28dc9aa520168417" title="Fixed internal matches (this is fixed, external is wild).">matchedBy</a>(<span class="keyword">const</span> <a class="code" href="classKviIrcMask.html" title="Irc user mask handling.">KviIrcMask</a> &amp; mask)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mask.<a class="code" href="classKviIrcMask.html#a25d2f39897489a0fa3c2bf4f73581ff0" title="Fixed external matches (this is wild, external is fixed).">matchesFixed</a>(*<span class="keyword">this</span>); };
 <a name="l00263"></a>00263 
 <a name="l00268"></a>00268         <span class="keywordtype">int</span> nonWildChars();
 <a name="l00269"></a>00269 
-<a name="l00275"></a>00275         <span class="keywordtype">bool</span> <a class="code" href="kvi__string_8h.html#ad1c1b2eba313e6178ca809b83a791abb">operator==</a>(<span class="keyword">const</span> <a class="code" href="classKviIrcMask.html" title="Irc user mask handling.">KviIrcMask</a> &amp; user);
+<a name="l00275"></a>00275         <span class="keywordtype">bool</span> <a class="code" href="kvi__string_8h.html#ae91c47b30d4728536cd4bca3a950376d">operator==</a>(<span class="keyword">const</span> <a class="code" href="classKviIrcMask.html" title="Irc user mask handling.">KviIrcMask</a> &amp; user);
 <a name="l00276"></a>00276 <span class="keyword">private</span>:
 <a name="l00283"></a>00283         <span class="keywordtype">int</span> getIpDomainMaskLen() <span class="keyword">const</span>;
 <a name="l00284"></a>00284 
@@ -176,7 +176,7 @@
 <a name="l00312"></a>00312 
 <a name="l00313"></a>00313 <span class="preprocessor">#endif //_KVI_IRCMASK_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:18 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:19 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

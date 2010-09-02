@@ -42,23 +42,33 @@ Inheritance diagram for KviUnrealIrcServerInfo:</div>
 <p><a href="classKviUnrealIrcServerInfo-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUnrealIrcServerInfo.html#ad8c5a548d3135d0cc0dbe8c0e2d703e5">getChannelModeDescription</a> (char mode)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUnrealIrcServerInfo.html#a78782cd64027b21d6dba4528eadb75e6">getNeedsOpToListModeseI</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUnrealIrcServerInfo.html#a315575332767ec50fdb3da229a179531">getRegisterModeChar</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUnrealIrcServerInfo.html#a18937fe8cd454ec562ee6d7a8b895e44">getSoftware</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUnrealIrcServerInfo.html#ae2cbfc6f630f94c6ddaacb03c1d2477d">KviUnrealIrcServerInfo</a> (const QString &amp;version=<a class="el" href="namespaceKviQString.html#aa14b9dc45e5d3b528f26e523d7c96b3e">KviQString::Empty</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUnrealIrcServerInfo.html#a06845b13456865f62edb7e45b48dc229">KviUnrealIrcServerInfo</a> (<a class="el" href="classKviIrcConnectionServerInfo.html">KviIrcConnectionServerInfo</a> *pParent=0, const QString &amp;version=<a class="el" href="namespaceKviQString.html#aa14b9dc45e5d3b528f26e523d7c96b3e">KviQString::Empty</a>)</td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ae2cbfc6f630f94c6ddaacb03c1d2477d"></a><!-- doxytag: member="KviUnrealIrcServerInfo::KviUnrealIrcServerInfo" ref="ae2cbfc6f630f94c6ddaacb03c1d2477d" args="(const QString &amp;version=KviQString::Empty)" -->
+<a class="anchor" id="a06845b13456865f62edb7e45b48dc229"></a><!-- doxytag: member="KviUnrealIrcServerInfo::KviUnrealIrcServerInfo" ref="a06845b13456865f62edb7e45b48dc229" args="(KviIrcConnectionServerInfo *pParent=0, const QString &amp;version=KviQString::Empty)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">KviUnrealIrcServerInfo::KviUnrealIrcServerInfo </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="classKviIrcConnectionServerInfo.html">KviIrcConnectionServerInfo</a> *&nbsp;</td>
+          <td class="paramname"> <em>pParent</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const QString &amp;&nbsp;</td>
-          <td class="paramname"> <em>version</em> = <code><a class="el" href="namespaceKviQString.html#aa14b9dc45e5d3b528f26e523d7c96b3e">KviQString::Empty</a></code></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
+          <td class="paramname"> <em>version</em> = <code><a class="el" href="namespaceKviQString.html#aa14b9dc45e5d3b528f26e523d7c96b3e">KviQString::Empty</a></code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -67,6 +77,28 @@ Inheritance diagram for KviUnrealIrcServerInfo:</div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ad8c5a548d3135d0cc0dbe8c0e2d703e5"></a><!-- doxytag: member="KviUnrealIrcServerInfo::getChannelModeDescription" ref="ad8c5a548d3135d0cc0dbe8c0e2d703e5" args="(char mode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QString &amp; KviUnrealIrcServerInfo::getChannelModeDescription </td>
+          <td>(</td>
+          <td class="paramtype">char&nbsp;</td>
+          <td class="paramname"> <em>mode</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classKviBasicIrcServerInfo.html#a478a29df65171d6cdd2b8cc541917738">KviBasicIrcServerInfo</a>.</p>
+
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a78782cd64027b21d6dba4528eadb75e6"></a><!-- doxytag: member="KviUnrealIrcServerInfo::getNeedsOpToListModeseI" ref="a78782cd64027b21d6dba4528eadb75e6" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -124,11 +156,12 @@ Inheritance diagram for KviUnrealIrcServerInfo:</div>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/kvirc/kernel/<a class="el" href="kvi__ircconnectionserverinfo_8h_source.html">kvi_ircconnectionserverinfo.h</a></li>
+<li>src/kvirc/kernel/<a class="el" href="kvi__ircconnectionserverinfo_8cpp.html">kvi_ircconnectionserverinfo.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:27 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:27 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

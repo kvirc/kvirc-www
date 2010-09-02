@@ -61,19 +61,14 @@
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__locale_8cpp.html#a3974d162cb13657563e6c525706fe47d">MO_REVISION_NUMBER</a>&nbsp;&nbsp;&nbsp;0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__locale_8cpp.html#a66fbec8ab2b2aefbe07cbc80e356b4f0">NUM_ENCODINGS</a>&nbsp;&nbsp;&nbsp;109</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__locale_8cpp.html#a25f0a93fc023fa0eec07ac1e32011e89">UNICODE_VALID</a>(Char)</td></tr>
-<tr><td colspan="2"><h2>Typedefs</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__locale_8cpp.html#a54cda4d0b1b475ae7c855edbf17b4a59">gchar</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef signed int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__locale_8cpp.html#a4e8d1f353f754e50d6f8c36681855235">gssize</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef unsigned char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__locale_8cpp.html#a5e8851857ea175b3eba6457ff70efc0d">guchar</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__locale_8cpp.html#a5bddde70d965000a6f3db2b024a2edf6">gunichar</a></td></tr>
 <tr><td colspan="2"><h2>Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QTextCodec *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviLocale.html#ab284a0e7f8849b08abd5aa0f2c9443c0">KviLocale::codecForName</a> (const char *szName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviLocale.html#a0516e82ea3996ded16e7bd66399c4e60">KviLocale::done</a> (QApplication *app)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">EncodingDescription *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviLocale.html#ad37ab6a6a3509e024c6cca30479de1f7">KviLocale::encodingDescription</a> (int iIdx)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static const char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__locale_8cpp.html#a0bb0dcacdf1e4583d3d5df2fe11ff125">fast_validate</a> (const char *str)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="kvi__locale_8cpp.html#a54cda4d0b1b475ae7c855edbf17b4a59">gchar</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__locale_8cpp.html#a77f89feea3057357b085d3f1682b5105">fast_validate_len</a> (const char *str, <a class="el" href="kvi__locale_8cpp.html#a4e8d1f353f754e50d6f8c36681855235">gssize</a> max_len)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__locale_8cpp.html#a52cb0ab5392c25293611932c6323d56d">fast_validate_len</a> (const char *str, int max_len)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviLocale.html#a1b1febc43ef8b5dc7e38ef097baca555">KviLocale::findCatalogue</a> (QString &amp;szBuffer, const QString &amp;name, const QString &amp;szLocaleDir)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__locale_8cpp.html#a73dd10463f475f87ac17a00173951cf3">g_utf8_validate</a> (const char *str, <a class="el" href="kvi__locale_8cpp.html#a4e8d1f353f754e50d6f8c36681855235">gssize</a> max_len, const <a class="el" href="kvi__locale_8cpp.html#a54cda4d0b1b475ae7c855edbf17b4a59">gchar</a> **end)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__locale_8cpp.html#a31f67913bb6603223a3259fb1f88f013">g_utf8_validate</a> (const char *str, int max_len, const char **end)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviMessageCatalogue.html">KviMessageCatalogue</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviLocale.html#a4dd7063235635fa7a824af46a8ca0190">KviLocale::getLoadedCatalogue</a> (const QString &amp;name)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviLocale.html#ab09ac414ed2ae6a8f785e51a4a8eb54c">KviLocale::init</a> (QApplication *app, const QString &amp;localeDir)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__locale_8cpp.html#a328a9659449bb0450211d0d3af585239">kvi_getFirstBiggerPrime</a> (int number)</td></tr>
@@ -120,12 +115,12 @@
       </table>
 </div>
 <div class="memdoc">
-<b>Value:</b><div class="fragment"><pre class="fragment"><span class="keywordflow">if</span> ((*(<a class="code" href="kvi__locale_8cpp.html#a5e8851857ea175b3eba6457ff70efc0d">guchar</a> *)p &amp; 0xc0) != 0x80) <span class="comment">/* 10xxxxxx */</span> \
+<b>Value:</b><div class="fragment"><pre class="fragment"><span class="keywordflow">if</span> ((*(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *)p &amp; 0xc0) != 0x80) <span class="comment">/* 10xxxxxx */</span> \
                 <span class="keywordflow">goto</span> error;                                     \
                 val &lt;&lt;= 6;                                      \
-                val |= (*(<a class="code" href="kvi__locale_8cpp.html#a5e8851857ea175b3eba6457ff70efc0d">guchar</a> *)p) &amp; 0x3f;
+                val |= (*(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *)p) &amp; 0x3f;
 </pre></div>
-<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00101">fast_validate()</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00163">fast_validate_len()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00096">fast_validate()</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00157">fast_validate_len()</a>.</p>
 
 </div>
 </div>
@@ -140,7 +135,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00424">KviMessageCatalogue::load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00415">KviMessageCatalogue::load()</a>.</p>
 
 </div>
 </div>
@@ -155,7 +150,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00424">KviMessageCatalogue::load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00415">KviMessageCatalogue::load()</a>.</p>
 
 </div>
 </div>
@@ -180,7 +175,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00424">KviMessageCatalogue::load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00415">KviMessageCatalogue::load()</a>.</p>
 
 </div>
 </div>
@@ -195,7 +190,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00424">KviMessageCatalogue::load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00415">KviMessageCatalogue::load()</a>.</p>
 
 </div>
 </div>
@@ -232,60 +227,7 @@
         ((Char) &lt; 0xFDD0 || (Char) &gt; 0xFDEF) &amp;&amp;  \
         ((Char) &amp; 0xFFFE) != 0xFFFE)
 </pre></div>
-<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00101">fast_validate()</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00163">fast_validate_len()</a>.</p>
-
-</div>
-</div>
-<hr/><h2>Typedef Documentation</h2>
-<a class="anchor" id="a54cda4d0b1b475ae7c855edbf17b4a59"></a><!-- doxytag: member="kvi_locale.cpp::gchar" ref="a54cda4d0b1b475ae7c855edbf17b4a59" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef char <a class="el" href="kvi__locale_8cpp.html#a54cda4d0b1b475ae7c855edbf17b4a59">gchar</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a4e8d1f353f754e50d6f8c36681855235"></a><!-- doxytag: member="kvi_locale.cpp::gssize" ref="a4e8d1f353f754e50d6f8c36681855235" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef signed int <a class="el" href="kvi__locale_8cpp.html#a4e8d1f353f754e50d6f8c36681855235">gssize</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a5e8851857ea175b3eba6457ff70efc0d"></a><!-- doxytag: member="kvi_locale.cpp::guchar" ref="a5e8851857ea175b3eba6457ff70efc0d" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef unsigned char <a class="el" href="kvi__locale_8cpp.html#a5e8851857ea175b3eba6457ff70efc0d">guchar</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a5bddde70d965000a6f3db2b024a2edf6"></a><!-- doxytag: member="kvi_locale.cpp::gunichar" ref="a5bddde70d965000a6f3db2b024a2edf6" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef unsigned int <a class="el" href="kvi__locale_8cpp.html#a5bddde70d965000a6f3db2b024a2edf6">gunichar</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
+<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00096">fast_validate()</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00157">fast_validate_len()</a>.</p>
 
 </div>
 </div>
@@ -306,18 +248,18 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8cpp_source.html#l00093">CONTINUATION_CHAR</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00087">UNICODE_VALID</a>.</p>
+<p>References <a class="el" href="kvi__locale_8cpp_source.html#l00089">CONTINUATION_CHAR</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00083">UNICODE_VALID</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00233">g_utf8_validate()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00227">g_utf8_validate()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a77f89feea3057357b085d3f1682b5105"></a><!-- doxytag: member="kvi_locale.cpp::fast_validate_len" ref="a77f89feea3057357b085d3f1682b5105" args="(const char *str, gssize max_len)" -->
+<a class="anchor" id="a52cb0ab5392c25293611932c6323d56d"></a><!-- doxytag: member="kvi_locale.cpp::fast_validate_len" ref="a52cb0ab5392c25293611932c6323d56d" args="(const char *str, int max_len)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">static const <a class="el" href="kvi__locale_8cpp.html#a54cda4d0b1b475ae7c855edbf17b4a59">gchar</a>* fast_validate_len </td>
+          <td class="memname">static const char* fast_validate_len </td>
           <td>(</td>
           <td class="paramtype">const char *&nbsp;</td>
           <td class="paramname"> <em>str</em>, </td>
@@ -325,7 +267,7 @@
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="kvi__locale_8cpp.html#a4e8d1f353f754e50d6f8c36681855235">gssize</a>&nbsp;</td>
+          <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>max_len</em></td><td>&nbsp;</td>
         </tr>
         <tr>
@@ -337,13 +279,13 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8cpp_source.html#l00093">CONTINUATION_CHAR</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00087">UNICODE_VALID</a>.</p>
+<p>References <a class="el" href="kvi__locale_8cpp_source.html#l00089">CONTINUATION_CHAR</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00083">UNICODE_VALID</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00233">g_utf8_validate()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00227">g_utf8_validate()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a73dd10463f475f87ac17a00173951cf3"></a><!-- doxytag: member="kvi_locale.cpp::g_utf8_validate" ref="a73dd10463f475f87ac17a00173951cf3" args="(const char *str, gssize max_len, const gchar **end)" -->
+<a class="anchor" id="a31f67913bb6603223a3259fb1f88f013"></a><!-- doxytag: member="kvi_locale.cpp::g_utf8_validate" ref="a31f67913bb6603223a3259fb1f88f013" args="(const char *str, int max_len, const char **end)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -356,13 +298,13 @@
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="kvi__locale_8cpp.html#a4e8d1f353f754e50d6f8c36681855235">gssize</a>&nbsp;</td>
+          <td class="paramtype">int&nbsp;</td>
           <td class="paramname"> <em>max_len</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="kvi__locale_8cpp.html#a54cda4d0b1b475ae7c855edbf17b4a59">gchar</a> **&nbsp;</td>
+          <td class="paramtype">const char **&nbsp;</td>
           <td class="paramname"> <em>end</em></td><td>&nbsp;</td>
         </tr>
         <tr>
@@ -374,9 +316,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8cpp_source.html#l00101">fast_validate()</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00163">fast_validate_len()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8cpp_source.html#l00096">fast_validate()</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00157">fast_validate_len()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00300">KviSmartTextCodec::convertToUnicode()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00289">KviSmartTextCodec::convertToUnicode()</a>.</p>
 
 </div>
 </div>
@@ -396,9 +338,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8cpp_source.html#l00386">somePrimeNumbers</a>.</p>
+<p>References <a class="el" href="kvi__locale_8cpp_source.html#l00377">somePrimeNumbers</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00424">KviMessageCatalogue::load()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00415">KviMessageCatalogue::load()</a>.</p>
 
 </div>
 </div>
@@ -427,7 +369,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l01014">KviTranslator::translate()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l01021">KviTranslator::translate()</a>.</p>
 
 </div>
 </div>
@@ -468,7 +410,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00300">KviSmartTextCodec::convertToUnicode()</a>, <a class="el" href="kvi__locale_8cpp_source.html#l00265">KviSmartTextCodec::KviSmartTextCodec()</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00290">KviSmartTextCodec::ok()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00289">KviSmartTextCodec::convertToUnicode()</a>, <a class="el" href="kvi__locale_8cpp_source.html#l00256">KviSmartTextCodec::KviSmartTextCodec()</a>, and <a class="el" href="kvi__locale_8cpp_source.html#l00279">KviSmartTextCodec::ok()</a>.</p>
 
 </div>
 </div>
@@ -508,12 +450,12 @@
         2903, 3121, 3329, 3331, 3767, 4127, 5051, 6089, 7039, 9973
 }
 </pre></div>
-<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00399">kvi_getFirstBiggerPrime()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__locale_8cpp_source.html#l00390">kvi_getFirstBiggerPrime()</a>.</p>
 
 </div>
 </div>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:21 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

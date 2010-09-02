@@ -53,29 +53,32 @@
 <a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="kvi__themedlineedit_8h.html">kvi_themedlineedit.h</a>&quot;</span>
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 <span class="keyword">class </span><a class="code" href="classKviChannel.html" title="The class which manages a channel.">KviChannel</a>;
-<a name="l00031"></a>00031 
-<a name="l00032"></a><a class="code" href="classKviModeWidget.html">00032</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviModeWidget.html">KviModeWidget</a> : <span class="keyword">public</span> <a class="code" href="classKviThemedLineEdit.html">KviThemedLineEdit</a>
-<a name="l00033"></a>00033 {
-<a name="l00034"></a>00034         Q_OBJECT
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <span class="keyword">public</span>:
-<a name="l00037"></a>00037         <a class="code" href="classKviModeWidget.html">KviModeWidget</a>(QWidget * par,<a class="code" href="classKviChannel.html" title="The class which manages a channel.">KviChannel</a>* chan,<span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">name</a>=0);
-<a name="l00038"></a>00038         ~<a class="code" href="classKviModeWidget.html">KviModeWidget</a>();
-<a name="l00039"></a>00039         <span class="keywordtype">void</span> reset();
-<a name="l00040"></a>00040         <span class="keywordtype">void</span> refreshModes();
-<a name="l00041"></a>00041 <span class="keyword">private</span>:
-<a name="l00042"></a><a class="code" href="classKviModeWidget.html#a374ae5600efc6b450e3ab1c609207de9">00042</a>         <a class="code" href="classKviChannel.html" title="The class which manages a channel.">KviChannel</a>            *  m_pChannel;
-<a name="l00043"></a>00043 <span class="keyword">protected</span>:
-<a name="l00044"></a>00044         <span class="keywordtype">void</span> mouseDoubleClickEvent(QMouseEvent * e);
-<a name="l00045"></a>00045         <span class="keywordtype">void</span> keyReleaseEvent (QKeyEvent * e);
-<a name="l00046"></a>00046 <span class="keyword">public</span> slots:
-<a name="l00047"></a>00047         <span class="keywordtype">void</span> editorReturnPressed();
-<a name="l00048"></a>00048         <span class="keywordtype">void</span> editorTextEdited( <span class="keyword">const</span> QString &amp; );
-<a name="l00049"></a>00049 };
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="preprocessor">#endif //_KVI_MODEW_H_</span>
+<a name="l00031"></a>00031 <span class="keyword">class </span><a class="code" href="classKviIrcConnectionServerInfo.html">KviIrcConnectionServerInfo</a>;
+<a name="l00032"></a>00032 
+<a name="l00033"></a><a class="code" href="classKviModeWidget.html">00033</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviModeWidget.html">KviModeWidget</a> : <span class="keyword">public</span> <a class="code" href="classKviThemedLineEdit.html">KviThemedLineEdit</a>
+<a name="l00034"></a>00034 {
+<a name="l00035"></a>00035         Q_OBJECT
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 <span class="keyword">public</span>:
+<a name="l00038"></a>00038         <a class="code" href="classKviModeWidget.html">KviModeWidget</a>(QWidget * par,<a class="code" href="classKviChannel.html" title="The class which manages a channel.">KviChannel</a>* chan,<span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">name</a>=0);
+<a name="l00039"></a>00039         ~<a class="code" href="classKviModeWidget.html">KviModeWidget</a>();
+<a name="l00040"></a>00040         <span class="keywordtype">void</span> reset();
+<a name="l00041"></a>00041         <span class="keywordtype">void</span> refreshModes();
+<a name="l00042"></a>00042 <span class="keyword">private</span>:
+<a name="l00043"></a><a class="code" href="classKviModeWidget.html#a374ae5600efc6b450e3ab1c609207de9">00043</a>         <a class="code" href="classKviChannel.html" title="The class which manages a channel.">KviChannel</a>            *  m_pChannel;
+<a name="l00044"></a>00044 <span class="keyword">protected</span>:
+<a name="l00045"></a>00045         <span class="keywordtype">void</span> mouseDoubleClickEvent(QMouseEvent * e);
+<a name="l00046"></a>00046         <span class="keywordtype">void</span> keyReleaseEvent (QKeyEvent * e);
+<a name="l00047"></a>00047         <span class="keywordtype">bool</span> modeNeedsParameterOnlyWhenSet(<span class="keywordtype">char</span> cMode);
+<a name="l00048"></a>00048 <span class="keyword">public</span> slots:
+<a name="l00049"></a>00049         <span class="keywordtype">void</span> editorReturnPressed();
+<a name="l00050"></a>00050 signals:
+<a name="l00051"></a>00051         <span class="keywordtype">void</span> setMode(QString &amp; szMode);
+<a name="l00052"></a>00052 };
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 <span class="preprocessor">#endif //_KVI_MODEW_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:21 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

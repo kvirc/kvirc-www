@@ -53,6 +53,7 @@
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#ae9d177210471d9f61161379354053bfe">dummyRead</a>() const </td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#a5d9366f3db6f9928d311328a2d4871e3">emptyBuffer</a>(bool bRepaint=true)</td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#aa609b065e6c82c6bf4dc61db1b37e40e">enableDnd</a>(bool bEnable)</td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviIrcView.html#a2a49dcef38110f62b69045656a6e07fe">ensureLineVisible</a>(KviIrcViewLine *pLineToShow)</td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#a00ffc1a9beacfc18952726755b409288">event</a>(QEvent *e)</td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td><code> [protected, virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#ab7fb7a7af495572886d7d744216c8d7a">fastScroll</a>(int lines=1)</td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#ab87e6da8eb201ef162ac872972d62d92">fileDropped</a>(const QString &amp;)</td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td><code> [signal]</code></td></tr>
@@ -109,6 +110,7 @@
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#a638c84400e439d2a1d070d0b574c22ba">m_iSelectTimer</a></td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#af305c3c6ea67ddd1a0ba702b762ce1bc">m_iUnprocessedPaintEventRequests</a></td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#a326488c7ebd2b84b1bbea8596a5f5a98">m_iWrapMargin</a></td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td><code> [private]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviIrcView.html#a32d6ac09eb74a58e75f642e25a078697">m_lineMarkArea</a></td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#a2ee9c434ed94ed41ce6fd9e93675e3ee">m_mouseCurrentPos</a></td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#ad36412a4dfbe73251c4b01c7e89f4fbb">m_mousePressPos</a></td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#a6bee763efa031a744957e83fa54808c7">m_pCurLine</a></td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td><code> [private]</code></td></tr>
@@ -158,6 +160,7 @@
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#a8b09fcd7d45bb0ef5dc16779beaeff91">rightClicked</a>()</td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td><code> [signal]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#ad6fd535687b034d8cda1bea92f419633">saveBuffer</a>(const char *filename)</td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#a7ae202fd47eef6c5e3796b30d0ecb617">scrollBarPositionChanged</a>(int newValue)</td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td><code> [protected, virtual, slot]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviIrcView.html#ab0f85b5269d3dd6b801dbfca8a69d40d">scrollToMarker</a>()</td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#a15494800712a8018431e386715baf94f">setCursorLine</a>(KviIrcViewLine *l)</td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td><code> [private]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#a24c565f5ed19d8ac13e6849dc3ea5252">setFont</a>(const QFont &amp;f)</td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td><code> [virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#a5a1eb10b62d7cffd3e6888ad52138e96af9bfcff06b0d01d3ac2b681d75b11fe0">SetLineMark</a> enum value</td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td></td></tr>
@@ -177,7 +180,7 @@
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#a09759d393fd3ac605e48e999f6e4734b">wheelEvent</a>(QWheelEvent *e)</td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td><code> [protected, virtual]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviIrcView.html#a5964c606e5c2f8a36b698537ff3163f0">~KviIrcView</a>()</td><td><a class="el" href="classKviIrcView.html">KviIrcView</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:22 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:23 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

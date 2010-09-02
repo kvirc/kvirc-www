@@ -57,7 +57,7 @@
 <a name="l00032"></a>00032 <span class="comment">// Base class for all IRC crypt engines</span>
 <a name="l00033"></a>00033 <span class="comment">// These intend to encrypt plain text into something</span>
 <a name="l00034"></a>00034 <span class="comment">// that can be sent through the IRC protocol...</span>
-<a name="l00035"></a>00035 <span class="comment">// so it should not contain NULL, CR , LF and other</span>
+<a name="l00035"></a>00035 <span class="comment">// so it should not contain NULL, CR, LF and other</span>
 <a name="l00036"></a>00036 <span class="comment">// similar stuff...</span>
 <a name="l00037"></a>00037 <span class="comment">//</span>
 <a name="l00038"></a>00038 
@@ -148,13 +148,13 @@
 <a name="l00123"></a>00123                 KviCryptEngineDescription(){};
 <a name="l00124"></a>00124                 <span class="keyword">virtual</span> ~KviCryptEngineDescription(){};
 <a name="l00125"></a>00125         <span class="keyword">public</span>:
-<a name="l00126"></a>00126                 QString                       szName;           <span class="comment">// engine name</span>
-<a name="l00127"></a>00127                 QString                       szDescription;    <span class="comment">// details</span>
-<a name="l00128"></a>00128                 QString                       szAuthor;         <span class="comment">// algorithm author</span>
-<a name="l00129"></a>00129                 <span class="keywordtype">int</span>                           iFlags;           <span class="comment">// properties</span>
-<a name="l00130"></a>00130                 crypt_engine_allocator_func   allocFunc;        <span class="comment">// engine allocator</span>
-<a name="l00131"></a>00131                 crypt_engine_deallocator_func deallocFunc;      <span class="comment">// deallocation function (if called from outside the origin module)</span>
-<a name="l00132"></a>00132                 <span class="keywordtype">void</span> *                        providerHandle;   <span class="comment">// used to identify the provider module</span>
+<a name="l00126"></a>00126                 QString                       m_szName;           <span class="comment">// engine name</span>
+<a name="l00127"></a>00127                 QString                       m_szDescription;    <span class="comment">// details</span>
+<a name="l00128"></a>00128                 QString                       m_szAuthor;         <span class="comment">// algorithm author</span>
+<a name="l00129"></a>00129                 <span class="keywordtype">int</span>                           m_iFlags;           <span class="comment">// properties</span>
+<a name="l00130"></a>00130                 crypt_engine_allocator_func   m_allocFunc;        <span class="comment">// engine allocator</span>
+<a name="l00131"></a>00131                 crypt_engine_deallocator_func m_deallocFunc;      <span class="comment">// deallocation function (if called from outside the origin module)</span>
+<a name="l00132"></a>00132                 <span class="keywordtype">void</span>                        * m_providerHandle;   <span class="comment">// used to identify the provider module</span>
 <a name="l00133"></a>00133         };
 <a name="l00134"></a>00134 
 <a name="l00135"></a>00135 
@@ -184,7 +184,7 @@
 <a name="l00159"></a>00159 
 <a name="l00160"></a>00160 <span class="preprocessor">#endif //!_KVI_CRYPT_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:18 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:19 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

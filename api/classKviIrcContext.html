@@ -37,14 +37,15 @@
 <a class="el" href="classKviIrcContext.html#a37935b83b79ed751ecdb29442dcd09b6aacf9402adf917c7ee860c95d5d51ae21">LoggingIn</a>, 
 <a class="el" href="classKviIrcContext.html#a37935b83b79ed751ecdb29442dcd09b6ad5dd4111d3e1ee25b2d9738558ece6fa">Connected</a>
  }</td></tr>
+<tr><td colspan="2"><h2>Public Slots</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#a25e50c5e7f63ffa194127bfe2a7e6b8e">closeAllDeadChannels</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#a3714d5a592b42d9a4ff5d2d3d1f67ae6">closeAllDeadQueries</a> ()</td></tr>
 <tr><td colspan="2"><h2>Signals</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#a320ea81cf4a928a1299c4984321d902a">stateChanged</a> ()</td></tr>
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviAsynchronousConnectionData.html">KviAsynchronousConnectionData</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#abbdc9a37c7e2d6b62f02ec4449267ceb">asynchronousConnectionData</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#ae3138d4eec2a9425231e73ba3acd52f5">beginAsynchronousConnect</a> (unsigned int uDelayInMSecs)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#a6e64fb176d5d6d0f3913f7509254e289">closeAllContextWindows</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#a25e50c5e7f63ffa194127bfe2a7e6b8e">closeAllDeadChannels</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#a3714d5a592b42d9a4ff5d2d3d1f67ae6">closeAllDeadQueries</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviIrcConnection.html">KviIrcConnection</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#a8e50d106e8492d3a5e11caab348c8f6e">connection</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#a1a7327f570a79cc370f1c5bb77185f47">connectOrDisconnect</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#a0e01b5b17aa7de245a9fcbfab1adea7f">connectToCurrentServer</a> ()</td></tr>
@@ -54,6 +55,7 @@
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#a04ece699ffd408cf3de938f63fc38a5e">destroyAsynchronousConnectionData</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviChannel.html">KviChannel</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#a7a2b73b296d856c80107c0b1880de716">findDeadChannel</a> (const QString &amp;name)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviQuery.html">KviQuery</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#a3a4daa27bf9ddaf450dd97013869c024">findDeadQuery</a> (const QString &amp;nick)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviChannel.html">KviChannel</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#a6d84e3fd247147df757fbcd91cf9248b">firstDeadChannel</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviQuery.html">KviQuery</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#a6bf239f7cc116aba56a2fd51187c720d">firstDeadQuery</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviFrame.html">KviFrame</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#a3dde302fcbb1e129c71bd56410c64e0c">frame</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContext.html#afcffd858672be4bf96c6c950eee15477">id</a> ()</td></tr>
@@ -177,7 +179,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__irccontext_8cpp_source.html#l00188">closeAllContextWindows()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00156">closeAllDeadChannels()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00172">closeAllDeadQueries()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00320">destroyConnection()</a>, <a class="el" href="kvi__sparser_8h_source.html#l00114">KviExternalServerDataParser::die()</a>, <a class="el" href="kvi__ircdatastreammonitor_8h_source.html#l00045">KviIrcDataStreamMonitor::die()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00107">m_iHeartbeatTimerId</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00093">m_pAsynchronousConnectionData</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00090">m_pLinksWindow</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00091">m_pListWindow</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00099">m_pMonitorList</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00097">m_pReconnectTimer</a>, and <a class="el" href="kvi__irccontext_8h_source.html#l00094">m_pSavedAsynchronousConnectionData</a>.</p>
+<p>References <a class="el" href="kvi__irccontext_8cpp_source.html#l00188">closeAllContextWindows()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00156">closeAllDeadChannels()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00172">closeAllDeadQueries()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00328">destroyConnection()</a>, <a class="el" href="kvi__sparser_8h_source.html#l00114">KviExternalServerDataParser::die()</a>, <a class="el" href="kvi__ircdatastreammonitor_8h_source.html#l00045">KviIrcDataStreamMonitor::die()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00107">m_iHeartbeatTimerId</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00093">m_pAsynchronousConnectionData</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00090">m_pLinksWindow</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00091">m_pListWindow</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00099">m_pMonitorList</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00097">m_pReconnectTimer</a>, and <a class="el" href="kvi__irccontext_8h_source.html#l00094">m_pSavedAsynchronousConnectionData</a>.</p>
 
 </div>
 </div>
@@ -197,9 +199,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">connectToCurrentServer()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00073">Idle</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00097">m_pReconnectTimer</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00117">state()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00849">terminateConnectionRequest()</a>.</p>
+<p>References <a class="el" href="kvi__irccontext_8cpp_source.html#l00404">connectToCurrentServer()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00073">Idle</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00097">m_pReconnectTimer</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00117">state()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00857">terminateConnectionRequest()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00827">beginAsynchronousConnect()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00835">beginAsynchronousConnect()</a>.</p>
 
 </div>
 </div>
@@ -236,9 +238,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__irccontext_8cpp_source.html#l00835">asynchronousConnect()</a>, and <a class="el" href="kvi__irccontext_8h_source.html#l00097">m_pReconnectTimer</a>.</p>
+<p>References <a class="el" href="kvi__irccontext_8cpp_source.html#l00843">asynchronousConnect()</a>, and <a class="el" href="kvi__irccontext_8h_source.html#l00097">m_pReconnectTimer</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00588">connectionFailed()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">connectionTerminated()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00596">connectionFailed()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00712">connectionTerminated()</a>.</p>
 
 </div>
 </div>
@@ -257,7 +259,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00403">KviFrame::closeWindow()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00105">m_pContextWindows</a>, and <a class="el" href="kvi__irccontext_8h_source.html#l00087">m_pFrame</a>.</p>
+<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00404">KviFrame::closeWindow()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00105">m_pContextWindows</a>, and <a class="el" href="kvi__irccontext_8h_source.html#l00087">m_pFrame</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00102">~KviIrcContext()</a>.</p>
 
@@ -272,13 +274,13 @@
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
-          <td></td>
+          <td><code> [slot]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00403">KviFrame::closeWindow()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00102">m_pDeadChannels</a>, and <a class="el" href="kvi__irccontext_8h_source.html#l00087">m_pFrame</a>.</p>
+<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__frame_8cpp_source.html#l00404">KviFrame::closeWindow()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00102">m_pDeadChannels</a>, and <a class="el" href="kvi__irccontext_8h_source.html#l00087">m_pFrame</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00102">~KviIrcContext()</a>.</p>
 
@@ -293,13 +295,13 @@
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
-          <td></td>
+          <td><code> [slot]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00403">KviFrame::closeWindow()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00103">m_pDeadQueries</a>, and <a class="el" href="kvi__irccontext_8h_source.html#l00087">m_pFrame</a>.</p>
+<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00404">KviFrame::closeWindow()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00103">m_pDeadQueries</a>, and <a class="el" href="kvi__irccontext_8h_source.html#l00087">m_pFrame</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00102">~KviIrcContext()</a>.</p>
 
@@ -320,7 +322,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00115">connection()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">connectToCurrentServer()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00358">destroyAsynchronousConnectionData()</a>, <a class="el" href="kvi__out_8h_source.html#l00038">KVI_OUT_SYSTEMERROR</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00097">m_pReconnectTimer</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00096">m_uConnectAttemptCount</a>, <a class="el" href="kvi__window_8cpp_source.html#l01309">KviWindow::outputNoFmt()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00849">terminateConnectionRequest()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00115">connection()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00404">connectToCurrentServer()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00366">destroyAsynchronousConnectionData()</a>, <a class="el" href="kvi__out_8h_source.html#l00038">KVI_OUT_SYSTEMERROR</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00097">m_pReconnectTimer</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00096">m_uConnectAttemptCount</a>, <a class="el" href="kvi__window_8cpp_source.html#l01317">KviWindow::outputNoFmt()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00857">terminateConnectionRequest()</a>.</p>
 
 </div>
 </div>
@@ -339,7 +341,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00655">KviFrame::activeConnection()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00996">KviGoAwayAction::activeContextStateChanged()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l01051">KviGoAwayAction::addToPopupMenu()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00370">connectButtonClicked()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01380">KviWindow::connection()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00489">KviConsole::connectionAttached()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00670">connectionEstabilished()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00588">connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">connectionTerminated()</a>, <a class="el" href="kvi__statusbar_8cpp_source.html#l00530">KviStatusBar::mouseDoubleClickEvent()</a>, <a class="el" href="kvi__statusbar_8cpp_source.html#l00657">KviStatusBar::setPermanentMessage()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00849">terminateConnectionRequest()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00544">KviStatusBarConnectionTimer::timerEvent()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00309">KviStatusBarLagIndicator::updateDisplay()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00141">KviStatusBarAwayIndicator::updateDisplay()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__frame_8cpp_source.html#l00656">KviFrame::activeConnection()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00997">KviGoAwayAction::activeContextStateChanged()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l01052">KviGoAwayAction::addToPopupMenu()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00378">connectButtonClicked()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00498">KviConsole::connectionAttached()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00678">connectionEstabilished()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00596">connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00712">connectionTerminated()</a>, <a class="el" href="kvi__statusbar_8cpp_source.html#l00530">KviStatusBar::mouseDoubleClickEvent()</a>, <a class="el" href="kvi__statusbar_8cpp_source.html#l00657">KviStatusBar::setPermanentMessage()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00857">terminateConnectionRequest()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00544">KviStatusBarConnectionTimer::timerEvent()</a>, <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00309">KviStatusBarLagIndicator::updateDisplay()</a>, and <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00141">KviStatusBarAwayIndicator::updateDisplay()</a>.</p>
 
 </div>
 </div>
@@ -358,9 +360,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__app_8cpp_source.html#l01782">KviApp::addRecentServer()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00115">connection()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00127">g_pApp</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00215">KviIrcUrl::join()</a>, <a class="el" href="kvi__out_8h_source.html#l00040">KVI_OUT_CONNECTION</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00093">KviEvent_OnIRCConnectionEstabilished</a>, <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00150">KVS_TRIGGER_EVENT_0_HALTED</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00075">LoggingIn</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00118">KviServer::m_szIp</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00096">m_uConnectAttemptCount</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00120">KviServer::m_uPort</a>, <a class="el" href="kvi__window_8cpp_source.html#l01268">KviWindow::output()</a>, <a class="el" href="kvi__ircconnectiontarget_8h_source.html#l00052">KviIrcConnectionTarget::server()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00338">setState()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00207">KviIrcConnection::target()</a>, and <a class="el" href="kvi__window_8h_source.html#l00223">KviWindow::target()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__app_8cpp_source.html#l01840">KviApp::addRecentServer()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00115">connection()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00128">g_pApp</a>, <a class="el" href="kvi__ircurl_8cpp_source.html#l00215">KviIrcUrl::join()</a>, <a class="el" href="kvi__out_8h_source.html#l00040">KVI_OUT_CONNECTION</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00096">KviEvent_OnIRCConnectionEstabilished</a>, <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00150">KVS_TRIGGER_EVENT_0_HALTED</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00075">LoggingIn</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00118">KviServer::m_szIp</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00096">m_uConnectAttemptCount</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00120">KviServer::m_uPort</a>, <a class="el" href="kvi__window_8cpp_source.html#l01276">KviWindow::output()</a>, <a class="el" href="kvi__ircconnectiontarget_8h_source.html#l00052">KviIrcConnectionTarget::server()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00346">setState()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00205">KviIrcConnection::target()</a>, and <a class="el" href="kvi__window_8h_source.html#l00223">KviWindow::target()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00300">KviIrcConnection::linkEstabilished()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00302">KviIrcConnection::linkEstabilished()</a>.</p>
 
 </div>
 </div>
@@ -380,9 +382,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__options_8h_source.html#l00696">_OUTPUT_MUTE</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00827">beginAsynchronousConnect()</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00042">KviAsynchronousConnectionData::bPortIsOk</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00045">KviAsynchronousConnectionData::bSTARTTLS</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00043">KviAsynchronousConnectionData::bUseIPv6</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00044">KviAsynchronousConnectionData::bUseSSL</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00115">connection()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00309">KviServer::enabledSTARTTLS()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00261">KviServer::id()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00073">Idle</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00069">KviIrcConnectionUserInfo::isAway()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00291">KviServer::isIPv6()</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00677">KVI_OPTION_UINT</a>, <a class="el" href="kvi__out_8h_source.html#l00038">KVI_OUT_SYSTEMERROR</a>, <a class="el" href="kvi__out_8h_source.html#l00042">KVI_OUT_SYSTEMMESSAGE</a>, <a class="el" href="kvi__out_8h_source.html#l00041">KVI_OUT_SYSTEMWARNING</a>, <a class="el" href="kvi__error_8h_source.html#l00080">KviError_connectionRefused</a>, <a class="el" href="kvi__error_8h_source.html#l00082">KviError_connectionTimedOut</a>, <a class="el" href="kvi__error_8h_source.html#l00165">KviError_hostUnreachable</a>, <a class="el" href="kvi__error_8h_source.html#l00083">KviError_networkUnreachable</a>, <a class="el" href="kvi__error_8h_source.html#l00178">KviError_operationAborted</a>, <a class="el" href="kvi__options_8h_source.html#l00208">KviOption_boolAutoReconnectOnUnexpectedDisconnect</a>, <a class="el" href="kvi__options_8h_source.html#l00571">KviOption_uintAutoReconnectDelay</a>, <a class="el" href="kvi__options_8h_source.html#l00570">KviOption_uintMaxAutoReconnectAttempts</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00080">m_pConnection</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">KviServer::m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00131">KviServer::m_szInitUMode</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00096">m_uConnectAttemptCount</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00060">KviIrcConnectionUserInfo::nickName()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00071">KviIrcConnectionUserInfo::nickNameBeforeAway()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01268">KviWindow::output()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01309">KviWindow::outputNoFmt()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00168">KviServer::password()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00162">KviServer::port()</a>, <a class="el" href="kvi__ircconnectiontarget_8h_source.html#l00052">KviIrcConnectionTarget::server()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00352">setAsynchronousConnectionData()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00338">setState()</a>, <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00047">KviAsynchronousConnectionData::szCommandToExecAfterConnect</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00051">KviAsynchronousConnectionData::szInitUMode</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00050">KviAsynchronousConnectionData::szNick</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00049">KviAsynchronousConnectionData::szPass</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00039">KviAsynchronousConnectionData::szServer</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00052">KviAsynchronousConnectionData::szServerId</a>, <a class="el" href="kvi__window_8h_source.html#l00223">KviWindow::target()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00207">KviIrcConnection::target()</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00041">KviAsynchronousConnectionData::uPort</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00243">KviIrcConnection::userInfo()</a>, and <a class="el" href="kvi__ircserver_8h_source.html#l00297">KviServer::useSSL()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__options_8h_source.html#l00697">_OUTPUT_MUTE</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00835">beginAsynchronousConnect()</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00042">KviAsynchronousConnectionData::bPortIsOk</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00045">KviAsynchronousConnectionData::bSTARTTLS</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00043">KviAsynchronousConnectionData::bUseIPv6</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00044">KviAsynchronousConnectionData::bUseSSL</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00115">connection()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00309">KviServer::enabledSTARTTLS()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00261">KviServer::id()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00073">Idle</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00069">KviIrcConnectionUserInfo::isAway()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00291">KviServer::isIPv6()</a>, <a class="el" href="kvi__options_8h_source.html#l00673">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00678">KVI_OPTION_UINT</a>, <a class="el" href="kvi__out_8h_source.html#l00038">KVI_OUT_SYSTEMERROR</a>, <a class="el" href="kvi__out_8h_source.html#l00042">KVI_OUT_SYSTEMMESSAGE</a>, <a class="el" href="kvi__out_8h_source.html#l00041">KVI_OUT_SYSTEMWARNING</a>, <a class="el" href="kvi__error_8h_source.html#l00080">KviError_connectionRefused</a>, <a class="el" href="kvi__error_8h_source.html#l00082">KviError_connectionTimedOut</a>, <a class="el" href="kvi__error_8h_source.html#l00165">KviError_hostUnreachable</a>, <a class="el" href="kvi__error_8h_source.html#l00083">KviError_networkUnreachable</a>, <a class="el" href="kvi__error_8h_source.html#l00178">KviError_operationAborted</a>, <a class="el" href="kvi__options_8h_source.html#l00208">KviOption_boolAutoReconnectOnUnexpectedDisconnect</a>, <a class="el" href="kvi__options_8h_source.html#l00572">KviOption_uintAutoReconnectDelay</a>, <a class="el" href="kvi__options_8h_source.html#l00571">KviOption_uintMaxAutoReconnectAttempts</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00080">m_pConnection</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">KviServer::m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00131">KviServer::m_szInitUMode</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00096">m_uConnectAttemptCount</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00060">KviIrcConnectionUserInfo::nickName()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00071">KviIrcConnectionUserInfo::nickNameBeforeAway()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01276">KviWindow::output()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01317">KviWindow::outputNoFmt()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00168">KviServer::password()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00162">KviServer::port()</a>, <a class="el" href="kvi__ircconnectiontarget_8h_source.html#l00052">KviIrcConnectionTarget::server()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00360">setAsynchronousConnectionData()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00346">setState()</a>, <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00047">KviAsynchronousConnectionData::szCommandToExecAfterConnect</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00051">KviAsynchronousConnectionData::szInitUMode</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00050">KviAsynchronousConnectionData::szNick</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00049">KviAsynchronousConnectionData::szPass</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00039">KviAsynchronousConnectionData::szServer</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00052">KviAsynchronousConnectionData::szServerId</a>, <a class="el" href="kvi__window_8h_source.html#l00223">KviWindow::target()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00205">KviIrcConnection::target()</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00041">KviAsynchronousConnectionData::uPort</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00241">KviIrcConnection::userInfo()</a>, and <a class="el" href="kvi__ircserver_8h_source.html#l00297">KviServer::useSSL()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00522">KviIrcConnection::linkAttemptFailed()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00524">KviIrcConnection::linkAttemptFailed()</a>.</p>
 
 </div>
 </div>
@@ -401,9 +403,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__options_8h_source.html#l00696">_OUTPUT_MUTE</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00067">KviIrcConnectionUserInfo::awayReason()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00827">beginAsynchronousConnect()</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00042">KviAsynchronousConnectionData::bPortIsOk</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00045">KviAsynchronousConnectionData::bSTARTTLS</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00043">KviAsynchronousConnectionData::bUseIPv6</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00044">KviAsynchronousConnectionData::bUseSSL</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__channel_8h_source.html#l00960">KviChannel::channelKey()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00355">KviIrcConnection::channelList()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00067">KviRequestQueue::clearAll()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00076">Connected</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00115">connection()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00309">KviServer::enabledSTARTTLS()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00198">KviServer::hostName()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00261">KviServer::id()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00073">Idle</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00204">KviServer::ip()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00069">KviIrcConnectionUserInfo::isAway()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00291">KviServer::isIPv6()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00687">KviIrcConnection::keepChannelsOpenAfterDisconnect()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00696">KviIrcConnection::keepQueriesOpenAfterDisconnect()</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00677">KVI_OPTION_UINT</a>, <a class="el" href="kvi__out_8h_source.html#l00040">KVI_OUT_CONNECTION</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00094">KviEvent_OnIRCConnectionTerminated</a>, <a class="el" href="kvi__options_8h_source.html#l00208">KviOption_boolAutoReconnectOnUnexpectedDisconnect</a>, <a class="el" href="kvi__options_8h_source.html#l00297">KviOption_boolKeepChannelsOpenOnDisconnect</a>, <a class="el" href="kvi__options_8h_source.html#l00233">KviOption_boolKeepChannelsOpenOnUnexpectedDisconnect</a>, <a class="el" href="kvi__options_8h_source.html#l00298">KviOption_boolKeepQueriesOpenOnDisconnect</a>, <a class="el" href="kvi__options_8h_source.html#l00234">KviOption_boolKeepQueriesOpenOnUnexpectedDisconnect</a>, <a class="el" href="kvi__options_8h_source.html#l00209">KviOption_boolRejoinChannelsAfterReconnect</a>, <a class="el" href="kvi__options_8h_source.html#l00210">KviOption_boolReopenQueriesAfterReconnect</a>, <a class="el" href="kvi__options_8h_source.html#l00571">KviOption_uintAutoReconnectDelay</a>, <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00150">KVS_TRIGGER_EVENT_0_HALTED</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00088">KviServerReconnectInfo::m_bIsAway</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00084">m_eState</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00080">m_pConnection</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00053">KviAsynchronousConnectionData::m_pReconnectInfo</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00116">KviServer::m_pReconnectInfo</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00085">KviServerReconnectInfo::m_szAwayReason</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">KviServer::m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00131">KviServer::m_szInitUMode</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00086">KviServerReconnectInfo::m_szJoinChannels</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00084">KviServerReconnectInfo::m_szNick</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00087">KviServerReconnectInfo::m_szOpenQueryes</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00060">KviIrcConnectionUserInfo::nickName()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00071">KviIrcConnectionUserInfo::nickNameBeforeAway()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01268">KviWindow::output()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00168">KviServer::password()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00162">KviServer::port()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00480">KviIrcConnection::queryList()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00347">KviIrcConnection::requestQueue()</a>, <a class="el" href="kvi__ircconnectionstatedata_8h_source.html#l00087">KviIrcConnectionStateData::sentQuit()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00352">setAsynchronousConnectionData()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00338">setState()</a>, <a class="el" href="kvi__ircconnectionstatedata_8h_source.html#l00099">KviIrcConnectionStateData::simulateUnexpectedDisconnect()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00271">KviIrcConnection::stateData()</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00051">KviAsynchronousConnectionData::szInitUMode</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00049">KviAsynchronousConnectionData::szPass</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00039">KviAsynchronousConnectionData::szServer</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00052">KviAsynchronousConnectionData::szServerId</a>, <a class="el" href="kvi__window_8h_source.html#l00223">KviWindow::target()</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00041">KviAsynchronousConnectionData::uPort</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00243">KviIrcConnection::userInfo()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00297">KviServer::useSSL()</a>, and <a class="el" href="kvi__window_8h_source.html#l00184">KviWindow::windowName()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__options_8h_source.html#l00697">_OUTPUT_MUTE</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00067">KviIrcConnectionUserInfo::awayReason()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00835">beginAsynchronousConnect()</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00042">KviAsynchronousConnectionData::bPortIsOk</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00045">KviAsynchronousConnectionData::bSTARTTLS</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00043">KviAsynchronousConnectionData::bUseIPv6</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00044">KviAsynchronousConnectionData::bUseSSL</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00353">KviIrcConnection::channelList()</a>, <a class="el" href="kvi__channel_8h_source.html#l00817">KviChannel::channelModeParam()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00068">KviRequestQueue::clearAll()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00076">Connected</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00115">connection()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00309">KviServer::enabledSTARTTLS()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__channel_8h_source.html#l00810">KviChannel::hasChannelMode()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00198">KviServer::hostName()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00261">KviServer::id()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00073">Idle</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00204">KviServer::ip()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00069">KviIrcConnectionUserInfo::isAway()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00291">KviServer::isIPv6()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00692">KviIrcConnection::keepChannelsOpenAfterDisconnect()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00701">KviIrcConnection::keepQueriesOpenAfterDisconnect()</a>, <a class="el" href="kvi__options_8h_source.html#l00673">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00678">KVI_OPTION_UINT</a>, <a class="el" href="kvi__out_8h_source.html#l00040">KVI_OUT_CONNECTION</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00097">KviEvent_OnIRCConnectionTerminated</a>, <a class="el" href="kvi__options_8h_source.html#l00208">KviOption_boolAutoReconnectOnUnexpectedDisconnect</a>, <a class="el" href="kvi__options_8h_source.html#l00297">KviOption_boolKeepChannelsOpenOnDisconnect</a>, <a class="el" href="kvi__options_8h_source.html#l00233">KviOption_boolKeepChannelsOpenOnUnexpectedDisconnect</a>, <a class="el" href="kvi__options_8h_source.html#l00298">KviOption_boolKeepQueriesOpenOnDisconnect</a>, <a class="el" href="kvi__options_8h_source.html#l00234">KviOption_boolKeepQueriesOpenOnUnexpectedDisconnect</a>, <a class="el" href="kvi__options_8h_source.html#l00209">KviOption_boolRejoinChannelsAfterReconnect</a>, <a class="el" href="kvi__options_8h_source.html#l00210">KviOption_boolReopenQueriesAfterReconnect</a>, <a class="el" href="kvi__options_8h_source.html#l00572">KviOption_uintAutoReconnectDelay</a>, <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00150">KVS_TRIGGER_EVENT_0_HALTED</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00088">KviServerReconnectInfo::m_bIsAway</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00084">m_eState</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00080">m_pConnection</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00053">KviAsynchronousConnectionData::m_pReconnectInfo</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00116">KviServer::m_pReconnectInfo</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00085">KviServerReconnectInfo::m_szAwayReason</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">KviServer::m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00131">KviServer::m_szInitUMode</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00086">KviServerReconnectInfo::m_szJoinChannels</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00084">KviServerReconnectInfo::m_szNick</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00087">KviServerReconnectInfo::m_szOpenQueryes</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00060">KviIrcConnectionUserInfo::nickName()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00071">KviIrcConnectionUserInfo::nickNameBeforeAway()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01276">KviWindow::output()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00168">KviServer::password()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00162">KviServer::port()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00478">KviIrcConnection::queryList()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00345">KviIrcConnection::requestQueue()</a>, <a class="el" href="kvi__ircconnectionstatedata_8h_source.html#l00087">KviIrcConnectionStateData::sentQuit()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00360">setAsynchronousConnectionData()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00346">setState()</a>, <a class="el" href="kvi__ircconnectionstatedata_8h_source.html#l00099">KviIrcConnectionStateData::simulateUnexpectedDisconnect()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00269">KviIrcConnection::stateData()</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00051">KviAsynchronousConnectionData::szInitUMode</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00049">KviAsynchronousConnectionData::szPass</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00039">KviAsynchronousConnectionData::szServer</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00052">KviAsynchronousConnectionData::szServerId</a>, <a class="el" href="kvi__window_8h_source.html#l00223">KviWindow::target()</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00041">KviAsynchronousConnectionData::uPort</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00241">KviIrcConnection::userInfo()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00297">KviServer::useSSL()</a>, and <a class="el" href="kvi__window_8h_source.html#l00184">KviWindow::windowName()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00491">KviIrcConnection::linkTerminated()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00493">KviIrcConnection::linkTerminated()</a>.</p>
 
 </div>
 </div>
@@ -441,9 +443,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00049">_KviServerDefinition::bIPv6</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00042">KviAsynchronousConnectionData::bPortIsOk</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00048">_KviServerDefinition::bPortIsValid</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00050">_KviServerDefinition::bSSL</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00051">_KviServerDefinition::bSTARTTLS</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00045">KviAsynchronousConnectionData::bSTARTTLS</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00043">KviAsynchronousConnectionData::bUseIPv6</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00040">KviAsynchronousConnectionData::bUseLastServerInContext</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00044">KviAsynchronousConnectionData::bUseSSL</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00074">Connecting</a>, <a class="el" href="kvi__console_8cpp_source.html#l00489">KviConsole::connectionAttached()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00095">KviServerDataBase::currentNetwork()</a>, <a class="el" href="kvi__proxydb_8h_source.html#l00087">KviProxyDataBase::currentProxy()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00147">KviNetwork::currentServer()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__useridentity_8cpp_source.html#l00154">KviUserIdentityManager::defaultIdentity()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00358">destroyAsynchronousConnectionData()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00309">KviServer::enabledSTARTTLS()</a>, <a class="el" href="kvi__useridentity_8h_source.html#l00399">KviUserIdentityManager::findIdentity()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00131">g_pProxyDataBase</a>, <a class="el" href="kvi__app_8cpp_source.html#l00130">g_pServerDataBase</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00261">KviServer::id()</a>, <a class="el" href="kvi__useridentity_8h_source.html#l00386">KviUserIdentityManager::instance()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00291">KviServer::isIPv6()</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__out_8h_source.html#l00038">KVI_OUT_SYSTEMERROR</a>, <a class="el" href="kvi__out_8h_source.html#l00042">KVI_OUT_SYSTEMMESSAGE</a>, <a class="el" href="kvi__out_8h_source.html#l00041">KVI_OUT_SYSTEMWARNING</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00063">KviIrcConnection</a>, <a class="el" href="kvi__options_8h_source.html#l00101">KviOption_boolUseProxyHost</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00093">m_pAsynchronousConnectionData</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00080">m_pConnection</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00116">KviServer::m_pReconnectInfo</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00053">KviAsynchronousConnectionData::m_pReconnectInfo</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00097">m_pReconnectTimer</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00094">m_pSavedAsynchronousConnectionData</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">KviServer::m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00131">KviServer::m_szInitUMode</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00151">KviServerDataBase::makeCurrentServer()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00089">KviServerDataBase::networkCount()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01309">KviWindow::outputNoFmt()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00168">KviServer::password()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00162">KviServer::port()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00149">KviServer::proxy()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00056">KviServer::proxyServer()</a>, <a class="el" href="kvi__kvs__script_8cpp_source.html#l00180">KviKvsScript::run()</a>, <a class="el" href="kvi__ircconnectionstatedata_8h_source.html#l00106">KviIrcConnectionStateData::setCommandToExecAfterConnect()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00338">setState()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00289">KviIrcConnection::start()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00271">KviIrcConnection::stateData()</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00046">KviAsynchronousConnectionData::szBindAddress</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00047">KviAsynchronousConnectionData::szCommandToExecAfterConnect</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00056">_KviServerDefinition::szId</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00055">_KviServerDefinition::szInitUMode</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00051">KviAsynchronousConnectionData::szInitUMode</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00052">_KviServerDefinition::szLinkFilter</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00048">KviAsynchronousConnectionData::szLinkFilter</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00054">_KviServerDefinition::szNick</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00050">KviAsynchronousConnectionData::szNick</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00053">_KviServerDefinition::szPass</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00049">KviAsynchronousConnectionData::szPass</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00046">_KviServerDefinition::szServer</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00039">KviAsynchronousConnectionData::szServer</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00052">KviAsynchronousConnectionData::szServerId</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00047">_KviServerDefinition::uPort</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00041">KviAsynchronousConnectionData::uPort</a>, <a class="el" href="kvi__network_8h_source.html#l00159">KviNetwork::userIdentityId()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00267">KviServer::userIdentityId()</a>, and <a class="el" href="kvi__ircserver_8h_source.html#l00297">KviServer::useSSL()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00049">_KviServerDefinition::bIPv6</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00042">KviAsynchronousConnectionData::bPortIsOk</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00048">_KviServerDefinition::bPortIsValid</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00050">_KviServerDefinition::bSSL</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00051">_KviServerDefinition::bSTARTTLS</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00045">KviAsynchronousConnectionData::bSTARTTLS</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00043">KviAsynchronousConnectionData::bUseIPv6</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00040">KviAsynchronousConnectionData::bUseLastServerInContext</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00044">KviAsynchronousConnectionData::bUseSSL</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00074">Connecting</a>, <a class="el" href="kvi__console_8cpp_source.html#l00498">KviConsole::connectionAttached()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00095">KviServerDataBase::currentNetwork()</a>, <a class="el" href="kvi__proxydb_8h_source.html#l00087">KviProxyDataBase::currentProxy()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00147">KviNetwork::currentServer()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__useridentity_8cpp_source.html#l00154">KviUserIdentityManager::defaultIdentity()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00366">destroyAsynchronousConnectionData()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00309">KviServer::enabledSTARTTLS()</a>, <a class="el" href="kvi__useridentity_8h_source.html#l00399">KviUserIdentityManager::findIdentity()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00132">g_pProxyDataBase</a>, <a class="el" href="kvi__app_8cpp_source.html#l00131">g_pServerDataBase</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00261">KviServer::id()</a>, <a class="el" href="kvi__useridentity_8h_source.html#l00386">KviUserIdentityManager::instance()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00291">KviServer::isIPv6()</a>, <a class="el" href="kvi__options_8h_source.html#l00673">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__out_8h_source.html#l00038">KVI_OUT_SYSTEMERROR</a>, <a class="el" href="kvi__out_8h_source.html#l00042">KVI_OUT_SYSTEMMESSAGE</a>, <a class="el" href="kvi__out_8h_source.html#l00041">KVI_OUT_SYSTEMWARNING</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00063">KviIrcConnection</a>, <a class="el" href="kvi__options_8h_source.html#l00101">KviOption_boolUseProxyHost</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00093">m_pAsynchronousConnectionData</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00080">m_pConnection</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00116">KviServer::m_pReconnectInfo</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00053">KviAsynchronousConnectionData::m_pReconnectInfo</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00097">m_pReconnectTimer</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00094">m_pSavedAsynchronousConnectionData</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">KviServer::m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00131">KviServer::m_szInitUMode</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00151">KviServerDataBase::makeCurrentServer()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00089">KviServerDataBase::networkCount()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01317">KviWindow::outputNoFmt()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00168">KviServer::password()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00162">KviServer::port()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00149">KviServer::proxy()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00056">KviServer::proxyServer()</a>, <a class="el" href="kvi__kvs__script_8cpp_source.html#l00180">KviKvsScript::run()</a>, <a class="el" href="kvi__ircconnectionstatedata_8h_source.html#l00106">KviIrcConnectionStateData::setCommandToExecAfterConnect()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00346">setState()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00291">KviIrcConnection::start()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00269">KviIrcConnection::stateData()</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00046">KviAsynchronousConnectionData::szBindAddress</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00047">KviAsynchronousConnectionData::szCommandToExecAfterConnect</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00056">_KviServerDefinition::szId</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00055">_KviServerDefinition::szInitUMode</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00051">KviAsynchronousConnectionData::szInitUMode</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00052">_KviServerDefinition::szLinkFilter</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00048">KviAsynchronousConnectionData::szLinkFilter</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00054">_KviServerDefinition::szNick</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00050">KviAsynchronousConnectionData::szNick</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00053">_KviServerDefinition::szPass</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00049">KviAsynchronousConnectionData::szPass</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00046">_KviServerDefinition::szServer</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00039">KviAsynchronousConnectionData::szServer</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00052">KviAsynchronousConnectionData::szServerId</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00047">_KviServerDefinition::uPort</a>, <a class="el" href="kvi__asynchronousconnectiondata_8h_source.html#l00041">KviAsynchronousConnectionData::uPort</a>, <a class="el" href="kvi__network_8h_source.html#l00159">KviNetwork::userIdentityId()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00267">KviServer::userIdentityId()</a>, and <a class="el" href="kvi__ircserver_8h_source.html#l00297">KviServer::useSSL()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00835">asynchronousConnect()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00370">connectButtonClicked()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00843">asynchronousConnect()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00378">connectButtonClicked()</a>.</p>
 
 </div>
 </div>
@@ -462,7 +464,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00078">KviIrcConnection::KviIrcConnection()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00849">terminateConnectionRequest()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00080">KviIrcConnection::KviIrcConnection()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00857">terminateConnectionRequest()</a>.</p>
 
 </div>
 </div>
@@ -483,7 +485,7 @@
 
 <p>References <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00090">m_pLinksWindow</a>, and <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01736">KviServerParser::parseNumericLinks()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01792">KviServerParser::parseNumericLinks()</a>.</p>
 
 </div>
 </div>
@@ -504,7 +506,7 @@
 
 <p>References <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00091">m_pListWindow</a>, and <a class="el" href="kvi__ircurl_8cpp_source.html#l00270">KviIrcUrl::run()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01694">KviServerParser::parseNumericList()</a>, and <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01673">KviServerParser::parseNumericListStart()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01750">KviServerParser::parseNumericList()</a>, and <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01729">KviServerParser::parseNumericListStart()</a>.</p>
 
 </div>
 </div>
@@ -525,7 +527,7 @@
 
 <p>References <a class="el" href="kvi__irccontext_8h_source.html#l00093">m_pAsynchronousConnectionData</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00370">connectButtonClicked()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">connectToCurrentServer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00378">connectButtonClicked()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00404">connectToCurrentServer()</a>.</p>
 
 </div>
 </div>
@@ -544,9 +546,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__ircconnection_8cpp_source.html#l00589">KviIrcConnection::closeAllChannels()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00598">KviIrcConnection::closeAllQueries()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00497">KviConsole::connectionDetached()</a>, <a class="el" href="kvi__sparser_8h_source.html#l00113">KviExternalServerDataParser::control()</a>, <a class="el" href="kvi__sparser_8h_source.html#l00102">EXTERNAL_SERVER_DATA_PARSER_CONTROL_RESET</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00080">m_pConnection</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00090">m_pLinksWindow</a>, and <a class="el" href="kvi__irccontext_8h_source.html#l00091">m_pListWindow</a>.</p>
+<p>References <a class="el" href="kvi__ircconnection_8cpp_source.html#l00591">KviIrcConnection::closeAllChannels()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00600">KviIrcConnection::closeAllQueries()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00506">KviConsole::connectionDetached()</a>, <a class="el" href="kvi__sparser_8h_source.html#l00113">KviExternalServerDataParser::control()</a>, <a class="el" href="kvi__sparser_8h_source.html#l00102">EXTERNAL_SERVER_DATA_PARSER_CONTROL_RESET</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00080">m_pConnection</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00090">m_pLinksWindow</a>, and <a class="el" href="kvi__irccontext_8h_source.html#l00091">m_pListWindow</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00338">setState()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00102">~KviIrcContext()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00346">setState()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00102">~KviIrcContext()</a>.</p>
 
 </div>
 </div>
@@ -568,7 +570,7 @@
 
 <p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00102">m_pDeadChannels</a>, and <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00607">KviIrcConnection::createChannel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00609">KviIrcConnection::createChannel()</a>.</p>
 
 </div>
 </div>
@@ -590,7 +592,28 @@
 
 <p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00103">m_pDeadQueries</a>, and <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00625">KviIrcConnection::createQuery()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00630">KviIrcConnection::createQuery()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6d84e3fd247147df757fbcd91cf9248b"></a><!-- doxytag: member="KviIrcContext::firstDeadChannel" ref="a6d84e3fd247147df757fbcd91cf9248b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classKviChannel.html">KviChannel</a> * KviIrcContext::firstDeadChannel </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, and <a class="el" href="kvi__irccontext_8h_source.html#l00102">m_pDeadChannels</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__console_8cpp_source.html#l00219">KviConsole::fillContextPopup()</a>.</p>
 
 </div>
 </div>
@@ -611,7 +634,7 @@
 
 <p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, and <a class="el" href="kvi__irccontext_8h_source.html#l00103">m_pDeadQueries</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00705">KviIrcConnection::resurrectDeadQueries()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__console_8cpp_source.html#l00219">KviConsole::fillContextPopup()</a>, and <a class="el" href="kvi__ircconnection_8cpp_source.html#l00710">KviIrcConnection::resurrectDeadQueries()</a>.</p>
 
 </div>
 </div>
@@ -647,7 +670,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__windowlist_8cpp_source.html#l00289">KviWindowListButton::drawButtonLabel()</a>, <a class="el" href="kvi__irctoolbar_8cpp_source.html#l00346">KviIrcContextDisplay::drawContents()</a>, <a class="el" href="kvi__app_8cpp_source.html#l01625">KviApp::findWindowByCaption()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00289">KviQuery::getBaseLogFileName()</a>, <a class="el" href="kvi__kvs__coresimplecommands__gl_8cpp_source.html#l00282">KviKvsCoreSimpleCommands::KVSCSC()</a>, <a class="el" href="kvi__windowlist__tree_8cpp_source.html#l00497">KviTreeWindowListItemDelegate::paint()</a>, and <a class="el" href="kvi__irctoolbar_8cpp_source.html#l00271">KviIrcContextDisplay::tipRequest()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__windowlist_8cpp_source.html#l00289">KviWindowListButton::drawButtonLabel()</a>, <a class="el" href="kvi__irctoolbar_8cpp_source.html#l00347">KviIrcContextDisplay::drawContents()</a>, <a class="el" href="kvi__app_8cpp_source.html#l01685">KviApp::findWindowByCaption()</a>, <a class="el" href="kvi__query_8cpp_source.html#l00289">KviQuery::getBaseLogFileName()</a>, <a class="el" href="kvi__kvs__coresimplecommands__gl_8cpp_source.html#l00282">KviKvsCoreSimpleCommands::KVSCSC()</a>, <a class="el" href="kvi__windowlist__tree_8cpp_source.html#l00498">KviTreeWindowListItemDelegate::paint()</a>, and <a class="el" href="kvi__irctoolbar_8cpp_source.html#l00272">KviIrcContextDisplay::tipRequest()</a>.</p>
 
 </div>
 </div>
@@ -702,7 +725,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01760">KviServerParser::parseNumericEndOfLinks()</a>, and <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01736">KviServerParser::parseNumericLinks()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01816">KviServerParser::parseNumericEndOfLinks()</a>, and <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01792">KviServerParser::parseNumericLinks()</a>.</p>
 
 </div>
 </div>
@@ -721,7 +744,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01694">KviServerParser::parseNumericList()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01721">KviServerParser::parseNumericListEnd()</a>, and <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01673">KviServerParser::parseNumericListStart()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01750">KviServerParser::parseNumericList()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01777">KviServerParser::parseNumericListEnd()</a>, and <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01729">KviServerParser::parseNumericListStart()</a>.</p>
 
 </div>
 </div>
@@ -740,9 +763,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__irccontext_8h_source.html#l00076">Connected</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00338">setState()</a>.</p>
+<p>References <a class="el" href="kvi__irccontext_8h_source.html#l00076">Connected</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00346">setState()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01392">KviIrcConnection::loginComplete()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01417">KviIrcConnection::loginComplete()</a>.</p>
 
 </div>
 </div>
@@ -823,7 +846,7 @@
 
 <p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00102">m_pDeadChannels</a>, and <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00670">KviChannel::setDeadChan()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00686">KviChannel::setDeadChan()</a>.</p>
 
 </div>
 </div>
@@ -867,7 +890,7 @@
 
 <p>References <a class="el" href="kvi__irccontext_8h_source.html#l00093">m_pAsynchronousConnectionData</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00588">connectionFailed()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">connectionTerminated()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00596">connectionFailed()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00712">connectionTerminated()</a>.</p>
 
 </div>
 </div>
@@ -923,9 +946,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00667">KviFrame::childContextStateChange()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00320">destroyConnection()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00073">Idle</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00084">m_eState</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00087">m_pFrame</a>, <a class="el" href="classKviIrcContext.html#a320ea81cf4a928a1299c4984321d902a">stateChanged()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l00646">KviWindow::updateCaption()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8cpp_source.html#l00668">KviFrame::childContextStateChange()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00328">destroyConnection()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00073">Idle</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00084">m_eState</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00087">m_pFrame</a>, <a class="el" href="classKviIrcContext.html#a320ea81cf4a928a1299c4984321d902a">stateChanged()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l00648">KviWindow::updateCaption()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00670">connectionEstabilished()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00588">connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">connectToCurrentServer()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00365">loginComplete()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00678">connectionEstabilished()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00596">connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00712">connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00404">connectToCurrentServer()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00373">loginComplete()</a>.</p>
 
 </div>
 </div>
@@ -944,7 +967,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__coreactions_8cpp_source.html#l00996">KviGoAwayAction::activeContextStateChanged()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00547">KviConnectAction::activeContextStateChanged()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00378">KviAction::activeContextStateChanged()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00216">KviAction::activeWindowChanged()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l01051">KviGoAwayAction::addToPopupMenu()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00611">KviConnectAction::addToPopupMenu()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00835">asynchronousConnect()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00504">KviConsole::closeEvent()</a>, <a class="el" href="kvi__statusbar_8cpp_source.html#l00530">KviStatusBar::mouseDoubleClickEvent()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00074">KviServerParser::parseNumeric001()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00093">KviServerParser::parseNumeric002()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00102">KviServerParser::parseNumeric003()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00111">KviServerParser::parseNumeric004()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00204">KviServerParser::parseNumeric005()</a>, <a class="el" href="kvi__statusbar_8cpp_source.html#l00657">KviStatusBar::setPermanentMessage()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00161">KviAction::setup()</a>, <a class="el" href="kvi__menubar_8cpp_source.html#l00218">KviMenuBar::setupMainPopup()</a>, <a class="el" href="kvi__console_8h_source.html#l00136">KviConsole::state()</a>, and <a class="el" href="kvi__statusbar_8cpp_source.html#l00307">KviStatusBar::tipRequest()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__coreactions_8cpp_source.html#l00997">KviGoAwayAction::activeContextStateChanged()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00547">KviConnectAction::activeContextStateChanged()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00378">KviAction::activeContextStateChanged()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00216">KviAction::activeWindowChanged()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l01052">KviGoAwayAction::addToPopupMenu()</a>, <a class="el" href="kvi__coreactions_8cpp_source.html#l00611">KviConnectAction::addToPopupMenu()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00843">asynchronousConnect()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00513">KviConsole::closeEvent()</a>, <a class="el" href="kvi__statusbar_8cpp_source.html#l00530">KviStatusBar::mouseDoubleClickEvent()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00074">KviServerParser::parseNumeric001()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00093">KviServerParser::parseNumeric002()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00102">KviServerParser::parseNumeric003()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00111">KviServerParser::parseNumeric004()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00204">KviServerParser::parseNumeric005()</a>, <a class="el" href="kvi__statusbar_8cpp_source.html#l00657">KviStatusBar::setPermanentMessage()</a>, <a class="el" href="kvi__action_8cpp_source.html#l00161">KviAction::setup()</a>, <a class="el" href="kvi__menubar_8cpp_source.html#l00211">KviMenuBar::setupMainPopup()</a>, <a class="el" href="kvi__console_8h_source.html#l00136">KviConsole::state()</a>, and <a class="el" href="kvi__statusbar_8cpp_source.html#l00307">KviStatusBar::tipRequest()</a>.</p>
 
 </div>
 </div>
@@ -963,7 +986,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00338">setState()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00346">setState()</a>.</p>
 
 </div>
 </div>
@@ -998,9 +1021,9 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00283">KviIrcConnection::abort()</a>, <a class="el" href="kvi__kvs__variant_8cpp_source.html#l00580">KviKvsVariant::asString()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00076">Connected</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00074">Connecting</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00115">connection()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00111">console()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00255">KviIrcConnection::encodeText()</a>, <a class="el" href="kvi__kvs__script_8cpp_source.html#l00152">KviKvsScript::evaluate()</a>, <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00674">KVI_OPTION_STRING</a>, <a class="el" href="kvi__out_8h_source.html#l00042">KVI_OUT_SYSTEMMESSAGE</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00097">KviEvent_OnDisconnectRequest</a>, <a class="el" href="kvi__options_8h_source.html#l00103">KviOption_boolForceBrutalQuit</a>, <a class="el" href="kvi__options_8h_source.html#l00362">KviOption_stringQuitMessage</a>, <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00058">KVS_TRIGGER_EVENT_0</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00075">LoggingIn</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00084">m_eState</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__thread_8cpp_source.html#l00557">KviThread::msleep()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01309">KviWindow::outputNoFmt()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00736">KviIrcConnection::sendFmtData()</a>, <a class="el" href="kvi__ircconnectionstatedata_8h_source.html#l00088">KviIrcConnectionStateData::setSentQuit()</a>, <a class="el" href="kvi__ircconnectionstatedata_8h_source.html#l00100">KviIrcConnectionStateData::setSimulateUnexpectedDisconnect()</a>, and <a class="el" href="kvi__ircconnection_8h_source.html#l00271">KviIrcConnection::stateData()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00285">KviIrcConnection::abort()</a>, <a class="el" href="kvi__kvs__variant_8cpp_source.html#l00580">KviKvsVariant::asString()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00076">Connected</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00074">Connecting</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00115">connection()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00111">console()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00257">KviIrcConnection::encodeText()</a>, <a class="el" href="kvi__kvs__script_8cpp_source.html#l00152">KviKvsScript::evaluate()</a>, <a class="el" href="kvi__debug_8h_source.html#l00162">KVI_ASSERT</a>, <a class="el" href="kvi__options_8h_source.html#l00673">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00675">KVI_OPTION_STRING</a>, <a class="el" href="kvi__out_8h_source.html#l00042">KVI_OUT_SYSTEMMESSAGE</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00100">KviEvent_OnDisconnectRequest</a>, <a class="el" href="kvi__options_8h_source.html#l00103">KviOption_boolForceBrutalQuit</a>, <a class="el" href="kvi__options_8h_source.html#l00363">KviOption_stringQuitMessage</a>, <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00058">KVS_TRIGGER_EVENT_0</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00075">LoggingIn</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00084">m_eState</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00079">m_pConsole</a>, <a class="el" href="kvi__thread_8cpp_source.html#l00557">KviThread::msleep()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01317">KviWindow::outputNoFmt()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00741">KviIrcConnection::sendFmtData()</a>, <a class="el" href="kvi__ircconnectionstatedata_8h_source.html#l00088">KviIrcConnectionStateData::setSentQuit()</a>, <a class="el" href="kvi__ircconnectionstatedata_8h_source.html#l00100">KviIrcConnectionStateData::setSimulateUnexpectedDisconnect()</a>, and <a class="el" href="kvi__ircconnection_8h_source.html#l00269">KviIrcConnection::stateData()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00835">asynchronousConnect()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00504">KviConsole::closeEvent()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00370">connectButtonClicked()</a>, and <a class="el" href="kvi__console_8cpp_source.html#l00184">KviConsole::~KviConsole()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00843">asynchronousConnect()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00513">KviConsole::closeEvent()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00378">connectButtonClicked()</a>, and <a class="el" href="kvi__console_8cpp_source.html#l00184">KviConsole::~KviConsole()</a>.</p>
 
 </div>
 </div>
@@ -1020,7 +1043,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__ircconnection_8cpp_source.html#l01631">KviIrcConnection::heartbeat()</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00107">m_iHeartbeatTimerId</a>, and <a class="el" href="kvi__irccontext_8h_source.html#l00080">m_pConnection</a>.</p>
+<p>References <a class="el" href="kvi__ircconnection_8cpp_source.html#l01656">KviIrcConnection::heartbeat()</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00107">m_iHeartbeatTimerId</a>, and <a class="el" href="kvi__irccontext_8h_source.html#l00080">m_pConnection</a>.</p>
 
 </div>
 </div>
@@ -1039,7 +1062,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__irccontext_8h_source.html#l00087">m_pFrame</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00639">KviFrame::unhighlightWindowsOfContext()</a>.</p>
+<p>References <a class="el" href="kvi__irccontext_8h_source.html#l00087">m_pFrame</a>, and <a class="el" href="kvi__frame_8cpp_source.html#l00640">KviFrame::unhighlightWindowsOfContext()</a>.</p>
 
 </div>
 </div>
@@ -1103,7 +1126,7 @@
 
 <p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00591">KviPointerList&lt; T &gt;::isEmpty()</a>, <a class="el" href="kvi__irccontext_8h_source.html#l00102">m_pDeadChannels</a>, and <a class="el" href="kvi__pointerlist_8h_source.html#l01065">KviPointerList&lt; T &gt;::removeRef()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01545">KviChannel::closeEvent()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00713">KviChannel::setAliveChan()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00222">KviChannel::~KviChannel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01571">KviChannel::closeEvent()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00733">KviChannel::setAliveChan()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00241">KviChannel::~KviChannel()</a>.</p>
 
 </div>
 </div>
@@ -1167,7 +1190,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">connectToCurrentServer()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00404">connectToCurrentServer()</a>.</p>
 
 </div>
 </div>
@@ -1209,7 +1232,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00338">setState()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00849">terminateConnectionRequest()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00712">connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00346">setState()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00857">terminateConnectionRequest()</a>.</p>
 
 </div>
 </div>
@@ -1224,7 +1247,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00909">timerEvent()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00102">~KviIrcContext()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00918">timerEvent()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00102">~KviIrcContext()</a>.</p>
 
 </div>
 </div>
@@ -1239,7 +1262,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">connectToCurrentServer()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00358">destroyAsynchronousConnectionData()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00352">setAsynchronousConnectionData()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00102">~KviIrcContext()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00404">connectToCurrentServer()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00366">destroyAsynchronousConnectionData()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00360">setAsynchronousConnectionData()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00102">~KviIrcContext()</a>.</p>
 
 </div>
 </div>
@@ -1254,7 +1277,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00588">connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">connectToCurrentServer()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00320">destroyConnection()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00909">timerEvent()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00596">connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00712">connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00404">connectToCurrentServer()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00328">destroyConnection()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00918">timerEvent()</a>.</p>
 
 </div>
 </div>
@@ -1269,7 +1292,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00370">connectButtonClicked()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00670">connectionEstabilished()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00588">connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00704">connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">connectToCurrentServer()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00308">createLinksWindow()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00314">createListWindow()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00320">destroyConnection()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00338">setState()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00849">terminateConnectionRequest()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00378">connectButtonClicked()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00678">connectionEstabilished()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00596">connectionFailed()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00712">connectionTerminated()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00404">connectToCurrentServer()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00316">createLinksWindow()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00322">createListWindow()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00328">destroyConnection()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00346">setState()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00857">terminateConnectionRequest()</a>.</p>
 
 </div>
 </div>
@@ -1284,7 +1307,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00188">closeAllContextWindows()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00232">registerContextWindow()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00278">unregisterContextWindow()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00188">closeAllContextWindows()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00240">registerContextWindow()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00286">unregisterContextWindow()</a>.</p>
 
 </div>
 </div>
@@ -1299,7 +1322,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00156">closeAllDeadChannels()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00204">findDeadChannel()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00242">registerDeadChannel()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00262">unregisterDeadChannel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00156">closeAllDeadChannels()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00204">findDeadChannel()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00233">firstDeadChannel()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00250">registerDeadChannel()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00270">unregisterDeadChannel()</a>.</p>
 
 </div>
 </div>
@@ -1314,7 +1337,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00172">closeAllDeadQueries()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00215">findDeadQuery()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00226">firstDeadQuery()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00252">registerDeadQuery()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00293">unregisterDeadQuery()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00172">closeAllDeadQueries()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00215">findDeadQuery()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00226">firstDeadQuery()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00260">registerDeadQuery()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00301">unregisterDeadQuery()</a>.</p>
 
 </div>
 </div>
@@ -1329,7 +1352,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00188">closeAllContextWindows()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00156">closeAllDeadChannels()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00172">closeAllDeadQueries()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00338">setState()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00130">unhighlightAllWindows()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00188">closeAllContextWindows()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00156">closeAllDeadChannels()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00172">closeAllDeadQueries()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00346">setState()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00130">unhighlightAllWindows()</a>.</p>
 
 </div>
 </div>
@@ -1344,7 +1367,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00308">createLinksWindow()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00320">destroyConnection()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00102">~KviIrcContext()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00316">createLinksWindow()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00328">destroyConnection()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00102">~KviIrcContext()</a>.</p>
 
 </div>
 </div>
@@ -1359,7 +1382,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00314">createListWindow()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00320">destroyConnection()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00102">~KviIrcContext()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00322">createListWindow()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00328">destroyConnection()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00102">~KviIrcContext()</a>.</p>
 
 </div>
 </div>
@@ -1389,7 +1412,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00835">asynchronousConnect()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00827">beginAsynchronousConnect()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00370">connectButtonClicked()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">connectToCurrentServer()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00102">~KviIrcContext()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00843">asynchronousConnect()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00835">beginAsynchronousConnect()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00378">connectButtonClicked()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00404">connectToCurrentServer()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00102">~KviIrcContext()</a>.</p>
 
 </div>
 </div>
@@ -1404,7 +1427,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00396">connectToCurrentServer()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00102">~KviIrcContext()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00404">connectToCurrentServer()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00102">~KviIrcContext()</a>.</p>
 
 </div>
 </div>
@@ -1419,7 +1442,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00370">connectButtonClicked()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00670">connectionEstabilished()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00588">connectionFailed()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00378">connectButtonClicked()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00678">connectionEstabilished()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00596">connectionFailed()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00070">KviIrcContext()</a>.</p>
 
 </div>
 </div>
@@ -1443,7 +1466,7 @@
 <li>src/kvirc/kernel/<a class="el" href="kvi__irccontext_8cpp.html">kvi_irccontext.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:22 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:23 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

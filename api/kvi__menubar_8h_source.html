@@ -61,51 +61,48 @@
 <a name="l00036"></a>00036 
 <a name="l00037"></a><a class="code" href="struct__KviScriptMenuBarItem.html">00037</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct__KviScriptMenuBarItem.html">_KviScriptMenuBarItem</a>
 <a name="l00038"></a>00038 {
-<a name="l00039"></a><a class="code" href="struct__KviScriptMenuBarItem.html#a775191f83e1dd9d8e3331d2d99860601">00039</a>         <span class="keywordtype">int</span>               <a class="code" href="struct__KviScriptMenuBarItem.html#a775191f83e1dd9d8e3331d2d99860601">id</a>;
-<a name="l00040"></a><a class="code" href="struct__KviScriptMenuBarItem.html#a3d0da143b080d24a213cd46e2962bd45">00040</a>         <a class="code" href="classKviStr.html">KviStr</a>            <a class="code" href="struct__KviScriptMenuBarItem.html#a3d0da143b080d24a213cd46e2962bd45">szPopupName</a>;
-<a name="l00041"></a><a class="code" href="struct__KviScriptMenuBarItem.html#a421f7ec6357f6b9abf6ac6d08b3c8527">00041</a>         <a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * <a class="code" href="struct__KviScriptMenuBarItem.html#a421f7ec6357f6b9abf6ac6d08b3c8527">pPopup</a>;
-<a name="l00042"></a><a class="code" href="struct__KviScriptMenuBarItem.html#a0c9c9085a7c54b970924d7eb6453720b">00042</a>         <a class="code" href="classKviStr.html">KviStr</a>            <a class="code" href="struct__KviScriptMenuBarItem.html#a0c9c9085a7c54b970924d7eb6453720b">szText</a>;
-<a name="l00043"></a>00043 } <a class="code" href="struct__KviScriptMenuBarItem.html">KviScriptMenuBarItem</a>;
+<a name="l00039"></a><a class="code" href="struct__KviScriptMenuBarItem.html#a3d0da143b080d24a213cd46e2962bd45">00039</a>         <a class="code" href="classKviStr.html">KviStr</a>            <a class="code" href="struct__KviScriptMenuBarItem.html#a3d0da143b080d24a213cd46e2962bd45">szPopupName</a>;
+<a name="l00040"></a><a class="code" href="struct__KviScriptMenuBarItem.html#a421f7ec6357f6b9abf6ac6d08b3c8527">00040</a>         <a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * <a class="code" href="struct__KviScriptMenuBarItem.html#a421f7ec6357f6b9abf6ac6d08b3c8527">pPopup</a>;
+<a name="l00041"></a><a class="code" href="struct__KviScriptMenuBarItem.html#a0c9c9085a7c54b970924d7eb6453720b">00041</a>         <a class="code" href="classKviStr.html">KviStr</a>            <a class="code" href="struct__KviScriptMenuBarItem.html#a0c9c9085a7c54b970924d7eb6453720b">szText</a>;
+<a name="l00042"></a>00042 } <a class="code" href="struct__KviScriptMenuBarItem.html">KviScriptMenuBarItem</a>;
+<a name="l00043"></a>00043 
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045 
-<a name="l00046"></a><a class="code" href="classKviMenuBar.html">00046</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviMenuBar.html">KviMenuBar</a> : <span class="keyword">public</span> <a class="code" href="classKviTalMenuBar.html" title="Toolkit Abstraction Layer: menubar class.">KviTalMenuBar</a>
-<a name="l00047"></a>00047 {
-<a name="l00048"></a>00048         Q_OBJECT
-<a name="l00049"></a>00049 <span class="keyword">public</span>:
-<a name="l00050"></a>00050         <a class="code" href="classKviMenuBar.html">KviMenuBar</a>(<a class="code" href="classKviFrame.html">KviFrame</a> * par,<span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">name</a>);
-<a name="l00051"></a>00051         ~<a class="code" href="classKviMenuBar.html">KviMenuBar</a>();
-<a name="l00052"></a>00052 <span class="keyword">protected</span>:
-<a name="l00053"></a><a class="code" href="classKviMenuBar.html#a8e64382761ee4ae3e6429daee1628ae2">00053</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>                       * m_pToolbarsPopup;
-<a name="l00054"></a><a class="code" href="classKviMenuBar.html#a3aff10daeef7cc27695356d68ade1546">00054</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>                       * m_pRecentServersPopup;
-<a name="l00055"></a><a class="code" href="classKviMenuBar.html#ab5c0762cdf19fb3686d1fe234755daed">00055</a>         <a class="code" href="classKviFrame.html">KviFrame</a>                         * m_pFrm;
-<a name="l00056"></a><a class="code" href="classKviMenuBar.html#a7c93eaeaaaa2dfc3c179ca8b3343d68e">00056</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviScriptMenuBarItem&gt;</a> * m_pScriptItemList;
-<a name="l00057"></a><a class="code" href="classKviMenuBar.html#a3145da75a0ebdec4a522cc71c4ca1fed">00057</a>         <span class="keywordtype">int</span>                                m_iNumDefaultItems;
-<a name="l00058"></a><a class="code" href="classKviMenuBar.html#a3b51449a49bcb6e3c668196167efce93">00058</a>         <span class="keywordtype">int</span>                              * m_pDefaultItemId;
-<a name="l00059"></a>00059 <span class="keyword">protected</span>:
-<a name="l00060"></a>00060         <a class="code" href="struct__KviScriptMenuBarItem.html">KviScriptMenuBarItem</a> * findMenu(<span class="keyword">const</span> QString &amp;text);
-<a name="l00061"></a>00061         <a class="code" href="struct__KviScriptMenuBarItem.html">KviScriptMenuBarItem</a> * findMenu(<a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * p);
-<a name="l00062"></a>00062         <span class="keywordtype">void</span> addDefaultItem(<span class="keyword">const</span> QString &amp;text,<a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * pop);
-<a name="l00063"></a>00063 <span class="keyword">public</span>:
-<a name="l00064"></a>00064         <span class="keywordtype">int</span> getDefaultItemRealIndex(<span class="keywordtype">int</span> iDefaultIndex);
-<a name="l00065"></a>00065         <span class="keywordtype">void</span> addMenu(<span class="keyword">const</span> QString &amp;text,<a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * p,<span class="keywordtype">int</span> index);
-<a name="l00066"></a>00066         <span class="keywordtype">bool</span> removeMenu(<span class="keyword">const</span> QString &amp;text);
-<a name="l00067"></a>00067 <span class="keyword">protected</span> slots:
-<a name="l00068"></a>00068         <span class="keywordtype">void</span> menuDestroyed();
-<a name="l00069"></a>00069         <span class="keywordtype">void</span> setupMainPopup();
-<a name="l00070"></a>00070         <span class="keywordtype">void</span> setupSettingsPopup();
-<a name="l00071"></a>00071         <span class="keywordtype">void</span> setupHelpPopup();
-<a name="l00072"></a>00072         <span class="keywordtype">void</span> setupRecentServersPopup();
-<a name="l00073"></a>00073         <span class="keywordtype">void</span> setupScriptingPopup();
-<a name="l00074"></a>00074         <span class="keywordtype">void</span> newConnectionToServer(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
-<a name="l00075"></a>00075         <span class="keywordtype">void</span> setupToolbarsPopup();
-<a name="l00076"></a>00076         <span class="keywordtype">void</span> setupToolsPopup();
-<a name="l00077"></a>00077         <span class="keywordtype">void</span> toolsPopupSelected(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
-<a name="l00078"></a>00078         <span class="keywordtype">void</span> actionTriggered(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
-<a name="l00079"></a>00079 };
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081 <span class="preprocessor">#endif //_KVI_MENUBAR_H_</span>
+<a name="l00045"></a><a class="code" href="classKviMenuBar.html">00045</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviMenuBar.html">KviMenuBar</a> : <span class="keyword">public</span> <a class="code" href="classKviTalMenuBar.html" title="Toolkit Abstraction Layer: menubar class.">KviTalMenuBar</a>
+<a name="l00046"></a>00046 {
+<a name="l00047"></a>00047         Q_OBJECT
+<a name="l00048"></a>00048 <span class="keyword">public</span>:
+<a name="l00049"></a>00049         <a class="code" href="classKviMenuBar.html">KviMenuBar</a>(<a class="code" href="classKviFrame.html">KviFrame</a> * par,<span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">name</a>);
+<a name="l00050"></a>00050         ~<a class="code" href="classKviMenuBar.html">KviMenuBar</a>();
+<a name="l00051"></a>00051 <span class="keyword">protected</span>:
+<a name="l00052"></a><a class="code" href="classKviMenuBar.html#a8e64382761ee4ae3e6429daee1628ae2">00052</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>                       * m_pToolbarsPopup;
+<a name="l00053"></a><a class="code" href="classKviMenuBar.html#a3aff10daeef7cc27695356d68ade1546">00053</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>                       * m_pRecentServersPopup;
+<a name="l00054"></a><a class="code" href="classKviMenuBar.html#ab5c0762cdf19fb3686d1fe234755daed">00054</a>         <a class="code" href="classKviFrame.html">KviFrame</a>                         * m_pFrm;
+<a name="l00055"></a><a class="code" href="classKviMenuBar.html#a7c93eaeaaaa2dfc3c179ca8b3343d68e">00055</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviScriptMenuBarItem&gt;</a> * m_pScriptItemList;
+<a name="l00056"></a>00056 <span class="keyword">protected</span>:
+<a name="l00057"></a>00057         <a class="code" href="struct__KviScriptMenuBarItem.html">KviScriptMenuBarItem</a> * findMenu(<span class="keyword">const</span> QString &amp;text);
+<a name="l00058"></a>00058         <a class="code" href="struct__KviScriptMenuBarItem.html">KviScriptMenuBarItem</a> * findMenu(<a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * p);
+<a name="l00059"></a>00059         <span class="keywordtype">void</span> addDefaultItem(<span class="keyword">const</span> QString &amp;text,<a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * pop);
+<a name="l00060"></a>00060 <span class="keyword">public</span>:
+<a name="l00061"></a>00061         <span class="keywordtype">int</span> getDefaultItemRealIndex(<span class="keywordtype">int</span> iDefaultIndex);
+<a name="l00062"></a>00062         <span class="keywordtype">void</span> addMenu(<span class="keyword">const</span> QString &amp;text,<a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * p,<span class="keywordtype">int</span> index);
+<a name="l00063"></a>00063         <span class="keywordtype">bool</span> removeMenu(<span class="keyword">const</span> QString &amp;text);
+<a name="l00064"></a>00064 <span class="keyword">protected</span> slots:
+<a name="l00065"></a>00065         <span class="keywordtype">void</span> menuDestroyed();
+<a name="l00066"></a>00066         <span class="keywordtype">void</span> setupMainPopup();
+<a name="l00067"></a>00067         <span class="keywordtype">void</span> setupSettingsPopup();
+<a name="l00068"></a>00068         <span class="keywordtype">void</span> setupHelpPopup();
+<a name="l00069"></a>00069         <span class="keywordtype">void</span> setupRecentServersPopup();
+<a name="l00070"></a>00070         <span class="keywordtype">void</span> setupScriptingPopup();
+<a name="l00071"></a>00071         <span class="keywordtype">void</span> newConnectionToServer(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
+<a name="l00072"></a>00072         <span class="keywordtype">void</span> setupToolbarsPopup();
+<a name="l00073"></a>00073         <span class="keywordtype">void</span> setupToolsPopup();
+<a name="l00074"></a>00074         <span class="keywordtype">void</span> toolsPopupSelected(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
+<a name="l00075"></a>00075         <span class="keywordtype">void</span> actionTriggered(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
+<a name="l00076"></a>00076 };
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078 <span class="preprocessor">#endif //_KVI_MENUBAR_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:21 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

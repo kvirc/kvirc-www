@@ -83,19 +83,21 @@
 <a name="l00058"></a>00058         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setInfoText(<span class="keyword">const</span> QString &amp;text);
 <a name="l00059"></a>00059         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFindText(<span class="keyword">const</span> QString &amp;text);
 <a name="l00060"></a>00060         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setCursorPosition(<span class="keywordtype">int</span>);
-<a name="l00061"></a>00061         <span class="keyword">virtual</span> <span class="keywordtype">int</span> getCursor();
-<a name="l00062"></a>00062         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFindLineeditReadOnly(<span class="keywordtype">bool</span> b);
-<a name="l00063"></a>00063         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> isModified();
-<a name="l00064"></a><a class="code" href="classKviScriptEditor.html#a7ec5a8ab54a2ad909fab7586453fa9be">00064</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviScriptEditor.html#a7ec5a8ab54a2ad909fab7586453fa9be">setModified</a>(<span class="keywordtype">bool</span>){};
-<a name="l00065"></a>00065         <span class="keyword">static</span> <a class="code" href="classKviScriptEditor.html">KviScriptEditor</a> * getDummyEditor(QWidget * par);
-<a name="l00066"></a>00066         <span class="keyword">static</span> <a class="code" href="classKviScriptEditor.html">KviScriptEditor</a> * createInstance(QWidget * par);
-<a name="l00067"></a>00067         <span class="keyword">static</span> <span class="keywordtype">void</span> destroyInstance(<a class="code" href="classKviScriptEditor.html">KviScriptEditor</a> * e);
-<a name="l00068"></a>00068 };
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071 <span class="preprocessor">#endif //!_KVI_SCRIPTEDITOR_H_</span>
+<a name="l00061"></a>00061         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setReadOnly(<span class="keywordtype">bool</span> bReadonly);
+<a name="l00062"></a>00062         <span class="keyword">virtual</span> <span class="keywordtype">int</span> getCursor();
+<a name="l00063"></a>00063         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFindLineeditReadOnly(<span class="keywordtype">bool</span> b);
+<a name="l00064"></a>00064         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> isModified();
+<a name="l00065"></a>00065         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setUnHighlightedText(<span class="keyword">const</span> QString &amp; szText);
+<a name="l00066"></a><a class="code" href="classKviScriptEditor.html#a7ec5a8ab54a2ad909fab7586453fa9be">00066</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviScriptEditor.html#a7ec5a8ab54a2ad909fab7586453fa9be">setModified</a>(<span class="keywordtype">bool</span>){};
+<a name="l00067"></a>00067         <span class="keyword">static</span> <a class="code" href="classKviScriptEditor.html">KviScriptEditor</a> * getDummyEditor(QWidget * par);
+<a name="l00068"></a>00068         <span class="keyword">static</span> <a class="code" href="classKviScriptEditor.html">KviScriptEditor</a> * createInstance(QWidget * par);
+<a name="l00069"></a>00069         <span class="keyword">static</span> <span class="keywordtype">void</span> destroyInstance(<a class="code" href="classKviScriptEditor.html">KviScriptEditor</a> * e);
+<a name="l00070"></a>00070 };
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073 <span class="preprocessor">#endif //!_KVI_SCRIPTEDITOR_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:21 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

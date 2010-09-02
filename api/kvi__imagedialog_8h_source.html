@@ -67,7 +67,7 @@
 <a name="l00042"></a><a class="code" href="classKviImageDialogItem.html#a7398169dc418839450832a40bb116e6c">00042</a>         QString <a class="code" href="classKviImageDialogItem.html#a7398169dc418839450832a40bb116e6c">m_szTipText</a>;
 <a name="l00043"></a>00043 <span class="keyword">public</span>:
 <a name="l00044"></a><a class="code" href="classKviImageDialogItem.html#af49cb2ba50b167d0bcc1d5373a9892f4">00044</a>         <a class="code" href="classKviImageDialogItem.html#af49cb2ba50b167d0bcc1d5373a9892f4">KviImageDialogItem</a>(<a class="code" href="classKviTalListWidget.html">KviTalListWidget</a> * b,<span class="keyword">const</span> QPixmap &amp;thumb,<span class="keyword">const</span> QString &amp;szFile,<span class="keyword">const</span> QString &amp;image_id,<span class="keyword">const</span> QString &amp;szTipText = QString(),<span class="keywordtype">bool</span> bIsFolder = <span class="keyword">false</span>)
-<a name="l00045"></a>00045         : <a class="code" href="classKviTalListWidgetPixmap.html">KviTalListWidgetPixmap</a>(b,thumb,szFile) , <a class="code" href="classKviImageDialogItem.html#a95d7cffb44323e5197cb06fe54ccbbe1">m_bIsFolder</a>(bIsFolder) , <a class="code" href="classKviImageDialogItem.html#a9f5d8da4c538904d592c5649a7c19757">m_szImageId</a>(image_id) , <a class="code" href="classKviImageDialogItem.html#a7398169dc418839450832a40bb116e6c">m_szTipText</a>(szTipText) {};
+<a name="l00045"></a>00045         : <a class="code" href="classKviTalListWidgetPixmap.html">KviTalListWidgetPixmap</a>(b,thumb,szFile), <a class="code" href="classKviImageDialogItem.html#a95d7cffb44323e5197cb06fe54ccbbe1">m_bIsFolder</a>(bIsFolder), <a class="code" href="classKviImageDialogItem.html#a9f5d8da4c538904d592c5649a7c19757">m_szImageId</a>(image_id), <a class="code" href="classKviImageDialogItem.html#a7398169dc418839450832a40bb116e6c">m_szTipText</a>(szTipText) {};
 <a name="l00046"></a><a class="code" href="classKviImageDialogItem.html#a974b92dce0b011bd7cebf035ed73da6d">00046</a>         <a class="code" href="classKviImageDialogItem.html#a974b92dce0b011bd7cebf035ed73da6d">~KviImageDialogItem</a>(){};
 <a name="l00047"></a>00047 <span class="keyword">public</span>:
 <a name="l00048"></a><a class="code" href="classKviImageDialogItem.html#a91b5ed593d7b7f9eb3e01e3933ec3ae8">00048</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviImageDialogItem.html#a91b5ed593d7b7f9eb3e01e3933ec3ae8">isFolder</a>(){ <span class="keywordflow">return</span> <a class="code" href="classKviImageDialogItem.html#a95d7cffb44323e5197cb06fe54ccbbe1">m_bIsFolder</a>; };
@@ -131,7 +131,7 @@
 <a name="l00106"></a>00106 
 <a name="l00107"></a>00107 <span class="preprocessor">#endif //_KVI_IMAGEDIALOG_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:21 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -197,7 +197,7 @@
 <a name="l00183"></a>00183         <span class="comment">// THIS is the function that should be used</span>
 <a name="l00184"></a><a class="code" href="classKviWindow.html#a1a9d026251bc4cf03e3718f9d0af77ac">00184</a>         <span class="keyword">inline</span> <span class="keyword">const</span> QString &amp; <a class="code" href="classKviWindow.html#a1a9d026251bc4cf03e3718f9d0af77ac">windowName</a>(){ <span class="keywordflow">return</span> m_szName; };
 <a name="l00185"></a>00185         <span class="keywordtype">void</span> setWindowName(<span class="keyword">const</span> QString &amp;szName);
-<a name="l00186"></a>00186         <span class="comment">// Sets the progress for the WindowList item: if &quot;progress&quot; makes sense in your window , well , use this</span>
+<a name="l00186"></a>00186         <span class="comment">// Sets the progress for the WindowList item: if &quot;progress&quot; makes sense in your window, well, use this</span>
 <a name="l00187"></a>00187         <span class="keywordtype">void</span> setProgress(<span class="keywordtype">int</span> progress);
 <a name="l00188"></a>00188         <span class="comment">// Window type management</span>
 <a name="l00189"></a><a class="code" href="classKviWindow.html#a903add38136595916538ac6e3349af6e">00189</a>         <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classKviWindow.html#a903add38136595916538ac6e3349af6e">type</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_iType; };
@@ -286,7 +286,7 @@
 <a name="l00272"></a>00272         <span class="keyword">virtual</span> <span class="keywordtype">void</span> updateCaption();
 <a name="l00273"></a>00273         <span class="keyword">virtual</span> <span class="keywordtype">void</span> applyOptions();
 <a name="l00274"></a>00274         <span class="keyword">virtual</span> <span class="keywordtype">void</span> updateIcon();
-<a name="l00275"></a><a class="code" href="classKviWindow.html#a3eef229888f90cb75494524ed4452a26">00275</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a3eef229888f90cb75494524ed4452a26">ownMessage</a>(<span class="keyword">const</span> QString &amp;){};
+<a name="l00275"></a><a class="code" href="classKviWindow.html#a84791485798762785432f48ab9bbdfe1">00275</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a84791485798762785432f48ab9bbdfe1">ownMessage</a>(<span class="keyword">const</span> QString &amp;, <span class="keywordtype">bool</span> = <span class="keyword">true</span>){};
 <a name="l00276"></a><a class="code" href="classKviWindow.html#a7cbab6cf8d74e8aeb0d70a275ec6325d">00276</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a7cbab6cf8d74e8aeb0d70a275ec6325d">ownAction</a>(<span class="keyword">const</span> QString &amp;){};
 <a name="l00277"></a><a class="code" href="classKviWindow.html#ad852a283d3cd3f3d6713d7915075472d">00277</a>         <span class="keyword">virtual</span> <span class="keyword">const</span> QString &amp; <a class="code" href="classKviWindow.html#ad852a283d3cd3f3d6713d7915075472d">plainTextCaption</a>(){ <span class="keywordflow">return</span> m_szPlainTextCaption; };
 <a name="l00278"></a>00278         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setFocus();
@@ -309,47 +309,47 @@
 <a name="l00295"></a>00295         <span class="keywordtype">void</span> listWindowTypes();
 <a name="l00296"></a>00296 
 <a name="l00297"></a>00297         <span class="keywordtype">void</span> activateSelf();
-<a name="l00298"></a>00298 <span class="keyword">public</span> slots:
-<a name="l00299"></a>00299         <span class="keywordtype">void</span> dock();
-<a name="l00300"></a>00300         <span class="keywordtype">void</span> undock();
-<a name="l00301"></a>00301         <span class="keywordtype">void</span> autoRaise();
-<a name="l00302"></a>00302         <span class="keywordtype">void</span> maximize();
-<a name="l00303"></a>00303         <span class="keywordtype">void</span> minimize();
-<a name="l00304"></a>00304         <span class="keywordtype">void</span> restore();
-<a name="l00305"></a>00305         <span class="keywordtype">void</span> reloadImages();
-<a name="l00306"></a>00306 <span class="keyword">protected</span> slots:
-<a name="l00307"></a>00307         <span class="keywordtype">void</span> savePropertiesAsDefault();
-<a name="l00308"></a>00308         <span class="keywordtype">void</span> toggleCryptController();     <span class="comment">// This has to be here even if the crypt support is enabled...moc does not support conditionals</span>
-<a name="l00309"></a>00309         <span class="keywordtype">void</span> cryptControllerFinished();   <span class="comment">// same as above</span>
-<a name="l00310"></a>00310         <span class="keywordtype">void</span> cryptSessionInfoDestroyed(); <span class="comment">//  same as above</span>
-<a name="l00311"></a>00311         <span class="keywordtype">void</span> textEncodingButtonClicked();
-<a name="l00312"></a>00312         <span class="keywordtype">void</span> systemPopupRequest(<span class="keyword">const</span> QPoint &amp;pnt);
-<a name="l00313"></a>00313         <span class="keywordtype">void</span> systemTextEncodingPopupSmartActivated(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
-<a name="l00314"></a>00314         <span class="keywordtype">void</span> systemTextEncodingPopupSmartUtf8Activated(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
-<a name="l00315"></a>00315         <span class="keywordtype">void</span> systemTextEncodingPopupStandardActivated(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
-<a name="l00316"></a>00316         <span class="keywordtype">void</span> systemTextEncodingPopupDefault();
-<a name="l00317"></a>00317         <span class="keywordtype">void</span> childDestroyed();
-<a name="l00318"></a>00318 signals:
-<a name="l00319"></a>00319         <span class="keywordtype">void</span> windowNameChanged();
-<a name="l00320"></a>00320 <span class="keyword">protected</span>:
-<a name="l00321"></a>00321         <span class="comment">// Loading and saving of properties</span>
-<a name="l00322"></a>00322         <span class="comment">// Protected: only KviFrame can call these</span>
-<a name="l00323"></a>00323         <span class="keyword">virtual</span> <span class="keywordtype">void</span> saveProperties(<a class="code" href="classKviConfig.html">KviConfig</a> *cfg);
-<a name="l00324"></a>00324         <span class="keyword">virtual</span> <span class="keywordtype">void</span> loadProperties(<a class="code" href="classKviConfig.html">KviConfig</a> *cfg);
-<a name="l00325"></a>00325         <span class="comment">// Creation and destruction events: overridden in windows that have script events bound to creation and destruction</span>
-<a name="l00326"></a><a class="code" href="classKviWindow.html#a497d86458ff9baa8b5fd5123c77d7c73">00326</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a497d86458ff9baa8b5fd5123c77d7c73">triggerCreationEvents</a>(){};
-<a name="l00327"></a><a class="code" href="classKviWindow.html#a0fd9d3d9707e681d9983351fbda3a8c8">00327</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a0fd9d3d9707e681d9983351fbda3a8c8">triggerDestructionEvents</a>(){};
-<a name="l00328"></a>00328         <span class="comment">// Internal: do not touch :D (KviFrame)</span>
-<a name="l00329"></a>00329         <span class="keyword">virtual</span> <span class="keywordtype">void</span> createWindowListItem();
-<a name="l00330"></a>00330         <span class="keyword">virtual</span> <span class="keywordtype">void</span> destroyWindowListItem();
-<a name="l00331"></a>00331         <span class="comment">// called by KviFrame</span>
-<a name="l00332"></a>00332         <span class="comment">// either lost the active window status or the frame is no longer active (but we&#39;re still the active kvirc&#39;s subwindow)</span>
-<a name="l00333"></a>00333         <span class="keyword">virtual</span> <span class="keywordtype">void</span> lostUserFocus();
-<a name="l00334"></a>00334 
-<a name="l00335"></a>00335         <span class="comment">// call this in the constructor if your caption is fixed:</span>
-<a name="l00336"></a>00336         <span class="comment">// it will set m_szPlainTextCaption to szCaption and it will</span>
-<a name="l00337"></a>00337         <span class="comment">// automatically use it without the need of overriding fillCaptionBuffers</span>
-<a name="l00338"></a>00338         <span class="keywordtype">void</span> setFixedCaption(<span class="keyword">const</span> QString &amp;szCaption);
+<a name="l00298"></a>00298         
+<a name="l00299"></a>00299         <span class="comment">// call this in the constructor if your caption is fixed:</span>
+<a name="l00300"></a>00300         <span class="comment">// it will set m_szPlainTextCaption to szCaption and it will</span>
+<a name="l00301"></a>00301         <span class="comment">// automatically use it without the need of overriding fillCaptionBuffers</span>
+<a name="l00302"></a>00302         <span class="keywordtype">void</span> setFixedCaption(<span class="keyword">const</span> QString &amp;szCaption);
+<a name="l00303"></a>00303 <span class="keyword">public</span> slots:
+<a name="l00304"></a>00304         <span class="keywordtype">void</span> dock();
+<a name="l00305"></a>00305         <span class="keywordtype">void</span> undock();
+<a name="l00306"></a>00306         <span class="keywordtype">void</span> autoRaise();
+<a name="l00307"></a>00307         <span class="keywordtype">void</span> maximize();
+<a name="l00308"></a>00308         <span class="keywordtype">void</span> minimize();
+<a name="l00309"></a>00309         <span class="keywordtype">void</span> restore();
+<a name="l00310"></a>00310         <span class="keywordtype">void</span> reloadImages();
+<a name="l00311"></a>00311 <span class="keyword">protected</span> slots:
+<a name="l00312"></a>00312         <span class="keywordtype">void</span> savePropertiesAsDefault();
+<a name="l00313"></a>00313         <span class="keywordtype">void</span> toggleCryptController();     <span class="comment">// This has to be here even if the crypt support is enabled...moc does not support conditionals</span>
+<a name="l00314"></a>00314         <span class="keywordtype">void</span> cryptControllerFinished();   <span class="comment">// same as above</span>
+<a name="l00315"></a>00315         <span class="keywordtype">void</span> cryptSessionInfoDestroyed(); <span class="comment">//  same as above</span>
+<a name="l00316"></a>00316         <span class="keywordtype">void</span> textEncodingButtonClicked();
+<a name="l00317"></a>00317         <span class="keywordtype">void</span> systemPopupRequest(<span class="keyword">const</span> QPoint &amp;pnt);
+<a name="l00318"></a>00318         <span class="keywordtype">void</span> systemTextEncodingPopupSmartActivated(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
+<a name="l00319"></a>00319         <span class="keywordtype">void</span> systemTextEncodingPopupSmartUtf8Activated(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
+<a name="l00320"></a>00320         <span class="keywordtype">void</span> systemTextEncodingPopupStandardActivated(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
+<a name="l00321"></a>00321         <span class="keywordtype">void</span> systemTextEncodingPopupDefault();
+<a name="l00322"></a>00322         <span class="keywordtype">void</span> childDestroyed();
+<a name="l00323"></a>00323 signals:
+<a name="l00324"></a>00324         <span class="keywordtype">void</span> windowNameChanged();
+<a name="l00325"></a>00325 <span class="keyword">protected</span>:
+<a name="l00326"></a>00326         <span class="comment">// Loading and saving of properties</span>
+<a name="l00327"></a>00327         <span class="comment">// Protected: only KviFrame can call these</span>
+<a name="l00328"></a>00328         <span class="keyword">virtual</span> <span class="keywordtype">void</span> saveProperties(<a class="code" href="classKviConfig.html">KviConfig</a> *cfg);
+<a name="l00329"></a>00329         <span class="keyword">virtual</span> <span class="keywordtype">void</span> loadProperties(<a class="code" href="classKviConfig.html">KviConfig</a> *cfg);
+<a name="l00330"></a>00330         <span class="comment">// Creation and destruction events: overridden in windows that have script events bound to creation and destruction</span>
+<a name="l00331"></a><a class="code" href="classKviWindow.html#a497d86458ff9baa8b5fd5123c77d7c73">00331</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a497d86458ff9baa8b5fd5123c77d7c73">triggerCreationEvents</a>(){};
+<a name="l00332"></a><a class="code" href="classKviWindow.html#a0fd9d3d9707e681d9983351fbda3a8c8">00332</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a0fd9d3d9707e681d9983351fbda3a8c8">triggerDestructionEvents</a>(){};
+<a name="l00333"></a>00333         <span class="comment">// Internal: do not touch :D (KviFrame)</span>
+<a name="l00334"></a>00334         <span class="keyword">virtual</span> <span class="keywordtype">void</span> createWindowListItem();
+<a name="l00335"></a>00335         <span class="keyword">virtual</span> <span class="keywordtype">void</span> destroyWindowListItem();
+<a name="l00336"></a>00336         <span class="comment">// called by KviFrame</span>
+<a name="l00337"></a>00337         <span class="comment">// either lost the active window status or the frame is no longer active (but we&#39;re still the active kvirc&#39;s subwindow)</span>
+<a name="l00338"></a>00338         <span class="keyword">virtual</span> <span class="keywordtype">void</span> lostUserFocus();
 <a name="l00339"></a>00339         <span class="comment">// this by default calls fillSingleColorCaptionBuffer(plainTextCaption());</span>
 <a name="l00340"></a>00340         <span class="keyword">virtual</span> <span class="keywordtype">void</span> fillCaptionBuffers();
 <a name="l00341"></a>00341         <span class="comment">// protected helper</span>
@@ -417,7 +417,7 @@
 <a name="l00403"></a>00403 
 <a name="l00404"></a>00404 <span class="preprocessor">#endif //_KVI_WINDOW_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:21 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

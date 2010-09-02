@@ -142,7 +142,7 @@
 <a name="l00117"></a>00117 <span class="keyword">public</span>:
 <a name="l00118"></a>00118         <a class="code" href="classKviStatusBarClock.html#a0a7a28c627fa0d91645e1199d7383b31">KviStatusBarClock</a>(<a class="code" href="classKviStatusBar.html" title="Status Bar class.">KviStatusBar</a> * pParent, <a class="code" href="classKviStatusBarAppletDescriptor.html">KviStatusBarAppletDescriptor</a> * pDescriptor);
 <a name="l00119"></a>00119         <span class="keyword">virtual</span> <a class="code" href="classKviStatusBarClock.html#a9ec6f728efae0243ca9c3b737d0a9fb1">~KviStatusBarClock</a>();
-<a name="l00120"></a><a class="code" href="classKviStatusBarClock.html#aa76847a3d894a76eb5e25496357fcbdba37d8dbd7e0e496c425eacf2c89214514">00120</a>         <span class="keyword">enum</span> <a class="code" href="classKviStatusBarClock.html#aa76847a3d894a76eb5e25496357fcbdb">Format</a> { <a class="code" href="classKviStatusBarClock.html#aa76847a3d894a76eb5e25496357fcbdba37d8dbd7e0e496c425eacf2c89214514">HMS</a> , <a class="code" href="classKviStatusBarClock.html#aa76847a3d894a76eb5e25496357fcbdba0d5048eb2ff0f6fc4aadb866f67f6199">HM</a> };
+<a name="l00120"></a><a class="code" href="classKviStatusBarClock.html#aa76847a3d894a76eb5e25496357fcbdba37d8dbd7e0e496c425eacf2c89214514">00120</a>         <span class="keyword">enum</span> <a class="code" href="classKviStatusBarClock.html#aa76847a3d894a76eb5e25496357fcbdb">Format</a> { <a class="code" href="classKviStatusBarClock.html#aa76847a3d894a76eb5e25496357fcbdba37d8dbd7e0e496c425eacf2c89214514">HMS</a>, <a class="code" href="classKviStatusBarClock.html#aa76847a3d894a76eb5e25496357fcbdba0d5048eb2ff0f6fc4aadb866f67f6199">HM</a> };
 <a name="l00121"></a>00121 <span class="keyword">protected</span>:
 <a name="l00122"></a><a class="code" href="classKviStatusBarClock.html#abf36dbfc38a0bf82294215201333fc95">00122</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviStatusBarClock.html#abf36dbfc38a0bf82294215201333fc95">m_bUtc</a>;
 <a name="l00123"></a><a class="code" href="classKviStatusBarClock.html#a0972ad003ecdfe41981629c6f2c524e8">00123</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviStatusBarClock.html#a0972ad003ecdfe41981629c6f2c524e8">m_b24h</a>;
@@ -249,23 +249,25 @@
 <a name="l00224"></a>00224         <span class="keywordtype">void</span> <a class="code" href="classKviStatusBarUpdateIndicator.html#a84e853579fe34073faef4ecbbf41b9a2">getNewVersion</a>();
 <a name="l00225"></a>00225 <span class="keyword">protected</span> slots:
 <a name="l00226"></a>00226         <span class="keywordtype">void</span> <a class="code" href="classKviStatusBarUpdateIndicator.html#a30955f6b64f281879b286fafb8f93eb6">updateDisplay</a>();
-<a name="l00227"></a>00227         <span class="keywordtype">void</span> <a class="code" href="classKviStatusBarUpdateIndicator.html#af61b4b5f54465382fa1d1649a0c82b4f">toggleContext</a>();
-<a name="l00228"></a>00228         <span class="keywordtype">void</span> <a class="code" href="classKviStatusBarUpdateIndicator.html#a227a1ddde9237342951afe78487d225a">responseReceived</a>(<span class="keyword">const</span> QString &amp;);
-<a name="l00229"></a>00229         <span class="keywordtype">void</span> <a class="code" href="classKviStatusBarUpdateIndicator.html#aba7ddd0c5765cde7b8a76b62536b1fc6">requestCompleted</a>(<span class="keywordtype">bool</span> status);
-<a name="l00230"></a>00230         <span class="keywordtype">void</span> <a class="code" href="classKviStatusBarUpdateIndicator.html#a39d4fa37001887c2224b80f325966f25">binaryDataReceived</a>(<span class="keyword">const</span> <a class="code" href="classKviDataBuffer.html">KviDataBuffer</a> &amp;);
-<a name="l00231"></a>00231 <span class="keyword">private</span>:
-<a name="l00232"></a><a class="code" href="classKviStatusBarUpdateIndicator.html#a66536c765ce88f6a3fbc8134e635be08">00232</a>         <a class="code" href="classKviHttpRequest.html">KviHttpRequest</a> * <a class="code" href="classKviStatusBarUpdateIndicator.html#a66536c765ce88f6a3fbc8134e635be08">m_pHttpRequest</a>;
-<a name="l00233"></a><a class="code" href="classKviStatusBarUpdateIndicator.html#adf3101843da5a051e16aa035130ba0c5">00233</a>         QString          <a class="code" href="classKviStatusBarUpdateIndicator.html#adf3101843da5a051e16aa035130ba0c5">m_szHttpResponse</a>;
-<a name="l00234"></a><a class="code" href="classKviStatusBarUpdateIndicator.html#ab07ddc45e73225617f38d709244f5d7e">00234</a>         QString          <a class="code" href="classKviStatusBarUpdateIndicator.html#ab07ddc45e73225617f38d709244f5d7e">m_szNewVersion</a>;
-<a name="l00235"></a><a class="code" href="classKviStatusBarUpdateIndicator.html#a2cb783dee539de971e1eb137e967d963">00235</a>         <span class="keywordtype">bool</span>             <a class="code" href="classKviStatusBarUpdateIndicator.html#a2cb783dee539de971e1eb137e967d963">m_bCheckDone</a>;
-<a name="l00236"></a><a class="code" href="classKviStatusBarUpdateIndicator.html#a7a7338eb3abb074301e0b4a9d5f88ba5">00236</a>         <span class="keywordtype">bool</span>             <a class="code" href="classKviStatusBarUpdateIndicator.html#a7a7338eb3abb074301e0b4a9d5f88ba5">m_bCheckFailed</a>;
-<a name="l00237"></a><a class="code" href="classKviStatusBarUpdateIndicator.html#a3b016110cb8912d119031dd13f083ea4">00237</a>         <span class="keywordtype">bool</span>             <a class="code" href="classKviStatusBarUpdateIndicator.html#a3b016110cb8912d119031dd13f083ea4">m_bUpdateStatus</a>;
-<a name="l00238"></a><a class="code" href="classKviStatusBarUpdateIndicator.html#af1f719663b44983c0236fd0e5b011c86">00238</a>         <span class="keywordtype">bool</span>             <a class="code" href="classKviStatusBarUpdateIndicator.html#af1f719663b44983c0236fd0e5b011c86">m_bUpdateOnStartup</a>;
-<a name="l00239"></a>00239 };
-<a name="l00240"></a>00240 
-<a name="l00241"></a>00241 <span class="preprocessor">#endif //_KVI_STATUSBARAPPLET_H_</span>
+<a name="l00227"></a>00227         <span class="keywordtype">void</span> <a class="code" href="classKviStatusBarUpdateIndicator.html#a86b1c4f6bbb4497d9c5b59ce895b7d0d">toggleStartup</a>();
+<a name="l00228"></a>00228         <span class="keywordtype">void</span> <a class="code" href="classKviStatusBarUpdateIndicator.html#ab0ff96bacf4e5c98d0bced8971d18045">toggleRevision</a>();
+<a name="l00229"></a>00229         <span class="keywordtype">void</span> <a class="code" href="classKviStatusBarUpdateIndicator.html#a227a1ddde9237342951afe78487d225a">responseReceived</a>(<span class="keyword">const</span> QString &amp;);
+<a name="l00230"></a>00230         <span class="keywordtype">void</span> <a class="code" href="classKviStatusBarUpdateIndicator.html#aba7ddd0c5765cde7b8a76b62536b1fc6">requestCompleted</a>(<span class="keywordtype">bool</span> status);
+<a name="l00231"></a>00231         <span class="keywordtype">void</span> <a class="code" href="classKviStatusBarUpdateIndicator.html#a39d4fa37001887c2224b80f325966f25">binaryDataReceived</a>(<span class="keyword">const</span> <a class="code" href="classKviDataBuffer.html">KviDataBuffer</a> &amp;);
+<a name="l00232"></a>00232 <span class="keyword">private</span>:
+<a name="l00233"></a><a class="code" href="classKviStatusBarUpdateIndicator.html#a66536c765ce88f6a3fbc8134e635be08">00233</a>         <a class="code" href="classKviHttpRequest.html">KviHttpRequest</a> * <a class="code" href="classKviStatusBarUpdateIndicator.html#a66536c765ce88f6a3fbc8134e635be08">m_pHttpRequest</a>;
+<a name="l00234"></a><a class="code" href="classKviStatusBarUpdateIndicator.html#adf3101843da5a051e16aa035130ba0c5">00234</a>         QString          <a class="code" href="classKviStatusBarUpdateIndicator.html#adf3101843da5a051e16aa035130ba0c5">m_szHttpResponse</a>;
+<a name="l00235"></a><a class="code" href="classKviStatusBarUpdateIndicator.html#ab07ddc45e73225617f38d709244f5d7e">00235</a>         QString          <a class="code" href="classKviStatusBarUpdateIndicator.html#ab07ddc45e73225617f38d709244f5d7e">m_szNewVersion</a>;
+<a name="l00236"></a><a class="code" href="classKviStatusBarUpdateIndicator.html#a2cb783dee539de971e1eb137e967d963">00236</a>         <span class="keywordtype">bool</span>             <a class="code" href="classKviStatusBarUpdateIndicator.html#a2cb783dee539de971e1eb137e967d963">m_bCheckDone</a>;
+<a name="l00237"></a><a class="code" href="classKviStatusBarUpdateIndicator.html#a7a7338eb3abb074301e0b4a9d5f88ba5">00237</a>         <span class="keywordtype">bool</span>             <a class="code" href="classKviStatusBarUpdateIndicator.html#a7a7338eb3abb074301e0b4a9d5f88ba5">m_bCheckFailed</a>;
+<a name="l00238"></a><a class="code" href="classKviStatusBarUpdateIndicator.html#a3b016110cb8912d119031dd13f083ea4">00238</a>         <span class="keywordtype">bool</span>             <a class="code" href="classKviStatusBarUpdateIndicator.html#a3b016110cb8912d119031dd13f083ea4">m_bUpdateStatus</a>;
+<a name="l00239"></a><a class="code" href="classKviStatusBarUpdateIndicator.html#af1f719663b44983c0236fd0e5b011c86">00239</a>         <span class="keywordtype">bool</span>             <a class="code" href="classKviStatusBarUpdateIndicator.html#af1f719663b44983c0236fd0e5b011c86">m_bUpdateOnStartup</a>;
+<a name="l00240"></a><a class="code" href="classKviStatusBarUpdateIndicator.html#a37818adcbcad7d9eb341e64d928ecc2d">00240</a>         <span class="keywordtype">bool</span>             <a class="code" href="classKviStatusBarUpdateIndicator.html#a37818adcbcad7d9eb341e64d928ecc2d">m_bUpdateRevision</a>;
+<a name="l00241"></a>00241 };
+<a name="l00242"></a>00242 
+<a name="l00243"></a>00243 <span class="preprocessor">#endif //_KVI_STATUSBARAPPLET_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:20 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:21 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

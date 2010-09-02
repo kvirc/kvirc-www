@@ -166,7 +166,7 @@
 <a name="l00141"></a>00141                         <span class="comment">// We don&#39;t care about exit codes at all</span>
 <a name="l00142"></a>00142 <span class="preprocessor">                        #define kvi_threadExit() thr_exit(0)</span>
 <a name="l00143"></a>00143 <span class="preprocessor"></span><span class="preprocessor">                #else</span>
-<a name="l00144"></a>00144 <span class="preprocessor"></span><span class="comment">// FIXME:                       #warning &quot;Missing a decent thread implementation: we&#39;re going to fail , sorry!&quot;</span>
+<a name="l00144"></a>00144 <span class="preprocessor"></span><span class="comment">// FIXME:                       #warning &quot;Missing a decent thread implementation: we&#39;re going to fail, sorry!&quot;</span>
 <a name="l00145"></a>00145 <span class="preprocessor">                #endif</span>
 <a name="l00146"></a>00146 <span class="preprocessor"></span><span class="preprocessor">        #endif</span>
 <a name="l00147"></a>00147 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
@@ -222,7 +222,7 @@
 <a name="l00197"></a>00197         <span class="comment">// Returns the state of the thread...safe to call from anywhere</span>
 <a name="l00198"></a>00198         <span class="keywordtype">bool</span> isRunning();
 <a name="l00199"></a>00199         <span class="comment">// Returns the state of the thread...safe to call from anywhere</span>
-<a name="l00200"></a>00200         <span class="keywordtype">bool</span> isStartingUp(); <span class="comment">// start() called , but not in run() yet...</span>
+<a name="l00200"></a>00200         <span class="keywordtype">bool</span> isStartingUp(); <span class="comment">// start() called, but not in run() yet...</span>
 <a name="l00201"></a>00201         <span class="comment">// Waits for the termination of this thread: call only from external threads!!! :)</span>
 <a name="l00202"></a>00202         <span class="keywordtype">void</span> wait();
 <a name="l00203"></a>00203         <span class="comment">// DO NOT TOUCH THIS ONE!</span>
@@ -292,11 +292,11 @@
 <a name="l00269"></a><a class="code" href="classKviThreadEvent.html#a27c5b60c138b532ac4cd71f7a1d7f496">00269</a>         <a class="code" href="classKviThread.html">KviThread</a> * m_pSender;
 <a name="l00270"></a>00270 <span class="keyword">public</span>:
 <a name="l00271"></a><a class="code" href="classKviThreadEvent.html#a8b00e5434cda05a2b555f16d363a9a69">00271</a>         <a class="code" href="classKviThreadEvent.html">KviThreadEvent</a>(<span class="keywordtype">int</span> evId,<a class="code" href="classKviThread.html">KviThread</a> * sender = 0)
-<a name="l00272"></a>00272                 : QEvent((QEvent::Type)<a class="code" href="kvi__thread_8h.html#acdf84f0909f6beaee6f2e88db7765fce">KVI_THREAD_EVENT</a>) , m_eventId(evId) , m_pSender(sender) {};
+<a name="l00272"></a>00272                 : QEvent((QEvent::Type)<a class="code" href="kvi__thread_8h.html#acdf84f0909f6beaee6f2e88db7765fce">KVI_THREAD_EVENT</a>), m_eventId(evId), m_pSender(sender) {};
 <a name="l00273"></a><a class="code" href="classKviThreadEvent.html#adfa1399d08b8a5210e59e1d96e77ef20">00273</a>         <span class="keyword">virtual</span> <a class="code" href="classKviThreadEvent.html#adfa1399d08b8a5210e59e1d96e77ef20">~KviThreadEvent</a>(){};
 <a name="l00274"></a>00274 <span class="keyword">public</span>:
 <a name="l00275"></a>00275         <span class="comment">// This is the sender of the event</span>
-<a name="l00276"></a>00276         <span class="comment">// WARNING : this MAY be null , threads CAN send anonymous events</span>
+<a name="l00276"></a>00276         <span class="comment">// WARNING : this MAY be null, threads CAN send anonymous events</span>
 <a name="l00277"></a><a class="code" href="classKviThreadEvent.html#ac165652803019a88a572ed5ad4e9f363">00277</a>         <a class="code" href="classKviThread.html">KviThread</a> * <a class="code" href="classKviThreadEvent.html#ac165652803019a88a572ed5ad4e9f363">sender</a>(){ <span class="keywordflow">return</span> m_pSender; };
 <a name="l00278"></a><a class="code" href="classKviThreadEvent.html#adfb3dff58e7a00d1fad8f7d1387d4eb4">00278</a>         <span class="keywordtype">int</span> <a class="code" href="classKviThreadEvent.html#adfb3dff58e7a00d1fad8f7d1387d4eb4">id</a>(){ <span class="keywordflow">return</span> m_eventId; };
 <a name="l00279"></a>00279 };
@@ -401,7 +401,7 @@
 <a name="l00378"></a>00378 
 <a name="l00379"></a>00379 <span class="preprocessor">#endif //!_KVI_THREAD_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:18 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:20 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

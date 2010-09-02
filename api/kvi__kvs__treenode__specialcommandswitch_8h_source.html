@@ -72,7 +72,7 @@
 <a name="l00047"></a>00047         <span class="keywordtype">void</span> setParameter(<a class="code" href="classKviKvsTreeNodeData.html">KviKvsTreeNodeData</a> * pParameter);
 <a name="l00048"></a>00048         <span class="keywordtype">void</span> setInstruction(<a class="code" href="classKviKvsTreeNodeInstruction.html" title="Treenode class to handle instructions.">KviKvsTreeNodeInstruction</a> * pInstruction);
 <a name="l00049"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandSwitchLabel.html#acd44de616c137d6547daea6e7884fbaf">00049</a>         <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNodeSpecialCommandSwitchLabel.html#acd44de616c137d6547daea6e7884fbaf">setTerminatingBreak</a>(<span class="keywordtype">bool</span> b){ m_bHasTerminatingBreak = b; };
-<a name="l00050"></a>00050         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> execute(<a class="code" href="classKviKvsRunTimeContext.html">KviKvsRunTimeContext</a> * <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>,<a class="code" href="classKviKvsVariant.html">KviKvsVariant</a> * pRealParameter) = 0;
+<a name="l00050"></a>00050         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> execute(<a class="code" href="classKviKvsRunTimeContext.html">KviKvsRunTimeContext</a> * <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>,<a class="code" href="classKviKvsVariant.html">KviKvsVariant</a> * pRealParameter, <span class="keywordtype">bool</span> * bPassThrough) = 0;
 <a name="l00051"></a>00051 };
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053 
@@ -84,7 +84,7 @@
 <a name="l00059"></a>00059 <span class="keyword">public</span>:
 <a name="l00060"></a>00060         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNode.html#a797af0a9a3fd882049a07d08c8f6a31f" title="Sets the buffer.">contextDescription</a>(QString &amp;szBuffer);
 <a name="l00061"></a>00061         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNode.html#ad49069675321c8e752c7c33b5ad60fb0" title="Dumps the tree.">dump</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * prefix);
-<a name="l00062"></a>00062         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviKvsTreeNodeSpecialCommandSwitchLabel.html#a784bba34015f66d3208f5d15e011e1d9">execute</a>(<a class="code" href="classKviKvsRunTimeContext.html">KviKvsRunTimeContext</a> * <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>,<a class="code" href="classKviKvsVariant.html">KviKvsVariant</a> * pRealParameter);
+<a name="l00062"></a>00062         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviKvsTreeNodeSpecialCommandSwitchLabel.html#a552fd3834f985f17e02d7575e5d145fb">execute</a>(<a class="code" href="classKviKvsRunTimeContext.html">KviKvsRunTimeContext</a> * <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>,<a class="code" href="classKviKvsVariant.html">KviKvsVariant</a> * pRealParameter, <span class="keywordtype">bool</span> * bPassThrough);
 <a name="l00063"></a>00063 };
 <a name="l00064"></a>00064 
 <a name="l00065"></a>00065 
@@ -96,7 +96,7 @@
 <a name="l00071"></a>00071 <span class="keyword">public</span>:
 <a name="l00072"></a>00072         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNode.html#a797af0a9a3fd882049a07d08c8f6a31f" title="Sets the buffer.">contextDescription</a>(QString &amp;szBuffer);
 <a name="l00073"></a>00073         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNode.html#ad49069675321c8e752c7c33b5ad60fb0" title="Dumps the tree.">dump</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * prefix);
-<a name="l00074"></a>00074         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviKvsTreeNodeSpecialCommandSwitchLabel.html#a784bba34015f66d3208f5d15e011e1d9">execute</a>(<a class="code" href="classKviKvsRunTimeContext.html">KviKvsRunTimeContext</a> * <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>,<a class="code" href="classKviKvsVariant.html">KviKvsVariant</a> * pRealParameter);
+<a name="l00074"></a>00074         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviKvsTreeNodeSpecialCommandSwitchLabel.html#a552fd3834f985f17e02d7575e5d145fb">execute</a>(<a class="code" href="classKviKvsRunTimeContext.html">KviKvsRunTimeContext</a> * <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>,<a class="code" href="classKviKvsVariant.html">KviKvsVariant</a> * pRealParameter, <span class="keywordtype">bool</span> * bPassThrough);
 <a name="l00075"></a>00075 };
 <a name="l00076"></a>00076 
 <a name="l00077"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandSwitchLabelRegexp.html">00077</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsTreeNodeSpecialCommandSwitchLabelRegexp.html">KviKvsTreeNodeSpecialCommandSwitchLabelRegexp</a> : <span class="keyword">public</span> <a class="code" href="classKviKvsTreeNodeSpecialCommandSwitchLabel.html">KviKvsTreeNodeSpecialCommandSwitchLabel</a>
@@ -107,7 +107,7 @@
 <a name="l00082"></a>00082 <span class="keyword">public</span>:
 <a name="l00083"></a>00083         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNode.html#a797af0a9a3fd882049a07d08c8f6a31f" title="Sets the buffer.">contextDescription</a>(QString &amp;szBuffer);
 <a name="l00084"></a>00084         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNode.html#ad49069675321c8e752c7c33b5ad60fb0" title="Dumps the tree.">dump</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * prefix);
-<a name="l00085"></a>00085         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviKvsTreeNodeSpecialCommandSwitchLabel.html#a784bba34015f66d3208f5d15e011e1d9">execute</a>(<a class="code" href="classKviKvsRunTimeContext.html">KviKvsRunTimeContext</a> * <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>,<a class="code" href="classKviKvsVariant.html">KviKvsVariant</a> * pRealParameter);
+<a name="l00085"></a>00085         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviKvsTreeNodeSpecialCommandSwitchLabel.html#a552fd3834f985f17e02d7575e5d145fb">execute</a>(<a class="code" href="classKviKvsRunTimeContext.html">KviKvsRunTimeContext</a> * <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>,<a class="code" href="classKviKvsVariant.html">KviKvsVariant</a> * pRealParameter, <span class="keywordtype">bool</span> * bPassThrough);
 <a name="l00086"></a>00086 };
 <a name="l00087"></a>00087 
 <a name="l00088"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandSwitchLabelDefault.html">00088</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsTreeNodeSpecialCommandSwitchLabelDefault.html">KviKvsTreeNodeSpecialCommandSwitchLabelDefault</a> : <span class="keyword">public</span> <a class="code" href="classKviKvsTreeNodeSpecialCommandSwitchLabel.html">KviKvsTreeNodeSpecialCommandSwitchLabel</a>
@@ -118,7 +118,7 @@
 <a name="l00093"></a>00093 <span class="keyword">public</span>:
 <a name="l00094"></a>00094         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNode.html#ad49069675321c8e752c7c33b5ad60fb0" title="Dumps the tree.">dump</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * prefix);
 <a name="l00095"></a>00095         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNode.html#a797af0a9a3fd882049a07d08c8f6a31f" title="Sets the buffer.">contextDescription</a>(QString &amp;szBuffer);
-<a name="l00096"></a>00096         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviKvsTreeNodeSpecialCommandSwitchLabel.html#a784bba34015f66d3208f5d15e011e1d9">execute</a>(<a class="code" href="classKviKvsRunTimeContext.html">KviKvsRunTimeContext</a> * <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>,<a class="code" href="classKviKvsVariant.html">KviKvsVariant</a> * pRealParameter);
+<a name="l00096"></a>00096         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviKvsTreeNodeSpecialCommandSwitchLabel.html#a552fd3834f985f17e02d7575e5d145fb">execute</a>(<a class="code" href="classKviKvsRunTimeContext.html">KviKvsRunTimeContext</a> * <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>,<a class="code" href="classKviKvsVariant.html">KviKvsVariant</a> * pRealParameter, <span class="keywordtype">bool</span> * bPassThrough);
 <a name="l00097"></a>00097 };
 <a name="l00098"></a>00098 
 <a name="l00099"></a>00099 
@@ -141,7 +141,7 @@
 <a name="l00116"></a>00116 
 <a name="l00117"></a>00117 <span class="preprocessor">#endif //!_KVI_KVS_TREENODE_SPECIALCOMMANDSWITCH_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Jul 28 19:03:19 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:20 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
