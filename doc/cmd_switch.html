@@ -37,7 +37,7 @@ Another flow control command
     <td><b>Usage</b></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code>switch(&lt;expression&gt;)
+    <td><font color="#802000"><pre><code>switch [-p] (&lt;expression&gt;)
 {
 &nbsp;&nbsp;&nbsp;&nbsp;case(&lt;value&gt;)[:]&lt;command&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;[break]
@@ -62,39 +62,49 @@ Another flow control command
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>The switch command is based on the standard C 'switch' keyword.
-It executes conditionally groups of commands chosen from
-a larger set of command groups.<br>
+It conditionally executes groups of commands chosen from a larger set of command groups.<br>
 First &lt;expression&gt; is evaluated (&lt;expression&gt; is any arithmetic or string expression).<br>
-Then the 'match','regexp','case' and 'default' labels are evaluated sequentially
+Then the 'match', 'regexp', 'case' and 'default' labels are evaluated sequentially
 in the order of appearance.<br>
 <b>case(&lt;value&gt;)[:]&lt;command&gt;</b><br>
 The &lt;value&gt; is evaluated and is compared against the result of &lt;expression&gt;.
-The comparison is case insensitive (if the values are strings).<br>
+String comparison is case insensitive.<br>
 If &lt;value&gt; is equal to &lt;expression&gt; then &lt;command&gt; is executed.
 Please note that &lt;command&gt; must be either a single instruction or an instruction block <b>enclosed in braces</b>.
-If &lt;command&gt; contains a <a href="cmd_break.html">break</a> statement inside or if <a href="cmd_break.html">break</a>
-is specified just after the &lt;command&gt; then the execution of the switch is terminated
-otherwise the nex label is evaluated.<br>
+During or after &lt;command&gt; execution, if a <a href="cmd_break.html">break</a> statement is encountered the execution of the switch
+is terminated, otherwise the next label is evaluated.<br>
+If the -p (--passthrough) option is enabled, than the switch command will execute all the istructions blocks
+until a <a href="cmd_break.html">break</a> statement is found.<br>
 <b>match(&lt;value&gt;)[:]&lt;command&gt;</b><br>
-The &lt;value&gt; is expected to be a <a href="doc_irc_masks.html">wildcard</a> expression (containing '*' and '?' wildcards)
-that is matched against &lt;expression&gt;.<br>
-If there is a match (a complete case insensitive match!) then the related &lt;command&gt;
-is executed. <a href="cmd_brea.html">brea</a> is treated just like in the case label.<br>
+The &lt;value&gt; is expected to be a <a href="doc_irc_masks.html">wildcard</a> expression (<a href="doc_irc_masks.html">wildcard</a> characters being '*' and '?')
+that is matched in a case insensitive fashion against &lt;expression&gt;.<br>
+If a match occurs, the related &lt;command&gt; is executed.
+The <a href="cmd_break.html">break</a> statement is treated as in the case label.<br>
 <b>regexp(&lt;value&gt;)[:]&lt;command&gt;</b><br>
 The &lt;value&gt; is expected to be a complete standard regular expression
-that is matched agains &lt;expression&gt;.<br>
-If there is a match (a complete case insensitive match!) then the related &lt;command&gt;
-is executed. <a href="cmd_brea.html">brea</a> is treated just like in the case label.<br>
+that is matched in a case insensitive fashion against &lt;expression&gt;.<br>
+If a match occurs, the related &lt;command&gt; is executed.
+The <a href="cmd_break.html">break</a> statement is treated as in the case label.<br>
 <b>default[:]&lt;command&gt;</b><br>
-The default label is executed unconditionally (unless there was a previous label
-that terminated the execution with break).<br>
+The default label is executed unconditionally if no previous label terminated execution with the <a href="cmd_break.html">break</a> statement.<br>
 </td>
+  </tr>
+  <tr bgcolor="#D2D2D2">
+    <td><b>Switches</b></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td>
+      <table bgcolor="#D5D5D5">
+<tr bgcolor="#E0E0E0"><td><b>-p | --passthrough</b></td></tr>
+<tr><td>Use c-style 'break' flow control</td></tr>
+      </table>
+    </td>
   </tr>
   <tr bgcolor="#D2D2D2">
     <td><b>Syntax Specification</b></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code><b>switch</b><b>(</b><font color="#8080a0">&lt;</font>expression<font color="#8080a0">&gt;</font><b>)</b>
+    <td><font color="#802000"><pre><code><b>switch</b> <font color="#8080a0">[</font>-p<font color="#8080a0">]</font> <b>(</b><font color="#8080a0">&lt;</font>expression<font color="#8080a0">&gt;</font><b>)</b>
 {
 &nbsp;&nbsp;&nbsp;&nbsp;case<b>(</b><font color="#8080a0">&lt;</font>value<font color="#8080a0">&gt;</font><b>)</b><font color="#8080a0">[</font>:<font color="#8080a0">]</font><font color="#8080a0">&lt;</font>command<font color="#8080a0">&gt;</font>
 &nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">[</font>break<font color="#8080a0">]</font>
@@ -119,7 +129,7 @@ that terminated the execution with break).<br>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td><font color="#207500"># Try to change the 1 below to 2 or 3 to see the results</font>
-%tmp = 1
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">%tmp = 1
 switch(%tmp)
 {
 &nbsp;&nbsp;&nbsp;&nbsp;case(1):
@@ -132,8 +142,9 @@ switch(%tmp)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo \%tmp was not 1 nor 2: it was %tmp!
 &nbsp;&nbsp;&nbsp;&nbsp;break;
 }
+</font></code></pre></td></tr></table></p>
 <font color="#207500"># A complexier example: change the 1 in 2 or 3</font>
-%tmp = 1
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">%tmp = 1
 switch(%tmp)
 {
 &nbsp;&nbsp;&nbsp;&nbsp;case(1):
@@ -145,8 +156,23 @@ switch(%tmp)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo \%tmp was either 1 or something different from 2 (%tmp)
 &nbsp;&nbsp;&nbsp;&nbsp;break;
 }
+</font></code></pre></td></tr></table></p>
+<font color="#207500"># An example of the -p switch</font>
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">%tmp = 1
+switch -p (%tmp)
+{
+&nbsp;&nbsp;&nbsp;&nbsp;case(1):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo \%tmp was 1!
+&nbsp;&nbsp;&nbsp;&nbsp;case(2)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo \%tmp was 1 or 2!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
+&nbsp;&nbsp;&nbsp;&nbsp;default:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo \%tmp was not 1 or 2 (%tmp)
+&nbsp;&nbsp;&nbsp;&nbsp;break;
+}
+</font></code></pre></td></tr></table></p>
 <font color="#207500"># An example with strings</font>
-%tmp = "This is a test"
+<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">%tmp = "This is a test"
 %tmp2 = "This is not a test"
 switch(%tmp)
 {
@@ -168,10 +194,11 @@ switch(%tmp)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo This is executed anyway (unless some break was called)
 &nbsp;&nbsp;&nbsp;&nbsp;break;
 }
+</font></code></pre></td></tr></table></p>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<hr>KVIrc 4.1.0.4701 Documentation<br>Generated by hellvis69 at Wed Jul 28 16:59:08 2010
+<hr>KVIrc 4.1.1.4965 Documentation<br>Generated by hellvis69 at Wed Sep  1 16:22:36 2010
 </body>
 </html>

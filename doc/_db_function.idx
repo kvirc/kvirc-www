@@ -8,6 +8,7 @@ $b<!>Returns the BOLD mIRC control character<!>fnc_b.html
 $base64ToAscii<!>Returns a decoded base64 string<!>fnc_base64toascii.html
 $boolean<!>Casts a variable to a boolean<!>fnc_boolean.html
 $bool<!>Casts a variable to a boolean<!>fnc_bool.html
+$certificate<!>Returns informations about the local certificate<!>fnc_certificate.html
 $channel<!>Retrieves the window ID of a specified channel<!>fnc_channel.html
 $char<!>Returns a character specified by unicode<!>fnc_char.html
 $classdefined<!>Checks if a class is defined<!>fnc_classdefined.html
@@ -103,6 +104,7 @@ $chan.useropcount<!>Returns the number of userop users on a channel<!>fnc_chan.u
 $chan.bancount<!>Returns the number of entries in the channel ban list<!>fnc_chan.bancount.html
 $chan.banexceptioncount<!>Returns the number of entries in the channel ban exception list<!>fnc_chan.banexceptioncount.html
 $chan.invitecount<!>Returns the number of entries in the channel invite list<!>fnc_chan.invitecount.html
+$chan.maskcount<!>Returns the number of entries in the mask list for a channel mode<!>fnc_chan.maskcount.html
 $chan.ison<!>Checks if an user is on a channel<!>fnc_chan.ison.html
 $chan.getflag<!>Returns the channel-user mode flag of an user<!>fnc_chan.getflag.html
 $chan.isowner<!>Checks if an user is at least a channel owner<!>fnc_chan.isowner.html
@@ -120,14 +122,17 @@ $chan.isMeUserOp<!>Checks if the current user is at least an user operator on a 
 $chan.mode<!>Returns the mode string of a channel<!>fnc_chan.mode.html
 $chan.key<!>Returns the key of a channel<!>fnc_chan.key.html
 $chan.limit<!>Returns the limit of a channel<!>fnc_chan.limit.html
+$chan.modeParam<!>Returns the parameter for a set mode of a channel<!>fnc_chan.modeparam.html
 $chan.users<!>Returns an array of channel user nicknames<!>fnc_chan.users.html
 $chan.banlist<!>Returns an array of channel ban masks<!>fnc_chan.banlist.html
 $chan.banexceptionlist<!>Returns an array of channel ban exception masks<!>fnc_chan.banexceptionlist.html
 $chan.invitelist<!>Returns an array of channel invite masks<!>fnc_chan.invitelist.html
+$chan.masklist<!>Returns an array of masks for a channel mode<!>fnc_chan.masklist.html
 $chan.matchban<!>Matches a mask agains the channel ban list<!>fnc_chan.matchban.html
 $chan.matchbanexception<!>Matches a mask agains the channel ban exception list<!>fnc_chan.matchbanexception.html
 $chan.matchinvite<!>Matches a mask agains the channel invite list<!>fnc_chan.matchinvite.html
 $chan.matchqban<!>Matches a mask agains the channel ban list searcing for +q bans (aka mute bans)<!>fnc_chan.matchqban.html
+$chan.matchmask<!>Matches a mask agains the channel list for a specific mode<!>fnc_chan.matchmask.html
 $chan.usermodelevel<!>Returns the channel user-mode level<!>fnc_chan.usermodelevel.html
 $chan.userJoinTime<!>Returns the time that an user has joined the channel<!>fnc_chan.userjointime.html
 $chan.userLastActionTime<!>Returns the time that an user has last performed some kind of action on the channel<!>fnc_chan.userlastactiontime.html
@@ -177,6 +182,7 @@ $dcc.transferredBytes<!>Returns the number of transferred bytes in a dcc file tr
 $dcc.averageSpeed<!>Returns the average speed of a dcc file transfer<!>fnc_dcc.averagespeed.html
 $dcc.session<!>Returns the DCC session identifier associated to a window<!>fnc_dcc.session.html
 $dcc.sessionList<!>List the existing dcc session identifiers<!>fnc_dcc.sessionlist.html
+$dcc.getSSLCertInfo<!>Returns the requested information about certificates used in an ssl-enabled dcc session<!>fnc_dcc.getsslcertinfo.html
 $dialog.yesno<!>Shows a simple yes/no dialog<!>fnc_dialog.yesno.html
 $file.exists<!>Check if a file exists<!>fnc_file.exists.html
 $file.type<!>Checks the type of a path<!>fnc_file.type.html
@@ -353,6 +359,8 @@ $str.join<!>Returns a string joined from several strings<!>fnc_str.join.html
 $str.grep<!>Emulates the GNU Regular Expression Parser<!>fnc_str.grep.html
 $str.split<!>Splits a string to an array<!>fnc_str.split.html
 $str.printf<!>Returns a formatted string in a C sprintf-like fashion.<!>fnc_str.printf.html
+$str.evpSign<!>Returns a signature for a message created using your certificate's private key<!>fnc_str.evpsign.html
+$str.evpVerify<!>Verifies the signature for a message against a public key<!>fnc_str.evpverify.html
 $system.ostype<!>Returns the type of the operating system<!>fnc_system.ostype.html
 $system.osname<!>Returns the name of the operating system<!>fnc_system.osname.html
 $system.osversion<!>Returns the version of the operating system<!>fnc_system.osversion.html
@@ -409,3 +417,4 @@ $window.caption<!>Returns the caption of a window<!>fnc_window.caption.html
 $window.list<!>Generates lists of windows<!>fnc_window.list.html
 $window.open<!>Creates and opens a new window<!>fnc_window.open.html
 $window.inputText<!>Returns the window input line text<!>fnc_$window.inputtext.html
+$dcc.getSSLInfo<!>Returns the requested ssl information about a ssl-enabled dcc session<!>fnc_dcc.getsslinfo.html

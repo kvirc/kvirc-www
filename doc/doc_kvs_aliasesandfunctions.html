@@ -55,7 +55,7 @@ The <a href="doc_functions.html">functions</a> can be used also as switch parame
 </font></code></pre></td></tr></table></p>
 The -w switch allows to redirect the echo text to a specified window --- in this
 case the one that you are typing in.<br>
-<i>(Surprise: in this case the -w switch is useless ,
+<i>(Surprise: in this case the -w switch is useless,
 since echo prints text to the current window by default...
 but it will work correctly. :)</i>
 </p>
@@ -96,7 +96,7 @@ an opened '(' corresponds to a closed ')'.
 In this case you can omit the 'escape' character.<br>
 <p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> The length of '(a+b)' is : <a href="fnc_str.len.html">$str.len</a>( (a+b) )
 </font></code></pre></td></tr></table></p>
-This is useful for algebraic and boolean <a href="doc_expressioneval.html">expressions</a> , like the ones
+This is useful for algebraic and boolean <a href="doc_expressioneval.html">expressions</a>, like the ones
 accepted by the special function $() (see next paragraphs).<br>
 </p>
 </td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Aliases</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
@@ -170,10 +170,10 @@ TIP: It is a good idea to write the following examples in a text file and then u
 &nbsp;&nbsp;&nbsp;&nbsp;}
 </font></code></pre></td></tr></table></p>
 The example above will first check the validity of the &lt;<a href="doc_irc_masks.html">nickname</a>&gt; passed to kb:
-if no <a href="doc_irc_masks.html">nickname</a> was passed , it will warn the user and stop.
+if no <a href="doc_irc_masks.html">nickname</a> was passed, it will warn the user and stop.
 The next step will be the "ban &lt;<a href="doc_irc_masks.html">nickname</a>&gt;" call. Another enchancement is the "default reason":
 we first <a href="doc_operators.html">assign</a> the remaining parameters ($1- means "from $1 to the end") to a temporary <a href="doc_kvs_datatypes.html">variable</a>,
-if the <a href="doc_kvs_datatypes.html">variable</a> is empty , a default kick reason is assigned.
+if the <a href="doc_kvs_datatypes.html">variable</a> is empty, a default kick reason is assigned.
 Finally the "kick &lt;<a href="doc_irc_masks.html">nickname</a>&gt; &lt;reason&gt;" will be executed.
 Get used to looking at the single command documentation pages, they will give
 you the hints necessary to fully understand the above piece of code.
@@ -206,7 +206,7 @@ You will then use it in the following way:
 &nbsp;&nbsp;&nbsp;&nbsp;...
 </font></code></pre></td></tr></table></p>
 Ops.. I've used some <a href="doc_kvs_datatypes.html">variables</a> without actually explaining them... hehe.. please forgive me and read on.
-This example is again really simple , but you might have complexier function-aliases.
+This example is again really simple, but you might have complexier function-aliases.
 The function-aliases are also normal <a href="doc_aliases.html">aliases</a>.... you can use it as a command:
 <p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;/sum3 1 2 3
 </font></code></pre></td></tr></table></p>
@@ -214,10 +214,10 @@ Is a perfectly valid call.... it's just that it will have no visible results
 (just because a command call implies ignoring the return value.
 In fact there is no difference al all between function-aliases and normal-aliases:
 the caller makes the difference: by calling an alias as a command the return value
-just disappears in hyperspace, by calling an alias as a function , the return value
+just disappears in hyperspace, by calling an alias as a function, the return value
 is propagated (and in fact "used").
 (There are some "nice" exceptions to this rule...but you don't need to care about it, for now).
-If return is not called inside an alias body , the return value will be just a null value.
+If return is not called inside an alias body, the return value will be just a null value.
 </p>
 <p>
 <a href="doc_aliases.html">Aliases</a> can accept switches just like any other command. The <a href="fnc_sw.html">$sw</a> is there
@@ -229,7 +229,7 @@ We have already seen the positional parameter functions.
 The functions of type <b>$N[-[M]]</b> (where N and M are positive
 numbers starting from 0 and N &lt; M) evaluate to the sequence of
 <b>positional parameters</b> from Nth to Mth."<br>
-If M is omitted , the function evaluate to the sequence of <b>positional
+If M is omitted, the function evaluate to the sequence of <b>positional
 parameters</b> from Nth to the last one. If the whole -M block is omitted
 the function evaluate to the Nth positional parameter.
 We will discover more on the <b>positional parameters</b> when talking
@@ -253,6 +253,6 @@ but it is too early to explain it here...<br>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
-<hr>KVIrc 4.1.0.4701 Documentation<br>Generated by hellvis69 at Wed Jul 28 16:59:08 2010
+<hr>KVIrc 4.1.1.4965 Documentation<br>Generated by hellvis69 at Wed Sep  1 16:22:36 2010
 </body>
 </html>
