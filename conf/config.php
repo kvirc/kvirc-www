@@ -64,7 +64,7 @@ $ftp_mirror=array(
 	array("name" => "kvirc.tradebit.com", "url" => "http://kvirc.tradebit.com", "desc" => "USA mirror", "city" => "New York, United States", "maintainer" => "tradebit.com"),
 	array("name" => "kvirc.imsam.info", "url" => "http://kvirc.imsam.info", "desc" => "German mirror", "city" => "Nuernberg, Germany", "maintainer" => "tradebit.com"),
 	array("name" => "kvirc.bcoos.net", "url" => "http://kvirc.bcoos.net", "desc" => "USA mirror", "city" => "United States", "maintainer" => "exoops.info"),
-	array("name" => "mirrorpool.in", "url" => "http://mirrorpool.in/Kvirc", "desc" => "USA mirror 2", "city" => "Chicago, United States", "maintainer" => "Slevin Black", "maintainer_mail" => "topoyr at gmail dot com")
+	array("name" => "mirrorpool.in", "url" => "http://mirrorpool.in/Kvirc/", "desc" => "USA mirror 2", "city" => "Chicago, United States", "maintainer" => "Slevin Black", "maintainer_mail" => "topoyr at gmail dot com")
 );
 
 // Addons
