@@ -44,6 +44,9 @@ Inheritance diagram for KviChannel:</div>
 
 <p><a href="classKviChannel-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Signals</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a60ef13a3660e2f76cbdec02ef2518971">opStatusChanged</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Emitted when our op status change.  <a href="#a60ef13a3660e2f76cbdec02ef2518971"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a2905470bbf885c52318018c299d8a088">activityMeter</a> (unsigned int *puActivityValue, unsigned int *puActivityTemperature)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Colors the icon who tells how much activity there is.  <a href="#a2905470bbf885c52318018c299d8a088"></a><br/></td></tr>
@@ -61,6 +64,8 @@ Inheritance diagram for KviChannel:</div>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the value (parameter) for a channel mode (eg. the password for mode k).  <a href="#ae3355e933e67eee3e4ad69e5583b9df0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a7afc53ed2dbd3df9eff914be393d3ea7">chanOwnerCount</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the number of users with chanowner status.  <a href="#a7afc53ed2dbd3df9eff914be393d3ea7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#adb59f4a40eb97a2d7d2faf95c0bd3e8f">checkChannelSync</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Checks the channel synchronization time.  <a href="#adb59f4a40eb97a2d7d2faf95c0bd3e8f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#af52d89a53e17537dafb614571999efc5">clearSentSyncWhoRequest</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clears the sync WHO request flag.  <a href="#af52d89a53e17537dafb614571999efc5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a337cce04648e3c955f5a534b5b58b14e">closeOnPart</a> ()</td></tr>
@@ -197,8 +202,8 @@ Inheritance diagram for KviChannel:</div>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the chan owner mode.  <a href="#abf4a25fd6d1f901d638cb31f968d3340"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a7e235f9e5e6ccbb0b021f2a7e0cc2d0f">setDeadChan</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the channel as dead.  <a href="#a7e235f9e5e6ccbb0b021f2a7e0cc2d0f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a4656b2639b6caab5218549cfb90f3051">setHalfOp</a> (const QString &amp;szNick, bool bHalfOp)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the half operator mode.  <a href="#a4656b2639b6caab5218549cfb90f3051"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a1130e52723d5398a4c8db34c384aa5b7">setHalfOp</a> (const QString &amp;szNick, bool bHalfOp, bool)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the half operator mode.  <a href="#a1130e52723d5398a4c8db34c384aa5b7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a7f8030192ea9d2a42fa3fe733398bb63">setHasAllNames</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the existance of all names.  <a href="#a7f8030192ea9d2a42fa3fe733398bb63"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a0aa33f2392020ac8e476c1be3b50e5d3">setHasWhoList</a> ()</td></tr>
@@ -207,20 +212,20 @@ Inheritance diagram for KviChannel:</div>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the time of the last received WHO reply.  <a href="#ae29e80f44f109ca9db8855e33716646e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a0c630090a36587fbaa5cae3c7f02b5ff">setListRequestDone</a> (char cMode)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clears the "sent request" flag for a specific chanel mode.  <a href="#a0c630090a36587fbaa5cae3c7f02b5ff"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a5181316c91f760742ef0cf2ff587a7fb">setMask</a> (char cMode, const QString &amp;szMask, bool bAdd, const QString &amp;szSetBy, unsigned int uSetAt)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when someone sets a channel mode that is stored in a list; these modes require a parameter that is tipically a mask.  <a href="#a5181316c91f760742ef0cf2ff587a7fb"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a85f24c9a6945456f904124e31b479249">setOp</a> (const QString &amp;szNick, bool bOp)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the operator mode.  <a href="#a85f24c9a6945456f904124e31b479249"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#ad710923e892ed8dc752e89bfd03659b2">setMask</a> (char cMode, const QString &amp;szMask, bool bAdd, const QString &amp;szSetBy, unsigned int uSetAt, QString szChangeMask=QString())</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when someone sets a channel mode that is stored in a list; these modes require a parameter that is tipically a mask.  <a href="#ad710923e892ed8dc752e89bfd03659b2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a1095179bcb8d7d3832ff3602c145fd13">setOp</a> (const QString &amp;szNick, bool bOp, bool bIsMe)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the operator mode.  <a href="#a1095179bcb8d7d3832ff3602c145fd13"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a6ba1d36cbf6449f04a46e9f6c4550fa4">setSentListRequest</a> (char cMode)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the "sent request" flag for a specific channel mode.  <a href="#a6ba1d36cbf6449f04a46e9f6c4550fa4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a2c039e54a2d478951dd5193d675ead67">setSentSyncWhoRequest</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the sync WHO request flag.  <a href="#a2c039e54a2d478951dd5193d675ead67"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a112e3a18420a636f45c806b95c1cf8f2">setSentWhoRequest</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the WHO request flag.  <a href="#a112e3a18420a636f45c806b95c1cf8f2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#aee386257d004c2ad62e479817a5f7852">setUserOp</a> (const QString &amp;szNick, bool bUserOp)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the user operator mode.  <a href="#aee386257d004c2ad62e479817a5f7852"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a82807748cfa5606a161b61321e22f16b">setVoice</a> (const QString &amp;szNick, bool bVoice)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the voice mode.  <a href="#a82807748cfa5606a161b61321e22f16b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a42136259269487dba4b7d7dae3e25236">setUserOp</a> (const QString &amp;szNick, bool bUserOp, bool)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the user operator mode.  <a href="#a42136259269487dba4b7d7dae3e25236"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#ad7be0c26cd757f28c5cb987b013ef35c">setVoice</a> (const QString &amp;szNick, bool bVoice, bool)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the voice mode.  <a href="#ad7be0c26cd757f28c5cb987b013ef35c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QSize&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a7789a91259fe3139ef21118a0d986c07">sizeHint</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the size of the channel.  <a href="#a7789a91259fe3139ef21118a0d986c07"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a36565979756c991e3f2bf3edcd080acc">target</a> ()</td></tr>
@@ -248,8 +253,6 @@ Inheritance diagram for KviChannel:</div>
 <tr><td colspan="2"><h2>Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a13f99b0c32f0f975996036ae838c4b5f">applyOptions</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Applies the options.  <a href="#a13f99b0c32f0f975996036ae838c4b5f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#adb59f4a40eb97a2d7d2faf95c0bd3e8f">checkChannelSync</a> ()</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Checks the channel synchronization time.  <a href="#adb59f4a40eb97a2d7d2faf95c0bd3e8f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a9b8ef5dff98964dfa46019897d975cb9">closeEvent</a> (QCloseEvent *e)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a69cb6268428d438413a85332e2542743">eventFilter</a> (QObject *o, QEvent *e)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Filters the events.  <a href="#a69cb6268428d438413a85332e2542743"></a><br/></td></tr>
@@ -263,8 +266,8 @@ Inheritance diagram for KviChannel:</div>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Gets the group name.  <a href="#a4436b3eadd5b29eb35cccd5f7dabe15b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a18e29a62feb30f32d2f82b503f436c29">getTalkingUsersStats</a> (QString &amp;szBuffer, QStringList &amp;list, bool bPast)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Gets the talking user stats to fill in the tooltip.  <a href="#a18e29a62feb30f32d2f82b503f436c29"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#ad73eb7d91dbcc3367e50067df445b717">internalMask</a> (const QString &amp;szMask, bool bAdd, const QString &amp;szSetBy, unsigned int uSetAt, <a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="struct__KviMaskEntry.html">KviMaskEntry</a> &gt; *l, <a class="el" href="classKviMaskEditor.html">KviMaskEditor</a> **ppEd)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when someone sets a mask in the channel's lists.  <a href="#ad73eb7d91dbcc3367e50067df445b717"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a493837c8ce1a459698a1fff130e090de">internalMask</a> (const QString &amp;szMask, bool bAdd, const QString &amp;szSetBy, unsigned int uSetAt, <a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="struct__KviMaskEntry.html">KviMaskEntry</a> &gt; *l, <a class="el" href="classKviMaskEditor.html">KviMaskEditor</a> **ppEd, QString &amp;szChangeMask)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called when someone sets a mask in the channel's lists.  <a href="#a493837c8ce1a459698a1fff130e090de"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a52ed3c42a69ae063b71f912613251f9a">loadProperties</a> (<a class="el" href="classKviConfig.html">KviConfig</a> *cfg)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Loads the properties from file.  <a href="#a52ed3c42a69ae063b71f912613251f9a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QPixmap *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannel.html#a0e863d9ec90d023a6cf1e66882a92506">myIconPtr</a> ()</td></tr>
@@ -375,7 +378,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviChannel.html" title="The class which manages a channel.">KviChannel</a> </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__tal__tooltip_8cpp_source.html#l00083">KviTalToolTip::add()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00309">applyOptions()</a>, <a class="el" href="kvi__channel_8h_source.html#l00221">buttonContainer()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00404">KviWindow::createCryptControllerButton()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00412">KviWindow::createTextEncodingButton()</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00761">KviIconManager::getBigIcon()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00214">KviIrcConnectionServerInfo::getChannelModeDescription()</a>, <a class="el" href="kvi__options_8h_source.html#l00673">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00105">KVI_SMALLICON_BAN</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00107">KVI_SMALLICON_BANEXCEPT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00108">KVI_SMALLICON_BANUNEXCEPT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00111">KVI_SMALLICON_CHANMODE</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00112">KVI_SMALLICON_CHANMODEHIDE</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00070">KVI_SMALLICON_HIDEDOUBLEVIEW</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00076">KVI_SMALLICON_HIDELISTVIEW</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00109">KVI_SMALLICON_INVITEEXCEPT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00110">KVI_SMALLICON_INVITEUNEXCEPT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00071">KVI_SMALLICON_SHOWDOUBLEVIEW</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00075">KVI_SMALLICON_SHOWLISTVIEW</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00106">KVI_SMALLICON_UNBAN</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__window_8h_source.html#l00134">KviWindow::KviInput</a>, <a class="el" href="kvi__options_8h_source.html#l00162">KviOption_boolAutoLogChannels</a>, <a class="el" href="kvi__tal__splitter_8h_source.html#l00035">KviTalSplitter</a>, <a class="el" href="kvi__channel_8h_source.html#l00184">m_iStateFlags</a>, <a class="el" href="kvi__channel_8h_source.html#l00190">m_joinTime</a>, <a class="el" href="kvi__channel_8h_source.html#l00194">m_pActionHistory</a>, <a class="el" href="kvi__window_8h_source.html#l00159">KviWindow::m_pButtonBox</a>, <a class="el" href="kvi__channel_8h_source.html#l00197">m_pButtonContainer</a>, <a class="el" href="kvi__channel_8h_source.html#l00174">m_pDoubleViewButton</a>, <a class="el" href="kvi__window_8h_source.html#l00168">KviWindow::m_pHideToolsButton</a>, <a class="el" href="kvi__window_8h_source.html#l00157">KviWindow::m_pInput</a>, <a class="el" href="kvi__window_8h_source.html#l00156">KviWindow::m_pIrcView</a>, <a class="el" href="kvi__channel_8h_source.html#l00177">m_pListEditorButtons</a>, <a class="el" href="kvi__channel_8h_source.html#l00175">m_pListViewButton</a>, <a class="el" href="kvi__channel_8h_source.html#l00180">m_pMessageView</a>, <a class="el" href="kvi__channel_8h_source.html#l00179">m_pModeEditor</a>, <a class="el" href="kvi__channel_8h_source.html#l00176">m_pModeEditorButton</a>, <a class="el" href="kvi__channel_8h_source.html#l00183">m_pModeWidget</a>, <a class="el" href="kvi__window_8h_source.html#l00158">KviWindow::m_pSplitter</a>, <a class="el" href="kvi__channel_8h_source.html#l00192">m_pTmpHighLighted</a>, <a class="el" href="kvi__channel_8h_source.html#l00181">m_pTopicWidget</a>, <a class="el" href="kvi__channel_8h_source.html#l00172">m_pTopSplitter</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__channel_8h_source.html#l00173">m_pVertSplitter</a>, <a class="el" href="kvi__channel_8h_source.html#l00195">m_tLastReceivedWhoReply</a>, <a class="el" href="kvi__channel_8h_source.html#l00193">m_uActionHistoryHotActionCount</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00664">KviIrcConnection::registerChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01802">serverInfo()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00101">KviTalHBox::setMargin()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00485">setMode()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00096">KviTalHBox::setSpacing()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00091">KviTalHBox::setStretchFactor()</a>, <a class="el" href="kvi__ircview__loghandling_8cpp_source.html#l00184">KviIrcView::startLogging()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00200">KviIrcConnectionServerInfo::supportedListModes()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00286">textViewRightClicked()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00433">toggleDoubleView()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00496">toggleListModeEditor()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00445">toggleListView()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00457">toggleModeEditor()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00268">toggleToolButtons()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01561">topicSelected()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__tal__tooltip_8cpp_source.html#l00083">KviTalToolTip::add()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00318">applyOptions()</a>, <a class="el" href="kvi__channel_8h_source.html#l00221">buttonContainer()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00404">KviWindow::createCryptControllerButton()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00412">KviWindow::createTextEncodingButton()</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00761">KviIconManager::getBigIcon()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00214">KviIrcConnectionServerInfo::getChannelModeDescription()</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00105">KVI_SMALLICON_BAN</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00107">KVI_SMALLICON_BANEXCEPT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00108">KVI_SMALLICON_BANUNEXCEPT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00280">KVI_SMALLICON_CHANADMIN</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00111">KVI_SMALLICON_CHANMODE</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00112">KVI_SMALLICON_CHANMODEHIDE</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00298">KVI_SMALLICON_CHANOWNER</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00281">KVI_SMALLICON_CHANUNADMIN</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00299">KVI_SMALLICON_CHANUNOWNER</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00070">KVI_SMALLICON_HIDEDOUBLEVIEW</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00076">KVI_SMALLICON_HIDELISTVIEW</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00109">KVI_SMALLICON_INVITEEXCEPT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00110">KVI_SMALLICON_INVITEUNEXCEPT</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00071">KVI_SMALLICON_SHOWDOUBLEVIEW</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00075">KVI_SMALLICON_SHOWLISTVIEW</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00106">KVI_SMALLICON_UNBAN</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__window_8h_source.html#l00134">KviWindow::KviInput</a>, <a class="el" href="kvi__options_8h_source.html#l00162">KviOption_boolAutoLogChannels</a>, <a class="el" href="kvi__tal__splitter_8h_source.html#l00035">KviTalSplitter</a>, <a class="el" href="kvi__channel_8h_source.html#l00184">m_iStateFlags</a>, <a class="el" href="kvi__channel_8h_source.html#l00190">m_joinTime</a>, <a class="el" href="kvi__channel_8h_source.html#l00194">m_pActionHistory</a>, <a class="el" href="kvi__window_8h_source.html#l00159">KviWindow::m_pButtonBox</a>, <a class="el" href="kvi__channel_8h_source.html#l00197">m_pButtonContainer</a>, <a class="el" href="kvi__channel_8h_source.html#l00174">m_pDoubleViewButton</a>, <a class="el" href="kvi__window_8h_source.html#l00168">KviWindow::m_pHideToolsButton</a>, <a class="el" href="kvi__window_8h_source.html#l00157">KviWindow::m_pInput</a>, <a class="el" href="kvi__window_8h_source.html#l00156">KviWindow::m_pIrcView</a>, <a class="el" href="kvi__channel_8h_source.html#l00177">m_pListEditorButtons</a>, <a class="el" href="kvi__channel_8h_source.html#l00175">m_pListViewButton</a>, <a class="el" href="kvi__channel_8h_source.html#l00180">m_pMessageView</a>, <a class="el" href="kvi__channel_8h_source.html#l00179">m_pModeEditor</a>, <a class="el" href="kvi__channel_8h_source.html#l00176">m_pModeEditorButton</a>, <a class="el" href="kvi__channel_8h_source.html#l00183">m_pModeWidget</a>, <a class="el" href="kvi__window_8h_source.html#l00158">KviWindow::m_pSplitter</a>, <a class="el" href="kvi__channel_8h_source.html#l00192">m_pTmpHighLighted</a>, <a class="el" href="kvi__channel_8h_source.html#l00181">m_pTopicWidget</a>, <a class="el" href="kvi__channel_8h_source.html#l00172">m_pTopSplitter</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__channel_8h_source.html#l00173">m_pVertSplitter</a>, <a class="el" href="kvi__channel_8h_source.html#l00195">m_tLastReceivedWhoReply</a>, <a class="el" href="kvi__channel_8h_source.html#l00193">m_uActionHistoryHotActionCount</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00664">KviIrcConnection::registerChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01863">serverInfo()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00101">KviTalHBox::setMargin()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00494">setMode()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00096">KviTalHBox::setSpacing()</a>, <a class="el" href="kvi__tal__hbox_8cpp_source.html#l00091">KviTalHBox::setStretchFactor()</a>, <a class="el" href="kvi__ircview__loghandling_8cpp_source.html#l00184">KviIrcView::startLogging()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00200">KviIrcConnectionServerInfo::supportedListModes()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00295">textViewRightClicked()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00442">toggleDoubleView()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00505">toggleListModeEditor()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00454">toggleListView()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00466">toggleModeEditor()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00277">toggleToolButtons()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01609">topicSelected()</a>.</p>
 
 </div>
 </div>
@@ -396,7 +399,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>Destroys the channel object. </p>
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01396">KviWindow::context()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00386">KviUserListView::enableUpdates()</a>, <a class="el" href="kvi__window_8h_source.html#l00100">KVI_WINDOW_TYPE_DEADCHANNEL</a>, <a class="el" href="kvi__channel_8h_source.html#l00194">m_pActionHistory</a>, <a class="el" href="kvi__channel_8h_source.html#l00177">m_pListEditorButtons</a>, <a class="el" href="kvi__channel_8h_source.html#l00178">m_pListEditors</a>, <a class="el" href="kvi__channel_8h_source.html#l00188">m_pModeLists</a>, <a class="el" href="kvi__channel_8h_source.html#l00192">m_pTmpHighLighted</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01360">KviUserListView::partAll()</a>, <a class="el" href="kvi__window_8h_source.html#l00189">KviWindow::type()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00673">KviIrcConnection::unregisterChannel()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00270">KviIrcContext::unregisterDeadChannel()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01397">KviWindow::context()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00387">KviUserListView::enableUpdates()</a>, <a class="el" href="kvi__window_8h_source.html#l00100">KVI_WINDOW_TYPE_DEADCHANNEL</a>, <a class="el" href="kvi__channel_8h_source.html#l00194">m_pActionHistory</a>, <a class="el" href="kvi__channel_8h_source.html#l00177">m_pListEditorButtons</a>, <a class="el" href="kvi__channel_8h_source.html#l00178">m_pListEditors</a>, <a class="el" href="kvi__channel_8h_source.html#l00188">m_pModeLists</a>, <a class="el" href="kvi__channel_8h_source.html#l00192">m_pTmpHighLighted</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01413">KviUserListView::partAll()</a>, <a class="el" href="kvi__window_8h_source.html#l00189">KviWindow::type()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00673">KviIrcConnection::unregisterChannel()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00270">KviIrcContext::unregisterDeadChannel()</a>.</p>
 
 </div>
 </div>
@@ -438,7 +441,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#aed24fe66e4f3813c32d1595975bf825f">KviWindow</a>.</p>
 
-<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01417">fixActionHistory()</a>, <a class="el" href="kvi__window_8h_source.html#l00121">KVI_ACTIVITY_COLD</a>, <a class="el" href="kvi__window_8h_source.html#l00125">KVI_ACTIVITY_FIRE</a>, <a class="el" href="kvi__window_8h_source.html#l00116">KVI_ACTIVITY_HIGH</a>, <a class="el" href="kvi__window_8h_source.html#l00123">KVI_ACTIVITY_HOT</a>, <a class="el" href="kvi__window_8h_source.html#l00119">KVI_ACTIVITY_ICE</a>, <a class="el" href="kvi__window_8h_source.html#l00114">KVI_ACTIVITY_LOW</a>, <a class="el" href="kvi__window_8h_source.html#l00115">KVI_ACTIVITY_MEDIUM</a>, <a class="el" href="kvi__window_8h_source.html#l00112">KVI_ACTIVITY_NONE</a>, <a class="el" href="kvi__window_8h_source.html#l00122">KVI_ACTIVITY_UNDEFINED</a>, <a class="el" href="kvi__window_8h_source.html#l00120">KVI_ACTIVITY_VERYCOLD</a>, <a class="el" href="kvi__window_8h_source.html#l00117">KVI_ACTIVITY_VERYHIGH</a>, <a class="el" href="kvi__window_8h_source.html#l00124">KVI_ACTIVITY_VERYHOT</a>, <a class="el" href="kvi__window_8h_source.html#l00113">KVI_ACTIVITY_VERYLOW</a>, <a class="el" href="kvi__channel_8h_source.html#l00098">KVI_CHANACTIVITY_LIMIT_COLD</a>, <a class="el" href="kvi__channel_8h_source.html#l00100">KVI_CHANACTIVITY_LIMIT_HOT</a>, <a class="el" href="kvi__channel_8h_source.html#l00096">KVI_CHANACTIVITY_LIMIT_ICE</a>, <a class="el" href="kvi__channel_8h_source.html#l00099">KVI_CHANACTIVITY_LIMIT_UNDEFINED</a>, <a class="el" href="kvi__channel_8h_source.html#l00097">KVI_CHANACTIVITY_LIMIT_VERYCOLD</a>, <a class="el" href="kvi__channel_8h_source.html#l00101">KVI_CHANACTIVITY_LIMIT_VERYHOT</a>, <a class="el" href="kvi__channel_8h_source.html#l00114">KVI_CHANNEL_ACTION_HISTORY_MAX_COUNT</a>, <a class="el" href="kvi__channel_8h_source.html#l00115">KVI_CHANNEL_ACTION_HISTORY_MAX_TIMESPAN</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00664">KviPointerList&lt; T &gt;::last()</a>, <a class="el" href="kvi__channel_8h_source.html#l00190">m_joinTime</a>, <a class="el" href="kvi__channel_8h_source.html#l00194">m_pActionHistory</a>, <a class="el" href="kvi__channel_8h_source.html#l00193">m_uActionHistoryHotActionCount</a>, and <a class="el" href="kvi__channel_8h_source.html#l00126">_KviChannelAction::tTime</a>.</p>
+<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01465">fixActionHistory()</a>, <a class="el" href="kvi__window_8h_source.html#l00121">KVI_ACTIVITY_COLD</a>, <a class="el" href="kvi__window_8h_source.html#l00125">KVI_ACTIVITY_FIRE</a>, <a class="el" href="kvi__window_8h_source.html#l00116">KVI_ACTIVITY_HIGH</a>, <a class="el" href="kvi__window_8h_source.html#l00123">KVI_ACTIVITY_HOT</a>, <a class="el" href="kvi__window_8h_source.html#l00119">KVI_ACTIVITY_ICE</a>, <a class="el" href="kvi__window_8h_source.html#l00114">KVI_ACTIVITY_LOW</a>, <a class="el" href="kvi__window_8h_source.html#l00115">KVI_ACTIVITY_MEDIUM</a>, <a class="el" href="kvi__window_8h_source.html#l00112">KVI_ACTIVITY_NONE</a>, <a class="el" href="kvi__window_8h_source.html#l00122">KVI_ACTIVITY_UNDEFINED</a>, <a class="el" href="kvi__window_8h_source.html#l00120">KVI_ACTIVITY_VERYCOLD</a>, <a class="el" href="kvi__window_8h_source.html#l00117">KVI_ACTIVITY_VERYHIGH</a>, <a class="el" href="kvi__window_8h_source.html#l00124">KVI_ACTIVITY_VERYHOT</a>, <a class="el" href="kvi__window_8h_source.html#l00113">KVI_ACTIVITY_VERYLOW</a>, <a class="el" href="kvi__channel_8h_source.html#l00098">KVI_CHANACTIVITY_LIMIT_COLD</a>, <a class="el" href="kvi__channel_8h_source.html#l00100">KVI_CHANACTIVITY_LIMIT_HOT</a>, <a class="el" href="kvi__channel_8h_source.html#l00096">KVI_CHANACTIVITY_LIMIT_ICE</a>, <a class="el" href="kvi__channel_8h_source.html#l00099">KVI_CHANACTIVITY_LIMIT_UNDEFINED</a>, <a class="el" href="kvi__channel_8h_source.html#l00097">KVI_CHANACTIVITY_LIMIT_VERYCOLD</a>, <a class="el" href="kvi__channel_8h_source.html#l00101">KVI_CHANACTIVITY_LIMIT_VERYHOT</a>, <a class="el" href="kvi__channel_8h_source.html#l00114">KVI_CHANNEL_ACTION_HISTORY_MAX_COUNT</a>, <a class="el" href="kvi__channel_8h_source.html#l00115">KVI_CHANNEL_ACTION_HISTORY_MAX_TIMESPAN</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00664">KviPointerList&lt; T &gt;::last()</a>, <a class="el" href="kvi__channel_8h_source.html#l00190">m_joinTime</a>, <a class="el" href="kvi__channel_8h_source.html#l00194">m_pActionHistory</a>, <a class="el" href="kvi__channel_8h_source.html#l00193">m_uActionHistoryHotActionCount</a>, and <a class="el" href="kvi__channel_8h_source.html#l00126">_KviChannelAction::tTime</a>.</p>
 
 </div>
 </div>
@@ -467,7 +470,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__userlistview_8h_source.html#l00448">KviUserListView::findEntry()</a>, <a class="el" href="kvi__channel_8h_source.html#l00192">m_pTmpHighLighted</a>, and <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>.</p>
+<p>References <a class="el" href="kvi__userlistview_8h_source.html#l00455">KviUserListView::findEntry()</a>, <a class="el" href="kvi__channel_8h_source.html#l00192">m_pTmpHighLighted</a>, and <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>.</p>
 
 </div>
 </div>
@@ -491,7 +494,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a372021c3ba0dcd30af1531e1910ea89f">KviWindow</a>.</p>
 
-<p>References <a class="el" href="kvi__themedlineedit_8cpp_source.html#l00055">KviThemedLineEdit::applyOptions()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00433">KviIrcView::applyOptions()</a>, <a class="el" href="kvi__topicw_8cpp_source.html#l00165">KviTopicWidget::applyOptions()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00337">KviUserListView::applyOptions()</a>, <a class="el" href="kvi__channel_8h_source.html#l00180">m_pMessageView</a>, <a class="el" href="kvi__channel_8h_source.html#l00183">m_pModeWidget</a>, <a class="el" href="kvi__channel_8h_source.html#l00181">m_pTopicWidget</a>, and <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>.</p>
+<p>References <a class="el" href="kvi__themedlineedit_8cpp_source.html#l00055">KviThemedLineEdit::applyOptions()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00433">KviIrcView::applyOptions()</a>, <a class="el" href="kvi__topicw_8cpp_source.html#l00165">KviTopicWidget::applyOptions()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00338">KviUserListView::applyOptions()</a>, <a class="el" href="kvi__channel_8h_source.html#l00180">m_pMessageView</a>, <a class="el" href="kvi__channel_8h_source.html#l00183">m_pModeWidget</a>, <a class="el" href="kvi__channel_8h_source.html#l00181">m_pTopicWidget</a>, and <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>.</p>
 
@@ -544,7 +547,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a87ecbe0278887fdedb1ba013d26e08cd">KviWindow</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00352">loadProperties()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00336">saveProperties()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00268">toggleToolButtons()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00361">loadProperties()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00345">saveProperties()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00277">toggleToolButtons()</a>.</p>
 
 </div>
 </div>
@@ -610,9 +613,9 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01417">fixActionHistory()</a>, <a class="el" href="kvi__channel_8h_source.html#l00127">_KviChannelAction::iTemperature</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__channel_8h_source.html#l00194">m_pActionHistory</a>, <a class="el" href="kvi__channel_8h_source.html#l00193">m_uActionHistoryHotActionCount</a>, <a class="el" href="kvi__channel_8h_source.html#l00124">_KviChannelAction::szNick</a>, <a class="el" href="kvi__channel_8h_source.html#l00126">_KviChannelAction::tTime</a>, and <a class="el" href="kvi__channel_8h_source.html#l00125">_KviChannelAction::uActionType</a>.</p>
+<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01465">fixActionHistory()</a>, <a class="el" href="kvi__channel_8h_source.html#l00127">_KviChannelAction::iTemperature</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__channel_8h_source.html#l00194">m_pActionHistory</a>, <a class="el" href="kvi__channel_8h_source.html#l00193">m_uActionHistoryHotActionCount</a>, <a class="el" href="kvi__channel_8h_source.html#l00124">_KviChannelAction::szNick</a>, <a class="el" href="kvi__channel_8h_source.html#l00126">_KviChannelAction::tTime</a>, and <a class="el" href="kvi__channel_8h_source.html#l00125">_KviChannelAction::uActionType</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01315">nickChange()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01323">part()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01540">userAction()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01349">nickChange()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01364">part()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01588">userAction()</a>.</p>
 
 </div>
 </div>
@@ -641,7 +644,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>QString </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00257">KviModeEditor::commit()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00712">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00091">KviModeWidget::editorReturnPressed()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor::KviModeEditor()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l00546">KviServerParser::parseLiteralKick()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01688">updateModeLabel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00266">KviModeEditor::commit()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00712">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00091">KviModeWidget::editorReturnPressed()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor::KviModeEditor()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l00546">KviServerParser::parseLiteralKick()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01749">updateModeLabel()</a>.</p>
 
 </div>
 </div>
@@ -674,7 +677,7 @@ Inheritance diagram for KviChannel:</div>
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
-          <td><code> [protected]</code></td>
+          <td></td>
         </tr>
       </table>
 </div>
@@ -683,7 +686,9 @@ Inheritance diagram for KviChannel:</div>
 <p>Checks the channel synchronization time. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__channel_8h_source.html#l00076">KVI_CHANNEL_STATE_HAVEWHOLIST</a>, <a class="el" href="kvi__channel_8h_source.html#l00078">KVI_CHANNEL_STATE_SENTWHOREQUEST</a>, <a class="el" href="kvi__channel_8h_source.html#l00080">KVI_CHANNEL_STATE_SYNCHRONIZED</a>, <a class="el" href="kvi__options_8h_source.html#l00673">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__out_8h_source.html#l00042">KVI_OUT_SYSTEMMESSAGE</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00143">KviEvent_OnChannelSync</a>, <a class="el" href="kvi__options_8h_source.html#l00147">KviOption_boolShowChannelSyncTime</a>, <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00163">KVS_TRIGGER_EVENT_1_HALTED</a>, <a class="el" href="kvi__channel_8h_source.html#l00184">m_iStateFlags</a>, <a class="el" href="kvi__channel_8h_source.html#l00190">m_joinTime</a>, <a class="el" href="kvi__channel_8h_source.html#l00185">m_szSentModeRequests</a>, and <a class="el" href="kvi__window_8cpp_source.html#l01276">KviWindow::output()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, <a class="el" href="kvi__channel_8h_source.html#l00076">KVI_CHANNEL_STATE_HAVEWHOLIST</a>, <a class="el" href="kvi__channel_8h_source.html#l00078">KVI_CHANNEL_STATE_SENTWHOREQUEST</a>, <a class="el" href="kvi__channel_8h_source.html#l00080">KVI_CHANNEL_STATE_SYNCHRONIZED</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__out_8h_source.html#l00042">KVI_OUT_SYSTEMMESSAGE</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00145">KviEvent_OnChannelSync</a>, <a class="el" href="kvi__options_8h_source.html#l00147">KviOption_boolShowChannelSyncTime</a>, <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00163">KVS_TRIGGER_EVENT_1_HALTED</a>, <a class="el" href="kvi__channel_8h_source.html#l00184">m_iStateFlags</a>, <a class="el" href="kvi__channel_8h_source.html#l00190">m_joinTime</a>, <a class="el" href="kvi__channel_8h_source.html#l00185">m_szSentModeRequests</a>, and <a class="el" href="kvi__window_8cpp_source.html#l01277">KviWindow::output()</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00075">KviRequestQueue::timerSlot()</a>.</p>
 
 </div>
 </div>
@@ -729,7 +734,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a71e069ef208c7e1f7d22b96fb890637f">KviWindow</a>.</p>
 
-<p>References <a class="el" href="kvi__kvs__variant_8cpp_source.html#l00580">KviKvsVariant::asString()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01396">KviWindow::context()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00257">KviIrcConnection::encodeText()</a>, <a class="el" href="kvi__window_8h_source.html#l00386">KviWindow::encodeText()</a>, <a class="el" href="kvi__kvs__script_8cpp_source.html#l00152">KviKvsScript::evaluate()</a>, <a class="el" href="kvi__console_8h_source.html#l00139">KviConsole::isConnected()</a>, <a class="el" href="kvi__channel_8h_source.html#l00077">KVI_CHANNEL_STATE_DEADCHAN</a>, <a class="el" href="kvi__channel_8h_source.html#l00079">KVI_CHANNEL_STATE_SENTPART</a>, <a class="el" href="kvi__options_8h_source.html#l00675">KVI_OPTION_STRING</a>, <a class="el" href="kvi__options_8h_source.html#l00362">KviOption_stringPartMessage</a>, <a class="el" href="kvi__channel_8h_source.html#l00184">m_iStateFlags</a>, <a class="el" href="kvi__window_8h_source.html#l00149">KviWindow::m_pConsole</a>, <a class="el" href="kvi__window_8h_source.html#l00147">KviWindow::m_szName</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01601">partMessageSent()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00741">KviIrcConnection::sendFmtData()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00270">KviIrcContext::unregisterDeadChannel()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__variant_8cpp_source.html#l00583">KviKvsVariant::asString()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01397">KviWindow::context()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00257">KviIrcConnection::encodeText()</a>, <a class="el" href="kvi__window_8h_source.html#l00386">KviWindow::encodeText()</a>, <a class="el" href="namespaceKviQString.html#a18507f7c41b3a80fc61a25b281c12ef3">KviQString::escapeKvs()</a>, <a class="el" href="kvi__kvs__script_8cpp_source.html#l00152">KviKvsScript::evaluate()</a>, <a class="el" href="kvi__console_8h_source.html#l00139">KviConsole::isConnected()</a>, <a class="el" href="kvi__channel_8h_source.html#l00077">KVI_CHANNEL_STATE_DEADCHAN</a>, <a class="el" href="kvi__channel_8h_source.html#l00079">KVI_CHANNEL_STATE_SENTPART</a>, <a class="el" href="kvi__options_8h_source.html#l00674">KVI_OPTION_STRING</a>, <a class="el" href="kvi__options_8h_source.html#l00362">KviOption_stringPartMessage</a>, <a class="el" href="kvi__channel_8h_source.html#l00184">m_iStateFlags</a>, <a class="el" href="kvi__window_8h_source.html#l00149">KviWindow::m_pConsole</a>, <a class="el" href="kvi__window_8h_source.html#l00147">KviWindow::m_szName</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01648">partMessageSent()</a>, <a class="el" href="kvi__qstring_8h_source.html#l00053">KviQString::PermitFunctions</a>, <a class="el" href="kvi__qstring_8h_source.html#l00052">KviQString::PermitVariables</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00741">KviIrcConnection::sendFmtData()</a>, and <a class="el" href="kvi__irccontext_8cpp_source.html#l00270">KviIrcContext::unregisterDeadChannel()</a>.</p>
 
 </div>
 </div>
@@ -775,7 +780,7 @@ Inheritance diagram for KviChannel:</div>
 <p>Returns the number of users. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>unsigned int </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircview__events_8cpp_source.html#l00869">KviIrcView::doLinkToolTip()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircview__events_8cpp_source.html#l00831">KviIrcView::doLinkToolTip()</a>.</p>
 
 </div>
 </div>
@@ -869,7 +874,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a62b040dc4fdd6dab69d5102a652b48ca">KviWindow</a>.</p>
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01709">KviIrcConnection::currentNickName()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01704">KviIrcConnection::currentServerName()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00662">getChannelModeString()</a>, <a class="el" href="kvi__channel_8h_source.html#l00493">getUserFlag()</a>, <a class="el" href="kvi__window_8h_source.html#l00147">KviWindow::m_szName</a>, <a class="el" href="kvi__channel_8h_source.html#l00191">m_szNameWithUserFlag</a>, and <a class="el" href="kvi__window_8h_source.html#l00155">KviWindow::m_szPlainTextCaption</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01707">KviIrcConnection::currentNickName()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01702">KviIrcConnection::currentServerName()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00671">getChannelModeString()</a>, <a class="el" href="kvi__channel_8h_source.html#l00494">getUserFlag()</a>, <a class="el" href="kvi__window_8h_source.html#l00147">KviWindow::m_szName</a>, <a class="el" href="kvi__channel_8h_source.html#l00191">m_szNameWithUserFlag</a>, and <a class="el" href="kvi__window_8h_source.html#l00155">KviWindow::m_szPlainTextCaption</a>.</p>
 
 </div>
 </div>
@@ -898,7 +903,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01769">preprocessMessage()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01830">preprocessMessage()</a>.</p>
 
 </div>
 </div>
@@ -942,7 +947,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>References <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__channel_8h_source.html#l00127">_KviChannelAction::iTemperature</a>, <a class="el" href="kvi__channel_8h_source.html#l00114">KVI_CHANNEL_ACTION_HISTORY_MAX_COUNT</a>, <a class="el" href="kvi__channel_8h_source.html#l00115">KVI_CHANNEL_ACTION_HISTORY_MAX_TIMESPAN</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00664">KviPointerList&lt; T &gt;::last()</a>, <a class="el" href="kvi__channel_8h_source.html#l00194">m_pActionHistory</a>, <a class="el" href="kvi__channel_8h_source.html#l00193">m_uActionHistoryHotActionCount</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00934">KviPointerList&lt; T &gt;::removeFirst()</a>, and <a class="el" href="kvi__channel_8h_source.html#l00126">_KviChannelAction::tTime</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01331">activityMeter()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01402">channelAction()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01446">getChannelActivityStats()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01379">activityMeter()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01450">channelAction()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01494">getChannelActivityStats()</a>.</p>
 
 </div>
 </div>
@@ -973,7 +978,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#ac7c99002bd21758ecf43e312a78c3010">KviWindow</a>.</p>
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01396">KviWindow::context()</a>, and <a class="el" href="kvi__window_8h_source.html#l00184">KviWindow::windowName()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01397">KviWindow::context()</a>, and <a class="el" href="kvi__window_8h_source.html#l00184">KviWindow::windowName()</a>.</p>
 
 </div>
 </div>
@@ -1002,9 +1007,9 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__channel_8h_source.html#l00138">_KviChannelActivityStats::bStatsInaccurate</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__channel_8h_source.html#l00141">_KviChannelActivityStats::dActionsPerMinute</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01417">fixActionHistory()</a>, <a class="el" href="kvi__channel_8h_source.html#l00143">_KviChannelActivityStats::iAverageActionTemperature</a>, <a class="el" href="kvi__channel_8h_source.html#l00725">isOn()</a>, <a class="el" href="kvi__channel_8h_source.html#l00127">_KviChannelAction::iTemperature</a>, <a class="el" href="kvi__channel_8h_source.html#l00114">KVI_CHANNEL_ACTION_HISTORY_MAX_COUNT</a>, <a class="el" href="kvi__channel_8h_source.html#l00115">KVI_CHANNEL_ACTION_HISTORY_MAX_TIMESPAN</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__useraction_8h_source.html#l00059">KVI_USERACTION_ACTION</a>, <a class="el" href="kvi__useraction_8h_source.html#l00061">KVI_USERACTION_NOTICE</a>, <a class="el" href="kvi__useraction_8h_source.html#l00060">KVI_USERACTION_PRIVMSG</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00664">KviPointerList&lt; T &gt;::last()</a>, <a class="el" href="kvi__channel_8h_source.html#l00146">_KviChannelActivityStats::lTalkingUsers</a>, <a class="el" href="kvi__channel_8h_source.html#l00147">_KviChannelActivityStats::lWereTalkingUsers</a>, <a class="el" href="kvi__channel_8h_source.html#l00190">m_joinTime</a>, <a class="el" href="kvi__channel_8h_source.html#l00194">m_pActionHistory</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00749">KviPointerList&lt; T &gt;::prev()</a>, <a class="el" href="kvi__channel_8h_source.html#l00124">_KviChannelAction::szNick</a>, <a class="el" href="kvi__channel_8h_source.html#l00126">_KviChannelAction::tTime</a>, <a class="el" href="kvi__channel_8h_source.html#l00137">_KviChannelActivityStats::uActionCount</a>, <a class="el" href="kvi__channel_8h_source.html#l00142">_KviChannelActivityStats::uActionsInTheLastMinute</a>, <a class="el" href="kvi__channel_8h_source.html#l00125">_KviChannelAction::uActionType</a>, <a class="el" href="kvi__channel_8h_source.html#l00140">_KviChannelActivityStats::uFirstActionTimeSpan</a>, <a class="el" href="kvi__channel_8h_source.html#l00144">_KviChannelActivityStats::uHotActionCount</a>, <a class="el" href="kvi__channel_8h_source.html#l00145">_KviChannelActivityStats::uHotActionPercent</a>, and <a class="el" href="kvi__channel_8h_source.html#l00139">_KviChannelActivityStats::uLastActionTimeSpan</a>.</p>
+<p>References <a class="el" href="kvi__channel_8h_source.html#l00138">_KviChannelActivityStats::bStatsInaccurate</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__channel_8h_source.html#l00141">_KviChannelActivityStats::dActionsPerMinute</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01465">fixActionHistory()</a>, <a class="el" href="kvi__channel_8h_source.html#l00143">_KviChannelActivityStats::iAverageActionTemperature</a>, <a class="el" href="kvi__channel_8h_source.html#l00726">isOn()</a>, <a class="el" href="kvi__channel_8h_source.html#l00127">_KviChannelAction::iTemperature</a>, <a class="el" href="kvi__channel_8h_source.html#l00114">KVI_CHANNEL_ACTION_HISTORY_MAX_COUNT</a>, <a class="el" href="kvi__channel_8h_source.html#l00115">KVI_CHANNEL_ACTION_HISTORY_MAX_TIMESPAN</a>, <a class="el" href="kvi__time_8h_source.html#l00043">kvi_time_t</a>, <a class="el" href="kvi__time_8h_source.html#l00039">kvi_unixTime</a>, <a class="el" href="kvi__useraction_8h_source.html#l00059">KVI_USERACTION_ACTION</a>, <a class="el" href="kvi__useraction_8h_source.html#l00061">KVI_USERACTION_NOTICE</a>, <a class="el" href="kvi__useraction_8h_source.html#l00060">KVI_USERACTION_PRIVMSG</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00664">KviPointerList&lt; T &gt;::last()</a>, <a class="el" href="kvi__channel_8h_source.html#l00146">_KviChannelActivityStats::lTalkingUsers</a>, <a class="el" href="kvi__channel_8h_source.html#l00147">_KviChannelActivityStats::lWereTalkingUsers</a>, <a class="el" href="kvi__channel_8h_source.html#l00190">m_joinTime</a>, <a class="el" href="kvi__channel_8h_source.html#l00194">m_pActionHistory</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00749">KviPointerList&lt; T &gt;::prev()</a>, <a class="el" href="kvi__channel_8h_source.html#l00124">_KviChannelAction::szNick</a>, <a class="el" href="kvi__channel_8h_source.html#l00126">_KviChannelAction::tTime</a>, <a class="el" href="kvi__channel_8h_source.html#l00137">_KviChannelActivityStats::uActionCount</a>, <a class="el" href="kvi__channel_8h_source.html#l00142">_KviChannelActivityStats::uActionsInTheLastMinute</a>, <a class="el" href="kvi__channel_8h_source.html#l00125">_KviChannelAction::uActionType</a>, <a class="el" href="kvi__channel_8h_source.html#l00140">_KviChannelActivityStats::uFirstActionTimeSpan</a>, <a class="el" href="kvi__channel_8h_source.html#l00144">_KviChannelActivityStats::uHotActionCount</a>, <a class="el" href="kvi__channel_8h_source.html#l00145">_KviChannelActivityStats::uHotActionPercent</a>, and <a class="el" href="kvi__channel_8h_source.html#l00139">_KviChannelActivityStats::uLastActionTimeSpan</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00800">getWindowListTipText()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00834">getWindowListTipText()</a>.</p>
 
 </div>
 </div>
@@ -1035,7 +1040,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>References <a class="el" href="kvi__channel_8h_source.html#l00186">m_szChannelMode</a>, and <a class="el" href="kvi__channel_8h_source.html#l00187">m_szChannelParameterModes</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircview__events_8cpp_source.html#l00869">KviIrcView::doLinkToolTip()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01062">fillCaptionBuffers()</a>, and <a class="el" href="kvi__topicw_8cpp_source.html#l00420">KviTopicWidget::switchMode()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircview__events_8cpp_source.html#l00831">KviIrcView::doLinkToolTip()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01096">fillCaptionBuffers()</a>, and <a class="el" href="kvi__topicw_8cpp_source.html#l00420">KviTopicWidget::switchMode()</a>.</p>
 
 </div>
 </div>
@@ -1145,7 +1150,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00800">getWindowListTipText()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00834">getWindowListTipText()</a>.</p>
 
 </div>
 </div>
@@ -1174,7 +1179,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>char </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01062">fillCaptionBuffers()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01096">fillCaptionBuffers()</a>.</p>
 
 </div>
 </div>
@@ -1205,7 +1210,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#aa50f7093107ec733e3e6957460e57684">KviWindow</a>.</p>
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__channel_8h_source.html#l00138">_KviChannelActivityStats::bStatsInaccurate</a>, <a class="el" href="kvi__channel_8h_source.html#l00141">_KviChannelActivityStats::dActionsPerMinute</a>, <a class="el" href="kvi__options_8h_source.html#l00700">END_TABLE_BOLD_ROW</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01446">getChannelActivityStats()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00753">getTalkingUsersStats()</a>, <a class="el" href="kvi__channel_8h_source.html#l00077">KVI_CHANNEL_STATE_DEADCHAN</a>, <a class="el" href="kvi__channel_8h_source.html#l00146">_KviChannelActivityStats::lTalkingUsers</a>, <a class="el" href="kvi__channel_8h_source.html#l00147">_KviChannelActivityStats::lWereTalkingUsers</a>, <a class="el" href="kvi__channel_8h_source.html#l00184">m_iStateFlags</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__window_8h_source.html#l00155">KviWindow::m_szPlainTextCaption</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, <a class="el" href="kvi__options_8h_source.html#l00699">START_TABLE_BOLD_ROW</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00076">_KviUserListViewUserStats::uActive</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00077">_KviUserListViewUserStats::uActiveOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00082">_KviUserListViewUserStats::uChanAdmin</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00081">_KviUserListViewUserStats::uChanOwner</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00084">_KviUserListViewUserStats::uHalfOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00078">_KviUserListViewUserStats::uHot</a>, <a class="el" href="kvi__channel_8h_source.html#l00145">_KviChannelActivityStats::uHotActionPercent</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00079">_KviUserListViewUserStats::uHotOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00080">_KviUserListViewUserStats::uIrcOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00083">_KviUserListViewUserStats::uOp</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01429">KviUserListView::userStats()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00075">_KviUserListViewUserStats::uTotal</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00086">_KviUserListViewUserStats::uUserOp</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00085">_KviUserListViewUserStats::uVoiced</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__channel_8h_source.html#l00138">_KviChannelActivityStats::bStatsInaccurate</a>, <a class="el" href="kvi__channel_8h_source.html#l00141">_KviChannelActivityStats::dActionsPerMinute</a>, <a class="el" href="kvi__options_8h_source.html#l00699">END_TABLE_BOLD_ROW</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01494">getChannelActivityStats()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00787">getTalkingUsersStats()</a>, <a class="el" href="kvi__channel_8h_source.html#l00077">KVI_CHANNEL_STATE_DEADCHAN</a>, <a class="el" href="kvi__channel_8h_source.html#l00146">_KviChannelActivityStats::lTalkingUsers</a>, <a class="el" href="kvi__channel_8h_source.html#l00147">_KviChannelActivityStats::lWereTalkingUsers</a>, <a class="el" href="kvi__channel_8h_source.html#l00184">m_iStateFlags</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__window_8h_source.html#l00155">KviWindow::m_szPlainTextCaption</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, <a class="el" href="kvi__options_8h_source.html#l00698">START_TABLE_BOLD_ROW</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00076">_KviUserListViewUserStats::uActive</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00077">_KviUserListViewUserStats::uActiveOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00082">_KviUserListViewUserStats::uChanAdmin</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00081">_KviUserListViewUserStats::uChanOwner</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00084">_KviUserListViewUserStats::uHalfOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00078">_KviUserListViewUserStats::uHot</a>, <a class="el" href="kvi__channel_8h_source.html#l00145">_KviChannelActivityStats::uHotActionPercent</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00079">_KviUserListViewUserStats::uHotOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00080">_KviUserListViewUserStats::uIrcOp</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00083">_KviUserListViewUserStats::uOp</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01482">KviUserListView::userStats()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00075">_KviUserListViewUserStats::uTotal</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00086">_KviUserListViewUserStats::uUserOp</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00085">_KviUserListViewUserStats::uVoiced</a>.</p>
 
 </div>
 </div>
@@ -1318,7 +1323,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00257">KviModeEditor::commit()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00712">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00091">KviModeWidget::editorReturnPressed()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor::KviModeEditor()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l00546">KviServerParser::parseLiteralKick()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01688">updateModeLabel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00266">KviModeEditor::commit()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00712">KviIrcContext::connectionTerminated()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00091">KviModeWidget::editorReturnPressed()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor::KviModeEditor()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l00546">KviServerParser::parseLiteralKick()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01749">updateModeLabel()</a>.</p>
 
 </div>
 </div>
@@ -1386,7 +1391,7 @@ Inheritance diagram for KviChannel:</div>
 
 </div>
 </div>
-<a class="anchor" id="ad73eb7d91dbcc3367e50067df445b717"></a><!-- doxytag: member="KviChannel::internalMask" ref="ad73eb7d91dbcc3367e50067df445b717" args="(const QString &amp;szMask, bool bAdd, const QString &amp;szSetBy, unsigned int uSetAt, KviPointerList&lt; KviMaskEntry &gt; *l, KviMaskEditor **ppEd)" -->
+<a class="anchor" id="a493837c8ce1a459698a1fff130e090de"></a><!-- doxytag: member="KviChannel::internalMask" ref="a493837c8ce1a459698a1fff130e090de" args="(const QString &amp;szMask, bool bAdd, const QString &amp;szSetBy, unsigned int uSetAt, KviPointerList&lt; KviMaskEntry &gt; *l, KviMaskEditor **ppEd, QString &amp;szChangeMask)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1424,7 +1429,13 @@ Inheritance diagram for KviChannel:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classKviMaskEditor.html">KviMaskEditor</a> **&nbsp;</td>
-          <td class="paramname"> <em>ppEd</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>ppEd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString &amp;&nbsp;</td>
+          <td class="paramname"> <em>szChangeMask</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -1444,6 +1455,7 @@ Inheritance diagram for KviChannel:</div>
     <tr><td valign="top"></td><td valign="top"><em>uSetAt</em>&nbsp;</td><td>The datetime when the mask was set </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>l</em>&nbsp;</td><td>The list of masks in the channel lists </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>ppEd</em>&nbsp;</td><td>The mask editor window </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>szChangeMask</em>&nbsp;</td><td>If bAdd is false and this string is set, the mask will be updated instead that removed </td></tr>
   </table>
   </dd>
 </dl>
@@ -1451,7 +1463,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l01065">KviPointerList&lt; T &gt;::removeRef()</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00043">_KviMaskEntry::szMask</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00044">_KviMaskEntry::szSetBy</a>, and <a class="el" href="kvi__maskeditor_8h_source.html#l00045">_KviMaskEntry::uSetAt</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01633">setMask()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01680">setMask()</a>.</p>
 
 </div>
 </div>
@@ -1640,7 +1652,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00272">KviMaskEditor::addClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00320">KviMaskEditor::itemDoubleClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00127">KviMaskEditor::KviMaskEditor()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor::KviModeEditor()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00061">KviModeWidget::mouseDoubleClickEvent()</a>, and <a class="el" href="kvi__topicw_8cpp_source.html#l00420">KviTopicWidget::switchMode()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00288">KviMaskEditor::addClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00336">KviMaskEditor::itemDoubleClicked()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00061">KviModeWidget::mouseDoubleClickEvent()</a>, <a class="el" href="kvi__topicw_8cpp_source.html#l00420">KviTopicWidget::switchMode()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00225">KviModeEditor::updateOpStatus()</a>, and <a class="el" href="kvi__maskeditor_8cpp_source.html#l00228">KviMaskEditor::updateOpStatus()</a>.</p>
 
 </div>
 </div>
@@ -1669,7 +1681,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00272">KviMaskEditor::addClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00320">KviMaskEditor::itemDoubleClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00127">KviMaskEditor::KviMaskEditor()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor::KviModeEditor()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00061">KviModeWidget::mouseDoubleClickEvent()</a>, and <a class="el" href="kvi__topicw_8cpp_source.html#l00420">KviTopicWidget::switchMode()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00288">KviMaskEditor::addClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00336">KviMaskEditor::itemDoubleClicked()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00061">KviModeWidget::mouseDoubleClickEvent()</a>, <a class="el" href="kvi__topicw_8cpp_source.html#l00420">KviTopicWidget::switchMode()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00225">KviModeEditor::updateOpStatus()</a>, and <a class="el" href="kvi__maskeditor_8cpp_source.html#l00228">KviMaskEditor::updateOpStatus()</a>.</p>
 
 </div>
 </div>
@@ -1698,7 +1710,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00272">KviMaskEditor::addClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00320">KviMaskEditor::itemDoubleClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00127">KviMaskEditor::KviMaskEditor()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor::KviModeEditor()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00061">KviModeWidget::mouseDoubleClickEvent()</a>, and <a class="el" href="kvi__topicw_8cpp_source.html#l00420">KviTopicWidget::switchMode()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00288">KviMaskEditor::addClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00336">KviMaskEditor::itemDoubleClicked()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00061">KviModeWidget::mouseDoubleClickEvent()</a>, <a class="el" href="kvi__topicw_8cpp_source.html#l00420">KviTopicWidget::switchMode()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00225">KviModeEditor::updateOpStatus()</a>, and <a class="el" href="kvi__maskeditor_8cpp_source.html#l00228">KviMaskEditor::updateOpStatus()</a>.</p>
 
 </div>
 </div>
@@ -1754,7 +1766,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00272">KviMaskEditor::addClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00320">KviMaskEditor::itemDoubleClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00127">KviMaskEditor::KviMaskEditor()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor::KviModeEditor()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00061">KviModeWidget::mouseDoubleClickEvent()</a>, <a class="el" href="kvi__topicw_8cpp_source.html#l00420">KviTopicWidget::switchMode()</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00075">KviRequestQueue::timerSlot()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00288">KviMaskEditor::addClicked()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00336">KviMaskEditor::itemDoubleClicked()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00061">KviModeWidget::mouseDoubleClickEvent()</a>, <a class="el" href="kvi__topicw_8cpp_source.html#l00420">KviTopicWidget::switchMode()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00075">KviRequestQueue::timerSlot()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00225">KviModeEditor::updateOpStatus()</a>, and <a class="el" href="kvi__maskeditor_8cpp_source.html#l00228">KviMaskEditor::updateOpStatus()</a>.</p>
 
 </div>
 </div>
@@ -1837,7 +1849,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01446">getChannelActivityStats()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01494">getChannelActivityStats()</a>.</p>
 
 </div>
 </div>
@@ -2023,7 +2035,7 @@ Inheritance diagram for KviChannel:</div>
 <p>Returns the time of the last received WHO reply. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>kvi_time_t </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01656">KviIrcConnection::heartbeat()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01654">KviIrcConnection::heartbeat()</a>.</p>
 
 </div>
 </div>
@@ -2063,7 +2075,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>QByteArray </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01808">pasteLastLog()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01869">pasteLastLog()</a>.</p>
 
 </div>
 </div>
@@ -2094,7 +2106,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a6b18c93e9174a259fd56745d207a5730">KviWindow</a>.</p>
 
-<p>References <a class="el" href="kvi__channel_8h_source.html#l00221">buttonContainer()</a>, <a class="el" href="kvi__options_8h_source.html#l00673">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00299">KviOption_boolHideWindowToolButtons</a>, <a class="el" href="kvi__window_8h_source.html#l00156">KviWindow::m_pIrcView</a>, <a class="el" href="kvi__channel_8h_source.html#l00180">m_pMessageView</a>, <a class="el" href="kvi__channel_8h_source.html#l00189">m_privateBackground</a>, <a class="el" href="kvi__window_8h_source.html#l00158">KviWindow::m_pSplitter</a>, <a class="el" href="kvi__channel_8h_source.html#l00172">m_pTopSplitter</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__channel_8h_source.html#l00196">m_VertSplitterSizesList</a>, <a class="el" href="kvi__config_8cpp_source.html#l00823">KviConfig::readBoolEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00643">KviConfig::readIntListEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00697">KviConfig::readPixmapEntry()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00601">resizeEvent()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00483">KviIrcView::setPrivateBackgroundPixmap()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00397">showDoubleView()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00268">toggleToolButtons()</a>.</p>
+<p>References <a class="el" href="kvi__channel_8h_source.html#l00221">buttonContainer()</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h_source.html#l00299">KviOption_boolHideWindowToolButtons</a>, <a class="el" href="kvi__window_8h_source.html#l00156">KviWindow::m_pIrcView</a>, <a class="el" href="kvi__channel_8h_source.html#l00180">m_pMessageView</a>, <a class="el" href="kvi__channel_8h_source.html#l00189">m_privateBackground</a>, <a class="el" href="kvi__window_8h_source.html#l00158">KviWindow::m_pSplitter</a>, <a class="el" href="kvi__channel_8h_source.html#l00172">m_pTopSplitter</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__channel_8h_source.html#l00196">m_VertSplitterSizesList</a>, <a class="el" href="kvi__config_8cpp_source.html#l00800">KviConfig::readBoolEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00620">KviConfig::readIntListEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00674">KviConfig::readPixmapEntry()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00610">resizeEvent()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00483">KviIrcView::setPrivateBackgroundPixmap()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00406">showDoubleView()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00277">toggleToolButtons()</a>.</p>
 
 </div>
 </div>
@@ -2201,9 +2213,9 @@ Inheritance diagram for KviChannel:</div>
 
 <p>Called when we close the mode editor. </p>
 
-<p>References <a class="el" href="kvi__channel_8h_source.html#l00179">m_pModeEditor</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00457">toggleModeEditor()</a>.</p>
+<p>References <a class="el" href="kvi__channel_8h_source.html#l00179">m_pModeEditor</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00466">toggleModeEditor()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00457">toggleModeEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00466">toggleModeEditor()</a>.</p>
 
 </div>
 </div>
@@ -2328,7 +2340,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="kvi__channel_8cpp_source.html#l01402">channelAction()</a>, <a class="el" href="kvi__useraction_8cpp_source.html#l00040">kvi_getUserActionTemperature()</a>, <a class="el" href="kvi__useraction_8h_source.html#l00064">KVI_USERACTION_NICK</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l01242">KviUserListView::nickChange()</a>.</p>
+<p>References <a class="el" href="kvi__channel_8cpp_source.html#l01450">channelAction()</a>, <a class="el" href="kvi__useraction_8cpp_source.html#l00040">kvi_getUserActionTemperature()</a>, <a class="el" href="kvi__useraction_8h_source.html#l00064">KVI_USERACTION_NICK</a>, <a class="el" href="kvi__channel_8h_source.html#l00188">m_pModeLists</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01295">KviUserListView::nickChange()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01680">setMask()</a>.</p>
 
 </div>
 </div>
@@ -2349,6 +2361,28 @@ Inheritance diagram for KviChannel:</div>
 
 <p>Returns the number of users with op status. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a60ef13a3660e2f76cbdec02ef2518971"></a><!-- doxytag: member="KviChannel::opStatusChanged" ref="a60ef13a3660e2f76cbdec02ef2518971" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KviChannel::opStatusChanged </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [signal]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Emitted when our op status change. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
+
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00695">setOp()</a>.</p>
 
 </div>
 </div>
@@ -2387,9 +2421,9 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l01222">KviWindow::internalOutput()</a>, <a class="el" href="kvi__window_8h_source.html#l00156">KviWindow::m_pIrcView</a>, <a class="el" href="kvi__channel_8h_source.html#l00180">m_pMessageView</a>, <a class="el" href="namespaceKviQString.html#a772d51df816f541ea4e7c760c49bf765">KviQString::nullTerminatedArray()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01769">preprocessMessage()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l01222">KviWindow::internalOutput()</a>, <a class="el" href="kvi__window_8h_source.html#l00156">KviWindow::m_pIrcView</a>, <a class="el" href="kvi__channel_8h_source.html#l00180">m_pMessageView</a>, <a class="el" href="namespaceKviQString.html#a772d51df816f541ea4e7c760c49bf765">KviQString::nullTerminatedArray()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01830">preprocessMessage()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01282">ownAction()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01808">pasteLastLog()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01316">ownAction()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01869">pasteLastLog()</a>.</p>
 
 </div>
 </div>
@@ -2420,7 +2454,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a7cbab6cf8d74e8aeb0d70a275ec6325d">KviWindow</a>.</p>
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01709">KviIrcConnection::currentNickName()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__window_8h_source.html#l00386">KviWindow::encodeText()</a>, <a class="el" href="kvi__options_8h_source.html#l00673">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__out_8h_source.html#l00059">KVI_OUT_ACTION</a>, <a class="el" href="kvi__useraction_8h_source.html#l00059">KVI_USERACTION_ACTION</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00322">KviEvent_OnMeAction</a>, <a class="el" href="kvi__options_8h_source.html#l00269">KviOption_boolStripMircColorsInUserMessages</a>, <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00178">KVS_TRIGGER_EVENT_2_HALTED</a>, <a class="el" href="kvi__window_8h_source.html#l00147">KviWindow::m_szName</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01713">outputMessage()</a>, <a class="el" href="namespaceKviMircCntrl.html#af6dada1872bb132eb4ec35a05f31f3de">KviMircCntrl::stripControlBytes()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01554">userAction()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l01707">KviIrcConnection::currentNickName()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__window_8h_source.html#l00386">KviWindow::encodeText()</a>, <a class="el" href="kvi__options_8h_source.html#l00672">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__out_8h_source.html#l00059">KVI_OUT_ACTION</a>, <a class="el" href="kvi__useraction_8h_source.html#l00059">KVI_USERACTION_ACTION</a>, <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00324">KviEvent_OnMeAction</a>, <a class="el" href="kvi__options_8h_source.html#l00269">KviOption_boolStripMircColorsInUserMessages</a>, <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00178">KVS_TRIGGER_EVENT_2_HALTED</a>, <a class="el" href="kvi__window_8h_source.html#l00147">KviWindow::m_szName</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01774">outputMessage()</a>, <a class="el" href="namespaceKviMircCntrl.html#af6dada1872bb132eb4ec35a05f31f3de">KviMircCntrl::stripControlBytes()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01602">userAction()</a>.</p>
 
 </div>
 </div>
@@ -2461,7 +2495,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a84791485798762785432f48ab9bbdfe1">KviWindow</a>.</p>
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__window_8h_source.html#l00395">KviWindow::decodeText()</a>, <a class="el" href="kvi__window_8h_source.html#l00386">KviWindow::encodeText()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00257">KviIrcConnection::encodeText()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00064">KviIrcConnectionUserInfo::hostName()</a>, <a class="el" href="kvi__out_8h_source.html#l00051">KVI_OUT_OWNPRIVMSG</a>, <a class="el" href="kvi__out_8h_source.html#l00092">KVI_OUT_OWNPRIVMSGCRYPTED</a>, <a class="el" href="kvi__out_8h_source.html#l00038">KVI_OUT_SYSTEMERROR</a>, <a class="el" href="kvi__mirccntrl_8h_source.html#l00144">KVI_TEXT_CRYPTESCAPE</a>, <a class="el" href="kvi__useraction_8h_source.html#l00060">KVI_USERACTION_PRIVMSG</a>, <a class="el" href="kvi__window_8h_source.html#l00149">KviWindow::m_pConsole</a>, <a class="el" href="kvi__window_8cpp_source.html#l00301">KviWindow::makeEncoder()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00060">KviIrcConnectionUserInfo::nickName()</a>, <a class="el" href="kvi__console_8h_source.html#l00156">KviConsole::NoNotifications</a>, <a class="el" href="kvi__window_8cpp_source.html#l01276">KviWindow::output()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00692">KviConsole::outputPrivmsg()</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00741">KviIrcConnection::sendFmtData()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01554">userAction()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00241">KviIrcConnection::userInfo()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00062">KviIrcConnectionUserInfo::userName()</a>, and <a class="el" href="kvi__window_8h_source.html#l00184">KviWindow::windowName()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">d</a>, <a class="el" href="kvi__window_8h_source.html#l00395">KviWindow::decodeText()</a>, <a class="el" href="kvi__window_8h_source.html#l00386">KviWindow::encodeText()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00257">KviIrcConnection::encodeText()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00064">KviIrcConnectionUserInfo::hostName()</a>, <a class="el" href="kvi__out_8h_source.html#l00051">KVI_OUT_OWNPRIVMSG</a>, <a class="el" href="kvi__out_8h_source.html#l00092">KVI_OUT_OWNPRIVMSGCRYPTED</a>, <a class="el" href="kvi__out_8h_source.html#l00038">KVI_OUT_SYSTEMERROR</a>, <a class="el" href="kvi__mirccntrl_8h_source.html#l00144">KVI_TEXT_CRYPTESCAPE</a>, <a class="el" href="kvi__useraction_8h_source.html#l00060">KVI_USERACTION_PRIVMSG</a>, <a class="el" href="kvi__window_8h_source.html#l00149">KviWindow::m_pConsole</a>, <a class="el" href="kvi__window_8cpp_source.html#l00301">KviWindow::makeEncoder()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00060">KviIrcConnectionUserInfo::nickName()</a>, <a class="el" href="kvi__console_8h_source.html#l00156">KviConsole::NoNotifications</a>, <a class="el" href="kvi__window_8cpp_source.html#l01277">KviWindow::output()</a>, <a class="el" href="kvi__console_8cpp_source.html#l00692">KviConsole::outputPrivmsg()</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00741">KviIrcConnection::sendFmtData()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01602">userAction()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00241">KviIrcConnection::userInfo()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8h_source.html#l00062">KviIrcConnectionUserInfo::userName()</a>, and <a class="el" href="kvi__window_8h_source.html#l00184">KviWindow::windowName()</a>.</p>
 
 </div>
 </div>
@@ -2490,7 +2524,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="kvi__channel_8cpp_source.html#l01402">channelAction()</a>, <a class="el" href="kvi__useraction_8cpp_source.html#l00040">kvi_getUserActionTemperature()</a>, <a class="el" href="kvi__useraction_8h_source.html#l00067">KVI_USERACTION_PART</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, and <a class="el" href="kvi__userlistview_8h_source.html#l00537">KviUserListView::part()</a>.</p>
+<p>References <a class="el" href="kvi__channel_8cpp_source.html#l01450">channelAction()</a>, <a class="el" href="kvi__useraction_8cpp_source.html#l00040">kvi_getUserActionTemperature()</a>, <a class="el" href="kvi__useraction_8h_source.html#l00067">KVI_USERACTION_PART</a>, <a class="el" href="kvi__channel_8h_source.html#l00188">m_pModeLists</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00544">KviUserListView::part()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01680">setMask()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l00546">KviServerParser::parseLiteralKick()</a>, and <a class="el" href="kvi__sp__literal_8cpp_source.html#l00305">KviServerParser::parseLiteralPart()</a>.</p>
 
@@ -2531,9 +2565,9 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__channel_8h_source.html#l00081">KVI_CHANNEL_STATE_NOCLOSEONPART</a>, <a class="el" href="kvi__channel_8h_source.html#l00079">KVI_CHANNEL_STATE_SENTPART</a>, <a class="el" href="kvi__out_8h_source.html#l00042">KVI_OUT_SYSTEMMESSAGE</a>, <a class="el" href="kvi__channel_8h_source.html#l00184">m_iStateFlags</a>, and <a class="el" href="kvi__window_8cpp_source.html#l01317">KviWindow::outputNoFmt()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__channel_8h_source.html#l00081">KVI_CHANNEL_STATE_NOCLOSEONPART</a>, <a class="el" href="kvi__channel_8h_source.html#l00079">KVI_CHANNEL_STATE_SENTPART</a>, <a class="el" href="kvi__out_8h_source.html#l00042">KVI_OUT_SYSTEMMESSAGE</a>, <a class="el" href="kvi__channel_8h_source.html#l00184">m_iStateFlags</a>, and <a class="el" href="kvi__window_8cpp_source.html#l01318">KviWindow::outputNoFmt()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01571">closeEvent()</a>, and <a class="el" href="kvi__kvs__coresimplecommands__mr_8cpp_source.html#l00708">KviKvsCoreSimpleCommands::KVSCSC()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01619">closeEvent()</a>, and <a class="el" href="kvi__kvs__coresimplecommands__mr_8cpp_source.html#l00708">KviKvsCoreSimpleCommands::KVSCSC()</a>.</p>
 
 </div>
 </div>
@@ -2556,7 +2590,7 @@ Inheritance diagram for KviChannel:</div>
 <p>It searches for the most recent channel log of the channel we have just joined, and pastes into the buffer the last N lines, where N is get from the options </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__window_8h_source.html#l00206">KviWindow::console()</a>, <a class="el" href="kvi__console_8h_source.html#l00241">KviConsole::currentNetworkName()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00128">g_pApp</a>, <a class="el" href="kvi__app__fs_8cpp_source.html#l00109">KviApp::getLocalKvircDirectory()</a>, <a class="el" href="kvi__options_8h_source.html#l00678">KVI_OPTION_UINT</a>, <a class="el" href="kvi__out_8h_source.html#l00052">KVI_OUT_CHANPRIVMSG</a>, <a class="el" href="kvi__options_8h_source.html#l00598">KviOption_uintDaysIntervalToPasteOnChannelJoin</a>, <a class="el" href="kvi__options_8h_source.html#l00597">KviOption_uintLinesToPasteOnChannelJoin</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01911">loadLogFile()</a>, <a class="el" href="kvi__app_8h_source.html#l00146">KviApp::Log</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01713">outputMessage()</a>, and <a class="el" href="kvi__channel_8h_source.html#l00245">target()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__window_8h_source.html#l00206">KviWindow::console()</a>, <a class="el" href="kvi__console_8h_source.html#l00241">KviConsole::currentNetworkName()</a>, <a class="el" href="kvi__app_8cpp_source.html#l00130">g_pApp</a>, <a class="el" href="kvi__app__fs_8cpp_source.html#l00109">KviApp::getLocalKvircDirectory()</a>, <a class="el" href="kvi__options_8h_source.html#l00677">KVI_OPTION_UINT</a>, <a class="el" href="kvi__out_8h_source.html#l00052">KVI_OUT_CHANPRIVMSG</a>, <a class="el" href="kvi__options_8h_source.html#l00597">KviOption_uintDaysIntervalToPasteOnChannelJoin</a>, <a class="el" href="kvi__options_8h_source.html#l00596">KviOption_uintLinesToPasteOnChannelJoin</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01972">loadLogFile()</a>, <a class="el" href="kvi__app_8h_source.html#l00147">KviApp::Log</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01774">outputMessage()</a>, and <a class="el" href="kvi__channel_8h_source.html#l00245">target()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00609">KviIrcConnection::createChannel()</a>.</p>
 
@@ -2580,7 +2614,7 @@ Inheritance diagram for KviChannel:</div>
 <p>Returns only the plain (parameter-less) channel modes (eg: mi). </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>QString </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00257">KviModeEditor::commit()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor::KviModeEditor()</a>, and <a class="el" href="kvi__topicw_8cpp_source.html#l00420">KviTopicWidget::switchMode()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00266">KviModeEditor::commit()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor::KviModeEditor()</a>, and <a class="el" href="kvi__topicw_8cpp_source.html#l00420">KviTopicWidget::switchMode()</a>.</p>
 
 </div>
 </div>
@@ -2648,9 +2682,9 @@ Inheritance diagram for KviChannel:</div>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a1c93c505b5bf784bf7b398d8829be246">KviWindow</a>.</p>
 
-<p>References <a class="el" href="kvi__channel_8h_source.html#l00732">findEntry()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01802">serverInfo()</a>, <a class="el" href="namespaceKviMircCntrl.html#af6dada1872bb132eb4ec35a05f31f3de">KviMircCntrl::stripControlBytes()</a>, and <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00197">KviIrcConnectionServerInfo::supportedChannelTypes()</a>.</p>
+<p>References <a class="el" href="kvi__channel_8h_source.html#l00733">findEntry()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01863">serverInfo()</a>, <a class="el" href="namespaceKviMircCntrl.html#af6dada1872bb132eb4ec35a05f31f3de">KviMircCntrl::stripControlBytes()</a>, and <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00197">KviIrcConnectionServerInfo::supportedChannelTypes()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01713">outputMessage()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01774">outputMessage()</a>.</p>
 
 </div>
 </div>
@@ -2718,9 +2752,9 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00257">KviIrcConnection::encodeText()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00110">KviMaskEditor::flag()</a>, <a class="el" href="kvi__window_8h_source.html#l00147">KviWindow::m_szName</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00210">KviIrcConnectionServerInfo::maxModeChanges()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00741">KviIrcConnection::sendFmtData()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01802">serverInfo()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00257">KviIrcConnection::encodeText()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__maskeditor_8h_source.html#l00110">KviMaskEditor::flag()</a>, <a class="el" href="kvi__window_8h_source.html#l00147">KviWindow::m_szName</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00210">KviIrcConnectionServerInfo::maxModeChanges()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00741">KviIrcConnection::sendFmtData()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01863">serverInfo()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00496">toggleListModeEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00505">toggleListModeEditor()</a>.</p>
 
 </div>
 </div>
@@ -2742,7 +2776,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>References <a class="el" href="kvi__input_8cpp_source.html#l00370">KviInput::heightHint()</a>, <a class="el" href="kvi__window_8h_source.html#l00159">KviWindow::m_pButtonBox</a>, <a class="el" href="kvi__window_8h_source.html#l00157">KviWindow::m_pInput</a>, <a class="el" href="kvi__window_8h_source.html#l00158">KviWindow::m_pSplitter</a>, <a class="el" href="kvi__channel_8h_source.html#l00181">m_pTopicWidget</a>, and <a class="el" href="kvi__topicw_8cpp_source.html#l00402">KviTopicWidget::sizeHint()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00352">loadProperties()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00457">toggleModeEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00361">loadProperties()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00466">toggleModeEditor()</a>.</p>
 
 </div>
 </div>
@@ -2884,9 +2918,9 @@ Inheritance diagram for KviChannel:</div>
 <p>Gets the <a class="el" href="classKviIrcConnectionServerInfo.html">KviIrcConnectionServerInfo</a> structure associated to the current connection. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>KviIrcConnectionServerInfo* </dd></dl>
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, and <a class="el" href="kvi__ircconnection_8h_source.html#l00255">KviIrcConnection::serverInfo()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, and <a class="el" href="kvi__ircconnection_8h_source.html#l00255">KviIrcConnection::serverInfo()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00257">KviModeEditor::commit()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00091">KviModeWidget::editorReturnPressed()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00412">KviModeEditor::getModeDescription()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00127">KviMaskEditor::KviMaskEditor()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor::KviModeEditor()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00272">KviModeWidget::modeNeedsParameterOnlyWhenSet()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00421">KviModeEditor::modeNeedsParameterOnlyWhenSet()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01769">preprocessMessage()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00550">removeMasks()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00617">setChannelMode()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00075">KviRequestQueue::timerSlot()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01688">updateModeLabel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00266">KviModeEditor::commit()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00091">KviModeWidget::editorReturnPressed()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00421">KviModeEditor::getModeDescription()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__maskeditor_8cpp_source.html#l00122">KviMaskEditor::KviMaskEditor()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor::KviModeEditor()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00272">KviModeWidget::modeNeedsParameterOnlyWhenSet()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00430">KviModeEditor::modeNeedsParameterOnlyWhenSet()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01830">preprocessMessage()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00559">removeMasks()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00626">setChannelMode()</a>, <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00075">KviRequestQueue::timerSlot()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01749">updateModeLabel()</a>.</p>
 
 </div>
 </div>
@@ -2908,7 +2942,7 @@ Inheritance diagram for KviChannel:</div>
 <p>Sets the channel as alive. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01396">KviWindow::context()</a>, <a class="el" href="kvi__ircview_8h_source.html#l00177">KviIrcView::isLogging()</a>, <a class="el" href="kvi__window_8h_source.html#l00083">KVI_WINDOW_TYPE_CHANNEL</a>, <a class="el" href="kvi__channel_8h_source.html#l00184">m_iStateFlags</a>, <a class="el" href="kvi__channel_8h_source.html#l00190">m_joinTime</a>, <a class="el" href="kvi__window_8h_source.html#l00156">KviWindow::m_pIrcView</a>, <a class="el" href="kvi__channel_8h_source.html#l00181">m_pTopicWidget</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00664">KviIrcConnection::registerChannel()</a>, <a class="el" href="kvi__topicw_8cpp_source.html#l00155">KviTopicWidget::reset()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00371">KviWindow::setType()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00325">KviUserListView::setUserDataBase()</a>, <a class="el" href="kvi__ircview__loghandling_8cpp_source.html#l00184">KviIrcView::startLogging()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00270">KviIrcContext::unregisterDeadChannel()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00648">KviWindow::updateCaption()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l00901">KviWindow::updateIcon()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01397">KviWindow::context()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00257">KviIrcConnection::encodeText()</a>, <a class="el" href="kvi__ircview_8h_source.html#l00177">KviIrcView::isLogging()</a>, <a class="el" href="kvi__window_8h_source.html#l00083">KVI_WINDOW_TYPE_CHANNEL</a>, <a class="el" href="kvi__channel_8h_source.html#l00184">m_iStateFlags</a>, <a class="el" href="kvi__channel_8h_source.html#l00190">m_joinTime</a>, <a class="el" href="kvi__window_8h_source.html#l00156">KviWindow::m_pIrcView</a>, <a class="el" href="kvi__channel_8h_source.html#l00178">m_pListEditors</a>, <a class="el" href="kvi__channel_8h_source.html#l00181">m_pTopicWidget</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__window_8h_source.html#l00147">KviWindow::m_szName</a>, <a class="el" href="kvi__channel_8h_source.html#l00185">m_szSentModeRequests</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00664">KviIrcConnection::registerChannel()</a>, <a class="el" href="kvi__topicw_8cpp_source.html#l00155">KviTopicWidget::reset()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00741">KviIrcConnection::sendFmtData()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00371">KviWindow::setType()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00325">KviUserListView::setUserDataBase()</a>, <a class="el" href="kvi__ircview__loghandling_8cpp_source.html#l00184">KviIrcView::startLogging()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00270">KviIrcContext::unregisterDeadChannel()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00648">KviWindow::updateCaption()</a>, and <a class="el" href="kvi__window_8cpp_source.html#l00901">KviWindow::updateIcon()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l00609">KviIrcConnection::createChannel()</a>.</p>
 
@@ -2949,6 +2983,8 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
+<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01718">KviServerParser::parseChannelMode()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a11c384c4651dcf10a85d15e22626adb9"></a><!-- doxytag: member="KviChannel::setChannelMode" ref="a11c384c4651dcf10a85d15e22626adb9" args="(char cMode, bool bAdd)" -->
@@ -2986,9 +3022,9 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__channel_8h_source.html#l00186">m_szChannelMode</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01802">serverInfo()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00200">KviIrcConnectionServerInfo::supportedListModes()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00648">KviWindow::updateCaption()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01688">updateModeLabel()</a>.</p>
+<p>References <a class="el" href="kvi__channel_8h_source.html#l00186">m_szChannelMode</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01863">serverInfo()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00200">KviIrcConnectionServerInfo::supportedListModes()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00648">KviWindow::updateCaption()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01749">updateModeLabel()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01704">KviServerParser::parseChannelMode()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01718">KviServerParser::parseChannelMode()</a>.</p>
 
 </div>
 </div>
@@ -3027,9 +3063,9 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__channel_8h_source.html#l00187">m_szChannelParameterModes</a>, <a class="el" href="kvi__window_8cpp_source.html#l00648">KviWindow::updateCaption()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01688">updateModeLabel()</a>.</p>
+<p>References <a class="el" href="kvi__channel_8h_source.html#l00187">m_szChannelParameterModes</a>, <a class="el" href="kvi__window_8cpp_source.html#l00648">KviWindow::updateCaption()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01749">updateModeLabel()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01704">KviServerParser::parseChannelMode()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01718">KviServerParser::parseChannelMode()</a>.</p>
 
 </div>
 </div>
@@ -3068,7 +3104,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01704">KviServerParser::parseChannelMode()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01718">KviServerParser::parseChannelMode()</a>.</p>
 
 </div>
 </div>
@@ -3090,13 +3126,13 @@ Inheritance diagram for KviChannel:</div>
 <p>Sets the channel as dead. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l01037">KviPointerList&lt; T &gt;::clear()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01396">KviWindow::context()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00386">KviUserListView::enableUpdates()</a>, <a class="el" href="kvi__channel_8h_source.html#l00077">KVI_CHANNEL_STATE_DEADCHAN</a>, <a class="el" href="kvi__channel_8h_source.html#l00081">KVI_CHANNEL_STATE_NOCLOSEONPART</a>, <a class="el" href="kvi__channel_8h_source.html#l00082">KVI_CHANNEL_STATE_SENTSYNCWHOREQUEST</a>, <a class="el" href="kvi__window_8h_source.html#l00100">KVI_WINDOW_TYPE_DEADCHANNEL</a>, <a class="el" href="kvi__channel_8h_source.html#l00184">m_iStateFlags</a>, <a class="el" href="kvi__channel_8h_source.html#l00194">m_pActionHistory</a>, <a class="el" href="kvi__channel_8h_source.html#l00178">m_pListEditors</a>, <a class="el" href="kvi__channel_8h_source.html#l00188">m_pModeLists</a>, <a class="el" href="kvi__channel_8h_source.html#l00181">m_pTopicWidget</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__channel_8h_source.html#l00186">m_szChannelMode</a>, <a class="el" href="kvi__channel_8h_source.html#l00187">m_szChannelParameterModes</a>, <a class="el" href="kvi__channel_8h_source.html#l00193">m_uActionHistoryHotActionCount</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01360">KviUserListView::partAll()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00250">KviIrcContext::registerDeadChannel()</a>, <a class="el" href="kvi__topicw_8cpp_source.html#l00155">KviTopicWidget::reset()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00371">KviWindow::setType()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00325">KviUserListView::setUserDataBase()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00673">KviIrcConnection::unregisterChannel()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00648">KviWindow::updateCaption()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00901">KviWindow::updateIcon()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01688">updateModeLabel()</a>.</p>
+<p>References <a class="el" href="kvi__pointerlist_8h_source.html#l01037">KviPointerList&lt; T &gt;::clear()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01397">KviWindow::context()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00387">KviUserListView::enableUpdates()</a>, <a class="el" href="kvi__channel_8h_source.html#l00077">KVI_CHANNEL_STATE_DEADCHAN</a>, <a class="el" href="kvi__channel_8h_source.html#l00081">KVI_CHANNEL_STATE_NOCLOSEONPART</a>, <a class="el" href="kvi__channel_8h_source.html#l00082">KVI_CHANNEL_STATE_SENTSYNCWHOREQUEST</a>, <a class="el" href="kvi__window_8h_source.html#l00100">KVI_WINDOW_TYPE_DEADCHANNEL</a>, <a class="el" href="kvi__channel_8h_source.html#l00184">m_iStateFlags</a>, <a class="el" href="kvi__channel_8h_source.html#l00194">m_pActionHistory</a>, <a class="el" href="kvi__channel_8h_source.html#l00178">m_pListEditors</a>, <a class="el" href="kvi__channel_8h_source.html#l00188">m_pModeLists</a>, <a class="el" href="kvi__channel_8h_source.html#l00181">m_pTopicWidget</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__channel_8h_source.html#l00186">m_szChannelMode</a>, <a class="el" href="kvi__channel_8h_source.html#l00187">m_szChannelParameterModes</a>, <a class="el" href="kvi__channel_8h_source.html#l00185">m_szSentModeRequests</a>, <a class="el" href="kvi__channel_8h_source.html#l00193">m_uActionHistoryHotActionCount</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l01413">KviUserListView::partAll()</a>, <a class="el" href="kvi__irccontext_8cpp_source.html#l00250">KviIrcContext::registerDeadChannel()</a>, <a class="el" href="kvi__topicw_8cpp_source.html#l00155">KviTopicWidget::reset()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00371">KviWindow::setType()</a>, <a class="el" href="kvi__userlistview_8h_source.html#l00325">KviUserListView::setUserDataBase()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00673">KviIrcConnection::unregisterChannel()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00648">KviWindow::updateCaption()</a>, <a class="el" href="kvi__window_8cpp_source.html#l00901">KviWindow::updateIcon()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01749">updateModeLabel()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l00546">KviServerParser::parseLiteralKick()</a>, and <a class="el" href="kvi__sp__literal_8cpp_source.html#l00305">KviServerParser::parseLiteralPart()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4656b2639b6caab5218549cfb90f3051"></a><!-- doxytag: member="KviChannel::setHalfOp" ref="a4656b2639b6caab5218549cfb90f3051" args="(const QString &amp;szNick, bool bHalfOp)" -->
+<a class="anchor" id="a1130e52723d5398a4c8db34c384aa5b7"></a><!-- doxytag: member="KviChannel::setHalfOp" ref="a1130e52723d5398a4c8db34c384aa5b7" args="(const QString &amp;szNick, bool bHalfOp, bool)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -3110,7 +3146,13 @@ Inheritance diagram for KviChannel:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>bHalfOp</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>bHalfOp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -3233,7 +3275,7 @@ Inheritance diagram for KviChannel:</div>
 
 </div>
 </div>
-<a class="anchor" id="a5181316c91f760742ef0cf2ff587a7fb"></a><!-- doxytag: member="KviChannel::setMask" ref="a5181316c91f760742ef0cf2ff587a7fb" args="(char cMode, const QString &amp;szMask, bool bAdd, const QString &amp;szSetBy, unsigned int uSetAt)" -->
+<a class="anchor" id="ad710923e892ed8dc752e89bfd03659b2"></a><!-- doxytag: member="KviChannel::setMask" ref="ad710923e892ed8dc752e89bfd03659b2" args="(char cMode, const QString &amp;szMask, bool bAdd, const QString &amp;szSetBy, unsigned int uSetAt, QString szChangeMask=QString())" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -3265,7 +3307,13 @@ Inheritance diagram for KviChannel:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned int&nbsp;</td>
-          <td class="paramname"> <em>uSetAt</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>uSetAt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&nbsp;</td>
+          <td class="paramname"> <em>szChangeMask</em> = <code>QString()</code></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -3289,6 +3337,7 @@ Inheritance diagram for KviChannel:</div>
     <tr><td valign="top"></td><td valign="top"><em>bAdd</em>&nbsp;</td><td>Whether to add or remove the mask </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>szSetBy</em>&nbsp;</td><td>Who set the mask </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>uSetAt</em>&nbsp;</td><td>The datetime when the mask was set </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>szChangeMask</em>&nbsp;</td><td>If bAdd is false and this string is set, the mask will be updated instead that removed </td></tr>
   </table>
   </dd>
 </dl>
@@ -3296,9 +3345,9 @@ Inheritance diagram for KviChannel:</div>
 </li>
 </ul>
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01655">internalMask()</a>, <a class="el" href="kvi__channel_8h_source.html#l00178">m_pListEditors</a>, <a class="el" href="kvi__channel_8h_source.html#l00188">m_pModeLists</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00393">KviUserListView::setMaskEntries()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00600">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01705">internalMask()</a>, <a class="el" href="kvi__channel_8h_source.html#l00178">m_pListEditors</a>, <a class="el" href="kvi__channel_8h_source.html#l00188">m_pModeLists</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00394">KviUserListView::setMaskEntries()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__sp__literal_8cpp_source.html#l01704">KviServerParser::parseChannelMode()</a>, and <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00679">KviServerParser::parseNumeric367()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01349">nickChange()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l01718">KviServerParser::parseChannelMode()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00679">KviServerParser::parseNumeric367()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01364">part()</a>.</p>
 
 </div>
 </div>
@@ -3327,13 +3376,13 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00257">KviIrcConnection::encodeText()</a>, <a class="el" href="kvi__window_8h_source.html#l00147">KviWindow::m_szName</a>, and <a class="el" href="kvi__ircconnection_8cpp_source.html#l00741">KviIrcConnection::sendFmtData()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00257">KviIrcConnection::encodeText()</a>, <a class="el" href="kvi__window_8h_source.html#l00147">KviWindow::m_szName</a>, and <a class="el" href="kvi__ircconnection_8cpp_source.html#l00741">KviIrcConnection::sendFmtData()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00457">toggleModeEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00466">toggleModeEditor()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a85f24c9a6945456f904124e31b479249"></a><!-- doxytag: member="KviChannel::setOp" ref="a85f24c9a6945456f904124e31b479249" args="(const QString &amp;szNick, bool bOp)" -->
+<a class="anchor" id="a1095179bcb8d7d3832ff3602c145fd13"></a><!-- doxytag: member="KviChannel::setOp" ref="a1095179bcb8d7d3832ff3602c145fd13" args="(const QString &amp;szNick, bool bOp, bool bIsMe)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -3347,12 +3396,18 @@ Inheritance diagram for KviChannel:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>bOp</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>bOp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>bIsMe</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td><td><code> [inline]</code></td>
+          <td></td><td></td><td></td>
         </tr>
       </table>
 </div>
@@ -3367,6 +3422,8 @@ Inheritance diagram for KviChannel:</div>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
+<p>References <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="classKviChannel.html#a60ef13a3660e2f76cbdec02ef2518971">opStatusChanged()</a>, and <a class="el" href="classKviUserListView.html#a7a56db0aeac8f06201496c46f611964b">KviUserListView::setOp()</a>.</p>
 
 </div>
 </div>
@@ -3413,7 +3470,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>References <a class="el" href="kvi__channel_8h_source.html#l00082">KVI_CHANNEL_STATE_SENTSYNCWHOREQUEST</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01656">KviIrcConnection::heartbeat()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircconnection_8cpp_source.html#l01654">KviIrcConnection::heartbeat()</a>.</p>
 
 </div>
 </div>
@@ -3441,7 +3498,7 @@ Inheritance diagram for KviChannel:</div>
 
 </div>
 </div>
-<a class="anchor" id="aee386257d004c2ad62e479817a5f7852"></a><!-- doxytag: member="KviChannel::setUserOp" ref="aee386257d004c2ad62e479817a5f7852" args="(const QString &amp;szNick, bool bUserOp)" -->
+<a class="anchor" id="a42136259269487dba4b7d7dae3e25236"></a><!-- doxytag: member="KviChannel::setUserOp" ref="a42136259269487dba4b7d7dae3e25236" args="(const QString &amp;szNick, bool bUserOp, bool)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -3455,7 +3512,13 @@ Inheritance diagram for KviChannel:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>bUserOp</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>bUserOp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -3478,7 +3541,7 @@ Inheritance diagram for KviChannel:</div>
 
 </div>
 </div>
-<a class="anchor" id="a82807748cfa5606a161b61321e22f16b"></a><!-- doxytag: member="KviChannel::setVoice" ref="a82807748cfa5606a161b61321e22f16b" args="(const QString &amp;szNick, bool bVoice)" -->
+<a class="anchor" id="ad7be0c26cd757f28c5cb987b013ef35c"></a><!-- doxytag: member="KviChannel::setVoice" ref="ad7be0c26cd757f28c5cb987b013ef35c" args="(const QString &amp;szNick, bool bVoice, bool)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -3492,7 +3555,13 @@ Inheritance diagram for KviChannel:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&nbsp;</td>
-          <td class="paramname"> <em>bVoice</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>bVoice</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -3541,9 +3610,9 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__ircview_8cpp_source.html#l00852">KviIrcView::joinMessagesFrom()</a>, <a class="el" href="kvi__channel_8h_source.html#l00174">m_pDoubleViewButton</a>, <a class="el" href="kvi__window_8h_source.html#l00148">KviWindow::m_pFrm</a>, <a class="el" href="kvi__window_8h_source.html#l00156">KviWindow::m_pIrcView</a>, <a class="el" href="kvi__channel_8h_source.html#l00180">m_pMessageView</a>, <a class="el" href="kvi__channel_8h_source.html#l00189">m_privateBackground</a>, <a class="el" href="kvi__channel_8h_source.html#l00173">m_pVertSplitter</a>, <a class="el" href="kvi__channel_8h_source.html#l00196">m_VertSplitterSizesList</a>, <a class="el" href="kvi__pixmap_8h_source.html#l00049">KviPixmap::pixmap()</a>, <a class="el" href="kvi__ircview__loghandling_8cpp_source.html#l00172">KviIrcView::setMasterView()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00483">KviIrcView::setPrivateBackgroundPixmap()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00762">KviIrcView::splitMessagesTo()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00286">textViewRightClicked()</a>.</p>
+<p>References <a class="el" href="kvi__ircview_8cpp_source.html#l00850">KviIrcView::joinMessagesFrom()</a>, <a class="el" href="kvi__channel_8h_source.html#l00174">m_pDoubleViewButton</a>, <a class="el" href="kvi__window_8h_source.html#l00148">KviWindow::m_pFrm</a>, <a class="el" href="kvi__window_8h_source.html#l00156">KviWindow::m_pIrcView</a>, <a class="el" href="kvi__channel_8h_source.html#l00180">m_pMessageView</a>, <a class="el" href="kvi__channel_8h_source.html#l00189">m_privateBackground</a>, <a class="el" href="kvi__channel_8h_source.html#l00173">m_pVertSplitter</a>, <a class="el" href="kvi__channel_8h_source.html#l00196">m_VertSplitterSizesList</a>, <a class="el" href="kvi__pixmap_8h_source.html#l00049">KviPixmap::pixmap()</a>, <a class="el" href="kvi__ircview__loghandling_8cpp_source.html#l00172">KviIrcView::setMasterView()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00483">KviIrcView::setPrivateBackgroundPixmap()</a>, <a class="el" href="kvi__ircview_8cpp_source.html#l00760">KviIrcView::splitMessagesTo()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00295">textViewRightClicked()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00352">loadProperties()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00433">toggleDoubleView()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00361">loadProperties()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00442">toggleDoubleView()</a>.</p>
 
 </div>
 </div>
@@ -3565,7 +3634,7 @@ Inheritance diagram for KviChannel:</div>
 <p>Returns the size of the channel. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>QSize </dd></dl>
 
-<p>References <a class="el" href="kvi__input_8cpp_source.html#l00370">KviInput::heightHint()</a>, <a class="el" href="kvi__window_8h_source.html#l00159">KviWindow::m_pButtonBox</a>, <a class="el" href="kvi__window_8h_source.html#l00157">KviWindow::m_pInput</a>, <a class="el" href="kvi__window_8h_source.html#l00156">KviWindow::m_pIrcView</a>, <a class="el" href="kvi__window_8h_source.html#l00158">KviWindow::m_pSplitter</a>, and <a class="el" href="kvi__ircview_8cpp_source.html#l02047">KviIrcView::sizeHint()</a>.</p>
+<p>References <a class="el" href="kvi__input_8cpp_source.html#l00370">KviInput::heightHint()</a>, <a class="el" href="kvi__window_8h_source.html#l00159">KviWindow::m_pButtonBox</a>, <a class="el" href="kvi__window_8h_source.html#l00157">KviWindow::m_pInput</a>, <a class="el" href="kvi__window_8h_source.html#l00156">KviWindow::m_pIrcView</a>, <a class="el" href="kvi__window_8h_source.html#l00158">KviWindow::m_pSplitter</a>, and <a class="el" href="kvi__ircview_8cpp_source.html#l02043">KviIrcView::sizeHint()</a>.</p>
 
 </div>
 </div>
@@ -3591,7 +3660,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>References <a class="el" href="kvi__window_8h_source.html#l00184">KviWindow::windowName()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00106">KviMaskInputDialog::accept()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01808">pasteLastLog()</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00075">KviRequestQueue::timerSlot()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__maskeditor_8cpp_source.html#l00101">KviMaskInputDialog::accept()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01869">pasteLastLog()</a>, and <a class="el" href="kvi__ircconnectionrequestqueue_8cpp_source.html#l00075">KviRequestQueue::timerSlot()</a>.</p>
 
 </div>
 </div>
@@ -3614,9 +3683,9 @@ Inheritance diagram for KviChannel:</div>
 <p>Trigger the OnChannelPopupRequest event </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00121">KviEvent_OnChannelPopupRequest</a>, and <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00058">KVS_TRIGGER_EVENT_0</a>.</p>
+<p>References <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00123">KviEvent_OnChannelPopupRequest</a>, and <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00058">KVS_TRIGGER_EVENT_0</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00397">showDoubleView()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00406">showDoubleView()</a>.</p>
 
 </div>
 </div>
@@ -3638,7 +3707,7 @@ Inheritance diagram for KviChannel:</div>
 <p>Toggles the double view mode. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__channel_8h_source.html#l00174">m_pDoubleViewButton</a>, <a class="el" href="kvi__channel_8h_source.html#l00180">m_pMessageView</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00397">showDoubleView()</a>.</p>
+<p>References <a class="el" href="kvi__channel_8h_source.html#l00174">m_pDoubleViewButton</a>, <a class="el" href="kvi__channel_8h_source.html#l00180">m_pMessageView</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00406">showDoubleView()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>.</p>
 
@@ -3662,7 +3731,7 @@ Inheritance diagram for KviChannel:</div>
 <p>Toggles a list mode editor. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00257">KviIrcConnection::encodeText()</a>, <a class="el" href="kvi__channel_8h_source.html#l00177">m_pListEditorButtons</a>, <a class="el" href="kvi__channel_8h_source.html#l00178">m_pListEditors</a>, <a class="el" href="kvi__channel_8h_source.html#l00188">m_pModeLists</a>, <a class="el" href="kvi__window_8h_source.html#l00158">KviWindow::m_pSplitter</a>, <a class="el" href="kvi__window_8h_source.html#l00147">KviWindow::m_szName</a>, <a class="el" href="kvi__channel_8h_source.html#l00185">m_szSentModeRequests</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00550">removeMasks()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00741">KviIrcConnection::sendFmtData()</a>, and <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00257">KviIrcConnection::encodeText()</a>, <a class="el" href="kvi__channel_8h_source.html#l00177">m_pListEditorButtons</a>, <a class="el" href="kvi__channel_8h_source.html#l00178">m_pListEditors</a>, <a class="el" href="kvi__channel_8h_source.html#l00188">m_pModeLists</a>, <a class="el" href="kvi__window_8h_source.html#l00158">KviWindow::m_pSplitter</a>, <a class="el" href="kvi__window_8h_source.html#l00147">KviWindow::m_szName</a>, <a class="el" href="kvi__channel_8h_source.html#l00185">m_szSentModeRequests</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00559">removeMasks()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00741">KviIrcConnection::sendFmtData()</a>, and <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>.</p>
 
@@ -3710,9 +3779,9 @@ Inheritance diagram for KviChannel:</div>
 <p>Toggles the mode editor. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="namespaceKviLocale.html#a0516e82ea3996ded16e7bd66399c4e60">KviLocale::done()</a>, <a class="el" href="kvi__channel_8h_source.html#l00179">m_pModeEditor</a>, <a class="el" href="kvi__channel_8h_source.html#l00176">m_pModeEditorButton</a>, <a class="el" href="kvi__window_8h_source.html#l00158">KviWindow::m_pSplitter</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00479">modeSelectorDone()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00601">resizeEvent()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00485">setMode()</a>.</p>
+<p>References <a class="el" href="namespaceKviLocale.html#a0516e82ea3996ded16e7bd66399c4e60">KviLocale::done()</a>, <a class="el" href="kvi__channel_8h_source.html#l00179">m_pModeEditor</a>, <a class="el" href="kvi__channel_8h_source.html#l00176">m_pModeEditorButton</a>, <a class="el" href="kvi__window_8h_source.html#l00158">KviWindow::m_pSplitter</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00488">modeSelectorDone()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00610">resizeEvent()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00494">setMode()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00479">modeSelectorDone()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00488">modeSelectorDone()</a>.</p>
 
 </div>
 </div>
@@ -3736,7 +3805,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>References <a class="el" href="kvi__channel_8h_source.html#l00221">buttonContainer()</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00761">KviIconManager::getBigIcon()</a>, <a class="el" href="kvi__window_8h_source.html#l00168">KviWindow::m_pHideToolsButton</a>, and <a class="el" href="kvi__window_8cpp_source.html#l00173">KviWindow::toggleButtonContainer()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00352">loadProperties()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00361">loadProperties()</a>.</p>
 
 </div>
 </div>
@@ -3765,7 +3834,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00257">KviIrcConnection::encodeText()</a>, <a class="el" href="kvi__window_8h_source.html#l00386">KviWindow::encodeText()</a>, <a class="el" href="kvi__window_8h_source.html#l00147">KviWindow::m_szName</a>, and <a class="el" href="kvi__ircconnection_8cpp_source.html#l00741">KviIrcConnection::sendFmtData()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnection_8cpp_source.html#l00257">KviIrcConnection::encodeText()</a>, <a class="el" href="kvi__window_8h_source.html#l00386">KviWindow::encodeText()</a>, <a class="el" href="kvi__window_8h_source.html#l00147">KviWindow::m_szName</a>, and <a class="el" href="kvi__ircconnection_8cpp_source.html#l00741">KviIrcConnection::sendFmtData()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>.</p>
 
@@ -3789,7 +3858,7 @@ Inheritance diagram for KviChannel:</div>
 <p>Returns the topic widget object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviTopicWidget.html">KviTopicWidget</a> * </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircview__events_8cpp_source.html#l00869">KviIrcView::doLinkToolTip()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l01396">KviServerParser::parseLiteralTopic()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00543">KviServerParser::parseNumericNoTopic()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00515">KviServerParser::parseNumericTopic()</a>, and <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00565">KviServerParser::parseNumericTopicWhoTime()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__ircview__events_8cpp_source.html#l00831">KviIrcView::doLinkToolTip()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l01410">KviServerParser::parseLiteralTopic()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00543">KviServerParser::parseNumericNoTopic()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00515">KviServerParser::parseNumericTopic()</a>, and <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00565">KviServerParser::parseNumericTopicWhoTime()</a>.</p>
 
 </div>
 </div>
@@ -3813,7 +3882,7 @@ Inheritance diagram for KviChannel:</div>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a497d86458ff9baa8b5fd5123c77d7c73">KviWindow</a>.</p>
 
-<p>References <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00142">KviEvent_OnChannelWindowCreated</a>, and <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00058">KVS_TRIGGER_EVENT_0</a>.</p>
+<p>References <a class="el" href="kvi__kvs__eventtable_8h_source.html#l00144">KviEvent_OnChannelWindowCreated</a>, and <a class="el" href="kvi__kvs__eventtriggers_8h_source.html#l00058">KVS_TRIGGER_EVENT_0</a>.</p>
 
 </div>
 </div>
@@ -3859,9 +3928,9 @@ Inheritance diagram for KviChannel:</div>
 <p>Updates the tooltip over the channel modes. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__tal__tooltip_8cpp_source.html#l00083">KviTalToolTip::add()</a>, <a class="el" href="namespaceKviQString.html#a2b893cd695b7daa98874cc2c2a5dc7b1">KviQString::appendFormatted()</a>, <a class="el" href="kvi__channel_8h_source.html#l00817">channelModeParam()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00214">KviIrcConnectionServerInfo::getChannelModeDescription()</a>, <a class="el" href="kvi__channel_8h_source.html#l00810">hasChannelMode()</a>, <a class="el" href="kvi__window_8h_source.html#l00149">KviWindow::m_pConsole</a>, <a class="el" href="kvi__channel_8h_source.html#l00183">m_pModeWidget</a>, <a class="el" href="kvi__channel_8h_source.html#l00186">m_szChannelMode</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00054">KviModeWidget::refreshModes()</a>, <a class="el" href="kvi__tal__tooltip_8cpp_source.html#l00088">KviTalToolTip::remove()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00255">KviIrcConnection::serverInfo()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01802">serverInfo()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__tal__tooltip_8cpp_source.html#l00083">KviTalToolTip::add()</a>, <a class="el" href="namespaceKviQString.html#a2b893cd695b7daa98874cc2c2a5dc7b1">KviQString::appendFormatted()</a>, <a class="el" href="kvi__channel_8h_source.html#l00818">channelModeParam()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00214">KviIrcConnectionServerInfo::getChannelModeDescription()</a>, <a class="el" href="kvi__channel_8h_source.html#l00811">hasChannelMode()</a>, <a class="el" href="kvi__window_8h_source.html#l00149">KviWindow::m_pConsole</a>, <a class="el" href="kvi__channel_8h_source.html#l00183">m_pModeWidget</a>, <a class="el" href="kvi__channel_8h_source.html#l00186">m_szChannelMode</a>, <a class="el" href="kvi__string_8h_source.html#l00174">KviStr::ptr()</a>, <a class="el" href="kvi__modew_8cpp_source.html#l00054">KviModeWidget::refreshModes()</a>, <a class="el" href="kvi__tal__tooltip_8cpp_source.html#l00088">KviTalToolTip::remove()</a>, <a class="el" href="kvi__ircconnection_8h_source.html#l00255">KviIrcConnection::serverInfo()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01863">serverInfo()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00617">setChannelMode()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00639">setChannelModeWithParam()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00686">setDeadChan()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00626">setChannelMode()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00648">setChannelModeWithParam()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00703">setDeadChan()</a>.</p>
 
 </div>
 </div>
@@ -3914,7 +3983,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__channel_8cpp_source.html#l01402">channelAction()</a>, <a class="el" href="kvi__useraction_8cpp_source.html#l00040">kvi_getUserActionTemperature()</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00937">KviUserListView::userAction()</a>.</p>
+<p>References <a class="el" href="kvi__channel_8cpp_source.html#l01450">channelAction()</a>, <a class="el" href="kvi__useraction_8cpp_source.html#l00040">kvi_getUserActionTemperature()</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00937">KviUserListView::userAction()</a>.</p>
 
 </div>
 </div>
@@ -3953,7 +4022,7 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__channel_8cpp_source.html#l01402">channelAction()</a>, <a class="el" href="kvi__useraction_8cpp_source.html#l00040">kvi_getUserActionTemperature()</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00937">KviUserListView::userAction()</a>.</p>
+<p>References <a class="el" href="kvi__channel_8cpp_source.html#l01450">channelAction()</a>, <a class="el" href="kvi__useraction_8cpp_source.html#l00040">kvi_getUserActionTemperature()</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00937">KviUserListView::userAction()</a>.</p>
 
 </div>
 </div>
@@ -3992,9 +4061,9 @@ Inheritance diagram for KviChannel:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__channel_8cpp_source.html#l01402">channelAction()</a>, <a class="el" href="kvi__useraction_8cpp_source.html#l00040">kvi_getUserActionTemperature()</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__ircmask_8h_source.html#l00177">KviIrcMask::nick()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00937">KviUserListView::userAction()</a>.</p>
+<p>References <a class="el" href="kvi__channel_8cpp_source.html#l01450">channelAction()</a>, <a class="el" href="kvi__useraction_8cpp_source.html#l00040">kvi_getUserActionTemperature()</a>, <a class="el" href="kvi__channel_8h_source.html#l00182">m_pUserListView</a>, <a class="el" href="kvi__ircmask_8h_source.html#l00177">KviIrcMask::nick()</a>, and <a class="el" href="kvi__userlistview_8cpp_source.html#l00937">KviUserListView::userAction()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01282">ownAction()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01109">ownMessage()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l00546">KviServerParser::parseLiteralKick()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l01665">KviServerParser::parseLiteralMode()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l01058">KviServerParser::parseLiteralNotice()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l00703">KviServerParser::parseLiteralPrivmsg()</a>, and <a class="el" href="kvi__sp__literal_8cpp_source.html#l01396">KviServerParser::parseLiteralTopic()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01316">ownAction()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01143">ownMessage()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l00546">KviServerParser::parseLiteralKick()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l01679">KviServerParser::parseLiteralMode()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l01066">KviServerParser::parseLiteralNotice()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l00704">KviServerParser::parseLiteralPrivmsg()</a>, and <a class="el" href="kvi__sp__literal_8cpp_source.html#l01410">KviServerParser::parseLiteralTopic()</a>.</p>
 
 </div>
 </div>
@@ -4016,7 +4085,7 @@ Inheritance diagram for KviChannel:</div>
 <p>Returns the user listview object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviUserListView.html" title="User list view management class.">KviUserListView</a> * </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__ircview__events_8cpp_source.html#l00340">KviIrcView::mouseRealPressEvent()</a>, and <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00905">KviServerParser::parseNumericEndOfWho()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__sp__numeric_8cpp_source.html#l00905">KviServerParser::parseNumericEndOfWho()</a>.</p>
 
 </div>
 </div>
@@ -4072,7 +4141,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01725">checkChannelSync()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01571">closeEvent()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00800">getWindowListTipText()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00596">myIconPtr()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01601">partMessageSent()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00733">setAliveChan()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00686">setDeadChan()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01786">checkChannelSync()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01619">closeEvent()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00834">getWindowListTipText()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00605">myIconPtr()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01648">partMessageSent()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00752">setAliveChan()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00703">setDeadChan()</a>.</p>
 
 </div>
 </div>
@@ -4087,7 +4156,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01331">activityMeter()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01725">checkChannelSync()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01446">getChannelActivityStats()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00733">setAliveChan()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01379">activityMeter()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01786">checkChannelSync()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01494">getChannelActivityStats()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00752">setAliveChan()</a>.</p>
 
 </div>
 </div>
@@ -4102,7 +4171,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01331">activityMeter()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01402">channelAction()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01417">fixActionHistory()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01446">getChannelActivityStats()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00686">setDeadChan()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00241">~KviChannel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01379">activityMeter()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01450">channelAction()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01465">fixActionHistory()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01494">getChannelActivityStats()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00703">setDeadChan()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00250">~KviChannel()</a>.</p>
 
 </div>
 </div>
@@ -4132,7 +4201,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00397">showDoubleView()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00433">toggleDoubleView()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00406">showDoubleView()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00442">toggleDoubleView()</a>.</p>
 
 </div>
 </div>
@@ -4147,7 +4216,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00496">toggleListModeEditor()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00241">~KviChannel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00505">toggleListModeEditor()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00250">~KviChannel()</a>.</p>
 
 </div>
 </div>
@@ -4162,7 +4231,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00686">setDeadChan()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01633">setMask()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00496">toggleListModeEditor()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00241">~KviChannel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00752">setAliveChan()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00703">setDeadChan()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01680">setMask()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00505">toggleListModeEditor()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00250">~KviChannel()</a>.</p>
 
 </div>
 </div>
@@ -4177,7 +4246,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00445">toggleListView()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00454">toggleListView()</a>.</p>
 
 </div>
 </div>
@@ -4192,7 +4261,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00309">applyOptions()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00352">loadProperties()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01437">lostUserFocus()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01713">outputMessage()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00336">saveProperties()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00397">showDoubleView()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00433">toggleDoubleView()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00318">applyOptions()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00361">loadProperties()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01485">lostUserFocus()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01774">outputMessage()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00345">saveProperties()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00406">showDoubleView()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00442">toggleDoubleView()</a>.</p>
 
 </div>
 </div>
@@ -4207,7 +4276,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00479">modeSelectorDone()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00457">toggleModeEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00488">modeSelectorDone()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00466">toggleModeEditor()</a>.</p>
 
 </div>
 </div>
@@ -4222,7 +4291,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00457">toggleModeEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00466">toggleModeEditor()</a>.</p>
 
 </div>
 </div>
@@ -4237,7 +4306,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00686">setDeadChan()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01633">setMask()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00496">toggleListModeEditor()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00241">~KviChannel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01349">nickChange()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01364">part()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00703">setDeadChan()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01680">setMask()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00505">toggleListModeEditor()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00250">~KviChannel()</a>.</p>
 
 </div>
 </div>
@@ -4252,7 +4321,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00309">applyOptions()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01688">updateModeLabel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00318">applyOptions()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01749">updateModeLabel()</a>.</p>
 
 </div>
 </div>
@@ -4267,7 +4336,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00352">loadProperties()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00336">saveProperties()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00397">showDoubleView()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00361">loadProperties()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00345">saveProperties()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00406">showDoubleView()</a>.</p>
 
 </div>
 </div>
@@ -4282,7 +4351,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00649">addHighlightedUser()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00657">removeHighlightedUser()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00241">~KviChannel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00658">addHighlightedUser()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00666">removeHighlightedUser()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00250">~KviChannel()</a>.</p>
 
 </div>
 </div>
@@ -4297,7 +4366,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00309">applyOptions()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01760">eventFilter()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00601">resizeEvent()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00733">setAliveChan()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00686">setDeadChan()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00318">applyOptions()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01821">eventFilter()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00610">resizeEvent()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00752">setAliveChan()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00703">setDeadChan()</a>.</p>
 
 </div>
 </div>
@@ -4312,7 +4381,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00352">loadProperties()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00336">saveProperties()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00361">loadProperties()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00345">saveProperties()</a>.</p>
 
 </div>
 </div>
@@ -4327,7 +4396,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00649">addHighlightedUser()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00309">applyOptions()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00800">getWindowListTipText()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00352">loadProperties()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01315">nickChange()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01323">part()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00336">saveProperties()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00733">setAliveChan()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00686">setDeadChan()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01633">setMask()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00445">toggleListView()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01540">userAction()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00241">~KviChannel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00658">addHighlightedUser()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00318">applyOptions()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00834">getWindowListTipText()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00361">loadProperties()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01349">nickChange()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01364">part()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00345">saveProperties()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00752">setAliveChan()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00703">setDeadChan()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01680">setMask()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00695">setOp()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00454">toggleListView()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01588">userAction()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00250">~KviChannel()</a>.</p>
 
 </div>
 </div>
@@ -4342,7 +4411,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00336">saveProperties()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00397">showDoubleView()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00345">saveProperties()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00406">showDoubleView()</a>.</p>
 
 </div>
 </div>
@@ -4357,7 +4426,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00662">getChannelModeString()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00674">getChannelModeStringWithEmbeddedParams()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00617">setChannelMode()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00686">setDeadChan()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01688">updateModeLabel()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00671">getChannelModeString()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00683">getChannelModeStringWithEmbeddedParams()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00626">setChannelMode()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00703">setDeadChan()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01749">updateModeLabel()</a>.</p>
 
 </div>
 </div>
@@ -4372,7 +4441,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00662">getChannelModeString()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00674">getChannelModeStringWithEmbeddedParams()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00639">setChannelModeWithParam()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00686">setDeadChan()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00671">getChannelModeString()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00683">getChannelModeStringWithEmbeddedParams()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00648">setChannelModeWithParam()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00703">setDeadChan()</a>.</p>
 
 </div>
 </div>
@@ -4387,7 +4456,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01062">fillCaptionBuffers()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01096">fillCaptionBuffers()</a>.</p>
 
 </div>
 </div>
@@ -4402,7 +4471,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01725">checkChannelSync()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00496">toggleListModeEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01786">checkChannelSync()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00752">setAliveChan()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00703">setDeadChan()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00505">toggleListModeEditor()</a>.</p>
 
 </div>
 </div>
@@ -4432,7 +4501,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01331">activityMeter()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01402">channelAction()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01417">fixActionHistory()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00686">setDeadChan()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l01379">activityMeter()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01450">channelAction()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01465">fixActionHistory()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00086">KviChannel()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00703">setDeadChan()</a>.</p>
 
 </div>
 </div>
@@ -4447,7 +4516,7 @@ Inheritance diagram for KviChannel:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00352">loadProperties()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00336">saveProperties()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00397">showDoubleView()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__channel_8cpp_source.html#l00361">loadProperties()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l00345">saveProperties()</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l00406">showDoubleView()</a>.</p>
 
 </div>
 </div>
@@ -4456,7 +4525,7 @@ Inheritance diagram for KviChannel:</div>
 <li>src/kvirc/ui/<a class="el" href="kvi__channel_8cpp.html">kvi_channel.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:22 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Oct 20 15:11:55 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

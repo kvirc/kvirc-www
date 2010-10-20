@@ -25,11 +25,19 @@
   </div>
 </div>
 <div class="contents">
-<h1>KviMiscUtils Namespace Reference</h1><table border="0" cellpadding="0" cellspacing="0">
+<h1>KviMiscUtils Namespace Reference</h1>
+<p>A namespace for helper functions.  
+<a href="#_details">More...</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviMiscUtils.html#aef5bebdb5a87b962604af0a1a8da0b55">compareVersions</a> (const QString &amp;szVersion1, const QString &amp;szVersion2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Compares two x.y.z... version strings The function behaves like strcmp: it returns 0 when the versions are equal, -1 if the szVersion1 is greater and 1 if szVersion2 is greater.  <a href="#aef5bebdb5a87b962604af0a1a8da0b55"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviMiscUtils.html#af69eb1a2f9ba7222d6e0837f201c651c">isValidVersionString</a> (const QString &amp;szVersion)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Checks if the argument string is a valid x.y.z... version string.  <a href="#af69eb1a2f9ba7222d6e0837f201c651c"></a><br/></td></tr>
 </table>
+<hr/><a name="_details"></a><h2>Detailed Description</h2>
+<p>A namespace for helper functions. </p>
+<p>This namespace contains single function stuff that doesn't really fit anywhere else </p>
 <hr/><h2>Function Documentation</h2>
 <a class="anchor" id="aef5bebdb5a87b962604af0a1a8da0b55"></a><!-- doxytag: member="KviMiscUtils::compareVersions" ref="aef5bebdb5a87b962604af0a1a8da0b55" args="(const QString &amp;szVersion1, const QString &amp;szVersion2)" -->
 <div class="memitem">
@@ -56,6 +64,16 @@
 </div>
 <div class="memdoc">
 
+<p>Compares two x.y.z... version strings The function behaves like strcmp: it returns 0 when the versions are equal, -1 if the szVersion1 is greater and 1 if szVersion2 is greater. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>szVersion1</em>&nbsp;</td><td>The first version to check </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>szVersion2</em>&nbsp;</td><td>The second version to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>int </dd></dl>
+
 <p>Referenced by <a class="el" href="kvi__statusbarapplet_8cpp_source.html#l00761">KviStatusBarUpdateIndicator::binaryDataReceived()</a>, and <a class="el" href="kvi__theme_8cpp_source.html#l00053">KviThemeInfo::load()</a>.</p>
 
 </div>
@@ -76,10 +94,19 @@
 </div>
 <div class="memdoc">
 
+<p>Checks if the argument string is a valid x.y.z... version string. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>szVersion</em>&nbsp;</td><td>The version to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
 </div>
 </div>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:27 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Oct 20 15:12:03 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

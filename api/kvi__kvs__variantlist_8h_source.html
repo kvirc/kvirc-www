@@ -83,7 +83,7 @@
 <a name="l00058"></a>00058 
 <a name="l00059"></a><a class="code" href="classKviKvsVariantList.html#ae6de1fc63bdfd1e6ee3ecded28513112">00059</a>         <span class="keywordtype">void</span> <a class="code" href="classKviKvsVariantList.html#ae6de1fc63bdfd1e6ee3ecded28513112">clear</a>(){ m_pList-&gt;clear(); };
 <a name="l00060"></a>00060 
-<a name="l00061"></a><a class="code" href="classKviKvsVariantList.html#a8530d7b8dc14fb543712c271724e2ec4">00061</a>         <span class="keywordtype">void</span> <a class="code" href="classKviKvsVariantList.html#a8530d7b8dc14fb543712c271724e2ec4">append</a>(<span class="keyword">const</span> QString &amp;szParam){ m_pList-&gt;append(<span class="keyword">new</span> <a class="code" href="classKviKvsVariant.html">KviKvsVariant</a>(szParam)); };
+<a name="l00061"></a><a class="code" href="classKviKvsVariantList.html#ab8e8aa7ad23948b99bb6c8e3676409f2">00061</a>         <span class="keywordtype">void</span> <a class="code" href="classKviKvsVariantList.html#ab8e8aa7ad23948b99bb6c8e3676409f2">append</a>(<span class="keyword">const</span> QString &amp;szParam, <span class="keywordtype">bool</span> bEscape=<span class="keyword">false</span>){ m_pList-&gt;append(<span class="keyword">new</span> <a class="code" href="classKviKvsVariant.html">KviKvsVariant</a>(szParam, bEscape)); };
 <a name="l00062"></a><a class="code" href="classKviKvsVariantList.html#a8ab81200c58a5fa5666cc3b5ba3bb788">00062</a>         <span class="keywordtype">void</span> <a class="code" href="classKviKvsVariantList.html#a8ab81200c58a5fa5666cc3b5ba3bb788">append</a>(<a class="code" href="kvi__kvs__types_8h.html#ac9044d831e7a8b855ec6563e745cec21">kvs_int_t</a> iInteger){ m_pList-&gt;append(<span class="keyword">new</span> <a class="code" href="classKviKvsVariant.html">KviKvsVariant</a>(iInteger)); };
 <a name="l00063"></a><a class="code" href="classKviKvsVariantList.html#a1e0effa03f3cf9806023429817adbc4f">00063</a>         <span class="keywordtype">void</span> <a class="code" href="classKviKvsVariantList.html#a1e0effa03f3cf9806023429817adbc4f">append</a>(<a class="code" href="kvi__kvs__types_8h.html#ac0c941372331edcdc89698f6f68c866c">kvs_real_t</a> dReal){ m_pList-&gt;append(<span class="keyword">new</span> <a class="code" href="classKviKvsVariant.html">KviKvsVariant</a>(dReal)); };
 <a name="l00064"></a><a class="code" href="classKviKvsVariantList.html#ab85e23415e68478c9e0519cb42d97768">00064</a>         <span class="keywordtype">void</span> <a class="code" href="classKviKvsVariantList.html#ab85e23415e68478c9e0519cb42d97768">append</a>(<span class="keywordtype">bool</span> bBoolean){ m_pList-&gt;append(<span class="keyword">new</span> <a class="code" href="classKviKvsVariant.html">KviKvsVariant</a>(bBoolean)); };
@@ -105,7 +105,7 @@
 <a name="l00080"></a>00080 
 <a name="l00081"></a>00081 <span class="preprocessor">#endif //!_KVI_KVS_VARIANTLIST_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:21 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Oct 20 15:11:53 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

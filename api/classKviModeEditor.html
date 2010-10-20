@@ -50,10 +50,12 @@ Inheritance diagram for KviModeEditor:</div>
 <tr><td colspan="2"><h2>Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModeEditor.html#a43cd0fb210e64359154a7431b9b901ad">checkBoxToggled</a> (bool bChecked)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModeEditor.html#a7bcb35c97b9778b16859066f9990a0cb">commit</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModeEditor.html#a670f076776d142459f7968a4e7acbc70">updateOpStatus</a> ()</td></tr>
 <tr><td colspan="2"><h2>Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModeEditor.html#a5387903765aa93681a1f4f9ed9111264">getModeDescription</a> (char cMode)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModeEditor.html#a5d8dbfb0da5aa53364bb7a16d728c073">modeNeedsParameterOnlyWhenSet</a> (char cMode)</td></tr>
 <tr><td colspan="2"><h2>Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QPushButton *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModeEditor.html#a7b8bcd3a5ca805bb932c3a1b0a747329">m_pButton</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviChannel.html">KviChannel</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModeEditor.html#ab9d12d86064aea4c140e50e46d615d45">m_pChannel</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QMap&lt; char, QCheckBox * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModeEditor.html#aea77e465a3db4435c7c806830502f05c">m_pCheckBoxes</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QMap&lt; char, QLineEdit * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModeEditor.html#a3314b51d6c1920364669eafc5b24e323">m_pLineEdits</a></td></tr>
@@ -96,7 +98,7 @@ Inheritance diagram for KviModeEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__channel_8h_source.html#l00817">KviChannel::channelModeParam()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00240">checkBoxToggled()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00257">commit()</a>, <a class="el" href="kvi__window_8cpp_source.html#l01388">KviWindow::connection()</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00412">getModeDescription()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00494">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__channel_8h_source.html#l00810">KviChannel::hasChannelMode()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8cpp_source.html#l00034">KviIrcConnectionUserInfo::hasUserMode()</a>, <a class="el" href="classKviChannel.html#a36a47275838e4d947eeb464590f94b08">KviChannel::isMeChanAdmin()</a>, <a class="el" href="classKviChannel.html#ab3ac78e679bf45db52f9d80c58683f13">KviChannel::isMeChanOwner()</a>, <a class="el" href="classKviChannel.html#a7e3fe5c82aed9c894ed80c2c608186d3">KviChannel::isMeHalfOp()</a>, <a class="el" href="classKviChannel.html#a50170318e02fec78c2df5aff153d66e1">KviChannel::isMeOp()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00102">KVI_SMALLICON_MODE</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00051">m_pChannel</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00052">m_pCheckBoxes</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00053">m_pLineEdits</a>, <a class="el" href="kvi__channel_8h_source.html#l00781">KviChannel::plainChannelMode()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01802">KviChannel::serverInfo()</a>, <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00201">KviIrcConnectionServerInfo::supportedParameterModes()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00202">KviIrcConnectionServerInfo::supportedParameterWhenSetModes()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00203">KviIrcConnectionServerInfo::supportedPlainModes()</a>, and <a class="el" href="kvi__ircconnection_8h_source.html#l00241">KviIrcConnection::userInfo()</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__channel_8h_source.html#l00818">KviChannel::channelModeParam()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00249">checkBoxToggled()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00266">commit()</a>, <a class="el" href="kvi__iconmanager_8cpp_source.html#l00048">g_pIconManager</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00421">getModeDescription()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00494">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__channel_8h_source.html#l00811">KviChannel::hasChannelMode()</a>, <a class="el" href="kvi__iconmanager_8h_source.html#l00102">KVI_SMALLICON_MODE</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00053">m_pButton</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00052">m_pChannel</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00054">m_pCheckBoxes</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00055">m_pLineEdits</a>, <a class="el" href="kvi__channel_8h_source.html#l00782">KviChannel::plainChannelMode()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01863">KviChannel::serverInfo()</a>, <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00201">KviIrcConnectionServerInfo::supportedParameterModes()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00202">KviIrcConnectionServerInfo::supportedParameterWhenSetModes()</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00203">KviIrcConnectionServerInfo::supportedPlainModes()</a>, and <a class="el" href="kvi__modeeditor_8cpp_source.html#l00225">updateOpStatus()</a>.</p>
 
 </div>
 </div>
@@ -115,7 +117,7 @@ Inheritance diagram for KviModeEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__modeeditor_8h_source.html#l00052">m_pCheckBoxes</a>, and <a class="el" href="kvi__modeeditor_8h_source.html#l00053">m_pLineEdits</a>.</p>
+<p>References <a class="el" href="kvi__modeeditor_8h_source.html#l00054">m_pCheckBoxes</a>, and <a class="el" href="kvi__modeeditor_8h_source.html#l00055">m_pLineEdits</a>.</p>
 
 </div>
 </div>
@@ -136,7 +138,7 @@ Inheritance diagram for KviModeEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00052">m_pCheckBoxes</a>, and <a class="el" href="kvi__modeeditor_8h_source.html#l00053">m_pLineEdits</a>.</p>
+<p>References <a class="el" href="kvi__numeric_8h_source.html#l00383">c</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00054">m_pCheckBoxes</a>, and <a class="el" href="kvi__modeeditor_8h_source.html#l00055">m_pLineEdits</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor()</a>.</p>
 
@@ -157,7 +159,7 @@ Inheritance diagram for KviModeEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__channel_8h_source.html#l00817">KviChannel::channelModeParam()</a>, <a class="el" href="classKviModeEditor.html#a12e2f87daa4860eac9120005e87d2088">done()</a>, <a class="el" href="kvi__channel_8h_source.html#l00810">KviChannel::hasChannelMode()</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00051">m_pChannel</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00052">m_pCheckBoxes</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00053">m_pLineEdits</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00210">KviIrcConnectionServerInfo::maxModeChanges()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00421">modeNeedsParameterOnlyWhenSet()</a>, <a class="el" href="kvi__channel_8h_source.html#l00781">KviChannel::plainChannelMode()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01802">KviChannel::serverInfo()</a>, and <a class="el" href="classKviModeEditor.html#aaf73b7179dbfceb1669c69744a458f70">setMode()</a>.</p>
+<p>References <a class="el" href="kvi__channel_8h_source.html#l00818">KviChannel::channelModeParam()</a>, <a class="el" href="classKviModeEditor.html#a12e2f87daa4860eac9120005e87d2088">done()</a>, <a class="el" href="kvi__channel_8h_source.html#l00811">KviChannel::hasChannelMode()</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00052">m_pChannel</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00054">m_pCheckBoxes</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00055">m_pLineEdits</a>, <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00210">KviIrcConnectionServerInfo::maxModeChanges()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00430">modeNeedsParameterOnlyWhenSet()</a>, <a class="el" href="kvi__channel_8h_source.html#l00782">KviChannel::plainChannelMode()</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01863">KviChannel::serverInfo()</a>, and <a class="el" href="classKviModeEditor.html#aaf73b7179dbfceb1669c69744a458f70">setMode()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor()</a>.</p>
 
@@ -178,7 +180,7 @@ Inheritance diagram for KviModeEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00257">commit()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00266">commit()</a>.</p>
 
 </div>
 </div>
@@ -198,7 +200,7 @@ Inheritance diagram for KviModeEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00214">KviIrcConnectionServerInfo::getChannelModeDescription()</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00051">m_pChannel</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01802">KviChannel::serverInfo()</a>.</p>
+<p>References <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00214">KviIrcConnectionServerInfo::getChannelModeDescription()</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00052">m_pChannel</a>, and <a class="el" href="kvi__channel_8cpp_source.html#l01863">KviChannel::serverInfo()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor()</a>.</p>
 
@@ -220,9 +222,9 @@ Inheritance diagram for KviModeEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__modeeditor_8h_source.html#l00051">m_pChannel</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01802">KviChannel::serverInfo()</a>, and <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00202">KviIrcConnectionServerInfo::supportedParameterWhenSetModes()</a>.</p>
+<p>References <a class="el" href="kvi__modeeditor_8h_source.html#l00052">m_pChannel</a>, <a class="el" href="kvi__channel_8cpp_source.html#l01863">KviChannel::serverInfo()</a>, and <a class="el" href="kvi__ircconnectionserverinfo_8h_source.html#l00202">KviIrcConnectionServerInfo::supportedParameterWhenSetModes()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00257">commit()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00266">commit()</a>.</p>
 
 </div>
 </div>
@@ -242,11 +244,49 @@ Inheritance diagram for KviModeEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00257">commit()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00266">commit()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a670f076776d142459f7968a4e7acbc70"></a><!-- doxytag: member="KviModeEditor::updateOpStatus" ref="a670f076776d142459f7968a4e7acbc70" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KviModeEditor::updateOpStatus </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected, slot]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__window_8cpp_source.html#l01389">KviWindow::connection()</a>, <a class="el" href="kvi__ircconnectionuserinfo_8cpp_source.html#l00034">KviIrcConnectionUserInfo::hasUserMode()</a>, <a class="el" href="classKviChannel.html#a36a47275838e4d947eeb464590f94b08">KviChannel::isMeChanAdmin()</a>, <a class="el" href="classKviChannel.html#ab3ac78e679bf45db52f9d80c58683f13">KviChannel::isMeChanOwner()</a>, <a class="el" href="classKviChannel.html#a7e3fe5c82aed9c894ed80c2c608186d3">KviChannel::isMeHalfOp()</a>, <a class="el" href="classKviChannel.html#a50170318e02fec78c2df5aff153d66e1">KviChannel::isMeOp()</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00053">m_pButton</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00052">m_pChannel</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00054">m_pCheckBoxes</a>, <a class="el" href="kvi__modeeditor_8h_source.html#l00055">m_pLineEdits</a>, and <a class="el" href="kvi__ircconnection_8h_source.html#l00241">KviIrcConnection::userInfo()</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor()</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a7b8bcd3a5ca805bb932c3a1b0a747329"></a><!-- doxytag: member="KviModeEditor::m_pButton" ref="a7b8bcd3a5ca805bb932c3a1b0a747329" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPushButton* <a class="el" href="classKviModeEditor.html#a7b8bcd3a5ca805bb932c3a1b0a747329">KviModeEditor::m_pButton</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classKviWindowToolWidget.html#abe5b6bd4d5f97f03ba4e0b065736d28d">KviWindowToolWidget</a>.</p>
+
+<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor()</a>, and <a class="el" href="kvi__modeeditor_8cpp_source.html#l00225">updateOpStatus()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ab9d12d86064aea4c140e50e46d615d45"></a><!-- doxytag: member="KviModeEditor::m_pChannel" ref="ab9d12d86064aea4c140e50e46d615d45" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -258,7 +298,7 @@ Inheritance diagram for KviModeEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00257">commit()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00412">getModeDescription()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor()</a>, and <a class="el" href="kvi__modeeditor_8cpp_source.html#l00421">modeNeedsParameterOnlyWhenSet()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00266">commit()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00421">getModeDescription()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00430">modeNeedsParameterOnlyWhenSet()</a>, and <a class="el" href="kvi__modeeditor_8cpp_source.html#l00225">updateOpStatus()</a>.</p>
 
 </div>
 </div>
@@ -273,7 +313,7 @@ Inheritance diagram for KviModeEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00240">checkBoxToggled()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00257">commit()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor()</a>, and <a class="el" href="kvi__modeeditor_8cpp_source.html#l00231">~KviModeEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00249">checkBoxToggled()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00266">commit()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00225">updateOpStatus()</a>, and <a class="el" href="kvi__modeeditor_8cpp_source.html#l00219">~KviModeEditor()</a>.</p>
 
 </div>
 </div>
@@ -288,7 +328,7 @@ Inheritance diagram for KviModeEditor:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00240">checkBoxToggled()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00257">commit()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor()</a>, and <a class="el" href="kvi__modeeditor_8cpp_source.html#l00231">~KviModeEditor()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__modeeditor_8cpp_source.html#l00249">checkBoxToggled()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00266">commit()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00043">KviModeEditor()</a>, <a class="el" href="kvi__modeeditor_8cpp_source.html#l00225">updateOpStatus()</a>, and <a class="el" href="kvi__modeeditor_8cpp_source.html#l00219">~KviModeEditor()</a>.</p>
 
 </div>
 </div>
@@ -297,7 +337,7 @@ Inheritance diagram for KviModeEditor:</div>
 <li>src/kvirc/ui/<a class="el" href="kvi__modeeditor_8cpp.html">kvi_modeeditor.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:26 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Oct 20 15:12:00 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

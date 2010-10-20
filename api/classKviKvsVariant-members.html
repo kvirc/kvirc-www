@@ -61,13 +61,13 @@
   <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#ae338ed437f55c5a0c619fd8da902171b">isScalar</a>() const </td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#aeaca23ebc9160ad1ccf7ba4b4fb497da">isString</a>() const </td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#ad92cac0405b7b2f3a568396da42d6630">KviKvsVariant</a>()</td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#a908c273310562f39c2fda1cb9d038b4f">KviKvsVariant</a>(kvs_int_t iInteger)</td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#a3324a01b9e463fe9e54258c9058a2075">KviKvsVariant</a>(kvs_int_t iInteger, bool bEscape=false)</td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#aafe160a08b07cf628b21f2f09c148714">KviKvsVariant</a>(kvs_real_t dReal)</td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#a46ca2443f1ef9322a8d03065588ab1d9">KviKvsVariant</a>(kvs_real_t *pReal)</td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#a7954655751276a435db3fd93a1feaafe">KviKvsVariant</a>(bool bBoolean)</td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#a030a07e782badc0176bcb6f4acf7c265">KviKvsVariant</a>(const QString &amp;szString)</td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#ae31ff0a3e71f45a9a639c24ed059159d">KviKvsVariant</a>(const char *szString)</td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#ace3060cb783fbd7df8b426de974d189d">KviKvsVariant</a>(QString *pString)</td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#a687238f435eb3addc201a90d1a15d082">KviKvsVariant</a>(const QString &amp;szString, bool bEscape=false)</td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#a3a2f0214702e9b86f5cd162d972c0350">KviKvsVariant</a>(const char *szString, bool bEscape=false)</td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#a641a47ace25e8a83ff9f503404f0f7d5">KviKvsVariant</a>(QString *pString, bool bEscape=false)</td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#af035092c04373b3337244be12f9cc408">KviKvsVariant</a>(KviKvsArray *pArray)</td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#a6c107aecc92abb00f689796695812c52">KviKvsVariant</a>(KviKvsHash *pHash)</td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#ac40947b85453a0b28c8e8489178509eb">KviKvsVariant</a>(kvs_hobject_t hObject)</td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td></td></tr>
@@ -106,7 +106,7 @@
   <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#aafb0d2377b46866ef0b59a1718cb1288">unserializeTrue</a>(const QChar **aux)</td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td><code> [private, static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviKvsVariant.html#a09475e430f86169f020f6ffadf9a077f">~KviKvsVariant</a>()</td><td><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:26 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Oct 20 15:12:00 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

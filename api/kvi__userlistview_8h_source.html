@@ -212,155 +212,157 @@
 <a name="l00340"></a>00340 
 <a name="l00346"></a>00346         <span class="keywordtype">void</span> select(<span class="keyword">const</span> QString &amp; szNick);
 <a name="l00347"></a>00347 
-<a name="l00352"></a>00352         <span class="keywordtype">void</span> <a class="code" href="classKviQuery.html#a53d7ef9e65df6352e09d1f0b9929525b" title="Applies the options.">applyOptions</a>();
-<a name="l00353"></a>00353 
-<a name="l00358"></a><a class="code" href="classKviUserListView.html#a0bbef1de2899e8e2dc12219788182d94">00358</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviUserListEntry&gt;</a> * <a class="code" href="classKviUserListView.html#a0bbef1de2899e8e2dc12219788182d94" title="Returns the entry in the list.">entryDict</a>(){ <span class="keywordflow">return</span> m_pEntryDict; };
-<a name="l00359"></a>00359 
-<a name="l00364"></a><a class="code" href="classKviUserListView.html#a81694d7699e1f119ca7ab92d5621df45">00364</a>         <a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * <a class="code" href="classKviUserListView.html#a81694d7699e1f119ca7ab92d5621df45" title="Returns the first item of the user list.">firstItem</a>(){ <span class="keywordflow">return</span> m_pHeadItem; };
-<a name="l00365"></a>00365 
-<a name="l00372"></a>00372         <a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * itemAt(<span class="keyword">const</span> QPoint &amp; pnt, QRect * pRect = 0);
-<a name="l00373"></a>00373 
-<a name="l00379"></a>00379         <span class="keywordtype">bool</span> itemVisible(<a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * pEntry);
+<a name="l00353"></a>00353         <span class="keywordtype">void</span> ensureVisible(<span class="keyword">const</span> QString &amp; szNick);
+<a name="l00354"></a>00354 
+<a name="l00359"></a>00359         <span class="keywordtype">void</span> <a class="code" href="classKviQuery.html#a53d7ef9e65df6352e09d1f0b9929525b" title="Applies the options.">applyOptions</a>();
+<a name="l00360"></a>00360 
+<a name="l00365"></a><a class="code" href="classKviUserListView.html#a0bbef1de2899e8e2dc12219788182d94">00365</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviUserListEntry&gt;</a> * <a class="code" href="classKviUserListView.html#a0bbef1de2899e8e2dc12219788182d94" title="Returns the entry in the list.">entryDict</a>(){ <span class="keywordflow">return</span> m_pEntryDict; };
+<a name="l00366"></a>00366 
+<a name="l00371"></a><a class="code" href="classKviUserListView.html#a81694d7699e1f119ca7ab92d5621df45">00371</a>         <a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * <a class="code" href="classKviUserListView.html#a81694d7699e1f119ca7ab92d5621df45" title="Returns the first item of the user list.">firstItem</a>(){ <span class="keywordflow">return</span> m_pHeadItem; };
+<a name="l00372"></a>00372 
+<a name="l00379"></a>00379         <a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * itemAt(<span class="keyword">const</span> QPoint &amp; pnt, QRect * pRect = 0);
 <a name="l00380"></a>00380 
-<a name="l00385"></a><a class="code" href="classKviUserListView.html#a624853a1f14108f13c86518917dace90">00385</a>         <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * <a class="code" href="classKviUserListView.html#a624853a1f14108f13c86518917dace90" title="Returns the window associated to the userlist.">window</a>(){ <span class="keywordflow">return</span> m_pKviWindow; };
-<a name="l00386"></a>00386 
-<a name="l00391"></a><a class="code" href="classKviUserListView.html#acd397372da3aac322f6552264d950c70">00391</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#acd397372da3aac322f6552264d950c70" title="Returns the number of the entries in the userlist.">count</a>(){ <span class="keywordflow">return</span> m_pEntryDict-&gt;count(); };
-<a name="l00392"></a>00392 
-<a name="l00397"></a><a class="code" href="classKviUserListView.html#a3e1ab7268fc2e1235e54864d2bd0d06a">00397</a>         <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#a3e1ab7268fc2e1235e54864d2bd0d06a" title="Returns the number of selected entries in the userlist.">selectedCount</a>(){ <span class="keywordflow">return</span> m_iSelectedCount; };
-<a name="l00398"></a>00398 
-<a name="l00403"></a><a class="code" href="classKviUserListView.html#a150864867f0a4ddee081b4935479d9ff">00403</a>         <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#a150864867f0a4ddee081b4935479d9ff" title="Returns the number of ircops.">ircOpCount</a>(){ <span class="keywordflow">return</span> m_iIrcOpCount; };
-<a name="l00404"></a>00404 
-<a name="l00409"></a><a class="code" href="classKviUserListView.html#a6081705683aebb69669ff7c9657bfefd">00409</a>         <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#a6081705683aebb69669ff7c9657bfefd" title="Returns the number of chan owners.">chanOwnerCount</a>(){ <span class="keywordflow">return</span> m_iChanOwnerCount; };
-<a name="l00410"></a>00410 
-<a name="l00415"></a><a class="code" href="classKviUserListView.html#a6de3214444486ddc04196835ad4c4d67">00415</a>         <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#a6de3214444486ddc04196835ad4c4d67" title="Returns the number of chan admins.">chanAdminCount</a>(){ <span class="keywordflow">return</span> m_iChanAdminCount; };
-<a name="l00416"></a>00416 
-<a name="l00421"></a><a class="code" href="classKviUserListView.html#a9020c6d6c4aa4c1064880391049365b6">00421</a>         <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#a9020c6d6c4aa4c1064880391049365b6" title="Returns the number of operators.">opCount</a>(){ <span class="keywordflow">return</span> m_iOpCount; };
-<a name="l00422"></a>00422 
-<a name="l00427"></a><a class="code" href="classKviUserListView.html#a8f263bca521a7b8401920a1cfcbb7822">00427</a>         <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#a8f263bca521a7b8401920a1cfcbb7822" title="Returns the number of half operators.">halfOpCount</a>(){ <span class="keywordflow">return</span> m_iHalfOpCount; };
-<a name="l00428"></a>00428 
-<a name="l00433"></a><a class="code" href="classKviUserListView.html#a33678aec02aced14e275ac0f4a66fdf0">00433</a>         <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#a33678aec02aced14e275ac0f4a66fdf0" title="Returns the number of voices.">voiceCount</a>(){ <span class="keywordflow">return</span> m_iVoiceCount; };
-<a name="l00434"></a>00434 
-<a name="l00439"></a><a class="code" href="classKviUserListView.html#a0c1bff5b6302406a70853b4ed291974f">00439</a>         <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#a0c1bff5b6302406a70853b4ed291974f" title="Returns the number of user operators.">userOpCount</a>(){ <span class="keywordflow">return</span> m_iUserOpCount; };
-<a name="l00440"></a>00440 
-<a name="l00448"></a><a class="code" href="classKviUserListView.html#a972b22155e124e78038710a602833992">00448</a>         <a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * <a class="code" href="classKviUserListView.html#a972b22155e124e78038710a602833992" title="Searches an entry in the userlist.">findEntry</a>(<span class="keyword">const</span> QString &amp; szNick){ <span class="keywordflow">return</span> szNick.isEmpty() ? 0 : m_pEntryDict-&gt;find(szNick); };
-<a name="l00449"></a>00449 
-<a name="l00455"></a>00455         <span class="keywordtype">void</span> appendSelectedNicknames(QString &amp; szBuffer);
+<a name="l00386"></a>00386         <span class="keywordtype">bool</span> itemVisible(<a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * pEntry);
+<a name="l00387"></a>00387 
+<a name="l00392"></a><a class="code" href="classKviUserListView.html#a624853a1f14108f13c86518917dace90">00392</a>         <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * <a class="code" href="classKviUserListView.html#a624853a1f14108f13c86518917dace90" title="Returns the window associated to the userlist.">window</a>(){ <span class="keywordflow">return</span> m_pKviWindow; };
+<a name="l00393"></a>00393 
+<a name="l00398"></a><a class="code" href="classKviUserListView.html#acd397372da3aac322f6552264d950c70">00398</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#acd397372da3aac322f6552264d950c70" title="Returns the number of the entries in the userlist.">count</a>(){ <span class="keywordflow">return</span> m_pEntryDict-&gt;count(); };
+<a name="l00399"></a>00399 
+<a name="l00404"></a><a class="code" href="classKviUserListView.html#a3e1ab7268fc2e1235e54864d2bd0d06a">00404</a>         <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#a3e1ab7268fc2e1235e54864d2bd0d06a" title="Returns the number of selected entries in the userlist.">selectedCount</a>(){ <span class="keywordflow">return</span> m_iSelectedCount; };
+<a name="l00405"></a>00405 
+<a name="l00410"></a><a class="code" href="classKviUserListView.html#a150864867f0a4ddee081b4935479d9ff">00410</a>         <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#a150864867f0a4ddee081b4935479d9ff" title="Returns the number of ircops.">ircOpCount</a>(){ <span class="keywordflow">return</span> m_iIrcOpCount; };
+<a name="l00411"></a>00411 
+<a name="l00416"></a><a class="code" href="classKviUserListView.html#a6081705683aebb69669ff7c9657bfefd">00416</a>         <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#a6081705683aebb69669ff7c9657bfefd" title="Returns the number of chan owners.">chanOwnerCount</a>(){ <span class="keywordflow">return</span> m_iChanOwnerCount; };
+<a name="l00417"></a>00417 
+<a name="l00422"></a><a class="code" href="classKviUserListView.html#a6de3214444486ddc04196835ad4c4d67">00422</a>         <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#a6de3214444486ddc04196835ad4c4d67" title="Returns the number of chan admins.">chanAdminCount</a>(){ <span class="keywordflow">return</span> m_iChanAdminCount; };
+<a name="l00423"></a>00423 
+<a name="l00428"></a><a class="code" href="classKviUserListView.html#a9020c6d6c4aa4c1064880391049365b6">00428</a>         <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#a9020c6d6c4aa4c1064880391049365b6" title="Returns the number of operators.">opCount</a>(){ <span class="keywordflow">return</span> m_iOpCount; };
+<a name="l00429"></a>00429 
+<a name="l00434"></a><a class="code" href="classKviUserListView.html#a8f263bca521a7b8401920a1cfcbb7822">00434</a>         <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#a8f263bca521a7b8401920a1cfcbb7822" title="Returns the number of half operators.">halfOpCount</a>(){ <span class="keywordflow">return</span> m_iHalfOpCount; };
+<a name="l00435"></a>00435 
+<a name="l00440"></a><a class="code" href="classKviUserListView.html#a33678aec02aced14e275ac0f4a66fdf0">00440</a>         <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#a33678aec02aced14e275ac0f4a66fdf0" title="Returns the number of voices.">voiceCount</a>(){ <span class="keywordflow">return</span> m_iVoiceCount; };
+<a name="l00441"></a>00441 
+<a name="l00446"></a><a class="code" href="classKviUserListView.html#a0c1bff5b6302406a70853b4ed291974f">00446</a>         <span class="keywordtype">int</span> <a class="code" href="classKviUserListView.html#a0c1bff5b6302406a70853b4ed291974f" title="Returns the number of user operators.">userOpCount</a>(){ <span class="keywordflow">return</span> m_iUserOpCount; };
+<a name="l00447"></a>00447 
+<a name="l00455"></a><a class="code" href="classKviUserListView.html#a972b22155e124e78038710a602833992">00455</a>         <a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * <a class="code" href="classKviUserListView.html#a972b22155e124e78038710a602833992" title="Searches an entry in the userlist.">findEntry</a>(<span class="keyword">const</span> QString &amp; szNick){ <span class="keywordflow">return</span> szNick.isEmpty() ? 0 : m_pEntryDict-&gt;find(szNick); };
 <a name="l00456"></a>00456 
-<a name="l00461"></a>00461         QString * firstSelectedNickname();
-<a name="l00462"></a>00462 
-<a name="l00467"></a>00467         QString * nextSelectedNickname();
-<a name="l00468"></a>00468 
-<a name="l00473"></a>00473         <span class="keywordtype">void</span> partAll();
-<a name="l00474"></a>00474 
-<a name="l00480"></a>00480         <span class="keywordtype">void</span> partAllButOne(<span class="keyword">const</span> QString &amp; szWhoNot);
+<a name="l00462"></a>00462         <span class="keywordtype">void</span> appendSelectedNicknames(QString &amp; szBuffer);
+<a name="l00463"></a>00463 
+<a name="l00468"></a>00468         QString * firstSelectedNickname();
+<a name="l00469"></a>00469 
+<a name="l00474"></a>00474         QString * nextSelectedNickname();
+<a name="l00475"></a>00475 
+<a name="l00480"></a>00480         <span class="keywordtype">void</span> partAll();
 <a name="l00481"></a>00481 
-<a name="l00487"></a>00487         <span class="keywordtype">void</span> userStats(<a class="code" href="struct__KviUserListViewUserStats.html" title="A struct to hold user statistics.">KviUserListViewUserStats</a> * pStats);
+<a name="l00487"></a>00487         <span class="keywordtype">void</span> partAllButOne(<span class="keyword">const</span> QString &amp; szWhoNot);
 <a name="l00488"></a>00488 
-<a name="l00502"></a>00502         <span class="keywordtype">int</span> getUserModeLevel(<span class="keyword">const</span> QString &amp; szNick);
-<a name="l00503"></a>00503 
-<a name="l00509"></a>00509         <a class="code" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a> getUserJoinTime(<span class="keyword">const</span> QString &amp; szNick);
+<a name="l00494"></a>00494         <span class="keywordtype">void</span> userStats(<a class="code" href="struct__KviUserListViewUserStats.html" title="A struct to hold user statistics.">KviUserListViewUserStats</a> * pStats);
+<a name="l00495"></a>00495 
+<a name="l00509"></a>00509         <span class="keywordtype">int</span> getUserModeLevel(<span class="keyword">const</span> QString &amp; szNick);
 <a name="l00510"></a>00510 
-<a name="l00516"></a>00516         <a class="code" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a> getUserLastActionTime(<span class="keyword">const</span> QString &amp; szNick);
+<a name="l00516"></a>00516         <a class="code" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a> getUserJoinTime(<span class="keyword">const</span> QString &amp; szNick);
 <a name="l00517"></a>00517 
-<a name="l00523"></a>00523         <span class="keywordtype">char</span> getUserFlag(<a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * pEntry);
+<a name="l00523"></a>00523         <a class="code" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a> getUserLastActionTime(<span class="keyword">const</span> QString &amp; szNick);
 <a name="l00524"></a>00524 
-<a name="l00530"></a><a class="code" href="classKviUserListView.html#aed1b6eca4d16ac3be7979d13c44d04ed">00530</a>         <span class="keywordtype">char</span> <a class="code" href="classKviUserListView.html#aed1b6eca4d16ac3be7979d13c44d04ed" title="Returns the flags of a user.">getUserFlag</a>(<span class="keyword">const</span> QString &amp; szNick){ <span class="keywordflow">return</span> <a class="code" href="classKviUserListView.html#aed1b6eca4d16ac3be7979d13c44d04ed" title="Returns the flags of a user.">getUserFlag</a>(m_pEntryDict-&gt;find(szNick)); };
+<a name="l00530"></a>00530         <span class="keywordtype">char</span> getUserFlag(<a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * pEntry);
 <a name="l00531"></a>00531 
-<a name="l00537"></a><a class="code" href="classKviUserListView.html#a5d9a895662cd42a65f2f8c9b382d1394">00537</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviUserListView.html#a5d9a895662cd42a65f2f8c9b382d1394" title="Check if a user parts from a channel.">part</a>(<span class="keyword">const</span> QString &amp; szNick){ <span class="keywordflow">return</span> partInternal(szNick,<span class="keyword">true</span>); };
+<a name="l00537"></a><a class="code" href="classKviUserListView.html#aed1b6eca4d16ac3be7979d13c44d04ed">00537</a>         <span class="keywordtype">char</span> <a class="code" href="classKviUserListView.html#aed1b6eca4d16ac3be7979d13c44d04ed" title="Returns the flags of a user.">getUserFlag</a>(<span class="keyword">const</span> QString &amp; szNick){ <span class="keywordflow">return</span> <a class="code" href="classKviUserListView.html#aed1b6eca4d16ac3be7979d13c44d04ed" title="Returns the flags of a user.">getUserFlag</a>(m_pEntryDict-&gt;find(szNick)); };
 <a name="l00538"></a>00538 
-<a name="l00545"></a>00545         <span class="keywordtype">void</span> prependUserFlag(<span class="keyword">const</span> QString &amp; szNick, QString &amp; szBuffer);
-<a name="l00546"></a>00546 
-<a name="l00552"></a>00552         <span class="keywordtype">int</span> flags(<span class="keyword">const</span> QString &amp; szNick);
+<a name="l00544"></a><a class="code" href="classKviUserListView.html#a5d9a895662cd42a65f2f8c9b382d1394">00544</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviUserListView.html#a5d9a895662cd42a65f2f8c9b382d1394" title="Check if a user parts from a channel.">part</a>(<span class="keyword">const</span> QString &amp; szNick){ <span class="keywordflow">return</span> partInternal(szNick,<span class="keyword">true</span>); };
+<a name="l00545"></a>00545 
+<a name="l00552"></a>00552         <span class="keywordtype">void</span> prependUserFlag(<span class="keyword">const</span> QString &amp; szNick, QString &amp; szBuffer);
 <a name="l00553"></a>00553 
-<a name="l00560"></a>00560         <span class="keywordtype">bool</span> isChanOwner(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
-<a name="l00561"></a>00561 
-<a name="l00568"></a>00568         <span class="keywordtype">bool</span> isChanAdmin(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
-<a name="l00569"></a>00569 
-<a name="l00576"></a>00576         <span class="keywordtype">bool</span> isOp(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
-<a name="l00577"></a>00577 
-<a name="l00584"></a>00584         <span class="keywordtype">bool</span> isHalfOp(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
-<a name="l00585"></a>00585 
-<a name="l00592"></a>00592         <span class="keywordtype">bool</span> isVoice(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
-<a name="l00593"></a>00593 
-<a name="l00600"></a>00600         <span class="keywordtype">bool</span> isUserOp(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
-<a name="l00601"></a>00601 
-<a name="l00608"></a>00608         <span class="keywordtype">bool</span> setChanOwner(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bChanOwner);
-<a name="l00609"></a>00609 
-<a name="l00616"></a>00616         <span class="keywordtype">bool</span> setChanAdmin(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bChanAdmin);
-<a name="l00617"></a>00617 
-<a name="l00624"></a>00624         <span class="keywordtype">bool</span> setOp(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bOp);
-<a name="l00625"></a>00625 
-<a name="l00632"></a>00632         <span class="keywordtype">bool</span> setHalfOp(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bHalfOp);
-<a name="l00633"></a>00633 
-<a name="l00640"></a>00640         <span class="keywordtype">bool</span> setVoice(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bVoice);
-<a name="l00641"></a>00641 
-<a name="l00648"></a>00648         <span class="keywordtype">bool</span> setUserOp(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bUserOp);
-<a name="l00649"></a>00649 
-<a name="l00666"></a>00666         <span class="keywordtype">bool</span> userActionVerifyMask(<span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser, <span class="keyword">const</span> QString &amp; szHost, <span class="keywordtype">int</span> iActionTemperature, QString &amp; szOldUser, QString &amp; szOldHost);
-<a name="l00667"></a>00667 
-<a name="l00678"></a>00678         <span class="keywordtype">void</span> <a class="code" href="classKviQuery.html#ad5958a6275e91772fd4da105ada01d4b" title="Called when a user performs an action.">userAction</a>(<a class="code" href="classKviIrcMask.html" title="Irc user mask handling.">KviIrcMask</a> * pUser, <span class="keywordtype">int</span> iActionTemperature);
-<a name="l00679"></a>00679 
-<a name="l00692"></a>00692         <span class="keywordtype">void</span> <a class="code" href="classKviQuery.html#ad5958a6275e91772fd4da105ada01d4b" title="Called when a user performs an action.">userAction</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser, <span class="keyword">const</span> QString &amp; szHost, <span class="keywordtype">int</span> iActionTemperature);
-<a name="l00693"></a>00693 
-<a name="l00704"></a>00704         <span class="keywordtype">void</span> <a class="code" href="classKviQuery.html#ad5958a6275e91772fd4da105ada01d4b" title="Called when a user performs an action.">userAction</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">int</span> iActionTemperature);
-<a name="l00705"></a>00705 
-<a name="l00712"></a>00712         <span class="keywordtype">bool</span> <a class="code" href="classKviQuery.html#a107d23c2d6a2bcb2e203fec19d724ae8" title="Called when the target changes the nick.">nickChange</a>(<span class="keyword">const</span> QString &amp; szOldNick, <span class="keyword">const</span> QString &amp; szNewNick);
-<a name="l00713"></a>00713 
-<a name="l00722"></a>00722         <a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * <a class="code" href="namespaceKviIrcUrl.html#ae10c8ddb3b91ac71ae444687fe1b5359">join</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser = QString(), <span class="keyword">const</span> QString &amp; szHost = QString(), <span class="keywordtype">int</span> iFlags = 0);
-<a name="l00723"></a>00723 
-<a name="l00729"></a>00729         <span class="keywordtype">bool</span> <a class="code" href="classKviQuery.html#acae525390c54ad3d3606b075f492776d" title="Called when the target changes the avatar.">avatarChanged</a>(<span class="keyword">const</span> QString &amp; szNick);
+<a name="l00559"></a>00559         <span class="keywordtype">int</span> flags(<span class="keyword">const</span> QString &amp; szNick);
+<a name="l00560"></a>00560 
+<a name="l00567"></a>00567         <span class="keywordtype">bool</span> isChanOwner(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
+<a name="l00568"></a>00568 
+<a name="l00575"></a>00575         <span class="keywordtype">bool</span> isChanAdmin(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
+<a name="l00576"></a>00576 
+<a name="l00583"></a>00583         <span class="keywordtype">bool</span> isOp(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
+<a name="l00584"></a>00584 
+<a name="l00591"></a>00591         <span class="keywordtype">bool</span> isHalfOp(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
+<a name="l00592"></a>00592 
+<a name="l00599"></a>00599         <span class="keywordtype">bool</span> isVoice(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
+<a name="l00600"></a>00600 
+<a name="l00607"></a>00607         <span class="keywordtype">bool</span> isUserOp(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bAtLeast = <span class="keyword">false</span>);
+<a name="l00608"></a>00608 
+<a name="l00615"></a>00615         <span class="keywordtype">bool</span> setChanOwner(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bChanOwner);
+<a name="l00616"></a>00616 
+<a name="l00623"></a>00623         <span class="keywordtype">bool</span> setChanAdmin(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bChanAdmin);
+<a name="l00624"></a>00624 
+<a name="l00631"></a>00631         <span class="keywordtype">bool</span> setOp(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bOp);
+<a name="l00632"></a>00632 
+<a name="l00639"></a>00639         <span class="keywordtype">bool</span> setHalfOp(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bHalfOp);
+<a name="l00640"></a>00640 
+<a name="l00647"></a>00647         <span class="keywordtype">bool</span> setVoice(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bVoice);
+<a name="l00648"></a>00648 
+<a name="l00655"></a>00655         <span class="keywordtype">bool</span> setUserOp(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">bool</span> bUserOp);
+<a name="l00656"></a>00656 
+<a name="l00673"></a>00673         <span class="keywordtype">bool</span> userActionVerifyMask(<span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser, <span class="keyword">const</span> QString &amp; szHost, <span class="keywordtype">int</span> iActionTemperature, QString &amp; szOldUser, QString &amp; szOldHost);
+<a name="l00674"></a>00674 
+<a name="l00685"></a>00685         <span class="keywordtype">void</span> <a class="code" href="classKviQuery.html#ad5958a6275e91772fd4da105ada01d4b" title="Called when a user performs an action.">userAction</a>(<a class="code" href="classKviIrcMask.html" title="Irc user mask handling.">KviIrcMask</a> * pUser, <span class="keywordtype">int</span> iActionTemperature);
+<a name="l00686"></a>00686 
+<a name="l00699"></a>00699         <span class="keywordtype">void</span> <a class="code" href="classKviQuery.html#ad5958a6275e91772fd4da105ada01d4b" title="Called when a user performs an action.">userAction</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser, <span class="keyword">const</span> QString &amp; szHost, <span class="keywordtype">int</span> iActionTemperature);
+<a name="l00700"></a>00700 
+<a name="l00711"></a>00711         <span class="keywordtype">void</span> <a class="code" href="classKviQuery.html#ad5958a6275e91772fd4da105ada01d4b" title="Called when a user performs an action.">userAction</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">int</span> iActionTemperature);
+<a name="l00712"></a>00712 
+<a name="l00719"></a>00719         <span class="keywordtype">bool</span> <a class="code" href="classKviQuery.html#a107d23c2d6a2bcb2e203fec19d724ae8" title="Called when the target changes the nick.">nickChange</a>(<span class="keyword">const</span> QString &amp; szOldNick, <span class="keyword">const</span> QString &amp; szNewNick);
+<a name="l00720"></a>00720 
+<a name="l00729"></a>00729         <a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * <a class="code" href="namespaceKviIrcUrl.html#ae10c8ddb3b91ac71ae444687fe1b5359">join</a>(<span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser = QString(), <span class="keyword">const</span> QString &amp; szHost = QString(), <span class="keywordtype">int</span> iFlags = 0);
 <a name="l00730"></a>00730 
-<a name="l00736"></a>00736         <span class="keywordtype">void</span> enableUpdates(<span class="keywordtype">bool</span> bEnable);
+<a name="l00736"></a>00736         <span class="keywordtype">bool</span> <a class="code" href="classKviQuery.html#acae525390c54ad3d3606b075f492776d" title="Called when the target changes the avatar.">avatarChanged</a>(<span class="keyword">const</span> QString &amp; szNick);
 <a name="l00737"></a>00737 
-<a name="l00751"></a>00751         <span class="keywordtype">void</span> setMaskEntries(<span class="keywordtype">char</span> cType, <span class="keywordtype">int</span> iNum);
-<a name="l00752"></a>00752 
-<a name="l00757"></a>00757         <span class="keywordtype">void</span> emitRightClick();
-<a name="l00758"></a>00758 
-<a name="l00763"></a>00763         <span class="keywordtype">void</span> emitDoubleClick();
-<a name="l00764"></a>00764 
-<a name="l00776"></a>00776         <span class="keywordtype">bool</span> completeNickStandard(<span class="keyword">const</span> QString &amp; szBegin, <span class="keyword">const</span> QString &amp; szSkipAfter, QString &amp; szBuffer, <span class="keywordtype">bool</span> bAppendMask);
-<a name="l00777"></a>00777 
-<a name="l00789"></a>00789         <span class="keywordtype">void</span> completeNickBashLike(<span class="keyword">const</span> QString &amp; szBegin, <a class="code" href="classKviPointerList.html">KviPointerList&lt;QString&gt;</a> * pList, <span class="keywordtype">bool</span> bAppendMask);
-<a name="l00790"></a>00790 <span class="keyword">public</span> slots:
-<a name="l00795"></a>00795         <span class="keywordtype">void</span> animatedAvatarUpdated(<a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * e);
-<a name="l00796"></a>00796 };
-<a name="l00797"></a>00797 
-<a name="l00802"></a><a class="code" href="classKviUserListViewArea.html">00802</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviUserListViewArea.html" title="User list area management.">KviUserListViewArea</a> : <span class="keyword">public</span> QWidget
-<a name="l00803"></a>00803 {
-<a name="l00804"></a><a class="code" href="classKviUserListViewArea.html#a387c1fc64b6b9c8ea6b95054c8f531b3">00804</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classKviUserListView.html" title="User list view management class.">KviUserListView</a>;
-<a name="l00805"></a>00805 
-<a name="l00806"></a>00806         Q_OBJECT
-<a name="l00807"></a><a class="code" href="classKviUserListViewArea.html#ae64ad9cae425dd13b872282e6aa18686">00807</a>         Q_PROPERTY(<span class="keywordtype">int</span> TransparencyCapable READ dummyRead)
-<a name="l00808"></a>00808 <span class="keyword">public</span>:
-<a name="l00814"></a>00814         <a class="code" href="classKviUserListView.html#a0a19770cd911dc1867a3b01608615217">KviUserListViewArea</a>(<a class="code" href="classKviUserListView.html" title="User list view management class.">KviUserListView</a> * pPar);
-<a name="l00815"></a>00815 
-<a name="l00819"></a>00819         ~<a class="code" href="classKviUserListViewArea.html" title="User list area management.">KviUserListViewArea</a>();
-<a name="l00820"></a>00820 <span class="keyword">public</span>:
-<a name="l00825"></a><a class="code" href="classKviUserListViewArea.html#ad193d919b255fd795ab1d8008dc35625">00825</a>         <span class="keywordtype">int</span> dummyRead()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 0; };
-<a name="l00826"></a>00826 <span class="keyword">protected</span>:
-<a name="l00827"></a>00827         <a class="code" href="classKviUserListView.html" title="User list view management class.">KviUserListView</a>  * m_pListView;
-<a name="l00828"></a><a class="code" href="classKviUserListViewArea.html#a785633ce3bc473bb0b3d5cbfc163f283">00828</a>         <a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * m_pLastEntryUnderMouse;
-<a name="l00829"></a><a class="code" href="classKviUserListViewArea.html#ad929dc98c8b90933a966235334d1588c">00829</a>         QScrollBar       * m_pScrollBar;
-<a name="l00830"></a><a class="code" href="classKviUserListViewArea.html#ae1f70fec93aa21a489577e53f4a9b72a">00830</a>         <span class="keywordtype">int</span>                m_iLastScrollBarVal;
-<a name="l00831"></a><a class="code" href="classKviUserListViewArea.html#a10ca1738c0b2c023aa57d87c1bc97bba">00831</a>         <span class="keywordtype">int</span>                m_iTopItemOffset;
-<a name="l00832"></a><a class="code" href="classKviUserListViewArea.html#a1d65e90fca33fbd59a4f6cba8dc0c94f">00832</a>         <span class="keywordtype">bool</span>               m_bIgnoreScrollBar;
+<a name="l00743"></a>00743         <span class="keywordtype">void</span> enableUpdates(<span class="keywordtype">bool</span> bEnable);
+<a name="l00744"></a>00744 
+<a name="l00758"></a>00758         <span class="keywordtype">void</span> setMaskEntries(<span class="keywordtype">char</span> cType, <span class="keywordtype">int</span> iNum);
+<a name="l00759"></a>00759 
+<a name="l00764"></a>00764         <span class="keywordtype">void</span> emitRightClick();
+<a name="l00765"></a>00765 
+<a name="l00770"></a>00770         <span class="keywordtype">void</span> emitDoubleClick();
+<a name="l00771"></a>00771 
+<a name="l00783"></a>00783         <span class="keywordtype">bool</span> completeNickStandard(<span class="keyword">const</span> QString &amp; szBegin, <span class="keyword">const</span> QString &amp; szSkipAfter, QString &amp; szBuffer, <span class="keywordtype">bool</span> bAppendMask);
+<a name="l00784"></a>00784 
+<a name="l00796"></a>00796         <span class="keywordtype">void</span> completeNickBashLike(<span class="keyword">const</span> QString &amp; szBegin, <a class="code" href="classKviPointerList.html">KviPointerList&lt;QString&gt;</a> * pList, <span class="keywordtype">bool</span> bAppendMask);
+<a name="l00797"></a>00797 <span class="keyword">public</span> slots:
+<a name="l00802"></a>00802         <span class="keywordtype">void</span> animatedAvatarUpdated(<a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * e);
+<a name="l00803"></a>00803 };
+<a name="l00804"></a>00804 
+<a name="l00809"></a><a class="code" href="classKviUserListViewArea.html">00809</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviUserListViewArea.html" title="User list area management.">KviUserListViewArea</a> : <span class="keyword">public</span> QWidget
+<a name="l00810"></a>00810 {
+<a name="l00811"></a><a class="code" href="classKviUserListViewArea.html#a387c1fc64b6b9c8ea6b95054c8f531b3">00811</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classKviUserListView.html" title="User list view management class.">KviUserListView</a>;
+<a name="l00812"></a>00812 
+<a name="l00813"></a>00813         Q_OBJECT
+<a name="l00814"></a><a class="code" href="classKviUserListViewArea.html#ae64ad9cae425dd13b872282e6aa18686">00814</a>         Q_PROPERTY(<span class="keywordtype">int</span> TransparencyCapable READ dummyRead)
+<a name="l00815"></a>00815 <span class="keyword">public</span>:
+<a name="l00821"></a>00821         <a class="code" href="classKviUserListView.html#a0a19770cd911dc1867a3b01608615217">KviUserListViewArea</a>(<a class="code" href="classKviUserListView.html" title="User list view management class.">KviUserListView</a> * pPar);
+<a name="l00822"></a>00822 
+<a name="l00826"></a>00826         ~<a class="code" href="classKviUserListViewArea.html" title="User list area management.">KviUserListViewArea</a>();
+<a name="l00827"></a>00827 <span class="keyword">public</span>:
+<a name="l00832"></a><a class="code" href="classKviUserListViewArea.html#ad193d919b255fd795ab1d8008dc35625">00832</a>         <span class="keywordtype">int</span> dummyRead()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 0; };
 <a name="l00833"></a>00833 <span class="keyword">protected</span>:
-<a name="l00834"></a>00834         <span class="keyword">virtual</span> <span class="keywordtype">void</span> paintEvent(QPaintEvent * e);
-<a name="l00835"></a>00835         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviUserListView.html#a17d052df9dd176ee6a6c0e4882ef284b">resizeEvent</a>(QResizeEvent * e);
-<a name="l00836"></a>00836         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mousePressEvent(QMouseEvent * e);
-<a name="l00837"></a>00837         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseMoveEvent(QMouseEvent * e);
-<a name="l00838"></a>00838         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseReleaseEvent(QMouseEvent * e);
-<a name="l00839"></a>00839         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseDoubleClickEvent(QMouseEvent * e);
-<a name="l00840"></a>00840         <span class="keyword">virtual</span> <span class="keywordtype">void</span> wheelEvent(QWheelEvent * e);
-<a name="l00841"></a>00841         <span class="keyword">virtual</span> <span class="keywordtype">void</span> keyPressEvent(QKeyEvent * e);
-<a name="l00842"></a>00842 <span class="keyword">protected</span> slots:
-<a name="l00848"></a>00848         <span class="keywordtype">void</span> scrollBarMoved(<span class="keywordtype">int</span> iNewVal);
-<a name="l00849"></a>00849 };
-<a name="l00850"></a>00850 
-<a name="l00851"></a>00851 
-<a name="l00852"></a>00852 <span class="preprocessor">#endif //_KVI_USERLISTVIEW_H_</span>
+<a name="l00834"></a>00834         <a class="code" href="classKviUserListView.html" title="User list view management class.">KviUserListView</a>  * m_pListView;
+<a name="l00835"></a><a class="code" href="classKviUserListViewArea.html#a785633ce3bc473bb0b3d5cbfc163f283">00835</a>         <a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * m_pLastEntryUnderMouse;
+<a name="l00836"></a><a class="code" href="classKviUserListViewArea.html#ad929dc98c8b90933a966235334d1588c">00836</a>         QScrollBar       * m_pScrollBar;
+<a name="l00837"></a><a class="code" href="classKviUserListViewArea.html#ae1f70fec93aa21a489577e53f4a9b72a">00837</a>         <span class="keywordtype">int</span>                m_iLastScrollBarVal;
+<a name="l00838"></a><a class="code" href="classKviUserListViewArea.html#a10ca1738c0b2c023aa57d87c1bc97bba">00838</a>         <span class="keywordtype">int</span>                m_iTopItemOffset;
+<a name="l00839"></a><a class="code" href="classKviUserListViewArea.html#a1d65e90fca33fbd59a4f6cba8dc0c94f">00839</a>         <span class="keywordtype">bool</span>               m_bIgnoreScrollBar;
+<a name="l00840"></a>00840 <span class="keyword">protected</span>:
+<a name="l00841"></a>00841         <span class="keyword">virtual</span> <span class="keywordtype">void</span> paintEvent(QPaintEvent * e);
+<a name="l00842"></a>00842         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviUserListView.html#a17d052df9dd176ee6a6c0e4882ef284b">resizeEvent</a>(QResizeEvent * e);
+<a name="l00843"></a>00843         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mousePressEvent(QMouseEvent * e);
+<a name="l00844"></a>00844         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseMoveEvent(QMouseEvent * e);
+<a name="l00845"></a>00845         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseReleaseEvent(QMouseEvent * e);
+<a name="l00846"></a>00846         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseDoubleClickEvent(QMouseEvent * e);
+<a name="l00847"></a>00847         <span class="keyword">virtual</span> <span class="keywordtype">void</span> wheelEvent(QWheelEvent * e);
+<a name="l00848"></a>00848         <span class="keyword">virtual</span> <span class="keywordtype">void</span> keyPressEvent(QKeyEvent * e);
+<a name="l00849"></a>00849 <span class="keyword">protected</span> slots:
+<a name="l00855"></a>00855         <span class="keywordtype">void</span> scrollBarMoved(<span class="keywordtype">int</span> iNewVal);
+<a name="l00856"></a>00856 };
+<a name="l00857"></a>00857 
+<a name="l00858"></a>00858 
+<a name="l00859"></a>00859 <span class="preprocessor">#endif //_KVI_USERLISTVIEW_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:21 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Oct 20 15:11:54 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

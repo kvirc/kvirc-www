@@ -40,7 +40,7 @@
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsVariantList.html#ab85e23415e68478c9e0519cb42d97768">append</a> (bool bBoolean)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsVariantList.html#a1e0effa03f3cf9806023429817adbc4f">append</a> (<a class="el" href="kvi__kvs__types_8h.html#ac0c941372331edcdc89698f6f68c866c">kvs_real_t</a> dReal)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsVariantList.html#a8ab81200c58a5fa5666cc3b5ba3bb788">append</a> (<a class="el" href="kvi__kvs__types_8h.html#ac9044d831e7a8b855ec6563e745cec21">kvs_int_t</a> iInteger)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsVariantList.html#a8530d7b8dc14fb543712c271724e2ec4">append</a> (const QString &amp;szParam)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsVariantList.html#ab8e8aa7ad23948b99bb6c8e3676409f2">append</a> (const QString &amp;szParam, bool bEscape=false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsVariantList.html#a5c266e78b6fec6e7b17ddea57aee425a">at</a> (int iIdx)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsVariantList.html#ae6de1fc63bdfd1e6ee3ecded28513112">clear</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsVariantList.html#af165297480bb32c35ec72f07cbb61141">count</a> ()</td></tr>
@@ -765,7 +765,7 @@
 
 </div>
 </div>
-<a class="anchor" id="a8530d7b8dc14fb543712c271724e2ec4"></a><!-- doxytag: member="KviKvsVariantList::append" ref="a8530d7b8dc14fb543712c271724e2ec4" args="(const QString &amp;szParam)" -->
+<a class="anchor" id="ab8e8aa7ad23948b99bb6c8e3676409f2"></a><!-- doxytag: member="KviKvsVariantList::append" ref="ab8e8aa7ad23948b99bb6c8e3676409f2" args="(const QString &amp;szParam, bool bEscape=false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -773,15 +773,24 @@
           <td class="memname">void KviKvsVariantList::append </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&nbsp;</td>
-          <td class="paramname"> <em>szParam</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
+          <td class="paramname"> <em>szParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>bEscape</em> = <code>false</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__object__class_8cpp_source.html#l00124">KviKvsObjectClass::allocateInstance()</a>, <a class="el" href="kvi__scriptbutton_8cpp_source.html#l00062">KviScriptUserButton::btnClicked()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00305">KviUserListView::emitDoubleClick()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00279">KviUserListView::emitRightClick()</a>, <a class="el" href="kvi__kvs__treenode__datalist_8cpp_source.html#l00077">KviKvsTreeNodeDataList::evaluate()</a>, <a class="el" href="kvi__kvs__callbackobject_8cpp_source.html#l00058">KviKvsCallbackObject::execute()</a>, <a class="el" href="kvi__kvs__callbackobject_8cpp_source.html#l00032">KviKvsCallbackObject::KviKvsCallbackObject()</a>, <a class="el" href="kvi__kvs__coresimplecommands__mr_8cpp_source.html#l00360">KviKvsCoreSimpleCommands::KVSCSC()</a>, <a class="el" href="kvi__kvs__asyncdnsoperation_8cpp_source.html#l00065">KviKvsAsyncDnsOperation::lookupTerminated()</a>, <a class="el" href="kvi__ircview__events_8cpp_source.html#l00120">KviIrcView::mouseDoubleClickEvent()</a>, <a class="el" href="kvi__ircview__events_8cpp_source.html#l00340">KviIrcView::mouseRealPressEvent()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l00404">KviServerParser::parseLiteralQuit()</a>, <a class="el" href="kvi__sparser_8cpp_source.html#l00050">KviServerParser::parseMessage()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01532">KviServerParser::parseNumericEndOfWhois()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01594">KviServerParser::parseNumericNoSuchNick()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l02073">KviServerParser::parseNumericNoSuchServer()</a>, and <a class="el" href="kvi__kvs__processmanager_8cpp_source.html#l00166">KviKvsProcessAsyncOperation::trigger()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__object__class_8cpp_source.html#l00124">KviKvsObjectClass::allocateInstance()</a>, <a class="el" href="kvi__scriptbutton_8cpp_source.html#l00062">KviScriptUserButton::btnClicked()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00305">KviUserListView::emitDoubleClick()</a>, <a class="el" href="kvi__userlistview_8cpp_source.html#l00279">KviUserListView::emitRightClick()</a>, <a class="el" href="kvi__kvs__treenode__datalist_8cpp_source.html#l00077">KviKvsTreeNodeDataList::evaluate()</a>, <a class="el" href="kvi__kvs__callbackobject_8cpp_source.html#l00058">KviKvsCallbackObject::execute()</a>, <a class="el" href="kvi__kvs__callbackobject_8cpp_source.html#l00032">KviKvsCallbackObject::KviKvsCallbackObject()</a>, <a class="el" href="kvi__kvs__coresimplecommands__mr_8cpp_source.html#l00360">KviKvsCoreSimpleCommands::KVSCSC()</a>, <a class="el" href="kvi__kvs__asyncdnsoperation_8cpp_source.html#l00065">KviKvsAsyncDnsOperation::lookupTerminated()</a>, <a class="el" href="kvi__ircview__events_8cpp_source.html#l00120">KviIrcView::mouseDoubleClickEvent()</a>, <a class="el" href="kvi__ircview__events_8cpp_source.html#l00316">KviIrcView::mouseRealPressEvent()</a>, <a class="el" href="kvi__sp__literal_8cpp_source.html#l00404">KviServerParser::parseLiteralQuit()</a>, <a class="el" href="kvi__sparser_8cpp_source.html#l00050">KviServerParser::parseMessage()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01532">KviServerParser::parseNumericEndOfWhois()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l01594">KviServerParser::parseNumericNoSuchNick()</a>, <a class="el" href="kvi__sp__numeric_8cpp_source.html#l02073">KviServerParser::parseNumericNoSuchServer()</a>, and <a class="el" href="kvi__kvs__processmanager_8cpp_source.html#l00166">KviKvsProcessAsyncOperation::trigger()</a>.</p>
 
 </div>
 </div>
@@ -839,7 +848,7 @@
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="kvi__kvs__treenode__parameterreturn_8cpp_source.html#l00057">KviKvsTreeNodeParameterReturn::execute()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__treenode__parameterreturn_8cpp_source.html#l00057">KviKvsTreeNodeParameterReturn::execute()</a>, and <a class="el" href="kvi__kvs__coresimplecommands__mr_8cpp_source.html#l00844">KviKvsCoreSimpleCommands::KVSCSC()</a>.</p>
 
 </div>
 </div>
@@ -878,9 +887,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__variant_8cpp_source.html#l00580">KviKvsVariant::asString()</a>, and <a class="el" href="kvi__kvs__variantlist_8h_source.html#l00054">first()</a>.</p>
-
-<p>Referenced by <a class="el" href="kvi__ircview__events_8cpp_source.html#l00340">KviIrcView::mouseRealPressEvent()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__variant_8cpp_source.html#l00583">KviKvsVariant::asString()</a>, and <a class="el" href="kvi__kvs__variantlist_8h_source.html#l00054">first()</a>.</p>
 
 </div>
 </div>
@@ -919,7 +926,7 @@
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__variant_8cpp_source.html#l00580">KviKvsVariant::asString()</a>, and <a class="el" href="kvi__kvs__variantlist_8h_source.html#l00055">next()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__variant_8cpp_source.html#l00583">KviKvsVariant::asString()</a>, and <a class="el" href="kvi__kvs__variantlist_8h_source.html#l00055">next()</a>.</p>
 
 </div>
 </div>
@@ -986,7 +993,7 @@
 <li>src/kvirc/kvs/<a class="el" href="kvi__kvs__variantlist_8cpp.html">kvi_kvs_variantlist.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:26 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Oct 20 15:12:00 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

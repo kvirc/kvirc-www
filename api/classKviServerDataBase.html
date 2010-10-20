@@ -102,7 +102,7 @@
 <p>Constructs the server database object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviServerDataBase.html" title="Irc server database handling class.">KviServerDataBase</a> </dd></dl>
 
-<p>References <a class="el" href="kvi__ircserverdb_8h_source.html#l00080">m_pAutoConnectOnStartupNetworks</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00079">m_pAutoConnectOnStartupServers</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00077">m_pRecords</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00858">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="kvi__ircserverdb_8h_source.html#l00080">m_pAutoConnectOnStartupNetworks</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00079">m_pAutoConnectOnStartupServers</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00077">m_pRecords</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00864">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
 
 </div>
 </div>
@@ -153,7 +153,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__ircserverdb_8h_source.html#l00077">m_pRecords</a>, <a class="el" href="kvi__network_8h_source.html#l00094">KviNetwork::name()</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00540">KviPointerHashTable&lt; Key, T &gt;::replace()</a>.</p>
+<p>References <a class="el" href="kvi__ircserverdb_8h_source.html#l00077">m_pRecords</a>, <a class="el" href="kvi__network_8h_source.html#l00094">KviNetwork::name()</a>, and <a class="el" href="kvi__pointerhashtable_8h_source.html#l00546">KviPointerHashTable&lt; Key, T &gt;::replace()</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00364">importFromMircIni()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">load()</a>.</p>
 
@@ -177,7 +177,7 @@
 <p>Returns a list of networks to connect on startup This list is computed when the data are loaded from disk during the startup and is used by <a class="el" href="classKviApp.html">KviApp</a> to start the connections. The pointer is zero if there are no autoConnect networks. The list is valid only during the startup phase because it contains shallow pointers to the networks really contained in the server/network list and it is never updated later. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviPointerList.html">KviPointerList&lt;KviNetwork&gt;</a> * </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01457">KviApp::autoConnectToServers()</a>, and <a class="el" href="kvi__app_8cpp_source.html#l01488">KviApp::createFrame()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01464">KviApp::autoConnectToServers()</a>, and <a class="el" href="kvi__app_8cpp_source.html#l01495">KviApp::createFrame()</a>.</p>
 
 </div>
 </div>
@@ -199,7 +199,7 @@
 <p>Returns a list of servers to connect on startup This list is computed when the data are loaded from disk during the startup and is used by <a class="el" href="classKviApp.html">KviApp</a> to start the connections. The pointer is zero if there are no autoConnect servers. The list is valid only during the startup phase because it contains shallow pointers to the servers really contained in the server/network list and it is never updated later. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviPointerList.html">KviPointerList&lt;KviServer&gt;</a> * </dd></dl>
 
-<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01457">KviApp::autoConnectToServers()</a>, and <a class="el" href="kvi__app_8cpp_source.html#l01488">KviApp::createFrame()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01464">KviApp::autoConnectToServers()</a>, and <a class="el" href="kvi__app_8cpp_source.html#l01495">KviApp::createFrame()</a>.</p>
 
 </div>
 </div>
@@ -221,7 +221,7 @@
 <p>Deletes the database. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00620">KviPointerHashTable&lt; Key, T &gt;::clear()</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00077">m_pRecords</a>, and <a class="el" href="kvi__ircserverdb_8h_source.html#l00078">m_szCurrentNetwork</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00626">KviPointerHashTable&lt; Key, T &gt;::clear()</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00077">m_pRecords</a>, and <a class="el" href="kvi__ircserverdb_8h_source.html#l00078">m_szCurrentNetwork</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00364">importFromMircIni()</a>, and <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00452">load()</a>.</p>
 
@@ -247,7 +247,7 @@
 
 <p>References <a class="el" href="kvi__ircserverdb_8h_source.html#l00080">m_pAutoConnectOnStartupNetworks</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01457">KviApp::autoConnectToServers()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01464">KviApp::autoConnectToServers()</a>.</p>
 
 </div>
 </div>
@@ -271,7 +271,7 @@
 
 <p>References <a class="el" href="kvi__ircserverdb_8h_source.html#l00079">m_pAutoConnectOnStartupServers</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01457">KviApp::autoConnectToServers()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01464">KviApp::autoConnectToServers()</a>.</p>
 
 </div>
 </div>
@@ -293,7 +293,7 @@
 <p>Returns the current network. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviNetwork.html" title="Network handling class.">KviNetwork</a> </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00077">m_pRecords</a>, and <a class="el" href="kvi__ircserverdb_8h_source.html#l00078">m_szCurrentNetwork</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00453">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00077">m_pRecords</a>, and <a class="el" href="kvi__ircserverdb_8h_source.html#l00078">m_szCurrentNetwork</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00404">KviIrcContext::connectToCurrentServer()</a>.</p>
 
@@ -344,7 +344,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviNetwork.html" title="Network handling class.">KviNetwork</a> </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, and <a class="el" href="kvi__ircserverdb_8h_source.html#l00077">m_pRecords</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00453">KviPointerHashTable&lt; Key, T &gt;::find()</a>, and <a class="el" href="kvi__ircserverdb_8h_source.html#l00077">m_pRecords</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00364">importFromMircIni()</a>.</p>
 
@@ -392,7 +392,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00078">addNetwork()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00072">clear()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00083">findNetwork()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00555">KviConfig::hasGroup()</a>, <a class="el" href="kvi__network_8h_source.html#l00087">KviNetwork::m_pServerList</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00078">m_szCurrentNetwork</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00119">KviServer::m_szDescription</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">KviServer::m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00120">KviServer::m_uPort</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00330">parseMircServerRecord()</a>, <a class="el" href="kvi__config_8h_source.html#l00051">KviConfig::Read</a>, <a class="el" href="kvi__config_8cpp_source.html#l00586">KviConfig::readEntry()</a>, <a class="el" href="kvi__config_8h_source.html#l00130">KviConfig::readQStringEntry()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, and <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>.</p>
+<p>References <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00078">addNetwork()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00072">clear()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00083">findNetwork()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00555">KviConfig::hasGroup()</a>, <a class="el" href="kvi__network_8h_source.html#l00087">KviNetwork::m_pServerList</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00078">m_szCurrentNetwork</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00119">KviServer::m_szDescription</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">KviServer::m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00120">KviServer::m_uPort</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00330">parseMircServerRecord()</a>, <a class="el" href="kvi__config_8h_source.html#l00051">KviConfig::Read</a>, <a class="el" href="kvi__config_8cpp_source.html#l00584">KviConfig::readEntry()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, and <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>.</p>
 
 </div>
 </div>
@@ -421,9 +421,9 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00078">addNetwork()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00273">KviServer::autoConnect()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00072">clear()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01116">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01139">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="kvi__config_8h_source.html#l00092">KviConfig::dict()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">KviServer::load()</a>, <a class="el" href="kvi__network_8h_source.html#l00083">KviNetwork::m_bAutoConnect</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00080">m_pAutoConnectOnStartupNetworks</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00079">m_pAutoConnectOnStartupServers</a>, <a class="el" href="kvi__network_8h_source.html#l00088">KviNetwork::m_pCurrentServer</a>, <a class="el" href="kvi__network_8h_source.html#l00082">KviNetwork::m_pNickServRuleSet</a>, <a class="el" href="kvi__network_8h_source.html#l00087">KviNetwork::m_pServerList</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00078">m_szCurrentNetwork</a>, <a class="el" href="kvi__network_8h_source.html#l00072">KviNetwork::m_szDescription</a>, <a class="el" href="kvi__network_8h_source.html#l00073">KviNetwork::m_szEncoding</a>, <a class="el" href="kvi__network_8h_source.html#l00075">KviNetwork::m_szNickName</a>, <a class="el" href="kvi__network_8h_source.html#l00079">KviNetwork::m_szOnConnectCommand</a>, <a class="el" href="kvi__network_8h_source.html#l00080">KviNetwork::m_szOnLoginCommand</a>, <a class="el" href="kvi__network_8h_source.html#l00078">KviNetwork::m_szPass</a>, <a class="el" href="kvi__network_8h_source.html#l00077">KviNetwork::m_szRealName</a>, <a class="el" href="kvi__network_8h_source.html#l00074">KviNetwork::m_szTextEncoding</a>, <a class="el" href="kvi__network_8h_source.html#l00084">KviNetwork::m_szUserIdentityId</a>, <a class="el" href="kvi__network_8h_source.html#l00076">KviNetwork::m_szUserName</a>, <a class="el" href="kvi__config_8h_source.html#l00051">KviConfig::Read</a>, <a class="el" href="kvi__config_8cpp_source.html#l00823">KviConfig::readBoolEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00907">KviConfig::readIntEntry()</a>, <a class="el" href="kvi__config_8h_source.html#l00130">KviConfig::readQStringEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00624">KviConfig::readStringListEntry()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00056">KviNetwork::setAutoJoinChannelList()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, and <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>.</p>
+<p>References <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00078">addNetwork()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00839">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00273">KviServer::autoConnect()</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00072">clear()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01122">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01145">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="kvi__config_8h_source.html#l00092">KviConfig::dict()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__ircserver_8cpp_source.html#l00188">KviServer::load()</a>, <a class="el" href="kvi__network_8h_source.html#l00083">KviNetwork::m_bAutoConnect</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00080">m_pAutoConnectOnStartupNetworks</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00079">m_pAutoConnectOnStartupServers</a>, <a class="el" href="kvi__network_8h_source.html#l00088">KviNetwork::m_pCurrentServer</a>, <a class="el" href="kvi__network_8h_source.html#l00082">KviNetwork::m_pNickServRuleSet</a>, <a class="el" href="kvi__network_8h_source.html#l00087">KviNetwork::m_pServerList</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00078">m_szCurrentNetwork</a>, <a class="el" href="kvi__network_8h_source.html#l00072">KviNetwork::m_szDescription</a>, <a class="el" href="kvi__network_8h_source.html#l00073">KviNetwork::m_szEncoding</a>, <a class="el" href="kvi__network_8h_source.html#l00075">KviNetwork::m_szNickName</a>, <a class="el" href="kvi__network_8h_source.html#l00079">KviNetwork::m_szOnConnectCommand</a>, <a class="el" href="kvi__network_8h_source.html#l00080">KviNetwork::m_szOnLoginCommand</a>, <a class="el" href="kvi__network_8h_source.html#l00078">KviNetwork::m_szPass</a>, <a class="el" href="kvi__network_8h_source.html#l00077">KviNetwork::m_szRealName</a>, <a class="el" href="kvi__network_8h_source.html#l00074">KviNetwork::m_szTextEncoding</a>, <a class="el" href="kvi__network_8h_source.html#l00084">KviNetwork::m_szUserIdentityId</a>, <a class="el" href="kvi__network_8h_source.html#l00076">KviNetwork::m_szUserName</a>, <a class="el" href="kvi__config_8h_source.html#l00051">KviConfig::Read</a>, <a class="el" href="kvi__config_8cpp_source.html#l00800">KviConfig::readBoolEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00584">KviConfig::readEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00884">KviConfig::readIntEntry()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00601">KviConfig::readStringListEntry()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l01017">KviPointerList&lt; T &gt;::setAutoDelete()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00056">KviNetwork::setAutoJoinChannelList()</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, and <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l00205">KviApp::setup()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l00210">KviApp::setup()</a>.</p>
 
 </div>
 </div>
@@ -510,7 +510,7 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00049">_KviServerDefinition::bIPv6</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00048">_KviServerDefinition::bPortIsValid</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00050">_KviServerDefinition::bSSL</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01116">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="namespaceKviQString.html#afe84786f6e548c13eb18c3c6a8f25491">KviQString::equalCIN()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00447">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="namespaceKviNetUtils.html#a055093fea525914aca7b8c17643c47ae">KviNetUtils::isValidStringIp()</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00077">m_pRecords</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00078">m_szCurrentNetwork</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">KviServer::m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00131">KviServer::m_szInitUMode</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00118">KviServer::m_szIp</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00129">KviServer::m_szNick</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00128">KviServer::m_szPass</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00106">makeCurrentBestServerInNetwork()</a>, <a class="el" href="kvi__network_8h_source.html#l00094">KviNetwork::name()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00540">KviPointerHashTable&lt; Key, T &gt;::replace()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, <a class="el" href="kvi__network_8h_source.html#l00305">KviNetwork::serverList()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00542">KviServer::setCacheIp()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00142">KviNetwork::setCurrentServer()</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00056">_KviServerDefinition::szId</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00055">_KviServerDefinition::szInitUMode</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00052">_KviServerDefinition::szLinkFilter</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00054">_KviServerDefinition::szNick</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00053">_KviServerDefinition::szPass</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00046">_KviServerDefinition::szServer</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01152">KviPointerHashTableIterator&lt; Key, T &gt;::toFirst()</a>, and <a class="el" href="kvi__ircserverdb_8h_source.html#l00047">_KviServerDefinition::uPort</a>.</p>
+<p>References <a class="el" href="kvi__locale_8h_source.html#l00114">__tr2qs</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00049">_KviServerDefinition::bIPv6</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00048">_KviServerDefinition::bPortIsValid</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00050">_KviServerDefinition::bSSL</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01122">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="namespaceKviQString.html#afe84786f6e548c13eb18c3c6a8f25491">KviQString::equalCIN()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00453">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00612">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="namespaceKviNetUtils.html#a055093fea525914aca7b8c17643c47ae">KviNetUtils::isValidStringIp()</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00077">m_pRecords</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00078">m_szCurrentNetwork</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00117">KviServer::m_szHostname</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00131">KviServer::m_szInitUMode</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00118">KviServer::m_szIp</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00129">KviServer::m_szNick</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00128">KviServer::m_szPass</a>, <a class="el" href="kvi__ircserverdb_8cpp_source.html#l00106">makeCurrentBestServerInNetwork()</a>, <a class="el" href="kvi__network_8h_source.html#l00094">KviNetwork::name()</a>, <a class="el" href="kvi__pointerlist_8h_source.html#l00731">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l00546">KviPointerHashTable&lt; Key, T &gt;::replace()</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, <a class="el" href="kvi__network_8h_source.html#l00305">KviNetwork::serverList()</a>, <a class="el" href="kvi__ircserver_8h_source.html#l00542">KviServer::setCacheIp()</a>, <a class="el" href="kvi__network_8cpp_source.html#l00142">KviNetwork::setCurrentServer()</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00056">_KviServerDefinition::szId</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00055">_KviServerDefinition::szInitUMode</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00052">_KviServerDefinition::szLinkFilter</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00054">_KviServerDefinition::szNick</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00053">_KviServerDefinition::szPass</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00046">_KviServerDefinition::szServer</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01158">KviPointerHashTableIterator&lt; Key, T &gt;::toFirst()</a>, and <a class="el" href="kvi__ircserverdb_8h_source.html#l00047">_KviServerDefinition::uPort</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00404">KviIrcContext::connectToCurrentServer()</a>.</p>
 
@@ -534,7 +534,7 @@
 <p>Returns the number of networks. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>unsigned integer </dd></dl>
 
-<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00476">KviPointerHashTable&lt; Key, T &gt;::count()</a>, and <a class="el" href="kvi__ircserverdb_8h_source.html#l00077">m_pRecords</a>.</p>
+<p>References <a class="el" href="kvi__pointerhashtable_8h_source.html#l00482">KviPointerHashTable&lt; Key, T &gt;::count()</a>, and <a class="el" href="kvi__ircserverdb_8h_source.html#l00077">m_pRecords</a>.</p>
 
 <p>Referenced by <a class="el" href="kvi__irccontext_8cpp_source.html#l00404">KviIrcContext::connectToCurrentServer()</a>.</p>
 
@@ -585,9 +585,9 @@
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__config_8cpp_source.html#l00069">KviConfig::clear()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01116">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00077">m_pRecords</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00078">m_szCurrentNetwork</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>, <a class="el" href="kvi__config_8h_source.html#l00051">KviConfig::Write</a>, and <a class="el" href="kvi__config_8cpp_source.html#l00576">KviConfig::writeEntry()</a>.</p>
+<p>References <a class="el" href="kvi__config_8cpp_source.html#l00069">KviConfig::clear()</a>, <a class="el" href="kvi__pointerhashtable_8h_source.html#l01122">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00077">m_pRecords</a>, <a class="el" href="kvi__ircserverdb_8h_source.html#l00078">m_szCurrentNetwork</a>, <a class="el" href="kvi__numeric_8h_source.html#l00383">s</a>, <a class="el" href="kvi__config_8cpp_source.html#l00536">KviConfig::setGroup()</a>, <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>, <a class="el" href="kvi__config_8h_source.html#l00051">KviConfig::Write</a>, and <a class="el" href="kvi__config_8cpp_source.html#l00576">KviConfig::writeEntry()</a>.</p>
 
-<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01365">KviApp::saveIrcServerDataBase()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__app_8cpp_source.html#l01364">KviApp::saveIrcServerDataBase()</a>.</p>
 
 </div>
 </div>
@@ -684,7 +684,7 @@
 <li>src/kvilib/irc/<a class="el" href="kvi__ircserverdb_8cpp.html">kvi_ircserverdb.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu Sep 2 17:17:27 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Oct 20 15:12:01 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
