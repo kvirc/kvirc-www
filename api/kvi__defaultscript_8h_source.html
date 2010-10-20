@@ -89,54 +89,54 @@
 <a name="l00093"></a>00093 
 <a name="l00098"></a><a class="code" href="classKviDefaultScriptManager.html#ab478069c913c015b53cb58c0727b5662">00098</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviDefaultScriptManager.html#ab478069c913c015b53cb58c0727b5662" title="Returns the number of instances of the class.">count</a>(){ <span class="keywordflow">return</span> m_uCount; };
 <a name="l00099"></a>00099 
-<a name="l00108"></a>00108         <span class="keywordtype">void</span> restore(<span class="keywordtype">bool</span> bSuggest = <span class="keyword">false</span>);
-<a name="l00109"></a>00109 
-<a name="l00116"></a>00116         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#abac3f12de939692411bdae6dcb59050d">load</a>(<span class="keyword">const</span> QString &amp; szConfigFile);
-<a name="l00117"></a>00117 
-<a name="l00124"></a>00124         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#afc947a792aac67a66d0402e09682ac13">save</a>(<span class="keyword">const</span> QString &amp; szConfigFile);
-<a name="l00125"></a>00125 <span class="keyword">private</span>:
-<a name="l00131"></a>00131         <span class="keywordtype">void</span> restoreInternal(<span class="keywordtype">bool</span> bSuggest = <span class="keyword">false</span>);
-<a name="l00132"></a>00132 
-<a name="l00139"></a>00139         <span class="keywordtype">void</span> loadInternal(<a class="code" href="classKviConfig.html">KviConfig</a> * pCfg);
-<a name="l00140"></a>00140 
-<a name="l00147"></a>00147         <span class="keywordtype">void</span> saveInternal(<a class="code" href="classKviConfig.html">KviConfig</a> * pCfg);
+<a name="l00111"></a>00111         <span class="keywordtype">void</span> restore(<span class="keywordtype">bool</span> bSuggest = <span class="keyword">false</span>);
+<a name="l00112"></a>00112 
+<a name="l00120"></a>00120         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#abac3f12de939692411bdae6dcb59050d">load</a>(<span class="keyword">const</span> QString &amp; szConfigFile);
+<a name="l00121"></a>00121 
+<a name="l00129"></a>00129         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#afc947a792aac67a66d0402e09682ac13">save</a>(<span class="keyword">const</span> QString &amp; szConfigFile);
+<a name="l00130"></a>00130 <span class="keyword">private</span>:
+<a name="l00138"></a>00138         <span class="keywordtype">void</span> restoreInternal(<span class="keywordtype">bool</span> bSuggest = <span class="keyword">false</span>);
+<a name="l00139"></a>00139 
+<a name="l00147"></a>00147         <span class="keywordtype">void</span> loadInternal(<a class="code" href="classKviConfig.html">KviConfig</a> * pCfg);
 <a name="l00148"></a>00148 
-<a name="l00155"></a>00155         <span class="keywordtype">bool</span> <a class="code" href="namespaceKviMiscUtils.html#aef5bebdb5a87b962604af0a1a8da0b55" title="Compares two x.y.z... version strings The function behaves like strcmp: it returns...">compareVersions</a>(QString &amp; szConfig, QString * pszError);
-<a name="l00156"></a>00156 };
+<a name="l00156"></a>00156         <span class="keywordtype">void</span> saveInternal(<a class="code" href="classKviConfig.html">KviConfig</a> * pCfg);
 <a name="l00157"></a>00157 
-<a name="l00162"></a><a class="code" href="classKviDefaultScriptDialog.html">00162</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviDefaultScriptDialog.html" title="A dialog which allow the user to choose which elements to restore.">KviDefaultScriptDialog</a> : <span class="keyword">public</span> QDialog
-<a name="l00163"></a>00163 {
-<a name="l00164"></a>00164         Q_OBJECT
-<a name="l00165"></a><a class="code" href="classKviDefaultScriptDialog.html#a7421e2ed109745e66f2258a2cc9d02ff">00165</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classKviDefaultScriptManager.html" title="The manager who handles the restoring of the default script.">KviDefaultScriptManager</a>;
-<a name="l00166"></a>00166 <span class="keyword">public</span>:
-<a name="l00171"></a>00171         <a class="code" href="classKviDefaultScriptDialog.html" title="A dialog which allow the user to choose which elements to restore.">KviDefaultScriptDialog</a>();
-<a name="l00172"></a>00172 
-<a name="l00176"></a>00176         ~<a class="code" href="classKviDefaultScriptDialog.html" title="A dialog which allow the user to choose which elements to restore.">KviDefaultScriptDialog</a>();
-<a name="l00177"></a>00177 <span class="keyword">protected</span>:
-<a name="l00178"></a><a class="code" href="classKviDefaultScriptDialog.html#a89e0d6ca5977bf87e804b96112917b00">00178</a>         QGroupBox * m_pAdvanced;
-<a name="l00179"></a><a class="code" href="classKviDefaultScriptDialog.html#a48b8473537c30dd13f67fe93b7d93806">00179</a>         QCheckBox * m_pAll;
-<a name="l00180"></a><a class="code" href="classKviDefaultScriptDialog.html#adf736d8294557cecb6d2b628b6776c88">00180</a>         QCheckBox * m_pData;
-<a name="l00181"></a><a class="code" href="classKviDefaultScriptDialog.html#ad030cb4bd6727421f2fa374d323dcc0b">00181</a>         QCheckBox * m_pAction;
-<a name="l00182"></a><a class="code" href="classKviDefaultScriptDialog.html#aa58262181a17001a5a7aff1c1febc657">00182</a>         QCheckBox * m_pAddon;
-<a name="l00183"></a><a class="code" href="classKviDefaultScriptDialog.html#aa025bf1d8ad0dfd88a8d9769039f0db3">00183</a>         QCheckBox * m_pAlias;
-<a name="l00184"></a><a class="code" href="classKviDefaultScriptDialog.html#ae947c3a598f82e20ff9262c0db87babd">00184</a>         QCheckBox * m_pClass;
-<a name="l00185"></a><a class="code" href="classKviDefaultScriptDialog.html#a8c139ab8dd1926d4449426ed24f3008a">00185</a>         QCheckBox * m_pEvent;
-<a name="l00186"></a><a class="code" href="classKviDefaultScriptDialog.html#a61ecb00a8676abfb4c429d14e68432c0">00186</a>         QCheckBox * m_pPopup;
-<a name="l00187"></a><a class="code" href="classKviDefaultScriptDialog.html#aa6a8e8bb4c0cf68c8bb854dd77922634">00187</a>         QCheckBox * m_pRaw;
-<a name="l00188"></a><a class="code" href="classKviDefaultScriptDialog.html#a42dcb27f584100d780e9bb414cf4afda">00188</a>         QCheckBox * m_pToolbar;
-<a name="l00189"></a>00189 <span class="keyword">protected</span> slots:
-<a name="l00195"></a>00195         <span class="keywordtype">void</span> toggleAll(<span class="keywordtype">bool</span>);
-<a name="l00196"></a>00196 
-<a name="l00202"></a>00202         <span class="keywordtype">void</span> advanced();
-<a name="l00203"></a>00203 
-<a name="l00209"></a>00209         <span class="keyword">virtual</span> <span class="keywordtype">void</span> accept();
-<a name="l00210"></a>00210 
-<a name="l00217"></a>00217         <span class="keyword">virtual</span> <span class="keywordtype">void</span> reject();
-<a name="l00218"></a>00218 };
-<a name="l00219"></a>00219 
-<a name="l00220"></a>00220 <span class="preprocessor">#endif // _KVI_DEFAULTSCRIPT_H_</span>
+<a name="l00164"></a>00164         <span class="keywordtype">bool</span> <a class="code" href="namespaceKviMiscUtils.html#aef5bebdb5a87b962604af0a1a8da0b55" title="Compares two x.y.z... version strings The function behaves like strcmp: it returns...">compareVersions</a>(QString &amp; szConfig, QString * pszError);
+<a name="l00165"></a>00165 };
+<a name="l00166"></a>00166 
+<a name="l00171"></a><a class="code" href="classKviDefaultScriptDialog.html">00171</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviDefaultScriptDialog.html" title="A dialog which allow the user to choose which elements to restore.">KviDefaultScriptDialog</a> : <span class="keyword">public</span> QDialog
+<a name="l00172"></a>00172 {
+<a name="l00173"></a>00173         Q_OBJECT
+<a name="l00174"></a><a class="code" href="classKviDefaultScriptDialog.html#a7421e2ed109745e66f2258a2cc9d02ff">00174</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classKviDefaultScriptManager.html" title="The manager who handles the restoring of the default script.">KviDefaultScriptManager</a>;
+<a name="l00175"></a>00175 <span class="keyword">public</span>:
+<a name="l00180"></a>00180         <a class="code" href="classKviDefaultScriptDialog.html" title="A dialog which allow the user to choose which elements to restore.">KviDefaultScriptDialog</a>();
+<a name="l00181"></a>00181 
+<a name="l00185"></a>00185         ~<a class="code" href="classKviDefaultScriptDialog.html" title="A dialog which allow the user to choose which elements to restore.">KviDefaultScriptDialog</a>();
+<a name="l00186"></a>00186 <span class="keyword">protected</span>:
+<a name="l00187"></a><a class="code" href="classKviDefaultScriptDialog.html#a89e0d6ca5977bf87e804b96112917b00">00187</a>         QGroupBox * m_pAdvanced;
+<a name="l00188"></a><a class="code" href="classKviDefaultScriptDialog.html#a48b8473537c30dd13f67fe93b7d93806">00188</a>         QCheckBox * m_pAll;
+<a name="l00189"></a><a class="code" href="classKviDefaultScriptDialog.html#adf736d8294557cecb6d2b628b6776c88">00189</a>         QCheckBox * m_pData;
+<a name="l00190"></a><a class="code" href="classKviDefaultScriptDialog.html#ad030cb4bd6727421f2fa374d323dcc0b">00190</a>         QCheckBox * m_pAction;
+<a name="l00191"></a><a class="code" href="classKviDefaultScriptDialog.html#aa58262181a17001a5a7aff1c1febc657">00191</a>         QCheckBox * m_pAddon;
+<a name="l00192"></a><a class="code" href="classKviDefaultScriptDialog.html#aa025bf1d8ad0dfd88a8d9769039f0db3">00192</a>         QCheckBox * m_pAlias;
+<a name="l00193"></a><a class="code" href="classKviDefaultScriptDialog.html#ae947c3a598f82e20ff9262c0db87babd">00193</a>         QCheckBox * m_pClass;
+<a name="l00194"></a><a class="code" href="classKviDefaultScriptDialog.html#a8c139ab8dd1926d4449426ed24f3008a">00194</a>         QCheckBox * m_pEvent;
+<a name="l00195"></a><a class="code" href="classKviDefaultScriptDialog.html#a61ecb00a8676abfb4c429d14e68432c0">00195</a>         QCheckBox * m_pPopup;
+<a name="l00196"></a><a class="code" href="classKviDefaultScriptDialog.html#aa6a8e8bb4c0cf68c8bb854dd77922634">00196</a>         QCheckBox * m_pRaw;
+<a name="l00197"></a><a class="code" href="classKviDefaultScriptDialog.html#a42dcb27f584100d780e9bb414cf4afda">00197</a>         QCheckBox * m_pToolbar;
+<a name="l00198"></a>00198 <span class="keyword">protected</span> slots:
+<a name="l00205"></a>00205         <span class="keywordtype">void</span> toggleAll(<span class="keywordtype">bool</span>);
+<a name="l00206"></a>00206 
+<a name="l00213"></a>00213         <span class="keywordtype">void</span> advanced();
+<a name="l00214"></a>00214 
+<a name="l00221"></a>00221         <span class="keyword">virtual</span> <span class="keywordtype">void</span> accept();
+<a name="l00222"></a>00222 
+<a name="l00230"></a>00230         <span class="keyword">virtual</span> <span class="keywordtype">void</span> reject();
+<a name="l00231"></a>00231 };
+<a name="l00232"></a>00232 
+<a name="l00233"></a>00233 <span class="preprocessor">#endif // _KVI_DEFAULTSCRIPT_H_</span>
 </pre></div></div>
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Oct 20 15:11:52 2010 for KVIrc by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Wed Oct 20 18:35:54 2010 for KVIrc by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
