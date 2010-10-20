@@ -93,6 +93,10 @@ body {
   <td>Returns the version of an installed addon</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="fnc_aliasbody.html">$aliasBody</a></td>
+  <td>Returns the body of an alias, if it exists</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="fnc_array.html">$array</a></td>
   <td>Explicitly creates an array</td>
 </tr>
@@ -625,6 +629,10 @@ body {
   <td>Reads a text file</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="fnc_file.readbytes.html">$file.readBytes</a></td>
+  <td>Reads a binary file</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="fnc_file.readlines.html">$file.readLines</a></td>
   <td>Reads lines of a text file</td>
 </tr>
@@ -1035,6 +1043,14 @@ body {
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_perl.isavailable.html">$perl.isAvailable</a></td>
   <td>Check if perl scripting support is available</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="fnc_popup.exists.html">$popup.exists</a></td>
+  <td>Returns true if a popup exists</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="fnc_popup.isempty.html">$popup.isEmpty</a></td>
+  <td>Returns true if a popup is empty</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_proxydb.hostname.html">$proxydb.hostname</a></td>
@@ -1665,6 +1681,10 @@ body {
   <td>Returns if a UPnP-capable gateway has been found on the local network</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="fnc_userlist.selected.html">$userlist.selected</a></td>
+  <td>Returns the list of selected nicknames in the channel's userlist</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="fnc_username.html">$username</a></td>
   <td>Returns the username of the specified user</td>
 </tr>
@@ -2187,6 +2207,10 @@ body {
 <tr bgcolor="#EAEAEA">
   <td><a href="event_onignoredmessage.html">OnIgnoredMessage</a></td>
   <td>Triggered when a message is ignored.</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="event_oninputbarpaste.html">OnInputBarPaste</a></td>
+  <td>Triggered when the user paste some text on the inputbar</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="event_oninvite.html">OnInvite</a></td>
@@ -3294,7 +3318,11 @@ body {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_file.write.html">file.write</a></td>
-  <td>Writes an ascii data string to a file</td>
+  <td>Writes character data string to a file</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="cmd_file.writebytes.html">file.writeBytes</a></td>
+  <td>Writes binary data string to a file</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_file.writelines.html">file.writeLines</a></td>
@@ -4010,7 +4038,7 @@ body {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_options.save.html">options.save</a></td>
-  <td>Saves the options to disk</td>
+  <td>Saves the configuration to disk</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="class_painter.html">painter class</a></td>
@@ -4063,6 +4091,54 @@ body {
 <tr bgcolor="#EAEAEA">
   <td><a href="doc_modules.html">plugins</a></td>
   <td>KVIrc modules model</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="cmd_popup.addepilogue.html">popup.addEpilogue</a></td>
+  <td>Adds an epilogue to a popup</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="cmd_popup.addextpopup.html">popup.addExtPopup</a></td>
+  <td>Adds an external popup to a popup</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="cmd_popup.additem.html">popup.addItem</a></td>
+  <td>Adds an item to a popup</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="cmd_popup.addlabel.html">popup.addLabel</a></td>
+  <td>Adds a label to a popup</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="cmd_popup.addprologue.html">popup.addPrologue</a></td>
+  <td>Adds a prologue to a popup</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="cmd_popup.addseparator.html">popup.addSeparator</a></td>
+  <td>Adds a separator to a popup</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="cmd_popup.addsubpopup.html">popup.addSubPopup</a></td>
+  <td>Adds a nested popup to a popup</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="cmd_popup.clear.html">popup.clear</a></td>
+  <td>Clears all the items of a popup</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="cmd_popup.create.html">popup.create</a></td>
+  <td>Creates a popup</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="cmd_popup.delitem.html">popup.delitem</a></td>
+  <td>Deletes an item from a popup</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="cmd_popup.destroy.html">popup.destroy</a></td>
+  <td>Destroies a popup</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="cmd_popup.show.html">popup.show</a></td>
+  <td>Shows a popup menu</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_popup.html">popup</a></td>
@@ -5065,8 +5141,12 @@ body {
   <td>Provides a wrapper class that hooks to an existing Qt graphic object modifying it.</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="cmd_file.writebytes.html">writing data to files</a></td>
+  <td>Writes binary data string to a file</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="cmd_file.write.html">writing data to files</a></td>
-  <td>Writes an ascii data string to a file</td>
+  <td>Writes character data string to a file</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="class_xmlreader.html">xml</a></td>
@@ -5110,6 +5190,6 @@ body {
  <td><a href="doc_keyterms_index_all.html">All</a></td></tr></table></td>
   </tr>
 </table>
-<hr>KVIrc 4.1.1.4965 Documentation<br>Generated by hellvis69 at Wed Sep  1 16:22:36 2010
+<hr>KVIrc 4.1.1.5093 Documentation<br>Generated by hellvis69 at Wed Oct 20 13:05:00 2010
 </body>
 </html>

@@ -49,6 +49,7 @@ Defines a popup menu
 &nbsp;&nbsp;&nbsp;&nbsp;}
 &nbsp;&nbsp;&nbsp;&nbsp;extpopup(&lt;text&gt;,&lt;name&gt;[,&lt;icon&gt;[,&lt;id&gt;]])[(&lt;expression&gt;)][;]
 &nbsp;&nbsp;&nbsp;&nbsp;separator[(&lt;expression&gt;)][;]
+&nbsp;&nbsp;&nbsp;&nbsp;separatorid[(&lt;id&gt;)][(&lt;expression&gt;)][;]
 &nbsp;&nbsp;&nbsp;&nbsp;...
 }</code></pre></font></td>
   </tr>
@@ -57,7 +58,7 @@ Defines a popup menu
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>Defines the popup menu &lt;popup_name&gt;. If the -m switch is NOT used
-the previous contents of the popups are cleared, otherwise are preserved.<br>
+the previous contents of the popups are cleared before updating.<br>
 The popup is generated 'on the fly' when the <a href="cmd_popup.html">popup</a> command
 is called.<br>
 The 'item' keyword adds a menu item with visible &lt;text&gt;,
@@ -67,14 +68,15 @@ call time and may contain identifiers and <a href="doc_kvs_datatypes.html">varia
 is given, it is evaluated at <a href="cmd_popup.html">popup</a> call time and if the result
 is 0, the item is not shown in the physical popup.<br>
 The 'popup' keyword adds a submenu with visible &lt;text&gt;, the optional
-&lt;icon&gt; and a popup body that follows exactly the same syntax
-as the defpopup body. The &lt;expression&gt; has the same meaning as with the
-'item' keyword.<br>
+&lt;icon&gt; and a popup body that has identical syntax to the defpopup body.
+The &lt;expression&gt; has the same meaning as with the 'item' keyword.<br>
 The 'extpopup' keyword adds a submenu with visible &lt;text&gt;, the optional
 icon and a popup body that is defined by the popup menu &lt;name&gt;. This
 basically allows to nest popup menus and define their parts separately.
 &lt;icon&gt; and &lt;expression&gt; have the same meaning as with the 'item' keyword.<br>
 The 'separator' keyword adds a straight line between items (separator).<br>
+The 'separatorid' keyword adds a straight line between items, but permits to
+specify a separator id.<br>
 The 'label' keywork adds a descriptive label that acts like a separator.<br>
 The 'prologue' keyword adds a &lt;prologue_command&gt; to be executed
 just before the popup is filled at <a href="cmd_popup.html">popup</a> command call.<br>
@@ -93,14 +95,14 @@ To remove a popup menu use this command with an empty body:<br>
 <p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;defpopup(test){}
 </font></code></pre></td></tr></table></p>
 This will remove the popup 'test' and free its memory.
-Popups have a special kind of <a href="doc_kvs_datatypes.html">local variables</a> that have an extended lifetime:
-these are called "<a href="doc_kvs_datatypes.html">extended scope</a> <a href="doc_kvs_datatypes.html">variables</a>" and are described in the <a href="doc_data_structures.html">data structures documentation</a>.<br>
-The syntax for these <a href="doc_kvs_datatypes.html">variables</a> is:<br>
+Popups have a special kind of <a href="doc_kvs_datatypes.html">local variables</a> that have an extended lifetime,
+called "<a href="doc_kvs_datatypes.html">extended scope</a>" - this is described in the <a href="doc_data_structures.html">data structures documentation</a>.<br>
+The syntax for an "<a href="doc_kvs_datatypes.html">extended scope</a>" <a href="doc_kvs_datatypes.html">variable</a> is:<br>
 <b>%:&lt;<a href="doc_kvs_datatypes.html">variable</a> name&gt;</b><br>
-These <a href="doc_kvs_datatypes.html">variables</a> are visible during all the "visible lifetime" of the popup:
-from the <a href="cmd_popup.html">popup</a> command call to the moment in that the user selects an item
-and the corresponding code is executed (substantially from a <a href="cmd_popup.html">popup</a> call to the next one).<br>
-This allows you to pre-calculate data and conditions in the porologue of the popup
+This type of <a href="doc_kvs_datatypes.html">variable</a> is maintained during the entire "visible lifetime" of the popup -
+from the <a href="cmd_popup.html">popup</a> command call to the moment in that the user selects an item and the
+corresponding code is executed (essentially from a <a href="cmd_popup.html">popup</a> call to the next one).<br>
+This allows you to pre-calculate data and conditions in the prologue of the popup
 and then use it in the item handlers or item conditions.<br>
 </td>
   </tr>
@@ -111,7 +113,7 @@ and then use it in the item handlers or item conditions.<br>
     <td>
       <table bgcolor="#D5D5D5">
 <tr bgcolor="#E0E0E0"><td><b>-m | --merge</b></td></tr>
-<tr><td>Merges the new popup contents with an older popup version</td></tr>
+<tr><td>Merges the new popup contents with the current named popup. If the named popup does not exist, the popup is created. </td></tr>
       </table>
     </td>
   </tr>
@@ -131,6 +133,7 @@ and then use it in the item handlers or item conditions.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;}
 &nbsp;&nbsp;&nbsp;&nbsp;extpopup<b>(</b><font color="#8080a0">&lt;</font>text<font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>name<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>icon<font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>id<font color="#8080a0">&gt;</font><font color="#8080a0">]</font><font color="#8080a0">]</font><b>)</b><font color="#8080a0">[</font><b>(</b><font color="#8080a0">&lt;</font>expression<font color="#8080a0">&gt;</font><b>)</b><font color="#8080a0">]</font><font color="#8080a0">[</font>;<font color="#8080a0">]</font>
 &nbsp;&nbsp;&nbsp;&nbsp;separator<font color="#8080a0">[</font><b>(</b><font color="#8080a0">&lt;</font>expression<font color="#8080a0">&gt;</font><b>)</b><font color="#8080a0">]</font><font color="#8080a0">[</font>;<font color="#8080a0">]</font>
+&nbsp;&nbsp;&nbsp;&nbsp;separatorid<font color="#8080a0">[</font><b>(</b><font color="#8080a0">&lt;</font>id<font color="#8080a0">&gt;</font><b>)</b><font color="#8080a0">]</font><font color="#8080a0">[</font><b>(</b><font color="#8080a0">&lt;</font>expression<font color="#8080a0">&gt;</font><b>)</b><font color="#8080a0">]</font><font color="#8080a0">[</font>;<font color="#8080a0">]</font>
 &nbsp;&nbsp;&nbsp;&nbsp;...
 }</code></pre></font></td>
   </tr>
@@ -143,6 +146,6 @@ and then use it in the item handlers or item conditions.<br>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<hr>KVIrc 4.1.1.4965 Documentation<br>Generated by hellvis69 at Wed Sep  1 16:22:36 2010
+<hr>KVIrc 4.1.1.5093 Documentation<br>Generated by hellvis69 at Wed Oct 20 13:05:00 2010
 </body>
 </html>

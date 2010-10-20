@@ -69,6 +69,7 @@ exec<!>Asynchronous execution of external programs<!>cmd_exec.html
 privateimpl<!>Adds a private implementation of a function<!>cmd_privateimpl.html
 timer<!>Starts a timer<!>cmd_timer.html
 $active<!>Retrieves the window ID of the active window<!>fnc_active.html
+$aliasBody<!>Returns the body of an alias, if it exists<!>fnc_aliasbody.html
 $ascii<!>Returns the UNICODE code of a character<!>fnc_ascii.html
 $asciiToBase64<!>Returns an encoded base64 string<!>fnc_asciitobase64.html
 $asciiToHex<!>Returns an encoded hex string<!>fnc_asciitohex.html
@@ -397,6 +398,7 @@ OnNickLinkDefaultActionRequest<!>Nick link double click customization<!>event_on
 OnChannelNickDefaultActionRequest<!>Allows customization of the double click on nicknames<!>event_onchannelnickdefaultactionrequest.html
 OnQueryNickDefaultActionRequest<!>Query double click customization<!>event_onquerynickdefaultactionrequest.html
 OnWindowTitleRequest<!>Triggered when a window title needs to be set<!>event_onwindowtitlerequest.html
+OnInputBarPaste<!>Triggered when the user paste some text on the inputbar<!>event_oninputbarpaste.html
 objects<!>Object scripting overview<!>doc_objects.html
 object scripting<!>Object scripting overview<!>doc_objects.html
 complex data structures<!>Object scripting overview<!>doc_objects.html
@@ -674,8 +676,10 @@ copying files<!>Makes a copy of a file<!>cmd_file.copy.html
 file.copy<!>Makes a copy of a file<!>cmd_file.copy.html
 file.addimagepath<!>Adds an image search path<!>cmd_file.addimagepath.html
 file.delimagepath<!>Removes an image search path<!>cmd_file.delimagepath.html
-writing data to files<!>Writes an ascii data string to a file<!>cmd_file.write.html
-file.write<!>Writes an ascii data string to a file<!>cmd_file.write.html
+writing data to files<!>Writes character data string to a file<!>cmd_file.write.html
+file.write<!>Writes character data string to a file<!>cmd_file.write.html
+writing data to files<!>Writes binary data string to a file<!>cmd_file.writebytes.html
+file.writeBytes<!>Writes binary data string to a file<!>cmd_file.writebytes.html
 copying files<!>Makes a copy of a file<!>cmd_file.rename.html
 file.rename<!>Makes a copy of a file<!>cmd_file.rename.html
 creating directories<!>Creates a directory<!>cmd_file.mkdir.html
@@ -692,6 +696,7 @@ $file.fixpath<!>Converts file paths<!>fnc_file.fixpath.html
 $file.ps<!>Returns the file path separator<!>fnc_file.ps.html
 $file.ls<!>Returns a directory listing<!>fnc_file.ls.html
 $file.read<!>Reads a text file<!>fnc_file.read.html
+$file.readBytes<!>Reads a binary file<!>fnc_file.readbytes.html
 $file.readLines<!>Reads lines of a text file<!>fnc_file.readlines.html
 file.writeLines<!>Writes an array of lines to a file<!>cmd_file.writelines.html
 $file.localdir<!>Get the KVIrc local directory<!>fnc_file.localdir.html
@@ -921,7 +926,7 @@ objects.name<!>Returns class name<!>cmd_objects.name.html
 objects.disconnect<!>Disconnects a signal from a slot<!>cmd_objects.disconnect.html
 dump objects<!>Dump the kvirc widgets.<!>fnc_objects.dump.html
 $objects.dump<!>Dump the kvirc widgets.<!>fnc_objects.dump.html
-options.save<!>Saves the options to disk<!>cmd_options.save.html
+options.save<!>Saves the configuration to disk<!>cmd_options.save.html
 options.dialog<!>Shows the "options dialog"<!>cmd_options.dialog.html
 options.pages<!>Lists the option pages<!>cmd_options.pages.html
 options.edit [-m]<!>Shows a single options page<!>cmd_options.edit.html
@@ -934,6 +939,20 @@ perl.begin<!>Starts a perl code snippet<!>cmd_perl.begin.html
 perl.end<!>Ends a perl code snippet<!>cmd_perl.end.html
 perl.destroy<!>Destroys a perl execution context<!>cmd_perl.destroy.html
 $perl.isAvailable<!>Check if perl scripting support is available<!>fnc_perl.isavailable.html
+popup.addItem<!>Adds an item to a popup<!>cmd_popup.additem.html
+popup.addPrologue<!>Adds a prologue to a popup<!>cmd_popup.addprologue.html
+popup.addEpilogue<!>Adds an epilogue to a popup<!>cmd_popup.addepilogue.html
+popup.addExtPopup<!>Adds an external popup to a popup<!>cmd_popup.addextpopup.html
+popup.addLabel<!>Adds a label to a popup<!>cmd_popup.addlabel.html
+popup.addSubPopup<!>Adds a nested popup to a popup<!>cmd_popup.addsubpopup.html
+popup.addSeparator<!>Adds a separator to a popup<!>cmd_popup.addseparator.html
+popup.clear<!>Clears all the items of a popup<!>cmd_popup.clear.html
+popup.create<!>Creates a popup<!>cmd_popup.create.html
+popup.destroy<!>Destroies a popup<!>cmd_popup.destroy.html
+popup.delitem<!>Deletes an item from a popup<!>cmd_popup.delitem.html
+$popup.exists<!>Returns true if a popup exists<!>fnc_popup.exists.html
+$popup.isEmpty<!>Returns true if a popup is empty<!>fnc_popup.isempty.html
+popup.show<!>Shows a popup menu<!>cmd_popup.show.html
 popupeditor.open<!>Shows the popup editor<!>cmd_popupeditor.open.html
 $proxydb.protocol<!>Returns the protocol<!>fnc_proxydb.protocol.html
 $proxydb.hostname<!>Returns the hostname<!>fnc_proxydb.hostname.html
@@ -1216,6 +1235,7 @@ upnp.refresh<!>Rescan the local network for a gateway using UPnP<!>cmd_upnp.refr
 url.list<!>Opens url list<!>cmd_url.list.html
 url.config<!>Loads URL list module<!>cmd_url.config.html
 The URL list module<!>The URL list module: keeps track of all urls shown in kvirc windows<!>module_url.html
+$userlist.selected<!>Returns the list of selected nicknames in the channel's userlist<!>fnc_userlist.selected.html
 window.clearOutput<!>Clears the output a window<!>cmd_window.clearoutput.html
 window.close<!>Closes a window<!>cmd_window.close.html
 window.dock<!>Docks a window<!>cmd_window.dock.html
