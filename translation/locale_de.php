@@ -830,7 +830,7 @@ $template['screen']['text']="Du hast ein schönes Bildschirmfoto? Schick es an";
 $template['screen']['prev']="zurück";
 $template['screen']['next']="weiter";
 $template['screen']['screen1']="Allgemeiner Optionsdialog";
-$template['screen']['screen2']="Skript Center";	
+$template['screen']['screen2']="Skript Center";
 $template['screen']['screen3']="URL plugin &amp; an object mail script";			//TODO
 $template['screen']['screen4']="Mehr Dialoge";
 $template['screen']['screen5']="Raum-Aufklappmenüs";
@@ -910,9 +910,9 @@ $template['splash']['in']="Enthalten in";
 /* status.php start */
 $template['status']['title']="Projektstatus";
 $template['status']['text']="
-	<p>Nach 9 Jahren Entwicklung ist KVIrc ein ausgereifter und voll ausgestatteter IRC-Client, ein exzellenter Begleiter für die täglichen IRC-Aktivitäten.</p>
-	<p>Die aktuelle stabile Version ist <a href=\"?id=news&story=2008.10.14.16.59.1.story&dir=latest&lang=$lang\">3.4.2 \"Shiny\"</a>.
-	Sie wurde am 14. Oktober 2008 veröffentlicht.
+	<p>Nach 10 Jahren Entwicklung ist KVIrc ein ausgereifter und voll ausgestatteter IRC-Client, ein exzellenter Begleiter für die täglichen IRC-Aktivitäten.</p>
+	<p>Die aktuelle stabile Version ist <a href=\"?id=news&story=2010.08.01.16.30.1.story&dir=latest&lang=$lang\">4.0.2 \"Insomnia\"</a>.
+	Sie wurde am 1. August 2010 veröffentlicht.
 
 	Sie kann als Quelltext von der <a href=\"?id=download&amp;lang=$lang\">download</a>-Seite bezogen werden.</p>
 	<p>Wenn Sie offizielle Veröffentlichungen suchen, schauen Sie in <a href=\"?id=releases&amp;lang=$lang\">diese Rubrik</a>, diese werden seltener veröffentlicht, sind aber die stabilsten. Wählen Sie ihre Version zwischen Linux, Windows, MacOSX oder Quelltextpaket.</p>
@@ -951,7 +951,7 @@ $template['themes']['text3b1']="Es gibt eine kleine Kurzanleitung (englisch), di
 $template['themes']['text3b2']="hier";
 $template['themes']['text3b3']="gefunden werden kann und eine italienische Version";
 $template['themes']['text3b4']="Die englische Kurzanleitung ist auch im KVIrc-Paket enthalten";
-$template['themes']['text4a']="Ich habe ein Thema erstellt. Wie kann ich es mit anderen teilen";	
+$template['themes']['text4a']="Ich habe ein Thema erstellt. Wie kann ich es mit anderen teilen";
 $template['themes']['text4b']="Sie können es an";
 $template['themes']['text4c']="senden, inklusive eines Themennamens, Beschreibung, Version, Spitzname, Homepage und E-Mail; erlaube Sie uns (oder nicht) diese auf der Homepage zu zeigen";
 $template['themes']['text5']="Alle Downloads sind für eine Auflösung von 1024x768 gedacht.<br />Wenn eine 1280x1024-Version verteilt werden soll, senden sie diese einfach mit einer 1024x768 Version ein.";

@@ -915,9 +915,9 @@ $template['splash']['in']="Splash presente en";
 /* status.php start */
 $template['status']['title']="Estado del proyecto";
 $template['status']['text']="
-	<p>Después de 9 años de desarrollo KVIrc es un cliente de IRC maduro y lleno de prestaciones, una excelente compañía para tus sesiones diarias de IRC.</p>
-	<p>La última versión estable es <a href=\"?id=news&story=2008.10.14.16.59.1.story&dir=latest&lang==$lang\">3.4.2 \"Shiny\"</a>.
-	Fue publicada el 14 de Octubre de 2008.
+	<p>Después de 10 años de desarrollo KVIrc es un cliente de IRC maduro y lleno de prestaciones, una excelente compañía para tus sesiones diarias de IRC.</p>
+	<p>La última versión estable es <a href=\"?id=news&story=2010.08.01.16.30.1.story&dir=latest&lang==$lang\">4.0.2 \"Insomnia\"</a>.
+	Fue publicada el 1 de Agosto de 2010.
 	Puede ser obtenida en código desde la página de <a href=\"?id=download&amp;lang=$lang\">descargas</a>.</p>
 	<p>Si estás buscando versiones oficiales, échale un vistazo a <a href=\"?id=releases&amp;lang=$lang\">esta sección</a>, estas versiones son liberadas menos frecuentemente pero son las más estables. Elige tu versión entre Linux, Windows, MacOS X o el paquete de código fuente.</p>
 	<p>Las snapshots están <a href=\"?id=snapshots&amp;lang=$lang\">aquí</a> y el SVN está <a href=\"?id=SVN&amp;lang=$lang\">aquí</a>.</p>
@@ -1128,7 +1128,7 @@ $template['tutorials']['dropmail']="Si has escrito un FAQ, tutorial o guía de K
 $template['tutorials']['text5a']="HowTo de temas";
 $template['tutorials']['text5b']="Un pequeño howto sobre cómo hacer un buen tema";
 $template['tutorials']['text6a']="Modificación del instalador bajo Win32";
-$template['tutorials']['text6b']="Un tutorial sobre cómo reempaquetar el instalador de windows para incluir un script por defecto modificado, un nuevo tema o lo que sea"; 
+$template['tutorials']['text6b']="Un tutorial sobre cómo reempaquetar el instalador de windows para incluir un script por defecto modificado, un nuevo tema o lo que sea";
 $template['tutorials']['text7a']="Usuarios registrados";
 $template['tutorials']['text7b']="Tutorial que explica cómo administrar la base de datos de usuarios registrados";
 /* tutorials.php end */

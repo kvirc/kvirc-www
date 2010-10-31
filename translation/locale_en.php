@@ -902,7 +902,7 @@ $template['snapshots']['text2']="
 	The source snapshots are kindly provided by the KVIrc Development Team.<br />
 	Honor and Glory! :)";
 $template['snapshots']['text3']="
-	To download the latest snapshot you have to dig in 
+	To download the latest snapshot you have to dig in
 	<a href=\"ftp://ftp.kvirc.de/pub/kvirc/snapshots/\">the KVIrc ftp</a> or in the \"snapshots\" subdirectory of one of the ftp mirrors.";
 /* snapshots.php end */
 
@@ -916,9 +916,9 @@ $template['splash']['in']="Splash Present in";
 /* status.php start */
 $template['status']['title']="Project Status";
 $template['status']['text']="
-	<p>After 9 years of development KVIrc is a mature and full featured IRC client, an excellent companion for your daily IRC sessions.</p>
-	<p>The latest stable release is <a href=\"?id=news&story=2008.10.14.16.59.1.story&dir=latest&lang=$lang\">3.4.2 \"Shiny\"</a>.
-	It has been published on Oct 14 2008.
+	<p>After 10 years of development KVIrc is a mature and full featured IRC client, an excellent companion for your daily IRC sessions.</p>
+	<p>The latest stable release is <a href=\"?id=news&story=2010.08.01.16.30.1.story&dir=latest&lang=$lang\">4.0.2 \"Insomnia\"</a>.
+	It has been published on August 1, 2010.
 	It can be obtained in source form from the <a href=\"?id=download&amp;lang=$lang\">download</a> page.</p>
 	<p>If you are looking for official releases have a look at <a href=\"?id=releases&amp;lang=$lang\">this section</a>, those are released less often but are most stable. Choose your release between Linux, Windows, MacOS X or source package.</p>
 	<p>Snapshots are located <a href=\"?id=snapshots&amp;lang=$lang\">here</a> while SVN are found <a href=\"?id=SVN&amp;lang=$lang\">here</a>.</p>
