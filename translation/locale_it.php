@@ -1000,6 +1000,8 @@ $template['themes']['theme36']="Un tema rosa ispirato a Hello Kitty";
 $template['themes']['theme37']="Uno sfondo rilassante con la sua cascata.. sfumata da una luce turchese. Il colore dei messaggi è coerente alla provenienza";
 $template['themes']['theme38']="Celebration è un tema roseo, pulito; i temi puliti non sono i miei favoriti ma questo è una sorta di celebrazione: la tua vita, il tuo mondo, il tuo amore";
 $template['themes']['theme39']="Un bel tema chiaro con uno sfondo verde ad alta risoluzione e le icone del canale vecchio stile";
+$template['themes']['theme40']="A dark theme optimized for working on a monitor set to minimum brightness and for secure communication.";
+$template['themes']['theme41']="A light theme from the author of VDark.";
 /* themes.php end */
 
 /* tools.php start */

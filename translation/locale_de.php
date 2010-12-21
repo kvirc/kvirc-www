@@ -995,6 +995,8 @@ $template['themes']['theme36']="Ein rosafarbenes Thema inspiriert von »Hello Ki
 $template['themes']['theme37']="Easy-on-eyes refreshing waterfall wallpaper... diffused with light turquoise transparency. Coherent text colors with the source of the message";
 $template['themes']['theme38']="Celebration ist ein ziemlich pinkes Thema, aber sauber; die suaberen Themen sind nicht meine Favoriten, aber dieses ist eine Art Feier: das Leben, die Welt, die Liebe";
 $template['themes']['theme39']="Ein nettes helles Thema mit einem zarten hochaufgelöstem grünen Hintergrund und alten Raumstatussymbolen";
+$template['themes']['theme40']="A dark theme optimized for working on a monitor set to minimum brightness and for secure communication.";
+$template['themes']['theme41']="A light theme from the author of VDark.";
 /* themes.php end */
 
 /* tools.php start */

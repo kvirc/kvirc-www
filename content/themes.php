@@ -30,7 +30,10 @@ echo "<div class=\"column1-unit\">";
 
 	echo "<p>".$template['themes']['text5']."</p>";
 
-foreach($themes as $key => $value){
+$rthemes = reverse($themes); // newer themes go first
+
+foreach($rthemes as $key => $value)
+{
 	if(fmod($key,2)!=0) echo "<div class=\"split\"><div class=\"left\">";
 	else echo "<div class=\"right\">";
 
