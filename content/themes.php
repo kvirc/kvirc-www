@@ -32,10 +32,16 @@ echo "<div class=\"column1-unit\">";
 
 $rthemes = array_reverse($themes); // newer themes go first
 
+$bInLeftColumn = false;
+
 foreach($rthemes as $key => $value)
 {
-	if(fmod($key,2)==0) echo "<div class=\"split\"><div class=\"left\">";
-	else echo "<div class=\"right\">";
+	if($bInLeftColumn)
+		echo "<div class=\"right\">";
+	else
+		echo "<div class=\"split\"><div class=\"left\">";
+
+	$bInLeftColumn = !$bInLeftColumn;
 
 	// We have an array of version number
 	if(is_array($value['version']) && is_array($value['download']))
@@ -73,8 +79,13 @@ foreach($rthemes as $key => $value)
 	echo "</div>";
 
 	// if the object is on the right or if it's the last, we have to close the container split
-	if((fmod($key,2)==0)||($key==count($themes))) echo "</div>";
+	if(!$bInLeftColumn)
+		echo "</div>";
 }
+
+if($bInLeftColumn)
+	echo "</div>";
+
 
 echo "</div>";
 ?>
