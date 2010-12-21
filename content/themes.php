@@ -34,7 +34,7 @@ $rthemes = array_reverse($themes); // newer themes go first
 
 foreach($rthemes as $key => $value)
 {
-	if(fmod($key,2)!=0) echo "<div class=\"split\"><div class=\"left\">";
+	if(fmod($key,2)==0) echo "<div class=\"split\"><div class=\"left\">";
 	else echo "<div class=\"right\">";
 
 	// We have an array of version number
