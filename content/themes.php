@@ -30,7 +30,7 @@ echo "<div class=\"column1-unit\">";
 
 	echo "<p>".$template['themes']['text5']."</p>";
 
-$rthemes = reverse($themes); // newer themes go first
+$rthemes = array_reverse($themes); // newer themes go first
 
 foreach($rthemes as $key => $value)
 {
