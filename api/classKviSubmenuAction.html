@@ -61,9 +61,9 @@ Inheritance diagram for KviSubmenuAction:<!-- endSectionHeader --></div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a87cf87419cefdb741a2d8023c52f3aba">addToCustomToolBar</a> (<a class="el" href="classKviCustomToolBar.html">KviCustomToolBar</a> *pTool)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the action to the given toolbar.  <a href="#a87cf87419cefdb741a2d8023c52f3aba"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a2daa3e8e19944910a5ef3c72426311b2">addToPopupMenu</a> (<a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *pMenu)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a2daa3e8e19944910a5ef3c72426311b2">addToPopupMenu</a> (KviTalPopupMenu *pMenu)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the action to the given popup.  <a href="#a2daa3e8e19944910a5ef3c72426311b2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a7b9881398563eb0f0a5ba2561f898497">KviSubmenuAction</a> (QObject *pParent, const QString &amp;szName, const QString &amp;szScriptCode, const QString &amp;szVisibleName, const QString &amp;szDescription, <a class="el" href="classKviActionCategory.html">KviActionCategory</a> *pCategory=<a class="el" href="kvi__numeric_8h.html#af2ebd5db010f0e321c1faa0e6a182c2b">NULL</a>, const QString &amp;szBigIconId=QString(), const QString &amp;szSmallIcoNId=QString(), unsigned int uFlags=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a7b9881398563eb0f0a5ba2561f898497">KviSubmenuAction</a> (QObject *pParent, const QString &amp;szName, const QString &amp;szScriptCode, const QString &amp;szVisibleName, const QString &amp;szDescription, <a class="el" href="classKviActionCategory.html">KviActionCategory</a> *pCategory=<a class="el" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a>, const QString &amp;szBigIconId=QString(), const QString &amp;szSmallIcoNId=QString(), unsigned int uFlags=0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a94b9a21edec6b6206736d846f99e9325">~KviSubmenuAction</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
@@ -75,7 +75,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables the action upon starting KVIrc.  <a href="#a00ade98a8f46409cd34a7933e20b08f4"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a5c7e8ce7530fdbb6bfc323078ba45b13">m_pPopup</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviTalPopupMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a5c7e8ce7530fdbb6bfc323078ba45b13">m_pPopup</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7b9881398563eb0f0a5ba2561f898497"></a><!-- doxytag: member="KviSubmenuAction::KviSubmenuAction" ref="a7b9881398563eb0f0a5ba2561f898497" args="(QObject *pParent, const QString &amp;szName, const QString &amp;szScriptCode, const QString &amp;szVisibleName, const QString &amp;szDescription, KviActionCategory *pCategory=NULL, const QString &amp;szBigIconId=QString(), const QString &amp;szSmallIcoNId=QString(), unsigned int uFlags=0)" -->
@@ -116,7 +116,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classKviActionCategory.html">KviActionCategory</a> *&#160;</td>
-          <td class="paramname"> <em>pCategory</em> = <code><a class="el" href="kvi__numeric_8h.html#af2ebd5db010f0e321c1faa0e6a182c2b">NULL</a></code>, </td>
+          <td class="paramname"> <em>pCategory</em> = <code><a class="el" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -205,7 +205,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">bool KviSubmenuAction::addToPopupMenu </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td>
+          <td class="paramtype">KviTalPopupMenu *&#160;</td>
           <td class="paramname"> <em>pMenu</em>&#160;)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -224,7 +224,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviAction.html#a62ac15a73381217e5daedf1bac6a097b">KviAction</a>.</p>
 
-<p>References <a class="el" href="classKviTalPopupMenu.html#ad491ba2ad4a8133a89bdf417c1acacc6">KviTalPopupMenu::insertItem()</a>, <a class="el" href="classKviAction.html#a13bd501174c472299d566a33e75ec177">KviAction::isEnabled()</a>, <a class="el" href="classKviSubmenuAction.html#a5c7e8ce7530fdbb6bfc323078ba45b13">m_pPopup</a>, <a class="el" href="classKviTalPopupMenu.html#af795e001403292ee5fb15cd600495f9e">KviTalPopupMenu::setItemEnabled()</a>, <a class="el" href="classKviSubmenuAction.html#a00ade98a8f46409cd34a7933e20b08f4">setup()</a>, <a class="el" href="classKviAction.html#aea704938943c932bcef1dbb7355f1eb9">KviAction::setupDone()</a>, <a class="el" href="classKviAction.html#ab97e47d4ee5a86fb1a5e4e8d338bb7ae">KviAction::smallIcon()</a>, and <a class="el" href="classKviAction.html#a75f53e180467211892c803f245d99cac">KviAction::visibleName()</a>.</p>
+<p>References <a class="el" href="classKviAction.html#a13bd501174c472299d566a33e75ec177">KviAction::isEnabled()</a>, <a class="el" href="classKviSubmenuAction.html#a5c7e8ce7530fdbb6bfc323078ba45b13">m_pPopup</a>, <a class="el" href="classKviSubmenuAction.html#a00ade98a8f46409cd34a7933e20b08f4">setup()</a>, <a class="el" href="classKviAction.html#aea704938943c932bcef1dbb7355f1eb9">KviAction::setupDone()</a>, <a class="el" href="classKviAction.html#ab97e47d4ee5a86fb1a5e4e8d338bb7ae">KviAction::smallIcon()</a>, and <a class="el" href="classKviAction.html#a75f53e180467211892c803f245d99cac">KviAction::visibleName()</a>.</p>
 
 </div>
 </div>
@@ -300,7 +300,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>* <a class="el" href="classKviSubmenuAction.html#a5c7e8ce7530fdbb6bfc323078ba45b13">KviSubmenuAction::m_pPopup</a><code> [protected]</code></td>
+          <td class="memname">KviTalPopupMenu* <a class="el" href="classKviSubmenuAction.html#a5c7e8ce7530fdbb6bfc323078ba45b13">KviSubmenuAction::m_pPopup</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -315,7 +315,7 @@ Protected Attributes</h2></td></tr>
 <li>src/kvirc/kernel/<a class="el" href="kvi__coreactions_8cpp.html">kvi_coreactions.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:33:04 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:13 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

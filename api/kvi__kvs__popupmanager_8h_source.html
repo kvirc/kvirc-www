@@ -37,7 +37,7 @@
 <a name="l00006"></a>00006 <span class="comment">//   Creation date : Tue 7 Jan 2004 02:11:41 by Szymon Stefanek</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">//   This file is part of the KVIrc IRC client distribution</span>
-<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2004-2008 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
+<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2004-2010 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
 <a name="l00010"></a>00010 <span class="comment">//</span>
 <a name="l00011"></a>00011 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00012"></a>00012 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -65,15 +65,15 @@
 <a name="l00034"></a>00034         <a class="code" href="classKviKvsPopupManager.html">KviKvsPopupManager</a>();
 <a name="l00035"></a>00035         ~<a class="code" href="classKviKvsPopupManager.html">KviKvsPopupManager</a>();
 <a name="l00036"></a>00036 <span class="keyword">protected</span>:
-<a name="l00037"></a><a class="code" href="classKviKvsPopupManager.html#a7e8a6bd12a17a702bbe0fe88b75f65b5">00037</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviKvsPopupMenu&gt;</a>    * <a class="code" href="classKviKvsPopupManager.html#a7e8a6bd12a17a702bbe0fe88b75f65b5">m_pPopupDict</a>;
+<a name="l00037"></a><a class="code" href="classKviKvsPopupManager.html#a7e8a6bd12a17a702bbe0fe88b75f65b5">00037</a>         KviPointerHashTable&lt;QString,KviKvsPopupMenu&gt;    * <a class="code" href="classKviKvsPopupManager.html#a7e8a6bd12a17a702bbe0fe88b75f65b5">m_pPopupDict</a>;
 <a name="l00038"></a><a class="code" href="classKviKvsPopupManager.html#a894cdecbe47e35e07aff470a20d7d9f8">00038</a>         <span class="keyword">static</span> <a class="code" href="classKviKvsPopupManager.html">KviKvsPopupManager</a> * <a class="code" href="classKviKvsPopupManager.html#a894cdecbe47e35e07aff470a20d7d9f8">m_pInstance</a>;
 <a name="l00039"></a>00039 <span class="keyword">public</span>:
 <a name="l00040"></a><a class="code" href="classKviKvsPopupManager.html#a9d14b44d28f655ad08d6a27cd0f508cb">00040</a>         <span class="keyword">static</span> <a class="code" href="classKviKvsPopupManager.html">KviKvsPopupManager</a> * <a class="code" href="classKviKvsPopupManager.html#a9d14b44d28f655ad08d6a27cd0f508cb">instance</a>(){ <span class="keywordflow">return</span> m_pInstance; };
-<a name="l00041"></a>00041         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="namespaceKviStringConversion.html#a25090e2ca3b1e82492fb33ebc2ed0f1d">init</a>();
-<a name="l00042"></a>00042         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="namespaceKviLocale.html#a0516e82ea3996ded16e7bd66399c4e60">done</a>();
+<a name="l00041"></a>00041         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="namespaceKviKvs.html#a94c1acb519342da85a66decfe8c21912">init</a>();
+<a name="l00042"></a>00042         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="namespaceKviKvs.html#ab846ee5b15891b344ae932ef8f19ed3f">done</a>();
 <a name="l00043"></a><a class="code" href="classKviKvsPopupManager.html#a916c913bbc64d91f0e3d4917fad6d98a">00043</a>         <span class="keywordtype">int</span> <a class="code" href="classKviKvsPopupManager.html#a916c913bbc64d91f0e3d4917fad6d98a">popupCount</a>(){ <span class="keywordflow">return</span> m_pPopupDict-&gt;count(); };
 <a name="l00044"></a>00044 
-<a name="l00045"></a><a class="code" href="classKviKvsPopupManager.html#a66867d98cd522869a7453c9a82ce7ec3">00045</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviKvsPopupMenu&gt;</a> * <a class="code" href="classKviKvsPopupManager.html#a66867d98cd522869a7453c9a82ce7ec3">popupDict</a>(){ <span class="keywordflow">return</span> m_pPopupDict; };
+<a name="l00045"></a><a class="code" href="classKviKvsPopupManager.html#a66867d98cd522869a7453c9a82ce7ec3">00045</a>         KviPointerHashTable&lt;QString,KviKvsPopupMenu&gt; * <a class="code" href="classKviKvsPopupManager.html#a66867d98cd522869a7453c9a82ce7ec3">popupDict</a>(){ <span class="keywordflow">return</span> m_pPopupDict; };
 <a name="l00046"></a>00046 
 <a name="l00047"></a><a class="code" href="classKviKvsPopupManager.html#acbcff43871618472fc66374837007a4f">00047</a>         <a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * <a class="code" href="classKviKvsPopupManager.html#acbcff43871618472fc66374837007a4f">lookup</a>(<span class="keyword">const</span> QString &amp;szPopupName){ <span class="keywordflow">return</span> m_pPopupDict-&gt;find(szPopupName); };
 <a name="l00048"></a>00048         <a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * <span class="keyword">get</span>(<span class="keyword">const</span> QString &amp;szPopupName);
@@ -92,7 +92,7 @@
 <a name="l00061"></a>00061 <span class="preprocessor">#endif //!_KVI_KVS_POPUPMANAGER_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:54 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:04 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

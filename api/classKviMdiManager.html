@@ -65,7 +65,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove and delete the subwindow.  <a href="#afe27e4cfc3795a8bc85bc6f3185008fa"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiManager.html#a365df13fd61a318c3bbde9627af4d9e0">eventFilter</a> (QObject *obj, QEvent *event)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Filters out some events: (de)activation events, window switching.  <a href="#a365df13fd61a318c3bbde9627af4d9e0"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiManager.html#a979f40e56dbf51bd1a36a14fad2c3387">focusPreviousTopChild</a> (<a class="el" href="classKviMdiChild.html">KviMdiChild</a> *pExcludeThis=<a class="el" href="kvi__numeric_8h.html#af2ebd5db010f0e321c1faa0e6a182c2b">NULL</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiManager.html#a979f40e56dbf51bd1a36a14fad2c3387">focusPreviousTopChild</a> (<a class="el" href="classKviMdiChild.html">KviMdiChild</a> *pExcludeThis=<a class="el" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a>)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Move the focus the the previous active window.  <a href="#a979f40e56dbf51bd1a36a14fad2c3387"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiManager.html#a1e62a39d62fafc9e6e66f1394d4ca390">getVisibleChildCount</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all visible subwindows.  <a href="#a1e62a39d62fafc9e6e66f1394d4ca390"></a><br/></td></tr>
@@ -85,7 +85,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the <a class="el" href="classKviMdiChild.html" title="Class of an MDI window.">KviMdiChild</a> and bring it to the front.  <a href="#a51e6e9bfdf94c686199538e7041ff29d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviMdiChild.html">KviMdiChild</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiManager.html#aaae20f13c1335c8a5e3fdda6ffa82ef5">topChild</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the currently active window.  <a href="#aaae20f13c1335c8a5e3fdda6ffa82ef5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiManager.html#adb52b0daf76494f4d1b324c6ffa4fab8">windowPopup</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviTalPopupMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiManager.html#adb52b0daf76494f4d1b324c6ffa4fab8">windowPopup</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the window popup.  <a href="#adb52b0daf76494f4d1b324c6ffa4fab8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiManager.html#a1883a264f0f2a58920770d56f40ec4d1">~KviMdiManager</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroys the Mdi manager object.  <a href="#a1883a264f0f2a58920770d56f40ec4d1"></a><br/></td></tr>
@@ -105,9 +105,9 @@ Protected Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviFrame.html">KviFrame</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiManager.html#a63b8001b0c9bf1206cd64b3f2e5210c2">m_pFrm</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The frame where this <a class="el" href="classKviMdiManager.html" title="Handles all MDI windows.">KviMdiManager</a> belongs to.  <a href="#a63b8001b0c9bf1206cd64b3f2e5210c2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiManager.html#a182155cf5afae33f3cdb4d73b1d80da5">m_pTileMethodPopup</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviTalPopupMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiManager.html#a182155cf5afae33f3cdb4d73b1d80da5">m_pTileMethodPopup</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the tiling popup.  <a href="#a182155cf5afae33f3cdb4d73b1d80da5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiManager.html#ac3d82b0b1bc693c3be51d791a1304e80">m_pWindowPopup</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviTalPopupMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiManager.html#ac3d82b0b1bc693c3be51d791a1304e80">m_pWindowPopup</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the specialized window popup.  <a href="#ac3d82b0b1bc693c3be51d791a1304e80"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -369,7 +369,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="classKviMdiManager.html#a45b2d9d17cfecb43028c481cbf473b5b">cascadeMaximized()</a>, <a class="el" href="classKviMdiManager.html#a5b609902434e58d2e57c5b19693f11f5">cascadeWindows()</a>, <a class="el" href="classKviTalPopupMenu.html#a2deae00fa8031a641272499bc195e87e">KviTalPopupMenu::clear()</a>, <a class="el" href="classKviMdiManager.html#adc011c14b3da3a91669add2d94ac1e42">expandHorizontal()</a>, <a class="el" href="classKviMdiManager.html#a23cab148b93f2ce73564dc6f80ca08e3">expandVertical()</a>, <a class="el" href="kvi__iconmanager_8cpp.html#a3ea7617ef2d091c1c04b0f95fb0845ae">g_pIconManager</a>, <a class="el" href="classKviIconManager.html#a18563529ab125d8bc7a5221fcb83e408">KviIconManager::getSmallIcon()</a>, <a class="el" href="classKviMdiChild.html#a41e5377b0c8a5e0f9eaaf8399b916a45">KviMdiChild::icon()</a>, <a class="el" href="classKviTalPopupMenu.html#ad491ba2ad4a8133a89bdf417c1acacc6">KviTalPopupMenu::insertItem()</a>, <a class="el" href="classKviTalPopupMenu.html#aa8e6cf937ecf16c7ef3105c918359acc">KviTalPopupMenu::insertSeparator()</a>, <a class="el" href="kvi__mdimanager_8cpp.html#a03a552687348f40c596a77d3d9dd107f">KVI_NUM_TILE_METHODS</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#ae69b0fd7eb238f40d4c177d8a44e77df">KVI_OPTION_UINT</a>, <a class="el" href="kvi__iconmanager_8h.html#af363004d27cf87ee544fe3c8f5886eef">KVI_SMALLICON_AUTOTILEWINDOWS</a>, <a class="el" href="kvi__iconmanager_8h.html#ae660dd103d9bf6824cfcb7b67af2152a">KVI_SMALLICON_CASCADEWINDOWS</a>, <a class="el" href="kvi__iconmanager_8h.html#a463f311183689f43ab6a89005f556456">KVI_SMALLICON_MAXHORIZONTAL</a>, <a class="el" href="kvi__iconmanager_8h.html#a339750d555284be7a7183310acad915e">KVI_SMALLICON_MAXVERTICAL</a>, <a class="el" href="kvi__iconmanager_8h.html#a67e4fe5a8530d4e2b58818300f38df35">KVI_SMALLICON_MINIMIZE</a>, <a class="el" href="kvi__iconmanager_8h.html#a1dbfb7cdf92ed8e9ee2fc1f233f6a5d5">KVI_SMALLICON_RESTORE</a>, <a class="el" href="kvi__iconmanager_8h.html#a8ab7ac95b4971966782b1b99e1028c0c">KVI_SMALLICON_TILEWINDOWS</a>, <a class="el" href="kvi__mdimanager_8cpp.html#a03eeb18ff9e21f156487eeafaae88b0f">KVI_TILE_METHOD_ANODINE</a>, <a class="el" href="kvi__mdimanager_8cpp.html#a656d724ec80b9c7ea6085d69c56425b3">KVI_TILE_METHOD_PRAGMA4HOR</a>, <a class="el" href="kvi__mdimanager_8cpp.html#a7cceb53e43c9146dcd163b9319487188">KVI_TILE_METHOD_PRAGMA4VER</a>, <a class="el" href="kvi__mdimanager_8cpp.html#afda8fd0c8745ace4a6b77ea4fc3e4959">KVI_TILE_METHOD_PRAGMA6HOR</a>, <a class="el" href="kvi__mdimanager_8cpp.html#a1c5466cc5effb98496270975b36ead7b">KVI_TILE_METHOD_PRAGMA6VER</a>, <a class="el" href="kvi__mdimanager_8cpp.html#a80ae6f924dc4c71edf34d64a95e82d09">KVI_TILE_METHOD_PRAGMA9HOR</a>, <a class="el" href="kvi__mdimanager_8cpp.html#a5c3fe8ee696ed8a73e0625e795fd69df">KVI_TILE_METHOD_PRAGMA9VER</a>, <a class="el" href="kvi__options_8h.html#aed11c4385768f98ebb174d4fc48849c8">KviOption_boolAutoTileWindows</a>, <a class="el" href="kvi__options_8h.html#ac29b137ce2ad5a7265483564bf99d59c">KviOption_uintTileMethod</a>, <a class="el" href="classKviMdiManager.html#a182155cf5afae33f3cdb4d73b1d80da5">m_pTileMethodPopup</a>, <a class="el" href="classKviMdiManager.html#ac3d82b0b1bc693c3be51d791a1304e80">m_pWindowPopup</a>, <a class="el" href="classKviMdiManager.html#a70eb905b82fd9a17ea552dd21bb0deca">minimizeAll()</a>, <a class="el" href="classKviMdiChild.html#a3098a440d2c15ef29c63db7d794ed2bfa192faf9d5cd3aaf8d9dd2119f3f5a448">KviMdiChild::Minimized</a>, <a class="el" href="classKviMdiManager.html#af589f656bae16a59017046accb07dffe">restoreAll()</a>, <a class="el" href="classKviTalPopupMenu.html#a283ebe206279947137b4677fa2767aaa">KviTalPopupMenu::setItemChecked()</a>, <a class="el" href="classKviTalPopupMenu.html#ae9a5fe5b16b306b6a071409e16c8375a">KviTalPopupMenu::setItemParameter()</a>, <a class="el" href="classKviMdiChild.html#a3b63a14ffad211de818354a597aaf3f9">KviMdiChild::state()</a>, <a class="el" href="classKviMdiManager.html#a5e4b35d7f8d797474c9c9e1b75e00d03">tile()</a>, and <a class="el" href="classKviMdiManager.html#aab241111bf3ec323c195e32130e644f6">toggleAutoTile()</a>.</p>
+<p>References <a class="el" href="classKviMdiManager.html#a45b2d9d17cfecb43028c481cbf473b5b">cascadeMaximized()</a>, <a class="el" href="classKviMdiManager.html#a5b609902434e58d2e57c5b19693f11f5">cascadeWindows()</a>, <a class="el" href="classKviMdiManager.html#adc011c14b3da3a91669add2d94ac1e42">expandHorizontal()</a>, <a class="el" href="classKviMdiManager.html#a23cab148b93f2ce73564dc6f80ca08e3">expandVertical()</a>, <a class="el" href="kvi__iconmanager_8cpp.html#a3ea7617ef2d091c1c04b0f95fb0845ae">g_pIconManager</a>, <a class="el" href="classKviIconManager.html#a18563529ab125d8bc7a5221fcb83e408">KviIconManager::getSmallIcon()</a>, <a class="el" href="classKviMdiChild.html#a41e5377b0c8a5e0f9eaaf8399b916a45">KviMdiChild::icon()</a>, <a class="el" href="kvi__mdimanager_8cpp.html#a03a552687348f40c596a77d3d9dd107f">KVI_NUM_TILE_METHODS</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#ae69b0fd7eb238f40d4c177d8a44e77df">KVI_OPTION_UINT</a>, <a class="el" href="kvi__iconmanager_8h.html#af363004d27cf87ee544fe3c8f5886eef">KVI_SMALLICON_AUTOTILEWINDOWS</a>, <a class="el" href="kvi__iconmanager_8h.html#ae660dd103d9bf6824cfcb7b67af2152a">KVI_SMALLICON_CASCADEWINDOWS</a>, <a class="el" href="kvi__iconmanager_8h.html#a463f311183689f43ab6a89005f556456">KVI_SMALLICON_MAXHORIZONTAL</a>, <a class="el" href="kvi__iconmanager_8h.html#a339750d555284be7a7183310acad915e">KVI_SMALLICON_MAXVERTICAL</a>, <a class="el" href="kvi__iconmanager_8h.html#a67e4fe5a8530d4e2b58818300f38df35">KVI_SMALLICON_MINIMIZE</a>, <a class="el" href="kvi__iconmanager_8h.html#a1dbfb7cdf92ed8e9ee2fc1f233f6a5d5">KVI_SMALLICON_RESTORE</a>, <a class="el" href="kvi__iconmanager_8h.html#a8ab7ac95b4971966782b1b99e1028c0c">KVI_SMALLICON_TILEWINDOWS</a>, <a class="el" href="kvi__mdimanager_8cpp.html#a03eeb18ff9e21f156487eeafaae88b0f">KVI_TILE_METHOD_ANODINE</a>, <a class="el" href="kvi__mdimanager_8cpp.html#a656d724ec80b9c7ea6085d69c56425b3">KVI_TILE_METHOD_PRAGMA4HOR</a>, <a class="el" href="kvi__mdimanager_8cpp.html#a7cceb53e43c9146dcd163b9319487188">KVI_TILE_METHOD_PRAGMA4VER</a>, <a class="el" href="kvi__mdimanager_8cpp.html#afda8fd0c8745ace4a6b77ea4fc3e4959">KVI_TILE_METHOD_PRAGMA6HOR</a>, <a class="el" href="kvi__mdimanager_8cpp.html#a1c5466cc5effb98496270975b36ead7b">KVI_TILE_METHOD_PRAGMA6VER</a>, <a class="el" href="kvi__mdimanager_8cpp.html#a80ae6f924dc4c71edf34d64a95e82d09">KVI_TILE_METHOD_PRAGMA9HOR</a>, <a class="el" href="kvi__mdimanager_8cpp.html#a5c3fe8ee696ed8a73e0625e795fd69df">KVI_TILE_METHOD_PRAGMA9VER</a>, <a class="el" href="kvi__options_8h.html#aed11c4385768f98ebb174d4fc48849c8">KviOption_boolAutoTileWindows</a>, <a class="el" href="kvi__options_8h.html#ac29b137ce2ad5a7265483564bf99d59c">KviOption_uintTileMethod</a>, <a class="el" href="classKviMdiManager.html#a182155cf5afae33f3cdb4d73b1d80da5">m_pTileMethodPopup</a>, <a class="el" href="classKviMdiManager.html#ac3d82b0b1bc693c3be51d791a1304e80">m_pWindowPopup</a>, <a class="el" href="classKviMdiManager.html#a70eb905b82fd9a17ea552dd21bb0deca">minimizeAll()</a>, <a class="el" href="classKviMdiChild.html#a3098a440d2c15ef29c63db7d794ed2bfa192faf9d5cd3aaf8d9dd2119f3f5a448">KviMdiChild::Minimized</a>, <a class="el" href="classKviMdiManager.html#af589f656bae16a59017046accb07dffe">restoreAll()</a>, <a class="el" href="classKviMdiChild.html#a3b63a14ffad211de818354a597aaf3f9">KviMdiChild::state()</a>, <a class="el" href="classKviMdiManager.html#a5e4b35d7f8d797474c9c9e1b75e00d03">tile()</a>, and <a class="el" href="classKviMdiManager.html#aab241111bf3ec323c195e32130e644f6">toggleAutoTile()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviMdiManager.html#ab27420dd736160abffc65ea8b36ca645">KviMdiManager()</a>.</p>
 
@@ -383,7 +383,7 @@ Friends</h2></td></tr>
           <td class="memname">void KviMdiManager::focusPreviousTopChild </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classKviMdiChild.html">KviMdiChild</a> *&#160;</td>
-          <td class="paramname"> <em>pExcludeThis</em> = <code><a class="el" href="kvi__numeric_8h.html#af2ebd5db010f0e321c1faa0e6a182c2b">NULL</a></code>&#160;)</td>
+          <td class="paramname"> <em>pExcludeThis</em> = <code><a class="el" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a></code>&#160;)</td>
           <td></td>
         </tr>
       </table>
@@ -393,7 +393,7 @@ Friends</h2></td></tr>
 <p>Move the focus the the previous active window. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviMdiManager.html#a03bb39a9f0673f11423418c757752687">isInSDIMode()</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#aed11c4385768f98ebb174d4fc48849c8">KviOption_boolAutoTileWindows</a>, <a class="el" href="classKviMdiChild.html#a4f6afba7f21d308400eb8497762c1ec9">KviMdiChild::maximize()</a>, <a class="el" href="classKviMdiChild.html#a3098a440d2c15ef29c63db7d794ed2bfa192faf9d5cd3aaf8d9dd2119f3f5a448">KviMdiChild::Minimized</a>, <a class="el" href="kvi__numeric_8h.html#af2ebd5db010f0e321c1faa0e6a182c2b">NULL</a>, <a class="el" href="classKviMdiChild.html#a3b63a14ffad211de818354a597aaf3f9">KviMdiChild::state()</a>, and <a class="el" href="classKviMdiManager.html#a5e4b35d7f8d797474c9c9e1b75e00d03">tile()</a>.</p>
+<p>References <a class="el" href="classKviMdiManager.html#a03bb39a9f0673f11423418c757752687">isInSDIMode()</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#aed11c4385768f98ebb174d4fc48849c8">KviOption_boolAutoTileWindows</a>, <a class="el" href="classKviMdiChild.html#a4f6afba7f21d308400eb8497762c1ec9">KviMdiChild::maximize()</a>, <a class="el" href="classKviMdiChild.html#a3098a440d2c15ef29c63db7d794ed2bfa192faf9d5cd3aaf8d9dd2119f3f5a448">KviMdiChild::Minimized</a>, <a class="el" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a>, <a class="el" href="classKviMdiChild.html#a3b63a14ffad211de818354a597aaf3f9">KviMdiChild::state()</a>, and <a class="el" href="classKviMdiManager.html#a5e4b35d7f8d797474c9c9e1b75e00d03">tile()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviMdiManager.html#a935f2105ef728e182f47969dfff0c288">hideChild()</a>, <a class="el" href="classKviMdiChild.html#acfb9d47c817a413fbd53d990fb0dee61">KviMdiChild::windowStateChangedEvent()</a>, and <a class="el" href="classKviMdiChild.html#a02e9af94fa357fc7943ae0d03c1a198c">KviMdiChild::~KviMdiChild()</a>.</p>
 
@@ -818,7 +818,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviTalPopupMenu.html#a1970b6884dc9be05b9c8de88c244e3fd">KviTalPopupMenu::itemParameter()</a>, <a class="el" href="kvi__mdimanager_8cpp.html#a03a552687348f40c596a77d3d9dd107f">KVI_NUM_TILE_METHODS</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#ae69b0fd7eb238f40d4c177d8a44e77df">KVI_OPTION_UINT</a>, <a class="el" href="kvi__mdimanager_8cpp.html#a5c3fe8ee696ed8a73e0625e795fd69df">KVI_TILE_METHOD_PRAGMA9VER</a>, <a class="el" href="kvi__options_8h.html#aed11c4385768f98ebb174d4fc48849c8">KviOption_boolAutoTileWindows</a>, <a class="el" href="kvi__options_8h.html#ac29b137ce2ad5a7265483564bf99d59c">KviOption_uintTileMethod</a>, <a class="el" href="classKviMdiManager.html#a182155cf5afae33f3cdb4d73b1d80da5">m_pTileMethodPopup</a>, and <a class="el" href="classKviMdiManager.html#a5e4b35d7f8d797474c9c9e1b75e00d03">tile()</a>.</p>
+<p>References <a class="el" href="kvi__mdimanager_8cpp.html#a03a552687348f40c596a77d3d9dd107f">KVI_NUM_TILE_METHODS</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#ae69b0fd7eb238f40d4c177d8a44e77df">KVI_OPTION_UINT</a>, <a class="el" href="kvi__mdimanager_8cpp.html#a5c3fe8ee696ed8a73e0625e795fd69df">KVI_TILE_METHOD_PRAGMA9VER</a>, <a class="el" href="kvi__options_8h.html#aed11c4385768f98ebb174d4fc48849c8">KviOption_boolAutoTileWindows</a>, <a class="el" href="kvi__options_8h.html#ac29b137ce2ad5a7265483564bf99d59c">KviOption_uintTileMethod</a>, <a class="el" href="classKviMdiManager.html#a182155cf5afae33f3cdb4d73b1d80da5">m_pTileMethodPopup</a>, and <a class="el" href="classKviMdiManager.html#a5e4b35d7f8d797474c9c9e1b75e00d03">tile()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviMdiManager.html#ab27420dd736160abffc65ea8b36ca645">KviMdiManager()</a>.</p>
 
@@ -870,7 +870,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>* KviMdiManager::windowPopup </td>
+          <td class="memname">KviTalPopupMenu* KviMdiManager::windowPopup </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td><code> [inline]</code></td>
@@ -880,7 +880,7 @@ Friends</h2></td></tr>
 <div class="memdoc">
 
 <p>Returns the window popup. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>KviTalPopupMenu * </dd></dl>
 
 <p>Referenced by <a class="el" href="classKviMenuBar.html#ab19cada8c7a639f64057e302b3e6124c">KviMenuBar::KviMenuBar()</a>.</p>
 
@@ -938,7 +938,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>* <a class="el" href="classKviMdiManager.html#a182155cf5afae33f3cdb4d73b1d80da5">KviMdiManager::m_pTileMethodPopup</a><code> [protected]</code></td>
+          <td class="memname">KviTalPopupMenu* <a class="el" href="classKviMdiManager.html#a182155cf5afae33f3cdb4d73b1d80da5">KviMdiManager::m_pTileMethodPopup</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -955,7 +955,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>* <a class="el" href="classKviMdiManager.html#ac3d82b0b1bc693c3be51d791a1304e80">KviMdiManager::m_pWindowPopup</a><code> [protected]</code></td>
+          <td class="memname">KviTalPopupMenu* <a class="el" href="classKviMdiManager.html#ac3d82b0b1bc693c3be51d791a1304e80">KviMdiManager::m_pWindowPopup</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -972,7 +972,7 @@ Friends</h2></td></tr>
 <li>src/kvirc/ui/<a class="el" href="kvi__mdimanager_8cpp.html">kvi_mdimanager.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:33:03 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:13 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

@@ -38,7 +38,7 @@
 <a name="l00007"></a>00007 <span class="comment">//   Creation date : Sat Aug 12 2000 20:31:17 by Szymon Stefanek</span>
 <a name="l00008"></a>00008 <span class="comment">//</span>
 <a name="l00009"></a>00009 <span class="comment">//   This file is part of the KVirc irc client distribution</span>
-<a name="l00010"></a>00010 <span class="comment">//   Copyright (C) 2000-2008 Szymon Stefanek (pragma at kvirc dot net)</span>
+<a name="l00010"></a>00010 <span class="comment">//   Copyright (C) 2000-2010 Szymon Stefanek (pragma at kvirc dot net)</span>
 <a name="l00011"></a>00011 <span class="comment">//</span>
 <a name="l00012"></a>00012 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00013"></a>00013 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -57,9 +57,9 @@
 <a name="l00026"></a>00026 <span class="comment">//=============================================================================</span>
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerlist_8h.html" title="C++ Template based double linked pointer list class.">kvi_pointerlist.h</a>&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;KviPointerList.h&quot;</span>
 <a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="kvi__module_8h.html">kvi_module.h</a>&quot;</span>
-<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerhashtable_8h.html" title="Pointer Hash Table.">kvi_pointerhashtable.h</a>&quot;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;KviPointerHashTable.h&quot;</span>
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033 <span class="preprocessor">#include &lt;QTimer&gt;</span>
 <a name="l00034"></a>00034 <span class="preprocessor">#include &lt;QObject&gt;</span>
@@ -71,7 +71,7 @@
 <a name="l00040"></a>00040         <a class="code" href="classKviModuleManager.html">KviModuleManager</a>();
 <a name="l00041"></a>00041         ~<a class="code" href="classKviModuleManager.html">KviModuleManager</a>();
 <a name="l00042"></a>00042 <span class="keyword">private</span>:
-<a name="l00043"></a><a class="code" href="classKviModuleManager.html#a191e087392a63581c6b2663616749ea1">00043</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviModule&gt;</a>       * <a class="code" href="classKviModuleManager.html#a191e087392a63581c6b2663616749ea1">m_pModuleDict</a>;
+<a name="l00043"></a><a class="code" href="classKviModuleManager.html#a191e087392a63581c6b2663616749ea1">00043</a>         KviPointerHashTable&lt;QString,KviModule&gt;       * <a class="code" href="classKviModuleManager.html#a191e087392a63581c6b2663616749ea1">m_pModuleDict</a>;
 <a name="l00044"></a><a class="code" href="classKviModuleManager.html#aaa1c78f5f3a036bf646c169e20f2a17a">00044</a>         QTimer                                       * <a class="code" href="classKviModuleManager.html#aaa1c78f5f3a036bf646c169e20f2a17a">m_pCleanupTimer</a>;
 <a name="l00045"></a><a class="code" href="classKviModuleManager.html#a0f07bd7851f6b43f2bd8341194e4416b">00045</a>         QString                                        <a class="code" href="classKviModuleManager.html#a0f07bd7851f6b43f2bd8341194e4416b">m_szLastError</a>;
 <a name="l00046"></a>00046 <span class="keyword">public</span>:
@@ -86,9 +86,9 @@
 <a name="l00055"></a>00055         <span class="keywordtype">void</span> loadModulesByCaps(<span class="keyword">const</span> QString &amp;caps,<span class="keyword">const</span> QString &amp;dir);
 <a name="l00056"></a>00056         <span class="keywordtype">void</span> loadModulesByCaps(<span class="keyword">const</span> QString &amp;caps);
 <a name="l00057"></a>00057         <span class="keywordtype">bool</span> hasLockedModules();
-<a name="l00058"></a>00058         <span class="keywordtype">void</span> completeModuleNames(<span class="keyword">const</span> QString &amp;word,<a class="code" href="classKviPointerList.html">KviPointerList&lt;QString&gt;</a> * matches);
+<a name="l00058"></a>00058         <span class="keywordtype">void</span> completeModuleNames(<span class="keyword">const</span> QString &amp;word,KviPointerList&lt;QString&gt; * matches);
 <a name="l00059"></a>00059 <span class="keyword">protected</span>:
-<a name="l00060"></a>00060         <span class="keywordtype">void</span> completeModuleNames(<span class="keyword">const</span> QString &amp;path,<span class="keyword">const</span> QString &amp;work,<a class="code" href="classKviPointerList.html">KviPointerList&lt;QString&gt;</a> * matches);
+<a name="l00060"></a>00060         <span class="keywordtype">void</span> completeModuleNames(<span class="keyword">const</span> QString &amp;path,<span class="keyword">const</span> QString &amp;work,KviPointerList&lt;QString&gt; * matches);
 <a name="l00061"></a>00061 <span class="keyword">public</span> slots:
 <a name="l00062"></a>00062         <span class="keywordtype">void</span> cleanupUnusedModules();
 <a name="l00063"></a>00063 signals:
@@ -100,7 +100,7 @@
 <a name="l00069"></a>00069 <span class="preprocessor">#endif //_KVI_MODULEMANAGER_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:54 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

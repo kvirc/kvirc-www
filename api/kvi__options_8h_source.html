@@ -38,7 +38,7 @@
 <a name="l00007"></a>00007 <span class="comment">//   Creation date : Tue Jun 20 2000 12:42:07 by Szymon Stefanek</span>
 <a name="l00008"></a>00008 <span class="comment">//</span>
 <a name="l00009"></a>00009 <span class="comment">//   This file is part of the KVirc irc client distribution</span>
-<a name="l00010"></a>00010 <span class="comment">//   Copyright (C) 2000-2008 Szymon Stefanek (pragma at kvirc dot net)</span>
+<a name="l00010"></a>00010 <span class="comment">//   Copyright (C) 2000-2010 Szymon Stefanek (pragma at kvirc dot net)</span>
 <a name="l00011"></a>00011 <span class="comment">//</span>
 <a name="l00012"></a>00012 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00013"></a>00013 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -57,9 +57,9 @@
 <a name="l00026"></a>00026 <span class="comment">//=============================================================================</span>
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="kvi__string_8h.html">kvi_string.h</a>&quot;</span>
-<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pixmap_8h.html">kvi_pixmap.h</a>&quot;</span>
-<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;<a class="code" href="kvi__msgtype_8h.html">kvi_msgtype.h</a>&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;KviCString.h&quot;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;KviPixmap.h&quot;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;KviMessageTypeSettings.h&quot;</span>
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033 <span class="preprocessor">#include &lt;QRect&gt;</span>
 <a name="l00034"></a>00034 <span class="preprocessor">#include &lt;QPixmap&gt;</span>
@@ -88,10 +88,10 @@
 <a name="l00057"></a>00057 <a class="code" href="kvi__options_8h.html#a5f3d8b1dbb316017d782a9fc60956b0f">DECLARE_OPTION_STRUCT</a>(KviStringOption,QString)
 <a name="l00058"></a>00058 <a class="code" href="kvi__options_8h.html#a5f3d8b1dbb316017d782a9fc60956b0f">DECLARE_OPTION_STRUCT</a>(KviColorOption,QColor)
 <a name="l00059"></a>00059 <a class="code" href="kvi__options_8h.html#a5f3d8b1dbb316017d782a9fc60956b0f">DECLARE_OPTION_STRUCT</a>(KviFontOption,QFont)
-<a name="l00060"></a>00060 <a class="code" href="kvi__options_8h.html#a5f3d8b1dbb316017d782a9fc60956b0f">DECLARE_OPTION_STRUCT</a>(KviPixmapOption,<a class="code" href="classKviPixmap.html">KviPixmap</a>)
+<a name="l00060"></a>00060 <a class="code" href="kvi__options_8h.html#a5f3d8b1dbb316017d782a9fc60956b0f">DECLARE_OPTION_STRUCT</a>(KviPixmapOption,KviPixmap)
 <a name="l00061"></a>00061 <span class="comment">//DECLARE_OPTION_STRUCT(KviIntOption,int)</span>
 <a name="l00062"></a>00062 <a class="code" href="kvi__options_8h.html#a5f3d8b1dbb316017d782a9fc60956b0f">DECLARE_OPTION_STRUCT</a>(KviUIntOption,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)
-<a name="l00063"></a>00063 <a class="code" href="kvi__options_8h.html#a5f3d8b1dbb316017d782a9fc60956b0f">DECLARE_OPTION_STRUCT</a>(KviMsgTypeOption,<a class="code" href="classKviMsgType.html">KviMsgType</a>)
+<a name="l00063"></a>00063 <a class="code" href="kvi__options_8h.html#a5f3d8b1dbb316017d782a9fc60956b0f">DECLARE_OPTION_STRUCT</a>(KviMessageTypeSettingsOption,KviMessageTypeSettings)
 <a name="l00064"></a>00064 <a class="code" href="kvi__options_8h.html#a5f3d8b1dbb316017d782a9fc60956b0f">DECLARE_OPTION_STRUCT</a>(KviStringListOption,QStringList)
 <a name="l00065"></a>00065 
 <a name="l00066"></a><a class="code" href="kvi__options_8h.html#aa484d667e614e9cbb301f80e106b90c3">00066</a> <span class="preprocessor">#define KVI_COLOR_EXT_USER_OP           50</span>
@@ -694,7 +694,7 @@
 <a name="l00663"></a>00663 <span class="comment">//      extern KviIntOption        g_intOptionsTable[KVI_NUM_INT_OPTIONS];</span>
 <a name="l00664"></a>00664 <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> KviUIntOption       <a class="code" href="kvi__options_8cpp.html#ac405d82f3f229bf6b45e1c344816b73a">g_uintOptionsTable</a>[<a class="code" href="kvi__options_8h.html#a593e47644bab4b854b8232aa09c3b184">KVI_NUM_UINT_OPTIONS</a>];
 <a name="l00665"></a>00665 <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> KviFontOption       <a class="code" href="kvi__options_8cpp.html#a4c3753fc40a926793dd9a9a045d5f871">g_fontOptionsTable</a>[<a class="code" href="kvi__options_8h.html#acc4a08ee34982d6d98c30dd375665c4d">KVI_NUM_FONT_OPTIONS</a>];
-<a name="l00666"></a>00666 <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> KviMsgTypeOption    <a class="code" href="kvi__options_8cpp.html#ac51b095834d788e7ff00f71fd5283fdf">g_msgtypeOptionsTable</a>[<a class="code" href="kvi__options_8h.html#a2a3caf50731669be8ae7279583b9e87d">KVI_NUM_MSGTYPE_OPTIONS</a>];
+<a name="l00666"></a>00666 <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> KviMessageTypeSettingsOption    <a class="code" href="kvi__options_8cpp.html#a194398533ec7f1415b9cc81e4a35931e">g_msgtypeOptionsTable</a>[<a class="code" href="kvi__options_8h.html#a2a3caf50731669be8ae7279583b9e87d">KVI_NUM_MSGTYPE_OPTIONS</a>];
 <a name="l00667"></a>00667 <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> KviColorOption      <a class="code" href="kvi__options_8cpp.html#ab0364ae603632077193fa28ffe1f61f5">g_mirccolorOptionsTable</a>[<a class="code" href="kvi__options_8h.html#ab90b10a2344ead9eac0531640ae61f67">KVI_NUM_MIRCCOLOR_OPTIONS</a>];
 <a name="l00668"></a>00668 <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> KviColorOption      <a class="code" href="kvi__options_8cpp.html#a212dd760cd6605703efda7ec2c904e3f">g_iccolorOptionsTable</a>[<a class="code" href="kvi__options_8h.html#a1a74e2a102d280eacceafbf57d749288">KVI_NUM_ICCOLOR_OPTIONS</a>];
 <a name="l00669"></a>00669 <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> KviStringListOption <a class="code" href="kvi__options_8cpp.html#a6108a910746d1ba7f67e1a8b4a93e7c1">g_stringlistOptionsTable</a>[<a class="code" href="kvi__options_8h.html#acc93ed068fb0ed067d1b3b9129a742c9">KVI_NUM_STRINGLIST_OPTIONS</a>];
@@ -803,7 +803,7 @@
 <a name="l00772"></a>00772 <span class="preprocessor">#endif //_KVI_OPTIONS_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:54 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:04 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

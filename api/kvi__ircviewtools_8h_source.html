@@ -37,7 +37,7 @@
 <a name="l00006"></a>00006 <span class="comment">//   Creation date : Sat Oct 9 2004 16:03:01 by Szymon Stefanek</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">//   This file is part of the KVirc irc client distribution</span>
-<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2004-2008 Szymon Stefanek (pragma at kvirc dot net)</span>
+<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2004-2010 Szymon Stefanek (pragma at kvirc dot net)</span>
 <a name="l00010"></a>00010 <span class="comment">//</span>
 <a name="l00011"></a>00011 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00012"></a>00012 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -56,7 +56,7 @@
 <a name="l00025"></a>00025 <span class="comment">//=============================================================================</span>
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="kvi__tal__tooltip_8h.html">kvi_tal_tooltip.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;KviTalToolTip.h&quot;</span>
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 <span class="preprocessor">#include &lt;QFrame&gt;</span>
 <a name="l00031"></a>00031 <span class="preprocessor">#include &lt;QString&gt;</span>
@@ -68,7 +68,7 @@
 <a name="l00037"></a>00037 <span class="keyword">class </span><a class="code" href="classKviIrcView.html">KviIrcView</a>;
 <a name="l00038"></a>00038 
 <a name="l00039"></a>00039 
-<a name="l00040"></a><a class="code" href="classKviIrcViewToolTip.html">00040</a> <span class="keyword">class </span><a class="code" href="classKviIrcViewToolTip.html">KviIrcViewToolTip</a> : <span class="keyword">public</span> <a class="code" href="classKviTalToolTip.html">KviTalToolTip</a>
+<a name="l00040"></a><a class="code" href="classKviIrcViewToolTip.html">00040</a> <span class="keyword">class </span><a class="code" href="classKviIrcViewToolTip.html">KviIrcViewToolTip</a> : <span class="keyword">public</span> KviTalToolTip
 <a name="l00041"></a>00041 {
 <a name="l00042"></a>00042 <span class="keyword">public</span>:
 <a name="l00043"></a>00043         <a class="code" href="classKviIrcViewToolTip.html#abea0708b113a59f0bd529cbdc40019ef">KviIrcViewToolTip</a>(<a class="code" href="classKviIrcView.html">KviIrcView</a> * pView);
@@ -78,7 +78,7 @@
 <a name="l00047"></a>00047 <span class="keyword">protected</span>:
 <a name="l00048"></a>00048         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviIrcViewToolTip.html#af25f7d4853795f7a8141c47f737b91f8">maybeTip</a>(<span class="keyword">const</span> QPoint &amp;pnt);
 <a name="l00049"></a>00049 <span class="keyword">public</span>:
-<a name="l00050"></a><a class="code" href="classKviIrcViewToolTip.html#a30cdc7eeee612e4eb17a7041cdd79bc8">00050</a>         <span class="keywordtype">void</span> <a class="code" href="classKviIrcViewToolTip.html#a30cdc7eeee612e4eb17a7041cdd79bc8">doTip</a>(<span class="keyword">const</span> QRect &amp;rct,<span class="keyword">const</span> QString &amp;str){ <a class="code" href="classKviTalToolTip.html#a827218c6cb69edd520829d5288f1c60b">tip</a>(rct,str); };
+<a name="l00050"></a><a class="code" href="classKviIrcViewToolTip.html#a30cdc7eeee612e4eb17a7041cdd79bc8">00050</a>         <span class="keywordtype">void</span> <a class="code" href="classKviIrcViewToolTip.html#a30cdc7eeee612e4eb17a7041cdd79bc8">doTip</a>(<span class="keyword">const</span> QRect &amp;rct,<span class="keyword">const</span> QString &amp;str){ tip(rct,str); };
 <a name="l00051"></a>00051 };
 <a name="l00052"></a>00052 
 <a name="l00053"></a>00053 <span class="comment">//=========================================================================================================</span>
@@ -155,7 +155,7 @@
 <a name="l00124"></a>00124 <span class="preprocessor">#endif //!_KVI_IRCVIEWTOOLS_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:55 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

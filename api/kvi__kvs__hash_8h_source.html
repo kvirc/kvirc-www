@@ -56,14 +56,14 @@
 <a name="l00025"></a>00025 <span class="comment">//=============================================================================</span>
 <a name="l00026"></a>00026 
 <a name="l00033"></a>00033 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerhashtable_8h.html" title="Pointer Hash Table.">kvi_pointerhashtable.h</a>&quot;</span>
-<a name="l00035"></a>00035 <span class="preprocessor">#include &quot;<a class="code" href="kvi__qstring_8h.html" title="Helper functions for the QString class.">kvi_qstring.h</a>&quot;</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;KviPointerHashTable.h&quot;</span>
+<a name="l00035"></a>00035 <span class="preprocessor">#include &quot;KviQString.h&quot;</span>
 <a name="l00036"></a>00036 <span class="preprocessor">#include &quot;<a class="code" href="kvi__kvs__variant_8h.html" title="Handling of variant data type in KVS.">kvi_kvs_variant.h</a>&quot;</span>
-<a name="l00037"></a>00037 <span class="preprocessor">#include &quot;<a class="code" href="kvi__heapobject_8h.html" title="Heap Object.">kvi_heapobject.h</a>&quot;</span>
+<a name="l00037"></a>00037 <span class="preprocessor">#include &quot;KviHeapObject.h&quot;</span>
 <a name="l00038"></a>00038 
-<a name="l00039"></a><a class="code" href="kvi__kvs__hash_8h.html#a34d254e38b4d8b59097678ba669ea13c">00039</a> <span class="keyword">typedef</span> <a class="code" href="kvi__settings_8h.html#a70fbe621bf59c5ddacaa5b9f53687df8">KVIRC_API_TYPEDEF</a> <a class="code" href="classKviPointerHashTableIterator.html" title="A fast pointer hash table iterator implementation.">KviPointerHashTableIterator&lt;QString,KviKvsVariant&gt;</a> <a class="code" href="kvi__kvs__hash_8h.html#a34d254e38b4d8b59097678ba669ea13c">KviKvsHashIterator</a>;
+<a name="l00039"></a><a class="code" href="kvi__kvs__hash_8h.html#a34d254e38b4d8b59097678ba669ea13c">00039</a> <span class="keyword">typedef</span> <a class="code" href="kvi__settings_8h.html#a70fbe621bf59c5ddacaa5b9f53687df8">KVIRC_API_TYPEDEF</a> KviPointerHashTableIterator&lt;QString,KviKvsVariant&gt; <a class="code" href="kvi__kvs__hash_8h.html#a34d254e38b4d8b59097678ba669ea13c">KviKvsHashIterator</a>;
 <a name="l00040"></a>00040 
-<a name="l00047"></a><a class="code" href="classKviKvsHash.html">00047</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsHash.html" title="This class defines a new data type which contains hash data.">KviKvsHash</a> : <span class="keyword">public</span> <a class="code" href="classKviHeapObject.html">KviHeapObject</a>
+<a name="l00047"></a><a class="code" href="classKviKvsHash.html">00047</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsHash.html" title="This class defines a new data type which contains hash data.">KviKvsHash</a> : <span class="keyword">public</span> KviHeapObject
 <a name="l00048"></a>00048 {
 <a name="l00049"></a>00049 <span class="keyword">public</span>:
 <a name="l00054"></a>00054         <a class="code" href="classKviKvsHash.html" title="This class defines a new data type which contains hash data.">KviKvsHash</a>();
@@ -72,7 +72,7 @@
 <a name="l00064"></a>00064 
 <a name="l00068"></a>00068         ~<a class="code" href="classKviKvsHash.html" title="This class defines a new data type which contains hash data.">KviKvsHash</a>();
 <a name="l00069"></a>00069 <span class="keyword">protected</span>:
-<a name="l00070"></a><a class="code" href="classKviKvsHash.html#ad60d823498be4346b123acead2ae94d7">00070</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviKvsVariant&gt;</a> * <a class="code" href="classKviKvsHash.html#ad60d823498be4346b123acead2ae94d7">m_pDict</a>;
+<a name="l00070"></a><a class="code" href="classKviKvsHash.html#ad60d823498be4346b123acead2ae94d7">00070</a>         KviPointerHashTable&lt;QString,KviKvsVariant&gt; * <a class="code" href="classKviKvsHash.html#ad60d823498be4346b123acead2ae94d7">m_pDict</a>;
 <a name="l00071"></a>00071 <span class="keyword">public</span>:
 <a name="l00077"></a><a class="code" href="classKviKvsHash.html#ab2264890f764c58af2bc4f430e2c3697">00077</a>         <span class="keywordtype">void</span> <a class="code" href="classKviKvsHash.html#ab2264890f764c58af2bc4f430e2c3697" title="Unsets an element from the hash.">unset</a>(<span class="keyword">const</span> QString &amp; szKey){ m_pDict-&gt;remove(szKey); };
 <a name="l00078"></a>00078 
@@ -88,7 +88,7 @@
 <a name="l00115"></a>00115 
 <a name="l00121"></a>00121         <span class="keywordtype">void</span> appendAsString(QString &amp; szBuffer) <span class="keyword">const</span>;
 <a name="l00122"></a>00122 
-<a name="l00127"></a><a class="code" href="classKviKvsHash.html#ab382422c8cb7802b24fbc92dd45facee">00127</a>         <span class="keyword">const</span> <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviKvsVariant&gt;</a> * <a class="code" href="classKviKvsHash.html#ab382422c8cb7802b24fbc92dd45facee" title="Returns the internal dictionary of the hash.">dict</a>(){ <span class="keywordflow">return</span> m_pDict; };
+<a name="l00127"></a><a class="code" href="classKviKvsHash.html#ab382422c8cb7802b24fbc92dd45facee">00127</a>         <span class="keyword">const</span> KviPointerHashTable&lt;QString,KviKvsVariant&gt; * <a class="code" href="classKviKvsHash.html#ab382422c8cb7802b24fbc92dd45facee" title="Returns the internal dictionary of the hash.">dict</a>(){ <span class="keywordflow">return</span> m_pDict; };
 <a name="l00128"></a>00128 
 <a name="l00134"></a>00134         <span class="keywordtype">void</span> serialize(QString &amp; szResult);
 <a name="l00135"></a>00135 };
@@ -96,7 +96,7 @@
 <a name="l00137"></a>00137 <span class="preprocessor">#endif // _KVI_KVS_HASH_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:54 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:04 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

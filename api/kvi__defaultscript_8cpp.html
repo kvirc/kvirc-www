@@ -35,9 +35,9 @@
 <code>#include &quot;<a class="el" href="kvi__defaultscript_8h_source.html">kvi_defaultscript.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__app_8h_source.html">kvi_app.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__kvs_8h_source.html">kvi_kvs.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__config_8h_source.html">kvi_config.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__locale_8h_source.html">kvi_locale.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__miscutils_8h_source.html">kvi_miscutils.h</a>&quot;</code><br/>
+<code>#include &quot;KviConfigurationFile.h&quot;</code><br/>
+<code>#include &quot;KviLocale.h&quot;</code><br/>
+<code>#include &quot;KviMiscUtils.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__actionmanager_8h_source.html">kvi_actionmanager.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__iconmanager_8h_source.html">kvi_iconmanager.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__customtoolbarmanager_8h_source.html">kvi_customtoolbarmanager.h</a>&quot;</code><br/>
@@ -84,9 +84,9 @@ Defines</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<b>Value:</b><div class="fragment"><pre class="fragment"><span class="keywordflow">if</span>(<a class="code" href="namespaceKviMiscUtils.html#aef5bebdb5a87b962604af0a1a8da0b55" title="Compares two x.y.z... version strings The function behaves like strcmp: it returns 0 when the version...">KviMiscUtils::compareVersions</a>(__global,__local) == 1) \
+<b>Value:</b><div class="fragment"><pre class="fragment"><span class="keywordflow">if</span>(KviMiscUtils::compareVersions(__global,__local) == 1) \
         { \
-                *pszError = <a class="code" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>(<span class="stringliteral">&quot;There&#39;s something wrong in your personal data: my &#39;%1&#39; is %2, while yours is %3&quot;</span>).arg(__name,__global,__local); \
+                *pszError = __tr2qs(<span class="stringliteral">&quot;There&#39;s something wrong in your personal data: my &#39;%1&#39; is %2, while yours is %3&quot;</span>).arg(__name,__global,__local); \
                 <span class="keywordflow">return</span> <span class="keyword">false</span>; \
         }
 </pre></div>
@@ -121,12 +121,12 @@ Defines</h2></td></tr>
 <b>Value:</b><div class="fragment"><pre class="fragment"><span class="keywordflow">if</span>(__var.isEmpty()) \
                 __var = __default;
 </pre></div>
-<p>Referenced by <a class="el" href="classKviDefaultScriptManager.html#aac189868f198c11be539cdc57c48919f">KviDefaultScriptManager::loadInternal()</a>.</p>
+<p>Referenced by <a class="el" href="classKviDefaultScriptManager.html#a21be267db43a3262d4a9253aa02e8980">KviDefaultScriptManager::loadInternal()</a>.</p>
 
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:55 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:06 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

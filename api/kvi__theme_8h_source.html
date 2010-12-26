@@ -38,7 +38,7 @@
 <a name="l00007"></a>00007 <span class="comment">//   Creation date : Mon Jan 08 2007 03:23:00 CEST by Szymon Stefanek</span>
 <a name="l00008"></a>00008 <span class="comment">//</span>
 <a name="l00009"></a>00009 <span class="comment">//   This file is part of the KVirc irc client distribution</span>
-<a name="l00010"></a>00010 <span class="comment">//   Copyright (C) 2007-2008 Szymon Stefanek (pragma at kvirc dot net)</span>
+<a name="l00010"></a>00010 <span class="comment">//   Copyright (C) 2007-2010 Szymon Stefanek (pragma at kvirc dot net)</span>
 <a name="l00011"></a>00011 <span class="comment">//</span>
 <a name="l00012"></a>00012 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00013"></a>00013 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -57,8 +57,8 @@
 <a name="l00026"></a>00026 <span class="comment">//=============================================================================</span>
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="kvi__qstring_8h.html" title="Helper functions for the QString class.">kvi_qstring.h</a>&quot;</span>
-<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="kvi__heapobject_8h.html" title="Heap Object.">kvi_heapobject.h</a>&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;KviQString.h&quot;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;KviHeapObject.h&quot;</span>
 <a name="l00031"></a>00031 <span class="preprocessor">#include &quot;<a class="code" href="kvi__fileextensions_8h.html" title="This file contains the file extensions and filters used by KVIrc.">kvi_fileextensions.h</a>&quot;</span>
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033 <span class="preprocessor">#include &lt;QPixmap&gt;</span>
@@ -70,7 +70,7 @@
 <a name="l00039"></a>00039 <span class="preprocessor"></span>
 <a name="l00044"></a><a class="code" href="kvi__theme_8h.html#a9e38ec49de6a93863f9f016008e43e9b">00044</a> <span class="preprocessor">#define KVI_CURRENT_THEME_ENGINE_VERSION &quot;1.0.0&quot;</span>
 <a name="l00045"></a>00045 <span class="preprocessor"></span>
-<a name="l00056"></a><a class="code" href="classKviThemeInfo.html">00056</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviThemeInfo.html" title="A set of information about a KVIrc theme.">KviThemeInfo</a> : <span class="keyword">public</span> <a class="code" href="classKviHeapObject.html">KviHeapObject</a>
+<a name="l00056"></a><a class="code" href="classKviThemeInfo.html">00056</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviThemeInfo.html" title="A set of information about a KVIrc theme.">KviThemeInfo</a> : <span class="keyword">public</span> KviHeapObject
 <a name="l00057"></a>00057 {
 <a name="l00058"></a>00058 <span class="keyword">public</span>:
 <a name="l00059"></a>00059         <a class="code" href="classKviThemeInfo.html" title="A set of information about a KVIrc theme.">KviThemeInfo</a>();
@@ -135,7 +135,7 @@
 <a name="l00170"></a>00170 <span class="preprocessor">#endif //_KVI_THEME_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:54 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:04 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

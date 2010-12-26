@@ -37,7 +37,7 @@
 <a name="l00006"></a>00006 <span class="comment">//   Creation date : Fri 19 Dec 2003 01:29:22 by Szymon Stefanek</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">//   This file is part of the KVIrc IRC client distribution</span>
-<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2003-2008 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
+<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2003-2010 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
 <a name="l00010"></a>00010 <span class="comment">//</span>
 <a name="l00011"></a>00011 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00012"></a>00012 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -57,11 +57,11 @@
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="kvi__qstring_8h.html" title="Helper functions for the QString class.">kvi_qstring.h</a>&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;KviQString.h&quot;</span>
 <a name="l00030"></a>00030 
-<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerhashtable_8h.html" title="Pointer Hash Table.">kvi_pointerhashtable.h</a>&quot;</span>
-<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerhashtable_8h.html" title="Pointer Hash Table.">kvi_pointerhashtable.h</a>&quot;</span>
-<a name="l00033"></a>00033 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerlist_8h.html" title="C++ Template based double linked pointer list class.">kvi_pointerlist.h</a>&quot;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;KviPointerHashTable.h&quot;</span>
+<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;KviPointerHashTable.h&quot;</span>
+<a name="l00033"></a>00033 <span class="preprocessor">#include &quot;KviPointerList.h&quot;</span>
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035 <span class="preprocessor">#include &lt;QObject&gt;</span>
 <a name="l00036"></a>00036 
@@ -124,16 +124,16 @@
 <a name="l00093"></a>00093         <a class="code" href="classKviKvsTimerManager.html">KviKvsTimerManager</a>();
 <a name="l00094"></a>00094         ~<a class="code" href="classKviKvsTimerManager.html">KviKvsTimerManager</a>();
 <a name="l00095"></a>00095 <span class="keyword">private</span>:
-<a name="l00096"></a><a class="code" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">00096</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;int,KviKvsTimer&gt;</a>     * <a class="code" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">m_pTimerDictById</a>;      <span class="comment">// stored by id</span>
-<a name="l00097"></a><a class="code" href="classKviKvsTimerManager.html#a440e2ba763093b6a3b485600e6290a63">00097</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviKvsTimer&gt;</a>        * <a class="code" href="classKviKvsTimerManager.html#a440e2ba763093b6a3b485600e6290a63">m_pTimerDictByName</a>;    <span class="comment">// stored by name</span>
+<a name="l00096"></a><a class="code" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">00096</a>         KviPointerHashTable&lt;int,KviKvsTimer&gt;     * <a class="code" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">m_pTimerDictById</a>;      <span class="comment">// stored by id</span>
+<a name="l00097"></a><a class="code" href="classKviKvsTimerManager.html#a440e2ba763093b6a3b485600e6290a63">00097</a>         KviPointerHashTable&lt;QString,KviKvsTimer&gt;        * <a class="code" href="classKviKvsTimerManager.html#a440e2ba763093b6a3b485600e6290a63">m_pTimerDictByName</a>;    <span class="comment">// stored by name</span>
 <a name="l00098"></a><a class="code" href="classKviKvsTimerManager.html#af64591582a321c3e2dc1a6772000ae6a">00098</a>         <span class="keyword">static</span> <a class="code" href="classKviKvsTimerManager.html">KviKvsTimerManager</a>   * <a class="code" href="classKviKvsTimerManager.html#af64591582a321c3e2dc1a6772000ae6a">m_pInstance</a>;             <span class="comment">// the one and only timer manager instance</span>
-<a name="l00099"></a><a class="code" href="classKviKvsTimerManager.html#ac7f3679c690afcc68478143454251e8b">00099</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviKvsTimer&gt;</a>     * <a class="code" href="classKviKvsTimerManager.html#ac7f3679c690afcc68478143454251e8b">m_pKilledTimerList</a>;      <span class="comment">// list of timers for that killing has been scheduled</span>
+<a name="l00099"></a><a class="code" href="classKviKvsTimerManager.html#ac7f3679c690afcc68478143454251e8b">00099</a>         KviPointerList&lt;KviKvsTimer&gt;     * <a class="code" href="classKviKvsTimerManager.html#ac7f3679c690afcc68478143454251e8b">m_pKilledTimerList</a>;      <span class="comment">// list of timers for that killing has been scheduled</span>
 <a name="l00100"></a><a class="code" href="classKviKvsTimerManager.html#a4506f190e8277e28faa7121ba3bd10ba">00100</a>         <span class="keywordtype">int</span>                           <a class="code" href="classKviKvsTimerManager.html#a4506f190e8277e28faa7121ba3bd10ba">m_iAssassinTimer</a>;        <span class="comment">// assassin timer id</span>
 <a name="l00101"></a><a class="code" href="classKviKvsTimerManager.html#afd8cd5d58f74c7932c8d7a43a7426ee5">00101</a>         <span class="keywordtype">int</span>                           <a class="code" href="classKviKvsTimerManager.html#afd8cd5d58f74c7932c8d7a43a7426ee5">m_iCurrentTimer</a>;         <span class="comment">// the timer currently executed</span>
 <a name="l00102"></a>00102 <span class="keyword">public</span>:
 <a name="l00103"></a><a class="code" href="classKviKvsTimerManager.html#a20f69701eb6fad5b9df4752f1d194154">00103</a>         <span class="keyword">static</span> <a class="code" href="classKviKvsTimerManager.html">KviKvsTimerManager</a> * <a class="code" href="classKviKvsTimerManager.html#a20f69701eb6fad5b9df4752f1d194154">instance</a>(){ <span class="keywordflow">return</span> m_pInstance; };
-<a name="l00104"></a>00104         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="namespaceKviStringConversion.html#a25090e2ca3b1e82492fb33ebc2ed0f1d">init</a>();
-<a name="l00105"></a>00105         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="namespaceKviLocale.html#a0516e82ea3996ded16e7bd66399c4e60">done</a>();
+<a name="l00104"></a>00104         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="namespaceKviKvs.html#a94c1acb519342da85a66decfe8c21912">init</a>();
+<a name="l00105"></a>00105         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="namespaceKviKvs.html#ab846ee5b15891b344ae932ef8f19ed3f">done</a>();
 <a name="l00106"></a>00106         <span class="comment">// the pCallback and pParams are owned by the timer: they WILL be deleted</span>
 <a name="l00107"></a>00107         <span class="keywordtype">bool</span> addTimer(<span class="keyword">const</span> QString &amp;szName,<a class="code" href="classKviKvsTimer.html#ae155a0d4d6cd3d7ebd859afba69a378a">KviKvsTimer::Lifetime</a> l,<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * pWnd,<span class="keywordtype">int</span> iDelay,<a class="code" href="classKviKvsScript.html" title="The KVIrc Script class.">KviKvsScript</a> * pCallback,<a class="code" href="classKviKvsVariantList.html" title="Class to handle variant variables lists.">KviKvsVariantList</a> * pParams);
 <a name="l00108"></a>00108         <span class="keywordtype">bool</span> deleteTimer(<span class="keyword">const</span> QString &amp;szName);
@@ -144,7 +144,7 @@
 <a name="l00113"></a>00113         <span class="keywordtype">bool</span> deleteCurrentTimer();
 <a name="l00114"></a>00114         <span class="keywordtype">void</span> deleteAllTimers();
 <a name="l00115"></a><a class="code" href="classKviKvsTimerManager.html#a9cf1f305efbc323fad23aecb92a5310e">00115</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviKvsTimerManager.html#a9cf1f305efbc323fad23aecb92a5310e">timerExists</a>(<span class="keyword">const</span> QString &amp;szName){ <span class="keywordflow">return</span> m_pTimerDictByName-&gt;find(szName); };
-<a name="l00116"></a><a class="code" href="classKviKvsTimerManager.html#a7f7f4a9b88c5ccb3e69c1a40af4824b5">00116</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviKvsTimer&gt;</a> * timerDict()
+<a name="l00116"></a><a class="code" href="classKviKvsTimerManager.html#a7f7f4a9b88c5ccb3e69c1a40af4824b5">00116</a>         KviPointerHashTable&lt;QString,KviKvsTimer&gt; * timerDict()
 <a name="l00117"></a>00117                 { <span class="keywordflow">return</span> m_pTimerDictByName; };
 <a name="l00118"></a>00118 <span class="keyword">protected</span>:
 <a name="l00119"></a>00119         <span class="keywordtype">void</span> scheduleKill(<a class="code" href="classKviKvsTimer.html">KviKvsTimer</a> * t);
@@ -155,7 +155,7 @@
 <a name="l00124"></a>00124 <span class="preprocessor">#endif //!_KVI_KVS_TIMERMANAGER_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:54 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

@@ -56,11 +56,11 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsTreeNodeCompositeData.html#accf40ba62eec64105225e57a72151bbe">dump</a> (const char *prefix)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dumps the tree.  <a href="#accf40ba62eec64105225e57a72151bbe"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsTreeNodeCompositeData.html#a9c324d94083009766fff8e644115e3a0">evaluateReadOnly</a> (<a class="el" href="classKviKvsRunTimeContext.html">KviKvsRunTimeContext</a> *<a class="el" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>, <a class="el" href="classKviKvsVariant.html">KviKvsVariant</a> *pBuffer)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsTreeNodeCompositeData.html#a49468c85e927bac66fa4985b1495eaff">KviKvsTreeNodeCompositeData</a> (const QChar *pLocation, <a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="classKviKvsTreeNodeData.html">KviKvsTreeNodeData</a> &gt; *pSubData)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsTreeNodeCompositeData.html#a49468c85e927bac66fa4985b1495eaff">KviKvsTreeNodeCompositeData</a> (const QChar *pLocation, KviPointerList&lt; <a class="el" href="classKviKvsTreeNodeData.html">KviKvsTreeNodeData</a> &gt; *pSubData)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsTreeNodeCompositeData.html#a7beb5867bd074808f42f8892531f4de4">~KviKvsTreeNodeCompositeData</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerList.html">KviPointerList</a><br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerList<br class="typebreak"/>
 &lt; <a class="el" href="classKviKvsTreeNodeData.html">KviKvsTreeNodeData</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsTreeNodeCompositeData.html#a4ccdfc0c515f5718c90180ad9baab142">m_pSubData</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -77,7 +77,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="classKviKvsTreeNodeData.html">KviKvsTreeNodeData</a> &gt; *&#160;</td>
+          <td class="paramtype">KviPointerList&lt; <a class="el" href="classKviKvsTreeNodeData.html">KviKvsTreeNodeData</a> &gt; *&#160;</td>
           <td class="paramname"> <em>pSubData</em>&#160;</td>
         </tr>
         <tr>
@@ -89,7 +89,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a37db5612395dc02903cd9aa6b0b9b000">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="classKviKvsTreeNodeCompositeData.html#a4ccdfc0c515f5718c90180ad9baab142">m_pSubData</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, and <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>, and <a class="el" href="classKviKvsTreeNodeCompositeData.html#a4ccdfc0c515f5718c90180ad9baab142">m_pSubData</a>.</p>
 
 </div>
 </div>
@@ -166,7 +166,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviKvsTreeNodeData.html#a9129f107cc1e4610b178da607df5d17e">KviKvsTreeNodeData</a>.</p>
 
-<p>References <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="classKviKvsTreeNodeCompositeData.html#a4ccdfc0c515f5718c90180ad9baab142">m_pSubData</a>, and <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>.</p>
+<p>References <a class="el" href="classKviKvsTreeNodeCompositeData.html#a4ccdfc0c515f5718c90180ad9baab142">m_pSubData</a>.</p>
 
 </div>
 </div>
@@ -197,7 +197,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviKvsTreeNodeData.html#a88a6a1cfdade4de56efb32b93fa1a51b">KviKvsTreeNodeData</a>.</p>
 
-<p>References <a class="el" href="classKviKvsVariant.html#a26f50257678408167e4c48c169a5d17e">KviKvsVariant::appendAsString()</a>, <a class="el" href="classKviPointerListIterator.html#a6297264b81233d1a9579f85ce9b81554">KviPointerListIterator&lt; T &gt;::current()</a>, <a class="el" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>, <a class="el" href="classKviKvsTreeNodeCompositeData.html#a4ccdfc0c515f5718c90180ad9baab142">m_pSubData</a>, and <a class="el" href="classKviKvsVariant.html#aa0be5192daaab65d1e8bf4694a078176">KviKvsVariant::setString()</a>.</p>
+<p>References <a class="el" href="classKviKvsVariant.html#a26f50257678408167e4c48c169a5d17e">KviKvsVariant::appendAsString()</a>, <a class="el" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>, <a class="el" href="classKviKvsTreeNodeCompositeData.html#a4ccdfc0c515f5718c90180ad9baab142">m_pSubData</a>, and <a class="el" href="classKviKvsVariant.html#aa0be5192daaab65d1e8bf4694a078176">KviKvsVariant::setString()</a>.</p>
 
 </div>
 </div>
@@ -207,7 +207,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt;<a class="el" href="classKviKvsTreeNodeData.html">KviKvsTreeNodeData</a>&gt;* <a class="el" href="classKviKvsTreeNodeCompositeData.html#a4ccdfc0c515f5718c90180ad9baab142">KviKvsTreeNodeCompositeData::m_pSubData</a><code> [protected]</code></td>
+          <td class="memname">KviPointerList&lt;<a class="el" href="classKviKvsTreeNodeData.html">KviKvsTreeNodeData</a>&gt;* <a class="el" href="classKviKvsTreeNodeCompositeData.html#a4ccdfc0c515f5718c90180ad9baab142">KviKvsTreeNodeCompositeData::m_pSubData</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -222,7 +222,7 @@ Protected Attributes</h2></td></tr>
 <li>src/kvirc/kvs/<a class="el" href="kvi__kvs__treenode__compositedata_8cpp.html">kvi_kvs_treenode_compositedata.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:59 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:09 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

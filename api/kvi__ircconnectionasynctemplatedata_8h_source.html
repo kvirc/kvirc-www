@@ -37,7 +37,7 @@
 <a name="l00006"></a>00006 <span class="comment">//   Creation date : Sat 26 Jun 2004 19:40:20 by Szymon Stefanek</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">//   This file is part of the KVIrc IRC client distribution</span>
-<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2004-2008 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
+<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2004-2010 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
 <a name="l00010"></a>00010 <span class="comment">//</span>
 <a name="l00011"></a>00011 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00012"></a>00012 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -75,14 +75,14 @@
 <a name="l00044"></a>00044         }
 <a name="l00045"></a>00045 
 <a name="l00046"></a>00046 <span class="keyword">protected</span>:
-<a name="l00047"></a><a class="code" href="classKviIrcConnectionAsyncTemplateData.html#a99106983a702541d7ef4a9c42955d583">00047</a>         <a class="code" href="classKviPointerList.html" title="A template double linked list of pointers.">KviPointerList&lt;T&gt;</a> * <a class="code" href="classKviIrcConnectionAsyncTemplateData.html#a99106983a702541d7ef4a9c42955d583">m_pInfoList</a>; <span class="comment">// awhois pending stuff</span>
+<a name="l00047"></a><a class="code" href="classKviIrcConnectionAsyncTemplateData.html#a99106983a702541d7ef4a9c42955d583">00047</a>         KviPointerList&lt;T&gt; * <a class="code" href="classKviIrcConnectionAsyncTemplateData.html#a99106983a702541d7ef4a9c42955d583">m_pInfoList</a>; <span class="comment">// awhois pending stuff</span>
 <a name="l00048"></a>00048 <span class="keyword">public</span>:
 <a name="l00049"></a><a class="code" href="classKviIrcConnectionAsyncTemplateData.html#a05da16d7464bfd6e2c5bc1bfdd36b6a6">00049</a>         <span class="keywordtype">void</span> add(T * i)
 <a name="l00050"></a>00050         {
 <a name="l00051"></a>00051                 <span class="keywordflow">if</span>(!m_pInfoList)
 <a name="l00052"></a>00052                 {
-<a name="l00053"></a>00053                         m_pInfoList = <span class="keyword">new</span> <a class="code" href="classKviPointerList.html" title="A template double linked list of pointers.">KviPointerList&lt;T&gt;</a>;
-<a name="l00054"></a>00054                         m_pInfoList-&gt;<a class="code" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418" title="Sets the autodelete flag.">setAutoDelete</a>(<span class="keyword">true</span>);
+<a name="l00053"></a>00053                         m_pInfoList = <span class="keyword">new</span> KviPointerList&lt;T&gt;;
+<a name="l00054"></a>00054                         m_pInfoList-&gt;setAutoDelete(<span class="keyword">true</span>);
 <a name="l00055"></a>00055                 }
 <a name="l00056"></a>00056                 m_pInfoList-&gt;append(i);
 <a name="l00057"></a>00057         }
@@ -92,7 +92,7 @@
 <a name="l00061"></a>00061                 <span class="keywordflow">if</span>(!m_pInfoList)<span class="keywordflow">return</span> 0;
 <a name="l00062"></a>00062                 <span class="keywordflow">for</span>(T * i = m_pInfoList-&gt;first();i;i = m_pInfoList-&gt;next())
 <a name="l00063"></a>00063                 {
-<a name="l00064"></a>00064                         <span class="keywordflow">if</span>(<a class="code" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f" title="Compares two strings with case insensitive.">KviQString::equalCI</a>(nick,i-&gt;szNick))<span class="keywordflow">return</span> i;
+<a name="l00064"></a>00064                         <span class="keywordflow">if</span>(KviQString::equalCI(nick,i-&gt;szNick))<span class="keywordflow">return</span> i;
 <a name="l00065"></a>00065                 }
 <a name="l00066"></a>00066                 <span class="keywordflow">return</span> 0;
 <a name="l00067"></a>00067         }
@@ -113,7 +113,7 @@
 <a name="l00082"></a>00082 <span class="preprocessor"></span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:54 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:04 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

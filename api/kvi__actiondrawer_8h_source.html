@@ -37,7 +37,7 @@
 <a name="l00006"></a>00006 <span class="comment">//   Creation date : Sun 21 Nov 2004 05:44:22 by Szymon Stefanek</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">//   This file is part of the KVIrc IRC Client distribution</span>
-<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2004-2008 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
+<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2004-2010 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
 <a name="l00010"></a>00010 <span class="comment">//</span>
 <a name="l00011"></a>00011 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00012"></a>00012 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -56,8 +56,8 @@
 <a name="l00025"></a>00025 <span class="comment">//=============================================================================</span>
 <a name="l00026"></a>00026 
 <a name="l00033"></a>00033 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;<a class="code" href="kvi__qstring_8h.html" title="Helper functions for the QString class.">kvi_qstring.h</a>&quot;</span>
-<a name="l00035"></a>00035 <span class="preprocessor">#include &quot;<a class="code" href="kvi__tal__listwidget_8h.html">kvi_tal_listwidget.h</a>&quot;</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;KviQString.h&quot;</span>
+<a name="l00035"></a>00035 <span class="preprocessor">#include &quot;KviTalListWidget.h&quot;</span>
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037 <span class="preprocessor">#include &lt;QWidget&gt;</span>
 <a name="l00038"></a>00038 <span class="preprocessor">#include &lt;QTabWidget&gt;</span>
@@ -91,7 +91,7 @@
 <a name="l00100"></a>00100         <span class="keywordtype">void</span> add(<a class="code" href="classKviAction.html" title="Defines an action inside KVIrc.">KviAction</a> * pAction);
 <a name="l00101"></a>00101 };
 <a name="l00102"></a>00102 
-<a name="l00107"></a><a class="code" href="classKviActionDrawerPageListWidget.html">00107</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviActionDrawerPageListWidget.html">KviActionDrawerPageListWidget</a> : <span class="keyword">public</span> <a class="code" href="classKviTalListWidget.html">KviTalListWidget</a>
+<a name="l00107"></a><a class="code" href="classKviActionDrawerPageListWidget.html">00107</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviActionDrawerPageListWidget.html">KviActionDrawerPageListWidget</a> : <span class="keyword">public</span> KviTalListWidget
 <a name="l00108"></a>00108 {
 <a name="l00109"></a><a class="code" href="classKviActionDrawerPageListWidget.html#ac3ab4491edd2562f82c33c62cdcbc7ca">00109</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classKviActionDrawerPage.html">KviActionDrawerPage</a>;
 <a name="l00110"></a>00110         Q_OBJECT
@@ -104,16 +104,16 @@
 <a name="l00125"></a>00125         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mousePressEvent(QMouseEvent * e);
 <a name="l00126"></a>00126 };
 <a name="l00127"></a>00127 
-<a name="l00132"></a><a class="code" href="classKviActionDrawerPageListWidgetItem.html">00132</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviActionDrawerPageListWidgetItem.html">KviActionDrawerPageListWidgetItem</a> : <span class="keyword">public</span> <a class="code" href="classKviTalListWidgetItem.html">KviTalListWidgetItem</a>
+<a name="l00132"></a><a class="code" href="classKviActionDrawerPageListWidgetItem.html">00132</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviActionDrawerPageListWidgetItem.html">KviActionDrawerPageListWidgetItem</a> : <span class="keyword">public</span> KviTalListWidgetItem
 <a name="l00133"></a>00133 {
 <a name="l00134"></a>00134 <span class="keyword">public</span>:
-<a name="l00141"></a>00141         <a class="code" href="classKviActionDrawerPageListWidgetItem.html">KviActionDrawerPageListWidgetItem</a>(<a class="code" href="classKviTalListWidget.html">KviTalListWidget</a> * pList, <a class="code" href="classKviAction.html" title="Defines an action inside KVIrc.">KviAction</a> * pAction);
+<a name="l00141"></a>00141         <a class="code" href="classKviActionDrawerPageListWidgetItem.html">KviActionDrawerPageListWidgetItem</a>(KviTalListWidget * pList, <a class="code" href="classKviAction.html" title="Defines an action inside KVIrc.">KviAction</a> * pAction);
 <a name="l00142"></a>00142 
 <a name="l00146"></a>00146         ~<a class="code" href="classKviActionDrawerPageListWidgetItem.html">KviActionDrawerPageListWidgetItem</a>();
 <a name="l00147"></a>00147 <span class="keyword">protected</span>:
 <a name="l00148"></a><a class="code" href="classKviActionDrawerPageListWidgetItem.html#a82192041bed8dd38a58c3c874c59049c">00148</a>         QString            <a class="code" href="classKviActionDrawerPageListWidgetItem.html#a82192041bed8dd38a58c3c874c59049c">m_szName</a>;
 <a name="l00149"></a><a class="code" href="classKviActionDrawerPageListWidgetItem.html#a1edd4a850113c35a739bcf04d06db516">00149</a>         QPixmap          * <a class="code" href="classKviActionDrawerPageListWidgetItem.html#a1edd4a850113c35a739bcf04d06db516">m_pIcon</a>;
-<a name="l00150"></a><a class="code" href="classKviActionDrawerPageListWidgetItem.html#a78eac974e3d530170249bce14f03682a">00150</a>         <a class="code" href="classKviTalListWidget.html">KviTalListWidget</a> * <a class="code" href="classKviActionDrawerPageListWidgetItem.html#a78eac974e3d530170249bce14f03682a">m_pListWidget</a>;
+<a name="l00150"></a><a class="code" href="classKviActionDrawerPageListWidgetItem.html#a78eac974e3d530170249bce14f03682a">00150</a>         KviTalListWidget * <a class="code" href="classKviActionDrawerPageListWidgetItem.html#a78eac974e3d530170249bce14f03682a">m_pListWidget</a>;
 <a name="l00151"></a><a class="code" href="classKviActionDrawerPageListWidgetItem.html#a8bdde9eb63e12ff908ada696a51d9bbb">00151</a>         QString            <a class="code" href="classKviActionDrawerPageListWidgetItem.html#a8bdde9eb63e12ff908ada696a51d9bbb">m_szKey</a>;
 <a name="l00152"></a>00152 
 <a name="l00153"></a>00153 <span class="keyword">public</span>:
@@ -130,7 +130,7 @@
 <a name="l00164"></a>00164 <span class="preprocessor">#endif //_KVI_ACTIONDRAWER_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:55 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

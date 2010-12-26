@@ -58,7 +58,7 @@
 <a name="l00027"></a>00027 <span class="comment">//============================================================================</span>
 <a name="l00028"></a>00028 
 <a name="l00038"></a>00038 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00039"></a>00039 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerlist_8h.html" title="C++ Template based double linked pointer list class.">kvi_pointerlist.h</a>&quot;</span>
+<a name="l00039"></a>00039 <span class="preprocessor">#include &quot;KviPointerList.h&quot;</span>
 <a name="l00040"></a>00040 
 <a name="l00041"></a><a class="code" href="kvi__input__history_8h.html#afaf7265aadd7731147af6369f177b6bc">00041</a> <span class="preprocessor">#define KVI_INPUT_MAX_GLOBAL_HISTORY_ENTRIES 100</span>
 <a name="l00042"></a><a class="code" href="kvi__input__history_8h.html#ac3f6c2d1c5f7c8f2ee481987a59f255c">00042</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_INPUT_MAX_LOCAL_HISTORY_ENTRIES 20</span>
@@ -69,14 +69,14 @@
 <a name="l00051"></a><a class="code" href="classKviInputHistory.html#a7d98a31c46091f13afd79f9e6ba402a5">00051</a>         <span class="keyword">static</span> <a class="code" href="classKviInputHistory.html" title="Input history class.">KviInputHistory</a> * <a class="code" href="classKviInputHistory.html#a7d98a31c46091f13afd79f9e6ba402a5">m_pSelf</a>;
 <a name="l00052"></a><a class="code" href="classKviInputHistory.html#a45bd9ea310de546c36e513d0ef306f3e">00052</a>         <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>      <a class="code" href="classKviInputHistory.html#a45bd9ea310de546c36e513d0ef306f3e">m_uCount</a>;
 <a name="l00053"></a>00053 <span class="keyword">protected</span>:
-<a name="l00054"></a><a class="code" href="classKviInputHistory.html#aa1ec9e2fc347fbdd3ce36f35bc901df0">00054</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;QString&gt;</a> * <a class="code" href="classKviInputHistory.html#aa1ec9e2fc347fbdd3ce36f35bc901df0">m_pStringList</a>;
+<a name="l00054"></a><a class="code" href="classKviInputHistory.html#aa1ec9e2fc347fbdd3ce36f35bc901df0">00054</a>         KviPointerList&lt;QString&gt; * <a class="code" href="classKviInputHistory.html#aa1ec9e2fc347fbdd3ce36f35bc901df0">m_pStringList</a>;
 <a name="l00055"></a>00055 <span class="keyword">public</span>:
 <a name="l00060"></a>00060         <a class="code" href="classKviInputHistory.html" title="Input history class.">KviInputHistory</a>();
 <a name="l00064"></a>00064         ~<a class="code" href="classKviInputHistory.html" title="Input history class.">KviInputHistory</a>();
 <a name="l00065"></a>00065 
-<a name="l00070"></a>00070         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="namespaceKviStringConversion.html#a25090e2ca3b1e82492fb33ebc2ed0f1d">init</a>();
+<a name="l00070"></a>00070         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="namespaceKviKvs.html#a94c1acb519342da85a66decfe8c21912">init</a>();
 <a name="l00071"></a>00071 
-<a name="l00076"></a>00076         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="namespaceKviLocale.html#a0516e82ea3996ded16e7bd66399c4e60">done</a>();
+<a name="l00076"></a>00076         <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="namespaceKviKvs.html#ab846ee5b15891b344ae932ef8f19ed3f">done</a>();
 <a name="l00077"></a>00077 
 <a name="l00082"></a><a class="code" href="classKviInputHistory.html#a8184dff586d425d903225148bd276362">00082</a>         <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="classKviInputHistory.html" title="Input history class.">KviInputHistory</a> * <a class="code" href="classKviInputHistory.html#a8184dff586d425d903225148bd276362" title="Returns the instance of the class.">instance</a>(){ <span class="keywordflow">return</span> m_pSelf; };
 <a name="l00083"></a>00083 
@@ -88,7 +88,7 @@
 <a name="l00101"></a>00101 
 <a name="l00107"></a>00107         <span class="keywordtype">void</span> add(QString * szString);
 <a name="l00108"></a>00108 
-<a name="l00113"></a><a class="code" href="classKviInputHistory.html#a380ea5856f1f429e39fed773f4c12b02">00113</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;QString&gt;</a> * <a class="code" href="classKviInputHistory.html#a380ea5856f1f429e39fed773f4c12b02" title="Returns the list of string in the history.">list</a>(){ <span class="keywordflow">return</span> m_pStringList; };
+<a name="l00113"></a><a class="code" href="classKviInputHistory.html#a380ea5856f1f429e39fed773f4c12b02">00113</a>         KviPointerList&lt;QString&gt; * <a class="code" href="classKviInputHistory.html#a380ea5856f1f429e39fed773f4c12b02" title="Returns the list of string in the history.">list</a>(){ <span class="keywordflow">return</span> m_pStringList; };
 <a name="l00114"></a>00114 
 <a name="l00120"></a>00120         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#afc947a792aac67a66d0402e09682ac13">save</a>(<span class="keyword">const</span> QString &amp; szFileName);
 <a name="l00121"></a>00121 
@@ -98,7 +98,7 @@
 <a name="l00130"></a>00130 <span class="preprocessor">#endif //_KVI_INPUT_HISTORY_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:55 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

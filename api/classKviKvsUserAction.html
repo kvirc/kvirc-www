@@ -75,8 +75,8 @@ Static Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsUserAction.html#a12f291a3ff7462963b3a9d9119f9d359">isKviUserActionNeverOverrideThis</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the action is user-defined.  <a href="#a12f291a3ff7462963b3a9d9119f9d359"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsUserAction.html#aad8c2392383416e54f4a96fd38e644b5">load</a> (<a class="el" href="classKviConfig.html">KviConfig</a> *cfg)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsUserAction.html#a66b88eaff7ef7d735e1a6fe8f216d861">save</a> (<a class="el" href="classKviConfig.html">KviConfig</a> *cfg)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsUserAction.html#a0ef18c6e6dbc74466b179b890984a916">load</a> (KviConfigurationFile *cfg)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsUserAction.html#a0e157092981b5a180d8972d3dd7583f1">save</a> (KviConfigurationFile *cfg)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviKvsScript.html">KviKvsScript</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsUserAction.html#a1f514043584f5eea199520173e858c4d">m_pDescriptionScript</a></td></tr>
@@ -413,7 +413,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="namespaceKviCommandFormatter.html#acfd5fca108c0728ca0e1881045ee3f47">KviCommandFormatter::blockFromBuffer()</a>, <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fca31d34acb10193bb93ca25079521da210">KviAction::EnableAtLogin</a>, <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fca100cb079bbf1f09629dc3ac55e00004a">KviAction::InternalWindowMask</a>, <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fcadba541a1833121406cfe71e041ecd83c">KviAction::NeedsConnection</a>, <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fcad8b9a052e3a338d44fb066e92c540706">KviAction::NeedsContext</a>, <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fcab99c6d1496eb175cbb6fef9568ddcde0">KviAction::WindowChannel</a>, <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fca56c46555ff35b7da28e3967de1c0c3bc">KviAction::WindowConsole</a>, <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fca3c3380b627d6a5c6050498800fe02616">KviAction::WindowDccChat</a>, <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fcae5dd9f0c3b538241c733585e6da041ed">KviAction::WindowOnlyIfUsersSelected</a>, and <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fca80b0f5541bf471a42b2b160265dec729">KviAction::WindowQuery</a>.</p>
+<p>References <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fca31d34acb10193bb93ca25079521da210">KviAction::EnableAtLogin</a>, <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fca100cb079bbf1f09629dc3ac55e00004a">KviAction::InternalWindowMask</a>, <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fcadba541a1833121406cfe71e041ecd83c">KviAction::NeedsConnection</a>, <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fcad8b9a052e3a338d44fb066e92c540706">KviAction::NeedsContext</a>, <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fcab99c6d1496eb175cbb6fef9568ddcde0">KviAction::WindowChannel</a>, <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fca56c46555ff35b7da28e3967de1c0c3bc">KviAction::WindowConsole</a>, <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fca3c3380b627d6a5c6050498800fe02616">KviAction::WindowDccChat</a>, <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fcae5dd9f0c3b538241c733585e6da041ed">KviAction::WindowOnlyIfUsersSelected</a>, and <a class="el" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fca80b0f5541bf471a42b2b160265dec729">KviAction::WindowQuery</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsUserAction.html#a43482b6e7ff0544913b7a0f5deafe567">exportToKvs()</a>.</p>
 
@@ -460,14 +460,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aad8c2392383416e54f4a96fd38e644b5"></a><!-- doxytag: member="KviKvsUserAction::load" ref="aad8c2392383416e54f4a96fd38e644b5" args="(KviConfig *cfg)" -->
+<a class="anchor" id="a0ef18c6e6dbc74466b179b890984a916"></a><!-- doxytag: member="KviKvsUserAction::load" ref="a0ef18c6e6dbc74466b179b890984a916" args="(KviConfigurationFile *cfg)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool KviKvsUserAction::load </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviConfig.html">KviConfig</a> *&#160;</td>
+          <td class="paramtype">KviConfigurationFile *&#160;</td>
           <td class="paramname"> <em>cfg</em>&#160;)</td>
           <td><code> [protected]</code></td>
         </tr>
@@ -475,20 +475,20 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviActionManager.html#a16570a1ff53fab8d003e534df7c31432">KviActionManager::category()</a>, <a class="el" href="classKviConfig.html#a4e676bf46fa70c309788ea1f515d8eac">KviConfig::group()</a>, <a class="el" href="classKviActionManager.html#a7076f244f6d84120a7665db74990ab6b">KviActionManager::instance()</a>, <a class="el" href="classKviAction.html#a96873e61e3298b2c8cc402859492388c">KviAction::m_pCategory</a>, <a class="el" href="classKviKvsUserAction.html#a1f514043584f5eea199520173e858c4d">m_pDescriptionScript</a>, <a class="el" href="classKviKvsUserAction.html#a183c7571763c9bb54b429907e73d1563">m_pVisibleNameScript</a>, <a class="el" href="classKviAction.html#ad830b1aa76061adf5e1a0bdec24acca6">KviAction::m_szBigIconId</a>, <a class="el" href="classKviKvsUserAction.html#a5ae8a6e423ce99a01a25974d06fcd526">m_szCategory</a>, <a class="el" href="classKviAction.html#aaa186f6cb55b0bcd0b03f30eaf860181">KviAction::m_szDescription</a>, <a class="el" href="classKviAction.html#a1a9ecf9ba0f9f1e11e7be5cf6150abad">KviAction::m_szKeySequence</a>, <a class="el" href="classKviAction.html#a3c44956520f6dacf151c283e33ccb6d1">KviAction::m_szName</a>, <a class="el" href="classKviKvsAction.html#a86c8ae089618a7055c6797a75029c872">KviKvsAction::m_szScript</a>, <a class="el" href="classKviAction.html#a95f210a4c8aa05f5d0a0d97d4e3f29e6">KviAction::m_szSmallIconId</a>, <a class="el" href="classKviAction.html#afd8970b5e1b6bdef4904ce6d62c7790e">KviAction::m_szVisibleName</a>, <a class="el" href="classKviAction.html#adac4d7d424f47ba37c1b02a1a9dee0c5">KviAction::m_uFlags</a>, <a class="el" href="classKviKvsScript.html#ae450e3a491f93989bd0f6f1b6a410f85a4e2ef59e0daf60652a1a8b8d62791f11">KviKvsScript::Parameter</a>, <a class="el" href="classKviConfig.html#a49a385580df7ab2b87e6bdb677cf20eb">KviConfig::readEntry()</a>, and <a class="el" href="classKviConfig.html#a3c1aebd49e1bad5a1c060ddae3637735">KviConfig::readUIntEntry()</a>.</p>
+<p>References <a class="el" href="classKviActionManager.html#a16570a1ff53fab8d003e534df7c31432">KviActionManager::category()</a>, <a class="el" href="classKviActionManager.html#a7076f244f6d84120a7665db74990ab6b">KviActionManager::instance()</a>, <a class="el" href="classKviAction.html#a96873e61e3298b2c8cc402859492388c">KviAction::m_pCategory</a>, <a class="el" href="classKviKvsUserAction.html#a1f514043584f5eea199520173e858c4d">m_pDescriptionScript</a>, <a class="el" href="classKviKvsUserAction.html#a183c7571763c9bb54b429907e73d1563">m_pVisibleNameScript</a>, <a class="el" href="classKviAction.html#ad830b1aa76061adf5e1a0bdec24acca6">KviAction::m_szBigIconId</a>, <a class="el" href="classKviKvsUserAction.html#a5ae8a6e423ce99a01a25974d06fcd526">m_szCategory</a>, <a class="el" href="classKviAction.html#aaa186f6cb55b0bcd0b03f30eaf860181">KviAction::m_szDescription</a>, <a class="el" href="classKviAction.html#a1a9ecf9ba0f9f1e11e7be5cf6150abad">KviAction::m_szKeySequence</a>, <a class="el" href="classKviAction.html#a3c44956520f6dacf151c283e33ccb6d1">KviAction::m_szName</a>, <a class="el" href="classKviKvsAction.html#a86c8ae089618a7055c6797a75029c872">KviKvsAction::m_szScript</a>, <a class="el" href="classKviAction.html#a95f210a4c8aa05f5d0a0d97d4e3f29e6">KviAction::m_szSmallIconId</a>, <a class="el" href="classKviAction.html#afd8970b5e1b6bdef4904ce6d62c7790e">KviAction::m_szVisibleName</a>, <a class="el" href="classKviAction.html#adac4d7d424f47ba37c1b02a1a9dee0c5">KviAction::m_uFlags</a>, and <a class="el" href="classKviKvsScript.html#ae450e3a491f93989bd0f6f1b6a410f85a4e2ef59e0daf60652a1a8b8d62791f11">KviKvsScript::Parameter</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviActionManager.html#a8d944f3c245339ea73ef4065b7645003">KviActionManager::load()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a66b88eaff7ef7d735e1a6fe8f216d861"></a><!-- doxytag: member="KviKvsUserAction::save" ref="a66b88eaff7ef7d735e1a6fe8f216d861" args="(KviConfig *cfg)" -->
+<a class="anchor" id="a0e157092981b5a180d8972d3dd7583f1"></a><!-- doxytag: member="KviKvsUserAction::save" ref="a0e157092981b5a180d8972d3dd7583f1" args="(KviConfigurationFile *cfg)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void KviKvsUserAction::save </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviConfig.html">KviConfig</a> *&#160;</td>
+          <td class="paramtype">KviConfigurationFile *&#160;</td>
           <td class="paramname"> <em>cfg</em>&#160;)</td>
           <td><code> [protected]</code></td>
         </tr>
@@ -496,7 +496,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsScript.html#a623dec8db25115dab4f2047bc02460f8">KviKvsScript::code()</a>, <a class="el" href="classKviKvsUserAction.html#a1f514043584f5eea199520173e858c4d">m_pDescriptionScript</a>, <a class="el" href="classKviKvsUserAction.html#a183c7571763c9bb54b429907e73d1563">m_pVisibleNameScript</a>, <a class="el" href="classKviAction.html#ad830b1aa76061adf5e1a0bdec24acca6">KviAction::m_szBigIconId</a>, <a class="el" href="classKviKvsUserAction.html#a5ae8a6e423ce99a01a25974d06fcd526">m_szCategory</a>, <a class="el" href="classKviAction.html#a1a9ecf9ba0f9f1e11e7be5cf6150abad">KviAction::m_szKeySequence</a>, <a class="el" href="classKviAction.html#a3c44956520f6dacf151c283e33ccb6d1">KviAction::m_szName</a>, <a class="el" href="classKviKvsAction.html#a86c8ae089618a7055c6797a75029c872">KviKvsAction::m_szScript</a>, <a class="el" href="classKviAction.html#a95f210a4c8aa05f5d0a0d97d4e3f29e6">KviAction::m_szSmallIconId</a>, <a class="el" href="classKviAction.html#adac4d7d424f47ba37c1b02a1a9dee0c5">KviAction::m_uFlags</a>, <a class="el" href="classKviConfig.html#ab31c7473a1ff943b8694f2bc07570034">KviConfig::setGroup()</a>, and <a class="el" href="classKviConfig.html#a77ae0a956895bc66f5f1b203d6401675">KviConfig::writeEntry()</a>.</p>
+<p>References <a class="el" href="classKviKvsScript.html#a623dec8db25115dab4f2047bc02460f8">KviKvsScript::code()</a>, <a class="el" href="classKviKvsUserAction.html#a1f514043584f5eea199520173e858c4d">m_pDescriptionScript</a>, <a class="el" href="classKviKvsUserAction.html#a183c7571763c9bb54b429907e73d1563">m_pVisibleNameScript</a>, <a class="el" href="classKviAction.html#ad830b1aa76061adf5e1a0bdec24acca6">KviAction::m_szBigIconId</a>, <a class="el" href="classKviKvsUserAction.html#a5ae8a6e423ce99a01a25974d06fcd526">m_szCategory</a>, <a class="el" href="classKviAction.html#a1a9ecf9ba0f9f1e11e7be5cf6150abad">KviAction::m_szKeySequence</a>, <a class="el" href="classKviAction.html#a3c44956520f6dacf151c283e33ccb6d1">KviAction::m_szName</a>, <a class="el" href="classKviKvsAction.html#a86c8ae089618a7055c6797a75029c872">KviKvsAction::m_szScript</a>, <a class="el" href="classKviAction.html#a95f210a4c8aa05f5d0a0d97d4e3f29e6">KviAction::m_szSmallIconId</a>, and <a class="el" href="classKviAction.html#adac4d7d424f47ba37c1b02a1a9dee0c5">KviAction::m_uFlags</a>.</p>
 
 </div>
 </div>
@@ -592,7 +592,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviKvsUserAction.html#a7fcfb72a5e8584b914a43836a712f680">description()</a>, <a class="el" href="classKviKvsUserAction.html#a7bf5b5f3d561ec0f82d216e0b9ddeef2">descriptionCode()</a>, <a class="el" href="classKviKvsUserAction.html#a2e8b72d6007a914eea6d552583800cf6">KviKvsUserAction()</a>, <a class="el" href="classKviKvsUserAction.html#aad8c2392383416e54f4a96fd38e644b5">load()</a>, <a class="el" href="classKviKvsUserAction.html#a66b88eaff7ef7d735e1a6fe8f216d861">save()</a>, and <a class="el" href="classKviKvsUserAction.html#a9664be22b2408d6793b4f25c71aa9eef">~KviKvsUserAction()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsUserAction.html#a7fcfb72a5e8584b914a43836a712f680">description()</a>, <a class="el" href="classKviKvsUserAction.html#a7bf5b5f3d561ec0f82d216e0b9ddeef2">descriptionCode()</a>, <a class="el" href="classKviKvsUserAction.html#a2e8b72d6007a914eea6d552583800cf6">KviKvsUserAction()</a>, <a class="el" href="classKviKvsUserAction.html#a0ef18c6e6dbc74466b179b890984a916">load()</a>, <a class="el" href="classKviKvsUserAction.html#a0e157092981b5a180d8972d3dd7583f1">save()</a>, and <a class="el" href="classKviKvsUserAction.html#a9664be22b2408d6793b4f25c71aa9eef">~KviKvsUserAction()</a>.</p>
 
 </div>
 </div>
@@ -607,7 +607,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviKvsUserAction.html#a2e8b72d6007a914eea6d552583800cf6">KviKvsUserAction()</a>, <a class="el" href="classKviKvsUserAction.html#aad8c2392383416e54f4a96fd38e644b5">load()</a>, <a class="el" href="classKviKvsUserAction.html#a66b88eaff7ef7d735e1a6fe8f216d861">save()</a>, <a class="el" href="classKviKvsUserAction.html#ac6248fc7e1d38769cc3f87b1bbc1357a">visibleName()</a>, <a class="el" href="classKviKvsUserAction.html#a36077a6d815bf365e284902d047536cc">visibleNameCode()</a>, and <a class="el" href="classKviKvsUserAction.html#a9664be22b2408d6793b4f25c71aa9eef">~KviKvsUserAction()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsUserAction.html#a2e8b72d6007a914eea6d552583800cf6">KviKvsUserAction()</a>, <a class="el" href="classKviKvsUserAction.html#a0ef18c6e6dbc74466b179b890984a916">load()</a>, <a class="el" href="classKviKvsUserAction.html#a0e157092981b5a180d8972d3dd7583f1">save()</a>, <a class="el" href="classKviKvsUserAction.html#ac6248fc7e1d38769cc3f87b1bbc1357a">visibleName()</a>, <a class="el" href="classKviKvsUserAction.html#a36077a6d815bf365e284902d047536cc">visibleNameCode()</a>, and <a class="el" href="classKviKvsUserAction.html#a9664be22b2408d6793b4f25c71aa9eef">~KviKvsUserAction()</a>.</p>
 
 </div>
 </div>
@@ -622,7 +622,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviKvsUserAction.html#a43482b6e7ff0544913b7a0f5deafe567">exportToKvs()</a>, <a class="el" href="classKviKvsUserAction.html#a2e8b72d6007a914eea6d552583800cf6">KviKvsUserAction()</a>, <a class="el" href="classKviKvsUserAction.html#aad8c2392383416e54f4a96fd38e644b5">load()</a>, and <a class="el" href="classKviKvsUserAction.html#a66b88eaff7ef7d735e1a6fe8f216d861">save()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsUserAction.html#a43482b6e7ff0544913b7a0f5deafe567">exportToKvs()</a>, <a class="el" href="classKviKvsUserAction.html#a2e8b72d6007a914eea6d552583800cf6">KviKvsUserAction()</a>, <a class="el" href="classKviKvsUserAction.html#a0ef18c6e6dbc74466b179b890984a916">load()</a>, and <a class="el" href="classKviKvsUserAction.html#a0e157092981b5a180d8972d3dd7583f1">save()</a>.</p>
 
 </div>
 </div>
@@ -631,7 +631,7 @@ Friends</h2></td></tr>
 <li>src/kvirc/kvs/<a class="el" href="kvi__kvs__useraction_8cpp.html">kvi_kvs_useraction.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:33:03 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:13 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

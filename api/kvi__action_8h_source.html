@@ -56,13 +56,13 @@
 <a name="l00025"></a>00025 <span class="comment">//=============================================================================</span>
 <a name="l00026"></a>00026 
 <a name="l00033"></a>00033 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerlist_8h.html" title="C++ Template based double linked pointer list class.">kvi_pointerlist.h</a>&quot;</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;KviPointerList.h&quot;</span>
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 <span class="preprocessor">#include &lt;QObject&gt;</span>
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038 <span class="keyword">class </span>QShortcut;
 <a name="l00039"></a>00039 <span class="keyword">class </span>QPixmap;
-<a name="l00040"></a>00040 <span class="keyword">class </span><a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>;
+<a name="l00040"></a>00040 <span class="keyword">class </span>KviTalPopupMenu;
 <a name="l00041"></a>00041 <span class="keyword">class </span><a class="code" href="classKviCustomToolBar.html">KviCustomToolBar</a>;
 <a name="l00042"></a>00042 
 <a name="l00049"></a><a class="code" href="classKviActionCategory.html">00049</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviActionCategory.html" title="Holds the categories of an action.">KviActionCategory</a>
@@ -105,7 +105,7 @@
 <a name="l00120"></a><a class="code" href="classKviAction.html#a2200579c476d915ff8c11a99e881a3fcae5dd9f0c3b538241c733585e6da041ed">00120</a>                 WindowOnlyIfUsersSelected = 128   
 <a name="l00121"></a>00121         };
 <a name="l00122"></a>00122 <span class="keyword">public</span>:
-<a name="l00142"></a>00142         <a class="code" href="classKviAction.html" title="Defines an action inside KVIrc.">KviAction</a>(QObject * pParent, <span class="keyword">const</span> QString &amp; szName, <span class="keyword">const</span> QString &amp; szVisibleName, <span class="keyword">const</span> QString &amp; szDescription, <a class="code" href="classKviActionCategory.html" title="Holds the categories of an action.">KviActionCategory</a> * pCategory = <a class="code" href="kvi__numeric_8h.html#af2ebd5db010f0e321c1faa0e6a182c2b">NULL</a>, <span class="keyword">const</span> QString &amp; szBigIconId = QString(), <span class="keyword">const</span> QString &amp; szSmallIconId = QString(), <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uFlags = 0, <span class="keyword">const</span> QString &amp; szKeySequence = QString());
+<a name="l00142"></a>00142         <a class="code" href="classKviAction.html" title="Defines an action inside KVIrc.">KviAction</a>(QObject * pParent, <span class="keyword">const</span> QString &amp; szName, <span class="keyword">const</span> QString &amp; szVisibleName, <span class="keyword">const</span> QString &amp; szDescription, <a class="code" href="classKviActionCategory.html" title="Holds the categories of an action.">KviActionCategory</a> * pCategory = <a class="code" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a>, <span class="keyword">const</span> QString &amp; szBigIconId = QString(), <span class="keyword">const</span> QString &amp; szSmallIconId = QString(), <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uFlags = 0, <span class="keyword">const</span> QString &amp; szKeySequence = QString());
 <a name="l00143"></a>00143 
 <a name="l00147"></a>00147         <span class="keyword">virtual</span> ~<a class="code" href="classKviAction.html" title="Defines an action inside KVIrc.">KviAction</a>();
 <a name="l00148"></a>00148 <span class="keyword">protected</span>:
@@ -115,7 +115,7 @@
 <a name="l00152"></a><a class="code" href="classKviAction.html#a96873e61e3298b2c8cc402859492388c">00152</a>         <a class="code" href="classKviActionCategory.html" title="Holds the categories of an action.">KviActionCategory</a>       * <a class="code" href="classKviAction.html#a96873e61e3298b2c8cc402859492388c">m_pCategory</a>;
 <a name="l00153"></a><a class="code" href="classKviAction.html#ad830b1aa76061adf5e1a0bdec24acca6">00153</a>         QString                   <a class="code" href="classKviAction.html#ad830b1aa76061adf5e1a0bdec24acca6">m_szBigIconId</a>;
 <a name="l00154"></a><a class="code" href="classKviAction.html#a95f210a4c8aa05f5d0a0d97d4e3f29e6">00154</a>         QString                   <a class="code" href="classKviAction.html#a95f210a4c8aa05f5d0a0d97d4e3f29e6">m_szSmallIconId</a>;
-<a name="l00155"></a><a class="code" href="classKviAction.html#a6cab2e6ad5084db24312bae657d0f65f">00155</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;QWidget&gt;</a> * <a class="code" href="classKviAction.html#a6cab2e6ad5084db24312bae657d0f65f">m_pWidgetList</a>;
+<a name="l00155"></a><a class="code" href="classKviAction.html#a6cab2e6ad5084db24312bae657d0f65f">00155</a>         KviPointerList&lt;QWidget&gt; * <a class="code" href="classKviAction.html#a6cab2e6ad5084db24312bae657d0f65f">m_pWidgetList</a>;
 <a name="l00156"></a><a class="code" href="classKviAction.html#a2dbc085691e3507234f7c480f35dd6ab">00156</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span>        <a class="code" href="classKviAction.html#a2dbc085691e3507234f7c480f35dd6ab">m_uInternalFlags</a>;
 <a name="l00157"></a><a class="code" href="classKviAction.html#adac4d7d424f47ba37c1b02a1a9dee0c5">00157</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>              <a class="code" href="classKviAction.html#adac4d7d424f47ba37c1b02a1a9dee0c5">m_uFlags</a>;
 <a name="l00158"></a><a class="code" href="classKviAction.html#a1a9ecf9ba0f9f1e11e7be5cf6150abad">00158</a>         QString                   <a class="code" href="classKviAction.html#a1a9ecf9ba0f9f1e11e7be5cf6150abad">m_szKeySequence</a>;
@@ -149,7 +149,7 @@
 <a name="l00241"></a>00241 
 <a name="l00246"></a>00246         QPixmap * bigIcon();
 <a name="l00247"></a>00247 
-<a name="l00253"></a>00253         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> addToPopupMenu(<a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * pMenu);
+<a name="l00253"></a>00253         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> addToPopupMenu(KviTalPopupMenu * pMenu);
 <a name="l00254"></a>00254 
 <a name="l00260"></a>00260         <span class="keyword">virtual</span> QWidget * addToCustomToolBar(<a class="code" href="classKviCustomToolBar.html">KviCustomToolBar</a> * pParentToolBar);
 <a name="l00261"></a>00261 
@@ -159,7 +159,7 @@
 <a name="l00274"></a>00274 
 <a name="l00279"></a>00279         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setup();
 <a name="l00280"></a>00280 
-<a name="l00285"></a><a class="code" href="classKviAction.html#abf45ddf4a1e95b479f937b6c155af8c2">00285</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;QWidget&gt;</a> * <a class="code" href="classKviAction.html#abf45ddf4a1e95b479f937b6c155af8c2" title="Returns the list of widgets associated to the action.">widgetList</a>(){ <span class="keywordflow">return</span> m_pWidgetList; };
+<a name="l00285"></a><a class="code" href="classKviAction.html#abf45ddf4a1e95b479f937b6c155af8c2">00285</a>         KviPointerList&lt;QWidget&gt; * <a class="code" href="classKviAction.html#abf45ddf4a1e95b479f937b6c155af8c2" title="Returns the list of widgets associated to the action.">widgetList</a>(){ <span class="keywordflow">return</span> m_pWidgetList; };
 <a name="l00286"></a>00286 
 <a name="l00291"></a>00291         <span class="keywordtype">void</span> registerAccelerator();
 <a name="l00292"></a>00292 
@@ -187,7 +187,7 @@
 <a name="l00375"></a>00375 <span class="preprocessor">#endif // _KVI_ACTION_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:53 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:04 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

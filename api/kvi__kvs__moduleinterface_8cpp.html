@@ -37,7 +37,7 @@
 <code>#include &quot;<a class="el" href="kvi__kvs__eventmanager_8h_source.html">kvi_kvs_eventmanager.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__module_8h_source.html">kvi_module.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__modulemanager_8h_source.html">kvi_modulemanager.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__locale_8h_source.html">kvi_locale.h</a>&quot;</code><br/>
+<code>#include &quot;KviLocale.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__kvs__treenode__data_8h_source.html">kvi_kvs_treenode_data.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__kvs__treenode__datalist_8h_source.html">kvi_kvs_treenode_datalist.h</a>&quot;</code><br/>
 <table class="memberdecls">
@@ -87,11 +87,11 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 <b>Value:</b><div class="fragment"><pre class="fragment">{ \
-                <a class="code" href="classKviPointerHashTableIterator.html" title="A fast pointer hash table iterator implementation.">KviPointerHashTableIterator&lt;QString,__type&gt;</a> it(*__dict); \
+                KviPointerHashTableIterator&lt;QString,__type&gt; it(*__dict); \
                 <span class="keywordtype">int</span> l = __word.length(); \
                 <span class="keywordflow">while</span>(it.current()) \
                 { \
-                        <span class="keywordflow">if</span>(<a class="code" href="namespaceKviQString.html#afe84786f6e548c13eb18c3c6a8f25491" title="Compares two strings with case insensitive up to N chars.">KviQString::equalCIN</a>(__word,it.currentKey(),l)) \
+                        <span class="keywordflow">if</span>(KviQString::equalCIN(__word,it.currentKey(),l)) \
                                 __list-&gt;append(<span class="keyword">new</span> QString(it.currentKey())); \
                         ++it; \
                 } \
@@ -136,14 +136,14 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h.html#a109fa73229142b7d3a9415f3a1d1dfa2">__tr2qs_ctx</a>, <a class="el" href="classKviKvsSwitchList.html#ae9c44b863715bc7073006fd479059073">KviKvsSwitchList::find()</a>, <a class="el" href="kvi__modulemanager_8cpp.html#ad5107dd04eb0a4a5441db378ca913656">g_pModuleManager</a>, <a class="el" href="classKviModule.html#a7931f39b5b97ac368538ae8e2b698ff2">KviModule::isLocked()</a>, <a class="el" href="classKviKvsModuleRunTimeCall.html#ad0552a08239ad749e1d3bcef29b7cd0f">KviKvsModuleRunTimeCall::module()</a>, <a class="el" href="classKviModule.html#ae0820f01a3c1a639ebc9f4cf0ff0e54c">KviModule::name()</a>, <a class="el" href="classKviKvsModuleCommandCall.html#af85a7e53e4870b1d1ffd1ef090c8833e">KviKvsModuleCommandCall::switches()</a>, <a class="el" href="classKviModuleManager.html#a05635ce42be228fc58b90e11d0f6f0cb">KviModuleManager::unloadModule()</a>, and <a class="el" href="classKviKvsRunTimeCall.html#ab9aed835b3901b828e61b4ca3ecc160a">KviKvsRunTimeCall::warning()</a>.</p>
+<p>References <a class="el" href="classKviKvsSwitchList.html#ae9c44b863715bc7073006fd479059073">KviKvsSwitchList::find()</a>, <a class="el" href="kvi__modulemanager_8cpp.html#ad5107dd04eb0a4a5441db378ca913656">g_pModuleManager</a>, <a class="el" href="classKviModule.html#a7931f39b5b97ac368538ae8e2b698ff2">KviModule::isLocked()</a>, <a class="el" href="classKviKvsModuleRunTimeCall.html#ad0552a08239ad749e1d3bcef29b7cd0f">KviKvsModuleRunTimeCall::module()</a>, <a class="el" href="classKviModule.html#ae0820f01a3c1a639ebc9f4cf0ff0e54c">KviModule::name()</a>, <a class="el" href="classKviKvsModuleCommandCall.html#af85a7e53e4870b1d1ffd1ef090c8833e">KviKvsModuleCommandCall::switches()</a>, <a class="el" href="classKviModuleManager.html#a05635ce42be228fc58b90e11d0f6f0cb">KviModuleManager::unloadModule()</a>, and <a class="el" href="classKviKvsRunTimeCall.html#ab9aed835b3901b828e61b4ca3ecc160a">KviKvsRunTimeCall::warning()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsModuleInterface.html#a257bd3bc83ef42cd1df0988662e02025">KviKvsModuleInterface::registerDefaultCommands()</a>.</p>
 
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:56 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:06 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

@@ -38,7 +38,7 @@
 <a name="l00007"></a>00007 <span class="comment">//   Creation date : Sat Jun 24 2000 14:49:24 by Szymon Stefanek</span>
 <a name="l00008"></a>00008 <span class="comment">//</span>
 <a name="l00009"></a>00009 <span class="comment">//   This file is part of the KVirc irc client distribution</span>
-<a name="l00010"></a>00010 <span class="comment">//   Copyright (C) 2000-2008 Szymon Stefanek (pragma at kvirc dot net)</span>
+<a name="l00010"></a>00010 <span class="comment">//   Copyright (C) 2000-2010 Szymon Stefanek (pragma at kvirc dot net)</span>
 <a name="l00011"></a>00011 <span class="comment">//</span>
 <a name="l00012"></a>00012 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00013"></a>00013 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -57,10 +57,10 @@
 <a name="l00026"></a>00026 <span class="comment">//=============================================================================</span>
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="kvi__string_8h.html">kvi_string.h</a>&quot;</span>
-<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="kvi__avatar_8h.html" title="Avatar handling.">kvi_avatar.h</a>&quot;</span>
-<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;<a class="code" href="kvi__time_8h.html" title="Time management.">kvi_time.h</a>&quot;</span>
-<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerhashtable_8h.html" title="Pointer Hash Table.">kvi_pointerhashtable.h</a>&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;KviCString.h&quot;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;KviAvatar.h&quot;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;KviTimeUtils.h&quot;</span>
+<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;KviPointerHashTable.h&quot;</span>
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034 <span class="preprocessor">#include &lt;QPixmap&gt;</span>
 <a name="l00035"></a>00035 <span class="preprocessor">#include &lt;QObject&gt;</span>
@@ -435,14 +435,14 @@
 <a name="l00404"></a>00404         ~<a class="code" href="classKviCachedPixmap.html">KviCachedPixmap</a>();
 <a name="l00405"></a>00405 <span class="keyword">private</span>:
 <a name="l00406"></a><a class="code" href="classKviCachedPixmap.html#aecab479d662b0e7a9c09e49892ef4dcd">00406</a>         QString      <a class="code" href="classKviCachedPixmap.html#aecab479d662b0e7a9c09e49892ef4dcd">m_szPath</a>;
-<a name="l00407"></a><a class="code" href="classKviCachedPixmap.html#aa7542bdd94b10d2fbd5a38f034e9712e">00407</a>         <a class="code" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a>   <a class="code" href="classKviCachedPixmap.html#aa7542bdd94b10d2fbd5a38f034e9712e">m_tLastAccess</a>;
+<a name="l00407"></a><a class="code" href="classKviCachedPixmap.html#aa7542bdd94b10d2fbd5a38f034e9712e">00407</a>         kvi_time_t   <a class="code" href="classKviCachedPixmap.html#aa7542bdd94b10d2fbd5a38f034e9712e">m_tLastAccess</a>;
 <a name="l00408"></a><a class="code" href="classKviCachedPixmap.html#a05677f222e75c3fc6d858c10a61e1bb5">00408</a>         QPixmap    * <a class="code" href="classKviCachedPixmap.html#a05677f222e75c3fc6d858c10a61e1bb5">m_pPixmap</a>;
 <a name="l00409"></a><a class="code" href="classKviCachedPixmap.html#a39d0f61dcd29daa2af033de264de3f3c">00409</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviCachedPixmap.html#a39d0f61dcd29daa2af033de264de3f3c">m_uSize</a>;
 <a name="l00410"></a>00410 <span class="keyword">public</span>:
 <a name="l00411"></a><a class="code" href="classKviCachedPixmap.html#ab409f42be162f1fc66fc91db232c0403">00411</a>         QPixmap       * <a class="code" href="classKviCachedPixmap.html#ab409f42be162f1fc66fc91db232c0403">pixmap</a>(){ <span class="keywordflow">return</span> m_pPixmap; };
 <a name="l00412"></a><a class="code" href="classKviCachedPixmap.html#ad85d727980b0ff24f3efed6b02d23cf8">00412</a>         <span class="keyword">const</span> QString &amp; <a class="code" href="classKviCachedPixmap.html#ad85d727980b0ff24f3efed6b02d23cf8">path</a>(){ <span class="keywordflow">return</span> m_szPath; };
 <a name="l00413"></a><a class="code" href="classKviCachedPixmap.html#a58900fee2372cc9732f9d009c2ac0707">00413</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    <a class="code" href="classKviCachedPixmap.html#a58900fee2372cc9732f9d009c2ac0707">size</a>(){ <span class="keywordflow">return</span> m_uSize; };
-<a name="l00414"></a><a class="code" href="classKviCachedPixmap.html#a63696640de49f0334489ba4eb629a0cb">00414</a>         <a class="code" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a>      <a class="code" href="classKviCachedPixmap.html#a63696640de49f0334489ba4eb629a0cb">lastAccessTime</a>(){ <span class="keywordflow">return</span> m_tLastAccess; };
+<a name="l00414"></a><a class="code" href="classKviCachedPixmap.html#a63696640de49f0334489ba4eb629a0cb">00414</a>         kvi_time_t      <a class="code" href="classKviCachedPixmap.html#a63696640de49f0334489ba4eb629a0cb">lastAccessTime</a>(){ <span class="keywordflow">return</span> m_tLastAccess; };
 <a name="l00415"></a>00415         <span class="keywordtype">void</span>            updateLastAccessTime();
 <a name="l00416"></a>00416 };
 <a name="l00417"></a>00417 
@@ -454,7 +454,7 @@
 <a name="l00423"></a>00423         <a class="code" href="classKviIconWidget.html">KviIconWidget</a>(QWidget * par);
 <a name="l00424"></a>00424         ~<a class="code" href="classKviIconWidget.html">KviIconWidget</a>();
 <a name="l00425"></a>00425 <span class="keyword">protected</span>:
-<a name="l00426"></a>00426         <span class="keywordtype">void</span> <a class="code" href="namespaceKviStringConversion.html#a25090e2ca3b1e82492fb33ebc2ed0f1d">init</a>();
+<a name="l00426"></a>00426         <span class="keywordtype">void</span> <a class="code" href="namespaceKviKvs.html#a94c1acb519342da85a66decfe8c21912">init</a>();
 <a name="l00427"></a>00427         <span class="keyword">virtual</span> <span class="keywordtype">void</span> closeEvent(QCloseEvent *e);
 <a name="l00428"></a>00428         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> eventFilter(QObject * o,QEvent *e);
 <a name="l00429"></a>00429 signals:
@@ -493,8 +493,8 @@
 <a name="l00462"></a><a class="code" href="classKviIconManager.html#a1a6fdb35972ebc9ccc0e7081fb3f1dc1">00462</a>         QPixmap                     * m_smallIcons[<a class="code" href="kvi__iconmanager_8h.html#a9ff1ba2255ce0e44e7f0c00b2807975e">KVI_NUM_SMALL_ICONS</a>];
 <a name="l00463"></a><a class="code" href="classKviIconManager.html#a0dc9e79b792d7ec85a725af3d9a861d7">00463</a>         <a class="code" href="classKviIconWidget.html">KviIconWidget</a>               * <a class="code" href="classKviIconManager.html#a0dc9e79b792d7ec85a725af3d9a861d7">m_pIconWidget</a>;
 <a name="l00464"></a>00464 
-<a name="l00465"></a><a class="code" href="classKviIconManager.html#ac3ca24a52084b7770bc3774444a21d33">00465</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviCachedPixmap&gt;</a>      * <a class="code" href="classKviIconManager.html#ac3ca24a52084b7770bc3774444a21d33">m_pCachedImages</a>;
-<a name="l00466"></a><a class="code" href="classKviIconManager.html#a526f4967060f67fda09601a826758eaf">00466</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,int&gt;</a>                  * <a class="code" href="classKviIconManager.html#a526f4967060f67fda09601a826758eaf">m_pIconNames</a>;
+<a name="l00465"></a><a class="code" href="classKviIconManager.html#ac3ca24a52084b7770bc3774444a21d33">00465</a>         KviPointerHashTable&lt;QString,KviCachedPixmap&gt;      * <a class="code" href="classKviIconManager.html#ac3ca24a52084b7770bc3774444a21d33">m_pCachedImages</a>;
+<a name="l00466"></a><a class="code" href="classKviIconManager.html#a526f4967060f67fda09601a826758eaf">00466</a>         KviPointerHashTable&lt;QString,int&gt;                  * <a class="code" href="classKviIconManager.html#a526f4967060f67fda09601a826758eaf">m_pIconNames</a>;
 <a name="l00467"></a><a class="code" href="classKviIconManager.html#a4618a867333f464d9a2f53a3e0e95dcb">00467</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>                  <a class="code" href="classKviIconManager.html#a4618a867333f464d9a2f53a3e0e95dcb">m_uCacheTotalSize</a>;
 <a name="l00468"></a><a class="code" href="classKviIconManager.html#aec5b3913b77816a38e53e647d0193a28">00468</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>                  <a class="code" href="classKviIconManager.html#aec5b3913b77816a38e53e647d0193a28">m_uCacheMaxSize</a>;
 <a name="l00469"></a>00469 <span class="keyword">public</span>:
@@ -533,7 +533,7 @@
 <a name="l00502"></a>00502         <span class="comment">// if szLocalPath is empty then szName can be the identification</span>
 <a name="l00503"></a>00503         <span class="comment">// string for the avatar</span>
 <a name="l00504"></a>00504         <span class="comment">// if szName is empty then it is found from szLocalPath</span>
-<a name="l00505"></a>00505         <a class="code" href="classKviAvatar.html" title="Avatar class.">KviAvatar</a> * getAvatar(<span class="keyword">const</span> QString &amp;szLocalPath,<span class="keyword">const</span> QString &amp;szName);
+<a name="l00505"></a>00505         KviAvatar * getAvatar(<span class="keyword">const</span> QString &amp;szLocalPath,<span class="keyword">const</span> QString &amp;szName);
 <a name="l00506"></a>00506 
 <a name="l00507"></a>00507         <span class="keywordtype">void</span> urlToCachedFileName(QString &amp;szFName);
 <a name="l00508"></a>00508 
@@ -559,7 +559,7 @@
 <a name="l00528"></a>00528 <span class="preprocessor">#endif //_KVI_ICONMANAGER_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:53 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:04 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

@@ -66,9 +66,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarApplet.html#a88a2cbbdc30933c0a4a8f9e1f2cb8705">~KviStatusBarApplet</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarApplet.html#a66f111cb0b022e75bcbba3ff8d4dbf6b">fillContextPopup</a> (<a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarApplet.html#ad8685fb65a00511a491c492d61f0680c">loadState</a> (const char *, <a class="el" href="classKviConfig.html">KviConfig</a> *)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarApplet.html#a8ecb371e20e0e37c0533bf5339c68012">saveState</a> (const char *, <a class="el" href="classKviConfig.html">KviConfig</a> *)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarApplet.html#a66f111cb0b022e75bcbba3ff8d4dbf6b">fillContextPopup</a> (KviTalPopupMenu *)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarApplet.html#adaf3ea6a3a07a720434c5de78073dddc">loadState</a> (const char *, KviConfigurationFile *)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarApplet.html#a680b670d565c3f2a4a297147d6a055c5">saveState</a> (const char *, KviConfigurationFile *)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarApplet.html#a468465357c6e955203731a3bfb9352c5">tipText</a> (const QPoint &amp;)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -153,7 +153,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">virtual void KviStatusBarApplet::fillContextPopup </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td>
+          <td class="paramtype">KviTalPopupMenu *&#160;</td>
           <td class="paramname">&#160;)</td>
           <td><code> [inline, protected, virtual]</code></td>
         </tr>
@@ -201,7 +201,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad8685fb65a00511a491c492d61f0680c"></a><!-- doxytag: member="KviStatusBarApplet::loadState" ref="ad8685fb65a00511a491c492d61f0680c" args="(const char *, KviConfig *)" -->
+<a class="anchor" id="adaf3ea6a3a07a720434c5de78073dddc"></a><!-- doxytag: member="KviStatusBarApplet::loadState" ref="adaf3ea6a3a07a720434c5de78073dddc" args="(const char *, KviConfigurationFile *)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -214,7 +214,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classKviConfig.html">KviConfig</a> *&#160;</td>
+          <td class="paramtype">KviConfigurationFile *&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -226,13 +226,13 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classKviStatusBarClock.html#a627e5f424fdf95def1472ebca3163fcd">KviStatusBarClock</a>, <a class="el" href="classKviStatusBarConnectionTimer.html#a1db1782c50d6f55502140f4a2b33df3e">KviStatusBarConnectionTimer</a>, <a class="el" href="classKviStatusBarAwayIndicator.html#a146fc8c9feca08cc86a04b8bbdc42ef9">KviStatusBarAwayIndicator</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#a38696cb95b8128ecd95f6e7dd564f50c">KviStatusBarUpdateIndicator</a>.</p>
+<p>Reimplemented in <a class="el" href="classKviStatusBarClock.html#a8f9d067845a039a8b8f70ef9243aa37c">KviStatusBarClock</a>, <a class="el" href="classKviStatusBarConnectionTimer.html#ae45f1cbe7c7be48308f4d4c31564cfad">KviStatusBarConnectionTimer</a>, <a class="el" href="classKviStatusBarAwayIndicator.html#a5fd2923967bb092ba7aa8f769469d4c8">KviStatusBarAwayIndicator</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#a2941308317f96c679dab314682cb88a3">KviStatusBarUpdateIndicator</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviStatusBar.html#ac5d49fadbf36739b894b42b45e1aebcb">KviStatusBar::load()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a8ecb371e20e0e37c0533bf5339c68012"></a><!-- doxytag: member="KviStatusBarApplet::saveState" ref="a8ecb371e20e0e37c0533bf5339c68012" args="(const char *, KviConfig *)" -->
+<a class="anchor" id="a680b670d565c3f2a4a297147d6a055c5"></a><!-- doxytag: member="KviStatusBarApplet::saveState" ref="a680b670d565c3f2a4a297147d6a055c5" args="(const char *, KviConfigurationFile *)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -245,7 +245,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classKviConfig.html">KviConfig</a> *&#160;</td>
+          <td class="paramtype">KviConfigurationFile *&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>
@@ -257,7 +257,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classKviStatusBarClock.html#abfdc458462a25c48d5e29ffed5443faf">KviStatusBarClock</a>, <a class="el" href="classKviStatusBarConnectionTimer.html#a51040aed62a21f65c0e5b64f60a07959">KviStatusBarConnectionTimer</a>, <a class="el" href="classKviStatusBarAwayIndicator.html#aefee60c18af7057d5e0a6b8a9c89313a">KviStatusBarAwayIndicator</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#a0697b3a317a515efb10436aa42c65831">KviStatusBarUpdateIndicator</a>.</p>
+<p>Reimplemented in <a class="el" href="classKviStatusBarClock.html#a13fda4343ad8fb1754ed64392ecb5177">KviStatusBarClock</a>, <a class="el" href="classKviStatusBarConnectionTimer.html#ae4bd5fb9372a998659a86c447c656e7d">KviStatusBarConnectionTimer</a>, <a class="el" href="classKviStatusBarAwayIndicator.html#a68418e3b816bde812bddb09e09b38412">KviStatusBarAwayIndicator</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#aa86c9c810dfd933f6428bf755f7d5e3c">KviStatusBarUpdateIndicator</a>.</p>
 
 </div>
 </div>
@@ -382,7 +382,7 @@ Friends</h2></td></tr>
 <li>src/kvirc/ui/<a class="el" href="kvi__statusbarapplet_8cpp.html">kvi_statusbarapplet.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:33:03 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:13 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

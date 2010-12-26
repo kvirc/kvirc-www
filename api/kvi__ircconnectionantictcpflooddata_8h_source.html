@@ -37,7 +37,7 @@
 <a name="l00006"></a>00006 <span class="comment">//   Creation date : Sat 26 Jun 2004 18:09:42 by Szymon Stefanek</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">//   This file is part of the KVIrc IRC client distribution</span>
-<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2004-2008 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
+<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2004-2010 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
 <a name="l00010"></a>00010 <span class="comment">//</span>
 <a name="l00011"></a>00011 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00012"></a>00012 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -56,7 +56,7 @@
 <a name="l00025"></a>00025 <span class="comment">//=============================================================================</span>
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="kvi__time_8h.html" title="Time management.">kvi_time.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;KviTimeUtils.h&quot;</span>
 <a name="l00029"></a>00029 
 <a name="l00030"></a><a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html">00030</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html">KviIrcConnectionAntiCtcpFloodData</a>
 <a name="l00031"></a>00031 {
@@ -65,12 +65,12 @@
 <a name="l00034"></a>00034         ~<a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html">KviIrcConnectionAntiCtcpFloodData</a>();
 <a name="l00035"></a>00035 <span class="keyword">protected</span>:
 <a name="l00036"></a>00036         <span class="comment">// ctcp antiflood mechanism</span>
-<a name="l00037"></a><a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#a8f460dff237b4e4ec4048fac9c5f623e">00037</a>         <a class="code" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a>   <a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#a8f460dff237b4e4ec4048fac9c5f623e">m_tLastCtcp</a>;                  <span class="comment">// the time we have received the last &quot;may flood&quot; ctcp request</span>
+<a name="l00037"></a><a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#a8f460dff237b4e4ec4048fac9c5f623e">00037</a>         kvi_time_t   <a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#a8f460dff237b4e4ec4048fac9c5f623e">m_tLastCtcp</a>;                  <span class="comment">// the time we have received the last &quot;may flood&quot; ctcp request</span>
 <a name="l00038"></a><a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#af6fbbd5983d6c21e6714747c595d54bc">00038</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#af6fbbd5983d6c21e6714747c595d54bc">m_uCtcpCount</a>;                 <span class="comment">// the ctcp counter for the antiflooder</span>
 <a name="l00039"></a>00039 <span class="keyword">public</span>:
-<a name="l00040"></a><a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#aec4ea71ea61456eb98b542f0df5e8fb0">00040</a>         <a class="code" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a> <a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#aec4ea71ea61456eb98b542f0df5e8fb0">lastCtcpTime</a>(){ <span class="keywordflow">return</span> m_tLastCtcp; };
+<a name="l00040"></a><a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#aec4ea71ea61456eb98b542f0df5e8fb0">00040</a>         kvi_time_t <a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#aec4ea71ea61456eb98b542f0df5e8fb0">lastCtcpTime</a>(){ <span class="keywordflow">return</span> m_tLastCtcp; };
 <a name="l00041"></a><a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#a0276f65bacd93dceed5e98e7b41bc3dd">00041</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#a0276f65bacd93dceed5e98e7b41bc3dd">ctcpCount</a>(){ <span class="keywordflow">return</span> m_uCtcpCount; };
-<a name="l00042"></a><a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#a3f313c454a459f57d09fdaf51deca324">00042</a>         <span class="keywordtype">void</span> <a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#a3f313c454a459f57d09fdaf51deca324">setLastCtcpTime</a>(<a class="code" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a> tLastCtcp){ m_tLastCtcp = tLastCtcp; };
+<a name="l00042"></a><a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#a3f313c454a459f57d09fdaf51deca324">00042</a>         <span class="keywordtype">void</span> <a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#a3f313c454a459f57d09fdaf51deca324">setLastCtcpTime</a>(kvi_time_t tLastCtcp){ m_tLastCtcp = tLastCtcp; };
 <a name="l00043"></a><a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#a9b3828e744463bb0e7c6be38babbc14d">00043</a>         <span class="keywordtype">void</span> <a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#a9b3828e744463bb0e7c6be38babbc14d">increaseCtcpCount</a>(){ m_uCtcpCount++; };
 <a name="l00044"></a><a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#ac05dc89e8024d3d2cf489c9882634da2">00044</a>         <span class="keywordtype">void</span> <a class="code" href="classKviIrcConnectionAntiCtcpFloodData.html#ac05dc89e8024d3d2cf489c9882634da2">setCtcpCount</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uCtcpCount){ m_uCtcpCount = uCtcpCount; };
 <a name="l00045"></a>00045 };
@@ -79,7 +79,7 @@
 <a name="l00048"></a>00048 <span class="preprocessor">#endif //!_KVI_IRCCONNECTIONANTICTCPFLOODDATA_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:54 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:04 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

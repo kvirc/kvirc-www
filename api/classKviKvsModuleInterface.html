@@ -52,8 +52,8 @@ Inheritance diagram for KviKvsModuleInterface:<!-- endSectionHeader --></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsModuleInterface.html#a582799dce0ed71329fdac47ba357cec3">completeCommand</a> (const QString &amp;cmd, <a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; QString &gt; *matches)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsModuleInterface.html#a0f2c97fdc6b36e25309302f395d74070">completeFunction</a> (const QString &amp;cmd, <a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; QString &gt; *matches)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsModuleInterface.html#a582799dce0ed71329fdac47ba357cec3">completeCommand</a> (const QString &amp;cmd, KviPointerList&lt; QString &gt; *matches)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsModuleInterface.html#a0f2c97fdc6b36e25309302f395d74070">completeFunction</a> (const QString &amp;cmd, KviPointerList&lt; QString &gt; *matches)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsModuleInterface.html#a4335d837be51473941d8a03b36419a8b">getAllFunctionsCommandsModule</a> (QStringList *list, QString &amp;szModuleName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsModuleInterface.html#a0c9ba8d955e11c61496d9ac52a7bef6e">KviKvsModuleInterface</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="kvi__kvs__moduleinterface_8h.html#ae956a7bbab1f03a95bce468245185063">KviKvsModuleCallbackCommandExecRoutine</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsModuleInterface.html#a2229d1507e475da158166b26dbc52855">kvsFindCallbackCommand</a> (const QString &amp;szCommand)</td></tr>
@@ -81,11 +81,11 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsModuleInterface.html#a257bd3bc83ef42cd1df0988662e02025">registerDefaultCommands</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 <a class="el" href="kvi__kvs__moduleinterface_8h.html#ae956a7bbab1f03a95bce468245185063">KviKvsModuleCallbackCommandExecRoutine</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsModuleInterface.html#a7c6392972e8f608a68b57bd1cc6368ba">m_pModuleCallbackCommandExecRoutineDict</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 <a class="el" href="kvi__kvs__moduleinterface_8h.html#a2b41c015b4a646d6c9d42c5d0e503f85">KviKvsModuleFunctionExecRoutine</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsModuleInterface.html#abd6373add55f1c59377c52926690b966">m_pModuleFunctionExecRoutineDict</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 <a class="el" href="kvi__kvs__moduleinterface_8h.html#af5489b53cd9e427d4583ef2d0bb73fa9">KviKvsModuleSimpleCommandExecRoutine</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsModuleInterface.html#ab82f13c6414e67285eff948b52c5a231">m_pModuleSimpleCommandExecRoutineDict</a></td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
 Friends</h2></td></tr>
@@ -106,7 +106,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsModuleInterface.html#a7c6392972e8f608a68b57bd1cc6368ba">m_pModuleCallbackCommandExecRoutineDict</a>, <a class="el" href="classKviKvsModuleInterface.html#abd6373add55f1c59377c52926690b966">m_pModuleFunctionExecRoutineDict</a>, <a class="el" href="classKviKvsModuleInterface.html#ab82f13c6414e67285eff948b52c5a231">m_pModuleSimpleCommandExecRoutineDict</a>, and <a class="el" href="classKviPointerHashTable.html#ac4b0eb0129f8d32f757d1a2a846d85cd">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="classKviKvsModuleInterface.html#a7c6392972e8f608a68b57bd1cc6368ba">m_pModuleCallbackCommandExecRoutineDict</a>, <a class="el" href="classKviKvsModuleInterface.html#abd6373add55f1c59377c52926690b966">m_pModuleFunctionExecRoutineDict</a>, and <a class="el" href="classKviKvsModuleInterface.html#ab82f13c6414e67285eff948b52c5a231">m_pModuleSimpleCommandExecRoutineDict</a>.</p>
 
 </div>
 </div>
@@ -142,7 +142,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; QString &gt; *&#160;</td>
+          <td class="paramtype">KviPointerList&lt; QString &gt; *&#160;</td>
           <td class="paramname"> <em>matches</em>&#160;</td>
         </tr>
         <tr>
@@ -173,7 +173,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; QString &gt; *&#160;</td>
+          <td class="paramtype">KviPointerList&lt; QString &gt; *&#160;</td>
           <td class="paramname"> <em>matches</em>&#160;</td>
         </tr>
         <tr>
@@ -216,7 +216,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerHashTableIterator.html#a118714da73f457cf6cbea89c83d2f8e3">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="classKviPointerHashTableIterator.html#a86c86a3f9ca4386b1339a51f61ea291f">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="classKviKvsModuleInterface.html#abd6373add55f1c59377c52926690b966">m_pModuleFunctionExecRoutineDict</a>, and <a class="el" href="classKviKvsModuleInterface.html#ab82f13c6414e67285eff948b52c5a231">m_pModuleSimpleCommandExecRoutineDict</a>.</p>
+<p>References <a class="el" href="classKviKvsModuleInterface.html#abd6373add55f1c59377c52926690b966">m_pModuleFunctionExecRoutineDict</a>, and <a class="el" href="classKviKvsModuleInterface.html#ab82f13c6414e67285eff948b52c5a231">m_pModuleSimpleCommandExecRoutineDict</a>.</p>
 
 </div>
 </div>
@@ -331,7 +331,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsModuleInterface.html#a7c6392972e8f608a68b57bd1cc6368ba">m_pModuleCallbackCommandExecRoutineDict</a>, and <a class="el" href="classKviPointerHashTable.html#a429780ac2d3e4c2c7376c93a50da1f54">KviPointerHashTable&lt; Key, T &gt;::replace()</a>.</p>
+<p>References <a class="el" href="classKviKvsModuleInterface.html#a7c6392972e8f608a68b57bd1cc6368ba">m_pModuleCallbackCommandExecRoutineDict</a>.</p>
 
 </div>
 </div>
@@ -360,7 +360,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsModuleInterface.html#abd6373add55f1c59377c52926690b966">m_pModuleFunctionExecRoutineDict</a>, and <a class="el" href="classKviPointerHashTable.html#a429780ac2d3e4c2c7376c93a50da1f54">KviPointerHashTable&lt; Key, T &gt;::replace()</a>.</p>
+<p>References <a class="el" href="classKviKvsModuleInterface.html#abd6373add55f1c59377c52926690b966">m_pModuleFunctionExecRoutineDict</a>.</p>
 
 </div>
 </div>
@@ -418,7 +418,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsModuleInterface.html#ab82f13c6414e67285eff948b52c5a231">m_pModuleSimpleCommandExecRoutineDict</a>, and <a class="el" href="classKviPointerHashTable.html#a429780ac2d3e4c2c7376c93a50da1f54">KviPointerHashTable&lt; Key, T &gt;::replace()</a>.</p>
+<p>References <a class="el" href="classKviKvsModuleInterface.html#ab82f13c6414e67285eff948b52c5a231">m_pModuleSimpleCommandExecRoutineDict</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsModuleInterface.html#a257bd3bc83ef42cd1df0988662e02025">registerDefaultCommands()</a>.</p>
 
@@ -661,7 +661,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,<a class="el" href="kvi__kvs__moduleinterface_8h.html#ae956a7bbab1f03a95bce468245185063">KviKvsModuleCallbackCommandExecRoutine</a>&gt;* <a class="el" href="classKviKvsModuleInterface.html#a7c6392972e8f608a68b57bd1cc6368ba">KviKvsModuleInterface::m_pModuleCallbackCommandExecRoutineDict</a><code> [protected]</code></td>
+          <td class="memname">KviPointerHashTable&lt;QString,<a class="el" href="kvi__kvs__moduleinterface_8h.html#ae956a7bbab1f03a95bce468245185063">KviKvsModuleCallbackCommandExecRoutine</a>&gt;* <a class="el" href="classKviKvsModuleInterface.html#a7c6392972e8f608a68b57bd1cc6368ba">KviKvsModuleInterface::m_pModuleCallbackCommandExecRoutineDict</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -676,7 +676,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,<a class="el" href="kvi__kvs__moduleinterface_8h.html#a2b41c015b4a646d6c9d42c5d0e503f85">KviKvsModuleFunctionExecRoutine</a>&gt;* <a class="el" href="classKviKvsModuleInterface.html#abd6373add55f1c59377c52926690b966">KviKvsModuleInterface::m_pModuleFunctionExecRoutineDict</a><code> [protected]</code></td>
+          <td class="memname">KviPointerHashTable&lt;QString,<a class="el" href="kvi__kvs__moduleinterface_8h.html#a2b41c015b4a646d6c9d42c5d0e503f85">KviKvsModuleFunctionExecRoutine</a>&gt;* <a class="el" href="classKviKvsModuleInterface.html#abd6373add55f1c59377c52926690b966">KviKvsModuleInterface::m_pModuleFunctionExecRoutineDict</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -691,7 +691,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,<a class="el" href="kvi__kvs__moduleinterface_8h.html#af5489b53cd9e427d4583ef2d0bb73fa9">KviKvsModuleSimpleCommandExecRoutine</a>&gt;* <a class="el" href="classKviKvsModuleInterface.html#ab82f13c6414e67285eff948b52c5a231">KviKvsModuleInterface::m_pModuleSimpleCommandExecRoutineDict</a><code> [protected]</code></td>
+          <td class="memname">KviPointerHashTable&lt;QString,<a class="el" href="kvi__kvs__moduleinterface_8h.html#af5489b53cd9e427d4583ef2d0bb73fa9">KviKvsModuleSimpleCommandExecRoutine</a>&gt;* <a class="el" href="classKviKvsModuleInterface.html#ab82f13c6414e67285eff948b52c5a231">KviKvsModuleInterface::m_pModuleSimpleCommandExecRoutineDict</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -706,7 +706,7 @@ Friends</h2></td></tr>
 <li>src/kvirc/kvs/<a class="el" href="kvi__kvs__moduleinterface_8cpp.html">kvi_kvs_moduleinterface.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:58 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

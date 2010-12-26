@@ -38,7 +38,7 @@
 <a name="l00007"></a>00007 <span class="comment">//   Creation date : Wen Jun 21 2000 13:11:24 by Szymon Stefanek</span>
 <a name="l00008"></a>00008 <span class="comment">//</span>
 <a name="l00009"></a>00009 <span class="comment">//   This file is part of the KVirc irc client distribution</span>
-<a name="l00010"></a>00010 <span class="comment">//   Copyright (C) 2000-2008 Szymon Stefanek (pragma at kvirc dot net)</span>
+<a name="l00010"></a>00010 <span class="comment">//   Copyright (C) 2000-2010 Szymon Stefanek (pragma at kvirc dot net)</span>
 <a name="l00011"></a>00011 <span class="comment">//</span>
 <a name="l00012"></a>00012 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00013"></a>00013 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -57,37 +57,37 @@
 <a name="l00026"></a>00026 <span class="comment">//=============================================================================</span>
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerlist_8h.html" title="C++ Template based double linked pointer list class.">kvi_pointerlist.h</a>&quot;</span>
-<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="kvi__string_8h.html">kvi_string.h</a>&quot;</span>
-<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;<a class="code" href="kvi__tal__menubar_8h.html" title="Toolkit Abstraction Layer class.">kvi_tal_menubar.h</a>&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;KviPointerList.h&quot;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;KviCString.h&quot;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;KviTalMenuBar.h&quot;</span>
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033 <span class="keyword">class </span><a class="code" href="classKviFrame.html">KviFrame</a>;
-<a name="l00034"></a>00034 <span class="keyword">class </span><a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>;
+<a name="l00034"></a>00034 <span class="keyword">class </span>KviTalPopupMenu;
 <a name="l00035"></a>00035 <span class="keyword">class </span><a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a>;
 <a name="l00036"></a>00036 
 <a name="l00037"></a><a class="code" href="struct__KviScriptMenuBarItem.html">00037</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct__KviScriptMenuBarItem.html">_KviScriptMenuBarItem</a>
 <a name="l00038"></a>00038 {
-<a name="l00039"></a><a class="code" href="struct__KviScriptMenuBarItem.html#a3d0da143b080d24a213cd46e2962bd45">00039</a>         <a class="code" href="classKviStr.html">KviStr</a>            <a class="code" href="struct__KviScriptMenuBarItem.html#a3d0da143b080d24a213cd46e2962bd45">szPopupName</a>;
+<a name="l00039"></a><a class="code" href="struct__KviScriptMenuBarItem.html#a9a894273ee8e0da8e3331add39fd5102">00039</a>         KviCString            <a class="code" href="struct__KviScriptMenuBarItem.html#a9a894273ee8e0da8e3331add39fd5102">szPopupName</a>;
 <a name="l00040"></a><a class="code" href="struct__KviScriptMenuBarItem.html#a421f7ec6357f6b9abf6ac6d08b3c8527">00040</a>         <a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * <a class="code" href="struct__KviScriptMenuBarItem.html#a421f7ec6357f6b9abf6ac6d08b3c8527">pPopup</a>;
-<a name="l00041"></a><a class="code" href="struct__KviScriptMenuBarItem.html#a0c9c9085a7c54b970924d7eb6453720b">00041</a>         <a class="code" href="classKviStr.html">KviStr</a>            <a class="code" href="struct__KviScriptMenuBarItem.html#a0c9c9085a7c54b970924d7eb6453720b">szText</a>;
+<a name="l00041"></a><a class="code" href="struct__KviScriptMenuBarItem.html#aeb2f986dc813dab1540afb306b0d14aa">00041</a>         KviCString            <a class="code" href="struct__KviScriptMenuBarItem.html#aeb2f986dc813dab1540afb306b0d14aa">szText</a>;
 <a name="l00042"></a>00042 } <a class="code" href="kvi__menubar_8h.html#a7d75f1410c33fbafff350c94509b4b1c">KviScriptMenuBarItem</a>;
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044 
-<a name="l00045"></a><a class="code" href="classKviMenuBar.html">00045</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviMenuBar.html">KviMenuBar</a> : <span class="keyword">public</span> <a class="code" href="classKviTalMenuBar.html" title="Toolkit Abstraction Layer: menubar class.">KviTalMenuBar</a>
+<a name="l00045"></a><a class="code" href="classKviMenuBar.html">00045</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviMenuBar.html">KviMenuBar</a> : <span class="keyword">public</span> KviTalMenuBar
 <a name="l00046"></a>00046 {
 <a name="l00047"></a>00047         Q_OBJECT
 <a name="l00048"></a>00048 <span class="keyword">public</span>:
-<a name="l00049"></a>00049         <a class="code" href="classKviMenuBar.html">KviMenuBar</a>(<a class="code" href="classKviFrame.html">KviFrame</a> * par,<span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">name</a>);
+<a name="l00049"></a>00049         <a class="code" href="classKviMenuBar.html">KviMenuBar</a>(<a class="code" href="classKviFrame.html">KviFrame</a> * par,<span class="keyword">const</span> <span class="keywordtype">char</span> * name);
 <a name="l00050"></a>00050         ~<a class="code" href="classKviMenuBar.html">KviMenuBar</a>();
 <a name="l00051"></a>00051 <span class="keyword">protected</span>:
-<a name="l00052"></a><a class="code" href="classKviMenuBar.html#a8e64382761ee4ae3e6429daee1628ae2">00052</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>                       * <a class="code" href="classKviMenuBar.html#a8e64382761ee4ae3e6429daee1628ae2">m_pToolbarsPopup</a>;
-<a name="l00053"></a><a class="code" href="classKviMenuBar.html#a3aff10daeef7cc27695356d68ade1546">00053</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>                       * <a class="code" href="classKviMenuBar.html#a3aff10daeef7cc27695356d68ade1546">m_pRecentServersPopup</a>;
+<a name="l00052"></a><a class="code" href="classKviMenuBar.html#a8e64382761ee4ae3e6429daee1628ae2">00052</a>         KviTalPopupMenu                       * <a class="code" href="classKviMenuBar.html#a8e64382761ee4ae3e6429daee1628ae2">m_pToolbarsPopup</a>;
+<a name="l00053"></a><a class="code" href="classKviMenuBar.html#a3aff10daeef7cc27695356d68ade1546">00053</a>         KviTalPopupMenu                       * <a class="code" href="classKviMenuBar.html#a3aff10daeef7cc27695356d68ade1546">m_pRecentServersPopup</a>;
 <a name="l00054"></a><a class="code" href="classKviMenuBar.html#ab5c0762cdf19fb3686d1fe234755daed">00054</a>         <a class="code" href="classKviFrame.html">KviFrame</a>                         * <a class="code" href="classKviMenuBar.html#ab5c0762cdf19fb3686d1fe234755daed">m_pFrm</a>;
-<a name="l00055"></a><a class="code" href="classKviMenuBar.html#a7c93eaeaaaa2dfc3c179ca8b3343d68e">00055</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviScriptMenuBarItem&gt;</a> * <a class="code" href="classKviMenuBar.html#a7c93eaeaaaa2dfc3c179ca8b3343d68e">m_pScriptItemList</a>;
+<a name="l00055"></a><a class="code" href="classKviMenuBar.html#a7c93eaeaaaa2dfc3c179ca8b3343d68e">00055</a>         KviPointerList&lt;KviScriptMenuBarItem&gt; * <a class="code" href="classKviMenuBar.html#a7c93eaeaaaa2dfc3c179ca8b3343d68e">m_pScriptItemList</a>;
 <a name="l00056"></a>00056 <span class="keyword">protected</span>:
 <a name="l00057"></a>00057         <a class="code" href="struct__KviScriptMenuBarItem.html">KviScriptMenuBarItem</a> * findMenu(<span class="keyword">const</span> QString &amp;text);
 <a name="l00058"></a>00058         <a class="code" href="struct__KviScriptMenuBarItem.html">KviScriptMenuBarItem</a> * findMenu(<a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * p);
-<a name="l00059"></a>00059         <span class="keywordtype">void</span> addDefaultItem(<span class="keyword">const</span> QString &amp;text,<a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * pop);
+<a name="l00059"></a>00059         <span class="keywordtype">void</span> addDefaultItem(<span class="keyword">const</span> QString &amp;text,KviTalPopupMenu * pop);
 <a name="l00060"></a>00060 <span class="keyword">public</span>:
 <a name="l00061"></a>00061         <span class="keywordtype">int</span> getDefaultItemRealIndex(<span class="keywordtype">int</span> iDefaultIndex);
 <a name="l00062"></a>00062         <span class="keywordtype">void</span> addMenu(<span class="keyword">const</span> QString &amp;text,<a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * p,<span class="keywordtype">int</span> index);
@@ -109,7 +109,7 @@
 <a name="l00078"></a>00078 <span class="preprocessor">#endif //_KVI_MENUBAR_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:55 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

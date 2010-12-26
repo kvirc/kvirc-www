@@ -63,7 +63,7 @@
 <a name="l00038"></a>00038 <span class="preprocessor">#include &lt;QScrollBar&gt;</span>
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040 <span class="keyword">class </span><a class="code" href="classKviFrame.html">KviFrame</a>;
-<a name="l00041"></a>00041 <span class="keyword">class </span><a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>;
+<a name="l00041"></a>00041 <span class="keyword">class </span>KviTalPopupMenu;
 <a name="l00042"></a>00042 
 <a name="l00053"></a><a class="code" href="classKviMdiManager.html">00053</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviMdiManager.html" title="Handles all MDI windows.">KviMdiManager</a> : <span class="keyword">public</span> QMdiArea
 <a name="l00054"></a>00054 {
@@ -78,8 +78,8 @@
 <a name="l00077"></a>00077 <span class="keyword">private</span>:
 <a name="l00078"></a><a class="code" href="classKviMdiManager.html#aacffce9411bd4cf1d8f22af88cf377a0">00078</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviMdiManager.html#aacffce9411bd4cf1d8f22af88cf377a0">m_bInSDIMode</a>;
 <a name="l00079"></a>00079 <span class="keyword">protected</span>:
-<a name="l00081"></a><a class="code" href="classKviMdiManager.html#ac3d82b0b1bc693c3be51d791a1304e80">00081</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * <a class="code" href="classKviMdiManager.html#ac3d82b0b1bc693c3be51d791a1304e80" title="Holds the specialized window popup.">m_pWindowPopup</a>;
-<a name="l00083"></a><a class="code" href="classKviMdiManager.html#a182155cf5afae33f3cdb4d73b1d80da5">00083</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * <a class="code" href="classKviMdiManager.html#a182155cf5afae33f3cdb4d73b1d80da5" title="Holds the tiling popup.">m_pTileMethodPopup</a>;
+<a name="l00081"></a><a class="code" href="classKviMdiManager.html#ac3d82b0b1bc693c3be51d791a1304e80">00081</a>         KviTalPopupMenu * <a class="code" href="classKviMdiManager.html#ac3d82b0b1bc693c3be51d791a1304e80" title="Holds the specialized window popup.">m_pWindowPopup</a>;
+<a name="l00083"></a><a class="code" href="classKviMdiManager.html#a182155cf5afae33f3cdb4d73b1d80da5">00083</a>         KviTalPopupMenu * <a class="code" href="classKviMdiManager.html#a182155cf5afae33f3cdb4d73b1d80da5" title="Holds the tiling popup.">m_pTileMethodPopup</a>;
 <a name="l00085"></a><a class="code" href="classKviMdiManager.html#a63b8001b0c9bf1206cd64b3f2e5210c2">00085</a>         <a class="code" href="classKviFrame.html">KviFrame</a>        * <a class="code" href="classKviMdiManager.html#a63b8001b0c9bf1206cd64b3f2e5210c2" title="The frame where this KviMdiManager belongs to.">m_pFrm</a>;
 <a name="l00086"></a>00086 <span class="keyword">public</span>:
 <a name="l00091"></a>00091         <a class="code" href="classKviMdiChild.html" title="Class of an MDI window.">KviMdiChild</a> * topChild();
@@ -90,9 +90,9 @@
 <a name="l00108"></a>00108 
 <a name="l00114"></a>00114         <span class="keywordtype">void</span> showAndActivate(<a class="code" href="classKviMdiChild.html" title="Class of an MDI window.">KviMdiChild</a> * lpC);
 <a name="l00115"></a>00115 
-<a name="l00120"></a><a class="code" href="classKviMdiManager.html#adb52b0daf76494f4d1b324c6ffa4fab8">00120</a>         <span class="keyword">inline</span> <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * <a class="code" href="classKviMdiManager.html#adb52b0daf76494f4d1b324c6ffa4fab8" title="Returns the window popup.">windowPopup</a>() { <span class="keywordflow">return</span> m_pWindowPopup; };
+<a name="l00120"></a><a class="code" href="classKviMdiManager.html#adb52b0daf76494f4d1b324c6ffa4fab8">00120</a>         <span class="keyword">inline</span> KviTalPopupMenu * <a class="code" href="classKviMdiManager.html#adb52b0daf76494f4d1b324c6ffa4fab8" title="Returns the window popup.">windowPopup</a>() { <span class="keywordflow">return</span> m_pWindowPopup; };
 <a name="l00121"></a>00121 
-<a name="l00126"></a>00126         <span class="keywordtype">void</span> focusPreviousTopChild(<a class="code" href="classKviMdiChild.html" title="Class of an MDI window.">KviMdiChild</a> * pExcludeThis = <a class="code" href="kvi__numeric_8h.html#af2ebd5db010f0e321c1faa0e6a182c2b">NULL</a>);
+<a name="l00126"></a>00126         <span class="keywordtype">void</span> focusPreviousTopChild(<a class="code" href="classKviMdiChild.html" title="Class of an MDI window.">KviMdiChild</a> * pExcludeThis = <a class="code" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a>);
 <a name="l00127"></a>00127 
 <a name="l00133"></a>00133         <span class="keywordtype">void</span> destroyChild(<a class="code" href="classKviMdiChild.html" title="Class of an MDI window.">KviMdiChild</a> * lpC);
 <a name="l00134"></a>00134 
@@ -133,7 +133,7 @@
 <a name="l00204"></a>00204 <span class="preprocessor">#endif //_KVI_MDIMANAGER_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:55 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

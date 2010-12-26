@@ -62,10 +62,10 @@ Static Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviDebugWindow.html#a0673035bc9b4337fc1dce12b911e4784">fillCaptionBuffers</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviDebugWindow.html#ad768e26bc570eef6f084a3f843326caa">getBaseLogFileName</a> (QString &amp;buffer)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviDebugWindow.html#afa678d8bd3ee6d15ca77bebe6041354f">loadProperties</a> (<a class="el" href="classKviConfig.html">KviConfig</a> *cfg)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviDebugWindow.html#a8f0dcb28839850bcd1c89255758961f8">loadProperties</a> (KviConfigurationFile *cfg)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QPixmap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviDebugWindow.html#a05b57479098f85294664cb0e3baf0d0f">myIconPtr</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviDebugWindow.html#a4af2f8d1fbf7e319a4a2c16ef0e04d06">resizeEvent</a> (QResizeEvent *e)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviDebugWindow.html#a6f66611b0837db7169f9dcfebf4dd07c">saveProperties</a> (<a class="el" href="classKviConfig.html">KviConfig</a> *cfg)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviDebugWindow.html#ac64c4ad2022eaf4130de0950d8e271eb">saveProperties</a> (KviConfigurationFile *cfg)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QSize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviDebugWindow.html#af5df4be694641b25e7cd409d577d230c">sizeHint</a> () const </td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
@@ -86,7 +86,7 @@ Static Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__frame_8cpp.html#a7895f8401924e0a65411209e3442790e">g_pFrame</a>, <a class="el" href="classKviWindow.html#a5f39f418ddeccad88ad908cec7a393ed">KviWindow::KviInput</a>, <a class="el" href="kvi__tal__splitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a>, <a class="el" href="classKviWindow.html#ac5bc9ea8c19f88f18d32c65845dade31">KviWindow::m_pInput</a>, <a class="el" href="classKviDebugWindow.html#ad404aee3ce5dc9d55cf3338e5cf84645">m_pInstance</a>, <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, and <a class="el" href="classKviWindow.html#a225f8c128b94fb3dddcf978713f054d6">KviWindow::updateCaption()</a>.</p>
+<p>References <a class="el" href="kvi__frame_8cpp.html#a7895f8401924e0a65411209e3442790e">g_pFrame</a>, <a class="el" href="classKviWindow.html#a5f39f418ddeccad88ad908cec7a393ed">KviWindow::KviInput</a>, <a class="el" href="classKviWindow.html#ac5bc9ea8c19f88f18d32c65845dade31">KviWindow::m_pInput</a>, <a class="el" href="classKviDebugWindow.html#ad404aee3ce5dc9d55cf3338e5cf84645">m_pInstance</a>, <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, and <a class="el" href="classKviWindow.html#a225f8c128b94fb3dddcf978713f054d6">KviWindow::updateCaption()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviDebugWindow.html#a4709e073ff6962dc983db7df668fb2c3">getInstance()</a>.</p>
 
@@ -188,14 +188,14 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afa678d8bd3ee6d15ca77bebe6041354f"></a><!-- doxytag: member="KviDebugWindow::loadProperties" ref="afa678d8bd3ee6d15ca77bebe6041354f" args="(KviConfig *cfg)" -->
+<a class="anchor" id="a8f0dcb28839850bcd1c89255758961f8"></a><!-- doxytag: member="KviDebugWindow::loadProperties" ref="a8f0dcb28839850bcd1c89255758961f8" args="(KviConfigurationFile *cfg)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void KviDebugWindow::loadProperties </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviConfig.html">KviConfig</a> *&#160;</td>
+          <td class="paramtype">KviConfigurationFile *&#160;</td>
           <td class="paramname"> <em>cfg</em>&#160;)</td>
           <td><code> [protected, virtual]</code></td>
         </tr>
@@ -203,9 +203,9 @@ Static Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classKviWindow.html#a6b18c93e9174a259fd56745d207a5730">KviWindow</a>.</p>
+<p>Reimplemented from <a class="el" href="classKviWindow.html#a621926cfecba617903e819d94ddb877c">KviWindow</a>.</p>
 
-<p>References <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, and <a class="el" href="classKviConfig.html#a9080b37fe05f6f28c3dbe7ded7150066">KviConfig::readIntListEntry()</a>.</p>
+<p>References <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>.</p>
 
 </div>
 </div>
@@ -248,14 +248,14 @@ Static Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6f66611b0837db7169f9dcfebf4dd07c"></a><!-- doxytag: member="KviDebugWindow::saveProperties" ref="a6f66611b0837db7169f9dcfebf4dd07c" args="(KviConfig *cfg)" -->
+<a class="anchor" id="ac64c4ad2022eaf4130de0950d8e271eb"></a><!-- doxytag: member="KviDebugWindow::saveProperties" ref="ac64c4ad2022eaf4130de0950d8e271eb" args="(KviConfigurationFile *cfg)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void KviDebugWindow::saveProperties </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviConfig.html">KviConfig</a> *&#160;</td>
+          <td class="paramtype">KviConfigurationFile *&#160;</td>
           <td class="paramname"> <em>cfg</em>&#160;)</td>
           <td><code> [protected, virtual]</code></td>
         </tr>
@@ -263,9 +263,9 @@ Static Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classKviWindow.html#af0bffcf61e408d06eb4a91502d958ec6">KviWindow</a>.</p>
+<p>Reimplemented from <a class="el" href="classKviWindow.html#a01609eaa8ae28196bbb936adbb49b4fe">KviWindow</a>.</p>
 
-<p>References <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, and <a class="el" href="classKviConfig.html#a77ae0a956895bc66f5f1b203d6401675">KviConfig::writeEntry()</a>.</p>
+<p>References <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>.</p>
 
 </div>
 </div>
@@ -308,7 +308,7 @@ Static Protected Attributes</h2></td></tr>
 <li>src/kvirc/ui/<a class="el" href="kvi__debugwindow_8cpp.html">kvi_debugwindow.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:57 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

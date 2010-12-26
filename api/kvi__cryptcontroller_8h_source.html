@@ -33,11 +33,11 @@
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define _KVI_CRYPTCONTROLLER_H_</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span><span class="comment">//=============================================================================</span>
 <a name="l00004"></a>00004 <span class="comment">//</span>
-<a name="l00005"></a>00005 <span class="comment">//   File : kvi_cryptcontroller.h</span>
+<a name="l00005"></a>00005 <span class="comment">//   File : KviCryptEngine.h</span>
 <a name="l00006"></a>00006 <span class="comment">//   Creation date : Fri Nov 03 2000 14:11:03 CEST by Szymon Stefanek</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">//   This file is part of the KVirc irc client distribution</span>
-<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2000-2008 Szymon Stefanek (pragma at kvirc dot net)</span>
+<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2000-2010 Szymon Stefanek (pragma at kvirc dot net)</span>
 <a name="l00010"></a>00010 <span class="comment">//</span>
 <a name="l00011"></a>00011 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00012"></a>00012 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -58,10 +58,10 @@
 <a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029 <span class="preprocessor">#if defined(COMPILE_CRYPT_SUPPORT)</span>
-<a name="l00030"></a>00030 <span class="preprocessor"></span><span class="preprocessor">        #include &quot;<a class="code" href="kvi__crypt_8h.html">kvi_crypt.h</a>&quot;</span>
-<a name="l00031"></a>00031 <span class="preprocessor">        #include &quot;<a class="code" href="kvi__heapobject_8h.html" title="Heap Object.">kvi_heapobject.h</a>&quot;</span>
+<a name="l00030"></a>00030 <span class="preprocessor"></span><span class="preprocessor">        #include &quot;KviCryptEngine.h&quot;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">        #include &quot;KviHeapObject.h&quot;</span>
 <a name="l00032"></a>00032 <span class="preprocessor">        #include &quot;<a class="code" href="kvi__toolwindows__container_8h.html">kvi_toolwindows_container.h</a>&quot;</span>
-<a name="l00033"></a>00033 <span class="preprocessor">        #include &quot;<a class="code" href="kvi__tal__listwidget_8h.html">kvi_tal_listwidget.h</a>&quot;</span>
+<a name="l00033"></a>00033 <span class="preprocessor">        #include &quot;KviTalListWidget.h&quot;</span>
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035 <span class="preprocessor">        #include &lt;QWidget&gt;</span>
 <a name="l00036"></a>00036 <span class="preprocessor">        #include &lt;QPushButton&gt;</span>
@@ -72,20 +72,20 @@
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042         <span class="keyword">class </span><a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>;
 <a name="l00043"></a>00043 
-<a name="l00044"></a>00044         <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> KviCryptSessionInfo : <span class="keyword">public</span> <a class="code" href="classKviHeapObject.html">KviHeapObject</a>
+<a name="l00044"></a>00044         <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> KviCryptSessionInfo : <span class="keyword">public</span> KviHeapObject
 <a name="l00045"></a>00045         {
 <a name="l00046"></a>00046         <span class="keyword">public</span>:
-<a name="l00047"></a>00047                 <a class="code" href="classKviCryptEngine.html">KviCryptEngine</a> * m_pEngine;
+<a name="l00047"></a>00047                 KviCryptEngine * m_pEngine;
 <a name="l00048"></a>00048                 QString          m_szEngineName;
 <a name="l00049"></a>00049                 <span class="keywordtype">bool</span>             m_bDoEncrypt;
 <a name="l00050"></a>00050                 <span class="keywordtype">bool</span>             m_bDoDecrypt;
 <a name="l00051"></a>00051         };
 <a name="l00052"></a>00052 
-<a name="l00053"></a>00053         <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> KviEngineListBoxItem : <span class="keyword">public</span> <a class="code" href="classKviTalListWidgetText.html">KviTalListWidgetText</a>
+<a name="l00053"></a>00053         <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> KviEngineListBoxItem : <span class="keyword">public</span> KviTalListWidgetText
 <a name="l00054"></a>00054         {
 <a name="l00055"></a>00055                 <span class="keyword">friend</span> <span class="keyword">class </span>KviCryptController;
 <a name="l00056"></a>00056         <span class="keyword">public</span>:
-<a name="l00057"></a>00057                 KviEngineListBoxItem(<a class="code" href="classKviTalListWidget.html">KviTalListWidget</a> * lb,KviCryptEngineDescription * <a class="code" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>,<span class="keyword">const</span> <span class="keywordtype">char</span> * modName);
+<a name="l00057"></a>00057                 KviEngineListBoxItem(KviTalListWidget * lb,KviCryptEngineDescription * <a class="code" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>,<span class="keyword">const</span> <span class="keywordtype">char</span> * modName);
 <a name="l00058"></a>00058                 ~KviEngineListBoxItem();
 <a name="l00059"></a>00059         <span class="keyword">public</span>:
 <a name="l00060"></a>00060                 QString m_szName;
@@ -103,7 +103,7 @@
 <a name="l00072"></a>00072                 ~KviCryptController();
 <a name="l00073"></a>00073         <span class="keyword">protected</span>:
 <a name="l00074"></a>00074                 <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>            * m_pWindow;
-<a name="l00075"></a>00075                 <a class="code" href="classKviTalListWidget.html">KviTalListWidget</a>     * m_pListBox;
+<a name="l00075"></a>00075                 KviTalListWidget     * m_pListBox;
 <a name="l00076"></a>00076                 QPushButton          * m_pOkButton;
 <a name="l00077"></a>00077                 QCheckBox            * m_pEnableCheck;
 <a name="l00078"></a>00078                 QLabel               * m_pDescriptionLabel;
@@ -130,16 +130,16 @@
 <a name="l00099"></a>00099                 <span class="keywordtype">void</span> fillEngineList();
 <a name="l00100"></a>00100                 <span class="keywordtype">void</span> noEnginesAvailable();
 <a name="l00101"></a>00101                 <span class="keywordtype">void</span> enableWidgets(<span class="keywordtype">bool</span> bEnabled);
-<a name="l00102"></a>00102                 <span class="keywordtype">bool</span> initializeEngine(<a class="code" href="classKviCryptEngine.html">KviCryptEngine</a> * pEngine);
+<a name="l00102"></a>00102                 <span class="keywordtype">bool</span> initializeEngine(KviCryptEngine * pEngine);
 <a name="l00103"></a>00103         signals:
-<a name="l00104"></a>00104                 <span class="keywordtype">void</span> <a class="code" href="namespaceKviLocale.html#a0516e82ea3996ded16e7bd66399c4e60">done</a>();
+<a name="l00104"></a>00104                 <span class="keywordtype">void</span> <a class="code" href="namespaceKviKvs.html#ab846ee5b15891b344ae932ef8f19ed3f">done</a>();
 <a name="l00105"></a>00105         };
 <a name="l00106"></a>00106 <span class="preprocessor">#endif //COMPILE_CRYPT_SUPPORT</span>
 <a name="l00107"></a>00107 <span class="preprocessor"></span>
 <a name="l00108"></a>00108 <span class="preprocessor">#endif //!_KVI_CRYPTCONTROLLER_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:55 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

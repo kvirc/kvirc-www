@@ -55,7 +55,7 @@ Inheritance diagram for KviModule:<!-- endSectionHeader --></div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModule.html#aecd9dd630f6eb74556e4cc555d3f7bb9">ctrl</a> (const char *operation, void *param)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModule.html#a56f2fc2daa2300b1c886222fc492db9c">filename</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviModuleExtensionDescriptor.html">KviModuleExtensionDescriptor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModule.html#afc42c4adeb962316ee40ec807e665688">findExtensionDescriptor</a> (const <a class="el" href="classKviStr.html">KviStr</a> &amp;szType, const <a class="el" href="classKviStr.html">KviStr</a> &amp;szName)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviModuleExtensionDescriptor.html">KviModuleExtensionDescriptor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModule.html#a9ecc06f95aeee691351d5a4934102d4f">findExtensionDescriptor</a> (const KviCString &amp;szType, const KviCString &amp;szName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModule.html#ab848a9d958d0c66e5251f5a92bd14816">getDefaultConfigFileName</a> (QString &amp;szBuffer)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModule.html#a31214cbd382d36636822fbaf956fb175">getSymbol</a> (const char *symname)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QLibrary *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModule.html#aec23c181419721be2c74577301648efd">handle</a> ()</td></tr>
@@ -63,8 +63,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModule.html#a057e1d8dcc3dc15e29260c9a3ce148d9">lock</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__KviModuleInfo.html">KviModuleInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModule.html#a38c9e03f4821270942e0e444fb41aa21">moduleInfo</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModule.html#ae0820f01a3c1a639ebc9f4cf0ff0e54c">name</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviModuleExtensionDescriptor.html">KviModuleExtensionDescriptor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModule.html#af52d2d33cbd6f83fe6c9cd95bd498c7e">registerExtension</a> (const <a class="el" href="classKviStr.html">KviStr</a> &amp;szType, const <a class="el" href="classKviStr.html">KviStr</a> &amp;szName, const QString &amp;szVisibleName, <a class="el" href="kvi__moduleextension_8h.html#ac0031f61241bd2d5b143f704714bf935">KviModuleExtensionAllocRoutine</a> r)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviModuleExtensionDescriptor.html">KviModuleExtensionDescriptor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModule.html#ad69db39ec85282ecace0b6d8bb029bec">registerExtension</a> (const <a class="el" href="classKviStr.html">KviStr</a> &amp;szType, const <a class="el" href="classKviStr.html">KviStr</a> &amp;szName, const QString &amp;szVisibleName, <a class="el" href="kvi__moduleextension_8h.html#ac0031f61241bd2d5b143f704714bf935">KviModuleExtensionAllocRoutine</a> r, const QPixmap &amp;icon)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviModuleExtensionDescriptor.html">KviModuleExtensionDescriptor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModule.html#abb549cde09ac1c738eb58912888201e1">registerExtension</a> (const KviCString &amp;szType, const KviCString &amp;szName, const QString &amp;szVisibleName, <a class="el" href="kvi__moduleextension_8h.html#ac0031f61241bd2d5b143f704714bf935">KviModuleExtensionAllocRoutine</a> r)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviModuleExtensionDescriptor.html">KviModuleExtensionDescriptor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModule.html#a43425fee3647210f26c423eba6be2848">registerExtension</a> (const KviCString &amp;szType, const KviCString &amp;szName, const QString &amp;szVisibleName, <a class="el" href="kvi__moduleextension_8h.html#ac0031f61241bd2d5b143f704714bf935">KviModuleExtensionAllocRoutine</a> r, const QPixmap &amp;icon)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModule.html#a2fd22b2a6307490681c2c8e4a0d81825">unlock</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModule.html#aea395e61e68d7b9a877c4874f12dba74">unregisterAllExtensions</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviModule.html#a8284923b0c27f807f570f4d7a8647d59">~KviModule</a> ()</td></tr>
@@ -200,20 +200,20 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afc42c4adeb962316ee40ec807e665688"></a><!-- doxytag: member="KviModule::findExtensionDescriptor" ref="afc42c4adeb962316ee40ec807e665688" args="(const KviStr &amp;szType, const KviStr &amp;szName)" -->
+<a class="anchor" id="a9ecc06f95aeee691351d5a4934102d4f"></a><!-- doxytag: member="KviModule::findExtensionDescriptor" ref="a9ecc06f95aeee691351d5a4934102d4f" args="(const KviCString &amp;szType, const KviCString &amp;szName)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classKviModuleExtensionDescriptor.html">KviModuleExtensionDescriptor</a> * KviModule::findExtensionDescriptor </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classKviStr.html">KviStr</a> &amp;&#160;</td>
+          <td class="paramtype">const KviCString &amp;&#160;</td>
           <td class="paramname"> <em>szType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classKviStr.html">KviStr</a> &amp;&#160;</td>
+          <td class="paramtype">const KviCString &amp;&#160;</td>
           <td class="paramname"> <em>szName</em>&#160;</td>
         </tr>
         <tr>
@@ -225,7 +225,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviModuleExtensionManager.html#a9aeae7de70ace9fe7b7c7a9ba939e820">KviModuleExtensionManager::findExtensionDescriptor()</a>, and <a class="el" href="kvi__module_8cpp.html#a08777d5fb02cd7cee0c4c289e298b1b2">g_pModuleExtensionManager</a>.</p>
+<p>References <a class="el" href="classKviModuleExtensionManager.html#adbe9a33c5993488e056c8ec6ca203705">KviModuleExtensionManager::findExtensionDescriptor()</a>, and <a class="el" href="kvi__module_8cpp.html#a08777d5fb02cd7cee0c4c289e298b1b2">g_pModuleExtensionManager</a>.</p>
 
 </div>
 </div>
@@ -301,7 +301,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviModuleManager.html#a5ce25c4a13210c096661a951de68c8f9">KviModuleManager::cleanupUnusedModules()</a>, and <a class="el" href="kvi__kvs__moduleinterface_8cpp.html#a7bd7f59915d9900a3a7fba0933eb9dc0">default_module_kvs_cmd_unload()</a>.</p>
+<p>Referenced by <a class="el" href="kvi__kvs__moduleinterface_8cpp.html#a7bd7f59915d9900a3a7fba0933eb9dc0">default_module_kvs_cmd_unload()</a>.</p>
 
 </div>
 </div>
@@ -335,7 +335,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviModuleManager.html#a5ce25c4a13210c096661a951de68c8f9">KviModuleManager::cleanupUnusedModules()</a>, and <a class="el" href="classKviModuleManager.html#ab46086fa93ff871b26cf2a16faac16e4">KviModuleManager::unloadModule()</a>.</p>
+<p>Referenced by <a class="el" href="classKviModuleManager.html#ab46086fa93ff871b26cf2a16faac16e4">KviModuleManager::unloadModule()</a>.</p>
 
 </div>
 </div>
@@ -357,20 +357,20 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af52d2d33cbd6f83fe6c9cd95bd498c7e"></a><!-- doxytag: member="KviModule::registerExtension" ref="af52d2d33cbd6f83fe6c9cd95bd498c7e" args="(const KviStr &amp;szType, const KviStr &amp;szName, const QString &amp;szVisibleName, KviModuleExtensionAllocRoutine r)" -->
+<a class="anchor" id="abb549cde09ac1c738eb58912888201e1"></a><!-- doxytag: member="KviModule::registerExtension" ref="abb549cde09ac1c738eb58912888201e1" args="(const KviCString &amp;szType, const KviCString &amp;szName, const QString &amp;szVisibleName, KviModuleExtensionAllocRoutine r)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classKviModuleExtensionDescriptor.html">KviModuleExtensionDescriptor</a> * KviModule::registerExtension </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classKviStr.html">KviStr</a> &amp;&#160;</td>
+          <td class="paramtype">const KviCString &amp;&#160;</td>
           <td class="paramname"> <em>szType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classKviStr.html">KviStr</a> &amp;&#160;</td>
+          <td class="paramtype">const KviCString &amp;&#160;</td>
           <td class="paramname"> <em>szName</em>, </td>
         </tr>
         <tr>
@@ -394,24 +394,24 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__module_8cpp.html#a08777d5fb02cd7cee0c4c289e298b1b2">g_pModuleExtensionManager</a>, and <a class="el" href="classKviModuleExtensionManager.html#abe25fd3663ac4b921e08c1833eda21d7">KviModuleExtensionManager::registerExtension()</a>.</p>
+<p>References <a class="el" href="kvi__module_8cpp.html#a08777d5fb02cd7cee0c4c289e298b1b2">g_pModuleExtensionManager</a>, and <a class="el" href="classKviModuleExtensionManager.html#aa118ad62a1fb6d21962f3d56ab3641ff">KviModuleExtensionManager::registerExtension()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad69db39ec85282ecace0b6d8bb029bec"></a><!-- doxytag: member="KviModule::registerExtension" ref="ad69db39ec85282ecace0b6d8bb029bec" args="(const KviStr &amp;szType, const KviStr &amp;szName, const QString &amp;szVisibleName, KviModuleExtensionAllocRoutine r, const QPixmap &amp;icon)" -->
+<a class="anchor" id="a43425fee3647210f26c423eba6be2848"></a><!-- doxytag: member="KviModule::registerExtension" ref="a43425fee3647210f26c423eba6be2848" args="(const KviCString &amp;szType, const KviCString &amp;szName, const QString &amp;szVisibleName, KviModuleExtensionAllocRoutine r, const QPixmap &amp;icon)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classKviModuleExtensionDescriptor.html">KviModuleExtensionDescriptor</a> * KviModule::registerExtension </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classKviStr.html">KviStr</a> &amp;&#160;</td>
+          <td class="paramtype">const KviCString &amp;&#160;</td>
           <td class="paramname"> <em>szType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classKviStr.html">KviStr</a> &amp;&#160;</td>
+          <td class="paramtype">const KviCString &amp;&#160;</td>
           <td class="paramname"> <em>szName</em>, </td>
         </tr>
         <tr>
@@ -441,7 +441,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__module_8cpp.html#a08777d5fb02cd7cee0c4c289e298b1b2">g_pModuleExtensionManager</a>, and <a class="el" href="classKviModuleExtensionManager.html#abe25fd3663ac4b921e08c1833eda21d7">KviModuleExtensionManager::registerExtension()</a>.</p>
+<p>References <a class="el" href="kvi__module_8cpp.html#a08777d5fb02cd7cee0c4c289e298b1b2">g_pModuleExtensionManager</a>, and <a class="el" href="classKviModuleExtensionManager.html#aa118ad62a1fb6d21962f3d56ab3641ff">KviModuleExtensionManager::registerExtension()</a>.</p>
 
 </div>
 </div>
@@ -460,8 +460,6 @@ Friends</h2></td></tr>
 <div class="memdoc">
 
 <p>References <a class="el" href="classKviModule.html#a0762954ccf66b2b1195f3fc2d416939b">m_lastAccessTime</a>.</p>
-
-<p>Referenced by <a class="el" href="classKviModuleManager.html#a5ce25c4a13210c096661a951de68c8f9">KviModuleManager::cleanupUnusedModules()</a>.</p>
 
 </div>
 </div>
@@ -534,7 +532,7 @@ Friends</h2></td></tr>
 
 <p>References <a class="el" href="classKviModule.html#a0762954ccf66b2b1195f3fc2d416939b">m_lastAccessTime</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviModuleManager.html#a5ce25c4a13210c096661a951de68c8f9">KviModuleManager::cleanupUnusedModules()</a>, <a class="el" href="classKviModuleManager.html#a95bfae03386ca402e338876dd205bce9">KviModuleManager::findModule()</a>, and <a class="el" href="classKviModuleManager.html#ac2e155f3662711bea29ca85050aedc4c">KviModuleManager::getModule()</a>.</p>
+<p>Referenced by <a class="el" href="classKviModuleManager.html#a95bfae03386ca402e338876dd205bce9">KviModuleManager::findModule()</a>, and <a class="el" href="classKviModuleManager.html#ac2e155f3662711bea29ca85050aedc4c">KviModuleManager::getModule()</a>.</p>
 
 </div>
 </div>
@@ -557,7 +555,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">friend class <a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; const char *, <a class="el" href="classKviModule.html">KviModule</a> &gt;<code> [friend]</code></td>
+          <td class="memname">friend class KviPointerHashTable&lt; const char *, <a class="el" href="classKviModule.html">KviModule</a> &gt;<code> [friend]</code></td>
         </tr>
       </table>
 </div>
@@ -674,7 +672,7 @@ Friends</h2></td></tr>
 <li>src/kvirc/module/<a class="el" href="kvi__module_8cpp.html">kvi_module.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:33:03 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:13 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

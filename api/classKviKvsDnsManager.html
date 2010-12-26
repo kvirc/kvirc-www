@@ -55,10 +55,10 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classKviKvsDnsManager.html">KviKvsDnsManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsDnsManager.html#a46697afe5dc27ddc225cbc6adc474cfa">instance</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsDnsManager.html#a42f73597393805e44294a81265a56786">dnsLookupTerminated</a> (<a class="el" href="classKviDns.html">KviDns</a> *pDns)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsDnsManager.html#a47801d4b1250b8bddb63fb290b18337e">dnsLookupTerminated</a> (KviDnsResolver *pDns)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; void <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; void <br class="typebreak"/>
 *, <a class="el" href="classKviKvsDnsObject.html">KviKvsDnsObject</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsDnsManager.html#a0e258ad4cd37827890a402b0bec069f2">m_pDnsObjects</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
@@ -138,18 +138,18 @@ Private Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsDnsObject.html#ab80ee09a6bb293c4da7642432f5491d1">KviKvsDnsObject::dns()</a>, <a class="el" href="classKviKvsDnsManager.html#a42f73597393805e44294a81265a56786">dnsLookupTerminated()</a>, <a class="el" href="classKviKvsDnsManager.html#a0e258ad4cd37827890a402b0bec069f2">m_pDnsObjects</a>, <a class="el" href="classKviPointerHashTable.html#a429780ac2d3e4c2c7376c93a50da1f54">KviPointerHashTable&lt; Key, T &gt;::replace()</a>, and <a class="el" href="classKviPointerHashTable.html#ac4b0eb0129f8d32f757d1a2a846d85cd">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="classKviKvsDnsObject.html#afda0c9312beb76b0fbf39326481a42f8">KviKvsDnsObject::dns()</a>, <a class="el" href="classKviKvsDnsManager.html#a47801d4b1250b8bddb63fb290b18337e">dnsLookupTerminated()</a>, and <a class="el" href="classKviKvsDnsManager.html#a0e258ad4cd37827890a402b0bec069f2">m_pDnsObjects</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a42f73597393805e44294a81265a56786"></a><!-- doxytag: member="KviKvsDnsManager::dnsLookupTerminated" ref="a42f73597393805e44294a81265a56786" args="(KviDns *pDns)" -->
+<a class="anchor" id="a47801d4b1250b8bddb63fb290b18337e"></a><!-- doxytag: member="KviKvsDnsManager::dnsLookupTerminated" ref="a47801d4b1250b8bddb63fb290b18337e" args="(KviDnsResolver *pDns)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void KviKvsDnsManager::dnsLookupTerminated </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviDns.html">KviDns</a> *&#160;</td>
+          <td class="paramtype">KviDnsResolver *&#160;</td>
           <td class="paramname"> <em>pDns</em>&#160;)</td>
           <td><code> [protected, slot]</code></td>
         </tr>
@@ -157,7 +157,7 @@ Private Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h.html#a109fa73229142b7d3a9415f3a1d1dfa2">__tr2qs_ctx</a>, <a class="el" href="classKviKvsDnsObject.html#ac917e5ec5c7747140d59731e78b731a0">KviKvsDnsObject::callback()</a>, <a class="el" href="classKviKvsDnsObject.html#ab80ee09a6bb293c4da7642432f5491d1">KviKvsDnsObject::dns()</a>, <a class="el" href="classKviDns.html#a0cdc3844328dac3d24324e8d4c59ef9c">KviDns::error()</a>, <a class="el" href="classKviDns.html#ae39fae40886b6a7f18a8a4e891eb6c2ca5e7df4b1ac4184546bfb050618c32259">KviDns::Failure</a>, <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__window_8cpp.html#a2fe86e51e6cd81939fda329d662f4bef">g_pActiveWindow</a>, <a class="el" href="kvi__app_8cpp.html#a5d91e669373d40e04bf12f72e2c03a11">g_pApp</a>, <a class="el" href="namespaceKviError.html#a6f591856c16912ee3bae1d7c0adc43b2">KviError::getDescription()</a>, <a class="el" href="classKviDns.html#a0c2550d150eee9049c9b59bb279b6eac">KviDns::hostnameList()</a>, <a class="el" href="classKviDns.html#a0963ec3fe3f64b78bc0279899d45a6fd">KviDns::ipAddressList()</a>, <a class="el" href="kvi__out_8h.html#af42c1116d9908d4aae216c802f7da4a6">KVI_OUT_HOSTLOOKUP</a>, <a class="el" href="classKviKvsDnsManager.html#a0e258ad4cd37827890a402b0bec069f2">m_pDnsObjects</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>, <a class="el" href="classKviKvsDnsObject.html#a0c8814608c2d3b9c8959cfe8e09b2fbf">KviKvsDnsObject::parameterList()</a>, <a class="el" href="classKviKvsVariantList.html#ac42e3e590686440fde90e1feaa901ef9">KviKvsVariantList::prepend()</a>, <a class="el" href="classKviKvsScript.html#ab5fb343c7b482baf7a6b1f3e4a07b62fae68bdcbb344fd0f659c69e33969c9416">KviKvsScript::PreserveParams</a>, <a class="el" href="classKviDns.html#ac258ff1387ab1e0bee17fb94e8eb46bc">KviDns::query()</a>, <a class="el" href="classKviKvsDnsObject.html#a210d1163311ab052e5e165d93ff0123d">KviKvsDnsObject::query()</a>, <a class="el" href="classKviKvsDnsObject.html#a24a2afc08a757deff4fbf7250cad8986">KviKvsDnsObject::rebindOnWindowClose()</a>, <a class="el" href="classKviPointerHashTable.html#aa7a770856e2431e6c9a07c9b08ad256a">KviPointerHashTable&lt; Key, T &gt;::remove()</a>, <a class="el" href="classKviKvsScript.html#a1e86e4f6a626e189ed829b0a07398cdd">KviKvsScript::run()</a>, <a class="el" href="classKviKvsDnsObject.html#a3ce243d53985b643c030a78477e5a076">KviKvsDnsObject::setParameterList()</a>, <a class="el" href="classKviKvsDnsObject.html#ad1ae9367ccdad7b1e244a086b16a2caa">KviKvsDnsObject::setWindow()</a>, <a class="el" href="classKviDns.html#ac9626c6af8caa7eb8e01cc133b6e26ee">KviDns::state()</a>, <a class="el" href="classKviKvsDnsObject.html#ad395855107a95674f6d0db997d1075cf">KviKvsDnsObject::window()</a>, and <a class="el" href="classKviApp.html#a5dbad0167530d1994a7977366d13247e">KviApp::windowExists()</a>.</p>
+<p>References <a class="el" href="classKviKvsDnsObject.html#ac917e5ec5c7747140d59731e78b731a0">KviKvsDnsObject::callback()</a>, <a class="el" href="classKviKvsDnsObject.html#afda0c9312beb76b0fbf39326481a42f8">KviKvsDnsObject::dns()</a>, <a class="el" href="kvi__window_8cpp.html#a2fe86e51e6cd81939fda329d662f4bef">g_pActiveWindow</a>, <a class="el" href="kvi__app_8cpp.html#a5d91e669373d40e04bf12f72e2c03a11">g_pApp</a>, <a class="el" href="namespaceKviError.html#a6f591856c16912ee3bae1d7c0adc43b2">KviError::getDescription()</a>, <a class="el" href="kvi__out_8h.html#af42c1116d9908d4aae216c802f7da4a6">KVI_OUT_HOSTLOOKUP</a>, <a class="el" href="classKviKvsDnsManager.html#a0e258ad4cd37827890a402b0bec069f2">m_pDnsObjects</a>, <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>, <a class="el" href="classKviKvsDnsObject.html#a0c8814608c2d3b9c8959cfe8e09b2fbf">KviKvsDnsObject::parameterList()</a>, <a class="el" href="classKviKvsVariantList.html#ac42e3e590686440fde90e1feaa901ef9">KviKvsVariantList::prepend()</a>, <a class="el" href="classKviKvsScript.html#ab5fb343c7b482baf7a6b1f3e4a07b62fae68bdcbb344fd0f659c69e33969c9416">KviKvsScript::PreserveParams</a>, <a class="el" href="classKviKvsDnsObject.html#a210d1163311ab052e5e165d93ff0123d">KviKvsDnsObject::query()</a>, <a class="el" href="classKviKvsDnsObject.html#a24a2afc08a757deff4fbf7250cad8986">KviKvsDnsObject::rebindOnWindowClose()</a>, <a class="el" href="classKviKvsScript.html#a1e86e4f6a626e189ed829b0a07398cdd">KviKvsScript::run()</a>, <a class="el" href="classKviKvsDnsObject.html#a3ce243d53985b643c030a78477e5a076">KviKvsDnsObject::setParameterList()</a>, <a class="el" href="classKviKvsDnsObject.html#ad1ae9367ccdad7b1e244a086b16a2caa">KviKvsDnsObject::setWindow()</a>, <a class="el" href="classKviKvsDnsObject.html#ad395855107a95674f6d0db997d1075cf">KviKvsDnsObject::window()</a>, and <a class="el" href="classKviApp.html#a5dbad0167530d1994a7977366d13247e">KviApp::windowExists()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsDnsManager.html#a4f6d305a67e92f6143bb832844cab6c9">addDns()</a>.</p>
 
@@ -223,13 +223,13 @@ Private Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;void *,<a class="el" href="classKviKvsDnsObject.html">KviKvsDnsObject</a>&gt;* <a class="el" href="classKviKvsDnsManager.html#a0e258ad4cd37827890a402b0bec069f2">KviKvsDnsManager::m_pDnsObjects</a><code> [protected]</code></td>
+          <td class="memname">KviPointerHashTable&lt;void *,<a class="el" href="classKviKvsDnsObject.html">KviKvsDnsObject</a>&gt;* <a class="el" href="classKviKvsDnsManager.html#a0e258ad4cd37827890a402b0bec069f2">KviKvsDnsManager::m_pDnsObjects</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviKvsDnsManager.html#a4f6d305a67e92f6143bb832844cab6c9">addDns()</a>, <a class="el" href="classKviKvsDnsManager.html#a42f73597393805e44294a81265a56786">dnsLookupTerminated()</a>, <a class="el" href="classKviKvsDnsManager.html#a7fbabf124dec6559a432f3e8821625ea">KviKvsDnsManager()</a>, and <a class="el" href="classKviKvsDnsManager.html#a3e5e9c2ca09184ea05c054c783bdd619">~KviKvsDnsManager()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsDnsManager.html#a4f6d305a67e92f6143bb832844cab6c9">addDns()</a>, <a class="el" href="classKviKvsDnsManager.html#a47801d4b1250b8bddb63fb290b18337e">dnsLookupTerminated()</a>, <a class="el" href="classKviKvsDnsManager.html#a7fbabf124dec6559a432f3e8821625ea">KviKvsDnsManager()</a>, and <a class="el" href="classKviKvsDnsManager.html#a3e5e9c2ca09184ea05c054c783bdd619">~KviKvsDnsManager()</a>.</p>
 
 </div>
 </div>
@@ -253,7 +253,7 @@ Private Member Functions</h2></td></tr>
 <li>src/kvirc/kvs/<a class="el" href="kvi__kvs__dnsmanager_8cpp.html">kvi_kvs_dnsmanager.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:58 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

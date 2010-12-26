@@ -52,7 +52,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of instances of the class.  <a href="#a83a9c63f13d097700467b708bbc2d159"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInputHistory.html#a311fe0ca8e6143256308a6fac74dd7fd">KviInputHistory</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the input history object.  <a href="#a311fe0ca8e6143256308a6fac74dd7fd"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; QString &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInputHistory.html#a380ea5856f1f429e39fed773f4c12b02">list</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerList&lt; QString &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInputHistory.html#a380ea5856f1f429e39fed773f4c12b02">list</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the list of string in the history.  <a href="#a380ea5856f1f429e39fed773f4c12b02"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInputHistory.html#a1bd5c7106f69287f66d175e57fc4c600">load</a> (const QString &amp;szFileName)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the history.  <a href="#a1bd5c7106f69287f66d175e57fc4c600"></a><br/></td></tr>
@@ -74,10 +74,10 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the instance of the class.  <a href="#a8184dff586d425d903225148bd276362"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; QString &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInputHistory.html#aa1ec9e2fc347fbdd3ce36f35bc901df0">m_pStringList</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerList&lt; QString &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInputHistory.html#aa1ec9e2fc347fbdd3ce36f35bc901df0">m_pStringList</a></td></tr>
 <tr><td colspan="2"><h2><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classKviInputHistory.html">KviInputHistory</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInputHistory.html#a7d98a31c46091f13afd79f9e6ba402a5">m_pSelf</a> = <a class="el" href="kvi__numeric_8h.html#af2ebd5db010f0e321c1faa0e6a182c2b">NULL</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classKviInputHistory.html">KviInputHistory</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInputHistory.html#a7d98a31c46091f13afd79f9e6ba402a5">m_pSelf</a> = <a class="el" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviInputHistory.html#a45bd9ea310de546c36e513d0ef306f3e">m_uCount</a> = 0</td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
@@ -100,7 +100,7 @@ Static Private Attributes</h2></td></tr>
 <p>Constructs the input history object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviInputHistory.html" title="Input history class.">KviInputHistory</a> </dd></dl>
 
-<p>References <a class="el" href="classKviInputHistory.html#aa1ec9e2fc347fbdd3ce36f35bc901df0">m_pStringList</a>, and <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="classKviInputHistory.html#aa1ec9e2fc347fbdd3ce36f35bc901df0">m_pStringList</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviInputHistory.html#a6f21ea1d5791af08d91585368687b329">init()</a>.</p>
 
@@ -151,7 +151,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviPointerList.html#a37db5612395dc02903cd9aa6b0b9b000">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="classKviPointerList.html#aa4d4893553e14f24c5bd74b92a272abd">KviPointerList&lt; T &gt;::insert()</a>, <a class="el" href="kvi__input__history_8h.html#afaf7265aadd7731147af6369f177b6bc">KVI_INPUT_MAX_GLOBAL_HISTORY_ENTRIES</a>, <a class="el" href="classKviInputHistory.html#aa1ec9e2fc347fbdd3ce36f35bc901df0">m_pStringList</a>, and <a class="el" href="classKviPointerList.html#af039f8c34cae2a14d532d04be3541b59">KviPointerList&lt; T &gt;::removeLast()</a>.</p>
+<p>References <a class="el" href="kvi__input__history_8h.html#afaf7265aadd7731147af6369f177b6bc">KVI_INPUT_MAX_GLOBAL_HISTORY_ENTRIES</a>, and <a class="el" href="classKviInputHistory.html#aa1ec9e2fc347fbdd3ce36f35bc901df0">m_pStringList</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviInputHistory.html#a1bd5c7106f69287f66d175e57fc4c600">load()</a>, <a class="el" href="classKviInputEditor.html#a2fc62e8a1f5ff7346407a3e9411332f7">KviInputEditor::returnPressed()</a>, and <a class="el" href="classKviInputEditor.html#a61130e315bc4b27138a664740f891db8">KviInputEditor::sendPlain()</a>.</p>
 
@@ -292,7 +292,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt;QString&gt;* KviInputHistory::list </td>
+          <td class="memname">KviPointerList&lt;QString&gt;* KviInputHistory::list </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td><code> [inline]</code></td>
@@ -302,7 +302,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memdoc">
 
 <p>Returns the list of string in the history. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviPointerList.html">KviPointerList&lt;QString&gt;</a> * </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>KviPointerList&lt;QString&gt; * </dd></dl>
 
 <p>Referenced by <a class="el" href="classKviHistoryWindow.html#a11dc257fd0699e692b044981603a13cb">KviHistoryWindow::fill()</a>.</p>
 
@@ -332,7 +332,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviInputHistory.html#a23d2f4eb08370026eb1d49959e34e03d">add()</a>, <a class="el" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>, <a class="el" href="kvi__input__history_8h.html#afaf7265aadd7731147af6369f177b6bc">KVI_INPUT_MAX_GLOBAL_HISTORY_ENTRIES</a>, <a class="el" href="classKviStr.html#adabd1f259ed2b72237b5b9b566676759">KviStr::ptr()</a>, <a class="el" href="classKviConfig.html#a0ee3925624620e77f29c851d918cd7f9a24fd017481048902ac931f2747782e69">KviConfig::Read</a>, <a class="el" href="classKviConfig.html#a49a385580df7ab2b87e6bdb677cf20eb">KviConfig::readEntry()</a>, <a class="el" href="classKviConfig.html#a3925236b9d0c3e72552fd992717cb9e5">KviConfig::readIntEntry()</a>, and <a class="el" href="classKviStr.html#a8a4d4aa8c6ef5ed95978b9b798cab65d">KviStr::sprintf()</a>.</p>
+<p>References <a class="el" href="classKviInputHistory.html#a23d2f4eb08370026eb1d49959e34e03d">add()</a>, <a class="el" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>, and <a class="el" href="kvi__input__history_8h.html#afaf7265aadd7731147af6369f177b6bc">KVI_INPUT_MAX_GLOBAL_HISTORY_ENTRIES</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviApp.html#a46137d422c9dc91809a6d60314343a65">KviApp::setup()</a>.</p>
 
@@ -362,7 +362,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>, <a class="el" href="classKviConfig.html#ae76b4f8d9d15f716ef3551953048817c">KviConfig::clear()</a>, <a class="el" href="classKviPointerList.html#a37db5612395dc02903cd9aa6b0b9b000">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="classKviInputHistory.html#aa1ec9e2fc347fbdd3ce36f35bc901df0">m_pStringList</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviStr.html#adabd1f259ed2b72237b5b9b566676759">KviStr::ptr()</a>, <a class="el" href="classKviStr.html#a8a4d4aa8c6ef5ed95978b9b798cab65d">KviStr::sprintf()</a>, <a class="el" href="classKviConfig.html#a0ee3925624620e77f29c851d918cd7f9a0317e2b97dc42e49fde657f461a30c82">KviConfig::Write</a>, and <a class="el" href="classKviConfig.html#a77ae0a956895bc66f5f1b203d6401675">KviConfig::writeEntry()</a>.</p>
+<p>References <a class="el" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>, and <a class="el" href="classKviInputHistory.html#aa1ec9e2fc347fbdd3ce36f35bc901df0">m_pStringList</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviApp.html#a6a92d36ff247a88c3abb98153ac9e1e6">KviApp::saveInputHistory()</a>.</p>
 
@@ -374,7 +374,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviInputHistory.html">KviInputHistory</a> * <a class="el" href="classKviInputHistory.html#a7d98a31c46091f13afd79f9e6ba402a5">KviInputHistory::m_pSelf</a> = <a class="el" href="kvi__numeric_8h.html#af2ebd5db010f0e321c1faa0e6a182c2b">NULL</a><code> [static, private]</code></td>
+          <td class="memname"><a class="el" href="classKviInputHistory.html">KviInputHistory</a> * <a class="el" href="classKviInputHistory.html#a7d98a31c46091f13afd79f9e6ba402a5">KviInputHistory::m_pSelf</a> = <a class="el" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a><code> [static, private]</code></td>
         </tr>
       </table>
 </div>
@@ -389,7 +389,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt;QString&gt;* <a class="el" href="classKviInputHistory.html#aa1ec9e2fc347fbdd3ce36f35bc901df0">KviInputHistory::m_pStringList</a><code> [protected]</code></td>
+          <td class="memname">KviPointerList&lt;QString&gt;* <a class="el" href="classKviInputHistory.html#aa1ec9e2fc347fbdd3ce36f35bc901df0">KviInputHistory::m_pStringList</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -419,7 +419,7 @@ Static Private Attributes</h2></td></tr>
 <li>src/kvirc/ui/<a class="el" href="kvi__input__history_8cpp.html">kvi_input_history.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:57 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

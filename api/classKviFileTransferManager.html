@@ -54,7 +54,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransferManager.html#aef5b2807bf9dbeabdb682fcce6f563b2">killAllTransfers</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransferManager.html#ad01925c74b2e6143d9822bcb3e37721e">killTerminatedTransfers</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransferManager.html#ada775cb8c1dc0c867f7169e4a540d119">KviFileTransferManager</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="classKviFileTransfer.html">KviFileTransfer</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransferManager.html#ac9ef78b14a1957ffd079b562235a4217">transferList</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerList&lt; <a class="el" href="classKviFileTransfer.html">KviFileTransfer</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransferManager.html#ac9ef78b14a1957ffd079b562235a4217">transferList</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviWindow.html">KviWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransferManager.html#a640818aa8b2e27e52b71d167e1c65073">transferWindow</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransferManager.html#ac7559436ea278bb3a4c38c1359653a7d">~KviFileTransferManager</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
@@ -70,7 +70,7 @@ Static Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransferManager.html#a92e46e0dd4d40838d31461ced85a7ec8">cleanup</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="classKviFileTransfer.html">KviFileTransfer</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransferManager.html#ad875fb1f60964308c5cae6df1dc5d8c7">m_pTransferList</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerList&lt; <a class="el" href="classKviFileTransfer.html">KviFileTransfer</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransferManager.html#ad875fb1f60964308c5cae6df1dc5d8c7">m_pTransferList</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviWindow.html">KviWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransferManager.html#a289049858749a77dd39306fe86cda8e1">m_pTransferWindow</a></td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
 Friends</h2></td></tr>
@@ -189,7 +189,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>, <a class="el" href="classKviFileTransferManager.html#abdf83373715a6a36f0734a255eab7180">instance()</a>, <a class="el" href="kvi__filetransfer_8h.html#a265ad7eb96688205e9cd1bdc0aba33d7">KVI_FILE_TRANSFER_WINDOW_EXTENSION_NAME</a>, <a class="el" href="classKviFileTransferManager.html#a289049858749a77dd39306fe86cda8e1">m_pTransferWindow</a>, <a class="el" href="classKviPointerHashTable.html#a429780ac2d3e4c2c7376c93a50da1f54">KviPointerHashTable&lt; Key, T &gt;::replace()</a>, and <a class="el" href="classKviPointerHashTable.html#ac4b0eb0129f8d32f757d1a2a846d85cd">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>, <a class="el" href="classKviFileTransferManager.html#abdf83373715a6a36f0734a255eab7180">instance()</a>, <a class="el" href="kvi__filetransfer_8h.html#a265ad7eb96688205e9cd1bdc0aba33d7">KVI_FILE_TRANSFER_WINDOW_EXTENSION_NAME</a>, and <a class="el" href="classKviFileTransferManager.html#a289049858749a77dd39306fe86cda8e1">m_pTransferWindow</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviFileTransfer.html#a1426c791b86a4b24f275e6ac0d6715ca">KviFileTransfer::invokeTransferWindow()</a>.</p>
 
@@ -209,7 +209,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviFileTransfer.html#aa78db4e50763d88248396ce021b810fe">KviFileTransfer::die()</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, and <a class="el" href="classKviFileTransferManager.html#ad875fb1f60964308c5cae6df1dc5d8c7">m_pTransferList</a>.</p>
+<p>References <a class="el" href="classKviFileTransfer.html#aa78db4e50763d88248396ce021b810fe">KviFileTransfer::die()</a>, and <a class="el" href="classKviFileTransferManager.html#ad875fb1f60964308c5cae6df1dc5d8c7">m_pTransferList</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviFileTransferManager.html#ac7559436ea278bb3a4c38c1359653a7d">~KviFileTransferManager()</a>.</p>
 
@@ -229,7 +229,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="classKviFileTransferManager.html#ad875fb1f60964308c5cae6df1dc5d8c7">m_pTransferList</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, and <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>, and <a class="el" href="classKviFileTransferManager.html#ad875fb1f60964308c5cae6df1dc5d8c7">m_pTransferList</a>.</p>
 
 </div>
 </div>
@@ -248,7 +248,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviFileTransferManager.html#ad875fb1f60964308c5cae6df1dc5d8c7">m_pTransferList</a>, <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>, and <a class="el" href="classKviFileTransferManager.html#ad498c0fd587eb618e066841695f0cf45">transferRegistered()</a>.</p>
+<p>References <a class="el" href="classKviFileTransferManager.html#ad875fb1f60964308c5cae6df1dc5d8c7">m_pTransferList</a>, and <a class="el" href="classKviFileTransferManager.html#ad498c0fd587eb618e066841695f0cf45">transferRegistered()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviFileTransfer.html#a161fca332e38c7af002753eb776e8a19">KviFileTransfer::KviFileTransfer()</a>.</p>
 
@@ -276,7 +276,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt;<a class="el" href="classKviFileTransfer.html">KviFileTransfer</a>&gt;* KviFileTransferManager::transferList </td>
+          <td class="memname">KviPointerList&lt;<a class="el" href="classKviFileTransfer.html">KviFileTransfer</a>&gt;* KviFileTransferManager::transferList </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td><code> [inline]</code></td>
@@ -356,7 +356,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a505f71cb8f82f309085047d2d71e9161">KviPointerList&lt; T &gt;::isEmpty()</a>, <a class="el" href="classKviFileTransferManager.html#ad875fb1f60964308c5cae6df1dc5d8c7">m_pTransferList</a>, <a class="el" href="classKviPointerList.html#ae40ae20ce78c065788a04b47c35452c1">KviPointerList&lt; T &gt;::removeRef()</a>, and <a class="el" href="classKviFileTransferManager.html#ab32f688831c7b0da7ae1782786a4bbf4">transferUnregistering()</a>.</p>
+<p>References <a class="el" href="classKviFileTransferManager.html#ad875fb1f60964308c5cae6df1dc5d8c7">m_pTransferList</a>, and <a class="el" href="classKviFileTransferManager.html#ab32f688831c7b0da7ae1782786a4bbf4">transferUnregistering()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviFileTransfer.html#a3ba2ea9caeeb025863f37e0d724cdf60">KviFileTransfer::~KviFileTransfer()</a>.</p>
 
@@ -408,7 +408,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt;<a class="el" href="classKviFileTransfer.html">KviFileTransfer</a>&gt;* <a class="el" href="classKviFileTransferManager.html#ad875fb1f60964308c5cae6df1dc5d8c7">KviFileTransferManager::m_pTransferList</a><code> [protected]</code></td>
+          <td class="memname">KviPointerList&lt;<a class="el" href="classKviFileTransfer.html">KviFileTransfer</a>&gt;* <a class="el" href="classKviFileTransferManager.html#ad875fb1f60964308c5cae6df1dc5d8c7">KviFileTransferManager::m_pTransferList</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -438,7 +438,7 @@ Friends</h2></td></tr>
 <li>src/kvirc/kernel/<a class="el" href="kvi__filetransfer_8cpp.html">kvi_filetransfer.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:57 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

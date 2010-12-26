@@ -36,17 +36,8 @@
 <h1>KviKvsScriptAddon Class Reference</h1>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="KviKvsScriptAddon" --><!-- doxytag: inherits="KviHeapObject" -->
+<!-- doxytag: class="KviKvsScriptAddon" -->
 <p><code>#include &lt;<a class="el" href="kvi__kvs__scriptaddonmanager_8h_source.html">kvi_kvs_scriptaddonmanager.h</a>&gt;</code></p>
-<!-- startSectionHeader --><div class="dynheader">
-Inheritance diagram for KviKvsScriptAddon:<!-- endSectionHeader --></div>
-<!-- startSectionSummary --><!-- endSectionSummary --><!-- startSectionContent --><div class="dyncontent">
- <div class="center">
-  <img src="classKviKvsScriptAddon.png" usemap="#KviKvsScriptAddon_map" alt=""/>
-  <map id="KviKvsScriptAddon_map" name="KviKvsScriptAddon_map">
-<area href="classKviHeapObject.html" alt="KviHeapObject" shape="rect" coords="0,0,121,24"/>
-</map>
- </div><!-- endSectionContent --></div>
 
 <p><a href="classKviKvsScriptAddon-members.html">List of all members.</a></p>
 <table class="memberdecls">
@@ -77,8 +68,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#a183b1cfe5b372f6eaa4b5e53e24bc28a">executeUninstallCallback</a> (<a class="el" href="classKviWindow.html">KviWindow</a> *pWnd)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#a0be84a6e795474eac58e6948b79120a8">KviKvsScriptAddon</a> (const QString &amp;szName, const QString &amp;szVersion, const QString &amp;szVisibleNameCode, const QString &amp;szDescriptionCode, const QString &amp;szUninstallCallbackCode, const QString &amp;szIconId)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#a452e4343ad8b83b5b6e8db9c177ed0ce">KviKvsScriptAddon</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#acdb300f67916761db64605d9564b3ffa">load</a> (<a class="el" href="classKviConfig.html">KviConfig</a> *cfg, const QString &amp;szName)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#a8e6726c877f1f6ba2846249ba7799f6c">save</a> (<a class="el" href="classKviConfig.html">KviConfig</a> *cfg)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#a85dd451b278ec6b198973759d01c5ddb">load</a> (KviConfigurationFile *cfg, const QString &amp;szName)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#a33eba8dd2a53bc7c089fc6e5c7b806c2">save</a> (KviConfigurationFile *cfg)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsScriptAddon.html#a84160ca28ebd64fdd7a6d2ec8030d083">m_lInstalledFiles</a></td></tr>
@@ -259,7 +250,7 @@ Friends</h2></td></tr>
 
 <p>References <a class="el" href="classKviKvsScript.html#ae450e3a491f93989bd0f6f1b6a410f85a1f6b1969559e3e1f3c243e9a87b939b9">KviKvsScript::InstructionList</a>, <a class="el" href="classKviKvsScript.html#ad90dd2ee9f4489a89224d0a0346703e2">KviKvsScript::KviKvsScript()</a>, <a class="el" href="classKviKvsScriptAddon.html#ae66a3251e8f51d2b1c024d80994fcb96">m_pDescriptionScript</a>, <a class="el" href="classKviKvsScriptAddon.html#a42464e7519b8182c6d33bed419b8210a">m_pUninstallCallback</a>, <a class="el" href="classKviKvsScriptAddon.html#a5ef05cdbe8426946b5e1bad71973edf5">m_pVisibleNameScript</a>, <a class="el" href="classKviKvsScriptAddon.html#a7dc1b1fc2d4f1f42d951f83abf33de10">m_szName</a>, and <a class="el" href="classKviKvsScript.html#ae450e3a491f93989bd0f6f1b6a410f85a4e2ef59e0daf60652a1a8b8d62791f11">KviKvsScript::Parameter</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#a0be84a6e795474eac58e6948b79120a8">KviKvsScriptAddon()</a>, and <a class="el" href="classKviKvsScriptAddon.html#acdb300f67916761db64605d9564b3ffa">load()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#a0be84a6e795474eac58e6948b79120a8">KviKvsScriptAddon()</a>, and <a class="el" href="classKviKvsScriptAddon.html#a85dd451b278ec6b198973759d01c5ddb">load()</a>.</p>
 
 </div>
 </div>
@@ -277,9 +268,9 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsScript.html#a623dec8db25115dab4f2047bc02460f8">KviKvsScript::code()</a>, <a class="el" href="namespaceKviQString.html#aa14b9dc45e5d3b528f26e523d7c96b3e">KviQString::Empty</a>, and <a class="el" href="classKviKvsScriptAddon.html#a24388aa618113813d38575e1b60118ee">m_pConfigureCallback</a>.</p>
+<p>References <a class="el" href="classKviKvsScript.html#a623dec8db25115dab4f2047bc02460f8">KviKvsScript::code()</a>, and <a class="el" href="classKviKvsScriptAddon.html#a24388aa618113813d38575e1b60118ee">m_pConfigureCallback</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#a8e6726c877f1f6ba2846249ba7799f6c">save()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#a33eba8dd2a53bc7c089fc6e5c7b806c2">save()</a>.</p>
 
 </div>
 </div>
@@ -317,7 +308,7 @@ Friends</h2></td></tr>
 
 <p>References <a class="el" href="classKviKvsScript.html#a623dec8db25115dab4f2047bc02460f8">KviKvsScript::code()</a>, and <a class="el" href="classKviKvsScriptAddon.html#ae66a3251e8f51d2b1c024d80994fcb96">m_pDescriptionScript</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#a8e6726c877f1f6ba2846249ba7799f6c">save()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#a33eba8dd2a53bc7c089fc6e5c7b806c2">save()</a>.</p>
 
 </div>
 </div>
@@ -394,9 +385,9 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsScript.html#a623dec8db25115dab4f2047bc02460f8">KviKvsScript::code()</a>, <a class="el" href="namespaceKviQString.html#aa14b9dc45e5d3b528f26e523d7c96b3e">KviQString::Empty</a>, and <a class="el" href="classKviKvsScriptAddon.html#a1dc955456db5fc18c97fdd986f89b220">m_pHelpCallback</a>.</p>
+<p>References <a class="el" href="classKviKvsScript.html#a623dec8db25115dab4f2047bc02460f8">KviKvsScript::code()</a>, and <a class="el" href="classKviKvsScriptAddon.html#a1dc955456db5fc18c97fdd986f89b220">m_pHelpCallback</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#a8e6726c877f1f6ba2846249ba7799f6c">save()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#a33eba8dd2a53bc7c089fc6e5c7b806c2">save()</a>.</p>
 
 </div>
 </div>
@@ -452,14 +443,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acdb300f67916761db64605d9564b3ffa"></a><!-- doxytag: member="KviKvsScriptAddon::load" ref="acdb300f67916761db64605d9564b3ffa" args="(KviConfig *cfg, const QString &amp;szName)" -->
+<a class="anchor" id="a85dd451b278ec6b198973759d01c5ddb"></a><!-- doxytag: member="KviKvsScriptAddon::load" ref="a85dd451b278ec6b198973759d01c5ddb" args="(KviConfigurationFile *cfg, const QString &amp;szName)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool KviKvsScriptAddon::load </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviConfig.html">KviConfig</a> *&#160;</td>
+          <td class="paramtype">KviConfigurationFile *&#160;</td>
           <td class="paramname"> <em>cfg</em>, </td>
         </tr>
         <tr>
@@ -477,7 +468,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsScriptAddon.html#a1dd9426a6993aa4cbd46085f1a8cc803">allocateScripts()</a>, <a class="el" href="classKviKvsScriptAddon.html#a84160ca28ebd64fdd7a6d2ec8030d083">m_lInstalledFiles</a>, <a class="el" href="classKviKvsScriptAddon.html#a2d83bed4ebc0b58fd584c8c582636f37">m_szIconId</a>, <a class="el" href="classKviKvsScriptAddon.html#a7dc1b1fc2d4f1f42d951f83abf33de10">m_szName</a>, <a class="el" href="classKviKvsScriptAddon.html#ae76fa7eabc6623428f237de3bef17c55">m_szVersion</a>, <a class="el" href="classKviConfig.html#a49a385580df7ab2b87e6bdb677cf20eb">KviConfig::readEntry()</a>, <a class="el" href="classKviConfig.html#aa95086bd0d5f716c896781f8c9421b93">KviConfig::readStringListEntry()</a>, <a class="el" href="classKviKvsScriptAddon.html#acda2e910c67f1986f49212244d868460">setConfigureCallback()</a>, <a class="el" href="classKviConfig.html#ab31c7473a1ff943b8694f2bc07570034">KviConfig::setGroup()</a>, and <a class="el" href="classKviKvsScriptAddon.html#a9a02491e849b450bd34d3b35572ca9aa">setHelpCallback()</a>.</p>
+<p>References <a class="el" href="classKviKvsScriptAddon.html#a1dd9426a6993aa4cbd46085f1a8cc803">allocateScripts()</a>, <a class="el" href="classKviKvsScriptAddon.html#a84160ca28ebd64fdd7a6d2ec8030d083">m_lInstalledFiles</a>, <a class="el" href="classKviKvsScriptAddon.html#a2d83bed4ebc0b58fd584c8c582636f37">m_szIconId</a>, <a class="el" href="classKviKvsScriptAddon.html#a7dc1b1fc2d4f1f42d951f83abf33de10">m_szName</a>, <a class="el" href="classKviKvsScriptAddon.html#ae76fa7eabc6623428f237de3bef17c55">m_szVersion</a>, <a class="el" href="classKviKvsScriptAddon.html#acda2e910c67f1986f49212244d868460">setConfigureCallback()</a>, and <a class="el" href="classKviKvsScriptAddon.html#a9a02491e849b450bd34d3b35572ca9aa">setHelpCallback()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsScriptAddonManager.html#ae4a50d2ca0177c6c3d6a5388ab0f10e6">KviKvsScriptAddonManager::delayedLoad()</a>.</p>
 
@@ -499,14 +490,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8e6726c877f1f6ba2846249ba7799f6c"></a><!-- doxytag: member="KviKvsScriptAddon::save" ref="a8e6726c877f1f6ba2846249ba7799f6c" args="(KviConfig *cfg)" -->
+<a class="anchor" id="a33eba8dd2a53bc7c089fc6e5c7b806c2"></a><!-- doxytag: member="KviKvsScriptAddon::save" ref="a33eba8dd2a53bc7c089fc6e5c7b806c2" args="(KviConfigurationFile *cfg)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void KviKvsScriptAddon::save </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviConfig.html">KviConfig</a> *&#160;</td>
+          <td class="paramtype">KviConfigurationFile *&#160;</td>
           <td class="paramname"> <em>cfg</em>&#160;)</td>
           <td><code> [protected]</code></td>
         </tr>
@@ -514,7 +505,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsScriptAddon.html#a00bcec889608471046efd89e16f12ef7">configureCallbackCode()</a>, <a class="el" href="classKviKvsScriptAddon.html#a3e2f94abdceca783a2f4e126f48e9f5d">descriptionCode()</a>, <a class="el" href="classKviKvsScriptAddon.html#a3d642db41a88d8e0c3c27efe0622fe78">helpCallbackCode()</a>, <a class="el" href="classKviKvsScriptAddon.html#a84160ca28ebd64fdd7a6d2ec8030d083">m_lInstalledFiles</a>, <a class="el" href="classKviKvsScriptAddon.html#a2d83bed4ebc0b58fd584c8c582636f37">m_szIconId</a>, <a class="el" href="classKviKvsScriptAddon.html#a7dc1b1fc2d4f1f42d951f83abf33de10">m_szName</a>, <a class="el" href="classKviKvsScriptAddon.html#ae76fa7eabc6623428f237de3bef17c55">m_szVersion</a>, <a class="el" href="classKviConfig.html#ab31c7473a1ff943b8694f2bc07570034">KviConfig::setGroup()</a>, <a class="el" href="classKviKvsScriptAddon.html#a9dbc349d58fae2b87b551bffafb2fec4">uninstallCallbackCode()</a>, <a class="el" href="classKviKvsScriptAddon.html#afa8cb72b4a3656f55cc683eb4a7a39c3">visibleNameCode()</a>, and <a class="el" href="classKviConfig.html#a77ae0a956895bc66f5f1b203d6401675">KviConfig::writeEntry()</a>.</p>
+<p>References <a class="el" href="classKviKvsScriptAddon.html#a00bcec889608471046efd89e16f12ef7">configureCallbackCode()</a>, <a class="el" href="classKviKvsScriptAddon.html#a3e2f94abdceca783a2f4e126f48e9f5d">descriptionCode()</a>, <a class="el" href="classKviKvsScriptAddon.html#a3d642db41a88d8e0c3c27efe0622fe78">helpCallbackCode()</a>, <a class="el" href="classKviKvsScriptAddon.html#a84160ca28ebd64fdd7a6d2ec8030d083">m_lInstalledFiles</a>, <a class="el" href="classKviKvsScriptAddon.html#a2d83bed4ebc0b58fd584c8c582636f37">m_szIconId</a>, <a class="el" href="classKviKvsScriptAddon.html#a7dc1b1fc2d4f1f42d951f83abf33de10">m_szName</a>, <a class="el" href="classKviKvsScriptAddon.html#ae76fa7eabc6623428f237de3bef17c55">m_szVersion</a>, <a class="el" href="classKviKvsScriptAddon.html#a9dbc349d58fae2b87b551bffafb2fec4">uninstallCallbackCode()</a>, and <a class="el" href="classKviKvsScriptAddon.html#afa8cb72b4a3656f55cc683eb4a7a39c3">visibleNameCode()</a>.</p>
 
 </div>
 </div>
@@ -535,7 +526,7 @@ Friends</h2></td></tr>
 
 <p>References <a class="el" href="classKviKvsScript.html#ae450e3a491f93989bd0f6f1b6a410f85a1f6b1969559e3e1f3c243e9a87b939b9">KviKvsScript::InstructionList</a>, <a class="el" href="classKviKvsScript.html#ad90dd2ee9f4489a89224d0a0346703e2">KviKvsScript::KviKvsScript()</a>, <a class="el" href="classKviKvsScriptAddon.html#a24388aa618113813d38575e1b60118ee">m_pConfigureCallback</a>, and <a class="el" href="classKviKvsScriptAddon.html#a7dc1b1fc2d4f1f42d951f83abf33de10">m_szName</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#ab0ad2bd1513ff240507e57a42a3ab746">KviKvsScriptAddon()</a>, and <a class="el" href="classKviKvsScriptAddon.html#acdb300f67916761db64605d9564b3ffa">load()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#ab0ad2bd1513ff240507e57a42a3ab746">KviKvsScriptAddon()</a>, and <a class="el" href="classKviKvsScriptAddon.html#a85dd451b278ec6b198973759d01c5ddb">load()</a>.</p>
 
 </div>
 </div>
@@ -556,7 +547,7 @@ Friends</h2></td></tr>
 
 <p>References <a class="el" href="classKviKvsScript.html#ae450e3a491f93989bd0f6f1b6a410f85a1f6b1969559e3e1f3c243e9a87b939b9">KviKvsScript::InstructionList</a>, <a class="el" href="classKviKvsScript.html#ad90dd2ee9f4489a89224d0a0346703e2">KviKvsScript::KviKvsScript()</a>, <a class="el" href="classKviKvsScriptAddon.html#a1dc955456db5fc18c97fdd986f89b220">m_pHelpCallback</a>, and <a class="el" href="classKviKvsScriptAddon.html#a7dc1b1fc2d4f1f42d951f83abf33de10">m_szName</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#ab0ad2bd1513ff240507e57a42a3ab746">KviKvsScriptAddon()</a>, and <a class="el" href="classKviKvsScriptAddon.html#acdb300f67916761db64605d9564b3ffa">load()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#ab0ad2bd1513ff240507e57a42a3ab746">KviKvsScriptAddon()</a>, and <a class="el" href="classKviKvsScriptAddon.html#a85dd451b278ec6b198973759d01c5ddb">load()</a>.</p>
 
 </div>
 </div>
@@ -576,7 +567,7 @@ Friends</h2></td></tr>
 
 <p>References <a class="el" href="classKviKvsScript.html#a623dec8db25115dab4f2047bc02460f8">KviKvsScript::code()</a>, and <a class="el" href="classKviKvsScriptAddon.html#a42464e7519b8182c6d33bed419b8210a">m_pUninstallCallback</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#a8e6726c877f1f6ba2846249ba7799f6c">save()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#a33eba8dd2a53bc7c089fc6e5c7b806c2">save()</a>.</p>
 
 </div>
 </div>
@@ -630,7 +621,7 @@ Friends</h2></td></tr>
 
 <p>References <a class="el" href="classKviKvsScript.html#a623dec8db25115dab4f2047bc02460f8">KviKvsScript::code()</a>, and <a class="el" href="classKviKvsScriptAddon.html#a5ef05cdbe8426946b5e1bad71973edf5">m_pVisibleNameScript</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#a8e6726c877f1f6ba2846249ba7799f6c">save()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#a33eba8dd2a53bc7c089fc6e5c7b806c2">save()</a>.</p>
 
 </div>
 </div>
@@ -660,7 +651,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#ad8f7189a588ff6348fa9f98579681586">addInstalledFile()</a>, <a class="el" href="classKviKvsScriptAddon.html#acdb300f67916761db64605d9564b3ffa">load()</a>, and <a class="el" href="classKviKvsScriptAddon.html#a8e6726c877f1f6ba2846249ba7799f6c">save()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#ad8f7189a588ff6348fa9f98579681586">addInstalledFile()</a>, <a class="el" href="classKviKvsScriptAddon.html#a85dd451b278ec6b198973759d01c5ddb">load()</a>, and <a class="el" href="classKviKvsScriptAddon.html#a33eba8dd2a53bc7c089fc6e5c7b806c2">save()</a>.</p>
 
 </div>
 </div>
@@ -765,7 +756,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#ac62c51ff9d22fd927e35c5bbc5039803">icon()</a>, <a class="el" href="classKviKvsScriptAddon.html#ab0ad2bd1513ff240507e57a42a3ab746">KviKvsScriptAddon()</a>, <a class="el" href="classKviKvsScriptAddon.html#acdb300f67916761db64605d9564b3ffa">load()</a>, and <a class="el" href="classKviKvsScriptAddon.html#a8e6726c877f1f6ba2846249ba7799f6c">save()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#ac62c51ff9d22fd927e35c5bbc5039803">icon()</a>, <a class="el" href="classKviKvsScriptAddon.html#ab0ad2bd1513ff240507e57a42a3ab746">KviKvsScriptAddon()</a>, <a class="el" href="classKviKvsScriptAddon.html#a85dd451b278ec6b198973759d01c5ddb">load()</a>, and <a class="el" href="classKviKvsScriptAddon.html#a33eba8dd2a53bc7c089fc6e5c7b806c2">save()</a>.</p>
 
 </div>
 </div>
@@ -780,7 +771,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#a1dd9426a6993aa4cbd46085f1a8cc803">allocateScripts()</a>, <a class="el" href="classKviKvsScriptAddon.html#ab0ad2bd1513ff240507e57a42a3ab746">KviKvsScriptAddon()</a>, <a class="el" href="classKviKvsScriptAddon.html#acdb300f67916761db64605d9564b3ffa">load()</a>, <a class="el" href="classKviKvsScriptAddon.html#a8e6726c877f1f6ba2846249ba7799f6c">save()</a>, <a class="el" href="classKviKvsScriptAddon.html#acda2e910c67f1986f49212244d868460">setConfigureCallback()</a>, and <a class="el" href="classKviKvsScriptAddon.html#a9a02491e849b450bd34d3b35572ca9aa">setHelpCallback()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#a1dd9426a6993aa4cbd46085f1a8cc803">allocateScripts()</a>, <a class="el" href="classKviKvsScriptAddon.html#ab0ad2bd1513ff240507e57a42a3ab746">KviKvsScriptAddon()</a>, <a class="el" href="classKviKvsScriptAddon.html#a85dd451b278ec6b198973759d01c5ddb">load()</a>, <a class="el" href="classKviKvsScriptAddon.html#a33eba8dd2a53bc7c089fc6e5c7b806c2">save()</a>, <a class="el" href="classKviKvsScriptAddon.html#acda2e910c67f1986f49212244d868460">setConfigureCallback()</a>, and <a class="el" href="classKviKvsScriptAddon.html#a9a02491e849b450bd34d3b35572ca9aa">setHelpCallback()</a>.</p>
 
 </div>
 </div>
@@ -795,7 +786,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#ab0ad2bd1513ff240507e57a42a3ab746">KviKvsScriptAddon()</a>, <a class="el" href="classKviKvsScriptAddon.html#acdb300f67916761db64605d9564b3ffa">load()</a>, and <a class="el" href="classKviKvsScriptAddon.html#a8e6726c877f1f6ba2846249ba7799f6c">save()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsScriptAddon.html#ab0ad2bd1513ff240507e57a42a3ab746">KviKvsScriptAddon()</a>, <a class="el" href="classKviKvsScriptAddon.html#a85dd451b278ec6b198973759d01c5ddb">load()</a>, and <a class="el" href="classKviKvsScriptAddon.html#a33eba8dd2a53bc7c089fc6e5c7b806c2">save()</a>.</p>
 
 </div>
 </div>
@@ -819,7 +810,7 @@ Friends</h2></td></tr>
 <li>src/kvirc/kvs/<a class="el" href="kvi__kvs__scriptaddonmanager_8cpp.html">kvi_kvs_scriptaddonmanager.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:58 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:08 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

@@ -37,7 +37,7 @@
 <a name="l00006"></a>00006 <span class="comment">//   Creation date : Wed Apr 11 2003 03:07 by Szymon Stefanek</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">//   This file is part of the KVirc irc client distribution</span>
-<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2003-2008 Szymon Stefanek (pragma at kvirc dot net)</span>
+<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2003-2010 Szymon Stefanek (pragma at kvirc dot net)</span>
 <a name="l00010"></a>00010 <span class="comment">//</span>
 <a name="l00011"></a>00011 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00012"></a>00012 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -60,7 +60,7 @@
 <a name="l00029"></a>00029 
 <a name="l00030"></a>00030 <span class="preprocessor">#include &lt;QObject&gt;</span>
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032 <span class="keyword">class </span><a class="code" href="classKviDataBuffer.html">KviDataBuffer</a>;
+<a name="l00032"></a>00032 <span class="keyword">class </span>KviDataBuffer;
 <a name="l00033"></a>00033 
 <a name="l00034"></a><a class="code" href="classKviMexLinkFilter.html">00034</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviMexLinkFilter.html">KviMexLinkFilter</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> <a class="code" href="classKviModuleExtension.html">KviModuleExtension</a>
 <a name="l00035"></a>00035 {
@@ -70,13 +70,14 @@
 <a name="l00039"></a>00039         ~<a class="code" href="classKviMexLinkFilter.html">KviMexLinkFilter</a>();
 <a name="l00040"></a>00040 <span class="keyword">public</span>:
 <a name="l00041"></a>00041         <span class="keyword">virtual</span> <span class="keywordtype">void</span> processData(<span class="keywordtype">char</span> * buffer,<span class="keywordtype">int</span> len) = 0;
-<a name="l00042"></a>00042         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> sendPacket(<a class="code" href="classKviDataBuffer.html">KviDataBuffer</a> * pData) = 0;
-<a name="l00043"></a>00043 };
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="preprocessor">#endif //!_KVI_MEXLINKFILTER_H_</span>
+<a name="l00042"></a>00042         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> sendPacket(KviDataBuffer * pData) = 0;
+<a name="l00043"></a>00043         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> clearOutputQueue(<span class="keywordtype">bool</span> bPrivateMessagesOnly) = 0;
+<a name="l00044"></a>00044 };
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046 <span class="preprocessor">#endif //!_KVI_MEXLINKFILTER_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:54 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

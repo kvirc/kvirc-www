@@ -34,30 +34,20 @@
 <h1>KviImageDialogItem Class Reference</h1>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="KviImageDialogItem" --><!-- doxytag: inherits="KviTalListWidgetPixmap" -->
+<!-- doxytag: class="KviImageDialogItem" -->
 <p><code>#include &lt;<a class="el" href="kvi__imagedialog_8h_source.html">kvi_imagedialog.h</a>&gt;</code></p>
-<!-- startSectionHeader --><div class="dynheader">
-Inheritance diagram for KviImageDialogItem:<!-- endSectionHeader --></div>
-<!-- startSectionSummary --><!-- endSectionSummary --><!-- startSectionContent --><div class="dyncontent">
- <div class="center">
-  <img src="classKviImageDialogItem.png" usemap="#KviImageDialogItem_map" alt=""/>
-  <map id="KviImageDialogItem_map" name="KviImageDialogItem_map">
-<area href="classKviTalListWidgetPixmap.html" alt="KviTalListWidgetPixmap" shape="rect" coords="0,56,144,80"/>
-<area href="classKviTalListWidgetItem.html" alt="KviTalListWidgetItem" shape="rect" coords="0,0,144,24"/>
-</map>
- </div><!-- endSectionContent --></div>
 
 <p><a href="classKviImageDialogItem-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviImageDialogItem.html#aec2a79a3bd370b2175f4a66358c7ae86">height</a> (const <a class="el" href="classKviTalListWidget.html">KviTalListWidget</a> *) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviImageDialogItem.html#aec2a79a3bd370b2175f4a66358c7ae86">height</a> (const KviTalListWidget *) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviImageDialogItem.html#a3465c021e8f8f35f0f0dd0afed899bd2">imageId</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviImageDialogItem.html#a91b5ed593d7b7f9eb3e01e3933ec3ae8">isFolder</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviImageDialogItem.html#af49cb2ba50b167d0bcc1d5373a9892f4">KviImageDialogItem</a> (<a class="el" href="classKviTalListWidget.html">KviTalListWidget</a> *b, const QPixmap &amp;thumb, const QString &amp;szFile, const QString &amp;image_id, const QString &amp;szTipText=QString(), bool bIsFolder=false)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviImageDialogItem.html#af49cb2ba50b167d0bcc1d5373a9892f4">KviImageDialogItem</a> (KviTalListWidget *b, const QPixmap &amp;thumb, const QString &amp;szFile, const QString &amp;image_id, const QString &amp;szTipText=QString(), bool bIsFolder=false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviImageDialogItem.html#a0c176edf5f983f8ed5f3e58edc31e124">paint</a> (QPainter *p)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviImageDialogItem.html#a3baf0ccc8f153ce647b61ac6546f1f3c">tipText</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviImageDialogItem.html#a44d3e079f52ede3428ac02a93e326a01">width</a> (const <a class="el" href="classKviTalListWidget.html">KviTalListWidget</a> *) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviImageDialogItem.html#a44d3e079f52ede3428ac02a93e326a01">width</a> (const KviTalListWidget *) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviImageDialogItem.html#a974b92dce0b011bd7cebf035ed73da6d">~KviImageDialogItem</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -73,7 +63,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">KviImageDialogItem::KviImageDialogItem </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviTalListWidget.html">KviTalListWidget</a> *&#160;</td>
+          <td class="paramtype">KviTalListWidget *&#160;</td>
           <td class="paramname"> <em>b</em>, </td>
         </tr>
         <tr>
@@ -141,17 +131,13 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">int KviImageDialogItem::height </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classKviTalListWidget.html">KviTalListWidget</a> *&#160;</td>
+          <td class="paramtype">const KviTalListWidget *&#160;</td>
           <td class="paramname"> <em>lb</em>&#160;)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Reimplemented from <a class="el" href="classKviTalListWidgetPixmap.html#ab2755d48d10b9513ca490a5212f2f212">KviTalListWidgetPixmap</a>.</p>
-
-<p>References <a class="el" href="classKviTalListWidgetPixmap.html#af7dd1c21c54b8124190aacb5a194b9a9">KviTalListWidgetPixmap::pixmap()</a>.</p>
 
 </div>
 </div>
@@ -210,9 +196,7 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classKviTalListWidgetPixmap.html#a1a2f2090229fc77e8a8c7b8b84cd74db">KviTalListWidgetPixmap</a>.</p>
-
-<p>References <a class="el" href="classKviTalListWidgetItem.html#a3ddc27ee6636a1bcbe4c87b4731b9b1e">KviTalListWidgetItem::listWidget()</a>, <a class="el" href="classKviImageDialogItem.html#a95d7cffb44323e5197cb06fe54ccbbe1">m_bIsFolder</a>, <a class="el" href="classKviTalListWidgetPixmap.html#af7dd1c21c54b8124190aacb5a194b9a9">KviTalListWidgetPixmap::pixmap()</a>, and <a class="el" href="classKviTalListWidgetPixmap.html#a8416ab3d1988c32306ebad491cb7440e">KviTalListWidgetPixmap::pm</a>.</p>
+<p>References <a class="el" href="classKviImageDialogItem.html#a95d7cffb44323e5197cb06fe54ccbbe1">m_bIsFolder</a>.</p>
 
 </div>
 </div>
@@ -243,7 +227,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">int KviImageDialogItem::width </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classKviTalListWidget.html">KviTalListWidget</a> *&#160;</td>
+          <td class="paramtype">const KviTalListWidget *&#160;</td>
           <td class="paramname"> <em>lb</em>&#160;)</td>
           <td> const<code> [virtual]</code></td>
         </tr>
@@ -251,9 +235,7 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classKviTalListWidgetPixmap.html#a18cba58eb92e09894a1595071b307013">KviTalListWidgetPixmap</a>.</p>
-
-<p>References <a class="el" href="classKviTalListWidgetPixmap.html#af7dd1c21c54b8124190aacb5a194b9a9">KviTalListWidgetPixmap::pixmap()</a>, and <a class="el" href="classKviImageDialogItem.html#a44d3e079f52ede3428ac02a93e326a01">width()</a>.</p>
+<p>References <a class="el" href="classKviImageDialogItem.html#a44d3e079f52ede3428ac02a93e326a01">width()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviImageDialogItem.html#a44d3e079f52ede3428ac02a93e326a01">width()</a>.</p>
 
@@ -310,7 +292,7 @@ Public Attributes</h2></td></tr>
 <li>src/kvirc/ui/<a class="el" href="kvi__imagedialog_8cpp.html">kvi_imagedialog.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:57 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

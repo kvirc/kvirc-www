@@ -40,12 +40,12 @@
 <code>#include &quot;<a class="el" href="kvi__app_8h_source.html">kvi_app.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__modulemanager_8h_source.html">kvi_modulemanager.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__console_8h_source.html">kvi_console.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__locale_8h_source.html">kvi_locale.h</a>&quot;</code><br/>
+<code>#include &quot;KviLocale.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__error_8h_source.html">kvi_error.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__out_8h_source.html">kvi_out.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__mirccntrl_8h_source.html">kvi_mirccntrl.h</a>&quot;</code><br/>
+<code>#include &quot;KviMircCntrl.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__iconmanager_8h_source.html">kvi_iconmanager.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__malloc_8h_source.html">kvi_malloc.h</a>&quot;</code><br/>
+<code>#include &quot;KviMemory.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__kvs__object__controller_8h_source.html">kvi_kvs_object_controller.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__kvs__object__functioncall_8h_source.html">kvi_kvs_object_functioncall.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__kvs__object__functionhandlerimpl_8h_source.html">kvi_kvs_object_functionhandlerimpl.h</a>&quot;</code><br/>
@@ -79,7 +79,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 <b>Value:</b><div class="fragment"><pre class="fragment">{ \
-                <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>-&gt;warning(<a class="code" href="kvi__locale_8h.html#a109fa73229142b7d3a9415f3a1d1dfa2">__tr2qs_ctx</a>(<span class="stringliteral">&quot;The property is of type %s but the supplied argument can&#39;t be converted to that type (expecting &#39;%s&#39;)&quot;</span>,<span class="stringliteral">&quot;kvs&quot;</span>),p-&gt;type(),__therighttype); \
+                <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>-&gt;warning(__tr2qs_ctx(<span class="stringliteral">&quot;The property is of type %s but the supplied argument can&#39;t be converted to that type (expecting &#39;%s&#39;)&quot;</span>,<span class="stringliteral">&quot;kvs&quot;</span>),p-&gt;type(),__therighttype); \
                 <span class="keywordflow">return</span> <span class="keyword">true</span>; \
         }
 </pre></div>
@@ -104,7 +104,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:56 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:06 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

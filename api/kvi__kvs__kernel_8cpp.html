@@ -77,11 +77,11 @@ Defines</h2></td></tr>
 </div>
 <div class="memdoc">
 <b>Value:</b><div class="fragment"><pre class="fragment">{ \
-                <a class="code" href="classKviPointerHashTableIterator.html" title="A fast pointer hash table iterator implementation.">KviPointerHashTableIterator&lt;QString,__type&gt;</a> it(*__dict); \
+                KviPointerHashTableIterator&lt;QString,__type&gt; it(*__dict); \
                 <span class="keywordtype">int</span> l = szCommandBegin.length(); \
                 <span class="keywordflow">while</span>(it.current()) \
                 { \
-                        <span class="keywordflow">if</span>(<a class="code" href="namespaceKviQString.html#afe84786f6e548c13eb18c3c6a8f25491" title="Compares two strings with case insensitive up to N chars.">KviQString::equalCIN</a>(szCommandBegin,it.currentKey(),l)) \
+                        <span class="keywordflow">if</span>(KviQString::equalCIN(szCommandBegin,it.currentKey(),l)) \
                                 pMatches-&gt;append(<span class="keyword">new</span> QString(it.currentKey())); \
                         ++it; \
                 } \
@@ -92,7 +92,7 @@ Defines</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:56 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:06 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

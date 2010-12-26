@@ -56,7 +56,7 @@
 <a name="l00025"></a>00025 <span class="comment">//=============================================================================</span>
 <a name="l00026"></a>00026 
 <a name="l00033"></a>00033 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerlist_8h.html" title="C++ Template based double linked pointer list class.">kvi_pointerlist.h</a>&quot;</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;KviPointerList.h&quot;</span>
 <a name="l00035"></a>00035 <span class="preprocessor">#include &quot;<a class="code" href="kvi__kvs__variant_8h.html" title="Handling of variant data type in KVS.">kvi_kvs_variant.h</a>&quot;</span>
 <a name="l00036"></a>00036 
 <a name="l00041"></a><a class="code" href="classKviKvsVariantList.html">00041</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsVariantList.html" title="Class to handle variant variables lists.">KviKvsVariantList</a>
@@ -94,7 +94,7 @@
 <a name="l00189"></a>00189 
 <a name="l00193"></a>00193         ~<a class="code" href="classKviKvsVariantList.html" title="Class to handle variant variables lists.">KviKvsVariantList</a>();
 <a name="l00194"></a>00194 <span class="keyword">protected</span>:
-<a name="l00195"></a><a class="code" href="classKviKvsVariantList.html#a84a36ac1b513adb3a3ddca39f8d6061f">00195</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviKvsVariant&gt;</a> * <a class="code" href="classKviKvsVariantList.html#a84a36ac1b513adb3a3ddca39f8d6061f">m_pList</a>;
+<a name="l00195"></a><a class="code" href="classKviKvsVariantList.html#a84a36ac1b513adb3a3ddca39f8d6061f">00195</a>         KviPointerList&lt;KviKvsVariant&gt; * <a class="code" href="classKviKvsVariantList.html#a84a36ac1b513adb3a3ddca39f8d6061f">m_pList</a>;
 <a name="l00196"></a>00196 <span class="keyword">public</span>:
 <a name="l00201"></a><a class="code" href="classKviKvsVariantList.html#a88da2b1edf923cfbca6ce7e4d7610b76">00201</a>         <a class="code" href="classKviKvsVariant.html" title="This class defines a new data type which contains variant data.">KviKvsVariant</a> * <a class="code" href="classKviKvsVariantList.html#a88da2b1edf923cfbca6ce7e4d7610b76" title="Returns the first element of the list.">first</a>(){ <span class="keywordflow">return</span> m_pList-&gt;first(); };
 <a name="l00202"></a>00202 
@@ -136,7 +136,7 @@
 <a name="l00321"></a>00321 <span class="preprocessor">#endif // _KVI_KVS_VARIANTLIST_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:54 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

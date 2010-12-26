@@ -41,8 +41,7 @@ Inheritance diagram for KviMexLinkFilter:<!-- endSectionHeader --></div>
  <div class="center">
   <img src="classKviMexLinkFilter.png" usemap="#KviMexLinkFilter_map" alt=""/>
   <map id="KviMexLinkFilter_map" name="KviMexLinkFilter_map">
-<area href="classKviModuleExtension.html" alt="KviModuleExtension" shape="rect" coords="0,56,126,80"/>
-<area href="classKviHeapObject.html" alt="KviHeapObject" shape="rect" coords="0,0,126,24"/>
+<area href="classKviModuleExtension.html" alt="KviModuleExtension" shape="rect" coords="0,0,126,24"/>
 </map>
  </div><!-- endSectionContent --></div>
 
@@ -50,9 +49,10 @@ Inheritance diagram for KviMexLinkFilter:<!-- endSectionHeader --></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMexLinkFilter.html#a9feea2d80021a5d5ce70c25eb2ba3c99">clearOutputQueue</a> (bool bPrivateMessagesOnly)=0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMexLinkFilter.html#a0128b837d60a5bde12ed8eaf3383e92e">KviMexLinkFilter</a> (<a class="el" href="classKviModuleExtensionDescriptor.html">KviModuleExtensionDescriptor</a> *<a class="el" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMexLinkFilter.html#af39569d76c9ad5b37fecf4fa6f7607a0">processData</a> (char *buffer, int len)=0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMexLinkFilter.html#a923f33501d7a7333fda65f751d58f7a1">sendPacket</a> (<a class="el" href="classKviDataBuffer.html">KviDataBuffer</a> *pData)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMexLinkFilter.html#a923f33501d7a7333fda65f751d58f7a1">sendPacket</a> (KviDataBuffer *pData)=0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMexLinkFilter.html#a4856103ca1acef5feec6a6a517e0c50b">~KviMexLinkFilter</a> ()</td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -90,6 +90,25 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a9feea2d80021a5d5ce70c25eb2ba3c99"></a><!-- doxytag: member="KviMexLinkFilter::clearOutputQueue" ref="a9feea2d80021a5d5ce70c25eb2ba3c99" args="(bool bPrivateMessagesOnly)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool KviMexLinkFilter::clearOutputQueue </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"> <em>bPrivateMessagesOnly</em>&#160;)</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="classKviIrcLink.html#a7e4f5f52558a7c963ec7c936576e2fbb">KviIrcLink::clearOutputQueue()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="af39569d76c9ad5b37fecf4fa6f7607a0"></a><!-- doxytag: member="KviMexLinkFilter::processData" ref="af39569d76c9ad5b37fecf4fa6f7607a0" args="(char *buffer, int len)=0" -->
 <div class="memitem">
 <div class="memproto">
@@ -126,7 +145,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual bool KviMexLinkFilter::sendPacket </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviDataBuffer.html">KviDataBuffer</a> *&#160;</td>
+          <td class="paramtype">KviDataBuffer *&#160;</td>
           <td class="paramname"> <em>pData</em>&#160;)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -143,7 +162,7 @@ Public Member Functions</h2></td></tr>
 <li>src/kvirc/module/<a class="el" href="kvi__mexlinkfilter_8cpp.html">kvi_mexlinkfilter.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:33:03 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:13 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

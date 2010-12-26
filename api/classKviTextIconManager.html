@@ -69,7 +69,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the text of the icon.  <a href="#ac7d02dfd9fa0ddc97df9a05cf0f1d3be"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviTextIconManager.html#a68570ffd03cf8055537b93bf4083b7b5">save</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the dictionary.  <a href="#a68570ffd03cf8055537b93bf4083b7b5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 <a class="el" href="classKviTextIcon.html">KviTextIcon</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviTextIconManager.html#a2aeeb4b40311673c944fd144800719d2">textIconDict</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dictionary of the icons.  <a href="#a2aeeb4b40311673c944fd144800719d2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviTextIconManager.html#a688f2871c36cbd3a7c6ed578cbc23f27">~KviTextIconManager</a> ()</td></tr>
@@ -82,7 +82,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the dictionary to a file.  <a href="#a5c9020c842572e25b06123b999cf3eed"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 <a class="el" href="classKviTextIcon.html">KviTextIcon</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a></td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
 Friends</h2></td></tr>
@@ -109,7 +109,7 @@ Friends</h2></td></tr>
 <p>Constructs the icon manager object. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviTextIconManager.html" title="The class that manages the icons.">KviTextIconManager</a> </dd></dl>
 
-<p>References <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>, and <a class="el" href="classKviPointerHashTable.html#ac4b0eb0129f8d32f757d1a2a846d85cd">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>.</p>
 
 </div>
 </div>
@@ -151,7 +151,7 @@ Friends</h2></td></tr>
 <p>Applies the options. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviPointerHashTable.html#a40aca92b70f9532032cfeffb006d8359">KviPointerHashTable&lt; Key, T &gt;::first()</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#afe6dadf45e25acb033796b2905abe934">KviOption_boolEnableAnimatedSmiles</a>, <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>, and <a class="el" href="classKviPointerHashTable.html#af0eac0f47653ecaefd7b0428f1df0f00">KviPointerHashTable&lt; Key, T &gt;::next()</a>.</p>
+<p>References <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#afe6dadf45e25acb033796b2905abe934">KviOption_boolEnableAnimatedSmiles</a>, and <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviFrame.html#acc16c25d7aeb9dd67c250cd18e364094">KviFrame::applyOptions()</a>.</p>
 
@@ -195,7 +195,7 @@ Friends</h2></td></tr>
 <p>Checks and updates the default associations. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviTextIconManager.html#ae500378785298803a6e75dcd977842f1">changed()</a>, <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="classKviTextIconManager.html#a45f5fcac479c88ebe3f6a036bc83b565">insert()</a>, <a class="el" href="struct__KviTextIconAssocEntry.html#a30f70c4116a067212030762f753d8a9d">_KviTextIconAssocEntry::iVal</a>, <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>, <a class="el" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">KviOsInfo::name()</a>, and <a class="el" href="struct__KviTextIconAssocEntry.html#ab43ce7b5e7765ed87766a93befd5101f">_KviTextIconAssocEntry::name</a>.</p>
+<p>References <a class="el" href="classKviTextIconManager.html#ae500378785298803a6e75dcd977842f1">changed()</a>, <a class="el" href="classKviTextIconManager.html#a45f5fcac479c88ebe3f6a036bc83b565">insert()</a>, <a class="el" href="struct__KviTextIconAssocEntry.html#a30f70c4116a067212030762f753d8a9d">_KviTextIconAssocEntry::iVal</a>, <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>, and <a class="el" href="struct__KviTextIconAssocEntry.html#ab43ce7b5e7765ed87766a93befd5101f">_KviTextIconAssocEntry::name</a>.</p>
 
 </div>
 </div>
@@ -216,7 +216,7 @@ Friends</h2></td></tr>
 <p>Clears the dictionary. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviPointerHashTable.html#a04e3b957cd82abaeca9e101915b86c88">KviPointerHashTable&lt; Key, T &gt;::clear()</a>, and <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>.</p>
+<p>References <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>.</p>
 
 </div>
 </div>
@@ -255,7 +255,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviTextIconManager.html#ae500378785298803a6e75dcd977842f1">changed()</a>, <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>, and <a class="el" href="classKviPointerHashTable.html#a429780ac2d3e4c2c7376c93a50da1f54">KviPointerHashTable&lt; Key, T &gt;::replace()</a>.</p>
+<p>References <a class="el" href="classKviTextIconManager.html#ae500378785298803a6e75dcd977842f1">changed()</a>, and <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviTextIconManager.html#aa7d0b7f1d77adbef591df4000657c45d">checkDefaultAssociations()</a>.</p>
 
@@ -296,7 +296,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviTextIconManager.html#ae500378785298803a6e75dcd977842f1">changed()</a>, <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>, and <a class="el" href="classKviPointerHashTable.html#a429780ac2d3e4c2c7376c93a50da1f54">KviPointerHashTable&lt; Key, T &gt;::replace()</a>.</p>
+<p>References <a class="el" href="classKviTextIconManager.html#ae500378785298803a6e75dcd977842f1">changed()</a>, and <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>.</p>
 
 </div>
 </div>
@@ -336,7 +336,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>int </dd></dl>
 
-<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviTextIconManager.html#ae500378785298803a6e75dcd977842f1">changed()</a>, <a class="el" href="classKviPointerHashTable.html#a04e3b957cd82abaeca9e101915b86c88">KviPointerHashTable&lt; Key, T &gt;::clear()</a>, <a class="el" href="classKviPointerHashTableIterator.html#a118714da73f457cf6cbea89c83d2f8e3">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="classKviPointerHashTableIterator.html#a86c86a3f9ca4386b1339a51f61ea291f">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="classKviConfig.html#a7e17a18c93263c0c6147fd6d15c475d8">KviConfig::dict()</a>, <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__iconmanager_8cpp.html#a3ea7617ef2d091c1c04b0f95fb0845ae">g_pIconManager</a>, <a class="el" href="classKviIconManager.html#a938ec4e383d55d256f31b8130270e16f">KviIconManager::getPixmap()</a>, <a class="el" href="classKviIconManager.html#a18563529ab125d8bc7a5221fcb83e408">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__iconmanager_8h.html#ab9cea7d9b2ecd3cb3037b6e748a55494">KVI_SMALLICON_HELP</a>, <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviConfig.html#a0ee3925624620e77f29c851d918cd7f9a24fd017481048902ac931f2747782e69">KviConfig::Read</a>, <a class="el" href="classKviConfig.html#a49a385580df7ab2b87e6bdb677cf20eb">KviConfig::readEntry()</a>, <a class="el" href="classKviConfig.html#a3925236b9d0c3e72552fd992717cb9e5">KviConfig::readIntEntry()</a>, <a class="el" href="classKviPointerHashTable.html#a429780ac2d3e4c2c7376c93a50da1f54">KviPointerHashTable&lt; Key, T &gt;::replace()</a>, <a class="el" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>, <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>, and <a class="el" href="classKviConfig.html#ab31c7473a1ff943b8694f2bc07570034">KviConfig::setGroup()</a>.</p>
+<p>References <a class="el" href="classKviTextIconManager.html#ae500378785298803a6e75dcd977842f1">changed()</a>, <a class="el" href="kvi__iconmanager_8cpp.html#a3ea7617ef2d091c1c04b0f95fb0845ae">g_pIconManager</a>, <a class="el" href="classKviIconManager.html#a938ec4e383d55d256f31b8130270e16f">KviIconManager::getPixmap()</a>, <a class="el" href="classKviIconManager.html#a18563529ab125d8bc7a5221fcb83e408">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__iconmanager_8h.html#ab9cea7d9b2ecd3cb3037b6e748a55494">KVI_SMALLICON_HELP</a>, <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>, and <a class="el" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>.</p>
 
 </div>
 </div>
@@ -416,7 +416,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviPointerHashTableIterator.html#a118714da73f457cf6cbea89c83d2f8e3">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="classKviPointerHashTableIterator.html#a86c86a3f9ca4386b1339a51f61ea291f">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>, <a class="el" href="classKviConfig.html#ab31c7473a1ff943b8694f2bc07570034">KviConfig::setGroup()</a>, <a class="el" href="kvi__texticonmanager_8h.html#abb8ef7a4e7a8a8fc6d9b1dee1aac4a32">TEXTICONMANAGER_CURRENT_CONFIG_UPDATE</a>, <a class="el" href="classKviConfig.html#a0ee3925624620e77f29c851d918cd7f9a0317e2b97dc42e49fde657f461a30c82">KviConfig::Write</a>, and <a class="el" href="classKviConfig.html#a77ae0a956895bc66f5f1b203d6401675">KviConfig::writeEntry()</a>.</p>
+<p>References <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>, and <a class="el" href="kvi__texticonmanager_8h.html#abb8ef7a4e7a8a8fc6d9b1dee1aac4a32">TEXTICONMANAGER_CURRENT_CONFIG_UPDATE</a>.</p>
 
 </div>
 </div>
@@ -448,7 +448,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,<a class="el" href="classKviTextIcon.html">KviTextIcon</a>&gt;* KviTextIconManager::textIconDict </td>
+          <td class="memname">KviPointerHashTable&lt;QString,<a class="el" href="classKviTextIcon.html">KviTextIcon</a>&gt;* KviTextIconManager::textIconDict </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td><code> [inline]</code></td>
@@ -458,7 +458,7 @@ Friends</h2></td></tr>
 <div class="memdoc">
 
 <p>Returns the dictionary of the icons. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviTextIcon&gt;</a> * </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>KviPointerHashTable&lt;QString,KviTextIcon&gt; * </dd></dl>
 
 <p>Referenced by <a class="el" href="classKviTextIconWindow.html#a9248f67642db318f161659f0c8ad6d25">KviTextIconWindow::fill()</a>, and <a class="el" href="classKviInputEditor.html#a9fc70f0eb9ca564d6e098c56a7e1cf1e">KviInputEditor::mousePressEvent()</a>.</p>
 
@@ -497,7 +497,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,<a class="el" href="classKviTextIcon.html">KviTextIcon</a>&gt;* <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">KviTextIconManager::m_pTextIconDict</a><code> [private]</code></td>
+          <td class="memname">KviPointerHashTable&lt;QString,<a class="el" href="classKviTextIcon.html">KviTextIcon</a>&gt;* <a class="el" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">KviTextIconManager::m_pTextIconDict</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -512,7 +512,7 @@ Friends</h2></td></tr>
 <li>src/kvirc/kernel/<a class="el" href="kvi__texticonmanager_8cpp.html">kvi_texticonmanager.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:33:04 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:13 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

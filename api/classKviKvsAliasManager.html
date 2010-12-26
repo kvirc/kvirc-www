@@ -49,10 +49,10 @@ Signals</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAliasManager.html#abb7aa840f8a71a4493256f7e230877ac">add</a> (const QString &amp;szName, <a class="el" href="classKviKvsScript.html">KviKvsScript</a> *pAlias)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 <a class="el" href="classKviKvsScript.html">KviKvsScript</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAliasManager.html#ae531d30c1bda9510a745fde54b6a6505">aliasDict</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAliasManager.html#a78c32c4448f0024671ffe95a3234539f">clear</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAliasManager.html#ae8622788fb30cac6880f82d407f6a6fb">completeCommand</a> (const QString &amp;word, <a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; QString &gt; *matches)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAliasManager.html#ae8622788fb30cac6880f82d407f6a6fb">completeCommand</a> (const QString &amp;word, KviPointerList&lt; QString &gt; *matches)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAliasManager.html#a3bf4aa6e43ecfd2edbf1aff544af650b">load</a> (const QString &amp;filename)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classKviKvsScript.html">KviKvsScript</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAliasManager.html#a58e3ccbda2c55011710b4f9f903fb793">lookup</a> (const QString &amp;szName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAliasManager.html#af626e71a82ba580abae765a8b7df1311">remove</a> (const QString &amp;szName)</td></tr>
@@ -68,7 +68,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAliasManager.html#a4034e549b359249623a1ff76fd8e32b9">~KviKvsAliasManager</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 <a class="el" href="classKviKvsScript.html">KviKvsScript</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAliasManager.html#afc82fb84208acae4bc5daa7e2888eac5">m_pAliasDict</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
@@ -89,7 +89,7 @@ Static Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsAliasManager.html#afc82fb84208acae4bc5daa7e2888eac5">m_pAliasDict</a>, <a class="el" href="classKviKvsAliasManager.html#af88c8cae2346e79766de9445d013cb2e">m_pAliasManager</a>, and <a class="el" href="classKviPointerHashTable.html#ac4b0eb0129f8d32f757d1a2a846d85cd">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="classKviKvsAliasManager.html#afc82fb84208acae4bc5daa7e2888eac5">m_pAliasDict</a>, and <a class="el" href="classKviKvsAliasManager.html#af88c8cae2346e79766de9445d013cb2e">m_pAliasManager</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsAliasManager.html#a647576628a37dc03d33447426b9b7fc0">init()</a>.</p>
 
@@ -139,7 +139,7 @@ Static Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsAliasManager.html#a9616afa3aac4e3efb0ff7da504d8838b">aliasRefresh()</a>, <a class="el" href="classKviKvsAliasManager.html#afc82fb84208acae4bc5daa7e2888eac5">m_pAliasDict</a>, and <a class="el" href="classKviPointerHashTable.html#a429780ac2d3e4c2c7376c93a50da1f54">KviPointerHashTable&lt; Key, T &gt;::replace()</a>.</p>
+<p>References <a class="el" href="classKviKvsAliasManager.html#a9616afa3aac4e3efb0ff7da504d8838b">aliasRefresh()</a>, and <a class="el" href="classKviKvsAliasManager.html#afc82fb84208acae4bc5daa7e2888eac5">m_pAliasDict</a>.</p>
 
 <p>Referenced by <a class="el" href="namespaceKviKvsCoreCallbackCommands.html#a579403fc1f66086154c2f1e36766f5c3">KviKvsCoreCallbackCommands::KVSCCC()</a>.</p>
 
@@ -150,7 +150,7 @@ Static Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,<a class="el" href="classKviKvsScript.html">KviKvsScript</a>&gt;* KviKvsAliasManager::aliasDict </td>
+          <td class="memname">KviPointerHashTable&lt;QString,<a class="el" href="classKviKvsScript.html">KviKvsScript</a>&gt;* KviKvsAliasManager::aliasDict </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td><code> [inline]</code></td>
@@ -209,7 +209,7 @@ Static Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; QString &gt; *&#160;</td>
+          <td class="paramtype">KviPointerList&lt; QString &gt; *&#160;</td>
           <td class="paramname"> <em>matches</em>&#160;</td>
         </tr>
         <tr>
@@ -221,7 +221,7 @@ Static Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviPointerHashTableIterator.html#a118714da73f457cf6cbea89c83d2f8e3">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="namespaceKviQString.html#afe84786f6e548c13eb18c3c6a8f25491">KviQString::equalCIN()</a>, <a class="el" href="classKviKvsAliasManager.html#afc82fb84208acae4bc5daa7e2888eac5">m_pAliasDict</a>, and <a class="el" href="classKviKvsScript.html#acc286d7544e2a70db101c4021eef6fee">KviKvsScript::name()</a>.</p>
+<p>References <a class="el" href="classKviKvsAliasManager.html#afc82fb84208acae4bc5daa7e2888eac5">m_pAliasDict</a>.</p>
 
 </div>
 </div>
@@ -294,7 +294,7 @@ Static Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviPointerHashTable.html#a04e3b957cd82abaeca9e101915b86c88">KviPointerHashTable&lt; Key, T &gt;::clear()</a>, <a class="el" href="classKviPointerHashTableIterator.html#a118714da73f457cf6cbea89c83d2f8e3">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="classKviPointerHashTableIterator.html#a86c86a3f9ca4386b1339a51f61ea291f">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="classKviConfig.html#a7e17a18c93263c0c6147fd6d15c475d8">KviConfig::dict()</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="classKviPointerHashTable.html#a9694589651d8fd3f91a42611f1f29133">KviPointerHashTable&lt; Key, T &gt;::insert()</a>, <a class="el" href="classKviKvsAliasManager.html#afc82fb84208acae4bc5daa7e2888eac5">m_pAliasDict</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviConfig.html#a0ee3925624620e77f29c851d918cd7f9a24fd017481048902ac931f2747782e69">KviConfig::Read</a>, <a class="el" href="classKviConfig.html#a49a385580df7ab2b87e6bdb677cf20eb">KviConfig::readEntry()</a>, <a class="el" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>, <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>, and <a class="el" href="classKviConfig.html#ab31c7473a1ff943b8694f2bc07570034">KviConfig::setGroup()</a>.</p>
+<p>References <a class="el" href="classKviKvsAliasManager.html#afc82fb84208acae4bc5daa7e2888eac5">m_pAliasDict</a>, and <a class="el" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>.</p>
 
 </div>
 </div>
@@ -351,7 +351,7 @@ Static Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviConfig.html#ae76b4f8d9d15f716ef3551953048817c">KviConfig::clear()</a>, <a class="el" href="classKviKvsScript.html#a623dec8db25115dab4f2047bc02460f8">KviKvsScript::code()</a>, <a class="el" href="classKviPointerHashTableIterator.html#a118714da73f457cf6cbea89c83d2f8e3">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="classKviKvsAliasManager.html#afc82fb84208acae4bc5daa7e2888eac5">m_pAliasDict</a>, <a class="el" href="classKviKvsScript.html#acc286d7544e2a70db101c4021eef6fee">KviKvsScript::name()</a>, <a class="el" href="classKviConfig.html#ab31c7473a1ff943b8694f2bc07570034">KviConfig::setGroup()</a>, <a class="el" href="classKviConfig.html#a0ee3925624620e77f29c851d918cd7f9a0317e2b97dc42e49fde657f461a30c82">KviConfig::Write</a>, and <a class="el" href="classKviConfig.html#a77ae0a956895bc66f5f1b203d6401675">KviConfig::writeEntry()</a>.</p>
+<p>References <a class="el" href="classKviKvsAliasManager.html#afc82fb84208acae4bc5daa7e2888eac5">m_pAliasDict</a>.</p>
 
 </div>
 </div>
@@ -361,7 +361,7 @@ Static Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,<a class="el" href="classKviKvsScript.html">KviKvsScript</a>&gt;* <a class="el" href="classKviKvsAliasManager.html#afc82fb84208acae4bc5daa7e2888eac5">KviKvsAliasManager::m_pAliasDict</a><code> [protected]</code></td>
+          <td class="memname">KviPointerHashTable&lt;QString,<a class="el" href="classKviKvsScript.html">KviKvsScript</a>&gt;* <a class="el" href="classKviKvsAliasManager.html#afc82fb84208acae4bc5daa7e2888eac5">KviKvsAliasManager::m_pAliasDict</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -391,7 +391,7 @@ Static Protected Attributes</h2></td></tr>
 <li>src/kvirc/kvs/<a class="el" href="kvi__kvs__aliasmanager_8cpp.html">kvi_kvs_aliasmanager.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:57 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

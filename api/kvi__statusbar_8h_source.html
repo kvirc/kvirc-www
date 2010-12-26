@@ -37,7 +37,7 @@
 <a name="l00006"></a>00006 <span class="comment">//   Creation date : Tue 07 Sep 2004 03:56:46 by Szymon Stefanek</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">//   This file is part of the KVIrc IRC client distribution</span>
-<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2004-2008 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
+<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2004-2010 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
 <a name="l00010"></a>00010 <span class="comment">//</span>
 <a name="l00011"></a>00011 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00012"></a>00012 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -56,10 +56,10 @@
 <a name="l00025"></a>00025 <span class="comment">//=============================================================================</span>
 <a name="l00026"></a>00026 
 <a name="l00038"></a>00038 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00039"></a>00039 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerlist_8h.html" title="C++ Template based double linked pointer list class.">kvi_pointerlist.h</a>&quot;</span>
-<a name="l00040"></a>00040 <span class="preprocessor">#include &quot;<a class="code" href="kvi__heapobject_8h.html" title="Heap Object.">kvi_heapobject.h</a>&quot;</span>
-<a name="l00041"></a>00041 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerhashtable_8h.html" title="Pointer Hash Table.">kvi_pointerhashtable.h</a>&quot;</span>
-<a name="l00042"></a>00042 <span class="preprocessor">#include &quot;<a class="code" href="kvi__tal__hbox_8h.html" title="Class for horizontal box.">kvi_tal_hbox.h</a>&quot;</span>
+<a name="l00039"></a>00039 <span class="preprocessor">#include &quot;KviPointerList.h&quot;</span>
+<a name="l00040"></a>00040 <span class="preprocessor">#include &quot;KviHeapObject.h&quot;</span>
+<a name="l00041"></a>00041 <span class="preprocessor">#include &quot;KviPointerHashTable.h&quot;</span>
+<a name="l00042"></a>00042 <span class="preprocessor">#include &quot;KviTalHBox.h&quot;</span>
 <a name="l00043"></a>00043 
 <a name="l00044"></a>00044 <span class="preprocessor">#include &lt;QString&gt;</span>
 <a name="l00045"></a>00045 <span class="preprocessor">#include &lt;QStatusBar&gt;</span>
@@ -68,7 +68,7 @@
 <a name="l00048"></a>00048 <span class="keyword">class </span>QTimer;
 <a name="l00049"></a>00049 <span class="keyword">class </span>QLabel;
 <a name="l00050"></a>00050 <span class="keyword">class </span><a class="code" href="classKviFrame.html">KviFrame</a>;
-<a name="l00051"></a>00051 <span class="keyword">class </span><a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>;
+<a name="l00051"></a>00051 <span class="keyword">class </span>KviTalPopupMenu;
 <a name="l00052"></a>00052 <span class="keyword">class </span><a class="code" href="classKviStatusBarApplet.html">KviStatusBarApplet</a>;
 <a name="l00053"></a>00053 <span class="keyword">class </span><a class="code" href="classKviStatusBarAppletDescriptor.html">KviStatusBarAppletDescriptor</a>;
 <a name="l00054"></a>00054 <span class="keyword">class </span><a class="code" href="classKviIrcContext.html">KviIrcContext</a>;
@@ -79,7 +79,7 @@
 <a name="l00059"></a>00059 <span class="comment">//#define SPACING 3</span>
 <a name="l00060"></a><a class="code" href="kvi__statusbar_8h.html#a24cf8ae9124704a929eb8975f899dd03">00060</a> <span class="preprocessor">#define RICHTEXTLABELTRICK 2</span>
 <a name="l00061"></a>00061 <span class="preprocessor"></span>
-<a name="l00066"></a><a class="code" href="classKviStatusBarMessage.html">00066</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviStatusBarMessage.html" title="A class that hold the statusbar message.">KviStatusBarMessage</a> : <span class="keyword">public</span> <a class="code" href="classKviHeapObject.html">KviHeapObject</a>
+<a name="l00066"></a><a class="code" href="classKviStatusBarMessage.html">00066</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviStatusBarMessage.html" title="A class that hold the statusbar message.">KviStatusBarMessage</a> : <span class="keyword">public</span> KviHeapObject
 <a name="l00067"></a>00067 {
 <a name="l00068"></a><a class="code" href="classKviStatusBarMessage.html#a2cc490d0136c95f2ca6814cb906ca367">00068</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classKviStatusBar.html" title="Status Bar class.">KviStatusBar</a>;
 <a name="l00069"></a>00069 <span class="keyword">protected</span>:
@@ -88,7 +88,7 @@
 <a name="l00072"></a><a class="code" href="classKviStatusBarMessage.html#a28fc6066db36f5ed95fd8221a31f0fd6">00072</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviStatusBarMessage.html#a28fc6066db36f5ed95fd8221a31f0fd6">m_uPriority</a>;
 <a name="l00073"></a>00073 <span class="keyword">public</span>:
 <a name="l00081"></a><a class="code" href="classKviStatusBarMessage.html#a31e0263675c0a0f5354a54249172f21a">00081</a>         <a class="code" href="classKviStatusBarMessage.html" title="A class that hold the statusbar message.">KviStatusBarMessage</a>(<span class="keyword">const</span> QString &amp; szText, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uTimeout = 8000, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uPriority = 0)
-<a name="l00082"></a>00082         : <a class="code" href="classKviHeapObject.html">KviHeapObject</a>(), m_szText(szText), m_uTimeout(uTimeout), m_uPriority(uPriority){};
+<a name="l00082"></a>00082         : KviHeapObject(), m_szText(szText), m_uTimeout(uTimeout), m_uPriority(uPriority){};
 <a name="l00083"></a>00083 
 <a name="l00087"></a><a class="code" href="classKviStatusBarMessage.html#a0d9613f9f08aa164e4e31dec030094d5">00087</a>         <a class="code" href="classKviStatusBarMessage.html#a0d9613f9f08aa164e4e31dec030094d5" title="Destroys the statusbar message object.">~KviStatusBarMessage</a>(){};
 <a name="l00088"></a>00088 <span class="keyword">public</span>:
@@ -109,15 +109,15 @@
 <a name="l00124"></a>00124 
 <a name="l00128"></a>00128         ~<a class="code" href="classKviStatusBar.html" title="Status Bar class.">KviStatusBar</a>();
 <a name="l00129"></a>00129 <span class="keyword">protected</span>:
-<a name="l00130"></a><a class="code" href="classKviStatusBar.html#aa63bfe5aae25d5b4558a067bd2e7eb1f">00130</a>         <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>                                     * <a class="code" href="classKviStatusBar.html#aa63bfe5aae25d5b4558a067bd2e7eb1f">m_pBox</a>;
+<a name="l00130"></a><a class="code" href="classKviStatusBar.html#aa63bfe5aae25d5b4558a067bd2e7eb1f">00130</a>         KviTalHBox                                     * <a class="code" href="classKviStatusBar.html#aa63bfe5aae25d5b4558a067bd2e7eb1f">m_pBox</a>;
 <a name="l00131"></a><a class="code" href="classKviStatusBar.html#ac81511b43fb10c4c08913f8b7175e242">00131</a>         <a class="code" href="classKviFrame.html">KviFrame</a>                                       * <a class="code" href="classKviStatusBar.html#ac81511b43fb10c4c08913f8b7175e242">m_pFrame</a>;
-<a name="l00132"></a><a class="code" href="classKviStatusBar.html#a505d9d4690665068e164c037a4a2a0b5">00132</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviStatusBarMessage&gt;</a>            * <a class="code" href="classKviStatusBar.html#a505d9d4690665068e164c037a4a2a0b5">m_pMessageQueue</a>;
+<a name="l00132"></a><a class="code" href="classKviStatusBar.html#a505d9d4690665068e164c037a4a2a0b5">00132</a>         KviPointerList&lt;KviStatusBarMessage&gt;            * <a class="code" href="classKviStatusBar.html#a505d9d4690665068e164c037a4a2a0b5">m_pMessageQueue</a>;
 <a name="l00133"></a><a class="code" href="classKviStatusBar.html#a182c2a00a723b1e7bc89479abf9f5aa0">00133</a>         QTimer                                         * <a class="code" href="classKviStatusBar.html#a182c2a00a723b1e7bc89479abf9f5aa0">m_pMessageTimer</a>;
 <a name="l00134"></a><a class="code" href="classKviStatusBar.html#ad604912c54ec40440bff90661c02702c">00134</a>         QLabel                                         * <a class="code" href="classKviStatusBar.html#ad604912c54ec40440bff90661c02702c">m_pMessageLabel</a>;
-<a name="l00135"></a><a class="code" href="classKviStatusBar.html#aa1c25211010199d92f4e51b8ba19d24a">00135</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviStatusBarApplet&gt;</a>             * <a class="code" href="classKviStatusBar.html#aa1c25211010199d92f4e51b8ba19d24a">m_pAppletList</a>;
-<a name="l00136"></a><a class="code" href="classKviStatusBar.html#aa71f9a6e9462dacd16f2db8a0039e160">00136</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviStatusBarAppletDescriptor&gt;</a>      * <a class="code" href="classKviStatusBar.html#aa71f9a6e9462dacd16f2db8a0039e160">m_pAppletDescriptors</a>;
-<a name="l00137"></a><a class="code" href="classKviStatusBar.html#a86d96172b09ff2fcaaadb3f11b41c66b">00137</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>                                * <a class="code" href="classKviStatusBar.html#a86d96172b09ff2fcaaadb3f11b41c66b">m_pContextPopup</a>;
-<a name="l00138"></a><a class="code" href="classKviStatusBar.html#a5eb249c367a6b06117b43cb1f03fdc72">00138</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>                                * <a class="code" href="classKviStatusBar.html#a5eb249c367a6b06117b43cb1f03fdc72">m_pAppletsPopup</a>;
+<a name="l00135"></a><a class="code" href="classKviStatusBar.html#aa1c25211010199d92f4e51b8ba19d24a">00135</a>         KviPointerList&lt;KviStatusBarApplet&gt;             * <a class="code" href="classKviStatusBar.html#aa1c25211010199d92f4e51b8ba19d24a">m_pAppletList</a>;
+<a name="l00136"></a><a class="code" href="classKviStatusBar.html#aa71f9a6e9462dacd16f2db8a0039e160">00136</a>         KviPointerHashTable&lt;QString,KviStatusBarAppletDescriptor&gt;      * <a class="code" href="classKviStatusBar.html#aa71f9a6e9462dacd16f2db8a0039e160">m_pAppletDescriptors</a>;
+<a name="l00137"></a><a class="code" href="classKviStatusBar.html#a86d96172b09ff2fcaaadb3f11b41c66b">00137</a>         KviTalPopupMenu                                * <a class="code" href="classKviStatusBar.html#a86d96172b09ff2fcaaadb3f11b41c66b">m_pContextPopup</a>;
+<a name="l00138"></a><a class="code" href="classKviStatusBar.html#a5eb249c367a6b06117b43cb1f03fdc72">00138</a>         KviTalPopupMenu                                * <a class="code" href="classKviStatusBar.html#a5eb249c367a6b06117b43cb1f03fdc72">m_pAppletsPopup</a>;
 <a name="l00139"></a><a class="code" href="classKviStatusBar.html#a25bc44b6ba2ebd0d7a1caade1a844017">00139</a>         <a class="code" href="classKviStatusBarApplet.html">KviStatusBarApplet</a>                             * <a class="code" href="classKviStatusBar.html#a25bc44b6ba2ebd0d7a1caade1a844017">m_pClickedApplet</a>;
 <a name="l00140"></a><a class="code" href="classKviStatusBar.html#acfa76224969a8c8f4b8945f8f4db93b5">00140</a>         <span class="keywordtype">int</span>                                              <a class="code" href="classKviStatusBar.html#acfa76224969a8c8f4b8945f8f4db93b5">m_iLastMinimumHeight</a>;
 <a name="l00141"></a><a class="code" href="classKviStatusBar.html#a8301d06be328c32aafdd64ea742e32be">00141</a>         <span class="keywordtype">bool</span>                                             <a class="code" href="classKviStatusBar.html#a8301d06be328c32aafdd64ea742e32be">m_bStopLayoutOnAddRemove</a>;
@@ -183,7 +183,7 @@
 <a name="l00318"></a>00318 <span class="preprocessor">#endif // _KVI_STATUSBAR_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:55 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

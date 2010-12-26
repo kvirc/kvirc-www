@@ -49,19 +49,19 @@
 <code>#include &quot;<a class="el" href="kvi__ircconnectionrequestqueue_8h_source.html">kvi_ircconnectionrequestqueue.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__irctoolbar_8h_source.html">kvi_irctoolbar.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__out_8h_source.html">kvi_out.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__ircserverdb_8h_source.html">kvi_ircserverdb.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__proxydb_8h_source.html">kvi_proxydb.h</a>&quot;</code><br/>
+<code>#include &quot;KviIrcServerDataBase.h&quot;</code><br/>
+<code>#include &quot;KviProxyDataBase.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__options_8h_source.html">kvi_options.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__locale_8h_source.html">kvi_locale.h</a>&quot;</code><br/>
+<code>#include &quot;KviLocale.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__ircdatastreammonitor_8h_source.html">kvi_ircdatastreammonitor.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__error_8h_source.html">kvi_error.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__thread_8h_source.html">kvi_thread.h</a>&quot;</code><br/>
+<code>#include &quot;KviThread.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__app_8h_source.html">kvi_app.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__kvs__eventtriggers_8h_source.html">kvi_kvs_eventtriggers.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__kvs__script_8h_source.html">kvi_kvs_script.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__netutils_8h_source.html">kvi_netutils.h</a>&quot;</code><br/>
+<code>#include &quot;KviNetUtils.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__ircurl_8h_source.html">kvi_ircurl.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__useridentity_8h_source.html">kvi_useridentity.h</a>&quot;</code><br/>
+<code>#include &quot;KviUserIdentity.h&quot;</code><br/>
 <code>#include &lt;QTimer&gt;</code><br/>
 <code>#include &lt;QByteArray&gt;</code><br/>
 <table class="memberdecls">
@@ -70,8 +70,8 @@ Defines</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__irccontext_8cpp.html#a14bbbe495c30e16cccf962f432f96487">__KVI_DEBUG__</a></td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">KVIRC_API <a class="el" href="classKviProxyDataBase.html">KviProxyDataBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__irccontext_8cpp.html#a12b72bcbd221152af8646524c8e6a205">g_pProxyDataBase</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">KVIRC_API <a class="el" href="classKviServerDataBase.html">KviServerDataBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__irccontext_8cpp.html#adc8b5b856940d1b8732bfd679753ef52">g_pServerDataBase</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KVIRC_API KviProxyDataBase *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__irccontext_8cpp.html#a12b72bcbd221152af8646524c8e6a205">g_pProxyDataBase</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KVIRC_API KviServerDataBase *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__irccontext_8cpp.html#adc8b5b856940d1b8732bfd679753ef52">g_pServerDataBase</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__irccontext_8cpp.html#a1795e0dae83c1413dcb255175818223d">g_uNextIrcContextId</a> = 1</td></tr>
 </table>
 <hr/><h2>Define Documentation</h2>
@@ -94,7 +94,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">KVIRC_API <a class="el" href="classKviProxyDataBase.html">KviProxyDataBase</a>* <a class="el" href="kvi__console_8cpp.html#a12b72bcbd221152af8646524c8e6a205">g_pProxyDataBase</a></td>
+          <td class="memname">KVIRC_API KviProxyDataBase* <a class="el" href="kvi__console_8cpp.html#a12b72bcbd221152af8646524c8e6a205">g_pProxyDataBase</a></td>
         </tr>
       </table>
 </div>
@@ -107,7 +107,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">KVIRC_API <a class="el" href="classKviServerDataBase.html">KviServerDataBase</a>* <a class="el" href="kvi__console_8cpp.html#adc8b5b856940d1b8732bfd679753ef52">g_pServerDataBase</a></td>
+          <td class="memname">KVIRC_API KviServerDataBase* <a class="el" href="kvi__console_8cpp.html#adc8b5b856940d1b8732bfd679753ef52">g_pServerDataBase</a></td>
         </tr>
       </table>
 </div>
@@ -131,7 +131,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:56 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:06 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

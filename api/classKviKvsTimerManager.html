@@ -49,7 +49,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsTimerManager.html#a016c1c13d9b14b4cd4ff8a0260aae29f">deleteCurrentTimer</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsTimerManager.html#a7826a5dae78da841951812a0f6c82ea4">deleteTimer</a> (const QString &amp;szName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsTimerManager.html#a7ef691cdb35a785bc9ba9c867aebb51f">deleteTimer</a> (int iId)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 <a class="el" href="classKviKvsTimer.html">KviKvsTimer</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsTimerManager.html#a7f7f4a9b88c5ccb3e69c1a40af4824b5">timerDict</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsTimerManager.html#a9cf1f305efbc323fad23aecb92a5310e">timerExists</a> (const QString &amp;szName)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
@@ -67,10 +67,10 @@ Protected Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsTimerManager.html#a4506f190e8277e28faa7121ba3bd10ba">m_iAssassinTimer</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsTimerManager.html#afd8cd5d58f74c7932c8d7a43a7426ee5">m_iCurrentTimer</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="classKviKvsTimer.html">KviKvsTimer</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsTimerManager.html#ac7f3679c690afcc68478143454251e8b">m_pKilledTimerList</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; int, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerList&lt; <a class="el" href="classKviKvsTimer.html">KviKvsTimer</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsTimerManager.html#ac7f3679c690afcc68478143454251e8b">m_pKilledTimerList</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; int, <br class="typebreak"/>
 <a class="el" href="classKviKvsTimer.html">KviKvsTimer</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">m_pTimerDictById</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 <a class="el" href="classKviKvsTimer.html">KviKvsTimer</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsTimerManager.html#a440e2ba763093b6a3b485600e6290a63">m_pTimerDictByName</a></td></tr>
 <tr><td colspan="2"><h2><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -91,7 +91,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsTimerManager.html#a4506f190e8277e28faa7121ba3bd10ba">m_iAssassinTimer</a>, <a class="el" href="classKviKvsTimerManager.html#afd8cd5d58f74c7932c8d7a43a7426ee5">m_iCurrentTimer</a>, <a class="el" href="classKviKvsTimerManager.html#ac7f3679c690afcc68478143454251e8b">m_pKilledTimerList</a>, <a class="el" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">m_pTimerDictById</a>, <a class="el" href="classKviKvsTimerManager.html#a440e2ba763093b6a3b485600e6290a63">m_pTimerDictByName</a>, and <a class="el" href="classKviPointerHashTable.html#ac4b0eb0129f8d32f757d1a2a846d85cd">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="classKviKvsTimerManager.html#a4506f190e8277e28faa7121ba3bd10ba">m_iAssassinTimer</a>, <a class="el" href="classKviKvsTimerManager.html#afd8cd5d58f74c7932c8d7a43a7426ee5">m_iCurrentTimer</a>, <a class="el" href="classKviKvsTimerManager.html#ac7f3679c690afcc68478143454251e8b">m_pKilledTimerList</a>, <a class="el" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">m_pTimerDictById</a>, and <a class="el" href="classKviKvsTimerManager.html#a440e2ba763093b6a3b485600e6290a63">m_pTimerDictByName</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsTimerManager.html#a45f472b2f4a6a7a68f5d27408f15fdfd">init()</a>.</p>
 
@@ -111,7 +111,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsTimerManager.html#ac7f3679c690afcc68478143454251e8b">m_pKilledTimerList</a>, <a class="el" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">m_pTimerDictById</a>, <a class="el" href="classKviKvsTimerManager.html#a440e2ba763093b6a3b485600e6290a63">m_pTimerDictByName</a>, and <a class="el" href="classKviPointerHashTable.html#ac4b0eb0129f8d32f757d1a2a846d85cd">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="classKviKvsTimerManager.html#ac7f3679c690afcc68478143454251e8b">m_pKilledTimerList</a>, <a class="el" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">m_pTimerDictById</a>, and <a class="el" href="classKviKvsTimerManager.html#a440e2ba763093b6a3b485600e6290a63">m_pTimerDictByName</a>.</p>
 
 </div>
 </div>
@@ -165,7 +165,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsTimerManager.html#a7826a5dae78da841951812a0f6c82ea4">deleteTimer()</a>, <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="classKviKvsTimer.html#abe7536f15e8663fb9a9d80ad4efac1f3">KviKvsTimer::id()</a>, <a class="el" href="classKviPointerHashTable.html#a9694589651d8fd3f91a42611f1f29133">KviPointerHashTable&lt; Key, T &gt;::insert()</a>, <a class="el" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">m_pTimerDictById</a>, and <a class="el" href="classKviKvsTimerManager.html#a440e2ba763093b6a3b485600e6290a63">m_pTimerDictByName</a>.</p>
+<p>References <a class="el" href="classKviKvsTimerManager.html#a7826a5dae78da841951812a0f6c82ea4">deleteTimer()</a>, <a class="el" href="classKviKvsTimer.html#abe7536f15e8663fb9a9d80ad4efac1f3">KviKvsTimer::id()</a>, <a class="el" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">m_pTimerDictById</a>, and <a class="el" href="classKviKvsTimerManager.html#a440e2ba763093b6a3b485600e6290a63">m_pTimerDictByName</a>.</p>
 
 </div>
 </div>
@@ -183,7 +183,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviPointerHashTableIterator.html#a118714da73f457cf6cbea89c83d2f8e3">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="classKviKvsTimerManager.html#a7826a5dae78da841951812a0f6c82ea4">deleteTimer()</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="classKviPointerHashTable.html#a7ab4222317656794208d9a78e67c6bfa">KviPointerHashTable&lt; Key, T &gt;::isEmpty()</a>, <a class="el" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">m_pTimerDictById</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, and <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="classKviKvsTimerManager.html#a7826a5dae78da841951812a0f6c82ea4">deleteTimer()</a>, and <a class="el" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">m_pTimerDictById</a>.</p>
 
 <p>Referenced by <a class="el" href="namespaceKviKvsCoreSimpleCommands.html#ab05d69f6da751b7aa51565c42e1d256b">KviKvsCoreSimpleCommands::KVSCSC()</a>.</p>
 
@@ -224,7 +224,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="classKviKvsTimer.html#abe7536f15e8663fb9a9d80ad4efac1f3">KviKvsTimer::id()</a>, <a class="el" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">m_pTimerDictById</a>, <a class="el" href="classKviKvsTimerManager.html#a440e2ba763093b6a3b485600e6290a63">m_pTimerDictByName</a>, <a class="el" href="classKviPointerHashTable.html#aa7a770856e2431e6c9a07c9b08ad256a">KviPointerHashTable&lt; Key, T &gt;::remove()</a>, and <a class="el" href="classKviKvsTimerManager.html#ac6151c06d0e8410bba17a04d3e9fddff">scheduleKill()</a>.</p>
+<p>References <a class="el" href="classKviKvsTimer.html#abe7536f15e8663fb9a9d80ad4efac1f3">KviKvsTimer::id()</a>, <a class="el" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">m_pTimerDictById</a>, <a class="el" href="classKviKvsTimerManager.html#a440e2ba763093b6a3b485600e6290a63">m_pTimerDictByName</a>, and <a class="el" href="classKviKvsTimerManager.html#ac6151c06d0e8410bba17a04d3e9fddff">scheduleKill()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsTimerManager.html#a8b04dc675d5ad8b9fe1059df8405fc92">addTimer()</a>, <a class="el" href="classKviKvsTimerManager.html#a8143de264c9a14c7b447456f03a08843">deleteAllTimers()</a>, <a class="el" href="classKviKvsTimerManager.html#a016c1c13d9b14b4cd4ff8a0260aae29f">deleteCurrentTimer()</a>, and <a class="el" href="classKviKvsTimerManager.html#adcece93a7b5a5d8961386de546ca865a">timerEvent()</a>.</p>
 
@@ -245,7 +245,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="classKviKvsTimer.html#abe7536f15e8663fb9a9d80ad4efac1f3">KviKvsTimer::id()</a>, <a class="el" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">m_pTimerDictById</a>, <a class="el" href="classKviKvsTimerManager.html#a440e2ba763093b6a3b485600e6290a63">m_pTimerDictByName</a>, <a class="el" href="classKviKvsTimer.html#a385d91e6b607348844a012ef4a576259">KviKvsTimer::name()</a>, <a class="el" href="classKviPointerHashTable.html#aa7a770856e2431e6c9a07c9b08ad256a">KviPointerHashTable&lt; Key, T &gt;::remove()</a>, and <a class="el" href="classKviKvsTimerManager.html#ac6151c06d0e8410bba17a04d3e9fddff">scheduleKill()</a>.</p>
+<p>References <a class="el" href="classKviKvsTimer.html#abe7536f15e8663fb9a9d80ad4efac1f3">KviKvsTimer::id()</a>, <a class="el" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">m_pTimerDictById</a>, <a class="el" href="classKviKvsTimerManager.html#a440e2ba763093b6a3b485600e6290a63">m_pTimerDictByName</a>, <a class="el" href="classKviKvsTimer.html#a385d91e6b607348844a012ef4a576259">KviKvsTimer::name()</a>, and <a class="el" href="classKviKvsTimerManager.html#ac6151c06d0e8410bba17a04d3e9fddff">scheduleKill()</a>.</p>
 
 </div>
 </div>
@@ -318,7 +318,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviKvsTimerManager.html#a4506f190e8277e28faa7121ba3bd10ba">m_iAssassinTimer</a>, <a class="el" href="classKviKvsTimerManager.html#ac7f3679c690afcc68478143454251e8b">m_pKilledTimerList</a>, and <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="classKviKvsTimerManager.html#a4506f190e8277e28faa7121ba3bd10ba">m_iAssassinTimer</a>, and <a class="el" href="classKviKvsTimerManager.html#ac7f3679c690afcc68478143454251e8b">m_pKilledTimerList</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsTimerManager.html#a7826a5dae78da841951812a0f6c82ea4">deleteTimer()</a>.</p>
 
@@ -329,7 +329,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,<a class="el" href="classKviKvsTimer.html">KviKvsTimer</a>&gt;* KviKvsTimerManager::timerDict </td>
+          <td class="memname">KviPointerHashTable&lt;QString,<a class="el" href="classKviKvsTimer.html">KviKvsTimer</a>&gt;* KviKvsTimerManager::timerDict </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td><code> [inline]</code></td>
@@ -338,7 +338,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="namespaceKviKvsCoreSimpleCommands.html#ab731d318dce611383c38840b6eba1473">KviKvsCoreSimpleCommands::KVSCSC()</a>.</p>
+<p>Referenced by <a class="el" href="namespaceKviKvsCoreFunctions.html#a2d2b23a10a7220cd4fe23bdeb2956b8a">KviKvsCoreFunctions::KVSCF()</a>, and <a class="el" href="namespaceKviKvsCoreSimpleCommands.html#ab731d318dce611383c38840b6eba1473">KviKvsCoreSimpleCommands::KVSCSC()</a>.</p>
 
 </div>
 </div>
@@ -357,7 +357,7 @@ Static Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h.html#a109fa73229142b7d3a9415f3a1d1dfa2">__tr2qs_ctx</a>, <a class="el" href="classKviApp.html#af08891e634a70bfab9f4affdfb80a7b3">KviApp::activeConsole()</a>, <a class="el" href="classKviKvsTimer.html#a85437843220280aab48fffd73182192b">KviKvsTimer::callback()</a>, <a class="el" href="classKviPointerList.html#acc4c59d1af7c01f82f7afe2c5339ffda">KviPointerList&lt; T &gt;::clear()</a>, <a class="el" href="classKviKvsTimerManager.html#a7826a5dae78da841951812a0f6c82ea4">deleteTimer()</a>, <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__app_8cpp.html#a5d91e669373d40e04bf12f72e2c03a11">g_pApp</a>, <a class="el" href="classKviKvsTimer.html#abe7536f15e8663fb9a9d80ad4efac1f3">KviKvsTimer::id()</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__out_8h.html#a34e09c47078f9608308f158b9bcb859b">KVI_OUT_PARSERERROR</a>, <a class="el" href="kvi__options_8h.html#a2a56adac2d1e1e42f67057aca1b41d71">KviOption_boolKillBrokenTimers</a>, <a class="el" href="classKviKvsTimer.html#a72b6e3afe73311112c185cba8d5c025b">KviKvsTimer::lifetime()</a>, <a class="el" href="classKviKvsTimerManager.html#a4506f190e8277e28faa7121ba3bd10ba">m_iAssassinTimer</a>, <a class="el" href="classKviKvsTimerManager.html#afd8cd5d58f74c7932c8d7a43a7426ee5">m_iCurrentTimer</a>, <a class="el" href="classKviKvsTimerManager.html#ac7f3679c690afcc68478143454251e8b">m_pKilledTimerList</a>, <a class="el" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">m_pTimerDictById</a>, <a class="el" href="classKviKvsTimer.html#a385d91e6b607348844a012ef4a576259">KviKvsTimer::name()</a>, <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>, <a class="el" href="classKviKvsTimer.html#acbf96d2d818af22cd552e83111698d6f">KviKvsTimer::parameterList()</a>, <a class="el" href="classKviKvsTimer.html#ae155a0d4d6cd3d7ebd859afba69a378aa3eca640e8e4d7f66b919a8b57c54ba2a">KviKvsTimer::Persistent</a>, <a class="el" href="classKviKvsScript.html#ab5fb343c7b482baf7a6b1f3e4a07b62fae68bdcbb344fd0f659c69e33969c9416">KviKvsScript::PreserveParams</a>, <a class="el" href="classKviKvsScript.html#a1e86e4f6a626e189ed829b0a07398cdd">KviKvsScript::run()</a>, <a class="el" href="classKviKvsTimer.html#ac9041c5e4871f62111f7b231d39d4f36">KviKvsTimer::runTimeData()</a>, <a class="el" href="classKviKvsTimer.html#a2e9b149f48ef459961ff84682260136c">KviKvsTimer::setWindow()</a>, <a class="el" href="classKviKvsTimer.html#ae155a0d4d6cd3d7ebd859afba69a378aad3f63918ae8062a21db3cedf14569ebd">KviKvsTimer::SingleShot</a>, <a class="el" href="classKviKvsTimer.html#a9cb8a1a5f893443868c035279e6da1cf">KviKvsTimer::window()</a>, and <a class="el" href="classKviApp.html#a5dbad0167530d1994a7977366d13247e">KviApp::windowExists()</a>.</p>
+<p>References <a class="el" href="classKviApp.html#af08891e634a70bfab9f4affdfb80a7b3">KviApp::activeConsole()</a>, <a class="el" href="classKviKvsTimer.html#a85437843220280aab48fffd73182192b">KviKvsTimer::callback()</a>, <a class="el" href="classKviKvsTimerManager.html#a7826a5dae78da841951812a0f6c82ea4">deleteTimer()</a>, <a class="el" href="kvi__app_8cpp.html#a5d91e669373d40e04bf12f72e2c03a11">g_pApp</a>, <a class="el" href="classKviKvsTimer.html#abe7536f15e8663fb9a9d80ad4efac1f3">KviKvsTimer::id()</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__out_8h.html#a34e09c47078f9608308f158b9bcb859b">KVI_OUT_PARSERERROR</a>, <a class="el" href="kvi__options_8h.html#a2a56adac2d1e1e42f67057aca1b41d71">KviOption_boolKillBrokenTimers</a>, <a class="el" href="classKviKvsTimer.html#a72b6e3afe73311112c185cba8d5c025b">KviKvsTimer::lifetime()</a>, <a class="el" href="classKviKvsTimerManager.html#a4506f190e8277e28faa7121ba3bd10ba">m_iAssassinTimer</a>, <a class="el" href="classKviKvsTimerManager.html#afd8cd5d58f74c7932c8d7a43a7426ee5">m_iCurrentTimer</a>, <a class="el" href="classKviKvsTimerManager.html#ac7f3679c690afcc68478143454251e8b">m_pKilledTimerList</a>, <a class="el" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">m_pTimerDictById</a>, <a class="el" href="classKviKvsTimer.html#a385d91e6b607348844a012ef4a576259">KviKvsTimer::name()</a>, <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>, <a class="el" href="classKviKvsTimer.html#acbf96d2d818af22cd552e83111698d6f">KviKvsTimer::parameterList()</a>, <a class="el" href="classKviKvsTimer.html#ae155a0d4d6cd3d7ebd859afba69a378aa3eca640e8e4d7f66b919a8b57c54ba2a">KviKvsTimer::Persistent</a>, <a class="el" href="classKviKvsScript.html#ab5fb343c7b482baf7a6b1f3e4a07b62fae68bdcbb344fd0f659c69e33969c9416">KviKvsScript::PreserveParams</a>, <a class="el" href="classKviKvsScript.html#a1e86e4f6a626e189ed829b0a07398cdd">KviKvsScript::run()</a>, <a class="el" href="classKviKvsTimer.html#ac9041c5e4871f62111f7b231d39d4f36">KviKvsTimer::runTimeData()</a>, <a class="el" href="classKviKvsTimer.html#a2e9b149f48ef459961ff84682260136c">KviKvsTimer::setWindow()</a>, <a class="el" href="classKviKvsTimer.html#ae155a0d4d6cd3d7ebd859afba69a378aad3f63918ae8062a21db3cedf14569ebd">KviKvsTimer::SingleShot</a>, <a class="el" href="classKviKvsTimer.html#a9cb8a1a5f893443868c035279e6da1cf">KviKvsTimer::window()</a>, and <a class="el" href="classKviApp.html#a5dbad0167530d1994a7977366d13247e">KviApp::windowExists()</a>.</p>
 
 </div>
 </div>
@@ -429,7 +429,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt;<a class="el" href="classKviKvsTimer.html">KviKvsTimer</a>&gt;* <a class="el" href="classKviKvsTimerManager.html#ac7f3679c690afcc68478143454251e8b">KviKvsTimerManager::m_pKilledTimerList</a><code> [private]</code></td>
+          <td class="memname">KviPointerList&lt;<a class="el" href="classKviKvsTimer.html">KviKvsTimer</a>&gt;* <a class="el" href="classKviKvsTimerManager.html#ac7f3679c690afcc68478143454251e8b">KviKvsTimerManager::m_pKilledTimerList</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -444,7 +444,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;int,<a class="el" href="classKviKvsTimer.html">KviKvsTimer</a>&gt;* <a class="el" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">KviKvsTimerManager::m_pTimerDictById</a><code> [private]</code></td>
+          <td class="memname">KviPointerHashTable&lt;int,<a class="el" href="classKviKvsTimer.html">KviKvsTimer</a>&gt;* <a class="el" href="classKviKvsTimerManager.html#a56ae162a9a6e620c5f33e98a4e06a25e">KviKvsTimerManager::m_pTimerDictById</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -459,7 +459,7 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,<a class="el" href="classKviKvsTimer.html">KviKvsTimer</a>&gt;* <a class="el" href="classKviKvsTimerManager.html#a440e2ba763093b6a3b485600e6290a63">KviKvsTimerManager::m_pTimerDictByName</a><code> [private]</code></td>
+          <td class="memname">KviPointerHashTable&lt;QString,<a class="el" href="classKviKvsTimer.html">KviKvsTimer</a>&gt;* <a class="el" href="classKviKvsTimerManager.html#a440e2ba763093b6a3b485600e6290a63">KviKvsTimerManager::m_pTimerDictByName</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -474,7 +474,7 @@ Static Private Attributes</h2></td></tr>
 <li>src/kvirc/kvs/<a class="el" href="kvi__kvs__timermanager_8cpp.html">kvi_kvs_timermanager.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:58 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:08 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

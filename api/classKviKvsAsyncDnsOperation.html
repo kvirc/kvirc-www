@@ -51,22 +51,22 @@ Inheritance diagram for KviKvsAsyncDnsOperation:<!-- endSectionHeader --></div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAsyncDnsOperation.html#a643d70f2378b790cf08b5c20aef89f4b">KviKvsAsyncDnsOperation</a> (<a class="el" href="classKviWindow.html">KviWindow</a> *pWnd, QString &amp;szQuery, <a class="el" href="classKviDns.html#ae4d6118d0ebbf64a63847e8bf182df1c">KviDns::QueryType</a> eType, <a class="el" href="classKviKvsScript.html">KviKvsScript</a> *pCallback=0, <a class="el" href="classKviKvsVariant.html">KviKvsVariant</a> *pMagic=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAsyncDnsOperation.html#ae76c4f78c9901eb25198f94736311919">KviKvsAsyncDnsOperation</a> (<a class="el" href="classKviWindow.html">KviWindow</a> *pWnd, QString &amp;szQuery, KviDnsResolver::QueryType eType, <a class="el" href="classKviKvsScript.html">KviKvsScript</a> *pCallback=0, <a class="el" href="classKviKvsVariant.html">KviKvsVariant</a> *pMagic=0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAsyncDnsOperation.html#a762eadb38bd57d019f6d8086483f9756">~KviKvsAsyncDnsOperation</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAsyncDnsOperation.html#aa90fc005cca4e60f60ce60f3eeac7c8e">dnsStartFailed</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAsyncDnsOperation.html#aed77c8b27cbecc92b9af08f7a998152d">lookupTerminated</a> (<a class="el" href="classKviDns.html">KviDns</a> *)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAsyncDnsOperation.html#acea2ec915fc40e326a3caeffe536de9d">lookupTerminated</a> (KviDnsResolver *)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviDns.html#ae4d6118d0ebbf64a63847e8bf182df1c">KviDns::QueryType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAsyncDnsOperation.html#a779a6681dc12859dafe7b950511ed53b">m_eType</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviDnsResolver::QueryType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAsyncDnsOperation.html#a9f816fcae52e6deed696526086154c98">m_eType</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviKvsScript.html">KviKvsScript</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAsyncDnsOperation.html#a53c0b3ee9937fbe77784dca81b89af0a">m_pCallback</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviDns.html">KviDns</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAsyncDnsOperation.html#a0b6f2bb42c450a8e8d93e4e3db14b7f5">m_pDns</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviDnsResolver *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAsyncDnsOperation.html#af209e59c2cf13466251d8db9702c4692">m_pDns</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviKvsVariant.html">KviKvsVariant</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAsyncDnsOperation.html#a467778348485e5fdbd58e90c9e9198ef">m_pMagic</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsAsyncDnsOperation.html#a8d4c394e1d2763a069b17373765cf785">m_szQuery</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a643d70f2378b790cf08b5c20aef89f4b"></a><!-- doxytag: member="KviKvsAsyncDnsOperation::KviKvsAsyncDnsOperation" ref="a643d70f2378b790cf08b5c20aef89f4b" args="(KviWindow *pWnd, QString &amp;szQuery, KviDns::QueryType eType, KviKvsScript *pCallback=0, KviKvsVariant *pMagic=0)" -->
+<a class="anchor" id="ae76c4f78c9901eb25198f94736311919"></a><!-- doxytag: member="KviKvsAsyncDnsOperation::KviKvsAsyncDnsOperation" ref="ae76c4f78c9901eb25198f94736311919" args="(KviWindow *pWnd, QString &amp;szQuery, KviDnsResolver::QueryType eType, KviKvsScript *pCallback=0, KviKvsVariant *pMagic=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -85,7 +85,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classKviDns.html#ae4d6118d0ebbf64a63847e8bf182df1c">KviDns::QueryType</a>&#160;</td>
+          <td class="paramtype">KviDnsResolver::QueryType&#160;</td>
           <td class="paramname"> <em>eType</em>, </td>
         </tr>
         <tr>
@@ -109,7 +109,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsAsyncDnsOperation.html#aa90fc005cca4e60f60ce60f3eeac7c8e">dnsStartFailed()</a>, <a class="el" href="classKviDns.html#a4ac83437d0b69e3de8bd89c580c366d0">KviDns::lookup()</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#aed77c8b27cbecc92b9af08f7a998152d">lookupTerminated()</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#a779a6681dc12859dafe7b950511ed53b">m_eType</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#a53c0b3ee9937fbe77784dca81b89af0a">m_pCallback</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#a0b6f2bb42c450a8e8d93e4e3db14b7f5">m_pDns</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#a467778348485e5fdbd58e90c9e9198ef">m_pMagic</a>, and <a class="el" href="classKviKvsAsyncDnsOperation.html#a8d4c394e1d2763a069b17373765cf785">m_szQuery</a>.</p>
+<p>References <a class="el" href="classKviKvsAsyncDnsOperation.html#aa90fc005cca4e60f60ce60f3eeac7c8e">dnsStartFailed()</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#acea2ec915fc40e326a3caeffe536de9d">lookupTerminated()</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#a9f816fcae52e6deed696526086154c98">m_eType</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#a53c0b3ee9937fbe77784dca81b89af0a">m_pCallback</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#af209e59c2cf13466251d8db9702c4692">m_pDns</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#a467778348485e5fdbd58e90c9e9198ef">m_pMagic</a>, and <a class="el" href="classKviKvsAsyncDnsOperation.html#a8d4c394e1d2763a069b17373765cf785">m_szQuery</a>.</p>
 
 </div>
 </div>
@@ -127,7 +127,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsAsyncDnsOperation.html#a53c0b3ee9937fbe77784dca81b89af0a">m_pCallback</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#a0b6f2bb42c450a8e8d93e4e3db14b7f5">m_pDns</a>, and <a class="el" href="classKviKvsAsyncDnsOperation.html#a467778348485e5fdbd58e90c9e9198ef">m_pMagic</a>.</p>
+<p>References <a class="el" href="classKviKvsAsyncDnsOperation.html#a53c0b3ee9937fbe77784dca81b89af0a">m_pCallback</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#af209e59c2cf13466251d8db9702c4692">m_pDns</a>, and <a class="el" href="classKviKvsAsyncDnsOperation.html#a467778348485e5fdbd58e90c9e9198ef">m_pMagic</a>.</p>
 
 </div>
 </div>
@@ -146,20 +146,20 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsAsyncDnsOperation.html#aed77c8b27cbecc92b9af08f7a998152d">lookupTerminated()</a>, and <a class="el" href="classKviKvsAsyncDnsOperation.html#a0b6f2bb42c450a8e8d93e4e3db14b7f5">m_pDns</a>.</p>
+<p>References <a class="el" href="classKviKvsAsyncDnsOperation.html#acea2ec915fc40e326a3caeffe536de9d">lookupTerminated()</a>, and <a class="el" href="classKviKvsAsyncDnsOperation.html#af209e59c2cf13466251d8db9702c4692">m_pDns</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviKvsAsyncDnsOperation.html#a643d70f2378b790cf08b5c20aef89f4b">KviKvsAsyncDnsOperation()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsAsyncDnsOperation.html#ae76c4f78c9901eb25198f94736311919">KviKvsAsyncDnsOperation()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="aed77c8b27cbecc92b9af08f7a998152d"></a><!-- doxytag: member="KviKvsAsyncDnsOperation::lookupTerminated" ref="aed77c8b27cbecc92b9af08f7a998152d" args="(KviDns *)" -->
+<a class="anchor" id="acea2ec915fc40e326a3caeffe536de9d"></a><!-- doxytag: member="KviKvsAsyncDnsOperation::lookupTerminated" ref="acea2ec915fc40e326a3caeffe536de9d" args="(KviDnsResolver *)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void KviKvsAsyncDnsOperation::lookupTerminated </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviDns.html">KviDns</a> *&#160;</td>
+          <td class="paramtype">KviDnsResolver *&#160;</td>
           <td class="paramname">&#160;)</td>
           <td><code> [protected, slot]</code></td>
         </tr>
@@ -167,25 +167,25 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h.html#a109fa73229142b7d3a9415f3a1d1dfa2">__tr2qs_ctx</a>, <a class="el" href="classKviKvsVariantList.html#a34614ecce05aec2da8798d1be775634d">KviKvsVariantList::append()</a>, <a class="el" href="classKviDns.html#a0cdc3844328dac3d24324e8d4c59ef9c">KviDns::error()</a>, <a class="el" href="classKviDns.html#ae39fae40886b6a7f18a8a4e891eb6c2ca5e7df4b1ac4184546bfb050618c32259">KviDns::Failure</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__window_8cpp.html#a2fe86e51e6cd81939fda329d662f4bef">g_pActiveWindow</a>, <a class="el" href="kvi__app_8cpp.html#a5d91e669373d40e04bf12f72e2c03a11">g_pApp</a>, <a class="el" href="namespaceKviError.html#a6f591856c16912ee3bae1d7c0adc43b2">KviError::getDescription()</a>, <a class="el" href="classKviDns.html#a0c2550d150eee9049c9b59bb279b6eac">KviDns::hostnameList()</a>, <a class="el" href="classKviDns.html#a0963ec3fe3f64b78bc0279899d45a6fd">KviDns::ipAddressList()</a>, <a class="el" href="kvi__out_8h.html#af42c1116d9908d4aae216c802f7da4a6">KVI_OUT_HOSTLOOKUP</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#a53c0b3ee9937fbe77784dca81b89af0a">m_pCallback</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#a0b6f2bb42c450a8e8d93e4e3db14b7f5">m_pDns</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#a467778348485e5fdbd58e90c9e9198ef">m_pMagic</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#a8d4c394e1d2763a069b17373765cf785">m_szQuery</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>, <a class="el" href="classKviKvsScript.html#ab5fb343c7b482baf7a6b1f3e4a07b62fae68bdcbb344fd0f659c69e33969c9416">KviKvsScript::PreserveParams</a>, <a class="el" href="classKviDns.html#ac258ff1387ab1e0bee17fb94e8eb46bc">KviDns::query()</a>, <a class="el" href="classKviKvsScript.html#a1e86e4f6a626e189ed829b0a07398cdd">KviKvsScript::run()</a>, <a class="el" href="classKviKvsVariantList.html#afab40426b8f3e512e7c85222a3435cb2">KviKvsVariantList::setAutoDelete()</a>, <a class="el" href="classKviDns.html#ac9626c6af8caa7eb8e01cc133b6e26ee">KviDns::state()</a>, <a class="el" href="classKviKvsAsyncOperation.html#a7c70512816c21256ec063ffc3b5408bf">KviKvsAsyncOperation::window()</a>, and <a class="el" href="classKviApp.html#a5dbad0167530d1994a7977366d13247e">KviApp::windowExists()</a>.</p>
+<p>References <a class="el" href="classKviKvsVariantList.html#a34614ecce05aec2da8798d1be775634d">KviKvsVariantList::append()</a>, <a class="el" href="kvi__window_8cpp.html#a2fe86e51e6cd81939fda329d662f4bef">g_pActiveWindow</a>, <a class="el" href="kvi__app_8cpp.html#a5d91e669373d40e04bf12f72e2c03a11">g_pApp</a>, <a class="el" href="namespaceKviError.html#a6f591856c16912ee3bae1d7c0adc43b2">KviError::getDescription()</a>, <a class="el" href="kvi__out_8h.html#af42c1116d9908d4aae216c802f7da4a6">KVI_OUT_HOSTLOOKUP</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#a53c0b3ee9937fbe77784dca81b89af0a">m_pCallback</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#af209e59c2cf13466251d8db9702c4692">m_pDns</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#a467778348485e5fdbd58e90c9e9198ef">m_pMagic</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#a8d4c394e1d2763a069b17373765cf785">m_szQuery</a>, <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>, <a class="el" href="classKviKvsScript.html#ab5fb343c7b482baf7a6b1f3e4a07b62fae68bdcbb344fd0f659c69e33969c9416">KviKvsScript::PreserveParams</a>, <a class="el" href="classKviKvsScript.html#a1e86e4f6a626e189ed829b0a07398cdd">KviKvsScript::run()</a>, <a class="el" href="classKviKvsVariantList.html#afab40426b8f3e512e7c85222a3435cb2">KviKvsVariantList::setAutoDelete()</a>, <a class="el" href="classKviKvsAsyncOperation.html#a7c70512816c21256ec063ffc3b5408bf">KviKvsAsyncOperation::window()</a>, and <a class="el" href="classKviApp.html#a5dbad0167530d1994a7977366d13247e">KviApp::windowExists()</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviKvsAsyncDnsOperation.html#aa90fc005cca4e60f60ce60f3eeac7c8e">dnsStartFailed()</a>, and <a class="el" href="classKviKvsAsyncDnsOperation.html#a643d70f2378b790cf08b5c20aef89f4b">KviKvsAsyncDnsOperation()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsAsyncDnsOperation.html#aa90fc005cca4e60f60ce60f3eeac7c8e">dnsStartFailed()</a>, and <a class="el" href="classKviKvsAsyncDnsOperation.html#ae76c4f78c9901eb25198f94736311919">KviKvsAsyncDnsOperation()</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a779a6681dc12859dafe7b950511ed53b"></a><!-- doxytag: member="KviKvsAsyncDnsOperation::m_eType" ref="a779a6681dc12859dafe7b950511ed53b" args="" -->
+<a class="anchor" id="a9f816fcae52e6deed696526086154c98"></a><!-- doxytag: member="KviKvsAsyncDnsOperation::m_eType" ref="a9f816fcae52e6deed696526086154c98" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviDns.html#ae4d6118d0ebbf64a63847e8bf182df1c">KviDns::QueryType</a> <a class="el" href="classKviKvsAsyncDnsOperation.html#a779a6681dc12859dafe7b950511ed53b">KviKvsAsyncDnsOperation::m_eType</a><code> [protected]</code></td>
+          <td class="memname">KviDnsResolver::QueryType <a class="el" href="classKviKvsAsyncDnsOperation.html#a9f816fcae52e6deed696526086154c98">KviKvsAsyncDnsOperation::m_eType</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviKvsAsyncDnsOperation.html#a643d70f2378b790cf08b5c20aef89f4b">KviKvsAsyncDnsOperation()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsAsyncDnsOperation.html#ae76c4f78c9901eb25198f94736311919">KviKvsAsyncDnsOperation()</a>.</p>
 
 </div>
 </div>
@@ -200,22 +200,22 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviKvsAsyncDnsOperation.html#a643d70f2378b790cf08b5c20aef89f4b">KviKvsAsyncDnsOperation()</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#aed77c8b27cbecc92b9af08f7a998152d">lookupTerminated()</a>, and <a class="el" href="classKviKvsAsyncDnsOperation.html#a762eadb38bd57d019f6d8086483f9756">~KviKvsAsyncDnsOperation()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsAsyncDnsOperation.html#ae76c4f78c9901eb25198f94736311919">KviKvsAsyncDnsOperation()</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#acea2ec915fc40e326a3caeffe536de9d">lookupTerminated()</a>, and <a class="el" href="classKviKvsAsyncDnsOperation.html#a762eadb38bd57d019f6d8086483f9756">~KviKvsAsyncDnsOperation()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0b6f2bb42c450a8e8d93e4e3db14b7f5"></a><!-- doxytag: member="KviKvsAsyncDnsOperation::m_pDns" ref="a0b6f2bb42c450a8e8d93e4e3db14b7f5" args="" -->
+<a class="anchor" id="af209e59c2cf13466251d8db9702c4692"></a><!-- doxytag: member="KviKvsAsyncDnsOperation::m_pDns" ref="af209e59c2cf13466251d8db9702c4692" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviDns.html">KviDns</a>* <a class="el" href="classKviKvsAsyncDnsOperation.html#a0b6f2bb42c450a8e8d93e4e3db14b7f5">KviKvsAsyncDnsOperation::m_pDns</a><code> [protected]</code></td>
+          <td class="memname">KviDnsResolver* <a class="el" href="classKviKvsAsyncDnsOperation.html#af209e59c2cf13466251d8db9702c4692">KviKvsAsyncDnsOperation::m_pDns</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviKvsAsyncDnsOperation.html#aa90fc005cca4e60f60ce60f3eeac7c8e">dnsStartFailed()</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#a643d70f2378b790cf08b5c20aef89f4b">KviKvsAsyncDnsOperation()</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#aed77c8b27cbecc92b9af08f7a998152d">lookupTerminated()</a>, and <a class="el" href="classKviKvsAsyncDnsOperation.html#a762eadb38bd57d019f6d8086483f9756">~KviKvsAsyncDnsOperation()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsAsyncDnsOperation.html#aa90fc005cca4e60f60ce60f3eeac7c8e">dnsStartFailed()</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#ae76c4f78c9901eb25198f94736311919">KviKvsAsyncDnsOperation()</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#acea2ec915fc40e326a3caeffe536de9d">lookupTerminated()</a>, and <a class="el" href="classKviKvsAsyncDnsOperation.html#a762eadb38bd57d019f6d8086483f9756">~KviKvsAsyncDnsOperation()</a>.</p>
 
 </div>
 </div>
@@ -230,7 +230,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviKvsAsyncDnsOperation.html#a643d70f2378b790cf08b5c20aef89f4b">KviKvsAsyncDnsOperation()</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#aed77c8b27cbecc92b9af08f7a998152d">lookupTerminated()</a>, and <a class="el" href="classKviKvsAsyncDnsOperation.html#a762eadb38bd57d019f6d8086483f9756">~KviKvsAsyncDnsOperation()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsAsyncDnsOperation.html#ae76c4f78c9901eb25198f94736311919">KviKvsAsyncDnsOperation()</a>, <a class="el" href="classKviKvsAsyncDnsOperation.html#acea2ec915fc40e326a3caeffe536de9d">lookupTerminated()</a>, and <a class="el" href="classKviKvsAsyncDnsOperation.html#a762eadb38bd57d019f6d8086483f9756">~KviKvsAsyncDnsOperation()</a>.</p>
 
 </div>
 </div>
@@ -245,7 +245,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviKvsAsyncDnsOperation.html#a643d70f2378b790cf08b5c20aef89f4b">KviKvsAsyncDnsOperation()</a>, and <a class="el" href="classKviKvsAsyncDnsOperation.html#aed77c8b27cbecc92b9af08f7a998152d">lookupTerminated()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsAsyncDnsOperation.html#ae76c4f78c9901eb25198f94736311919">KviKvsAsyncDnsOperation()</a>, and <a class="el" href="classKviKvsAsyncDnsOperation.html#acea2ec915fc40e326a3caeffe536de9d">lookupTerminated()</a>.</p>
 
 </div>
 </div>
@@ -254,7 +254,7 @@ Protected Attributes</h2></td></tr>
 <li>src/kvirc/kvs/<a class="el" href="kvi__kvs__asyncdnsoperation_8cpp.html">kvi_kvs_asyncdnsoperation.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:57 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

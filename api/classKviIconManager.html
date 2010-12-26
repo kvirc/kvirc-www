@@ -49,7 +49,7 @@ Public Slots</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIconManager.html#a79ce60bce36aa71aa80f72cd880309ab">cacheCleanup</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIconManager.html#a3ffdfc1462e07d37c4053773afc170ae">clearCache</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviAvatar.html">KviAvatar</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIconManager.html#a065e1aff95b8fe71dad2cb5e1768d488">getAvatar</a> (const QString &amp;szLocalPath, const QString &amp;szName)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviAvatar *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIconManager.html#a065e1aff95b8fe71dad2cb5e1768d488">getAvatar</a> (const QString &amp;szLocalPath, const QString &amp;szName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPixmap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIconManager.html#a516b6236fb0fa37090fbbe2bf731f2f0">getBigIcon</a> (const QString &amp;szName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPixmap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIconManager.html#a2bef18c7f5a294f67b6e86a7baafb973">getImage</a> (const QString &amp;id, bool bCanBeNumber=true, QString *pRetPath=0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPixmap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIconManager.html#a938ec4e383d55d256f31b8130270e16f">getPixmap</a> (const QString &amp;szName)</td></tr>
@@ -73,9 +73,9 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPixmap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIconManager.html#a80cbf5d12a8288d4c9c97632020bb362">loadSmallIcon</a> (int idx)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 <a class="el" href="classKviCachedPixmap.html">KviCachedPixmap</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIconManager.html#ac3ca24a52084b7770bc3774444a21d33">m_pCachedImages</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIconManager.html#a526f4967060f67fda09601a826758eaf">m_pIconNames</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviIconWidget.html">KviIconWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIconManager.html#a0dc9e79b792d7ec85a725af3d9a861d7">m_pIconWidget</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPixmap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIconManager.html#a1a6fdb35972ebc9ccc0e7081fb3f1dc1">m_smallIcons</a> [KVI_NUM_SMALL_ICONS]</td></tr>
@@ -97,7 +97,7 @@ int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviApp.html#a4bf6629dfcc698f64ecb56fde2ff570e">KviApp::findImage()</a>, <a class="el" href="kvi__app_8cpp.html#a9c095c5c83fa0e34e42016bbe70bc42d">g_pActivityMeterPixmap</a>, <a class="el" href="kvi__app_8cpp.html#a5d91e669373d40e04bf12f72e2c03a11">g_pApp</a>, <a class="el" href="kvi__app_8cpp.html#a72e5354b52ccbee111e36d758e73790e">g_pUserChanStatePixmap</a>, <a class="el" href="classKviIconManager.html#a662a542fb7b17ee4bc3496a07c9441e1">initQResourceBackend()</a>, <a class="el" href="kvi__iconmanager_8h.html#ab1ae9d40c490aa74df8202c6fdbd5817">KVI_ACTIVITYMETER_IMAGE_NAME</a>, <a class="el" href="kvi__iconmanager_8h.html#a9ff1ba2255ce0e44e7f0c00b2807975e">KVI_NUM_SMALL_ICONS</a>, <a class="el" href="kvi__iconmanager_8h.html#a0120e42525e442d28d15d1fe04a10f7b">KVI_USERCHANSTATE_IMAGE_NAME</a>, <a class="el" href="classKviIconManager.html#ac3ca24a52084b7770bc3774444a21d33">m_pCachedImages</a>, <a class="el" href="classKviIconManager.html#a526f4967060f67fda09601a826758eaf">m_pIconNames</a>, <a class="el" href="classKviIconManager.html#a0dc9e79b792d7ec85a725af3d9a861d7">m_pIconWidget</a>, <a class="el" href="classKviIconManager.html#a1a6fdb35972ebc9ccc0e7081fb3f1dc1">m_smallIcons</a>, <a class="el" href="classKviIconManager.html#aec5b3913b77816a38e53e647d0193a28">m_uCacheMaxSize</a>, <a class="el" href="classKviIconManager.html#a4618a867333f464d9a2f53a3e0e95dcb">m_uCacheTotalSize</a>, and <a class="el" href="classKviPointerHashTable.html#ac4b0eb0129f8d32f757d1a2a846d85cd">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="classKviApp.html#a4bf6629dfcc698f64ecb56fde2ff570e">KviApp::findImage()</a>, <a class="el" href="kvi__app_8cpp.html#a9c095c5c83fa0e34e42016bbe70bc42d">g_pActivityMeterPixmap</a>, <a class="el" href="kvi__app_8cpp.html#a5d91e669373d40e04bf12f72e2c03a11">g_pApp</a>, <a class="el" href="kvi__app_8cpp.html#a72e5354b52ccbee111e36d758e73790e">g_pUserChanStatePixmap</a>, <a class="el" href="classKviIconManager.html#a662a542fb7b17ee4bc3496a07c9441e1">initQResourceBackend()</a>, <a class="el" href="kvi__iconmanager_8h.html#ab1ae9d40c490aa74df8202c6fdbd5817">KVI_ACTIVITYMETER_IMAGE_NAME</a>, <a class="el" href="kvi__iconmanager_8h.html#a9ff1ba2255ce0e44e7f0c00b2807975e">KVI_NUM_SMALL_ICONS</a>, <a class="el" href="kvi__iconmanager_8h.html#a0120e42525e442d28d15d1fe04a10f7b">KVI_USERCHANSTATE_IMAGE_NAME</a>, <a class="el" href="classKviIconManager.html#ac3ca24a52084b7770bc3774444a21d33">m_pCachedImages</a>, <a class="el" href="classKviIconManager.html#a526f4967060f67fda09601a826758eaf">m_pIconNames</a>, <a class="el" href="classKviIconManager.html#a0dc9e79b792d7ec85a725af3d9a861d7">m_pIconWidget</a>, <a class="el" href="classKviIconManager.html#a1a6fdb35972ebc9ccc0e7081fb3f1dc1">m_smallIcons</a>, <a class="el" href="classKviIconManager.html#aec5b3913b77816a38e53e647d0193a28">m_uCacheMaxSize</a>, and <a class="el" href="classKviIconManager.html#a4618a867333f464d9a2f53a3e0e95dcb">m_uCacheTotalSize</a>.</p>
 
 </div>
 </div>
@@ -145,7 +145,7 @@ int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviIconManager.html#a79ce60bce36aa71aa80f72cd880309ab">cacheCleanup()</a>, <a class="el" href="classKviPointerHashTable.html#a9694589651d8fd3f91a42611f1f29133">KviPointerHashTable&lt; Key, T &gt;::insert()</a>, <a class="el" href="classKviIconManager.html#ac3ca24a52084b7770bc3774444a21d33">m_pCachedImages</a>, <a class="el" href="classKviIconManager.html#aec5b3913b77816a38e53e647d0193a28">m_uCacheMaxSize</a>, <a class="el" href="classKviIconManager.html#a4618a867333f464d9a2f53a3e0e95dcb">m_uCacheTotalSize</a>, and <a class="el" href="classKviCachedPixmap.html#a58900fee2372cc9732f9d009c2ac0707">KviCachedPixmap::size()</a>.</p>
+<p>References <a class="el" href="classKviIconManager.html#a79ce60bce36aa71aa80f72cd880309ab">cacheCleanup()</a>, <a class="el" href="classKviIconManager.html#ac3ca24a52084b7770bc3774444a21d33">m_pCachedImages</a>, <a class="el" href="classKviIconManager.html#aec5b3913b77816a38e53e647d0193a28">m_uCacheMaxSize</a>, <a class="el" href="classKviIconManager.html#a4618a867333f464d9a2f53a3e0e95dcb">m_uCacheTotalSize</a>, and <a class="el" href="classKviCachedPixmap.html#a58900fee2372cc9732f9d009c2ac0707">KviCachedPixmap::size()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIconManager.html#a516b6236fb0fa37090fbbe2bf731f2f0">getBigIcon()</a>, <a class="el" href="classKviIconManager.html#ab0631f4f5839f6c040b7a849a8a2057e">getPixmapWithCache()</a>, and <a class="el" href="classKviIconManager.html#a38a6d01ab0f03b36f9093d365292c2cb">getPixmapWithCacheScaleOnLoad()</a>.</p>
 
@@ -185,7 +185,7 @@ int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerHashTable.html#a04e3b957cd82abaeca9e101915b86c88">KviPointerHashTable&lt; Key, T &gt;::clear()</a>, and <a class="el" href="classKviIconManager.html#ac3ca24a52084b7770bc3774444a21d33">m_pCachedImages</a>.</p>
+<p>References <a class="el" href="classKviIconManager.html#ac3ca24a52084b7770bc3774444a21d33">m_pCachedImages</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIconManager.html#a24dbda02c4bc2601eb4f5bf3e8bde08f">reloadImages()</a>.</p>
 
@@ -196,7 +196,7 @@ int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviAvatar.html">KviAvatar</a> * KviIconManager::getAvatar </td>
+          <td class="memname">KviAvatar * KviIconManager::getAvatar </td>
           <td>(</td>
           <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"> <em>szLocalPath</em>, </td>
@@ -216,7 +216,7 @@ int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviApp.html#a86f530c0e147d7ebe10c0c9f8a16abdda1ccfde564c1e5d733193b13616458c63">KviApp::Avatars</a>, <a class="el" href="namespaceKviQString.html#afe84786f6e548c13eb18c3c6a8f25491">KviQString::equalCIN()</a>, <a class="el" href="namespaceKviFileUtils.html#a33d98ccc756d296ee9a45de0317920ed">KviFileUtils::extractFileName()</a>, <a class="el" href="namespaceKviFileUtils.html#addf8271376fc6c3ad51045e10d8aeaec">KviFileUtils::fileExists()</a>, <a class="el" href="kvi__app_8cpp.html#a5d91e669373d40e04bf12f72e2c03a11">g_pApp</a>, <a class="el" href="classKviApp.html#aa42fdc1ee5118e7902f76048e4d60f9d">KviApp::getLocalKvircDirectory()</a>, <a class="el" href="classKviAvatar.html#af65b8c1aa74460218511efbab39f72b4">KviAvatar::isValid()</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#ae69b0fd7eb238f40d4c177d8a44e77df">KVI_OPTION_UINT</a>, <a class="el" href="kvi__options_8h.html#a0c67a73146e993e67039bd6e63e06d99">KviOption_boolScaleAvatarsOnLoad</a>, <a class="el" href="kvi__options_8h.html#aa29b81ab05d4e00b349d6e08b8f5fa62">KviOption_uintScaleAvatarsOnLoadHeight</a>, <a class="el" href="kvi__options_8h.html#abc41c66bac7436a64effc7f78a4f82a9">KviOption_uintScaleAvatarsOnLoadWidth</a>, and <a class="el" href="classKviIconManager.html#a4a9ce92e5ef05fa0e1cf3adce1aff2b1">urlToCachedFileName()</a>.</p>
+<p>References <a class="el" href="classKviApp.html#a86f530c0e147d7ebe10c0c9f8a16abdda1ccfde564c1e5d733193b13616458c63">KviApp::Avatars</a>, <a class="el" href="kvi__app_8cpp.html#a5d91e669373d40e04bf12f72e2c03a11">g_pApp</a>, <a class="el" href="classKviApp.html#aa42fdc1ee5118e7902f76048e4d60f9d">KviApp::getLocalKvircDirectory()</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#ae69b0fd7eb238f40d4c177d8a44e77df">KVI_OPTION_UINT</a>, <a class="el" href="kvi__options_8h.html#a0c67a73146e993e67039bd6e63e06d99">KviOption_boolScaleAvatarsOnLoad</a>, <a class="el" href="kvi__options_8h.html#aa29b81ab05d4e00b349d6e08b8f5fa62">KviOption_uintScaleAvatarsOnLoadHeight</a>, <a class="el" href="kvi__options_8h.html#abc41c66bac7436a64effc7f78a4f82a9">KviOption_uintScaleAvatarsOnLoadWidth</a>, and <a class="el" href="classKviIconManager.html#a4a9ce92e5ef05fa0e1cf3adce1aff2b1">urlToCachedFileName()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviConsole.html#a9e4fb5b9de271f06849014368289a2f2">KviConsole::checkDefaultAvatar()</a>, <a class="el" href="classKviServerParser.html#abb185f267c08f444b6990680c2b7bbf3">KviServerParser::parseCtcpReplyAvatar()</a>, <a class="el" href="classKviConsole.html#abf30ca8fd4fc6ed165c9625ca4fb3b5c">KviConsole::resetAvatarForMatchingUsers()</a>, and <a class="el" href="classKviConsole.html#a14d7751a7fdd30b60fbf59bb54b6d50a">KviConsole::setAvatar()</a>.</p>
 
@@ -274,7 +274,7 @@ int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviIconManager.html#ab0631f4f5839f6c040b7a849a8a2057e">getPixmapWithCache()</a>, <a class="el" href="classKviIconManager.html#a18563529ab125d8bc7a5221fcb83e408">getSmallIcon()</a>, <a class="el" href="classKviIconManager.html#a664ab5d21757832a2a9c80b91c367af2">getSmallIconIdFromName()</a>, <a class="el" href="kvi__iconmanager_8h.html#a9ff1ba2255ce0e44e7f0c00b2807975e">KVI_NUM_SMALL_ICONS</a>, <a class="el" href="kvi__numeric_8h.html#af2ebd5db010f0e321c1faa0e6a182c2b">NULL</a>, <a class="el" href="classKviCachedPixmap.html#ad85d727980b0ff24f3efed6b02d23cf8">KviCachedPixmap::path()</a>, and <a class="el" href="classKviCachedPixmap.html#ab409f42be162f1fc66fc91db232c0403">KviCachedPixmap::pixmap()</a>.</p>
+<p>References <a class="el" href="classKviIconManager.html#ab0631f4f5839f6c040b7a849a8a2057e">getPixmapWithCache()</a>, <a class="el" href="classKviIconManager.html#a18563529ab125d8bc7a5221fcb83e408">getSmallIcon()</a>, <a class="el" href="classKviIconManager.html#a664ab5d21757832a2a9c80b91c367af2">getSmallIconIdFromName()</a>, <a class="el" href="kvi__iconmanager_8h.html#a9ff1ba2255ce0e44e7f0c00b2807975e">KVI_NUM_SMALL_ICONS</a>, <a class="el" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a>, <a class="el" href="classKviCachedPixmap.html#ad85d727980b0ff24f3efed6b02d23cf8">KviCachedPixmap::path()</a>, and <a class="el" href="classKviCachedPixmap.html#ab409f42be162f1fc66fc91db232c0403">KviCachedPixmap::pixmap()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviAction.html#acefe140b14d825cfc8b12f1419eef3a2">KviAction::bigIcon()</a>, <a class="el" href="classKviKvsPopupMenuItemWithTextAndIcon.html#a09c3da56a038a574d7e62c972a33f093">KviKvsPopupMenuItemWithTextAndIcon::evaluateIcon()</a>, <a class="el" href="classKviFrame.html#ae6017b25c88063a49ce5331a8097b765">KviFrame::fillToolBarsPopup()</a>, <a class="el" href="classKviKvsObject.html#adae07322391f4acf65ac9367837cb764">KviKvsObject::function_setProperty()</a>, <a class="el" href="namespaceKviKvsCoreCallbackCommands.html#a8df2eef7ea8017c67516bcbf51685d10">KviKvsCoreCallbackCommands::KVSCCC()</a>, <a class="el" href="namespaceKviKvsCoreSimpleCommands.html#afd9a58aba9f16b970990269593022110">KviKvsCoreSimpleCommands::KVSCSC()</a>, and <a class="el" href="classKviAction.html#ab97e47d4ee5a86fb1a5e4e8d338bb7ae">KviAction::smallIcon()</a>.</p>
 
@@ -316,7 +316,7 @@ int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviIconManager.html#ae3893285c4759d2b509e7b1a68e969f7">addToCache()</a>, <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="classKviApp.html#a4bf6629dfcc698f64ecb56fde2ff570e">KviApp::findImage()</a>, <a class="el" href="kvi__app_8cpp.html#a5d91e669373d40e04bf12f72e2c03a11">g_pApp</a>, <a class="el" href="classKviIconManager.html#ac3ca24a52084b7770bc3774444a21d33">m_pCachedImages</a>, and <a class="el" href="classKviCachedPixmap.html#a0ab2d99968d1e4bdb2dae578056fdea9">KviCachedPixmap::updateLastAccessTime()</a>.</p>
+<p>References <a class="el" href="classKviIconManager.html#ae3893285c4759d2b509e7b1a68e969f7">addToCache()</a>, <a class="el" href="classKviApp.html#a4bf6629dfcc698f64ecb56fde2ff570e">KviApp::findImage()</a>, <a class="el" href="kvi__app_8cpp.html#a5d91e669373d40e04bf12f72e2c03a11">g_pApp</a>, <a class="el" href="classKviIconManager.html#ac3ca24a52084b7770bc3774444a21d33">m_pCachedImages</a>, and <a class="el" href="classKviCachedPixmap.html#a0ab2d99968d1e4bdb2dae578056fdea9">KviCachedPixmap::updateLastAccessTime()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIconManager.html#a2bef18c7f5a294f67b6e86a7baafb973">getImage()</a>, and <a class="el" href="namespaceKviTheme.html#afc947a792aac67a66d0402e09682ac13">KviTheme::save()</a>.</p>
 
@@ -353,7 +353,7 @@ int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviIconManager.html#ae3893285c4759d2b509e7b1a68e969f7">addToCache()</a>, <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="classKviApp.html#a4bf6629dfcc698f64ecb56fde2ff570e">KviApp::findImage()</a>, <a class="el" href="kvi__app_8cpp.html#a5d91e669373d40e04bf12f72e2c03a11">g_pApp</a>, <a class="el" href="classKviIconManager.html#ac3ca24a52084b7770bc3774444a21d33">m_pCachedImages</a>, and <a class="el" href="classKviCachedPixmap.html#a0ab2d99968d1e4bdb2dae578056fdea9">KviCachedPixmap::updateLastAccessTime()</a>.</p>
+<p>References <a class="el" href="classKviIconManager.html#ae3893285c4759d2b509e7b1a68e969f7">addToCache()</a>, <a class="el" href="classKviApp.html#a4bf6629dfcc698f64ecb56fde2ff570e">KviApp::findImage()</a>, <a class="el" href="kvi__app_8cpp.html#a5d91e669373d40e04bf12f72e2c03a11">g_pApp</a>, <a class="el" href="classKviIconManager.html#ac3ca24a52084b7770bc3774444a21d33">m_pCachedImages</a>, and <a class="el" href="classKviCachedPixmap.html#a0ab2d99968d1e4bdb2dae578056fdea9">KviCachedPixmap::updateLastAccessTime()</a>.</p>
 
 </div>
 </div>
@@ -393,7 +393,7 @@ int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__iconmanager_8cpp.html#a31cf6dc994bd2488af69e6879de7e3d7">g_szIconNames</a>, <a class="el" href="kvi__iconmanager_8h.html#a9ff1ba2255ce0e44e7f0c00b2807975e">KVI_NUM_SMALL_ICONS</a>, <a class="el" href="classKviIconManager.html#a526f4967060f67fda09601a826758eaf">m_pIconNames</a>, <a class="el" href="classKviPointerHashTable.html#a429780ac2d3e4c2c7376c93a50da1f54">KviPointerHashTable&lt; Key, T &gt;::replace()</a>, and <a class="el" href="classKviPointerHashTable.html#ac4b0eb0129f8d32f757d1a2a846d85cd">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="kvi__iconmanager_8cpp.html#a31cf6dc994bd2488af69e6879de7e3d7">g_szIconNames</a>, <a class="el" href="kvi__iconmanager_8h.html#a9ff1ba2255ce0e44e7f0c00b2807975e">KVI_NUM_SMALL_ICONS</a>, and <a class="el" href="classKviIconManager.html#a526f4967060f67fda09601a826758eaf">m_pIconNames</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIconManager.html#a2bef18c7f5a294f67b6e86a7baafb973">getImage()</a>, and <a class="el" href="namespaceKviKvsCoreFunctions.html#a68e36051022300d146a3b6a03633004d">KviKvsCoreFunctions::KVSCF()</a>.</p>
 
@@ -496,7 +496,7 @@ int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviApp.html#ae034ebf4cc4bd78d7becfbad378066e7">KviApp::findSmallIcon()</a>, <a class="el" href="kvi__app_8cpp.html#a5d91e669373d40e04bf12f72e2c03a11">g_pApp</a>, <a class="el" href="kvi__iconmanager_8cpp.html#a31cf6dc994bd2488af69e6879de7e3d7">g_szIconNames</a>, <a class="el" href="kvi__iconmanager_8h.html#a9ff1ba2255ce0e44e7f0c00b2807975e">KVI_NUM_SMALL_ICONS</a>, <a class="el" href="kvi__iconmanager_8h.html#a4ad50d597dfe8c37e6db00afc066bbca">KVI_SMALLICONS_PREFIX</a>, <a class="el" href="classKviIconManager.html#a1a6fdb35972ebc9ccc0e7081fb3f1dc1">m_smallIcons</a>, and <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>.</p>
+<p>References <a class="el" href="classKviApp.html#ae034ebf4cc4bd78d7becfbad378066e7">KviApp::findSmallIcon()</a>, <a class="el" href="kvi__app_8cpp.html#a5d91e669373d40e04bf12f72e2c03a11">g_pApp</a>, <a class="el" href="kvi__iconmanager_8cpp.html#a31cf6dc994bd2488af69e6879de7e3d7">g_szIconNames</a>, <a class="el" href="kvi__iconmanager_8h.html#a9ff1ba2255ce0e44e7f0c00b2807975e">KVI_NUM_SMALL_ICONS</a>, <a class="el" href="kvi__iconmanager_8h.html#a4ad50d597dfe8c37e6db00afc066bbca">KVI_SMALLICONS_PREFIX</a>, and <a class="el" href="classKviIconManager.html#a1a6fdb35972ebc9ccc0e7081fb3f1dc1">m_smallIcons</a>.</p>
 
 </div>
 </div>
@@ -563,7 +563,7 @@ int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,<a class="el" href="classKviCachedPixmap.html">KviCachedPixmap</a>&gt;* <a class="el" href="classKviIconManager.html#ac3ca24a52084b7770bc3774444a21d33">KviIconManager::m_pCachedImages</a><code> [private]</code></td>
+          <td class="memname">KviPointerHashTable&lt;QString,<a class="el" href="classKviCachedPixmap.html">KviCachedPixmap</a>&gt;* <a class="el" href="classKviIconManager.html#ac3ca24a52084b7770bc3774444a21d33">KviIconManager::m_pCachedImages</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -578,7 +578,7 @@ int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,int&gt;* <a class="el" href="classKviIconManager.html#a526f4967060f67fda09601a826758eaf">KviIconManager::m_pIconNames</a><code> [private]</code></td>
+          <td class="memname">KviPointerHashTable&lt;QString,int&gt;* <a class="el" href="classKviIconManager.html#a526f4967060f67fda09601a826758eaf">KviIconManager::m_pIconNames</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -653,7 +653,7 @@ int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <li>src/kvirc/kernel/<a class="el" href="kvi__iconmanager_8cpp.html">kvi_iconmanager.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:57 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

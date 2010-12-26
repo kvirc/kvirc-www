@@ -53,9 +53,9 @@ Signals</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviActionManager.html#a6fb934c20236804818c0638509b8d7ca">removeActionsHintRequest</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 <a class="el" href="classKviAction.html">KviAction</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviActionManager.html#ab895668dc39c326d50a959abcbd9c89e">actions</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 <a class="el" href="classKviActionCategory.html">KviActionCategory</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviActionManager.html#ab387e45d1cdc9254b7e34387a208380a">categories</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviActionCategory.html">KviActionCategory</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviActionManager.html#a16570a1ff53fab8d003e534df7c31432">category</a> (const QString &amp;szName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviActionManager.html#a93afdf5c03f6e84cae82d510782d1375">coreActionExists</a> (const QString &amp;szName)</td></tr>
@@ -63,7 +63,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviAction.html">KviAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviActionManager.html#a47276709308dad0ac9cb2208256618c0">getAction</a> (const QString &amp;szName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviActionManager.html#a5731e09c53d6a9e6ba6d2c8e1c7b3f35">killAllKvsUserActions</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviActionManager.html#a4aaa482475d7749f6248e1e865943892">KviActionManager</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviActionManager.html#ada1262de2204fa08a338239168d86c46">listActionsByCategory</a> (const QString &amp;szCatName, <a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="classKviAction.html">KviAction</a> &gt; *pBuffer)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviActionManager.html#ada1262de2204fa08a338239168d86c46">listActionsByCategory</a> (const QString &amp;szCatName, KviPointerList&lt; <a class="el" href="classKviAction.html">KviAction</a> &gt; *pBuffer)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviActionManager.html#a8d944f3c245339ea73ef4065b7645003">load</a> (const QString &amp;szFileName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviActionManager.html#add387a6d905e3abe0386e8279db01e09">nameForAutomaticAction</a> (const QString &amp;szTemplate)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviActionManager.html#a2888b7a3e52574094deb415c7d943029">registerAction</a> (<a class="el" href="classKviAction.html">KviAction</a> *a)</td></tr>
@@ -99,9 +99,9 @@ Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviActionManager.html#a8841f8979d73fc8631eb1f2d7edf76e1">m_bCoreActionsRegistered</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 <a class="el" href="classKviAction.html">KviAction</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 <a class="el" href="classKviActionCategory.html">KviActionCategory</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviActionManager.html#a5157cbe94c41b2b3179b2e6beb62ec9f">m_pCategories</a></td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
@@ -137,7 +137,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__actionmanager_8cpp.html#ab9536d2a4c77968e3fdd3da93d479d8e">CATEGORY</a>, <a class="el" href="classKviActionManager.html#a8841f8979d73fc8631eb1f2d7edf76e1">m_bCoreActionsRegistered</a>, <a class="el" href="classKviActionManager.html#a812156f144f5a3f39aa91e800a26c309">m_bCustomizingToolBars</a>, <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>, <a class="el" href="classKviActionManager.html#a5157cbe94c41b2b3179b2e6beb62ec9f">m_pCategories</a>, <a class="el" href="classKviActionManager.html#a8a3183e408cf24773630ce43cdf70e75">m_pCategoryChannel</a>, <a class="el" href="classKviActionManager.html#a71b270d5582a8b920e346e7ddb0a07dc">m_pCategoryGeneric</a>, <a class="el" href="classKviActionManager.html#adefc24836932e45c80ad085ad55824b2">m_pCategoryGUI</a>, <a class="el" href="classKviActionManager.html#a8214e14cecc16c50a17561a8f1ba4359">m_pCategoryIrc</a>, <a class="el" href="classKviActionManager.html#a83437fa5f61dc73b1889cf453be642a0">m_pCategoryScripting</a>, <a class="el" href="classKviActionManager.html#abdacd095bd9513a548bb8dda592d0359">m_pCategorySettings</a>, <a class="el" href="classKviActionManager.html#a6df63398e6eca95b494f83347f5ea564">m_pCategoryTools</a>, <a class="el" href="classKviActionManager.html#a3037eac18d84ba7cee28fe7a7bcfec2b">m_pCurrentToolBar</a>, and <a class="el" href="classKviPointerHashTable.html#ac4b0eb0129f8d32f757d1a2a846d85cd">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="kvi__actionmanager_8cpp.html#ab9536d2a4c77968e3fdd3da93d479d8e">CATEGORY</a>, <a class="el" href="classKviActionManager.html#a8841f8979d73fc8631eb1f2d7edf76e1">m_bCoreActionsRegistered</a>, <a class="el" href="classKviActionManager.html#a812156f144f5a3f39aa91e800a26c309">m_bCustomizingToolBars</a>, <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>, <a class="el" href="classKviActionManager.html#a5157cbe94c41b2b3179b2e6beb62ec9f">m_pCategories</a>, <a class="el" href="classKviActionManager.html#a8a3183e408cf24773630ce43cdf70e75">m_pCategoryChannel</a>, <a class="el" href="classKviActionManager.html#a71b270d5582a8b920e346e7ddb0a07dc">m_pCategoryGeneric</a>, <a class="el" href="classKviActionManager.html#adefc24836932e45c80ad085ad55824b2">m_pCategoryGUI</a>, <a class="el" href="classKviActionManager.html#a8214e14cecc16c50a17561a8f1ba4359">m_pCategoryIrc</a>, <a class="el" href="classKviActionManager.html#a83437fa5f61dc73b1889cf453be642a0">m_pCategoryScripting</a>, <a class="el" href="classKviActionManager.html#abdacd095bd9513a548bb8dda592d0359">m_pCategorySettings</a>, <a class="el" href="classKviActionManager.html#a6df63398e6eca95b494f83347f5ea564">m_pCategoryTools</a>, and <a class="el" href="classKviActionManager.html#a3037eac18d84ba7cee28fe7a7bcfec2b">m_pCurrentToolBar</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviActionManager.html#a29af5f3f21c2cc0709e32733b0c935f8">init()</a>.</p>
 
@@ -157,7 +157,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviActionManager.html#a6c9ac82201ad262383a3821b2e9e83fb">actionDestroyed()</a>, <a class="el" href="classKviPointerHashTableIterator.html#a118714da73f457cf6cbea89c83d2f8e3">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>, and <a class="el" href="classKviActionManager.html#a5157cbe94c41b2b3179b2e6beb62ec9f">m_pCategories</a>.</p>
+<p>References <a class="el" href="classKviActionManager.html#a6c9ac82201ad262383a3821b2e9e83fb">actionDestroyed()</a>, <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>, and <a class="el" href="classKviActionManager.html#a5157cbe94c41b2b3179b2e6beb62ec9f">m_pCategories</a>.</p>
 
 </div>
 </div>
@@ -176,7 +176,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>, <a class="el" href="classKviAction.html#a1a45f49e6669e13643057319e40f303c">KviAction::name()</a>, and <a class="el" href="classKviPointerHashTable.html#aa7a770856e2431e6c9a07c9b08ad256a">KviPointerHashTable&lt; Key, T &gt;::remove()</a>.</p>
+<p>References <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>, and <a class="el" href="classKviAction.html#a1a45f49e6669e13643057319e40f303c">KviAction::name()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviActionManager.html#a2888b7a3e52574094deb415c7d943029">registerAction()</a>, <a class="el" href="classKviActionManager.html#a54184be7b1a2b4bce5d0a2806f343a84">unregisterAction()</a>, and <a class="el" href="classKviActionManager.html#ae2c0ac4d3c0671c7e4e964ca686fb466">~KviActionManager()</a>.</p>
 
@@ -187,7 +187,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,<a class="el" href="classKviAction.html">KviAction</a>&gt;* KviActionManager::actions </td>
+          <td class="memname">KviPointerHashTable&lt;QString,<a class="el" href="classKviAction.html">KviAction</a>&gt;* KviActionManager::actions </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td><code> [inline]</code></td>
@@ -223,7 +223,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,<a class="el" href="classKviActionCategory.html">KviActionCategory</a>&gt;* KviActionManager::categories </td>
+          <td class="memname">KviPointerHashTable&lt;QString,<a class="el" href="classKviActionCategory.html">KviActionCategory</a>&gt;* KviActionManager::categories </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td><code> [inline]</code></td>
@@ -249,9 +249,9 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>, <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="classKviActionManager.html#a5157cbe94c41b2b3179b2e6beb62ec9f">m_pCategories</a>, and <a class="el" href="classKviActionManager.html#a71b270d5582a8b920e346e7ddb0a07dc">m_pCategoryGeneric</a>.</p>
+<p>References <a class="el" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>, <a class="el" href="classKviActionManager.html#a5157cbe94c41b2b3179b2e6beb62ec9f">m_pCategories</a>, and <a class="el" href="classKviActionManager.html#a71b270d5582a8b920e346e7ddb0a07dc">m_pCategoryGeneric</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviKvsUserAction.html#a2e8b72d6007a914eea6d552583800cf6">KviKvsUserAction::KviKvsUserAction()</a>, <a class="el" href="classKviActionManager.html#ada1262de2204fa08a338239168d86c46">listActionsByCategory()</a>, and <a class="el" href="classKviKvsUserAction.html#aad8c2392383416e54f4a96fd38e644b5">KviKvsUserAction::load()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsUserAction.html#a2e8b72d6007a914eea6d552583800cf6">KviKvsUserAction::KviKvsUserAction()</a>, <a class="el" href="classKviActionManager.html#ada1262de2204fa08a338239168d86c46">listActionsByCategory()</a>, and <a class="el" href="classKviKvsUserAction.html#a0ef18c6e6dbc74466b179b890984a916">KviKvsUserAction::load()</a>.</p>
 
 </div>
 </div>
@@ -392,7 +392,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="classKviAction.html#accba5fa240c2d86cf46433fd17d01332">KviAction::isKviUserActionNeverOverrideThis()</a>, and <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>.</p>
+<p>References <a class="el" href="classKviAction.html#accba5fa240c2d86cf46433fd17d01332">KviAction::isKviUserActionNeverOverrideThis()</a>, and <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>.</p>
 
 </div>
 </div>
@@ -500,7 +500,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerHashTableIterator.html#a118714da73f457cf6cbea89c83d2f8e3">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, and <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>.</p>
+<p>References <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviFrame.html#aa722a7867d641f245e1a7d3971f1df01">KviFrame::createNewConsole()</a>.</p>
 
@@ -594,7 +594,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__modulemanager_8cpp.html#ad5107dd04eb0a4a5441db378ca913656">g_pModuleManager</a>, <a class="el" href="classKviModuleManager.html#ac2e155f3662711bea29ca85050aedc4c">KviModuleManager::getModule()</a>, <a class="el" href="classKviActionManager.html#a8841f8979d73fc8631eb1f2d7edf76e1">m_bCoreActionsRegistered</a>, <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>, <a class="el" href="kvi__actionmanager_8cpp.html#a1998324ae1253c8c8b9241a52e845298">register_core_actions()</a>, and <a class="el" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>.</p>
+<p>References <a class="el" href="kvi__modulemanager_8cpp.html#ad5107dd04eb0a4a5441db378ca913656">g_pModuleManager</a>, <a class="el" href="classKviModuleManager.html#ac2e155f3662711bea29ca85050aedc4c">KviModuleManager::getModule()</a>, <a class="el" href="classKviActionManager.html#a8841f8979d73fc8631eb1f2d7edf76e1">m_bCoreActionsRegistered</a>, <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>, <a class="el" href="kvi__actionmanager_8cpp.html#a1998324ae1253c8c8b9241a52e845298">register_core_actions()</a>, and <a class="el" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviCustomToolBarDescriptor.html#ae21ec2dfa2c9e41a64db104daed9278a">KviCustomToolBarDescriptor::addAction()</a>, <a class="el" href="classKviCustomToolBar.html#a96f2ced1984361552b6dbf14a4a2b929">KviCustomToolBar::dragEnterEvent()</a>, <a class="el" href="classKviCustomToolBar.html#a78831c31b474c3069adee4e02c2c6d90">KviCustomToolBar::eventFilter()</a>, <a class="el" href="classKviCustomToolBarDescriptor.html#ad81d1ef94d547a5e7e99849727a1a734">KviCustomToolBarDescriptor::fillToolBar()</a>, <a class="el" href="classKviActionDrawerPageListWidget.html#ac48b4d25c51278e7125b31ca8e5a38fe">KviActionDrawerPageListWidget::mousePressEvent()</a>, <a class="el" href="classKviIrcOperationsAction.html#a22ea4d32f06e16820ac5193ee705a999">KviIrcOperationsAction::popupAboutToShow()</a>, and <a class="el" href="classKviIrcToolsAction.html#a08bbbc71e7bea0e06b9ae08204bb6f0f">KviIrcToolsAction::popupAboutToShow()</a>.</p>
 
@@ -632,7 +632,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviCustomToolBarDescriptor.html#ae21ec2dfa2c9e41a64db104daed9278a">KviCustomToolBarDescriptor::addAction()</a>, <a class="el" href="classKviFrame.html#aa722a7867d641f245e1a7d3971f1df01">KviFrame::createNewConsole()</a>, <a class="el" href="classKviActionManager.html#a1553c35f6314041a314fe90cd9ae105f">customizeToolBarsDialogCreated()</a>, <a class="el" href="classKviCustomToolBar.html#a96f2ced1984361552b6dbf14a4a2b929">KviCustomToolBar::dragEnterEvent()</a>, <a class="el" href="classKviCustomToolBar.html#a78831c31b474c3069adee4e02c2c6d90">KviCustomToolBar::eventFilter()</a>, <a class="el" href="classKviActionDrawer.html#a8ee14012ca762ec0172ffe440e50ca29">KviActionDrawer::fill()</a>, <a class="el" href="classKviCustomToolBarDescriptor.html#ad81d1ef94d547a5e7e99849727a1a734">KviCustomToolBarDescriptor::fillToolBar()</a>, <a class="el" href="classKviCustomToolBar.html#a9e6b6cf0081a6a8554e2571f00353212">KviCustomToolBar::KviCustomToolBar()</a>, <a class="el" href="classKviKvsUserAction.html#a2e8b72d6007a914eea6d552583800cf6">KviKvsUserAction::KviKvsUserAction()</a>, <a class="el" href="classKviKvsUserAction.html#aad8c2392383416e54f4a96fd38e644b5">KviKvsUserAction::load()</a>, <a class="el" href="classKviActionManager.html#a684c906ca7d6c287fd7889239fa4c901">loadAllAvailableActions()</a>, <a class="el" href="classKviCustomToolBar.html#aa4d50f13b824c24b999e089e95082478">KviCustomToolBar::mousePressEvent()</a>, <a class="el" href="classKviActionDrawerPageListWidget.html#ac48b4d25c51278e7125b31ca8e5a38fe">KviActionDrawerPageListWidget::mousePressEvent()</a>, <a class="el" href="classKviIrcOperationsAction.html#a22ea4d32f06e16820ac5193ee705a999">KviIrcOperationsAction::popupAboutToShow()</a>, <a class="el" href="classKviIrcToolsAction.html#a08bbbc71e7bea0e06b9ae08204bb6f0f">KviIrcToolsAction::popupAboutToShow()</a>, <a class="el" href="classKviDefaultScriptManager.html#a48cb422babf753eeb2d9b776886c18ce">KviDefaultScriptManager::restoreInternal()</a>, <a class="el" href="classKviApp.html#a8686497724ac6772ece4c25066d6e070">KviApp::saveActions()</a>, <a class="el" href="classKviActionManager.html#a9fe32a103ac3bd12ee88dd7b6fa6520b">setCurrentToolBar()</a>, <a class="el" href="classKviApp.html#a46137d422c9dc91809a6d60314343a65">KviApp::setup()</a>, <a class="el" href="classKviMenuBar.html#a608e31561a2b828f70fa8448f1400330">KviMenuBar::setupToolsPopup()</a>, and <a class="el" href="classKviCustomToolBar.html#aea2bb7d6050454b4e7595db940958760">KviCustomToolBar::~KviCustomToolBar()</a>.</p>
+<p>Referenced by <a class="el" href="classKviCustomToolBarDescriptor.html#ae21ec2dfa2c9e41a64db104daed9278a">KviCustomToolBarDescriptor::addAction()</a>, <a class="el" href="classKviFrame.html#aa722a7867d641f245e1a7d3971f1df01">KviFrame::createNewConsole()</a>, <a class="el" href="classKviActionManager.html#a1553c35f6314041a314fe90cd9ae105f">customizeToolBarsDialogCreated()</a>, <a class="el" href="classKviCustomToolBar.html#a96f2ced1984361552b6dbf14a4a2b929">KviCustomToolBar::dragEnterEvent()</a>, <a class="el" href="classKviCustomToolBar.html#a78831c31b474c3069adee4e02c2c6d90">KviCustomToolBar::eventFilter()</a>, <a class="el" href="classKviActionDrawer.html#a8ee14012ca762ec0172ffe440e50ca29">KviActionDrawer::fill()</a>, <a class="el" href="classKviCustomToolBarDescriptor.html#ad81d1ef94d547a5e7e99849727a1a734">KviCustomToolBarDescriptor::fillToolBar()</a>, <a class="el" href="classKviCustomToolBar.html#a9e6b6cf0081a6a8554e2571f00353212">KviCustomToolBar::KviCustomToolBar()</a>, <a class="el" href="classKviKvsUserAction.html#a2e8b72d6007a914eea6d552583800cf6">KviKvsUserAction::KviKvsUserAction()</a>, <a class="el" href="classKviKvsUserAction.html#a0ef18c6e6dbc74466b179b890984a916">KviKvsUserAction::load()</a>, <a class="el" href="classKviActionManager.html#a684c906ca7d6c287fd7889239fa4c901">loadAllAvailableActions()</a>, <a class="el" href="classKviCustomToolBar.html#aa4d50f13b824c24b999e089e95082478">KviCustomToolBar::mousePressEvent()</a>, <a class="el" href="classKviActionDrawerPageListWidget.html#ac48b4d25c51278e7125b31ca8e5a38fe">KviActionDrawerPageListWidget::mousePressEvent()</a>, <a class="el" href="classKviIrcOperationsAction.html#a22ea4d32f06e16820ac5193ee705a999">KviIrcOperationsAction::popupAboutToShow()</a>, <a class="el" href="classKviIrcToolsAction.html#a08bbbc71e7bea0e06b9ae08204bb6f0f">KviIrcToolsAction::popupAboutToShow()</a>, <a class="el" href="classKviDefaultScriptManager.html#a48cb422babf753eeb2d9b776886c18ce">KviDefaultScriptManager::restoreInternal()</a>, <a class="el" href="classKviApp.html#a8686497724ac6772ece4c25066d6e070">KviApp::saveActions()</a>, <a class="el" href="classKviActionManager.html#a9fe32a103ac3bd12ee88dd7b6fa6520b">setCurrentToolBar()</a>, <a class="el" href="classKviApp.html#a46137d422c9dc91809a6d60314343a65">KviApp::setup()</a>, <a class="el" href="classKviMenuBar.html#a608e31561a2b828f70fa8448f1400330">KviMenuBar::setupToolsPopup()</a>, and <a class="el" href="classKviCustomToolBar.html#aea2bb7d6050454b4e7595db940958760">KviCustomToolBar::~KviCustomToolBar()</a>.</p>
 
 </div>
 </div>
@@ -650,7 +650,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviPointerList.html#acc4c59d1af7c01f82f7afe2c5339ffda">KviPointerList&lt; T &gt;::clear()</a>, <a class="el" href="classKviPointerHashTableIterator.html#a118714da73f457cf6cbea89c83d2f8e3">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>, and <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviDefaultScriptManager.html#a48cb422babf753eeb2d9b776886c18ce">KviDefaultScriptManager::restoreInternal()</a>.</p>
 
@@ -669,7 +669,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="classKviAction.html">KviAction</a> &gt; *&#160;</td>
+          <td class="paramtype">KviPointerList&lt; <a class="el" href="classKviAction.html">KviAction</a> &gt; *&#160;</td>
           <td class="paramname"> <em>pBuffer</em>&#160;</td>
         </tr>
         <tr>
@@ -681,7 +681,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviActionManager.html#a16570a1ff53fab8d003e534df7c31432">category()</a>, <a class="el" href="classKviPointerList.html#acc4c59d1af7c01f82f7afe2c5339ffda">KviPointerList&lt; T &gt;::clear()</a>, <a class="el" href="classKviPointerHashTableIterator.html#a118714da73f457cf6cbea89c83d2f8e3">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="classKviActionManager.html#a684c906ca7d6c287fd7889239fa4c901">loadAllAvailableActions()</a>, <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>, and <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="classKviActionManager.html#a16570a1ff53fab8d003e534df7c31432">category()</a>, <a class="el" href="classKviActionManager.html#a684c906ca7d6c287fd7889239fa4c901">loadAllAvailableActions()</a>, and <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviMenuBar.html#a608e31561a2b828f70fa8448f1400330">KviMenuBar::setupToolsPopup()</a>.</p>
 
@@ -702,7 +702,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerHashTableIterator.html#a118714da73f457cf6cbea89c83d2f8e3">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="classKviPointerHashTableIterator.html#a86c86a3f9ca4386b1339a51f61ea291f">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="classKviConfig.html#a7e17a18c93263c0c6147fd6d15c475d8">KviConfig::dict()</a>, <a class="el" href="classKviKvsUserAction.html#aad8c2392383416e54f4a96fd38e644b5">KviKvsUserAction::load()</a>, <a class="el" href="classKviConfig.html#a0ee3925624620e77f29c851d918cd7f9a24fd017481048902ac931f2747782e69">KviConfig::Read</a>, <a class="el" href="classKviActionManager.html#a2888b7a3e52574094deb415c7d943029">registerAction()</a>, and <a class="el" href="classKviConfig.html#ab31c7473a1ff943b8694f2bc07570034">KviConfig::setGroup()</a>.</p>
+<p>References <a class="el" href="classKviKvsUserAction.html#a0ef18c6e6dbc74466b179b890984a916">KviKvsUserAction::load()</a>, and <a class="el" href="classKviActionManager.html#a2888b7a3e52574094deb415c7d943029">registerAction()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviApp.html#a46137d422c9dc91809a6d60314343a65">KviApp::setup()</a>.</p>
 
@@ -743,7 +743,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>, and <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>.</p>
+<p>References <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>.</p>
 
 </div>
 </div>
@@ -762,7 +762,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviActionManager.html#a6c9ac82201ad262383a3821b2e9e83fb">actionDestroyed()</a>, <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="kvi__frame_8cpp.html#a7895f8401924e0a65411209e3442790e">g_pFrame</a>, <a class="el" href="classKviPointerHashTable.html#a9694589651d8fd3f91a42611f1f29133">KviPointerHashTable&lt; Key, T &gt;::insert()</a>, <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>, <a class="el" href="classKviAction.html#a1a45f49e6669e13643057319e40f303c">KviAction::name()</a>, and <a class="el" href="classKviAction.html#a148689a7a89572c10af3170a3e5fd510">KviAction::registerAccelerator()</a>.</p>
+<p>References <a class="el" href="classKviActionManager.html#a6c9ac82201ad262383a3821b2e9e83fb">actionDestroyed()</a>, <a class="el" href="kvi__frame_8cpp.html#a7895f8401924e0a65411209e3442790e">g_pFrame</a>, <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>, <a class="el" href="classKviAction.html#a1a45f49e6669e13643057319e40f303c">KviAction::name()</a>, and <a class="el" href="classKviAction.html#a148689a7a89572c10af3170a3e5fd510">KviAction::registerAccelerator()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviActionManager.html#a8d944f3c245339ea73ef4065b7645003">load()</a>, and <a class="el" href="kvi__coreactions_8cpp.html#a29be7450b2c301d31d1ec09bd977c319">register_core_actions()</a>.</p>
 
@@ -801,7 +801,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviConfig.html#ae76b4f8d9d15f716ef3551953048817c">KviConfig::clear()</a>, <a class="el" href="classKviPointerHashTableIterator.html#a118714da73f457cf6cbea89c83d2f8e3">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>, <a class="el" href="classKviConfig.html#ab31c7473a1ff943b8694f2bc07570034">KviConfig::setGroup()</a>, and <a class="el" href="classKviConfig.html#a0ee3925624620e77f29c851d918cd7f9a0317e2b97dc42e49fde657f461a30c82">KviConfig::Write</a>.</p>
+<p>References <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviApp.html#a8686497724ac6772ece4c25066d6e070">KviApp::saveActions()</a>.</p>
 
@@ -859,7 +859,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviActionManager.html#a6c9ac82201ad262383a3821b2e9e83fb">actionDestroyed()</a>, <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>, <a class="el" href="classKviPointerHashTable.html#aa7a770856e2431e6c9a07c9b08ad256a">KviPointerHashTable&lt; Key, T &gt;::remove()</a>, and <a class="el" href="classKviAction.html#a2471e8daf4dbd6307412333851eec438">KviAction::unregisterAccelerator()</a>.</p>
+<p>References <a class="el" href="classKviActionManager.html#a6c9ac82201ad262383a3821b2e9e83fb">actionDestroyed()</a>, <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">m_pActions</a>, and <a class="el" href="classKviAction.html#a2471e8daf4dbd6307412333851eec438">KviAction::unregisterAccelerator()</a>.</p>
 
 </div>
 </div>
@@ -952,7 +952,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,<a class="el" href="classKviAction.html">KviAction</a>&gt;* <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">KviActionManager::m_pActions</a><code> [protected]</code></td>
+          <td class="memname">KviPointerHashTable&lt;QString,<a class="el" href="classKviAction.html">KviAction</a>&gt;* <a class="el" href="classKviActionManager.html#a8dbd9fe7fe911de19afc570212844ab9">KviActionManager::m_pActions</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -967,7 +967,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,<a class="el" href="classKviActionCategory.html">KviActionCategory</a>&gt;* <a class="el" href="classKviActionManager.html#a5157cbe94c41b2b3179b2e6beb62ec9f">KviActionManager::m_pCategories</a><code> [protected]</code></td>
+          <td class="memname">KviPointerHashTable&lt;QString,<a class="el" href="classKviActionCategory.html">KviActionCategory</a>&gt;* <a class="el" href="classKviActionManager.html#a5157cbe94c41b2b3179b2e6beb62ec9f">KviActionManager::m_pCategories</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -1117,7 +1117,7 @@ Friends</h2></td></tr>
 <li>src/kvirc/kernel/<a class="el" href="kvi__actionmanager_8cpp.html">kvi_actionmanager.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:56 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:06 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

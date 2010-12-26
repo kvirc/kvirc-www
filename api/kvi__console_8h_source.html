@@ -37,7 +37,7 @@
 <a name="l00006"></a>00006 <span class="comment">//   Creation date : Sun Jun 25 2000 15:00:20 by Szymon Stefanek</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">//   This file is part of the KVirc irc client distribution</span>
-<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2000-2008 Szymon Stefanek (pragma at kvirc dot net)</span>
+<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2000-2010 Szymon Stefanek (pragma at kvirc dot net)</span>
 <a name="l00010"></a>00010 <span class="comment">//</span>
 <a name="l00011"></a>00011 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00012"></a>00012 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -60,10 +60,10 @@
 <a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="kvi__ircconnectiontarget_8h.html">kvi_ircconnectiontarget.h</a>&quot;</span>
 <a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="kvi__window_8h.html" title="Contains the KviWindow class.">kvi_window.h</a>&quot;</span>
 <a name="l00031"></a>00031 <span class="preprocessor">#include &quot;<a class="code" href="kvi__ircsocket_8h.html" title="Lower stack protocol for IRC connection.">kvi_ircsocket.h</a>&quot;</span>
-<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;<a class="code" href="kvi__ircserver_8h.html" title="Irc server handling.">kvi_ircserver.h</a>&quot;</span>
-<a name="l00033"></a>00033 <span class="preprocessor">#include &quot;<a class="code" href="kvi__string_8h.html">kvi_string.h</a>&quot;</span>
+<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;KviIrcServer.h&quot;</span>
+<a name="l00033"></a>00033 <span class="preprocessor">#include &quot;KviCString.h&quot;</span>
 <a name="l00034"></a>00034 <span class="preprocessor">#include &quot;<a class="code" href="kvi__irccontext_8h.html">kvi_irccontext.h</a>&quot;</span>
-<a name="l00035"></a>00035 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerlist_8h.html" title="C++ Template based double linked pointer list class.">kvi_pointerlist.h</a>&quot;</span>
+<a name="l00035"></a>00035 <span class="preprocessor">#include &quot;KviPointerList.h&quot;</span>
 <a name="l00036"></a>00036 <span class="preprocessor">#include &quot;<a class="code" href="kvi__userlistview_8h.html" title="User list view management.">kvi_userlistview.h</a>&quot;</span>
 <a name="l00037"></a>00037 <span class="preprocessor">#include &quot;<a class="code" href="kvi__themedcombobox_8h.html">kvi_themedcombobox.h</a>&quot;</span>
 <a name="l00038"></a>00038 
@@ -73,16 +73,16 @@
 <a name="l00042"></a>00042 
 <a name="l00043"></a>00043 <span class="keyword">class </span>QToolBar;
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045 <span class="keyword">class </span><a class="code" href="classKviAvatar.html" title="Avatar class.">KviAvatar</a>;
-<a name="l00046"></a>00046 <span class="keyword">class </span><a class="code" href="classKviDns.html">KviDns</a>;
-<a name="l00047"></a>00047 <span class="keyword">class </span><a class="code" href="classKviIrcUserDataBase.html" title="The class which manages the user database.">KviIrcUserDataBase</a>;
-<a name="l00048"></a>00048 <span class="keyword">class </span><a class="code" href="classKviIrcUserEntry.html" title="A class to handle the entries of the user database.">KviIrcUserEntry</a>;
-<a name="l00049"></a>00049 <span class="keyword">class </span><a class="code" href="classKviServer.html" title="The class which manages the irc servers.">KviServer</a>;
-<a name="l00050"></a>00050 <span class="keyword">class </span><a class="code" href="classKviNetwork.html" title="Network handling class.">KviNetwork</a>;
-<a name="l00051"></a>00051 <span class="keyword">class </span><a class="code" href="classKviProxy.html">KviProxy</a>;
+<a name="l00045"></a>00045 <span class="keyword">class </span>KviAvatar;
+<a name="l00046"></a>00046 <span class="keyword">class </span>KviDnsResolver;
+<a name="l00047"></a>00047 <span class="keyword">class </span>KviIrcUserDataBase;
+<a name="l00048"></a>00048 <span class="keyword">class </span>KviIrcUserEntry;
+<a name="l00049"></a>00049 <span class="keyword">class </span>KviServer;
+<a name="l00050"></a>00050 <span class="keyword">class </span>KviNetwork;
+<a name="l00051"></a>00051 <span class="keyword">class </span>KviProxy;
 <a name="l00052"></a>00052 <span class="keyword">class </span><a class="code" href="classKviUserListView.html" title="User list view management class.">KviUserListView</a>;
 <a name="l00053"></a>00053 <span class="keyword">class </span><a class="code" href="classKviNotifyListManager.html">KviNotifyListManager</a>;
-<a name="l00054"></a>00054 <span class="keyword">class </span><a class="code" href="classKviRegisteredUser.html" title="_KVI_REGUSERDB_CPP_">KviRegisteredUser</a>;
+<a name="l00054"></a>00054 <span class="keyword">class </span>KviRegisteredUser;
 <a name="l00055"></a>00055 <span class="keyword">class </span><a class="code" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a>;
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057 <span class="preprocessor">#ifdef COMPILE_ON_WINDOWS</span>
@@ -143,12 +143,12 @@
 <a name="l00112"></a>00112         <span class="comment">//void socketStateChange();</span>
 <a name="l00113"></a>00113         <span class="comment">//void registerLinkMonitor(KviIrcSocketMonitor * m);</span>
 <a name="l00114"></a>00114         <span class="comment">//void unregisterLinkMonitor(KviIrcSocketMonitor * m);</span>
-<a name="l00115"></a>00115         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a6b18c93e9174a259fd56745d207a5730">loadProperties</a>(<a class="code" href="classKviConfig.html">KviConfig</a> * cfg);
-<a name="l00116"></a>00116         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#af0bffcf61e408d06eb4a91502d958ec6">saveProperties</a>(<a class="code" href="classKviConfig.html">KviConfig</a> * cfg);
+<a name="l00115"></a>00115         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a621926cfecba617903e819d94ddb877c">loadProperties</a>(KviConfigurationFile * cfg);
+<a name="l00116"></a>00116         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a01609eaa8ae28196bbb936adbb49b4fe">saveProperties</a>(KviConfigurationFile * cfg);
 <a name="l00117"></a>00117 
 <a name="l00118"></a>00118         <span class="keywordtype">void</span> <a class="code" href="classKviIrcContext.html#aba83bef82141c767d090a8da4de1b628">destroyConnection</a>();
 <a name="l00119"></a>00119         <span class="comment">// internal helper for applyHighlighting</span>
-<a name="l00120"></a>00120         <span class="keywordtype">int</span> triggerOnHighlight(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> *wnd,<span class="keywordtype">int</span> <a class="code" href="namespaceKviOsInfo.html#ac118c3a07dc4cbbe510f06bafe548511">type</a>,<span class="keyword">const</span> QString &amp;nick,<span class="keyword">const</span> QString &amp;user,<span class="keyword">const</span> QString &amp;host,<span class="keyword">const</span> QString &amp;szMsg,<span class="keyword">const</span> QString &amp;trigger);
+<a name="l00120"></a>00120         <span class="keywordtype">int</span> triggerOnHighlight(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> *wnd,<span class="keywordtype">int</span> type,<span class="keyword">const</span> QString &amp;nick,<span class="keyword">const</span> QString &amp;user,<span class="keyword">const</span> QString &amp;host,<span class="keyword">const</span> QString &amp;szMsg,<span class="keyword">const</span> QString &amp;trigger);
 <a name="l00121"></a>00121 
 <a name="l00122"></a>00122         <span class="keywordtype">void</span> showNotifyList(<span class="keywordtype">bool</span> bShow);
 <a name="l00123"></a>00123         <span class="keyword">static</span> <span class="keywordtype">int</span> getSmartColorHashForNick(QString *szNick);
@@ -174,18 +174,18 @@
 <a name="l00143"></a>00143         <span class="comment">// This connection info</span>
 <a name="l00144"></a>00144         <span class="comment">//</span>
 <a name="l00145"></a>00145         <span class="keyword">inline</span> QString currentNetworkName();
-<a name="l00146"></a>00146         <a class="code" href="classKviAvatar.html" title="Avatar class.">KviAvatar</a> * currentAvatar();
+<a name="l00146"></a>00146         KviAvatar * currentAvatar();
 <a name="l00147"></a>00147         <span class="comment">//</span>
 <a name="l00148"></a>00148         <span class="comment">// IRC Context wide helpers (connection related)</span>
 <a name="l00149"></a>00149         <span class="comment">//</span>
-<a name="l00150"></a>00150         <span class="keywordtype">void</span> getUserTipText(<span class="keyword">const</span> QString &amp;nick,<a class="code" href="classKviIrcUserEntry.html" title="A class to handle the entries of the user database.">KviIrcUserEntry</a> *e,QString &amp;buffer);
+<a name="l00150"></a>00150         <span class="keywordtype">void</span> getUserTipText(<span class="keyword">const</span> QString &amp;nick,KviIrcUserEntry *e,QString &amp;buffer);
 <a name="l00151"></a><a class="code" href="classKviConsole.html#a374a2482619d20788046b60caf21e541">00151</a>         <span class="keyword">enum</span> <a class="code" href="classKviConsole.html#a374a2482619d20788046b60caf21e541">OutputPrivmsgFlags</a> {
 <a name="l00152"></a><a class="code" href="classKviConsole.html#a374a2482619d20788046b60caf21e541ade1f26350a8ac4c3aca59369f614138f">00152</a>                 NoWindowFlashing = 1, <span class="comment">// has meaning only if NoHighlighting is NOT given, otherwise it is implied</span>
 <a name="l00153"></a><a class="code" href="classKviConsole.html#a374a2482619d20788046b60caf21e541aedb616cb66809a0b2c25be2e431c1648">00153</a>                 NoNotifier = 2, <span class="comment">// has meaning only if NoHighlighitng is NOT given, otherwise it is implied</span>
 <a name="l00154"></a><a class="code" href="classKviConsole.html#a374a2482619d20788046b60caf21e541a072527db93f6916505a591e132cace85">00154</a>                 NoHighlighting = 4,
 <a name="l00155"></a><a class="code" href="classKviConsole.html#a374a2482619d20788046b60caf21e541a10bc60ab92b0f8431f33dd53bb2099c2">00155</a>                 NoNotifications = 7 <span class="comment">// this is 1|2|4 implies NoWindowFlashing and NoNotifier</span>
 <a name="l00156"></a>00156         };
-<a name="l00157"></a>00157         <span class="keywordtype">void</span> outputPrivmsg(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> *wnd,<span class="keywordtype">int</span> <a class="code" href="namespaceKviOsInfo.html#ac118c3a07dc4cbbe510f06bafe548511">type</a>,<span class="keyword">const</span> QString &amp;nick,
+<a name="l00157"></a>00157         <span class="keywordtype">void</span> outputPrivmsg(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> *wnd,<span class="keywordtype">int</span> type,<span class="keyword">const</span> QString &amp;nick,
 <a name="l00158"></a>00158                 <span class="keyword">const</span> QString &amp;user,<span class="keyword">const</span> QString &amp;host,<span class="keyword">const</span> QString &amp;msg,<span class="keywordtype">int</span> iFlags = 0,<span class="keyword">const</span> QString &amp;prefix = QString(),<span class="keyword">const</span> QString &amp;suffix = QString());
 <a name="l00159"></a>00159         <span class="comment">// this applies highlighting to the specified message</span>
 <a name="l00160"></a>00160         <span class="comment">// and triggers the OnHighlight event.</span>
@@ -194,12 +194,12 @@
 <a name="l00163"></a>00163         <span class="comment">// otherwise it returns &lt;type&gt;</span>
 <a name="l00164"></a>00164         <span class="keywordtype">int</span> applyHighlighting(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> *wnd,<span class="keywordtype">int</span> type,<span class="keyword">const</span> QString &amp;nick,<span class="keyword">const</span> QString &amp;user,<span class="keyword">const</span> QString &amp;host,<span class="keyword">const</span> QString &amp;szMsg);
 <a name="l00165"></a>00165         <span class="comment">// Avatar helpers (conneciton related)</span>
-<a name="l00166"></a>00166         <span class="keywordtype">void</span> resetAvatarForMatchingUsers(<a class="code" href="classKviRegisteredUser.html" title="_KVI_REGUSERDB_CPP_">KviRegisteredUser</a> * u);
+<a name="l00166"></a>00166         <span class="keywordtype">void</span> resetAvatarForMatchingUsers(KviRegisteredUser * u);
 <a name="l00167"></a>00167         <span class="comment">// this should be protected at least</span>
 <a name="l00168"></a>00168         <span class="keywordtype">void</span> avatarChangedUpdateWindows(<span class="keyword">const</span> QString &amp;nick,<span class="keyword">const</span> QString &amp;textLine);
-<a name="l00169"></a>00169         <span class="keywordtype">void</span> avatarChanged(<a class="code" href="classKviAvatar.html" title="Avatar class.">KviAvatar</a> * avatar,<span class="keyword">const</span> QString &amp;nick,<span class="keyword">const</span> QString &amp;user,<span class="keyword">const</span> QString &amp;host,<span class="keyword">const</span> QString &amp;textLine);
-<a name="l00170"></a>00170         <a class="code" href="classKviAvatar.html" title="Avatar class.">KviAvatar</a> * setAvatar(<span class="keyword">const</span> QString &amp;nick,<span class="keyword">const</span> QString &amp;user,<span class="keyword">const</span> QString &amp;host,<span class="keyword">const</span> QString &amp;szLocalPath,<span class="keyword">const</span> QString &amp;szName);
-<a name="l00171"></a>00171         <span class="keywordtype">void</span> checkDefaultAvatar(<a class="code" href="classKviIrcUserEntry.html" title="A class to handle the entries of the user database.">KviIrcUserEntry</a> *e,<span class="keyword">const</span> QString &amp;nick,<span class="keyword">const</span> QString &amp;user,<span class="keyword">const</span> QString &amp;host);
+<a name="l00169"></a>00169         <span class="keywordtype">void</span> avatarChanged(KviAvatar * avatar,<span class="keyword">const</span> QString &amp;nick,<span class="keyword">const</span> QString &amp;user,<span class="keyword">const</span> QString &amp;host,<span class="keyword">const</span> QString &amp;textLine);
+<a name="l00170"></a>00170         KviAvatar * setAvatar(<span class="keyword">const</span> QString &amp;nick,<span class="keyword">const</span> QString &amp;user,<span class="keyword">const</span> QString &amp;host,<span class="keyword">const</span> QString &amp;szLocalPath,<span class="keyword">const</span> QString &amp;szName);
+<a name="l00171"></a>00171         <span class="keywordtype">void</span> checkDefaultAvatar(KviIrcUserEntry *e,<span class="keyword">const</span> QString &amp;nick,<span class="keyword">const</span> QString &amp;user,<span class="keyword">const</span> QString &amp;host);
 <a name="l00172"></a>00172         <span class="keywordtype">void</span> setAvatarFromOptions();
 <a name="l00173"></a>00173 
 <a name="l00174"></a>00174         <span class="comment">// This returns the default avatar for the current KVIrc user</span>
@@ -207,7 +207,7 @@
 <a name="l00176"></a>00176         <span class="comment">// otherwise returns 0.</span>
 <a name="l00177"></a>00177         <span class="comment">// The avatar is allocated with new and must be deleted</span>
 <a name="l00178"></a>00178         <span class="comment">// when no longer needed.</span>
-<a name="l00179"></a>00179         <a class="code" href="classKviAvatar.html" title="Avatar class.">KviAvatar</a> * defaultAvatarFromOptions();
+<a name="l00179"></a>00179         KviAvatar * defaultAvatarFromOptions();
 <a name="l00180"></a>00180 
 <a name="l00181"></a>00181         <span class="keywordtype">void</span> <a class="code" href="classKviIrcContext.html#aa4b1bfab0f1bf1870b138f0e72d12d65">terminateConnectionRequest</a>(<span class="keywordtype">bool</span> bForce = <span class="keyword">false</span>,<span class="keyword">const</span> <span class="keywordtype">char</span> * quitMsg = 0);
 <a name="l00182"></a>00182 
@@ -216,8 +216,8 @@
 <a name="l00185"></a>00185 
 <a name="l00186"></a>00186         <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * activeWindow();
 <a name="l00187"></a>00187         <span class="comment">// User db, connection related</span>
-<a name="l00188"></a>00188         <span class="keywordtype">void</span> completeChannel(<span class="keyword">const</span> QString &amp;word,<a class="code" href="classKviPointerList.html">KviPointerList&lt;QString&gt;</a> * matches);
-<a name="l00189"></a>00189         <span class="keywordtype">void</span> completeServer(<span class="keyword">const</span> QString &amp;word,<a class="code" href="classKviPointerList.html">KviPointerList&lt;QString&gt;</a> * matches);
+<a name="l00188"></a>00188         <span class="keywordtype">void</span> completeChannel(<span class="keyword">const</span> QString &amp;word,KviPointerList&lt;QString&gt; * matches);
+<a name="l00189"></a>00189         <span class="keywordtype">void</span> completeServer(<span class="keyword">const</span> QString &amp;word,KviPointerList&lt;QString&gt; * matches);
 <a name="l00190"></a>00190         <span class="keywordtype">void</span> connectionAttached();
 <a name="l00191"></a>00191         <span class="keywordtype">void</span> connectionDetached();
 <a name="l00192"></a>00192 
@@ -245,7 +245,7 @@
 <a name="l00229"></a><a class="code" href="classKviConsole.html#a011a60c2f1d0e3e31c768cc259d080c9">00229</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviConsole.html#a011a60c2f1d0e3e31c768cc259d080c9">KviConsole::isIPv6Connection</a>()
 <a name="l00230"></a>00230 {
 <a name="l00231"></a>00231         <a class="code" href="kvi__debug_8h.html#acb8235d766e251808b07c2fdaab97fbc" title="__GNUC__">KVI_ASSERT</a>(<a class="code" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">connection</a>());
-<a name="l00232"></a>00232         <span class="keywordflow">return</span> <a class="code" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">connection</a>()-&gt;<a class="code" href="classKviIrcConnection.html#a1a6fd7a82e80720927b7aa860eab3300" title="Returns the target of this connection.">target</a>()-&gt;<a class="code" href="classKviIrcConnectionTarget.html#afaffdb268935b58fc62fff0ad19622d2">server</a>()-&gt;<a class="code" href="classKviServer.html#ae6c0c4321c2ac91ef75a4d5417fdff34" title="Returns true if the server uses IPv6.">isIPv6</a>();
+<a name="l00232"></a>00232         <span class="keywordflow">return</span> <a class="code" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">connection</a>()-&gt;<a class="code" href="classKviIrcConnection.html#a1a6fd7a82e80720927b7aa860eab3300" title="Returns the target of this connection.">target</a>()-&gt;<a class="code" href="classKviIrcConnectionTarget.html#afaffdb268935b58fc62fff0ad19622d2">server</a>()-&gt;isIPv6();
 <a name="l00233"></a>00233 }
 <a name="l00234"></a>00234 
 <a name="l00235"></a><a class="code" href="classKviConsole.html#a33ca9feb02dc3166eb6a13c245c133de">00235</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviConsole.html#a33ca9feb02dc3166eb6a13c245c133de">KviConsole::isNotConnected</a>()
@@ -255,13 +255,13 @@
 <a name="l00239"></a>00239 
 <a name="l00240"></a><a class="code" href="classKviConsole.html#aa6111702b045e510c816c3cebcc47bc4">00240</a> <span class="keyword">inline</span> QString <a class="code" href="classKviConsole.html#aa6111702b045e510c816c3cebcc47bc4">KviConsole::currentNetworkName</a>()
 <a name="l00241"></a>00241 {
-<a name="l00242"></a>00242         <span class="keywordflow">return</span> (<a class="code" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">connection</a>() ? <a class="code" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">connection</a>()-&gt;networkName() : QString());
+<a name="l00242"></a>00242         <span class="keywordflow">return</span> (<a class="code" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">connection</a>() ? <a class="code" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">connection</a>()-&gt;<a class="code" href="classKviConsole.html#aa6111702b045e510c816c3cebcc47bc4">currentNetworkName</a>() : QString());
 <a name="l00243"></a>00243 }
 <a name="l00244"></a>00244 
 <a name="l00245"></a>00245 <span class="preprocessor">#endif //_KVI_CONSOLE_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:55 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

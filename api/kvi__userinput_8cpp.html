@@ -37,7 +37,7 @@
 <code>#include &quot;<a class="el" href="kvi__kvs__variantlist_8h_source.html">kvi_kvs_variantlist.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__console_8h_source.html">kvi_console.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__kvs__script_8h_source.html">kvi_kvs_script.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__locale_8h_source.html">kvi_locale.h</a>&quot;</code><br/>
+<code>#include &quot;KviLocale.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__ircconnection_8h_source.html">kvi_ircconnection.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__ircconnectionuserinfo_8h_source.html">kvi_ircconnectionuserinfo.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__out_8h_source.html">kvi_out.h</a>&quot;</code><br/>
@@ -53,15 +53,15 @@ Namespaces</h2></td></tr>
 </p>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviUserInput.html#ac23fb8060cb0085e908da3924459ce7f">KviUserInput::parse</a> (QString &amp;szData, <a class="el" href="classKviWindow.html">KviWindow</a> *pWindow, const QString &amp;szContext=<a class="el" href="namespaceKviQString.html#aa14b9dc45e5d3b528f26e523d7c96b3e">KviQString::Empty</a>, bool bUserFriendlyCommandline=false)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviUserInput.html#ac23fb8060cb0085e908da3924459ce7f">KviUserInput::parse</a> (QString &amp;szData, <a class="el" href="classKviWindow.html">KviWindow</a> *pWindow, const QString &amp;szContext=KviQString::Empty, bool bUserFriendlyCommandline=false)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns false if szData is a command and it fails to run.  <a href="#ac23fb8060cb0085e908da3924459ce7f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviUserInput.html#a7e05f43e35335d5288afe9d95a2c1bdd">KviUserInput::parseCommand</a> (const QString &amp;szData, <a class="el" href="classKviWindow.html">KviWindow</a> *pWindow, const QString &amp;szContext=<a class="el" href="namespaceKviQString.html#aa14b9dc45e5d3b528f26e523d7c96b3e">KviQString::Empty</a>, bool bUserFriendlyCommandline=false)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviUserInput.html#a7e05f43e35335d5288afe9d95a2c1bdd">KviUserInput::parseCommand</a> (const QString &amp;szData, <a class="el" href="classKviWindow.html">KviWindow</a> *pWindow, const QString &amp;szContext=KviQString::Empty, bool bUserFriendlyCommandline=false)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the command run.  <a href="#a7e05f43e35335d5288afe9d95a2c1bdd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviUserInput.html#a5ac9294b92cf8c4ba5ef983c4e8eba1b">KviUserInput::parseNonCommand</a> (QString &amp;szData, <a class="el" href="classKviWindow.html">KviWindow</a> *pWindow)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the non command input data.  <a href="#a5ac9294b92cf8c4ba5ef983c4e8eba1b"></a><br/></td></tr>
 </table>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:56 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:06 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

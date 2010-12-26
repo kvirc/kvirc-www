@@ -60,7 +60,7 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a5e49e85deb4ab7dd59776ee8388bead8">selfRegister</a> (<a class="el" href="classKviStatusBar.html">KviStatusBar</a> *pBar)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a39d4fa37001887c2224b80f325966f25">binaryDataReceived</a> (const <a class="el" href="classKviDataBuffer.html">KviDataBuffer</a> &amp;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a39d4fa37001887c2224b80f325966f25">binaryDataReceived</a> (const KviDataBuffer &amp;)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#aba7ddd0c5765cde7b8a76b62536b1fc6">requestCompleted</a> (bool status)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a227a1ddde9237342951afe78487d225a">responseReceived</a> (const QString &amp;)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#ab0ff96bacf4e5c98d0bced8971d18045">toggleRevision</a> ()</td></tr>
@@ -69,11 +69,11 @@ Protected Slots</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#afe241d6a5dd4f31f64eafc5ba4994de4">checkVersion</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a6e9dd0e23a498616865a3e7224e64a8e">fillContextPopup</a> (<a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *p)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a6e9dd0e23a498616865a3e7224e64a8e">fillContextPopup</a> (KviTalPopupMenu *p)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a84e853579fe34073faef4ecbbf41b9a2">getNewVersion</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a38696cb95b8128ecd95f6e7dd564f50c">loadState</a> (const char *pcPrefix, <a class="el" href="classKviConfig.html">KviConfig</a> *pCfg)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a2941308317f96c679dab314682cb88a3">loadState</a> (const char *pcPrefix, KviConfigurationFile *pCfg)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#addb5960e56978277a9b623b2e313b247">mouseDoubleClickEvent</a> (QMouseEvent *e)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a0697b3a317a515efb10436aa42c65831">saveState</a> (const char *pcPrefix, <a class="el" href="classKviConfig.html">KviConfig</a> *pCfg)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#aa86c9c810dfd933f6428bf755f7d5e3c">saveState</a> (const char *pcPrefix, KviConfigurationFile *pCfg)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a847439c1210f66d04781e23e087801da">tipText</a> (const QPoint &amp;)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -82,7 +82,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#af1f719663b44983c0236fd0e5b011c86">m_bUpdateOnStartup</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a37818adcbcad7d9eb341e64d928ecc2d">m_bUpdateRevision</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a3b016110cb8912d119031dd13f083ea4">m_bUpdateStatus</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviHttpRequest.html">KviHttpRequest</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a66536c765ce88f6a3fbc8134e635be08">m_pHttpRequest</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviHttpRequest *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#a66536c765ce88f6a3fbc8134e635be08">m_pHttpRequest</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#adf3101843da5a051e16aa035130ba0c5">m_szHttpResponse</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviStatusBarUpdateIndicator.html#ab07ddc45e73225617f38d709244f5d7e">m_szNewVersion</a></td></tr>
 </table>
@@ -140,7 +140,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void KviStatusBarUpdateIndicator::binaryDataReceived </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classKviDataBuffer.html">KviDataBuffer</a> &amp;&#160;</td>
+          <td class="paramtype">const KviDataBuffer &amp;&#160;</td>
           <td class="paramname"> <em>buffer</em>&#160;)</td>
           <td><code> [protected, slot]</code></td>
         </tr>
@@ -148,7 +148,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="namespaceKviBuildInfo.html#a0010cfae4c632165686566441f2cbbd1">KviBuildInfo::buildRevision()</a>, <a class="el" href="namespaceKviMiscUtils.html#aef5bebdb5a87b962604af0a1a8da0b55">KviMiscUtils::compareVersions()</a>, <a class="el" href="classKviDataBuffer.html#a7ef44a09feeb82ee1aea77dd534c0093">KviDataBuffer::data()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a84e853579fe34073faef4ecbbf41b9a2">getNewVersion()</a>, <a class="el" href="kvi__settings_8h.html#a25dfafff2be60299a38a1eec78078e6c">KVI_VERSION</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#af1f719663b44983c0236fd0e5b011c86">m_bUpdateOnStartup</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a37818adcbcad7d9eb341e64d928ecc2d">m_bUpdateRevision</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a3b016110cb8912d119031dd13f083ea4">m_bUpdateStatus</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#ab07ddc45e73225617f38d709244f5d7e">m_szNewVersion</a>, <a class="el" href="classKviDataBuffer.html#ab1fa87892487c7cb09e689cd550a9e8a">KviDataBuffer::size()</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#a30955f6b64f281879b286fafb8f93eb6">updateDisplay()</a>.</p>
+<p>References <a class="el" href="namespaceKviBuildInfo.html#a0010cfae4c632165686566441f2cbbd1">KviBuildInfo::buildRevision()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a84e853579fe34073faef4ecbbf41b9a2">getNewVersion()</a>, <a class="el" href="kvi__settings_8h.html#a25dfafff2be60299a38a1eec78078e6c">KVI_VERSION</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#af1f719663b44983c0236fd0e5b011c86">m_bUpdateOnStartup</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a37818adcbcad7d9eb341e64d928ecc2d">m_bUpdateRevision</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a3b016110cb8912d119031dd13f083ea4">m_bUpdateStatus</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#ab07ddc45e73225617f38d709244f5d7e">m_szNewVersion</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#a30955f6b64f281879b286fafb8f93eb6">updateDisplay()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviStatusBarUpdateIndicator.html#afe241d6a5dd4f31f64eafc5ba4994de4">checkVersion()</a>.</p>
 
@@ -168,9 +168,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviStatusBarUpdateIndicator.html#a39d4fa37001887c2224b80f325966f25">binaryDataReceived()</a>, <a class="el" href="classKviHttpRequest.html#ac9269b8aa4e66940c33a99349b6d40e4">KviHttpRequest::get()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a2cb783dee539de971e1eb137e967d963">m_bCheckDone</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a37818adcbcad7d9eb341e64d928ecc2d">m_bUpdateRevision</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a66536c765ce88f6a3fbc8134e635be08">m_pHttpRequest</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#aba7ddd0c5765cde7b8a76b62536b1fc6">requestCompleted()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a227a1ddde9237342951afe78487d225a">responseReceived()</a>, and <a class="el" href="classKviHttpRequest.html#aa7a22a6296893b8b39673a325d890d9ca7e38509ae001748e971f5d8a7cda9482">KviHttpRequest::WholeFile</a>.</p>
+<p>References <a class="el" href="classKviStatusBarUpdateIndicator.html#a39d4fa37001887c2224b80f325966f25">binaryDataReceived()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a2cb783dee539de971e1eb137e967d963">m_bCheckDone</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a37818adcbcad7d9eb341e64d928ecc2d">m_bUpdateRevision</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a66536c765ce88f6a3fbc8134e635be08">m_pHttpRequest</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#aba7ddd0c5765cde7b8a76b62536b1fc6">requestCompleted()</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#a227a1ddde9237342951afe78487d225a">responseReceived()</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviStatusBarUpdateIndicator.html#a38696cb95b8128ecd95f6e7dd564f50c">loadState()</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#addb5960e56978277a9b623b2e313b247">mouseDoubleClickEvent()</a>.</p>
+<p>Referenced by <a class="el" href="classKviStatusBarUpdateIndicator.html#a2941308317f96c679dab314682cb88a3">loadState()</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#addb5960e56978277a9b623b2e313b247">mouseDoubleClickEvent()</a>.</p>
 
 </div>
 </div>
@@ -181,7 +181,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void KviStatusBarUpdateIndicator::fillContextPopup </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td>
+          <td class="paramtype">KviTalPopupMenu *&#160;</td>
           <td class="paramname"> <em>p</em>&#160;)</td>
           <td><code> [protected, virtual]</code></td>
         </tr>
@@ -191,7 +191,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviStatusBarApplet.html#a66f111cb0b022e75bcbba3ff8d4dbf6b">KviStatusBarApplet</a>.</p>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="classKviTalPopupMenu.html#ad491ba2ad4a8133a89bdf417c1acacc6">KviTalPopupMenu::insertItem()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#af1f719663b44983c0236fd0e5b011c86">m_bUpdateOnStartup</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a37818adcbcad7d9eb341e64d928ecc2d">m_bUpdateRevision</a>, <a class="el" href="classKviTalPopupMenu.html#a283ebe206279947137b4677fa2767aaa">KviTalPopupMenu::setItemChecked()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#ab0ff96bacf4e5c98d0bced8971d18045">toggleRevision()</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#a86b1c4f6bbb4497d9c5b59ce895b7d0d">toggleStartup()</a>.</p>
+<p>References <a class="el" href="classKviStatusBarUpdateIndicator.html#af1f719663b44983c0236fd0e5b011c86">m_bUpdateOnStartup</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a37818adcbcad7d9eb341e64d928ecc2d">m_bUpdateRevision</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#ab0ff96bacf4e5c98d0bced8971d18045">toggleRevision()</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#a86b1c4f6bbb4497d9c5b59ce895b7d0d">toggleStartup()</a>.</p>
 
 </div>
 </div>
@@ -215,7 +215,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a38696cb95b8128ecd95f6e7dd564f50c"></a><!-- doxytag: member="KviStatusBarUpdateIndicator::loadState" ref="a38696cb95b8128ecd95f6e7dd564f50c" args="(const char *pcPrefix, KviConfig *pCfg)" -->
+<a class="anchor" id="a2941308317f96c679dab314682cb88a3"></a><!-- doxytag: member="KviStatusBarUpdateIndicator::loadState" ref="a2941308317f96c679dab314682cb88a3" args="(const char *pcPrefix, KviConfigurationFile *pCfg)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -228,7 +228,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classKviConfig.html">KviConfig</a> *&#160;</td>
+          <td class="paramtype">KviConfigurationFile *&#160;</td>
           <td class="paramname"> <em>pCfg</em>&#160;</td>
         </tr>
         <tr>
@@ -240,9 +240,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classKviStatusBarApplet.html#ad8685fb65a00511a491c492d61f0680c">KviStatusBarApplet</a>.</p>
+<p>Reimplemented from <a class="el" href="classKviStatusBarApplet.html#adaf3ea6a3a07a720434c5de78073dddc">KviStatusBarApplet</a>.</p>
 
-<p>References <a class="el" href="classKviStatusBarUpdateIndicator.html#afe241d6a5dd4f31f64eafc5ba4994de4">checkVersion()</a>, <a class="el" href="classKviStr.html#ae9a44eec2e3ae5946544552ef01c8254abefa3b7ff9b69e2d9f6f2e0f277dfd7f">KviStr::Format</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#af1f719663b44983c0236fd0e5b011c86">m_bUpdateOnStartup</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a37818adcbcad7d9eb341e64d928ecc2d">m_bUpdateRevision</a>, <a class="el" href="classKviStr.html#adabd1f259ed2b72237b5b9b566676759">KviStr::ptr()</a>, and <a class="el" href="classKviConfig.html#a38a1fde77bfd6f2e8b5a879404ccac79">KviConfig::readBoolEntry()</a>.</p>
+<p>References <a class="el" href="classKviStatusBarUpdateIndicator.html#afe241d6a5dd4f31f64eafc5ba4994de4">checkVersion()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#af1f719663b44983c0236fd0e5b011c86">m_bUpdateOnStartup</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#a37818adcbcad7d9eb341e64d928ecc2d">m_bUpdateRevision</a>.</p>
 
 </div>
 </div>
@@ -307,7 +307,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0697b3a317a515efb10436aa42c65831"></a><!-- doxytag: member="KviStatusBarUpdateIndicator::saveState" ref="a0697b3a317a515efb10436aa42c65831" args="(const char *pcPrefix, KviConfig *pCfg)" -->
+<a class="anchor" id="aa86c9c810dfd933f6428bf755f7d5e3c"></a><!-- doxytag: member="KviStatusBarUpdateIndicator::saveState" ref="aa86c9c810dfd933f6428bf755f7d5e3c" args="(const char *pcPrefix, KviConfigurationFile *pCfg)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -320,7 +320,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classKviConfig.html">KviConfig</a> *&#160;</td>
+          <td class="paramtype">KviConfigurationFile *&#160;</td>
           <td class="paramname"> <em>pCfg</em>&#160;</td>
         </tr>
         <tr>
@@ -332,9 +332,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classKviStatusBarApplet.html#a8ecb371e20e0e37c0533bf5339c68012">KviStatusBarApplet</a>.</p>
+<p>Reimplemented from <a class="el" href="classKviStatusBarApplet.html#a680b670d565c3f2a4a297147d6a055c5">KviStatusBarApplet</a>.</p>
 
-<p>References <a class="el" href="classKviStr.html#ae9a44eec2e3ae5946544552ef01c8254abefa3b7ff9b69e2d9f6f2e0f277dfd7f">KviStr::Format</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#af1f719663b44983c0236fd0e5b011c86">m_bUpdateOnStartup</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a37818adcbcad7d9eb341e64d928ecc2d">m_bUpdateRevision</a>, <a class="el" href="classKviStr.html#adabd1f259ed2b72237b5b9b566676759">KviStr::ptr()</a>, and <a class="el" href="classKviConfig.html#a77ae0a956895bc66f5f1b203d6401675">KviConfig::writeEntry()</a>.</p>
+<p>References <a class="el" href="classKviStatusBarUpdateIndicator.html#af1f719663b44983c0236fd0e5b011c86">m_bUpdateOnStartup</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#a37818adcbcad7d9eb341e64d928ecc2d">m_bUpdateRevision</a>.</p>
 
 </div>
 </div>
@@ -353,7 +353,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__statusbarapplet_8cpp.html#aefa4af910cf4b762c97c31da45bd9fc5">CreateStatusBarUpdateIndicator()</a>, <a class="el" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>, <a class="el" href="kvi__iconmanager_8cpp.html#a3ea7617ef2d091c1c04b0f95fb0845ae">g_pIconManager</a>, <a class="el" href="classKviIconManager.html#a18563529ab125d8bc7a5221fcb83e408">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__iconmanager_8h.html#a72c91c0735fb5d73db6a790d27d02272">KVI_SMALLICON_UPDATE</a>, and <a class="el" href="classKviStatusBar.html#a4a30c2a653f5438d10b143e0062a7de0">KviStatusBar::registerAppletDescriptor()</a>.</p>
+<p>References <a class="el" href="kvi__statusbarapplet_8cpp.html#aefa4af910cf4b762c97c31da45bd9fc5">CreateStatusBarUpdateIndicator()</a>, <a class="el" href="kvi__numeric_8h.html#a0e15b1a1966e777f3c3e7f4b87aa0625">d</a>, <a class="el" href="kvi__iconmanager_8cpp.html#a3ea7617ef2d091c1c04b0f95fb0845ae">g_pIconManager</a>, <a class="el" href="classKviIconManager.html#a18563529ab125d8bc7a5221fcb83e408">KviIconManager::getSmallIcon()</a>, <a class="el" href="kvi__iconmanager_8h.html#a72c91c0735fb5d73db6a790d27d02272">KVI_SMALLICON_UPDATE</a>, and <a class="el" href="classKviStatusBar.html#a4a30c2a653f5438d10b143e0062a7de0">KviStatusBar::registerAppletDescriptor()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviStatusBar.html#a631fb31ab29ec034dd306ab9fe56e766">KviStatusBar::KviStatusBar()</a>.</p>
 
@@ -376,7 +376,7 @@ Private Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviStatusBarApplet.html#a468465357c6e955203731a3bfb9352c5">KviStatusBarApplet</a>.</p>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a2cb783dee539de971e1eb137e967d963">m_bCheckDone</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a7a7338eb3abb074301e0b4a9d5f88ba5">m_bCheckFailed</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a3b016110cb8912d119031dd13f083ea4">m_bUpdateStatus</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#adf3101843da5a051e16aa035130ba0c5">m_szHttpResponse</a>.</p>
+<p>References <a class="el" href="classKviStatusBarUpdateIndicator.html#a2cb783dee539de971e1eb137e967d963">m_bCheckDone</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a7a7338eb3abb074301e0b4a9d5f88ba5">m_bCheckFailed</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a3b016110cb8912d119031dd13f083ea4">m_bUpdateStatus</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#adf3101843da5a051e16aa035130ba0c5">m_szHttpResponse</a>.</p>
 
 </div>
 </div>
@@ -482,7 +482,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviStatusBarUpdateIndicator.html#a39d4fa37001887c2224b80f325966f25">binaryDataReceived()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a6e9dd0e23a498616865a3e7224e64a8e">fillContextPopup()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a8458e0aed1e9fafe5aa677faee722817">KviStatusBarUpdateIndicator()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a38696cb95b8128ecd95f6e7dd564f50c">loadState()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a0697b3a317a515efb10436aa42c65831">saveState()</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#a86b1c4f6bbb4497d9c5b59ce895b7d0d">toggleStartup()</a>.</p>
+<p>Referenced by <a class="el" href="classKviStatusBarUpdateIndicator.html#a39d4fa37001887c2224b80f325966f25">binaryDataReceived()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a6e9dd0e23a498616865a3e7224e64a8e">fillContextPopup()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a8458e0aed1e9fafe5aa677faee722817">KviStatusBarUpdateIndicator()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a2941308317f96c679dab314682cb88a3">loadState()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#aa86c9c810dfd933f6428bf755f7d5e3c">saveState()</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#a86b1c4f6bbb4497d9c5b59ce895b7d0d">toggleStartup()</a>.</p>
 
 </div>
 </div>
@@ -497,7 +497,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviStatusBarUpdateIndicator.html#a39d4fa37001887c2224b80f325966f25">binaryDataReceived()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#afe241d6a5dd4f31f64eafc5ba4994de4">checkVersion()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a6e9dd0e23a498616865a3e7224e64a8e">fillContextPopup()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a84e853579fe34073faef4ecbbf41b9a2">getNewVersion()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a8458e0aed1e9fafe5aa677faee722817">KviStatusBarUpdateIndicator()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a38696cb95b8128ecd95f6e7dd564f50c">loadState()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a0697b3a317a515efb10436aa42c65831">saveState()</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#ab0ff96bacf4e5c98d0bced8971d18045">toggleRevision()</a>.</p>
+<p>Referenced by <a class="el" href="classKviStatusBarUpdateIndicator.html#a39d4fa37001887c2224b80f325966f25">binaryDataReceived()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#afe241d6a5dd4f31f64eafc5ba4994de4">checkVersion()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a6e9dd0e23a498616865a3e7224e64a8e">fillContextPopup()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a84e853579fe34073faef4ecbbf41b9a2">getNewVersion()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a8458e0aed1e9fafe5aa677faee722817">KviStatusBarUpdateIndicator()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#a2941308317f96c679dab314682cb88a3">loadState()</a>, <a class="el" href="classKviStatusBarUpdateIndicator.html#aa86c9c810dfd933f6428bf755f7d5e3c">saveState()</a>, and <a class="el" href="classKviStatusBarUpdateIndicator.html#ab0ff96bacf4e5c98d0bced8971d18045">toggleRevision()</a>.</p>
 
 </div>
 </div>
@@ -521,7 +521,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviHttpRequest.html">KviHttpRequest</a>* <a class="el" href="classKviStatusBarUpdateIndicator.html#a66536c765ce88f6a3fbc8134e635be08">KviStatusBarUpdateIndicator::m_pHttpRequest</a><code> [private]</code></td>
+          <td class="memname">KviHttpRequest* <a class="el" href="classKviStatusBarUpdateIndicator.html#a66536c765ce88f6a3fbc8134e635be08">KviStatusBarUpdateIndicator::m_pHttpRequest</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -566,7 +566,7 @@ Private Attributes</h2></td></tr>
 <li>src/kvirc/ui/<a class="el" href="kvi__statusbarapplet_8cpp.html">kvi_statusbarapplet.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:33:04 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:13 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

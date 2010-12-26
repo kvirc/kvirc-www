@@ -52,9 +52,9 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListEntry.html#aebddcaf2776bc71883c8fc3c86491087">detachAvatarData</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">short int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListEntry.html#ade00b0511ee734a64c35d29690e86b45">flags</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the flags of the user.  <a href="#ade00b0511ee734a64c35d29690e86b45"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviIrcUserEntry.html">KviIrcUserEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListEntry.html#a26867e3e334c6a5cb67b5b6f43e3351e">globalData</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviIrcUserEntry *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListEntry.html#a26867e3e334c6a5cb67b5b6f43e3351e">globalData</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the irc user db entry.  <a href="#a26867e3e334c6a5cb67b5b6f43e3351e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListEntry.html#a5ed6c23a43b1b0ed62921b958a52b89a">KviUserListEntry</a> (<a class="el" href="classKviUserListView.html">KviUserListView</a> *pParent, const QString &amp;szNick, <a class="el" href="classKviIrcUserEntry.html">KviIrcUserEntry</a> *pEntry, short int iFlags, bool bJoinTimeUnknown=true)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListEntry.html#a5ed6c23a43b1b0ed62921b958a52b89a">KviUserListEntry</a> (<a class="el" href="classKviUserListView.html">KviUserListView</a> *pParent, const QString &amp;szNick, KviIrcUserEntry *pEntry, short int iFlags, bool bJoinTimeUnknown=true)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the user list entry object.  <a href="#a5ed6c23a43b1b0ed62921b958a52b89a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviUserListEntry.html">KviUserListEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListEntry.html#a32577664973ffc785929221341a6d3e3">next</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next entry in the list.  <a href="#a32577664973ffc785929221341a6d3e3"></a><br/></td></tr>
@@ -76,8 +76,8 @@ Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">short int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListEntry.html#a7449ef3098121c4ff0a0edecc88c185d">m_iTemperature</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">kvi_time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListEntry.html#a085afcbc0f8566030230e3c6d6eb3309">m_joinTime</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">kvi_time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListEntry.html#a0d8566def07e682a81519d02c8f0f5b1">m_lastActionTime</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviAnimatedPixmap.html">KviAnimatedPixmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListEntry.html#a659822f78582acb9d8bbb346bf8b048e">m_pAvatarPixmap</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviIrcUserEntry.html">KviIrcUserEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListEntry.html#a29a8939bce8a6e59e368351b33d00bc8">m_pGlobalData</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviAnimatedPixmap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListEntry.html#a659822f78582acb9d8bbb346bf8b048e">m_pAvatarPixmap</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviIrcUserEntry *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListEntry.html#a29a8939bce8a6e59e368351b33d00bc8">m_pGlobalData</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviUserListView.html">KviUserListView</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListEntry.html#a42f3ca82636d14e444d41a2aeb0efde7">m_pListView</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviUserListEntry.html">KviUserListEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListEntry.html#aa90e36f76acd1fa8e20d4fe2e2c56b6e">m_pNext</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviUserListEntry.html">KviUserListEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviUserListEntry.html#a0e700ec12ff1d1b838e2db5981033f35">m_pPrev</a></td></tr>
@@ -113,7 +113,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classKviIrcUserEntry.html">KviIrcUserEntry</a> *&#160;</td>
+          <td class="paramtype">KviIrcUserEntry *&#160;</td>
           <td class="paramname"> <em>pEntry</em>, </td>
         </tr>
         <tr>
@@ -150,7 +150,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> </dd></dl>
 
-<p>References <a class="el" href="kvi__time_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a>, <a class="el" href="kvi__time_8h.html#a6fe7a3ad3d1a08a5173aa2a58a242f24">kvi_unixTime</a>, <a class="el" href="kvi__useraction_8h.html#a63c240069625b02b5f7e3282337c2ef1">KVI_USERACTION_JOIN</a>, <a class="el" href="classKviUserListEntry.html#ab6b318d0dfdba7bdf01ec5fc5d97fb57">m_bSelected</a>, <a class="el" href="classKviUserListEntry.html#a242d0588bf155d91aaa4193ca6981147">m_iFlags</a>, <a class="el" href="classKviUserListEntry.html#a7449ef3098121c4ff0a0edecc88c185d">m_iTemperature</a>, <a class="el" href="classKviUserListEntry.html#a085afcbc0f8566030230e3c6d6eb3309">m_joinTime</a>, <a class="el" href="classKviUserListEntry.html#a0d8566def07e682a81519d02c8f0f5b1">m_lastActionTime</a>, <a class="el" href="classKviUserListEntry.html#a659822f78582acb9d8bbb346bf8b048e">m_pAvatarPixmap</a>, <a class="el" href="classKviUserListEntry.html#a29a8939bce8a6e59e368351b33d00bc8">m_pGlobalData</a>, <a class="el" href="classKviUserListEntry.html#a42f3ca82636d14e444d41a2aeb0efde7">m_pListView</a>, <a class="el" href="classKviUserListEntry.html#af1ff732ce965900a54b74a4ef3936007">m_szNick</a>, <a class="el" href="kvi__numeric_8h.html#af2ebd5db010f0e321c1faa0e6a182c2b">NULL</a>, <a class="el" href="classKviUserListEntry.html#a7b6ddd82d2d80c4a4a30407cfde27e1c">recalcSize()</a>, and <a class="el" href="classKviUserListEntry.html#a2fd3897a9c979cdb6f81eed75762fc2a">updateAvatarData()</a>.</p>
+<p>References <a class="el" href="kvi__useraction_8h.html#a63c240069625b02b5f7e3282337c2ef1">KVI_USERACTION_JOIN</a>, <a class="el" href="classKviUserListEntry.html#ab6b318d0dfdba7bdf01ec5fc5d97fb57">m_bSelected</a>, <a class="el" href="classKviUserListEntry.html#a242d0588bf155d91aaa4193ca6981147">m_iFlags</a>, <a class="el" href="classKviUserListEntry.html#a7449ef3098121c4ff0a0edecc88c185d">m_iTemperature</a>, <a class="el" href="classKviUserListEntry.html#a085afcbc0f8566030230e3c6d6eb3309">m_joinTime</a>, <a class="el" href="classKviUserListEntry.html#a0d8566def07e682a81519d02c8f0f5b1">m_lastActionTime</a>, <a class="el" href="classKviUserListEntry.html#a659822f78582acb9d8bbb346bf8b048e">m_pAvatarPixmap</a>, <a class="el" href="classKviUserListEntry.html#a29a8939bce8a6e59e368351b33d00bc8">m_pGlobalData</a>, <a class="el" href="classKviUserListEntry.html#a42f3ca82636d14e444d41a2aeb0efde7">m_pListView</a>, <a class="el" href="classKviUserListEntry.html#af1ff732ce965900a54b74a4ef3936007">m_szNick</a>, <a class="el" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a>, <a class="el" href="classKviUserListEntry.html#a7b6ddd82d2d80c4a4a30407cfde27e1c">recalcSize()</a>, and <a class="el" href="classKviUserListEntry.html#a2fd3897a9c979cdb6f81eed75762fc2a">updateAvatarData()</a>.</p>
 
 </div>
 </div>
@@ -189,7 +189,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviUserListEntry.html#a659822f78582acb9d8bbb346bf8b048e">m_pAvatarPixmap</a>, and <a class="el" href="kvi__numeric_8h.html#af2ebd5db010f0e321c1faa0e6a182c2b">NULL</a>.</p>
+<p>References <a class="el" href="classKviUserListEntry.html#a659822f78582acb9d8bbb346bf8b048e">m_pAvatarPixmap</a>, and <a class="el" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviUserListEntry.html#aebddcaf2776bc71883c8fc3c86491087">detachAvatarData()</a>, and <a class="el" href="classKviUserListEntry.html#a2fd3897a9c979cdb6f81eed75762fc2a">updateAvatarData()</a>.</p>
 
@@ -239,7 +239,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">KviWindow::connection()</a>, <a class="el" href="classKviIrcConnection.html#a4556a5c94ac759f3d9815e0a20b19d84">KviIrcConnection::currentNickName()</a>, <a class="el" href="classKviIrcUserDataBase.html#a6519f70f00c2e3c906cb10a2d84077d7">KviIrcUserDataBase::customColor()</a>, <a class="el" href="classKviUserListEntry.html#a26867e3e334c6a5cb67b5b6f43e3351e">globalData()</a>, <a class="el" href="classKviIrcUserDataBase.html#a632e7ae1521782b2f95594ce61d6e1a0">KviIrcUserDataBase::haveCustomColor()</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#a134dd34140beb552ac895b18338f5f06">KVI_OPTION_COLOR</a>, <a class="el" href="kvi__ircuserdb_8h.html#a2fc6e9fa76d1e85cbedd8c7d3905212c">KVI_USERFLAG_CHANADMIN</a>, <a class="el" href="kvi__ircuserdb_8h.html#a7c8eea97f031d102b7fcedacc7011fd4">KVI_USERFLAG_CHANOWNER</a>, <a class="el" href="kvi__ircuserdb_8h.html#ae50f51853812eaa3dc71df99ca26ec79">KVI_USERFLAG_HALFOP</a>, <a class="el" href="kvi__ircuserdb_8h.html#af0c5a94fa587ba91c69f1bcb8cc91989">KVI_USERFLAG_OP</a>, <a class="el" href="kvi__ircuserdb_8h.html#a309ce0e16dd76c62c0418ef595250702">KVI_USERFLAG_VOICE</a>, <a class="el" href="kvi__options_8h.html#a31cc226105cf84dee27f3537b8d065bc">KviOption_boolUseDifferentColorForOwnNick</a>, <a class="el" href="kvi__options_8h.html#aff5ccc26a0ae5f6d65344bc1cc831d30">KviOption_colorUserListViewChanAdminForeground</a>, <a class="el" href="kvi__options_8h.html#abe69d63f059066daebdf7f9780e91222">KviOption_colorUserListViewChanOwnerForeground</a>, <a class="el" href="kvi__options_8h.html#a583f5e8039168b99287d600780d2bb6b">KviOption_colorUserListViewHalfOpForeground</a>, <a class="el" href="kvi__options_8h.html#ad77028cd652a4e0c2862c4ccdf43a679">KviOption_colorUserListViewIrcOpForeground</a>, <a class="el" href="kvi__options_8h.html#ae8357f473002dbae87f724f5cf761edb">KviOption_colorUserListViewNormalForeground</a>, <a class="el" href="kvi__options_8h.html#a6751079dfee2e549340e321158cdb51f">KviOption_colorUserListViewOpForeground</a>, <a class="el" href="kvi__options_8h.html#a214ba6751a821c41b3acfff10c172f19">KviOption_colorUserListViewOwnForeground</a>, <a class="el" href="kvi__options_8h.html#a903336b37e09746c30040d727da73f38">KviOption_colorUserListViewUserOpForeground</a>, <a class="el" href="kvi__options_8h.html#a5fb7bfad58c8b2c8a451f50058f62fdd">KviOption_colorUserListViewVoiceForeground</a>, <a class="el" href="classKviUserListEntry.html#a242d0588bf155d91aaa4193ca6981147">m_iFlags</a>, <a class="el" href="classKviUserListView.html#ae31f08cef4b0212f721a6b8ccf062ff2">KviUserListView::m_pKviWindow</a>, <a class="el" href="classKviUserListEntry.html#a42f3ca82636d14e444d41a2aeb0efde7">m_pListView</a>, <a class="el" href="classKviUserListEntry.html#af1ff732ce965900a54b74a4ef3936007">m_szNick</a>, <a class="el" href="classKviIrcUserDataBase.html#a4bc8dca38c08ee107e64831d804faed5">KviIrcUserDataBase::registeredUser()</a>, and <a class="el" href="classKviIrcConnection.html#ac248af7de361ad78a24bf18125c0372e">KviIrcConnection::userDataBase()</a>.</p>
+<p>References <a class="el" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">KviWindow::connection()</a>, <a class="el" href="classKviIrcConnection.html#a4556a5c94ac759f3d9815e0a20b19d84">KviIrcConnection::currentNickName()</a>, <a class="el" href="classKviUserListEntry.html#a26867e3e334c6a5cb67b5b6f43e3351e">globalData()</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#a134dd34140beb552ac895b18338f5f06">KVI_OPTION_COLOR</a>, <a class="el" href="kvi__options_8h.html#a31cc226105cf84dee27f3537b8d065bc">KviOption_boolUseDifferentColorForOwnNick</a>, <a class="el" href="kvi__options_8h.html#aff5ccc26a0ae5f6d65344bc1cc831d30">KviOption_colorUserListViewChanAdminForeground</a>, <a class="el" href="kvi__options_8h.html#abe69d63f059066daebdf7f9780e91222">KviOption_colorUserListViewChanOwnerForeground</a>, <a class="el" href="kvi__options_8h.html#a583f5e8039168b99287d600780d2bb6b">KviOption_colorUserListViewHalfOpForeground</a>, <a class="el" href="kvi__options_8h.html#ad77028cd652a4e0c2862c4ccdf43a679">KviOption_colorUserListViewIrcOpForeground</a>, <a class="el" href="kvi__options_8h.html#ae8357f473002dbae87f724f5cf761edb">KviOption_colorUserListViewNormalForeground</a>, <a class="el" href="kvi__options_8h.html#a6751079dfee2e549340e321158cdb51f">KviOption_colorUserListViewOpForeground</a>, <a class="el" href="kvi__options_8h.html#a214ba6751a821c41b3acfff10c172f19">KviOption_colorUserListViewOwnForeground</a>, <a class="el" href="kvi__options_8h.html#a903336b37e09746c30040d727da73f38">KviOption_colorUserListViewUserOpForeground</a>, <a class="el" href="kvi__options_8h.html#a5fb7bfad58c8b2c8a451f50058f62fdd">KviOption_colorUserListViewVoiceForeground</a>, <a class="el" href="classKviUserListEntry.html#a242d0588bf155d91aaa4193ca6981147">m_iFlags</a>, <a class="el" href="classKviUserListView.html#ae31f08cef4b0212f721a6b8ccf062ff2">KviUserListView::m_pKviWindow</a>, <a class="el" href="classKviUserListEntry.html#a42f3ca82636d14e444d41a2aeb0efde7">m_pListView</a>, <a class="el" href="classKviUserListEntry.html#af1ff732ce965900a54b74a4ef3936007">m_szNick</a>, and <a class="el" href="classKviIrcConnection.html#ac248af7de361ad78a24bf18125c0372e">KviIrcConnection::userDataBase()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcView.html#a70b6add0da561b3be23c0280872c1fda">KviIrcView::getTextLine()</a>.</p>
 
@@ -259,7 +259,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviUserListEntry.html#a7371dfcd8f27942ecc7dda17331fb17b">avatarDestroyed()</a>, <a class="el" href="classKviUserListEntry.html#a3a78c182e013207e38e594ffdbe9f53a">avatarFrameChanged()</a>, <a class="el" href="classKviUserListEntry.html#a659822f78582acb9d8bbb346bf8b048e">m_pAvatarPixmap</a>, <a class="el" href="kvi__numeric_8h.html#af2ebd5db010f0e321c1faa0e6a182c2b">NULL</a>, and <a class="el" href="classKviAnimatedPixmap.html#afc764a6393e1222607ad0c53cf2b8c6f">KviAnimatedPixmap::stop()</a>.</p>
+<p>References <a class="el" href="classKviUserListEntry.html#a7371dfcd8f27942ecc7dda17331fb17b">avatarDestroyed()</a>, <a class="el" href="classKviUserListEntry.html#a3a78c182e013207e38e594ffdbe9f53a">avatarFrameChanged()</a>, <a class="el" href="classKviUserListEntry.html#a659822f78582acb9d8bbb346bf8b048e">m_pAvatarPixmap</a>, and <a class="el" href="kvi__numeric_8h.html#a46b8d10d4747a4604e6e798ebc7e8a53">NULL</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviUserListView.html#a6fa2b680b52f5d1c7d95e7d0c2d62274">KviUserListView::partInternal()</a>, <a class="el" href="classKviUserListEntry.html#a2fd3897a9c979cdb6f81eed75762fc2a">updateAvatarData()</a>, and <a class="el" href="classKviUserListEntry.html#a303ee154a980556a6963018ac9253726">~KviUserListEntry()</a>.</p>
 
@@ -289,7 +289,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviIrcUserEntry.html">KviIrcUserEntry</a>* KviUserListEntry::globalData </td>
+          <td class="memname">KviIrcUserEntry* KviUserListEntry::globalData </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td><code> [inline]</code></td>
@@ -299,7 +299,7 @@ Friends</h2></td></tr>
 <div class="memdoc">
 
 <p>Returns the irc user db entry. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviIrcUserEntry.html" title="A class to handle the entries of the user database.">KviIrcUserEntry</a> * </dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>KviIrcUserEntry * </dd></dl>
 
 <p>Referenced by <a class="el" href="classKviUserListEntry.html#ab9b18fa81babe702f3df1147ffc63733">color()</a>, <a class="el" href="classKviUserListView.html#aefb6a6fe4fec02d6a8e3bd5fec0d2fff">KviUserListView::insertUserEntry()</a>, <a class="el" href="classKviUserListViewArea.html#a346ec5eb1a52ea47f85600e28ecdcaa5">KviUserListViewArea::paintEvent()</a>, <a class="el" href="classKviServerParser.html#a58a86e109902199f64899cd1e5165586">KviServerParser::parseLiteralJoin()</a>, and <a class="el" href="classKviQuery.html#af9fe0fccea11cc20eadeba1f552d48f8">KviQuery::setTarget()</a>.</p>
 
@@ -364,7 +364,7 @@ Friends</h2></td></tr>
 <p>Recalculates the size height for the entry. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#a9315db3c98fc3edd47c4ac9b1ed6d8e6">KviOption_boolShowUserChannelIcons</a>, <a class="el" href="classKviUserListView.html#a11e9f4ba1f4a65b29b6b351c13ff532b">KviUserListView::m_iFontHeight</a>, <a class="el" href="classKviUserListEntry.html#aea7e1e4dc7045028d6be5db6b6daea1a">m_iHeight</a>, <a class="el" href="classKviUserListEntry.html#a659822f78582acb9d8bbb346bf8b048e">m_pAvatarPixmap</a>, <a class="el" href="classKviUserListEntry.html#a42f3ca82636d14e444d41a2aeb0efde7">m_pListView</a>, and <a class="el" href="classKviAnimatedPixmap.html#a5e65844164d836a6627ff9dec016ab9c">KviAnimatedPixmap::size()</a>.</p>
+<p>References <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#a9315db3c98fc3edd47c4ac9b1ed6d8e6">KviOption_boolShowUserChannelIcons</a>, <a class="el" href="classKviUserListView.html#a11e9f4ba1f4a65b29b6b351c13ff532b">KviUserListView::m_iFontHeight</a>, <a class="el" href="classKviUserListEntry.html#aea7e1e4dc7045028d6be5db6b6daea1a">m_iHeight</a>, <a class="el" href="classKviUserListEntry.html#a659822f78582acb9d8bbb346bf8b048e">m_pAvatarPixmap</a>, and <a class="el" href="classKviUserListEntry.html#a42f3ca82636d14e444d41a2aeb0efde7">m_pListView</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviUserListView.html#a1f3cb0b959e759470b82a8c31405701e">KviUserListView::applyOptions()</a>, <a class="el" href="classKviUserListView.html#adcd0c82dca3cf65ec1275b32907cd8a3">KviUserListView::avatarChanged()</a>, and <a class="el" href="classKviUserListEntry.html#a5ed6c23a43b1b0ed62921b958a52b89a">KviUserListEntry()</a>.</p>
 
@@ -387,7 +387,7 @@ Friends</h2></td></tr>
 <p>Updates the avatar data. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviAvatar.html#a7635c7af7c5ecc2b607ed47316dceefc">KviAvatar::animatedPixmap()</a>, <a class="el" href="classKviIrcUserEntry.html#a400231485f6049e709ca20bdeaebbc3c">KviIrcUserEntry::avatar()</a>, <a class="el" href="classKviUserListEntry.html#a7371dfcd8f27942ecc7dda17331fb17b">avatarDestroyed()</a>, <a class="el" href="classKviUserListEntry.html#a3a78c182e013207e38e594ffdbe9f53a">avatarFrameChanged()</a>, <a class="el" href="classKviUserListEntry.html#aebddcaf2776bc71883c8fc3c86491087">detachAvatarData()</a>, <a class="el" href="classKviAvatar.html#ad81dadcb32c1f4e161cc1caf4d7ee0bc">KviAvatar::forSize()</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#ae69b0fd7eb238f40d4c177d8a44e77df">KVI_OPTION_UINT</a>, <a class="el" href="kvi__options_8h.html#ad3967a2ab42bea92f9e600732b556fe5">KviOption_boolDoNotUpscaleAvatars</a>, <a class="el" href="kvi__options_8h.html#a50adc40abbf48f3caaefb24ba7a165dc">KviOption_boolEnableAnimatedAvatars</a>, <a class="el" href="kvi__options_8h.html#a0a54c7ef98ec37212320fb208396802a">KviOption_boolScaleAvatars</a>, <a class="el" href="kvi__options_8h.html#a023e802953773086bf60a1fa7dece102">KviOption_boolShowAvatarsInUserlist</a>, <a class="el" href="kvi__options_8h.html#a2f6e71023da0dbb2a298774e151993d3">KviOption_uintAvatarScaleHeight</a>, <a class="el" href="kvi__options_8h.html#aca822541a0e7ec7c366d993844a18750">KviOption_uintAvatarScaleWidth</a>, <a class="el" href="classKviUserListEntry.html#a659822f78582acb9d8bbb346bf8b048e">m_pAvatarPixmap</a>, <a class="el" href="classKviUserListEntry.html#a29a8939bce8a6e59e368351b33d00bc8">m_pGlobalData</a>, <a class="el" href="classKviAvatar.html#a61fd5aad13f1dcb38c2bba6812495d0d">KviAvatar::size()</a>, and <a class="el" href="classKviAnimatedPixmap.html#a735ea6bd0d25b101d73bf3700e268cbb">KviAnimatedPixmap::start()</a>.</p>
+<p>References <a class="el" href="classKviUserListEntry.html#a7371dfcd8f27942ecc7dda17331fb17b">avatarDestroyed()</a>, <a class="el" href="classKviUserListEntry.html#a3a78c182e013207e38e594ffdbe9f53a">avatarFrameChanged()</a>, <a class="el" href="classKviUserListEntry.html#aebddcaf2776bc71883c8fc3c86491087">detachAvatarData()</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#ae69b0fd7eb238f40d4c177d8a44e77df">KVI_OPTION_UINT</a>, <a class="el" href="kvi__options_8h.html#ad3967a2ab42bea92f9e600732b556fe5">KviOption_boolDoNotUpscaleAvatars</a>, <a class="el" href="kvi__options_8h.html#a50adc40abbf48f3caaefb24ba7a165dc">KviOption_boolEnableAnimatedAvatars</a>, <a class="el" href="kvi__options_8h.html#a0a54c7ef98ec37212320fb208396802a">KviOption_boolScaleAvatars</a>, <a class="el" href="kvi__options_8h.html#a023e802953773086bf60a1fa7dece102">KviOption_boolShowAvatarsInUserlist</a>, <a class="el" href="kvi__options_8h.html#a2f6e71023da0dbb2a298774e151993d3">KviOption_uintAvatarScaleHeight</a>, <a class="el" href="kvi__options_8h.html#aca822541a0e7ec7c366d993844a18750">KviOption_uintAvatarScaleWidth</a>, <a class="el" href="classKviUserListEntry.html#a659822f78582acb9d8bbb346bf8b048e">m_pAvatarPixmap</a>, and <a class="el" href="classKviUserListEntry.html#a29a8939bce8a6e59e368351b33d00bc8">m_pGlobalData</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviUserListView.html#a1f3cb0b959e759470b82a8c31405701e">KviUserListView::applyOptions()</a>, <a class="el" href="classKviUserListView.html#adcd0c82dca3cf65ec1275b32907cd8a3">KviUserListView::avatarChanged()</a>, and <a class="el" href="classKviUserListEntry.html#a5ed6c23a43b1b0ed62921b958a52b89a">KviUserListEntry()</a>.</p>
 
@@ -516,7 +516,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviAnimatedPixmap.html">KviAnimatedPixmap</a>* <a class="el" href="classKviUserListEntry.html#a659822f78582acb9d8bbb346bf8b048e">KviUserListEntry::m_pAvatarPixmap</a><code> [protected]</code></td>
+          <td class="memname">KviAnimatedPixmap* <a class="el" href="classKviUserListEntry.html#a659822f78582acb9d8bbb346bf8b048e">KviUserListEntry::m_pAvatarPixmap</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -531,7 +531,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviIrcUserEntry.html">KviIrcUserEntry</a>* <a class="el" href="classKviUserListEntry.html#a29a8939bce8a6e59e368351b33d00bc8">KviUserListEntry::m_pGlobalData</a><code> [protected]</code></td>
+          <td class="memname">KviIrcUserEntry* <a class="el" href="classKviUserListEntry.html#a29a8939bce8a6e59e368351b33d00bc8">KviUserListEntry::m_pGlobalData</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -606,7 +606,7 @@ Friends</h2></td></tr>
 <li>src/kvirc/ui/<a class="el" href="kvi__userlistview_8cpp.html">kvi_userlistview.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:33:05 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:14 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

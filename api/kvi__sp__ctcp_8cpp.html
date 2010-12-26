@@ -33,23 +33,23 @@
 <h1>src/kvirc/sparser/kvi_sp_ctcp.cpp File Reference</h1>  </div>
 </div>
 <div class="contents">
-<code>#include &quot;<a class="el" href="kvi__mirccntrl_8h_source.html">kvi_mirccntrl.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__osinfo_8h_source.html">kvi_osinfo.h</a>&quot;</code><br/>
+<code>#include &quot;KviMircCntrl.h&quot;</code><br/>
+<code>#include &quot;KviOsInfo.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__app_8h_source.html">kvi_app.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__sparser_8h_source.html">kvi_sparser.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__window_8h_source.html">kvi_window.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__out_8h_source.html">kvi_out.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__locale_8h_source.html">kvi_locale.h</a>&quot;</code><br/>
+<code>#include &quot;KviLocale.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__ircsocket_8h_source.html">kvi_ircsocket.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__channel_8h_source.html">kvi_channel.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__defaults_8h_source.html">kvi_defaults.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__query_8h_source.html">kvi_query.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__ircuserdb_8h_source.html">kvi_ircuserdb.h</a>&quot;</code><br/>
+<code>#include &quot;KviIrcUserDataBase.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__iconmanager_8h_source.html">kvi_iconmanager.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__modulemanager_8h_source.html">kvi_modulemanager.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__sharedfiles_8h_source.html">kvi_sharedfiles.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__time_8h_source.html">kvi_time.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__fileutils_8h_source.html">kvi_fileutils.h</a>&quot;</code><br/>
+<code>#include &quot;KviSharedFilesManager.h&quot;</code><br/>
+<code>#include &quot;KviTimeUtils.h&quot;</code><br/>
+<code>#include &quot;KviFileUtils.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__ctcppagedialog_8h_source.html">kvi_ctcppagedialog.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__useraction_8h_source.html">kvi_useraction.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__options_8h_source.html">kvi_options.h</a>&quot;</code><br/>
@@ -60,7 +60,7 @@
 <code>#include &quot;<a class="el" href="kvi__kvs__eventtriggers_8h_source.html">kvi_kvs_eventtriggers.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__kvs__script_8h_source.html">kvi_kvs_script.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__sourcesdate_8h_source.html">kvi_sourcesdate.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__regusersdb_8h_source.html">kvi_regusersdb.h</a>&quot;</code><br/>
+<code>#include &quot;KviRegisteredUserDataBase.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__buildinfo_8h_source.html">kvi_buildinfo.h</a>&quot;</code><br/>
 <code>#include &lt;stdlib.h&gt;</code><br/>
 <code>#include &lt;QDateTime&gt;</code><br/>
@@ -73,7 +73,7 @@ Typedefs</h2></td></tr>
 Variables</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__ctcp_8cpp.html#a86f5473b707749e82e698eaccf6202ce">ctcpTagTable</a> [][2]</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">KVIRC_API <a class="el" href="classKviCtcpPageDialog.html">KviCtcpPageDialog</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__ctcp_8cpp.html#adeb1ffd3d106f82111b10cf62372b3d3">g_pCtcpPageDialog</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">KVIRC_API <a class="el" href="classKviSharedFilesManager.html">KviSharedFilesManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__ctcp_8cpp.html#a647d42a9a5585ee3bcdb45344dd4b305">g_pSharedFilesManager</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KVIRC_API KviSharedFilesManager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kvi__sp__ctcp_8cpp.html#a647d42a9a5585ee3bcdb45344dd4b305">g_pSharedFilesManager</a></td></tr>
 </table>
 <hr/><h2>Typedef Documentation</h2>
 <a class="anchor" id="a8ecafdeff08f33672519860540bd1483"></a><!-- doxytag: member="kvi_sp_ctcp.cpp::dccModuleCtcpDccParseRoutine" ref="a8ecafdeff08f33672519860540bd1483" args=")(KviDccRequest *par)" -->
@@ -140,7 +140,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">KVIRC_API <a class="el" href="classKviSharedFilesManager.html">KviSharedFilesManager</a>* <a class="el" href="kvi__sp__ctcp_8cpp.html#a647d42a9a5585ee3bcdb45344dd4b305">g_pSharedFilesManager</a></td>
+          <td class="memname">KVIRC_API KviSharedFilesManager* <a class="el" href="kvi__sp__ctcp_8cpp.html#a647d42a9a5585ee3bcdb45344dd4b305">g_pSharedFilesManager</a></td>
         </tr>
       </table>
 </div>
@@ -151,7 +151,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:56 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:06 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

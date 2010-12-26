@@ -56,8 +56,8 @@
 <a name="l00025"></a>00025 <span class="comment">//=============================================================================</span>
 <a name="l00026"></a>00026 
 <a name="l00033"></a>00033 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;<a class="code" href="kvi__qstring_8h.html" title="Helper functions for the QString class.">kvi_qstring.h</a>&quot;</span>
-<a name="l00035"></a>00035 <span class="preprocessor">#include &quot;<a class="code" href="kvi__heapobject_8h.html" title="Heap Object.">kvi_heapobject.h</a>&quot;</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;KviQString.h&quot;</span>
+<a name="l00035"></a>00035 <span class="preprocessor">#include &quot;KviHeapObject.h&quot;</span>
 <a name="l00036"></a>00036 <span class="preprocessor">#include &quot;<a class="code" href="kvi__kvs__types_8h.html">kvi_kvs_types.h</a>&quot;</span>
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038 <span class="keyword">class </span><a class="code" href="classKviKvsVariant.html" title="This class defines a new data type which contains variant data.">KviKvsVariant</a>;
@@ -176,7 +176,7 @@
 <a name="l00329"></a>00329         <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classKviKvsVariantComparison.html#a44d2936fd7ecfbb6df661cd35374c460" title="Compares an object handle and an array variant.">compareHObjectArray</a>(<span class="keyword">const</span> <a class="code" href="classKviKvsVariant.html" title="This class defines a new data type which contains variant data.">KviKvsVariant</a> * pV1, <span class="keyword">const</span> <a class="code" href="classKviKvsVariant.html" title="This class defines a new data type which contains variant data.">KviKvsVariant</a> * pV2);
 <a name="l00330"></a>00330 };
 <a name="l00331"></a>00331 
-<a name="l00341"></a><a class="code" href="classKviKvsVariant.html">00341</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsVariant.html" title="This class defines a new data type which contains variant data.">KviKvsVariant</a> : <span class="keyword">public</span> <a class="code" href="classKviHeapObject.html">KviHeapObject</a>
+<a name="l00341"></a><a class="code" href="classKviKvsVariant.html">00341</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsVariant.html" title="This class defines a new data type which contains variant data.">KviKvsVariant</a> : <span class="keyword">public</span> KviHeapObject
 <a name="l00342"></a>00342 {
 <a name="l00343"></a><a class="code" href="classKviKvsVariant.html#a00ada8fc8bf8d931a6c4b7fd4bb39615">00343</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classKviKvsVariantComparison.html" title="A class for comparison between two variant data.">KviKvsVariantComparison</a>;
 <a name="l00344"></a>00344 <span class="keyword">public</span>:
@@ -282,7 +282,7 @@
 <a name="l00683"></a>00683 
 <a name="l00688"></a><a class="code" href="classKviKvsVariant.html#a479a3377a19188c811831258c7ce8c75">00688</a>         <a class="code" href="kvi__kvs__types_8h.html#ac0c941372331edcdc89698f6f68c866c">kvs_real_t</a> <a class="code" href="classKviKvsVariant.html#a479a3377a19188c811831258c7ce8c75" title="Returns the double floating point contained in the variant data.">real</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pData ? *(m_pData-&gt;m_u.pReal) : 0.0; };
 <a name="l00689"></a>00689 
-<a name="l00694"></a><a class="code" href="classKviKvsVariant.html#a0daeee44052e1fbe02690e1f719a01ac">00694</a>         <span class="keyword">const</span> QString &amp; <a class="code" href="classKviKvsVariant.html#a0daeee44052e1fbe02690e1f719a01ac" title="Returns the string contained in the variant data.">string</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pData ? *(m_pData-&gt;m_u.pString) : <a class="code" href="namespaceKviQString.html#aa14b9dc45e5d3b528f26e523d7c96b3e" title="A global empty string (note that this is ALSO NULL under Qt 3.x)">KviQString::Empty</a>; };
+<a name="l00694"></a><a class="code" href="classKviKvsVariant.html#a0daeee44052e1fbe02690e1f719a01ac">00694</a>         <span class="keyword">const</span> QString &amp; <a class="code" href="classKviKvsVariant.html#a0daeee44052e1fbe02690e1f719a01ac" title="Returns the string contained in the variant data.">string</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pData ? *(m_pData-&gt;m_u.pString) : KviQString::Empty; };
 <a name="l00695"></a>00695 
 <a name="l00700"></a><a class="code" href="classKviKvsVariant.html#a371bdf53d7b445d327bbe4de627f824e">00700</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviKvsVariant.html#a371bdf53d7b445d327bbe4de627f824e" title="Returns the boolean contained in the variant data.">boolean</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pData ? m_pData-&gt;m_u.bBoolean : <span class="keyword">false</span>; };
 <a name="l00701"></a>00701 
@@ -340,7 +340,7 @@
 <a name="l00874"></a>00874 <span class="preprocessor">#endif // _KVI_KVS_VARIANT_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:54 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

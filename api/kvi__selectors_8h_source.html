@@ -38,7 +38,7 @@
 <a name="l00007"></a>00007 <span class="comment">//   Creation date : Mon Now 13 2000 15:21:10 CEST by Szymon Stefanek</span>
 <a name="l00008"></a>00008 <span class="comment">//</span>
 <a name="l00009"></a>00009 <span class="comment">//   This file is part of the KVirc irc client distribution</span>
-<a name="l00010"></a>00010 <span class="comment">//   Copyright (C) 2000-2008 Szymon Stefanek (pragma at kvirc dot net)</span>
+<a name="l00010"></a>00010 <span class="comment">//   Copyright (C) 2000-2010 Szymon Stefanek (pragma at kvirc dot net)</span>
 <a name="l00011"></a>00011 <span class="comment">//</span>
 <a name="l00012"></a>00012 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00013"></a>00013 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -58,11 +58,11 @@
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="kvi__string_8h.html">kvi_string.h</a>&quot;</span>
-<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pixmap_8h.html">kvi_pixmap.h</a>&quot;</span>
-<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;<a class="code" href="kvi__tal__hbox_8h.html" title="Class for horizontal box.">kvi_tal_hbox.h</a>&quot;</span>
-<a name="l00033"></a>00033 <span class="preprocessor">#include &quot;<a class="code" href="kvi__tal__vbox_8h.html" title="Class for vertical box.">kvi_tal_vbox.h</a>&quot;</span>
-<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;<a class="code" href="kvi__tal__listwidget_8h.html">kvi_tal_listwidget.h</a>&quot;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;KviCString.h&quot;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;KviPixmap.h&quot;</span>
+<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;KviTalHBox.h&quot;</span>
+<a name="l00033"></a>00033 <span class="preprocessor">#include &quot;KviTalVBox.h&quot;</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;KviTalListWidget.h&quot;</span>
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 <span class="preprocessor">#include &lt;QTreeWidget&gt;</span>
 <a name="l00037"></a>00037 <span class="preprocessor">#include &lt;QScrollArea&gt;</span>
@@ -126,7 +126,7 @@
 <a name="l00095"></a>00095 
 <a name="l00096"></a>00096 };
 <a name="l00097"></a>00097 
-<a name="l00098"></a><a class="code" href="classKviStringSelector.html">00098</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviStringSelector.html">KviStringSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
+<a name="l00098"></a><a class="code" href="classKviStringSelector.html">00098</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviStringSelector.html">KviStringSelector</a> : <span class="keyword">public</span> KviTalHBox, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
 <a name="l00099"></a>00099 {
 <a name="l00100"></a>00100         Q_OBJECT
 <a name="l00101"></a>00101 <span class="keyword">public</span>:
@@ -147,7 +147,7 @@
 <a name="l00116"></a>00116         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span> bEnabled);
 <a name="l00117"></a>00117 };
 <a name="l00118"></a>00118 
-<a name="l00119"></a><a class="code" href="classKviPasswordSelector.html">00119</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviPasswordSelector.html">KviPasswordSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
+<a name="l00119"></a><a class="code" href="classKviPasswordSelector.html">00119</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviPasswordSelector.html">KviPasswordSelector</a> : <span class="keyword">public</span> KviTalHBox, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
 <a name="l00120"></a>00120 {
 <a name="l00121"></a>00121         Q_OBJECT
 <a name="l00122"></a>00122 <span class="keyword">public</span>:
@@ -171,7 +171,7 @@
 <a name="l00140"></a>00140         <span class="keywordtype">void</span> checkToggled(<span class="keywordtype">int</span> state);
 <a name="l00141"></a>00141 };
 <a name="l00142"></a>00142 
-<a name="l00143"></a><a class="code" href="classKviPasswordLineEdit.html">00143</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviPasswordLineEdit.html">KviPasswordLineEdit</a> : <span class="keyword">public</span> <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>
+<a name="l00143"></a><a class="code" href="classKviPasswordLineEdit.html">00143</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviPasswordLineEdit.html">KviPasswordLineEdit</a> : <span class="keyword">public</span> KviTalHBox
 <a name="l00144"></a>00144 {
 <a name="l00145"></a>00145         Q_OBJECT
 <a name="l00146"></a>00146 <span class="keyword">public</span>:
@@ -200,22 +200,22 @@
 <a name="l00169"></a>00169 <span class="keyword">protected</span>:
 <a name="l00170"></a><a class="code" href="classKviPixmapPreview.html#a9177663fd318a4db2633149bfd9bd8ae">00170</a>         QLabel *<a class="code" href="classKviPixmapPreview.html#a9177663fd318a4db2633149bfd9bd8ae">m_pLabPixmap</a>;
 <a name="l00171"></a>00171 <span class="keyword">public</span>:
-<a name="l00172"></a>00172         <span class="keywordtype">void</span> setPixmap(<a class="code" href="classKviPixmap.html">KviPixmap</a> * pix);
+<a name="l00172"></a>00172         <span class="keywordtype">void</span> setPixmap(KviPixmap * pix);
 <a name="l00173"></a>00173 };
 <a name="l00174"></a>00174 
 <a name="l00175"></a><a class="code" href="classKviPixmapSelector.html">00175</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviPixmapSelector.html">KviPixmapSelector</a> : <span class="keyword">public</span> QWidget, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
 <a name="l00176"></a>00176 {
 <a name="l00177"></a>00177         Q_OBJECT
 <a name="l00178"></a>00178 <span class="keyword">public</span>:
-<a name="l00179"></a>00179         <a class="code" href="classKviPixmapSelector.html">KviPixmapSelector</a>(QWidget * par,<span class="keyword">const</span> QString &amp; txt,<a class="code" href="classKviPixmap.html">KviPixmap</a> * pOption,<span class="keywordtype">bool</span> bEnabled);
+<a name="l00179"></a>00179         <a class="code" href="classKviPixmapSelector.html">KviPixmapSelector</a>(QWidget * par,<span class="keyword">const</span> QString &amp; txt,KviPixmap * pOption,<span class="keywordtype">bool</span> bEnabled);
 <a name="l00180"></a>00180         ~<a class="code" href="classKviPixmapSelector.html">KviPixmapSelector</a>();
 <a name="l00181"></a>00181 <span class="keyword">private</span>:
 <a name="l00182"></a><a class="code" href="classKviPixmapSelector.html#a55135b3836acc6d5f126998bb74d0ab4">00182</a>         QCheckBox * <a class="code" href="classKviPixmapSelector.html#a55135b3836acc6d5f126998bb74d0ab4">m_pCheckBox</a>;
 <a name="l00183"></a><a class="code" href="classKviPixmapSelector.html#a5bc2a2fe3b195088999a95eb9557dcae">00183</a>         QLabel            * <a class="code" href="classKviPixmapSelector.html#a5bc2a2fe3b195088999a95eb9557dcae">m_pFileNameLabel</a>;
 <a name="l00184"></a><a class="code" href="classKviPixmapSelector.html#a8e593067f0a9f05f8a160d4b58779ab5">00184</a>         <a class="code" href="classKviPixmapPreview.html">KviPixmapPreview</a>  * <a class="code" href="classKviPixmapSelector.html#a8e593067f0a9f05f8a160d4b58779ab5">m_pPreview</a>;
 <a name="l00185"></a><a class="code" href="classKviPixmapSelector.html#ab5d96ce20d855639d1f997e3c7ef592d">00185</a>         QPushButton       * <a class="code" href="classKviPixmapSelector.html#ab5d96ce20d855639d1f997e3c7ef592d">m_pChooseButton</a>;
-<a name="l00186"></a><a class="code" href="classKviPixmapSelector.html#a7f7adc1c7fa0abcf9085226342183294">00186</a>         <a class="code" href="classKviPixmap.html">KviPixmap</a>         * <a class="code" href="classKviPixmapSelector.html#a7f7adc1c7fa0abcf9085226342183294">m_pOption</a>;
-<a name="l00187"></a><a class="code" href="classKviPixmapSelector.html#a2ad33ade946f0b05221d898a6c9aac0d">00187</a>         <a class="code" href="classKviPixmap.html">KviPixmap</a>           <a class="code" href="classKviPixmapSelector.html#a2ad33ade946f0b05221d898a6c9aac0d">m_localPixmap</a>;
+<a name="l00186"></a><a class="code" href="classKviPixmapSelector.html#a7f7adc1c7fa0abcf9085226342183294">00186</a>         KviPixmap         * <a class="code" href="classKviPixmapSelector.html#a7f7adc1c7fa0abcf9085226342183294">m_pOption</a>;
+<a name="l00187"></a><a class="code" href="classKviPixmapSelector.html#a2ad33ade946f0b05221d898a6c9aac0d">00187</a>         KviPixmap           <a class="code" href="classKviPixmapSelector.html#a2ad33ade946f0b05221d898a6c9aac0d">m_localPixmap</a>;
 <a name="l00188"></a>00188 <span class="keyword">public</span>:
 <a name="l00189"></a>00189         <span class="keywordtype">void</span> setImagePath(<span class="keyword">const</span> QString &amp;path);
 <a name="l00190"></a>00190         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSelectorInterface.html#a2dac18af8c22c2ab82aff348a770eed3">commit</a>();
@@ -225,7 +225,7 @@
 <a name="l00194"></a>00194         <span class="keywordtype">void</span> choosePixmap();
 <a name="l00195"></a>00195 };
 <a name="l00196"></a>00196 
-<a name="l00197"></a><a class="code" href="classKviUIntSelector.html">00197</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviUIntSelector.html">KviUIntSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
+<a name="l00197"></a><a class="code" href="classKviUIntSelector.html">00197</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviUIntSelector.html">KviUIntSelector</a> : <span class="keyword">public</span> KviTalHBox, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
 <a name="l00198"></a>00198 {
 <a name="l00199"></a>00199         Q_OBJECT
 <a name="l00200"></a>00200 <span class="keyword">public</span>:
@@ -299,7 +299,7 @@
 <a name="l00268"></a>00268 };
 <a name="l00269"></a>00269 
 <a name="l00270"></a>00270 
-<a name="l00271"></a><a class="code" href="classKviColorSelector.html">00271</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviColorSelector.html">KviColorSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
+<a name="l00271"></a><a class="code" href="classKviColorSelector.html">00271</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviColorSelector.html">KviColorSelector</a> : <span class="keyword">public</span> KviTalHBox, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
 <a name="l00272"></a>00272 {
 <a name="l00273"></a>00273         Q_OBJECT
 <a name="l00274"></a>00274 <span class="keyword">public</span>:
@@ -324,7 +324,7 @@
 <a name="l00293"></a>00293         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span> bEnabled);
 <a name="l00294"></a>00294 };
 <a name="l00295"></a>00295 
-<a name="l00296"></a><a class="code" href="classKviFontSelector.html">00296</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviFontSelector.html">KviFontSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
+<a name="l00296"></a><a class="code" href="classKviFontSelector.html">00296</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviFontSelector.html">KviFontSelector</a> : <span class="keyword">public</span> KviTalHBox, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
 <a name="l00297"></a>00297 {
 <a name="l00298"></a>00298         Q_OBJECT
 <a name="l00299"></a>00299 <span class="keyword">public</span>:
@@ -346,7 +346,7 @@
 <a name="l00315"></a>00315         <span class="keywordtype">void</span> changeClicked();
 <a name="l00316"></a>00316 };
 <a name="l00317"></a>00317 
-<a name="l00318"></a><a class="code" href="classKviStringListSelector.html">00318</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviStringListSelector.html">KviStringListSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalVBox.html" title="Toolkit Abstraction Layer: vbox class.">KviTalVBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
+<a name="l00318"></a><a class="code" href="classKviStringListSelector.html">00318</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviStringListSelector.html">KviStringListSelector</a> : <span class="keyword">public</span> KviTalVBox, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
 <a name="l00319"></a>00319 {
 <a name="l00320"></a>00320         Q_OBJECT
 <a name="l00321"></a>00321 <span class="keyword">public</span>:
@@ -354,7 +354,7 @@
 <a name="l00323"></a>00323         ~<a class="code" href="classKviStringListSelector.html">KviStringListSelector</a>();
 <a name="l00324"></a>00324 <span class="keyword">private</span>:
 <a name="l00325"></a><a class="code" href="classKviStringListSelector.html#a77001376e0294549d9824620d6b70dc7">00325</a>         QLabel      * <a class="code" href="classKviStringListSelector.html#a77001376e0294549d9824620d6b70dc7">m_pLabel</a>;
-<a name="l00326"></a><a class="code" href="classKviStringListSelector.html#ac4b0e28cbf97c94f41a501d0d46b9ea7">00326</a>         <a class="code" href="classKviTalListWidget.html">KviTalListWidget</a>    * <a class="code" href="classKviStringListSelector.html#ac4b0e28cbf97c94f41a501d0d46b9ea7">m_pListWidget</a>;
+<a name="l00326"></a><a class="code" href="classKviStringListSelector.html#ac4b0e28cbf97c94f41a501d0d46b9ea7">00326</a>         KviTalListWidget    * <a class="code" href="classKviStringListSelector.html#ac4b0e28cbf97c94f41a501d0d46b9ea7">m_pListWidget</a>;
 <a name="l00327"></a><a class="code" href="classKviStringListSelector.html#a2811f9e26ed0b3ee1ac79ba45377793d">00327</a>         QLineEdit   * <a class="code" href="classKviStringListSelector.html#a2811f9e26ed0b3ee1ac79ba45377793d">m_pLineEdit</a>;
 <a name="l00328"></a><a class="code" href="classKviStringListSelector.html#a4c752714027f1ce6b8def9809846ca77">00328</a>         QPushButton * <a class="code" href="classKviStringListSelector.html#a4c752714027f1ce6b8def9809846ca77">m_pAddButton</a>;
 <a name="l00329"></a><a class="code" href="classKviStringListSelector.html#a89fb6b0aef7de888da4af6694857187b">00329</a>         QPushButton * <a class="code" href="classKviStringListSelector.html#a89fb6b0aef7de888da4af6694857187b">m_pRemoveButton</a>;
@@ -371,9 +371,9 @@
 <a name="l00340"></a>00340         <span class="keywordtype">void</span> removeClicked();
 <a name="l00341"></a>00341 };
 <a name="l00342"></a>00342 
-<a name="l00343"></a>00343 <span class="keyword">class </span><a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>;
+<a name="l00343"></a>00343 <span class="keyword">class </span>KviTalPopupMenu;
 <a name="l00344"></a>00344 
-<a name="l00345"></a><a class="code" href="classKviMircTextColorSelector.html">00345</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviMircTextColorSelector.html">KviMircTextColorSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
+<a name="l00345"></a><a class="code" href="classKviMircTextColorSelector.html">00345</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviMircTextColorSelector.html">KviMircTextColorSelector</a> : <span class="keyword">public</span> KviTalHBox, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
 <a name="l00346"></a>00346 {
 <a name="l00347"></a>00347         Q_OBJECT
 <a name="l00348"></a>00348 <span class="keyword">public</span>:
@@ -386,9 +386,9 @@
 <a name="l00355"></a><a class="code" href="classKviMircTextColorSelector.html#a983c9ed08b4e99dfc9e5f4bf611fa9ff">00355</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * <a class="code" href="classKviMircTextColorSelector.html#a983c9ed08b4e99dfc9e5f4bf611fa9ff">m_pUBack</a>;
 <a name="l00356"></a><a class="code" href="classKviMircTextColorSelector.html#aea4abb25397f6acc8a2d31ff06351ea7">00356</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviMircTextColorSelector.html#aea4abb25397f6acc8a2d31ff06351ea7">m_uFore</a>;
 <a name="l00357"></a><a class="code" href="classKviMircTextColorSelector.html#aad965ec8f47816a8373a9eb0e5d669a5">00357</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviMircTextColorSelector.html#aad965ec8f47816a8373a9eb0e5d669a5">m_uBack</a>;
-<a name="l00358"></a><a class="code" href="classKviMircTextColorSelector.html#a2c8b3493f9887d6742dbc8e4d0bc487b">00358</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * <a class="code" href="classKviMircTextColorSelector.html#a2c8b3493f9887d6742dbc8e4d0bc487b">m_pContextPopup</a>;
-<a name="l00359"></a><a class="code" href="classKviMircTextColorSelector.html#adbe4bf5bba05f56d16005ef8bcb8a1bf">00359</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * <a class="code" href="classKviMircTextColorSelector.html#adbe4bf5bba05f56d16005ef8bcb8a1bf">m_pForePopup</a>;
-<a name="l00360"></a><a class="code" href="classKviMircTextColorSelector.html#ac8f0430ed8ce48276cdb0cdc40692b30">00360</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * <a class="code" href="classKviMircTextColorSelector.html#ac8f0430ed8ce48276cdb0cdc40692b30">m_pBackPopup</a>;
+<a name="l00358"></a><a class="code" href="classKviMircTextColorSelector.html#a2c8b3493f9887d6742dbc8e4d0bc487b">00358</a>         KviTalPopupMenu * <a class="code" href="classKviMircTextColorSelector.html#a2c8b3493f9887d6742dbc8e4d0bc487b">m_pContextPopup</a>;
+<a name="l00359"></a><a class="code" href="classKviMircTextColorSelector.html#adbe4bf5bba05f56d16005ef8bcb8a1bf">00359</a>         KviTalPopupMenu * <a class="code" href="classKviMircTextColorSelector.html#adbe4bf5bba05f56d16005ef8bcb8a1bf">m_pForePopup</a>;
+<a name="l00360"></a><a class="code" href="classKviMircTextColorSelector.html#ac8f0430ed8ce48276cdb0cdc40692b30">00360</a>         KviTalPopupMenu * <a class="code" href="classKviMircTextColorSelector.html#ac8f0430ed8ce48276cdb0cdc40692b30">m_pBackPopup</a>;
 <a name="l00361"></a>00361 <span class="keyword">public</span>:
 <a name="l00362"></a>00362         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSelectorInterface.html#a2dac18af8c22c2ab82aff348a770eed3">commit</a>();
 <a name="l00363"></a>00363         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span> bEnabled);
@@ -426,7 +426,7 @@
 <a name="l00395"></a><a class="code" href="classKviChanTreeViewItem.html#aec76b0aa4260d9e0878b4d04551383b5">00395</a>         <span class="keyword">const</span> QString&amp; <a class="code" href="classKviChanTreeViewItem.html#aec76b0aa4260d9e0878b4d04551383b5">pass</a>() { <span class="keywordflow">return</span> m_szPass; }
 <a name="l00396"></a>00396 };
 <a name="l00397"></a>00397 
-<a name="l00398"></a><a class="code" href="classKviChannelListSelector.html">00398</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviChannelListSelector.html">KviChannelListSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalVBox.html" title="Toolkit Abstraction Layer: vbox class.">KviTalVBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
+<a name="l00398"></a><a class="code" href="classKviChannelListSelector.html">00398</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviChannelListSelector.html">KviChannelListSelector</a> : <span class="keyword">public</span> KviTalVBox, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
 <a name="l00399"></a>00399 {
 <a name="l00400"></a>00400         Q_OBJECT
 <a name="l00401"></a>00401 <span class="keyword">public</span>:
@@ -455,7 +455,7 @@
 <a name="l00424"></a>00424 <span class="preprocessor">#endif //!_KVI_SELECTORS_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:55 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

@@ -47,7 +47,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviKvsObject.html">KviKvsObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectClass.html#a968c94c10ff2b3eb0755cebabc3e53ca">allocateInstance</a> (<a class="el" href="classKviKvsObject.html">KviKvsObject</a> *pParent, const QString &amp;szName, <a class="el" href="classKviKvsRunTimeContext.html">KviKvsRunTimeContext</a> *pContext, <a class="el" href="classKviKvsVariantList.html">KviKvsVariantList</a> *pParams)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectClass.html#af2f56a2272cb46d216a145274b3b5d72">clearDirtyFlag</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectClass.html#ad1919ea7760960fe0b31262c7779b787">getFunctionCode</a> (QString &amp;szCode, <a class="el" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a> &amp;h)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 <a class="el" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectClass.html#ad131703278ab8f6fb325031ff066ca59">getHandlers</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectClass.html#a1cbe2e2fbde9f2a6307bbeb9445150d4">isBuiltin</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectClass.html#a866f090cce636f1922d668aed6552302">isDirty</a> ()</td></tr>
@@ -70,7 +70,7 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectClass.html#a82a77484b52c721b20c106f49a4e5de8">load</a> (const QString &amp;szFileName)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 <a class="el" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectClass.html#a64905356c539c9a246877bd48092c53e">functionHandlers</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectClass.html#a6e203bc377c462cbc150612e77b59f1c">registerChildClass</a> (<a class="el" href="classKviKvsObjectClass.html">KviKvsObjectClass</a> *pClass)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectClass.html#abfa4de19b270cedf125395855388f655">unregisterChildClass</a> (<a class="el" href="classKviKvsObjectClass.html">KviKvsObjectClass</a> *pClass)</td></tr>
@@ -79,9 +79,9 @@ Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="kvi__kvs__object__class_8h.html#aa8e96c305ae80d810558b7369ef64405">KviKvsObjectAllocateInstanceProc</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectClass.html#ad3e6603ddf702fb4692ba5c13dcbdc84">m_allocProc</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectClass.html#a4e4066585666d707d6402da44efc19e8">m_bBuiltin</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectClass.html#a08d35f56e1549a09bbec8f317a8492a0">m_bDirty</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerList.html">KviPointerList</a><br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerList<br class="typebreak"/>
 &lt; <a class="el" href="classKviKvsObjectClass.html">KviKvsObjectClass</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectClass.html#a88b67e40030bbb718c7e5d9339e52467">m_pChildClasses</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt; QString, <br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerHashTable&lt; QString, <br class="typebreak"/>
 <a class="el" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">m_pFunctionHandlers</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviKvsObjectClass.html">KviKvsObjectClass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectClass.html#ad52c9cf6983a4220a1c615f75b491ffe">m_pParentClass</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsObjectClass.html#a91f81c4d401c891a18fccad954c9f049">m_szName</a></td></tr>
@@ -128,7 +128,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerHashTableIterator.html#a118714da73f457cf6cbea89c83d2f8e3">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="classKviPointerHashTableIterator.html#a86c86a3f9ca4386b1339a51f61ea291f">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="classKviKvsObjectClass.html#a64905356c539c9a246877bd48092c53e">functionHandlers()</a>, <a class="el" href="classKviPointerHashTable.html#a9694589651d8fd3f91a42611f1f29133">KviPointerHashTable&lt; Key, T &gt;::insert()</a>, <a class="el" href="classKviKvsKernel.html#ab079022595463d7430f7039d3a8afe7e">KviKvsKernel::instance()</a>, <a class="el" href="classKviKvsObjectFunctionHandler.html#a71133fca54fc810eb08f80e14d9c71bc">KviKvsObjectFunctionHandler::isScriptHandler()</a>, <a class="el" href="classKviKvsObjectClass.html#ad3e6603ddf702fb4692ba5c13dcbdc84">m_allocProc</a>, <a class="el" href="classKviKvsObjectClass.html#a4e4066585666d707d6402da44efc19e8">m_bBuiltin</a>, <a class="el" href="classKviKvsObjectClass.html#a08d35f56e1549a09bbec8f317a8492a0">m_bDirty</a>, <a class="el" href="classKviKvsObjectClass.html#a88b67e40030bbb718c7e5d9339e52467">m_pChildClasses</a>, <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">m_pFunctionHandlers</a>, <a class="el" href="classKviKvsObjectClass.html#ad52c9cf6983a4220a1c615f75b491ffe">m_pParentClass</a>, <a class="el" href="classKviKvsObjectClass.html#a91f81c4d401c891a18fccad954c9f049">m_szName</a>, <a class="el" href="classKviKvsKernel.html#ad9d2c55cfa67ff94f3b5a2c808f680b7">KviKvsKernel::objectController()</a>, <a class="el" href="classKviKvsObjectClass.html#a6e203bc377c462cbc150612e77b59f1c">registerChildClass()</a>, <a class="el" href="classKviKvsObjectController.html#a12e87bda5b434ff33374e8bb3663981d">KviKvsObjectController::registerClass()</a>, <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>, <a class="el" href="classKviPointerHashTable.html#ac4b0eb0129f8d32f757d1a2a846d85cd">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>, and <a class="el" href="classKviKvsObjectFunctionHandler.html#a31ec84da2b8b1021a24e034d4af6fc99">KviKvsObjectFunctionHandler::setClone()</a>.</p>
+<p>References <a class="el" href="classKviKvsObjectClass.html#a64905356c539c9a246877bd48092c53e">functionHandlers()</a>, <a class="el" href="classKviKvsKernel.html#ab079022595463d7430f7039d3a8afe7e">KviKvsKernel::instance()</a>, <a class="el" href="classKviKvsObjectFunctionHandler.html#a71133fca54fc810eb08f80e14d9c71bc">KviKvsObjectFunctionHandler::isScriptHandler()</a>, <a class="el" href="classKviKvsObjectClass.html#ad3e6603ddf702fb4692ba5c13dcbdc84">m_allocProc</a>, <a class="el" href="classKviKvsObjectClass.html#a4e4066585666d707d6402da44efc19e8">m_bBuiltin</a>, <a class="el" href="classKviKvsObjectClass.html#a08d35f56e1549a09bbec8f317a8492a0">m_bDirty</a>, <a class="el" href="classKviKvsObjectClass.html#a88b67e40030bbb718c7e5d9339e52467">m_pChildClasses</a>, <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">m_pFunctionHandlers</a>, <a class="el" href="classKviKvsObjectClass.html#ad52c9cf6983a4220a1c615f75b491ffe">m_pParentClass</a>, <a class="el" href="classKviKvsObjectClass.html#a91f81c4d401c891a18fccad954c9f049">m_szName</a>, <a class="el" href="classKviKvsKernel.html#ad9d2c55cfa67ff94f3b5a2c808f680b7">KviKvsKernel::objectController()</a>, <a class="el" href="classKviKvsObjectClass.html#a6e203bc377c462cbc150612e77b59f1c">registerChildClass()</a>, <a class="el" href="classKviKvsObjectController.html#a12e87bda5b434ff33374e8bb3663981d">KviKvsObjectController::registerClass()</a>, and <a class="el" href="classKviKvsObjectFunctionHandler.html#a31ec84da2b8b1021a24e034d4af6fc99">KviKvsObjectFunctionHandler::setClone()</a>.</p>
 
 </div>
 </div>
@@ -146,7 +146,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="classKviKvsKernel.html#ab079022595463d7430f7039d3a8afe7e">KviKvsKernel::instance()</a>, <a class="el" href="classKviKvsObjectController.html#aeab8b56d7e7a0b352cd4a919409cfe2c">KviKvsObjectController::killAllObjectsWithClass()</a>, <a class="el" href="classKviKvsObjectClass.html#a88b67e40030bbb718c7e5d9339e52467">m_pChildClasses</a>, <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">m_pFunctionHandlers</a>, <a class="el" href="classKviKvsObjectClass.html#ad52c9cf6983a4220a1c615f75b491ffe">m_pParentClass</a>, <a class="el" href="classKviKvsKernel.html#ad9d2c55cfa67ff94f3b5a2c808f680b7">KviKvsKernel::objectController()</a>, <a class="el" href="classKviKvsObjectClass.html#abfa4de19b270cedf125395855388f655">unregisterChildClass()</a>, and <a class="el" href="classKviKvsObjectController.html#aa286cff735a60eb4873a15392515b2d1">KviKvsObjectController::unregisterClass()</a>.</p>
+<p>References <a class="el" href="classKviKvsKernel.html#ab079022595463d7430f7039d3a8afe7e">KviKvsKernel::instance()</a>, <a class="el" href="classKviKvsObjectController.html#aeab8b56d7e7a0b352cd4a919409cfe2c">KviKvsObjectController::killAllObjectsWithClass()</a>, <a class="el" href="classKviKvsObjectClass.html#a88b67e40030bbb718c7e5d9339e52467">m_pChildClasses</a>, <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">m_pFunctionHandlers</a>, <a class="el" href="classKviKvsObjectClass.html#ad52c9cf6983a4220a1c615f75b491ffe">m_pParentClass</a>, <a class="el" href="classKviKvsKernel.html#ad9d2c55cfa67ff94f3b5a2c808f680b7">KviKvsKernel::objectController()</a>, <a class="el" href="classKviKvsObjectClass.html#abfa4de19b270cedf125395855388f655">unregisterChildClass()</a>, and <a class="el" href="classKviKvsObjectController.html#aa286cff735a60eb4873a15392515b2d1">KviKvsObjectController::unregisterClass()</a>.</p>
 
 </div>
 </div>
@@ -188,7 +188,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h.html#a109fa73229142b7d3a9415f3a1d1dfa2">__tr2qs_ctx</a>, <a class="el" href="classKviKvsVariantList.html#a34614ecce05aec2da8798d1be775634d">KviKvsVariantList::append()</a>, <a class="el" href="classKviKvsObject.html#ad939f83011a2153e93c3d0ceceb2b7ce">KviKvsObject::callFunction()</a>, <a class="el" href="classKviKvsObject.html#a73678a718edc463a4bd75a21a47eed39">KviKvsObject::dieNow()</a>, <a class="el" href="classKviKvsVariantList.html#a88da2b1edf923cfbca6ce7e4d7610b76">KviKvsVariantList::first()</a>, <a class="el" href="classKviKvsObject.html#ab0a7bcbe41f9f94f63111b9d7de611d7">KviKvsObject::init()</a>, <a class="el" href="classKviKvsVariant.html#a6781bf76170bb4abd7621ca71f09f880">KviKvsVariant::isEmpty()</a>, <a class="el" href="classKviKvsObjectClass.html#ad3e6603ddf702fb4692ba5c13dcbdc84">m_allocProc</a>, <a class="el" href="classKviKvsVariantList.html#a5f4cd471251b376ebe77c8c2e6ff9010">KviKvsVariantList::next()</a>, <a class="el" href="classKviKvsVariantList.html#afab40426b8f3e512e7c85222a3435cb2">KviKvsVariantList::setAutoDelete()</a>, and <a class="el" href="classKviKvsRunTimeContext.html#a85298c8717b96bc580b3b45b8d3955e9">KviKvsRunTimeContext::warning()</a>.</p>
+<p>References <a class="el" href="classKviKvsVariantList.html#a34614ecce05aec2da8798d1be775634d">KviKvsVariantList::append()</a>, <a class="el" href="classKviKvsObject.html#ad939f83011a2153e93c3d0ceceb2b7ce">KviKvsObject::callFunction()</a>, <a class="el" href="classKviKvsObject.html#a73678a718edc463a4bd75a21a47eed39">KviKvsObject::dieNow()</a>, <a class="el" href="classKviKvsVariantList.html#a88da2b1edf923cfbca6ce7e4d7610b76">KviKvsVariantList::first()</a>, <a class="el" href="classKviKvsObject.html#ab0a7bcbe41f9f94f63111b9d7de611d7">KviKvsObject::init()</a>, <a class="el" href="classKviKvsVariant.html#a6781bf76170bb4abd7621ca71f09f880">KviKvsVariant::isEmpty()</a>, <a class="el" href="classKviKvsObjectClass.html#ad3e6603ddf702fb4692ba5c13dcbdc84">m_allocProc</a>, <a class="el" href="classKviKvsVariantList.html#a5f4cd471251b376ebe77c8c2e6ff9010">KviKvsVariantList::next()</a>, <a class="el" href="classKviKvsVariantList.html#afab40426b8f3e512e7c85222a3435cb2">KviKvsVariantList::setAutoDelete()</a>, and <a class="el" href="classKviKvsRunTimeContext.html#a85298c8717b96bc580b3b45b8d3955e9">KviKvsRunTimeContext::warning()</a>.</p>
 
 </div>
 </div>
@@ -215,7 +215,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,<a class="el" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a>&gt;* KviKvsObjectClass::functionHandlers </td>
+          <td class="memname">KviPointerHashTable&lt;QString,<a class="el" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a>&gt;* KviKvsObjectClass::functionHandlers </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td><code> [inline, protected]</code></td>
@@ -262,7 +262,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,<a class="el" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a>&gt;* KviKvsObjectClass::getHandlers </td>
+          <td class="memname">KviPointerHashTable&lt;QString,<a class="el" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a>&gt;* KviKvsObjectClass::getHandlers </td>
           <td>(</td>
           <td class="paramname">&#160;)</td>
           <td><code> [inline]</code></td>
@@ -287,7 +287,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviKvsObjectController.html#a8d696c3ebb521ec99c2433890b236160">KviKvsObjectController::clearUserClasses()</a>, <a class="el" href="classKviKvsObjectController.html#a742bac8b08db707e1ec907b1381cf904">KviKvsObjectController::lookupClass()</a>, <a class="el" href="classKviKvsObjectClass.html#a347ec0f428248b02af5bdbc3856f0312">save()</a>, and <a class="el" href="classKviKvsObjectController.html#aa286cff735a60eb4873a15392515b2d1">KviKvsObjectController::unregisterClass()</a>.</p>
+<p>Referenced by <a class="el" href="classKviKvsObjectController.html#a742bac8b08db707e1ec907b1381cf904">KviKvsObjectController::lookupClass()</a>, <a class="el" href="classKviKvsObjectClass.html#a347ec0f428248b02af5bdbc3856f0312">save()</a>, and <a class="el" href="classKviKvsObjectController.html#aa286cff735a60eb4873a15392515b2d1">KviKvsObjectController::unregisterClass()</a>.</p>
 
 </div>
 </div>
@@ -343,7 +343,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__window_8cpp.html#a2fe86e51e6cd81939fda329d662f4bef">g_pActiveWindow</a>, <a class="el" href="namespaceKviFileUtils.html#a2c2e855f3837aaa6a569fc0f5f205184">KviFileUtils::readFile()</a>, and <a class="el" href="namespaceKviIrcUrl.html#a2cf284bbc4c7e3df86fe73815a8ac48f">KviIrcUrl::run()</a>.</p>
+<p>References <a class="el" href="kvi__window_8cpp.html#a2fe86e51e6cd81939fda329d662f4bef">g_pActiveWindow</a>, and <a class="el" href="namespaceKviIrcUrl.html#a2cf284bbc4c7e3df86fe73815a8ac48f">KviIrcUrl::run()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsObjectController.html#a742bac8b08db707e1ec907b1381cf904">KviKvsObjectController::lookupClass()</a>.</p>
 
@@ -419,7 +419,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, and <a class="el" href="classKviKvsObjectClass.html#a88b67e40030bbb718c7e5d9339e52467">m_pChildClasses</a>.</p>
+<p>References <a class="el" href="classKviKvsObjectClass.html#a88b67e40030bbb718c7e5d9339e52467">m_pChildClasses</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsObjectClass.html#a19a087762aa4773fe8cefcf68fb69899">KviKvsObjectClass()</a>.</p>
 
@@ -462,7 +462,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">m_pFunctionHandlers</a>, <a class="el" href="classKviKvsObjectClass.html#a91f81c4d401c891a18fccad954c9f049">m_szName</a>, and <a class="el" href="classKviPointerHashTable.html#a429780ac2d3e4c2c7376c93a50da1f54">KviPointerHashTable&lt; Key, T &gt;::replace()</a>.</p>
+<p>References <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">m_pFunctionHandlers</a>, and <a class="el" href="classKviKvsObjectClass.html#a91f81c4d401c891a18fccad954c9f049">m_szName</a>.</p>
 
 </div>
 </div>
@@ -497,7 +497,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">m_pFunctionHandlers</a>, and <a class="el" href="classKviPointerHashTable.html#a429780ac2d3e4c2c7376c93a50da1f54">KviPointerHashTable&lt; Key, T &gt;::replace()</a>.</p>
+<p>References <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">m_pFunctionHandlers</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsTreeNodeSpecialCommandClass.html#a08fddc4a679c2ad394e0210f055b1e82">KviKvsTreeNodeSpecialCommandClass::execute()</a>, and <a class="el" href="classKviKvsObjectController.html#ac3c923d0c4ff727c791d6f0cdcaee393">KviKvsObjectController::init()</a>.</p>
 
@@ -518,7 +518,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">m_pFunctionHandlers</a>, and <a class="el" href="classKviPointerHashTable.html#a429780ac2d3e4c2c7376c93a50da1f54">KviPointerHashTable&lt; Key, T &gt;::replace()</a>.</p>
+<p>References <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">m_pFunctionHandlers</a>.</p>
 
 </div>
 </div>
@@ -537,7 +537,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">m_pFunctionHandlers</a>, and <a class="el" href="classKviPointerHashTable.html#a429780ac2d3e4c2c7376c93a50da1f54">KviPointerHashTable&lt; Key, T &gt;::replace()</a>.</p>
+<p>References <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">m_pFunctionHandlers</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsObjectController.html#ac3c923d0c4ff727c791d6f0cdcaee393">KviKvsObjectController::init()</a>.</p>
 
@@ -558,7 +558,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">m_pFunctionHandlers</a>, and <a class="el" href="classKviPointerHashTable.html#a429780ac2d3e4c2c7376c93a50da1f54">KviPointerHashTable&lt; Key, T &gt;::replace()</a>.</p>
+<p>References <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">m_pFunctionHandlers</a>.</p>
 
 </div>
 </div>
@@ -596,7 +596,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="namespaceKviCommandFormatter.html#acfd5fca108c0728ca0e1881045ee3f47">KviCommandFormatter::blockFromBuffer()</a>, <a class="el" href="classKviPointerHashTableIterator.html#a118714da73f457cf6cbea89c83d2f8e3">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="classKviPointerHashTableIterator.html#a86c86a3f9ca4386b1339a51f61ea291f">KviPointerHashTableIterator&lt; Key, T &gt;::currentKey()</a>, <a class="el" href="namespaceKviCommandFormatter.html#a200ae0b73893dc519e07072c5bacac2d">KviCommandFormatter::indent()</a>, <a class="el" href="classKviKvsObjectFunctionHandler.html#a2fdbf8c6085704f0a8f5c68598214db0a009f34a2f22ac8e00dfe517665df45b8">KviKvsObjectFunctionHandler::Internal</a>, <a class="el" href="classKviKvsObjectClass.html#a1cbe2e2fbde9f2a6307bbeb9445150d4">isBuiltin()</a>, <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">m_pFunctionHandlers</a>, <a class="el" href="classKviKvsObjectClass.html#ad52c9cf6983a4220a1c615f75b491ffe">m_pParentClass</a>, <a class="el" href="classKviKvsObjectClass.html#a91f81c4d401c891a18fccad954c9f049">m_szName</a>, <a class="el" href="classKviKvsObjectClass.html#a05b3f407cd466241a234334841553a09">name()</a>, <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>, and <a class="el" href="namespaceKviFileUtils.html#a035973ee0946798e74a5c7f1d7f1e151">KviFileUtils::writeFile()</a>.</p>
+<p>References <a class="el" href="classKviKvsObjectFunctionHandler.html#a2fdbf8c6085704f0a8f5c68598214db0a009f34a2f22ac8e00dfe517665df45b8">KviKvsObjectFunctionHandler::Internal</a>, <a class="el" href="classKviKvsObjectClass.html#a1cbe2e2fbde9f2a6307bbeb9445150d4">isBuiltin()</a>, <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">m_pFunctionHandlers</a>, <a class="el" href="classKviKvsObjectClass.html#ad52c9cf6983a4220a1c615f75b491ffe">m_pParentClass</a>, <a class="el" href="classKviKvsObjectClass.html#a91f81c4d401c891a18fccad954c9f049">m_szName</a>, and <a class="el" href="classKviKvsObjectClass.html#a05b3f407cd466241a234334841553a09">name()</a>.</p>
 
 </div>
 </div>
@@ -644,7 +644,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsObjectClass.html#a88b67e40030bbb718c7e5d9339e52467">m_pChildClasses</a>, and <a class="el" href="classKviPointerList.html#ae40ae20ce78c065788a04b47c35452c1">KviPointerList&lt; T &gt;::removeRef()</a>.</p>
+<p>References <a class="el" href="classKviKvsObjectClass.html#a88b67e40030bbb718c7e5d9339e52467">m_pChildClasses</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsObjectClass.html#af7732c821a3b35cbfa86b7e58b8a720f">~KviKvsObjectClass()</a>.</p>
 
@@ -728,7 +728,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt;<a class="el" href="classKviKvsObjectClass.html">KviKvsObjectClass</a>&gt;* <a class="el" href="classKviKvsObjectClass.html#a88b67e40030bbb718c7e5d9339e52467">KviKvsObjectClass::m_pChildClasses</a><code> [protected]</code></td>
+          <td class="memname">KviPointerList&lt;<a class="el" href="classKviKvsObjectClass.html">KviKvsObjectClass</a>&gt;* <a class="el" href="classKviKvsObjectClass.html#a88b67e40030bbb718c7e5d9339e52467">KviKvsObjectClass::m_pChildClasses</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -743,7 +743,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerHashTable.html">KviPointerHashTable</a>&lt;QString,<a class="el" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a>&gt;* <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">KviKvsObjectClass::m_pFunctionHandlers</a><code> [protected]</code></td>
+          <td class="memname">KviPointerHashTable&lt;QString,<a class="el" href="classKviKvsObjectFunctionHandler.html">KviKvsObjectFunctionHandler</a>&gt;* <a class="el" href="classKviKvsObjectClass.html#a6e3c9c5a3ebbc4bbc88c67c9dbb1c5f6">KviKvsObjectClass::m_pFunctionHandlers</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -788,7 +788,7 @@ Friends</h2></td></tr>
 <li>src/kvirc/kvs/<a class="el" href="kvi__kvs__object__class_8cpp.html">kvi_kvs_object_class.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:58 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

@@ -37,7 +37,7 @@
 <a name="l00006"></a>00006 <span class="comment">//   Creation date : Tue 07 Oct 2003 02:24:33 by Szymon Stefanek</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">//   This file is part of the KVIrc IRC client distribution</span>
-<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2003-2008 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
+<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2003-2010 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
 <a name="l00010"></a>00010 <span class="comment">//</span>
 <a name="l00011"></a>00011 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00012"></a>00012 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -56,16 +56,16 @@
 <a name="l00025"></a>00025 <span class="comment">//=============================================================================</span>
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerlist_8h.html" title="C++ Template based double linked pointer list class.">kvi_pointerlist.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;KviPointerList.h&quot;</span>
 <a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="kvi__kvs__treenode__data_8h.html">kvi_kvs_treenode_data.h</a>&quot;</span>
 <a name="l00030"></a>00030 
 <a name="l00031"></a><a class="code" href="classKviKvsTreeNodeCompositeData.html">00031</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsTreeNodeCompositeData.html">KviKvsTreeNodeCompositeData</a> : <span class="keyword">public</span> <a class="code" href="classKviKvsTreeNodeData.html">KviKvsTreeNodeData</a>
 <a name="l00032"></a>00032 {
 <a name="l00033"></a>00033 <span class="keyword">public</span>:
-<a name="l00034"></a>00034         <a class="code" href="classKviKvsTreeNodeCompositeData.html">KviKvsTreeNodeCompositeData</a>(<span class="keyword">const</span> QChar * pLocation,<a class="code" href="classKviPointerList.html">KviPointerList&lt;KviKvsTreeNodeData&gt;</a> * pSubData);
+<a name="l00034"></a>00034         <a class="code" href="classKviKvsTreeNodeCompositeData.html">KviKvsTreeNodeCompositeData</a>(<span class="keyword">const</span> QChar * pLocation,KviPointerList&lt;KviKvsTreeNodeData&gt; * pSubData);
 <a name="l00035"></a>00035         ~<a class="code" href="classKviKvsTreeNodeCompositeData.html">KviKvsTreeNodeCompositeData</a>();
 <a name="l00036"></a>00036 <span class="keyword">protected</span>:
-<a name="l00037"></a><a class="code" href="classKviKvsTreeNodeCompositeData.html#a4ccdfc0c515f5718c90180ad9baab142">00037</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviKvsTreeNodeData&gt;</a> * <a class="code" href="classKviKvsTreeNodeCompositeData.html#a4ccdfc0c515f5718c90180ad9baab142">m_pSubData</a>;
+<a name="l00037"></a><a class="code" href="classKviKvsTreeNodeCompositeData.html#a4ccdfc0c515f5718c90180ad9baab142">00037</a>         KviPointerList&lt;KviKvsTreeNodeData&gt; * <a class="code" href="classKviKvsTreeNodeCompositeData.html#a4ccdfc0c515f5718c90180ad9baab142">m_pSubData</a>;
 <a name="l00038"></a>00038 <span class="keyword">public</span>:
 <a name="l00039"></a>00039         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviKvsTreeNodeData.html#a88a6a1cfdade4de56efb32b93fa1a51b">evaluateReadOnly</a>(<a class="code" href="classKviKvsRunTimeContext.html">KviKvsRunTimeContext</a> * <a class="code" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>,<a class="code" href="classKviKvsVariant.html" title="This class defines a new data type which contains variant data.">KviKvsVariant</a> * pBuffer);
 <a name="l00040"></a>00040         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNodeData.html#a354ca643dfa5707a2662d270f543b232" title="Sets the buffer.">contextDescription</a>(QString &amp;szBuffer);
@@ -77,7 +77,7 @@
 <a name="l00046"></a>00046 <span class="preprocessor">#endif //!_KVI_KVS_TREENODE_COMPOSITEDATA_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:54 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

@@ -37,7 +37,7 @@
 <a name="l00006"></a>00006 <span class="comment">//   Creation date : Wed 07 Jan 2004 05:02:57 by Szymon Stefanek</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">//   This file is part of the KVIrc IRC client distribution</span>
-<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2004-2008 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
+<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2004-2010 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
 <a name="l00010"></a>00010 <span class="comment">//</span>
 <a name="l00011"></a>00011 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00012"></a>00012 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -56,14 +56,14 @@
 <a name="l00025"></a>00025 <span class="comment">//=============================================================================</span>
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="kvi__qstring_8h.html" title="Helper functions for the QString class.">kvi_qstring.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;KviQString.h&quot;</span>
 <a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="kvi__window_8h.html" title="Contains the KviWindow class.">kvi_window.h</a>&quot;</span>
 <a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="kvi__kvs__hash_8h.html" title="Handling of hash data type in KVS.">kvi_kvs_hash.h</a>&quot;</span>
 <a name="l00031"></a>00031 <span class="preprocessor">#include &quot;<a class="code" href="kvi__kvs__variantlist_8h.html" title="Parser class to handle variant variables lists.">kvi_kvs_variantlist.h</a>&quot;</span>
 <a name="l00032"></a>00032 <span class="preprocessor">#include &quot;<a class="code" href="kvi__kvs__script_8h.html" title="KVIrc Script manager.">kvi_kvs_script.h</a>&quot;</span>
 <a name="l00033"></a>00033 <span class="preprocessor">#include &quot;<a class="code" href="kvi__kvs__runtimecontext_8h.html">kvi_kvs_runtimecontext.h</a>&quot;</span>
 <a name="l00034"></a>00034 
-<a name="l00035"></a>00035 <span class="preprocessor">#include &quot;<a class="code" href="kvi__tal__popupmenu_8h.html">kvi_tal_popupmenu.h</a>&quot;</span>
+<a name="l00035"></a>00035 <span class="preprocessor">#include &quot;KviTalPopupMenu.h&quot;</span>
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037 <span class="preprocessor">#include &lt;QLabel&gt;</span>
 <a name="l00038"></a>00038 <span class="preprocessor">#include &lt;QPixmap&gt;</span>
@@ -130,7 +130,7 @@
 <a name="l00099"></a>00099 
 <a name="l00100"></a>00100 
 <a name="l00101"></a>00101         <span class="keyword">virtual</span> <span class="keywordtype">void</span> fill(<a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * pMenu,<a class="code" href="classKviKvsPopupMenuTopLevelData.html">KviKvsPopupMenuTopLevelData</a> * pData,<span class="keywordtype">int</span> iIdx) = 0;
-<a name="l00102"></a>00102         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviTalPopupMenu.html#a2deae00fa8031a641272499bc195e87e">clear</a>();
+<a name="l00102"></a>00102         <span class="keyword">virtual</span> <span class="keywordtype">void</span> clear();
 <a name="l00103"></a>00103         <span class="keyword">virtual</span> <a class="code" href="classKviKvsPopupMenuItem.html">KviKvsPopupMenuItem</a> * clone() <span class="keyword">const</span> = 0;
 <a name="l00104"></a>00104 };
 <a name="l00105"></a>00105 
@@ -258,7 +258,7 @@
 <a name="l00227"></a>00227 };
 <a name="l00228"></a>00228 
 <a name="l00229"></a>00229 
-<a name="l00230"></a><a class="code" href="classKviKvsPopupMenu.html">00230</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> : <span class="keyword">public</span> <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>
+<a name="l00230"></a><a class="code" href="classKviKvsPopupMenu.html">00230</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> : <span class="keyword">public</span> KviTalPopupMenu
 <a name="l00231"></a>00231 {
 <a name="l00232"></a><a class="code" href="classKviKvsPopupMenu.html#a8cf68a5678e780b935a4d526aeac5f47">00232</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classKviKvsPopupMenuItemMenu.html">KviKvsPopupMenuItemMenu</a>;
 <a name="l00233"></a><a class="code" href="classKviKvsPopupMenu.html#a0771806e500d6b6c210aed03b87841dd">00233</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classKviKvsPopupManager.html">KviKvsPopupManager</a>;
@@ -268,12 +268,12 @@
 <a name="l00237"></a>00237         <a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a>(<span class="keyword">const</span> QString &amp;szName);
 <a name="l00238"></a>00238         ~<a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a>();
 <a name="l00239"></a>00239 <span class="keyword">protected</span>:
-<a name="l00240"></a><a class="code" href="classKviKvsPopupMenu.html#ac93f2894ef3ceea48bfe1ebe51482279">00240</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviKvsPopupMenuItem&gt;</a>  * <a class="code" href="classKviKvsPopupMenu.html#ac93f2894ef3ceea48bfe1ebe51482279">m_pItemList</a>;
+<a name="l00240"></a><a class="code" href="classKviKvsPopupMenu.html#ac93f2894ef3ceea48bfe1ebe51482279">00240</a>         KviPointerList&lt;KviKvsPopupMenuItem&gt;  * <a class="code" href="classKviKvsPopupMenu.html#ac93f2894ef3ceea48bfe1ebe51482279">m_pItemList</a>;
 <a name="l00241"></a>00241 <span class="keyword">private</span>:
 <a name="l00242"></a><a class="code" href="classKviKvsPopupMenu.html#ab6dbd4c85fdfa371488390f02575805b">00242</a>         QString                            <a class="code" href="classKviKvsPopupMenu.html#ab6dbd4c85fdfa371488390f02575805b">m_szName</a>;
 <a name="l00243"></a><a class="code" href="classKviKvsPopupMenu.html#a5e6654197166d64088a919ee385ef44c">00243</a>         <a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a>                  * <a class="code" href="classKviKvsPopupMenu.html#a5e6654197166d64088a919ee385ef44c">m_pParentPopup</a>;
-<a name="l00244"></a><a class="code" href="classKviKvsPopupMenu.html#af7bdc9e0c081b25f846607e68ad8ff81">00244</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviKvsScript&gt;</a>     * <a class="code" href="classKviKvsPopupMenu.html#af7bdc9e0c081b25f846607e68ad8ff81">m_pPrologues</a>;
-<a name="l00245"></a><a class="code" href="classKviKvsPopupMenu.html#ae6f15b65b87e9bffd31382c1fa92bc44">00245</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviKvsScript&gt;</a>     * <a class="code" href="classKviKvsPopupMenu.html#ae6f15b65b87e9bffd31382c1fa92bc44">m_pEpilogues</a>;
+<a name="l00244"></a><a class="code" href="classKviKvsPopupMenu.html#af7bdc9e0c081b25f846607e68ad8ff81">00244</a>         KviPointerList&lt;KviKvsScript&gt;     * <a class="code" href="classKviKvsPopupMenu.html#af7bdc9e0c081b25f846607e68ad8ff81">m_pPrologues</a>;
+<a name="l00245"></a><a class="code" href="classKviKvsPopupMenu.html#ae6f15b65b87e9bffd31382c1fa92bc44">00245</a>         KviPointerList&lt;KviKvsScript&gt;     * <a class="code" href="classKviKvsPopupMenu.html#ae6f15b65b87e9bffd31382c1fa92bc44">m_pEpilogues</a>;
 <a name="l00246"></a><a class="code" href="classKviKvsPopupMenu.html#a41e89b65d149c903a524a315df9d386f">00246</a>         <a class="code" href="classKviKvsPopupMenuTopLevelData.html">KviKvsPopupMenuTopLevelData</a>      * <a class="code" href="classKviKvsPopupMenu.html#a41e89b65d149c903a524a315df9d386f">m_pTopLevelData</a>;
 <a name="l00247"></a>00247         <span class="comment">// this is a temporary used to hack-in the activation from KviMenuBar</span>
 <a name="l00248"></a><a class="code" href="classKviKvsPopupMenu.html#ad2fe850107f3d73e01943b89aaaf03ef">00248</a>         <a class="code" href="classKviKvsPopupMenuTopLevelData.html">KviKvsPopupMenuTopLevelData</a>      * <a class="code" href="classKviKvsPopupMenu.html#ad2fe850107f3d73e01943b89aaaf03ef">m_pTempTopLevelData</a>;
@@ -298,8 +298,8 @@
 <a name="l00267"></a>00267         <span class="keywordtype">void</span> addEpilogue(<span class="keyword">const</span> QString &amp;szItemName,<span class="keyword">const</span> QString &amp;szCode);
 <a name="l00268"></a>00268         <span class="keywordtype">bool</span> removeItemByName(<span class="keyword">const</span> QString &amp;szItemName,<span class="keywordtype">bool</span> bRecursive);
 <a name="l00269"></a>00269         <a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * findChildPopupByName(<span class="keyword">const</span> QString &amp;szItemName);
-<a name="l00270"></a><a class="code" href="classKviKvsPopupMenu.html#a531179fdaea5dbcaf8610e2fc47159dd">00270</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviKvsScript&gt;</a> * <a class="code" href="classKviKvsPopupMenu.html#a531179fdaea5dbcaf8610e2fc47159dd">epilogues</a>(){ <span class="keywordflow">return</span> m_pEpilogues; };
-<a name="l00271"></a><a class="code" href="classKviKvsPopupMenu.html#ae203928310d007787574fc12488c7959">00271</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviKvsScript&gt;</a> * <a class="code" href="classKviKvsPopupMenu.html#ae203928310d007787574fc12488c7959">prologues</a>(){ <span class="keywordflow">return</span> m_pPrologues; };
+<a name="l00270"></a><a class="code" href="classKviKvsPopupMenu.html#a531179fdaea5dbcaf8610e2fc47159dd">00270</a>         KviPointerList&lt;KviKvsScript&gt; * <a class="code" href="classKviKvsPopupMenu.html#a531179fdaea5dbcaf8610e2fc47159dd">epilogues</a>(){ <span class="keywordflow">return</span> m_pEpilogues; };
+<a name="l00271"></a><a class="code" href="classKviKvsPopupMenu.html#ae203928310d007787574fc12488c7959">00271</a>         KviPointerList&lt;KviKvsScript&gt; * <a class="code" href="classKviKvsPopupMenu.html#ae203928310d007787574fc12488c7959">prologues</a>(){ <span class="keywordflow">return</span> m_pPrologues; };
 <a name="l00272"></a><a class="code" href="classKviKvsPopupMenu.html#a65eb2f38852d7ea4590e3e4f9e7f7756">00272</a>         <a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * <a class="code" href="classKviKvsPopupMenu.html#a65eb2f38852d7ea4590e3e4f9e7f7756">parentPopup</a>(){ <span class="keywordflow">return</span> m_pParentPopup; };
 <a name="l00273"></a>00273         <span class="keywordtype">void</span> generateDefPopup(QString &amp;buffer);
 <a name="l00274"></a><a class="code" href="classKviKvsPopupMenu.html#aafa4d237ad3ad6231e4b0a25faaab747">00274</a>         <span class="keywordtype">void</span> <a class="code" href="classKviKvsPopupMenu.html#aafa4d237ad3ad6231e4b0a25faaab747">setParentPopup</a>(<a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * par){ m_pParentPopup = par; };
@@ -308,8 +308,8 @@
 <a name="l00277"></a>00277         <span class="keywordtype">void</span> addItemInternal(<a class="code" href="classKviKvsPopupMenuItem.html">KviKvsPopupMenuItem</a> * it);
 <a name="l00278"></a>00278         <span class="keywordtype">void</span> executePrologues(<a class="code" href="classKviKvsPopupMenuTopLevelData.html">KviKvsPopupMenuTopLevelData</a> * pData);
 <a name="l00279"></a>00279         <span class="keywordtype">void</span> executeEpilogues(<a class="code" href="classKviKvsPopupMenuTopLevelData.html">KviKvsPopupMenuTopLevelData</a> * pData);
-<a name="l00280"></a>00280         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#abac3f12de939692411bdae6dcb59050d">load</a>(<span class="keyword">const</span> QString &amp;prefix,<a class="code" href="classKviConfig.html">KviConfig</a> * cfg);
-<a name="l00281"></a>00281         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#afc947a792aac67a66d0402e09682ac13">save</a>(<span class="keyword">const</span> QString &amp;prefix,<a class="code" href="classKviConfig.html">KviConfig</a> * cfg);
+<a name="l00280"></a>00280         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#abac3f12de939692411bdae6dcb59050d">load</a>(<span class="keyword">const</span> QString &amp;prefix,KviConfigurationFile * cfg);
+<a name="l00281"></a>00281         <span class="keywordtype">void</span> <a class="code" href="namespaceKviTheme.html#afc947a792aac67a66d0402e09682ac13">save</a>(<span class="keyword">const</span> QString &amp;prefix,KviConfigurationFile * cfg);
 <a name="l00282"></a>00282 <span class="keyword">private</span> slots:
 <a name="l00283"></a>00283         <span class="keywordtype">void</span> setupMenuContents();
 <a name="l00284"></a>00284 <span class="keyword">protected</span>:
@@ -324,7 +324,7 @@
 <a name="l00293"></a>00293 <span class="preprocessor">#endif //!_KVI_KVS_POPUPMENU_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:54 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:04 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

@@ -52,7 +52,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#a7c7d73608d2acbe40869ec161c97dba2">addAppHandler</a> (unsigned int uEvIdx, <a class="el" href="classKviKvsEventHandler.html">KviKvsEventHandler</a> *h)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#a6c4511fda0342250e83f2c8ca56b3c62">addRawHandler</a> (unsigned int uRawIdx, <a class="el" href="classKviKvsEventHandler.html">KviKvsEventHandler</a> *h)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviKvsEvent.html">KviKvsEvent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#a3d1db35458801d3653f32eb6324dc231">appEvent</a> (unsigned int uEvIdx)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerList.html">KviPointerList</a><br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerList<br class="typebreak"/>
 &lt; <a class="el" href="classKviKvsEventHandler.html">KviKvsEventHandler</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#ad2e0e9e94caea810d1a512388d2f1775">appHandlers</a> (unsigned int uEvIdx)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#a60ea68615b76023a187b1730e868642e">clear</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#a8a44cef82038df7a2da6129a7d8bcc74">clearAppEvents</a> ()</td></tr>
@@ -69,7 +69,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#a20fdb106e9f163272238f1bdcbe4f460">isValidRawEvent</a> (unsigned int uEvIdx)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#a90aa134431cc3fc724c2b050de70599f">loadAppEvents</a> (const QString &amp;szFileName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#a8ac6a0d3c3acfd373de7a8449caf40a5">loadRawEvents</a> (const QString &amp;szFileName)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerList.html">KviPointerList</a><br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerList<br class="typebreak"/>
 &lt; <a class="el" href="classKviKvsEventHandler.html">KviKvsEventHandler</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#a97e20dc992482ef5c4e7e777a555d438">rawHandlers</a> (unsigned int uEvIdx)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#a41aefebf636624d500a3fe63119ce2cb">removeAllModuleAppHandlers</a> (<a class="el" href="classKviKvsModuleInterface.html">KviKvsModuleInterface</a> *i)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#a0e0c4039a29e01f85088840a3def7011">removeAllModuleHandlers</a> (<a class="el" href="classKviKvsModuleInterface.html">KviKvsModuleInterface</a> *i)</td></tr>
@@ -84,7 +84,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#a2acce4a6a9ab3fa9b76db5c478299e1e">saveRawEvents</a> (const QString &amp;szFileName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#af41660e89ba12e3ee3aabad1780481a3">trigger</a> (unsigned int uEvIdx, <a class="el" href="classKviWindow.html">KviWindow</a> *pWnd, <a class="el" href="classKviKvsVariantList.html">KviKvsVariantList</a> *pParams)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#a4c7e9e55ed8a615ca1309da19d22100a">triggerDeleteParams</a> (unsigned int uEvIdx, <a class="el" href="classKviWindow.html">KviWindow</a> *pWnd, <a class="el" href="classKviKvsVariantList.html">KviKvsVariantList</a> *pParams)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#afb453b7f86c28864ca4459722a2a9e3a">triggerHandlers</a> (<a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="classKviKvsEventHandler.html">KviKvsEventHandler</a> &gt; *pHandlers, <a class="el" href="classKviWindow.html">KviWindow</a> *pWnd, <a class="el" href="classKviKvsVariantList.html">KviKvsVariantList</a> *pParams)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#afb453b7f86c28864ca4459722a2a9e3a">triggerHandlers</a> (KviPointerList&lt; <a class="el" href="classKviKvsEventHandler.html">KviKvsEventHandler</a> &gt; *pHandlers, <a class="el" href="classKviWindow.html">KviWindow</a> *pWnd, <a class="el" href="classKviKvsVariantList.html">KviKvsVariantList</a> *pParams)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#af9ef17b5a1b71edb667312f43d1b5117">triggerRaw</a> (unsigned int uEvIdx, <a class="el" href="classKviWindow.html">KviWindow</a> *pWnd, <a class="el" href="classKviKvsVariantList.html">KviKvsVariantList</a> *pParams)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -97,7 +97,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#a1aab1ab6676b604a411d949abd97fe9d">~KviKvsEventManager</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerList.html">KviPointerList</a><br class="typebreak"/>
+<tr><td class="memItemLeft" align="right" valign="top">KviPointerList<br class="typebreak"/>
 &lt; <a class="el" href="classKviKvsEventHandler.html">KviKvsEventHandler</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">m_rawEventTable</a> [KVI_KVS_NUM_RAW_EVENTS]</td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
@@ -203,7 +203,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="kvi__kvs__eventmanager_8h.html#aa57ff802bad001ba07caa20a0fd4308d">KVI_KVS_NUM_RAW_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">m_rawEventTable</a>, and <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__eventmanager_8h.html#aa57ff802bad001ba07caa20a0fd4308d">KVI_KVS_NUM_RAW_EVENTS</a>, and <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">m_rawEventTable</a>.</p>
 
 <p>Referenced by <a class="el" href="namespaceKviKvsCoreCallbackCommands.html#a6773f86208e23bafeb6a4cafe3523c83">KviKvsCoreCallbackCommands::KVSCCC()</a>.</p>
 
@@ -231,7 +231,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt;<a class="el" href="classKviKvsEventHandler.html">KviKvsEventHandler</a>&gt;* KviKvsEventManager::appHandlers </td>
+          <td class="memname">KviPointerList&lt;<a class="el" href="classKviKvsEventHandler.html">KviKvsEventHandler</a>&gt;* KviKvsEventManager::appHandlers </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"> <em>uEvIdx</em>&#160;)</td>
@@ -427,7 +427,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="kvi__kvs__eventtable_8h.html#a73afdbbefe683df8a9151a2aad98125e">KVI_KVS_NUM_APP_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#a127254a85d5735516a3ea5acf33ebf3c">m_appEventTable</a>, and <a class="el" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">KviOsInfo::name()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__eventtable_8h.html#a73afdbbefe683df8a9151a2aad98125e">KVI_KVS_NUM_APP_EVENTS</a>, and <a class="el" href="classKviKvsEventManager.html#a127254a85d5735516a3ea5acf33ebf3c">m_appEventTable</a>.</p>
 
 </div>
 </div>
@@ -446,7 +446,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="kvi__kvs__eventtable_8h.html#a73afdbbefe683df8a9151a2aad98125e">KVI_KVS_NUM_APP_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#a127254a85d5735516a3ea5acf33ebf3c">m_appEventTable</a>, and <a class="el" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">KviOsInfo::name()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__eventtable_8h.html#a73afdbbefe683df8a9151a2aad98125e">KVI_KVS_NUM_APP_EVENTS</a>, and <a class="el" href="classKviKvsEventManager.html#a127254a85d5735516a3ea5acf33ebf3c">m_appEventTable</a>.</p>
 
 <p>Referenced by <a class="el" href="namespaceKviKvsCoreCallbackCommands.html#a6773f86208e23bafeb6a4cafe3523c83">KviKvsCoreCallbackCommands::KVSCCC()</a>, <a class="el" href="namespaceKviKvsCoreFunctions.html#a3563b0f9478d6d8277d3ca7603366a0c">KviKvsCoreFunctions::KVSCF()</a>, and <a class="el" href="namespaceKviKvsCoreSimpleCommands.html#afe99903c00d5e1a17c037af33f9cbc17">KviKvsCoreSimpleCommands::KVSCSC()</a>.</p>
 
@@ -477,7 +477,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="classKviKvsEvent.html#af829094206c31a8068033c79da9d567b">KviKvsEvent::handlers()</a>, <a class="el" href="kvi__kvs__eventtable_8h.html#a73afdbbefe683df8a9151a2aad98125e">KVI_KVS_NUM_APP_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#a127254a85d5735516a3ea5acf33ebf3c">m_appEventTable</a>, <a class="el" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">KviOsInfo::name()</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068a864bf0a30ae9b6afece26b3b8343766c">KviKvsEventHandler::Script</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
+<p>References <a class="el" href="classKviKvsEvent.html#af829094206c31a8068033c79da9d567b">KviKvsEvent::handlers()</a>, <a class="el" href="kvi__kvs__eventtable_8h.html#a73afdbbefe683df8a9151a2aad98125e">KVI_KVS_NUM_APP_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#a127254a85d5735516a3ea5acf33ebf3c">m_appEventTable</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068a864bf0a30ae9b6afece26b3b8343766c">KviKvsEventHandler::Script</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsEventManager.html#a658f303948a025da4e7154a3294e5a34">enableScriptAppHandler()</a>, <a class="el" href="namespaceKviKvsCoreFunctions.html#a3563b0f9478d6d8277d3ca7603366a0c">KviKvsCoreFunctions::KVSCF()</a>, and <a class="el" href="namespaceKviKvsCoreSimpleCommands.html#afe99903c00d5e1a17c037af33f9cbc17">KviKvsCoreSimpleCommands::KVSCSC()</a>.</p>
 
@@ -508,7 +508,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="kvi__kvs__eventmanager_8h.html#aa57ff802bad001ba07caa20a0fd4308d">KVI_KVS_NUM_RAW_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">m_rawEventTable</a>, <a class="el" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">KviOsInfo::name()</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068a864bf0a30ae9b6afece26b3b8343766c">KviKvsEventHandler::Script</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__eventmanager_8h.html#aa57ff802bad001ba07caa20a0fd4308d">KVI_KVS_NUM_RAW_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">m_rawEventTable</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068a864bf0a30ae9b6afece26b3b8343766c">KviKvsEventHandler::Script</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsEventManager.html#a1d939e5548bc7bda4b34549fe47d51a0">enableScriptRawHandler()</a>, <a class="el" href="namespaceKviKvsCoreFunctions.html#a3563b0f9478d6d8277d3ca7603366a0c">KviKvsCoreFunctions::KVSCF()</a>, and <a class="el" href="namespaceKviKvsCoreSimpleCommands.html#afe99903c00d5e1a17c037af33f9cbc17">KviKvsCoreSimpleCommands::KVSCSC()</a>.</p>
 
@@ -643,7 +643,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsEvent.html#acc9bb35e24071bec5630d6149231ed81">KviKvsEvent::addHandler()</a>, <a class="el" href="classKviConfig.html#a7d0005732dd9d668ffe829edfdd9adc6">KviConfig::hasGroup()</a>, <a class="el" href="kvi__kvs__eventtable_8h.html#a73afdbbefe683df8a9151a2aad98125e">KVI_KVS_NUM_APP_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#a127254a85d5735516a3ea5acf33ebf3c">m_appEventTable</a>, <a class="el" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">KviOsInfo::name()</a>, <a class="el" href="classKviConfig.html#a0ee3925624620e77f29c851d918cd7f9a24fd017481048902ac931f2747782e69">KviConfig::Read</a>, <a class="el" href="classKviConfig.html#a38a1fde77bfd6f2e8b5a879404ccac79">KviConfig::readBoolEntry()</a>, <a class="el" href="classKviConfig.html#a49a385580df7ab2b87e6bdb677cf20eb">KviConfig::readEntry()</a>, <a class="el" href="classKviConfig.html#a3c1aebd49e1bad5a1c060ddae3637735">KviConfig::readUIntEntry()</a>, <a class="el" href="classKviKvsEventManager.html#afa99ea110732a54ca669cdf590094f30">removeAllScriptAppHandlers()</a>, <a class="el" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>, <a class="el" href="classKviConfig.html#ab31c7473a1ff943b8694f2bc07570034">KviConfig::setGroup()</a>, and <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>.</p>
+<p>References <a class="el" href="classKviKvsEvent.html#acc9bb35e24071bec5630d6149231ed81">KviKvsEvent::addHandler()</a>, <a class="el" href="kvi__kvs__eventtable_8h.html#a73afdbbefe683df8a9151a2aad98125e">KVI_KVS_NUM_APP_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#a127254a85d5735516a3ea5acf33ebf3c">m_appEventTable</a>, <a class="el" href="classKviKvsEventManager.html#afa99ea110732a54ca669cdf590094f30">removeAllScriptAppHandlers()</a>, and <a class="el" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>.</p>
 
 </div>
 </div>
@@ -662,7 +662,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviConfig.html#a7d0005732dd9d668ffe829edfdd9adc6">KviConfig::hasGroup()</a>, <a class="el" href="kvi__kvs__eventmanager_8h.html#aa57ff802bad001ba07caa20a0fd4308d">KVI_KVS_NUM_RAW_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">m_rawEventTable</a>, <a class="el" href="classKviConfig.html#a0ee3925624620e77f29c851d918cd7f9a24fd017481048902ac931f2747782e69">KviConfig::Read</a>, <a class="el" href="classKviConfig.html#a38a1fde77bfd6f2e8b5a879404ccac79">KviConfig::readBoolEntry()</a>, <a class="el" href="classKviConfig.html#a49a385580df7ab2b87e6bdb677cf20eb">KviConfig::readEntry()</a>, <a class="el" href="classKviConfig.html#a3c1aebd49e1bad5a1c060ddae3637735">KviConfig::readUIntEntry()</a>, <a class="el" href="classKviKvsEventManager.html#a0c247ac9ff6eb5274c63bdaf0bdb092e">removeAllScriptRawHandlers()</a>, <a class="el" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>, <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>, <a class="el" href="classKviKvsScriptEventHandler.html#aed22d6aca351b61acfb176cff75e6598">KviKvsScriptEventHandler::setEnabled()</a>, <a class="el" href="classKviConfig.html#ab31c7473a1ff943b8694f2bc07570034">KviConfig::setGroup()</a>, and <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__eventmanager_8h.html#aa57ff802bad001ba07caa20a0fd4308d">KVI_KVS_NUM_RAW_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">m_rawEventTable</a>, <a class="el" href="classKviKvsEventManager.html#a0c247ac9ff6eb5274c63bdaf0bdb092e">removeAllScriptRawHandlers()</a>, <a class="el" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>, and <a class="el" href="classKviKvsScriptEventHandler.html#aed22d6aca351b61acfb176cff75e6598">KviKvsScriptEventHandler::setEnabled()</a>.</p>
 
 </div>
 </div>
@@ -671,7 +671,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt;<a class="el" href="classKviKvsEventHandler.html">KviKvsEventHandler</a>&gt;* KviKvsEventManager::rawHandlers </td>
+          <td class="memname">KviPointerList&lt;<a class="el" href="classKviKvsEventHandler.html">KviKvsEventHandler</a>&gt;* KviKvsEventManager::rawHandlers </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"> <em>uEvIdx</em>&#160;)</td>
@@ -698,7 +698,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="classKviKvsEvent.html#af829094206c31a8068033c79da9d567b">KviKvsEvent::handlers()</a>, <a class="el" href="kvi__kvs__eventtable_8h.html#a73afdbbefe683df8a9151a2aad98125e">KVI_KVS_NUM_APP_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#a127254a85d5735516a3ea5acf33ebf3c">m_appEventTable</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068acacf035bcd41a4e061a251d6ddbf926e">KviKvsEventHandler::Module</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
+<p>References <a class="el" href="classKviKvsEvent.html#af829094206c31a8068033c79da9d567b">KviKvsEvent::handlers()</a>, <a class="el" href="kvi__kvs__eventtable_8h.html#a73afdbbefe683df8a9151a2aad98125e">KVI_KVS_NUM_APP_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#a127254a85d5735516a3ea5acf33ebf3c">m_appEventTable</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068acacf035bcd41a4e061a251d6ddbf926e">KviKvsEventHandler::Module</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsModuleInterface.html#a5a71eb706f1e20020acfd95d39dda34f">KviKvsModuleInterface::kvsUnregisterAllAppEventHandlers()</a>, and <a class="el" href="classKviKvsEventManager.html#a0e0c4039a29e01f85088840a3def7011">removeAllModuleHandlers()</a>.</p>
 
@@ -738,7 +738,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__kvs__eventmanager_8h.html#aa57ff802bad001ba07caa20a0fd4308d">KVI_KVS_NUM_RAW_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">m_rawEventTable</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068acacf035bcd41a4e061a251d6ddbf926e">KviKvsEventHandler::Module</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__eventmanager_8h.html#aa57ff802bad001ba07caa20a0fd4308d">KVI_KVS_NUM_RAW_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">m_rawEventTable</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068acacf035bcd41a4e061a251d6ddbf926e">KviKvsEventHandler::Module</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsModuleInterface.html#ae7219aeee91716f32807ef14fa59e6b9">KviKvsModuleInterface::kvsUnregisterAllRawEventHandlers()</a>, and <a class="el" href="classKviKvsEventManager.html#a0e0c4039a29e01f85088840a3def7011">removeAllModuleHandlers()</a>.</p>
 
@@ -778,7 +778,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="kvi__kvs__eventmanager_8h.html#aa57ff802bad001ba07caa20a0fd4308d">KVI_KVS_NUM_RAW_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">m_rawEventTable</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviPointerList.html#ae40ae20ce78c065788a04b47c35452c1">KviPointerList&lt; T &gt;::removeRef()</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068a864bf0a30ae9b6afece26b3b8343766c">KviKvsEventHandler::Script</a>, <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__eventmanager_8h.html#aa57ff802bad001ba07caa20a0fd4308d">KVI_KVS_NUM_RAW_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">m_rawEventTable</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068a864bf0a30ae9b6afece26b3b8343766c">KviKvsEventHandler::Script</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsEventManager.html#a8ac6a0d3c3acfd373de7a8449caf40a5">loadRawEvents()</a>.</p>
 
@@ -809,7 +809,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviKvsEvent.html#af829094206c31a8068033c79da9d567b">KviKvsEvent::handlers()</a>, <a class="el" href="kvi__kvs__eventtable_8h.html#a73afdbbefe683df8a9151a2aad98125e">KVI_KVS_NUM_APP_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#a127254a85d5735516a3ea5acf33ebf3c">m_appEventTable</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068acacf035bcd41a4e061a251d6ddbf926e">KviKvsEventHandler::Module</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviKvsEvent.html#a718697d83dc16db52263236196e96f1a">KviKvsEvent::removeHandler()</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
+<p>References <a class="el" href="classKviKvsEvent.html#af829094206c31a8068033c79da9d567b">KviKvsEvent::handlers()</a>, <a class="el" href="kvi__kvs__eventtable_8h.html#a73afdbbefe683df8a9151a2aad98125e">KVI_KVS_NUM_APP_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#a127254a85d5735516a3ea5acf33ebf3c">m_appEventTable</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068acacf035bcd41a4e061a251d6ddbf926e">KviKvsEventHandler::Module</a>, <a class="el" href="classKviKvsEvent.html#a718697d83dc16db52263236196e96f1a">KviKvsEvent::removeHandler()</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsModuleInterface.html#a40086bef03e90285e7dcf298c7102962">KviKvsModuleInterface::kvsUnregisterAppEventHandler()</a>.</p>
 
@@ -840,7 +840,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__kvs__eventmanager_8h.html#aa57ff802bad001ba07caa20a0fd4308d">KVI_KVS_NUM_RAW_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">m_rawEventTable</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068acacf035bcd41a4e061a251d6ddbf926e">KviKvsEventHandler::Module</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviPointerList.html#ae40ae20ce78c065788a04b47c35452c1">KviPointerList&lt; T &gt;::removeRef()</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__eventmanager_8h.html#aa57ff802bad001ba07caa20a0fd4308d">KVI_KVS_NUM_RAW_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">m_rawEventTable</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068acacf035bcd41a4e061a251d6ddbf926e">KviKvsEventHandler::Module</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviKvsModuleInterface.html#aa9e96f21f9af42db901dd9c6c89fbd2c">KviKvsModuleInterface::kvsUnregisterRawEventHandler()</a>.</p>
 
@@ -871,7 +871,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="classKviKvsEvent.html#af829094206c31a8068033c79da9d567b">KviKvsEvent::handlers()</a>, <a class="el" href="kvi__kvs__eventtable_8h.html#a73afdbbefe683df8a9151a2aad98125e">KVI_KVS_NUM_APP_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#a127254a85d5735516a3ea5acf33ebf3c">m_appEventTable</a>, <a class="el" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">KviOsInfo::name()</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviKvsEvent.html#a718697d83dc16db52263236196e96f1a">KviKvsEvent::removeHandler()</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068a864bf0a30ae9b6afece26b3b8343766c">KviKvsEventHandler::Script</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
+<p>References <a class="el" href="classKviKvsEvent.html#af829094206c31a8068033c79da9d567b">KviKvsEvent::handlers()</a>, <a class="el" href="kvi__kvs__eventtable_8h.html#a73afdbbefe683df8a9151a2aad98125e">KVI_KVS_NUM_APP_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#a127254a85d5735516a3ea5acf33ebf3c">m_appEventTable</a>, <a class="el" href="classKviKvsEvent.html#a718697d83dc16db52263236196e96f1a">KviKvsEvent::removeHandler()</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068a864bf0a30ae9b6afece26b3b8343766c">KviKvsEventHandler::Script</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
 
 <p>Referenced by <a class="el" href="namespaceKviKvsCoreCallbackCommands.html#a6773f86208e23bafeb6a4cafe3523c83">KviKvsCoreCallbackCommands::KVSCCC()</a>.</p>
 
@@ -902,7 +902,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="namespaceKviQString.html#aef699e3d47aae9b614894e26b878fe3f">KviQString::equalCI()</a>, <a class="el" href="kvi__kvs__eventmanager_8h.html#aa57ff802bad001ba07caa20a0fd4308d">KVI_KVS_NUM_RAW_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">m_rawEventTable</a>, <a class="el" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">KviOsInfo::name()</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviPointerList.html#ae40ae20ce78c065788a04b47c35452c1">KviPointerList&lt; T &gt;::removeRef()</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068a864bf0a30ae9b6afece26b3b8343766c">KviKvsEventHandler::Script</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__eventmanager_8h.html#aa57ff802bad001ba07caa20a0fd4308d">KVI_KVS_NUM_RAW_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">m_rawEventTable</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068a864bf0a30ae9b6afece26b3b8343766c">KviKvsEventHandler::Script</a>, and <a class="el" href="classKviKvsEventHandler.html#a57978e941190bca87a0464c21c63f64c">KviKvsEventHandler::type()</a>.</p>
 
 <p>Referenced by <a class="el" href="namespaceKviKvsCoreCallbackCommands.html#a6773f86208e23bafeb6a4cafe3523c83">KviKvsCoreCallbackCommands::KVSCCC()</a>, and <a class="el" href="namespaceKviKvsCoreSimpleCommands.html#afe99903c00d5e1a17c037af33f9cbc17">KviKvsCoreSimpleCommands::KVSCSC()</a>.</p>
 
@@ -923,7 +923,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviConfig.html#ae76b4f8d9d15f716ef3551953048817c">KviConfig::clear()</a>, <a class="el" href="classKviKvsEvent.html#af829094206c31a8068033c79da9d567b">KviKvsEvent::handlers()</a>, <a class="el" href="classKviConfig.html#a7d0005732dd9d668ffe829edfdd9adc6">KviConfig::hasGroup()</a>, <a class="el" href="kvi__kvs__eventtable_8h.html#a73afdbbefe683df8a9151a2aad98125e">KVI_KVS_NUM_APP_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#a127254a85d5735516a3ea5acf33ebf3c">m_appEventTable</a>, <a class="el" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">KviOsInfo::name()</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068a864bf0a30ae9b6afece26b3b8343766c">KviKvsEventHandler::Script</a>, <a class="el" href="classKviConfig.html#ab31c7473a1ff943b8694f2bc07570034">KviConfig::setGroup()</a>, <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>, <a class="el" href="classKviConfig.html#a0ee3925624620e77f29c851d918cd7f9a0317e2b97dc42e49fde657f461a30c82">KviConfig::Write</a>, and <a class="el" href="classKviConfig.html#a77ae0a956895bc66f5f1b203d6401675">KviConfig::writeEntry()</a>.</p>
+<p>References <a class="el" href="classKviKvsEvent.html#af829094206c31a8068033c79da9d567b">KviKvsEvent::handlers()</a>, <a class="el" href="kvi__kvs__eventtable_8h.html#a73afdbbefe683df8a9151a2aad98125e">KVI_KVS_NUM_APP_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#a127254a85d5735516a3ea5acf33ebf3c">m_appEventTable</a>, <a class="el" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>, and <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068a864bf0a30ae9b6afece26b3b8343766c">KviKvsEventHandler::Script</a>.</p>
 
 </div>
 </div>
@@ -942,7 +942,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviConfig.html#ae76b4f8d9d15f716ef3551953048817c">KviConfig::clear()</a>, <a class="el" href="kvi__kvs__eventmanager_8h.html#aa57ff802bad001ba07caa20a0fd4308d">KVI_KVS_NUM_RAW_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">m_rawEventTable</a>, <a class="el" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">KviOsInfo::name()</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068a864bf0a30ae9b6afece26b3b8343766c">KviKvsEventHandler::Script</a>, <a class="el" href="classKviConfig.html#ab31c7473a1ff943b8694f2bc07570034">KviConfig::setGroup()</a>, <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>, <a class="el" href="classKviConfig.html#a0ee3925624620e77f29c851d918cd7f9a0317e2b97dc42e49fde657f461a30c82">KviConfig::Write</a>, and <a class="el" href="classKviConfig.html#a77ae0a956895bc66f5f1b203d6401675">KviConfig::writeEntry()</a>.</p>
+<p>References <a class="el" href="kvi__kvs__eventmanager_8h.html#aa57ff802bad001ba07caa20a0fd4308d">KVI_KVS_NUM_RAW_EVENTS</a>, <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">m_rawEventTable</a>, <a class="el" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>, and <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068a864bf0a30ae9b6afece26b3b8343766c">KviKvsEventHandler::Script</a>.</p>
 
 </div>
 </div>
@@ -1021,7 +1021,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">bool KviKvsEventManager::triggerHandlers </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="classKviKvsEventHandler.html">KviKvsEventHandler</a> &gt; *&#160;</td>
+          <td class="paramtype">KviPointerList&lt; <a class="el" href="classKviKvsEventHandler.html">KviKvsEventHandler</a> &gt; *&#160;</td>
           <td class="paramname"> <em>pHandlers</em>, </td>
         </tr>
         <tr>
@@ -1045,7 +1045,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h.html#a109fa73229142b7d3a9415f3a1d1dfa2">__tr2qs_ctx</a>, <a class="el" href="classKviKvsEventManager.html#ad01cfbf959f2d8735a5205fa9fbba5e4">eventHandlerDisabled()</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="classKviKvsScript.html#a26ec1d04c8c33257d495fbb836ceeba3a557a1f88093afa1c138cba4be146bb22">KviKvsScript::HaltEncountered</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__out_8h.html#a34e09c47078f9608308f158b9bcb859b">KVI_OUT_PARSERERROR</a>, <a class="el" href="kvi__options_8h.html#ad66925b62b042faf1479864716ffbccd">KviOption_boolDisableBrokenEventHandlers</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068acacf035bcd41a4e061a251d6ddbf926e">KviKvsEventHandler::Module</a>, <a class="el" href="classKviKvsScript.html#acc286d7544e2a70db101c4021eef6fee">KviKvsScript::name()</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>, <a class="el" href="classKviKvsScript.html#ab5fb343c7b482baf7a6b1f3e4a07b62fae68bdcbb344fd0f659c69e33969c9416">KviKvsScript::PreserveParams</a>, <a class="el" href="classKviKvsScript.html#a1e86e4f6a626e189ed829b0a07398cdd">KviKvsScript::run()</a>, <a class="el" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>, and <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068a864bf0a30ae9b6afece26b3b8343766c">KviKvsEventHandler::Script</a>.</p>
+<p>References <a class="el" href="classKviKvsEventManager.html#ad01cfbf959f2d8735a5205fa9fbba5e4">eventHandlerDisabled()</a>, <a class="el" href="classKviKvsScript.html#a26ec1d04c8c33257d495fbb836ceeba3a557a1f88093afa1c138cba4be146bb22">KviKvsScript::HaltEncountered</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__out_8h.html#a34e09c47078f9608308f158b9bcb859b">KVI_OUT_PARSERERROR</a>, <a class="el" href="kvi__options_8h.html#ad66925b62b042faf1479864716ffbccd">KviOption_boolDisableBrokenEventHandlers</a>, <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068acacf035bcd41a4e061a251d6ddbf926e">KviKvsEventHandler::Module</a>, <a class="el" href="classKviKvsScript.html#acc286d7544e2a70db101c4021eef6fee">KviKvsScript::name()</a>, <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>, <a class="el" href="classKviKvsScript.html#ab5fb343c7b482baf7a6b1f3e4a07b62fae68bdcbb344fd0f659c69e33969c9416">KviKvsScript::PreserveParams</a>, <a class="el" href="classKviKvsScript.html#a1e86e4f6a626e189ed829b0a07398cdd">KviKvsScript::run()</a>, <a class="el" href="kvi__numeric_8h.html#a1f2dd8e2d7291a91d19a8184cb721740">s</a>, and <a class="el" href="classKviKvsEventHandler.html#a21ff972546666423254b7311bbfcf068a864bf0a30ae9b6afece26b3b8343766c">KviKvsEventHandler::Script</a>.</p>
 
 </div>
 </div>
@@ -1134,7 +1134,7 @@ Friends</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt;<a class="el" href="classKviKvsEventHandler.html">KviKvsEventHandler</a>&gt;* <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">KviKvsEventManager::m_rawEventTable</a>[KVI_KVS_NUM_RAW_EVENTS]<code> [protected]</code></td>
+          <td class="memname">KviPointerList&lt;<a class="el" href="classKviKvsEventHandler.html">KviKvsEventHandler</a>&gt;* <a class="el" href="classKviKvsEventManager.html#af96809bc34d4b56a05cb04172aeecd43">KviKvsEventManager::m_rawEventTable</a>[KVI_KVS_NUM_RAW_EVENTS]<code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -1150,7 +1150,7 @@ Friends</h2></td></tr>
 <li>src/kvirc/kvs/<a class="el" href="kvi__kvs__eventtable_8cpp.html">kvi_kvs_eventtable.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:58 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

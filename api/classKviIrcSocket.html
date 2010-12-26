@@ -68,6 +68,7 @@ Public Types</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#af1a7caf224b2d6aebf0a08ca74a8bcc9">abort</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Aborts the connection.  <a href="#af1a7caf224b2d6aebf0a08ca74a8bcc9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a873a77aec71f460cb0c7180303bab090">clearOutputQueue</a> (bool bPrivateMessagesOnly)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviConsole.html">KviConsole</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a4500e008041cca7b6a9683ffc8850043">console</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the console.  <a href="#a4500e008041cca7b6a9683ffc8850043"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a593503528764be4cf5b45ab37c8f69a4">getLocalHostIp</a> (QString &amp;szIp, bool bIPv6)</td></tr>
@@ -84,13 +85,13 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the link.  <a href="#a9a2830ad4db6a72f529e7c88b14abd3b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a9071635d5267a1899c304adb71bb5ed6">readBytes</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of bytes read.  <a href="#a9071635d5267a1899c304adb71bb5ed6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a0876c5134d898d93aa22826fd1efa96b">sendPacket</a> (<a class="el" href="classKviDataBuffer.html">KviDataBuffer</a> *pData)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a0876c5134d898d93aa22826fd1efa96b">sendPacket</a> (KviDataBuffer *pData)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the packet is sent to the socket.  <a href="#a0876c5134d898d93aa22826fd1efa96b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#ad40908232466132017eb5e0373e98ca1">sentBytes</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of bytes sent.  <a href="#ad40908232466132017eb5e0373e98ca1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a7a177850047cf551f7708b8eeb17e3aa">sentPackets</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of packets sent.  <a href="#a7a177850047cf551f7708b8eeb17e3aa"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#adcbfed9a6facb0f2d149735fc0167e13">startConnection</a> (<a class="el" href="classKviServer.html">KviServer</a> *pServer, <a class="el" href="classKviProxy.html">KviProxy</a> *pProxy=0, const char *pcBindAddress=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#adcbfed9a6facb0f2d149735fc0167e13">startConnection</a> (KviServer *pServer, KviProxy *pProxy=0, const char *pcBindAddress=0)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the connection.  <a href="#adcbfed9a6facb0f2d149735fc0167e13"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8">SocketState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a83fefa65789dc41e49ce14c025074a2e">state</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the state of the socket.  <a href="#a83fefa65789dc41e49ce14c025074a2e"></a><br/></td></tr>
@@ -154,6 +155,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all messages from the queue.  <a href="#a0afa6663aab890e7159e10584d6deb2f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#ae781470bbafc21ae70dcd9ae0598e5e3">queue_removeMessage</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a message from the head of the queue.  <a href="#ae781470bbafc21ae70dcd9ae0598e5e3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#ab8f9284d7a4ebaa1b435839574730de7">queue_removePrivateMessages</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes private messages from the queue.  <a href="#ab8f9284d7a4ebaa1b435839574730de7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a4cc019bb1d79339231ddcbade49864cc">raiseError</a> (int iError)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Raises an error.  <a href="#a4cc019bb1d79339231ddcbade49864cc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a879dec3bda1b6cd472de701603c52a12">reset</a> ()</td></tr>
@@ -168,9 +171,9 @@ Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#afeeb2e8a3186594dcbee95750da3c7d5">m_iLastError</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviConsole.html">KviConsole</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a26792d099381762e2882287a68ad853c">m_pConsole</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QTimer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a47f3ee1c3935b8a802e650bfb1c13474">m_pFlushTimer</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviServer.html">KviServer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a3bb68350ffe8efdedb852627878183df">m_pIrcServer</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviServer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a3bb68350ffe8efdedb852627878183df">m_pIrcServer</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviIrcLink.html">KviIrcLink</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#ae43897477c6ccb8469c79ef64c49c21d">m_pLink</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviProxy.html">KviProxy</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a5b57837ba3983e2e26f22d02239b55b4">m_pProxy</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviProxy *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a5b57837ba3983e2e26f22d02239b55b4">m_pProxy</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QSocketNotifier *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a7ae33b22e7681314874b8d806aa12dd1">m_pRsn</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__KviIrcSocketMsgEntry.html">KviIrcSocketMsgEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a2046d69784c8be78f335352366ecf0f3">m_pSendQueueHead</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct__KviIrcSocketMsgEntry.html">KviIrcSocketMsgEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcSocket.html#a5eda56d1464c5e5c786ee959f46312b7">m_pSendQueueTail</a></td></tr>
@@ -327,6 +330,28 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a873a77aec71f460cb0c7180303bab090"></a><!-- doxytag: member="KviIrcSocket::clearOutputQueue" ref="a873a77aec71f460cb0c7180303bab090" args="(bool bPrivateMessagesOnly)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KviIrcSocket::clearOutputQueue </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"> <em>bPrivateMessagesOnly</em>&#160;)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Clears the output queue </p>
+
+<p>References <a class="el" href="classKviIrcSocket.html#a0afa6663aab890e7159e10584d6deb2f">queue_removeAllMessages()</a>, and <a class="el" href="classKviIrcSocket.html#ab8f9284d7a4ebaa1b435839574730de7">queue_removePrivateMessages()</a>.</p>
+
+<p>Referenced by <a class="el" href="classKviIrcLink.html#a7e4f5f52558a7c963ec7c936576e2fbb">KviIrcLink::clearOutputQueue()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a7a4c89f22d446e9409aa83841a8994b0"></a><!-- doxytag: member="KviIrcSocket::connectedToIrcServer" ref="a7a4c89f22d446e9409aa83841a8994b0" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -344,7 +369,7 @@ Private Member Functions</h2></td></tr>
 <p>Called when the connection to the irc server has been established. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviIrcSocket.html#a08b106533cf06839039af194152f0142">linkUp()</a>, <a class="el" href="classKviIrcSocket.html#a3bb68350ffe8efdedb852627878183df">m_pIrcServer</a>, and <a class="el" href="classKviServer.html#a4515545ce63283fc92126208906b0a3a">KviServer::useSSL()</a>.</p>
+<p>References <a class="el" href="classKviIrcSocket.html#a08b106533cf06839039af194152f0142">linkUp()</a>, and <a class="el" href="classKviIrcSocket.html#a3bb68350ffe8efdedb852627878183df">m_pIrcServer</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#a709bfd04fc8b4d1d100ef9d2aafa355a">connectionEstabilished()</a>, <a class="el" href="classKviIrcSocket.html#a9868dacf5ec12b8226f4aa4a3c1bf960">proxyHandleHttpFinalReply()</a>, <a class="el" href="classKviIrcSocket.html#acd39919a7bd728f3e5b4e99a1a17a815">proxyHandleV4FinalReply()</a>, and <a class="el" href="classKviIrcSocket.html#a3fd1eb91678ab0fc87b4c0dcb249422b">proxyHandleV5FinalReply()</a>.</p>
 
@@ -367,7 +392,7 @@ Private Member Functions</h2></td></tr>
 <p>Called when the connection to the proxy has been established. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviProxy.html#a617a9bbc8267815e7786599af3ce94edaadc8ca63cc8e9e293688b066b66dd094">KviProxy::Http</a>, <a class="el" href="classKviIrcSocket.html#a5b57837ba3983e2e26f22d02239b55b4">m_pProxy</a>, <a class="el" href="classKviIrcSocket.html#a7ae33b22e7681314874b8d806aa12dd1">m_pRsn</a>, <a class="el" href="classKviIrcSocket.html#a81dd5b2773dd799dc56be92450109d6a">m_sock</a>, <a class="el" href="classKviProxy.html#a05550402b0e2e73f57e29fbb94474a0f">KviProxy::protocol()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8acc2e41ff26e4b4a1ad3501d0cbebfc3e">ProxyLogin</a>, <a class="el" href="classKviIrcSocket.html#a57342c1898ecc0db2b3060a21866e7ef">proxyLoginHttp()</a>, <a class="el" href="classKviIrcSocket.html#a33940994a6e244fa4e593eb136b70f81">proxyLoginV4()</a>, <a class="el" href="classKviIrcSocket.html#acd5b9a031cd2699d456e524953c296e7">proxyLoginV5()</a>, <a class="el" href="classKviIrcSocket.html#a50d449d7362c97af2c4f946804bb40b2">readProxyData()</a>, <a class="el" href="classKviIrcSocket.html#a783007796f4c2e53f0659cb4d9c327c1">setState()</a>, and <a class="el" href="classKviProxy.html#a617a9bbc8267815e7786599af3ce94eda122a71d9da3cd556ff7e9be84a5c35dc">KviProxy::Socks5</a>.</p>
+<p>References <a class="el" href="classKviIrcSocket.html#a5b57837ba3983e2e26f22d02239b55b4">m_pProxy</a>, <a class="el" href="classKviIrcSocket.html#a7ae33b22e7681314874b8d806aa12dd1">m_pRsn</a>, <a class="el" href="classKviIrcSocket.html#a81dd5b2773dd799dc56be92450109d6a">m_sock</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8acc2e41ff26e4b4a1ad3501d0cbebfc3e">ProxyLogin</a>, <a class="el" href="classKviIrcSocket.html#a57342c1898ecc0db2b3060a21866e7ef">proxyLoginHttp()</a>, <a class="el" href="classKviIrcSocket.html#a33940994a6e244fa4e593eb136b70f81">proxyLoginV4()</a>, <a class="el" href="classKviIrcSocket.html#acd5b9a031cd2699d456e524953c296e7">proxyLoginV5()</a>, <a class="el" href="classKviIrcSocket.html#a50d449d7362c97af2c4f946804bb40b2">readProxyData()</a>, and <a class="el" href="classKviIrcSocket.html#a783007796f4c2e53f0659cb4d9c327c1">setState()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#a709bfd04fc8b4d1d100ef9d2aafa355a">connectionEstabilished()</a>.</p>
 
@@ -479,7 +504,7 @@ Private Member Functions</h2></td></tr>
 <p>If fails (happens only on really lagged servers) calls itself with a QTimer shot after <a class="el" href="kvi__options_8h.html#ae69b0fd7eb238f40d4c177d8a44e77df">KVI_OPTION_UINT(KviOption_uintSocketQueueFlushTimeout)</a> ms to retry again... </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="classKviDataBuffer.html#a7ef44a09feeb82ee1aea77dd534c0093">KviDataBuffer::data()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8ab70748345964d16165ad55a4dabd5018">Idle</a>, <a class="el" href="kvi__debug_8h.html#acb8235d766e251808b07c2fdaab97fbc">KVI_ASSERT</a>, <a class="el" href="kvi__time_8h.html#aefc3be507ed019bd85027811a75f2a57">kvi_gettimeofday()</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#ae69b0fd7eb238f40d4c177d8a44e77df">KVI_OPTION_UINT</a>, <a class="el" href="kvi__socket_8h.html#a09b9c8a71bf6576c7ebc954c7e3441ab">kvi_socket_error()</a>, <a class="el" href="kvi__socket_8h.html#a9663c685e7f5ea0fb72ff11e7aaa0eac">kvi_socket_send()</a>, <a class="el" href="kvi__error_8h.html#a42b682d626a92e26cbeb56af14b195a2">KviError_remoteEndClosedConnection</a>, <a class="el" href="kvi__error_8h.html#a5c15e8ab06e96ee5f5aa4c96523a546f">KviError_SSLError</a>, <a class="el" href="kvi__options_8h.html#a8c671bb92f7447f251bae1c5f9d5fa5d">KviOption_boolLimitOutgoingTraffic</a>, <a class="el" href="kvi__options_8h.html#ab46383a3bf941b3b58f1b1e3af012207">KviOption_uintOutgoingTrafficLimitUSeconds</a>, <a class="el" href="kvi__options_8h.html#ac9a729be5269540906cdfafb59655d98">KviOption_uintSocketQueueFlushTimeout</a>, <a class="el" href="classKviIrcSocket.html#a47f3ee1c3935b8a802e650bfb1c13474">m_pFlushTimer</a>, <a class="el" href="classKviIrcSocket.html#a2046d69784c8be78f335352366ecf0f3">m_pSendQueueHead</a>, <a class="el" href="classKviIrcSocket.html#a81dd5b2773dd799dc56be92450109d6a">m_sock</a>, <a class="el" href="classKviIrcSocket.html#a61df747485b120d1af56028660629b48">m_state</a>, <a class="el" href="classKviIrcSocket.html#af3ee9dc665bf4118be1670fe5839b82d">m_tAntiFloodLastMessageTime</a>, <a class="el" href="classKviIrcSocket.html#ac480cedeea51b1db9f96e8fdf839c683">m_uSentBytes</a>, <a class="el" href="classKviIrcSocket.html#ac0683869ea0379eb7730ae463f7ca005">m_uSentPackets</a>, <a class="el" href="classKviIrcSocket.html#a99c1e1c6d2779e9778b15878d41679df">outputSocketWarning()</a>, <a class="el" href="struct__KviIrcSocketMsgEntry.html#a83319d92a1f572194a966b7e3f2ea8e4">_KviIrcSocketMsgEntry::pData</a>, <a class="el" href="classKviIrcSocket.html#ae781470bbafc21ae70dcd9ae0598e5e3">queue_removeMessage()</a>, <a class="el" href="classKviIrcSocket.html#a4cc019bb1d79339231ddcbade49864cc">raiseError()</a>, <a class="el" href="classKviDataBuffer.html#af0398c10f0527544b752e75c54886f66">KviDataBuffer::remove()</a>, <a class="el" href="classKviIrcSocket.html#a879dec3bda1b6cd472de701603c52a12">reset()</a>, <a class="el" href="classKviDataBuffer.html#ab1fa87892487c7cb09e689cd550a9e8a">KviDataBuffer::size()</a>, and <a class="el" href="namespaceKviError.html#a246bcff078b0f629c40eb6ff8491ac56">KviError::translateSystemError()</a>.</p>
+<p>References <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8ab70748345964d16165ad55a4dabd5018">Idle</a>, <a class="el" href="kvi__debug_8h.html#acb8235d766e251808b07c2fdaab97fbc">KVI_ASSERT</a>, <a class="el" href="kvi__options_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="kvi__options_8h.html#ae69b0fd7eb238f40d4c177d8a44e77df">KVI_OPTION_UINT</a>, <a class="el" href="kvi__socket_8h.html#a09b9c8a71bf6576c7ebc954c7e3441ab">kvi_socket_error()</a>, <a class="el" href="kvi__socket_8h.html#a9663c685e7f5ea0fb72ff11e7aaa0eac">kvi_socket_send()</a>, <a class="el" href="kvi__error_8h.html#a42b682d626a92e26cbeb56af14b195a2">KviError_remoteEndClosedConnection</a>, <a class="el" href="kvi__error_8h.html#a5c15e8ab06e96ee5f5aa4c96523a546f">KviError_SSLError</a>, <a class="el" href="kvi__options_8h.html#a8c671bb92f7447f251bae1c5f9d5fa5d">KviOption_boolLimitOutgoingTraffic</a>, <a class="el" href="kvi__options_8h.html#ab46383a3bf941b3b58f1b1e3af012207">KviOption_uintOutgoingTrafficLimitUSeconds</a>, <a class="el" href="kvi__options_8h.html#ac9a729be5269540906cdfafb59655d98">KviOption_uintSocketQueueFlushTimeout</a>, <a class="el" href="classKviIrcSocket.html#a47f3ee1c3935b8a802e650bfb1c13474">m_pFlushTimer</a>, <a class="el" href="classKviIrcSocket.html#a2046d69784c8be78f335352366ecf0f3">m_pSendQueueHead</a>, <a class="el" href="classKviIrcSocket.html#a81dd5b2773dd799dc56be92450109d6a">m_sock</a>, <a class="el" href="classKviIrcSocket.html#a61df747485b120d1af56028660629b48">m_state</a>, <a class="el" href="classKviIrcSocket.html#af3ee9dc665bf4118be1670fe5839b82d">m_tAntiFloodLastMessageTime</a>, <a class="el" href="classKviIrcSocket.html#ac480cedeea51b1db9f96e8fdf839c683">m_uSentBytes</a>, <a class="el" href="classKviIrcSocket.html#ac0683869ea0379eb7730ae463f7ca005">m_uSentPackets</a>, <a class="el" href="classKviIrcSocket.html#a99c1e1c6d2779e9778b15878d41679df">outputSocketWarning()</a>, <a class="el" href="struct__KviIrcSocketMsgEntry.html#a83319d92a1f572194a966b7e3f2ea8e4">_KviIrcSocketMsgEntry::pData</a>, <a class="el" href="classKviIrcSocket.html#ae781470bbafc21ae70dcd9ae0598e5e3">queue_removeMessage()</a>, <a class="el" href="classKviIrcSocket.html#a4cc019bb1d79339231ddcbade49864cc">raiseError()</a>, <a class="el" href="classKviIrcSocket.html#a879dec3bda1b6cd472de701603c52a12">reset()</a>, and <a class="el" href="namespaceKviError.html#a246bcff078b0f629c40eb6ff8491ac56">KviError::translateSystemError()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#af1a7caf224b2d6aebf0a08ca74a8bcc9">abort()</a>, <a class="el" href="classKviIrcSocket.html#a559bd4192a52c099e7a3f12fdba3f2e8">KviIrcSocket()</a>, <a class="el" href="classKviIrcSocket.html#ac6eb7b2166a1f04bf125eec30e41b4cf">readData()</a>, <a class="el" href="classKviIrcSocket.html#a0876c5134d898d93aa22826fd1efa96b">sendPacket()</a>, and <a class="el" href="classKviIrcSocket.html#a20cb7d0797e5e4ae1db52957655b5165">sendRawData()</a>.</p>
 
@@ -509,7 +534,9 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__malloc_8h.html#a02e486a6105b6b21d1a236112fc43aa7">kvi_free</a>, and <a class="el" href="struct__KviIrcSocketMsgEntry.html#a83319d92a1f572194a966b7e3f2ea8e4">_KviIrcSocketMsgEntry::pData</a>.</p>
+<p>References <a class="el" href="struct__KviIrcSocketMsgEntry.html#a83319d92a1f572194a966b7e3f2ea8e4">_KviIrcSocketMsgEntry::pData</a>.</p>
+
+<p>Referenced by <a class="el" href="classKviIrcSocket.html#ab8f9284d7a4ebaa1b435839574730de7">queue_removePrivateMessages()</a>.</p>
 
 </div>
 </div>
@@ -548,7 +575,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="namespaceKviNetUtils.html#abdcb352f2992f18ebe3e37d6e25d6539">KviNetUtils::binaryIpToStringIp()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8a28d1acb9d0a5e314016e437e08aa45df">Connected</a>, <a class="el" href="kvi__socket_8h.html#ad0a7999e348b1e54198e0f800c1f13ea">kvi_socket_getsockname()</a>, <a class="el" href="classKviIrcSocket.html#a81dd5b2773dd799dc56be92450109d6a">m_sock</a>, <a class="el" href="classKviIrcSocket.html#a61df747485b120d1af56028660629b48">m_state</a>, and <a class="el" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">KviOsInfo::name()</a>.</p>
+<p>References <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8a28d1acb9d0a5e314016e437e08aa45df">Connected</a>, <a class="el" href="kvi__socket_8h.html#ad0a7999e348b1e54198e0f800c1f13ea">kvi_socket_getsockname()</a>, <a class="el" href="classKviIrcSocket.html#a81dd5b2773dd799dc56be92450109d6a">m_sock</a>, and <a class="el" href="classKviIrcSocket.html#a61df747485b120d1af56028660629b48">m_state</a>.</p>
 
 </div>
 </div>
@@ -708,7 +735,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__out_8h.html#a825d1961ee7d0a01efa2983d432bb491">KVI_OUT_SOCKETERROR</a>, <a class="el" href="classKviIrcSocket.html#a26792d099381762e2882287a68ad853c">m_pConsole</a>, and <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>.</p>
+<p>References <a class="el" href="kvi__out_8h.html#a825d1961ee7d0a01efa2983d432bb491">KVI_OUT_SOCKETERROR</a>, <a class="el" href="classKviIrcSocket.html#a26792d099381762e2882287a68ad853c">m_pConsole</a>, and <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#a9868dacf5ec12b8226f4aa4a3c1bf960">proxyHandleHttpFinalReply()</a>.</p>
 
@@ -738,7 +765,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__out_8h.html#afcb491274d0a3bd0610e4bbaa3071f56">KVI_OUT_SOCKETMESSAGE</a>, <a class="el" href="classKviIrcSocket.html#a26792d099381762e2882287a68ad853c">m_pConsole</a>, and <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>.</p>
+<p>References <a class="el" href="kvi__out_8h.html#afcb491274d0a3bd0610e4bbaa3071f56">KVI_OUT_SOCKETMESSAGE</a>, <a class="el" href="classKviIrcSocket.html#a26792d099381762e2882287a68ad853c">m_pConsole</a>, and <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#a9868dacf5ec12b8226f4aa4a3c1bf960">proxyHandleHttpFinalReply()</a>, <a class="el" href="classKviIrcSocket.html#acd39919a7bd728f3e5b4e99a1a17a815">proxyHandleV4FinalReply()</a>, <a class="el" href="classKviIrcSocket.html#a911c85f3b82c0da0db4832814da96374">proxyHandleV5AuthReply()</a>, <a class="el" href="classKviIrcSocket.html#a3fd1eb91678ab0fc87b4c0dcb249422b">proxyHandleV5FinalReply()</a>, <a class="el" href="classKviIrcSocket.html#a8a80371a9134a4dbdb84d90e8ad3aab0">proxyHandleV5MethodReply()</a>, <a class="el" href="classKviIrcSocket.html#a57342c1898ecc0db2b3060a21866e7ef">proxyLoginHttp()</a>, <a class="el" href="classKviIrcSocket.html#a33940994a6e244fa4e593eb136b70f81">proxyLoginV4()</a>, <a class="el" href="classKviIrcSocket.html#acd5b9a031cd2699d456e524953c296e7">proxyLoginV5()</a>, and <a class="el" href="classKviIrcSocket.html#ac5d621c5363143c467e1bb9d8fdc3622">readHttpProxyErrorData()</a>.</p>
 
@@ -768,7 +795,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__out_8h.html#a825d1961ee7d0a01efa2983d432bb491">KVI_OUT_SOCKETERROR</a>, <a class="el" href="classKviIrcSocket.html#a26792d099381762e2882287a68ad853c">m_pConsole</a>, and <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>.</p>
+<p>References <a class="el" href="kvi__out_8h.html#a825d1961ee7d0a01efa2983d432bb491">KVI_OUT_SOCKETERROR</a>, <a class="el" href="classKviIrcSocket.html#a26792d099381762e2882287a68ad853c">m_pConsole</a>, and <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#a4cc019bb1d79339231ddcbade49864cc">raiseError()</a>.</p>
 
@@ -798,7 +825,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__out_8h.html#afcb491274d0a3bd0610e4bbaa3071f56">KVI_OUT_SOCKETMESSAGE</a>, <a class="el" href="classKviIrcSocket.html#a26792d099381762e2882287a68ad853c">m_pConsole</a>, and <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>.</p>
+<p>References <a class="el" href="kvi__out_8h.html#afcb491274d0a3bd0610e4bbaa3071f56">KVI_OUT_SOCKETMESSAGE</a>, <a class="el" href="classKviIrcSocket.html#a26792d099381762e2882287a68ad853c">m_pConsole</a>, and <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#a4cc019bb1d79339231ddcbade49864cc">raiseError()</a>, and <a class="el" href="classKviIrcSocket.html#adcbfed9a6facb0f2d149735fc0167e13">startConnection()</a>.</p>
 
@@ -828,7 +855,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__out_8h.html#aeea752f666775929de95022fb1af1f1d">KVI_OUT_SOCKETWARNING</a>, <a class="el" href="classKviIrcSocket.html#a26792d099381762e2882287a68ad853c">m_pConsole</a>, and <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>.</p>
+<p>References <a class="el" href="kvi__out_8h.html#aeea752f666775929de95022fb1af1f1d">KVI_OUT_SOCKETWARNING</a>, <a class="el" href="classKviIrcSocket.html#a26792d099381762e2882287a68ad853c">m_pConsole</a>, and <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#aed1c5c3ed7e55ae927e03710cb13116c">flushSendQueue()</a>, and <a class="el" href="classKviIrcSocket.html#adcbfed9a6facb0f2d149735fc0167e13">startConnection()</a>.</p>
 
@@ -858,7 +885,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__out_8h.html#a774b0f6dc2a363dddd46be83dca5e54d">KVI_OUT_SSL</a>, <a class="el" href="classKviIrcSocket.html#a26792d099381762e2882287a68ad853c">m_pConsole</a>, and <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>.</p>
+<p>References <a class="el" href="kvi__out_8h.html#a774b0f6dc2a363dddd46be83dca5e54d">KVI_OUT_SSL</a>, <a class="el" href="classKviIrcSocket.html#a26792d099381762e2882287a68ad853c">m_pConsole</a>, and <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>.</p>
 
 </div>
 </div>
@@ -886,7 +913,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__out_8h.html#a774b0f6dc2a363dddd46be83dca5e54d">KVI_OUT_SSL</a>, <a class="el" href="classKviIrcSocket.html#a26792d099381762e2882287a68ad853c">m_pConsole</a>, and <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>.</p>
+<p>References <a class="el" href="kvi__out_8h.html#a774b0f6dc2a363dddd46be83dca5e54d">KVI_OUT_SSL</a>, <a class="el" href="classKviIrcSocket.html#a26792d099381762e2882287a68ad853c">m_pConsole</a>, and <a class="el" href="classKviWindow.html#affa5aba746a0a2f41385eb4d1b5ef8b2">KviWindow::output()</a>.</p>
 
 </div>
 </div>
@@ -907,7 +934,7 @@ Private Member Functions</h2></td></tr>
 <p>Starts the negotiation of user/pass for the proxy. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__memmove_8cpp.html#a198ffbdb7bd5601165d0c09cd08aa61c">kvi_memmove()</a>, <a class="el" href="classKviIrcSocket.html#a5b57837ba3983e2e26f22d02239b55b4">m_pProxy</a>, <a class="el" href="classKviProxy.html#a1ae0fc89882dffbfb6f28b37299b1667">KviProxy::pass()</a>, <a class="el" href="classKviProxy.html#a50a6c204828151285d758ae5ec26537e">KviProxy::passLen()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8ac5fa2b43078f0ded80767c8317e5b195">ProxyUserPassV5</a>, <a class="el" href="classKviIrcSocket.html#a20cb7d0797e5e4ae1db52957655b5165">sendRawData()</a>, <a class="el" href="classKviIrcSocket.html#a783007796f4c2e53f0659cb4d9c327c1">setState()</a>, <a class="el" href="classKviProxy.html#a2253a028af4354ee77f34dc643d6f99c">KviProxy::user()</a>, and <a class="el" href="classKviProxy.html#aa8c515609e7afd34a1fdf85d07e66874">KviProxy::userLen()</a>.</p>
+<p>References <a class="el" href="kvi__memmove_8cpp.html#a198ffbdb7bd5601165d0c09cd08aa61c">kvi_memmove()</a>, <a class="el" href="classKviIrcSocket.html#a5b57837ba3983e2e26f22d02239b55b4">m_pProxy</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8ac5fa2b43078f0ded80767c8317e5b195">ProxyUserPassV5</a>, <a class="el" href="classKviIrcSocket.html#a20cb7d0797e5e4ae1db52957655b5165">sendRawData()</a>, and <a class="el" href="classKviIrcSocket.html#a783007796f4c2e53f0659cb4d9c327c1">setState()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#a8a80371a9134a4dbdb84d90e8ad3aab0">proxyHandleV5MethodReply()</a>.</p>
 
@@ -948,7 +975,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="classKviIrcSocket.html#a7a4c89f22d446e9409aa83841a8994b0">connectedToIrcServer()</a>, <a class="el" href="classKviStr.html#af314495121c900d06ce472a9a2a800ba">KviStr::cutFromFirst()</a>, <a class="el" href="classKviWindow.html#abf3dcc8c04ee33b5dac6dbbf9c6189bf">KviWindow::decodeText()</a>, <a class="el" href="classKviStr.html#a352a50ecfe3057759a518ce50b7f4c76">KviStr::findFirstIdx()</a>, <a class="el" href="kvi__string_8cpp.html#a0b435ff3cd51eb79ebfd97c031619f81">kvi_strEqualCIN()</a>, <a class="el" href="classKviIrcSocket.html#a26792d099381762e2882287a68ad853c">m_pConsole</a>, <a class="el" href="classKviIrcSocket.html#a7ae33b22e7681314874b8d806aa12dd1">m_pRsn</a>, <a class="el" href="classKviIrcSocket.html#a0f392b736d7b3ee011827c66c62fc94e">m_pWsn</a>, <a class="el" href="classKviIrcSocket.html#a81dd5b2773dd799dc56be92450109d6a">m_sock</a>, <a class="el" href="classKviIrcSocket.html#a561ab10723832e39b1b8eb07fce315c9">outputProxyError()</a>, <a class="el" href="classKviIrcSocket.html#a975a2aa70bbdc48f3b07206172ed7606">outputProxyMessage()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8a60cf85dfbfca7061ca82abd62359700e">ProxyHttpError</a>, <a class="el" href="classKviStr.html#adabd1f259ed2b72237b5b9b566676759">KviStr::ptr()</a>, <a class="el" href="classKviIrcSocket.html#ac5d621c5363143c467e1bb9d8fdc3622">readHttpProxyErrorData()</a>, <a class="el" href="classKviIrcSocket.html#a783007796f4c2e53f0659cb4d9c327c1">setState()</a>, and <a class="el" href="classKviStr.html#ad9026411d835d524dc3f77f966088f94">KviStr::trimmed()</a>.</p>
+<p>References <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="classKviIrcSocket.html#a7a4c89f22d446e9409aa83841a8994b0">connectedToIrcServer()</a>, <a class="el" href="classKviWindow.html#abf3dcc8c04ee33b5dac6dbbf9c6189bf">KviWindow::decodeText()</a>, <a class="el" href="classKviIrcSocket.html#a26792d099381762e2882287a68ad853c">m_pConsole</a>, <a class="el" href="classKviIrcSocket.html#a7ae33b22e7681314874b8d806aa12dd1">m_pRsn</a>, <a class="el" href="classKviIrcSocket.html#a0f392b736d7b3ee011827c66c62fc94e">m_pWsn</a>, <a class="el" href="classKviIrcSocket.html#a81dd5b2773dd799dc56be92450109d6a">m_sock</a>, <a class="el" href="classKviIrcSocket.html#a561ab10723832e39b1b8eb07fce315c9">outputProxyError()</a>, <a class="el" href="classKviIrcSocket.html#a975a2aa70bbdc48f3b07206172ed7606">outputProxyMessage()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8a60cf85dfbfca7061ca82abd62359700e">ProxyHttpError</a>, <a class="el" href="classKviIrcSocket.html#ac5d621c5363143c467e1bb9d8fdc3622">readHttpProxyErrorData()</a>, and <a class="el" href="classKviIrcSocket.html#a783007796f4c2e53f0659cb4d9c327c1">setState()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#a50d449d7362c97af2c4f946804bb40b2">readProxyData()</a>.</p>
 
@@ -978,7 +1005,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="classKviIrcSocket.html#a7a4c89f22d446e9409aa83841a8994b0">connectedToIrcServer()</a>, <a class="el" href="kvi__error_8h.html#a0d2459576c504bf44ff5837e5f39e775">KviError_proxyReply91RequestFailed</a>, <a class="el" href="kvi__error_8h.html#aa4449d058c0d15b36e9941a57729244d">KviError_proxyReply92IdentFailed</a>, <a class="el" href="kvi__error_8h.html#ab66fb2ad8a29e041334630425a339671">KviError_proxyReply93IdentNotMatching</a>, <a class="el" href="kvi__error_8h.html#a4e8ed12ae09ed212674b11bd6dfc00ad">KviError_unrecognizedProxyReply</a>, <a class="el" href="classKviIrcSocket.html#a975a2aa70bbdc48f3b07206172ed7606">outputProxyMessage()</a>, <a class="el" href="classKviIrcSocket.html#a4cc019bb1d79339231ddcbade49864cc">raiseError()</a>, and <a class="el" href="classKviIrcSocket.html#a879dec3bda1b6cd472de701603c52a12">reset()</a>.</p>
+<p>References <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="classKviIrcSocket.html#a7a4c89f22d446e9409aa83841a8994b0">connectedToIrcServer()</a>, <a class="el" href="kvi__error_8h.html#a0d2459576c504bf44ff5837e5f39e775">KviError_proxyReply91RequestFailed</a>, <a class="el" href="kvi__error_8h.html#aa4449d058c0d15b36e9941a57729244d">KviError_proxyReply92IdentFailed</a>, <a class="el" href="kvi__error_8h.html#ab66fb2ad8a29e041334630425a339671">KviError_proxyReply93IdentNotMatching</a>, <a class="el" href="kvi__error_8h.html#a4e8ed12ae09ed212674b11bd6dfc00ad">KviError_unrecognizedProxyReply</a>, <a class="el" href="classKviIrcSocket.html#a975a2aa70bbdc48f3b07206172ed7606">outputProxyMessage()</a>, <a class="el" href="classKviIrcSocket.html#a4cc019bb1d79339231ddcbade49864cc">raiseError()</a>, and <a class="el" href="classKviIrcSocket.html#a879dec3bda1b6cd472de701603c52a12">reset()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#a50d449d7362c97af2c4f946804bb40b2">readProxyData()</a>.</p>
 
@@ -1008,7 +1035,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="kvi__error_8h.html#ab6f188b402f44a2576b81d07abd910eb">KviError_proxyAuthFailed</a>, <a class="el" href="classKviIrcSocket.html#a975a2aa70bbdc48f3b07206172ed7606">outputProxyMessage()</a>, <a class="el" href="classKviIrcSocket.html#a4f888a2abbeecee793d23c90b6f56812">proxySendTargetDataV5()</a>, <a class="el" href="classKviIrcSocket.html#a4cc019bb1d79339231ddcbade49864cc">raiseError()</a>, and <a class="el" href="classKviIrcSocket.html#a879dec3bda1b6cd472de701603c52a12">reset()</a>.</p>
+<p>References <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="kvi__error_8h.html#ab6f188b402f44a2576b81d07abd910eb">KviError_proxyAuthFailed</a>, <a class="el" href="classKviIrcSocket.html#a975a2aa70bbdc48f3b07206172ed7606">outputProxyMessage()</a>, <a class="el" href="classKviIrcSocket.html#a4f888a2abbeecee793d23c90b6f56812">proxySendTargetDataV5()</a>, <a class="el" href="classKviIrcSocket.html#a4cc019bb1d79339231ddcbade49864cc">raiseError()</a>, and <a class="el" href="classKviIrcSocket.html#a879dec3bda1b6cd472de701603c52a12">reset()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#a50d449d7362c97af2c4f946804bb40b2">readProxyData()</a>.</p>
 
@@ -1038,7 +1065,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="classKviIrcSocket.html#a7a4c89f22d446e9409aa83841a8994b0">connectedToIrcServer()</a>, <a class="el" href="kvi__error_8h.html#ab4aec3eb8bac30f79ac4dc68d2e63469">KviError_proxyReply01GeneralSOCKSFailure</a>, <a class="el" href="kvi__error_8h.html#a9d6a45351ad37a96e185569ab3d638fc">KviError_proxyReply02ConnectionNotAllowed</a>, <a class="el" href="kvi__error_8h.html#ade99133deba9ea8f4787dbf15a4021f0">KviError_proxyReply03NetworkUnreachable</a>, <a class="el" href="kvi__error_8h.html#a52c0d00115ea57ca3435ac41d685389e">KviError_proxyReply04HostUnreachable</a>, <a class="el" href="kvi__error_8h.html#a41986bc6cc88652d85db1133cadfcb1d">KviError_proxyReply05ConnectionRefused</a>, <a class="el" href="kvi__error_8h.html#a4a615e51061b44c6ed774d591ee55d3e">KviError_proxyReply06TTLExpired</a>, <a class="el" href="kvi__error_8h.html#a6d355c75868cac0b996b9615ccee9fb2">KviError_proxyReply07CommandNotSupported</a>, <a class="el" href="kvi__error_8h.html#a14f4551fcc98e63487d0c20cb94bcdb2">KviError_proxyReply08AddressTypeNotSupported</a>, <a class="el" href="kvi__error_8h.html#af34a0d6f9118faaebb87d7f0802ccb52">KviError_proxyReply09InvalidAddress</a>, <a class="el" href="kvi__error_8h.html#a4e8ed12ae09ed212674b11bd6dfc00ad">KviError_unrecognizedProxyReply</a>, <a class="el" href="classKviIrcSocket.html#a975a2aa70bbdc48f3b07206172ed7606">outputProxyMessage()</a>, <a class="el" href="classKviIrcSocket.html#a4cc019bb1d79339231ddcbade49864cc">raiseError()</a>, and <a class="el" href="classKviIrcSocket.html#a879dec3bda1b6cd472de701603c52a12">reset()</a>.</p>
+<p>References <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="classKviIrcSocket.html#a7a4c89f22d446e9409aa83841a8994b0">connectedToIrcServer()</a>, <a class="el" href="kvi__error_8h.html#ab4aec3eb8bac30f79ac4dc68d2e63469">KviError_proxyReply01GeneralSOCKSFailure</a>, <a class="el" href="kvi__error_8h.html#a9d6a45351ad37a96e185569ab3d638fc">KviError_proxyReply02ConnectionNotAllowed</a>, <a class="el" href="kvi__error_8h.html#ade99133deba9ea8f4787dbf15a4021f0">KviError_proxyReply03NetworkUnreachable</a>, <a class="el" href="kvi__error_8h.html#a52c0d00115ea57ca3435ac41d685389e">KviError_proxyReply04HostUnreachable</a>, <a class="el" href="kvi__error_8h.html#a41986bc6cc88652d85db1133cadfcb1d">KviError_proxyReply05ConnectionRefused</a>, <a class="el" href="kvi__error_8h.html#a4a615e51061b44c6ed774d591ee55d3e">KviError_proxyReply06TTLExpired</a>, <a class="el" href="kvi__error_8h.html#a6d355c75868cac0b996b9615ccee9fb2">KviError_proxyReply07CommandNotSupported</a>, <a class="el" href="kvi__error_8h.html#a14f4551fcc98e63487d0c20cb94bcdb2">KviError_proxyReply08AddressTypeNotSupported</a>, <a class="el" href="kvi__error_8h.html#af34a0d6f9118faaebb87d7f0802ccb52">KviError_proxyReply09InvalidAddress</a>, <a class="el" href="kvi__error_8h.html#a4e8ed12ae09ed212674b11bd6dfc00ad">KviError_unrecognizedProxyReply</a>, <a class="el" href="classKviIrcSocket.html#a975a2aa70bbdc48f3b07206172ed7606">outputProxyMessage()</a>, <a class="el" href="classKviIrcSocket.html#a4cc019bb1d79339231ddcbade49864cc">raiseError()</a>, and <a class="el" href="classKviIrcSocket.html#a879dec3bda1b6cd472de701603c52a12">reset()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#a50d449d7362c97af2c4f946804bb40b2">readProxyData()</a>.</p>
 
@@ -1068,7 +1095,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="kvi__error_8h.html#af9ef82090deff707324ef7d538f07219">KviError_proxyNoAcceptableAuthMethod</a>, <a class="el" href="kvi__error_8h.html#a4e8ed12ae09ed212674b11bd6dfc00ad">KviError_unrecognizedProxyReply</a>, <a class="el" href="classKviIrcSocket.html#a975a2aa70bbdc48f3b07206172ed7606">outputProxyMessage()</a>, <a class="el" href="classKviIrcSocket.html#a1241a1647b333edd4ab7426d4063b8d8">proxyAuthUserPassV5()</a>, <a class="el" href="classKviIrcSocket.html#a4f888a2abbeecee793d23c90b6f56812">proxySendTargetDataV5()</a>, <a class="el" href="classKviIrcSocket.html#a4cc019bb1d79339231ddcbade49864cc">raiseError()</a>, and <a class="el" href="classKviIrcSocket.html#a879dec3bda1b6cd472de701603c52a12">reset()</a>.</p>
+<p>References <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="kvi__error_8h.html#af9ef82090deff707324ef7d538f07219">KviError_proxyNoAcceptableAuthMethod</a>, <a class="el" href="kvi__error_8h.html#a4e8ed12ae09ed212674b11bd6dfc00ad">KviError_unrecognizedProxyReply</a>, <a class="el" href="classKviIrcSocket.html#a975a2aa70bbdc48f3b07206172ed7606">outputProxyMessage()</a>, <a class="el" href="classKviIrcSocket.html#a1241a1647b333edd4ab7426d4063b8d8">proxyAuthUserPassV5()</a>, <a class="el" href="classKviIrcSocket.html#a4f888a2abbeecee793d23c90b6f56812">proxySendTargetDataV5()</a>, <a class="el" href="classKviIrcSocket.html#a4cc019bb1d79339231ddcbade49864cc">raiseError()</a>, and <a class="el" href="classKviIrcSocket.html#a879dec3bda1b6cd472de701603c52a12">reset()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#a50d449d7362c97af2c4f946804bb40b2">readProxyData()</a>.</p>
 
@@ -1091,7 +1118,7 @@ Private Member Functions</h2></td></tr>
 <p>Called to login to an HTTP proxy. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="classKviStr.html#a51aa056ef3bfe0dd49e33d41da91df4a">KviStr::append()</a>, <a class="el" href="classKviStr.html#aa32f21babcad54463dff6ac0d7acc4ca">KviStr::bufferToBase64()</a>, <a class="el" href="classKviStr.html#ae9a44eec2e3ae5946544552ef01c8254abefa3b7ff9b69e2d9f6f2e0f277dfd7f">KviStr::Format</a>, <a class="el" href="classKviProxy.html#abd6223cacdf8686ac03cf3933fea18f4">KviProxy::hasUser()</a>, <a class="el" href="classKviServer.html#af67870bc8a56f3dff3bca120c87531d1">KviServer::hostName()</a>, <a class="el" href="classKviStr.html#a7e1b200c0bf53047ccd49b2028efd013">KviStr::len()</a>, <a class="el" href="classKviIrcSocket.html#a3bb68350ffe8efdedb852627878183df">m_pIrcServer</a>, <a class="el" href="classKviIrcSocket.html#a5b57837ba3983e2e26f22d02239b55b4">m_pProxy</a>, <a class="el" href="classKviIrcSocket.html#a975a2aa70bbdc48f3b07206172ed7606">outputProxyMessage()</a>, <a class="el" href="classKviProxy.html#a1ae0fc89882dffbfb6f28b37299b1667">KviProxy::pass()</a>, <a class="el" href="classKviServer.html#a7441fa5971db758ca1a464c510f1cea8">KviServer::port()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8a39f60c7171ec687170009e2524dc7087">ProxyFinalHttp</a>, <a class="el" href="classKviStr.html#adabd1f259ed2b72237b5b9b566676759">KviStr::ptr()</a>, <a class="el" href="classKviIrcSocket.html#a20cb7d0797e5e4ae1db52957655b5165">sendRawData()</a>, <a class="el" href="classKviIrcSocket.html#a783007796f4c2e53f0659cb4d9c327c1">setState()</a>, and <a class="el" href="classKviProxy.html#a2253a028af4354ee77f34dc643d6f99c">KviProxy::user()</a>.</p>
+<p>References <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="classKviIrcSocket.html#a3bb68350ffe8efdedb852627878183df">m_pIrcServer</a>, <a class="el" href="classKviIrcSocket.html#a5b57837ba3983e2e26f22d02239b55b4">m_pProxy</a>, <a class="el" href="classKviIrcSocket.html#a975a2aa70bbdc48f3b07206172ed7606">outputProxyMessage()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8a39f60c7171ec687170009e2524dc7087">ProxyFinalHttp</a>, <a class="el" href="classKviIrcSocket.html#a20cb7d0797e5e4ae1db52957655b5165">sendRawData()</a>, and <a class="el" href="classKviIrcSocket.html#a783007796f4c2e53f0659cb4d9c327c1">setState()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#a49fdf4abca9aa7e96b6f4673a20aa1ac">connectedToProxy()</a>.</p>
 
@@ -1114,7 +1141,7 @@ Private Member Functions</h2></td></tr>
 <p>Called to login to a SOCKSv4 proxy. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="classKviStr.html#a51aa056ef3bfe0dd49e33d41da91df4a">KviStr::append()</a>, <a class="el" href="classKviStr.html#a83db5222d0031ef36290896ed2106f5f">KviStr::hasData()</a>, <a class="el" href="classKviProxy.html#a8d8c1587311943df857d1f26a34140bc">KviProxy::hasPass()</a>, <a class="el" href="classKviServer.html#ae756e51dd5c30fc16be89fff530f6995">KviServer::ip()</a>, <a class="el" href="kvi__memmove_8cpp.html#a198ffbdb7bd5601165d0c09cd08aa61c">kvi_memmove()</a>, <a class="el" href="classKviStr.html#a7e1b200c0bf53047ccd49b2028efd013">KviStr::len()</a>, <a class="el" href="classKviIrcSocket.html#a3bb68350ffe8efdedb852627878183df">m_pIrcServer</a>, <a class="el" href="classKviIrcSocket.html#a5b57837ba3983e2e26f22d02239b55b4">m_pProxy</a>, <a class="el" href="classKviProxy.html#a0dbd9acff5cde32cff0eaa14e5194aea">KviProxy::normalizeUserAndPass()</a>, <a class="el" href="classKviIrcSocket.html#a975a2aa70bbdc48f3b07206172ed7606">outputProxyMessage()</a>, <a class="el" href="classKviProxy.html#a1ae0fc89882dffbfb6f28b37299b1667">KviProxy::pass()</a>, <a class="el" href="classKviServer.html#a7441fa5971db758ca1a464c510f1cea8">KviServer::port()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8aed018a23430dfa3b5e1115bc5bab5432">ProxyFinalV4</a>, <a class="el" href="classKviStr.html#adabd1f259ed2b72237b5b9b566676759">KviStr::ptr()</a>, <a class="el" href="classKviIrcSocket.html#a20cb7d0797e5e4ae1db52957655b5165">sendRawData()</a>, <a class="el" href="classKviIrcSocket.html#a783007796f4c2e53f0659cb4d9c327c1">setState()</a>, <a class="el" href="namespaceKviNetUtils.html#a4a3d61f8a4694e12eac24536add81f70">KviNetUtils::stringIpToBinaryIp()</a>, and <a class="el" href="classKviProxy.html#a2253a028af4354ee77f34dc643d6f99c">KviProxy::user()</a>.</p>
+<p>References <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="kvi__memmove_8cpp.html#a198ffbdb7bd5601165d0c09cd08aa61c">kvi_memmove()</a>, <a class="el" href="classKviIrcSocket.html#a3bb68350ffe8efdedb852627878183df">m_pIrcServer</a>, <a class="el" href="classKviIrcSocket.html#a5b57837ba3983e2e26f22d02239b55b4">m_pProxy</a>, <a class="el" href="classKviIrcSocket.html#a975a2aa70bbdc48f3b07206172ed7606">outputProxyMessage()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8aed018a23430dfa3b5e1115bc5bab5432">ProxyFinalV4</a>, <a class="el" href="classKviIrcSocket.html#a20cb7d0797e5e4ae1db52957655b5165">sendRawData()</a>, and <a class="el" href="classKviIrcSocket.html#a783007796f4c2e53f0659cb4d9c327c1">setState()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#a49fdf4abca9aa7e96b6f4673a20aa1ac">connectedToProxy()</a>.</p>
 
@@ -1137,7 +1164,7 @@ Private Member Functions</h2></td></tr>
 <p>Called to login to a SOCKSv5 proxy. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="classKviProxy.html#a8d8c1587311943df857d1f26a34140bc">KviProxy::hasPass()</a>, <a class="el" href="classKviProxy.html#abd6223cacdf8686ac03cf3933fea18f4">KviProxy::hasUser()</a>, <a class="el" href="classKviIrcSocket.html#a5b57837ba3983e2e26f22d02239b55b4">m_pProxy</a>, <a class="el" href="classKviProxy.html#a0dbd9acff5cde32cff0eaa14e5194aea">KviProxy::normalizeUserAndPass()</a>, <a class="el" href="classKviIrcSocket.html#a975a2aa70bbdc48f3b07206172ed7606">outputProxyMessage()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8a770bf40e23a710ce0d11cfc89cae5c14">ProxySelectAuthMethodV5</a>, <a class="el" href="classKviIrcSocket.html#a20cb7d0797e5e4ae1db52957655b5165">sendRawData()</a>, and <a class="el" href="classKviIrcSocket.html#a783007796f4c2e53f0659cb4d9c327c1">setState()</a>.</p>
+<p>References <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="classKviIrcSocket.html#a5b57837ba3983e2e26f22d02239b55b4">m_pProxy</a>, <a class="el" href="classKviIrcSocket.html#a975a2aa70bbdc48f3b07206172ed7606">outputProxyMessage()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8a770bf40e23a710ce0d11cfc89cae5c14">ProxySelectAuthMethodV5</a>, <a class="el" href="classKviIrcSocket.html#a20cb7d0797e5e4ae1db52957655b5165">sendRawData()</a>, and <a class="el" href="classKviIrcSocket.html#a783007796f4c2e53f0659cb4d9c327c1">setState()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#a49fdf4abca9aa7e96b6f4673a20aa1ac">connectedToProxy()</a>.</p>
 
@@ -1160,7 +1187,7 @@ Private Member Functions</h2></td></tr>
 <p>Sends the request details. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviServer.html#aa4e4e6bb6f7a6c67516044ae6e43307f">KviServer::cacheIp()</a>, <a class="el" href="classKviServer.html#af67870bc8a56f3dff3bca120c87531d1">KviServer::hostName()</a>, <a class="el" href="classKviServer.html#ae756e51dd5c30fc16be89fff530f6995">KviServer::ip()</a>, <a class="el" href="classKviServer.html#ae6c0c4321c2ac91ef75a4d5417fdff34">KviServer::isIPv6()</a>, <a class="el" href="namespaceKviNetUtils.html#a055093fea525914aca7b8c17643c47ae">KviNetUtils::isValidStringIp()</a>, <a class="el" href="kvi__malloc_8h.html#a02e486a6105b6b21d1a236112fc43aa7">kvi_free</a>, <a class="el" href="kvi__malloc_8h.html#aae42df82e9e4845e4669bef882a0bc5f">kvi_malloc</a>, <a class="el" href="kvi__memmove_8cpp.html#a198ffbdb7bd5601165d0c09cd08aa61c">kvi_memmove()</a>, <a class="el" href="classKviIrcSocket.html#a3bb68350ffe8efdedb852627878183df">m_pIrcServer</a>, <a class="el" href="classKviServer.html#a7441fa5971db758ca1a464c510f1cea8">KviServer::port()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8a217a7f6c1d32c72aabd536984f313073">ProxyFinalV5</a>, <a class="el" href="classKviIrcSocket.html#a20cb7d0797e5e4ae1db52957655b5165">sendRawData()</a>, <a class="el" href="classKviIrcSocket.html#a783007796f4c2e53f0659cb4d9c327c1">setState()</a>, and <a class="el" href="namespaceKviNetUtils.html#a4a3d61f8a4694e12eac24536add81f70">KviNetUtils::stringIpToBinaryIp()</a>.</p>
+<p>References <a class="el" href="kvi__memmove_8cpp.html#a198ffbdb7bd5601165d0c09cd08aa61c">kvi_memmove()</a>, <a class="el" href="classKviIrcSocket.html#a3bb68350ffe8efdedb852627878183df">m_pIrcServer</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8a217a7f6c1d32c72aabd536984f313073">ProxyFinalV5</a>, <a class="el" href="classKviIrcSocket.html#a20cb7d0797e5e4ae1db52957655b5165">sendRawData()</a>, and <a class="el" href="classKviIrcSocket.html#a783007796f4c2e53f0659cb4d9c327c1">setState()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#a911c85f3b82c0da0db4832814da96374">proxyHandleV5AuthReply()</a>, and <a class="el" href="classKviIrcSocket.html#a8a80371a9134a4dbdb84d90e8ad3aab0">proxyHandleV5MethodReply()</a>.</p>
 
@@ -1216,7 +1243,7 @@ Private Member Functions</h2></td></tr>
 
 <p>References <a class="el" href="classKviIrcSocket.html#a2046d69784c8be78f335352366ecf0f3">m_pSendQueueHead</a>, and <a class="el" href="classKviIrcSocket.html#ae781470bbafc21ae70dcd9ae0598e5e3">queue_removeMessage()</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviIrcSocket.html#a879dec3bda1b6cd472de701603c52a12">reset()</a>.</p>
+<p>Referenced by <a class="el" href="classKviIrcSocket.html#a873a77aec71f460cb0c7180303bab090">clearOutputQueue()</a>, and <a class="el" href="classKviIrcSocket.html#a879dec3bda1b6cd472de701603c52a12">reset()</a>.</p>
 
 </div>
 </div>
@@ -1237,9 +1264,32 @@ Private Member Functions</h2></td></tr>
 <p>Removes a message from the head of the queue. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="kvi__debug_8h.html#acb8235d766e251808b07c2fdaab97fbc">KVI_ASSERT</a>, <a class="el" href="kvi__malloc_8h.html#a02e486a6105b6b21d1a236112fc43aa7">kvi_free</a>, <a class="el" href="classKviIrcSocket.html#a2046d69784c8be78f335352366ecf0f3">m_pSendQueueHead</a>, <a class="el" href="classKviIrcSocket.html#a5eda56d1464c5e5c786ee959f46312b7">m_pSendQueueTail</a>, <a class="el" href="struct__KviIrcSocketMsgEntry.html#a516103332a8ba36314eb1ec17bd6bbd9">_KviIrcSocketMsgEntry::next_ptr</a>, and <a class="el" href="struct__KviIrcSocketMsgEntry.html#a83319d92a1f572194a966b7e3f2ea8e4">_KviIrcSocketMsgEntry::pData</a>.</p>
+<p>References <a class="el" href="kvi__debug_8h.html#acb8235d766e251808b07c2fdaab97fbc">KVI_ASSERT</a>, <a class="el" href="classKviIrcSocket.html#a2046d69784c8be78f335352366ecf0f3">m_pSendQueueHead</a>, <a class="el" href="classKviIrcSocket.html#a5eda56d1464c5e5c786ee959f46312b7">m_pSendQueueTail</a>, <a class="el" href="struct__KviIrcSocketMsgEntry.html#a516103332a8ba36314eb1ec17bd6bbd9">_KviIrcSocketMsgEntry::next_ptr</a>, and <a class="el" href="struct__KviIrcSocketMsgEntry.html#a83319d92a1f572194a966b7e3f2ea8e4">_KviIrcSocketMsgEntry::pData</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#aed1c5c3ed7e55ae927e03710cb13116c">flushSendQueue()</a>, and <a class="el" href="classKviIrcSocket.html#a0afa6663aab890e7159e10584d6deb2f">queue_removeAllMessages()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab8f9284d7a4ebaa1b435839574730de7"></a><!-- doxytag: member="KviIrcSocket::queue_removePrivateMessages" ref="ab8f9284d7a4ebaa1b435839574730de7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KviIrcSocket::queue_removePrivateMessages </td>
+          <td>(</td>
+          <td class="paramname">&#160;)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Removes private messages from the queue. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
+
+<p>References <a class="el" href="classKviIrcSocket.html#a95eed6f8a41b0b1480668bd9739ea020">free_msgEntry()</a>, <a class="el" href="classKviIrcSocket.html#a2046d69784c8be78f335352366ecf0f3">m_pSendQueueHead</a>, <a class="el" href="classKviIrcSocket.html#a5eda56d1464c5e5c786ee959f46312b7">m_pSendQueueTail</a>, <a class="el" href="struct__KviIrcSocketMsgEntry.html#a516103332a8ba36314eb1ec17bd6bbd9">_KviIrcSocketMsgEntry::next_ptr</a>, and <a class="el" href="struct__KviIrcSocketMsgEntry.html#a83319d92a1f572194a966b7e3f2ea8e4">_KviIrcSocketMsgEntry::pData</a>.</p>
+
+<p>Referenced by <a class="el" href="classKviIrcSocket.html#a873a77aec71f460cb0c7180303bab090">clearOutputQueue()</a>.</p>
 
 </div>
 </div>
@@ -1394,7 +1444,7 @@ Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">bool KviIrcSocket::sendPacket </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviDataBuffer.html">KviDataBuffer</a> *&#160;</td>
+          <td class="paramtype">KviDataBuffer *&#160;</td>
           <td class="paramname"> <em>pData</em>&#160;)</td>
           <td></td>
         </tr>
@@ -1411,7 +1461,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8a28d1acb9d0a5e314016e437e08aa45df">Connected</a>, <a class="el" href="classKviIrcSocket.html#aed1c5c3ed7e55ae927e03710cb13116c">flushSendQueue()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8ab70748345964d16165ad55a4dabd5018">Idle</a>, <a class="el" href="kvi__malloc_8h.html#aae42df82e9e4845e4669bef882a0bc5f">kvi_malloc</a>, <a class="el" href="classKviIrcSocket.html#ab1100a7af802c4e3286164d5d245a170">m_bInProcessData</a>, <a class="el" href="classKviIrcSocket.html#a61df747485b120d1af56028660629b48">m_state</a>, <a class="el" href="struct__KviIrcSocketMsgEntry.html#a83319d92a1f572194a966b7e3f2ea8e4">_KviIrcSocketMsgEntry::pData</a>, and <a class="el" href="classKviIrcSocket.html#aac2ab3eda002dbdb8e19ccc30a5c6fe1">queue_insertMessage()</a>.</p>
+<p>References <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8a28d1acb9d0a5e314016e437e08aa45df">Connected</a>, <a class="el" href="classKviIrcSocket.html#aed1c5c3ed7e55ae927e03710cb13116c">flushSendQueue()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8ab70748345964d16165ad55a4dabd5018">Idle</a>, <a class="el" href="classKviIrcSocket.html#ab1100a7af802c4e3286164d5d245a170">m_bInProcessData</a>, <a class="el" href="classKviIrcSocket.html#a61df747485b120d1af56028660629b48">m_state</a>, <a class="el" href="struct__KviIrcSocketMsgEntry.html#a83319d92a1f572194a966b7e3f2ea8e4">_KviIrcSocketMsgEntry::pData</a>, and <a class="el" href="classKviIrcSocket.html#aac2ab3eda002dbdb8e19ccc30a5c6fe1">queue_insertMessage()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcLink.html#a7df2c8ee49757b4a90168d4fd0027579">KviIrcLink::sendPacket()</a>.</p>
 
@@ -1452,7 +1502,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8a680810fd0a3161af9693f260ab4da2d0">Connecting</a>, <a class="el" href="classKviDataBuffer.html#a7ef44a09feeb82ee1aea77dd534c0093">KviDataBuffer::data()</a>, <a class="el" href="classKviIrcSocket.html#aed1c5c3ed7e55ae927e03710cb13116c">flushSendQueue()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8ab70748345964d16165ad55a4dabd5018">Idle</a>, <a class="el" href="kvi__malloc_8h.html#aae42df82e9e4845e4669bef882a0bc5f">kvi_malloc</a>, <a class="el" href="kvi__memmove_8cpp.html#a198ffbdb7bd5601165d0c09cd08aa61c">kvi_memmove()</a>, <a class="el" href="classKviIrcSocket.html#ab1100a7af802c4e3286164d5d245a170">m_bInProcessData</a>, <a class="el" href="classKviIrcSocket.html#a61df747485b120d1af56028660629b48">m_state</a>, <a class="el" href="struct__KviIrcSocketMsgEntry.html#a83319d92a1f572194a966b7e3f2ea8e4">_KviIrcSocketMsgEntry::pData</a>, and <a class="el" href="classKviIrcSocket.html#aac2ab3eda002dbdb8e19ccc30a5c6fe1">queue_insertMessage()</a>.</p>
+<p>References <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8a680810fd0a3161af9693f260ab4da2d0">Connecting</a>, <a class="el" href="classKviIrcSocket.html#aed1c5c3ed7e55ae927e03710cb13116c">flushSendQueue()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8ab70748345964d16165ad55a4dabd5018">Idle</a>, <a class="el" href="kvi__memmove_8cpp.html#a198ffbdb7bd5601165d0c09cd08aa61c">kvi_memmove()</a>, <a class="el" href="classKviIrcSocket.html#ab1100a7af802c4e3286164d5d245a170">m_bInProcessData</a>, <a class="el" href="classKviIrcSocket.html#a61df747485b120d1af56028660629b48">m_state</a>, <a class="el" href="struct__KviIrcSocketMsgEntry.html#a83319d92a1f572194a966b7e3f2ea8e4">_KviIrcSocketMsgEntry::pData</a>, and <a class="el" href="classKviIrcSocket.html#aac2ab3eda002dbdb8e19ccc30a5c6fe1">queue_insertMessage()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcSocket.html#a1241a1647b333edd4ab7426d4063b8d8">proxyAuthUserPassV5()</a>, <a class="el" href="classKviIrcSocket.html#a57342c1898ecc0db2b3060a21866e7ef">proxyLoginHttp()</a>, <a class="el" href="classKviIrcSocket.html#a33940994a6e244fa4e593eb136b70f81">proxyLoginV4()</a>, <a class="el" href="classKviIrcSocket.html#acd5b9a031cd2699d456e524953c296e7">proxyLoginV5()</a>, and <a class="el" href="classKviIrcSocket.html#a4f888a2abbeecee793d23c90b6f56812">proxySendTargetDataV5()</a>.</p>
 
@@ -1533,13 +1583,13 @@ Private Member Functions</h2></td></tr>
         <tr>
           <td class="memname">int KviIrcSocket::startConnection </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviServer.html">KviServer</a> *&#160;</td>
+          <td class="paramtype">KviServer *&#160;</td>
           <td class="paramname"> <em>pServer</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classKviProxy.html">KviProxy</a> *&#160;</td>
+          <td class="paramtype">KviProxy *&#160;</td>
           <td class="paramname"> <em>pProxy</em> = <code>0</code>, </td>
         </tr>
         <tr>
@@ -1568,7 +1618,7 @@ Private Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>int </dd></dl>
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="classKviSockaddr.html#a8f909547e30704fdb15ef37a309f36c3">KviSockaddr::addressLength()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8a680810fd0a3161af9693f260ab4da2d0">Connecting</a>, <a class="el" href="classKviIrcSocket.html#a1c5dc42ab9ec49532e23c9af267e4854">connectionTimedOut()</a>, <a class="el" href="classKviProxy.html#a617a9bbc8267815e7786599af3ce94edaadc8ca63cc8e9e293688b066b66dd094">KviProxy::Http</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8ab70748345964d16165ad55a4dabd5018">Idle</a>, <a class="el" href="classKviServer.html#ae756e51dd5c30fc16be89fff530f6995">KviServer::ip()</a>, <a class="el" href="classKviProxy.html#a33b8348b4be32f14a63fcc90bb381276">KviProxy::ip()</a>, <a class="el" href="classKviServer.html#ae6c0c4321c2ac91ef75a4d5417fdff34">KviServer::isIPv6()</a>, <a class="el" href="classKviProxy.html#a03619a785e3dbf71b74208dcb4266419">KviProxy::isIPv6()</a>, <a class="el" href="namespaceKviNetUtils.html#a055093fea525914aca7b8c17643c47ae">KviNetUtils::isValidStringIp()</a>, <a class="el" href="kvi__options_8h.html#ae69b0fd7eb238f40d4c177d8a44e77df">KVI_OPTION_UINT</a>, <a class="el" href="kvi__socket_8h.html#a0ef780a18fa4cf8081589ce8e292a3e1">kvi_socket_bind()</a>, <a class="el" href="kvi__socket_8h.html#a1fc3caa426bf4b8deae02114f9a8541f">kvi_socket_connect()</a>, <a class="el" href="kvi__socket_8h.html#af11c435c2ae12873abd154f9cd1d6aac">kvi_socket_create()</a>, <a class="el" href="kvi__socket_8h.html#a09b9c8a71bf6576c7ebc954c7e3441ab">kvi_socket_error()</a>, <a class="el" href="kvi__socket_8h.html#ab8ad06034217c2dec553fe95e2bebca2">kvi_socket_getsockopt()</a>, <a class="el" href="kvi__socket_8h.html#a2abcf1213fcb8b127d2a59f3e27dde55">KVI_SOCKET_PF_INET</a>, <a class="el" href="kvi__socket_8h.html#a1d9b84aecd8dc5e36eee2c67277480d3">KVI_SOCKET_PF_INET6</a>, <a class="el" href="kvi__socket_8h.html#a7945dadede8ab6710264420fa4abfb8a">KVI_SOCKET_PROTO_TCP</a>, <a class="el" href="kvi__socket_8h.html#a2aaf49816d3f9e840b343505cca53194">kvi_socket_recoverableConnectError()</a>, <a class="el" href="kvi__socket_8h.html#a84a97275dd99a5b95ac651c2eb2a86cc">kvi_socket_setNonBlocking()</a>, <a class="el" href="kvi__socket_8h.html#a924b3185c7c70c38292808906ba48d94">KVI_SOCKET_TYPE_STREAM</a>, <a class="el" href="kvi__error_8h.html#a911be8752efdf4e2ae5e3e0658660fce">KviError_anotherConnectionInProgress</a>, <a class="el" href="kvi__error_8h.html#aa26eb277b89d18fd48bf7442570311f5">KviError_asyncSocketFailed</a>, <a class="el" href="kvi__error_8h.html#a42a8d857b0559fbfffd3079ba4f1e7fe">KviError_invalidIpAddress</a>, <a class="el" href="kvi__error_8h.html#a37c847ba0e30f57601c0df07e8e6951a">KviError_invalidProxyAddress</a>, <a class="el" href="kvi__error_8h.html#affea82184b9fe3dd431f5d8f75effd78">KviError_noIPv6Support</a>, <a class="el" href="kvi__error_8h.html#a780b1724d01348876f4170fed6872cad">KviError_noSSLSupport</a>, <a class="el" href="kvi__error_8h.html#a4e81184256abfbc10f1d62d453ce5056">KviError_socketCreationFailed</a>, <a class="el" href="kvi__error_8h.html#a956a62672eb7f6bc64d5ad6c771ca5d3">KviError_socksV4LacksIPv6Support</a>, <a class="el" href="kvi__error_8h.html#a24f8feeb20284ad84815f395161ba7bd">KviError_success</a>, <a class="el" href="kvi__error_8h.html#a681a2cec594992993b7e54f077f4711a">KviError_unknownError</a>, <a class="el" href="kvi__options_8h.html#a3526726f64206c04791892e910f33e6b">KviOption_uintIrcSocketTimeout</a>, <a class="el" href="classKviIrcSocket.html#a3bb68350ffe8efdedb852627878183df">m_pIrcServer</a>, <a class="el" href="classKviIrcSocket.html#a5b57837ba3983e2e26f22d02239b55b4">m_pProxy</a>, <a class="el" href="classKviIrcSocket.html#a3f01cd2e6e83b8455b5400afef5d32fb">m_pTimeoutTimer</a>, <a class="el" href="classKviIrcSocket.html#a0f392b736d7b3ee011827c66c62fc94e">m_pWsn</a>, <a class="el" href="classKviIrcSocket.html#a81dd5b2773dd799dc56be92450109d6a">m_sock</a>, <a class="el" href="classKviIrcSocket.html#a61df747485b120d1af56028660629b48">m_state</a>, <a class="el" href="classKviIrcSocket.html#a5bd9d7a8912cbb65e80f8285d73df010">outputSocketMessage()</a>, <a class="el" href="classKviIrcSocket.html#a99c1e1c6d2779e9778b15878d41679df">outputSocketWarning()</a>, <a class="el" href="classKviServer.html#a7441fa5971db758ca1a464c510f1cea8">KviServer::port()</a>, <a class="el" href="classKviProxy.html#aacbf468c6520aa6f6aada75e89d030a3">KviProxy::port()</a>, <a class="el" href="classKviProxy.html#a05550402b0e2e73f57e29fbb94474a0f">KviProxy::protocol()</a>, <a class="el" href="classKviIrcSocket.html#a879dec3bda1b6cd472de701603c52a12">reset()</a>, <a class="el" href="classKviIrcSocket.html#a783007796f4c2e53f0659cb4d9c327c1">setState()</a>, <a class="el" href="classKviSockaddr.html#a1f9bb2518fe49c3341771ba72d75de2b">KviSockaddr::socketAddress()</a>, <a class="el" href="classKviProxy.html#a617a9bbc8267815e7786599af3ce94eda96a589d8a76b7a146bc24d05eb9f6810">KviProxy::Socks4</a>, <a class="el" href="classKviProxy.html#a617a9bbc8267815e7786599af3ce94eda122a71d9da3cd556ff7e9be84a5c35dc">KviProxy::Socks5</a>, <a class="el" href="namespaceKviQString.html#a50d2c5c1079e98a6e9bedbb5ca53f807">KviQString::sprintf()</a>, <a class="el" href="namespaceKviError.html#a246bcff078b0f629c40eb6ff8491ac56">KviError::translateSystemError()</a>, <a class="el" href="classKviServer.html#a4515545ce63283fc92126208906b0a3a">KviServer::useSSL()</a>, and <a class="el" href="classKviIrcSocket.html#a790f57b84b3f82c4a5aa7c3b65729242">writeNotifierFired()</a>.</p>
+<p>References <a class="el" href="kvi__options_8h.html#aae83a32de61061a014e3ca46a896c672">_OUTPUT_VERBOSE</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8a680810fd0a3161af9693f260ab4da2d0">Connecting</a>, <a class="el" href="classKviIrcSocket.html#a1c5dc42ab9ec49532e23c9af267e4854">connectionTimedOut()</a>, <a class="el" href="classKviIrcSocket.html#af28eb936da137fb13953bcd79b6e69c8ab70748345964d16165ad55a4dabd5018">Idle</a>, <a class="el" href="kvi__options_8h.html#ae69b0fd7eb238f40d4c177d8a44e77df">KVI_OPTION_UINT</a>, <a class="el" href="kvi__socket_8h.html#a0ef780a18fa4cf8081589ce8e292a3e1">kvi_socket_bind()</a>, <a class="el" href="kvi__socket_8h.html#a1fc3caa426bf4b8deae02114f9a8541f">kvi_socket_connect()</a>, <a class="el" href="kvi__socket_8h.html#af11c435c2ae12873abd154f9cd1d6aac">kvi_socket_create()</a>, <a class="el" href="kvi__socket_8h.html#a09b9c8a71bf6576c7ebc954c7e3441ab">kvi_socket_error()</a>, <a class="el" href="kvi__socket_8h.html#ab8ad06034217c2dec553fe95e2bebca2">kvi_socket_getsockopt()</a>, <a class="el" href="kvi__socket_8h.html#a2abcf1213fcb8b127d2a59f3e27dde55">KVI_SOCKET_PF_INET</a>, <a class="el" href="kvi__socket_8h.html#a1d9b84aecd8dc5e36eee2c67277480d3">KVI_SOCKET_PF_INET6</a>, <a class="el" href="kvi__socket_8h.html#a7945dadede8ab6710264420fa4abfb8a">KVI_SOCKET_PROTO_TCP</a>, <a class="el" href="kvi__socket_8h.html#a2aaf49816d3f9e840b343505cca53194">kvi_socket_recoverableConnectError()</a>, <a class="el" href="kvi__socket_8h.html#a84a97275dd99a5b95ac651c2eb2a86cc">kvi_socket_setNonBlocking()</a>, <a class="el" href="kvi__socket_8h.html#a924b3185c7c70c38292808906ba48d94">KVI_SOCKET_TYPE_STREAM</a>, <a class="el" href="kvi__error_8h.html#a911be8752efdf4e2ae5e3e0658660fce">KviError_anotherConnectionInProgress</a>, <a class="el" href="kvi__error_8h.html#aa26eb277b89d18fd48bf7442570311f5">KviError_asyncSocketFailed</a>, <a class="el" href="kvi__error_8h.html#a42a8d857b0559fbfffd3079ba4f1e7fe">KviError_invalidIpAddress</a>, <a class="el" href="kvi__error_8h.html#a37c847ba0e30f57601c0df07e8e6951a">KviError_invalidProxyAddress</a>, <a class="el" href="kvi__error_8h.html#affea82184b9fe3dd431f5d8f75effd78">KviError_noIPv6Support</a>, <a class="el" href="kvi__error_8h.html#a780b1724d01348876f4170fed6872cad">KviError_noSSLSupport</a>, <a class="el" href="kvi__error_8h.html#a4e81184256abfbc10f1d62d453ce5056">KviError_socketCreationFailed</a>, <a class="el" href="kvi__error_8h.html#a956a62672eb7f6bc64d5ad6c771ca5d3">KviError_socksV4LacksIPv6Support</a>, <a class="el" href="kvi__error_8h.html#a24f8feeb20284ad84815f395161ba7bd">KviError_success</a>, <a class="el" href="kvi__error_8h.html#a681a2cec594992993b7e54f077f4711a">KviError_unknownError</a>, <a class="el" href="kvi__options_8h.html#a3526726f64206c04791892e910f33e6b">KviOption_uintIrcSocketTimeout</a>, <a class="el" href="classKviIrcSocket.html#a3bb68350ffe8efdedb852627878183df">m_pIrcServer</a>, <a class="el" href="classKviIrcSocket.html#a5b57837ba3983e2e26f22d02239b55b4">m_pProxy</a>, <a class="el" href="classKviIrcSocket.html#a3f01cd2e6e83b8455b5400afef5d32fb">m_pTimeoutTimer</a>, <a class="el" href="classKviIrcSocket.html#a0f392b736d7b3ee011827c66c62fc94e">m_pWsn</a>, <a class="el" href="classKviIrcSocket.html#a81dd5b2773dd799dc56be92450109d6a">m_sock</a>, <a class="el" href="classKviIrcSocket.html#a61df747485b120d1af56028660629b48">m_state</a>, <a class="el" href="classKviIrcSocket.html#a5bd9d7a8912cbb65e80f8285d73df010">outputSocketMessage()</a>, <a class="el" href="classKviIrcSocket.html#a99c1e1c6d2779e9778b15878d41679df">outputSocketWarning()</a>, <a class="el" href="classKviIrcSocket.html#a879dec3bda1b6cd472de701603c52a12">reset()</a>, <a class="el" href="classKviIrcSocket.html#a783007796f4c2e53f0659cb4d9c327c1">setState()</a>, <a class="el" href="namespaceKviError.html#a246bcff078b0f629c40eb6ff8491ac56">KviError::translateSystemError()</a>, and <a class="el" href="classKviIrcSocket.html#a790f57b84b3f82c4a5aa7c3b65729242">writeNotifierFired()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcLink.html#a79b543001f03671829a2ed40d2564315">KviIrcLink::resolverTerminated()</a>.</p>
 
@@ -1704,7 +1754,7 @@ Private Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviServer.html">KviServer</a>* <a class="el" href="classKviIrcSocket.html#a3bb68350ffe8efdedb852627878183df">KviIrcSocket::m_pIrcServer</a><code> [protected]</code></td>
+          <td class="memname">KviServer* <a class="el" href="classKviIrcSocket.html#a3bb68350ffe8efdedb852627878183df">KviIrcSocket::m_pIrcServer</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -1734,7 +1784,7 @@ Private Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviProxy.html">KviProxy</a>* <a class="el" href="classKviIrcSocket.html#a5b57837ba3983e2e26f22d02239b55b4">KviIrcSocket::m_pProxy</a><code> [protected]</code></td>
+          <td class="memname">KviProxy* <a class="el" href="classKviIrcSocket.html#a5b57837ba3983e2e26f22d02239b55b4">KviIrcSocket::m_pProxy</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -1770,7 +1820,7 @@ Private Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviIrcSocket.html#aed1c5c3ed7e55ae927e03710cb13116c">flushSendQueue()</a>, <a class="el" href="classKviIrcSocket.html#a559bd4192a52c099e7a3f12fdba3f2e8">KviIrcSocket()</a>, <a class="el" href="classKviIrcSocket.html#aac2ab3eda002dbdb8e19ccc30a5c6fe1">queue_insertMessage()</a>, <a class="el" href="classKviIrcSocket.html#a0afa6663aab890e7159e10584d6deb2f">queue_removeAllMessages()</a>, <a class="el" href="classKviIrcSocket.html#ae781470bbafc21ae70dcd9ae0598e5e3">queue_removeMessage()</a>, and <a class="el" href="classKviIrcSocket.html#ac6eb7b2166a1f04bf125eec30e41b4cf">readData()</a>.</p>
+<p>Referenced by <a class="el" href="classKviIrcSocket.html#aed1c5c3ed7e55ae927e03710cb13116c">flushSendQueue()</a>, <a class="el" href="classKviIrcSocket.html#a559bd4192a52c099e7a3f12fdba3f2e8">KviIrcSocket()</a>, <a class="el" href="classKviIrcSocket.html#aac2ab3eda002dbdb8e19ccc30a5c6fe1">queue_insertMessage()</a>, <a class="el" href="classKviIrcSocket.html#a0afa6663aab890e7159e10584d6deb2f">queue_removeAllMessages()</a>, <a class="el" href="classKviIrcSocket.html#ae781470bbafc21ae70dcd9ae0598e5e3">queue_removeMessage()</a>, <a class="el" href="classKviIrcSocket.html#ab8f9284d7a4ebaa1b435839574730de7">queue_removePrivateMessages()</a>, and <a class="el" href="classKviIrcSocket.html#ac6eb7b2166a1f04bf125eec30e41b4cf">readData()</a>.</p>
 
 </div>
 </div>
@@ -1785,7 +1835,7 @@ Private Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviIrcSocket.html#a559bd4192a52c099e7a3f12fdba3f2e8">KviIrcSocket()</a>, <a class="el" href="classKviIrcSocket.html#aac2ab3eda002dbdb8e19ccc30a5c6fe1">queue_insertMessage()</a>, and <a class="el" href="classKviIrcSocket.html#ae781470bbafc21ae70dcd9ae0598e5e3">queue_removeMessage()</a>.</p>
+<p>Referenced by <a class="el" href="classKviIrcSocket.html#a559bd4192a52c099e7a3f12fdba3f2e8">KviIrcSocket()</a>, <a class="el" href="classKviIrcSocket.html#aac2ab3eda002dbdb8e19ccc30a5c6fe1">queue_insertMessage()</a>, <a class="el" href="classKviIrcSocket.html#ae781470bbafc21ae70dcd9ae0598e5e3">queue_removeMessage()</a>, and <a class="el" href="classKviIrcSocket.html#ab8f9284d7a4ebaa1b435839574730de7">queue_removePrivateMessages()</a>.</p>
 
 </div>
 </div>
@@ -1929,7 +1979,7 @@ Private Member Functions</h2></td></tr>
 <li>src/kvirc/kernel/<a class="el" href="kvi__ircsocket_8cpp.html">kvi_ircsocket.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:57 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

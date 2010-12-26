@@ -56,12 +56,12 @@
 <a name="l00025"></a>00025 <span class="comment">//=============================================================================</span>
 <a name="l00026"></a>00026 
 <a name="l00033"></a>00033 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;<a class="code" href="kvi__qstring_8h.html" title="Helper functions for the QString class.">kvi_qstring.h</a>&quot;</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;KviQString.h&quot;</span>
 <a name="l00035"></a>00035 <span class="preprocessor">#include &quot;<a class="code" href="kvi__window_8h.html" title="Contains the KviWindow class.">kvi_window.h</a>&quot;</span>
-<a name="l00036"></a>00036 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerlist_8h.html" title="C++ Template based double linked pointer list class.">kvi_pointerlist.h</a>&quot;</span>
+<a name="l00036"></a>00036 <span class="preprocessor">#include &quot;KviPointerList.h&quot;</span>
 <a name="l00037"></a>00037 <span class="preprocessor">#include &quot;<a class="code" href="kvi__kvs__variant_8h.html" title="Handling of variant data type in KVS.">kvi_kvs_variant.h</a>&quot;</span>
 <a name="l00038"></a>00038 <span class="preprocessor">#include &quot;<a class="code" href="kvi__kvs__variantlist_8h.html" title="Parser class to handle variant variables lists.">kvi_kvs_variantlist.h</a>&quot;</span>
-<a name="l00039"></a>00039 <span class="preprocessor">#include &quot;<a class="code" href="kvi__heapobject_8h.html" title="Heap Object.">kvi_heapobject.h</a>&quot;</span>
+<a name="l00039"></a>00039 <span class="preprocessor">#include &quot;KviHeapObject.h&quot;</span>
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041 <span class="keyword">class </span><a class="code" href="classKviKvsTreeNodeInstruction.html" title="Treenode class to handle instructions.">KviKvsTreeNodeInstruction</a>;
 <a name="l00042"></a>00042 <span class="keyword">class </span><a class="code" href="classKviKvsExtendedRunTimeData.html">KviKvsExtendedRunTimeData</a>;
@@ -77,7 +77,7 @@
 <a name="l00052"></a>00052 <span class="preprocessor"></span><span class="preprocessor">        #undef Success</span>
 <a name="l00053"></a>00053 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
 <a name="l00054"></a>00054 <span class="preprocessor"></span>
-<a name="l00059"></a><a class="code" href="classKviKvsScript.html">00059</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsScript.html" title="The KVIrc Script class.">KviKvsScript</a> : <span class="keyword">public</span> <a class="code" href="classKviHeapObject.html">KviHeapObject</a>
+<a name="l00059"></a><a class="code" href="classKviKvsScript.html">00059</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsScript.html" title="The KVIrc Script class.">KviKvsScript</a> : <span class="keyword">public</span> KviHeapObject
 <a name="l00060"></a>00060 {
 <a name="l00061"></a><a class="code" href="classKviKvsScript.html#add7408b412cdf9cb8e8a815bc5d3d9f1">00061</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classKviKvsObject.html">KviKvsObject</a>;
 <a name="l00062"></a><a class="code" href="classKviKvsScript.html#a9b337c298d02baf6d479c5a508f37554">00062</a>         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classKviKvsParser.html">KviKvsParser</a>;
@@ -114,7 +114,7 @@
 <a name="l00131"></a>00131 <span class="keyword">private</span>:
 <a name="l00132"></a><a class="code" href="classKviKvsScript.html#a507a15729fa5b37f235244ef12a4cf57">00132</a>         <a class="code" href="classKviKvsScriptData.html" title="Holds the data of the script.">KviKvsScriptData</a> * <a class="code" href="classKviKvsScript.html#a507a15729fa5b37f235244ef12a4cf57">m_pData</a>;
 <a name="l00133"></a>00133 <span class="keyword">public</span>:
-<a name="l00138"></a>00138         <span class="keyword">const</span> QString &amp; <a class="code" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">name</a>() <span class="keyword">const</span>;
+<a name="l00138"></a>00138         <span class="keyword">const</span> QString &amp; name() <span class="keyword">const</span>;
 <a name="l00139"></a>00139 
 <a name="l00144"></a>00144         <span class="keyword">const</span> QString &amp; code() <span class="keyword">const</span>;
 <a name="l00145"></a>00145 
@@ -136,7 +136,7 @@
 <a name="l00249"></a>00249 
 <a name="l00255"></a>00255         <span class="keywordtype">void</span> dump(<span class="keyword">const</span> <span class="keywordtype">char</span> * prefix);
 <a name="l00256"></a>00256 <span class="keyword">protected</span>:
-<a name="l00265"></a>00265         <span class="keywordtype">bool</span> <a class="code" href="namespaceKviIrcUrl.html#ad9f712d023d34e58ea06e5b2bb7bd994">parse</a>(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * pOutput = 0, <span class="keywordtype">int</span> iRunFlags = 0);
+<a name="l00265"></a>00265         <span class="keywordtype">bool</span> <a class="code" href="namespaceKviIrcUrl.html#a520482418922e54c1a5d20cd0f469a01">parse</a>(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * pOutput = 0, <span class="keywordtype">int</span> iRunFlags = 0);
 <a name="l00266"></a>00266 
 <a name="l00279"></a>00279         <span class="keywordtype">int</span> execute(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * pWnd, <a class="code" href="classKviKvsVariantList.html" title="Class to handle variant variables lists.">KviKvsVariantList</a> * pParams = 0, <a class="code" href="classKviKvsVariant.html" title="This class defines a new data type which contains variant data.">KviKvsVariant</a> * pRetVal = 0, <span class="keywordtype">int</span> iRunFlags = 0, <a class="code" href="classKviKvsExtendedRunTimeData.html">KviKvsExtendedRunTimeData</a> * pExtData = 0);
 <a name="l00280"></a>00280 
@@ -144,7 +144,7 @@
 <a name="l00290"></a>00290 
 <a name="l00295"></a>00295         <span class="keyword">const</span> QChar * buffer() <span class="keyword">const</span>;
 <a name="l00296"></a>00296 
-<a name="l00301"></a>00301         <span class="keywordtype">void</span> <a class="code" href="namespaceKviQString.html#ae071b4fa088184e602aca004a82668dc" title="Resets the size of the string.">detach</a>();
+<a name="l00301"></a>00301         <span class="keywordtype">void</span> detach();
 <a name="l00302"></a>00302 };
 <a name="l00303"></a>00303 
 <a name="l00308"></a><a class="code" href="classKviKvsScriptData.html">00308</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviKvsScriptData.html" title="Holds the data of the script.">KviKvsScriptData</a>
@@ -166,7 +166,7 @@
 <a name="l00324"></a>00324 <span class="preprocessor">#endif //_KVI_KVS_SCRIPT_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:54 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:04 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

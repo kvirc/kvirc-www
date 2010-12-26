@@ -56,6 +56,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">kvi_u32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#ad8d17345374650661041e99e4ecdae9f">modeFlagFromPrefixChar</a> (QChar <a class="el" href="kvi__numeric_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QChar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#a918b36fd75d091d52c3aebd66d8c4be2">modePrefixChar</a> (kvi_u32_t flag)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#ac5f0455f31ae2c71e4133af356afb6bb">name</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#a42725a71ac3f8b85e459a3f5824cc01f">networkName</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#ac59acaa322b642b930fbe150ab6b501a">registerModeChar</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#aec591598e6bf15dbb242d15948e525ad">setServerVersion</a> (const QString &amp;version)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#a3c6611e944f21f95ce2ab29d78c8c7fb">software</a> ()</td></tr>
@@ -79,6 +80,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#a5d03fdfb8e7ebbcec9a96d512eec08f3">setMaxModeChanges</a> (int iModes)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#ad123172bf6f7a3cc6c8ebe64f195d36e">setMaxTopicLen</a> (int iTopLen)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#adf298468195259dde17d1d044d5a8760">setName</a> (const QString &amp;szName)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#ad2e8f57a3916563329112aa84941638d">setNetworkName</a> (const QString &amp;szName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#a932f73a64c92389af36bfa80421d3a70">setSupportedChannelModes</a> (const QString &amp;szSupportedChannelModes)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#ab05750b1af22d133a818d38b807a046a">setSupportedChannelTypes</a> (const QString &amp;szSupportedChannelTypes)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#a83fa1afd1fefe4762699306e00f4a2ea">setSupportedModePrefixes</a> (const QString &amp;szSupportedModePrefixes, const QString &amp;szSupportedModeFlags)</td></tr>
@@ -101,6 +103,7 @@ Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviBasicIrcServerInfo.html">KviBasicIrcServerInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#ab164ed73ec8b347805a47da00834c9e1">m_pServInfo</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#a755aece3b8902366776267d9aff805b4">m_szListModes</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#ae5a7662d2266417bcb3267598dba0c46">m_szName</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#a37fd0d1e8c8e2ff3265d2125db944efa">m_szNetworkName</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#aa33ab6364ac653669158d3d4d857bdcf">m_szParameterModes</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#ac910b3f3e7104eb9474674a14e235b92">m_szParameterWhenSetModes</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionServerInfo.html#a618354e1c647154aafeb232d67638df6">m_szPlainModes</a></td></tr>
@@ -149,7 +152,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__malloc_8h.html#a02e486a6105b6b21d1a236112fc43aa7">kvi_free</a>, <a class="el" href="classKviIrcConnectionServerInfo.html#aba85d61628794999bcc59b321fa96c76">m_pModePrefixTable</a>, and <a class="el" href="classKviIrcConnectionServerInfo.html#ab164ed73ec8b347805a47da00834c9e1">m_pServInfo</a>.</p>
+<p>References <a class="el" href="classKviIrcConnectionServerInfo.html#aba85d61628794999bcc59b321fa96c76">m_pModePrefixTable</a>, and <a class="el" href="classKviIrcConnectionServerInfo.html#ab164ed73ec8b347805a47da00834c9e1">m_pServInfo</a>.</p>
 
 </div>
 </div>
@@ -189,7 +192,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__malloc_8h.html#a02e486a6105b6b21d1a236112fc43aa7">kvi_free</a>, <a class="el" href="kvi__malloc_8h.html#aae42df82e9e4845e4669bef882a0bc5f">kvi_malloc</a>, <a class="el" href="kvi__ircuserdb_8h.html#a2fc6e9fa76d1e85cbedd8c7d3905212c">KVI_USERFLAG_CHANADMIN</a>, <a class="el" href="kvi__ircuserdb_8h.html#a7c8eea97f031d102b7fcedacc7011fd4">KVI_USERFLAG_CHANOWNER</a>, <a class="el" href="kvi__ircuserdb_8h.html#ae50f51853812eaa3dc71df99ca26ec79">KVI_USERFLAG_HALFOP</a>, <a class="el" href="kvi__ircuserdb_8h.html#af0c5a94fa587ba91c69f1bcb8cc91989">KVI_USERFLAG_OP</a>, <a class="el" href="kvi__ircuserdb_8h.html#a82246e375bde0d0e936a071985b2132c">KVI_USERFLAG_USEROP</a>, <a class="el" href="kvi__ircuserdb_8h.html#a309ce0e16dd76c62c0418ef595250702">KVI_USERFLAG_VOICE</a>, <a class="el" href="classKviIrcConnectionServerInfo.html#aba85d61628794999bcc59b321fa96c76">m_pModePrefixTable</a>, <a class="el" href="classKviIrcConnectionServerInfo.html#a81a2bf4fec480f034897eeda6c551f75">m_szSupportedModeFlags</a>, <a class="el" href="classKviIrcConnectionServerInfo.html#a943cd1e7fbbaeb538c44c41fbec0d71e">m_szSupportedModePrefixes</a>, <a class="el" href="classKviIrcConnectionServerInfo.html#ae025015a2331a8957603341a621d3def">m_uPrefixes</a>, and <a class="el" href="namespaceKviQString.html#a772d51df816f541ea4e7c760c49bf765">KviQString::nullTerminatedArray()</a>.</p>
+<p>References <a class="el" href="classKviIrcConnectionServerInfo.html#aba85d61628794999bcc59b321fa96c76">m_pModePrefixTable</a>, <a class="el" href="classKviIrcConnectionServerInfo.html#a81a2bf4fec480f034897eeda6c551f75">m_szSupportedModeFlags</a>, <a class="el" href="classKviIrcConnectionServerInfo.html#a943cd1e7fbbaeb538c44c41fbec0d71e">m_szSupportedModePrefixes</a>, and <a class="el" href="classKviIrcConnectionServerInfo.html#ae025015a2331a8957603341a621d3def">m_uPrefixes</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviIrcConnectionServerInfo.html#ab313881333456253032bcca8a771ad6c">KviIrcConnectionServerInfo()</a>, and <a class="el" href="classKviIrcConnectionServerInfo.html#a83fa1afd1fefe4762699306e00f4a2ea">setSupportedModePrefixes()</a>.</p>
 
@@ -268,7 +271,7 @@ Friends</h2></td></tr>
 
 <p>References <a class="el" href="classKviIrcConnectionServerInfo.html#aba85d61628794999bcc59b321fa96c76">m_pModePrefixTable</a>, and <a class="el" href="classKviIrcConnectionServerInfo.html#ae025015a2331a8957603341a621d3def">m_uPrefixes</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviUserListView.html#aefb6a6fe4fec02d6a8e3bd5fec0d2fff">KviUserListView::insertUserEntry()</a>, and <a class="el" href="classKviServerParser.html#ae7902406c2957791fbe3aa9138a05348">KviServerParser::parseChannelMode()</a>.</p>
+<p>Referenced by <a class="el" href="classKviUserListView.html#aefb6a6fe4fec02d6a8e3bd5fec0d2fff">KviUserListView::insertUserEntry()</a>, and <a class="el" href="classKviServerParser.html#a948f0413fdb792bfa1e26f5f30f218b8">KviServerParser::parseChannelMode()</a>.</p>
 
 </div>
 </div>
@@ -429,6 +432,24 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a42725a71ac3f8b85e459a3f5824cc01f"></a><!-- doxytag: member="KviIrcConnectionServerInfo::networkName" ref="a42725a71ac3f8b85e459a3f5824cc01f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const QString&amp; KviIrcConnectionServerInfo::networkName </td>
+          <td>(</td>
+          <td class="paramname">&#160;)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="classKviIrcConnection.html#a9f8b91ebac261f89b508f920ab322cb4">KviIrcConnection::currentNetworkName()</a>, and <a class="el" href="classKviIrcConnection.html#afb56e4b4bdaec3a6baef98179ea9740e">KviIrcConnection::registerChannel()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ac59acaa322b642b930fbe150ab6b501a"></a><!-- doxytag: member="KviIrcConnectionServerInfo::registerModeChar" ref="ac59acaa322b642b930fbe150ab6b501a" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -501,6 +522,25 @@ Friends</h2></td></tr>
 <div class="memdoc">
 
 <p>Referenced by <a class="el" href="classKviIrcConnection.html#a0ea5c9f6108d97bc18b782633a483c9f">KviIrcConnection::linkEstabilished()</a>, <a class="el" href="classKviIrcConnection.html#acfa9d6bfb0cdd79831566e52d8d29454">KviIrcConnection::loginToIrcServer()</a>, and <a class="el" href="classKviIrcConnection.html#a8aa18e374ef6693c5549544c468bd1f7">KviIrcConnection::serverInfoReceived()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad2e8f57a3916563329112aa84941638d"></a><!-- doxytag: member="KviIrcConnectionServerInfo::setNetworkName" ref="ad2e8f57a3916563329112aa84941638d" args="(const QString &amp;szName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KviIrcConnectionServerInfo::setNetworkName </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"> <em>szName</em>&#160;)</td>
+          <td><code> [inline, protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="classKviIrcConnection.html#a0ea5c9f6108d97bc18b782633a483c9f">KviIrcConnection::linkEstabilished()</a>, and <a class="el" href="classKviServerParser.html#a42c9299f0d49aa794c48f774dcce1bde">KviServerParser::parseNumeric005()</a>.</p>
 
 </div>
 </div>
@@ -733,7 +773,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannel.html#a01be0ef3b42f49ac0f0d41b614dfaba5">KviChannel::KviChannel()</a>, <a class="el" href="classKviServerParser.html#ae7902406c2957791fbe3aa9138a05348">KviServerParser::parseChannelMode()</a>, <a class="el" href="classKviServerParser.html#ad39f728e3bf45d4c79b6380e8ccd3694">KviServerParser::parseNumeric367()</a>, <a class="el" href="classKviServerParser.html#a88f5be7f820d704acc5c7c8949ab1e75">KviServerParser::parseNumeric368()</a>, <a class="el" href="classKviChannel.html#a11c384c4651dcf10a85d15e22626adb9">KviChannel::setChannelMode()</a>, and <a class="el" href="classKviRequestQueue.html#aae3047df7c892003354e2e16694d5272">KviRequestQueue::timerSlot()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannel.html#a01be0ef3b42f49ac0f0d41b614dfaba5">KviChannel::KviChannel()</a>, <a class="el" href="classKviServerParser.html#a948f0413fdb792bfa1e26f5f30f218b8">KviServerParser::parseChannelMode()</a>, <a class="el" href="classKviServerParser.html#ad39f728e3bf45d4c79b6380e8ccd3694">KviServerParser::parseNumeric367()</a>, <a class="el" href="classKviServerParser.html#a88f5be7f820d704acc5c7c8949ab1e75">KviServerParser::parseNumeric368()</a>, <a class="el" href="classKviChannel.html#a11c384c4651dcf10a85d15e22626adb9">KviChannel::setChannelMode()</a>, and <a class="el" href="classKviRequestQueue.html#aae3047df7c892003354e2e16694d5272">KviRequestQueue::timerSlot()</a>.</p>
 
 </div>
 </div>
@@ -783,7 +823,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviModeEditor.html#a22a16fc3b2910e850d7a4239d13a29bc">KviModeEditor::KviModeEditor()</a>, and <a class="el" href="classKviServerParser.html#ae7902406c2957791fbe3aa9138a05348">KviServerParser::parseChannelMode()</a>.</p>
+<p>Referenced by <a class="el" href="classKviModeEditor.html#a22a16fc3b2910e850d7a4239d13a29bc">KviModeEditor::KviModeEditor()</a>, and <a class="el" href="classKviServerParser.html#a948f0413fdb792bfa1e26f5f30f218b8">KviServerParser::parseChannelMode()</a>.</p>
 
 </div>
 </div>
@@ -801,7 +841,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviModeEditor.html#a22a16fc3b2910e850d7a4239d13a29bc">KviModeEditor::KviModeEditor()</a>, <a class="el" href="classKviModeWidget.html#a9e4269f852b2e119c2cef7b1a6effa50">KviModeWidget::modeNeedsParameterOnlyWhenSet()</a>, <a class="el" href="classKviModeEditor.html#a5d8dbfb0da5aa53364bb7a16d728c073">KviModeEditor::modeNeedsParameterOnlyWhenSet()</a>, and <a class="el" href="classKviServerParser.html#ae7902406c2957791fbe3aa9138a05348">KviServerParser::parseChannelMode()</a>.</p>
+<p>Referenced by <a class="el" href="classKviModeEditor.html#a22a16fc3b2910e850d7a4239d13a29bc">KviModeEditor::KviModeEditor()</a>, <a class="el" href="classKviModeWidget.html#a9e4269f852b2e119c2cef7b1a6effa50">KviModeWidget::modeNeedsParameterOnlyWhenSet()</a>, <a class="el" href="classKviModeEditor.html#a5d8dbfb0da5aa53364bb7a16d728c073">KviModeEditor::modeNeedsParameterOnlyWhenSet()</a>, and <a class="el" href="classKviServerParser.html#a948f0413fdb792bfa1e26f5f30f218b8">KviServerParser::parseChannelMode()</a>.</p>
 
 </div>
 </div>
@@ -1080,6 +1120,19 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a37fd0d1e8c8e2ff3265d2125db944efa"></a><!-- doxytag: member="KviIrcConnectionServerInfo::m_szNetworkName" ref="a37fd0d1e8c8e2ff3265d2125db944efa" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString <a class="el" href="classKviIrcConnectionServerInfo.html#a37fd0d1e8c8e2ff3265d2125db944efa">KviIrcConnectionServerInfo::m_szNetworkName</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aa33ab6364ac653669158d3d4d857bdcf"></a><!-- doxytag: member="KviIrcConnectionServerInfo::m_szParameterModes" ref="aa33ab6364ac653669158d3d4d857bdcf" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -1218,7 +1271,7 @@ Friends</h2></td></tr>
 <li>src/kvirc/kernel/<a class="el" href="kvi__ircconnectionserverinfo_8cpp.html">kvi_ircconnectionserverinfo.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:57 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

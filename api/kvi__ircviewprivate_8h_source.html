@@ -37,7 +37,7 @@
 <a name="l00006"></a>00006 <span class="comment">//   Creation date : Sat Oct 9 2004 16:29:01 by Szymon Stefanek</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">//   This file is part of the KVirc irc client distribution</span>
-<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2004-2008 Szymon Stefanek (pragma at kvirc dot net)</span>
+<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2004-2010 Szymon Stefanek (pragma at kvirc dot net)</span>
 <a name="l00010"></a>00010 <span class="comment">//</span>
 <a name="l00011"></a>00011 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00012"></a>00012 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -113,12 +113,12 @@
 <a name="l00082"></a><a class="code" href="struct__KviIrcViewLineChunk.html#a2d96f64b3aba6cf724ba8ba36d798667">00082</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>  <a class="code" href="struct__KviIrcViewLineChunk.html#a2d96f64b3aba6cf724ba8ba36d798667">type</a>;                               <span class="comment">// chunk type</span>
 <a name="l00083"></a><a class="code" href="struct__KviIrcViewLineChunk.html#a53704661b9b0337ef03772e57b559f4a">00083</a>         <span class="keywordtype">int</span>            <a class="code" href="struct__KviIrcViewLineChunk.html#a53704661b9b0337ef03772e57b559f4a">iTextStart</a>;                         <span class="comment">// index in the szText string of the beginning of the block</span>
 <a name="l00084"></a><a class="code" href="struct__KviIrcViewLineChunk.html#a3b8c7da3e8bdb33db33413a1021ecd24">00084</a>         <span class="keywordtype">int</span>            <a class="code" href="struct__KviIrcViewLineChunk.html#a3b8c7da3e8bdb33db33413a1021ecd24">iTextLen</a>;                           <span class="comment">// length in chars of the block (excluding the terminator)</span>
-<a name="l00085"></a><a class="code" href="struct__KviIrcViewLineChunk.html#a2b867daa473411b22703a4ef705b7940">00085</a>         <a class="code" href="kvi__string_8h.html#a2dc1d56cc0b9ac8c459aaef1d056ce2f">kvi_wchar_t</a>  * <a class="code" href="struct__KviIrcViewLineChunk.html#a2b867daa473411b22703a4ef705b7940">szPayload</a>;                          <span class="comment">// KVI_TEXT_ESCAPE attribute command buffer and KVI_TEXT_ICON icon name (non zeroed for other attributes!!!)</span>
-<a name="l00086"></a><a class="code" href="struct__KviIrcViewLineChunk.html#a4b9be32a7c1590fa6483fb39f3e9f4d4">00086</a>         <a class="code" href="kvi__string_8h.html#a2dc1d56cc0b9ac8c459aaef1d056ce2f">kvi_wchar_t</a>  * <a class="code" href="struct__KviIrcViewLineChunk.html#a4b9be32a7c1590fa6483fb39f3e9f4d4">szSmileId</a>;
+<a name="l00085"></a><a class="code" href="struct__KviIrcViewLineChunk.html#a2b867daa473411b22703a4ef705b7940">00085</a>         kvi_wchar_t  * <a class="code" href="struct__KviIrcViewLineChunk.html#a2b867daa473411b22703a4ef705b7940">szPayload</a>;                          <span class="comment">// KVI_TEXT_ESCAPE attribute command buffer and KVI_TEXT_ICON icon name (non zeroed for other attributes!!!)</span>
+<a name="l00086"></a><a class="code" href="struct__KviIrcViewLineChunk.html#a4b9be32a7c1590fa6483fb39f3e9f4d4">00086</a>         kvi_wchar_t  * <a class="code" href="struct__KviIrcViewLineChunk.html#a4b9be32a7c1590fa6483fb39f3e9f4d4">szSmileId</a>;
 <a name="l00087"></a>00087         <span class="keyword">struct </span>{
 <a name="l00088"></a><a class="code" href="struct__KviIrcViewLineChunk.html#ae5edaca7ec4d9cf4ab03776e21a3046c">00088</a>                 <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="struct__KviIrcViewLineChunk.html#ae5edaca7ec4d9cf4ab03776e21a3046c">back</a>;                        <span class="comment">// optional background color for KVI_TEXT_COLOR attribute</span>
 <a name="l00089"></a><a class="code" href="struct__KviIrcViewLineChunk.html#a3c097934a2a2e26c17f86aa595c7c04f">00089</a>                 <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="struct__KviIrcViewLineChunk.html#a3c097934a2a2e26c17f86aa595c7c04f">fore</a>;                        <span class="comment">// optional foreground color for KVI_TEXT_COLOR attribute (used also for KVI_TEXT_ESCAPE!!!)</span>
-<a name="l00090"></a>00090         } <a class="code" href="kvi__ircviewprivate_8h.html#a36e0ca61ab957df2e5c2b57de1153d82" title="COMPILE_ON_WIDNOWS.">_KVI_PACKED</a> <a class="code" href="struct__KviIrcViewLineChunk.html#afee451d2a3725e3b3575dac703cf1737">colors</a>; <span class="comment">// anonymous</span>
+<a name="l00090"></a>00090         } <a class="code" href="kvi__ircviewprivate_8h.html#a36e0ca61ab957df2e5c2b57de1153d82" title="COMPILE_ON_WIDNOWS.">_KVI_PACKED</a> <a class="code" href="struct__KviIrcViewLineChunk.html#a38dfa912ec1a837fb2931076bb5aea07">colors</a>; <span class="comment">// anonymous</span>
 <a name="l00091"></a>00091 <span class="comment">//      QColor customBack;</span>
 <a name="l00092"></a><a class="code" href="struct__KviIrcViewLineChunk.html#a359530700d0bb9d2ae45fa518630e9b9">00092</a>         QColor <a class="code" href="struct__KviIrcViewLineChunk.html#a359530700d0bb9d2ae45fa518630e9b9">customFore</a>;
 <a name="l00093"></a>00093 } <span class="comment">/*_KVI_PACKED*/</span> <a class="code" href="kvi__ircview_8h.html#a3585c25241fae5b9d3c5d5214c6e6d24">KviIrcViewLineChunk</a>;
@@ -196,7 +196,7 @@
 <a name="l00165"></a>00165 <span class="preprocessor">#endif //!_KVI_IRCVIEWPRIVATE_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:55 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

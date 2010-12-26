@@ -40,7 +40,7 @@
 <code>#include &quot;<a class="el" href="kvi__kvs__kernel_8h_source.html">kvi_kvs_kernel.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__kvs__script_8h_source.html">kvi_kvs_script.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__kvs__parser__macros_8h_source.html">kvi_kvs_parser_macros.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="kvi__locale_8h_source.html">kvi_locale.h</a>&quot;</code><br/>
+<code>#include &quot;KviLocale.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="kvi__options_8h_source.html">kvi_options.h</a>&quot;</code><br/>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="define-members"></a>
@@ -138,7 +138,7 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><pre class="fragment"><span class="keywordflow">if</span>(iNestedTerminators &gt; 0) \
                                 { \
                                         <span class="keywordflow">if</span>(!<a class="code" href="kvi__options_8h.html#a2c27d6876eaf655ffee18dc1cfe542cc">_OUTPUT_MUTE</a>) \
-                                                <a class="code" href="namespaceKviMessageBox.html#ab46640cb0a56989d2f71e773bc54e5d4">warning</a>(<a class="code" href="kvi__kvs__parser__macros_8h.html#a753a5e34d602163d7965eb1d4d4727e1">KVSP_curCharPointer</a>,<a class="code" href="kvi__locale_8h.html#a109fa73229142b7d3a9415f3a1d1dfa2">__tr2qs_ctx</a>(<span class="stringliteral">&quot;Skipping nested terminator character %q&quot;</span>,<span class="stringliteral">&quot;kvs&quot;</span>),<a class="code" href="kvi__kvs__parser__macros_8h.html#a753a5e34d602163d7965eb1d4d4727e1">KVSP_curCharPointer</a>); \
+                                                <a class="code" href="namespaceKviMessageBox.html#ab46640cb0a56989d2f71e773bc54e5d4">warning</a>(<a class="code" href="kvi__kvs__parser__macros_8h.html#a753a5e34d602163d7965eb1d4d4727e1">KVSP_curCharPointer</a>,__tr2qs_ctx(<span class="stringliteral">&quot;Skipping nested terminator character %q&quot;</span>,<span class="stringliteral">&quot;kvs&quot;</span>),<a class="code" href="kvi__kvs__parser__macros_8h.html#a753a5e34d602163d7965eb1d4d4727e1">KVSP_curCharPointer</a>); \
                                         <a class="code" href="kvi__kvs__parser__macros_8h.html#a8d168ecba2b7c2fec1f30022d1fa8c05">KVSP_skipChar</a>; \
                                         iNestedTerminators--; \
                                         iLen++; \
@@ -181,7 +181,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 <b>Value:</b><div class="fragment"><pre class="fragment"><span class="keywordflow">if</span>(!<a class="code" href="kvi__options_8h.html#a2c27d6876eaf655ffee18dc1cfe542cc">_OUTPUT_MUTE</a>) \
-                                        <a class="code" href="namespaceKviMessageBox.html#ab46640cb0a56989d2f71e773bc54e5d4">warning</a>(<a class="code" href="kvi__kvs__parser__macros_8h.html#a753a5e34d602163d7965eb1d4d4727e1">KVSP_curCharPointer</a>,<a class="code" href="kvi__locale_8h.html#a109fa73229142b7d3a9415f3a1d1dfa2">__tr2qs_ctx</a>(<span class="stringliteral">&quot;Nested character %q corresponding to expected terminator, this might confuse me a bit: it is a good idea to enclose it in quotes&quot;</span>,<span class="stringliteral">&quot;kvs&quot;</span>),<a class="code" href="kvi__kvs__parser__macros_8h.html#a753a5e34d602163d7965eb1d4d4727e1">KVSP_curCharPointer</a>); \
+                                        <a class="code" href="namespaceKviMessageBox.html#ab46640cb0a56989d2f71e773bc54e5d4">warning</a>(<a class="code" href="kvi__kvs__parser__macros_8h.html#a753a5e34d602163d7965eb1d4d4727e1">KVSP_curCharPointer</a>,__tr2qs_ctx(<span class="stringliteral">&quot;Nested character %q corresponding to expected terminator, this might confuse me a bit: it is a good idea to enclose it in quotes&quot;</span>,<span class="stringliteral">&quot;kvs&quot;</span>),<a class="code" href="kvi__kvs__parser__macros_8h.html#a753a5e34d602163d7965eb1d4d4727e1">KVSP_curCharPointer</a>); \
                                 <a class="code" href="kvi__kvs__parser__macros_8h.html#a8d168ecba2b7c2fec1f30022d1fa8c05">KVSP_skipChar</a>; \
                                 iNestedTerminators++; \
                                 iLen++; \
@@ -267,7 +267,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:56 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:06 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

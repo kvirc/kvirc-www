@@ -34,17 +34,8 @@
 <h1>KviAsynchronousConnectionData Class Reference</h1>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="KviAsynchronousConnectionData" --><!-- doxytag: inherits="KviHeapObject" -->
+<!-- doxytag: class="KviAsynchronousConnectionData" -->
 <p><code>#include &lt;<a class="el" href="kvi__asynchronousconnectiondata_8h_source.html">kvi_asynchronousconnectiondata.h</a>&gt;</code></p>
-<!-- startSectionHeader --><div class="dynheader">
-Inheritance diagram for KviAsynchronousConnectionData:<!-- endSectionHeader --></div>
-<!-- startSectionSummary --><!-- endSectionSummary --><!-- startSectionContent --><div class="dyncontent">
- <div class="center">
-  <img src="classKviAsynchronousConnectionData.png" usemap="#KviAsynchronousConnectionData_map" alt=""/>
-  <map id="KviAsynchronousConnectionData_map" name="KviAsynchronousConnectionData_map">
-<area href="classKviHeapObject.html" alt="KviHeapObject" shape="rect" coords="0,0,202,24"/>
-</map>
- </div><!-- endSectionContent --></div>
 
 <p><a href="classKviAsynchronousConnectionData-members.html">List of all members.</a></p>
 <table class="memberdecls">
@@ -59,7 +50,7 @@ Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAsynchronousConnectionData.html#a4bdca9d296e99b2f8e0465a310ae2fd9">bUseIPv6</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAsynchronousConnectionData.html#ad388b6799863de28dcdd1ac5044e891e">bUseLastServerInContext</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAsynchronousConnectionData.html#a3d255cca67ce272dd0d78e35f57cd4dd">bUseSSL</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviServerReconnectInfo.html">KviServerReconnectInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAsynchronousConnectionData.html#ab437c1c1522b310d474e411e9c0051ba">m_pReconnectInfo</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviServerReconnectInfo *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAsynchronousConnectionData.html#ab437c1c1522b310d474e411e9c0051ba">m_pReconnectInfo</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAsynchronousConnectionData.html#a0bf62fcf9bc8367800366ee81b423310">szBindAddress</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAsynchronousConnectionData.html#a28cc2b724b56277b3329feab901b161e">szCommandToExecAfterConnect</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviAsynchronousConnectionData.html#ac717aba41f62867c3e1d7c5aed102ea3">szInitUMode</a></td></tr>
@@ -188,13 +179,13 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviServerReconnectInfo.html">KviServerReconnectInfo</a>* <a class="el" href="classKviAsynchronousConnectionData.html#ab437c1c1522b310d474e411e9c0051ba">KviAsynchronousConnectionData::m_pReconnectInfo</a></td>
+          <td class="memname">KviServerReconnectInfo* <a class="el" href="classKviAsynchronousConnectionData.html#ab437c1c1522b310d474e411e9c0051ba">KviAsynchronousConnectionData::m_pReconnectInfo</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviIrcContext.html#a448aae62a6b9df1f62969f8e6124b900">KviIrcContext::connectionTerminated()</a>, <a class="el" href="classKviIrcContext.html#a0e01b5b17aa7de245a9fcbfab1adea7f">KviIrcContext::connectToCurrentServer()</a>, <a class="el" href="classKviAsynchronousConnectionData.html#aa7b42724ab93355ab1dc7b97d10f9b51">KviAsynchronousConnectionData()</a>, and <a class="el" href="classKviAsynchronousConnectionData.html#abc09f8075afbbd0c2d84c836052f365f">~KviAsynchronousConnectionData()</a>.</p>
+<p>Referenced by <a class="el" href="classKviIrcContext.html#a448aae62a6b9df1f62969f8e6124b900">KviIrcContext::connectionTerminated()</a>, <a class="el" href="classKviIrcContext.html#a0e01b5b17aa7de245a9fcbfab1adea7f">KviIrcContext::connectToCurrentServer()</a>, <a class="el" href="classKviAsynchronousConnectionData.html#aa7b42724ab93355ab1dc7b97d10f9b51">KviAsynchronousConnectionData()</a>, <a class="el" href="namespaceKviKvsCoreSimpleCommands.html#ac94a09395b1232465647d125611e38b6">KviKvsCoreSimpleCommands::KVSCSC()</a>, and <a class="el" href="classKviAsynchronousConnectionData.html#abc09f8075afbbd0c2d84c836052f365f">~KviAsynchronousConnectionData()</a>.</p>
 
 </div>
 </div>
@@ -338,7 +329,7 @@ Public Attributes</h2></td></tr>
 <li>src/kvirc/kernel/<a class="el" href="kvi__asynchronousconnectiondata_8cpp.html">kvi_asynchronousconnectiondata.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:56 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

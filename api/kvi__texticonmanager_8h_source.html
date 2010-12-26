@@ -38,7 +38,7 @@
 <a name="l00007"></a>00007 <span class="comment">//   Creation date : Thu 15 May 2002 12:04:12 by Szymon Stefanek</span>
 <a name="l00008"></a>00008 <span class="comment">//</span>
 <a name="l00009"></a>00009 <span class="comment">//   This file is part of the KVirc irc client distribution</span>
-<a name="l00010"></a>00010 <span class="comment">//   Copyright (C) 2002-2008 Szymon Stefanek (pragma at kvirc dot net)</span>
+<a name="l00010"></a>00010 <span class="comment">//   Copyright (C) 2002-2010 Szymon Stefanek (pragma at kvirc dot net)</span>
 <a name="l00011"></a>00011 <span class="comment">//</span>
 <a name="l00012"></a>00012 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00013"></a>00013 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -57,8 +57,8 @@
 <a name="l00026"></a>00026 <span class="comment">//=============================================================================</span>
 <a name="l00027"></a>00027 
 <a name="l00036"></a>00036 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00037"></a>00037 <span class="preprocessor">#include &quot;<a class="code" href="kvi__pointerhashtable_8h.html" title="Pointer Hash Table.">kvi_pointerhashtable.h</a>&quot;</span>
-<a name="l00038"></a>00038 <span class="preprocessor">#include &quot;<a class="code" href="kvi__animatedpixmap_8h.html">kvi_animatedpixmap.h</a>&quot;</span>
+<a name="l00037"></a>00037 <span class="preprocessor">#include &quot;KviPointerHashTable.h&quot;</span>
+<a name="l00038"></a>00038 <span class="preprocessor">#include &quot;KviAnimatedPixmap.h&quot;</span>
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040 <span class="preprocessor">#include &lt;QPixmap&gt;</span>
 <a name="l00041"></a>00041 
@@ -75,7 +75,7 @@
 <a name="l00061"></a>00061 <span class="keyword">protected</span>:
 <a name="l00062"></a><a class="code" href="classKviTextIcon.html#a9332e69ab91413195f17c590699c94c5">00062</a>         <span class="keywordtype">int</span>                 <a class="code" href="classKviTextIcon.html#a9332e69ab91413195f17c590699c94c5">m_iId</a>;
 <a name="l00063"></a><a class="code" href="classKviTextIcon.html#aebd5e76fdcfda4108be03ad1879fd2c6">00063</a>         QString             <a class="code" href="classKviTextIcon.html#aebd5e76fdcfda4108be03ad1879fd2c6">m_szFileName</a>;
-<a name="l00064"></a><a class="code" href="classKviTextIcon.html#ae53e8d8ba51ad7d4834b255a924a1b48">00064</a>         <a class="code" href="classKviAnimatedPixmap.html">KviAnimatedPixmap</a> * <a class="code" href="classKviTextIcon.html#ae53e8d8ba51ad7d4834b255a924a1b48">m_pAnimatedPixmap</a>;
+<a name="l00064"></a><a class="code" href="classKviTextIcon.html#ae53e8d8ba51ad7d4834b255a924a1b48">00064</a>         KviAnimatedPixmap * <a class="code" href="classKviTextIcon.html#ae53e8d8ba51ad7d4834b255a924a1b48">m_pAnimatedPixmap</a>;
 <a name="l00065"></a>00065 <span class="keyword">public</span>:
 <a name="l00071"></a>00071         <a class="code" href="classKviTextIcon.html" title="The class that holds the icons.">KviTextIcon</a>(<span class="keywordtype">int</span> iId);
 <a name="l00072"></a>00072 
@@ -95,7 +95,7 @@
 <a name="l00117"></a>00117 
 <a name="l00122"></a>00122         QPixmap * pixmap();
 <a name="l00123"></a>00123 
-<a name="l00128"></a><a class="code" href="classKviTextIcon.html#afa662474b453c2d68f98166ed3a77a31">00128</a>         <span class="keyword">inline</span> <a class="code" href="classKviAnimatedPixmap.html">KviAnimatedPixmap</a> * <a class="code" href="classKviTextIcon.html#afa662474b453c2d68f98166ed3a77a31" title="Returns the animated pixmap associated to the icon.">animatedPixmap</a>(){ <span class="keywordflow">return</span> m_pAnimatedPixmap; };
+<a name="l00128"></a><a class="code" href="classKviTextIcon.html#afa662474b453c2d68f98166ed3a77a31">00128</a>         <span class="keyword">inline</span> KviAnimatedPixmap * <a class="code" href="classKviTextIcon.html#afa662474b453c2d68f98166ed3a77a31" title="Returns the animated pixmap associated to the icon.">animatedPixmap</a>(){ <span class="keywordflow">return</span> m_pAnimatedPixmap; };
 <a name="l00129"></a>00129 };
 <a name="l00130"></a>00130 
 <a name="l00135"></a><a class="code" href="classKviTextIconManager.html">00135</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviTextIconManager.html" title="The class that manages the icons.">KviTextIconManager</a> : <span class="keyword">public</span> QObject
@@ -108,9 +108,9 @@
 <a name="l00146"></a>00146 
 <a name="l00150"></a>00150         ~<a class="code" href="classKviTextIconManager.html" title="The class that manages the icons.">KviTextIconManager</a>();
 <a name="l00151"></a>00151 <span class="keyword">private</span>:
-<a name="l00152"></a><a class="code" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">00152</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviTextIcon&gt;</a> * <a class="code" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>;
+<a name="l00152"></a><a class="code" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">00152</a>         KviPointerHashTable&lt;QString,KviTextIcon&gt; * <a class="code" href="classKviTextIconManager.html#a526f51615962a451389c7afd631fa669">m_pTextIconDict</a>;
 <a name="l00153"></a>00153 <span class="keyword">public</span>:
-<a name="l00158"></a><a class="code" href="classKviTextIconManager.html#a2aeeb4b40311673c944fd144800719d2">00158</a>         <span class="keyword">inline</span> <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviTextIcon&gt;</a> * <a class="code" href="classKviTextIconManager.html#a2aeeb4b40311673c944fd144800719d2" title="Returns the dictionary of the icons.">textIconDict</a>(){ <span class="keywordflow">return</span> m_pTextIconDict; };
+<a name="l00158"></a><a class="code" href="classKviTextIconManager.html#a2aeeb4b40311673c944fd144800719d2">00158</a>         <span class="keyword">inline</span> KviPointerHashTable&lt;QString,KviTextIcon&gt; * <a class="code" href="classKviTextIconManager.html#a2aeeb4b40311673c944fd144800719d2" title="Returns the dictionary of the icons.">textIconDict</a>(){ <span class="keywordflow">return</span> m_pTextIconDict; };
 <a name="l00159"></a>00159 
 <a name="l00164"></a>00164         <span class="keywordtype">void</span> checkDefaultAssociations();
 <a name="l00165"></a>00165 
@@ -142,7 +142,7 @@
 <a name="l00244"></a>00244 <span class="preprocessor">#endif //_KVI_TEXTICONMANAGER_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:54 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:04 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

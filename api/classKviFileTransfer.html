@@ -46,7 +46,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a94bbf57df67fc3b01cb0e4706ad56fbc">displayHeight</a> (int iLineSpacing)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#ab46298f82f80cf5dec2ec0e8eb340748">displayPaint</a> (QPainter *p, int column, QRect rect)=0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a98ea7d0b9e76cefce5f9f1cf8f2a9553">displayUpdate</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a4e1bb42435f9da2f068c2c12ba514031">fillContextPopup</a> (<a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *m)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a4e1bb42435f9da2f068c2c12ba514031">fillContextPopup</a> (KviTalPopupMenu *m)=0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#af7f5218ad962c8c265fa4e73cec848c7">id</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a1426c791b86a4b24f275e6ac0d6715ca">invokeTransferWindow</a> (<a class="el" href="classKviWindow.html">KviWindow</a> *pWnd=0, bool bCreateMinimized=false, bool bNoRaise=false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a161fca332e38c7af002753eb776e8a19">KviFileTransfer</a> ()</td></tr>
@@ -54,7 +54,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviFileTransferManager.html">KviFileTransferManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#ac51f5ea24d2bfe59305a68922c23464e">manager</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviWindow.html">KviWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a607303758e89b0aff912e3f48c0fe3c2">outputWindow</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a2235d1ff2a448f3982deeb246a952c6d">retryCommand</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a2a6b7e6aa00d00ee7734db300ed30e1a">setDisplayItem</a> (<a class="el" href="classKviTalTableWidgetItemEx.html">KviTalTableWidgetItemEx</a> *i)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a2a6b7e6aa00d00ee7734db300ed30e1a">setDisplayItem</a> (KviTalTableWidgetItemEx *i)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#aa6e03a2138f96cd00ee07de53277ab39">terminated</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a5a0e853b7a787ae8dcd1a0874b445238">tipText</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviWindow.html">KviWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#ad3a4553cb5fb09277f99f94974275cda">transferWindow</a> ()</td></tr>
@@ -62,7 +62,7 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#aefc0486520c20b7fbe5d232d688c0ee7">m_iId</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviTalTableWidgetItemEx.html">KviTalTableWidgetItemEx</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a4220deb6a5a4bb4f320b0112a9a1342f">m_pDisplayItem</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviTalTableWidgetItemEx *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a4220deb6a5a4bb4f320b0112a9a1342f">m_pDisplayItem</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a161fca332e38c7af002753eb776e8a19"></a><!-- doxytag: member="KviFileTransfer::KviFileTransfer" ref="a161fca332e38c7af002753eb776e8a19" args="()" -->
@@ -204,7 +204,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviTalTableWidgetItemEx.html#a01eb6630d06133ebd2c10cc6c3592835">KviTalTableWidgetItemEx::displayUpdate()</a>, and <a class="el" href="classKviFileTransfer.html#a4220deb6a5a4bb4f320b0112a9a1342f">m_pDisplayItem</a>.</p>
+<p>References <a class="el" href="classKviFileTransfer.html#a4220deb6a5a4bb4f320b0112a9a1342f">m_pDisplayItem</a>.</p>
 
 </div>
 </div>
@@ -215,7 +215,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void KviFileTransfer::fillContextPopup </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td>
+          <td class="paramtype">KviTalPopupMenu *&#160;</td>
           <td class="paramname"> <em>m</em>&#160;)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -353,7 +353,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void KviFileTransfer::setDisplayItem </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviTalTableWidgetItemEx.html">KviTalTableWidgetItemEx</a> *&#160;</td>
+          <td class="paramtype">KviTalTableWidgetItemEx *&#160;</td>
           <td class="paramname"> <em>i</em>&#160;)</td>
           <td><code> [inline]</code></td>
         </tr>
@@ -436,7 +436,7 @@ Protected Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviTalTableWidgetItemEx.html">KviTalTableWidgetItemEx</a>* <a class="el" href="classKviFileTransfer.html#a4220deb6a5a4bb4f320b0112a9a1342f">KviFileTransfer::m_pDisplayItem</a><code> [protected]</code></td>
+          <td class="memname">KviTalTableWidgetItemEx* <a class="el" href="classKviFileTransfer.html#a4220deb6a5a4bb4f320b0112a9a1342f">KviFileTransfer::m_pDisplayItem</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -451,7 +451,7 @@ Protected Attributes</h2></td></tr>
 <li>src/kvirc/kernel/<a class="el" href="kvi__filetransfer_8cpp.html">kvi_filetransfer.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:57 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

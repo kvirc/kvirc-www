@@ -52,7 +52,7 @@ Inheritance diagram for KviPixmapSelector:<!-- endSectionHeader --></div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviPixmapSelector.html#a4dac3ce3117197d6672719ea702b8c4d">commit</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviPixmapSelector.html#aaf53983392d749aba0f27cc7affe4693">KviPixmapSelector</a> (QWidget *par, const QString &amp;txt, <a class="el" href="classKviPixmap.html">KviPixmap</a> *pOption, bool bEnabled)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviPixmapSelector.html#aaf53983392d749aba0f27cc7affe4693">KviPixmapSelector</a> (QWidget *par, const QString &amp;txt, KviPixmap *pOption, bool bEnabled)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviPixmapSelector.html#a8eb39d8c6832b5eb622df5e695ab16d3">setEnabled</a> (bool bEnabled)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviPixmapSelector.html#a0e9e4f0f5403554b3ad68c6c5c0b1849">setImagePath</a> (const QString &amp;path)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviPixmapSelector.html#ad0ff81fc91802a505c6b4a9aa1e309c9">~KviPixmapSelector</a> ()</td></tr>
@@ -62,11 +62,11 @@ Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviPixmapSelector.html#a4ef3bb470e1dce8e7af40381c4eafcbb">choosePixmap</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPixmap.html">KviPixmap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviPixmapSelector.html#a2ad33ade946f0b05221d898a6c9aac0d">m_localPixmap</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviPixmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviPixmapSelector.html#a2ad33ade946f0b05221d898a6c9aac0d">m_localPixmap</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviPixmapSelector.html#a55135b3836acc6d5f126998bb74d0ab4">m_pCheckBox</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviPixmapSelector.html#ab5d96ce20d855639d1f997e3c7ef592d">m_pChooseButton</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QLabel *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviPixmapSelector.html#a5bc2a2fe3b195088999a95eb9557dcae">m_pFileNameLabel</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPixmap.html">KviPixmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviPixmapSelector.html#a7f7adc1c7fa0abcf9085226342183294">m_pOption</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">KviPixmap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviPixmapSelector.html#a7f7adc1c7fa0abcf9085226342183294">m_pOption</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPixmapPreview.html">KviPixmapPreview</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviPixmapSelector.html#a8e593067f0a9f05f8a160d4b58779ab5">m_pPreview</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
@@ -89,7 +89,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classKviPixmap.html">KviPixmap</a> *&#160;</td>
+          <td class="paramtype">KviPixmap *&#160;</td>
           <td class="paramname"> <em>pOption</em>, </td>
         </tr>
         <tr>
@@ -107,7 +107,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPixmapSelector.html#ab586243343ccdbe376a461dbd9853fa8">checkBoxToggled()</a>, <a class="el" href="classKviPixmapSelector.html#a4ef3bb470e1dce8e7af40381c4eafcbb">choosePixmap()</a>, <a class="el" href="classKviPixmapSelector.html#a2ad33ade946f0b05221d898a6c9aac0d">m_localPixmap</a>, <a class="el" href="classKviPixmapSelector.html#a55135b3836acc6d5f126998bb74d0ab4">m_pCheckBox</a>, <a class="el" href="classKviPixmapSelector.html#ab5d96ce20d855639d1f997e3c7ef592d">m_pChooseButton</a>, <a class="el" href="classKviPixmapSelector.html#a5bc2a2fe3b195088999a95eb9557dcae">m_pFileNameLabel</a>, <a class="el" href="classKviPixmapSelector.html#a7f7adc1c7fa0abcf9085226342183294">m_pOption</a>, <a class="el" href="classKviPixmapSelector.html#a8e593067f0a9f05f8a160d4b58779ab5">m_pPreview</a>, <a class="el" href="classKviPixmap.html#a01e9131844f3fdef17b7d86ab669cfb1">KviPixmap::path()</a>, <a class="el" href="classKviPixmap.html#a068f279ce144eb24218c7ccb6fdf9a5b">KviPixmap::pixmap()</a>, <a class="el" href="classKviPixmapSelector.html#a8eb39d8c6832b5eb622df5e695ab16d3">setEnabled()</a>, and <a class="el" href="classKviPixmapPreview.html#a87453a1d3e94fc403889f351c971bfa5">KviPixmapPreview::setPixmap()</a>.</p>
+<p>References <a class="el" href="classKviPixmapSelector.html#ab586243343ccdbe376a461dbd9853fa8">checkBoxToggled()</a>, <a class="el" href="classKviPixmapSelector.html#a4ef3bb470e1dce8e7af40381c4eafcbb">choosePixmap()</a>, <a class="el" href="classKviPixmapSelector.html#a2ad33ade946f0b05221d898a6c9aac0d">m_localPixmap</a>, <a class="el" href="classKviPixmapSelector.html#a55135b3836acc6d5f126998bb74d0ab4">m_pCheckBox</a>, <a class="el" href="classKviPixmapSelector.html#ab5d96ce20d855639d1f997e3c7ef592d">m_pChooseButton</a>, <a class="el" href="classKviPixmapSelector.html#a5bc2a2fe3b195088999a95eb9557dcae">m_pFileNameLabel</a>, <a class="el" href="classKviPixmapSelector.html#a7f7adc1c7fa0abcf9085226342183294">m_pOption</a>, <a class="el" href="classKviPixmapSelector.html#a8e593067f0a9f05f8a160d4b58779ab5">m_pPreview</a>, <a class="el" href="classKviPixmapSelector.html#a8eb39d8c6832b5eb622df5e695ab16d3">setEnabled()</a>, and <a class="el" href="classKviPixmapPreview.html#a87453a1d3e94fc403889f351c971bfa5">KviPixmapPreview::setPixmap()</a>.</p>
 
 </div>
 </div>
@@ -163,7 +163,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h.html#ac7445f076d723be6df1b3532ea8159f7">__tr</a>, <a class="el" href="classKviFileDialog.html#a4fcd62f4d3a7b0a0d18b66f62a046c1e">KviFileDialog::askForOpenFileName()</a>, and <a class="el" href="classKviPixmapSelector.html#a0e9e4f0f5403554b3ad68c6c5c0b1849">setImagePath()</a>.</p>
+<p>References <a class="el" href="classKviFileDialog.html#a4fcd62f4d3a7b0a0d18b66f62a046c1e">KviFileDialog::askForOpenFileName()</a>, and <a class="el" href="classKviPixmapSelector.html#a0e9e4f0f5403554b3ad68c6c5c0b1849">setImagePath()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviPixmapSelector.html#aaf53983392d749aba0f27cc7affe4693">KviPixmapSelector()</a>.</p>
 
@@ -225,7 +225,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__locale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="classKviPixmap.html#ae7cbdebfbc133c8ba7c385638e6ccf96">KviPixmap::isNull()</a>, <a class="el" href="classKviPixmap.html#a65838ea0c3e467c350abde84c5d3dd67">KviPixmap::load()</a>, <a class="el" href="classKviPixmapSelector.html#a2ad33ade946f0b05221d898a6c9aac0d">m_localPixmap</a>, <a class="el" href="classKviPixmapSelector.html#a55135b3836acc6d5f126998bb74d0ab4">m_pCheckBox</a>, <a class="el" href="classKviPixmapSelector.html#a5bc2a2fe3b195088999a95eb9557dcae">m_pFileNameLabel</a>, <a class="el" href="classKviPixmapSelector.html#a8e593067f0a9f05f8a160d4b58779ab5">m_pPreview</a>, <a class="el" href="classKviPixmapSelector.html#a8eb39d8c6832b5eb622df5e695ab16d3">setEnabled()</a>, and <a class="el" href="classKviPixmapPreview.html#a87453a1d3e94fc403889f351c971bfa5">KviPixmapPreview::setPixmap()</a>.</p>
+<p>References <a class="el" href="classKviPixmapSelector.html#a2ad33ade946f0b05221d898a6c9aac0d">m_localPixmap</a>, <a class="el" href="classKviPixmapSelector.html#a55135b3836acc6d5f126998bb74d0ab4">m_pCheckBox</a>, <a class="el" href="classKviPixmapSelector.html#a5bc2a2fe3b195088999a95eb9557dcae">m_pFileNameLabel</a>, <a class="el" href="classKviPixmapSelector.html#a8e593067f0a9f05f8a160d4b58779ab5">m_pPreview</a>, <a class="el" href="classKviPixmapSelector.html#a8eb39d8c6832b5eb622df5e695ab16d3">setEnabled()</a>, and <a class="el" href="classKviPixmapPreview.html#a87453a1d3e94fc403889f351c971bfa5">KviPixmapPreview::setPixmap()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviPixmapSelector.html#a4ef3bb470e1dce8e7af40381c4eafcbb">choosePixmap()</a>.</p>
 
@@ -237,7 +237,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPixmap.html">KviPixmap</a> <a class="el" href="classKviPixmapSelector.html#a2ad33ade946f0b05221d898a6c9aac0d">KviPixmapSelector::m_localPixmap</a><code> [private]</code></td>
+          <td class="memname">KviPixmap <a class="el" href="classKviPixmapSelector.html#a2ad33ade946f0b05221d898a6c9aac0d">KviPixmapSelector::m_localPixmap</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -297,7 +297,7 @@ Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviPixmap.html">KviPixmap</a>* <a class="el" href="classKviPixmapSelector.html#a7f7adc1c7fa0abcf9085226342183294">KviPixmapSelector::m_pOption</a><code> [private]</code></td>
+          <td class="memname">KviPixmap* <a class="el" href="classKviPixmapSelector.html#a7f7adc1c7fa0abcf9085226342183294">KviPixmapSelector::m_pOption</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
@@ -327,7 +327,7 @@ Private Attributes</h2></td></tr>
 <li>src/kvirc/ui/<a class="el" href="kvi__selectors_8cpp.html">kvi_selectors.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:33:03 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:13 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

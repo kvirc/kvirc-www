@@ -68,7 +68,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionStateData.html#af4f57bb00c06d75fbfb3048f39d489d8">setLoginNickIndex</a> (unsigned int uNickIdx)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionStateData.html#a651805fd7cb36d031ebe4e26eef58bff">setSentQuit</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionStateData.html#a3971c616c80cf636435712c72a0be329">setSentStartTls</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionStateData.html#a4036b6ef9a9e4afdf072647bd5b8a355">setSimulateUnexpectedDisconnect</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionStateData.html#a635a2602fded6df7d8df75eb845faa9d">setSimulateUnexpectedDisconnect</a> (bool bSimulate)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionStateData.html#aa65bdcd11b208e0617cd74aa0ad90403">simulateUnexpectedDisconnect</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcConnectionStateData.html#a58d6dd15cc68cc788811a73fb7665ae6">~KviIrcConnectionStateData</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
@@ -108,7 +108,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="kvi__time_8h.html#a6fe7a3ad3d1a08a5173aa2a58a242f24">kvi_unixTime</a>, <a class="el" href="classKviIrcConnectionStateData.html#a5549261c76616ea00d54a46b9842dc83">m_bIdentifyMsgCapabilityEnabled</a>, <a class="el" href="classKviIrcConnectionStateData.html#a0b7b9eff4a1370426d49dab6d133d37e">m_bIgnoreOneYouHaveNotRegisteredError</a>, <a class="el" href="classKviIrcConnectionStateData.html#a06fab0a4fa4f48ef70222d9bf38b5acf">m_bInsideInitialCapLs</a>, <a class="el" href="classKviIrcConnectionStateData.html#a866fb377c54778f29c979da3621a068a">m_bInsideInitialCapReq</a>, <a class="el" href="classKviIrcConnectionStateData.html#a7e3b23552d25fd4fe8f0eb19f0219f5c">m_bSentQuit</a>, <a class="el" href="classKviIrcConnectionStateData.html#a34051bb2784b55cb300ba3bdc319bee3">m_bSentStartTls</a>, <a class="el" href="classKviIrcConnectionStateData.html#a47a00985b5aad449a83448f2aa80ee91">m_bSimulateUnexpectedDisconnect</a>, <a class="el" href="classKviIrcConnectionStateData.html#a89a1e7d753e2758cf17ee30868d40d48">m_tLastReceivedChannelWhoReply</a>, <a class="el" href="classKviIrcConnectionStateData.html#af2d8ba49d197489e9e091fbe4318f215">m_tLastReceivedWhoisReply</a>, <a class="el" href="classKviIrcConnectionStateData.html#a1e7f204993ebffe74920ad4bbfe6948e">m_tLastSentChannelWhoRequest</a>, and <a class="el" href="classKviIrcConnectionStateData.html#aa80128885fb66025d019384cebc237ac">m_uLoginNickIndex</a>.</p>
+<p>References <a class="el" href="classKviIrcConnectionStateData.html#a5549261c76616ea00d54a46b9842dc83">m_bIdentifyMsgCapabilityEnabled</a>, <a class="el" href="classKviIrcConnectionStateData.html#a0b7b9eff4a1370426d49dab6d133d37e">m_bIgnoreOneYouHaveNotRegisteredError</a>, <a class="el" href="classKviIrcConnectionStateData.html#a06fab0a4fa4f48ef70222d9bf38b5acf">m_bInsideInitialCapLs</a>, <a class="el" href="classKviIrcConnectionStateData.html#a866fb377c54778f29c979da3621a068a">m_bInsideInitialCapReq</a>, <a class="el" href="classKviIrcConnectionStateData.html#a7e3b23552d25fd4fe8f0eb19f0219f5c">m_bSentQuit</a>, <a class="el" href="classKviIrcConnectionStateData.html#a34051bb2784b55cb300ba3bdc319bee3">m_bSentStartTls</a>, <a class="el" href="classKviIrcConnectionStateData.html#a47a00985b5aad449a83448f2aa80ee91">m_bSimulateUnexpectedDisconnect</a>, <a class="el" href="classKviIrcConnectionStateData.html#a89a1e7d753e2758cf17ee30868d40d48">m_tLastReceivedChannelWhoReply</a>, <a class="el" href="classKviIrcConnectionStateData.html#af2d8ba49d197489e9e091fbe4318f215">m_tLastReceivedWhoisReply</a>, <a class="el" href="classKviIrcConnectionStateData.html#a1e7f204993ebffe74920ad4bbfe6948e">m_tLastSentChannelWhoRequest</a>, and <a class="el" href="classKviIrcConnectionStateData.html#aa80128885fb66025d019384cebc237ac">m_uLoginNickIndex</a>.</p>
 
 </div>
 </div>
@@ -236,7 +236,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviIrcConnection.html#adf90a3be9bae034a09258a849bd69d3c">KviIrcConnection::handleAuthenticate()</a>, <a class="el" href="classKviServerParser.html#a7392b526972bbdda80e3b1b665578e75">KviServerParser::parseNumericSaslFail()</a>, <a class="el" href="classKviServerParser.html#ae855caabe768aac5e3484bbf5a7d0f4a">KviServerParser::parseNumericSaslLogin()</a>, and <a class="el" href="classKviServerParser.html#a776afd1d171bdb74d51e0b7bf71fc699">KviServerParser::parseNumericSaslSuccess()</a>.</p>
+<p>Referenced by <a class="el" href="classKviIrcConnection.html#a6412dd8e88232b2606451c62c58c7f70">KviIrcConnection::handleAuthenticate()</a>, <a class="el" href="classKviServerParser.html#a7392b526972bbdda80e3b1b665578e75">KviServerParser::parseNumericSaslFail()</a>, <a class="el" href="classKviServerParser.html#ae855caabe768aac5e3484bbf5a7d0f4a">KviServerParser::parseNumericSaslLogin()</a>, and <a class="el" href="classKviServerParser.html#a776afd1d171bdb74d51e0b7bf71fc699">KviServerParser::parseNumericSaslSuccess()</a>.</p>
 
 </div>
 </div>
@@ -509,7 +509,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviServerParser.html#a47b6ca658018f637f5a8353eecd914d5">KviServerParser::parseNumericCodePageScheme()</a>, <a class="el" href="classKviServerParser.html#a45b0cf5e71aafca149103ea716387589">KviServerParser::parseNumericEndOfWhois()</a>, <a class="el" href="classKviServerParser.html#aecaf104416ea73c043f96cd7fb67ad58">KviServerParser::parseNumericWhoisAuth()</a>, <a class="el" href="classKviServerParser.html#a5f22d0a858b3d15cb0866eeb4c072d57">KviServerParser::parseNumericWhoisAway()</a>, <a class="el" href="classKviServerParser.html#a3feba327f5bda89e74ec9ed99a1808ff">KviServerParser::parseNumericWhoisChannels()</a>, <a class="el" href="classKviServerParser.html#a5b1b2e157b567a563020c4b339043b3a">KviServerParser::parseNumericWhoisIdle()</a>, <a class="el" href="classKviServerParser.html#a2a4ca6258c5b09cdbb53d70700002aef">KviServerParser::parseNumericWhoisOther()</a>, <a class="el" href="classKviServerParser.html#a2648917ecb5091885a14e5ad1a5bdebe">KviServerParser::parseNumericWhoisServer()</a>, and <a class="el" href="classKviServerParser.html#af883af4f43e07d497d4b78b9c61d0020">KviServerParser::parseNumericWhoisUser()</a>.</p>
+<p>Referenced by <a class="el" href="classKviServerParser.html#a47b6ca658018f637f5a8353eecd914d5">KviServerParser::parseNumericCodePageScheme()</a>, <a class="el" href="classKviServerParser.html#a45b0cf5e71aafca149103ea716387589">KviServerParser::parseNumericEndOfWhois()</a>, <a class="el" href="classKviServerParser.html#a785d5e755640b652d6678bf62ea90de1">KviServerParser::parseNumericWhoisActually()</a>, <a class="el" href="classKviServerParser.html#aecaf104416ea73c043f96cd7fb67ad58">KviServerParser::parseNumericWhoisAuth()</a>, <a class="el" href="classKviServerParser.html#a5f22d0a858b3d15cb0866eeb4c072d57">KviServerParser::parseNumericWhoisAway()</a>, <a class="el" href="classKviServerParser.html#a3feba327f5bda89e74ec9ed99a1808ff">KviServerParser::parseNumericWhoisChannels()</a>, <a class="el" href="classKviServerParser.html#a5b1b2e157b567a563020c4b339043b3a">KviServerParser::parseNumericWhoisIdle()</a>, <a class="el" href="classKviServerParser.html#a2a4ca6258c5b09cdbb53d70700002aef">KviServerParser::parseNumericWhoisOther()</a>, <a class="el" href="classKviServerParser.html#a2648917ecb5091885a14e5ad1a5bdebe">KviServerParser::parseNumericWhoisServer()</a>, and <a class="el" href="classKviServerParser.html#af883af4f43e07d497d4b78b9c61d0020">KviServerParser::parseNumericWhoisUser()</a>.</p>
 
 </div>
 </div>
@@ -585,14 +585,15 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4036b6ef9a9e4afdf072647bd5b8a355"></a><!-- doxytag: member="KviIrcConnectionStateData::setSimulateUnexpectedDisconnect" ref="a4036b6ef9a9e4afdf072647bd5b8a355" args="()" -->
+<a class="anchor" id="a635a2602fded6df7d8df75eb845faa9d"></a><!-- doxytag: member="KviIrcConnectionStateData::setSimulateUnexpectedDisconnect" ref="a635a2602fded6df7d8df75eb845faa9d" args="(bool bSimulate)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void KviIrcConnectionStateData::setSimulateUnexpectedDisconnect </td>
           <td>(</td>
-          <td class="paramname">&#160;)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"> <em>bSimulate</em>&#160;)</td>
           <td><code> [inline]</code></td>
         </tr>
       </table>
@@ -873,7 +874,7 @@ Friends</h2></td></tr>
 <li>src/kvirc/kernel/<a class="el" href="kvi__ircconnectionstatedata_8cpp.html">kvi_ircconnectionstatedata.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:57 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>

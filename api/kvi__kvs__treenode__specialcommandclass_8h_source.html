@@ -37,7 +37,7 @@
 <a name="l00006"></a>00006 <span class="comment">//   Creation date : Fri 12 Aug 2005 03:23:31 by Szymon Stefanek</span>
 <a name="l00007"></a>00007 <span class="comment">//</span>
 <a name="l00008"></a>00008 <span class="comment">//   This file is part of the KVIrc IRC Client distribution</span>
-<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2005-2008 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
+<a name="l00009"></a>00009 <span class="comment">//   Copyright (C) 2005-2010 Szymon Stefanek &lt;pragma at kvirc dot net&gt;</span>
 <a name="l00010"></a>00010 <span class="comment">//</span>
 <a name="l00011"></a>00011 <span class="comment">//   This program is FREE software. You can redistribute it and/or</span>
 <a name="l00012"></a>00012 <span class="comment">//   modify it under the terms of the GNU General Public License</span>
@@ -56,7 +56,7 @@
 <a name="l00025"></a>00025 <span class="comment">//=============================================================================</span>
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="kvi__settings_8h.html" title="This file contains compile time settings.">kvi_settings.h</a>&quot;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;<a class="code" href="kvi__qstring_8h.html" title="Helper functions for the QString class.">kvi_qstring.h</a>&quot;</span>
+<a name="l00028"></a>00028 <span class="preprocessor">#include &quot;KviQString.h&quot;</span>
 <a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="kvi__kvs__treenode__specialcommand_8h.html">kvi_kvs_treenode_specialcommand.h</a>&quot;</span>
 <a name="l00030"></a>00030 <span class="preprocessor">#include &quot;<a class="code" href="kvi__kvs__treenode__base_8h.html" title="Treenode handling.">kvi_kvs_treenode_base.h</a>&quot;</span>
 <a name="l00031"></a>00031 <span class="preprocessor">#include &quot;<a class="code" href="kvi__kvs__treenode__datalist_8h.html">kvi_kvs_treenode_datalist.h</a>&quot;</span>
@@ -91,7 +91,7 @@
 <a name="l00060"></a>00060         <span class="keyword">virtual</span> ~<a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html">KviKvsTreeNodeSpecialCommandClass</a>();
 <a name="l00061"></a>00061 <span class="keyword">protected</span>:
 <a name="l00062"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html#acda5473933483e1a12fbf6f8dec72334">00062</a>         <a class="code" href="classKviKvsTreeNodeDataList.html">KviKvsTreeNodeDataList</a> * <a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html#acda5473933483e1a12fbf6f8dec72334">m_pParams</a>;
-<a name="l00063"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html#a2a59c02a8be1f3c0a5f1885b3760c16b">00063</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviKvsTreeNodeSpecialCommandClassFunctionDefinition&gt;</a> * <a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html#a2a59c02a8be1f3c0a5f1885b3760c16b">m_pFunctions</a>;
+<a name="l00063"></a><a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html#a2a59c02a8be1f3c0a5f1885b3760c16b">00063</a>         KviPointerList&lt;KviKvsTreeNodeSpecialCommandClassFunctionDefinition&gt; * <a class="code" href="classKviKvsTreeNodeSpecialCommandClass.html#a2a59c02a8be1f3c0a5f1885b3760c16b">m_pFunctions</a>;
 <a name="l00064"></a>00064 <span class="keyword">public</span>:
 <a name="l00065"></a>00065         <span class="keywordtype">void</span> addFunctionDefinition(<a class="code" href="classKviKvsTreeNodeSpecialCommandClassFunctionDefinition.html">KviKvsTreeNodeSpecialCommandClassFunctionDefinition</a> * pDef);
 <a name="l00066"></a>00066         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviKvsTreeNodeSpecialCommand.html#a2a44b1f5588b93077e88614bc2c4f610" title="Sets the buffer as Instruction.">contextDescription</a>(QString &amp;szBuffer);
@@ -102,7 +102,7 @@
 <a name="l00071"></a>00071 <span class="preprocessor">#endif //!_KVI_KVS_TREENODE_SPECIALCOMMANDCLASS_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Mon Nov 22 2010 19:32:54 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Sun Dec 26 2010 21:28:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.2 </small></address>
 </body>
