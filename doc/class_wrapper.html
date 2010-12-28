@@ -55,37 +55,37 @@ Provides a wrapper class that hooks to an existing Qt graphic object modifying i
                 The difference is that there are more toplevel widgets (and so more than one tree).<br>
                 You can use <a href="fnc_objects.dump.html">$objects.dump()</a> to take a look at the <a href="doc_kvircintro.html">KVIrc</a> Qt <a href="doc_objects.html">objects</a> tree.<br>
                 Here is a part of the tree:<br><br>
-                Ptr 14332520: top level <a href="class_object.html">object</a>: kvirc_frame, <a href="class_object.html">class</a> KviFrame, visible, rect = -4, -4, 1024, 708
+                Ptr 14332520: top level <a href="class_object.html">object</a>: kvirc_frame, <a href="class_object.html">class</a> KviMainWindow, visible, rect = -4, -4, 1024, 708
                    Ptr 17296024: <a href="class_object.html">object</a>: qt_top_dock, <a href="class_object.html">class</a> QDockArea
                 Ptr 14882136: <a href="class_object.html">object</a>: qt_custom_toolbar, <a href="class_object.html">class</a> KviCustomToolBar
              Ptr 18143368: <a href="class_object.html">object</a>: qt_dockwidget_internal, <a href="class_object.html">class</a> QDockWindowTitleBar
                 <br><br>
                 Every listed widget has a "name", a "<a href="class_object.html">class</a>" and a set of properties.<br>
-                The first entry in this example is a <a href="doc_kvircintro.html">KVIrc</a> <a href="doc_ircintro.html">server</a> window, <a href="class_object.html">class</a> "KviFrame" and name "kvirc_frame":
+                The first entry in this example is a <a href="doc_kvircintro.html">KVIrc</a> <a href="doc_ircintro.html">server</a> window, <a href="class_object.html">class</a> "KviMainWindow" and name "kvirc_frame":
                 it is a toplevel widget.<br>
                 The "qt_top_dock", "qt_custom_toolbar" and the "qt_dockwidget_internal" are
                 direct children of that widget.<br>
                 To indicate a specific widget we will use the "<a href="class_object.html">class</a>::name" form.<br>
-                So to indicate the main <a href="doc_kvircintro.html">KVIrc</a> frame you will use "KviFrame::kvirc_main_frame".
+                So to indicate the main <a href="doc_kvircintro.html">KVIrc</a> frame you will use "KviMainWindow::kvirc_main_frame".
                 Look at this example:<br>
-                %A=$new(wrapper,0,test,KviFrame::kvirc_frame,KviStatusBar::unnamed)<br>
+                %A=$new(wrapper,0,test,KviMainWindow::kvirc_frame,KviStatusBar::unnamed)<br>
                 %A-&gt;$setBackGroundColor(FFFFFF)<br>
                 For first thing we create an <a href="class_object.html">object</a> type wrapper,then we flow the tree that there from the command /<a href="class_object.html">object</a>.dump and we will have:<br>
                 .  <br>
                 .  <br>
-                Ptr 14196288: top level <a href="class_object.html">object</a>: kvirc_frame, <a href="class_object.html">class</a> KviFrame, visible, rect = -4, -4, 1024, 712  <br>
+                Ptr 14196288: top level <a href="class_object.html">object</a>: kvirc_frame, <a href="class_object.html">class</a> KviMainWindow, visible, rect = -4, -4, 1024, 712  <br>
 .                  <br>
                         Ptr 17197360: <a href="class_object.html">object</a>: unnamed, <a href="class_object.html">class</a> KviStatusBar  <br>
                 .  <br>
                 .  <br>
-                in this way we can follow the order, father-&gt;child from the top-level widget(KviFrame::kvirc_frame)<br>
+                in this way we can follow the order, father-&gt;child from the top-level widget(KviMainWindow::kvirc_frame)<br>
                 to reach the child that interests us (KviStatusBar::unnamed)<br>
                 Then, following the syntax we will have:
-                %A=$new(wrapper,0,test,KviFrame::kvirc_frame,KviStatusBar::unnamed)
+                %A=$new(wrapper,0,test,KviMainWindow::kvirc_frame,KviStatusBar::unnamed)
                 Now %A. will be point to the wrapped <a href="class_object.html">object</a>, therefore we could modify its property or to consider it as if it were an <a href="class_object.html">object</a> created by us in scripting. <br>
                 Obviously, deleting the created <a href="class_object.html">object</a> (for example %A) you don't will delete the <a href="class_object.html">object</a> of <a href="doc_kvircintro.html">Kvirc</a> (in this case the statusbar). <br>
                 Another example could be this:<br>
-                %A=$new(wrapper,0,test,KviFrame::kvirc_frame,QToolButton::<a href="doc_kvircintro.html">kvirc</a>.identityoptions)<br>
+                %A=$new(wrapper,0,test,KviMainWindow::kvirc_frame,QToolButton::<a href="doc_kvircintro.html">kvirc</a>.identityoptions)<br>
                 %A-&gt;$setProperty(usesBigPixmap,0)<br>
                 In this fool example with the function $setProperty, we has setted the property usesBigPixmap to False, making to become the small icons of the ToolBar.<br>
                 <br>
@@ -95,6 +95,6 @@ Provides a wrapper class that hooks to an existing Qt graphic object modifying i
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<hr>KVIrc 4.1.1.5136 Documentation<br>Generated by hellvis69 at Thu Nov 11 16:57:38 2010
+<hr>KVIrc 4.1.1.5243 Documentation<br>Generated by hellvis69 at Tue Dec 28 15:51:15 2010
 </body>
 </html>

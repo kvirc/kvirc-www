@@ -142,7 +142,7 @@ body {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_certificate.html">$certificate</a></td>
-  <td>Returns informations about the local certificate</td>
+  <td>Returns information about the local certificate</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_chan.admincount.html">$chan.admincount</a></td>
@@ -433,6 +433,14 @@ body {
   <td>Returns the software running on the irc server, if recognized</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="fnc_context.serverdbnetworkname.html">$context.serverdbNetworkName</a></td>
+  <td>Returns the original IRC network name of an IRC context</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="fnc_context.serverdbserverhostname.html">$context.serverdbServerHostName</a></td>
+  <td>Returns the original IRC server name of an IRC context</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="fnc_context.state.html">$context.state</a></td>
   <td>Returns the state of an IRC context</td>
 </tr>
@@ -465,10 +473,6 @@ body {
   <td>Returns the requested information about certificates used in an ssl-enabled dcc session</td>
 </tr>
 <tr bgcolor="#EAEAEA">
-  <td><a href="fnc_dcc.getsslinfo.html">$dcc.getSSLInfo</a></td>
-  <td>Returns the requested ssl information about a ssl-enabled dcc session</td>
-</tr>
-<tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.irccontext.html">$dcc.ircContext</a></td>
   <td>Returns the ircContext from which this DCC has originated</td>
 </tr>
@@ -486,31 +490,31 @@ body {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.localfilename.html">$dcc.localFileName</a></td>
-  <td>Returns the local file name associated to the specified DCC</td>
+  <td>Returns the local file name associated with the specified DCC</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.localfilesize.html">$dcc.localFileSize</a></td>
-  <td>Returns the local file size associated to the specified DCC</td>
+  <td>Returns the local file size associated with the specified DCC</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.localhost.html">$dcc.localHost</a></td>
-  <td>Returns the local hostname associated to the specified DCC</td>
+  <td>Returns the local hostname associated with the specified DCC</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.localip.html">$dcc.localIp</a></td>
-  <td>Returns the local ip address associated to the specified DCC</td>
+  <td>Returns the local ip address associated with the specified DCC</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.localnick.html">$dcc.localNick</a></td>
-  <td>Returns the local nickname associated to the specified DCC</td>
+  <td>Returns the local nickname associated with the specified DCC</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.localport.html">$dcc.localPort</a></td>
-  <td>Returns the local port associated to the specified DCC</td>
+  <td>Returns the local port associated with the specified DCC</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.localuser.html">$dcc.localUser</a></td>
-  <td>Returns the local username associated to the specified DCC</td>
+  <td>Returns the local username associated with the specified DCC</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.protocol.html">$dcc.protocol</a></td>
@@ -518,35 +522,35 @@ body {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.remotefilename.html">$dcc.remoteFileName</a></td>
-  <td>Returns the remote file name associated to the specified DCC</td>
+  <td>Returns the remote file name associated with the specified DCC</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.remotefilesize.html">$dcc.remoteFileSize</a></td>
-  <td>Returns the remote file size associated to the specified DCC</td>
+  <td>Returns the remote file size associated with the specified DCC</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.remotehost.html">$dcc.remoteHost</a></td>
-  <td>Returns the remote hostname associated to the specified DCC</td>
+  <td>Returns the remote hostname associated with the specified DCC</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.remoteip.html">$dcc.remoteIp</a></td>
-  <td>Returns the remote ip address associated to the specified DCC</td>
+  <td>Returns the remote ip address associated with the specified DCC</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.remotenick.html">$dcc.remoteNick</a></td>
-  <td>Returns the remote nickname associated to the specified DCC</td>
+  <td>Returns the remote nickname associated with the specified DCC</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.remoteport.html">$dcc.remotePort</a></td>
-  <td>Returns the remote port associated to the specified DCC</td>
+  <td>Returns the remote port associated with the specified DCC</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.remoteuser.html">$dcc.remoteUser</a></td>
-  <td>Returns the remote username associated to the specified DCC</td>
+  <td>Returns the remote username associated with the specified DCC</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.session.html">$dcc.session</a></td>
-  <td>Returns the DCC session identifier associated to a window</td>
+  <td>Returns the DCC session identifier associated with a window</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.sessionlist.html">$dcc.sessionList</a></td>
@@ -578,7 +582,7 @@ body {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_file.allsizes.html">$file.allSizes</a></td>
-  <td>Returns all sizes of a specified directory.</td>
+  <td>Returns the size of each file in a specified directory.</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_file.cwd.html">$file.currentdir</a></td>
@@ -590,7 +594,7 @@ body {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_file.exists.html">$file.exists</a></td>
-  <td>Check if a file exists</td>
+  <td>Check if a file or directory exists</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_file.extractfilename.html">$file.extractfilename</a></td>
@@ -759,6 +763,10 @@ body {
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_link.html">$link</a></td>
   <td>Returns the text specified as a link</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="fnc_listtimers.html">$listtimers</a></td>
+  <td>Returns a list of the active timers</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_log.file.html">$log.file</a></td>
@@ -1354,7 +1362,7 @@ body {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.grep.html">$str.grep</a></td>
-  <td>Emulates the GNU Regular Expression Parser</td>
+  <td>Performs searches in arrays of strings via regular expression matching</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.insert.html">$str.insert</a></td>
@@ -1702,7 +1710,7 @@ body {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_window.console.html">$window.console</a></td>
-  <td>Returns the console that a window is attacched to</td>
+  <td>Returns the console that a window is attached to</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_window.context.html">$window.context</a></td>
@@ -1731,6 +1739,10 @@ body {
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_$window.inputtext.html">$window.inputText</a></td>
   <td>Returns the window input line text</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="fnc_window.isdocked.html">$window.isDocked</a></td>
+  <td>Checks if a window is currently docked</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_window.ismaximized.html">$window.isMaximized</a></td>
@@ -1802,6 +1814,6 @@ body {
  <td><a href="doc_function_index_all.html">All</a></td></tr></table></td>
   </tr>
 </table>
-<hr>KVIrc 4.1.1.5136 Documentation<br>Generated by hellvis69 at Thu Nov 11 16:57:38 2010
+<hr>KVIrc 4.1.1.5243 Documentation<br>Generated by hellvis69 at Tue Dec 28 15:51:15 2010
 </body>
 </html>
