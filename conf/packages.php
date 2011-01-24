@@ -100,8 +100,10 @@ if((strpos($hua,'Windows') !== false) || (strpos($hua,'WinXP') !== false))
 	$quickdownload_version = "4.0.2";
 } else if((strpos($hua,'Macintosh') !== false) || (strpos($hua,'Mac OS X') !== false) || (strpos($hua,'Mac_PowerPC') !== false))
 {
-	$quickdownload_link = $ftp_mirror_link[0]."/4.0.0/binary/macosx/KVirc-4.0.0.dmg";
-	$quickdownload_version = "4.0.0";
+	//$quickdownload_link = $ftp_mirror[1]['url']."/4.0.2/binary/macosx/KVIrc-4.0.2.dmg";
+	// point to the download page that explains that the user needs to pre-installl Qt
+	$quickdownload_link = "?id=releases&platform=macosx&version=4.0.2&lang=en";
+	$quickdownload_version = "4.0.2";
 } else {
 	$quickdownload_link = $ftp_mirror[1]['url']."/4.0.2/source/kvirc-4.0.2.tar.bz2";
 	$quickdownload_version = "4.0.2";
