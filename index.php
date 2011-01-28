@@ -27,7 +27,8 @@ require("conf/config.php");
 // Search activated
 search();
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -352,8 +353,8 @@ search();
 					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
 					<h1><img src="img/dialog-information.png" alt="<?=$template['index']['hwdonation'];?>" /><?=$template['index']['hwdonation'];?></h1>
 					<p class="center">
-						<a href="javascript:opendoc('http://www.waaf.net');" title="waaf.net - the hosting & development company"><img src="img/waaf.net.gif" alt="waaf.net - the hosting & development company" /></a><br />
-						<a href="javascript:opendoc('http://www.waaf.net');" title="waaf.net - the hosting & development company">waaf.net</a> <?=$template['index']['hwdonationtext'];?>
+						<a href="javascript:opendoc('http://www.waaf.net');" title="waaf.net - the hosting &amp; development company"><img src="img/waaf.net.gif" alt="waaf.net - the hosting &amp; development company" /></a><br />
+						<a href="javascript:opendoc('http://www.waaf.net');" title="waaf.net - the hosting &amp; development company">waaf.net</a> <?=$template['index']['hwdonationtext'];?>
 						<?if(getHostKvircde()) echo " ".$template['index']['donationtextkvirc.de'];?>
 					</p>
 				</div>
@@ -361,7 +362,7 @@ search();
 					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
 					<h1><img src="img/dialog-information.png" alt="<?=$template['index']['tahdonation'];?>" /><?=$template['index']['tahdonation'];?></h1>
 					<p class="center">
-						<a href="javascript:opendoc('http://www.tmt.de');"><img src="img/tmtlogo.gif" /></a><br />
+						<a href="javascript:opendoc('http://www.tmt.de');"><img src="img/tmtlogo.gif" alt="TMT Teleservice" /></a><br />
 						<a href="javascript:opendoc('http://www.tmt.de');">TMT Teleservice</a> <?=$template['index']['tahdonationtext'];?>
 						<?if(getHostKvircde()) echo " ".$template['index']['donationtextkvirc.de'];?>
 					</p>

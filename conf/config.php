@@ -323,7 +323,7 @@ $tools=array(
 $translators=array(
 	1 => array("lang" => $template['index']['brazilian'], "nick" => "Adilson Gonçalves Soares Junior", "mail" => "cabide [at] brfree [dot] com.br", "flag" => "Brazil", "unmain" => 1),
 	array("lang" => $template['index']['bulgarian'], "nick" => "Bugar", "mail" => "bugar [at] developer [dot] bg", "flag" => "Bulgaria", "unmain" => 1),
-	array("lang" => $template['index']['catalan'], "nick" => "", "mail" => "", "flag" => "Spain", "unmain" => 1),
+	array("lang" => $template['index']['catalan'], "nick" => "", "mail" => "", "flag" => "Catalonia", "unmain" => 1),
 	array("lang" => $template['index']['croatian'], "nick" => "SpeedyGhost", "mail" => "speedyghost [at] gmail [dot] com", "flag" => "Croatia", "unmain" => 1),
 	array("lang" => $template['index']['czech'], "nick" => "Dusan Hokuv", "mail" => "dusan [at] mirc [dot] cz", "flag" => "Czech-Republic", "unmain" => 1),
 	array("lang" => $template['index']['dutch'], "nick" => "Balboy", "mail" => "balboy [at] kvirc [dot] net", "flag" => "Netherlands", "unmain" => 1),
