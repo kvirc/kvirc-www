@@ -629,82 +629,95 @@ $template['install']['text29']="
 	Per usare queste opzioni, devi passare un valore booleano o una stringa.</p>
 	<p>Per esempio, per installare in /usr invece di /usr/local e disabilitare il supporto Phonon, il comando sarà";
 $template['install']['text30']="Ecco una lista con la spiegazione";
-$template['install']['tree1']="
-	Compila l'eseguibile coi simboli di debug.<br />
+$template['install']['tree0']="
+	Quando abilitato, compila l'eseguibile coi simboli di debug.<br />
 	Utile per riportare i bug.";
+$template['install']['tree1']="
+	Disponibile solo se il debug è disabilitato, questa opzione disabilita lo stripping degli oggetti prima dell'installazione.<br />
+	(Lo stripping degli oggetti elimina i simboli dai file degli oggetti, diminuendone la dimensione sul disco, a discapito di un debug molto compicato o addirittura impossibile.)";
 $template['install']['tree2']="Genera un output verboso mentre compila.";
 $template['install']['tree3']="Installa tutto nel /path specificato";
 $template['install']['tree4']="
 	Installa libkvilib e i moduli kvirc nella directory \${CMAKE_INSTALL_PREFIX}/lib\${LIB_SUFFIX}. Se omesso rimarrà vuoto. E' utilizzato principalmente per le distribuzioni a 64bit (-DLIB_SUFFIX=64).";
-$template['install']['tree5']="
-	Appende le informazioni di versione a kvirc e libkvilib in modo che diverse versioni di KVIrc possano coesistere sullo stesso sistema.";
+$template['install']['tree5']="Questo installerà le pagine del manuale in DIRECTORY.";
 $template['install']['tree6']="
-	Le regole di installazione di KVIrc non tenteranno di settare CMAKE_C(XX)_FLAGS; invece, farà in modo che CMake usi le variabili d'ambiente. Attivando questa opzione verrà disabilitata -DDEBUG.";
+	Se abilitato, appende le informazioni di versione a kvirc e libkvilib in modo che diverse versioni di KVIrc possano coesistere sullo stesso sistema.";
 $template['install']['tree7']="
+	Quando abilitato, le regole di installazione di KVIrc non tenteranno di settare CMAKE_C(XX)_FLAGS; invece, farà in modo che CMake usi le variabili d'ambiente.<br />
+	Attivando questa opzione verrà disabilitata -DWANT_DEBUG.";
+$template['install']['tree8']="
 	Reinizializza il percorso di installazione a un buon compromesso.<br />
 	Le compilazioni successive dovrebbero usare il percorso corretto salvato in cache da CMake.<br />
 	Questa opzione è utile per risolvere i problemi di installazione di MacOS X.";
-$template['install']['tree8']="Compila un binario universale per la piattaforma MacOS X";
-$template['install']['tree9']="Usa gli header precompilati";
-$template['install']['tree10']="Disabilita il supporto al backend audio Phonon.";
+$template['install']['tree9']="
+	Abilita o disabilita la compilazione dei binari universali per la piattaforma MacOS X";
+$template['install']['tree10']="Abilita o disabilita il supporto al backend audio Phonon.";
 $template['install']['tree11']="
-	Disabilita il supporto al backend audio OSS. Questo disabilita automaticamente anche il supporto Audiofile.";
-$template['install']['tree12']="Disabilita il supporto al backend audio Audiofile.";
-$template['install']['tree13']="Disabilita il supporto al backend audio Esd.";
-$template['install']['tree14']="Disabilita il supporto Qt-DBus.";
-$template['install']['tree15']="Disabilita il supporto Qt-WebKit.";
-$template['install']['tree16']="Disabilita il supporto KDE4.";
+	Abilita o disabilita il supporto al backend audio OSS. Questo disabilita automaticamente anche il supporto Audiofile.";
+$template['install']['tree12']="Abilita o disabilita il supporto al backend audio Audiofile.";
+$template['install']['tree13']="Abilita o disabilita il supporto al backend audio Esd.";
+$template['install']['tree14']="Abilita o disabilita il supporto Qt-DBus.";
+$template['install']['tree15']="Abilita o disabilita il supporto Qt-WebKit.";
+$template['install']['tree16']="Abilita o disabilita il supporto KDE4.";
 $template['install']['tree17']="
-	Disabilita il supporto Secure Socket Layer. Il supporto SSL è automaticamente abilitato se CMake trova OpenSSL.";
+	Abilita o disabilita il supporto Secure Socket Layer. Il supporto SSL è automaticamente abilitato se CMake trova OpenSSL.";
 $template['install']['tree18']="
-	Disabilita i motori crittografici e tutto il supporto alla crittografia e trasformazione del testo. Produce un eseguibile di poco più piccolo";
+	Abilita o disabilita le funzioni crittografiche usando Crypto++.<br />
+	Questo disabiliterà automaticamente il supporto OpenSSL.";
 $template['install']['tree19']="
+	Abilita o disabilita i motori crittografici e tutto il supporto alla crittografia e trasformazione del testo. Produce un eseguibile di poco più piccolo";
+$template['install']['tree20']="
 	Il supporto IPv6 è compilato automaticamente sulle piattaforme che lo supportano: questa opzione lo disabilita.<br />
 	Anche se hai una connessione solamente IPv4, potresti voler tenere il supporto IPv6: sarai capace di reversare gli hostname IPv6.";
-$template['install']['tree20']="
-	Questa opzione disabilita il supporto alla pseudo-trasparenza.<br />
-	La pseudo-trasparenza fa in modo che le finestre di KVIrc sembrino semi-trasparenti (questa NON è vera trasparenza: è solo un hack molto carino).<br />
-	Se il supporto KDE è abilitato, KVIrc avrà un'opzione che farà sì che tutte le finestre usino l'immagine del desktop di KDE come sfondo in trasparenza. (Puoi sempre scegliere il tuo sfondo del desktop: questo funzionerà (più o meno) in tutti i window manager.<br />
-	E' molto carino ma solitamente usa un po' di memoria quando abilitato.<br />
-	Inoltre aumenta un po' la dimensione dell'eseguibile.<br />
-	Quindi questa opzione permette di disabilitare la pseudo-trasparenza.";
 $template['install']['tree21']="
-	Disabilita forzatamente il supporto perl.<br />
-	Non sarai in grado di usare script perl dentro KVIrc.";
+	Questa opzione abilita o disabilita il supporto alla pseudo e reale trasparenza.<br />
+	La pseudo-trasparenza fa in modo che le finestre di KVIrc sembrino semi-trasparenti (questa NON è vera trasparenza: è solo un hack molto carino). La trasparenza usa il compositing e necessita del giusto hardware per funzionare.<br />
+	Se il supporto KDE è abilitato, KVIrc avrà un'opzione che farà sì che tutte le finestre usino l'immagine del desktop di KDE come sfondo in trasparenza. (Puoi sempre scegliere il tuo sfondo del desktop: questo funzionerà (più o meno) in tutti i window manager.<br />
+	E' molto carino ma solitamente usa un po' di memoria e aumenta un po' la dimensione dell'eseguibile quando abilitato. Specialmente quando vengono mossi gli oggetti, l'uso della CPU può elevarsi.<br />
+	Puoi disabilitare la trasparenza qui.";
 $template['install']['tree22']="
-	Disabilita forzatamente il supporto python.<br />
-	Non sarai in grado di usare script python dentro KVIrc.";
+	Abilita o disabilita il supporto perl.<br />
+	Non sarai in grado di usare script perl dentro KVIrc.<br />
+	Potrai sempre eseguire script Perl da fuori KVIrc, ad esempio usando il comando exec().<br />
+	Nota che il supporto a Perl sarà controllato lo stesso, e usato per generare la documentazione";
 $template['install']['tree23']="
-	Disabilita il supporto alle comunicazioni tra processi.<br />
+	Abilita o disabilita il supporto python.<br />
+	Non sarai in grado di usare script python dentro KVIrc.";
+$template['install']['tree24']="
+	Abilita o disabilita il supporto alle comunicazioni tra processi.<br />
 	Non sarai in grado di inviare comandi remoti tra sessioni avviate di KVIrc: questo significa che ogni volta che avvii KVIrc, verrà creata una nuova sessione.<br />
 	Se non usi questa opzione, una nuova sessione verrà avviata solo se non ci sono altre sessioni avviate sullo stesso display oppure se \"nuova sessione\" viene forzata dalle opzioni da riga di comando.<br />
 	Se una sessione è già avviata, la riga di comando verrà passata a quella sessione via IPC (comunicazione basata sugli eventi di X).<br />
 	Questa opzione risparmia alcuni KB nell'eseguibile KVIrc, quindi se sei davvero a corto di memoria usala, altrimenti, IPC è una bella caratteristica.";
-$template['install']['tree24']="
-	Disabilita l'uso di GetText per generare i file di traduzione.";
 $template['install']['tree25']="
-	Disabilita la generazione della documentazione attraverso Doxygen.";
+	Abilita o disabilita l'uso di GetText per generare i file di traduzione.";
 $template['install']['tree26']="
-	Questo disabilita l'uso delle funzioni di sistema memmove() memcpy() e memset() ed abilita le implementazioni fornite con KVIrc. Usalo se hai referenze non definite a queste funzioni durante la compilazione.";
+	Abilita o disabilita la generazione della documentazione attraverso Doxygen.";
 $template['install']['tree27']="
-	Disabilita esplicitamente l'uso della libreria GSM. Questo disabiliterà il codec GSM per la DCC VOICE ma potrebbe aiutare quando la compilazione si ferma a causa di qualcosa legato a GSM :)";
+	Abilita o disabilita l'uso della libreria GSM. Questo disabiliterà il codec GSM per la DCC VOICE ma potrebbe aiutare quando la compilazione si ferma a causa di qualcosa legato a GSM :)";
 $template['install']['tree28']="
-	KVIrc contiene qualche routine assembly ix86 che *potrebbe* eseguire le operazioni più velocemente (non è sempre vero, dipende dal compilatore).<br />
-	Potresti voler provarla se il tuo KVIrc sembra essere davvero lento...";
+	Su Solaris, sia usleep() che le implementazioni dei thread sono basate su SIGALARM. KVIrc li usa entrambi, e questo può portare a chiusure spontanee dell'applicazione. Questa opzione abilita un workaround per questo problema.";
 $template['install']['tree29']="
-	Disabilita esplicitamente il supporto sonoro DCC VOICE. Questo potrebbe aiutare se hai problemi nella compilazione di src/modules/dcc/voice.cpp.<br />
+	Abilita o disabilita il supporto sonoro DCC VOICE. Questo potrebbe aiutare se hai problemi nella compilazione di src/modules/dcc/voice.cpp.<br />
 	Disabiliterà il sistema sonoro (e renderà la DCC VOICE inusabile).";
-$template['install']['tree30']="
-	Opzione di debug... abilita il profiling dell'allocazione di memoria (non usarla :)";
+$template['install']['tree30']="Abilita o disabilita il supporto SPERIMENTALE per le DCC video";
 $template['install']['tree31']="
+	Abilita o disabilita il supporto SPERIMENTALE Ogg/Theora per le DCC video.";
+$template['install']['tree32']="Abilita o disabilita il supporto al VECCHIO DCC CANVAS.";
+$template['install']['tree33']="
+	Opzione di debug... abilita il profiling dell'allocazione di memoria (non usarla :)";
+$template['install']['tree34']="
 	Abilita i controlli alla memoria malloc(). Questo stamperà un grazioso messaggio se il tuo sistema finisce la memoria...<br />
 	Non può salvarti da comprare nuova RAM, ma almeno saprai che il tuo sistema ha finito la memoria e non è un problema di KVIrc.<br />
 	Attualmente non hai ragioni di usarlo.";
-$template['install']['tree32']="
+$template['install']['tree35']="
 	Imposta manualmente un numero di revisione se Subversion non viene trovato sul sistema.<br />
 	Questo è utile soprattutto su wundows.";
-$template['install']['tree33']="Aggiunge un po' di pizza per cena :)";
-$template['install']['tree34']="Aggiunge un po' di birra in chat :)";
+$template['install']['tree36']="Aggiunge un po' di pizza per cena :)";
+$template['install']['tree37']="Aggiunge un po' di birra in chat :)";
+$template['install']['tree38']="
+	Usa funzioni da librerie molto testate invece che usare codice embedded o reimplementazioni di codice/funzioni disponibili da queste librerie.<br />
+	Per le dipendenze richieste vedi la sezione 2 di questo documento.";
 $template['install']['text31']="
 	Il sistema di compilazione CMake fornisce inoltre un modo interattivo per configurare l'ambiente prima di compilare.<br />
 	Ancora, suggeriamo la compilazione \"out-of-source\": compilare tutti i file senza sporcare la directory dei sorgenti.";

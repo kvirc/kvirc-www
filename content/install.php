@@ -50,7 +50,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	<p><?=$template['install']['text8']?>:</p>
 	<code>
 	QMake version 2.01a<br />
-	Using Qt version 4.5.1 in /usr/lib64/qt/lib
+	Using Qt version 4.7.0 in /usr/lib64/qt/lib
 	</code>
 	<p><?=$template['install']['text9']?>:</p>
 	<code>#PATH=/opt/qt4.5/bin/:$PATH cmake ..</code>
@@ -62,7 +62,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	<p><?=$template['install']['text11']?></p>
 	<code># cmake --version</code>
 	<p><?=$template['install']['text8']?>:</p>
-	<code># cmake version 2.6-patch 4</code>
+	<code>cmake version 2.8.3</code>
 
 	<p><a name="cpp"></a></p>
 	<h3><b>C++ Compiler</b></h3>
@@ -70,16 +70,19 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	<code># gcc -v</code>
 	<p><?=$template['install']['text8']?>:</p>
 	<code>
-	Reading specs from /usr/lib64/gcc/x86_64-slackware-linux/4.3.3/specs<br />
+	Reading specs from /usr/lib64/gcc/x86_64-slackware-linux/4.5.2/specs<br />
+	COLLECT_GCC=gcc<br />
+	COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-slackware-linux/4.5.2/lto-wrapper<br />
 	Target: x86_64-slackware-linux<br />
-	Configured with: ../gcc-4.3.3/configure --prefix=/usr --libdir=/usr/lib64<br />
-	--enable-shared --enable-bootstrap --enable-languages=ada,c,c++,fortran,java,objc<br />
-	--enable-threads=posix --enable-checking=release --with-system-zlib<br />
-	--disable-libunwind-exceptions --enable-__cxa_atexit --enable-libssp<br />
-	--with-gnu-ld --verbose --disable-multilib --target=x86_64-slackware-linux<br />
-	--build=x86_64-slackware-linux --host=x86_64-slackware-linux<br />
+	Configured with: ../gcc-4.5.2/configure --prefix=/usr --libdir=/usr/lib64<br />
+	--mandir=/usr/man --infodir=/usr/info --enable-shared --enable-bootstrap<br />
+	--enable-languages=ada,c,c++,fortran,java,objc,lto --enable-threads=posix<br />
+	--enable-checking=release --with-system-zlib --enable-libssp --enable-lto<br />
+	--with-python-dir=/lib64/python2.6/site-packages --disable-libunwind-exceptions<br />
+	--enable-__cxa_atexit --with-gnu-ld --verbose --disable-multilib<br />
+	--target=x86_64-slackware-linux --build=x86_64-slackware-linux --host=x86_64-slackware-linux<br />
 	Thread model: posix<br />
-	gcc version 4.3.3 (GCC)
+	gcc version 4.5.2 (GCC)
 	</code>
 
 	<p><a name="pthread"></a></p>
@@ -144,77 +147,89 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	</code>
 	<p><?=$template['install']['text28']?></p>
 	<p><?=$template['install']['text29']?>:</p>
-	<code># cmake -DCMAKE_INSTALL_PREFIX=/usr --DWITHOUT_PHONON=1 ..</code>
+	<code># cmake -DCMAKE_INSTALL_PREFIX=/usr -DWANT_PHONON=0 ..</code>
 	<p><?=$template['install']['text30']?>:</p>
 	<ul class="list">
-		<li>-DDEBUG / -DWITH_DEBUG<br />
-		    <?=$template['install']['tree1']?></li>
-		<li>-DVERBOSE<br />
-		    <?=$template['install']['tree2']?></li>
-		<li>-DCMAKE_INSTALL_PREFIX=/path<br />
-		    <?=$template['install']['tree3']?></li>
-		<li>-DLIB_SUFFIX=suffix<br />
-		    <?=$template['install']['tree4']?></li>
-		<li>-DCOEXISTENCE<br />
-		    <?=$template['install']['tree5']?></li>
-		<li>-DUSE_ENV_FLAGS<br />
-		    <?=$template['install']['tree6']?></li>
-		<li>-DCMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT<br />
-		    <?=$template['install']['tree7']?></li>
-		<li>-DCOMPILE_MACOSX_UNIVERSAL_BINARY<br />
-		    <?=$template['install']['tree8']?></li>
-		<li>-DUSE_PCH<br />
-		    <?=$template['install']['tree9']?></li>
-		<li>-DWITHOUT_PHONON<br />
-		    <?=$template['install']['tree10']?></li>
-		<li>-DWITHOUT_OSS<br />
-		    <?=$template['install']['tree11']?></li>
-		<li>-DWITHOUT_AUDIOFILE<br />
-		    <?=$template['install']['tree12']?></li>
-		<li>-DWITHOUT_ESD<br />
-		    <?=$template['install']['tree13']?></li>
-		<li>-DWITHOUT_QTDBUS<br />
-		    <?=$template['install']['tree14']?></li>
-		<li>-DWITHOUT_QTWEBKIT<br />
-		    <?=$template['install']['tree15']?></li>
-		<li>-DWITHOUT_KDE4<br />
-		    <?=$template['install']['tree16']?></li>
-		<li>-DWITHOUT_SSL<br />
-		    <?=$template['install']['tree17']?></li>
-		<li>-DWITHOUT_CRYPT<br />
-		    <?=$template['install']['tree18']?></li>
-		<li>-DWITHOUT_IPV6<br />
-		    <?=$template['install']['tree19']?></li>
-		<li>-DWITHOUT_TRANSPARENCY<br />
-		    <?=$template['install']['tree20']?></li>
-		<li>-DWITHOUT_PERL<br />
-		    <?=$template['install']['tree21']?></li>
-		<li>-DWITHOUT_PYTHON<br />
-		    <?=$template['install']['tree22']?></li>
-		<li>-DWITHOUT_IPC<br />
-		    <?=$template['install']['tree23']?></li>
-		<li>-DWITHOUT_GETTEXT<br />
-		    <?=$template['install']['tree24']?></li>
-		<li>-DWITHOUT_DOXYGEN<br />
-		    <?=$template['install']['tree25']?></li>
-		<li>-DWITHOUT_SYSTEM_MEMMOVE<br />
-		    <?=$template['install']['tree26']?></li>
-		<li>-DWITHOUT_GSM<br />
-		    <?=$template['install']['tree27']?></li>
-		<li>-DWITH_ix86_ASM<br />
-		    <?=$template['install']['tree28']?></li>
-		<li>-DWITHOUT_DCC_VOICE<br />
-		    <?=$template['install']['tree29']?></li>
-		<li>-DWITH_MEMORY_PROFILE<br />
-		    <?=$template['install']['tree30']?></li>
-		<li>-DWITH_MEMORY_CHECKS<br />
-		    <?=$template['install']['tree31']?></li>
-		<li>-DMANUAL_REVISION<br />
-		    <?=$template['install']['tree32']?></li>
-		<li>-DWITH_PIZZA<br />
-		    <?=$template['install']['tree33']?></li>
-		<li>-DWITH_BEER<br />
-		    <?=$template['install']['tree34']?></li>
+		<li>-DWANT_DEBUG (default: OFF)<br />
+		<?=$template['install']['tree0']?></li>
+		<li>-DWANT_STRIP (default: OFF)<br />
+		<?=$template['install']['tree1']?></li>
+		<li>-DWANT_VERBOSE(default: OFF)<br />
+		<?=$template['install']['tree2']?></li>
+		<li>-DCMAKE_INSTALL_PREFIX=PATH (default: a system-dependant directory)<br />
+		<?=$template['install']['tree3']?></li>
+		<li>-DLIB_SUFFIX=SUFFIX (default: empty)<br />
+		<?=$template['install']['tree4']?></li>
+		<li>-DMANDIR=DIRECTORY (default: $CMAKE_INSTALL_PREFIX/share/man)<br />
+		<?=$template['install']['tree5']?></li>
+		<li>-DCOEXISTENCE (default: OFF)<br />
+		<?=$template['install']['tree6']?></li>
+		<li>-DUSE_ENV_FLAGS (default: OFF)<br />
+		<?=$template['install']['tree7']?></li>
+		<li>-DCMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT (default: OFF, not cached<br />
+		<?=$template['install']['tree8']?></li>
+		<li>-DWANT_UNIVERSAL_BINARY (default: OFF)<br />
+		<?=$template['install']['tree9']?></li>
+		<li>-DWANT_PHONON (default: ON)<br />
+		<?=$template['install']['tree10']?></li>
+		<li>-DWANT_OSS (default: ON)<br />
+		<?=$template['install']['tree11']?></li>
+		<li>-DWANT_AUDIOFILE (default: ON)<br />
+		<?=$template['install']['tree12']?></li>
+		<li>-DWANT_ESD (default: ON)<br />
+		<?=$template['install']['tree13']?></li>
+		<li>-DWANT_QTDBUS (default: ON)<br />
+		<?=$template['install']['tree14']?></li>
+		<li>-DWANT_QTWEBKIT (default: ON)<br />
+		<?=$template['install']['tree15']?></li>
+		<li>-DWANT_KDE4 (default: ON)<br />
+		<?=$template['install']['tree16']?></li>
+		<li>-DWANT_SSL (default: ON)<br />
+		<?=$template['install']['tree17']?></li>
+		<li>-DWANT_CRYPTOPP (default: OFF)<br />
+		<?=$template['install']['tree18']?></li>
+
+
+		<li>-DWANT_CRYPT (default: ON)<br />
+		<?=$template['install']['tree19']?></li>
+		<li>-DWANT_IPV6 (default: ON)<br />
+		<?=$template['install']['tree20']?></li>
+		<li>-DWANT_TRANSPARENCY (default: ON)<br />
+		<?=$template['install']['tree21']?></li>
+		<li>-DWANT_PERL (default: ON)<br />
+		<?=$template['install']['tree22']?></li>
+		<li>-DWANT_PYTHON (default: ON)<br />
+		<?=$template['install']['tree23']?></li>
+		<li>-DWANT_IPC (default: ON)<br />
+		<?=$template['install']['tree24']?></li>
+		<li>-DWANT_GETTEXT (default: ON)<br />
+		<?=$template['install']['tree25']?></li>
+		<li>-DWANT_DOXYGEN (default: ON)<br />
+		<?=$template['install']['tree26']?></li>
+		<li>-DWANT_GSM (default: ON)<br />
+		<?=$template['install']['tree27']?></li>
+		<li>-DWANT_IGNORE_SIGALARM (default: OFF)<br />
+		<?=$template['install']['tree28']?></li>
+		<li>-DWANT_DCC_VOICE (default: ON)<br />
+		<?=$template['install']['tree29']?></li>
+		<li>-DWANT_DCC_VIDEO (default: OFF)<br />
+		<?=$template['install']['tree30']?></li>
+		<li>-DWANT_OGG_THEORA (default: OFF)<br />
+		<?=$template['install']['tree31']?></li>
+		<li>-DWANT_DCC_CANVAS (default: OFF)<br />
+		<?=$template['install']['tree32']?></li>
+		<li>-DWANT_MEMORY_PROFILE (default: OFF)<br />
+		<?=$template['install']['tree33']?></li>
+		<li>-DWANT_MEMORY_CHECKS (default: OFF)<br />
+		<?=$template['install']['tree34']?></li>
+		<li>-DMANUAL_REVISION (default: empty)<br />
+		<?=$template['install']['tree35']?></li>
+		<li>-DWANT_PIZZA (default: OFF)<br />
+		<?=$template['install']['tree36']?></li>
+		<li>-DWANT_BEER (default: OFF)<br />
+		<?=$template['install']['tree37']?></li>
+		<li>-DWANT_NO_EMBEDDED_CODE (default: OFF)<br />
+		<?=$template['install']['tree38']?></li>
 	</ul>
 </div><br />
 
