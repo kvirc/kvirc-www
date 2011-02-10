@@ -35,9 +35,9 @@ search();
 	<meta http-equiv="cache-control" content="no-cache" />
 	<meta name="robots" content="index,follow" />
 	<meta name="copyright" content="etherea` ./LSD @ virg0.org | CreativeCode | KVIrc.net" />
-	<meta name="copyright" content="HelLViS69 hellvis69 @ netsons.org | GPL | KVIrc.net" />
+	<meta name="copyright" content="HelLViS69 hellvis69 @ gmail.com | GPL | KVIrc.net" />
 	<meta name="author" content="etherea` - graphics - ./LSD @ virg0.org" />
-	<meta name="author" content="HelLViS69 - code - hellvis69 @ netsons.org" />
+	<meta name="author" content="HelLViS69 - code - hellvis69 @ gmail.com" />
 	<meta name="distribution" content="global" />
 	<meta name="description" content="KVIrc.net - The K-Visual IRC client" />
 	<meta name="keywords" content="KVIrc, KDE, IRC, Chat, pragma" />

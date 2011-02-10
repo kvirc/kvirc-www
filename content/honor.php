@@ -40,6 +40,6 @@ foreach($honor as $key => $value){
 	if((fmod($key,2)==0)||($key==count($honor))) echo "</div>";
 }
 
-echo "<br /><p>".$template['honor']['text3']." <a href=\"mailto:hellvis69 [at] netsons [dot] org\">HelLViS69</a></p>";
+echo "<br /><p>".$template['honor']['text3']." <a href=\"mailto:hellvis69 [at] gmail [dot] com\">HelLViS69</a></p>";
 echo "</div>";
 ?>

@@ -166,7 +166,7 @@ $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.2";
 $p_size[$package_count]        = "5034052";
 $p_group[$package_count]       = "slackware";
-$p_author[$package_count]      = "HelLViS69 (hell at hellvis69 dot netsons dot org)";
+$p_author[$package_count]      = "HelLViS69 (hellvis69 at gmail dot com)";
 $package_count++;
 
 // 4.0.2
@@ -444,7 +444,7 @@ $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.0";
 $p_size[$package_count]        = "5000612";
 $p_group[$package_count]       = "slackware";
-$p_author[$package_count]      = "HelLViS69 (hell at hellvis69 dot netsons dot org)";
+$p_author[$package_count]      = "HelLViS69 (hellvis69 at gmail dot com)";
 $package_count++;
 
 // 4.0.0
@@ -759,7 +759,7 @@ $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "3.4.2";
 $p_size[$package_count]        = "8682100";
 $p_group[$package_count]       = "slackware";
-$p_author[$package_count]      = "HelLViS69 (hellvis69 at netsons dot org)";
+$p_author[$package_count]      = "HelLViS69 (hellvis69 at gmail dot com)";
 $package_count++;
 
 // Slamd64 12.1
@@ -1096,7 +1096,7 @@ $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "3.4.0";
 $p_size[$package_count]        = "8386977";
 $p_group[$package_count]       = "slackware";
-$p_author[$package_count]      = "HelLViS69 (hellvis69 at netsons dot org)";
+$p_author[$package_count]      = "HelLViS69 (hellvis69 at gmail dot com)";
 $package_count++;
 
 // MacOS X Intel

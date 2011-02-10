@@ -148,7 +148,7 @@ $honor=array(
 	array("nick" => "Noldor", "name" => "Alessandro Carbone", "mail" => "Noldor [at] barmes [dot] org", "made" => $template['honor']['made16'], "quote" => $template['honor']['quote16'], "image" => "noldor"),
 	array("nick" => "Grifisx", "name" => "Tonino Imbesi", "mail" => "", "made" => $template['honor']['made17'], "quote" => $template['honor']['quote17'], "image" => "grifisx"),
 	array("nick" => "Alexey", "name" => "Alexey Uzhva", "mail" => "wizard-ANTISPAM [at] opendoor [dot] ru", "made" => $template['honor']['made18'], "quote" => "", "image" => "alexey"),
-	array("nick" => "HelLViS69", "name" => "Elvio Basello", "mail" => "hell [at] hellvis69.netsons [dot] org", "made" => $template['honor']['made19'], "quote" => $template['honor']['quote19'], "image" => "hellvis69"),
+	array("nick" => "HelLViS69", "name" => "Elvio Basello", "mail" => "hellvis69 [at] gmail [dot] com", "made" => $template['honor']['made19'], "quote" => $template['honor']['quote19'], "image" => "hellvis69"),
 	array("nick" => "etherea`", "name" => "Claudia Galingani Mongini", "mail" => "cle [at] virg0 [dot] org", "made" => $template['honor']['made20'], "quote" => $template['honor']['quote20'], "image" => "etherea"),
 	array("nick" => "Nate", "name" => "Alessio Paoletti", "mail" => "nate [at] paranoici [dot] org", "made" => $template['honor']['made21'], "quote" => "", "image" => "nate"),
 	array("nick" => "k0sm|k0", "name" => "Massimiliano Leone", "mail" => "k0smik0 [at] logorroici [dot] org", "made" => $template['honor']['made22'], "quote" => $template['honor']['quote22'], "image" => "kosmiko"),
@@ -271,7 +271,7 @@ $themes=array(
 	array("name" => "Ghost", "version" => "1.0", "mail" => "darkstalker [at] insightbb [dot] com", "author" => "Jason Carter", "desc" => $template['themes']['theme7'], "home" => "", "download" => "Ghost-1.0.kvt", "screen" => "theme_ghost.jpg", "thumb" => "thumb_ghost.png"),
 	array("name" => "PayneReactor", "version" => "1.0", "mail" => "webmaster [at] paynereactor [dot] net", "author" => "Kristian Hollund", "desc" => $template['themes']['theme8'], "home" => "http://www.PayneReactor.com", "download" => "PayneReactor-1.0.kvt", "screen" => "theme_payne.jpg", "thumb" => "thumb_payne.png"),
 	array("name" => "XCrystall Black", "version" => "0.0.1", "mail" => "wizard at opendoor [dot] ru", "author" => "Alexey", "desc" => $template['themes']['theme9'], "home" => "", "download" => "XCrystall-black-0.0.1.kvt", "screen" => "theme_xcrystall.jpg", "thumb" => "thumb_xcrystall.jpg"),
-	array("name" => "DarkBaghira", "version" => "0.6", "mail" => "hell [at] hellvis69.netsons [dot] org", "author" => "HelLViS69", "desc" => $template['themes']['theme10'], "home" => "http://hellvis69.netsons.org", "download" => "DarkBaghira-0.6.kvt", "screen" => "theme_darkbaghira.jpg", "thumb" => "thumb_darkbaghira.png"),
+	array("name" => "DarkBaghira", "version" => "0.6", "mail" => "hellvis69 [at] gmail [dot] com", "author" => "HelLViS69", "desc" => $template['themes']['theme10'], "home" => "", "download" => "DarkBaghira-0.6.kvt", "screen" => "theme_darkbaghira.jpg", "thumb" => "thumb_darkbaghira.png"),
 	array("name" => "Time makes no sense", "version" => "3.3.2", "mail" => "cle [at] virg0 [dot] org", "author" => "etherea`", "desc" => $template['themes']['theme11'], "home" => "http://kvirc.virg0.org", "download" => "Time-3.3.2.kvt", "screen" => "theme_time.png", "thumb" => "thumb_time.png"),
 	array("name" => "Pure", "version" => "1.0.1", "mail" => "cle [at] virg0 [dot] org", "author" => "etherea`", "desc" => $template['themes']['theme12'], "home" => "http://kvirc.virg0.org", "download" => "Pure-1.0.1.kvt", "screen" => "theme_pure.png", "thumb" => "thumb_pure.png"),
 	array("name" => "Dark Glass", "version" => "1.0", "mail" => "grifisx [at] barmes.org", "author" => "Grifisx &amp; Noldor", "desc" => $template['themes']['theme13'], "home" => "", "download" => "DarkGlass-1.0.kvt", "screen" => "theme_darkglass.png", "thumb" => "thumb_darkglass.png"),
@@ -312,8 +312,8 @@ $themes=array(
 //aray("name" => "tool name", "author" => "author name", "mail" => "author mail", "desc" => "description", "url" => "url")
 $tools=array(
 	1 => array("name" => "Notepad++ KVS-Syntax", "author" => "TheXception", "mail" => "kvirc [at] thexception [dot] net", "desc" => $template['tools']['tool1'], "url" => "kvs-notepad++.zip"),
-	array("name" => "KVIrc TCL", "author" => array("HelLViS69","CtrlAltCa"), "mail" => array("hell [at] hellvis69.netsons [dot] org","ctrlaltca [at] gmail [dot] com"), "desc" => $template['tools']['tool2'], "url" => "kvirc-2.0.tcl.bz2"),
-	array("name" => "KVIrc Trac Syndacator", "author" => array("HelLViS69","CtrlAltCa"), "mail" => array("hell [at] hellvis69.netsons [dot] org","ctrlaltca [at] gmail [dot] com"), "desc" => $template['tools']['tool3'], "url" => "kvircrss-2.1.tcl.bz2"),
+	array("name" => "KVIrc TCL", "author" => array("HelLViS69","CtrlAltCa"), "mail" => array("hellvis69 [at] gmail [dot] com","ctrlaltca [at] gmail [dot] com"), "desc" => $template['tools']['tool2'], "url" => "kvirc-2.0.tcl.bz2"),
+	array("name" => "KVIrc Trac Syndacator", "author" => array("HelLViS69","CtrlAltCa"), "mail" => array("hellvis69 [at] gmail [dot] com","ctrlaltca [at] gmail [dot] com"), "desc" => $template['tools']['tool3'], "url" => "kvircrss-2.1.tcl.bz2"),
 	array("name" => "GetText Checker", "author" => "aleksanteri", "mail" => "aleksanteri4028 [at] gmail [dot] com", "desc" => $template['tools']['tool4'], "url" => "gtc-0.2.tcl.bz2"),
 	array("name" => "KVIrc 2 Text", "author" => "zly", "mail" => "zly [at] solidonline [dot] dk", "desc" => $template['tools']['tool5'], "url" => "kvirc2txt.php.bz2")
 );
@@ -331,7 +331,7 @@ $translators=array(
 	array("lang" => $template['index']['french'], "nick" => array("Ahinu","_Otaku"), "mail" => array("ahinu.laman [at] gmail [dot] com","notakou [at] gmail [dot] com"), "flag" => "France"),
 	array("lang" => $template['index']['german'], "nick" => "mren", "mail" => "kvirc [at] mrmx [dot] de", "flag" => "Germany"),
 	array("lang" => $template['index']['hungarian'], "nick" => "Fiber^", "mail" => "vfiber [at] gmail [dot] com", "flag" => "Hungary", "unmain" => 1),
-	array("lang" => $template['index']['italian'], "nick" => "HelLViS69", "mail" => "hell [at] hellvis69.netsons [dot] org", "flag" => "Italy"),
+	array("lang" => $template['index']['italian'], "nick" => "HelLViS69", "mail" => "hellvis69 [at] gmail [dot] com", "flag" => "Italy"),
 	array("lang" => $template['index']['polish'], "nick" => "Krzysztof Godlewski", "mail" => "kgod [at] poczta.onet [dot] pl", "flag" => "Poland", "unmain" => 1),
 	array("lang" => $template['index']['portuguese'], "nick" => "Ze_m", "mail" => "mmodem00 [at] netvisao [dot] pt", "flag" => "Portugal", "unmain" => 1),
 	array("lang" => $template['index']['russian'], "nick" => "Alexey", "mail" => "spam [at] kvirc [dot] ru", "flag" => "Russia", "unmain" => 1),
