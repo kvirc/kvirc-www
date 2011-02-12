@@ -716,9 +716,6 @@ $template['install']['tree35']="
 	Bitte geben Sie keine unnützen Informationen hier an, da sie die Fehlersuche erschweren und es keinen Nutzen hieraus gibt.";
 $template['install']['tree36']="Pizza zum Abendessen :)";
 $template['install']['tree37']="Bier zum Chatten :)";
-$template['install']['tree38']="
-	Nutze Funtkionen von getesteten Bibliotheken, anstatt Code einzubetten oder neu zu implementieren.<br />
-	Die nötigen Abhängigkeiten stehen in Abschnitt 2 dieses Dokuments.";
 $template['install']['text31']="
 	Das CMake Build System bietet auch einen interaktiven Modus an, um alle Einstellungen vor dem Kompilieren vorzunehmen.<br >
 	Auch hier unterstützen wir das Erstellen \"außerhalb-der-Quellen\": Alles erstellen, ohne das Quellverzeichnis zu verunreinigen.";

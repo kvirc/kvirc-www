@@ -226,8 +226,6 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 		<?=$template['install']['tree36']?></li>
 		<li>-DWANT_BEER (default: OFF)<br />
 		<?=$template['install']['tree37']?></li>
-		<li>-DWANT_NO_EMBEDDED_CODE (default: OFF)<br />
-		<?=$template['install']['tree38']?></li>
 	</ul>
 </div><br />
 

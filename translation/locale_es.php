@@ -789,9 +789,6 @@ $template['install']['tree35']="
         Please do not specify useless information here, as it will make debugging harder and you won't profit from it.";
 $template['install']['tree36']="Add some pizza for dinner :)";
 $template['install']['tree37']="Add some beers to chat :)";
-$template['install']['tree38']="
-	Use functions from widely tested libraries instead of embedded code or reimplementations of code/functions available from such libraries.<br />
-	For required dependencies see section 2 of this document.";
 $template['install']['text31']="
 	El sistema de compilación CMake también da un modo interactivo de configurar el entorno antes de compilar.<br />
 	De nuevo, te recomendamos usar el método de compilación \"fuera-del-código\": compílalo todo sin ensuciar las fuentes.";

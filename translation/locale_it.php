@@ -715,9 +715,6 @@ $template['install']['tree35']="
 	Questo è utile soprattutto su wundows.";
 $template['install']['tree36']="Aggiunge un po' di pizza per cena :)";
 $template['install']['tree37']="Aggiunge un po' di birra in chat :)";
-$template['install']['tree38']="
-	Usa funzioni da librerie molto testate invece che usare codice embedded o reimplementazioni di codice/funzioni disponibili da queste librerie.<br />
-	Per le dipendenze richieste vedi la sezione 2 di questo documento.";
 $template['install']['text31']="
 	Il sistema di compilazione CMake fornisce inoltre un modo interattivo per configurare l'ambiente prima di compilare.<br />
 	Ancora, suggeriamo la compilazione \"out-of-source\": compilare tutti i file senza sporcare la directory dei sorgenti.";
