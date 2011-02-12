@@ -664,7 +664,7 @@ $template['install']['tree17']="
 	Enables or disables the crypto functions support using OpenSSL.";
 $template['install']['tree18']="
 	Enables or disables the crypto functions support using Crypto++.<br />
-	This automatically disables OpenSSL support.";
+	Replaces embedded copies with a widley tested library.";
 $template['install']['tree19']="
 	Enables or disables the cryptographic engines and the whole cryptography/text transformation support. Produces a slightly smaller executable";
 $template['install']['tree20']="

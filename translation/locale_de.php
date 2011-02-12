@@ -658,9 +658,12 @@ $template['install']['tree15']="(De-) Aktiviert die Qt-WebKit-Unterstützung.";
 $template['install']['tree16']="(De-) Aktiviert die Unterstützung für KDE4.";
 $template['install']['tree17']="
 	(De-) Aktiviert die Crypto-Funktionen, die OpenSSL nutzen.";
-$template['install']['tree18']="
+/*$template['install']['tree18']="
 	(De-) Aktiviert die Crypto-Funktionen, die Crypto++ nutzen.<br />
-	Dies deaktiviert automatisch die OpenSSL-Unterstützung.";
+	Dies deaktiviert automatisch die OpenSSL-Unterstützung.";*/
+$template['install']['tree18']="
+	Enables or disables the crypto functions support using Crypto++.<br />
+	Replaces embedded copies with a widley tested library.";
 $template['install']['tree19']="
 	(De-) Aktiviert die Kryptografiefunktionen und die komplette Unterstützung für Kryptografie/Textumwandlung. Erzeugt ein leicht kleineres Programm";
 $template['install']['tree20']="
@@ -675,9 +678,9 @@ als Hintergrund dienen (Hier kann natürlich das Arbeitsflächenhintergrundbild 
 	Deshalb kann die Transparenz hier deaktiviert werden.";
 $template['install']['tree22']="
 	(De-) Aktiviert die Perl-Unterstützung.<br />
-		Es gibt keine Möglichkeit, Perl-Skripte innerhalb von KVIrc auszuführen.<br />
-		Es können Perl-Skripte außerhalb von KVIrc ausgeführt werden, z. B. mit exec().<br />
-		Hinweis: Es wird auf jeden Fall nach Perl gesucht, um, falls vorhanden, die Dokumentation zu erstellen.";
+	Es gibt keine Möglichkeit, Perl-Skripte innerhalb von KVIrc auszuführen.<br />
+	Es können Perl-Skripte außerhalb von KVIrc ausgeführt werden, z. B. mit exec().<br />
+	Hinweis: Es wird auf jeden Fall nach Perl gesucht, um, falls vorhanden, die Dokumentation zu erstellen.";
 $template['install']['tree23']="
 	(De-) Aktiviert die Python-Unterstützung.<br />
 	Es gibt keine Möglichkeit, Python-Skripte innerhalb von KVIrc auszuführen.";
@@ -702,9 +705,9 @@ $template['install']['tree31']="(De-) Aktiviert die EXPERIMENTELLE Ogg/Theora-Un
 $template['install']['tree32']="(De-) Aktiviert die VERALTETE DCC-CANVAS-Unterstützung.";
 $template['install']['tree33']="
 	(De-) Aktiviert das Memory-Allocation-Profiling.<br />
-		Nutzen Sie es nicht, sofern Sie kein Entwickler sind und wissen, was Sie tun.<br />
-		Es hat einen starken Einfluss auf die Programmgröße und vorallem dessen Geschwindigkeit.<br />
-		Bitte nutzen Sie es nicht.";
+	Nutzen Sie es nicht, sofern Sie kein Entwickler sind und wissen, was Sie tun.<br />
+	Es hat einen starken Einfluss auf die Programmgröße und vorallem dessen Geschwindigkeit.<br />
+	Bitte nutzen Sie es nicht.";
 $template['install']['tree34']="
 	(De-) Aktiviert malloc() Speicherprüfungen. Dies gibt eine schöne Nachricht aus, wenn dem System der Speicher ausgeht.<br />
 	Es kann keinen neuen Speicher kaufen, aber zumindest drauf hinweisen, dass dem System kein freier Speicher mehr zur Verfügung steht und dass es nicht die Schuld von KVIrc ist.<br />

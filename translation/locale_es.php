@@ -733,7 +733,7 @@ $template['install']['tree17']="
 	Enables or disables the crypto functions support using OpenSSL.";
 $template['install']['tree18']="
 	Enables or disables the crypto functions support using Crypto++.<br />
-	This automatically disables OpenSSL support.";
+	Replaces embedded copies with a widley tested library.";
 $template['install']['tree19']="
 	Enables or disables the cryptographic engines and the whole cryptography/text transformation support. Produces a slightly smaller executable";
 $template['install']['tree20']="
@@ -742,15 +742,14 @@ $template['install']['tree20']="
 $template['install']['tree21']="
 	This option enables or disables pseudo and real transparency support.<br />
 	The pseudo transparency support makes the KVIrc windows look like semi-transparent (this is NOT real transparency: this is just a nice-looking hack). Transparency uses compositing and needs proper hardware support to work.<br />
-	If KDE support is enabled, KVIrc will have an option that makes all windows use a faded KDE desktop background image as background. Without KDE support you will be able to choose a fake background image and use it as background. (You can still
-        choose your desktop wallpaper: this will (more-or-less) work in all the window managers).<br />
+	If KDE support is enabled, KVIrc will have an option that makes all windows use a faded KDE desktop background image as background. Without KDE support you will be able to choose a fake background image and use it as background. (You can still choose your desktop wallpaper: this will (more-or-less) work in all the window managers).<br />
 	It is cool-looking but usually eats some memory and makes the executable slightly bigger, when enabled. Especially when moving objects around, CPU consumption may get high as well.<br />
-        You can thus disable transparency here.";
+	You thus disable transparency here.";
 $template['install']['tree22']="
 	Enables or disables perl support.<br />
-        You will not be able to use Perl scripts inside of KVIrc.<br />
-        You still can execute Perl scripts outside of KVIrc, i.e. with the exec() command.<br />
-        Note that perl support will be checked anyway, and used to generate the documentation if present.";
+	You will not be able to use Perl scripts inside of KVIrc.<br />
+	You still can execute Perl scripts outside of KVIrc, i.e. with the exec() command.<br />
+	Note that perl support will be checked anyway, and used to generate the documentation if present.";
 $template['install']['tree23']="
 	Enables or disables python support.<br />
         You will not be able to use python scripts inside of KVIrc.";
@@ -775,18 +774,18 @@ $template['install']['tree31']="Enables or disables EXPERIMENTAL Ogg/Theora Supp
 $template['install']['tree32']="Enables or disables OBSOLETE DCC CANVAS support.";
 $template['install']['tree33']="
 	Enables or disables memory allocation profiling.<br />
-        Don't set it, unless you are a developer and know what you are doing.<br />
-        It will have high impact on executable size and most noteably speed.<br />
-        Please do not use this.";
+	Don't set it, unless you are a developer and know what you are doing.<br />
+	It will have high impact on executable size and most noteably speed.<br />
+	Please do not use this.";
 $template['install']['tree34']="
 	Enables or disables malloc() memory checks. This will print a nice message if your system goes out of memory.<br />
-        It can't save you from buying new RAM, but at least you will know that your system went out of memory and it is not a proper KVIrc fault.<br />
-        Most systems do actually already notice you when you are out of RAM (i.e. Linux and the OOM killer.)<br />
-        Most probably you will not need to enable this flag.";
+	It can't save you from buying new RAM, but at least you will know that your system went out of memory and it is not a proper KVIrc fault.<br />
+	Most systems do actually already notice you when you are out of RAM (i.e. Linux and the OOM killer.)<br />
+	Most probably you will not need to enable this flag.";
 $template['install']['tree35']="
 	Manually set a revision number if subversion is not found on your system.<br />
-        This is useful mostly on windows.<br />
-        Please do not specify useless information here, as it will make debugging harder and you won't profit from it.";
+	This is useful mostly on windows.<br />
+	Please do not specify useless information here, as it will make debugging harder and you won't profit from it.";
 $template['install']['tree36']="Add some pizza for dinner :)";
 $template['install']['tree37']="Add some beers to chat :)";
 $template['install']['text31']="

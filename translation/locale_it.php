@@ -663,7 +663,10 @@ $template['install']['tree17']="
 	Abilita o disabilita il supporto Secure Socket Layer. Il supporto SSL è automaticamente abilitato se CMake trova OpenSSL.";
 $template['install']['tree18']="
 	Abilita o disabilita le funzioni crittografiche usando Crypto++.<br />
-	Questo disabiliterà automaticamente il supporto OpenSSL.";
+	Rimpiazza le copie embedded con una libreria molto testata.";
+$template['install']['tree18']="
+	Enables or disables the crypto functions support using Crypto++.<br />
+	Replaces embedded copies with a widley tested library.";
 $template['install']['tree19']="
 	Abilita o disabilita i motori crittografici e tutto il supporto alla crittografia e trasformazione del testo. Produce un eseguibile di poco più piccolo";
 $template['install']['tree20']="
