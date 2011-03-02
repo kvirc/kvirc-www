@@ -55,7 +55,7 @@ $version_details["4.0.2"]           = "The latest stable release. This is the pa
 
 // The package groups
 $group_description["none"]      = "No group";
-$group_details["none"]          = "This is a dummy package group: if you see this , you have found a bug in our site :D";
+$group_details["none"]          = "This is a dummy package group: if you see this, you have found a bug in our site :D";
 
 $group_description["slackware"] = "Slackware *.txz binary package";
 $group_details["slackware"]     = "Download this if you have a Slackware based system.";
@@ -390,6 +390,57 @@ $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "Gizmokid2005 (gizmokid2005 at gmail dot com)";
 $package_count++;
 
+// 4.0.2
+// FreeBSD 8
+$p_filename[$package_count]    = "kvirc-4.0.2.tbz";
+$p_path[$package_count]        = "4.0.2/binary/freebsd/8";
+$p_description[$package_count] = "KVIrc 4.0.2, FreeBSD 8 binary";
+$p_details[$package_count]     = "FreeBSD Port; Can be installed with pkg_add -r kvirc <br/>or compiled by source by doing:<br/>cd /usr/ports/irc/kvirc && make install clean";
+$p_platform[$package_count]    = "freebsd";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "6285320";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Cpet (chris at cpetservices dot com)";
+$package_count++;
+
+// 4.0.2
+// FreeBSD 8
+$p_filename[$package_count]    = "kvirc-4.0.2-x86_64.tbz";
+$p_path[$package_count]        = "4.0.2/binary/freebsd/8";
+$p_description[$package_count] = "KVIrc 4.0.2, FreeBSD 8 64bit binary";
+$p_details[$package_count]     = "FreeBSD Port; Can be installed with pkg_add -r kvirc <br/>or compiled by source by doing:<br/>cd /usr/ports/irc/kvirc && make install clean";
+$p_platform[$package_count]    = "freebsd";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "6332157";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Cpet (chris at cpetservices dot com)";
+$package_count++;
+
+// 4.0.2
+// FreeBSD 7
+$p_filename[$package_count]    = "kvirc-4.0.2.tbz";
+$p_path[$package_count]        = "4.0.2/binary/freebsd/7";
+$p_description[$package_count] = "KVIrc 4.0.2, FreeBSD 7 binary";
+$p_details[$package_count]     = "FreeBSD Port; Can be installed with pkg_add -r kvirc <br/>or compiled by source by doing:<br/>cd /usr/ports/irc/kvirc && make install clean";
+$p_platform[$package_count]    = "freebsd";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "6285831";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Cpet (chris at cpetservices dot com)";
+$package_count++;
+
+// 4.0.2
+// FreeBSD 7
+$p_filename[$package_count]    = "kvirc-4.0.2-x86_64.tbz";
+$p_path[$package_count]        = "4.0.2/binary/freebsd/7";
+$p_description[$package_count] = "KVIrc 4.0.2, FreeBSD 7 64bit binary";
+$p_details[$package_count]     = "FreeBSD Port; Can be installed with pkg_add -r kvirc <br/>or compiled by source by doing:<br/>cd /usr/ports/irc/kvirc && make install clean";
+$p_platform[$package_count]    = "freebsd";
+$p_version[$package_count]     = "4.0.2";
+$p_size[$package_count]        = "6333727";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Cpet (chris at cpetservices dot com)";
+$package_count++;
 
 //================================================================================================
 // 4.0.0
