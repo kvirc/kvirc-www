@@ -11,7 +11,7 @@ require("conf/functions.php");
 $docRoot=$_SERVER['DOCUMENT_ROOT'].dirname($_SERVER['SCRIPT_NAME']);
 
 // Get the page using GET value
-$id=trim(strip_tags(htmlentities($_GET['id']),ENT_QUOTES));
+$id=trim(strip_tags(htmlentities($_GET['id'],ENT_QUOTES)));
 if(strpos($id,"..")===TRUE) header("Location: .");
 
 // Set browser lang

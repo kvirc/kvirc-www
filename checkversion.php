@@ -8,7 +8,7 @@ unset($_GET['checkNetHack']);
 $checkNetHack=0;
 require("conf/config.php");
 
-$svn = isset($_GET['svn']) ? trim(strip_tags(addslashes($_GET['svn']))) : "";
+$svn = isset($_GET['svn']) ? trim(strip_tags(htmlentities($_GET['svn'],ENT_QUOTES))) : "";
 if(($svn == "") || (!is_numeric($svn))) $svn = 0;
 
 if($svn == 0)
