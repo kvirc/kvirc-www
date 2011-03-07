@@ -112,7 +112,7 @@ function news_get_month_name($n)
 
 function news_get_dir_description($dirname)
 {
-	list($year,$month) = split('\.',$dirname);
+	list($year,$month) = explode('.',$dirname);
 	return news_get_month_name($month)." ".$year;
 }
 
@@ -120,7 +120,7 @@ function news_get_dir_description($dirname)
 // a hash with year->yyyy,month->mm,day->dd,hour->hh...
 function news_split_filename($filename,&$data)
 {
-	list($year,$month,$day,$hour,$minute,$second,$index,$story) = split('\.',$filename);
+	list($year,$month,$day,$hour,$minute,$second,$index,$story) = explode('.',$filename);
 	$data['filename'] = $filename;
 	$data['year'] = $year;
 	$data['month'] = $month;
@@ -139,7 +139,7 @@ function news_read_entry($filepath,&$data)
 	if(!$f)return false;
 	$d = fread($f,16000);
 	fclose($f);
-	$lines = split("\n",$d);
+	$lines = explode("\n",$d);
 	$cnt = count($lines);
 	$i = 0;
 	$section = "unknown";
