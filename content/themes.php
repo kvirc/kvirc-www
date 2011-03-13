@@ -34,7 +34,7 @@ $rthemes = array_reverse($themes); // newer themes go first
 
 $bInLeftColumn = false;
 
-foreach($rthemes as $key => $value)
+foreach($rthemes as $value)
 {
 	if($bInLeftColumn)
 		echo "<div class=\"right\">";
