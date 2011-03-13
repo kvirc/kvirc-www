@@ -22,7 +22,7 @@ foreach($rthemes as $aTheme)
 
 	echo "		<div class=\"theme_entry\" id=\"theme_entry\">\n";
 	echo "			<div class=\"theme_thumb\" id=\"theme_thumb\">\n";
-	echo "				<img src=\"img/themes/".$aTheme["thumb"]."\">\n";
+	echo "				<img src=\"/img/themes/".$aTheme["thumb"]."\">\n";
 	echo "			</div>\n";
 	echo "			<div class=\"theme_data\" id=\"theme_data\">\n";
 	echo "				<div class=\"theme_name\" id=\"theme_name\">".$aTheme["name"]."</div>\n";
