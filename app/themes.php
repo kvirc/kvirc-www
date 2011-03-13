@@ -154,8 +154,10 @@ foreach($rthemes as $aTheme)
 	echo "				<td valign=\"bottom\">\n";
 	echo "					<div class=\"item_info\">\n";
 	echo "						Author: <span class=\"item_author\">".$aTheme["author"]."</span>";
+	//if($aTheme["mail"] != "")
+	//echo "						 (".$aTheme["mail"].")";
 	if($aTheme["release_date"] != "")
-		echo "						- Release Date: <span class=\"item_release_date\">".$aTheme["release_date"]."</span>";
+		echo "						- Release&nbsp;Date: <span class=\"item_release_date\">".$aTheme["release_date"]."</span>";
 	echo "					</div>\n";
 	echo "				</td>\n";
 	echo "			</tr>\n";
