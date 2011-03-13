@@ -64,10 +64,9 @@ $szLanguage = getLanguage();
 			margin: 0px;
 		}
 		.item_thumb {
-			float: left;
 			border: solid 1px rgb(180,180,180);
-			margin-top: 2px;
-			margin-bottom: 4px;
+			margin-top: 0px;
+			margin-bottom: 0px;
 			margin-right: 7px;
 			margin-left: 0px;
 		}
@@ -77,19 +76,37 @@ $szLanguage = getLanguage();
 			border-top: solid 1px rgb(180,180,180);
 			clear: both;
 		}
-		.item_data {
-			float: left;
+		.item_id {
+			border: solid 1px rgb(210,210,210);
+			background: rgb(230,230,230);
 		}
 		.item_name {
 			size: 16pt;
 			font-weight: bold;
-			float: left;
 		}
 		.item_buttons {
 			float: right;
 		}
 		.item_description {
 			font-size: 11pt;
+			clear: both;
+			margin-top: 2px;
+			margin-bottom: 2px;
+		}
+		.item_version {
+
+		}
+		.item_info {
+			color: rgb(130,130,130);
+			font-size: 10pt;
+			position: relative;
+			bottom: 0;
+		}
+		.item_author {
+			font-weight: bold;
+		}
+		.item_release_date {
+			font-weight: bold;
 		}
 	</style>
 </head>
@@ -99,6 +116,7 @@ $szLanguage = getLanguage();
 $idx = 0;
 
 $szThumbPath = "/img/themes";
+$szScreenshotPath = "/img/themes";
 $szDownloadPath = "ftp://ftp.kvirc.de/pub/kvirc/themes";
 
 
@@ -109,23 +127,40 @@ foreach($rthemes as $aTheme)
 		continue; // invalid version
 
 	if($idx > 0)
-		echo "		<div class=\"item_separator\"></div>\n";
+		echo "	<div class=\"item_separator\"></div>\n";
 
-	echo "		<div class=\"item_entry\">\n";
-	echo "			<div class=\"item_thumb\">\n";
-	echo "				<img src=\"".$szThumbPath."/".$aTheme["thumb"]."\">\n";
-	echo "			</div>\n";
-	echo "			<div class=\"item_data\">\n";
-	echo "				<div class=\"item_name\">".$aTheme["name"]."</div>\n";
-	echo "				<div class=\"item_version\">".$aTheme["version"]."</div>\n";
-	echo "				<div class=\"item_description\">".$aTheme["desc"]."</div>\n";
-	echo "				<div class=\"item_release_date\">".$aTheme["release_date"]."</div>\n";
-	echo "				<div class=\"item_author\">".$aTheme["author"]."</div>\n";
-	echo "			</div>\n";
-	echo "			<div class=\"item_buttons\">\n";
-	echo "				<a class=\"item_download_link\" href=\"".$szDownloadPath."/".$aTheme["download"]."\">Install</a>\n";
-	echo "			</div>\n";
-	echo "		</div>\n";
+	echo "	<div class=\"item_entry\">\n";
+	echo "		<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n";
+	echo "			<tr>\n";
+	echo "				<td valign=\"top\" width=\"80\" rowspan=\"2\">\n";
+	echo "					<div class=\"item_thumb\">\n";
+	echo "						<a href=\"".$szScreenshotPath."/".$aTheme["screen"]."\"><img src=\"".$szThumbPath."/".$aTheme["thumb"]."\" border=\"0\"></a>\n";
+	echo "					</div>\n";
+	echo "				</td>\n";
+	echo "				<td valign=\"top\">\n";
+	echo "					<div class=\"item_id\">\n";
+	echo "						<span class=\"item_name\">".$aTheme["name"]."</span>\n";
+	echo "						<span class=\"item_version\">".$aTheme["version"]."</span>\n";
+	echo "					</div>\n";
+	echo "					<div class=\"item_description\">".$aTheme["desc"]."</div>\n";
+	echo "				</td>\n";
+	echo "				<td valign=\"top\" width=\"60\" rowspan=\"2\">\n";
+	echo "					<div class=\"item_buttons\">\n";
+	echo "						<a class=\"item_download_link\" href=\"".$szDownloadPath."/".$aTheme["download"]."\">Install</a>\n";
+	echo "					</div>\n";
+	echo "				</td>\n";
+	echo "			</tr>\n";
+	echo "			<tr>\n";
+	echo "				<td valign=\"bottom\">\n";
+	echo "					<div class=\"item_info\">\n";
+	echo "						Author: <span class=\"item_author\">".$aTheme["author"]."</span>";
+	if($aTheme["release_date"] != "")
+		echo "						- Release Date: <span class=\"item_release_date\">".$aTheme["release_date"]."</span>";
+	echo "					</div>\n";
+	echo "				</td>\n";
+	echo "			</tr>\n";
+	echo "		</table>\n";
+	echo "	</div>\n";
 	
 	$idx++;
 }
