@@ -6,8 +6,10 @@ function setlang()
 	$langAuto=substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);
 	$langGet=trim(strip_tags(htmlentities($_GET['lang'],ENT_QUOTES)));
 
-	if(!$langGet) $langGet=$langAuto;
-	if(!$langAuto) $langAuto="en";
+	if(!$langGet)
+		$langGet=$langAuto;
+	if(!$langAuto)
+		$langAuto="en";
 
 	// Set the language
 	$lang=$langAuto;

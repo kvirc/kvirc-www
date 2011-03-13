@@ -12,7 +12,9 @@ $themes = array(
 		"home" => "",
 		"download" => "Marble-1.0.4.kvt",
 		"screen" => "theme_marble.jpg",
-		"thumb" => "thumb_marble.png"
+		"thumb" => "thumb_marble.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Crystal",
