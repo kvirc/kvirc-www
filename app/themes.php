@@ -1,6 +1,6 @@
 <?php
 
-include_once("conf/themes.php");
+include_once("../conf/themes.php");
 
 $rthemes = array_reverse($themes); // newer themes go first
 
