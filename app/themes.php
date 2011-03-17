@@ -1,5 +1,14 @@
 <?php
 
+session_start();
+
+
+$g_aAvailableSortOrders = array(
+		"name" => "Name",
+		"release_date" => "Date",
+		"author" => "Author"
+	);
+
 function getLanguage()
 {
 	// Get the language from browser and from querystring
@@ -43,9 +52,26 @@ function print_header_or_footer()
 {
 	global $g_iCurrentPage;
 	global $g_iMaximumPage;
+	global $g_szRequestedVersion;
+	global $g_szRequestedLanguage;
+	global $g_szRequestedSortOrder;
+	global $g_szRequestedSortDirection;
+	global $g_aAvailableSortOrders;
+	
+	echo "<table class=\"header_or_footer_controls\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n";
+	echo "	<tr>\n";
+	echo "	<td width=\"30%\" align=\"left\">\n";
+	echo "	</td>\n";
+	echo "	<td width=\"40%\" align=\"center\">\n";
+	echo "	<div class=\"header_or_footer_links\">\n";
+	
 	// FIXME: Use Images here!
 	if($g_iCurrentPage > 0)
-		echo "		<a class=\"page_link\" href=\"?version=".$szVersion."&lang=".$szLanguage."&sort=".$szSortOrder."&page=".($g_iCurrentPage-1)."\">&lt;&lt;&lt;</a>\n";
+		echo "		<a class=\"page_link\" href=\"?version=".$g_szRequestedVersion.
+				"&lang=".$g_szRequestedLanguage.
+				"&sort=".$g_szRequestedSortOrder.
+				"&dir=".$g_szRequestedSortDirection.
+				"&page=".($g_iCurrentPage-1)."\">&lt;&lt;&lt;</a>\n";
 	
 	$iMin = $g_iCurrentPage - 5;
 	if($iMin < 0)
@@ -57,14 +83,41 @@ function print_header_or_footer()
 	for($i=$iMin;$i<=$iMax;$i++)
 	{
 		if($i != $g_iCurrentPage)
-			echo "		<a class=\"page_link\" href=\"?version=".$szVersion."&lang=".$szLanguage."&sort=".$szSortOrder."&page=".($i)."\">".($i+1)."</a>\n";
+			echo "		<a class=\"page_link\" href=\"?version=".$g_szRequestedVersion.
+					"&lang=".$g_szRequestedLanguage.
+					"&sort=".$g_szRequestedSortOrder.
+					"&dir=".$g_szRequestedSortDirection.
+					"&page=".($i)."\">".($i+1)."</a>\n";
 		else
 			echo "		<span class=\"current_page\">".($i+1)."</span>\n";
 	}
 	
 	if($g_iCurrentPage < $g_iMaximumPage)
-		echo "		<a class=\"page_link\" href=\"?version=".$szVersion."&lang=".$szLanguage."&sort=".$szSortOrder."&page=".($g_iCurrentPage+1)."\">&gt;&gt;&gt;</a>\n";
-	
+		echo "		<a class=\"page_link\" href=\"?version=".$g_szRequestedVersion.
+					"&lang=".$g_szRequestedLanguage.
+					"&sort=".$g_szRequestedSortOrder.
+					"&dir=".$g_szRequestedSortDirection.
+					"&page=".($g_iCurrentPage+1)."\">&gt;&gt;&gt;</a>\n";
+
+	echo "	</div>\n";
+	echo "	</td>\n";
+	echo "	<td width=\"30%\" align=\"right\">\n";
+	echo "		<form method=\"get\">\n";
+	echo "			<input type=\"hidden\" name=\"page\" value=\"0\">\n";
+	echo "			<input type=\"hidden\" name=\"lang\" value=\"".$g_szRequestedLanguage."\">\n";
+	echo "			<select name=\"sort\" onChange=\"this.form.submit();\">\n";
+	foreach($g_aAvailableSortOrders as $key => $value)
+	{
+		if($g_szRequestedSortOrder == $key)
+			echo "				<option selected value=\"".$key."\">".$value."</option>\n";
+		else
+			echo "				<option value=\"".$key."\">".$value."</option>\n";
+	}
+	echo "			</select>\n";
+	echo "		</form>\n";
+	echo "	</td>\n";
+	echo "</tr>\n";
+	echo "</table>\n";
 }
 
 if(file_exists("../translation/locale_$lang.php"))
@@ -75,12 +128,12 @@ else
 include_once("../conf/themes.php");
 
 
-$szVersion = $_REQUEST["version"];
-if($szVersion == "")
-	$szVersion = $_SESSION["version"];
-$szLanguage = getLanguage();
+$g_szRequestedVersion = $_REQUEST["version"];
+if($g_szRequestedVersion == "")
+	$g_szRequestedVersion = $_SESSION["version"];
+$g_szRequestedLanguage = getLanguage();
 
-$_SESSION["version"] = $szVersion;
+$_SESSION["version"] = $g_szRequestedVersion;
 
 $g_iCurrentPage = $_REQUEST["page"];
 if(!is_numeric($g_iCurrentPage))
@@ -88,22 +141,29 @@ if(!is_numeric($g_iCurrentPage))
 if(!is_numeric($g_iCurrentPage))
 	$g_iCurrentPage = 0;
 
-$szSortOrder = $_REQUEST["sort"];
-if($szSortOrder == "")
-	$szSortOrder = $_SESSION["sort"];
-switch($szSortOrder)
+$g_szRequestedSortOrder = $_REQUEST["sort"];
+if($g_szRequestedSortOrder == "")
+	$g_szRequestedSortOrder = $_SESSION["sort"];
+if($g_aAvailableSortOrders[$g_szRequestedSortOrder] == "")
+	$g_szRequestedSortOrder = "name";
+
+$_SESSION["sort"] = $g_szRequestedSortOrder;
+
+$g_szRequestedSortDirection = $_REQUEST["dir"];
+if($g_szRequestedSortDirection == "")
+	$g_szRequestedSortDirection = $_SESSION["dir"];
+switch($g_szRequestedSortDirection)
 {
-	case "release_date":
-	case "name":
+	case "asc":
+	case "desc":
 		// ok
 	break;
 	default:
-		$szSortOrder = "name";
+		$g_szRequestedSortDirection = "asc";
 	break;
 }
 
-
-$_SESSION["sort"] = $szSortOrder;
+$_SESSION["dir"] = $g_szRequestedSortDirection;
 
 ?>
 <html>
@@ -170,18 +230,15 @@ $_SESSION["sort"] = $szSortOrder;
 			margin-top: 10px;
 			padding-bottom: 4px;
 		}
-		.header a {
-			text-decoration: none;
-		}
 		.footer {
 			border-top: 1px solid rgb(130,130,130);
 			margin-top: 10px;
-			text-align: center;
-			font-size: 14pt;
 			margin-bottom: 10px;
 			padding-top: 4px;
 		}
-		.footer a {
+		.header_or_footer_links {
+			text-align: center;
+			font-size: 14pt;
 			text-decoration: none;
 		}
 		.current_page {
@@ -204,7 +261,7 @@ $aFilteredItems = array();
 $idx = 0;
 foreach($themes as $aItem)
 {
-	if(!checkVersion($szVersion,$aItem["min_kvirc_version"]))
+	if(!checkVersion($g_szRequestedVersion,$aItem["min_kvirc_version"]))
 		continue; // invalid version
 
 	$aFilteredItems[$idx] = $aItem;
@@ -213,7 +270,7 @@ foreach($themes as $aItem)
 
 $iCount = $idx;
 
-function compare_release_date($a, $b)
+function compare_release_date_asc($a, $b)
 {
 	if($a["release_date"] == $b["release_date"])
 		return 0;
@@ -221,7 +278,7 @@ function compare_release_date($a, $b)
 	return ($a["release_date"] < $b["release_date"]) ? -1 : 1;
 }
 
-function compare_name($a, $b)
+function compare_name_asc($a, $b)
 {
 	if($a["name"] == $b["name"])
 		return 0;
@@ -229,7 +286,39 @@ function compare_name($a, $b)
 	return ($a["name"] < $b["name"]) ? -1 : 1;
 }
 
-usort($aFilteredItems,"compare_".$szSortOrder);
+function compare_author_asc($a, $b)
+{
+	if($a["author"] == $b["author"])
+		return 0;
+
+	return ($a["author"] < $b["author"]) ? -1 : 1;
+}
+
+function compare_release_date_desc($a, $b)
+{
+	if($a["release_date"] == $b["release_date"])
+		return 0;
+
+	return ($a["release_date"] < $b["release_date"]) ? -1 : 1;
+}
+
+function compare_name_desc($a, $b)
+{
+	if($a["name"] == $b["name"])
+		return 0;
+
+	return ($a["name"] < $b["name"]) ? -1 : 1;
+}
+
+function compare_author_desc($a, $b)
+{
+	if($a["author"] == $b["author"])
+		return 0;
+
+	return ($a["author"] < $b["author"]) ? -1 : 1;
+}
+
+usort($aFilteredItems,"compare_".$g_szRequestedSortOrder."_".$g_szRequestedSortDirection);
 
 $g_iMaximumPage = (int)($iCount / $iMaxItemsPerPage);
 if($g_iCurrentPage < 0)
@@ -247,7 +336,7 @@ echo "	</div>\n";
 $idx = 0;
 foreach($aItemsToList as $aItem)
 {
-	if(!checkVersion($szVersion,$aItem["min_kvirc_version"]))
+	if(!checkVersion($g_szRequestedVersion,$aItem["min_kvirc_version"]))
 		continue; // invalid version
 
 	if($idx > 0)
@@ -266,8 +355,8 @@ foreach($aItemsToList as $aItem)
 	echo "						<span class=\"item_name\">".$aItem["name"]."</span>\n";
 	echo "						<span class=\"item_version\">".$aItem["version"]."</span>\n";
 	echo "					</div>\n";
-	if($aItem["desc_".$szLanguage] != "")
-		echo "					<div class=\"item_description\">".$aItem["desc_".$szLanguage]."</div>\n";
+	if($aItem["desc_".$g_szRequestedLanguage] != "")
+		echo "					<div class=\"item_description\">".$aItem["desc_".$g_szRequestedLanguage]."</div>\n";
 	else
 		echo "					<div class=\"item_description\">".$aItem["desc"]."</div>\n";
 	echo "				</td>\n";
