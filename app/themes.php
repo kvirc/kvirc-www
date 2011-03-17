@@ -60,14 +60,15 @@ function print_header_or_footer()
 	
 	echo "<table class=\"header_or_footer_controls\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n";
 	echo "	<tr>\n";
-	echo "	<td width=\"30%\" align=\"left\">\n";
+	echo "	<td width=\"30%\" align=\"left\" valign=\"middle\">\n";
 	echo "	</td>\n";
-	echo "	<td width=\"40%\" align=\"center\">\n";
+	echo "	<td width=\"40%\" align=\"center\" valign=\"middle\">\n";
 	echo "	<div class=\"header_or_footer_links\">\n";
 	
 	// FIXME: Use Images here!
 	if($g_iCurrentPage > 0)
-		echo "		<a class=\"page_link\" href=\"?version=".$g_szRequestedVersion.
+		echo "		<a class=\"page_link\" href=\"?" .
+				"version=".$g_szRequestedVersion.
 				"&lang=".$g_szRequestedLanguage.
 				"&sort=".$g_szRequestedSortOrder.
 				"&dir=".$g_szRequestedSortDirection.
@@ -83,7 +84,8 @@ function print_header_or_footer()
 	for($i=$iMin;$i<=$iMax;$i++)
 	{
 		if($i != $g_iCurrentPage)
-			echo "		<a class=\"page_link\" href=\"?version=".$g_szRequestedVersion.
+			echo "		<a class=\"page_link\" href=\"?" .
+					"version=".$g_szRequestedVersion.
 					"&lang=".$g_szRequestedLanguage.
 					"&sort=".$g_szRequestedSortOrder.
 					"&dir=".$g_szRequestedSortDirection.
@@ -93,7 +95,8 @@ function print_header_or_footer()
 	}
 	
 	if($g_iCurrentPage < $g_iMaximumPage)
-		echo "		<a class=\"page_link\" href=\"?version=".$g_szRequestedVersion.
+		echo "		<a class=\"page_link\" href=\"?" .
+					"version=".$g_szRequestedVersion.
 					"&lang=".$g_szRequestedLanguage.
 					"&sort=".$g_szRequestedSortOrder.
 					"&dir=".$g_szRequestedSortDirection.
@@ -101,11 +104,12 @@ function print_header_or_footer()
 
 	echo "	</div>\n";
 	echo "	</td>\n";
-	echo "	<td width=\"30%\" align=\"right\">\n";
-	echo "		<form method=\"get\">\n";
+	echo "	<td width=\"30%\" align=\"right\" valign=\"middle\">\n";
+	echo "		<form class=\"sort_form\" method=\"get\">\n";
 	echo "			<input type=\"hidden\" name=\"page\" value=\"0\">\n";
 	echo "			<input type=\"hidden\" name=\"lang\" value=\"".$g_szRequestedLanguage."\">\n";
-	echo "			<select name=\"sort\" onChange=\"this.form.submit();\">\n";
+	echo "			<input type=\"hidden\" name=\"version\" value=\"".$g_szRequestedVersion."\">\n";
+	echo "			Sort by <select name=\"sort\" onChange=\"this.form.submit();\">\n";
 	foreach($g_aAvailableSortOrders as $key => $value)
 	{
 		if($g_szRequestedSortOrder == $key)
@@ -113,6 +117,16 @@ function print_header_or_footer()
 		else
 			echo "				<option value=\"".$key."\">".$value."</option>\n";
 	}
+	echo "			</select>\n";
+	echo "			<select name=\"dir\" onChange=\"this.form.submit();\">\n";
+		if($g_szRequestedSortDirection == "asc")
+		{
+			echo "				<option selected value=\"asc\">Ascending</option>\n";
+			echo "				<option value=\"desc\">Descending</option>\n";
+		} else {
+			echo "				<option value=\"asc\">Ascending</option>\n";
+			echo "				<option selected value=\"desc\">Descending</option>\n";
+		}
 	echo "			</select>\n";
 	echo "		</form>\n";
 	echo "	</td>\n";
@@ -224,16 +238,14 @@ $_SESSION["dir"] = $g_szRequestedSortDirection;
 		}
 		.header {
 			border-bottom: 1px solid rgb(130,130,130);
-			margin-bottom: 10px;
-			text-align: center;
-			font-size: 14pt;
-			margin-top: 10px;
+			margin-bottom: 5px;
+			margin-top: 5px;
 			padding-bottom: 4px;
 		}
 		.footer {
 			border-top: 1px solid rgb(130,130,130);
-			margin-top: 10px;
-			margin-bottom: 10px;
+			margin-top: 5px;
+			margin-bottom: 5px;
 			padding-top: 4px;
 		}
 		.header_or_footer_links {
@@ -243,6 +255,9 @@ $_SESSION["dir"] = $g_szRequestedSortDirection;
 		}
 		.current_page {
 			background-color: rgb(200,200,200);
+		}
+		.sort_form {
+			margin: 0;
 		}
 	</style>
 </head>
@@ -280,18 +295,12 @@ function compare_release_date_asc($a, $b)
 
 function compare_name_asc($a, $b)
 {
-	if($a["name"] == $b["name"])
-		return 0;
-
-	return ($a["name"] < $b["name"]) ? -1 : 1;
+	return strcasecmp($a["name"],$b["name"]);
 }
 
 function compare_author_asc($a, $b)
 {
-	if($a["author"] == $b["author"])
-		return 0;
-
-	return ($a["author"] < $b["author"]) ? -1 : 1;
+	return strcasecmp($a["author"],$b["author"]);
 }
 
 function compare_release_date_desc($a, $b)
@@ -299,23 +308,17 @@ function compare_release_date_desc($a, $b)
 	if($a["release_date"] == $b["release_date"])
 		return 0;
 
-	return ($a["release_date"] < $b["release_date"]) ? -1 : 1;
+	return ($a["release_date"] > $b["release_date"]) ? -1 : 1;
 }
 
 function compare_name_desc($a, $b)
 {
-	if($a["name"] == $b["name"])
-		return 0;
-
-	return ($a["name"] < $b["name"]) ? -1 : 1;
+	return -strcasecmp($a["name"],$b["name"]);
 }
 
 function compare_author_desc($a, $b)
 {
-	if($a["author"] == $b["author"])
-		return 0;
-
-	return ($a["author"] < $b["author"]) ? -1 : 1;
+	return -strcasecmp($a["author"],$b["author"]);
 }
 
 usort($aFilteredItems,"compare_".$g_szRequestedSortOrder."_".$g_szRequestedSortDirection);
