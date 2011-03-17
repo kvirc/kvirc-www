@@ -39,6 +39,33 @@ function checkVersion($version,$min)
 	return true; // all equal
 }
 
+function print_header_or_footer()
+{
+	global $g_iCurrentPage;
+	global $g_iMaximumPage;
+	// FIXME: Use Images here!
+	if($g_iCurrentPage > 0)
+		echo "		<a class=\"page_link\" href=\"?version=".$szVersion."&lang=".$szLanguage."&sort=".$szSortOrder."&page=".($g_iCurrentPage-1)."\">&lt;&lt;&lt;</a>\n";
+	
+	$iMin = $g_iCurrentPage - 5;
+	if($iMin < 0)
+		$iMin = 0;
+	$iMax = $g_iCurrentPage + 5;
+	if($iMax > $g_iMaximumPage)
+		$iMax = $g_iMaximumPage;
+	
+	for($i=$iMin;$i<=$iMax;$i++)
+	{
+		if($i != $g_iCurrentPage)
+			echo "		<a class=\"page_link\" href=\"?version=".$szVersion."&lang=".$szLanguage."&sort=".$szSortOrder."&page=".($i)."\">".($i+1)."</a>\n";
+		else
+			echo "		<span class=\"current_page\">".($i+1)."</span>\n";
+	}
+	
+	if($g_iCurrentPage < $g_iMaximumPage)
+		echo "		<a class=\"page_link\" href=\"?version=".$szVersion."&lang=".$szLanguage."&sort=".$szSortOrder."&page=".($g_iCurrentPage+1)."\">&gt;&gt;&gt;</a>\n";
+	
+}
 
 if(file_exists("../translation/locale_$lang.php"))
 	include("./translation/locale_$lang.php");
@@ -55,17 +82,33 @@ $szLanguage = getLanguage();
 
 $_SESSION["version"] = $szVersion;
 
-$iPage = $_REQUEST["page"];
-if(!is_numeric($iPage))
-	$iPage = $_SESSION["page"];
-if(!is_numeric($iPage))
-	$iPage = 0;
+$g_iCurrentPage = $_REQUEST["page"];
+if(!is_numeric($g_iCurrentPage))
+	$g_iCurrentPage = $_SESSION["page"];
+if(!is_numeric($g_iCurrentPage))
+	$g_iCurrentPage = 0;
 
+$szSortOrder = $_REQUEST["sort"];
+if($szSortOrder == "")
+	$szSortOrder = $_SESSION["sort"];
+switch($szSortOrder)
+{
+	case "release_date":
+	case "name":
+		// ok
+	break;
+	default:
+		$szSortOrder = "name";
+	break;
+}
+
+
+$_SESSION["sort"] = $szSortOrder;
 
 ?>
 <html>
 <head>
-	<title>KVIrc Theme Listing</title>
+	<title>KVIrc Item Listing</title>
 	<style type="text/css">
 		body {
 			font-family: Arial, Verdana;
@@ -119,6 +162,17 @@ if(!is_numeric($iPage))
 		.item_release_date {
 			font-weight: bold;
 		}
+		.header {
+			border-bottom: 1px solid rgb(130,130,130);
+			margin-bottom: 10px;
+			text-align: center;
+			font-size: 14pt;
+			margin-top: 10px;
+			padding-bottom: 4px;
+		}
+		.header a {
+			text-decoration: none;
+		}
 		.footer {
 			border-top: 1px solid rgb(130,130,130);
 			margin-top: 10px;
@@ -138,29 +192,62 @@ if(!is_numeric($iPage))
 <body>
 <?php
 
-$idx = 0;
 
 $szThumbPath = "/img/themes";
 $szScreenshotPath = "/img/themes";
 $szDownloadPath = "ftp://ftp.kvirc.de/pub/kvirc/themes";
 $iMaxItemsPerPage = 10;
 
-$aSortedThemes = array_reverse($themes); // newer themes go first
 
-$iCount = count($aSortedThemes);
+$aFilteredItems = array();
 
-
-$iMaxPage = (int)($iCount / $iMaxItemsPerPage);
-if($iPage < 0)
-	$iPage = 0;
-else if($iPage > $iMaxPage)
-	$iPage = $iMaxPage;
-
-$aThemesToList = array_slice($aSortedThemes,$iPage * $iMaxItemsPerPage,$iMaxItemsPerPage,false);
-
-foreach($aThemesToList as $aTheme)
+$idx = 0;
+foreach($themes as $aItem)
 {
-	if(!checkVersion($szVersion,$aTheme["min_kvirc_version"]))
+	if(!checkVersion($szVersion,$aItem["min_kvirc_version"]))
+		continue; // invalid version
+
+	$aFilteredItems[$idx] = $aItem;
+	$idx++;
+}
+
+$iCount = $idx;
+
+function compare_release_date($a, $b)
+{
+	if($a["release_date"] == $b["release_date"])
+		return 0;
+
+	return ($a["release_date"] < $b["release_date"]) ? -1 : 1;
+}
+
+function compare_name($a, $b)
+{
+	if($a["name"] == $b["name"])
+		return 0;
+
+	return ($a["name"] < $b["name"]) ? -1 : 1;
+}
+
+usort($aFilteredItems,"compare_".$szSortOrder);
+
+$g_iMaximumPage = (int)($iCount / $iMaxItemsPerPage);
+if($g_iCurrentPage < 0)
+	$g_iCurrentPage = 0;
+else if($g_iCurrentPage > $g_iMaximumPage)
+	$g_iCurrentPage = $g_iMaximumPage;
+
+$aItemsToList = array_slice($aFilteredItems,$g_iCurrentPage * $iMaxItemsPerPage,$iMaxItemsPerPage,false);
+
+echo "	<div class=\"header\">\n";
+print_header_or_footer();
+echo "	</div>\n";
+
+
+$idx = 0;
+foreach($aItemsToList as $aItem)
+{
+	if(!checkVersion($szVersion,$aItem["min_kvirc_version"]))
 		continue; // invalid version
 
 	if($idx > 0)
@@ -171,30 +258,33 @@ foreach($aThemesToList as $aTheme)
 	echo "			<tr>\n";
 	echo "				<td valign=\"top\" width=\"80\" rowspan=\"2\">\n";
 	echo "					<div class=\"item_thumb\">\n";
-	echo "						<a href=\"".$szScreenshotPath."/".$aTheme["screen"]."\"><img src=\"".$szThumbPath."/".$aTheme["thumb"]."\" border=\"0\"></a>\n";
+	echo "						<a href=\"".$szScreenshotPath."/".$aItem["screen"]."\"><img src=\"".$szThumbPath."/".$aItem["thumb"]."\" border=\"0\"></a>\n";
 	echo "					</div>\n";
 	echo "				</td>\n";
 	echo "				<td valign=\"top\">\n";
 	echo "					<div class=\"item_id\">\n";
-	echo "						<span class=\"item_name\">".$aTheme["name"]."</span>\n";
-	echo "						<span class=\"item_version\">".$aTheme["version"]."</span>\n";
+	echo "						<span class=\"item_name\">".$aItem["name"]."</span>\n";
+	echo "						<span class=\"item_version\">".$aItem["version"]."</span>\n";
 	echo "					</div>\n";
-	echo "					<div class=\"item_description\">".$aTheme["desc"]."</div>\n";
+	if($aItem["desc_".$szLanguage] != "")
+		echo "					<div class=\"item_description\">".$aItem["desc_".$szLanguage]."</div>\n";
+	else
+		echo "					<div class=\"item_description\">".$aItem["desc"]."</div>\n";
 	echo "				</td>\n";
 	echo "				<td valign=\"top\" width=\"60\" rowspan=\"2\">\n";
 	echo "					<div class=\"item_buttons\">\n";
-	echo "						<a class=\"item_download_link\" href=\"".$szDownloadPath."/".$aTheme["download"]."\">Install</a>\n";
+	echo "						<a class=\"item_download_link\" href=\"".$szDownloadPath."/".$aItem["download"]."\">Install</a>\n";
 	echo "					</div>\n";
 	echo "				</td>\n";
 	echo "			</tr>\n";
 	echo "			<tr>\n";
 	echo "				<td valign=\"bottom\">\n";
 	echo "					<div class=\"item_info\">\n";
-	echo "						Author: <span class=\"item_author\">".$aTheme["author"]."</span>";
-	//if($aTheme["mail"] != "")
-	//echo "						 (".$aTheme["mail"].")";
-	if($aTheme["release_date"] != "")
-		echo "						- Release&nbsp;Date: <span class=\"item_release_date\">".$aTheme["release_date"]."</span>";
+	echo "						Author: <span class=\"item_author\">".$aItem["author"]."</span>";
+	//if($aItem["mail"] != "")
+	//echo "						 (".$aItem["mail"].")";
+	if($aItem["release_date"] != "")
+		echo "						- Release&nbsp;Date: <span class=\"item_release_date\">".$aItem["release_date"]."</span>";
 	echo "					</div>\n";
 	echo "				</td>\n";
 	echo "			</tr>\n";
@@ -204,29 +294,10 @@ foreach($aThemesToList as $aTheme)
 	$idx++;
 }
 
-echo "	<div class=\"footer\" id=\"footer\">\n";
-// FIXME: Use Images here!
-if($iPage > 0)
-	echo "		<a class=\"page_link\" href=\"?version=".$szVersion."&lang=".$szLanguage."&page=".($iPage-1)."\">&lt;===</a>\n";
-
-$iMin = $iPage - 5;
-if($iMin < 0)
-	$iMin = 0;
-$iMax = $iPage + 5;
-if($iMax > $iMaxPage)
-	$iMax = $iMaxPage;
-
-for($i=$iMin;$i<=$iMax;$i++)
-{
-	if($i != $iPage)
-		echo "		<a class=\"page_link\" href=\"?version=".$szVersion."&lang=".$szLanguage."&page=".($i)."\">".($i+1)."</a>\n";
-	else
-		echo "		<span class=\"current_page\">".($i+1)."</span>\n";
-}
-
-if($iPage < $iMaxPage)
-	echo "		<a class=\"page_link\" href=\"?version=".$szVersion."&lang=".$szLanguage."&page=".($iPage+1)."\">===&gt;</a>\n";
+echo "	<div class=\"footer\">\n";
+print_header_or_footer();
 echo "	</div>\n";
+
 
 ?>
 </body>

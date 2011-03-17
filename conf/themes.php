@@ -25,7 +25,9 @@ $themes = array(
 		"home" => "",
 		"download" => "Crystal-0.3.kvt",
 		"screen" => "theme_crystal.jpg",
-		"thumb" => "thumb_crystal.png"
+		"thumb" => "thumb_crystal.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Green Theme",
@@ -36,7 +38,9 @@ $themes = array(
 		"home" => "",
 		"download" => "Green-1.1.kvt",
 		"screen" => "theme_green.jpg",
-		"thumb" => "thumb_green.png"
+		"thumb" => "thumb_green.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Ircii Like",
@@ -47,7 +51,9 @@ $themes = array(
 		"home" => "",
 		"download" => "Ircii-like-1.0.kvt",
 		"screen" => "theme_ircii.jpg",
-		"thumb" => "thumb_ircii.png"
+		"thumb" => "thumb_ircii.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Yisus",
@@ -58,7 +64,9 @@ $themes = array(
 		"home" => "",
 		"download" => "Yisus-0.3.kvt",
 		"screen" => "theme_notari.jpg",
-		"thumb" => "thumb_notari.png"
+		"thumb" => "thumb_notari.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Kitsch Theme",
@@ -69,7 +77,9 @@ $themes = array(
 		"home" => "",
 		"download" => "Kitsch-1.0.kvt",
 		"screen" => "theme_kitsch.jpg",
-		"thumb" => "thumb_kitsch.png"
+		"thumb" => "thumb_kitsch.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Ghost",
@@ -80,7 +90,9 @@ $themes = array(
 		"home" => "",
 		"download" => "Ghost-1.0.kvt",
 		"screen" => "theme_ghost.jpg",
-		"thumb" => "thumb_ghost.png"
+		"thumb" => "thumb_ghost.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "PayneReactor",
@@ -91,7 +103,9 @@ $themes = array(
 		"home" => "http://www.PayneReactor.com",
 		"download" => "PayneReactor-1.0.kvt",
 		"screen" => "theme_payne.jpg",
-		"thumb" => "thumb_payne.png"
+		"thumb" => "thumb_payne.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "XCrystall Black",
@@ -102,7 +116,9 @@ $themes = array(
 		"home" => "",
 		"download" => "XCrystall-black-0.0.1.kvt",
 		"screen" => "theme_xcrystall.jpg",
-		"thumb" => "thumb_xcrystall.jpg"
+		"thumb" => "thumb_xcrystall.jpg",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "DarkBaghira",
@@ -113,7 +129,9 @@ $themes = array(
 		"home" => "",
 		"download" => "DarkBaghira-0.6.kvt",
 		"screen" => "theme_darkbaghira.jpg",
-		"thumb" => "thumb_darkbaghira.png"
+		"thumb" => "thumb_darkbaghira.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Time makes no sense",
@@ -124,7 +142,9 @@ $themes = array(
 		"home" => "http://kvirc.virg0.org",
 		"download" => "Time-3.3.2.kvt",
 		"screen" => "theme_time.png",
-		"thumb" => "thumb_time.png"
+		"thumb" => "thumb_time.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Pure",
@@ -135,7 +155,9 @@ $themes = array(
 		"home" => "http://kvirc.virg0.org",
 		"download" => "Pure-1.0.1.kvt",
 		"screen" => "theme_pure.png",
-		"thumb" => "thumb_pure.png"
+		"thumb" => "thumb_pure.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Dark Glass",
@@ -146,7 +168,9 @@ $themes = array(
 		"home" => "",
 		"download" => "DarkGlass-1.0.kvt",
 		"screen" => "theme_darkglass.png",
-		"thumb" => "thumb_darkglass.png"
+		"thumb" => "thumb_darkglass.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Black Heart",
@@ -157,7 +181,9 @@ $themes = array(
 		"home" => "",
 		"download" => "BlackHeart-1.0.kvt",
 		"screen" => "theme_blackheart.png",
-		"thumb" => "thumb_blackheart.png"
+		"thumb" => "thumb_blackheart.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "X-KVIrc-mas",
@@ -168,7 +194,9 @@ $themes = array(
 		"home" => "",
 		"download" => "X-KVIrc-mas-1.0.kvt",
 		"screen" => "theme_X-KVIrcmas.png",
-		"thumb" => "thumb_X-KVIrcmas.png"
+		"thumb" => "thumb_X-KVIrcmas.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Words are Perversion",
@@ -179,7 +207,9 @@ $themes = array(
 		"home" => "http://kvirc.virg0.org",
 		"download" => "Words_are_Perversion-1.0.3.kvt",
 		"screen" => "theme_words.png",
-		"thumb" => "thumb_words.png"
+		"thumb" => "thumb_words.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Erotica",
@@ -190,7 +220,9 @@ $themes = array(
 		"home" => "http://kvirc.virg0.org",
 		"download" => "Erotica-0.6.9.kvt",
 		"screen" => "theme_erotica.png",
-		"thumb" => "thumb_erotica.png"
+		"thumb" => "thumb_erotica.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Anger",
@@ -201,7 +233,9 @@ $themes = array(
 		"home" => "http://kvirc.virg0.org",
 		"download" => "Anger-0.0.1.kvt",
 		"screen" => "theme_anger.png",
-		"thumb" => "thumb_anger.png"
+		"thumb" => "thumb_anger.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Dark Blue",
@@ -212,7 +246,9 @@ $themes = array(
 		"home" => "",
 		"download" => "DarkBlue-0.9.0.kvt",
 		"screen" => "theme_darkblue.png",
-		"thumb" => "thumb_darkblue.png"
+		"thumb" => "thumb_darkblue.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Soft Blue",
@@ -223,7 +259,9 @@ $themes = array(
 		"home" => "http://stato-brodo.blogspot.com",
 		"download" => "Soft_blue-2.0.kvt",
 		"screen" => "theme_softblue.jpg",
-		"thumb" => "thumb_softblue.jpg"
+		"thumb" => "thumb_softblue.jpg",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Snow",
@@ -234,7 +272,9 @@ $themes = array(
 		"home" => "",
 		"download" => "Snow-1.1.kvt",
 		"screen" => "theme_snow.jpg",
-		"thumb" => "thumb_snow.jpg"
+		"thumb" => "thumb_snow.jpg",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Zima",
@@ -245,7 +285,9 @@ $themes = array(
 		"home" => "",
 		"download" => "Zima-1.3.kvt",
 		"screen" => "theme_zima.jpg",
-		"thumb" => "thumb_zima.jpg"
+		"thumb" => "thumb_zima.jpg",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "GreenKDE",
@@ -257,7 +299,9 @@ $themes = array(
 		"download" => "GreenKDE-1.0.kvt",
 		"downbig" => "GreenKDE-1.1.2.kvt",
 		"screen" => "theme_greenkde.jpg",
-		"thumb" => "thumb_greenkde.jpg"
+		"thumb" => "thumb_greenkde.jpg",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Minimalist",
@@ -268,7 +312,9 @@ $themes = array(
 		"home" => "http://www.stantown.de",
 		"download" => "Minimalist-1.0.kvt",
 		"screen" => "theme_minimalist.png",
-		"thumb" => "thumb_minimalist.png"
+		"thumb" => "thumb_minimalist.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array(
 		"name" => "Slightly Yellow",
@@ -279,7 +325,9 @@ $themes = array(
 		"home" => "",
 		"download" => "Slightly_Yellow-1.0.kvt",
 		"screen" => "theme_slightly.png",
-		"thumb" => "thumb_slightly.png"
+		"thumb" => "thumb_slightly.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array("name" => "YellowIRC",
 		"version" => "1.0",
@@ -289,7 +337,9 @@ $themes = array(
 		"home" => "http://pragmaware.net",
 		"download" => "YellowIRC-1.0.kvt",
 		"screen" => "theme_yellowirc.png",
-		"thumb" => "thumb_yellowirc.png"
+		"thumb" => "thumb_yellowirc.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array("name" => "Love And Death",
 		"version" => "1.0.5",
@@ -299,7 +349,9 @@ $themes = array(
 		"home" => "",
 		"download" => "Love_and_Death-1.0.5.kvt",
 		"screen" => "theme_loveanddeath.png",
-		"thumb" => "thumb_loveanddeath.png"
+		"thumb" => "thumb_loveanddeath.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array("name" => "mIRC",
 		"version" => "2.0",
@@ -309,7 +361,9 @@ $themes = array(
 		"home" => "",
 		"download" => "mIRC-2.0.kvt",
 		"screen" => "theme_mirc.png",
-		"thumb" => "thumb_mirc.png"
+		"thumb" => "thumb_mirc.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array("name" => "SilverEx_Clone",
 		"version" => "0.1",
@@ -319,7 +373,9 @@ $themes = array(
 		"home" => "",
 		"download" => "SilverEx_Clone-0.1.kvt",
 		"screen" => "theme_silverexclone.png",
-		"thumb" => "thumb_silverexclone.png"
+		"thumb" => "thumb_silverexclone.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array("name" => "Light My Fire!",
 		"version" => "0.4",
@@ -329,7 +385,9 @@ $themes = array(
 		"home" => "",
 		"download" => "Light_My_Fire-0.4.kvt",
 		"screen" => "theme_lightmyfire.png",
-		"thumb" => "thumb_lightmyfire.png"
+		"thumb" => "thumb_lightmyfire.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array("name" => "Drow",
 		"version" => "1.0",
@@ -339,7 +397,9 @@ $themes = array(
 		"home" => "",
 		"download" => "Drow-1.0.kvt",
 		"screen" => "theme_drow.png",
-		"thumb" => "thumb_drow.png"
+		"thumb" => "thumb_drow.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array("name" => "Fractalize",
 		"version" => "0.6",
@@ -349,7 +409,9 @@ $themes = array(
 		"home" => "",
 		"download" => "Fractalize-0.6.kvt",
 		"screen" => "theme_fractalize.png",
-		"thumb" => "thumb_fractalize.png"
+		"thumb" => "thumb_fractalize.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array("name" => "System",
 		"version" => "2.0",
@@ -359,7 +421,9 @@ $themes = array(
 		"home" => "",
 		"download" => "System-2.0.kvt",
 		"screen" => "theme_system.png",
-		"thumb" => "thumb_system.png"
+		"thumb" => "thumb_system.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array("name" => "CoreZeam",
 		"version" => "1.0",
@@ -369,7 +433,9 @@ $themes = array(
 		"home" => "http://corezeam.org/index.php/aide/53-lirc-internet-relay-chat/129-kvirc.html?lang=fr",
 		"download" => "CoreZeam-1.0.0.kvt",
 		"screen" => "theme_corezeam.png",
-		"thumb" => "thumb_corezeam.png"
+		"thumb" => "thumb_corezeam.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array("name" => "Black",
 		"version" => "1.4",
@@ -379,7 +445,9 @@ $themes = array(
 		"home" => "",
 		"download" => "Black-1.4.kvt",
 		"screen" => "theme_black.png",
-		"thumb" => "thumb_black.png"
+		"thumb" => "thumb_black.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array("name" => "Hello Kitty",
 		"version" => "1.0",
@@ -389,7 +457,9 @@ $themes = array(
 		"home" => "",
 		"download" => "HelloKitty-1.0.kvt",
 		"screen" => "theme_hellokitty.png",
-		"thumb" => "thumb_hellokitty.png"
+		"thumb" => "thumb_hellokitty.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array("name" => "CoherEase",
 		"version" => "1.1 GR",
@@ -399,7 +469,9 @@ $themes = array(
 		"home" => "",
 		"download" => "CoherEase-1.1_GR.kvt",
 		"screen" => "theme_coherease.png",
-		"thumb" => "thumb_coherease.png"
+		"thumb" => "thumb_coherease.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array("name" => "Celebration",
 		"version" => "0.6.9",
@@ -409,7 +481,9 @@ $themes = array(
 		"home" => "http://kvirc.virg0.org",
 		"download" => "Celebration-0.6.9.kvt",
 		"screen" => "theme_celebration.png",
-		"thumb" => "thumb_celebration.png"
+		"thumb" => "thumb_celebration.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array("name" => "Savannah",
 		"version" => "1.5",
@@ -419,7 +493,9 @@ $themes = array(
 		"home" => "http://irc.tsure.ru",
 		"download" => "Savannah-1.5.kvt",
 		"screen" => "theme_savannah.png",
-		"thumb" => "thumb_savannah.png"
+		"thumb" => "thumb_savannah.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array("name" => "VDark",
 		"version" => "1.0.1",
@@ -429,7 +505,9 @@ $themes = array(
 		"home" => "",
 		"download" => "VDark-1.0.1.kvt",
 		"screen" => "theme_vdark.png",
-		"thumb" => "thumb_vdark.png"
+		"thumb" => "thumb_vdark.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
 	),
 	array("name" => "VLight",
 		"version" => "1.0.2",
@@ -439,7 +517,10 @@ $themes = array(
 		"home" => "",
 		"download" => "VLight-1.0.2.kvt",
 		"screen" => "theme_vlight.png",
-		"thumb" => "thumb_vlight.png")
+		"thumb" => "thumb_vlight.png",
+		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
+	)
 /*
 	// without info, not listed
 	//array("name" => "Burst Rebird",
