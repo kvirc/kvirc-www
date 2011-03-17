@@ -119,6 +119,20 @@ if(!is_numeric($iPage))
 		.item_release_date {
 			font-weight: bold;
 		}
+		.footer {
+			border-top: 1px solid rgb(130,130,130);
+			margin-top: 10px;
+			text-align: center;
+			font-size: 14pt;
+			margin-bottom: 10px;
+			padding-top: 4px;
+		}
+		.footer a {
+			text-decoration: none;
+		}
+		.current_page {
+			background-color: rgb(200,200,200);
+		}
 	</style>
 </head>
 <body>
@@ -193,7 +207,7 @@ foreach($aThemesToList as $aTheme)
 echo "	<div class=\"footer\" id=\"footer\">\n";
 // FIXME: Use Images here!
 if($iPage > 0)
-	echo "		<a class=\"page_link\" href=\"?version=".$szVersion."&lang=".$szLanguage."&page=".($iPage-1)."\">&lt;---</a>\n";
+	echo "		<a class=\"page_link\" href=\"?version=".$szVersion."&lang=".$szLanguage."&page=".($iPage-1)."\">&lt;===</a>\n";
 
 $iMin = $iPage - 5;
 if($iMin < 0)
@@ -207,11 +221,11 @@ for($i=$iMin;$i<=$iMax;$i++)
 	if($i != $iPage)
 		echo "		<a class=\"page_link\" href=\"?version=".$szVersion."&lang=".$szLanguage."&page=".($i)."\">".($i+1)."</a>\n";
 	else
-		echo "		".($i+1)."\n";
+		echo "		<span class=\"current_page\">".($i+1)."</span>\n";
 }
 
 if($iPage < $iMaxPage)
-	echo "		<a class=\"page_link\" href=\"?version=".$szVersion."&lang=".$szLanguage."&page=".($iPage+1)."\">---&gt;</a>\n";
+	echo "		<a class=\"page_link\" href=\"?version=".$szVersion."&lang=".$szLanguage."&page=".($iPage+1)."\">===&gt;</a>\n";
 echo "	</div>\n";
 
 ?>
