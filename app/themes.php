@@ -39,6 +39,7 @@ function checkVersion($version,$min)
 	return true; // all equal
 }
 
+
 if(file_exists("../translation/locale_$lang.php"))
 	include("./translation/locale_$lang.php");
 else
@@ -46,10 +47,20 @@ else
 
 include_once("../conf/themes.php");
 
-$rthemes = array_reverse($themes); // newer themes go first
 
 $szVersion = $_REQUEST["version"];
+if($szVersion == "")
+	$szVersion = $_SESSION["version"];
 $szLanguage = getLanguage();
+
+$_SESSION["version"] = $szVersion;
+
+$iPage = $_REQUEST["page"];
+if(!is_numeric($iPage))
+	$iPage = $_SESSION["page"];
+if(!is_numeric($iPage))
+	$iPage = 0;
+
 
 ?>
 <html>
@@ -118,10 +129,22 @@ $idx = 0;
 $szThumbPath = "/img/themes";
 $szScreenshotPath = "/img/themes";
 $szDownloadPath = "ftp://ftp.kvirc.de/pub/kvirc/themes";
+$iMaxItemsPerPage = 10;
+
+$aSortedThemes = array_reverse($themes); // newer themes go first
+
+$iCount = count($aSortedThemes);
 
 
+$iMaxPage = (int)($iCount / $iMaxItemsPerPage);
+if($iPage < 0)
+	$iPage = 0;
+else if($iPage > $iMaxPage)
+	$iPage = $iMaxPage;
 
-foreach($rthemes as $aTheme)
+$aThemesToList = array_slice($aSortedThemes,$iPage * $iMaxItemsPerPage,$iMaxItemsPerPage,false);
+
+foreach($aThemesToList as $aTheme)
 {
 	if(!checkVersion($szVersion,$aTheme["min_kvirc_version"]))
 		continue; // invalid version
@@ -166,6 +189,30 @@ foreach($rthemes as $aTheme)
 	
 	$idx++;
 }
+
+echo "	<div class=\"footer\" id=\"footer\">\n";
+// FIXME: Use Images here!
+if($iPage > 0)
+	echo "		<a class=\"page_link\" href=\"?version=".$szVersion."&lang=".$szLanguage."&page=".($iPage-1)."\">&lt;---</a>\n";
+
+$iMin = $iPage - 5;
+if($iMin < 0)
+	$iMin = 0;
+$iMax = $iPage + 5;
+if($iMax > $iMaxPage)
+	$iMax = $iMaxPage;
+
+for($i=$iMin;$i<=$iMax;$i++)
+{
+	if($i != $iPage)
+		echo "		<a class=\"page_link\" href=\"?version=".$szVersion."&lang=".$szLanguage."&page=".($i)."\">".($i+1)."</a>\n";
+	else
+		echo "		".($i+1)."\n";
+}
+
+if($iPage < $iMaxPage)
+	echo "		<a class=\"page_link\" href=\"?version=".$szVersion."&lang=".$szLanguage."&page=".($iPage+1)."\">---&gt;</a>\n";
+echo "	</div>\n";
 
 ?>
 </body>
