@@ -60,9 +60,9 @@ function print_header_or_footer()
 	
 	echo "<table class=\"header_or_footer_controls\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n";
 	echo "	<tr>\n";
-	echo "	<td width=\"30%\" align=\"left\" valign=\"middle\">\n";
+	echo "	<td width=\"40%\" align=\"left\" valign=\"middle\">\n";
 	echo "	</td>\n";
-	echo "	<td width=\"40%\" align=\"center\" valign=\"middle\">\n";
+	echo "	<td width=\"20%\" align=\"center\" valign=\"middle\">\n";
 	echo "	<div class=\"header_or_footer_links\">\n";
 	
 	// FIXME: Use Images here!
@@ -104,8 +104,8 @@ function print_header_or_footer()
 
 	echo "	</div>\n";
 	echo "	</td>\n";
-	echo "	<td width=\"30%\" align=\"right\" valign=\"middle\">\n";
-	echo "		<form class=\"sort_form\" method=\"get\">\n";
+	echo "	<td width=\"40%\" align=\"right\" valign=\"middle\">\n";
+	echo "		<nobr><form class=\"sort_form\" method=\"get\">\n";
 	echo "			<input type=\"hidden\" name=\"page\" value=\"0\">\n";
 	echo "			<input type=\"hidden\" name=\"lang\" value=\"".$g_szRequestedLanguage."\">\n";
 	echo "			<input type=\"hidden\" name=\"version\" value=\"".$g_szRequestedVersion."\">\n";
@@ -128,7 +128,7 @@ function print_header_or_footer()
 			echo "				<option selected value=\"desc\">Descending</option>\n";
 		}
 	echo "			</select>\n";
-	echo "		</form>\n";
+	echo "		</form></nobr>\n";
 	echo "	</td>\n";
 	echo "</tr>\n";
 	echo "</table>\n";
