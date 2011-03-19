@@ -47,11 +47,13 @@ $version_description["3.4.2"]       = "3.4.2 : Stable (Oct 2008)";
 $version_details["3.4.2"]           = "Old stable release.";
 
 $version_description["4.0.0"]       = "4.0.0 : Stable (Jun 2010)";
-$version_details["4.0.0"]           = "The previous stable release.";
+$version_details["4.0.0"]           = "An old stable release";
 
 $version_description["4.0.2"]       = "4.0.2 : Stable (Aug 2010)";
-$version_details["4.0.2"]           = "The latest stable release. This is the package you want :)";
+$version_details["4.0.2"]           = "The previous stable release.";
 
+$version_description["4.0.4"]       = "4.0.4 : Stable (Aug 2010)";
+$version_details["4.0.4"]           = "The latest stable release. This is the package you want :)";
 
 // The package groups
 $group_description["none"]      = "No group";
@@ -105,12 +107,43 @@ if((strpos($hua,'Windows') !== false) || (strpos($hua,'WinXP') !== false))
 	$quickdownload_link = "?id=releases&platform=macosx&version=4.0.2&lang=en";
 	$quickdownload_version = "4.0.2";
 } else {
-	$quickdownload_link = $ftp_mirror[1]['url']."/4.0.2/source/kvirc-4.0.2.tar.bz2";
-	$quickdownload_version = "4.0.2";
+	$quickdownload_link = $ftp_mirror[1]['url']."/4.0.4/source/kvirc-4.0.4.tar.bz2";
+	$quickdownload_version = "4.0.4";
 }
 
 
 $package_count = 0;
+
+//============================================================================================================================================
+// 4.0.4
+//============================================================================================================================================
+
+
+// 4.0.4
+// BZip 2 sources
+$p_filename[$package_count]    = "kvirc-4.0.4.tar.bz2";
+$p_path[$package_count]        = "4.0.4/source";
+$p_description[$package_count] = "KVIrc 4.0.4, sources (bzipped package)";
+$p_details[$package_count]     = "Source tarball for both unix and windows version. The package is crompressed using the bzip2 program.";
+$p_platform[$package_count]    = "source";
+$p_version[$package_count]     = "4.0.4";
+$p_size[$package_count]        = "5355332";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Fabio Bas (ctrlaltca at gmail dot com)";
+$package_count++;
+
+// 4.0.4
+// Gzip sources
+$p_filename[$package_count]    = "kvirc-4.0.4.tar.gz";
+$p_path[$package_count]        = "4.0.4/source";
+$p_description[$package_count] = "KVIrc 4.0.4, sources (gzipped package)";
+$p_details[$package_count]     = "Source tarball for both unix and windows version. The package is crompressed using the bzip2 program.";
+$p_platform[$package_count]    = "source";
+$p_version[$package_count]     = "4.0.4";
+$p_size[$package_count]        = "7012020";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Fabio Bas (ctrlaltca at gmail dot com)";
+$package_count++;
 
 //============================================================================================================================================
 // 4.0.2

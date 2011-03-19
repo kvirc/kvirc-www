@@ -20,7 +20,7 @@ supported anymore.</p>
 system available at <a href="javascript:opendoc('https://svn.kvirc.de/kvirc');">https://svn.kvirc.de/kvirc</a>.
 At the same site you can also request new features for the future 4.2.0 version.</p>
 
-<p>The sources packages are available
+<p>The source packages are available
 <a href="javascript:opendoc('?id=releases&platform=source&version=4.0.4');">here</a>.
 Binaries for various platforms will be available in
 <a href="javascript:opendoc('?id=releases');">the download section</a>
