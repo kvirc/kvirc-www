@@ -52,7 +52,7 @@ $version_details["4.0.0"]           = "An old stable release";
 $version_description["4.0.2"]       = "4.0.2 : Stable (Aug 2010)";
 $version_details["4.0.2"]           = "The previous stable release.";
 
-$version_description["4.0.4"]       = "4.0.4 : Stable (Aug 2010)";
+$version_description["4.0.4"]       = "4.0.4 : Stable (Mar 2011)";
 $version_details["4.0.4"]           = "The latest stable release. This is the package you want :)";
 
 // The package groups
