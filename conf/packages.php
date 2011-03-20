@@ -98,8 +98,8 @@ $hua = $_SERVER['HTTP_USER_AGENT'];
 
 if((strpos($hua,'Windows') !== false) || (strpos($hua,'WinXP') !== false))
 {
-	$quickdownload_link = $ftp_mirror[1]['url']."/4.0.2/binary/win32/KVIrc-4.0.2-Insomnia.exe";
-	$quickdownload_version = "4.0.2";
+	$quickdownload_link = $ftp_mirror[1]['url']."/4.0.4/binary/win32/KVIrc-4.0.4-Insomnia.exe";
+	$quickdownload_version = "4.0.4";
 } else if((strpos($hua,'Macintosh') !== false) || (strpos($hua,'Mac OS X') !== false) || (strpos($hua,'Mac_PowerPC') !== false))
 {
 	//$quickdownload_link = $ftp_mirror[1]['url']."/4.0.2/binary/macosx/KVIrc-4.0.2.dmg";
@@ -124,7 +124,7 @@ $package_count = 0;
 $p_filename[$package_count]    = "kvirc-4.0.4.tar.bz2";
 $p_path[$package_count]        = "4.0.4/source";
 $p_description[$package_count] = "KVIrc 4.0.4, sources (bzipped package)";
-$p_details[$package_count]     = "Source tarball for both unix and windows version. The package is crompressed using the bzip2 program.";
+$p_details[$package_count]     = "Source tarball for both unix and windows version. The package is compressed using the bzip2 program.";
 $p_platform[$package_count]    = "source";
 $p_version[$package_count]     = "4.0.4";
 $p_size[$package_count]        = "5355332";
@@ -137,12 +137,25 @@ $package_count++;
 $p_filename[$package_count]    = "kvirc-4.0.4.tar.gz";
 $p_path[$package_count]        = "4.0.4/source";
 $p_description[$package_count] = "KVIrc 4.0.4, sources (gzipped package)";
-$p_details[$package_count]     = "Source tarball for both unix and windows version. The package is crompressed using the bzip2 program.";
+$p_details[$package_count]     = "Source tarball for both unix and windows version. The package is compressed using the bzip2 program.";
 $p_platform[$package_count]    = "source";
 $p_version[$package_count]     = "4.0.4";
 $p_size[$package_count]        = "7012020";
 $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "Fabio Bas (ctrlaltca at gmail dot com)";
+$package_count++;
+
+// 4.0.4
+// Windows
+$p_filename[$package_count]    = "KVIrc-4.0.4-Insomnia.exe";
+$p_path[$package_count]        = "4.0.4/binary/win32";
+$p_description[$package_count] = "KVIrc 4.0.4, Windows binary, 32bit";
+$p_details[$package_count]     = "The self-installing binary package for Windows built on top of the LGPL version of the Qt library. Just double click on it after downloading.";
+$p_platform[$package_count]    = "win32";
+$p_version[$package_count]     = "4.0.4";
+$p_size[$package_count]        = "17276436";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Gizmokid2005";
 $package_count++;
 
 //============================================================================================================================================
@@ -155,7 +168,7 @@ $package_count++;
 $p_filename[$package_count]    = "kvirc-4.0.2.tar.bz2";
 $p_path[$package_count]        = "4.0.2/source";
 $p_description[$package_count] = "KVIrc 4.0.2, sources (bzipped package)";
-$p_details[$package_count]     = "Source tarball for both unix and windows version. The package is crompressed using the bzip2 program.";
+$p_details[$package_count]     = "Source tarball for both unix and windows version. The package is compressed using the bzip2 program.";
 $p_platform[$package_count]    = "source";
 $p_version[$package_count]     = "4.0.2";
 $p_size[$package_count]        = "5279602";
@@ -168,7 +181,7 @@ $package_count++;
 $p_filename[$package_count]    = "kvirc-4.0.2.tar.gz";
 $p_path[$package_count]        = "4.0.2/source";
 $p_description[$package_count] = "KVIrc 4.0.2, sources (gzipped package)";
-$p_details[$package_count]     = "Source tarball for both unix and windows version. The package is crompressed using the bzip2 program.";
+$p_details[$package_count]     = "Source tarball for both unix and windows version. The package is compressed using the bzip2 program.";
 $p_platform[$package_count]    = "source";
 $p_version[$package_count]     = "4.0.2";
 $p_size[$package_count]        = "6918688";
