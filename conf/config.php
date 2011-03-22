@@ -4,9 +4,9 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
 // Some vars
-$current="4.0.2";
-$availVersions=array("4.0.0",$current);
-$dpath="ftp://ftp.kvirc.de/pub/kvirc";
+$current = "4.0.4";
+$availVersions = array("4.0.0",$current);
+$dpath = "ftp://ftp.kvirc.de/pub/kvirc";
 
 // Get environment
 if((strlen(getenv("SERVER_SOFTWARE")))!="0"){
@@ -259,6 +259,8 @@ $splash=array(
 	array("name" => "3.4.2 \"Shiny\"", "screen" => "splash-3.4.2.png", "alt" => "3.4.2", "motd" => "Reality is that which, when you stop believing in it, doesn't go away", "date" => "14.10.2008", "present" => "3.4.1")
 );
 
+// Themes
+// This part was splitted to allow external apps to access themes' data
 include_once("conf/themes.php");
 
 // Tools

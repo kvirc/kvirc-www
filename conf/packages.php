@@ -158,6 +158,20 @@ $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "Gizmokid2005";
 $package_count++;
 
+// 4.0.4
+// Slackware 13.37
+$p_filename[$package_count]    = "kvirc-4.0.4-x86_64-1hel.txz";
+$p_path[$package_count]        = "4.0.4/binary/slackware";
+$p_description[$package_count] = "KVIrc 4.0.4, Slackware 13.37 binary, x86_64";
+$p_details[$package_count]     = "The self-installing binary package for Slackware 13.37 built on top of glibc 2.13. Just use pkgtool to install after downloading.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.4";
+$p_size[$package_count]        = "5259516";
+$p_group[$package_count]       = "slackware";
+$p_author[$package_count]      = "HelLViS69 (hellvis69 at gmail dot com)";
+$package_count++;
+
+
 //============================================================================================================================================
 // 4.0.2
 //============================================================================================================================================
@@ -204,7 +218,7 @@ $package_count++;
 
 // 4.0.2
 // Slackware 13.1
-$p_filename[$package_count]    = "kvirc-4.0.2-x86_64-1_SBo.txz";
+$p_filename[$package_count]    = "kvirc-4.0.2-x86_64-1hel.txz";
 $p_path[$package_count]        = "4.0.2/binary/slackware";
 $p_description[$package_count] = "KVIrc 4.0.2, Slackware 13.1 binary, x86_64";
 $p_details[$package_count]     = "The self-installing binary package for Slackware 13.1 built on top of glibc 2.11.1. Just use pkgtool to install after downloading.";
