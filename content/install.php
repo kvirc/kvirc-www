@@ -24,7 +24,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 <div class="column1-unit">
 	<p><?=$template['install']['text2']?>:</p>
 	<ul class="list">
-		<li><a href="?id=install&amp;lang=<?=$lang?>#qt">Qt GUI Toolkit 4.5</a> - <a href="javascript:opendoc('http://www.qtsoftware.com');">http://www.qtsoftware.com</a></li>
+		<li><a href="?id=install&amp;lang=<?=$lang?>#qt">Qt GUI Toolkit 4.6</a> - <a href="javascript:opendoc('http://www.qtsoftware.com');">http://www.qtsoftware.com</a></li>
 		<li><a href="?id=install&amp;lang=<?=$lang?>#cmake">CMake 2.6.4</a> - <a href="javascript:opendoc('http://www.cmake.org');">http://www.cmake.org</a></li>
 		<li><a href="?id=install&amp;lang=<?=$lang?>#cpp">C++ compiler</a> - <a href="javascript:opendoc('http://gcc.gnu.org');">http://gcc.gnu.org</a></li>
 		<li><a href="?id=install&amp;lang=<?=$lang?>#pthread">Pthread</a></li>
@@ -50,12 +50,12 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	<p><?=$template['install']['text8']?>:</p>
 	<code>
 	QMake version 2.01a<br />
-	Using Qt version 4.7.0 in /usr/lib64/qt/lib
+	Using Qt version 4.7.2 in /usr/lib64/qt/lib
 	</code>
 	<p><?=$template['install']['text9']?>:</p>
-	<code>#PATH=/opt/qt4.5/bin/:$PATH cmake ..</code>
+	<code>#PATH=/opt/qt4.7/bin/:$PATH cmake ..</code>
 	<p><?=$template['install']['text10']?>:</p>
-	<code>#LD_LIBRARY_PATH=/opt/qt4.5/lib/ kvirc4</code>
+	<code>#LD_LIBRARY_PATH=/opt/qt4.7/lib/ kvirc4</code>
 
 	<p><a name="cmake"></a></p>
 	<h3><b>CMake</b></h3>
