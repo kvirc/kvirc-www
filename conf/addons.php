@@ -5,7 +5,20 @@
 
 // Addons
 //aray("name" => "name", "ver" => "addon version", "min" => "min KVIrc version", "max" => "max KVIrc version", "author" => [array(]"author"[,"author2")], "mail" => [array(]"author mail"[,"author2 mail")], "short" => "short description", "desc" => "description", "url" => "url", "screen" => [array(]"screenshot"[,"screenshot2")])
-$addons=array(
+$addons = array(
+	array(
+		"name" => "Newsticker",
+		"version" => "2.0.0",
+		"mail" => "pragma [at] kvirc [dot] net",
+		"author" => "Szymon Tomasz Stefanek",
+		"desc" => "Simple RSS Feed Reader",
+		"home" => "",
+		"download" => "newsticker-2.0.0.kva",
+		"screen" => "",
+		"icon" => "newsticker-2.0.0/newsticker_32.png",
+		"release_date" => "2011.03.25",
+		"min_version" => "4.1.1"
+	)
 	/*
 	These addons must be converted in .kva package
 	1 => array("name" => "Auto Away: Automatic Away", "ver" => "1.0.0", "min" => "3.2.1", "max" => $current, "author" => "Szymon Stefanek", "desc" => $template['addons']['addon1'], "url" => "autoaway.1.0.0.zip"),
