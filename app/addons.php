@@ -8,6 +8,14 @@ $g_aAvailableSortOrders = array(
 		"author" => "Author"
 	);
 
+function cutFromFirst($szSubject,$szSearch)
+{
+	$i = strpos($szSubject,$szSearch);
+	if($i === FALSE)
+		return $szSubject;
+	return substring($szSubject,0,$i);
+}
+
 function getLanguage()
 {
 	// Get the language from browser and from querystring
@@ -23,9 +31,9 @@ function getLanguage()
 	$lang=$langAuto;
 	if($langAuto!=$langGet) $lang=$langGet;
 
-	$lang = strstr($lang,".",TRUE);
-	$lang = strstr($lang,"_",TRUE);
-	$lang = strstr($lang,"@",TRUE);
+	$lang = cutFromFirst($lang,".");
+	$lang = cutFromFirst($lang,"_");
+	$lang = cutFromFirst($lang,"@");
 
 	return $lang;
 }
