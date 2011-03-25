@@ -203,9 +203,12 @@ $_SESSION["dir"] = $g_szRequestedSortDirection;
 			border-top: solid 1px rgb(180,180,180);
 			clear: both;
 		}
-		.item_id {
+		.item_identification {
 			border: solid 1px rgb(210,210,210);
 			background: rgb(230,230,230);
+		}
+		.item_id {
+			display: none;
 		}
 		.item_name {
 			size: 16pt;
@@ -354,7 +357,8 @@ foreach($aItemsToList as $aItem)
 	echo "					</div>\n";
 	echo "				</td>\n";
 	echo "				<td valign=\"top\">\n";
-	echo "					<div class=\"item_id\">\n";
+	echo "					<div class=\"item_identification\">\n";
+	echo "						<span class=\"item_id\">".$aItem["id"]."</span>\n";
 	echo "						<span class=\"item_name\">".$aItem["name"]."</span>\n";
 	echo "						<span class=\"item_version\">".$aItem["version"]."</span>\n";
 	echo "					</div>\n";

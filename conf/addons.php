@@ -4,11 +4,11 @@
 
 
 // Addons
-//aray("name" => "name", "ver" => "addon version", "min" => "min KVIrc version", "max" => "max KVIrc version", "author" => [array(]"author"[,"author2")], "mail" => [array(]"author mail"[,"author2 mail")], "short" => "short description", "desc" => "description", "url" => "url", "screen" => [array(]"screenshot"[,"screenshot2")])
 $addons = array(
 	array(
-		"name" => "Newsticker",
-		"version" => "2.0.0",
+		"id" => "newsticker", // the id of the addon as it appears inside kvirc!
+		"name" => "Newsticker", // the user visible name of the addon
+		"version" => "2.0.0", // the version of the addon
 		"mail" => "pragma [at] kvirc [dot] net",
 		"author" => "Szymon Tomasz Stefanek",
 		"desc" => "Simple RSS Feed Reader",
