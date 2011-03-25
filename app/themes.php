@@ -14,7 +14,7 @@ function cutFromFirst($szSubject,$szSearch)
 	$i = strpos($szSubject,$szSearch);
 	if($i === FALSE)
 		return $szSubject;
-	return substring($szSubject,0,$i);
+	return substr($szSubject,0,$i);
 }
 
 function getLanguage()
