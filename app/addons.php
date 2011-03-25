@@ -23,6 +23,10 @@ function getLanguage()
 	$lang=$langAuto;
 	if($langAuto!=$langGet) $lang=$langGet;
 
+	$lang = strstr($lang,".",TRUE);
+	$lang = strstr($lang,"_",TRUE);
+	$lang = strstr($lang,"@",TRUE);
+
 	return $lang;
 }
 
@@ -266,8 +270,6 @@ $_SESSION["dir"] = $g_szRequestedSortDirection;
 <body>
 <?php
 
-
-echo "LANG IS: ".$g_szRequestedLanguage."<br>";
 
 $szIconPath = "/img/addons";
 $szScreenshotPath = "/img/addons";

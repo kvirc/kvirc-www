@@ -24,6 +24,10 @@ function getLanguage()
 	$lang=$langAuto;
 	if($langAuto!=$langGet) $lang=$langGet;
 
+	$lang = strstr($lang,".",TRUE);
+	$lang = strstr($lang,"_",TRUE);
+	$lang = strstr($lang,"@",TRUE);
+
 	return $lang;
 }
 
