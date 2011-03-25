@@ -267,6 +267,8 @@ $_SESSION["dir"] = $g_szRequestedSortDirection;
 <?php
 
 
+echo "LANG IS: ".$g_szRequestedLanguage."<br>";
+
 $szIconPath = "/img/addons";
 $szScreenshotPath = "/img/addons";
 $szDownloadPath = "ftp://ftp.kvirc.de/pub/kvirc/addons";
