@@ -12,6 +12,7 @@ $addons = array(
 		"mail" => "pragma [at] kvirc [dot] net",
 		"author" => "Szymon Tomasz Stefanek",
 		"desc" => "Simple RSS Feed Reader",
+		"desc_it" => "Semplice Lettore per Feed RSS",
 		"home" => "",
 		"download" => "newsticker-2.0.0.kva",
 		"screen" => "",
