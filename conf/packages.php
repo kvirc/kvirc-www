@@ -178,7 +178,7 @@ $package_count++;
 // Ubuntu Maverick
 $p_filename[$package_count]    = "kvirc_4.0.4-1_amd64.deb";
 $p_path[$package_count]        = "4.0.4/binary/ubuntu/maverick";
-$p_description[$package_count] = "KVIrc 4.0.4, Ubuntu Maverick, data files.";
+$p_description[$package_count] = "KVIrc 4.0.4, Ubuntu Maverick, amd64 architecture.";
 $p_details[$package_count]     = "Data files for the self-installing binary packages (all architectures). You also need one of the binary packages above.";
 $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.4";
@@ -191,7 +191,7 @@ $package_count++;
 // Ubuntu Maverick
 $p_filename[$package_count]    = "kvirc_4.0.4-1_i386.deb";
 $p_path[$package_count]        = "4.0.4/binary/ubuntu/maverick";
-$p_description[$package_count] = "KVIrc 4.0.4, Ubuntu Maverick, data files.";
+$p_description[$package_count] = "KVIrc 4.0.4, Ubuntu Maverick, i386 architecture.";
 $p_details[$package_count]     = "Data files for the self-installing binary packages (all architectures). You also need one of the binary packages above.";
 $p_platform[$package_count]    = "linux";
 $p_version[$package_count]     = "4.0.4";
