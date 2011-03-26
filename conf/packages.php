@@ -83,6 +83,9 @@ $group_details["ubuntu_karmic"] = "Download this if you have an Ubuntu Karmic li
 $group_description["ubuntu_lucid"] = "Ubuntu Lucid *.deb binary package";
 $group_details["ubuntu_lucid"] = "Download this if you have an Ubuntu Lucid linux distribution.";
 
+$group_description["ubuntu_maverick"] = "Ubuntu Maverick *.deb binary package";
+$group_details["ubuntu_maverick"] = "Download this if you have an Ubuntu Maverick linux distribution.";
+
 $group_description["mandriva"] = "Mandriva linux binary *.rpm";
 $group_details["mandriva"] = "Download this if you have a Mandiva linux distribution. This kind of package *might* also work on plain RedHat, SuSE and other rpm-enabled systems.";
 
@@ -98,17 +101,17 @@ $hua = $_SERVER['HTTP_USER_AGENT'];
 
 if((strpos($hua,'Windows') !== false) || (strpos($hua,'WinXP') !== false))
 {
-	$quickdownload_link = $ftp_mirror[1]['url']."/4.0.4/binary/win32/KVIrc-4.0.4-Insomnia.exe";
-	$quickdownload_version = "4.0.4";
+	$quickdownload_link = $ftp_mirror[1]['url']."/$current/binary/win32/KVIrc-$current-$codename.exe";
+	$quickdownload_version = $current;
 } else if((strpos($hua,'Macintosh') !== false) || (strpos($hua,'Mac OS X') !== false) || (strpos($hua,'Mac_PowerPC') !== false))
 {
 	//$quickdownload_link = $ftp_mirror[1]['url']."/4.0.2/binary/macosx/KVIrc-4.0.2.dmg";
 	// point to the download page that explains that the user needs to pre-installl Qt
-	$quickdownload_link = "?id=releases&platform=macosx&version=4.0.2&lang=en";
-	$quickdownload_version = "4.0.2";
+	$quickdownload_link = "?id=releases&platform=macosx&version=$current&lang=en";
+	$quickdownload_version = $current;
 } else {
-	$quickdownload_link = $ftp_mirror[1]['url']."/4.0.4/source/kvirc-4.0.4.tar.bz2";
-	$quickdownload_version = "4.0.4";
+	$quickdownload_link = $ftp_mirror[1]['url']."/$current/source/kvirc-$current.tar.bz2";
+	$quickdownload_version = $current;
 }
 
 
@@ -169,6 +172,45 @@ $p_version[$package_count]     = "4.0.4";
 $p_size[$package_count]        = "5259516";
 $p_group[$package_count]       = "slackware";
 $p_author[$package_count]      = "HelLViS69 (hellvis69 at gmail dot com)";
+$package_count++;
+
+// 4.0.4
+// Ubuntu Maverick
+$p_filename[$package_count]    = "kvirc_4.0.4-1_amd64.deb";
+$p_path[$package_count]        = "4.0.4/binary/ubuntu/maverick";
+$p_description[$package_count] = "KVIrc 4.0.4, Ubuntu Maverick, data files.";
+$p_details[$package_count]     = "Data files for the self-installing binary packages (all architectures). You also need one of the binary packages above.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.4";
+$p_size[$package_count]        = "2178476";
+$p_group[$package_count]       = "ubuntu_maverick";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// 4.0.4
+// Ubuntu Maverick
+$p_filename[$package_count]    = "kvirc_4.0.4-1_i386.deb";
+$p_path[$package_count]        = "4.0.4/binary/ubuntu/maverick";
+$p_description[$package_count] = "KVIrc 4.0.4, Ubuntu Maverick, data files.";
+$p_details[$package_count]     = "Data files for the self-installing binary packages (all architectures). You also need one of the binary packages above.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.4";
+$p_size[$package_count]        = "1960614";
+$p_group[$package_count]       = "ubuntu_maverick";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
+$package_count++;
+
+// 4.0.4
+// Ubuntu Maverick
+$p_filename[$package_count]    = "kvirc-data_4.0.4-1_all.deb";
+$p_path[$package_count]        = "4.0.4/binary/ubuntu/maverick";
+$p_description[$package_count] = "KVIrc 4.0.4, Ubuntu Maverick, data files.";
+$p_details[$package_count]     = "Data files for the self-installing binary packages (all architectures). You also need one of the binary packages above.";
+$p_platform[$package_count]    = "linux";
+$p_version[$package_count]     = "4.0.4";
+$p_size[$package_count]        = "2415060";
+$p_group[$package_count]       = "ubuntu_maverick";
+$p_author[$package_count]      = "ambossarm (ambossarm at gmail dot com)";
 $package_count++;
 
 
