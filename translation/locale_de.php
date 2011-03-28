@@ -928,8 +928,8 @@ $template['splash']['in']="Enthalten in";
 $template['status']['title']="Projektstatus";
 $template['status']['text']="
 	<p>Nach 10 Jahren Entwicklung ist KVIrc ein ausgereifter und voll ausgestatteter IRC-Client, ein exzellenter Begleiter für die täglichen IRC-Aktivitäten.</p>
-	<p>Die aktuelle stabile Version ist <a href=\"?id=news&story=2010.08.01.16.30.1.story&dir=latest&lang=$lang\">4.0.2 \"Insomnia\"</a>.
-	Sie wurde am 1. August 2010 veröffentlicht.
+	<p>Die aktuelle stabile Version ist <a href=\"http://www.kvirc.net/?id=news&story=2011.03.19.23.40.1.story&dir=latest&lang=$lang\">4.0.4 \"Insomnia\"</a>.
+	It has been published on March 19, 2011.
 
 	Sie kann als Quelltext von der <a href=\"?id=download&amp;lang=$lang\">download</a>-Seite bezogen werden.</p>
 	<p>Wenn Sie offizielle Veröffentlichungen suchen, schauen Sie in <a href=\"?id=releases&amp;lang=$lang\">diese Rubrik</a>, diese werden seltener veröffentlicht, sind aber die stabilsten. Wählen Sie ihre Version zwischen Linux, Windows, MacOSX oder Quelltextpaket.</p>

@@ -998,8 +998,8 @@ $template['splash']['in']="Splash presente en";
 $template['status']['title']="Estado del proyecto";
 $template['status']['text']="
 	<p>Después de 10 años de desarrollo KVIrc es un cliente de IRC maduro y lleno de prestaciones, una excelente compañía para tus sesiones diarias de IRC.</p>
-	<p>La última versión estable es <a href=\"?id=news&story=2010.08.01.16.30.1.story&dir=latest&lang==$lang\">4.0.2 \"Insomnia\"</a>.
-	Fue publicada el 1 de Agosto de 2010.
+	<p>La última versión estable es <a href=\"http://www.kvirc.net/?id=news&story=2011.03.19.23.40.1.story&dir=latest&lang=$lang\">4.0.4 \"Insomnia\"</a>.
+	It has been published on March 19, 2011.
 	Puede ser obtenida en código desde la página de <a href=\"?id=download&amp;lang=$lang\">descargas</a>.</p>
 	<p>Si estás buscando versiones oficiales, échale un vistazo a <a href=\"?id=releases&amp;lang=$lang\">esta sección</a>, estas versiones son liberadas menos frecuentemente pero son las más estables. Elige tu versión entre Linux, Windows, MacOS X o el paquete de código fuente.</p>
 	<p>Las snapshots están <a href=\"?id=snapshots&amp;lang=$lang\">aquí</a> y el SVN está <a href=\"?id=SVN&amp;lang=$lang\">aquí</a>.</p>
