@@ -130,7 +130,7 @@ echo "<div class=\"column1-unit\">";
 						echo "<tr><td class=\"data\">".$template['custom']['type']."</td><td>".$platform_description[$platform]."</td></tr>";
 
 						if($p_size[$i]!="")
-							echo "<tr><td class=\"data\">".$template['custom']['size']."</td><td>".$p_size[$i]."</td></tr>";
+							echo "<tr><td class=\"data\">".$template['custom']['size']."</td><td>".humanSize($p_size[$i])."</td></tr>";
 						if($p_author[$i]!="")
 							echo "<tr><td class=\"data\">".$template['custom']['author']."</td><td>".$p_author[$i]."</td></tr>";
 						if($p_details[$i]!="")

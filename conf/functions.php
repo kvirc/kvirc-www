@@ -55,6 +55,32 @@ function search()
 	}
 }
 
+// Return sizes in human readable form
+function humanSize($size)
+{
+	if(!is_numeric($size))
+		return $size;
+
+	$jump = 0;
+	while($size >= 1024)
+	{
+		$size /= 1024;
+		$jump++;
+	}
+
+	$size = number_format($size,2);
+
+	switch($jump)
+	{
+		case 2: $size = $size." MB"; break;
+		case 1: $size = $size." KB"; break;
+		case 0:
+		default: $size = $size." B";
+	}
+
+	return $size;
+}
+
 function getHostKvircde()
 {
 	// Detection of kvirc.de machines
