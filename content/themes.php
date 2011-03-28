@@ -30,7 +30,7 @@ echo "<div class=\"column1-unit\">";
 
 	echo "<p>".$template['themes']['text5']."</p>";
 
-$rthemes = array_reverse($themes); // newer themes go first
+$rthemes = array_reverse(&$themes); // newer themes go first
 
 $bInLeftColumn = false;
 
@@ -48,7 +48,7 @@ foreach($rthemes as $value)
 		echo "<h1>".$value['name']." ".$value['version'][0]." &amp; ".$value['version'][1]."</h1>";
 	else echo "<h1>".$value['name']." ".$value['version']."</h1>";
 
-	echo "<div class=\"img\"><a href=\"$path/".$value['screen']."\"><img src=\"$path/".$value['thumb']."\" alt=\"".$template['themes']['screenshot']."\" /></a></div>";
+	echo "<div class=\"img\"><a href=\"$path/".$value['screen']."\"><img src=\"$path/thumb_".$value['screen']."\" alt=\"".$template['themes']['screenshot']."\" /></a></div>";
 
 	echo "<div class=\"desc\">";
 	echo "<p>";
