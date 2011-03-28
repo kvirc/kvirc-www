@@ -5,15 +5,16 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 
 require_once("conf/functions.php");
 
-$story=trim(addslashes(strip_tags($_GET['story'])));
-$dir=trim(addslashes(strip_tags($_GET['dir'])));
+$story = trim(strip_tags(htmlentities($_GET['story'],ENT_QUOTES)));
+$dir = trim(strip_tags(htmlentities($_GET['dir'],ENT_QUOTES)));
 
 echo "<h1 class=\"pagetitle\">".$template['news']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
 
 if(($story!="")&&($dir!="")){
 	$x['dummy']="";
-	if(!news_read_entry($docRoot."/news/".$dir."/".$story,$x)){
+	if(!news_read_entry($docRoot."/news/".$dir."/".$story,$x))
+	{
 		echo "<h1>".$template['news']['error']."</h1>";
 		echo "<p>".$template['news']['nonews']."</p>";
 		echo "</div>";

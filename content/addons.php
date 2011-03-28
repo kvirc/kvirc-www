@@ -6,7 +6,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 $dpath .= "/addons";
 $imgPath = "img/addons";
 $numAddons = 0;
-$version=trim(strip_tags(addslashes($_GET['version'])));
+$version=trim(strip_tags(htmlentities($_GET['version'],ENT_QUOTES)));
 if(!$version || !eregi("^[0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}$",$version))
 	$version=$current;
 

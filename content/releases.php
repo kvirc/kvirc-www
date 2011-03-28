@@ -9,11 +9,11 @@ echo "<h1 class=\"pagetitle\">".$template['releases']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
 
 	if($platform=="")
-		$platform=trim(strip_tags(addslashes($_GET['platform'])));
+		$platform=trim(strip_tags(htmlentities($_GET['platform'],ENT_QUOTES)));
 	if($version=="")
-		$version=trim(strip_tags(addslashes($_GET['version'])));
+		$version=trim(strip_tags(htmlentities($_GET['version'],ENT_QUOTES)));
 	if($group=="")
-		$group=trim(strip_tags(addslashes($_GET['group'])));
+		$group=trim(strip_tags(htmlentities($_GET['group'],ENT_QUOTES)));
 
 	if($platform==""){
 		echo "<p>".$template['releases']['text1']."</p>";

@@ -37,17 +37,19 @@ function checkVersion($version,$min,$max)
 function search()
 {
 	// Check for a search
-	if(isset($_POST['button'])&&($_POST['button']!=""))
+	if(isset($_POST['button']) && ($_POST['button']!=""))
 	{
 		// Select type of search
-		$type=trim(strip_tags(addslashes($_POST['type'])));
-		if($type=="site") $site="www.kvirc.net";
-		elseif($type=="mail") $site="lists.omnikron.net";
+		$type=trim(strip_tags(htmlentities($_POST['type'],ENT_QUOTES)));
+		if($type == "site")
+			$site = "www.kvirc.net";
+		elseif($type=="mail")
+			$site = "lists.omnikron.net";
 
 		// Setup keywords
-		$keywords=trim(strip_tags(addslashes($_POST['keywords'])));
-		$keywords=str_replace(" ","+",$keywords);
-		$searchUrl="http://www.google.com/search?hl=$lang&q=$keywords+site%3A$site";
+		$keywords = trim(strip_tags(htmlentities($_POST['keywords'],ENT_QUOTES)));
+		$keywords = str_replace(" ","+",$keywords);
+		$searchUrl = "http://www.google.com/search?hl=$lang&q=$keywords+site%3A$site";
 
 		// Get the results
 		header("Location: $searchUrl");
