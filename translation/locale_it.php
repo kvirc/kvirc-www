@@ -141,7 +141,7 @@ $template['addons']['text1b']="
 $template['addons']['text2']="Per installare un addon";
 $template['addons']['tree1']="<b>Scarica</b> l'addon";
 $template['addons']['tree2']="
-	Premi <b>CTRL+Alt+N</b> per aprire il Gestore degli Addon (o aprilo dal menu Impostazioni)";
+	Premi <b>CTRL+Shift+N</b> per aprire il Gestore degli Addon (o aprilo dal menu Impostazioni)";
 $template['addons']['tree3']="Premi il pulsante \"<b>Installa Addon Dal Disco</b>\"";
 $template['addons']['tree4']="
 	Naviga fino al punto dove hai decompresso l'addon e selezionalo";

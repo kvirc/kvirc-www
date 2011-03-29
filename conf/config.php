@@ -7,7 +7,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 $current = "4.0.4";
 $codename = "Insomnia";
 $availVersions = array("4.0.0",$current);
-$dpath = "ftp://ftp.kvirc.de/pub/kvirc";
+$dpath = "ftp://ftp.kvirc.de/pub/kvirc/";
 
 // Include language templates
 if(!file_exists("./translation/locale_$lang.php"))
@@ -215,33 +215,111 @@ $scripts=array(
 // Splash screens
 // array("name" => "name", "screen" => "screenshot", "alt" => "version number", "motd" => "motd", "date" => "date", "present" => "present")
 $splash=array(
-	1 => array("name" => "0.9.0", "screen" => "splash-0.9.0.png", "alt" => "0.9.0", "motd" => "", "date" => "25.01.1999", "present" => "0.6.0, 0.8.0, 0.9.0"),
-	array("name" => "1.0.0 beta", "screen" => "splash-1.0.0-beta.png", "alt" => "1.0.0 beta", "motd" => "The Net in your hands", "date" => "", "present" => ""),
-	array("name" => "1.0.0 \"Millennium\"", "screen" => "splash-1.0.0.png", "alt" => "1.0.0", "motd" => "", "date" => "21.12.1999", "present" => ""),
-	array("name" => "2.0.0 \"Phoenix\"", "screen" => "splash-2.0.0.png", "alt" => "2.0.0", "motd" => "The client that can't make coffee", "date" => "30.05.2000", "present" => ""),
-	array("name" => "2.1.0 \"Dark Star\"", "screen" => "splash-2.1.0.png", "alt" => "2.1.0", "motd" => "The client that can't make coffee", "date" => "30.01.2001", "present" => ""),
-	array("name" => "2.1.1 \"Monolith\"", "screen" => "splash-2.1.1.png", "alt" => "2.1.1", "motd" => "A breath of fresh net", "date" => "01.05.2001", "present" => ""),
-	array("name" => "3.0.0 beta \"Avatar\"", "screen" => "splash-3.0.0-beta.png", "alt" => "3.0.0 beta", "motd" => "No boundaries on the net", "date" => "24.12.2001", "present" => "alpha, xmas, beta 1, beta2"),
-	array("name" => "3.0.0 CVS \"Avatar\"", "screen" => "splash-3.0.0-cvs.png", "alt" => "3.0.0 CVS", "motd" => "You run, never stop, got to win, got to run 'till you drop", "date" => "", "present" => ""),
-	array("name" => "3.0.0 \"Awakening\"", "screen" => "splash-3.0.0.png", "alt" => "3.0.0", "motd" => "No boundaries on the net", "date" => "17.04.2004", "present" => ""),
-	array("name" => "3.0.1 \"System Virtue\"", "screen" => "splash-3.0.1.png", "alt" => "3.0.1", "motd" => "Ooh, look, a shiny object...", "date" => "31.04.2004", "present" => ""),
-	array("name" => "3.0.2 CVS \"Realia\"", "screen" => "splash-3.0.2-cvs.png", "alt" => "3.0.2", "motd" => "Ooh, look, a shiny object...", "date" => "06.12.2004", "present" => ""),
-	array("name" => "3.2.0 \"Realia\"", "screen" => "splash-3.2.0.png", "alt" => "3.2.0", "motd" => "So Long,  And Thanks for All the Fish", "date" => "26.02.2005", "present" => ""),
-	array("name" => "3.2.0.99 CVS \"Marmalade\" (1)", "screen" => "splash-3.2.0.99.1.png", "alt" => "3.2.0.99", "motd" => "Hello, Hey Joe! You Wanna Give It a Go ?", "date" => "01.05.2005", "present" => ""),
-	array("name" => "3.2.0.99 CVS \"Marmalade\" (2)", "screen" => "splash-3.2.0.99.2.png", "alt" => "3.2.0.99", "motd" => "Hello, Hey Joe! You Wanna Give It a Go ?", "date" => "01.08.2005", "present" => ""),
-	array("name" => "3.2.4 CVS \"Anomalies\"", "screen" => "splash-3.2.0.20051230.png", "alt" => "3.2.4", "motd" => "Time makes no sense", "date" => "06.08.2006", "present" => "3.2.0.20051230, 3.2.1, 3.2.2, 3.2.3, 3.2.4"),
-	array("name" => "3.2.6 SVN \"Anomalies\"", "screen" => "splash-3.2.6-svn.png", "alt" => "3.2.6", "motd" => "Time makes no sense", "date" => "12.09.2006", "present" => "3.2.4, 3.2.5, 3.2.6"),
-	array("name" => "3.4.0 \"Virgo\"", "screen" => "splash-3.4.0.png", "alt" => "3.4.0", "motd" => "No matter how dark the night, somehow the Sun rises once again", "date" => "25.03.2008", "present" => ""),
-	array("name" => "3.4.2 \"Shiny\"", "screen" => "splash-3.4.2.png", "alt" => "3.4.2", "motd" => "Reality is that which, when you stop believing in it, doesn't go away", "date" => "14.10.2008", "present" => "3.4.1")
+	1 => array("name" => "0.9.0", "screen" => "0.9.0.png", "alt" => "0.9.0", "motd" => "", "date" => "25.01.1999", "present" => "0.6.0, 0.8.0, 0.9.0"),
+	array("name" => "1.0.0 beta", "screen" => "1.0.0-beta.png", "alt" => "1.0.0 beta", "motd" => "The Net in your hands", "date" => "", "present" => ""),
+	array("name" => "1.0.0 \"Millennium\"", "screen" => "1.0.0.png", "alt" => "1.0.0", "motd" => "", "date" => "21.12.1999", "present" => ""),
+	array("name" => "2.0.0 \"Phoenix\"", "screen" => "2.0.0.png", "alt" => "2.0.0", "motd" => "The client that can't make coffee", "date" => "30.05.2000", "present" => ""),
+	array("name" => "2.1.0 \"Dark Star\"", "screen" => "2.1.0.png", "alt" => "2.1.0", "motd" => "The client that can't make coffee", "date" => "30.01.2001", "present" => ""),
+	array("name" => "2.1.1 \"Monolith\"", "screen" => "2.1.1.png", "alt" => "2.1.1", "motd" => "A breath of fresh net", "date" => "01.05.2001", "present" => ""),
+
+
+
+	array("name" => "3.0.0 beta \"Avatar\"", "screen" => "3.0.0-beta.png", "alt" => "3.0.0 beta", "motd" => "No boundaries on the net", "date" => "24.12.2001", "present" => "alpha, xmas, beta 1, beta2"),
+	array("name" => "3.0.0 CVS \"Avatar\"", "screen" => "3.0.0-cvs.png", "alt" => "3.0.0 CVS", "motd" => "You run, never stop, got to win, got to run 'till you drop", "date" => "", "present" => ""),
+	array("name" => "3.0.0 \"Awakening\"", "screen" => "3.0.0.png", "alt" => "3.0.0", "motd" => "No boundaries on the net", "date" => "17.04.2004", "present" => ""),
+	array("name" => "3.0.1 \"System Virtue\"", "screen" => "3.0.1.png", "alt" => "3.0.1", "motd" => "Ooh, look, a shiny object...", "date" => "31.04.2004", "present" => ""),
+
+
+	array("name" => "3.0.2 CVS \"Realia\"", "screen" => "3.0.2-cvs.png", "alt" => "3.0.2", "motd" => "Ooh, look, a shiny object...", "date" => "06.12.2004", "present" => ""),
+
+
+
+	array(
+		"name" => "3.2.0 \"Realia\"",
+		"motd" => "So Long,  And Thanks for All the Fish",
+		"screen" => "3.2.0.png",
+		"date" => "26.02.2005",
+		"present" => ""
+	),
+	array(
+		"name" => "3.2.0.99 CVS \"Marmalade\"",
+		"motd" => "Hello, Hey Joe! You Wanna Give It a Go ?",
+		"screen" => array(
+			"3.2.0.99.2.png",
+			"3.2.0.99.1.png"
+		),
+		"date" => array(
+			"01.08.2005", // 3.2.0.99 2nd edition
+			"01.05.2005"  // 3.2.0.99 1st edition
+		),
+		"present" => ""
+	),
+	array(
+		"name" => "3.2.6 SVN \"Anomalies\"",
+		"motd" => "Time makes no sense",
+		"screen" => array(
+			"3.2.6-svn.png",
+			"3.2.4-cvs.png",
+		),
+		"date" => array(
+			"12.09.2006", // 3.2.6
+			"06.08.2006", // 3.2.4
+		),
+		"present" => "3.2.5, 3.2.4, 3.2.3, 3.2.2, 3.2.1, 3.2.0.20051230"
+	),
+	array(
+		"name" => "3.4.2 \"Shiny\"",
+		"motd" => "Reality is that which, when you stop believing in it, doesn't go away",
+		"screen" => array(
+			"3.4.2.png",
+			"3.4.0.png"
+		),
+		"date" => array(
+			"14.10.2008", // 3.4.2
+			"25.03.2008"  // 3.4.0
+		),
+		"present" => "3.4.1"
+	),
+	array(
+		"name" => "4.0.4 \"Insomnia\"",
+		"motd" => "Once you know what it is you want to be true, instinct is a very useful device for enabling you to know that it is",
+		"screen" => array(
+			"4.0.4.png",
+			"4.0.2.png",
+			"4.0.0.png",
+			"4.0.0-rc3.png",
+			"4.0.0-rc2-r4000.png",
+			"4.0.0-rc2.png",
+			"4.0.0-rc1.png",
+			"4.0.0-svn.png"
+		),
+		"date" => array(
+			"19.03.2011", // 4.0.4
+			"01.08.2010", // 4.0.2
+			"27.06.2010", // 4.0.0
+			"17.04.2010", // 4.0.0-rc3
+			"20.02.2010", // 4.0.0-rc2-r4000
+			"19.12.2009", // 4.0.0-rc2
+			"10.09.2009", // 4.0.0-rc1
+			"19.01.2009"  // 4.0.0-svn
+		),
+		"present" => ""
+	)/*,
+	array(
+		"name" => "4.2.0 \"Equilibrium\"",
+		"motd" => "",
+		"screen" => "4.1.1.png",
+		"date" => 
+	)*/
 );
 
 // Themes
 // This part was splitted to allow external apps to access themes data
-include_once("conf/themes.php"); // FIXME: Put this include only where it's really needed
+include_once("themes.php"); // FIXME: Put this include only where it's really needed
 
 // Addons
 // This part was splitted to allow external apps to access addons data
-include_once("conf/addons.php"); // FIXME: Put this include only where it's really needed
+include_once("addons.php"); // FIXME: Put this include only where it's really needed
 
 // Tools
 //aray("name" => "tool name", "author" => "author name", "mail" => "author mail", "desc" => "description", "url" => "url")

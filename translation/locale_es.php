@@ -141,7 +141,7 @@ $template['addons']['text1b']="
 $template['addons']['text2']="Para instalar un addon";
 $template['addons']['tree1']="<b>Descarga</b> el addon";
 $template['addons']['tree2']="
-	Pulsa <b>CTRL+Alt+N</b> para abrir el Gestor de Funcionalidades Adicionales (o ábrelo desde el menú de Configuración)";
+	Pulsa <b>CTRL+Shift+N</b> para abrir el Gestor de Funcionalidades Adicionales (o ábrelo desde el menú de Configuración)";
 $template['addons']['tree3']="Press the \"<b>Install Addon Package From Disk</b>\" button";
 $template['addons']['tree4']="
 	Navigate to the place where you have the addon package and select it";

@@ -142,7 +142,7 @@ $template['addons']['text1b']="
 $template['addons']['text2']="Um eine Erweiterung zu installieren";
 $template['addons']['tree1']="die Erweiterung <b>herunterladen</b>";
 $template['addons']['tree2']="
-	Mit <b>Strg+Alt+N</b> den Erweiterungsmanager-Dialog öffnen (oder über das Einstellungsmenü).";
+	Mit <b>Strg+Shift+N</b> den Erweiterungsmanager-Dialog öffnen (oder über das Einstellungsmenü).";
 $template['addons']['tree3']="Klicke auf den »<b>Installiere Erweiterungspaket von Festplatte</b>«-Knopf";
 $template['addons']['tree4']="
 	Gehen Sie zu dem Ort, wo das Erweiterungspaket gespeichert wurde und wählen es aus";

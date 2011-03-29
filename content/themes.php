@@ -3,8 +3,8 @@
 if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
-$path="img/themes";
-$dpath.="/themes";
+$path = "img/themes";
+$dpath .= "themes";
 
 echo "<h1 class=\"pagetitle\">".$template['themes']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
@@ -30,7 +30,7 @@ echo "<div class=\"column1-unit\">";
 
 	echo "<p>".$template['themes']['text5']."</p>";
 
-$rthemes = array_reverse(&$themes); // newer themes go first
+$rthemes = array_reverse($themes); // newer themes go first
 
 $bInLeftColumn = false;
 

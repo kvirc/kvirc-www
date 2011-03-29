@@ -1,7 +1,6 @@
 <?php
 
 // Themes
-
 $themes = array(
 	array(
 		"name" => "Marble Theme",

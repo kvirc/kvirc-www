@@ -3,7 +3,7 @@
 if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
-$dpath .= "/addons";
+$dpath .= "addons";
 $imgPath = "img/addons";
 $numAddons = 0;
 $version=trim(strip_tags(htmlentities($_GET['version'],ENT_QUOTES)));
@@ -86,7 +86,7 @@ echo "<div class=\"column1-unit\">";
 		echo "<tr>";
 			echo "<td colspan=\"2\" class=\"details\">";
 				$addon = "addon$key";
-				echo "<p><a href=\"javascript:showAll('$addon');\" id=\"l$addon\">".$template['custom']['showhide']."</a></p>";
+				echo "<p><a href=\"javascript:showAll('$addon');\">".$template['custom']['showhide']."</a></p>";
 				echo "<div id=\"$addon\" class=\"hidden\">";
 					echo "<p>".$value['desc']."</p>";
 					echo "<p>";

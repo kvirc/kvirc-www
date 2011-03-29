@@ -142,7 +142,7 @@ $template['addons']['text1b']="
 $template['addons']['text2']="To install an addon";
 $template['addons']['tree1']="<b>Download</b> the addon";
 $template['addons']['tree2']="
-	Press <b>CTRL+Alt+N</b> to open the Addon Management dialog (or open it from the Settings menu)";
+	Press <b>CTRL+Shift+N</b> to open the Addon Management dialog (or open it from the Settings menu)";
 $template['addons']['tree3']="Press the \"<b>Install Addon Package From Disk</b>\" button";
 $template['addons']['tree4']="
 	Navigate to the place where you have the addon package and select it";
