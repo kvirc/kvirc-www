@@ -9,6 +9,11 @@ $codename = "Insomnia";
 $availVersions = array("4.0.0",$current);
 $dpath = "ftp://ftp.kvirc.de/pub/kvirc";
 
+// Include language templates
+if(!file_exists("./translation/locale_$lang.php"))
+	include("./translation/locale_en.php");
+else include("./translation/locale_$lang.php");
+
 // Get environment
 if((strlen(getenv("SERVER_SOFTWARE")))!="0"){
 	$server=getenv("SERVER_SOFTWARE");

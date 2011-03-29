@@ -17,11 +17,6 @@ if(strpos($id,"..")===TRUE) header("Location: .");
 // Set browser lang
 $lang=setlang();
 
-// Include language templates
-if(!file_exists("./translation/locale_$lang.php"))
-	include("./translation/locale_en.php");
-else include("./translation/locale_$lang.php");
-
 require("conf/config.php");
 
 // Search activated
