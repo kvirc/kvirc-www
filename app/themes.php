@@ -365,7 +365,7 @@ foreach($aItemsToList as $aItem)
 	echo "			<tr>\n";
 	echo "				<td valign=\"top\" width=\"80\" rowspan=\"2\">\n";
 	echo "					<div class=\"item_thumb\">\n";
-	echo "						<a href=\"".$szScreenshotPath."/".$aItem["screen"]."\"><img src=\"".$szThumbPath."/".$aItem["thumb"]."\" border=\"0\"></a>\n";
+	echo "						<a href=\"".$szScreenshotPath."/".$aItem["screen"]."\"><img src=\"".$szThumbPath."/thumb_".$aItem["screen"]."\" border=\"0\"></a>\n";
 	echo "					</div>\n";
 	echo "				</td>\n";
 	echo "				<td valign=\"top\">\n";
