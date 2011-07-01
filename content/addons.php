@@ -7,8 +7,8 @@ $dpath .= "addons";
 $imgPath = "img/addons";
 $numAddons = 0;
 $version=trim(strip_tags(htmlentities($_GET['version'],ENT_QUOTES)));
-if(!$version || !eregi("^[0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}$",$version))
-	$version=$current;
+if(!$version || !preg_match("/^\d+\.\d+\.\d+$/i",$version))
+	$version = $current;
 
 echo "<h1 class=\"pagetitle\">".$template['addons']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
