@@ -357,7 +357,7 @@ search();
 					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
 					<h1><img src="img/dialog-information.png" alt="<?=$template['index']['tahdonation'];?>" /><?=$template['index']['tahdonation'];?></h1>
 					<p class="center">
-						<a href="javascript:opendoc('http://www.tmt.de');"><img src="img/tmtlogo.gif" alt="TMT Teleservice" /></a><br />
+						<a href="javascript:opendoc('http://www.tmt.de');"><img src="img/tmtlogo.gif" alt="TMT" /></a><br />
 						<a href="javascript:opendoc('http://www.tmt.de');">TMT Teleservice</a> <?=$template['index']['tahdonationtext'];?>
 						<?if(getHostKvircde()) echo " ".$template['index']['donationtextkvirc.de'];?>
 					</p>
