@@ -326,14 +326,14 @@ $themes = array(
 		"min_version" => "4.0.0"
 	),
 	array("name" => "mIRC",
-		"version" => "2.0",
+		"version" => "2.1",
 		"mail" => "sonichedgehog_hyperblast00 [at] yahoo [dot] com",
 		"author" => "Taoki",
 		"desc" => $template['themes']['theme28'],
 		"home" => "",
-		"download" => "mIRC-2.0.kvt",
+		"download" => "mIRC-2.1.kvt",
 		"screen" => "mirc.png",
-		"release_date" => "2008.11.28",
+		"release_date" => "2011.06.10",
 		"min_version" => "4.0.0"
 	),
 	array("name" => "SilverEx_Clone",
@@ -477,6 +477,17 @@ $themes = array(
 		"download" => "VLight-1.0.2.kvt",
 		"screen" => "vlight.png",
 		"release_date" => "2008.11.28",
+		"min_version" => "4.0.0"
+	),
+	array("name" => "DarkMatter",
+		"version" => "1.0",
+		"mail" => "swarfega [at] swarfegaonline [dot] co.uk",
+		"author" => "swarfega",
+		"desc" => $template['themes']['theme42'],
+		"home" => "http://www.swarfegaonline.co.uk",
+		"download" => "DarkMatter-1.0.kvt",
+		"screen" => "darkmatter.png",
+		"release_date" => "2011.06.06",
 		"min_version" => "4.0.0"
 	)
 /*

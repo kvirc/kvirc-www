@@ -1014,6 +1014,7 @@ $template['themes']['theme38']="Celebration ist ein ziemlich pinkes Thema, aber 
 $template['themes']['theme39']="Ein nettes helles Thema mit einem zarten hochaufgelöstem grünen Hintergrund und alten Raumstatussymbolen";
 $template['themes']['theme40']="Ein dunkles Thema, optimiert für's Arbeiten am Monitor, eingestellt auf geringe Helligkeit und sichere Kommunikation.";
 $template['themes']['theme41']="Ein helles Thema vom Autor von VDark.";
+$template['themes']['theme42']="A simple dark theme";
 /* themes.php end */
 
 /* tools.php start */

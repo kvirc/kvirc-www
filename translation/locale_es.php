@@ -1083,6 +1083,7 @@ $template['themes']['theme38']="Celebration is a quite pinkish theme, a clear on
 $template['themes']['theme39']="A nice bright theme with a delicate high-resolution green background and old-style channel status icons";
 $template['themes']['theme40']="A dark theme optimized for working on a monitor set to minimum brightness and for secure communication.";
 $template['themes']['theme41']="A light theme from the author of VDark.";
+$template['themes']['theme42']="A simple dark theme";
 /* themes.php end */
 
 /* tools.php start */
