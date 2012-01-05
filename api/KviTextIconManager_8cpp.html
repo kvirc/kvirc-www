@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -84,6 +84,7 @@ function toggleVisibility(linkObj) {
 </div>
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="KviTextIconManager_8h_source.html">KviTextIconManager.h</a>&quot;</code><br/>
+<code>#include &quot;KviFileUtils.h&quot;</code><br/>
 <code>#include &quot;KviCString.h&quot;</code><br/>
 <code>#include &quot;KviPointerList.h&quot;</code><br/>
 <code>#include &quot;KviConfigurationFile.h&quot;</code><br/>
@@ -130,20 +131,20 @@ Variables</h2></td></tr>
 <div class="memdoc">
 <b>Initial value:</b><div class="fragment"><pre class="fragment">
 {
-        { <span class="stringliteral">&quot;:)&quot;</span>    , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a70802831a3d796836ad637ae8007b3fc">KviIconManager::Smile</a>       },
-        { <span class="stringliteral">&quot;:*&quot;</span>    , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a0c7868aaa7a76e9692cc0cd047999033">KviIconManager::Kiss</a>        },
-        { <span class="stringliteral">&quot;:D&quot;</span>    , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7ab18ef9be775dd8788aab0bc392fa87e6">KviIconManager::BigGrin</a>     },
-        { <span class="stringliteral">&quot;:(&quot;</span>    , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7aca3f26d81503ddef96d8b9e1e59886ac">KviIconManager::Ugly</a>        },
-        { <span class="stringliteral">&quot;:/&quot;</span>    , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a71131b4713026f5217a446dfcc96dc64">KviIconManager::Angry</a>       },
-        { <span class="stringliteral">&quot;:O&quot;</span>    , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a8a5ade19af4bb3d6871d3d903f2fef0c">KviIconManager::Surprised2</a>  },
-        { <span class="stringliteral">&quot;:P&quot;</span>    , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a07724e3a0480f9693f41772760090ee3">KviIconManager::Tongue</a>      },
-        { <span class="stringliteral">&quot;;)&quot;</span>    , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a7b982f7942a65b1946250b523cf7a9cd">KviIconManager::Eye</a>         },
-        { <span class="stringliteral">&quot;:°)&quot;</span>   , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a723a9be94a69b7775f0abeba9fa32c3b">KviIconManager::TearSmile</a>   },
-        { <span class="stringliteral">&quot;:°&quot;</span>    , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7aea39b43734cb9ce78f2fb90f467127a0">KviIconManager::Cry</a>         },
-        { <span class="stringliteral">&quot;:S&quot;</span>    , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a6d40959814d7dd50fe3639f3c218c9ff">KviIconManager::Afraid</a>      },
-        { <span class="stringliteral">&quot;:|&quot;</span>    , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7abdb7b0f7a24b8d61947325af337c927d">KviIconManager::Demoralized</a> },
-        { <span class="stringliteral">&quot;:P°&quot;</span>   , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7ae6fb852f53e51eec49f3349463b72633">KviIconManager::Slurp</a>       },
-        { 0       , 0                         }
+        { <span class="stringliteral">&quot;:)&quot;</span>  , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a70802831a3d796836ad637ae8007b3fc">KviIconManager::Smile</a>       },
+        { <span class="stringliteral">&quot;:*&quot;</span>  , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a0c7868aaa7a76e9692cc0cd047999033">KviIconManager::Kiss</a>        },
+        { <span class="stringliteral">&quot;:D&quot;</span>  , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7ab18ef9be775dd8788aab0bc392fa87e6">KviIconManager::BigGrin</a>     },
+        { <span class="stringliteral">&quot;:(&quot;</span>  , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7aca3f26d81503ddef96d8b9e1e59886ac">KviIconManager::Ugly</a>        },
+        { <span class="stringliteral">&quot;:/&quot;</span>  , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a71131b4713026f5217a446dfcc96dc64">KviIconManager::Angry</a>       },
+        { <span class="stringliteral">&quot;:O&quot;</span>  , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a8a5ade19af4bb3d6871d3d903f2fef0c">KviIconManager::Surprised2</a>  },
+        { <span class="stringliteral">&quot;:P&quot;</span>  , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a07724e3a0480f9693f41772760090ee3">KviIconManager::Tongue</a>      },
+        { <span class="stringliteral">&quot;;)&quot;</span>  , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a7b982f7942a65b1946250b523cf7a9cd">KviIconManager::Eye</a>         },
+        { <span class="stringliteral">&quot;:°)&quot;</span> , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a723a9be94a69b7775f0abeba9fa32c3b">KviIconManager::TearSmile</a>   },
+        { <span class="stringliteral">&quot;:°&quot;</span>  , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7aea39b43734cb9ce78f2fb90f467127a0">KviIconManager::Cry</a>         },
+        { <span class="stringliteral">&quot;:S&quot;</span>  , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a6d40959814d7dd50fe3639f3c218c9ff">KviIconManager::Afraid</a>      },
+        { <span class="stringliteral">&quot;:|&quot;</span>  , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7abdb7b0f7a24b8d61947325af337c927d">KviIconManager::Demoralized</a> },
+        { <span class="stringliteral">&quot;:P°&quot;</span> , <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7ae6fb852f53e51eec49f3349463b72633">KviIconManager::Slurp</a>       },
+        { 0     , 0                           }
 }
 </pre></div>
 </div>
@@ -159,12 +160,12 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviMainWindow.html#a6a34b57d6a79504e7ead96063346c155">KviMainWindow::applyOptions()</a>, <a class="el" href="classOptionsWidget__textIcons.html#a52b8f8a89a2471f45c2c11d645b9e56f">OptionsWidget_textIcons::commit()</a>, <a class="el" href="namespaceKviHtmlGenerator.html#a23bea7dbd3c797e888a2173d46c447b2">KviHtmlGenerator::convertToHtml()</a>, <a class="el" href="classKviTextIconWindow.html#a9248f67642db318f161659f0c8ad6d25">KviTextIconWindow::fill()</a>, <a class="el" href="classOptionsWidget__textIcons.html#ac3ee40a66314e18ac8750efdb9a2d1ff">OptionsWidget_textIcons::fillTable()</a>, <a class="el" href="classKviIrcView.html#a70b6add0da561b3be23c0280872c1fda">KviIrcView::getTextLine()</a>, <a class="el" href="classKviTextIconWindow.html#aebb287ac1457f59ed38b38fca972e3a4">KviTextIconWindow::KviTextIconWindow()</a>, <a class="el" href="classKviInputEditor.html#a9fc70f0eb9ca564d6e098c56a7e1cf1e">KviInputEditor::mousePressEvent()</a>, <a class="el" href="classKviTopicWidget.html#a49773a8968f4d06f133814ef89a6c9e9">KviTopicWidget::paintColoredText()</a>, <a class="el" href="classKviIrcView.html#a74d00b3db3e318d867bb8da133dec4bf">KviIrcView::paintEvent()</a>, <a class="el" href="classOptionsWidget__textIcons.html#a7f41bb93bf40d1667e2769aeb4341b3f">OptionsWidget_textIcons::restoreClicked()</a>, <a class="el" href="classKviApplication.html#a7733e333243ba3b742a53c141c5535f6">KviApplication::saveTextIcons()</a>, <a class="el" href="classKviApplication.html#a944c55d0e66654478fe4a817f26d433a">KviApplication::setup()</a>, <a class="el" href="libkvitexticons_8cpp.html#a0a514b82fda8d99f18736eefd755c2f9">texticons_kvs_cmd_set()</a>, <a class="el" href="libkvitexticons_8cpp.html#af26ca64691d0e7d97e0e6c5665257669">texticons_kvs_fnc_get()</a>, and <a class="el" href="classKviApplication.html#a4d85ab5f5d8219eef3428ef487812d68">KviApplication::~KviApplication()</a>.</p>
+<p>Referenced by <a class="el" href="classKviMainWindow.html#a6a34b57d6a79504e7ead96063346c155">KviMainWindow::applyOptions()</a>, <a class="el" href="classOptionsWidget__textIcons.html#a52b8f8a89a2471f45c2c11d645b9e56f">OptionsWidget_textIcons::commit()</a>, <a class="el" href="namespaceKviHtmlGenerator.html#a4124e0a329e3ebe1575a57d388dfb49f">KviHtmlGenerator::convertToHtml()</a>, <a class="el" href="classKviTextIconWindow.html#a9248f67642db318f161659f0c8ad6d25">KviTextIconWindow::fill()</a>, <a class="el" href="classOptionsWidget__textIcons.html#ac3ee40a66314e18ac8750efdb9a2d1ff">OptionsWidget_textIcons::fillTable()</a>, <a class="el" href="classKviIrcView.html#a70b6add0da561b3be23c0280872c1fda">KviIrcView::getTextLine()</a>, <a class="el" href="classKviTextIconWindow.html#aebb287ac1457f59ed38b38fca972e3a4">KviTextIconWindow::KviTextIconWindow()</a>, <a class="el" href="classKviInputEditor.html#a9fc70f0eb9ca564d6e098c56a7e1cf1e">KviInputEditor::mousePressEvent()</a>, <a class="el" href="classKviTopicWidget.html#a49773a8968f4d06f133814ef89a6c9e9">KviTopicWidget::paintColoredText()</a>, <a class="el" href="classKviIrcView.html#a74d00b3db3e318d867bb8da133dec4bf">KviIrcView::paintEvent()</a>, <a class="el" href="classOptionsWidget__textIcons.html#a7f41bb93bf40d1667e2769aeb4341b3f">OptionsWidget_textIcons::restoreClicked()</a>, <a class="el" href="classKviApplication.html#a7733e333243ba3b742a53c141c5535f6">KviApplication::saveTextIcons()</a>, <a class="el" href="classKviApplication.html#a944c55d0e66654478fe4a817f26d433a">KviApplication::setup()</a>, <a class="el" href="libkvitexticons_8cpp.html#a0a514b82fda8d99f18736eefd755c2f9">texticons_kvs_cmd_set()</a>, <a class="el" href="libkvitexticons_8cpp.html#af26ca64691d0e7d97e0e6c5665257669">texticons_kvs_fnc_get()</a>, and <a class="el" href="classKviApplication.html#a4d85ab5f5d8219eef3428ef487812d68">KviApplication::~KviApplication()</a>.</p>
 
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:32 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:22 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

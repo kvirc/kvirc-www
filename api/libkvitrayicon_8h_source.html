@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -109,7 +109,7 @@ function toggleVisibility(linkObj) {
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029 <span class="preprocessor">#include &quot;kvi_settings.h&quot;</span>
 <a name="l00030"></a>00030 <span class="preprocessor">#include &quot;KviMainWindow.h&quot;</span>
-<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;KviDockExtension.h&quot;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;KviTrayIcon.h&quot;</span>
 <a name="l00032"></a>00032 
 <a name="l00033"></a>00033 <span class="preprocessor">#include &lt;QSystemTrayIcon&gt;</span>
 <a name="l00034"></a>00034 <span class="preprocessor">#include &lt;QLabel&gt;</span>
@@ -120,52 +120,49 @@ function toggleVisibility(linkObj) {
 <a name="l00039"></a>00039 <span class="keyword">class </span><a class="code" href="classKviDynamicToolTip.html">KviDynamicToolTip</a>;
 <a name="l00040"></a>00040 <span class="comment">//class KviMainWindow;</span>
 <a name="l00041"></a>00041 
-<a name="l00042"></a><a class="code" href="classTrayIcon.html">00042</a> <span class="keyword">class </span><a class="code" href="classTrayIcon.html">TrayIcon</a> : <span class="keyword">public</span> QSystemTrayIcon, <span class="keyword">public</span> <a class="code" href="classKviDockExtension.html" title="The KviDockExtension class.">KviDockExtension</a>
+<a name="l00042"></a><a class="code" href="classKviTrayIconWidget.html">00042</a> <span class="keyword">class </span><a class="code" href="classKviTrayIconWidget.html">KviTrayIconWidget</a> : <span class="keyword">public</span> QSystemTrayIcon, <span class="keyword">public</span> <a class="code" href="classKviTrayIcon.html" title="The KviTrayIcon class.">KviTrayIcon</a>
 <a name="l00043"></a>00043 {
 <a name="l00044"></a>00044         Q_OBJECT
 <a name="l00045"></a>00045 <span class="keyword">public</span>:
-<a name="l00046"></a>00046         <a class="code" href="classTrayIcon.html#a38005267a3539c5375d9444a0e77573f">TrayIcon</a>(<a class="code" href="classKviMainWindow.html">KviMainWindow</a> * win);
-<a name="l00047"></a>00047         <a class="code" href="classTrayIcon.html#a4ab023074143b46c3eb9dda2a1678492">~TrayIcon</a>();
+<a name="l00046"></a>00046         <a class="code" href="classKviTrayIconWidget.html#abcdd41faed404ac4dba0b2b649c020d2">KviTrayIconWidget</a>();
+<a name="l00047"></a>00047         <a class="code" href="classKviTrayIconWidget.html#a7995c07641165bb0a9bbd63a3c1acccb">~KviTrayIconWidget</a>();
 <a name="l00048"></a>00048 <span class="keyword">protected</span>:
-<a name="l00049"></a><a class="code" href="classTrayIcon.html#a503d9ce890daa8a9847cc9faec9ba48c">00049</a>         <a class="code" href="classKviMainWindow.html">KviMainWindow</a>               * <a class="code" href="classTrayIcon.html#a503d9ce890daa8a9847cc9faec9ba48c">m_pFrm</a>;
-<a name="l00050"></a><a class="code" href="classTrayIcon.html#a52c5fb8ca2551d1b1e3fb3157730e567">00050</a>         <a class="code" href="classKviDynamicToolTip.html">KviDynamicToolTip</a>      * <a class="code" href="classTrayIcon.html#a52c5fb8ca2551d1b1e3fb3157730e567">m_pTip</a>;
-<a name="l00051"></a><a class="code" href="classTrayIcon.html#aa6e2eef635c1abd7536e653818fac85a">00051</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>        * <a class="code" href="classTrayIcon.html#aa6e2eef635c1abd7536e653818fac85a">m_pContextPopup</a>;
-<a name="l00052"></a><a class="code" href="classTrayIcon.html#a0745ce1f6b61efd272b43539af2b3291">00052</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>        * <a class="code" href="classTrayIcon.html#a0745ce1f6b61efd272b43539af2b3291">m_pAwayPopup</a>;
-<a name="l00053"></a><a class="code" href="classTrayIcon.html#a5183dc7d5ab2f0e301ea00d672eff3fb">00053</a>         QLabel                 * <a class="code" href="classTrayIcon.html#a5183dc7d5ab2f0e301ea00d672eff3fb">m_pTitleLabel</a>;
-<a name="l00054"></a>00054 
-<a name="l00055"></a><a class="code" href="classTrayIcon.html#a3e8633e6f25aaeb0c15d1203ae013306">00055</a>         QAction* <a class="code" href="classTrayIcon.html#a3e8633e6f25aaeb0c15d1203ae013306">m_pToggleFrame</a>;
-<a name="l00056"></a><a class="code" href="classTrayIcon.html#a3e15bd9e0a18e76524145a55897cc50e">00056</a>         QAction* <a class="code" href="classTrayIcon.html#a3e15bd9e0a18e76524145a55897cc50e">m_pAwayMenuId</a>;
-<a name="l00057"></a>00057 
-<a name="l00058"></a><a class="code" href="classTrayIcon.html#a3a6a89f73211050e875b4d55e0773d9d">00058</a>         <span class="keywordtype">bool</span> <a class="code" href="classTrayIcon.html#a3a6a89f73211050e875b4d55e0773d9d">m_bFlashed</a>;
-<a name="l00059"></a>00059 
-<a name="l00060"></a><a class="code" href="classTrayIcon.html#a9fd66ccfa87407bad55df10bcbf8f445">00060</a>         QPixmap <a class="code" href="classTrayIcon.html#a9fd66ccfa87407bad55df10bcbf8f445">m_CurrentPixmap</a>;
-<a name="l00061"></a><a class="code" href="classTrayIcon.html#a2687ceea8d63fa528ed5b169a5570b95">00061</a>         QTimer* <a class="code" href="classTrayIcon.html#a2687ceea8d63fa528ed5b169a5570b95">m_pFlashingTimer</a>;
-<a name="l00062"></a><a class="code" href="classTrayIcon.html#a612a02a4d1a85c9d59a560ccdb7fb2da">00062</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classTrayIcon.html#a612a02a4d1a85c9d59a560ccdb7fb2da">m_iConsoles</a>;
-<a name="l00063"></a><a class="code" href="classTrayIcon.html#a6eee12653177b49dc1b2af119c601045">00063</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classTrayIcon.html#a6eee12653177b49dc1b2af119c601045">m_iChannels</a>;
-<a name="l00064"></a><a class="code" href="classTrayIcon.html#a0a8a7897ca2f39b25a0620b3316d9ae9">00064</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classTrayIcon.html#a0a8a7897ca2f39b25a0620b3316d9ae9">m_iQueries</a>;
-<a name="l00065"></a><a class="code" href="classTrayIcon.html#acc1358cc408c307ec0c0f009463f5fdf">00065</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classTrayIcon.html#acc1358cc408c307ec0c0f009463f5fdf">m_iOther</a>;
-<a name="l00066"></a>00066 <span class="keyword">public</span>:
-<a name="l00067"></a><a class="code" href="classTrayIcon.html#a2dce870e36ae8c92d0e375b14a311aa7">00067</a>         <a class="code" href="classKviMainWindow.html">KviMainWindow</a> * <a class="code" href="classTrayIcon.html#a2dce870e36ae8c92d0e375b14a311aa7">frame</a>(){ <span class="keywordflow">return</span> <a class="code" href="classTrayIcon.html#a503d9ce890daa8a9847cc9faec9ba48c">m_pFrm</a>; };
-<a name="l00068"></a>00068 <span class="keyword">public</span>:
-<a name="l00069"></a>00069         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTrayIcon.html#ad9a123c82806d159dc51d230c1e6bd8d">refresh</a>();
-<a name="l00070"></a>00070         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classTrayIcon.html#a96a1576b90bf7926c905b14eff10382a">die</a>();
-<a name="l00071"></a>00071         <span class="keywordtype">void</span> <a class="code" href="classTrayIcon.html#a9a114418366cc6a1dc699679a7c7b3bf">updateIcon</a>();
-<a name="l00072"></a>00072 <span class="keyword">protected</span>:
-<a name="l00073"></a>00073         <span class="keywordtype">void</span> <a class="code" href="classTrayIcon.html#aa0c58e667f1d2718593a80d76c42114f">grabActivityInfo</a>();
-<a name="l00074"></a>00074         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classTrayIcon.html#ae3f8b38d74bc2bf8da757606e5489efc">event</a>(QEvent * <a class="code" href="detector_8cpp.html#a270b1ecf56619755ce62f6970dfabc91">e</a>);
-<a name="l00075"></a>00075 <span class="keyword">protected</span> slots:
-<a name="l00076"></a>00076         <span class="keywordtype">void</span> <a class="code" href="classTrayIcon.html#a851f9bf5c3aa7d85698e0160d0e76e4b">fillContextPopup</a>();
-<a name="l00077"></a>00077         <span class="keywordtype">void</span> <a class="code" href="classTrayIcon.html#a9230d62c906083131b69ba7c28a03e69">toggleParentFrame</a>();
-<a name="l00078"></a>00078         <span class="keywordtype">void</span> <a class="code" href="classTrayIcon.html#a6ee685c85aafc796588c71aba79eaaa6">doAway</a>(<span class="keywordtype">bool</span>);
-<a name="l00079"></a>00079         <span class="keywordtype">void</span> <a class="code" href="classTrayIcon.html#a1978c7cc6da550e3127780574d253ae8">flashingTimerShot</a>();
-<a name="l00080"></a>00080         <span class="keywordtype">void</span> <a class="code" href="classTrayIcon.html#a4f859e18305bac026722021b7d3619eb">activatedSlot</a>( QSystemTrayIcon::ActivationReason reason );
-<a name="l00081"></a>00081         <span class="keywordtype">void</span> <a class="code" href="classTrayIcon.html#a6868de08c62dbb8cbafbc801ecdb3bbf">executeInternalCommand</a>(<span class="keywordtype">bool</span>);
-<a name="l00082"></a>00082 };
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084 <span class="preprocessor">#endif //_KVI_TRAYICON_H_</span>
+<a name="l00049"></a><a class="code" href="classKviTrayIconWidget.html#a8f1b52321f898e90c29082f6e4472e3b">00049</a>         <a class="code" href="classKviDynamicToolTip.html">KviDynamicToolTip</a>      * <a class="code" href="classKviTrayIconWidget.html#a8f1b52321f898e90c29082f6e4472e3b">m_pTip</a>;
+<a name="l00050"></a><a class="code" href="classKviTrayIconWidget.html#a98f7bcc967568ac67e2ec8062f0e2f76">00050</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>        * <a class="code" href="classKviTrayIconWidget.html#a98f7bcc967568ac67e2ec8062f0e2f76">m_pContextPopup</a>;
+<a name="l00051"></a><a class="code" href="classKviTrayIconWidget.html#a5c68d61e8529d3c40c4e75eb06dc5776">00051</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>        * <a class="code" href="classKviTrayIconWidget.html#a5c68d61e8529d3c40c4e75eb06dc5776">m_pAwayPopup</a>;
+<a name="l00052"></a><a class="code" href="classKviTrayIconWidget.html#a319d7b678ca5cced98b6059eb75b8d01">00052</a>         QLabel                 * <a class="code" href="classKviTrayIconWidget.html#a319d7b678ca5cced98b6059eb75b8d01">m_pTitleLabel</a>;
+<a name="l00053"></a>00053 
+<a name="l00054"></a><a class="code" href="classKviTrayIconWidget.html#ad5dfe7b90a4bc7c12b270fed336ac7a8">00054</a>         QAction* <a class="code" href="classKviTrayIconWidget.html#ad5dfe7b90a4bc7c12b270fed336ac7a8">m_pToggleFrame</a>;
+<a name="l00055"></a><a class="code" href="classKviTrayIconWidget.html#a7deec68d00984c406efd6bc65d2792ec">00055</a>         QAction* <a class="code" href="classKviTrayIconWidget.html#a7deec68d00984c406efd6bc65d2792ec">m_pAwayMenuId</a>;
+<a name="l00056"></a>00056 
+<a name="l00057"></a><a class="code" href="classKviTrayIconWidget.html#a5c20a09b524b883413c6b6a07bec1e1d">00057</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviTrayIconWidget.html#a5c20a09b524b883413c6b6a07bec1e1d">m_bFlashed</a>;
+<a name="l00058"></a>00058 
+<a name="l00059"></a><a class="code" href="classKviTrayIconWidget.html#a11625060f462c9cf6af344d3802e911b">00059</a>         QPixmap <a class="code" href="classKviTrayIconWidget.html#a11625060f462c9cf6af344d3802e911b">m_CurrentPixmap</a>;
+<a name="l00060"></a><a class="code" href="classKviTrayIconWidget.html#a3f9c297d66f3cc2cb16ee2b156ba5b3b">00060</a>         QTimer* <a class="code" href="classKviTrayIconWidget.html#a3f9c297d66f3cc2cb16ee2b156ba5b3b">m_pFlashingTimer</a>;
+<a name="l00061"></a><a class="code" href="classKviTrayIconWidget.html#a27c65aeec3723c11b449945568633228">00061</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviTrayIconWidget.html#a27c65aeec3723c11b449945568633228">m_iConsoles</a>;
+<a name="l00062"></a><a class="code" href="classKviTrayIconWidget.html#a2ecd181f34bbc34c8f45f76664424283">00062</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviTrayIconWidget.html#a2ecd181f34bbc34c8f45f76664424283">m_iChannels</a>;
+<a name="l00063"></a><a class="code" href="classKviTrayIconWidget.html#aba442debe3d7aea83d50c251acf436d4">00063</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviTrayIconWidget.html#aba442debe3d7aea83d50c251acf436d4">m_iQueries</a>;
+<a name="l00064"></a><a class="code" href="classKviTrayIconWidget.html#aec6e32314d2d708ce5efe8789c1a2d67">00064</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviTrayIconWidget.html#aec6e32314d2d708ce5efe8789c1a2d67">m_iOther</a>;
+<a name="l00065"></a>00065 <span class="keyword">public</span>:
+<a name="l00066"></a>00066         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviTrayIconWidget.html#ab297a717514d616843c60b40fff63b19">refresh</a>();
+<a name="l00067"></a>00067         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviTrayIconWidget.html#a69bdd205b60ea3424c44500fe41a55be">die</a>();
+<a name="l00068"></a>00068         <span class="keywordtype">void</span> <a class="code" href="classKviTrayIconWidget.html#a17451dc38cbba3b49a43cff05a384c8f">updateIcon</a>();
+<a name="l00069"></a>00069 <span class="keyword">protected</span>:
+<a name="l00070"></a>00070         <span class="keywordtype">void</span> <a class="code" href="classKviTrayIconWidget.html#a9e29819c11691fe7b9372320f6fbe6f2">grabActivityInfo</a>();
+<a name="l00071"></a>00071         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviTrayIconWidget.html#a0e125af1ed6987af74fcdaa9c384054c">event</a>(QEvent * <a class="code" href="detector_8cpp.html#a270b1ecf56619755ce62f6970dfabc91">e</a>);
+<a name="l00072"></a>00072 <span class="keyword">protected</span> slots:
+<a name="l00073"></a>00073         <span class="keywordtype">void</span> <a class="code" href="classKviTrayIconWidget.html#ab16844b5e696e16ecb43fa7f925cc0a8">fillContextPopup</a>();
+<a name="l00074"></a>00074         <span class="keywordtype">void</span> <a class="code" href="classKviTrayIconWidget.html#ab470ca05faa7d1e155a5852b30f2dceb">toggleParentFrame</a>();
+<a name="l00075"></a>00075         <span class="keywordtype">void</span> <a class="code" href="classKviTrayIconWidget.html#ae8787cb93522d8505ce392c018cd920f">doAway</a>(<span class="keywordtype">bool</span>);
+<a name="l00076"></a>00076         <span class="keywordtype">void</span> <a class="code" href="classKviTrayIconWidget.html#ad793543269e04466ce986ec2d08f57a0">flashingTimerShot</a>();
+<a name="l00077"></a>00077         <span class="keywordtype">void</span> <a class="code" href="classKviTrayIconWidget.html#a2132675111d17cbeabb5d99a8fc26c03">activatedSlot</a>( QSystemTrayIcon::ActivationReason reason );
+<a name="l00078"></a>00078         <span class="keywordtype">void</span> <a class="code" href="classKviTrayIconWidget.html#a4b4f5403ebb408ba223dfa4bfdce3a1b">executeInternalCommand</a>(<span class="keywordtype">bool</span>);
+<a name="l00079"></a>00079 };
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 <span class="preprocessor">#endif //_KVI_TRAYICON_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:32 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:21 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

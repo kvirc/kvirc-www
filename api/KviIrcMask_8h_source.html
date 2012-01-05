@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -196,25 +196,27 @@ function toggleVisibility(linkObj) {
 <a name="l00283"></a>00283 
 <a name="l00289"></a><a class="code" href="classKviIrcMask.html#af4ba632b705daf8b28dc9aa520168417">00289</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviIrcMask.html#af4ba632b705daf8b28dc9aa520168417" title="Fixed internal matches (this is fixed, external is wild)">matchedBy</a>(<span class="keyword">const</span> <a class="code" href="classKviIrcMask.html" title="Irc user mask handling.">KviIrcMask</a> &amp; mask)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mask.<a class="code" href="classKviIrcMask.html#a33e6303122705b6cd6b32a655df070ad" title="Fixed external matches (this is wild, external is fixed)">matchesFixed</a>(*<span class="keyword">this</span>); };
 <a name="l00290"></a>00290 
-<a name="l00295"></a>00295         <span class="keywordtype">int</span> nonWildChars();
-<a name="l00296"></a>00296 
-<a name="l00302"></a>00302         <span class="keywordtype">bool</span> <a class="code" href="KviCString_8h.html#a3ec10b0f986e868df65ef193e2e33b1d">operator==</a>(<span class="keyword">const</span> <a class="code" href="classKviIrcMask.html" title="Irc user mask handling.">KviIrcMask</a> &amp; user);
-<a name="l00303"></a>00303 <span class="keyword">private</span>:
-<a name="l00310"></a>00310         <span class="keywordtype">int</span> getIpDomainMaskLen() <span class="keyword">const</span>;
-<a name="l00311"></a>00311 
-<a name="l00318"></a>00318         <span class="keywordtype">int</span> getLargeIpDomainMaskLen() <span class="keyword">const</span>;
+<a name="l00297"></a>00297         <span class="keywordtype">bool</span> matchWildString(<span class="keyword">const</span> QString &amp; szExp, <span class="keyword">const</span> QString &amp; szStr) <span class="keyword">const</span>;
+<a name="l00298"></a>00298 
+<a name="l00303"></a>00303         <span class="keywordtype">int</span> nonWildChars();
+<a name="l00304"></a>00304 
+<a name="l00310"></a>00310         <span class="keywordtype">bool</span> <a class="code" href="KviCString_8h.html#a3ec10b0f986e868df65ef193e2e33b1d">operator==</a>(<span class="keyword">const</span> <a class="code" href="classKviIrcMask.html" title="Irc user mask handling.">KviIrcMask</a> &amp; user);
+<a name="l00311"></a>00311 <span class="keyword">private</span>:
+<a name="l00318"></a>00318         <span class="keywordtype">int</span> getIpDomainMaskLen() <span class="keyword">const</span>;
 <a name="l00319"></a>00319 
-<a name="l00324"></a>00324         QString getHostDomainMask() <span class="keyword">const</span>;
-<a name="l00325"></a>00325 
-<a name="l00330"></a>00330         QString getLargeHostDomainMask() <span class="keyword">const</span>;
-<a name="l00331"></a>00331 
-<a name="l00337"></a>00337         <span class="keywordtype">bool</span> hasMaskedIp() <span class="keyword">const</span>;
-<a name="l00338"></a>00338 };
+<a name="l00326"></a>00326         <span class="keywordtype">int</span> getLargeIpDomainMaskLen() <span class="keyword">const</span>;
+<a name="l00327"></a>00327 
+<a name="l00332"></a>00332         QString getHostDomainMask() <span class="keyword">const</span>;
+<a name="l00333"></a>00333 
+<a name="l00338"></a>00338         QString getLargeHostDomainMask() <span class="keyword">const</span>;
 <a name="l00339"></a>00339 
-<a name="l00340"></a>00340 <span class="preprocessor">#endif //_KVI_IRCMASK_H_</span>
+<a name="l00345"></a>00345         <span class="keywordtype">bool</span> hasMaskedIp() <span class="keyword">const</span>;
+<a name="l00346"></a>00346 };
+<a name="l00347"></a>00347 
+<a name="l00348"></a>00348 <span class="preprocessor">#endif //_KVI_IRCMASK_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:26 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:15 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

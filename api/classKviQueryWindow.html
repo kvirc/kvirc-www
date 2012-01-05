@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -123,8 +123,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the button container.  <a href="#ace74881edf134b9630354e8574e01528"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#aeb0097f6cf807596ca12a7a8dd544415">isDeadQuery</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the query is dead.  <a href="#aeb0097f6cf807596ca12a7a8dd544415"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#a69ff9c275eef97e26582ad4aa4be7fbd">KviQueryWindow</a> (<a class="el" href="classKviMainWindow.html">KviMainWindow</a> *lpFrm, <a class="el" href="classKviConsoleWindow.html">KviConsoleWindow</a> *lpConsole, const QString &amp;szNick)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the query object.  <a href="#a69ff9c275eef97e26582ad4aa4be7fbd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#aa42ee5bdeeba4cc338da1d5d12ac4b69">KviQueryWindow</a> (<a class="el" href="classKviConsoleWindow.html">KviConsoleWindow</a> *lpConsole, const QString &amp;szNick)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the query object.  <a href="#aa42ee5bdeeba4cc338da1d5d12ac4b69"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#af21234d8951ef62a958bebb8acb0f8b2">loadLogFile</a> (const QString &amp;szFileName, bool bGzip)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a log file.  <a href="#af21234d8951ef62a958bebb8acb0f8b2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#a6925e0cf4b865457947f6a771cd0cc8c">mergeQuery</a> (<a class="el" href="classKviQueryWindow.html">KviQueryWindow</a> *pQuery)</td></tr>
@@ -181,8 +181,8 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the base of the log file name.  <a href="#a25818a3c972d6e758ba73a193a623097"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#afb4fec565ddebe81b1a97563963b1b6a">getInfoLabelText</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the info of the text in the upper part of the query.  <a href="#afb4fec565ddebe81b1a97563963b1b6a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#a75520ddcdcd49915c934f91a51bb1328">getInfoLabelTipText</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the info of the tooltip text.  <a href="#a75520ddcdcd49915c934f91a51bb1328"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#a3c87898dee63b9cb66247706b2384cfe">getWindowListTipText</a> (QString &amp;<a class="el" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the window list and info label tooltip text.  <a href="#a3c87898dee63b9cb66247706b2384cfe"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#a63a6b8c655c72ef444f7d1a79507be1a">loadProperties</a> (<a class="el" href="classKviConfigurationFile.html">KviConfigurationFile</a> *pCfg)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the properties from file.  <a href="#a63a6b8c655c72ef444f7d1a79507be1a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QPixmap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#a8f09c022784ed67228aae6201430ec75">myIconPtr</a> ()</td></tr>
@@ -227,19 +227,13 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a69ff9c275eef97e26582ad4aa4be7fbd"></a><!-- doxytag: member="KviQueryWindow::KviQueryWindow" ref="a69ff9c275eef97e26582ad4aa4be7fbd" args="(KviMainWindow *lpFrm, KviConsoleWindow *lpConsole, const QString &amp;szNick)" -->
+<a class="anchor" id="aa42ee5bdeeba4cc338da1d5d12ac4b69"></a><!-- doxytag: member="KviQueryWindow::KviQueryWindow" ref="aa42ee5bdeeba4cc338da1d5d12ac4b69" args="(KviConsoleWindow *lpConsole, const QString &amp;szNick)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">KviQueryWindow::KviQueryWindow </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviMainWindow.html">KviMainWindow</a> *&#160;</td>
-          <td class="paramname"><em>lpFrm</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="classKviConsoleWindow.html">KviConsoleWindow</a> *&#160;</td>
           <td class="paramname"><em>lpConsole</em>, </td>
         </tr>
@@ -261,7 +255,6 @@ Protected Attributes</h2></td></tr>
 <p>Constructs the query object. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">lpFrm</td><td>The parent frame </td></tr>
     <tr><td class="paramname">lpConsole</td><td>The associated console </td></tr>
     <tr><td class="paramname">szNick</td><td>The nickname with who we open a query </td></tr>
   </table>
@@ -362,7 +355,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a87ecbe0278887fdedb1ba013d26e08cd">KviWindow</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviQueryWindow.html#a69ff9c275eef97e26582ad4aa4be7fbd">KviQueryWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviQueryWindow.html#aa42ee5bdeeba4cc338da1d5d12ac4b69">KviQueryWindow()</a>.</p>
 
 </div>
 </div>
@@ -442,24 +435,27 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a75520ddcdcd49915c934f91a51bb1328"></a><!-- doxytag: member="KviQueryWindow::getInfoLabelTipText" ref="a75520ddcdcd49915c934f91a51bb1328" args="()" -->
+<a class="anchor" id="a3c87898dee63b9cb66247706b2384cfe"></a><!-- doxytag: member="KviQueryWindow::getWindowListTipText" ref="a3c87898dee63b9cb66247706b2384cfe" args="(QString &amp;szBuffer)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QString KviQueryWindow::getInfoLabelTipText </td>
+          <td class="memname">void KviQueryWindow::getWindowListTipText </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [protected]</code></td>
+          <td class="paramtype">QString &amp;&#160;</td>
+          <td class="paramname"><em>szBuffer</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Gets the info of the tooltip text. </p>
+<p>Gets the window list and info label tooltip text. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>QString </dd></dl>
 
-<p>References <a class="el" href="KviLocale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">KviWindow::connection()</a>, <a class="el" href="KviOptions_8h.html#a341d7a599588a8d75b293e0a18dcdefd">END_TABLE_BOLD_ROW</a>, <a class="el" href="classKviIrcUserDataBase.html#ab5c90fe84c30796ec4a61227c1d770a0">KviIrcUserDataBase::find()</a>, <a class="el" href="classKviIrcConnection.html#a9bbe11515c43ad3da51c6319b77ad377">KviIrcConnection::getCommonChannels()</a>, <a class="el" href="classKviIrcUserEntry.html#ad3b50724b9afeeea194fc6303b5851cd">KviIrcUserEntry::hasHops()</a>, <a class="el" href="classKviIrcUserEntry.html#aab5879b4ca0f6bb67933a0673ed237cd">KviIrcUserEntry::hasHost()</a>, <a class="el" href="classKviIrcUserEntry.html#a0910e4e638623c7dfbd2b63d9acf0ecf">KviIrcUserEntry::hasRealName()</a>, <a class="el" href="classKviIrcUserEntry.html#a3ce544278ddcace9449f61d4c53205bd">KviIrcUserEntry::hasServer()</a>, <a class="el" href="classKviIrcUserEntry.html#a221179401098d609675f9c63724af23c">KviIrcUserEntry::hasUser()</a>, <a class="el" href="classKviIrcUserEntry.html#a9f6d2ac8e5dd81bfd464be031940ebd3">KviIrcUserEntry::hops()</a>, <a class="el" href="classKviIrcUserEntry.html#a1ae503fb289f27a38e68ed1b75fe8f1a">KviIrcUserEntry::host()</a>, <a class="el" href="classKviIrcUserEntry.html#a9474273edf36abd00772904a477d416f">KviIrcUserEntry::isAway()</a>, <a class="el" href="classKviWindow.html#a95c059df5d821321a07c4220b96a9b1a">KviWindow::m_szName</a>, <a class="el" href="classKviIrcUserEntry.html#ad6f2d19e7b6e653dc310a2e528e8f332">KviIrcUserEntry::realName()</a>, <a class="el" href="classKviIrcUserEntry.html#a559f4185bcf27cedc0be375c27e64fbc">KviIrcUserEntry::server()</a>, <a class="el" href="KviOptions_8h.html#a5793711714b60e0a2e51edc0c60de386">START_TABLE_BOLD_ROW</a>, <a class="el" href="namespaceKviControlCodes.html#ac122719cda10fee70a000f6e59fab0d1">KviControlCodes::stripControlBytes()</a>, <a class="el" href="classKviIrcUserEntry.html#ae728fd5b6796a5598a8699573ab682d3">KviIrcUserEntry::user()</a>, and <a class="el" href="classKviIrcConnection.html#ac248af7de361ad78a24bf18125c0372e">KviIrcConnection::userDataBase()</a>.</p>
+<p>Reimplemented from <a class="el" href="classKviWindow.html#a59d6dd538cc823cb37fb9e24ded6a083">KviWindow</a>.</p>
+
+<p>References <a class="el" href="KviLocale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">KviWindow::connection()</a>, <a class="el" href="classKviWindow.html#acb0c3ad5eae68ed8419a9dda8ecdb24e">KviWindow::console()</a>, <a class="el" href="classKviIrcUserDataBase.html#ab5c90fe84c30796ec4a61227c1d770a0">KviIrcUserDataBase::find()</a>, <a class="el" href="classKviConsoleWindow.html#a5f34d5920cccbc243885638bb687369b">KviConsoleWindow::getUserTipText()</a>, <a class="el" href="classKviWindow.html#a95c059df5d821321a07c4220b96a9b1a">KviWindow::m_szName</a>, and <a class="el" href="classKviIrcConnection.html#ac248af7de361ad78a24bf18125c0372e">KviIrcConnection::userDataBase()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviQueryWindow.html#a65edbdb4317086a2332136facc19703d">updateLabelText()</a>.</p>
 
@@ -552,7 +548,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a0cb041b9b2c9356d0c541273c9f8dca8">KviWindow</a>.</p>
 
-<p>References <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classKviQueryWindow.html#ac3d9d7a66db26e04737bac3247e6f573">m_pUserListView</a>, <a class="el" href="classKviConfigurationFile.html#a5b0944547ed66f4b77babc2807b99dd7">KviConfigurationFile::readBoolEntry()</a>, <a class="el" href="classKviConfigurationFile.html#a8d5d75cadfd6a3b51a0d0404bb10fd58">KviConfigurationFile::readIntListEntry()</a>, and <a class="el" href="classKviQueryWindow.html#a7cc6f54f15842c1f541751f5d5322e04">showListView()</a>.</p>
+<p>References <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classKviConfigurationFile.html#a5b0944547ed66f4b77babc2807b99dd7">KviConfigurationFile::readBoolEntry()</a>, <a class="el" href="classKviConfigurationFile.html#a8d5d75cadfd6a3b51a0d0404bb10fd58">KviConfigurationFile::readIntListEntry()</a>, and <a class="el" href="classKviQueryWindow.html#a7cc6f54f15842c1f541751f5d5322e04">showListView()</a>.</p>
 
 </div>
 </div>
@@ -1113,7 +1109,7 @@ Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="KviKvsEventTable_8h.html#a6a5c53f92c5c9ccf60b626a1184f3eb1">KviEvent_OnQueryFileDropped</a>, and <a class="el" href="KviKvsEventTriggers_8h.html#aef1178664bd5fa25f1144074cc437bdc">KVS_TRIGGER_EVENT_1</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviQueryWindow.html#a69ff9c275eef97e26582ad4aa4be7fbd">KviQueryWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviQueryWindow.html#aa42ee5bdeeba4cc338da1d5d12ac4b69">KviQueryWindow()</a>.</p>
 
 </div>
 </div>
@@ -1161,7 +1157,7 @@ Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="KviKvsEventTable_8h.html#afba8f1206e18722122d919ec04cc0079">KviEvent_OnQueryPopupRequest</a>, and <a class="el" href="KviKvsEventTriggers_8h.html#a0d79b9bd36e0f3ba87cfcfec6d5e5a11">KVS_TRIGGER_EVENT_0</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviQueryWindow.html#a69ff9c275eef97e26582ad4aa4be7fbd">KviQueryWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviQueryWindow.html#aa42ee5bdeeba4cc338da1d5d12ac4b69">KviQueryWindow()</a>.</p>
 
 </div>
 </div>
@@ -1184,7 +1180,7 @@ Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="classKviQueryWindow.html#ac3d9d7a66db26e04737bac3247e6f573">m_pUserListView</a>, and <a class="el" href="classKviQueryWindow.html#a7cc6f54f15842c1f541751f5d5322e04">showListView()</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviQueryWindow.html#a69ff9c275eef97e26582ad4aa4be7fbd">KviQueryWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviQueryWindow.html#aa42ee5bdeeba4cc338da1d5d12ac4b69">KviQueryWindow()</a>.</p>
 
 </div>
 </div>
@@ -1228,9 +1224,9 @@ Protected Attributes</h2></td></tr>
 <p>Updates the text of the tooltip. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviTalToolTip.html#a4e4acde2924941d0a21a74a2795112fd">KviTalToolTip::add()</a>, <a class="el" href="classKviQueryWindow.html#afb4fec565ddebe81b1a97563963b1b6a">getInfoLabelText()</a>, <a class="el" href="classKviQueryWindow.html#a75520ddcdcd49915c934f91a51bb1328">getInfoLabelTipText()</a>, and <a class="el" href="classKviQueryWindow.html#a7d71a7ff94653a4603e7ac2a2ac338db">m_pLabel</a>.</p>
+<p>References <a class="el" href="classKviTalToolTip.html#a4e4acde2924941d0a21a74a2795112fd">KviTalToolTip::add()</a>, <a class="el" href="classKviQueryWindow.html#afb4fec565ddebe81b1a97563963b1b6a">getInfoLabelText()</a>, <a class="el" href="classKviQueryWindow.html#a3c87898dee63b9cb66247706b2384cfe">getWindowListTipText()</a>, <a class="el" href="classKviQueryWindow.html#a7d71a7ff94653a4603e7ac2a2ac338db">m_pLabel</a>, and <a class="el" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviQueryWindow.html#aba3e44e12376fdebb70f7094ded3afb0">applyOptions()</a>, <a class="el" href="classKviQueryWindow.html#a69ff9c275eef97e26582ad4aa4be7fbd">KviQueryWindow()</a>, <a class="el" href="classKviQueryWindow.html#a6925e0cf4b865457947f6a771cd0cc8c">mergeQuery()</a>, <a class="el" href="classKviQueryWindow.html#aeeaed3cdd39e5db0db0e02bdd62cc096">nickChange()</a>, <a class="el" href="classKviQueryWindow.html#ab9844b77d0adf0a10c15beb58e8880a5">notifyCommonChannels()</a>, <a class="el" href="classKviQueryWindow.html#a02dbe7669fdca155567bcde27de07420">notifyTargetChange()</a>, <a class="el" href="classKviIrcServerParser.html#aa858fb8e1ff3903657109a7b2bff9c8c">KviIrcServerParser::parseLiteralJoin()</a>, <a class="el" href="classKviIrcServerParser.html#a8a2a46e1fa037d757a97a9842954c9ca">KviIrcServerParser::parseNumericWhoisAway()</a>, <a class="el" href="classKviIrcServerParser.html#aa072a46b44449ba09855dc2d442e31fd">KviIrcServerParser::parseNumericWhoisServer()</a>, <a class="el" href="classKviIrcServerParser.html#ab5c39f38fc8d8cfc04638622e577869f">KviIrcServerParser::parseNumericWhoisUser()</a>, <a class="el" href="classKviIrcServerParser.html#a626182b7f46ef7c67ef4df0c18e65b6b">KviIrcServerParser::parseNumericWhoReply()</a>, <a class="el" href="classKviQueryWindow.html#a7734417cd40e9b0d84c31aaa68170d86">setDeadQuery()</a>, <a class="el" href="classKviQueryWindow.html#ae24951ba8ff6a4c2e632406f4769227a">setTarget()</a>, and <a class="el" href="classKviQueryWindow.html#aaac1ec7dd3bbeb683e933b8b2413ccd9">userAction()</a>.</p>
+<p>Referenced by <a class="el" href="classKviQueryWindow.html#aba3e44e12376fdebb70f7094ded3afb0">applyOptions()</a>, <a class="el" href="classKviQueryWindow.html#aa42ee5bdeeba4cc338da1d5d12ac4b69">KviQueryWindow()</a>, <a class="el" href="classKviQueryWindow.html#a6925e0cf4b865457947f6a771cd0cc8c">mergeQuery()</a>, <a class="el" href="classKviQueryWindow.html#aeeaed3cdd39e5db0db0e02bdd62cc096">nickChange()</a>, <a class="el" href="classKviQueryWindow.html#ab9844b77d0adf0a10c15beb58e8880a5">notifyCommonChannels()</a>, <a class="el" href="classKviQueryWindow.html#a02dbe7669fdca155567bcde27de07420">notifyTargetChange()</a>, <a class="el" href="classKviIrcServerParser.html#aa858fb8e1ff3903657109a7b2bff9c8c">KviIrcServerParser::parseLiteralJoin()</a>, <a class="el" href="classKviIrcServerParser.html#a8a2a46e1fa037d757a97a9842954c9ca">KviIrcServerParser::parseNumericWhoisAway()</a>, <a class="el" href="classKviIrcServerParser.html#aa072a46b44449ba09855dc2d442e31fd">KviIrcServerParser::parseNumericWhoisServer()</a>, <a class="el" href="classKviIrcServerParser.html#ab5c39f38fc8d8cfc04638622e577869f">KviIrcServerParser::parseNumericWhoisUser()</a>, <a class="el" href="classKviIrcServerParser.html#a626182b7f46ef7c67ef4df0c18e65b6b">KviIrcServerParser::parseNumericWhoReply()</a>, <a class="el" href="classKviQueryWindow.html#a7734417cd40e9b0d84c31aaa68170d86">setDeadQuery()</a>, <a class="el" href="classKviQueryWindow.html#ae24951ba8ff6a4c2e632406f4769227a">setTarget()</a>, and <a class="el" href="classKviQueryWindow.html#aaac1ec7dd3bbeb683e933b8b2413ccd9">userAction()</a>.</p>
 
 </div>
 </div>
@@ -1398,7 +1394,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviQueryWindow.html#a69ff9c275eef97e26582ad4aa4be7fbd">KviQueryWindow()</a>, <a class="el" href="classKviQueryWindow.html#a11b9c7e2a7ce9e511d51c572ecd053ba">setAliveQuery()</a>, and <a class="el" href="classKviQueryWindow.html#a7734417cd40e9b0d84c31aaa68170d86">setDeadQuery()</a>.</p>
+<p>Referenced by <a class="el" href="classKviQueryWindow.html#aa42ee5bdeeba4cc338da1d5d12ac4b69">KviQueryWindow()</a>, <a class="el" href="classKviQueryWindow.html#a11b9c7e2a7ce9e511d51c572ecd053ba">setAliveQuery()</a>, and <a class="el" href="classKviQueryWindow.html#a7734417cd40e9b0d84c31aaa68170d86">setDeadQuery()</a>.</p>
 
 </div>
 </div>
@@ -1413,7 +1409,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviQueryWindow.html#a69ff9c275eef97e26582ad4aa4be7fbd">KviQueryWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviQueryWindow.html#aa42ee5bdeeba4cc338da1d5d12ac4b69">KviQueryWindow()</a>.</p>
 
 </div>
 </div>
@@ -1428,7 +1424,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviQueryWindow.html#a69ff9c275eef97e26582ad4aa4be7fbd">KviQueryWindow()</a>, and <a class="el" href="classKviQueryWindow.html#a65edbdb4317086a2332136facc19703d">updateLabelText()</a>.</p>
+<p>Referenced by <a class="el" href="classKviQueryWindow.html#aa42ee5bdeeba4cc338da1d5d12ac4b69">KviQueryWindow()</a>, and <a class="el" href="classKviQueryWindow.html#a65edbdb4317086a2332136facc19703d">updateLabelText()</a>.</p>
 
 </div>
 </div>
@@ -1443,7 +1439,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviQueryWindow.html#a69ff9c275eef97e26582ad4aa4be7fbd">KviQueryWindow()</a>, and <a class="el" href="classKviQueryWindow.html#a7cc6f54f15842c1f541751f5d5322e04">showListView()</a>.</p>
+<p>Referenced by <a class="el" href="classKviQueryWindow.html#aa42ee5bdeeba4cc338da1d5d12ac4b69">KviQueryWindow()</a>, and <a class="el" href="classKviQueryWindow.html#a7cc6f54f15842c1f541751f5d5322e04">showListView()</a>.</p>
 
 </div>
 </div>
@@ -1458,7 +1454,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviQueryWindow.html#aba3e44e12376fdebb70f7094ded3afb0">applyOptions()</a>, <a class="el" href="classKviQueryWindow.html#a69ff9c275eef97e26582ad4aa4be7fbd">KviQueryWindow()</a>, <a class="el" href="classKviQueryWindow.html#a63a6b8c655c72ef444f7d1a79507be1a">loadProperties()</a>, <a class="el" href="classKviQueryWindow.html#aeeaed3cdd39e5db0db0e02bdd62cc096">nickChange()</a>, <a class="el" href="classKviQueryWindow.html#a8160ed7681ec028f37656a305bc38bc1">ownAction()</a>, <a class="el" href="classKviQueryWindow.html#af16ef9e25200f6e74f1c32b5ff7f3f20">saveProperties()</a>, <a class="el" href="classKviQueryWindow.html#a11b9c7e2a7ce9e511d51c572ecd053ba">setAliveQuery()</a>, <a class="el" href="classKviQueryWindow.html#a7734417cd40e9b0d84c31aaa68170d86">setDeadQuery()</a>, <a class="el" href="classKviQueryWindow.html#ae24951ba8ff6a4c2e632406f4769227a">setTarget()</a>, <a class="el" href="classKviQueryWindow.html#a7cc6f54f15842c1f541751f5d5322e04">showListView()</a>, <a class="el" href="classKviQueryWindow.html#a976c2b00293842eb474377ddaad0f842">toggleListView()</a>, <a class="el" href="classKviQueryWindow.html#aaac1ec7dd3bbeb683e933b8b2413ccd9">userAction()</a>, and <a class="el" href="classKviQueryWindow.html#a5fc739f9915ee42f3c77baf414f05a45">~KviQueryWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviQueryWindow.html#aba3e44e12376fdebb70f7094ded3afb0">applyOptions()</a>, <a class="el" href="classKviQueryWindow.html#aa42ee5bdeeba4cc338da1d5d12ac4b69">KviQueryWindow()</a>, <a class="el" href="classKviQueryWindow.html#aeeaed3cdd39e5db0db0e02bdd62cc096">nickChange()</a>, <a class="el" href="classKviQueryWindow.html#a8160ed7681ec028f37656a305bc38bc1">ownAction()</a>, <a class="el" href="classKviQueryWindow.html#af16ef9e25200f6e74f1c32b5ff7f3f20">saveProperties()</a>, <a class="el" href="classKviQueryWindow.html#a11b9c7e2a7ce9e511d51c572ecd053ba">setAliveQuery()</a>, <a class="el" href="classKviQueryWindow.html#a7734417cd40e9b0d84c31aaa68170d86">setDeadQuery()</a>, <a class="el" href="classKviQueryWindow.html#ae24951ba8ff6a4c2e632406f4769227a">setTarget()</a>, <a class="el" href="classKviQueryWindow.html#a7cc6f54f15842c1f541751f5d5322e04">showListView()</a>, <a class="el" href="classKviQueryWindow.html#a976c2b00293842eb474377ddaad0f842">toggleListView()</a>, <a class="el" href="classKviQueryWindow.html#aaac1ec7dd3bbeb683e933b8b2413ccd9">userAction()</a>, and <a class="el" href="classKviQueryWindow.html#a5fc739f9915ee42f3c77baf414f05a45">~KviQueryWindow()</a>.</p>
 
 </div>
 </div>
@@ -1467,7 +1463,7 @@ Protected Attributes</h2></td></tr>
 <li>src/kvirc/ui/<a class="el" href="KviQueryWindow_8cpp.html">KviQueryWindow.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:45 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:35 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

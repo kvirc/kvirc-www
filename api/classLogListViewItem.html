@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -107,8 +107,8 @@ function toggleVisibility(linkObj) {
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogListViewItem.html#a08893a2d4867b7e87d0e5c30cd89b4a0">fileName</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLogFile.html">LogFile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogListViewItem.html#ac994e1832fa402ad26e47f93da98c733">log</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogListViewItem.html#ac5dfbb0e930906c14090c8aba04e861f">LogListViewItem</a> (QTreeWidget *par, <a class="el" href="classLogFile.html#a019579b3007273b26985d8dcd3d8225b">LogFile::Type</a> type, <a class="el" href="classLogFile.html">LogFile</a> *fileData)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogListViewItem.html#a67a9072ed7497626e45794d3975be88e">LogListViewItem</a> (QTreeWidgetItem *par, <a class="el" href="classLogFile.html#a019579b3007273b26985d8dcd3d8225b">LogFile::Type</a> type, <a class="el" href="classLogFile.html">LogFile</a> *fileData)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogListViewItem.html#ab954988139c7e8e729375e60c9a45acc">LogListViewItem</a> (QTreeWidget *pPar, <a class="el" href="classLogFile.html#a019579b3007273b26985d8dcd3d8225b">LogFile::Type</a> eType, <a class="el" href="classLogFile.html">LogFile</a> *pLog)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogListViewItem.html#a461575ab9f4b1f9ea7b1f866f75b8f61">LogListViewItem</a> (QTreeWidgetItem *pPar, <a class="el" href="classLogFile.html#a019579b3007273b26985d8dcd3d8225b">LogFile::Type</a> eType, <a class="el" href="classLogFile.html">LogFile</a> *pLog)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogListViewItem.html#a58e5568354e794dc49d5b856286cbc43">~LogListViewItem</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -116,7 +116,7 @@ Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLogFile.html">LogFile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogListViewItem.html#a32c6de8a4b98d9e36a705cafd665f452">m_pFileData</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a67a9072ed7497626e45794d3975be88e"></a><!-- doxytag: member="LogListViewItem::LogListViewItem" ref="a67a9072ed7497626e45794d3975be88e" args="(QTreeWidgetItem *par, LogFile::Type type, LogFile *fileData)" -->
+<a class="anchor" id="a461575ab9f4b1f9ea7b1f866f75b8f61"></a><!-- doxytag: member="LogListViewItem::LogListViewItem" ref="a461575ab9f4b1f9ea7b1f866f75b8f61" args="(QTreeWidgetItem *pPar, LogFile::Type eType, LogFile *pLog)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -124,19 +124,19 @@ Public Attributes</h2></td></tr>
           <td class="memname">LogListViewItem::LogListViewItem </td>
           <td>(</td>
           <td class="paramtype">QTreeWidgetItem *&#160;</td>
-          <td class="paramname"><em>par</em>, </td>
+          <td class="paramname"><em>pPar</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classLogFile.html#a019579b3007273b26985d8dcd3d8225b">LogFile::Type</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramname"><em>eType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classLogFile.html">LogFile</a> *&#160;</td>
-          <td class="paramname"><em>fileData</em>&#160;</td>
+          <td class="paramname"><em>pLog</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -151,7 +151,7 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac5dfbb0e930906c14090c8aba04e861f"></a><!-- doxytag: member="LogListViewItem::LogListViewItem" ref="ac5dfbb0e930906c14090c8aba04e861f" args="(QTreeWidget *par, LogFile::Type type, LogFile *fileData)" -->
+<a class="anchor" id="ab954988139c7e8e729375e60c9a45acc"></a><!-- doxytag: member="LogListViewItem::LogListViewItem" ref="ab954988139c7e8e729375e60c9a45acc" args="(QTreeWidget *pPar, LogFile::Type eType, LogFile *pLog)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -159,19 +159,19 @@ Public Attributes</h2></td></tr>
           <td class="memname">LogListViewItem::LogListViewItem </td>
           <td>(</td>
           <td class="paramtype">QTreeWidget *&#160;</td>
-          <td class="paramname"><em>par</em>, </td>
+          <td class="paramname"><em>pPar</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classLogFile.html#a019579b3007273b26985d8dcd3d8225b">LogFile::Type</a>&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
+          <td class="paramname"><em>eType</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classLogFile.html">LogFile</a> *&#160;</td>
-          <td class="paramname"><em>fileData</em>&#160;</td>
+          <td class="paramname"><em>pLog</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -255,7 +255,7 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">LogViewWindow::filterNext()</a>, and <a class="el" href="classLogListViewItemType.html#a69fbf7e97cea6e7b1b11bdc524b8eef2">LogListViewItemType::LogListViewItemType()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">LogViewWindow::filterNext()</a>, and <a class="el" href="classLogListViewItemType.html#ad822a22ab2e1edb9ad50eee2c6e6d824">LogListViewItemType::LogListViewItemType()</a>.</p>
 
 </div>
 </div>
@@ -270,7 +270,7 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogListViewLog.html#a5493f11fe142c1861682002ab7d081e1">LogListViewLog::fileName()</a>, <a class="el" href="classLogListViewItem.html#ac994e1832fa402ad26e47f93da98c733">log()</a>, <a class="el" href="classLogListViewItem.html#a67a9072ed7497626e45794d3975be88e">LogListViewItem()</a>, <a class="el" href="classLogListViewLog.html#a7dce2b2be81c2975a4a13542f305dd44">LogListViewLog::LogListViewLog()</a>, and <a class="el" href="classLogListViewLog.html#ab2b2ba9bc16ac755aad0bc7631937da3">LogListViewLog::operator&lt;()</a>.</p>
+<p>Referenced by <a class="el" href="classLogListViewLog.html#a5493f11fe142c1861682002ab7d081e1">LogListViewLog::fileName()</a>, <a class="el" href="classLogListViewItem.html#ac994e1832fa402ad26e47f93da98c733">log()</a>, <a class="el" href="classLogListViewItem.html#a461575ab9f4b1f9ea7b1f866f75b8f61">LogListViewItem()</a>, <a class="el" href="classLogListViewLog.html#a53b65f8df59f2a41ae4dd3aaf6c3bfc8">LogListViewLog::LogListViewLog()</a>, and <a class="el" href="classLogListViewLog.html#ab2b2ba9bc16ac755aad0bc7631937da3">LogListViewLog::operator&lt;()</a>.</p>
 
 </div>
 </div>
@@ -279,7 +279,7 @@ Public Attributes</h2></td></tr>
 <li>src/modules/logview/<a class="el" href="LogViewWidget_8cpp.html">LogViewWidget.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:47 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:37 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

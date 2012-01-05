@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -232,8 +232,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the user is a voice.  <a href="#add0e011982930a5f798277d67739c8d7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviUserListEntry.html">KviUserListEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannelWindow.html#a30d10ace4f0d5b65a113709d95fd695a">join</a> (const QString &amp;szNick, const QString &amp;szUser=QString(), const QString &amp;<a class="el" href="SetupWizard_8cpp.html#a4fb3832e26f698a2be51f410b6a1e17e">szHost</a>=QString(), int iFlags=0)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a user joins the channel.  <a href="#a30d10ace4f0d5b65a113709d95fd695a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow</a> (<a class="el" href="classKviMainWindow.html">KviMainWindow</a> *lpFrm, <a class="el" href="classKviConsoleWindow.html">KviConsoleWindow</a> *lpConsole, const QString &amp;szName)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the channel object.  <a href="#a3b5c817ce882aa5169334d368c530e94"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow</a> (<a class="el" href="classKviConsoleWindow.html">KviConsoleWindow</a> *lpConsole, const QString &amp;szName)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the channel object.  <a href="#a581621fef0c584dbbabcf34d50d5f7d2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">kvi_time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannelWindow.html#a353fe091d68a384adc549583d5c1a076">lastReceivedWhoReply</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time of the last received WHO reply.  <a href="#a353fe091d68a384adc549583d5c1a076"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviChannelWindow.html#a72332b1a962c959bc8f2d3f2c401653a">loadLogFile</a> (const QString &amp;szFileName, bool bGzip)</td></tr>
@@ -514,19 +514,13 @@ Private Slots</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a3b5c817ce882aa5169334d368c530e94"></a><!-- doxytag: member="KviChannelWindow::KviChannelWindow" ref="a3b5c817ce882aa5169334d368c530e94" args="(KviMainWindow *lpFrm, KviConsoleWindow *lpConsole, const QString &amp;szName)" -->
+<a class="anchor" id="a581621fef0c584dbbabcf34d50d5f7d2"></a><!-- doxytag: member="KviChannelWindow::KviChannelWindow" ref="a581621fef0c584dbbabcf34d50d5f7d2" args="(KviConsoleWindow *lpConsole, const QString &amp;szName)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">KviChannelWindow::KviChannelWindow </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviMainWindow.html">KviMainWindow</a> *&#160;</td>
-          <td class="paramname"><em>lpFrm</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="classKviConsoleWindow.html">KviConsoleWindow</a> *&#160;</td>
           <td class="paramname"><em>lpConsole</em>, </td>
         </tr>
@@ -548,7 +542,6 @@ Private Slots</h2></td></tr>
 <p>Constructs the channel object. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">lpFrm</td><td>The parent frame object </td></tr>
     <tr><td class="paramname">lpConsole</td><td>The console of the context </td></tr>
     <tr><td class="paramname">szName</td><td>The name of the channel </td></tr>
   </table>
@@ -671,7 +664,7 @@ Private Slots</h2></td></tr>
 
 <p>References <a class="el" href="classKviThemedLineEdit.html#a22ba9f1583c6315ca963f5dcc38eea8a">KviThemedLineEdit::applyOptions()</a>, <a class="el" href="classKviIrcView.html#ad24a458565bad5f7f5ae691fb1d303bb">KviIrcView::applyOptions()</a>, <a class="el" href="classKviTopicWidget.html#a3de2abcb7e7daf074a78dc50cbbcfca1">KviTopicWidget::applyOptions()</a>, <a class="el" href="classKviUserListView.html#a1f3cb0b959e759470b82a8c31405701e">KviUserListView::applyOptions()</a>, <a class="el" href="classKviChannelWindow.html#a5e04947369b713aab50ab162c159884d">m_pMessageView</a>, <a class="el" href="classKviChannelWindow.html#aee1445e2a0f5d2bd5d275950f9806b74">m_pModeWidget</a>, <a class="el" href="classKviChannelWindow.html#ab8aa39bad52feed7979d238043401e2a">m_pTopicWidget</a>, and <a class="el" href="classKviChannelWindow.html#a5738f742d00f8fca3d8e14302010fb99">m_pUserListView</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>.</p>
 
 </div>
 </div>
@@ -722,7 +715,7 @@ Private Slots</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a87ecbe0278887fdedb1ba013d26e08cd">KviWindow</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#a22101d47a4918887e46086bcf7e7dfee">loadProperties()</a>, <a class="el" href="classKviChannelWindow.html#aa65256f937fbca21c258f5dbc1004d0d">saveProperties()</a>, and <a class="el" href="classKviChannelWindow.html#aa5345ddb73b1427f236c7e6c06493777">toggleToolButtons()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#a22101d47a4918887e46086bcf7e7dfee">loadProperties()</a>, <a class="el" href="classKviChannelWindow.html#aa65256f937fbca21c258f5dbc1004d0d">saveProperties()</a>, and <a class="el" href="classKviChannelWindow.html#aa5345ddb73b1427f236c7e6c06493777">toggleToolButtons()</a>.</p>
 
 </div>
 </div>
@@ -1271,7 +1264,7 @@ Private Slots</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#ae1ee2513f5ae368237b6374bb698e812">KviWindow</a>.</p>
 
-<p>References <a class="el" href="classKviWindow.html#a1a9d026251bc4cf03e3718f9d0af77ac">KviWindow::windowName()</a>.</p>
+<p>References <a class="el" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">KviWindow::connection()</a>, <a class="el" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">KviOsInfo::name()</a>, <a class="el" href="classKviChannelWindow.html#a488eaede4b2fe72e7e9708a2c0ba68a4">target()</a>, and <a class="el" href="classKviWindow.html#a1a9d026251bc4cf03e3718f9d0af77ac">KviWindow::windowName()</a>.</p>
 
 </div>
 </div>
@@ -2269,7 +2262,7 @@ Private Slots</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a0cb041b9b2c9356d0c541273c9f8dca8">KviWindow</a>.</p>
 
-<p>References <a class="el" href="classKviChannelWindow.html#a62d46961011d34d67ce73bc984fe474d">buttonContainer()</a>, <a class="el" href="KviOptions_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="KviOptions_8h.html#a3781e07408a73d145c1b51b4fa56c23d">KviOption_boolHideWindowToolButtons</a>, <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classKviChannelWindow.html#a5e04947369b713aab50ab162c159884d">m_pMessageView</a>, <a class="el" href="classKviChannelWindow.html#a573efa3fb78e5ef4fc329fcc64f40f4f">m_privateBackground</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classKviChannelWindow.html#a8707b0b0b8d90dbd189786dd4411e42f">m_pTopSplitter</a>, <a class="el" href="classKviChannelWindow.html#a5738f742d00f8fca3d8e14302010fb99">m_pUserListView</a>, <a class="el" href="classKviChannelWindow.html#aa10a2465508e7ce107af480b5b24475b">m_VertSplitterSizesList</a>, <a class="el" href="classKviConfigurationFile.html#a5b0944547ed66f4b77babc2807b99dd7">KviConfigurationFile::readBoolEntry()</a>, <a class="el" href="classKviConfigurationFile.html#a8d5d75cadfd6a3b51a0d0404bb10fd58">KviConfigurationFile::readIntListEntry()</a>, <a class="el" href="classKviConfigurationFile.html#a913e7c0f7c0dff08d6a58560c29f8d42">KviConfigurationFile::readPixmapEntry()</a>, <a class="el" href="classKviChannelWindow.html#a8ac0c5b43f28cec4683ff0f7a3dfc306">resizeEvent()</a>, <a class="el" href="classKviIrcView.html#a8aa777e99008f2382e84888a7a4ec8ba">KviIrcView::setPrivateBackgroundPixmap()</a>, <a class="el" href="classKviChannelWindow.html#aaad4e255dc40873ef69d99d6ffcec77e">showDoubleView()</a>, and <a class="el" href="classKviChannelWindow.html#aa5345ddb73b1427f236c7e6c06493777">toggleToolButtons()</a>.</p>
+<p>References <a class="el" href="classKviChannelWindow.html#a62d46961011d34d67ce73bc984fe474d">buttonContainer()</a>, <a class="el" href="KviOptions_8h.html#ad6a12fb1a7923a9adb4d75fe39c43333">KVI_OPTION_BOOL</a>, <a class="el" href="KviOptions_8h.html#a3781e07408a73d145c1b51b4fa56c23d">KviOption_boolHideWindowToolButtons</a>, <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classKviChannelWindow.html#abf8d9add23506d36cc09b4e73343cf67">m_pListViewButton</a>, <a class="el" href="classKviChannelWindow.html#a5e04947369b713aab50ab162c159884d">m_pMessageView</a>, <a class="el" href="classKviChannelWindow.html#a573efa3fb78e5ef4fc329fcc64f40f4f">m_privateBackground</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classKviChannelWindow.html#a8707b0b0b8d90dbd189786dd4411e42f">m_pTopSplitter</a>, <a class="el" href="classKviChannelWindow.html#a5738f742d00f8fca3d8e14302010fb99">m_pUserListView</a>, <a class="el" href="classKviChannelWindow.html#aa10a2465508e7ce107af480b5b24475b">m_VertSplitterSizesList</a>, <a class="el" href="classKviConfigurationFile.html#a5b0944547ed66f4b77babc2807b99dd7">KviConfigurationFile::readBoolEntry()</a>, <a class="el" href="classKviConfigurationFile.html#a8d5d75cadfd6a3b51a0d0404bb10fd58">KviConfigurationFile::readIntListEntry()</a>, <a class="el" href="classKviConfigurationFile.html#a913e7c0f7c0dff08d6a58560c29f8d42">KviConfigurationFile::readPixmapEntry()</a>, <a class="el" href="classKviChannelWindow.html#a8ac0c5b43f28cec4683ff0f7a3dfc306">resizeEvent()</a>, <a class="el" href="classKviIrcView.html#a8aa777e99008f2382e84888a7a4ec8ba">KviIrcView::setPrivateBackgroundPixmap()</a>, <a class="el" href="classKviChannelWindow.html#aaad4e255dc40873ef69d99d6ffcec77e">showDoubleView()</a>, and <a class="el" href="classKviChannelWindow.html#aa5345ddb73b1427f236c7e6c06493777">toggleToolButtons()</a>.</p>
 
 </div>
 </div>
@@ -2912,7 +2905,7 @@ Private Slots</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">KviWindow::connection()</a>, <a class="el" href="classKviIrcConnection.html#a6a518969ca87170e20fcce424495a3f2">KviIrcConnection::encodeText()</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="classKviMaskEditor.html#af99afd4865802c3b17163827a3be33df">KviMaskEditor::flag()</a>, <a class="el" href="classKviWindow.html#a95c059df5d821321a07c4220b96a9b1a">KviWindow::m_szName</a>, <a class="el" href="classKviIrcConnectionServerInfo.html#aff92ff505745dd77c502b73b4c7e8c0f">KviIrcConnectionServerInfo::maxModeChanges()</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviIrcConnection.html#a4c63e1985da2c9ef2c638ef6c5735ac3">KviIrcConnection::sendFmtData()</a>, and <a class="el" href="classKviChannelWindow.html#a8c61d5ddb6efa243d5819ad96b654575">serverInfo()</a>.</p>
+<p>References <a class="el" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">KviWindow::connection()</a>, <a class="el" href="classKviIrcConnection.html#a6a518969ca87170e20fcce424495a3f2">KviIrcConnection::encodeText()</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="classKviMaskEditor.html#af99afd4865802c3b17163827a3be33df">KviMaskEditor::flag()</a>, <a class="el" href="classKviWindow.html#a95c059df5d821321a07c4220b96a9b1a">KviWindow::m_szName</a>, <a class="el" href="classKviIrcConnectionServerInfo.html#aff92ff505745dd77c502b73b4c7e8c0f">KviIrcConnectionServerInfo::maxModeChanges()</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviPointerList.html#a295ab7df974b93661fa5e8b96e69b8ce">KviPointerList&lt; T &gt;::prev()</a>, <a class="el" href="classKviIrcConnection.html#a4c63e1985da2c9ef2c638ef6c5735ac3">KviIrcConnection::sendFmtData()</a>, and <a class="el" href="classKviChannelWindow.html#a8c61d5ddb6efa243d5819ad96b654575">serverInfo()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviChannelWindow.html#a554cda2d84fe5707772e25aed31d89dd">toggleListModeEditor()</a>.</p>
 
@@ -2965,7 +2958,7 @@ Private Slots</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a63f02e495408b530f84f6d4f559f9924">KviWindow</a>.</p>
 
-<p>References <a class="el" href="classKviChannelWindow.html#a62d46961011d34d67ce73bc984fe474d">buttonContainer()</a>, <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classKviChannelWindow.html#a5e04947369b713aab50ab162c159884d">m_pMessageView</a>, <a class="el" href="classKviChannelWindow.html#a573efa3fb78e5ef4fc329fcc64f40f4f">m_privateBackground</a>, <a class="el" href="classKviChannelWindow.html#a8707b0b0b8d90dbd189786dd4411e42f">m_pTopSplitter</a>, <a class="el" href="classKviChannelWindow.html#a5738f742d00f8fca3d8e14302010fb99">m_pUserListView</a>, <a class="el" href="classKviChannelWindow.html#a6ff46d32db9563bc58cce81b5c4ff745">m_pVertSplitter</a>, <a class="el" href="classKviChannelWindow.html#aa10a2465508e7ce107af480b5b24475b">m_VertSplitterSizesList</a>, and <a class="el" href="classKviConfigurationFile.html#a275254abcc77f29662b7a81c6abebb37">KviConfigurationFile::writeEntry()</a>.</p>
+<p>References <a class="el" href="classKviChannelWindow.html#a62d46961011d34d67ce73bc984fe474d">buttonContainer()</a>, <a class="el" href="classKviConfigurationFile.html#ab5b1e0846b369784a785266f4c5ffd47">KviConfigurationFile::group()</a>, <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classKviChannelWindow.html#a5e04947369b713aab50ab162c159884d">m_pMessageView</a>, <a class="el" href="classKviChannelWindow.html#a573efa3fb78e5ef4fc329fcc64f40f4f">m_privateBackground</a>, <a class="el" href="classKviChannelWindow.html#a8707b0b0b8d90dbd189786dd4411e42f">m_pTopSplitter</a>, <a class="el" href="classKviChannelWindow.html#a5738f742d00f8fca3d8e14302010fb99">m_pUserListView</a>, <a class="el" href="classKviChannelWindow.html#a6ff46d32db9563bc58cce81b5c4ff745">m_pVertSplitter</a>, <a class="el" href="classKviWindow.html#a95c059df5d821321a07c4220b96a9b1a">KviWindow::m_szName</a>, <a class="el" href="classKviChannelWindow.html#aa10a2465508e7ce107af480b5b24475b">m_VertSplitterSizesList</a>, <a class="el" href="classKviConfigurationFile.html#af9da42adc7dccd2ab5b5778283d8db3d">KviConfigurationFile::readIntEntry()</a>, and <a class="el" href="classKviConfigurationFile.html#a275254abcc77f29662b7a81c6abebb37">KviConfigurationFile::writeEntry()</a>.</p>
 
 </div>
 </div>
@@ -3071,7 +3064,7 @@ Private Slots</h2></td></tr>
 
 <p>References <a class="el" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">KviWindow::connection()</a>, and <a class="el" href="classKviIrcConnection.html#ac58a2cc9b429cbf2d09972123840911f">KviIrcConnection::serverInfo()</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviModeEditor.html#a7bcb35c97b9778b16859066f9990a0cb">KviModeEditor::commit()</a>, <a class="el" href="classKviModeWidget.html#a5251af10063598b42aaefeb7b05b4cec">KviModeWidget::editorReturnPressed()</a>, <a class="el" href="classKviModeEditor.html#a5387903765aa93681a1f4f9ed9111264">KviModeEditor::getModeDescription()</a>, <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, <a class="el" href="classKviMaskEditor.html#a2f6f518671940ffc9ddacb545e8e9461">KviMaskEditor::KviMaskEditor()</a>, <a class="el" href="classKviModeEditor.html#a621ae35978c1561d39b82c1c5e48ac1a">KviModeEditor::KviModeEditor()</a>, <a class="el" href="classKviModeWidget.html#a9e4269f852b2e119c2cef7b1a6effa50">KviModeWidget::modeNeedsParameterOnlyWhenSet()</a>, <a class="el" href="classKviModeEditor.html#a5d8dbfb0da5aa53364bb7a16d728c073">KviModeEditor::modeNeedsParameterOnlyWhenSet()</a>, <a class="el" href="classKviChannelWindow.html#ab3f755229d15572ba2a7fd1c754556b0">preprocessMessage()</a>, <a class="el" href="classKviChannelWindow.html#a2312a0a39e40dc6f37ffc2e0eb4d4bc9">removeMasks()</a>, <a class="el" href="classKviIrcConnectionRequestQueue.html#a459874ebe4ff7fa3f8be1adff1f9e82c">KviIrcConnectionRequestQueue::timerSlot()</a>, and <a class="el" href="classKviChannelWindow.html#adea01da6c5d8705b733748a0f952e403">updateModeLabel()</a>.</p>
+<p>Referenced by <a class="el" href="classKviModeEditor.html#a7bcb35c97b9778b16859066f9990a0cb">KviModeEditor::commit()</a>, <a class="el" href="classKviModeWidget.html#a5251af10063598b42aaefeb7b05b4cec">KviModeWidget::editorReturnPressed()</a>, <a class="el" href="classKviModeEditor.html#a5387903765aa93681a1f4f9ed9111264">KviModeEditor::getModeDescription()</a>, <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, <a class="el" href="classKviMaskEditor.html#a2f6f518671940ffc9ddacb545e8e9461">KviMaskEditor::KviMaskEditor()</a>, <a class="el" href="classKviModeEditor.html#a621ae35978c1561d39b82c1c5e48ac1a">KviModeEditor::KviModeEditor()</a>, <a class="el" href="classKviModeWidget.html#a9e4269f852b2e119c2cef7b1a6effa50">KviModeWidget::modeNeedsParameterOnlyWhenSet()</a>, <a class="el" href="classKviModeEditor.html#a5d8dbfb0da5aa53364bb7a16d728c073">KviModeEditor::modeNeedsParameterOnlyWhenSet()</a>, <a class="el" href="classKviChannelWindow.html#ab3f755229d15572ba2a7fd1c754556b0">preprocessMessage()</a>, <a class="el" href="classKviChannelWindow.html#a2312a0a39e40dc6f37ffc2e0eb4d4bc9">removeMasks()</a>, <a class="el" href="classKviIrcConnectionRequestQueue.html#a459874ebe4ff7fa3f8be1adff1f9e82c">KviIrcConnectionRequestQueue::timerSlot()</a>, and <a class="el" href="classKviChannelWindow.html#adea01da6c5d8705b733748a0f952e403">updateModeLabel()</a>.</p>
 
 </div>
 </div>
@@ -3448,7 +3441,7 @@ Private Slots</h2></td></tr>
 
 <p>References <a class="el" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">KviWindow::connection()</a>, <a class="el" href="classKviIrcConnection.html#a6a518969ca87170e20fcce424495a3f2">KviIrcConnection::encodeText()</a>, <a class="el" href="classKviWindow.html#a95c059df5d821321a07c4220b96a9b1a">KviWindow::m_szName</a>, and <a class="el" href="classKviIrcConnection.html#a4c63e1985da2c9ef2c638ef6c5735ac3">KviIrcConnection::sendFmtData()</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, and <a class="el" href="classKviChannelWindow.html#ad11a361302de70c35e97b76dc6fc3b71">toggleModeEditor()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, and <a class="el" href="classKviChannelWindow.html#ad11a361302de70c35e97b76dc6fc3b71">toggleModeEditor()</a>.</p>
 
 </div>
 </div>
@@ -3754,7 +3747,7 @@ Private Slots</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classKviIrcView.html#a9c5e65412dacbefc0bd4d879913b5585">KviIrcView::joinMessagesFrom()</a>, <a class="el" href="classKviChannelWindow.html#ac761ec6e4966d722b2a54db7f3fa0742">m_pDoubleViewButton</a>, <a class="el" href="classKviWindow.html#a812a9338a56f97b5897eb78ee9d24d0d">KviWindow::m_pFrm</a>, <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classKviChannelWindow.html#a5e04947369b713aab50ab162c159884d">m_pMessageView</a>, <a class="el" href="classKviChannelWindow.html#a573efa3fb78e5ef4fc329fcc64f40f4f">m_privateBackground</a>, <a class="el" href="classKviChannelWindow.html#a6ff46d32db9563bc58cce81b5c4ff745">m_pVertSplitter</a>, <a class="el" href="classKviChannelWindow.html#aa10a2465508e7ce107af480b5b24475b">m_VertSplitterSizesList</a>, <a class="el" href="classKviPixmap.html#a068f279ce144eb24218c7ccb6fdf9a5b">KviPixmap::pixmap()</a>, <a class="el" href="classKviIrcView.html#acd4cc03b507f059963c68a2e64cccf73">KviIrcView::setMasterView()</a>, <a class="el" href="classKviIrcView.html#a8aa777e99008f2382e84888a7a4ec8ba">KviIrcView::setPrivateBackgroundPixmap()</a>, <a class="el" href="classKviIrcView.html#ae22f603db6eda88ee3515760c27a4d79">KviIrcView::splitMessagesTo()</a>, and <a class="el" href="classKviChannelWindow.html#a9da947c2f3e4fe42dfbb28353b6a203d">textViewRightClicked()</a>.</p>
+<p>References <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classKviIrcView.html#a9c5e65412dacbefc0bd4d879913b5585">KviIrcView::joinMessagesFrom()</a>, <a class="el" href="classKviChannelWindow.html#ac761ec6e4966d722b2a54db7f3fa0742">m_pDoubleViewButton</a>, <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classKviChannelWindow.html#a5e04947369b713aab50ab162c159884d">m_pMessageView</a>, <a class="el" href="classKviChannelWindow.html#a573efa3fb78e5ef4fc329fcc64f40f4f">m_privateBackground</a>, <a class="el" href="classKviChannelWindow.html#a6ff46d32db9563bc58cce81b5c4ff745">m_pVertSplitter</a>, <a class="el" href="classKviChannelWindow.html#aa10a2465508e7ce107af480b5b24475b">m_VertSplitterSizesList</a>, <a class="el" href="classKviPixmap.html#a068f279ce144eb24218c7ccb6fdf9a5b">KviPixmap::pixmap()</a>, <a class="el" href="classKviIrcView.html#acd4cc03b507f059963c68a2e64cccf73">KviIrcView::setMasterView()</a>, <a class="el" href="classKviIrcView.html#a8aa777e99008f2382e84888a7a4ec8ba">KviIrcView::setPrivateBackgroundPixmap()</a>, <a class="el" href="classKviIrcView.html#ae22f603db6eda88ee3515760c27a4d79">KviIrcView::splitMessagesTo()</a>, and <a class="el" href="classKviChannelWindow.html#a9da947c2f3e4fe42dfbb28353b6a203d">textViewRightClicked()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviChannelWindow.html#a22101d47a4918887e46086bcf7e7dfee">loadProperties()</a>, and <a class="el" href="classKviChannelWindow.html#a90f155743e3dcddab3810c367019cb72">toggleDoubleView()</a>.</p>
 
@@ -3802,7 +3795,7 @@ Private Slots</h2></td></tr>
 
 <p>References <a class="el" href="classKviWindow.html#a1a9d026251bc4cf03e3718f9d0af77ac">KviWindow::windowName()</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviMaskInputDialog.html#ae89c39d803006ea2aa0218e6835eb6b8">KviMaskInputDialog::accept()</a>, <a class="el" href="classKviChannelWindow.html#a30ef8db366b4e348f95400a348e1b31d">pasteLastLog()</a>, and <a class="el" href="classKviIrcConnectionRequestQueue.html#a459874ebe4ff7fa3f8be1adff1f9e82c">KviIrcConnectionRequestQueue::timerSlot()</a>.</p>
+<p>Referenced by <a class="el" href="classKviMaskInputDialog.html#ae89c39d803006ea2aa0218e6835eb6b8">KviMaskInputDialog::accept()</a>, <a class="el" href="classKviChannelWindow.html#a8d48db9f271f5464e20dd087934422d6">getConfigGroupName()</a>, <a class="el" href="classKviChannelWindow.html#a30ef8db366b4e348f95400a348e1b31d">pasteLastLog()</a>, and <a class="el" href="classKviIrcConnectionRequestQueue.html#a459874ebe4ff7fa3f8be1adff1f9e82c">KviIrcConnectionRequestQueue::timerSlot()</a>.</p>
 
 </div>
 </div>
@@ -3826,7 +3819,7 @@ Private Slots</h2></td></tr>
 
 <p>References <a class="el" href="KviKvsEventTable_8h.html#a28a1cbe721b2a266c186dac9dc3b9f0a">KviEvent_OnChannelPopupRequest</a>, and <a class="el" href="KviKvsEventTriggers_8h.html#a0d79b9bd36e0f3ba87cfcfec6d5e5a11">KVS_TRIGGER_EVENT_0</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, and <a class="el" href="classKviChannelWindow.html#aaad4e255dc40873ef69d99d6ffcec77e">showDoubleView()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, and <a class="el" href="classKviChannelWindow.html#aaad4e255dc40873ef69d99d6ffcec77e">showDoubleView()</a>.</p>
 
 </div>
 </div>
@@ -3849,7 +3842,7 @@ Private Slots</h2></td></tr>
 
 <p>References <a class="el" href="classKviChannelWindow.html#ac761ec6e4966d722b2a54db7f3fa0742">m_pDoubleViewButton</a>, <a class="el" href="classKviChannelWindow.html#a5e04947369b713aab50ab162c159884d">m_pMessageView</a>, and <a class="el" href="classKviChannelWindow.html#aaad4e255dc40873ef69d99d6ffcec77e">showDoubleView()</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>.</p>
 
 </div>
 </div>
@@ -3872,7 +3865,7 @@ Private Slots</h2></td></tr>
 
 <p>References <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">KviWindow::connection()</a>, <a class="el" href="classKviIrcConnection.html#a6a518969ca87170e20fcce424495a3f2">KviIrcConnection::encodeText()</a>, <a class="el" href="classKviChannelWindow.html#a7198232e89b4036f898251675cc26abe">m_pListEditorButtons</a>, <a class="el" href="classKviChannelWindow.html#ad089758392ac7447c3df301dd14c3c08">m_pListEditors</a>, <a class="el" href="classKviChannelWindow.html#a61a3822f3d8dbd9e98e7034b38e876f9">m_pModeLists</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classKviWindow.html#a95c059df5d821321a07c4220b96a9b1a">KviWindow::m_szName</a>, <a class="el" href="classKviChannelWindow.html#a1219288b09d9ce81a97d9a1e11f643cb">m_szSentModeRequests</a>, <a class="el" href="classKviChannelWindow.html#a2312a0a39e40dc6f37ffc2e0eb4d4bc9">removeMasks()</a>, <a class="el" href="classKviIrcConnection.html#a4c63e1985da2c9ef2c638ef6c5735ac3">KviIrcConnection::sendFmtData()</a>, and <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>.</p>
 
 </div>
 </div>
@@ -3895,7 +3888,7 @@ Private Slots</h2></td></tr>
 
 <p>References <a class="el" href="classKviChannelWindow.html#abf8d9add23506d36cc09b4e73343cf67">m_pListViewButton</a>, and <a class="el" href="classKviChannelWindow.html#a5738f742d00f8fca3d8e14302010fb99">m_pUserListView</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>.</p>
 
 </div>
 </div>
@@ -3918,7 +3911,7 @@ Private Slots</h2></td></tr>
 
 <p>References <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="namespaceKviKvs.html#ab846ee5b15891b344ae932ef8f19ed3f">KviKvs::done()</a>, <a class="el" href="classKviChannelWindow.html#aca73cf12974d61b3c5dfc0cce13cc0cd">m_pModeEditor</a>, <a class="el" href="classKviChannelWindow.html#a35e404ef6799b12ba45e74ab2cab27f5">m_pModeEditorButton</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classKviChannelWindow.html#afc15e63dbdff1c342199bf1b1b3eb19f">modeSelectorDone()</a>, <a class="el" href="classKviChannelWindow.html#a8ac0c5b43f28cec4683ff0f7a3dfc306">resizeEvent()</a>, and <a class="el" href="classKviChannelWindow.html#a17dcc9080fd43c332a65e003de2604aa">setMode()</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, and <a class="el" href="classKviChannelWindow.html#afc15e63dbdff1c342199bf1b1b3eb19f">modeSelectorDone()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, and <a class="el" href="classKviChannelWindow.html#afc15e63dbdff1c342199bf1b1b3eb19f">modeSelectorDone()</a>.</p>
 
 </div>
 </div>
@@ -3941,7 +3934,7 @@ Private Slots</h2></td></tr>
 
 <p>References <a class="el" href="classKviChannelWindow.html#a62d46961011d34d67ce73bc984fe474d">buttonContainer()</a>, <a class="el" href="KviIconManager_8cpp.html#a3ea7617ef2d091c1c04b0f95fb0845ae">g_pIconManager</a>, <a class="el" href="classKviIconManager.html#a516b6236fb0fa37090fbbe2bf731f2f0">KviIconManager::getBigIcon()</a>, <a class="el" href="classKviWindow.html#a0e0ef930e63df82d810a75a77a86dc88">KviWindow::m_pHideToolsButton</a>, and <a class="el" href="classKviWindow.html#ae574413ac78b79dca6f077a6394f09bd">KviWindow::toggleButtonContainer()</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, and <a class="el" href="classKviChannelWindow.html#a22101d47a4918887e46086bcf7e7dfee">loadProperties()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, and <a class="el" href="classKviChannelWindow.html#a22101d47a4918887e46086bcf7e7dfee">loadProperties()</a>.</p>
 
 </div>
 </div>
@@ -3971,7 +3964,7 @@ Private Slots</h2></td></tr>
 
 <p>References <a class="el" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">KviWindow::connection()</a>, <a class="el" href="classKviIrcConnection.html#a6a518969ca87170e20fcce424495a3f2">KviIrcConnection::encodeText()</a>, <a class="el" href="classKviWindow.html#a13e12cfbf9a28ed99abca7f116343f12">KviWindow::encodeText()</a>, <a class="el" href="classKviWindow.html#a95c059df5d821321a07c4220b96a9b1a">KviWindow::m_szName</a>, <a class="el" href="namespaceKviOsInfo.html#aa032796a0490eb371ac71503d3177444">KviOsInfo::name()</a>, and <a class="el" href="classKviIrcConnection.html#a4c63e1985da2c9ef2c638ef6c5735ac3">KviIrcConnection::sendFmtData()</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>.</p>
 
 </div>
 </div>
@@ -4277,7 +4270,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#ab5a3c16d6d7c2b7726896680c600414b">checkChannelSync()</a>, <a class="el" href="classKviChannelWindow.html#ad9b0e4e25d0f8d9b1383df040136e5ed">closeEvent()</a>, <a class="el" href="classKviChannelWindow.html#ac6ecdc73738ac4d7b2480c9b068ad5f8">getWindowListTipText()</a>, <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#a5f0fb9848e43777129e98308178d2685">myIconPtr()</a>, <a class="el" href="classKviChannelWindow.html#a405918f1b1aab2fb4563eb474017621a">partMessageSent()</a>, <a class="el" href="classKviChannelWindow.html#a93ff3408b29063577fb189f0f0c6dcbd">setAliveChan()</a>, and <a class="el" href="classKviChannelWindow.html#ab1874cc000fb73f79645c95480b3003d">setDeadChan()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#ab5a3c16d6d7c2b7726896680c600414b">checkChannelSync()</a>, <a class="el" href="classKviChannelWindow.html#ad9b0e4e25d0f8d9b1383df040136e5ed">closeEvent()</a>, <a class="el" href="classKviChannelWindow.html#ac6ecdc73738ac4d7b2480c9b068ad5f8">getWindowListTipText()</a>, <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#a5f0fb9848e43777129e98308178d2685">myIconPtr()</a>, <a class="el" href="classKviChannelWindow.html#a405918f1b1aab2fb4563eb474017621a">partMessageSent()</a>, <a class="el" href="classKviChannelWindow.html#a93ff3408b29063577fb189f0f0c6dcbd">setAliveChan()</a>, and <a class="el" href="classKviChannelWindow.html#ab1874cc000fb73f79645c95480b3003d">setDeadChan()</a>.</p>
 
 </div>
 </div>
@@ -4292,7 +4285,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#ac314f4876b15539a5ba4eb1e5f74467c">activityMeter()</a>, <a class="el" href="classKviChannelWindow.html#ab5a3c16d6d7c2b7726896680c600414b">checkChannelSync()</a>, <a class="el" href="classKviChannelWindow.html#a8ec43fb5269d51d184630363d6206864">getChannelActivityStats()</a>, <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, and <a class="el" href="classKviChannelWindow.html#a93ff3408b29063577fb189f0f0c6dcbd">setAliveChan()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#ac314f4876b15539a5ba4eb1e5f74467c">activityMeter()</a>, <a class="el" href="classKviChannelWindow.html#ab5a3c16d6d7c2b7726896680c600414b">checkChannelSync()</a>, <a class="el" href="classKviChannelWindow.html#a8ec43fb5269d51d184630363d6206864">getChannelActivityStats()</a>, <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, and <a class="el" href="classKviChannelWindow.html#a93ff3408b29063577fb189f0f0c6dcbd">setAliveChan()</a>.</p>
 
 </div>
 </div>
@@ -4307,7 +4300,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#ac314f4876b15539a5ba4eb1e5f74467c">activityMeter()</a>, <a class="el" href="classKviChannelWindow.html#a85150bc6ba26b14d3443690605f76a7b">channelAction()</a>, <a class="el" href="classKviChannelWindow.html#abe07adefa4a13534885dd68632eb25cc">fixActionHistory()</a>, <a class="el" href="classKviChannelWindow.html#a8ec43fb5269d51d184630363d6206864">getChannelActivityStats()</a>, <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#ab1874cc000fb73f79645c95480b3003d">setDeadChan()</a>, and <a class="el" href="classKviChannelWindow.html#a43952ae93a75518f6c95185d823f2350">~KviChannelWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#ac314f4876b15539a5ba4eb1e5f74467c">activityMeter()</a>, <a class="el" href="classKviChannelWindow.html#a85150bc6ba26b14d3443690605f76a7b">channelAction()</a>, <a class="el" href="classKviChannelWindow.html#abe07adefa4a13534885dd68632eb25cc">fixActionHistory()</a>, <a class="el" href="classKviChannelWindow.html#a8ec43fb5269d51d184630363d6206864">getChannelActivityStats()</a>, <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#ab1874cc000fb73f79645c95480b3003d">setDeadChan()</a>, and <a class="el" href="classKviChannelWindow.html#a43952ae93a75518f6c95185d823f2350">~KviChannelWindow()</a>.</p>
 
 </div>
 </div>
@@ -4322,7 +4315,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>.</p>
 
 </div>
 </div>
@@ -4337,7 +4330,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#aaad4e255dc40873ef69d99d6ffcec77e">showDoubleView()</a>, and <a class="el" href="classKviChannelWindow.html#a90f155743e3dcddab3810c367019cb72">toggleDoubleView()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#aaad4e255dc40873ef69d99d6ffcec77e">showDoubleView()</a>, and <a class="el" href="classKviChannelWindow.html#a90f155743e3dcddab3810c367019cb72">toggleDoubleView()</a>.</p>
 
 </div>
 </div>
@@ -4352,7 +4345,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#a554cda2d84fe5707772e25aed31d89dd">toggleListModeEditor()</a>, and <a class="el" href="classKviChannelWindow.html#a43952ae93a75518f6c95185d823f2350">~KviChannelWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#a554cda2d84fe5707772e25aed31d89dd">toggleListModeEditor()</a>, and <a class="el" href="classKviChannelWindow.html#a43952ae93a75518f6c95185d823f2350">~KviChannelWindow()</a>.</p>
 
 </div>
 </div>
@@ -4382,7 +4375,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, and <a class="el" href="classKviChannelWindow.html#ae05f406b184ad17d642e27caaf257959">toggleListView()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#a22101d47a4918887e46086bcf7e7dfee">loadProperties()</a>, and <a class="el" href="classKviChannelWindow.html#ae05f406b184ad17d642e27caaf257959">toggleListView()</a>.</p>
 
 </div>
 </div>
@@ -4397,7 +4390,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a6e08489b563088f2d171a5ec2a4b754a">applyOptions()</a>, <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#a22101d47a4918887e46086bcf7e7dfee">loadProperties()</a>, <a class="el" href="classKviChannelWindow.html#a1ace8a4726e1a48852ea2280852d9d93">lostUserFocus()</a>, <a class="el" href="classKviChannelWindow.html#ade235171f132ebbe8362b238c30b9f01">outputMessage()</a>, <a class="el" href="classKviChannelWindow.html#aa65256f937fbca21c258f5dbc1004d0d">saveProperties()</a>, <a class="el" href="classKviChannelWindow.html#aaad4e255dc40873ef69d99d6ffcec77e">showDoubleView()</a>, and <a class="el" href="classKviChannelWindow.html#a90f155743e3dcddab3810c367019cb72">toggleDoubleView()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a6e08489b563088f2d171a5ec2a4b754a">applyOptions()</a>, <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#a22101d47a4918887e46086bcf7e7dfee">loadProperties()</a>, <a class="el" href="classKviChannelWindow.html#a1ace8a4726e1a48852ea2280852d9d93">lostUserFocus()</a>, <a class="el" href="classKviChannelWindow.html#ade235171f132ebbe8362b238c30b9f01">outputMessage()</a>, <a class="el" href="classKviChannelWindow.html#aa65256f937fbca21c258f5dbc1004d0d">saveProperties()</a>, <a class="el" href="classKviChannelWindow.html#aaad4e255dc40873ef69d99d6ffcec77e">showDoubleView()</a>, and <a class="el" href="classKviChannelWindow.html#a90f155743e3dcddab3810c367019cb72">toggleDoubleView()</a>.</p>
 
 </div>
 </div>
@@ -4412,7 +4405,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#afc15e63dbdff1c342199bf1b1b3eb19f">modeSelectorDone()</a>, and <a class="el" href="classKviChannelWindow.html#ad11a361302de70c35e97b76dc6fc3b71">toggleModeEditor()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#afc15e63dbdff1c342199bf1b1b3eb19f">modeSelectorDone()</a>, and <a class="el" href="classKviChannelWindow.html#ad11a361302de70c35e97b76dc6fc3b71">toggleModeEditor()</a>.</p>
 
 </div>
 </div>
@@ -4427,7 +4420,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, and <a class="el" href="classKviChannelWindow.html#ad11a361302de70c35e97b76dc6fc3b71">toggleModeEditor()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, and <a class="el" href="classKviChannelWindow.html#ad11a361302de70c35e97b76dc6fc3b71">toggleModeEditor()</a>.</p>
 
 </div>
 </div>
@@ -4457,7 +4450,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a6e08489b563088f2d171a5ec2a4b754a">applyOptions()</a>, <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, and <a class="el" href="classKviChannelWindow.html#adea01da6c5d8705b733748a0f952e403">updateModeLabel()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a6e08489b563088f2d171a5ec2a4b754a">applyOptions()</a>, <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, and <a class="el" href="classKviChannelWindow.html#adea01da6c5d8705b733748a0f952e403">updateModeLabel()</a>.</p>
 
 </div>
 </div>
@@ -4487,7 +4480,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a14d9c1dd1b75f66700f022335abd323a">addHighlightedUser()</a>, <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#affeaaa9b17e357eed41b95e5a804b8b6">removeHighlightedUser()</a>, and <a class="el" href="classKviChannelWindow.html#a43952ae93a75518f6c95185d823f2350">~KviChannelWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a14d9c1dd1b75f66700f022335abd323a">addHighlightedUser()</a>, <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#affeaaa9b17e357eed41b95e5a804b8b6">removeHighlightedUser()</a>, and <a class="el" href="classKviChannelWindow.html#a43952ae93a75518f6c95185d823f2350">~KviChannelWindow()</a>.</p>
 
 </div>
 </div>
@@ -4502,7 +4495,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a6e08489b563088f2d171a5ec2a4b754a">applyOptions()</a>, <a class="el" href="classKviChannelWindow.html#a6b4b0ed258a2da2ee6b5b140bd21a5f8">eventFilter()</a>, <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#a8ac0c5b43f28cec4683ff0f7a3dfc306">resizeEvent()</a>, <a class="el" href="classKviChannelWindow.html#a93ff3408b29063577fb189f0f0c6dcbd">setAliveChan()</a>, and <a class="el" href="classKviChannelWindow.html#ab1874cc000fb73f79645c95480b3003d">setDeadChan()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a6e08489b563088f2d171a5ec2a4b754a">applyOptions()</a>, <a class="el" href="classKviChannelWindow.html#a6b4b0ed258a2da2ee6b5b140bd21a5f8">eventFilter()</a>, <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#a8ac0c5b43f28cec4683ff0f7a3dfc306">resizeEvent()</a>, <a class="el" href="classKviChannelWindow.html#a93ff3408b29063577fb189f0f0c6dcbd">setAliveChan()</a>, and <a class="el" href="classKviChannelWindow.html#ab1874cc000fb73f79645c95480b3003d">setDeadChan()</a>.</p>
 
 </div>
 </div>
@@ -4517,7 +4510,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#a22101d47a4918887e46086bcf7e7dfee">loadProperties()</a>, and <a class="el" href="classKviChannelWindow.html#aa65256f937fbca21c258f5dbc1004d0d">saveProperties()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#a22101d47a4918887e46086bcf7e7dfee">loadProperties()</a>, and <a class="el" href="classKviChannelWindow.html#aa65256f937fbca21c258f5dbc1004d0d">saveProperties()</a>.</p>
 
 </div>
 </div>
@@ -4532,7 +4525,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a14d9c1dd1b75f66700f022335abd323a">addHighlightedUser()</a>, <a class="el" href="classKviChannelWindow.html#a6e08489b563088f2d171a5ec2a4b754a">applyOptions()</a>, <a class="el" href="classKviChannelWindow.html#ac6ecdc73738ac4d7b2480c9b068ad5f8">getWindowListTipText()</a>, <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#a22101d47a4918887e46086bcf7e7dfee">loadProperties()</a>, <a class="el" href="classKviChannelWindow.html#a1f75204c0b097a65503d64fb8b577750">nickChange()</a>, <a class="el" href="classKviChannelWindow.html#a6187339a00c88a472fc17e565aaac945">part()</a>, <a class="el" href="classKviChannelWindow.html#aa65256f937fbca21c258f5dbc1004d0d">saveProperties()</a>, <a class="el" href="classKviChannelWindow.html#a93ff3408b29063577fb189f0f0c6dcbd">setAliveChan()</a>, <a class="el" href="classKviChannelWindow.html#ab1874cc000fb73f79645c95480b3003d">setDeadChan()</a>, <a class="el" href="classKviChannelWindow.html#ac44eed1e67c248a1148ab0715c65b2d7">setModeInList()</a>, <a class="el" href="classKviChannelWindow.html#a673815866fed21b843948ad25814d629">setOp()</a>, <a class="el" href="classKviChannelWindow.html#ae05f406b184ad17d642e27caaf257959">toggleListView()</a>, <a class="el" href="classKviChannelWindow.html#a4392ed3535ecabe5b37676b929df7036">userAction()</a>, and <a class="el" href="classKviChannelWindow.html#a43952ae93a75518f6c95185d823f2350">~KviChannelWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a14d9c1dd1b75f66700f022335abd323a">addHighlightedUser()</a>, <a class="el" href="classKviChannelWindow.html#a6e08489b563088f2d171a5ec2a4b754a">applyOptions()</a>, <a class="el" href="classKviChannelWindow.html#ac6ecdc73738ac4d7b2480c9b068ad5f8">getWindowListTipText()</a>, <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#a22101d47a4918887e46086bcf7e7dfee">loadProperties()</a>, <a class="el" href="classKviChannelWindow.html#a1f75204c0b097a65503d64fb8b577750">nickChange()</a>, <a class="el" href="classKviChannelWindow.html#a6187339a00c88a472fc17e565aaac945">part()</a>, <a class="el" href="classKviChannelWindow.html#aa65256f937fbca21c258f5dbc1004d0d">saveProperties()</a>, <a class="el" href="classKviChannelWindow.html#a93ff3408b29063577fb189f0f0c6dcbd">setAliveChan()</a>, <a class="el" href="classKviChannelWindow.html#ab1874cc000fb73f79645c95480b3003d">setDeadChan()</a>, <a class="el" href="classKviChannelWindow.html#ac44eed1e67c248a1148ab0715c65b2d7">setModeInList()</a>, <a class="el" href="classKviChannelWindow.html#a673815866fed21b843948ad25814d629">setOp()</a>, <a class="el" href="classKviChannelWindow.html#ae05f406b184ad17d642e27caaf257959">toggleListView()</a>, <a class="el" href="classKviChannelWindow.html#a4392ed3535ecabe5b37676b929df7036">userAction()</a>, and <a class="el" href="classKviChannelWindow.html#a43952ae93a75518f6c95185d823f2350">~KviChannelWindow()</a>.</p>
 
 </div>
 </div>
@@ -4547,7 +4540,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#aa65256f937fbca21c258f5dbc1004d0d">saveProperties()</a>, and <a class="el" href="classKviChannelWindow.html#aaad4e255dc40873ef69d99d6ffcec77e">showDoubleView()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, <a class="el" href="classKviChannelWindow.html#aa65256f937fbca21c258f5dbc1004d0d">saveProperties()</a>, and <a class="el" href="classKviChannelWindow.html#aaad4e255dc40873ef69d99d6ffcec77e">showDoubleView()</a>.</p>
 
 </div>
 </div>
@@ -4622,7 +4615,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>.</p>
 
 </div>
 </div>
@@ -4637,7 +4630,7 @@ Private Slots</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#ac314f4876b15539a5ba4eb1e5f74467c">activityMeter()</a>, <a class="el" href="classKviChannelWindow.html#a85150bc6ba26b14d3443690605f76a7b">channelAction()</a>, <a class="el" href="classKviChannelWindow.html#abe07adefa4a13534885dd68632eb25cc">fixActionHistory()</a>, <a class="el" href="classKviChannelWindow.html#a3b5c817ce882aa5169334d368c530e94">KviChannelWindow()</a>, and <a class="el" href="classKviChannelWindow.html#ab1874cc000fb73f79645c95480b3003d">setDeadChan()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#ac314f4876b15539a5ba4eb1e5f74467c">activityMeter()</a>, <a class="el" href="classKviChannelWindow.html#a85150bc6ba26b14d3443690605f76a7b">channelAction()</a>, <a class="el" href="classKviChannelWindow.html#abe07adefa4a13534885dd68632eb25cc">fixActionHistory()</a>, <a class="el" href="classKviChannelWindow.html#a581621fef0c584dbbabcf34d50d5f7d2">KviChannelWindow()</a>, and <a class="el" href="classKviChannelWindow.html#ab1874cc000fb73f79645c95480b3003d">setDeadChan()</a>.</p>
 
 </div>
 </div>
@@ -4661,7 +4654,7 @@ Private Slots</h2></td></tr>
 <li>src/kvirc/ui/<a class="el" href="KviChannelWindow_8cpp.html">KviChannelWindow.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:36 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:26 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

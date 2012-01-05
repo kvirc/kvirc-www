@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -389,7 +389,11 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="namespaceKviError.html#a9ee88c2e11f25e2d268cbe9bd819fd79aea12e3f806c398f0a902ea3412da36cf">KviError::AcknowledgeError</a>, <a class="el" href="kvi__socket_8h.html#a9663c685e7f5ea0fb72ff11e7aaa0eac">kvi_socket_send()</a>, <a class="el" href="classDccThread.html#a9c0ee241e7c475af408ceed1daccbe01">DccThread::m_fd</a>, and <a class="el" href="classDccThread.html#aeac29d3b2df9cf0d64d124cba5c97205">DccThread::postErrorEvent()</a>.</p>
+<p><p>(defined(COMPILE_ON_WINDOWS) || defined(COMPILE_ON_MINGW))</p>
+<p>(defined(COMPILE_ON_WINDOWS) || defined(COMPILE_ON_MINGW)) </p>
+</p>
+
+<p>References <a class="el" href="namespaceKviError.html#a9ee88c2e11f25e2d268cbe9bd819fd79aea12e3f806c398f0a902ea3412da36cf">KviError::AcknowledgeError</a>, <a class="el" href="kvi__socket_8h.html#a09b9c8a71bf6576c7ebc954c7e3441ab">kvi_socket_error()</a>, <a class="el" href="kvi__socket_8h.html#a9663c685e7f5ea0fb72ff11e7aaa0eac">kvi_socket_send()</a>, <a class="el" href="classDccThread.html#a9c0ee241e7c475af408ceed1daccbe01">DccThread::m_fd</a>, <a class="el" href="classKviThread.html#a063a4e6e33d68921fa8b03d62406d9de">KviThread::msleep()</a>, and <a class="el" href="classDccThread.html#aeac29d3b2df9cf0d64d124cba5c97205">DccThread::postErrorEvent()</a>.</p>
 
 <p>Referenced by <a class="el" href="classDccRecvThread.html#a069abe938fec02fef444dec20dc7889b">run()</a>.</p>
 
@@ -592,7 +596,7 @@ Protected Attributes</h2></td></tr>
 <li>src/modules/dcc/<a class="el" href="DccFileTransfer_8cpp.html">DccFileTransfer.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:35 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:25 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

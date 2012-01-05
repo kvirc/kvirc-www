@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -102,6 +102,7 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkvilogview_8cpp.html#a449c264d8e71c3d9f9836bc186f6bca0">logview_kvs_cmd_open</a> (<a class="el" href="classKviKvsModuleCommandCall.html">KviKvsModuleCommandCall</a> *<a class="el" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkvilogview_8cpp.html#a5399aeed02e5aa04263f73286ad338a1">logview_module_can_unload</a> (<a class="el" href="classKviModule.html">KviModule</a> *)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkvilogview_8cpp.html#a24a95f08caa89bb801295459790fe4f7">logview_module_cleanup</a> (<a class="el" href="classKviModule.html">KviModule</a> *)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkvilogview_8cpp.html#aec38c4d8e0787d96e8031d0f7d954b17">logview_module_ctrl</a> (<a class="el" href="classKviModule.html">KviModule</a> *, const char *pcOperation, void *pParam)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkvilogview_8cpp.html#aa3993d3c6b928d911f134ab5d179df6b">logview_module_init</a> (<a class="el" href="classKviModule.html">KviModule</a> *m)</td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -203,6 +204,41 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aec38c4d8e0787d96e8031d0f7d954b17"></a><!-- doxytag: member="libkvilogview.cpp::logview_module_ctrl" ref="aec38c4d8e0787d96e8031d0f7d954b17" args="(KviModule *, const char *pcOperation, void *pParam)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool logview_module_ctrl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classKviModule.html">KviModule</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pcOperation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>References <a class="el" href="classLogViewWindow.html#a1f20b19fc331d8c940a5508c29011152">LogViewWindow::createLog()</a>, <a class="el" href="classLogFile.html#afd3ced5cc0bdb73321c31226f07ebe01a867a46ebfdafc1a86326a2dce8d008c3">LogFile::HTML</a>, <a class="el" href="KviCString_8cpp.html#a0aa63ca182ab1eccd81014a42340010d">kvi_strEqualCI()</a>, <a class="el" href="classLogFile.html#afd3ced5cc0bdb73321c31226f07ebe01a7ceb9c7791b57de105271282e8fac3aa">LogFile::PlainText</a>, <a class="el" href="struct__LogFileData.html#ac73a87ed3ea488d073bb3edcb173bfc1">_LogFileData::szFile</a>, <a class="el" href="struct__LogFileData.html#ad454633f0193a16e6fc211c88d4cd508">_LogFileData::szName</a>, and <a class="el" href="struct__LogFileData.html#a15649b771711ea27c1d239eaee912ea6">_LogFileData::szType</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="aa3993d3c6b928d911f134ab5d179df6b"></a><!-- doxytag: member="libkvilogview.cpp::logview_module_init" ref="aa3993d3c6b928d911f134ab5d179df6b" args="(KviModule *m)" -->
 <div class="memitem">
 <div class="memproto">
@@ -252,7 +288,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:34 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:23 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

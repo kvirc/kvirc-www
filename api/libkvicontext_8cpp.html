@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -98,6 +98,8 @@ function toggleVisibility(linkObj) {
 <code>#include &quot;KviIrcConnectionUserInfo.h&quot;</code><br/>
 <code>#include &quot;KviIrcConnectionTarget.h&quot;</code><br/>
 <code>#include &quot;KviIrcConnectionStatistics.h&quot;</code><br/>
+<code>#include &quot;KviIrcLink.h&quot;</code><br/>
+<code>#include &quot;KviIrcSocket.h&quot;</code><br/>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
@@ -108,6 +110,7 @@ Defines</h2></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkvicontext_8cpp.html#a2a17579cf49f3419c1fca4819e2792d8">context_kvs_cmd_clearQueue</a> (<a class="el" href="classKviKvsModuleCommandCall.html">KviKvsModuleCommandCall</a> *<a class="el" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkvicontext_8cpp.html#af966374c6f417381d9615876897efd44">context_kvs_fnc_getSSLCertInfo</a> (<a class="el" href="classKviKvsModuleFunctionCall.html">KviKvsModuleFunctionCall</a> *<a class="el" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkvicontext_8cpp.html#acfe6e394a91713fbecf09c61406077b3">context_kvs_fnc_list</a> (<a class="el" href="classKviKvsModuleFunctionCall.html">KviKvsModuleFunctionCall</a> *<a class="el" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkvicontext_8cpp.html#a388da02366fc84013bb29c4508025c1f">context_kvs_fnc_queueSize</a> (<a class="el" href="classKviKvsModuleFunctionCall.html">KviKvsModuleFunctionCall</a> *<a class="el" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkvicontext_8cpp.html#a93b2fe9728a6e1f0d95c2d7da42c73e2">context_module_cleanup</a> (<a class="el" href="classKviModule.html">KviModule</a> *)</td></tr>
@@ -264,6 +267,27 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af966374c6f417381d9615876897efd44"></a><!-- doxytag: member="libkvicontext.cpp::context_kvs_fnc_getSSLCertInfo" ref="af966374c6f417381d9615876897efd44" args="(KviKvsModuleFunctionCall *c)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool context_kvs_fnc_getSSLCertInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classKviKvsModuleFunctionCall.html">KviKvsModuleFunctionCall</a> *&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>References <a class="el" href="KviLocale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="classKviIrcContext.html#a8e50d106e8492d3a5e11caab348c8f6e">KviIrcContext::connection()</a>, <a class="el" href="classKviWindow.html#acb0c3ad5eae68ed8419a9dda8ecdb24e">KviWindow::console()</a>, <a class="el" href="classKviConsoleWindow.html#a38237f3ff6cbe08ee3ae18e281909bbb">KviConsoleWindow::context()</a>, <a class="el" href="classKviApplication.html#a1301de25b7790928fbbd6b31531be163">KviApplication::findConsole()</a>, <a class="el" href="KviApplication_8cpp.html#a2bab070e8cb43ca84c598b639d49fdfb">g_pApp</a>, <a class="el" href="KviKvsParameterProcessor_8h.html#ad7b50ae4c63b983cd951cbb78aee04e4">KVS_PF_OPTIONAL</a>, <a class="el" href="KviKvsParameterProcessor_8h.html#a1e92130e6e05dc12532a722da2015694adb7d10a8ccf6a03ff248bb4ab1f8908e">KVS_PT_STRING</a>, <a class="el" href="KviKvsParameterProcessor_8h.html#a6436a6cdf154a6f47c651d55bbdc0e05a7c91329cce3e60d08a68e73e2bc47863">KVS_PT_UINT</a>, <a class="el" href="KviKvsModuleInterface_8h.html#a1ef64ef17813944f039d0ac1b41eacff">KVSM_PARAMETER</a>, <a class="el" href="KviKvsModuleInterface_8h.html#a0ad6eb652d58d9d3f5d633e72bae89e8">KVSM_PARAMETERS_BEGIN</a>, <a class="el" href="KviKvsModuleInterface_8h.html#a0163f2f2dd01eddafc55b911e82ea351">KVSM_PARAMETERS_END</a>, <a class="el" href="classKviIrcConnection.html#aa4070429cc11c487c882a66ca908cf49">KviIrcConnection::link()</a>, <a class="el" href="KviIrcNumericCodes_8h.html#af2ebd5db010f0e321c1faa0e6a182c2b">NULL</a>, <a class="el" href="classKviKvsRunTimeCall.html#a696bb9a5aa6d70d25821f635f5210c0d">KviKvsRunTimeCall::parameterCount()</a>, <a class="el" href="classKviKvsModuleFunctionCall.html#ae62ec925e4401c8dab065c95d5230ca6">KviKvsModuleFunctionCall::returnValue()</a>, <a class="el" href="classKviKvsVariant.html#aa0be5192daaab65d1e8bf4694a078176">KviKvsVariant::setString()</a>, <a class="el" href="classKviIrcLink.html#a51a068f1a604eb8ea0ad2b8a812a17cf">KviIrcLink::socket()</a>, <a class="el" href="classKviIrcSocket.html#ab32573d635e1770cef6b76f049e5d76a">KviIrcSocket::usingSSL()</a>, <a class="el" href="classKviKvsRunTimeCall.html#ab9aed835b3901b828e61b4ca3ecc160a">KviKvsRunTimeCall::warning()</a>, and <a class="el" href="classKviKvsRunTimeCall.html#a3ffafdef3160c40c67ec982b7347e14e">KviKvsRunTimeCall::window()</a>.</p>
+
+<p>Referenced by <a class="el" href="libkvicontext_8cpp.html#afbdb9590efcd8c304399bd0b106850b0">context_module_init()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="acfe6e394a91713fbecf09c61406077b3"></a><!-- doxytag: member="libkvicontext.cpp::context_kvs_fnc_list" ref="acfe6e394a91713fbecf09c61406077b3" args="(KviKvsModuleFunctionCall *c)" -->
 <div class="memitem">
 <div class="memproto">
@@ -338,7 +362,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="libkvicontext_8cpp.html#a2a17579cf49f3419c1fca4819e2792d8">context_kvs_cmd_clearQueue()</a>, <a class="el" href="libkvicontext_8cpp.html#acfe6e394a91713fbecf09c61406077b3">context_kvs_fnc_list()</a>, <a class="el" href="libkvicontext_8cpp.html#a388da02366fc84013bb29c4508025c1f">context_kvs_fnc_queueSize()</a>, <a class="el" href="KviKvsModuleInterface_8h.html#a81c5c9b4caed6452759193c116a28e27">KVSM_REGISTER_FUNCTION</a>, and <a class="el" href="KviKvsModuleInterface_8h.html#aa97e8392db4434fb87a3235b98a319f5">KVSM_REGISTER_SIMPLE_COMMAND</a>.</p>
+<p>References <a class="el" href="libkvicontext_8cpp.html#a2a17579cf49f3419c1fca4819e2792d8">context_kvs_cmd_clearQueue()</a>, <a class="el" href="libkvicontext_8cpp.html#af966374c6f417381d9615876897efd44">context_kvs_fnc_getSSLCertInfo()</a>, <a class="el" href="libkvicontext_8cpp.html#acfe6e394a91713fbecf09c61406077b3">context_kvs_fnc_list()</a>, <a class="el" href="libkvicontext_8cpp.html#a388da02366fc84013bb29c4508025c1f">context_kvs_fnc_queueSize()</a>, <a class="el" href="KviKvsModuleInterface_8h.html#a81c5c9b4caed6452759193c116a28e27">KVSM_REGISTER_FUNCTION</a>, and <a class="el" href="KviKvsModuleInterface_8h.html#aa97e8392db4434fb87a3235b98a319f5">KVSM_REGISTER_SIMPLE_COMMAND</a>.</p>
 
 </div>
 </div>
@@ -415,7 +439,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:33 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:22 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

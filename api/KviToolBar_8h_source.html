@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -105,25 +105,36 @@ function toggleVisibility(linkObj) {
 <a name="l00024"></a>00024 <span class="comment">//</span>
 <a name="l00025"></a>00025 <span class="comment">//=============================================================================</span>
 <a name="l00026"></a>00026 
-<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;KviTalToolBar.h&quot;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;kvi_settings.h&quot;</span>
 <a name="l00028"></a>00028 
-<a name="l00029"></a><a class="code" href="classKviToolBar.html">00029</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviToolBar.html">KviToolBar</a> : <span class="keyword">public</span> <a class="code" href="classKviTalToolBar.html" title="Toolkit Abstraction Layer: toolbar class.">KviTalToolBar</a>
-<a name="l00030"></a>00030 {
-<a name="l00031"></a>00031         Q_OBJECT
-<a name="l00032"></a>00032 <span class="keyword">public</span>:
-<a name="l00033"></a>00033         <a class="code" href="classKviToolBar.html">KviToolBar</a>(<span class="keyword">const</span> QString &amp; szLabel, Qt::ToolBarArea <a class="code" href="namespaceKviOsInfo.html#ac118c3a07dc4cbbe510f06bafe548511">type</a> = Qt::TopToolBarArea, <span class="keywordtype">bool</span> bNewLine = <span class="keyword">false</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> * pcName = 0);
-<a name="l00034"></a>00034         ~<a class="code" href="classKviToolBar.html">KviToolBar</a>();
-<a name="l00035"></a>00035 <span class="keyword">protected</span>:
-<a name="l00036"></a>00036         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mousePressEvent(QMouseEvent * <a class="code" href="detector_8cpp.html#a270b1ecf56619755ce62f6970dfabc91">e</a>);
-<a name="l00037"></a>00037 <span class="keyword">public</span> slots:
-<a name="l00038"></a>00038         <span class="keywordtype">void</span> setBigIcons();
-<a name="l00039"></a>00039         <span class="keywordtype">void</span> setSmallIcons();
-<a name="l00040"></a>00040 };
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042 <span class="preprocessor">#endif //_KVI_TOOLBAR_H_</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &lt;QToolBar&gt;</span>
+<a name="l00030"></a>00030 
+<a name="l00031"></a><a class="code" href="classKviToolBar.html">00031</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviToolBar.html">KviToolBar</a> : <span class="keyword">public</span> QToolBar
+<a name="l00032"></a>00032 {
+<a name="l00033"></a>00033         Q_OBJECT
+<a name="l00034"></a>00034 <span class="keyword">public</span>:
+<a name="l00035"></a>00035         <a class="code" href="classKviToolBar.html">KviToolBar</a>(<span class="keyword">const</span> QString &amp; szLabel, Qt::ToolBarArea <a class="code" href="namespaceKviOsInfo.html#ac118c3a07dc4cbbe510f06bafe548511">type</a> = Qt::TopToolBarArea, <span class="keyword">const</span> <span class="keywordtype">char</span> * pcName = <span class="stringliteral">&quot;unnamed_toolbar&quot;</span>);
+<a name="l00036"></a>00036         ~<a class="code" href="classKviToolBar.html">KviToolBar</a>();
+<a name="l00037"></a>00037 
+<a name="l00043"></a><a class="code" href="structKviToolBar_1_1__IconSizes.html">00043</a>         <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structKviToolBar_1_1__IconSizes.html" title="Enumerates the valid icon sizes.">_IconSizes</a>
+<a name="l00044"></a>00044         {
+<a name="l00045"></a><a class="code" href="structKviToolBar_1_1__IconSizes.html#a4d9806ef7575bb3a8284f755565c9e5b">00045</a>                 uint         <a class="code" href="structKviToolBar_1_1__IconSizes.html#a4d9806ef7575bb3a8284f755565c9e5b">uSize</a>;           
+<a name="l00046"></a><a class="code" href="structKviToolBar_1_1__IconSizes.html#a20fb8f4d98731d52b85f4cd1c0595bf9">00046</a>                 <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="structKviToolBar_1_1__IconSizes.html#a20fb8f4d98731d52b85f4cd1c0595bf9">pcName</a>;          
+<a name="l00047"></a>00047         } <a class="code" href="structKviToolBar_1_1__IconSizes.html" title="Enumerates the valid icon sizes.">IconSizes</a>;
+<a name="l00048"></a>00048 
+<a name="l00054"></a><a class="code" href="structKviToolBar_1_1__ButtonStyles.html">00054</a>         <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structKviToolBar_1_1__ButtonStyles.html" title="Enumerates the valid button styles.">_ButtonStyles</a>
+<a name="l00055"></a>00055         {
+<a name="l00056"></a><a class="code" href="structKviToolBar_1_1__ButtonStyles.html#a4770772696164a38a3393c5caff859aa">00056</a>                 uint         <a class="code" href="structKviToolBar_1_1__ButtonStyles.html#a4770772696164a38a3393c5caff859aa">uStyle</a>;          
+<a name="l00057"></a><a class="code" href="structKviToolBar_1_1__ButtonStyles.html#ad297e5358642dcab6e38a5e0a4cf28fd">00057</a>                 <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="structKviToolBar_1_1__ButtonStyles.html#ad297e5358642dcab6e38a5e0a4cf28fd">pcName</a>;          
+<a name="l00058"></a>00058         } <a class="code" href="structKviToolBar_1_1__ButtonStyles.html" title="Enumerates the valid button styles.">ButtonStyles</a>;
+<a name="l00059"></a>00059 <span class="keyword">protected</span>:
+<a name="l00060"></a>00060         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mousePressEvent(QMouseEvent * <a class="code" href="detector_8cpp.html#a270b1ecf56619755ce62f6970dfabc91">e</a>);
+<a name="l00061"></a>00061 };
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 <span class="preprocessor">#endif //_KVI_TOOLBAR_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:28 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:18 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

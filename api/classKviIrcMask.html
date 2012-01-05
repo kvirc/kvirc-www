@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -174,10 +174,12 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fixed internal matches (this is fixed, external is wild)  <a href="#af4ba632b705daf8b28dc9aa520168417"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcMask.html#aebf372022663893b5895963c2f340cf5">matches</a> (const <a class="el" href="classKviIrcMask.html">KviIrcMask</a> &amp;mask) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wild external matches (this and external are wild)  <a href="#aebf372022663893b5895963c2f340cf5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcMask.html#a33e6303122705b6cd6b32a655df070ad">matchesFixed</a> (const QString &amp;szNick, const QString &amp;szUser, const QString &amp;<a class="el" href="SetupWizard_8cpp.html#a4fb3832e26f698a2be51f410b6a1e17e">szHost</a>) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fixed external matches (this is wild, external is fixed)  <a href="#a33e6303122705b6cd6b32a655df070ad"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcMask.html#a9554ada18396eb5604a35c02ce46bed9">matchesFixed</a> (const <a class="el" href="classKviIrcMask.html">KviIrcMask</a> &amp;mask) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fixed external matches (this is wild, external is fixed)  <a href="#a9554ada18396eb5604a35c02ce46bed9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcMask.html#a33e6303122705b6cd6b32a655df070ad">matchesFixed</a> (const QString &amp;szNick, const QString &amp;szUser, const QString &amp;<a class="el" href="SetupWizard_8cpp.html#a4fb3832e26f698a2be51f410b6a1e17e">szHost</a>) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Fixed external matches (this is wild, external is fixed)  <a href="#a33e6303122705b6cd6b32a655df070ad"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcMask.html#a03d6e79593c6f75207157212100c22f5">matchWildString</a> (const QString &amp;szExp, const QString &amp;szStr) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Matches 2 strings.  <a href="#a03d6e79593c6f75207157212100c22f5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcMask.html#acff9ecb3f18ef93495ccd85652221144">nick</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nickname of this user.  <a href="#acff9ecb3f18ef93495ccd85652221144"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcMask.html#a1e432ec8081f8fd8539e3ca6c23bba59">nonWildChars</a> ()</td></tr>
@@ -802,7 +804,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="classKviIrcMask.html#a776d8457058f0870705d23b7bcfb4893">m_szHost</a>, <a class="el" href="classKviIrcMask.html#a13f26a4776d21b59115006f21e2e92de">m_szNick</a>, <a class="el" href="classKviIrcMask.html#afb8dc80213a9a9231a35144db331a95d">m_szUser</a>, and <a class="el" href="namespaceKviQString.html#a73201f6b63483e608df3ca5c347c8e65">KviQString::matchString()</a>.</p>
+<p>References <a class="el" href="classKviIrcMask.html#a776d8457058f0870705d23b7bcfb4893">m_szHost</a>, <a class="el" href="classKviIrcMask.html#a13f26a4776d21b59115006f21e2e92de">m_szNick</a>, <a class="el" href="classKviIrcMask.html#afb8dc80213a9a9231a35144db331a95d">m_szUser</a>, and <a class="el" href="classKviIrcMask.html#a03d6e79593c6f75207157212100c22f5">matchWildString()</a>.</p>
 
 </div>
 </div>
@@ -848,9 +850,48 @@ Friends</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>References <a class="el" href="classKviIrcMask.html#a776d8457058f0870705d23b7bcfb4893">m_szHost</a>, <a class="el" href="classKviIrcMask.html#a13f26a4776d21b59115006f21e2e92de">m_szNick</a>, <a class="el" href="classKviIrcMask.html#afb8dc80213a9a9231a35144db331a95d">m_szUser</a>, and <a class="el" href="namespaceKviQString.html#a73201f6b63483e608df3ca5c347c8e65">KviQString::matchString()</a>.</p>
+<p>References <a class="el" href="classKviIrcMask.html#a776d8457058f0870705d23b7bcfb4893">m_szHost</a>, <a class="el" href="classKviIrcMask.html#a13f26a4776d21b59115006f21e2e92de">m_szNick</a>, <a class="el" href="classKviIrcMask.html#afb8dc80213a9a9231a35144db331a95d">m_szUser</a>, and <a class="el" href="classKviIrcMask.html#a03d6e79593c6f75207157212100c22f5">matchWildString()</a>.</p>
 
 <p>Referenced by <a class="el" href="libkvichan_8cpp.html#a04fe8850321cb38e11132fc64dddbd4e">chan_kvs_fnc_users()</a>, <a class="el" href="libkvimask_8cpp.html#a82659c4116972e0cc41f81a879dc01e9">mask_kvs_fnc_match()</a>, <a class="el" href="classKviIrcMask.html#af4ba632b705daf8b28dc9aa520168417">matchedBy()</a>, and <a class="el" href="classKviIrcServerParser.html#addc6715063d4ccaede519f33247f36cf">KviIrcServerParser::parseChannelMode()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a03d6e79593c6f75207157212100c22f5"></a><!-- doxytag: member="KviIrcMask::matchWildString" ref="a03d6e79593c6f75207157212100c22f5" args="(const QString &amp;szExp, const QString &amp;szStr) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool KviIrcMask::matchWildString </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>szExp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>szStr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Matches 2 strings. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">szExp</td><td>First string; can contains wildcards; special escape applies </td></tr>
+    <tr><td class="paramname">szStr</td><td>Second string, fixed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
+
+<p>Referenced by <a class="el" href="classKviIrcMask.html#a9554ada18396eb5604a35c02ce46bed9">matchesFixed()</a>.</p>
 
 </div>
 </div>
@@ -1158,7 +1199,7 @@ Friends</h2></td></tr>
 <li>src/kvilib/irc/<a class="el" href="KviIrcMask_8cpp.html">KviIrcMask.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:37 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:27 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

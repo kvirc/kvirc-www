@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -92,7 +92,7 @@ Defines</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviKvsParserMacros_8h.html#a7db6f7f469e2fbd6dd9a3aa15228e6f3">KVSP_backNChars</a>(n)&#160;&#160;&#160;m_ptr -= n</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviKvsParserMacros_8h.html#a9849ef8a8ea1807dffb5c1a2339a45c7">KVSP_curCharIsEndOfBuffer</a>&#160;&#160;&#160;(m_ptr-&gt;unicode() == 0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviKvsParserMacros_8h.html#a6764a7c648f6d71c9c744319feb0930a">KVSP_curCharIsEndOfCommand</a>&#160;&#160;&#160;((m_ptr-&gt;unicode() == ';') || (m_ptr-&gt;unicode() == 0) || (m_ptr-&gt;unicode() == '\n') || (m_ptr-&gt;unicode() == '\r'))</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviKvsParserMacros_8h.html#a9f18a0a057e599ee6d4118da5a2414a7">KVSP_curCharIsFunctionStart</a>&#160;&#160;&#160;(m_ptr-&gt;isLetterOrNumber() || (m_ptr-&gt;unicode() == '(') || (m_ptr-&gt;unicode() == '{') || (m_ptr-&gt;unicode() == '$'))</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviKvsParserMacros_8h.html#a9f18a0a057e599ee6d4118da5a2414a7">KVSP_curCharIsFunctionStart</a>&#160;&#160;&#160;(m_ptr-&gt;isLetterOrNumber() || (m_ptr-&gt;unicode() == '(') || (m_ptr-&gt;unicode() == '{') || (m_ptr-&gt;unicode() == '$') || (m_ptr-&gt;unicode() == '#'))</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviKvsParserMacros_8h.html#a314c421518aded0e62357b2d86be5291">KVSP_curCharIsLetter</a>&#160;&#160;&#160;(m_ptr-&gt;isLetter())</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviKvsParserMacros_8h.html#a72002aaaa76bced7e242e214c478dc84">KVSP_curCharIsLetterOrNumber</a>&#160;&#160;&#160;(m_ptr-&gt;isLetterOrNumber())</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviKvsParserMacros_8h.html#ad6fe8da0c348a0a7891fde1b92af3330">KVSP_curCharIsNumber</a>&#160;&#160;&#160;(m_ptr-&gt;isNumber())</td></tr>
@@ -189,7 +189,7 @@ Defines</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define KVSP_curCharIsFunctionStart&#160;&#160;&#160;(m_ptr-&gt;isLetterOrNumber() || (m_ptr-&gt;unicode() == '(') || (m_ptr-&gt;unicode() == '{') || (m_ptr-&gt;unicode() == '$'))</td>
+          <td class="memname">#define KVSP_curCharIsFunctionStart&#160;&#160;&#160;(m_ptr-&gt;isLetterOrNumber() || (m_ptr-&gt;unicode() == '(') || (m_ptr-&gt;unicode() == '{') || (m_ptr-&gt;unicode() == '$') || (m_ptr-&gt;unicode() == '#'))</td>
         </tr>
       </table>
 </div>
@@ -326,7 +326,7 @@ Defines</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:33 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:22 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

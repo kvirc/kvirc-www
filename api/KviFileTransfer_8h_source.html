@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -135,8 +135,8 @@ function toggleVisibility(linkObj) {
 <a name="l00054"></a><a class="code" href="classKviFileTransferManager.html#a289049858749a77dd39306fe86cda8e1">00054</a>         <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>                   * <a class="code" href="classKviFileTransferManager.html#a289049858749a77dd39306fe86cda8e1">m_pTransferWindow</a>;
 <a name="l00055"></a>00055 <span class="keyword">protected</span>:
 <a name="l00056"></a>00056         <span class="keyword">static</span> <span class="keywordtype">void</span> cleanup();
-<a name="l00057"></a>00057         <span class="keywordtype">void</span> registerTransfer(<a class="code" href="classKviFileTransfer.html">KviFileTransfer</a> * <a class="code" href="detector_8cpp.html#a1f0cf49f22a9b271d1d9e6e14609faed">t</a>);
-<a name="l00058"></a>00058         <span class="keywordtype">void</span> unregisterTransfer(<a class="code" href="classKviFileTransfer.html">KviFileTransfer</a> * <a class="code" href="detector_8cpp.html#a1f0cf49f22a9b271d1d9e6e14609faed">t</a>);
+<a name="l00057"></a>00057         <span class="keywordtype">void</span> registerTransfer(<a class="code" href="classKviFileTransfer.html">KviFileTransfer</a> * <a class="code" href="KvsObject__http_8cpp.html#aa1d7477f8f4f580c1a0307ed79c7ec91">t</a>);
+<a name="l00058"></a>00058         <span class="keywordtype">void</span> unregisterTransfer(<a class="code" href="classKviFileTransfer.html">KviFileTransfer</a> * <a class="code" href="KvsObject__http_8cpp.html#aa1d7477f8f4f580c1a0307ed79c7ec91">t</a>);
 <a name="l00059"></a><a class="code" href="classKviFileTransferManager.html#a9ded84b248197597cdb24938ab124e79">00059</a>         <span class="keywordtype">void</span> <a class="code" href="classKviFileTransferManager.html#a9ded84b248197597cdb24938ab124e79">setTransferWindow</a>(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * wnd){ m_pTransferWindow = wnd; };
 <a name="l00060"></a>00060 <span class="keyword">public</span>:
 <a name="l00061"></a>00061         <span class="comment">// might be zero!</span>
@@ -147,8 +147,8 @@ function toggleVisibility(linkObj) {
 <a name="l00066"></a>00066         <span class="keywordtype">void</span> killAllTransfers();
 <a name="l00067"></a>00067         <span class="keywordtype">void</span> killTerminatedTransfers();
 <a name="l00068"></a>00068 signals:
-<a name="l00069"></a>00069         <span class="keywordtype">void</span> <a class="code" href="classFileTransferWindow.html#aabc4f76aa8c958a1176f45d9ff3061be">transferRegistered</a>(<a class="code" href="classKviFileTransfer.html">KviFileTransfer</a> *<a class="code" href="detector_8cpp.html#a1f0cf49f22a9b271d1d9e6e14609faed">t</a>);
-<a name="l00070"></a>00070         <span class="keywordtype">void</span> <a class="code" href="classFileTransferWindow.html#aafdd6ba0ad271c322fa7ee4461646a2e">transferUnregistering</a>(<a class="code" href="classKviFileTransfer.html">KviFileTransfer</a> *<a class="code" href="detector_8cpp.html#a1f0cf49f22a9b271d1d9e6e14609faed">t</a>);
+<a name="l00069"></a>00069         <span class="keywordtype">void</span> <a class="code" href="classFileTransferWindow.html#aabc4f76aa8c958a1176f45d9ff3061be">transferRegistered</a>(<a class="code" href="classKviFileTransfer.html">KviFileTransfer</a> *<a class="code" href="KvsObject__http_8cpp.html#aa1d7477f8f4f580c1a0307ed79c7ec91">t</a>);
+<a name="l00070"></a>00070         <span class="keywordtype">void</span> <a class="code" href="classFileTransferWindow.html#aafdd6ba0ad271c322fa7ee4461646a2e">transferUnregistering</a>(<a class="code" href="classKviFileTransfer.html">KviFileTransfer</a> *<a class="code" href="KvsObject__http_8cpp.html#aa1d7477f8f4f580c1a0307ed79c7ec91">t</a>);
 <a name="l00071"></a>00071 };
 <a name="l00072"></a>00072 
 <a name="l00073"></a><a class="code" href="KviFileTransfer_8h.html#a87bd5249315bd6ea110e4cdfbfe63ccb">00073</a> <span class="preprocessor">#define COLUMN_TRANSFERTYPE 0</span>
@@ -195,7 +195,7 @@ function toggleVisibility(linkObj) {
 <a name="l00114"></a>00114 <span class="preprocessor">#endif //! _KVI_FILETRANSFER_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:26 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:16 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

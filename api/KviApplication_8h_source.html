@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -207,7 +207,7 @@ function toggleVisibility(linkObj) {
 <a name="l00131"></a>00131         <span class="comment">// setup stuff (accessed from KviMain.cpp: consider private othwerise)</span>
 <a name="l00132"></a><a class="code" href="classKviApplication.html#a205df052aa6e529538e764999273f2e5">00132</a>         QString                                    <a class="code" href="classKviApplication.html#a205df052aa6e529538e764999273f2e5">m_szConfigFile</a>;        <span class="comment">// setup</span>
 <a name="l00133"></a><a class="code" href="classKviApplication.html#a3aca1fc53d47f794ba306d3549a2223a">00133</a>         <span class="keywordtype">bool</span>                                       <a class="code" href="classKviApplication.html#a3aca1fc53d47f794ba306d3549a2223a">m_bCreateConfig</a>;      <span class="comment">// setup</span>
-<a name="l00134"></a><a class="code" href="classKviApplication.html#ac509793a8cb7a6204d59a3c9c0d2d997">00134</a>         <a class="code" href="classKviCString.html">KviCString</a>                                     <a class="code" href="classKviApplication.html#ac509793a8cb7a6204d59a3c9c0d2d997">m_szExecAfterStartup</a>;
+<a name="l00134"></a><a class="code" href="classKviApplication.html#aaef8c891a23db0c8d04267f6335665c4">00134</a>         QString                                    <a class="code" href="classKviApplication.html#aaef8c891a23db0c8d04267f6335665c4">m_szExecAfterStartup</a>;
 <a name="l00135"></a><a class="code" href="classKviApplication.html#a72725c8dc63e3d25e8f5e1680a347ff8">00135</a>         <span class="keywordtype">bool</span>                                       <a class="code" href="classKviApplication.html#a72725c8dc63e3d25e8f5e1680a347ff8">m_bShowSplashScreen</a>;
 <a name="l00136"></a>00136 <span class="keyword">protected</span>:
 <a name="l00137"></a>00137 <span class="preprocessor">#ifdef COMPILE_KDE_SUPPORT</span>
@@ -235,22 +235,22 @@ function toggleVisibility(linkObj) {
 <a name="l00159"></a>00159 <span class="preprocessor">#endif</span>
 <a name="l00160"></a><a class="code" href="classKviApplication.html#a7a68713b767234e45ef24baf4678fb34">00160</a> <span class="preprocessor"></span>        QFont                                      <a class="code" href="classKviApplication.html#a7a68713b767234e45ef24baf4678fb34">m_fntDefaultFont</a>;
 <a name="l00161"></a>00161 <span class="keyword">public</span>:
-<a name="l00162"></a>00162         <span class="keywordtype">void</span> destroyFrame();
-<a name="l00163"></a>00163         <span class="keywordtype">void</span> setup();                                  <span class="comment">// THIS SHOULD BE PRIVATE! (but is accessed from KviMain.cpp)</span>
-<a name="l00164"></a>00164 
-<a name="l00165"></a>00165 <span class="preprocessor">#ifdef COMPILE_KDE_SUPPORT</span>
-<a name="l00166"></a>00166 <span class="preprocessor"></span>        <span class="keywordtype">void</span> setAboutData(KAboutData * pAboutData){ m_pAboutData = pAboutData; };
-<a name="l00167"></a>00167         KAboutData * aboutData(){ <span class="keywordflow">return</span> m_pAboutData; };
-<a name="l00168"></a>00168 <span class="preprocessor">#endif</span>
-<a name="l00169"></a>00169 <span class="preprocessor"></span>
-<a name="l00170"></a>00170 <span class="preprocessor">#ifndef COMPILE_NO_IPC</span>
-<a name="l00171"></a>00171 <span class="preprocessor"></span>        <span class="keywordtype">void</span> ipcMessage(<span class="keywordtype">char</span> * message);
-<a name="l00172"></a>00172 <span class="preprocessor">#endif</span>
-<a name="l00173"></a>00173 <span class="preprocessor"></span>
-<a name="l00174"></a>00174         <span class="keyword">static</span> <span class="keywordtype">int</span> getGloballyUniqueId(); <span class="comment">// returns an unique integer identifier across the application</span>
-<a name="l00175"></a>00175 
-<a name="l00176"></a><a class="code" href="classKviApplication.html#a0381a1095f7bba3fbb030c0d52deaee8">00176</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviApplication.html#a0381a1095f7bba3fbb030c0d52deaee8">firstTimeRun</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_bFirstTimeRun; };
-<a name="l00177"></a><a class="code" href="classKviApplication.html#a3a2df2e1eddba0a05a473f2daffd3c27">00177</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviApplication.html#a3a2df2e1eddba0a05a473f2daffd3c27">kviClosingDown</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_bClosingDown; };
+<a name="l00162"></a>00162         <span class="keywordtype">void</span> setup();                                  <span class="comment">// THIS SHOULD BE PRIVATE! (but is accessed from KviMain.cpp)</span>
+<a name="l00163"></a>00163 
+<a name="l00164"></a>00164 <span class="preprocessor">#ifdef COMPILE_KDE_SUPPORT</span>
+<a name="l00165"></a>00165 <span class="preprocessor"></span>        <span class="keywordtype">void</span> setAboutData(KAboutData * pAboutData){ m_pAboutData = pAboutData; };
+<a name="l00166"></a>00166         KAboutData * aboutData(){ <span class="keywordflow">return</span> m_pAboutData; };
+<a name="l00167"></a>00167 <span class="preprocessor">#endif</span>
+<a name="l00168"></a>00168 <span class="preprocessor"></span>
+<a name="l00169"></a>00169 <span class="preprocessor">#ifndef COMPILE_NO_IPC</span>
+<a name="l00170"></a>00170 <span class="preprocessor"></span>        <span class="keywordtype">void</span> ipcMessage(<span class="keywordtype">char</span> * message);
+<a name="l00171"></a>00171 <span class="preprocessor">#endif</span>
+<a name="l00172"></a>00172 <span class="preprocessor"></span>
+<a name="l00173"></a>00173         <span class="keyword">static</span> <span class="keywordtype">int</span> getGloballyUniqueId(); <span class="comment">// returns an unique integer identifier across the application</span>
+<a name="l00174"></a>00174 
+<a name="l00175"></a><a class="code" href="classKviApplication.html#a0381a1095f7bba3fbb030c0d52deaee8">00175</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviApplication.html#a0381a1095f7bba3fbb030c0d52deaee8">firstTimeRun</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_bFirstTimeRun; };
+<a name="l00176"></a><a class="code" href="classKviApplication.html#a3a2df2e1eddba0a05a473f2daffd3c27">00176</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviApplication.html#a3a2df2e1eddba0a05a473f2daffd3c27">kviClosingDown</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_bClosingDown; };
+<a name="l00177"></a><a class="code" href="classKviApplication.html#a1be8da0d3a32e67d319ca2b79d5aaef8">00177</a>         <span class="keywordtype">void</span> <a class="code" href="classKviApplication.html#a1be8da0d3a32e67d319ca2b79d5aaef8">setKviClosingDown</a>() { m_bClosingDown=<span class="keyword">true</span>; };
 <a name="l00178"></a>00178 
 <a name="l00179"></a><a class="code" href="classKviApplication.html#a5881ed1700145509a15a79d2aa45440e">00179</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> supportsCompositing()
 <a name="l00180"></a>00180         {
@@ -461,7 +461,7 @@ function toggleVisibility(linkObj) {
 <a name="l00394"></a>00394 <span class="preprocessor">#endif //_KVI_APP_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:26 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:15 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

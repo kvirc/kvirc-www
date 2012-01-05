@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -109,7 +109,7 @@ function toggleVisibility(linkObj) {
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSharedFilesWindow.html#a98f0b38304a85c1ea7253c70d9933c03">die</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSharedFilesWindow.html#ab2e18fedf246c52b2d95635ec812f73f">SharedFilesWindow</a> (<a class="el" href="classKviModuleExtensionDescriptor.html">KviModuleExtensionDescriptor</a> *<a class="el" href="KviIrcNumericCodes_8h.html#aa0d1b16fcc0ac96e2d3a51a02d62a3aa">d</a>, <a class="el" href="classKviMainWindow.html">KviMainWindow</a> *lpFrm)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSharedFilesWindow.html#a2adbe82de765c1d8eb30519cb2086a86">SharedFilesWindow</a> (<a class="el" href="classKviModuleExtensionDescriptor.html">KviModuleExtensionDescriptor</a> *<a class="el" href="KviIrcNumericCodes_8h.html#aa0d1b16fcc0ac96e2d3a51a02d62a3aa">d</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QSize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSharedFilesWindow.html#ae077c3c08cc52da16219717683b9c8cb">sizeHint</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSharedFilesWindow.html#a9f8808e757b8ba23538e1c2f32a58c50">~SharedFilesWindow</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
@@ -132,14 +132,14 @@ Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSharedFilesWindow.html#ad5a92b0c2eb2fdf03406a38f5816178b">m_pAddButton</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSharedFilesWindow.html#a73e99d479efe38fec7cebdff13877e8a">m_pEditButton</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSharedFilesWindow.html#a22a133022ba4c3c10c62c7a1af0711ca">m_pRemoveButton</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QTreeWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSharedFilesWindow.html#ad9bc7cba1d57a984a26fcebd27fc558f">m_pTreeWidget</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviThemedTreeWidget.html">KviThemedTreeWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSharedFilesWindow.html#a8f9be87952acc5d9d1c070e313c71233">m_pTreeWidget</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QSplitter *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSharedFilesWindow.html#aa6232ad0378040fb9104771c0dee2c18">m_pVertSplitter</a></td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
 Friends</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSharedFilesWindow.html#a4d5d377bd4c4dbb084a361daed5ef012">KviSharedFilesItem</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab2e18fedf246c52b2d95635ec812f73f"></a><!-- doxytag: member="SharedFilesWindow::SharedFilesWindow" ref="ab2e18fedf246c52b2d95635ec812f73f" args="(KviModuleExtensionDescriptor *d, KviMainWindow *lpFrm)" -->
+<a class="anchor" id="a2adbe82de765c1d8eb30519cb2086a86"></a><!-- doxytag: member="SharedFilesWindow::SharedFilesWindow" ref="a2adbe82de765c1d8eb30519cb2086a86" args="(KviModuleExtensionDescriptor *d)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -147,24 +147,14 @@ Friends</h2></td></tr>
           <td class="memname">SharedFilesWindow::SharedFilesWindow </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classKviModuleExtensionDescriptor.html">KviModuleExtensionDescriptor</a> *&#160;</td>
-          <td class="paramname"><em>d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>d</em></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classKviMainWindow.html">KviMainWindow</a> *&#160;</td>
-          <td class="paramname"><em>lpFrm</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="MpXmmsInterface_8cpp.html#ac6cbf35c922efef0f49c40b1189883b5">__tr2qs_ctx()</a>, <a class="el" href="classSharedFilesWindow.html#a931fd61ac76c683bd0636ebc50525471">addClicked()</a>, <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classSharedFilesWindow.html#a00074053873d17c093248e894d1ea9cc">editClicked()</a>, <a class="el" href="classSharedFilesWindow.html#a551dd5d48159cfce0ffbdf92c842843e">enableButtons()</a>, <a class="el" href="classSharedFilesWindow.html#adb1523f922bf53e18e25b12081665592">fillFileView()</a>, <a class="el" href="KviApplication_8cpp.html#a647d42a9a5585ee3bcdb45344dd4b305">g_pSharedFilesManager</a>, <a class="el" href="KviTalSplitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a>, <a class="el" href="classSharedFilesWindow.html#ad5a92b0c2eb2fdf03406a38f5816178b">m_pAddButton</a>, <a class="el" href="classSharedFilesWindow.html#a73e99d479efe38fec7cebdff13877e8a">m_pEditButton</a>, <a class="el" href="classSharedFilesWindow.html#a22a133022ba4c3c10c62c7a1af0711ca">m_pRemoveButton</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classSharedFilesWindow.html#ad9bc7cba1d57a984a26fcebd27fc558f">m_pTreeWidget</a>, <a class="el" href="classSharedFilesWindow.html#a16f025c8e7635e3578d3775cbb2ead51">removeClicked()</a>, <a class="el" href="classSharedFilesWindow.html#aadc61ecee966c0a3162e3dadbe443643">sharedFileAdded()</a>, and <a class="el" href="classSharedFilesWindow.html#a2a4944715f693c8e20b9b9aaa77a2c7a">sharedFileRemoved()</a>.</p>
+<p>References <a class="el" href="MpXmmsInterface_8cpp.html#ac6cbf35c922efef0f49c40b1189883b5">__tr2qs_ctx()</a>, <a class="el" href="classSharedFilesWindow.html#a931fd61ac76c683bd0636ebc50525471">addClicked()</a>, <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classSharedFilesWindow.html#a00074053873d17c093248e894d1ea9cc">editClicked()</a>, <a class="el" href="classSharedFilesWindow.html#a551dd5d48159cfce0ffbdf92c842843e">enableButtons()</a>, <a class="el" href="classSharedFilesWindow.html#adb1523f922bf53e18e25b12081665592">fillFileView()</a>, <a class="el" href="KviApplication_8cpp.html#a647d42a9a5585ee3bcdb45344dd4b305">g_pSharedFilesManager</a>, <a class="el" href="KviTalSplitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a>, <a class="el" href="classSharedFilesWindow.html#ad5a92b0c2eb2fdf03406a38f5816178b">m_pAddButton</a>, <a class="el" href="classSharedFilesWindow.html#a73e99d479efe38fec7cebdff13877e8a">m_pEditButton</a>, <a class="el" href="classSharedFilesWindow.html#a22a133022ba4c3c10c62c7a1af0711ca">m_pRemoveButton</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classSharedFilesWindow.html#a8f9be87952acc5d9d1c070e313c71233">m_pTreeWidget</a>, <a class="el" href="classSharedFilesWindow.html#a16f025c8e7635e3578d3775cbb2ead51">removeClicked()</a>, <a class="el" href="classSharedFilesWindow.html#aadc61ecee966c0a3162e3dadbe443643">sharedFileAdded()</a>, and <a class="el" href="classSharedFilesWindow.html#a2a4944715f693c8e20b9b9aaa77a2c7a">sharedFileRemoved()</a>.</p>
 
 </div>
 </div>
@@ -201,7 +191,7 @@ Friends</h2></td></tr>
 
 <p>References <a class="el" href="classKviSharedFilesManager.html#a01aeffbe8585b04fd0778d2402f46d1b">KviSharedFilesManager::addSharedFile()</a>, <a class="el" href="detector_8cpp.html#a7a51ed112e9b79f89e3e70beb8db8bf5">f</a>, <a class="el" href="KviApplication_8cpp.html#a647d42a9a5585ee3bcdb45344dd4b305">g_pSharedFilesManager</a>, and <a class="el" href="classSharedFileEditDialog.html#af88eb63a172a3d4339f17509b9c68062">SharedFileEditDialog::getResult()</a>.</p>
 
-<p>Referenced by <a class="el" href="classSharedFilesWindow.html#ab2e18fedf246c52b2d95635ec812f73f">SharedFilesWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classSharedFilesWindow.html#a2adbe82de765c1d8eb30519cb2086a86">SharedFilesWindow()</a>.</p>
 
 </div>
 </div>
@@ -237,9 +227,9 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviSharedFilesManager.html#a01aeffbe8585b04fd0778d2402f46d1b">KviSharedFilesManager::addSharedFile()</a>, <a class="el" href="detector_8cpp.html#a7a51ed112e9b79f89e3e70beb8db8bf5">f</a>, <a class="el" href="KviApplication_8cpp.html#a647d42a9a5585ee3bcdb45344dd4b305">g_pSharedFilesManager</a>, <a class="el" href="classSharedFilesWindow.html#ad9bc7cba1d57a984a26fcebd27fc558f">m_pTreeWidget</a>, <a class="el" href="classKviSharedFile.html#afc48da8197f88e9669c1d0a3a3bf715f">KviSharedFile::name()</a>, <a class="el" href="classSharedFilesTreeWidgetItem.html#a7baef215ba22c2f6c2a8a9068040ec3e">SharedFilesTreeWidgetItem::readOnlySharedFilePointer()</a>, and <a class="el" href="classKviSharedFilesManager.html#a561b19dfb67683a2a4b3f6d43ff2f805">KviSharedFilesManager::removeSharedFile()</a>.</p>
+<p>References <a class="el" href="classKviSharedFilesManager.html#a01aeffbe8585b04fd0778d2402f46d1b">KviSharedFilesManager::addSharedFile()</a>, <a class="el" href="detector_8cpp.html#a7a51ed112e9b79f89e3e70beb8db8bf5">f</a>, <a class="el" href="KviApplication_8cpp.html#a647d42a9a5585ee3bcdb45344dd4b305">g_pSharedFilesManager</a>, <a class="el" href="classSharedFilesWindow.html#a8f9be87952acc5d9d1c070e313c71233">m_pTreeWidget</a>, <a class="el" href="classKviSharedFile.html#afc48da8197f88e9669c1d0a3a3bf715f">KviSharedFile::name()</a>, <a class="el" href="classSharedFilesTreeWidgetItem.html#a7baef215ba22c2f6c2a8a9068040ec3e">SharedFilesTreeWidgetItem::readOnlySharedFilePointer()</a>, and <a class="el" href="classKviSharedFilesManager.html#a561b19dfb67683a2a4b3f6d43ff2f805">KviSharedFilesManager::removeSharedFile()</a>.</p>
 
-<p>Referenced by <a class="el" href="classSharedFilesWindow.html#ab2e18fedf246c52b2d95635ec812f73f">SharedFilesWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classSharedFilesWindow.html#a2adbe82de765c1d8eb30519cb2086a86">SharedFilesWindow()</a>.</p>
 
 </div>
 </div>
@@ -257,9 +247,9 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classSharedFilesWindow.html#a73e99d479efe38fec7cebdff13877e8a">m_pEditButton</a>, <a class="el" href="classSharedFilesWindow.html#a22a133022ba4c3c10c62c7a1af0711ca">m_pRemoveButton</a>, and <a class="el" href="classSharedFilesWindow.html#ad9bc7cba1d57a984a26fcebd27fc558f">m_pTreeWidget</a>.</p>
+<p>References <a class="el" href="classSharedFilesWindow.html#a73e99d479efe38fec7cebdff13877e8a">m_pEditButton</a>, <a class="el" href="classSharedFilesWindow.html#a22a133022ba4c3c10c62c7a1af0711ca">m_pRemoveButton</a>, and <a class="el" href="classSharedFilesWindow.html#a8f9be87952acc5d9d1c070e313c71233">m_pTreeWidget</a>.</p>
 
-<p>Referenced by <a class="el" href="classSharedFilesWindow.html#adb1523f922bf53e18e25b12081665592">fillFileView()</a>, <a class="el" href="classSharedFilesWindow.html#aadc61ecee966c0a3162e3dadbe443643">sharedFileAdded()</a>, <a class="el" href="classSharedFilesWindow.html#a2a4944715f693c8e20b9b9aaa77a2c7a">sharedFileRemoved()</a>, and <a class="el" href="classSharedFilesWindow.html#ab2e18fedf246c52b2d95635ec812f73f">SharedFilesWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classSharedFilesWindow.html#adb1523f922bf53e18e25b12081665592">fillFileView()</a>, <a class="el" href="classSharedFilesWindow.html#aadc61ecee966c0a3162e3dadbe443643">sharedFileAdded()</a>, <a class="el" href="classSharedFilesWindow.html#a2a4944715f693c8e20b9b9aaa77a2c7a">sharedFileRemoved()</a>, and <a class="el" href="classSharedFilesWindow.html#a2adbe82de765c1d8eb30519cb2086a86">SharedFilesWindow()</a>.</p>
 
 </div>
 </div>
@@ -297,9 +287,9 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerHashTableIterator.html#a118714da73f457cf6cbea89c83d2f8e3">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="classSharedFilesWindow.html#a551dd5d48159cfce0ffbdf92c842843e">enableButtons()</a>, <a class="el" href="KviApplication_8cpp.html#a647d42a9a5585ee3bcdb45344dd4b305">g_pSharedFilesManager</a>, <a class="el" href="detector_8cpp.html#a1cb503ddd20ff3cf9588d2b5abd202d8">l</a>, <a class="el" href="classSharedFilesWindow.html#ad9bc7cba1d57a984a26fcebd27fc558f">m_pTreeWidget</a>, <a class="el" href="detector_8cpp.html#ac9ba2c61c69c381438f186315b5f2e9b">o</a>, and <a class="el" href="classKviSharedFilesManager.html#acce8895ddeaf2cb7b790555991a67d09">KviSharedFilesManager::sharedFileListDict()</a>.</p>
+<p>References <a class="el" href="classKviPointerHashTableIterator.html#a118714da73f457cf6cbea89c83d2f8e3">KviPointerHashTableIterator&lt; Key, T &gt;::current()</a>, <a class="el" href="classSharedFilesWindow.html#a551dd5d48159cfce0ffbdf92c842843e">enableButtons()</a>, <a class="el" href="KviApplication_8cpp.html#a647d42a9a5585ee3bcdb45344dd4b305">g_pSharedFilesManager</a>, <a class="el" href="detector_8cpp.html#a1cb503ddd20ff3cf9588d2b5abd202d8">l</a>, <a class="el" href="classSharedFilesWindow.html#a8f9be87952acc5d9d1c070e313c71233">m_pTreeWidget</a>, <a class="el" href="detector_8cpp.html#ac9ba2c61c69c381438f186315b5f2e9b">o</a>, and <a class="el" href="classKviSharedFilesManager.html#acce8895ddeaf2cb7b790555991a67d09">KviSharedFilesManager::sharedFileListDict()</a>.</p>
 
-<p>Referenced by <a class="el" href="classSharedFilesWindow.html#ab2e18fedf246c52b2d95635ec812f73f">SharedFilesWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classSharedFilesWindow.html#a2adbe82de765c1d8eb30519cb2086a86">SharedFilesWindow()</a>.</p>
 
 </div>
 </div>
@@ -356,9 +346,9 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="KviApplication_8cpp.html#a647d42a9a5585ee3bcdb45344dd4b305">g_pSharedFilesManager</a>, <a class="el" href="classSharedFilesWindow.html#ad9bc7cba1d57a984a26fcebd27fc558f">m_pTreeWidget</a>, <a class="el" href="classKviSharedFile.html#afc48da8197f88e9669c1d0a3a3bf715f">KviSharedFile::name()</a>, <a class="el" href="classSharedFilesTreeWidgetItem.html#a7baef215ba22c2f6c2a8a9068040ec3e">SharedFilesTreeWidgetItem::readOnlySharedFilePointer()</a>, and <a class="el" href="classKviSharedFilesManager.html#a561b19dfb67683a2a4b3f6d43ff2f805">KviSharedFilesManager::removeSharedFile()</a>.</p>
+<p>References <a class="el" href="KviApplication_8cpp.html#a647d42a9a5585ee3bcdb45344dd4b305">g_pSharedFilesManager</a>, <a class="el" href="classSharedFilesWindow.html#a8f9be87952acc5d9d1c070e313c71233">m_pTreeWidget</a>, <a class="el" href="classKviSharedFile.html#afc48da8197f88e9669c1d0a3a3bf715f">KviSharedFile::name()</a>, <a class="el" href="classSharedFilesTreeWidgetItem.html#a7baef215ba22c2f6c2a8a9068040ec3e">SharedFilesTreeWidgetItem::readOnlySharedFilePointer()</a>, and <a class="el" href="classKviSharedFilesManager.html#a561b19dfb67683a2a4b3f6d43ff2f805">KviSharedFilesManager::removeSharedFile()</a>.</p>
 
-<p>Referenced by <a class="el" href="classSharedFilesWindow.html#ab2e18fedf246c52b2d95635ec812f73f">SharedFilesWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classSharedFilesWindow.html#a2adbe82de765c1d8eb30519cb2086a86">SharedFilesWindow()</a>.</p>
 
 </div>
 </div>
@@ -396,9 +386,9 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classSharedFilesWindow.html#a551dd5d48159cfce0ffbdf92c842843e">enableButtons()</a>, and <a class="el" href="classSharedFilesWindow.html#ad9bc7cba1d57a984a26fcebd27fc558f">m_pTreeWidget</a>.</p>
+<p>References <a class="el" href="classSharedFilesWindow.html#a551dd5d48159cfce0ffbdf92c842843e">enableButtons()</a>, and <a class="el" href="classSharedFilesWindow.html#a8f9be87952acc5d9d1c070e313c71233">m_pTreeWidget</a>.</p>
 
-<p>Referenced by <a class="el" href="classSharedFilesWindow.html#ab2e18fedf246c52b2d95635ec812f73f">SharedFilesWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classSharedFilesWindow.html#a2adbe82de765c1d8eb30519cb2086a86">SharedFilesWindow()</a>.</p>
 
 </div>
 </div>
@@ -417,9 +407,9 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classSharedFilesWindow.html#a551dd5d48159cfce0ffbdf92c842843e">enableButtons()</a>, <a class="el" href="detector_8cpp.html#a08582ce460e3d5e1cf0b7fea017d608e">i</a>, and <a class="el" href="classSharedFilesWindow.html#ad9bc7cba1d57a984a26fcebd27fc558f">m_pTreeWidget</a>.</p>
+<p>References <a class="el" href="classSharedFilesWindow.html#a551dd5d48159cfce0ffbdf92c842843e">enableButtons()</a>, <a class="el" href="detector_8cpp.html#a08582ce460e3d5e1cf0b7fea017d608e">i</a>, and <a class="el" href="classSharedFilesWindow.html#a8f9be87952acc5d9d1c070e313c71233">m_pTreeWidget</a>.</p>
 
-<p>Referenced by <a class="el" href="classSharedFilesWindow.html#ab2e18fedf246c52b2d95635ec812f73f">SharedFilesWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classSharedFilesWindow.html#a2adbe82de765c1d8eb30519cb2086a86">SharedFilesWindow()</a>.</p>
 
 </div>
 </div>
@@ -467,7 +457,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classSharedFilesWindow.html#ab2e18fedf246c52b2d95635ec812f73f">SharedFilesWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classSharedFilesWindow.html#a2adbe82de765c1d8eb30519cb2086a86">SharedFilesWindow()</a>.</p>
 
 </div>
 </div>
@@ -482,7 +472,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classSharedFilesWindow.html#a551dd5d48159cfce0ffbdf92c842843e">enableButtons()</a>, and <a class="el" href="classSharedFilesWindow.html#ab2e18fedf246c52b2d95635ec812f73f">SharedFilesWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classSharedFilesWindow.html#a551dd5d48159cfce0ffbdf92c842843e">enableButtons()</a>, and <a class="el" href="classSharedFilesWindow.html#a2adbe82de765c1d8eb30519cb2086a86">SharedFilesWindow()</a>.</p>
 
 </div>
 </div>
@@ -497,22 +487,22 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classSharedFilesWindow.html#a551dd5d48159cfce0ffbdf92c842843e">enableButtons()</a>, and <a class="el" href="classSharedFilesWindow.html#ab2e18fedf246c52b2d95635ec812f73f">SharedFilesWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classSharedFilesWindow.html#a551dd5d48159cfce0ffbdf92c842843e">enableButtons()</a>, and <a class="el" href="classSharedFilesWindow.html#a2adbe82de765c1d8eb30519cb2086a86">SharedFilesWindow()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad9bc7cba1d57a984a26fcebd27fc558f"></a><!-- doxytag: member="SharedFilesWindow::m_pTreeWidget" ref="ad9bc7cba1d57a984a26fcebd27fc558f" args="" -->
+<a class="anchor" id="a8f9be87952acc5d9d1c070e313c71233"></a><!-- doxytag: member="SharedFilesWindow::m_pTreeWidget" ref="a8f9be87952acc5d9d1c070e313c71233" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QTreeWidget* <a class="el" href="classSharedFilesWindow.html#ad9bc7cba1d57a984a26fcebd27fc558f">SharedFilesWindow::m_pTreeWidget</a><code> [protected]</code></td>
+          <td class="memname"><a class="el" href="classKviThemedTreeWidget.html">KviThemedTreeWidget</a>* <a class="el" href="classSharedFilesWindow.html#a8f9be87952acc5d9d1c070e313c71233">SharedFilesWindow::m_pTreeWidget</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classSharedFilesWindow.html#a00074053873d17c093248e894d1ea9cc">editClicked()</a>, <a class="el" href="classSharedFilesWindow.html#a551dd5d48159cfce0ffbdf92c842843e">enableButtons()</a>, <a class="el" href="classSharedFilesWindow.html#adb1523f922bf53e18e25b12081665592">fillFileView()</a>, <a class="el" href="classSharedFilesWindow.html#a16f025c8e7635e3578d3775cbb2ead51">removeClicked()</a>, <a class="el" href="classSharedFilesWindow.html#aadc61ecee966c0a3162e3dadbe443643">sharedFileAdded()</a>, <a class="el" href="classSharedFilesWindow.html#a2a4944715f693c8e20b9b9aaa77a2c7a">sharedFileRemoved()</a>, and <a class="el" href="classSharedFilesWindow.html#ab2e18fedf246c52b2d95635ec812f73f">SharedFilesWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classSharedFilesWindow.html#a00074053873d17c093248e894d1ea9cc">editClicked()</a>, <a class="el" href="classSharedFilesWindow.html#a551dd5d48159cfce0ffbdf92c842843e">enableButtons()</a>, <a class="el" href="classSharedFilesWindow.html#adb1523f922bf53e18e25b12081665592">fillFileView()</a>, <a class="el" href="classSharedFilesWindow.html#a16f025c8e7635e3578d3775cbb2ead51">removeClicked()</a>, <a class="el" href="classSharedFilesWindow.html#aadc61ecee966c0a3162e3dadbe443643">sharedFileAdded()</a>, <a class="el" href="classSharedFilesWindow.html#a2a4944715f693c8e20b9b9aaa77a2c7a">sharedFileRemoved()</a>, and <a class="el" href="classSharedFilesWindow.html#a2adbe82de765c1d8eb30519cb2086a86">SharedFilesWindow()</a>.</p>
 
 </div>
 </div>
@@ -534,7 +524,7 @@ Friends</h2></td></tr>
 <li>src/modules/sharedfileswindow/<a class="el" href="SharedFilesWindow_8cpp.html">SharedFilesWindow.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:48 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:38 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

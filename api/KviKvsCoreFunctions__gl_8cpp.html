@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -99,6 +99,7 @@ function toggleVisibility(linkObj) {
 <code>#include &quot;KviKvsEventManager.h&quot;</code><br/>
 <code>#include &quot;KviKvsEventHandler.h&quot;</code><br/>
 <code>#include &quot;KviLagMeter.h&quot;</code><br/>
+<code>#include &quot;KviIrcUserEntry.h&quot;</code><br/>
 <code>#include &lt;QRegExp&gt;</code><br/>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="namespaces"></a>
@@ -106,7 +107,7 @@ Namespaces</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html">KviKvsCoreFunctions</a></td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#a436f326823093c5cb10509e05ac397a4">KviKvsCoreFunctions::KVSCF</a> (globals)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#a30f219c054a776935f3f53b5f129759f">KviKvsCoreFunctions::KVSCF</a> (gender)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#a2d2b23a10a7220cd4fe23bdeb2956b8a">KviKvsCoreFunctions::KVSCF</a> (listtimers)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#a4ab7ea57b925d53b53d94269a8a8b176">KviKvsCoreFunctions::KVSCF</a> (link)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#a425752ddb54d7af6e9dd0a52878737f8">KviKvsCoreFunctions::KVSCF</a> (lf)</td></tr>
@@ -122,7 +123,9 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#a39d072ed0346a22f13d98ca9ce383afa">KviKvsCoreFunctions::KVSCF</a> (isEmpty)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#aff47fc7084ce766f77ca1def31a0f2f3">KviKvsCoreFunctions::KVSCF</a> (isMainWindowMinimized)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#a408f1f76bc0aa4e1a3240bd3b2ea3a96">KviKvsCoreFunctions::KVSCF</a> (isMainWindowActive)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#ad8841c3a7f11a32a9bec44166db2a4d2">KviKvsCoreFunctions::KVSCF</a> (isBot)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#aff5519286332102265810cf5a18487e5">KviKvsCoreFunctions::KVSCF</a> (integer)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#a96291e0c1fe50fbc3140562619bfd225">KviKvsCoreFunctions::KVSCF</a> (insideAlias)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#ae705638fed29b92a1e6bf9b805508d8b">KviKvsCoreFunctions::KVSCF</a> (iconName)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#a68e36051022300d146a3b6a03633004d">KviKvsCoreFunctions::KVSCF</a> (icon)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#a9e840339d34c2af65a54f72f1de3a09e">KviKvsCoreFunctions::KVSCF</a> (hptimestamp)</td></tr>
@@ -130,9 +133,10 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#aa92e3264babc87cdeb006a770b2fac39">KviKvsCoreFunctions::KVSCF</a> (hostname)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#a3bc8f467e636534dfd9c2cba34b73107">KviKvsCoreFunctions::KVSCF</a> (hexToAscii)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#a1110258a99e2ae8627ab88367d0645c1">KviKvsCoreFunctions::KVSCF</a> (hash)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceKviKvsCoreFunctions.html#a436f326823093c5cb10509e05ac397a4">KviKvsCoreFunctions::KVSCF</a> (globals)</td></tr>
 </table>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:32 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:22 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

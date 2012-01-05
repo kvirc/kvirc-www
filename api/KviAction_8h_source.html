@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -173,7 +173,7 @@ function toggleVisibility(linkObj) {
 <a name="l00177"></a><a class="code" href="classKviAction.html#ad830b1aa76061adf5e1a0bdec24acca6">00177</a>         QString                   <a class="code" href="classKviAction.html#ad830b1aa76061adf5e1a0bdec24acca6">m_szBigIconId</a>;
 <a name="l00178"></a><a class="code" href="classKviAction.html#a95f210a4c8aa05f5d0a0d97d4e3f29e6">00178</a>         QString                   <a class="code" href="classKviAction.html#a95f210a4c8aa05f5d0a0d97d4e3f29e6">m_szSmallIconId</a>;
 <a name="l00179"></a><a class="code" href="classKviAction.html#a45935540d7d23b5fd383fe74d36211f6">00179</a>         QString                   <a class="code" href="classKviAction.html#a45935540d7d23b5fd383fe74d36211f6">m_eIcon</a>;
-<a name="l00180"></a><a class="code" href="classKviAction.html#a6cab2e6ad5084db24312bae657d0f65f">00180</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;QWidget&gt;</a> * <a class="code" href="classKviAction.html#a6cab2e6ad5084db24312bae657d0f65f">m_pWidgetList</a>;
+<a name="l00180"></a><a class="code" href="classKviAction.html#a721d349c0e5ac4caf74e59c6d7f4547e">00180</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;QAction&gt;</a> * <a class="code" href="classKviAction.html#a721d349c0e5ac4caf74e59c6d7f4547e">m_pActionList</a>;
 <a name="l00181"></a><a class="code" href="classKviAction.html#a2dbc085691e3507234f7c480f35dd6ab">00181</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <span class="keywordtype">int</span>        <a class="code" href="classKviAction.html#a2dbc085691e3507234f7c480f35dd6ab">m_uInternalFlags</a>;
 <a name="l00182"></a><a class="code" href="classKviAction.html#adac4d7d424f47ba37c1b02a1a9dee0c5">00182</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>              <a class="code" href="classKviAction.html#adac4d7d424f47ba37c1b02a1a9dee0c5">m_uFlags</a>;
 <a name="l00183"></a><a class="code" href="classKviAction.html#a1a9ecf9ba0f9f1e11e7be5cf6150abad">00183</a>         QString                   <a class="code" href="classKviAction.html#a1a9ecf9ba0f9f1e11e7be5cf6150abad">m_szKeySequence</a>;
@@ -209,7 +209,7 @@ function toggleVisibility(linkObj) {
 <a name="l00272"></a>00272 
 <a name="l00278"></a>00278         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> addToPopupMenu(<a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * pMenu);
 <a name="l00279"></a>00279 
-<a name="l00285"></a>00285         <span class="keyword">virtual</span> QWidget * addToCustomToolBar(<a class="code" href="classKviCustomToolBar.html">KviCustomToolBar</a> * pParentToolBar);
+<a name="l00285"></a>00285         <span class="keyword">virtual</span> QAction * addToCustomToolBar(<a class="code" href="classKviCustomToolBar.html">KviCustomToolBar</a> * pParentToolBar);
 <a name="l00286"></a>00286 
 <a name="l00291"></a><a class="code" href="classKviAction.html#a4f26cf6562f59866da25ecb91d316c54">00291</a>         <span class="keywordtype">void</span> <a class="code" href="classKviAction.html#a4f26cf6562f59866da25ecb91d316c54" title="Destroys itself. Maybe the best function in the whole APIs :)">suicide</a>(){ <span class="keyword">delete</span> <span class="keyword">this</span>; };
 <a name="l00292"></a>00292 <span class="keyword">protected</span>:
@@ -217,17 +217,17 @@ function toggleVisibility(linkObj) {
 <a name="l00299"></a>00299 
 <a name="l00304"></a>00304         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setup();
 <a name="l00305"></a>00305 
-<a name="l00310"></a><a class="code" href="classKviAction.html#abf45ddf4a1e95b479f937b6c155af8c2">00310</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;QWidget&gt;</a> * <a class="code" href="classKviAction.html#abf45ddf4a1e95b479f937b6c155af8c2" title="Returns the list of widgets associated to the action.">widgetList</a>(){ <span class="keywordflow">return</span> m_pWidgetList; };
+<a name="l00310"></a><a class="code" href="classKviAction.html#ab20fddf464f837ff4bb57403b3394ffa">00310</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;QAction&gt;</a> * <a class="code" href="classKviAction.html#ab20fddf464f837ff4bb57403b3394ffa" title="Returns the list of actions associated to the action.">actionList</a>(){ <span class="keywordflow">return</span> m_pActionList; };
 <a name="l00311"></a>00311 
 <a name="l00316"></a>00316         <span class="keywordtype">void</span> registerAccelerator();
 <a name="l00317"></a>00317 
 <a name="l00322"></a>00322         <span class="keywordtype">void</span> unregisterAccelerator();
 <a name="l00323"></a>00323 
-<a name="l00329"></a>00329         <span class="keywordtype">void</span> registerWidget(QWidget * pWidget);
+<a name="l00329"></a>00329         <span class="keywordtype">void</span> <a class="code" href="classKviActionManager.html#a2888b7a3e52574094deb415c7d943029">registerAction</a>(QAction * pAction);
 <a name="l00330"></a>00330 <span class="keyword">public</span> slots:
 <a name="l00338"></a>00338         <span class="keyword">virtual</span> <span class="keywordtype">void</span> activate();
 <a name="l00339"></a>00339 <span class="keyword">protected</span> slots:
-<a name="l00346"></a>00346         <span class="keyword">virtual</span> <span class="keywordtype">void</span> widgetDestroyed();
+<a name="l00346"></a>00346         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviActionManager.html#a6c9ac82201ad262383a3821b2e9e83fb">actionDestroyed</a>();
 <a name="l00347"></a>00347 
 <a name="l00354"></a>00354         <span class="keyword">virtual</span> <span class="keywordtype">void</span> reloadImages();
 <a name="l00355"></a>00355 
@@ -245,7 +245,7 @@ function toggleVisibility(linkObj) {
 <a name="l00400"></a>00400 <span class="preprocessor">#endif // _KVI_ACTION_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:26 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:15 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

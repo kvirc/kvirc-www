@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -180,295 +180,295 @@ function toggleVisibility(linkObj) {
 <a name="l00116"></a><a class="code" href="classKviWindow.html#a0d48396e80871d850fef175cde3c5ee6ac5834d17f0c31442cb335d48ef047732">00116</a>                 Fire      = 6    
 <a name="l00117"></a>00117         };
 <a name="l00118"></a>00118 
-<a name="l00124"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599">00124</a>         <span class="keyword">enum</span> <a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599" title="Holds the types of a window; these are used by the KVIrc core and distributed modules.">Type</a> {
-<a name="l00125"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a6bc8c6dfff30e1045db451edb9c86244">00125</a>                 Console      =  0,
-<a name="l00126"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599ab2cecc8c80ba39b0ccdaed025775731b">00126</a>                 <a class="code" href="KviIrcNumericCodes_8h.html#a869976dd6b52608fac47d56e2c6743e3">Channel</a>      =  1,
-<a name="l00127"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a0a9c6c4dc5268279cf2f4e3b65e8db2a">00127</a>                 Query        =  2,
-<a name="l00128"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599acefa3309fd89623e13954a00959684fb">00128</a>                 DeadChannel  =  3,
-<a name="l00129"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a265b0746aba05d0b700ddebc32f7ca97">00129</a>                 DeadQuery    =  4,
-<a name="l00130"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599af117fec89249ef1d7e690f31efc5147b">00130</a>                 Editor       =  5,
-<a name="l00131"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a5ca85a1858cfe55cbfa61a7ca92e1456">00131</a>                 Help         =  6,
-<a name="l00132"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599ad5ce1a58b0d789ea3adfdb6b7c4b48a7">00132</a>                 Terminal     =  7,
-<a name="l00133"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599aaa41bd8eea89c04bb588eb69ebbdc935">00133</a>                 SocketSpy    =  8,
-<a name="l00134"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a4555fe7388d44de6791fb704405baac4">00134</a>                 Links        =  9,
-<a name="l00135"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a5b3a1621d9898e88e49d35bfec9ae671">00135</a>                 List         = 10,
-<a name="l00136"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a4f699a4e443a58cfcc5b643113a41f00">00136</a>                 DccChat      = 11,
-<a name="l00137"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a5613125c352b27cca3beb43856a1fc1e">00137</a>                 DccTransfer  = 12,
-<a name="l00138"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a69176f1e3c1d3219c690404734e8ba3b">00138</a>                 DccCanvas    = 13,
-<a name="l00139"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599ac517e08628146638c201df835ef2c38b">00139</a>                 DccVoice     = 14,
-<a name="l00140"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a70ad4a7c359cfd510236683aeac8d27c">00140</a>                 DccVideo     = 15,
-<a name="l00141"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599aadf351ffaec3efb1b2de69d818fa00df">00141</a>                 <a class="code" href="classUserWindow.html">UserWindow</a>   = 16,
-<a name="l00142"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a5175a42d0cd328bd8560feebd868bb0a">00142</a>                 Tool         = 17,
-<a name="l00143"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599ab6a4df6e089ec2716c6348dd5e7e9471">00143</a>                 IOGraph      = 18,
-<a name="l00144"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a4bb18cf995dfd1cbb6ff3d1e3be58334">00144</a>                 DirBrowser   = 19,
-<a name="l00145"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a85c64cca012c2c7c2ac8b202b1952e68">00145</a>                 ScriptEditor = 20,
-<a name="l00146"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a41f856a4e88b5a8f91c96d3b34c61ca7">00146</a>                 ScriptObject = 21,
-<a name="l00147"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a37369bac1872b4c106d82c3eddf0443e">00147</a>                 LogView      = 22,
-<a name="l00148"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599ae96bdc128ec22398ccebef9985c2f63f">00148</a>                 Offer        = 23,
-<a name="l00149"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a81a0964614281ff289d95d69a7c165e9">00149</a>                 Debug        = 24,
-<a name="l00150"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599aa96b45de388e38d1c89a4252f46db6c5">00150</a>                 Unknown      = 25,
-<a name="l00151"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a8ad25ee6ce348099eb492ca4dae3ecd5">00151</a>                 TypeCount    = 26
-<a name="l00152"></a>00152         };
-<a name="l00153"></a>00153 
-<a name="l00162"></a>00162         <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>(Type eType, <a class="code" href="classKviMainWindow.html">KviMainWindow</a> * lpFrm, <span class="keyword">const</span> QString &amp; szName, <a class="code" href="classKviConsoleWindow.html">KviConsoleWindow</a> * pConsole = 0);
-<a name="l00163"></a>00163 
-<a name="l00167"></a>00167         <span class="keyword">virtual</span> ~<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>();
-<a name="l00168"></a>00168 <span class="keyword">protected</span>: <span class="comment">// almost private: don&#39;t touch :D</span>
-<a name="l00169"></a><a class="code" href="classKviWindow.html#a95c059df5d821321a07c4220b96a9b1a">00169</a>         QString                   <a class="code" href="classKviWindow.html#a95c059df5d821321a07c4220b96a9b1a">m_szName</a>;     <span class="comment">// the current window name (usually also the target)</span>
-<a name="l00170"></a><a class="code" href="classKviWindow.html#a812a9338a56f97b5897eb78ee9d24d0d">00170</a>         <a class="code" href="classKviMainWindow.html">KviMainWindow</a>           * <a class="code" href="classKviWindow.html#a812a9338a56f97b5897eb78ee9d24d0d">m_pFrm</a>;
-<a name="l00171"></a><a class="code" href="classKviWindow.html#a5a723df27fb1fe16713ec320ae038855">00171</a>         <a class="code" href="classKviConsoleWindow.html">KviConsoleWindow</a>        * <a class="code" href="classKviWindow.html#a5a723df27fb1fe16713ec320ae038855">m_pConsole</a>;
-<a name="l00172"></a><a class="code" href="classKviWindow.html#a2494a58497d42b121cf088333b0d1ae4">00172</a>         <a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599" title="Holds the types of a window; these are used by the KVIrc core and distributed modules.">Type</a>                      <a class="code" href="classKviWindow.html#a2494a58497d42b121cf088333b0d1ae4">m_eType</a>;
-<a name="l00173"></a><a class="code" href="classKviWindow.html#a414b1fe05aded1b4a2041361df6e6494">00173</a>         <a class="code" href="classKviWindowListItem.html">KviWindowListItem</a>       * <a class="code" href="classKviWindow.html#a414b1fe05aded1b4a2041361df6e6494">m_pWindowListItem</a>;
-<a name="l00174"></a><a class="code" href="classKviWindow.html#a3764fc5bfef6170cb11d6857e9666820">00174</a>         QWidget                 * <a class="code" href="classKviWindow.html#a3764fc5bfef6170cb11d6857e9666820">m_pFocusHandler</a>;
-<a name="l00175"></a><a class="code" href="classKviWindow.html#a6f3ab0ae66c5397962dfc7d39329592d">00175</a>         QString                   <a class="code" href="classKviWindow.html#a6f3ab0ae66c5397962dfc7d39329592d">m_szPlainTextCaption</a>;
-<a name="l00176"></a><a class="code" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">00176</a>         <a class="code" href="classKviIrcView.html">KviIrcView</a>              * <a class="code" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">m_pIrcView</a>;
-<a name="l00177"></a><a class="code" href="classKviWindow.html#ac5bc9ea8c19f88f18d32c65845dade31">00177</a>         <a class="code" href="classKviInput.html" title="Input handling class.">KviInput</a>                * <a class="code" href="classKviWindow.html#ac5bc9ea8c19f88f18d32c65845dade31">m_pInput</a>;
-<a name="l00178"></a><a class="code" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">00178</a>         <a class="code" href="KviTalSplitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a>          * <a class="code" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">m_pSplitter</a>;
-<a name="l00179"></a><a class="code" href="classKviWindow.html#aec571bc9619f7ec16d925f0b4d250a0d">00179</a>         <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>              * <a class="code" href="classKviWindow.html#aec571bc9619f7ec16d925f0b4d250a0d">m_pButtonBox</a>;
-<a name="l00180"></a><a class="code" href="classKviWindow.html#a92bf9937a512a4662ee99497a8974d60">00180</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span>         <a class="code" href="classKviWindow.html#a92bf9937a512a4662ee99497a8974d60">m_uId</a>;
-<a name="l00181"></a><a class="code" href="classKviWindow.html#a9f380d0c4c92635ac97fbbf1b3cd2b3d">00181</a>         QString                   <a class="code" href="classKviWindow.html#a9f380d0c4c92635ac97fbbf1b3cd2b3d">m_szTextEncoding</a>;
-<a name="l00182"></a>00182 <span class="preprocessor">#ifdef COMPILE_CRYPT_SUPPORT</span>
-<a name="l00183"></a>00183 <span class="preprocessor"></span>        <a class="code" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a> * m_pCryptControllerButton;
-<a name="l00184"></a>00184         KviCryptController      * m_pCryptController;
-<a name="l00185"></a>00185         KviCryptSessionInfo     * m_pCryptSessionInfo;
-<a name="l00186"></a>00186 <span class="preprocessor">#endif</span>
-<a name="l00187"></a><a class="code" href="classKviWindow.html#a8110d9ecc96b8d51440ede0ca50e583f">00187</a> <span class="preprocessor"></span>        QToolButton             * <a class="code" href="classKviWindow.html#a8110d9ecc96b8d51440ede0ca50e583f">m_pTextEncodingButton</a>;
-<a name="l00188"></a><a class="code" href="classKviWindow.html#a0e0ef930e63df82d810a75a77a86dc88">00188</a>         QToolButton             * <a class="code" href="classKviWindow.html#a0e0ef930e63df82d810a75a77a86dc88">m_pHideToolsButton</a>;
-<a name="l00189"></a><a class="code" href="classKviWindow.html#ab6e08337d09997b359b3b2fb3c7fa074">00189</a>         QWidget                 * <a class="code" href="classKviWindow.html#ab6e08337d09997b359b3b2fb3c7fa074">m_pLastFocusedChild</a>;
-<a name="l00190"></a><a class="code" href="classKviWindow.html#a11d135c4e84d671773f12558cd93255d">00190</a>         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>       * m_typeTable[TypeCount];
-<a name="l00191"></a>00191         <span class="comment">// text encoding and decoding</span>
-<a name="l00192"></a>00192         <span class="comment">//unsigned int              m_uTextEncoding;</span>
-<a name="l00193"></a><a class="code" href="classKviWindow.html#ad5168549fb3521094d90e76d8c77d5ad">00193</a>         QTextCodec              * <a class="code" href="classKviWindow.html#ad5168549fb3521094d90e76d8c77d5ad">m_pTextCodec</a>;
-<a name="l00194"></a>00194         <span class="comment">//KviToolWindowsContainer * m_pEditorsContainer;</span>
-<a name="l00195"></a><a class="code" href="classKviWindow.html#af09cb6be48386fe5d13373ea3233e571">00195</a>         <span class="keywordtype">bool</span>                      <a class="code" href="classKviWindow.html#af09cb6be48386fe5d13373ea3233e571">m_bIsDocked</a>;
-<a name="l00196"></a>00196 <span class="keyword">public</span>:
-<a name="l00197"></a><a class="code" href="classKviWindow.html#a5dd6d9f3f03940dcf666c33c6363492e">00197</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviWindow.html#a5dd6d9f3f03940dcf666c33c6363492e">isDocked</a>(){ <span class="keywordflow">return</span> m_bIsDocked; }
-<a name="l00198"></a>00198 
-<a name="l00205"></a><a class="code" href="classKviWindow.html#a604039f02ca3be05678e1a7c2b676eae">00205</a>         <span class="keyword">inline</span> QString <a class="code" href="classKviWindow.html#a604039f02ca3be05678e1a7c2b676eae" title="Returns the global ID of this window.">id</a>(){ <span class="keywordflow">return</span> QString(<span class="stringliteral">&quot;%1&quot;</span>).arg(m_uId); };
-<a name="l00206"></a>00206 
-<a name="l00213"></a><a class="code" href="classKviWindow.html#ab3b45da14566fa41759152c27086e618">00213</a>         <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="classKviWindow.html#ab3b45da14566fa41759152c27086e618" title="Returns the global ID of this window.">numericId</a>(){ <span class="keywordflow">return</span> m_uId; };
-<a name="l00214"></a>00214 
-<a name="l00219"></a><a class="code" href="classKviWindow.html#a1a9d026251bc4cf03e3718f9d0af77ac">00219</a>         <span class="keyword">inline</span> <span class="keyword">const</span> QString &amp; <a class="code" href="classKviWindow.html#a1a9d026251bc4cf03e3718f9d0af77ac" title="Returns the name of this window.">windowName</a>(){ <span class="keywordflow">return</span> m_szName; };
-<a name="l00220"></a>00220 
-<a name="l00226"></a>00226         <span class="keywordtype">void</span> setWindowName(<span class="keyword">const</span> QString &amp; szName);
+<a name="l00123"></a><a class="code" href="classKviWindow.html#a39570bf04c2611cd38eb3524bc6c8221">00123</a>         <span class="keyword">enum</span> <a class="code" href="classKviWindow.html#a39570bf04c2611cd38eb3524bc6c8221" title="attention levels usable in hasAttention()">AttentionLevel</a> {
+<a name="l00124"></a><a class="code" href="classKviWindow.html#a39570bf04c2611cd38eb3524bc6c8221a0b21581e0d44600645272aad03e5f33f">00124</a>                 VisibleAndActive        = 0,   
+<a name="l00125"></a><a class="code" href="classKviWindow.html#a39570bf04c2611cd38eb3524bc6c8221a79fbf891ee53827ea3c97e9e7f6028c2">00125</a>                 MainWindowIsVisible     = 1,   
+<a name="l00126"></a>00126         };
+<a name="l00132"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599">00132</a>         <span class="keyword">enum</span> <a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599" title="Holds the types of a window; these are used by the KVIrc core and distributed modules.">Type</a> {
+<a name="l00133"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a6bc8c6dfff30e1045db451edb9c86244">00133</a>                 Console      =  0,
+<a name="l00134"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599ab2cecc8c80ba39b0ccdaed025775731b">00134</a>                 <a class="code" href="KviIrcNumericCodes_8h.html#a869976dd6b52608fac47d56e2c6743e3">Channel</a>      =  1,
+<a name="l00135"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a0a9c6c4dc5268279cf2f4e3b65e8db2a">00135</a>                 Query        =  2,
+<a name="l00136"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599acefa3309fd89623e13954a00959684fb">00136</a>                 DeadChannel  =  3,
+<a name="l00137"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a265b0746aba05d0b700ddebc32f7ca97">00137</a>                 DeadQuery    =  4,
+<a name="l00138"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599af117fec89249ef1d7e690f31efc5147b">00138</a>                 Editor       =  5,
+<a name="l00139"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a5ca85a1858cfe55cbfa61a7ca92e1456">00139</a>                 Help         =  6,
+<a name="l00140"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599ad5ce1a58b0d789ea3adfdb6b7c4b48a7">00140</a>                 Terminal     =  7,
+<a name="l00141"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599aaa41bd8eea89c04bb588eb69ebbdc935">00141</a>                 SocketSpy    =  8,
+<a name="l00142"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a4555fe7388d44de6791fb704405baac4">00142</a>                 Links        =  9,
+<a name="l00143"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a5b3a1621d9898e88e49d35bfec9ae671">00143</a>                 List         = 10,
+<a name="l00144"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a4f699a4e443a58cfcc5b643113a41f00">00144</a>                 DccChat      = 11,
+<a name="l00145"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a5613125c352b27cca3beb43856a1fc1e">00145</a>                 DccTransfer  = 12,
+<a name="l00146"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a69176f1e3c1d3219c690404734e8ba3b">00146</a>                 DccCanvas    = 13,
+<a name="l00147"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599ac517e08628146638c201df835ef2c38b">00147</a>                 DccVoice     = 14,
+<a name="l00148"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a70ad4a7c359cfd510236683aeac8d27c">00148</a>                 DccVideo     = 15,
+<a name="l00149"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599aadf351ffaec3efb1b2de69d818fa00df">00149</a>                 <a class="code" href="classUserWindow.html">UserWindow</a>   = 16,
+<a name="l00150"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a5175a42d0cd328bd8560feebd868bb0a">00150</a>                 Tool         = 17,
+<a name="l00151"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599ab6a4df6e089ec2716c6348dd5e7e9471">00151</a>                 IOGraph      = 18,
+<a name="l00152"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a4bb18cf995dfd1cbb6ff3d1e3be58334">00152</a>                 DirBrowser   = 19,
+<a name="l00153"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a85c64cca012c2c7c2ac8b202b1952e68">00153</a>                 ScriptEditor = 20,
+<a name="l00154"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a41f856a4e88b5a8f91c96d3b34c61ca7">00154</a>                 ScriptObject = 21,
+<a name="l00155"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a37369bac1872b4c106d82c3eddf0443e">00155</a>                 LogView      = 22,
+<a name="l00156"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599ae96bdc128ec22398ccebef9985c2f63f">00156</a>                 Offer        = 23,
+<a name="l00157"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a81a0964614281ff289d95d69a7c165e9">00157</a>                 Debug        = 24,
+<a name="l00158"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599aa96b45de388e38d1c89a4252f46db6c5">00158</a>                 Unknown      = 25,
+<a name="l00159"></a><a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599a8ad25ee6ce348099eb492ca4dae3ecd5">00159</a>                 TypeCount    = 26
+<a name="l00160"></a>00160         };
+<a name="l00161"></a>00161 
+<a name="l00170"></a>00170         <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>(Type eType, <span class="keyword">const</span> QString &amp; szName, <a class="code" href="classKviConsoleWindow.html">KviConsoleWindow</a> * pConsole = 0);
+<a name="l00171"></a>00171 
+<a name="l00175"></a>00175         <span class="keyword">virtual</span> ~<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>();
+<a name="l00176"></a>00176 <span class="keyword">protected</span>: <span class="comment">// almost private: don&#39;t touch :D</span>
+<a name="l00177"></a><a class="code" href="classKviWindow.html#a95c059df5d821321a07c4220b96a9b1a">00177</a>         QString                   <a class="code" href="classKviWindow.html#a95c059df5d821321a07c4220b96a9b1a">m_szName</a>;     <span class="comment">// the current window name (usually also the target)</span>
+<a name="l00178"></a><a class="code" href="classKviWindow.html#a5a723df27fb1fe16713ec320ae038855">00178</a>         <a class="code" href="classKviConsoleWindow.html">KviConsoleWindow</a>        * <a class="code" href="classKviWindow.html#a5a723df27fb1fe16713ec320ae038855">m_pConsole</a>;
+<a name="l00179"></a><a class="code" href="classKviWindow.html#a2494a58497d42b121cf088333b0d1ae4">00179</a>         <a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599" title="Holds the types of a window; these are used by the KVIrc core and distributed modules.">Type</a>                      <a class="code" href="classKviWindow.html#a2494a58497d42b121cf088333b0d1ae4">m_eType</a>;
+<a name="l00180"></a><a class="code" href="classKviWindow.html#a414b1fe05aded1b4a2041361df6e6494">00180</a>         <a class="code" href="classKviWindowListItem.html">KviWindowListItem</a>       * <a class="code" href="classKviWindow.html#a414b1fe05aded1b4a2041361df6e6494">m_pWindowListItem</a>;
+<a name="l00181"></a><a class="code" href="classKviWindow.html#a3764fc5bfef6170cb11d6857e9666820">00181</a>         QWidget                 * <a class="code" href="classKviWindow.html#a3764fc5bfef6170cb11d6857e9666820">m_pFocusHandler</a>;
+<a name="l00182"></a><a class="code" href="classKviWindow.html#a6f3ab0ae66c5397962dfc7d39329592d">00182</a>         QString                   <a class="code" href="classKviWindow.html#a6f3ab0ae66c5397962dfc7d39329592d">m_szPlainTextCaption</a>;
+<a name="l00183"></a><a class="code" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">00183</a>         <a class="code" href="classKviIrcView.html">KviIrcView</a>              * <a class="code" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">m_pIrcView</a>;
+<a name="l00184"></a><a class="code" href="classKviWindow.html#ac5bc9ea8c19f88f18d32c65845dade31">00184</a>         <a class="code" href="classKviInput.html" title="Input handling class.">KviInput</a>                * <a class="code" href="classKviWindow.html#ac5bc9ea8c19f88f18d32c65845dade31">m_pInput</a>;
+<a name="l00185"></a><a class="code" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">00185</a>         <a class="code" href="KviTalSplitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a>          * <a class="code" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">m_pSplitter</a>;
+<a name="l00186"></a><a class="code" href="classKviWindow.html#aec571bc9619f7ec16d925f0b4d250a0d">00186</a>         <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>              * <a class="code" href="classKviWindow.html#aec571bc9619f7ec16d925f0b4d250a0d">m_pButtonBox</a>;
+<a name="l00187"></a><a class="code" href="classKviWindow.html#a92bf9937a512a4662ee99497a8974d60">00187</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span>         <a class="code" href="classKviWindow.html#a92bf9937a512a4662ee99497a8974d60">m_uId</a>;
+<a name="l00188"></a><a class="code" href="classKviWindow.html#a9f380d0c4c92635ac97fbbf1b3cd2b3d">00188</a>         QString                   <a class="code" href="classKviWindow.html#a9f380d0c4c92635ac97fbbf1b3cd2b3d">m_szTextEncoding</a>;
+<a name="l00189"></a>00189 <span class="preprocessor">#ifdef COMPILE_CRYPT_SUPPORT</span>
+<a name="l00190"></a>00190 <span class="preprocessor"></span>        <a class="code" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a> * m_pCryptControllerButton;
+<a name="l00191"></a>00191         KviCryptController      * m_pCryptController;
+<a name="l00192"></a>00192         KviCryptSessionInfo     * m_pCryptSessionInfo;
+<a name="l00193"></a>00193 <span class="preprocessor">#endif</span>
+<a name="l00194"></a><a class="code" href="classKviWindow.html#a8110d9ecc96b8d51440ede0ca50e583f">00194</a> <span class="preprocessor"></span>        QToolButton             * <a class="code" href="classKviWindow.html#a8110d9ecc96b8d51440ede0ca50e583f">m_pTextEncodingButton</a>;
+<a name="l00195"></a><a class="code" href="classKviWindow.html#a0e0ef930e63df82d810a75a77a86dc88">00195</a>         QToolButton             * <a class="code" href="classKviWindow.html#a0e0ef930e63df82d810a75a77a86dc88">m_pHideToolsButton</a>;
+<a name="l00196"></a><a class="code" href="classKviWindow.html#ab6e08337d09997b359b3b2fb3c7fa074">00196</a>         QWidget                 * <a class="code" href="classKviWindow.html#ab6e08337d09997b359b3b2fb3c7fa074">m_pLastFocusedChild</a>;
+<a name="l00197"></a><a class="code" href="classKviWindow.html#a11d135c4e84d671773f12558cd93255d">00197</a>         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>       * m_typeTable[TypeCount];
+<a name="l00198"></a>00198         <span class="comment">// text encoding and decoding</span>
+<a name="l00199"></a>00199         <span class="comment">//unsigned int              m_uTextEncoding;</span>
+<a name="l00200"></a><a class="code" href="classKviWindow.html#ad5168549fb3521094d90e76d8c77d5ad">00200</a>         QTextCodec              * <a class="code" href="classKviWindow.html#ad5168549fb3521094d90e76d8c77d5ad">m_pTextCodec</a>;
+<a name="l00201"></a>00201         <span class="comment">//KviToolWindowsContainer * m_pEditorsContainer;</span>
+<a name="l00202"></a><a class="code" href="classKviWindow.html#af09cb6be48386fe5d13373ea3233e571">00202</a>         <span class="keywordtype">bool</span>                      <a class="code" href="classKviWindow.html#af09cb6be48386fe5d13373ea3233e571">m_bIsDocked</a>;
+<a name="l00203"></a>00203 <span class="keyword">public</span>:
+<a name="l00204"></a><a class="code" href="classKviWindow.html#a5dd6d9f3f03940dcf666c33c6363492e">00204</a>         <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classKviWindow.html#a5dd6d9f3f03940dcf666c33c6363492e">isDocked</a>(){ <span class="keywordflow">return</span> m_bIsDocked; }
+<a name="l00205"></a>00205 
+<a name="l00212"></a><a class="code" href="classKviWindow.html#a604039f02ca3be05678e1a7c2b676eae">00212</a>         <span class="keyword">inline</span> QString <a class="code" href="classKviWindow.html#a604039f02ca3be05678e1a7c2b676eae" title="Returns the global ID of this window.">id</a>(){ <span class="keywordflow">return</span> QString(<span class="stringliteral">&quot;%1&quot;</span>).arg(m_uId); };
+<a name="l00213"></a>00213 
+<a name="l00220"></a><a class="code" href="classKviWindow.html#ab3b45da14566fa41759152c27086e618">00220</a>         <span class="keyword">inline</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="classKviWindow.html#ab3b45da14566fa41759152c27086e618" title="Returns the global ID of this window.">numericId</a>(){ <span class="keywordflow">return</span> m_uId; };
+<a name="l00221"></a>00221 
+<a name="l00226"></a><a class="code" href="classKviWindow.html#a1a9d026251bc4cf03e3718f9d0af77ac">00226</a>         <span class="keyword">inline</span> <span class="keyword">const</span> QString &amp; <a class="code" href="classKviWindow.html#a1a9d026251bc4cf03e3718f9d0af77ac" title="Returns the name of this window.">windowName</a>(){ <span class="keywordflow">return</span> m_szName; };
 <a name="l00227"></a>00227 
-<a name="l00235"></a>00235         <span class="keywordtype">void</span> setProgress(<span class="keywordtype">int</span> iProgress);
-<a name="l00236"></a>00236 
-<a name="l00241"></a><a class="code" href="classKviWindow.html#a84521c4b23f31d81a99b6b27c806ca30">00241</a>         <span class="keyword">inline</span> <a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599" title="Holds the types of a window; these are used by the KVIrc core and distributed modules.">Type</a> <a class="code" href="classKviWindow.html#a84521c4b23f31d81a99b6b27c806ca30" title="Returns the type of the window.">type</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_eType; };
-<a name="l00242"></a>00242 
-<a name="l00247"></a>00247         <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * typeString();
-<a name="l00248"></a>00248 
-<a name="l00249"></a><a class="code" href="classKviWindow.html#a9aae5f941d89d15f71e95a32c900b7d1">00249</a>         <span class="keyword">inline</span> QTextCodec * <a class="code" href="classKviWindow.html#a9aae5f941d89d15f71e95a32c900b7d1">textCodec</a>(){ <span class="keywordflow">return</span> m_pTextCodec ? m_pTextCodec : defaultTextCodec(); };
-<a name="l00250"></a>00250         <span class="keywordtype">void</span> forceTextCodec(QTextCodec * pCodec);
-<a name="l00251"></a>00251 
-<a name="l00258"></a><a class="code" href="classKviWindow.html#a35a7c88b9b3c9020fb2472d875f90020">00258</a>         <span class="keyword">inline</span> <a class="code" href="classKviMainWindow.html">KviMainWindow</a> * <a class="code" href="classKviWindow.html#a35a7c88b9b3c9020fb2472d875f90020" title="Returns the main window that this window belongs to.">frame</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pFrm; };
-<a name="l00259"></a>00259 
-<a name="l00266"></a><a class="code" href="classKviWindow.html#ac8c856af579e4a1967e3a3de546e3214">00266</a>         <span class="keyword">inline</span> <a class="code" href="classKviIrcView.html">KviIrcView</a> * <a class="code" href="classKviWindow.html#ac8c856af579e4a1967e3a3de546e3214" title="Returns the KviIrcView of this window.">view</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pIrcView; };
-<a name="l00267"></a>00267 
-<a name="l00274"></a><a class="code" href="classKviWindow.html#adaf281b9377a12f6dc7b0337a5b088f4">00274</a>         <span class="keyword">inline</span> <a class="code" href="classKviMdiChild.html" title="Class of an MDI window.">KviMdiChild</a> * <a class="code" href="classKviWindow.html#adaf281b9377a12f6dc7b0337a5b088f4" title="Returns the mdiParent widget.">mdiParent</a>(){ <span class="keywordflow">return</span> (<a class="code" href="classKviMdiChild.html" title="Class of an MDI window.">KviMdiChild</a> *)parent(); };
-<a name="l00275"></a>00275 
-<a name="l00282"></a><a class="code" href="classKviWindow.html#acb0c3ad5eae68ed8419a9dda8ecdb24e">00282</a>         <span class="keyword">inline</span> <a class="code" href="classKviConsoleWindow.html">KviConsoleWindow</a> * <a class="code" href="classKviWindow.html#acb0c3ad5eae68ed8419a9dda8ecdb24e" title="Returns the console that this window belongs to.">console</a>(){ <span class="keywordflow">return</span> m_pConsole; };
+<a name="l00233"></a>00233         <span class="keywordtype">void</span> setWindowName(<span class="keyword">const</span> QString &amp; szName);
+<a name="l00234"></a>00234 
+<a name="l00242"></a>00242         <span class="keywordtype">void</span> setProgress(<span class="keywordtype">int</span> iProgress);
+<a name="l00243"></a>00243 
+<a name="l00248"></a><a class="code" href="classKviWindow.html#a84521c4b23f31d81a99b6b27c806ca30">00248</a>         <span class="keyword">inline</span> <a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599" title="Holds the types of a window; these are used by the KVIrc core and distributed modules.">Type</a> <a class="code" href="classKviWindow.html#a84521c4b23f31d81a99b6b27c806ca30" title="Returns the type of the window.">type</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_eType; };
+<a name="l00249"></a>00249 
+<a name="l00254"></a>00254         <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * typeString();
+<a name="l00255"></a>00255 
+<a name="l00256"></a><a class="code" href="classKviWindow.html#a9aae5f941d89d15f71e95a32c900b7d1">00256</a>         <span class="keyword">inline</span> QTextCodec * <a class="code" href="classKviWindow.html#a9aae5f941d89d15f71e95a32c900b7d1">textCodec</a>(){ <span class="keywordflow">return</span> m_pTextCodec ? m_pTextCodec : defaultTextCodec(); };
+<a name="l00257"></a>00257         <span class="keywordtype">void</span> forceTextCodec(QTextCodec * pCodec);
+<a name="l00258"></a>00258 
+<a name="l00265"></a><a class="code" href="classKviWindow.html#ac8c856af579e4a1967e3a3de546e3214">00265</a>         <span class="keyword">inline</span> <a class="code" href="classKviIrcView.html">KviIrcView</a> * <a class="code" href="classKviWindow.html#ac8c856af579e4a1967e3a3de546e3214" title="Returns the KviIrcView of this window.">view</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_pIrcView; };
+<a name="l00266"></a>00266 
+<a name="l00273"></a><a class="code" href="classKviWindow.html#adaf281b9377a12f6dc7b0337a5b088f4">00273</a>         <span class="keyword">inline</span> <a class="code" href="classKviMdiChild.html" title="Class of an MDI window.">KviMdiChild</a> * <a class="code" href="classKviWindow.html#adaf281b9377a12f6dc7b0337a5b088f4" title="Returns the mdiParent widget.">mdiParent</a>(){ <span class="keywordflow">return</span> (<a class="code" href="classKviMdiChild.html" title="Class of an MDI window.">KviMdiChild</a> *)parent(); };
+<a name="l00274"></a>00274 
+<a name="l00281"></a><a class="code" href="classKviWindow.html#acb0c3ad5eae68ed8419a9dda8ecdb24e">00281</a>         <span class="keyword">inline</span> <a class="code" href="classKviConsoleWindow.html">KviConsoleWindow</a> * <a class="code" href="classKviWindow.html#acb0c3ad5eae68ed8419a9dda8ecdb24e" title="Returns the console that this window belongs to.">console</a>(){ <span class="keywordflow">return</span> m_pConsole; };
+<a name="l00282"></a>00282 
 <a name="l00283"></a>00283 
-<a name="l00284"></a>00284 
-<a name="l00285"></a>00285         <a class="code" href="classKviIrcContext.html">KviIrcContext</a> * context();
-<a name="l00286"></a>00286 
-<a name="l00291"></a>00291         <a class="code" href="classKviIrcConnection.html" title="An abstraction of a connection to an IRC server.">KviIrcConnection</a> * connection();
-<a name="l00292"></a>00292 
-<a name="l00299"></a><a class="code" href="classKviWindow.html#abd219ee6ceee666dd6a8eb1058065545">00299</a>         <span class="keyword">inline</span> <a class="code" href="KviTalSplitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a> * <a class="code" href="classKviWindow.html#abd219ee6ceee666dd6a8eb1058065545" title="Returns the splitter of this window.">splitter</a>(){ <span class="keywordflow">return</span> m_pSplitter; };
-<a name="l00300"></a>00300 
-<a name="l00307"></a><a class="code" href="classKviWindow.html#ad3a7cf1500953268cf147b1678fc2142">00307</a>         <span class="keyword">inline</span> <a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> * <a class="code" href="classKviWindow.html#ad3a7cf1500953268cf147b1678fc2142" title="Returns the windowList item.">windowListItem</a>(){ <span class="keywordflow">return</span> m_pWindowListItem; };
-<a name="l00308"></a>00308 
-<a name="l00309"></a>00309         <span class="comment">// The window *might* have a button container</span>
-<a name="l00310"></a><a class="code" href="classKviWindow.html#a87ecbe0278887fdedb1ba013d26e08cd">00310</a>         <span class="keyword">virtual</span> QFrame * <a class="code" href="classKviWindow.html#a87ecbe0278887fdedb1ba013d26e08cd">buttonContainer</a>(){ <span class="keywordflow">return</span> (QFrame*)m_pButtonBox; };
-<a name="l00311"></a>00311         <span class="keyword">virtual</span> <span class="keywordtype">void</span> toggleButtonContainer();
-<a name="l00312"></a>00312 
-<a name="l00313"></a>00313         <span class="comment">// The window *might* have an output proxy: if it has no view() for example</span>
-<a name="l00314"></a>00314         <span class="keyword">virtual</span> <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * outputProxy();
-<a name="l00315"></a>00315 
-<a name="l00316"></a>00316         <span class="comment">// The window input widget</span>
-<a name="l00317"></a><a class="code" href="classKviWindow.html#a27755aa02a780470a87b800371efc024">00317</a>         <span class="keyword">inline</span> <a class="code" href="classKviInput.html" title="Input handling class.">KviInput</a> * <a class="code" href="classKviWindow.html#a27755aa02a780470a87b800371efc024">input</a>(){ <span class="keywordflow">return</span> m_pInput; };
-<a name="l00318"></a>00318 
-<a name="l00319"></a>00319         <span class="comment">// The target of this window: empty when it makes no sense :D</span>
-<a name="l00320"></a><a class="code" href="classKviWindow.html#aff8ee8ac4e11b697d784bea77adfe8d4">00320</a>         <span class="keyword">virtual</span> <span class="keyword">const</span> QString &amp; <a class="code" href="classKviWindow.html#aff8ee8ac4e11b697d784bea77adfe8d4">target</a>(){ <span class="keywordflow">return</span> <a class="code" href="namespaceKviQString.html#aa14b9dc45e5d3b528f26e523d7c96b3e" title="A global empty string (note that this is ALSO NULL under Qt 3.x)">KviQString::Empty</a>; };
-<a name="l00321"></a>00321 
-<a name="l00322"></a>00322         <span class="comment">// The local nickname bound to this window: might be empty when a local nickname makes no sense</span>
-<a name="l00323"></a><a class="code" href="classKviWindow.html#a42f07183e2f11cdc69e51b2a0266daba">00323</a>         <span class="keyword">virtual</span> <span class="keyword">const</span> QString &amp; <a class="code" href="classKviWindow.html#a42f07183e2f11cdc69e51b2a0266daba">localNick</a>(){ <span class="keywordflow">return</span> <a class="code" href="namespaceKviQString.html#aa14b9dc45e5d3b528f26e523d7c96b3e" title="A global empty string (note that this is ALSO NULL under Qt 3.x)">KviQString::Empty</a>; };
-<a name="l00324"></a>00324 
-<a name="l00325"></a>00325 <span class="preprocessor">#ifdef COMPILE_CRYPT_SUPPORT</span>
-<a name="l00326"></a>00326 <span class="preprocessor"></span>        KviCryptSessionInfo * cryptSessionInfo(){ <span class="keywordflow">return</span> m_pCryptSessionInfo; };
-<a name="l00327"></a>00327         <span class="keywordtype">void</span> setCryptSessionInfo(KviCryptSessionInfo * pInfo);
-<a name="l00328"></a>00328 <span class="preprocessor">#endif</span>
-<a name="l00329"></a>00329 <span class="preprocessor"></span>
-<a name="l00330"></a>00330         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> activityMeter(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * puActivityValue, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * puActivityTemperature);
-<a name="l00331"></a>00331 
-<a name="l00332"></a>00332         <span class="comment">//* \param puValue Highlight level</span>
-<a name="l00333"></a>00333         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> highlightMeter(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * puValue);
-<a name="l00334"></a>00334         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> highlightMe(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uValue);
-<a name="l00335"></a>00335 
-<a name="l00336"></a>00336         <span class="keywordtype">void</span> unhighlight();
-<a name="l00337"></a>00337 
-<a name="l00338"></a><a class="code" href="classKviWindow.html#a59d6dd538cc823cb37fb9e24ded6a083">00338</a>         <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a59d6dd538cc823cb37fb9e24ded6a083">getWindowListTipText</a>(QString &amp; <a class="code" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>){ szBuffer = m_szPlainTextCaption; };
-<a name="l00339"></a>00339 
-<a name="l00340"></a>00340         <span class="comment">// This is meaningful only if view() is non NULL</span>
-<a name="l00341"></a>00341         <span class="keyword">const</span> QString &amp; lastLineOfText();
-<a name="l00342"></a>00342         <span class="keyword">const</span> QString &amp; lastMessageText();
-<a name="l00343"></a>00343 
-<a name="l00344"></a><a class="code" href="classKviWindow.html#a9e002a22117cfafddd978f639596c3c0">00344</a>         <span class="keyword">inline</span> <span class="keyword">const</span> QString &amp;<a class="code" href="classKviWindow.html#a9e002a22117cfafddd978f639596c3c0">textEncoding</a>(){ <span class="keywordflow">return</span> m_szTextEncoding; };
-<a name="l00345"></a>00345         <span class="comment">// returns true if the encoding could be successfully set</span>
-<a name="l00346"></a>00346         <span class="keywordtype">bool</span> setTextEncoding(<span class="keyword">const</span> QString &amp; szTextEncoding);
-<a name="l00347"></a>00347         <span class="comment">// this must return a default text codec suitable for this window</span>
-<a name="l00348"></a>00348         <span class="keyword">virtual</span> QTextCodec * defaultTextCodec();
-<a name="l00349"></a>00349         <span class="comment">// encode the text from szSource by using m_uTextEncoding</span>
-<a name="l00350"></a>00350         <span class="keyword">inline</span> QByteArray encodeText(<span class="keyword">const</span> QString &amp; szText);
-<a name="l00351"></a>00351         <span class="keyword">inline</span> QString decodeText(<span class="keyword">const</span> <span class="keywordtype">char</span> * pcText);
-<a name="l00352"></a>00352         <span class="comment">//return a text encoder</span>
-<a name="l00353"></a>00353         QTextEncoder * makeEncoder();
-<a name="l00354"></a>00354 
-<a name="l00355"></a>00355         <span class="keywordtype">void</span> contextPopup();
-<a name="l00356"></a>00356         <span class="comment">// Raises the window (after a light delay to prevent focus pingpongs)</span>
-<a name="l00357"></a>00357         <span class="keywordtype">void</span> delayedAutoRaise();
-<a name="l00358"></a>00358         <span class="comment">// Window state: might work :D</span>
-<a name="l00359"></a>00359         <span class="keywordtype">bool</span> isMinimized();
-<a name="l00360"></a>00360         <span class="keywordtype">bool</span> isMaximized();
-<a name="l00361"></a>00361         <span class="comment">// Retrieves the default log file name: this is pre-build</span>
-<a name="l00362"></a>00362         <span class="keywordtype">void</span> getDefaultLogFileName(QString &amp; <a class="code" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>);
-<a name="l00363"></a>00363         <span class="comment">// Well...the external geometry :)</span>
-<a name="l00364"></a>00364         QRect externalGeometry();
-<a name="l00365"></a>00365 
-<a name="l00366"></a>00366         <span class="keywordtype">void</span> delayedClose(); <span class="comment">// close that jumps out of the current event loop</span>
-<a name="l00367"></a>00367 
-<a name="l00368"></a>00368         <span class="comment">// Interesting overridables:</span>
-<a name="l00369"></a>00369         <span class="keyword">virtual</span> <span class="keywordtype">void</span> getConfigGroupName(QString &amp; <a class="code" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>);
-<a name="l00370"></a>00370         <span class="keyword">virtual</span> <span class="keywordtype">void</span> getBaseLogFileName(QString &amp; <a class="code" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>);
-<a name="l00371"></a>00371         <span class="keyword">virtual</span> <span class="keywordtype">void</span> updateCaption();
-<a name="l00372"></a>00372         <span class="keyword">virtual</span> <span class="keywordtype">void</span> applyOptions();
-<a name="l00373"></a>00373         <span class="keyword">virtual</span> <span class="keywordtype">void</span> updateIcon();
-<a name="l00374"></a><a class="code" href="classKviWindow.html#a84791485798762785432f48ab9bbdfe1">00374</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a84791485798762785432f48ab9bbdfe1">ownMessage</a>(<span class="keyword">const</span> QString &amp;, <span class="keywordtype">bool</span> = <span class="keyword">true</span>){};
-<a name="l00375"></a><a class="code" href="classKviWindow.html#a7cbab6cf8d74e8aeb0d70a275ec6325d">00375</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a7cbab6cf8d74e8aeb0d70a275ec6325d">ownAction</a>(<span class="keyword">const</span> QString &amp;){};
-<a name="l00376"></a><a class="code" href="classKviWindow.html#ad852a283d3cd3f3d6713d7915075472d">00376</a>         <span class="keyword">virtual</span> <span class="keyword">const</span> QString &amp; <a class="code" href="classKviWindow.html#ad852a283d3cd3f3d6713d7915075472d">plainTextCaption</a>(){ <span class="keywordflow">return</span> m_szPlainTextCaption; };
-<a name="l00377"></a>00377 
-<a name="l00378"></a>00378         <span class="keywordtype">void</span> internalOutput(<a class="code" href="classKviIrcView.html">KviIrcView</a> * pView, <span class="keywordtype">int</span> iMsgType, <span class="keyword">const</span> <a class="code" href="KviCString_8h.html#a2dc1d56cc0b9ac8c459aaef1d056ce2f">kvi_wchar_t</a> * pwText, <span class="keywordtype">int</span> iFlags = 0);
-<a name="l00379"></a>00379         <span class="comment">// You *might* want to override these too.. but better don&#39;t touch them :D</span>
-<a name="l00380"></a>00380         <span class="keyword">virtual</span> <span class="keywordtype">void</span> output(<span class="keywordtype">int</span> iMsgType, <span class="keyword">const</span> <span class="keywordtype">char</span> * pcFormat, ...);
-<a name="l00381"></a>00381         <span class="keyword">virtual</span> <span class="keywordtype">void</span> outputNoFmt(<span class="keywordtype">int</span> iMsgType, <span class="keyword">const</span> <span class="keywordtype">char</span> * pcText, <span class="keywordtype">int</span> iFlags = 0);
-<a name="l00382"></a>00382         <span class="keyword">virtual</span> <span class="keywordtype">void</span> output(<span class="keywordtype">int</span> iMsgType, <span class="keyword">const</span> <a class="code" href="KviCString_8h.html#a2dc1d56cc0b9ac8c459aaef1d056ce2f">kvi_wchar_t</a> * pwFormat, ...);
-<a name="l00383"></a><a class="code" href="classKviWindow.html#ae9c21baef160a95d8a102c9da10b5f05">00383</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#ae9c21baef160a95d8a102c9da10b5f05">outputNoFmt</a>(<span class="keywordtype">int</span> iMsgType, <span class="keyword">const</span> <a class="code" href="KviCString_8h.html#a2dc1d56cc0b9ac8c459aaef1d056ce2f">kvi_wchar_t</a> * pwText, <span class="keywordtype">int</span> iFlags = 0){ internalOutput(m_pIrcView,iMsgType,pwText,iFlags); };
-<a name="l00384"></a>00384         <span class="keyword">virtual</span> <span class="keywordtype">void</span> output(<span class="keywordtype">int</span> iMsgType, <span class="keyword">const</span> QString &amp; szFmt, ...);
-<a name="l00385"></a>00385         <span class="keyword">virtual</span> <span class="keywordtype">void</span> outputNoFmt(<span class="keywordtype">int</span> iMsgType, <span class="keyword">const</span> QString &amp; szText, <span class="keywordtype">int</span> iFlags = 0); <span class="comment">// &lt;-- these are KviIrcView::AppendTextFlags</span>
-<a name="l00386"></a>00386         <span class="comment">// Just helpers.. FIXME: might be redesigned in some other way</span>
-<a name="l00387"></a>00387         <span class="keywordtype">void</span> updateBackgrounds(QObject * pObj = 0);
-<a name="l00388"></a>00388 
-<a name="l00389"></a>00389         <span class="keywordtype">void</span> demandAttention();
-<a name="l00390"></a>00390         <span class="keywordtype">bool</span> hasAttention();
-<a name="l00391"></a>00391 
-<a name="l00392"></a>00392         <span class="comment">// This should die, probably</span>
-<a name="l00393"></a>00393         <span class="keywordtype">void</span> listWindowTypes();
-<a name="l00394"></a>00394 
-<a name="l00395"></a>00395         <span class="keywordtype">void</span> activateSelf();
-<a name="l00396"></a>00396 
-<a name="l00397"></a>00397         <span class="comment">// call this in the constructor if your caption is fixed:</span>
-<a name="l00398"></a>00398         <span class="comment">// it will set m_szPlainTextCaption to szCaption and it will</span>
-<a name="l00399"></a>00399         <span class="comment">// automatically use it without the need of overriding fillCaptionBuffers</span>
-<a name="l00400"></a><a class="code" href="classKviWindow.html#a95d85e165baaf6a49ff8aa524562e1ee">00400</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a95d85e165baaf6a49ff8aa524562e1ee">setFixedCaption</a>(<span class="keyword">const</span> QString &amp; szCaption){ m_szPlainTextCaption = szCaption; };
-<a name="l00401"></a>00401 <span class="keyword">protected</span>:
-<a name="l00402"></a>00402         <span class="comment">// Loading and saving of properties</span>
-<a name="l00403"></a>00403         <span class="comment">// Protected: only KviMainWindow can call these</span>
-<a name="l00404"></a>00404         <span class="keyword">virtual</span> <span class="keywordtype">void</span> saveProperties(<a class="code" href="classKviConfigurationFile.html">KviConfigurationFile</a> * pCfg);
-<a name="l00405"></a>00405         <span class="keyword">virtual</span> <span class="keywordtype">void</span> loadProperties(<a class="code" href="classKviConfigurationFile.html">KviConfigurationFile</a> * pCfg);
-<a name="l00406"></a>00406         <span class="comment">// Creation and destruction events: overridden in windows that have script events bound to creation and destruction</span>
-<a name="l00407"></a><a class="code" href="classKviWindow.html#a497d86458ff9baa8b5fd5123c77d7c73">00407</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a497d86458ff9baa8b5fd5123c77d7c73">triggerCreationEvents</a>(){};
-<a name="l00408"></a><a class="code" href="classKviWindow.html#a0fd9d3d9707e681d9983351fbda3a8c8">00408</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a0fd9d3d9707e681d9983351fbda3a8c8">triggerDestructionEvents</a>(){};
-<a name="l00409"></a>00409         <span class="comment">// Internal: do not touch :D (KviMainWindow)</span>
-<a name="l00410"></a>00410         <span class="keyword">virtual</span> <span class="keywordtype">void</span> createWindowListItem();
-<a name="l00411"></a>00411         <span class="keyword">virtual</span> <span class="keywordtype">void</span> destroyWindowListItem();
-<a name="l00412"></a>00412         <span class="comment">// called by KviMainWindow</span>
-<a name="l00413"></a>00413         <span class="comment">// either lost the active window status or the frame is no longer active (but we&#39;re still the active kvirc&#39;s subwindow)</span>
-<a name="l00414"></a>00414         <span class="keyword">virtual</span> <span class="keywordtype">void</span> lostUserFocus();
-<a name="l00415"></a>00415         <span class="comment">// this by default calls fillSingleColorCaptionBuffer(plainTextCaption());</span>
-<a name="l00416"></a>00416         <span class="keyword">virtual</span> <span class="keywordtype">void</span> fillCaptionBuffers();
-<a name="l00417"></a>00417         <span class="comment">// protected helper</span>
-<a name="l00418"></a><a class="code" href="classKviWindow.html#a1147ad55de8ce772e02d6e076fa22926">00418</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a1147ad55de8ce772e02d6e076fa22926">fillSingleColorCaptionBuffers</a>(<span class="keyword">const</span> QString &amp; szName){ m_szPlainTextCaption = szName; };
-<a name="l00419"></a>00419         <span class="comment">// Virtual events that signal dock state change</span>
-<a name="l00420"></a>00420         <span class="keyword">virtual</span> <span class="keywordtype">void</span> youAreDocked();
-<a name="l00421"></a>00421         <span class="keyword">virtual</span> <span class="keywordtype">void</span> youAreUndocked();
-<a name="l00422"></a>00422         <span class="comment">// Reimplement to show a special icon in the WindowList items and captions</span>
-<a name="l00423"></a>00423         <span class="keyword">virtual</span> QPixmap * myIconPtr();
-<a name="l00424"></a>00424         <span class="comment">// Sets the type of this window: be careful with this</span>
-<a name="l00425"></a><a class="code" href="classKviWindow.html#ac88d790c3de8c78111a5a1c2035e4045">00425</a>         <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#ac88d790c3de8c78111a5a1c2035e4045">setType</a>(<a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599" title="Holds the types of a window; these are used by the KVIrc core and distributed modules.">Type</a> eType){ m_eType = eType; };
-<a name="l00426"></a>00426 
-<a name="l00427"></a>00427         <span class="keywordtype">bool</span> eventFilter(QObject * pObject, QEvent * pEvent);
-<a name="l00428"></a>00428 
-<a name="l00429"></a>00429         <span class="comment">// Virtuals overridden to manage the internal layouts...</span>
-<a name="l00430"></a>00430         <span class="keyword">virtual</span> <span class="keywordtype">void</span> moveEvent(QMoveEvent * pEvent);
-<a name="l00431"></a>00431         <span class="keyword">virtual</span> <span class="keywordtype">void</span> closeEvent(QCloseEvent * pEvent);
-<a name="l00432"></a>00432         <span class="keyword">virtual</span> <span class="keywordtype">void</span> childEvent(QChildEvent * pEvent);
-<a name="l00433"></a>00433         <span class="keyword">virtual</span> <span class="keywordtype">void</span> focusInEvent(QFocusEvent *);
-<a name="l00434"></a>00434 
-<a name="l00435"></a>00435         <span class="keywordtype">void</span> childInserted(QWidget * pObject);
-<a name="l00436"></a>00436         <span class="keywordtype">void</span> childRemoved(QWidget * pObject);
-<a name="l00437"></a>00437 
-<a name="l00438"></a>00438         <span class="comment">// Internal helpers</span>
-<a name="l00439"></a>00439         <span class="keywordtype">void</span> createCryptControllerButton(QWidget * pPar);
-<a name="l00440"></a>00440         <span class="keywordtype">void</span> createTextEncodingButton(QWidget * pPar);
-<a name="l00441"></a>00441         <span class="keywordtype">void</span> createSystemTextEncodingPopup();
-<a name="l00442"></a>00442 
-<a name="l00443"></a>00443         QToolButton * createToolButton(QWidget * pPar, <span class="keyword">const</span> <span class="keywordtype">char</span> * pcName, <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7" title="Contains all KVIrc&amp;#39;s small icons.">KviIconManager::SmallIcon</a> eIcon, <span class="keyword">const</span> QString &amp; szToolTip, <span class="keywordtype">bool</span> bOn);
-<a name="l00444"></a>00444         <span class="comment">// This is called by KviInput: actually it links the widgetAdded</span>
-<a name="l00445"></a>00445         <span class="keyword">virtual</span> <span class="keywordtype">void</span> childrenTreeChanged(QWidget * pAdded);
-<a name="l00446"></a>00446 
-<a name="l00447"></a>00447         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> focusNextPrevChild(<span class="keywordtype">bool</span> bNext);
-<a name="l00448"></a>00448 
-<a name="l00449"></a>00449         <span class="keyword">virtual</span> <span class="keywordtype">void</span> preprocessMessage(QString &amp; szMessage);
-<a name="l00450"></a>00450 <span class="keyword">public</span> slots:
-<a name="l00451"></a>00451         <span class="keywordtype">void</span> dock();
-<a name="l00452"></a>00452         <span class="keywordtype">void</span> undock();
-<a name="l00453"></a>00453         <span class="keywordtype">void</span> autoRaise();
-<a name="l00454"></a>00454         <span class="keywordtype">void</span> maximize();
-<a name="l00455"></a>00455         <span class="keywordtype">void</span> minimize();
-<a name="l00456"></a>00456         <span class="keywordtype">void</span> restore();
-<a name="l00457"></a>00457         <span class="keywordtype">void</span> reloadImages();
-<a name="l00458"></a>00458         <span class="keywordtype">void</span> savePropertiesAsDefault();
-<a name="l00459"></a>00459 <span class="keyword">protected</span> slots:
-<a name="l00460"></a>00460         <span class="keywordtype">void</span> toggleCryptController();     <span class="comment">// This has to be here even if the crypt support is enabled...moc does not support conditionals</span>
-<a name="l00461"></a>00461         <span class="keywordtype">void</span> cryptControllerFinished();   <span class="comment">// same as above</span>
-<a name="l00462"></a>00462         <span class="keywordtype">void</span> cryptSessionInfoDestroyed(); <span class="comment">//  same as above</span>
-<a name="l00463"></a>00463         <span class="keywordtype">void</span> textEncodingButtonClicked();
-<a name="l00464"></a>00464         <span class="keywordtype">void</span> systemTextEncodingPopupActivated(QAction * pAction);
-<a name="l00465"></a>00465         <span class="keywordtype">void</span> childDestroyed();
-<a name="l00466"></a>00466 signals:
-<a name="l00467"></a>00467         <span class="keywordtype">void</span> windowNameChanged();
-<a name="l00468"></a>00468 };
-<a name="l00469"></a>00469 
-<a name="l00470"></a>00470 <span class="preprocessor">#ifndef _KVI_WINDOW_CPP_</span>
-<a name="l00471"></a>00471 <span class="preprocessor"></span>        <span class="comment">// The active window:</span>
-<a name="l00472"></a>00472         <span class="comment">//   This is almost always non null</span>
-<a name="l00473"></a>00473         <span class="comment">//   The exception is the startup (when there are no windows at all)</span>
-<a name="l00474"></a>00474         <span class="comment">//   and the last phase of the destructor.</span>
-<a name="l00475"></a>00475         <span class="comment">//   You usually shouldn&#39;t care of checking this pointer for NULL unless</span>
-<a name="l00476"></a>00476         <span class="comment">//   you&#39;re running very early at startup or very late at shutdown</span>
-<a name="l00477"></a>00477         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * <a class="code" href="KviWindow_8cpp.html#a2fe86e51e6cd81939fda329d662f4bef">g_pActiveWindow</a>;
-<a name="l00478"></a>00478 <span class="preprocessor">#endif</span>
-<a name="l00479"></a>00479 <span class="preprocessor"></span>
-<a name="l00480"></a><a class="code" href="classKviWindow.html#a13e12cfbf9a28ed99abca7f116343f12">00480</a> <span class="keyword">inline</span> QByteArray <a class="code" href="classKviWindow.html#a13e12cfbf9a28ed99abca7f116343f12">KviWindow::encodeText</a>(<span class="keyword">const</span> QString &amp; szText)
-<a name="l00481"></a>00481 {
-<a name="l00482"></a>00482         <span class="keywordflow">if</span>(<a class="code" href="classKviWindow.html#ad5168549fb3521094d90e76d8c77d5ad">m_pTextCodec</a>)
-<a name="l00483"></a>00483                 <span class="keywordflow">return</span> <a class="code" href="classKviWindow.html#ad5168549fb3521094d90e76d8c77d5ad">m_pTextCodec</a>-&gt;fromUnicode(szText);
-<a name="l00484"></a>00484         <span class="keywordflow">else</span>
-<a name="l00485"></a>00485                 <span class="keywordflow">return</span> <a class="code" href="classKviWindow.html#a64bad19546ec6c71cd9cbb2153578b39">defaultTextCodec</a>()-&gt;fromUnicode(szText);
-<a name="l00486"></a>00486 }
-<a name="l00487"></a>00487 
-<a name="l00488"></a><a class="code" href="classKviWindow.html#a475555423ff50c0742b170344ff0ef61">00488</a> <span class="keyword">inline</span> QString <a class="code" href="classKviWindow.html#a475555423ff50c0742b170344ff0ef61">KviWindow::decodeText</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * pcText)
-<a name="l00489"></a>00489 {
-<a name="l00490"></a>00490         <span class="keywordflow">if</span>(<a class="code" href="classKviWindow.html#ad5168549fb3521094d90e76d8c77d5ad">m_pTextCodec</a>)
-<a name="l00491"></a>00491                 <span class="keywordflow">return</span> <a class="code" href="classKviWindow.html#ad5168549fb3521094d90e76d8c77d5ad">m_pTextCodec</a>-&gt;toUnicode(pcText);
-<a name="l00492"></a>00492         <span class="keywordflow">else</span>
-<a name="l00493"></a>00493                 <span class="keywordflow">return</span> <a class="code" href="classKviWindow.html#a64bad19546ec6c71cd9cbb2153578b39">defaultTextCodec</a>()-&gt;toUnicode(pcText);
-<a name="l00494"></a>00494 }
-<a name="l00495"></a>00495 
-<a name="l00496"></a>00496 <span class="preprocessor">#endif //_KVI_WINDOW_H_</span>
+<a name="l00284"></a>00284         <a class="code" href="classKviIrcContext.html">KviIrcContext</a> * context();
+<a name="l00285"></a>00285 
+<a name="l00290"></a>00290         <a class="code" href="classKviIrcConnection.html" title="An abstraction of a connection to an IRC server.">KviIrcConnection</a> * connection();
+<a name="l00291"></a>00291 
+<a name="l00298"></a><a class="code" href="classKviWindow.html#abd219ee6ceee666dd6a8eb1058065545">00298</a>         <span class="keyword">inline</span> <a class="code" href="KviTalSplitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a> * <a class="code" href="classKviWindow.html#abd219ee6ceee666dd6a8eb1058065545" title="Returns the splitter of this window.">splitter</a>(){ <span class="keywordflow">return</span> m_pSplitter; };
+<a name="l00299"></a>00299 
+<a name="l00306"></a><a class="code" href="classKviWindow.html#ad3a7cf1500953268cf147b1678fc2142">00306</a>         <span class="keyword">inline</span> <a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> * <a class="code" href="classKviWindow.html#ad3a7cf1500953268cf147b1678fc2142" title="Returns the windowList item.">windowListItem</a>(){ <span class="keywordflow">return</span> m_pWindowListItem; };
+<a name="l00307"></a>00307 
+<a name="l00308"></a>00308         <span class="comment">// The window *might* have a button container</span>
+<a name="l00309"></a><a class="code" href="classKviWindow.html#a87ecbe0278887fdedb1ba013d26e08cd">00309</a>         <span class="keyword">virtual</span> QFrame * <a class="code" href="classKviWindow.html#a87ecbe0278887fdedb1ba013d26e08cd">buttonContainer</a>(){ <span class="keywordflow">return</span> (QFrame*)m_pButtonBox; };
+<a name="l00310"></a>00310         <span class="keyword">virtual</span> <span class="keywordtype">void</span> toggleButtonContainer();
+<a name="l00311"></a>00311 
+<a name="l00312"></a>00312         <span class="comment">// The window *might* have an output proxy: if it has no view() for example</span>
+<a name="l00313"></a>00313         <span class="keyword">virtual</span> <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * outputProxy();
+<a name="l00314"></a>00314 
+<a name="l00315"></a>00315         <span class="comment">// The window input widget</span>
+<a name="l00316"></a><a class="code" href="classKviWindow.html#a27755aa02a780470a87b800371efc024">00316</a>         <span class="keyword">inline</span> <a class="code" href="classKviInput.html" title="Input handling class.">KviInput</a> * <a class="code" href="classKviWindow.html#a27755aa02a780470a87b800371efc024">input</a>(){ <span class="keywordflow">return</span> m_pInput; };
+<a name="l00317"></a>00317 
+<a name="l00318"></a>00318         <span class="comment">// The target of this window: empty when it makes no sense :D</span>
+<a name="l00319"></a><a class="code" href="classKviWindow.html#aff8ee8ac4e11b697d784bea77adfe8d4">00319</a>         <span class="keyword">virtual</span> <span class="keyword">const</span> QString &amp; <a class="code" href="classKviWindow.html#aff8ee8ac4e11b697d784bea77adfe8d4">target</a>(){ <span class="keywordflow">return</span> <a class="code" href="namespaceKviQString.html#aa14b9dc45e5d3b528f26e523d7c96b3e" title="A global empty string (note that this is ALSO NULL under Qt 3.x)">KviQString::Empty</a>; };
+<a name="l00320"></a>00320 
+<a name="l00321"></a>00321         <span class="comment">// The local nickname bound to this window: might be empty when a local nickname makes no sense</span>
+<a name="l00322"></a><a class="code" href="classKviWindow.html#a42f07183e2f11cdc69e51b2a0266daba">00322</a>         <span class="keyword">virtual</span> <span class="keyword">const</span> QString &amp; <a class="code" href="classKviWindow.html#a42f07183e2f11cdc69e51b2a0266daba">localNick</a>(){ <span class="keywordflow">return</span> <a class="code" href="namespaceKviQString.html#aa14b9dc45e5d3b528f26e523d7c96b3e" title="A global empty string (note that this is ALSO NULL under Qt 3.x)">KviQString::Empty</a>; };
+<a name="l00323"></a>00323 
+<a name="l00324"></a>00324 <span class="preprocessor">#ifdef COMPILE_CRYPT_SUPPORT</span>
+<a name="l00325"></a>00325 <span class="preprocessor"></span>        KviCryptSessionInfo * cryptSessionInfo(){ <span class="keywordflow">return</span> m_pCryptSessionInfo; };
+<a name="l00326"></a>00326         <span class="keywordtype">void</span> setCryptSessionInfo(KviCryptSessionInfo * pInfo);
+<a name="l00327"></a>00327 <span class="preprocessor">#endif</span>
+<a name="l00328"></a>00328 <span class="preprocessor"></span>
+<a name="l00329"></a>00329         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> activityMeter(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * puActivityValue, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * puActivityTemperature);
+<a name="l00330"></a>00330 
+<a name="l00331"></a>00331         <span class="comment">//* \param puValue Highlight level</span>
+<a name="l00332"></a>00332         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> highlightMeter(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * puValue);
+<a name="l00333"></a>00333         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> highlightMe(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uValue);
+<a name="l00334"></a>00334 
+<a name="l00335"></a>00335         <span class="keywordtype">void</span> unhighlight();
+<a name="l00336"></a>00336 
+<a name="l00337"></a><a class="code" href="classKviWindow.html#a59d6dd538cc823cb37fb9e24ded6a083">00337</a>         <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a59d6dd538cc823cb37fb9e24ded6a083">getWindowListTipText</a>(QString &amp; <a class="code" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>){ szBuffer = m_szPlainTextCaption; };
+<a name="l00338"></a>00338 
+<a name="l00339"></a>00339         <span class="comment">// This is meaningful only if view() is non NULL</span>
+<a name="l00340"></a>00340         <span class="keyword">const</span> QString &amp; lastLineOfText();
+<a name="l00341"></a>00341         <span class="keyword">const</span> QString &amp; lastMessageText();
+<a name="l00342"></a>00342 
+<a name="l00343"></a><a class="code" href="classKviWindow.html#a9e002a22117cfafddd978f639596c3c0">00343</a>         <span class="keyword">inline</span> <span class="keyword">const</span> QString &amp;<a class="code" href="classKviWindow.html#a9e002a22117cfafddd978f639596c3c0">textEncoding</a>(){ <span class="keywordflow">return</span> m_szTextEncoding; };
+<a name="l00344"></a>00344         <span class="comment">// returns true if the encoding could be successfully set</span>
+<a name="l00345"></a>00345         <span class="keywordtype">bool</span> setTextEncoding(<span class="keyword">const</span> QString &amp; szTextEncoding);
+<a name="l00346"></a>00346         <span class="comment">// this must return a default text codec suitable for this window</span>
+<a name="l00347"></a>00347         <span class="keyword">virtual</span> QTextCodec * defaultTextCodec();
+<a name="l00348"></a>00348         <span class="comment">// encode the text from szSource by using m_uTextEncoding</span>
+<a name="l00349"></a>00349         <span class="keyword">inline</span> QByteArray encodeText(<span class="keyword">const</span> QString &amp; szText);
+<a name="l00350"></a>00350         <span class="keyword">inline</span> QString decodeText(<span class="keyword">const</span> <span class="keywordtype">char</span> * pcText);
+<a name="l00351"></a>00351         <span class="comment">//return a text encoder</span>
+<a name="l00352"></a>00352         QTextEncoder * makeEncoder();
+<a name="l00353"></a>00353 
+<a name="l00354"></a>00354         <span class="keywordtype">void</span> contextPopup();
+<a name="l00355"></a>00355         <span class="comment">// Raises the window (after a light delay to prevent focus pingpongs)</span>
+<a name="l00356"></a>00356         <span class="keywordtype">void</span> delayedAutoRaise();
+<a name="l00357"></a>00357         <span class="comment">// Window state: might work :D</span>
+<a name="l00358"></a>00358         <span class="keywordtype">bool</span> isMinimized();
+<a name="l00359"></a>00359         <span class="keywordtype">bool</span> isMaximized();
+<a name="l00360"></a>00360         <span class="comment">// Retrieves the default log file name: this is pre-build</span>
+<a name="l00361"></a>00361         <span class="keywordtype">void</span> getDefaultLogFileName(QString &amp; <a class="code" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>);
+<a name="l00362"></a>00362 
+<a name="l00363"></a>00363         <span class="keywordtype">void</span> delayedClose(); <span class="comment">// close that jumps out of the current event loop</span>
+<a name="l00364"></a>00364 
+<a name="l00365"></a>00365         <span class="comment">// Interesting overridables:</span>
+<a name="l00366"></a>00366         <span class="keyword">virtual</span> <span class="keywordtype">void</span> getConfigGroupName(QString &amp; <a class="code" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>);
+<a name="l00367"></a>00367         <span class="keyword">virtual</span> <span class="keywordtype">void</span> getBaseLogFileName(QString &amp; <a class="code" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>);
+<a name="l00368"></a>00368         <span class="keyword">virtual</span> <span class="keywordtype">void</span> updateCaption();
+<a name="l00369"></a>00369         <span class="keyword">virtual</span> <span class="keywordtype">void</span> applyOptions();
+<a name="l00370"></a>00370         <span class="keyword">virtual</span> <span class="keywordtype">void</span> updateIcon();
+<a name="l00371"></a><a class="code" href="classKviWindow.html#a84791485798762785432f48ab9bbdfe1">00371</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a84791485798762785432f48ab9bbdfe1">ownMessage</a>(<span class="keyword">const</span> QString &amp;, <span class="keywordtype">bool</span> = <span class="keyword">true</span>){};
+<a name="l00372"></a><a class="code" href="classKviWindow.html#a7cbab6cf8d74e8aeb0d70a275ec6325d">00372</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a7cbab6cf8d74e8aeb0d70a275ec6325d">ownAction</a>(<span class="keyword">const</span> QString &amp;){};
+<a name="l00373"></a><a class="code" href="classKviWindow.html#ad852a283d3cd3f3d6713d7915075472d">00373</a>         <span class="keyword">virtual</span> <span class="keyword">const</span> QString &amp; <a class="code" href="classKviWindow.html#ad852a283d3cd3f3d6713d7915075472d">plainTextCaption</a>(){ <span class="keywordflow">return</span> m_szPlainTextCaption; };
+<a name="l00374"></a>00374 
+<a name="l00375"></a>00375         <span class="keywordtype">void</span> internalOutput(<a class="code" href="classKviIrcView.html">KviIrcView</a> * pView, <span class="keywordtype">int</span> iMsgType, <span class="keyword">const</span> <a class="code" href="KviCString_8h.html#a2dc1d56cc0b9ac8c459aaef1d056ce2f">kvi_wchar_t</a> * pwText, <span class="keywordtype">int</span> iFlags = 0);
+<a name="l00376"></a>00376         <span class="comment">// You *might* want to override these too.. but better don&#39;t touch them :D</span>
+<a name="l00377"></a>00377         <span class="keyword">virtual</span> <span class="keywordtype">void</span> output(<span class="keywordtype">int</span> iMsgType, <span class="keyword">const</span> <span class="keywordtype">char</span> * pcFormat, ...);
+<a name="l00378"></a>00378         <span class="keyword">virtual</span> <span class="keywordtype">void</span> outputNoFmt(<span class="keywordtype">int</span> iMsgType, <span class="keyword">const</span> <span class="keywordtype">char</span> * pcText, <span class="keywordtype">int</span> iFlags = 0);
+<a name="l00379"></a>00379         <span class="keyword">virtual</span> <span class="keywordtype">void</span> output(<span class="keywordtype">int</span> iMsgType, <span class="keyword">const</span> <a class="code" href="KviCString_8h.html#a2dc1d56cc0b9ac8c459aaef1d056ce2f">kvi_wchar_t</a> * pwFormat, ...);
+<a name="l00380"></a><a class="code" href="classKviWindow.html#ae9c21baef160a95d8a102c9da10b5f05">00380</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#ae9c21baef160a95d8a102c9da10b5f05">outputNoFmt</a>(<span class="keywordtype">int</span> iMsgType, <span class="keyword">const</span> <a class="code" href="KviCString_8h.html#a2dc1d56cc0b9ac8c459aaef1d056ce2f">kvi_wchar_t</a> * pwText, <span class="keywordtype">int</span> iFlags = 0){ internalOutput(m_pIrcView,iMsgType,pwText,iFlags); };
+<a name="l00381"></a>00381         <span class="keyword">virtual</span> <span class="keywordtype">void</span> output(<span class="keywordtype">int</span> iMsgType, <span class="keyword">const</span> QString &amp; szFmt, ...);
+<a name="l00382"></a>00382         <span class="keyword">virtual</span> <span class="keywordtype">void</span> outputNoFmt(<span class="keywordtype">int</span> iMsgType, <span class="keyword">const</span> QString &amp; szText, <span class="keywordtype">int</span> iFlags = 0); <span class="comment">// &lt;-- these are KviIrcView::AppendTextFlags</span>
+<a name="l00383"></a>00383         <span class="comment">// Just helpers.. FIXME: might be redesigned in some other way</span>
+<a name="l00384"></a>00384         <span class="keywordtype">void</span> updateBackgrounds(QObject * pObj = 0);
+<a name="l00385"></a>00385 
+<a name="l00394"></a>00394         <span class="keywordtype">void</span> demandAttention();
+<a name="l00395"></a>00395 
+<a name="l00407"></a>00407         <span class="keywordtype">bool</span> hasAttention(AttentionLevel eLevel=VisibleAndActive);
+<a name="l00408"></a>00408 
+<a name="l00409"></a>00409         <span class="comment">// This should die, probably</span>
+<a name="l00410"></a>00410         <span class="keywordtype">void</span> listWindowTypes();
+<a name="l00411"></a>00411 
+<a name="l00412"></a>00412         <span class="keywordtype">void</span> activateSelf();
+<a name="l00413"></a>00413 
+<a name="l00414"></a>00414         <span class="comment">// call this in the constructor if your caption is fixed:</span>
+<a name="l00415"></a>00415         <span class="comment">// it will set m_szPlainTextCaption to szCaption and it will</span>
+<a name="l00416"></a>00416         <span class="comment">// automatically use it without the need of overriding fillCaptionBuffers</span>
+<a name="l00417"></a><a class="code" href="classKviWindow.html#a95d85e165baaf6a49ff8aa524562e1ee">00417</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a95d85e165baaf6a49ff8aa524562e1ee">setFixedCaption</a>(<span class="keyword">const</span> QString &amp; szCaption){ m_szPlainTextCaption = szCaption; };
+<a name="l00418"></a>00418 <span class="keyword">protected</span>:
+<a name="l00419"></a>00419         <span class="comment">// Loading and saving of properties</span>
+<a name="l00420"></a>00420         <span class="comment">// Protected: only KviMainWindow can call these</span>
+<a name="l00421"></a>00421         <span class="keyword">virtual</span> <span class="keywordtype">void</span> saveProperties(<a class="code" href="classKviConfigurationFile.html">KviConfigurationFile</a> * pCfg);
+<a name="l00422"></a>00422         <span class="keyword">virtual</span> <span class="keywordtype">void</span> loadProperties(<a class="code" href="classKviConfigurationFile.html">KviConfigurationFile</a> * pCfg);
+<a name="l00423"></a>00423         <span class="comment">// Creation and destruction events: overridden in windows that have script events bound to creation and destruction</span>
+<a name="l00424"></a><a class="code" href="classKviWindow.html#a497d86458ff9baa8b5fd5123c77d7c73">00424</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a497d86458ff9baa8b5fd5123c77d7c73">triggerCreationEvents</a>(){};
+<a name="l00425"></a><a class="code" href="classKviWindow.html#a0fd9d3d9707e681d9983351fbda3a8c8">00425</a>         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a0fd9d3d9707e681d9983351fbda3a8c8">triggerDestructionEvents</a>(){};
+<a name="l00426"></a>00426         <span class="comment">// Internal: do not touch :D (KviMainWindow)</span>
+<a name="l00427"></a>00427         <span class="keyword">virtual</span> <span class="keywordtype">void</span> createWindowListItem();
+<a name="l00428"></a>00428         <span class="keyword">virtual</span> <span class="keywordtype">void</span> destroyWindowListItem();
+<a name="l00429"></a>00429         <span class="comment">// called by KviMainWindow</span>
+<a name="l00430"></a>00430         <span class="comment">// either lost the active window status or the frame is no longer active (but we&#39;re still the active kvirc&#39;s subwindow)</span>
+<a name="l00431"></a>00431         <span class="keyword">virtual</span> <span class="keywordtype">void</span> lostUserFocus();
+<a name="l00432"></a>00432         <span class="comment">// this by default calls fillSingleColorCaptionBuffer(plainTextCaption());</span>
+<a name="l00433"></a>00433         <span class="keyword">virtual</span> <span class="keywordtype">void</span> fillCaptionBuffers();
+<a name="l00434"></a>00434         <span class="comment">// protected helper</span>
+<a name="l00435"></a><a class="code" href="classKviWindow.html#a1147ad55de8ce772e02d6e076fa22926">00435</a>         <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a1147ad55de8ce772e02d6e076fa22926">fillSingleColorCaptionBuffers</a>(<span class="keyword">const</span> QString &amp; szName){ m_szPlainTextCaption = szName; };
+<a name="l00436"></a>00436         <span class="comment">// Virtual events that signal dock state change</span>
+<a name="l00437"></a>00437         <span class="keyword">virtual</span> <span class="keywordtype">void</span> youAreDocked();
+<a name="l00438"></a>00438         <span class="keyword">virtual</span> <span class="keywordtype">void</span> youAreUndocked();
+<a name="l00439"></a>00439         <span class="comment">// Reimplement to show a special icon in the WindowList items and captions</span>
+<a name="l00440"></a>00440         <span class="keyword">virtual</span> QPixmap * myIconPtr();
+<a name="l00441"></a>00441         <span class="comment">// Sets the type of this window: be careful with this</span>
+<a name="l00442"></a><a class="code" href="classKviWindow.html#ac88d790c3de8c78111a5a1c2035e4045">00442</a>         <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#ac88d790c3de8c78111a5a1c2035e4045">setType</a>(<a class="code" href="classKviWindow.html#ab02f179d8b89b3b617e8b03871c52599" title="Holds the types of a window; these are used by the KVIrc core and distributed modules.">Type</a> eType){ m_eType = eType; };
+<a name="l00443"></a>00443 
+<a name="l00444"></a>00444         <span class="keywordtype">bool</span> eventFilter(QObject * pObject, QEvent * pEvent);
+<a name="l00445"></a>00445 
+<a name="l00446"></a>00446         <span class="comment">// Virtuals overridden to manage the internal layouts...</span>
+<a name="l00447"></a>00447         <span class="keyword">virtual</span> <span class="keywordtype">void</span> moveEvent(QMoveEvent * pEvent);
+<a name="l00448"></a>00448         <span class="keyword">virtual</span> <span class="keywordtype">void</span> closeEvent(QCloseEvent * pEvent);
+<a name="l00449"></a>00449         <span class="keyword">virtual</span> <span class="keywordtype">void</span> childEvent(QChildEvent * pEvent);
+<a name="l00450"></a>00450         <span class="keyword">virtual</span> <span class="keywordtype">void</span> focusInEvent(QFocusEvent *);
+<a name="l00451"></a>00451 
+<a name="l00452"></a>00452         <span class="keywordtype">void</span> childInserted(QWidget * pObject);
+<a name="l00453"></a>00453         <span class="keywordtype">void</span> childRemoved(QWidget * pObject);
+<a name="l00454"></a>00454 
+<a name="l00455"></a>00455         <span class="comment">// Internal helpers</span>
+<a name="l00456"></a>00456         <span class="keywordtype">void</span> createCryptControllerButton(QWidget * pPar);
+<a name="l00457"></a>00457         <span class="keywordtype">void</span> createTextEncodingButton(QWidget * pPar);
+<a name="l00458"></a>00458         <span class="keywordtype">void</span> createSystemTextEncodingPopup();
+<a name="l00459"></a>00459 
+<a name="l00460"></a>00460         QToolButton * createToolButton(QWidget * pPar, <span class="keyword">const</span> <span class="keywordtype">char</span> * pcName, <a class="code" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7" title="Contains all KVIrc&amp;#39;s small icons.">KviIconManager::SmallIcon</a> eIcon, <span class="keyword">const</span> QString &amp; szToolTip, <span class="keywordtype">bool</span> bOn);
+<a name="l00461"></a>00461         <span class="comment">// This is called by KviInput: actually it links the widgetAdded</span>
+<a name="l00462"></a>00462         <span class="keyword">virtual</span> <span class="keywordtype">void</span> childrenTreeChanged(QWidget * pAdded);
+<a name="l00463"></a>00463 
+<a name="l00464"></a>00464         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> focusNextPrevChild(<span class="keywordtype">bool</span> bNext);
+<a name="l00465"></a>00465 
+<a name="l00466"></a>00466         <span class="keyword">virtual</span> <span class="keywordtype">void</span> preprocessMessage(QString &amp; szMessage);
+<a name="l00467"></a>00467 <span class="keyword">public</span> slots:
+<a name="l00468"></a>00468         <span class="keywordtype">void</span> dock();
+<a name="l00469"></a>00469         <span class="keywordtype">void</span> undock();
+<a name="l00470"></a>00470         <span class="keywordtype">void</span> autoRaise();
+<a name="l00471"></a>00471         <span class="keywordtype">void</span> maximize();
+<a name="l00472"></a>00472         <span class="keywordtype">void</span> minimize();
+<a name="l00473"></a>00473         <span class="keywordtype">void</span> restore();
+<a name="l00474"></a>00474         <span class="keywordtype">void</span> reloadImages();
+<a name="l00475"></a>00475         <span class="keywordtype">void</span> savePropertiesAsDefault();
+<a name="l00476"></a>00476 <span class="keyword">protected</span> slots:
+<a name="l00477"></a>00477         <span class="keywordtype">void</span> toggleCryptController();     <span class="comment">// This has to be here even if the crypt support is enabled...moc does not support conditionals</span>
+<a name="l00478"></a>00478         <span class="keywordtype">void</span> cryptControllerFinished();   <span class="comment">// same as above</span>
+<a name="l00479"></a>00479         <span class="keywordtype">void</span> cryptSessionInfoDestroyed(); <span class="comment">//  same as above</span>
+<a name="l00480"></a>00480         <span class="keywordtype">void</span> textEncodingButtonClicked();
+<a name="l00481"></a>00481         <span class="keywordtype">void</span> systemTextEncodingPopupActivated(QAction * pAction);
+<a name="l00482"></a>00482         <span class="keywordtype">void</span> childDestroyed();
+<a name="l00483"></a>00483 signals:
+<a name="l00484"></a>00484         <span class="keywordtype">void</span> windowNameChanged();
+<a name="l00485"></a>00485 };
+<a name="l00486"></a>00486 
+<a name="l00487"></a>00487 <span class="preprocessor">#ifndef _KVI_WINDOW_CPP_</span>
+<a name="l00488"></a>00488 <span class="preprocessor"></span>        <span class="comment">// The active window:</span>
+<a name="l00489"></a>00489         <span class="comment">//   This is almost always non null</span>
+<a name="l00490"></a>00490         <span class="comment">//   The exception is the startup (when there are no windows at all)</span>
+<a name="l00491"></a>00491         <span class="comment">//   and the last phase of the destructor.</span>
+<a name="l00492"></a>00492         <span class="comment">//   You usually shouldn&#39;t care of checking this pointer for NULL unless</span>
+<a name="l00493"></a>00493         <span class="comment">//   you&#39;re running very early at startup or very late at shutdown</span>
+<a name="l00494"></a>00494         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * <a class="code" href="KviWindow_8cpp.html#a2fe86e51e6cd81939fda329d662f4bef">g_pActiveWindow</a>;
+<a name="l00495"></a>00495 <span class="preprocessor">#endif</span>
+<a name="l00496"></a>00496 <span class="preprocessor"></span>
+<a name="l00497"></a><a class="code" href="classKviWindow.html#a13e12cfbf9a28ed99abca7f116343f12">00497</a> <span class="keyword">inline</span> QByteArray <a class="code" href="classKviWindow.html#a13e12cfbf9a28ed99abca7f116343f12">KviWindow::encodeText</a>(<span class="keyword">const</span> QString &amp; szText)
+<a name="l00498"></a>00498 {
+<a name="l00499"></a>00499         <span class="keywordflow">if</span>(<a class="code" href="classKviWindow.html#ad5168549fb3521094d90e76d8c77d5ad">m_pTextCodec</a>)
+<a name="l00500"></a>00500                 <span class="keywordflow">return</span> <a class="code" href="classKviWindow.html#ad5168549fb3521094d90e76d8c77d5ad">m_pTextCodec</a>-&gt;fromUnicode(szText);
+<a name="l00501"></a>00501         <span class="keywordflow">else</span>
+<a name="l00502"></a>00502                 <span class="keywordflow">return</span> <a class="code" href="classKviWindow.html#a64bad19546ec6c71cd9cbb2153578b39">defaultTextCodec</a>()-&gt;fromUnicode(szText);
+<a name="l00503"></a>00503 }
+<a name="l00504"></a>00504 
+<a name="l00505"></a><a class="code" href="classKviWindow.html#a475555423ff50c0742b170344ff0ef61">00505</a> <span class="keyword">inline</span> QString <a class="code" href="classKviWindow.html#a475555423ff50c0742b170344ff0ef61">KviWindow::decodeText</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * pcText)
+<a name="l00506"></a>00506 {
+<a name="l00507"></a>00507         <span class="keywordflow">if</span>(<a class="code" href="classKviWindow.html#ad5168549fb3521094d90e76d8c77d5ad">m_pTextCodec</a>)
+<a name="l00508"></a>00508                 <span class="keywordflow">return</span> <a class="code" href="classKviWindow.html#ad5168549fb3521094d90e76d8c77d5ad">m_pTextCodec</a>-&gt;toUnicode(pcText);
+<a name="l00509"></a>00509         <span class="keywordflow">else</span>
+<a name="l00510"></a>00510                 <span class="keywordflow">return</span> <a class="code" href="classKviWindow.html#a64bad19546ec6c71cd9cbb2153578b39">defaultTextCodec</a>()-&gt;toUnicode(pcText);
+<a name="l00511"></a>00511 }
+<a name="l00512"></a>00512 
+<a name="l00513"></a>00513 <span class="preprocessor">#endif //_KVI_WINDOW_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:29 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:18 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -107,39 +107,36 @@ function toggleVisibility(linkObj) {
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028 
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030 <span class="comment">//===============================================================</span>
-<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;<a class="code" href="object__macros_8h.html">object_macros.h</a>&quot;</span>
-<a name="l00032"></a>00032 <span class="preprocessor">#include &lt;QSystemTrayIcon&gt;</span>
-<a name="l00033"></a>00033 <span class="preprocessor">#include &lt;QMenu&gt;</span>
-<a name="l00034"></a>00034 
-<a name="l00035"></a><a class="code" href="classKvsObject__trayIcon.html">00035</a> <span class="keyword">class </span><a class="code" href="classKvsObject__trayIcon.html">KvsObject_trayIcon</a> : <span class="keyword">public</span> <a class="code" href="classKviKvsObject.html">KviKvsObject</a>
-<a name="l00036"></a>00036 {
-<a name="l00037"></a>00037         Q_OBJECT
-<a name="l00038"></a>00038 <span class="keyword">public</span>:
-<a name="l00039"></a>00039         <a class="code" href="object__macros_8h.html#a69f894edce50dbd143340a8c89d8c8d1">KVSO_DECLARE_OBJECT</a>(<a class="code" href="classKvsObject__trayIcon.html">KvsObject_trayIcon</a>)
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;<a class="code" href="object__macros_8h.html">object_macros.h</a>&quot;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &lt;QSystemTrayIcon&gt;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &lt;QMenu&gt;</span>
+<a name="l00032"></a>00032 
+<a name="l00033"></a><a class="code" href="classKvsObject__trayIcon.html">00033</a> <span class="keyword">class </span><a class="code" href="classKvsObject__trayIcon.html">KvsObject_trayIcon</a> : <span class="keyword">public</span> <a class="code" href="classKviKvsObject.html">KviKvsObject</a>
+<a name="l00034"></a>00034 {
+<a name="l00035"></a>00035         Q_OBJECT
+<a name="l00036"></a>00036 <span class="keyword">public</span>:
+<a name="l00037"></a>00037         <a class="code" href="object__macros_8h.html#a69f894edce50dbd143340a8c89d8c8d1">KVSO_DECLARE_OBJECT</a>(<a class="code" href="classKvsObject__trayIcon.html">KvsObject_trayIcon</a>)
+<a name="l00038"></a>00038 <span class="keyword">protected</span>:
+<a name="l00039"></a><a class="code" href="classKvsObject__trayIcon.html#abbd286cb202de74a491aa474bba40cf1">00039</a>         QSystemTrayIcon *<a class="code" href="classKvsObject__trayIcon.html#abbd286cb202de74a491aa474bba40cf1">m_pTrayIcon</a>;
 <a name="l00040"></a>00040 <span class="keyword">protected</span>:
-<a name="l00041"></a><a class="code" href="classKvsObject__trayIcon.html#abbd286cb202de74a491aa474bba40cf1">00041</a>         QSystemTrayIcon *<a class="code" href="classKvsObject__trayIcon.html#abbd286cb202de74a491aa474bba40cf1">m_pTrayIcon</a>;
-<a name="l00042"></a>00042 <span class="keyword">protected</span>:
-<a name="l00043"></a>00043         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#a5e7e68f64361f22188fef434aa9ac63b">setIcon</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00044"></a>00044         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#a963d9a8e12e6f51f7361404420366228">show</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00045"></a>00045         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#ab11634bd56ef59a056f5aaba85b84d4f">hide</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00046"></a>00046         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#a137754f0d7497954d8bdd90f532dddb6">isVisible</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00047"></a>00047         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#aa1d47606e1da7fca8b17a40d21af0ade">setTooltip</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00048"></a>00048         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#a0760cf33329718d14c8ccc5fca4dd1c2">showMessage</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00049"></a>00049         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#a7d25eef590ac1422bc6b9a173e8eed1c">setContextMenu</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00050"></a>00050         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#a6690934d438347642c092b6661235e87">activatedEvent</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00051"></a>00051         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#ac786620ca4f4325a8970237ec7d0e776">messageClickedEvent</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00052"></a>00052         
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="keyword">protected</span> slots:
-<a name="l00055"></a>00055         <span class="keywordtype">void</span> <a class="code" href="classKvsObject__trayIcon.html#ad45ae82d9ffb4db3d675a820b50ce1c6">slotActivated</a>(QSystemTrayIcon::ActivationReason);
-<a name="l00056"></a>00056         <span class="keywordtype">void</span> <a class="code" href="classKvsObject__trayIcon.html#afeb3955e2f8e4ed9c5f443756e7953f0">slotMessageClicked</a>();
-<a name="l00057"></a>00057 };
-<a name="l00058"></a>00058 <span class="preprocessor">#endif //_CLASS_TRAYICON_H_</span>
+<a name="l00041"></a>00041         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#a5e7e68f64361f22188fef434aa9ac63b">setIcon</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00042"></a>00042         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#a963d9a8e12e6f51f7361404420366228">show</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00043"></a>00043         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#ab11634bd56ef59a056f5aaba85b84d4f">hide</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00044"></a>00044         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#a137754f0d7497954d8bdd90f532dddb6">isVisible</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00045"></a>00045         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#aa1d47606e1da7fca8b17a40d21af0ade">setTooltip</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00046"></a>00046         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#a0760cf33329718d14c8ccc5fca4dd1c2">showMessage</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00047"></a>00047         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#a7d25eef590ac1422bc6b9a173e8eed1c">setContextMenu</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00048"></a>00048         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#a6690934d438347642c092b6661235e87">activatedEvent</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00049"></a>00049         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__trayIcon.html#ac786620ca4f4325a8970237ec7d0e776">messageClickedEvent</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 <span class="keyword">protected</span> slots:
+<a name="l00052"></a>00052         <span class="keywordtype">void</span> <a class="code" href="classKvsObject__trayIcon.html#ad45ae82d9ffb4db3d675a820b50ce1c6">slotActivated</a>(QSystemTrayIcon::ActivationReason);
+<a name="l00053"></a>00053         <span class="keywordtype">void</span> <a class="code" href="classKvsObject__trayIcon.html#afeb3955e2f8e4ed9c5f443756e7953f0">slotMessageClicked</a>();
+<a name="l00054"></a>00054 };
+<a name="l00055"></a>00055 <span class="preprocessor">#endif //_CLASS_TRAYICON_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:31 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:20 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

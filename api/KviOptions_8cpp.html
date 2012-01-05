@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -103,11 +103,8 @@ function toggleVisibility(linkObj) {
 <code>#include &quot;<a class="el" href="KviTheme_8h_source.html">KviTheme.h</a>&quot;</code><br/>
 <code>#include &quot;KviFileUtils.h&quot;</code><br/>
 <code>#include &lt;QMessageBox&gt;</code><br/>
-<code>#include &lt;QRegExp&gt;</code><br/>
-<code>#include &lt;QTextCodec&gt;</code><br/>
 <code>#include &lt;QDir&gt;</code><br/>
 <code>#include &lt;QStringList&gt;</code><br/>
-<code>#include &lt;zlib.h&gt;</code><br/>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="namespaces"></a>
 Namespaces</h2></td></tr>
@@ -116,7 +113,7 @@ Namespaces</h2></td></tr>
 Defines</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviOptions_8cpp.html#a90057a1f6ac284b3455e5bcb4d504c89">_KVI_OPTIONS_CPP_</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviOptions_8cpp.html#a9cfe79ad473b242d5c49b44708cea168">BOOL_OPTION</a>(_txt, _val, _flags)&#160;&#160;&#160;KviBoolOption(KVI_BOOL_OPTIONS_PREFIX _txt,_val,_flags)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviOptions_8cpp.html#ad02dbcc50ded74607efe739f0fd44a56">COLOR_OPTION</a>(_name, _red, _green, _blue, _flags)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviOptions_8cpp.html#abc7a0c41e860636e1370ab493b488e09">COLOR_OPTION</a>(_name, _red, _green, _blue, _alpha, _flags)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviOptions_8cpp.html#ace91ecbeea33b8e105db441049e60679">FONT_OPTION</a>(_name, _face, _size, _flags)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviOptions_8cpp.html#a397c50f32804c59741d7ad2695b36543">GET_OPTION_STRING</a>(__numOpt, __table, __prefix, __prefixLen)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviOptions_8cpp.html#a2c961ecc62f81c434d840145d8ae36be">IC_COLOR_OPTION</a>(_num, _red, _green, _blue)</td></tr>
@@ -149,7 +146,6 @@ Variables</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">KviFontOption&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviOptions_8cpp.html#a4c3753fc40a926793dd9a9a045d5f871">g_fontOptionsTable</a> [KVI_NUM_FONT_OPTIONS]</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">KviColorOption&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviOptions_8cpp.html#a212dd760cd6605703efda7ec2c904e3f">g_iccolorOptionsTable</a> [KVI_NUM_ICCOLOR_OPTIONS]</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">KVIRC_API int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviOptions_8cpp.html#a4103a9bc3d78437c5882deab3c6960de">g_iIdentDaemonRunningUsers</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">xml parser  <a href="#a4103a9bc3d78437c5882deab3c6960de"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">KviColorOption&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviOptions_8cpp.html#ab0364ae603632077193fa28ffe1f61f5">g_mirccolorOptionsTable</a> [KVI_NUM_MIRCCOLOR_OPTIONS]</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">KviMessageTypeSettingsOption&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviOptions_8cpp.html#a194398533ec7f1415b9cc81e4a35931e">g_msgtypeOptionsTable</a> [KVI_NUM_MSGTYPE_OPTIONS]</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">KviPixmapOption&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviOptions_8cpp.html#ac468d55095365df4ec6a270863d5e968">g_pixmapOptionsTable</a> [KVI_NUM_PIXMAP_OPTIONS]</td></tr>
@@ -206,7 +202,7 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad02dbcc50ded74607efe739f0fd44a56"></a><!-- doxytag: member="KviOptions.cpp::COLOR_OPTION" ref="ad02dbcc50ded74607efe739f0fd44a56" args="(_name, _red, _green, _blue, _flags)" -->
+<a class="anchor" id="abc7a0c41e860636e1370ab493b488e09"></a><!-- doxytag: member="KviOptions.cpp::COLOR_OPTION" ref="abc7a0c41e860636e1370ab493b488e09" args="(_name, _red, _green, _blue, _alpha, _flags)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -238,6 +234,12 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname">_alpha, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname">_flags&#160;</td>
         </tr>
         <tr>
@@ -249,7 +251,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 <b>Value:</b><div class="fragment"><pre class="fragment">KviColorOption(<a class="code" href="KviOptions_8h.html#a0e279fb2c82ae5508f2005c62825d743">KVI_COLOR_OPTIONS_PREFIX</a> _name, \
-                QColor(_red,_green,_blue), \
+                QColor(_red,_green,_blue,_alpha), \
                 _flags | KviOption_resetUpdateGui | KviOption_groupTheme | KviOption_resetUpdatePseudoTransparency)
 </pre></div>
 </div>
@@ -1100,33 +1102,7 @@ Variables</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-<b>Initial value:</b><div class="fragment"><pre class="fragment">
-{
 
-
-
-
-
-
-
-
-
-
-
-
-        <a class="code" href="KviOptions_8cpp.html#ace91ecbeea33b8e105db441049e60679">FONT_OPTION</a>(<span class="stringliteral">&quot;IrcView&quot;</span>,<span class="stringliteral">&quot;Monospace&quot;</span>,10,KviOption_sectFlagIrcView | KviOption_resetUpdateGui),
-        <a class="code" href="KviOptions_8cpp.html#ace91ecbeea33b8e105db441049e60679">FONT_OPTION</a>(<span class="stringliteral">&quot;Input&quot;</span>,<span class="stringliteral">&quot;Sans Serif&quot;</span>,12,KviOption_sectFlagInput | KviOption_resetUpdateGui),
-        <a class="code" href="KviOptions_8cpp.html#ace91ecbeea33b8e105db441049e60679">FONT_OPTION</a>(<span class="stringliteral">&quot;UserListView&quot;</span>,<span class="stringliteral">&quot;Sans Serif&quot;</span>,10,KviOption_sectFlagUserListView | KviOption_resetUpdateGui),
-        <a class="code" href="KviOptions_8cpp.html#ace91ecbeea33b8e105db441049e60679">FONT_OPTION</a>(<span class="stringliteral">&quot;Label&quot;</span>,<span class="stringliteral">&quot;Sans Serif&quot;</span>,10,KviOption_sectFlagLabel | KviOption_resetUpdateGui),
-        <a class="code" href="KviOptions_8cpp.html#ace91ecbeea33b8e105db441049e60679">FONT_OPTION</a>(<span class="stringliteral">&quot;Application&quot;</span>,<span class="stringliteral">&quot;Sans Serif&quot;</span>,10,KviOption_sectFlagGui | KviOption_resetUpdateAppFont),
-        <a class="code" href="KviOptions_8cpp.html#ace91ecbeea33b8e105db441049e60679">FONT_OPTION</a>(<span class="stringliteral">&quot;IrcToolBarApplet&quot;</span>,<span class="stringliteral">&quot;Sans Serif&quot;</span>,10,KviOption_sectFlagIrcToolBar | KviOption_resetUpdateGui),
-        <a class="code" href="KviOptions_8cpp.html#ace91ecbeea33b8e105db441049e60679">FONT_OPTION</a>(<span class="stringliteral">&quot;WindowList&quot;</span>,<span class="stringliteral">&quot;Sans Serif&quot;</span>,10,KviOption_sectFlagWindowList | KviOption_resetUpdateWindowList),
-        <a class="code" href="KviOptions_8cpp.html#ace91ecbeea33b8e105db441049e60679">FONT_OPTION</a>(<span class="stringliteral">&quot;TreeWindowList&quot;</span>,<span class="stringliteral">&quot;Sans Serif&quot;</span>,10,KviOption_sectFlagWindowList | KviOption_resetUpdateWindowList),
-        <a class="code" href="KviOptions_8cpp.html#ace91ecbeea33b8e105db441049e60679">FONT_OPTION</a>(<span class="stringliteral">&quot;Notifier&quot;</span>,<span class="stringliteral">&quot;Sans Serif&quot;</span>,9,KviOption_sectFlagNotifier | KviOption_resetUpdateNotifier),
-
-
-}
-</pre></div>
 <p>Referenced by <a class="el" href="classKviOptionsWidget.html#ae4cde61746e2f3b18784e581f987a20f">KviOptionsWidget::addFontSelector()</a>, <a class="el" href="classKviApplication.html#a66bbe33ff53e960efbe3097bb33e0c1b">KviApplication::getOptionString()</a>, <a class="el" href="classKviApplication.html#add553803b442d943fd6e142827304fa7">KviApplication::listAvailableOptions()</a>, <a class="el" href="namespaceKviTheme.html#afa2f5bbf8ede1f41867007960fb62a97">KviTheme::load()</a>, <a class="el" href="classKviApplication.html#ab9ec65042d36edb718de68129430c8d8">KviApplication::loadOptions()</a>, <a class="el" href="namespaceKviTheme.html#afc947a792aac67a66d0402e09682ac13">KviTheme::save()</a>, <a class="el" href="classKviApplication.html#a749b40fe7ed13560183de2358fa1e033">KviApplication::saveOptions()</a>, and <a class="el" href="classKviApplication.html#a764d129f3c02090d41c2315f1bd1d32e">KviApplication::setCommonOptionValue()</a>.</p>
 
 </div>
@@ -1167,8 +1143,6 @@ Variables</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>xml parser </p>
 
 </div>
 </div>
@@ -1352,7 +1326,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:32 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:22 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

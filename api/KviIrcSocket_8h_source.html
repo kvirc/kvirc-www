@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -192,124 +192,129 @@ function toggleVisibility(linkObj) {
 <a name="l00164"></a><a class="code" href="classKviIrcSocket.html#ab32573d635e1770cef6b76f049e5d76a">00164</a> <span class="preprocessor"></span>        <span class="keywordtype">bool</span> <a class="code" href="classKviIrcSocket.html#ab32573d635e1770cef6b76f049e5d76a" title="Returns true if the socket is a Secure Socket Layer (SSL)">usingSSL</a>(){ <span class="keywordflow">return</span> <span class="keyword">false</span>; };
 <a name="l00165"></a>00165 <span class="preprocessor">#endif</span>
 <a name="l00166"></a>00166 <span class="preprocessor"></span>
-<a name="l00171"></a><a class="code" href="classKviIrcSocket.html#a9071635d5267a1899c304adb71bb5ed6">00171</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviIrcSocket.html#a9071635d5267a1899c304adb71bb5ed6" title="Returns the number of bytes read.">readBytes</a>(){ <span class="keywordflow">return</span> m_uReadBytes; };
-<a name="l00172"></a>00172 
-<a name="l00177"></a><a class="code" href="classKviIrcSocket.html#ad40908232466132017eb5e0373e98ca1">00177</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviIrcSocket.html#ad40908232466132017eb5e0373e98ca1" title="Returns the number of bytes sent.">sentBytes</a>(){ <span class="keywordflow">return</span> m_uSentBytes; };
-<a name="l00178"></a>00178 
-<a name="l00183"></a><a class="code" href="classKviIrcSocket.html#a7a177850047cf551f7708b8eeb17e3aa">00183</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviIrcSocket.html#a7a177850047cf551f7708b8eeb17e3aa" title="Returns the number of packets sent.">sentPackets</a>(){ <span class="keywordflow">return</span> m_uSentPackets; };
-<a name="l00184"></a>00184         <span class="comment">//unsigned int readPackets(){ return m_uReadPackets; };</span>
+<a name="l00167"></a>00167 <span class="preprocessor">#ifdef COMPILE_SSL_SUPPORT</span>
+<a name="l00168"></a>00168 <span class="preprocessor"></span>
+<a name="l00172"></a>00172         KviSSL * getSSL(){ <span class="keywordflow">return</span> m_pSSL; };
+<a name="l00173"></a>00173 <span class="preprocessor">#endif</span>
+<a name="l00174"></a>00174 <span class="preprocessor"></span>
+<a name="l00178"></a><a class="code" href="classKviIrcSocket.html#a9071635d5267a1899c304adb71bb5ed6">00178</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviIrcSocket.html#a9071635d5267a1899c304adb71bb5ed6" title="Returns the number of bytes read.">readBytes</a>(){ <span class="keywordflow">return</span> m_uReadBytes; };
+<a name="l00179"></a>00179 
+<a name="l00184"></a><a class="code" href="classKviIrcSocket.html#ad40908232466132017eb5e0373e98ca1">00184</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviIrcSocket.html#ad40908232466132017eb5e0373e98ca1" title="Returns the number of bytes sent.">sentBytes</a>(){ <span class="keywordflow">return</span> m_uSentBytes; };
 <a name="l00185"></a>00185 
-<a name="l00190"></a><a class="code" href="classKviIrcSocket.html#a6d1288f9a64ffb4d573f5c7896ac3ea9">00190</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviIrcSocket.html#a6d1288f9a64ffb4d573f5c7896ac3ea9" title="Returns true if the socket is connected.">isConnected</a>(){ <span class="keywordflow">return</span> m_state == Connected; };
-<a name="l00191"></a>00191 
-<a name="l00199"></a>00199         <a class="code" href="namespaceKviError.html#a9ee88c2e11f25e2d268cbe9bd819fd79" title="Contains all error codes.">KviError::Code</a> startConnection(<a class="code" href="classKviIrcServer.html" title="The class which manages the irc servers.">KviIrcServer</a> * pServer, <a class="code" href="classKviProxy.html">KviProxy</a> * pProxy = 0, <span class="keyword">const</span> <span class="keywordtype">char</span> * pcBindAddress = 0);
-<a name="l00200"></a>00200 
-<a name="l00201"></a>00201 <span class="preprocessor">#ifdef COMPILE_SSL_SUPPORT</span>
-<a name="l00202"></a>00202 <span class="preprocessor"></span>
-<a name="l00208"></a>00208         <span class="keywordtype">void</span> enterSSLMode();
-<a name="l00209"></a>00209 <span class="preprocessor">#endif // COMPILE_SSL_SUPPORT</span>
-<a name="l00210"></a>00210 <span class="preprocessor"></span>
-<a name="l00216"></a>00216         <span class="keywordtype">bool</span> sendPacket(<a class="code" href="classKviDataBuffer.html">KviDataBuffer</a> * pData);
-<a name="l00217"></a>00217 
-<a name="l00222"></a>00222         <span class="keywordtype">void</span> abort();
-<a name="l00223"></a>00223 
-<a name="l00230"></a>00230         <span class="keywordtype">bool</span> getLocalHostIp(QString &amp; szIp, <span class="keywordtype">bool</span> bIPv6);
-<a name="l00231"></a>00231         
-<a name="l00237"></a>00237         <span class="keywordtype">void</span> clearOutputQueue(<span class="keywordtype">bool</span> bPrivateMessagesOnly);
-<a name="l00238"></a>00238 
-<a name="l00243"></a>00243         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> outputQueueSize();
-<a name="l00244"></a>00244 
-<a name="l00245"></a>00245 <span class="keyword">protected</span>:
-<a name="l00246"></a>00246 
-<a name="l00247"></a>00247 <span class="preprocessor">#ifdef COMPILE_SSL_SUPPORT</span>
-<a name="l00248"></a>00248 <span class="preprocessor"></span>
-<a name="l00252"></a>00252         <span class="keywordtype">void</span> raiseSSLError();
+<a name="l00190"></a><a class="code" href="classKviIrcSocket.html#a7a177850047cf551f7708b8eeb17e3aa">00190</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviIrcSocket.html#a7a177850047cf551f7708b8eeb17e3aa" title="Returns the number of packets sent.">sentPackets</a>(){ <span class="keywordflow">return</span> m_uSentPackets; };
+<a name="l00191"></a>00191         <span class="comment">//unsigned int readPackets(){ return m_uReadPackets; };</span>
+<a name="l00192"></a>00192 
+<a name="l00197"></a><a class="code" href="classKviIrcSocket.html#a6d1288f9a64ffb4d573f5c7896ac3ea9">00197</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviIrcSocket.html#a6d1288f9a64ffb4d573f5c7896ac3ea9" title="Returns true if the socket is connected.">isConnected</a>(){ <span class="keywordflow">return</span> m_state == Connected; };
+<a name="l00198"></a>00198 
+<a name="l00206"></a>00206         <a class="code" href="namespaceKviError.html#a9ee88c2e11f25e2d268cbe9bd819fd79" title="Contains all error codes.">KviError::Code</a> startConnection(<a class="code" href="classKviIrcServer.html" title="The class which manages the irc servers.">KviIrcServer</a> * pServer, <a class="code" href="classKviProxy.html">KviProxy</a> * pProxy = 0, <span class="keyword">const</span> <span class="keywordtype">char</span> * pcBindAddress = 0);
+<a name="l00207"></a>00207 
+<a name="l00208"></a>00208 <span class="preprocessor">#ifdef COMPILE_SSL_SUPPORT</span>
+<a name="l00209"></a>00209 <span class="preprocessor"></span>
+<a name="l00215"></a>00215         <span class="keywordtype">void</span> enterSSLMode();
+<a name="l00216"></a>00216 <span class="preprocessor">#endif // COMPILE_SSL_SUPPORT</span>
+<a name="l00217"></a>00217 <span class="preprocessor"></span>
+<a name="l00223"></a>00223         <span class="keywordtype">bool</span> sendPacket(<a class="code" href="classKviDataBuffer.html">KviDataBuffer</a> * pData);
+<a name="l00224"></a>00224 
+<a name="l00229"></a>00229         <span class="keywordtype">void</span> abort();
+<a name="l00230"></a>00230 
+<a name="l00237"></a>00237         <span class="keywordtype">bool</span> getLocalHostIp(QString &amp; szIp, <span class="keywordtype">bool</span> bIPv6);
+<a name="l00238"></a>00238         
+<a name="l00244"></a>00244         <span class="keywordtype">void</span> clearOutputQueue(<span class="keywordtype">bool</span> bPrivateMessagesOnly);
+<a name="l00245"></a>00245 
+<a name="l00250"></a>00250         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> outputQueueSize();
+<a name="l00251"></a>00251 
+<a name="l00252"></a>00252 <span class="keyword">protected</span>:
 <a name="l00253"></a>00253 
-<a name="l00258"></a>00258         <span class="keywordtype">void</span> printSSLPeerCertificate();
-<a name="l00259"></a>00259 
-<a name="l00264"></a>00264         <span class="keywordtype">void</span> printSSLCipherInfo();
-<a name="l00265"></a>00265 <span class="preprocessor">#endif // COMPILE_SSL_SUPPORT</span>
-<a name="l00266"></a>00266 <span class="preprocessor"></span>
-<a name="l00273"></a>00273         <span class="keywordtype">bool</span> sendRawData(<span class="keyword">const</span> <span class="keywordtype">char</span> * pcBuffer, <span class="keywordtype">int</span> iBufLen);
-<a name="l00274"></a>00274 
-<a name="l00280"></a>00280         <span class="keywordtype">void</span> raiseError(<a class="code" href="namespaceKviError.html#a9ee88c2e11f25e2d268cbe9bd819fd79" title="Contains all error codes.">KviError::Code</a> eError);
+<a name="l00254"></a>00254 <span class="preprocessor">#ifdef COMPILE_SSL_SUPPORT</span>
+<a name="l00255"></a>00255 <span class="preprocessor"></span>
+<a name="l00259"></a>00259         <span class="keywordtype">void</span> raiseSSLError();
+<a name="l00260"></a>00260 
+<a name="l00265"></a>00265         <span class="keywordtype">void</span> printSSLPeerCertificate();
+<a name="l00266"></a>00266 
+<a name="l00271"></a>00271         <span class="keywordtype">void</span> printSSLCipherInfo();
+<a name="l00272"></a>00272 <span class="preprocessor">#endif // COMPILE_SSL_SUPPORT</span>
+<a name="l00273"></a>00273 <span class="preprocessor"></span>
+<a name="l00280"></a>00280         <span class="keywordtype">bool</span> sendRawData(<span class="keyword">const</span> <span class="keywordtype">char</span> * pcBuffer, <span class="keywordtype">int</span> iBufLen);
 <a name="l00281"></a>00281 
-<a name="l00289"></a>00289         <span class="keywordtype">void</span> connectionEstabilished();
-<a name="l00290"></a>00290 
-<a name="l00295"></a>00295         <span class="keywordtype">void</span> connectedToProxy();
-<a name="l00296"></a>00296 
-<a name="l00301"></a>00301         <span class="keywordtype">void</span> connectedToIrcServer();
-<a name="l00302"></a>00302 
-<a name="l00307"></a>00307         <span class="keywordtype">void</span> proxyLoginHttp();
-<a name="l00308"></a>00308 
-<a name="l00313"></a>00313         <span class="keywordtype">void</span> proxyLoginV4();
-<a name="l00314"></a>00314 
-<a name="l00319"></a>00319         <span class="keywordtype">void</span> proxyLoginV5();
-<a name="l00320"></a>00320 
-<a name="l00325"></a>00325         <span class="keywordtype">void</span> proxyAuthUserPassV5();
-<a name="l00326"></a>00326 
-<a name="l00331"></a>00331         <span class="keywordtype">void</span> proxySendTargetDataV5();
-<a name="l00332"></a>00332 
-<a name="l00338"></a>00338         <span class="keywordtype">void</span> proxyHandleV5AuthReply(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> cReply);
+<a name="l00287"></a>00287         <span class="keywordtype">void</span> raiseError(<a class="code" href="namespaceKviError.html#a9ee88c2e11f25e2d268cbe9bd819fd79" title="Contains all error codes.">KviError::Code</a> eError);
+<a name="l00288"></a>00288 
+<a name="l00296"></a>00296         <span class="keywordtype">void</span> connectionEstabilished();
+<a name="l00297"></a>00297 
+<a name="l00302"></a>00302         <span class="keywordtype">void</span> connectedToProxy();
+<a name="l00303"></a>00303 
+<a name="l00308"></a>00308         <span class="keywordtype">void</span> connectedToIrcServer();
+<a name="l00309"></a>00309 
+<a name="l00314"></a>00314         <span class="keywordtype">void</span> proxyLoginHttp();
+<a name="l00315"></a>00315 
+<a name="l00320"></a>00320         <span class="keywordtype">void</span> proxyLoginV4();
+<a name="l00321"></a>00321 
+<a name="l00326"></a>00326         <span class="keywordtype">void</span> proxyLoginV5();
+<a name="l00327"></a>00327 
+<a name="l00332"></a>00332         <span class="keywordtype">void</span> proxyAuthUserPassV5();
+<a name="l00333"></a>00333 
+<a name="l00338"></a>00338         <span class="keywordtype">void</span> proxySendTargetDataV5();
 <a name="l00339"></a>00339 
-<a name="l00345"></a>00345         <span class="keywordtype">void</span> proxyHandleV5MethodReply(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> cReply);
+<a name="l00345"></a>00345         <span class="keywordtype">void</span> proxyHandleV5AuthReply(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> cReply);
 <a name="l00346"></a>00346 
-<a name="l00352"></a>00352         <span class="keywordtype">void</span> proxyHandleV5FinalReply(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> cReply);
+<a name="l00352"></a>00352         <span class="keywordtype">void</span> proxyHandleV5MethodReply(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> cReply);
 <a name="l00353"></a>00353 
-<a name="l00359"></a>00359         <span class="keywordtype">void</span> proxyHandleV4FinalReply(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> cReply);
+<a name="l00359"></a>00359         <span class="keywordtype">void</span> proxyHandleV5FinalReply(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> cReply);
 <a name="l00360"></a>00360 
-<a name="l00367"></a>00367         <span class="keywordtype">void</span> proxyHandleHttpFinalReply(<span class="keyword">const</span> <span class="keywordtype">char</span> * pcBuffer, <span class="keywordtype">int</span> iBufLen);
-<a name="l00368"></a>00368 
-<a name="l00373"></a>00373         <span class="keywordtype">void</span> linkUp();
-<a name="l00374"></a>00374 
-<a name="l00384"></a>00384         <span class="keywordtype">void</span> handleInvalidSocketRead(<span class="keywordtype">int</span> iReadLength);
-<a name="l00385"></a>00385 
-<a name="l00390"></a>00390         <span class="keyword">virtual</span> <span class="keywordtype">void</span> reset();
-<a name="l00391"></a>00391 
-<a name="l00397"></a>00397         <span class="keywordtype">void</span> free_msgEntry(<a class="code" href="struct__KviIrcSocketMsgEntry.html" title="Holds the messages entries.">KviIrcSocketMsgEntry</a> * <a class="code" href="detector_8cpp.html#a270b1ecf56619755ce62f6970dfabc91">e</a>);
+<a name="l00366"></a>00366         <span class="keywordtype">void</span> proxyHandleV4FinalReply(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> cReply);
+<a name="l00367"></a>00367 
+<a name="l00374"></a>00374         <span class="keywordtype">void</span> proxyHandleHttpFinalReply(<span class="keyword">const</span> <span class="keywordtype">char</span> * pcBuffer, <span class="keywordtype">int</span> iBufLen);
+<a name="l00375"></a>00375 
+<a name="l00380"></a>00380         <span class="keywordtype">void</span> linkUp();
+<a name="l00381"></a>00381 
+<a name="l00391"></a>00391         <span class="keywordtype">void</span> handleInvalidSocketRead(<span class="keywordtype">int</span> iReadLength);
+<a name="l00392"></a>00392 
+<a name="l00397"></a>00397         <span class="keyword">virtual</span> <span class="keywordtype">void</span> reset();
 <a name="l00398"></a>00398 
-<a name="l00406"></a>00406         <span class="keyword">virtual</span> <span class="keywordtype">void</span> queue_insertMessage(<a class="code" href="struct__KviIrcSocketMsgEntry.html" title="Holds the messages entries.">KviIrcSocketMsgEntry</a> * pMsg);
-<a name="l00407"></a>00407 
-<a name="l00412"></a>00412         <span class="keywordtype">bool</span> queue_removeMessage();
-<a name="l00413"></a>00413 
-<a name="l00418"></a>00418         <span class="keywordtype">void</span> queue_removeAllMessages();
-<a name="l00419"></a>00419 
-<a name="l00424"></a>00424         <span class="keywordtype">void</span> queue_removePrivateMessages();
-<a name="l00425"></a>00425 
-<a name="l00431"></a>00431         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setState(SocketState state);
-<a name="l00432"></a>00432 <span class="keyword">private</span>:
-<a name="l00438"></a>00438         <span class="keywordtype">void</span> outputSSLMessage(<span class="keyword">const</span> QString &amp; szMsg);
-<a name="l00439"></a>00439 
-<a name="l00445"></a>00445         <span class="keywordtype">void</span> outputSSLError(<span class="keyword">const</span> QString &amp; szMsg);
+<a name="l00404"></a>00404         <span class="keywordtype">void</span> free_msgEntry(<a class="code" href="struct__KviIrcSocketMsgEntry.html" title="Holds the messages entries.">KviIrcSocketMsgEntry</a> * <a class="code" href="detector_8cpp.html#a270b1ecf56619755ce62f6970dfabc91">e</a>);
+<a name="l00405"></a>00405 
+<a name="l00413"></a>00413         <span class="keyword">virtual</span> <span class="keywordtype">void</span> queue_insertMessage(<a class="code" href="struct__KviIrcSocketMsgEntry.html" title="Holds the messages entries.">KviIrcSocketMsgEntry</a> * pMsg);
+<a name="l00414"></a>00414 
+<a name="l00419"></a>00419         <span class="keywordtype">bool</span> queue_removeMessage();
+<a name="l00420"></a>00420 
+<a name="l00425"></a>00425         <span class="keywordtype">void</span> queue_removeAllMessages();
+<a name="l00426"></a>00426 
+<a name="l00431"></a>00431         <span class="keywordtype">void</span> queue_removePrivateMessages();
+<a name="l00432"></a>00432 
+<a name="l00438"></a>00438         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setState(SocketState state);
+<a name="l00439"></a>00439 <span class="keyword">private</span>:
+<a name="l00445"></a>00445         <span class="keywordtype">void</span> outputSSLMessage(<span class="keyword">const</span> QString &amp; szMsg);
 <a name="l00446"></a>00446 
-<a name="l00452"></a>00452         <span class="keywordtype">void</span> outputProxyMessage(<span class="keyword">const</span> QString &amp; szMsg);
+<a name="l00452"></a>00452         <span class="keywordtype">void</span> outputSSLError(<span class="keyword">const</span> QString &amp; szMsg);
 <a name="l00453"></a>00453 
-<a name="l00459"></a>00459         <span class="keywordtype">void</span> outputProxyError(<span class="keyword">const</span> QString &amp; szMsg);
+<a name="l00459"></a>00459         <span class="keywordtype">void</span> outputProxyMessage(<span class="keyword">const</span> QString &amp; szMsg);
 <a name="l00460"></a>00460 
-<a name="l00466"></a>00466         <span class="keywordtype">void</span> outputSocketMessage(<span class="keyword">const</span> QString &amp; szMsg);
+<a name="l00466"></a>00466         <span class="keywordtype">void</span> outputProxyError(<span class="keyword">const</span> QString &amp; szMsg);
 <a name="l00467"></a>00467 
-<a name="l00473"></a>00473         <span class="keywordtype">void</span> outputSocketWarning(<span class="keyword">const</span> QString &amp; szMsg);
+<a name="l00473"></a>00473         <span class="keywordtype">void</span> outputSocketMessage(<span class="keyword">const</span> QString &amp; szMsg);
 <a name="l00474"></a>00474 
-<a name="l00480"></a>00480         <span class="keywordtype">void</span> outputSocketError(<span class="keyword">const</span> QString &amp; szMsg);
-<a name="l00481"></a>00481 <span class="keyword">protected</span> slots:
-<a name="l00486"></a>00486         <span class="keywordtype">void</span> connectionTimedOut();
-<a name="l00487"></a>00487 
-<a name="l00492"></a>00492         <span class="keywordtype">void</span> writeNotifierFired(<span class="keywordtype">int</span>);
-<a name="l00493"></a>00493 
-<a name="l00498"></a>00498         <span class="keywordtype">void</span> readData(<span class="keywordtype">int</span>);
-<a name="l00499"></a>00499 
-<a name="l00504"></a>00504         <span class="keywordtype">void</span> readProxyData(<span class="keywordtype">int</span>);
-<a name="l00505"></a>00505 
-<a name="l00510"></a>00510         <span class="keywordtype">void</span> readHttpProxyErrorData(<span class="keywordtype">int</span>);
-<a name="l00511"></a>00511 
-<a name="l00520"></a>00520         <span class="keywordtype">void</span> flushSendQueue();
-<a name="l00521"></a>00521 
-<a name="l00526"></a>00526         <span class="keywordtype">void</span> doSSLHandshake(<span class="keywordtype">int</span>);
-<a name="l00527"></a>00527 };
+<a name="l00480"></a>00480         <span class="keywordtype">void</span> outputSocketWarning(<span class="keyword">const</span> QString &amp; szMsg);
+<a name="l00481"></a>00481 
+<a name="l00487"></a>00487         <span class="keywordtype">void</span> outputSocketError(<span class="keyword">const</span> QString &amp; szMsg);
+<a name="l00488"></a>00488 <span class="keyword">protected</span> slots:
+<a name="l00493"></a>00493         <span class="keywordtype">void</span> connectionTimedOut();
+<a name="l00494"></a>00494 
+<a name="l00499"></a>00499         <span class="keywordtype">void</span> writeNotifierFired(<span class="keywordtype">int</span>);
+<a name="l00500"></a>00500 
+<a name="l00505"></a>00505         <span class="keywordtype">void</span> readData(<span class="keywordtype">int</span>);
+<a name="l00506"></a>00506 
+<a name="l00511"></a>00511         <span class="keywordtype">void</span> readProxyData(<span class="keywordtype">int</span>);
+<a name="l00512"></a>00512 
+<a name="l00517"></a>00517         <span class="keywordtype">void</span> readHttpProxyErrorData(<span class="keywordtype">int</span>);
+<a name="l00518"></a>00518 
+<a name="l00527"></a>00527         <span class="keywordtype">void</span> flushSendQueue();
 <a name="l00528"></a>00528 
-<a name="l00529"></a>00529 <span class="preprocessor">#endif //_KVI_IRCSOCKET_H_</span>
+<a name="l00533"></a>00533         <span class="keywordtype">void</span> doSSLHandshake(<span class="keywordtype">int</span>);
+<a name="l00534"></a>00534 };
+<a name="l00535"></a>00535 
+<a name="l00536"></a>00536 <span class="preprocessor">#endif //_KVI_IRCSOCKET_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:27 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:16 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -150,94 +150,94 @@ function toggleVisibility(linkObj) {
 <a name="l00094"></a>00094 
 <a name="l00099"></a>00099         <span class="keywordtype">bool</span> <a class="code" href="classPackAddonDialog.html#a38f19984934864001fd27effa9f06aca" title="Creates the addon package.">packAddon</a>();
 <a name="l00100"></a>00100 
-<a name="l00107"></a>00107         <span class="keywordtype">bool</span> <a class="code" href="classPackAddonDialog.html#a4a1a3bccc68dbf4b47bb59d95e4303b8" title="Ensures the sources directory is complete.">checkDirTree</a>(QString * pszError, QString * pszWarning);
-<a name="l00108"></a>00108 
-<a name="l00114"></a>00114         <span class="keywordtype">bool</span> <a class="code" href="classPackAddonDialog.html#a6842258e5ad7dc61b2f72892059b8087" title="Creates the installer file.">createInstaller</a>(QString * pszError);
-<a name="l00115"></a>00115 };
-<a name="l00116"></a>00116 
-<a name="l00121"></a><a class="code" href="classPackAddonInfoPackageWidget.html">00121</a> <span class="keyword">class </span><a class="code" href="classPackAddonInfoPackageWidget.html" title="Wizard page for addon information.">PackAddonInfoPackageWidget</a> : <span class="keyword">public</span> QWizardPage
-<a name="l00122"></a>00122 {
-<a name="l00123"></a>00123         Q_OBJECT
-<a name="l00124"></a>00124 <span class="keyword">public</span>:
-<a name="l00130"></a>00130         <a class="code" href="classPackAddonInfoPackageWidget.html#a334cecddddc33a0dbe4b19fee0dcfae0" title="Create the wizard package info page object.">PackAddonInfoPackageWidget</a>(<a class="code" href="classPackAddonDialog.html" title="Wizard for addon creation.">PackAddonDialog</a> * pParent);
-<a name="l00131"></a>00131 
-<a name="l00135"></a>00135         <a class="code" href="classPackAddonInfoPackageWidget.html#acbb580149d86d732ccc196660796aaa8" title="Destroys the wizard package info page object.">~PackAddonInfoPackageWidget</a>();
-<a name="l00136"></a>00136 <span class="keyword">protected</span>:
-<a name="l00137"></a><a class="code" href="classPackAddonInfoPackageWidget.html#a049f0bdd8e9ee8a3cf0c3682e07295fc">00137</a>         QLineEdit * <a class="code" href="classPackAddonInfoPackageWidget.html#a049f0bdd8e9ee8a3cf0c3682e07295fc">m_pPackageAuthorEdit</a>;
-<a name="l00138"></a><a class="code" href="classPackAddonInfoPackageWidget.html#a5dc3c24f98572d87f5d2a52f4fac30dd">00138</a>         QLineEdit * <a class="code" href="classPackAddonInfoPackageWidget.html#a5dc3c24f98572d87f5d2a52f4fac30dd">m_pPackageNameEdit</a>;
-<a name="l00139"></a><a class="code" href="classPackAddonInfoPackageWidget.html#a89b2aa5bb7140cf84ccc21ea6b2b16fd">00139</a>         QLineEdit * <a class="code" href="classPackAddonInfoPackageWidget.html#a89b2aa5bb7140cf84ccc21ea6b2b16fd">m_pPackageVersionEdit</a>;
-<a name="l00140"></a><a class="code" href="classPackAddonInfoPackageWidget.html#a5e8684723ce648947d386a48f96de5f7">00140</a>         QLineEdit * <a class="code" href="classPackAddonInfoPackageWidget.html#a5e8684723ce648947d386a48f96de5f7">m_pPackageDescriptionEdit</a>;
-<a name="l00141"></a><a class="code" href="classPackAddonInfoPackageWidget.html#ac7f97d54335fb1847cf635961f47c6b9">00141</a>         QLineEdit * <a class="code" href="classPackAddonInfoPackageWidget.html#ac7f97d54335fb1847cf635961f47c6b9">m_pPackageMinVersionEdit</a>;
-<a name="l00142"></a>00142 };
-<a name="l00143"></a>00143 
-<a name="l00148"></a><a class="code" href="classPackAddonFileSelectionWidget.html">00148</a> <span class="keyword">class </span><a class="code" href="classPackAddonFileSelectionWidget.html" title="Wizard page for directory source selection.">PackAddonFileSelectionWidget</a> : <span class="keyword">public</span> QWizardPage
-<a name="l00149"></a>00149 {
-<a name="l00150"></a>00150         Q_OBJECT
-<a name="l00151"></a>00151 <span class="keyword">public</span>:
-<a name="l00157"></a>00157         <a class="code" href="classPackAddonFileSelectionWidget.html#a10f1f4cbdc0a36cf2295c5f6fcdd4bad" title="Create the wizard package source dir object.">PackAddonFileSelectionWidget</a>(<a class="code" href="classPackAddonDialog.html" title="Wizard for addon creation.">PackAddonDialog</a> * pParent);
-<a name="l00158"></a>00158 
-<a name="l00162"></a>00162         <a class="code" href="classPackAddonFileSelectionWidget.html#aa2d90366463124d1090af40a8d46cdf9" title="Destroys the wizard package source dir object.">~PackAddonFileSelectionWidget</a>();
-<a name="l00163"></a>00163 <span class="keyword">protected</span>:
-<a name="l00164"></a><a class="code" href="classPackAddonFileSelectionWidget.html#a51575351cdc88eef552d0128422bb5ab">00164</a>         <a class="code" href="classKviDirectorySelector.html">KviDirectorySelector</a> * <a class="code" href="classPackAddonFileSelectionWidget.html#a51575351cdc88eef552d0128422bb5ab">m_pDirPathSelector</a>;
-<a name="l00165"></a><a class="code" href="classPackAddonFileSelectionWidget.html#a68350de8bcab7b48ddfd190d74fac8c0">00165</a>         <a class="code" href="classKviFileSelector.html">KviFileSelector</a>      * <a class="code" href="classPackAddonFileSelectionWidget.html#a68350de8bcab7b48ddfd190d74fac8c0">m_pPackageIconEdit</a>;
-<a name="l00166"></a><a class="code" href="classPackAddonFileSelectionWidget.html#ad0f5ee0a95544aef54fc16fa447c22dd">00166</a>         QString                <a class="code" href="classPackAddonFileSelectionWidget.html#ad0f5ee0a95544aef54fc16fa447c22dd">m_szDirPath</a>;
-<a name="l00167"></a><a class="code" href="classPackAddonFileSelectionWidget.html#a7887788d81133c76f3621ce5cac249fe">00167</a>         QString                <a class="code" href="classPackAddonFileSelectionWidget.html#a7887788d81133c76f3621ce5cac249fe">m_szPackageIcon</a>;
-<a name="l00168"></a>00168 };
-<a name="l00169"></a>00169 
-<a name="l00174"></a><a class="code" href="classPackAddonSaveSelectionWidget.html">00174</a> <span class="keyword">class </span><a class="code" href="classPackAddonSaveSelectionWidget.html" title="Wizard page for saving package.">PackAddonSaveSelectionWidget</a> : <span class="keyword">public</span> QWizardPage
-<a name="l00175"></a>00175 {
-<a name="l00176"></a>00176         Q_OBJECT
-<a name="l00177"></a>00177 <span class="keyword">public</span>:
-<a name="l00183"></a>00183         <a class="code" href="classPackAddonSaveSelectionWidget.html#a6bee4f21378bf38460e886cf270561e0" title="Create the wizard save page object.">PackAddonSaveSelectionWidget</a>(<a class="code" href="classPackAddonDialog.html" title="Wizard for addon creation.">PackAddonDialog</a> * pParent);
-<a name="l00184"></a>00184 
-<a name="l00188"></a>00188         <a class="code" href="classPackAddonSaveSelectionWidget.html#a54de673fdf0d4cf1ce1aad71689c4466" title="Destroys the wizard save page object.">~PackAddonSaveSelectionWidget</a>();
-<a name="l00189"></a>00189 <span class="keyword">protected</span>:
-<a name="l00190"></a><a class="code" href="classPackAddonSaveSelectionWidget.html#a0bcfbf9a4a87dd7bb870167a199b691e">00190</a>         <a class="code" href="classKviFileSelector.html">KviFileSelector</a> * <a class="code" href="classPackAddonSaveSelectionWidget.html#a0bcfbf9a4a87dd7bb870167a199b691e">m_pSavePathSelector</a>;
-<a name="l00191"></a><a class="code" href="classPackAddonSaveSelectionWidget.html#ac8c84a5f81118d874e9d772dec203d38">00191</a>         QString <a class="code" href="classPackAddonSaveSelectionWidget.html#ac8c84a5f81118d874e9d772dec203d38">m_szFilePath</a>;
-<a name="l00192"></a>00192 <span class="keyword">protected</span>:
-<a name="l00197"></a>00197         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPackAddonSaveSelectionWidget.html#ad23bd3647cf6c323be541901f776b4e6" title="Perform initial tasks before showing the widget.">initializePage</a>();
-<a name="l00198"></a>00198 };
-<a name="l00199"></a>00199 
-<a name="l00204"></a><a class="code" href="classPackAddonSummaryInfoWidget.html">00204</a> <span class="keyword">class </span><a class="code" href="classPackAddonSummaryInfoWidget.html" title="Wizard page for showing information inserted.">PackAddonSummaryInfoWidget</a> : <span class="keyword">public</span> QWizardPage
-<a name="l00205"></a>00205 {
-<a name="l00206"></a>00206         Q_OBJECT
-<a name="l00207"></a>00207 <span class="keyword">public</span>:
-<a name="l00213"></a>00213         <a class="code" href="classPackAddonSummaryInfoWidget.html#a172d429f791521795af399721e04a009" title="Create the wizard summary info page object.">PackAddonSummaryInfoWidget</a>(<a class="code" href="classPackAddonDialog.html" title="Wizard for addon creation.">PackAddonDialog</a> * pParent);
-<a name="l00214"></a>00214 
-<a name="l00218"></a>00218         <a class="code" href="classPackAddonSummaryInfoWidget.html#a1f0787d3599c4508598e5ee1f3835540" title="Destroys the wizard summary info page object.">~PackAddonSummaryInfoWidget</a>();
-<a name="l00219"></a>00219 <span class="keyword">protected</span>:
-<a name="l00220"></a><a class="code" href="classPackAddonSummaryInfoWidget.html#a06de48b17d0fb43c8e87dc30d904bd38">00220</a>         QLabel * <a class="code" href="classPackAddonSummaryInfoWidget.html#a06de48b17d0fb43c8e87dc30d904bd38">m_pLabelInfo</a>;
-<a name="l00221"></a><a class="code" href="classPackAddonSummaryInfoWidget.html#a6ec769886683a8e5cea33642ef2dca0d">00221</a>         QLabel * <a class="code" href="classPackAddonSummaryInfoWidget.html#a6ec769886683a8e5cea33642ef2dca0d">m_pLabelAuthor</a>;
-<a name="l00222"></a><a class="code" href="classPackAddonSummaryInfoWidget.html#ac4da02383f2369cbd99aee5b62b1a77e">00222</a>         QLabel * <a class="code" href="classPackAddonSummaryInfoWidget.html#ac4da02383f2369cbd99aee5b62b1a77e">m_pPackageName</a>;
-<a name="l00223"></a><a class="code" href="classPackAddonSummaryInfoWidget.html#a296c0751cbb5a198ec3d2a53f81cadae">00223</a>         QLabel * <a class="code" href="classPackAddonSummaryInfoWidget.html#a296c0751cbb5a198ec3d2a53f81cadae">m_pPackageVersion</a>;
-<a name="l00224"></a><a class="code" href="classPackAddonSummaryInfoWidget.html#a584af4c9eb38f78cd6eed7df32ac3667">00224</a>         QLabel * <a class="code" href="classPackAddonSummaryInfoWidget.html#a584af4c9eb38f78cd6eed7df32ac3667">m_pPackageDescription</a>;
-<a name="l00225"></a>00225 <span class="keyword">protected</span>:
-<a name="l00230"></a>00230         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPackAddonSummaryInfoWidget.html#af19df47ad32079086a13c0431982e1aa" title="Perform initial tasks before showing the widget.">initializePage</a>();
-<a name="l00231"></a>00231 };
+<a name="l00106"></a>00106         <span class="keywordtype">bool</span> <a class="code" href="classPackAddonDialog.html#a4a1387966ce6d05d1a6d233094ac7e6c" title="Ensures the sources directory is complete.">checkDirTree</a>(QString * pszError);
+<a name="l00107"></a>00107 
+<a name="l00113"></a>00113         <span class="keywordtype">bool</span> <a class="code" href="classPackAddonDialog.html#a6842258e5ad7dc61b2f72892059b8087" title="Creates the installer file.">createInstaller</a>(QString * pszError);
+<a name="l00114"></a>00114 };
+<a name="l00115"></a>00115 
+<a name="l00120"></a><a class="code" href="classPackAddonInfoPackageWidget.html">00120</a> <span class="keyword">class </span><a class="code" href="classPackAddonInfoPackageWidget.html" title="Wizard page for addon information.">PackAddonInfoPackageWidget</a> : <span class="keyword">public</span> QWizardPage
+<a name="l00121"></a>00121 {
+<a name="l00122"></a>00122         Q_OBJECT
+<a name="l00123"></a>00123 <span class="keyword">public</span>:
+<a name="l00129"></a>00129         <a class="code" href="classPackAddonInfoPackageWidget.html#a334cecddddc33a0dbe4b19fee0dcfae0" title="Create the wizard package info page object.">PackAddonInfoPackageWidget</a>(<a class="code" href="classPackAddonDialog.html" title="Wizard for addon creation.">PackAddonDialog</a> * pParent);
+<a name="l00130"></a>00130 
+<a name="l00134"></a>00134         <a class="code" href="classPackAddonInfoPackageWidget.html#acbb580149d86d732ccc196660796aaa8" title="Destroys the wizard package info page object.">~PackAddonInfoPackageWidget</a>();
+<a name="l00135"></a>00135 <span class="keyword">protected</span>:
+<a name="l00136"></a><a class="code" href="classPackAddonInfoPackageWidget.html#a049f0bdd8e9ee8a3cf0c3682e07295fc">00136</a>         QLineEdit * <a class="code" href="classPackAddonInfoPackageWidget.html#a049f0bdd8e9ee8a3cf0c3682e07295fc">m_pPackageAuthorEdit</a>;
+<a name="l00137"></a><a class="code" href="classPackAddonInfoPackageWidget.html#a5dc3c24f98572d87f5d2a52f4fac30dd">00137</a>         QLineEdit * <a class="code" href="classPackAddonInfoPackageWidget.html#a5dc3c24f98572d87f5d2a52f4fac30dd">m_pPackageNameEdit</a>;
+<a name="l00138"></a><a class="code" href="classPackAddonInfoPackageWidget.html#a89b2aa5bb7140cf84ccc21ea6b2b16fd">00138</a>         QLineEdit * <a class="code" href="classPackAddonInfoPackageWidget.html#a89b2aa5bb7140cf84ccc21ea6b2b16fd">m_pPackageVersionEdit</a>;
+<a name="l00139"></a><a class="code" href="classPackAddonInfoPackageWidget.html#a5e8684723ce648947d386a48f96de5f7">00139</a>         QLineEdit * <a class="code" href="classPackAddonInfoPackageWidget.html#a5e8684723ce648947d386a48f96de5f7">m_pPackageDescriptionEdit</a>;
+<a name="l00140"></a><a class="code" href="classPackAddonInfoPackageWidget.html#ac7f97d54335fb1847cf635961f47c6b9">00140</a>         QLineEdit * <a class="code" href="classPackAddonInfoPackageWidget.html#ac7f97d54335fb1847cf635961f47c6b9">m_pPackageMinVersionEdit</a>;
+<a name="l00141"></a>00141 };
+<a name="l00142"></a>00142 
+<a name="l00147"></a><a class="code" href="classPackAddonFileSelectionWidget.html">00147</a> <span class="keyword">class </span><a class="code" href="classPackAddonFileSelectionWidget.html" title="Wizard page for directory source selection.">PackAddonFileSelectionWidget</a> : <span class="keyword">public</span> QWizardPage
+<a name="l00148"></a>00148 {
+<a name="l00149"></a>00149         Q_OBJECT
+<a name="l00150"></a>00150 <span class="keyword">public</span>:
+<a name="l00156"></a>00156         <a class="code" href="classPackAddonFileSelectionWidget.html#a10f1f4cbdc0a36cf2295c5f6fcdd4bad" title="Create the wizard package source dir object.">PackAddonFileSelectionWidget</a>(<a class="code" href="classPackAddonDialog.html" title="Wizard for addon creation.">PackAddonDialog</a> * pParent);
+<a name="l00157"></a>00157 
+<a name="l00161"></a>00161         <a class="code" href="classPackAddonFileSelectionWidget.html#aa2d90366463124d1090af40a8d46cdf9" title="Destroys the wizard package source dir object.">~PackAddonFileSelectionWidget</a>();
+<a name="l00162"></a>00162 <span class="keyword">protected</span>:
+<a name="l00163"></a><a class="code" href="classPackAddonFileSelectionWidget.html#a51575351cdc88eef552d0128422bb5ab">00163</a>         <a class="code" href="classKviDirectorySelector.html">KviDirectorySelector</a> * <a class="code" href="classPackAddonFileSelectionWidget.html#a51575351cdc88eef552d0128422bb5ab">m_pDirPathSelector</a>;
+<a name="l00164"></a><a class="code" href="classPackAddonFileSelectionWidget.html#a68350de8bcab7b48ddfd190d74fac8c0">00164</a>         <a class="code" href="classKviFileSelector.html">KviFileSelector</a>      * <a class="code" href="classPackAddonFileSelectionWidget.html#a68350de8bcab7b48ddfd190d74fac8c0">m_pPackageIconEdit</a>;
+<a name="l00165"></a><a class="code" href="classPackAddonFileSelectionWidget.html#ad0f5ee0a95544aef54fc16fa447c22dd">00165</a>         QString                <a class="code" href="classPackAddonFileSelectionWidget.html#ad0f5ee0a95544aef54fc16fa447c22dd">m_szDirPath</a>;
+<a name="l00166"></a><a class="code" href="classPackAddonFileSelectionWidget.html#a7887788d81133c76f3621ce5cac249fe">00166</a>         QString                <a class="code" href="classPackAddonFileSelectionWidget.html#a7887788d81133c76f3621ce5cac249fe">m_szPackageIcon</a>;
+<a name="l00167"></a>00167 };
+<a name="l00168"></a>00168 
+<a name="l00173"></a><a class="code" href="classPackAddonSaveSelectionWidget.html">00173</a> <span class="keyword">class </span><a class="code" href="classPackAddonSaveSelectionWidget.html" title="Wizard page for saving package.">PackAddonSaveSelectionWidget</a> : <span class="keyword">public</span> QWizardPage
+<a name="l00174"></a>00174 {
+<a name="l00175"></a>00175         Q_OBJECT
+<a name="l00176"></a>00176 <span class="keyword">public</span>:
+<a name="l00182"></a>00182         <a class="code" href="classPackAddonSaveSelectionWidget.html#a6bee4f21378bf38460e886cf270561e0" title="Create the wizard save page object.">PackAddonSaveSelectionWidget</a>(<a class="code" href="classPackAddonDialog.html" title="Wizard for addon creation.">PackAddonDialog</a> * pParent);
+<a name="l00183"></a>00183 
+<a name="l00187"></a>00187         <a class="code" href="classPackAddonSaveSelectionWidget.html#a54de673fdf0d4cf1ce1aad71689c4466" title="Destroys the wizard save page object.">~PackAddonSaveSelectionWidget</a>();
+<a name="l00188"></a>00188 <span class="keyword">protected</span>:
+<a name="l00189"></a><a class="code" href="classPackAddonSaveSelectionWidget.html#a0bcfbf9a4a87dd7bb870167a199b691e">00189</a>         <a class="code" href="classKviFileSelector.html">KviFileSelector</a> * <a class="code" href="classPackAddonSaveSelectionWidget.html#a0bcfbf9a4a87dd7bb870167a199b691e">m_pSavePathSelector</a>;
+<a name="l00190"></a><a class="code" href="classPackAddonSaveSelectionWidget.html#ac8c84a5f81118d874e9d772dec203d38">00190</a>         QString <a class="code" href="classPackAddonSaveSelectionWidget.html#ac8c84a5f81118d874e9d772dec203d38">m_szFilePath</a>;
+<a name="l00191"></a>00191 <span class="keyword">protected</span>:
+<a name="l00196"></a>00196         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPackAddonSaveSelectionWidget.html#ad23bd3647cf6c323be541901f776b4e6" title="Perform initial tasks before showing the widget.">initializePage</a>();
+<a name="l00197"></a>00197 };
+<a name="l00198"></a>00198 
+<a name="l00203"></a><a class="code" href="classPackAddonSummaryInfoWidget.html">00203</a> <span class="keyword">class </span><a class="code" href="classPackAddonSummaryInfoWidget.html" title="Wizard page for showing information inserted.">PackAddonSummaryInfoWidget</a> : <span class="keyword">public</span> QWizardPage
+<a name="l00204"></a>00204 {
+<a name="l00205"></a>00205         Q_OBJECT
+<a name="l00206"></a>00206 <span class="keyword">public</span>:
+<a name="l00212"></a>00212         <a class="code" href="classPackAddonSummaryInfoWidget.html#a172d429f791521795af399721e04a009" title="Create the wizard summary info page object.">PackAddonSummaryInfoWidget</a>(<a class="code" href="classPackAddonDialog.html" title="Wizard for addon creation.">PackAddonDialog</a> * pParent);
+<a name="l00213"></a>00213 
+<a name="l00217"></a>00217         <a class="code" href="classPackAddonSummaryInfoWidget.html#a1f0787d3599c4508598e5ee1f3835540" title="Destroys the wizard summary info page object.">~PackAddonSummaryInfoWidget</a>();
+<a name="l00218"></a>00218 <span class="keyword">protected</span>:
+<a name="l00219"></a><a class="code" href="classPackAddonSummaryInfoWidget.html#a06de48b17d0fb43c8e87dc30d904bd38">00219</a>         QLabel * <a class="code" href="classPackAddonSummaryInfoWidget.html#a06de48b17d0fb43c8e87dc30d904bd38">m_pLabelInfo</a>;
+<a name="l00220"></a><a class="code" href="classPackAddonSummaryInfoWidget.html#a6ec769886683a8e5cea33642ef2dca0d">00220</a>         QLabel * <a class="code" href="classPackAddonSummaryInfoWidget.html#a6ec769886683a8e5cea33642ef2dca0d">m_pLabelAuthor</a>;
+<a name="l00221"></a><a class="code" href="classPackAddonSummaryInfoWidget.html#ac4da02383f2369cbd99aee5b62b1a77e">00221</a>         QLabel * <a class="code" href="classPackAddonSummaryInfoWidget.html#ac4da02383f2369cbd99aee5b62b1a77e">m_pPackageName</a>;
+<a name="l00222"></a><a class="code" href="classPackAddonSummaryInfoWidget.html#a296c0751cbb5a198ec3d2a53f81cadae">00222</a>         QLabel * <a class="code" href="classPackAddonSummaryInfoWidget.html#a296c0751cbb5a198ec3d2a53f81cadae">m_pPackageVersion</a>;
+<a name="l00223"></a><a class="code" href="classPackAddonSummaryInfoWidget.html#a584af4c9eb38f78cd6eed7df32ac3667">00223</a>         QLabel * <a class="code" href="classPackAddonSummaryInfoWidget.html#a584af4c9eb38f78cd6eed7df32ac3667">m_pPackageDescription</a>;
+<a name="l00224"></a>00224 <span class="keyword">protected</span>:
+<a name="l00229"></a>00229         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPackAddonSummaryInfoWidget.html#af19df47ad32079086a13c0431982e1aa" title="Perform initial tasks before showing the widget.">initializePage</a>();
+<a name="l00230"></a>00230 };
+<a name="l00231"></a>00231 
 <a name="l00232"></a>00232 
-<a name="l00233"></a>00233 
-<a name="l00234"></a><a class="code" href="classPackAddonSummaryFilesWidget.html">00234</a> <span class="keyword">class </span><a class="code" href="classPackAddonSummaryFilesWidget.html">PackAddonSummaryFilesWidget</a> : <span class="keyword">public</span> QDialog
-<a name="l00235"></a>00235 {
-<a name="l00236"></a>00236         Q_OBJECT
-<a name="l00237"></a>00237 <span class="keyword">public</span>:
-<a name="l00238"></a>00238         <a class="code" href="classPackAddonSummaryFilesWidget.html#a1546fd6a6951281cda297659d040c0d5">PackAddonSummaryFilesWidget</a>(<a class="code" href="classPackAddonDialog.html" title="Wizard for addon creation.">PackAddonDialog</a> * pParent);
-<a name="l00239"></a>00239         <a class="code" href="classPackAddonSummaryFilesWidget.html#ac9e324b2cde24a48af8f2d243d50e4f7">~PackAddonSummaryFilesWidget</a>();
-<a name="l00240"></a>00240 <span class="keyword">protected</span>:
-<a name="l00241"></a><a class="code" href="classPackAddonSummaryFilesWidget.html#ae61e0a806cf0bcdc236ff99581ccf190">00241</a>         QTextEdit * <a class="code" href="classPackAddonSummaryFilesWidget.html#ae61e0a806cf0bcdc236ff99581ccf190">m_pFiles</a>;
-<a name="l00242"></a><a class="code" href="classPackAddonSummaryFilesWidget.html#a81f4bb8959089f143996d5f32f2bf576">00242</a>         QString     <a class="code" href="classPackAddonSummaryFilesWidget.html#a81f4bb8959089f143996d5f32f2bf576">m_szPath</a>;
-<a name="l00243"></a>00243 <span class="keyword">public</span>:
-<a name="l00244"></a><a class="code" href="classPackAddonSummaryFilesWidget.html#a3a20eb51c6fa639a6158bdaa7aa6e145">00244</a>         <span class="keywordtype">void</span> <a class="code" href="classPackAddonSummaryFilesWidget.html#a3a20eb51c6fa639a6158bdaa7aa6e145">setPath</a>(QString &amp; szPath){ <a class="code" href="classPackAddonSummaryFilesWidget.html#a81f4bb8959089f143996d5f32f2bf576">m_szPath</a> = szPath; };
-<a name="l00245"></a>00245 <span class="keyword">protected</span>:
-<a name="l00246"></a>00246         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPackAddonSummaryFilesWidget.html#a9b77d5217cafc7a7c426479f8575d427">showEvent</a>(QShowEvent *);
-<a name="l00247"></a>00247 <span class="keyword">protected</span> slots:
-<a name="l00248"></a>00248         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPackAddonSummaryFilesWidget.html#a288c603e2a90873d9897ab7dcccae06e">accept</a>();
-<a name="l00249"></a>00249         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPackAddonSummaryFilesWidget.html#a4d7a083b129419f6f47db5cd188d3197">reject</a>();
-<a name="l00250"></a>00250 };
-<a name="l00251"></a>00251 
-<a name="l00252"></a>00252 <span class="preprocessor">#endif //!_PACKADDONDIALOG_H_</span>
+<a name="l00233"></a><a class="code" href="classPackAddonSummaryFilesWidget.html">00233</a> <span class="keyword">class </span><a class="code" href="classPackAddonSummaryFilesWidget.html">PackAddonSummaryFilesWidget</a> : <span class="keyword">public</span> QDialog
+<a name="l00234"></a>00234 {
+<a name="l00235"></a>00235         Q_OBJECT
+<a name="l00236"></a>00236 <span class="keyword">public</span>:
+<a name="l00237"></a>00237         <a class="code" href="classPackAddonSummaryFilesWidget.html#a1546fd6a6951281cda297659d040c0d5">PackAddonSummaryFilesWidget</a>(<a class="code" href="classPackAddonDialog.html" title="Wizard for addon creation.">PackAddonDialog</a> * pParent);
+<a name="l00238"></a>00238         <a class="code" href="classPackAddonSummaryFilesWidget.html#ac9e324b2cde24a48af8f2d243d50e4f7">~PackAddonSummaryFilesWidget</a>();
+<a name="l00239"></a>00239 <span class="keyword">protected</span>:
+<a name="l00240"></a><a class="code" href="classPackAddonSummaryFilesWidget.html#ae61e0a806cf0bcdc236ff99581ccf190">00240</a>         QTextEdit * <a class="code" href="classPackAddonSummaryFilesWidget.html#ae61e0a806cf0bcdc236ff99581ccf190">m_pFiles</a>;
+<a name="l00241"></a><a class="code" href="classPackAddonSummaryFilesWidget.html#a81f4bb8959089f143996d5f32f2bf576">00241</a>         QString     <a class="code" href="classPackAddonSummaryFilesWidget.html#a81f4bb8959089f143996d5f32f2bf576">m_szPath</a>;
+<a name="l00242"></a>00242 <span class="keyword">public</span>:
+<a name="l00243"></a><a class="code" href="classPackAddonSummaryFilesWidget.html#a3a20eb51c6fa639a6158bdaa7aa6e145">00243</a>         <span class="keywordtype">void</span> <a class="code" href="classPackAddonSummaryFilesWidget.html#a3a20eb51c6fa639a6158bdaa7aa6e145">setPath</a>(QString &amp; szPath){ <a class="code" href="classPackAddonSummaryFilesWidget.html#a81f4bb8959089f143996d5f32f2bf576">m_szPath</a> = szPath; };
+<a name="l00244"></a>00244 <span class="keyword">protected</span>:
+<a name="l00245"></a>00245         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPackAddonSummaryFilesWidget.html#a9b77d5217cafc7a7c426479f8575d427">showEvent</a>(QShowEvent *);
+<a name="l00246"></a>00246 <span class="keyword">protected</span> slots:
+<a name="l00247"></a>00247         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPackAddonSummaryFilesWidget.html#a288c603e2a90873d9897ab7dcccae06e">accept</a>();
+<a name="l00248"></a>00248         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classPackAddonSummaryFilesWidget.html#a4d7a083b129419f6f47db5cd188d3197">reject</a>();
+<a name="l00249"></a>00249 };
+<a name="l00250"></a>00250 
+<a name="l00251"></a>00251 <span class="preprocessor">#endif //!_PACKADDONDIALOG_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:29 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:18 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

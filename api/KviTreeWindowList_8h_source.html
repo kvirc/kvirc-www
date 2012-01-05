@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -145,65 +145,67 @@ function toggleVisibility(linkObj) {
 <a name="l00064"></a>00064 <span class="keyword">public</span>:
 <a name="l00065"></a>00065         <a class="code" href="classKviTreeWindowListTreeWidget.html">KviTreeWindowListTreeWidget</a>(QWidget * par);
 <a name="l00066"></a>00066         ~<a class="code" href="classKviTreeWindowListTreeWidget.html">KviTreeWindowListTreeWidget</a>();
-<a name="l00067"></a>00067 <span class="keyword">protected</span>:
-<a name="l00068"></a>00068         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mousePressEvent(QMouseEvent * <a class="code" href="detector_8cpp.html#a270b1ecf56619755ce62f6970dfabc91">e</a>);
-<a name="l00069"></a>00069         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseMoveEvent(QMouseEvent * <a class="code" href="detector_8cpp.html#a270b1ecf56619755ce62f6970dfabc91">e</a>);
-<a name="l00070"></a>00070         <span class="keyword">virtual</span> <span class="keywordtype">void</span> wheelEvent(QWheelEvent * <a class="code" href="detector_8cpp.html#a270b1ecf56619755ce62f6970dfabc91">e</a>);
-<a name="l00071"></a>00071         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseDoubleClickEvent(QMouseEvent * <a class="code" href="detector_8cpp.html#a270b1ecf56619755ce62f6970dfabc91">e</a>);
-<a name="l00072"></a>00072         <span class="keyword">virtual</span> <span class="keywordtype">void</span> paintEvent(QPaintEvent * event);
-<a name="l00073"></a>00073 <span class="keyword">private</span>:
-<a name="l00074"></a>00074         <a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> * lastItem();
-<a name="l00075"></a>00075 <span class="keyword">public</span> slots:
-<a name="l00076"></a>00076         <span class="keywordtype">void</span> sort();
-<a name="l00077"></a>00077         <span class="keywordtype">void</span> reverseSort();
-<a name="l00078"></a>00078 };
-<a name="l00079"></a>00079 
-<a name="l00080"></a><a class="code" href="classKviTreeWindowList.html">00080</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviTreeWindowList.html">KviTreeWindowList</a> : <span class="keyword">public</span> <a class="code" href="classKviWindowListBase.html">KviWindowListBase</a>
-<a name="l00081"></a>00081 {
-<a name="l00082"></a>00082         Q_OBJECT
-<a name="l00083"></a>00083 <span class="keyword">public</span>:
-<a name="l00084"></a>00084         <a class="code" href="classKviTreeWindowList.html">KviTreeWindowList</a>();
-<a name="l00085"></a>00085         ~<a class="code" href="classKviTreeWindowList.html">KviTreeWindowList</a>();
-<a name="l00086"></a>00086 <span class="keyword">private</span>:
-<a name="l00087"></a><a class="code" href="classKviTreeWindowList.html#a1db21c4343c5828fd815cac290db78c4">00087</a>         <a class="code" href="classKviTreeWindowListTreeWidget.html">KviTreeWindowListTreeWidget</a>   * <a class="code" href="classKviTreeWindowList.html#a1db21c4343c5828fd815cac290db78c4">m_pTreeWidget</a>;
-<a name="l00088"></a><a class="code" href="classKviTreeWindowList.html#a123147fecd74330ed71511b58593a6ef">00088</a>         <a class="code" href="classKviTreeWindowListItem.html">KviTreeWindowListItem</a>         * <a class="code" href="classKviTreeWindowList.html#a123147fecd74330ed71511b58593a6ef">m_pCurrentItem</a>;
-<a name="l00089"></a><a class="code" href="classKviTreeWindowList.html#a1b2a0249708cbcdf66ed189be3766f37">00089</a>         <a class="code" href="classKviDynamicToolTip.html">KviDynamicToolTip</a>             * <a class="code" href="classKviTreeWindowList.html#a1b2a0249708cbcdf66ed189be3766f37">m_pToolTip</a>;
-<a name="l00090"></a><a class="code" href="classKviTreeWindowList.html#a7752443cac9da74c507f349ff4644c4d">00090</a>         QStyledItemDelegate           * <a class="code" href="classKviTreeWindowList.html#a7752443cac9da74c507f349ff4644c4d">m_pItemDelegate</a>;
-<a name="l00091"></a>00091 <span class="keyword">public</span>:
-<a name="l00092"></a>00092         <span class="keyword">virtual</span> <a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> * <a class="code" href="classKviWindowListBase.html#a11632e6b70ea15338e5885e1c578318f">addItem</a>(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> *);
-<a name="l00093"></a>00093         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviWindowListBase.html#af62d19dc230c1dd28234e437dcac8e0d">removeItem</a>(<a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> *);
-<a name="l00094"></a>00094         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindowListBase.html#a4b4ef1d9e566bd668098efcfbe0fada7">setActiveItem</a>(<a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> *);
-<a name="l00095"></a>00095         <span class="keyword">virtual</span> <a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> * <a class="code" href="classKviWindowListBase.html#aeea50d22edc127af421323510d369dda">firstItem</a>();
-<a name="l00096"></a>00096         <span class="keyword">virtual</span> <a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> * <a class="code" href="classKviWindowListBase.html#a11842fadd5fd0332b47389af211f6903">nextItem</a>(<span class="keywordtype">void</span>);
-<a name="l00097"></a>00097         <span class="keyword">virtual</span> <a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> * <a class="code" href="classKviWindowListBase.html#a6b049d004ed3328c89cb9c11d27b2514">lastItem</a>();
-<a name="l00098"></a>00098         <span class="keyword">virtual</span> <a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> * <a class="code" href="classKviWindowListBase.html#a6e58cf2d6ab89c0db453242024563f9a">prevItem</a>(<span class="keywordtype">void</span>);
-<a name="l00099"></a>00099         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviWindowListBase.html#a7860fc2f06cfac430ba7e9cd828118b4">setIterationPointer</a>(<a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> * it);
-<a name="l00100"></a>00100         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindowListBase.html#a70b4d095e587d9ce48170ba012af9d86">updatePseudoTransparency</a>();
-<a name="l00101"></a>00101         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindowListBase.html#a1e30fcfb3f7bd3fcc65de541e8d2240a">updateActivityMeter</a>();
-<a name="l00102"></a>00102 <span class="keyword">protected</span>:
-<a name="l00103"></a>00103         <span class="keyword">virtual</span> <span class="keywordtype">void</span> moveEvent(QMoveEvent *);
-<a name="l00104"></a>00104 <span class="keyword">protected</span> slots:
-<a name="l00105"></a>00105         <span class="keywordtype">void</span> tipRequest(<a class="code" href="classKviDynamicToolTip.html">KviDynamicToolTip</a> *tip,<span class="keyword">const</span> QPoint &amp;pnt);
-<a name="l00106"></a>00106 };
-<a name="l00107"></a>00107 
-<a name="l00108"></a><a class="code" href="KviTreeWindowList_8h.html#a1b6e46b919b89ab31293b6abbeac4797">00108</a> <span class="preprocessor">#define KVI_TTBID_HIGHLIGHT Qt::UserRole</span>
-<a name="l00109"></a><a class="code" href="KviTreeWindowList_8h.html#af0fd01c0e838f6de7c5dcd17e3edf3c5">00109</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_TTBID_PROGRESS Qt::UserRole + 1</span>
-<a name="l00110"></a>00110 <span class="preprocessor"></span>
-<a name="l00111"></a><a class="code" href="classKviTreeWindowListItemDelegate.html">00111</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviTreeWindowListItemDelegate.html">KviTreeWindowListItemDelegate</a> : <span class="keyword">public</span> QStyledItemDelegate
-<a name="l00112"></a>00112 {
-<a name="l00113"></a>00113         Q_OBJECT
-<a name="l00114"></a>00114 <span class="keyword">public</span>:
-<a name="l00115"></a><a class="code" href="classKviTreeWindowListItemDelegate.html#a830a1de7ab294210ce792fb8e24323a5">00115</a>         <a class="code" href="classKviTreeWindowListItemDelegate.html">KviTreeWindowListItemDelegate</a>(QAbstractItemView * pWidget=0)
-<a name="l00116"></a>00116                 : QStyledItemDelegate(pWidget) {};
-<a name="l00117"></a><a class="code" href="classKviTreeWindowListItemDelegate.html#acf1c5a0d7fec3162fbe14fdd647986cb">00117</a>         <a class="code" href="classKviTreeWindowListItemDelegate.html#acf1c5a0d7fec3162fbe14fdd647986cb">~KviTreeWindowListItemDelegate</a>(){};
-<a name="l00118"></a>00118         QSize sizeHint(<span class="keyword">const</span> QStyleOptionViewItem &amp;option,<span class="keyword">const</span> QModelIndex &amp;index) <span class="keyword">const</span>;
-<a name="l00119"></a>00119         <span class="keywordtype">void</span> paint ( QPainter * painter, <span class="keyword">const</span> QStyleOptionViewItem &amp; option, <span class="keyword">const</span> QModelIndex &amp; index ) <span class="keyword">const</span>;
-<a name="l00120"></a>00120 };
-<a name="l00121"></a>00121 
-<a name="l00122"></a>00122 <span class="preprocessor">#endif //_KVI_WINDOWLIST_TREE_H_</span>
+<a name="l00067"></a><a class="code" href="classKviTreeWindowListTreeWidget.html#a7bd3ba044cbeb2a0bc34d232401835dd">00067</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviTreeWindowListTreeWidget.html#a7bd3ba044cbeb2a0bc34d232401835dd">isReverseSort</a>() { <span class="keywordflow">return</span> bReverseSort; };
+<a name="l00068"></a>00068 <span class="keyword">protected</span>:
+<a name="l00069"></a>00069         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mousePressEvent(QMouseEvent * <a class="code" href="detector_8cpp.html#a270b1ecf56619755ce62f6970dfabc91">e</a>);
+<a name="l00070"></a>00070         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseMoveEvent(QMouseEvent * <a class="code" href="detector_8cpp.html#a270b1ecf56619755ce62f6970dfabc91">e</a>);
+<a name="l00071"></a>00071         <span class="keyword">virtual</span> <span class="keywordtype">void</span> wheelEvent(QWheelEvent * <a class="code" href="detector_8cpp.html#a270b1ecf56619755ce62f6970dfabc91">e</a>);
+<a name="l00072"></a>00072         <span class="keyword">virtual</span> <span class="keywordtype">void</span> mouseDoubleClickEvent(QMouseEvent * <a class="code" href="detector_8cpp.html#a270b1ecf56619755ce62f6970dfabc91">e</a>);
+<a name="l00073"></a>00073         <span class="keyword">virtual</span> <span class="keywordtype">void</span> paintEvent(QPaintEvent * event);
+<a name="l00074"></a>00074 <span class="keyword">private</span>:
+<a name="l00075"></a>00075         <a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> * lastItem();
+<a name="l00076"></a><a class="code" href="classKviTreeWindowListTreeWidget.html#ab3e5e944ec2a781d36f78dbee0118efa">00076</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviTreeWindowListTreeWidget.html#ab3e5e944ec2a781d36f78dbee0118efa">bReverseSort</a>;
+<a name="l00077"></a>00077 <span class="keyword">public</span> slots:
+<a name="l00078"></a>00078         <span class="keywordtype">void</span> sort();
+<a name="l00079"></a>00079         <span class="keywordtype">void</span> reverseSort();
+<a name="l00080"></a>00080 };
+<a name="l00081"></a>00081 
+<a name="l00082"></a><a class="code" href="classKviTreeWindowList.html">00082</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviTreeWindowList.html">KviTreeWindowList</a> : <span class="keyword">public</span> <a class="code" href="classKviWindowListBase.html">KviWindowListBase</a>
+<a name="l00083"></a>00083 {
+<a name="l00084"></a>00084         Q_OBJECT
+<a name="l00085"></a>00085 <span class="keyword">public</span>:
+<a name="l00086"></a>00086         <a class="code" href="classKviTreeWindowList.html">KviTreeWindowList</a>();
+<a name="l00087"></a>00087         ~<a class="code" href="classKviTreeWindowList.html">KviTreeWindowList</a>();
+<a name="l00088"></a>00088 <span class="keyword">private</span>:
+<a name="l00089"></a><a class="code" href="classKviTreeWindowList.html#a1db21c4343c5828fd815cac290db78c4">00089</a>         <a class="code" href="classKviTreeWindowListTreeWidget.html">KviTreeWindowListTreeWidget</a>   * <a class="code" href="classKviTreeWindowList.html#a1db21c4343c5828fd815cac290db78c4">m_pTreeWidget</a>;
+<a name="l00090"></a><a class="code" href="classKviTreeWindowList.html#a123147fecd74330ed71511b58593a6ef">00090</a>         <a class="code" href="classKviTreeWindowListItem.html">KviTreeWindowListItem</a>         * <a class="code" href="classKviTreeWindowList.html#a123147fecd74330ed71511b58593a6ef">m_pCurrentItem</a>;
+<a name="l00091"></a><a class="code" href="classKviTreeWindowList.html#a1b2a0249708cbcdf66ed189be3766f37">00091</a>         <a class="code" href="classKviDynamicToolTip.html">KviDynamicToolTip</a>             * <a class="code" href="classKviTreeWindowList.html#a1b2a0249708cbcdf66ed189be3766f37">m_pToolTip</a>;
+<a name="l00092"></a><a class="code" href="classKviTreeWindowList.html#a7752443cac9da74c507f349ff4644c4d">00092</a>         QStyledItemDelegate           * <a class="code" href="classKviTreeWindowList.html#a7752443cac9da74c507f349ff4644c4d">m_pItemDelegate</a>;
+<a name="l00093"></a>00093 <span class="keyword">public</span>:
+<a name="l00094"></a>00094         <span class="keyword">virtual</span> <a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> * <a class="code" href="classKviWindowListBase.html#a11632e6b70ea15338e5885e1c578318f">addItem</a>(<a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> *);
+<a name="l00095"></a>00095         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviWindowListBase.html#af62d19dc230c1dd28234e437dcac8e0d">removeItem</a>(<a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> *);
+<a name="l00096"></a>00096         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindowListBase.html#a4b4ef1d9e566bd668098efcfbe0fada7">setActiveItem</a>(<a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> *);
+<a name="l00097"></a>00097         <span class="keyword">virtual</span> <a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> * <a class="code" href="classKviWindowListBase.html#aeea50d22edc127af421323510d369dda">firstItem</a>();
+<a name="l00098"></a>00098         <span class="keyword">virtual</span> <a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> * <a class="code" href="classKviWindowListBase.html#a11842fadd5fd0332b47389af211f6903">nextItem</a>(<span class="keywordtype">void</span>);
+<a name="l00099"></a>00099         <span class="keyword">virtual</span> <a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> * <a class="code" href="classKviWindowListBase.html#a6b049d004ed3328c89cb9c11d27b2514">lastItem</a>();
+<a name="l00100"></a>00100         <span class="keyword">virtual</span> <a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> * <a class="code" href="classKviWindowListBase.html#a6e58cf2d6ab89c0db453242024563f9a">prevItem</a>(<span class="keywordtype">void</span>);
+<a name="l00101"></a>00101         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviWindowListBase.html#a7860fc2f06cfac430ba7e9cd828118b4">setIterationPointer</a>(<a class="code" href="classKviWindowListItem.html">KviWindowListItem</a> * it);
+<a name="l00102"></a>00102         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindowListBase.html#a70b4d095e587d9ce48170ba012af9d86">updatePseudoTransparency</a>();
+<a name="l00103"></a>00103         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindowListBase.html#a1e30fcfb3f7bd3fcc65de541e8d2240a">updateActivityMeter</a>();
+<a name="l00104"></a>00104 <span class="keyword">protected</span>:
+<a name="l00105"></a>00105         <span class="keyword">virtual</span> <span class="keywordtype">void</span> moveEvent(QMoveEvent *);
+<a name="l00106"></a>00106 <span class="keyword">protected</span> slots:
+<a name="l00107"></a>00107         <span class="keywordtype">void</span> tipRequest(<a class="code" href="classKviDynamicToolTip.html">KviDynamicToolTip</a> *tip,<span class="keyword">const</span> QPoint &amp;pnt);
+<a name="l00108"></a>00108 };
+<a name="l00109"></a>00109 
+<a name="l00110"></a><a class="code" href="KviTreeWindowList_8h.html#a1b6e46b919b89ab31293b6abbeac4797">00110</a> <span class="preprocessor">#define KVI_TTBID_HIGHLIGHT Qt::UserRole</span>
+<a name="l00111"></a><a class="code" href="KviTreeWindowList_8h.html#af0fd01c0e838f6de7c5dcd17e3edf3c5">00111</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_TTBID_PROGRESS Qt::UserRole + 1</span>
+<a name="l00112"></a>00112 <span class="preprocessor"></span>
+<a name="l00113"></a><a class="code" href="classKviTreeWindowListItemDelegate.html">00113</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviTreeWindowListItemDelegate.html">KviTreeWindowListItemDelegate</a> : <span class="keyword">public</span> QStyledItemDelegate
+<a name="l00114"></a>00114 {
+<a name="l00115"></a>00115         Q_OBJECT
+<a name="l00116"></a>00116 <span class="keyword">public</span>:
+<a name="l00117"></a><a class="code" href="classKviTreeWindowListItemDelegate.html#a830a1de7ab294210ce792fb8e24323a5">00117</a>         <a class="code" href="classKviTreeWindowListItemDelegate.html">KviTreeWindowListItemDelegate</a>(QAbstractItemView * pWidget=0)
+<a name="l00118"></a>00118                 : QStyledItemDelegate(pWidget) {};
+<a name="l00119"></a><a class="code" href="classKviTreeWindowListItemDelegate.html#acf1c5a0d7fec3162fbe14fdd647986cb">00119</a>         <a class="code" href="classKviTreeWindowListItemDelegate.html#acf1c5a0d7fec3162fbe14fdd647986cb">~KviTreeWindowListItemDelegate</a>(){};
+<a name="l00120"></a>00120         QSize sizeHint(<span class="keyword">const</span> QStyleOptionViewItem &amp;option,<span class="keyword">const</span> QModelIndex &amp;index) <span class="keyword">const</span>;
+<a name="l00121"></a>00121         <span class="keywordtype">void</span> paint ( QPainter * painter, <span class="keyword">const</span> QStyleOptionViewItem &amp; option, <span class="keyword">const</span> QModelIndex &amp; index ) <span class="keyword">const</span>;
+<a name="l00122"></a>00122 };
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124 <span class="preprocessor">#endif //_KVI_WINDOWLIST_TREE_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:28 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:18 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

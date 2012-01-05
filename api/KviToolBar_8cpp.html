@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -96,29 +96,65 @@ function toggleVisibility(linkObj) {
 </div><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="define-members"></a>
 Defines</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#a09f3b79ad422faa4d42d9657765f66c0">_WANT_OPTION_FLAGS_</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#a380d89d0a1ab6394961c39267165969a">VALID_BUTTONSTYLES_NUM</a>&#160;&#160;&#160;5</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#a694b5547b1d89e5889722f9269852699">VALID_ICONSIZES_NUM</a>&#160;&#160;&#160;4</td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#aa8bbac34d21a2053a59942f3652dcdc4">g_pToolBarButtonStylePopup</a> = 0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#af92881dde3c8c74a208961bce1c96dd8">g_pToolBarContextPopup</a> = 0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#abb35eeb02accbd3f33a34e4a4b307bb9">g_pToolBarIconSizesPopup</a> = 0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#a8945c5f99f58d88f1a116ff8c69574f0">g_pToolBarPositionsPopup</a> = 0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#a816fe8e3d1d8d48ad8cc0ab9c43b70b6">g_pToolBarWindowsPopup</a> = 0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#ad87db855d2827ec22a8f0d82a11a6690">uToolBarInstances</a> = 0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structKviToolBar_1_1__ButtonStyles.html">KviToolBar::ButtonStyles</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#a19542dadae2fac9b8360598abcd61429">valid_buttonstyles</a> [VALID_BUTTONSTYLES_NUM]</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structKviToolBar_1_1__IconSizes.html">KviToolBar::IconSizes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#a01f34356f8ff9caaea602e49eb9b168a">valid_iconsizes</a> [VALID_ICONSIZES_NUM]</td></tr>
 </table>
 <hr/><h2>Define Documentation</h2>
-<a class="anchor" id="a09f3b79ad422faa4d42d9657765f66c0"></a><!-- doxytag: member="KviToolBar.cpp::_WANT_OPTION_FLAGS_" ref="a09f3b79ad422faa4d42d9657765f66c0" args="" -->
+<a class="anchor" id="a380d89d0a1ab6394961c39267165969a"></a><!-- doxytag: member="KviToolBar.cpp::VALID_BUTTONSTYLES_NUM" ref="a380d89d0a1ab6394961c39267165969a" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define _WANT_OPTION_FLAGS_</td>
+          <td class="memname">#define VALID_BUTTONSTYLES_NUM&#160;&#160;&#160;5</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
+<p>Referenced by <a class="el" href="classKviToolBar.html#a0ed8a0cf4288fb28c46f0d5d960646c4">KviToolBar::mousePressEvent()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a694b5547b1d89e5889722f9269852699"></a><!-- doxytag: member="KviToolBar.cpp::VALID_ICONSIZES_NUM" ref="a694b5547b1d89e5889722f9269852699" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VALID_ICONSIZES_NUM&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="classKviToolBar.html#a0ed8a0cf4288fb28c46f0d5d960646c4">KviToolBar::mousePressEvent()</a>.</p>
+
 </div>
 </div>
 <hr/><h2>Variable Documentation</h2>
+<a class="anchor" id="aa8bbac34d21a2053a59942f3652dcdc4"></a><!-- doxytag: member="KviToolBar.cpp::g_pToolBarButtonStylePopup" ref="aa8bbac34d21a2053a59942f3652dcdc4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>* <a class="el" href="KviToolBar_8cpp.html#aa8bbac34d21a2053a59942f3652dcdc4">g_pToolBarButtonStylePopup</a> = 0<code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="classKviToolBar.html#aae70da4bfc8f35719629e69a0d1519c3">KviToolBar::~KviToolBar()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="af92881dde3c8c74a208961bce1c96dd8"></a><!-- doxytag: member="KviToolBar.cpp::g_pToolBarContextPopup" ref="af92881dde3c8c74a208961bce1c96dd8" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -149,21 +185,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8945c5f99f58d88f1a116ff8c69574f0"></a><!-- doxytag: member="KviToolBar.cpp::g_pToolBarPositionsPopup" ref="a8945c5f99f58d88f1a116ff8c69574f0" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>* <a class="el" href="KviToolBar_8cpp.html#a8945c5f99f58d88f1a116ff8c69574f0">g_pToolBarPositionsPopup</a> = 0<code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Referenced by <a class="el" href="classKviToolBar.html#aae70da4bfc8f35719629e69a0d1519c3">KviToolBar::~KviToolBar()</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a816fe8e3d1d8d48ad8cc0ab9c43b70b6"></a><!-- doxytag: member="KviToolBar.cpp::g_pToolBarWindowsPopup" ref="a816fe8e3d1d8d48ad8cc0ab9c43b70b6" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -179,8 +200,64 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad87db855d2827ec22a8f0d82a11a6690"></a><!-- doxytag: member="KviToolBar.cpp::uToolBarInstances" ref="ad87db855d2827ec22a8f0d82a11a6690" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint <a class="el" href="KviToolBar_8cpp.html#ad87db855d2827ec22a8f0d82a11a6690">uToolBarInstances</a> = 0<code> [static]</code></td>
+        </tr>
+      </table>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:33 for KVIrc by&#160;
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="classKviToolBar.html#acaf3aba77b1bfb959d82626d62e6f4f8">KviToolBar::KviToolBar()</a>, and <a class="el" href="classKviToolBar.html#aae70da4bfc8f35719629e69a0d1519c3">KviToolBar::~KviToolBar()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a19542dadae2fac9b8360598abcd61429"></a><!-- doxytag: member="KviToolBar.cpp::valid_buttonstyles" ref="a19542dadae2fac9b8360598abcd61429" args="[VALID_BUTTONSTYLES_NUM]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structKviToolBar_1_1__ButtonStyles.html">KviToolBar::ButtonStyles</a> <a class="el" href="KviToolBar_8cpp.html#a19542dadae2fac9b8360598abcd61429">valid_buttonstyles</a>[VALID_BUTTONSTYLES_NUM]<code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<b>Initial value:</b><div class="fragment"><pre class="fragment">
+{
+        { Qt::ToolButtonIconOnly       , <span class="stringliteral">&quot;Icon Only&quot;</span>  },
+        { Qt::ToolButtonTextOnly       , <span class="stringliteral">&quot;Text Only&quot;</span> },
+        { Qt::ToolButtonTextBesideIcon , <span class="stringliteral">&quot;Text Beside Icon&quot;</span>  },
+        { Qt::ToolButtonTextUnderIcon  , <span class="stringliteral">&quot;Text Under Icon&quot;</span>   },
+        { Qt::ToolButtonFollowStyle    , <span class="stringliteral">&quot;Use System Style&quot;</span> }
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a01f34356f8ff9caaea602e49eb9b168a"></a><!-- doxytag: member="KviToolBar.cpp::valid_iconsizes" ref="a01f34356f8ff9caaea602e49eb9b168a" args="[VALID_ICONSIZES_NUM]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structKviToolBar_1_1__IconSizes.html">KviToolBar::IconSizes</a> <a class="el" href="KviToolBar_8cpp.html#a01f34356f8ff9caaea602e49eb9b168a">valid_iconsizes</a>[VALID_ICONSIZES_NUM]<code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<b>Initial value:</b><div class="fragment"><pre class="fragment">
+{
+        { 16, <span class="stringliteral">&quot;Small (16x16)&quot;</span>  },
+        { 22, <span class="stringliteral">&quot;Medium (22x22)&quot;</span> },
+        { 32, <span class="stringliteral">&quot;Large (32x32)&quot;</span>  },
+        { 48, <span class="stringliteral">&quot;Huge (48x48)&quot;</span>   }
+}
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:22 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

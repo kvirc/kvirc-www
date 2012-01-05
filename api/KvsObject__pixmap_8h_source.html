@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -124,41 +124,79 @@ function toggleVisibility(linkObj) {
 <a name="l00043"></a>00043 <span class="comment">//      Q_PROPERTY(QPixmap pixmap READ getPixmap)</span>
 <a name="l00044"></a>00044 <span class="keyword">public</span>:
 <a name="l00045"></a>00045         <a class="code" href="object__macros_8h.html#a69f894edce50dbd143340a8c89d8c8d1">KVSO_DECLARE_OBJECT</a>(<a class="code" href="classKvsObject__pixmap.html">KvsObject_pixmap</a>)
-<a name="l00046"></a>00046         QPixmap  * <a class="code" href="classKvsObject__pixmap.html#af09e6b28a6b3d4a950378463cd34a56d">getPixmap</a>();
-<a name="l00047"></a>00047         <span class="keywordtype">void</span> <a class="code" href="classKvsObject__pixmap.html#a80d413bc9f2e11a44f2fb1c4da5c7908">setInternalPixmap</a>(QPixmap *<a class="code" href="detector_8cpp.html#ade66e4ccafbc33b117610bbc0d85feb0">p</a>);
-<a name="l00048"></a>00048             <span class="comment">//QPixmap * pixmap(){ return m_pPixmap; }</span>
-<a name="l00049"></a>00049 <span class="keyword">protected</span>:
-<a name="l00050"></a><a class="code" href="classKvsObject__pixmap.html#a5388ca5121d3841afabc85b63368183b">00050</a>             <a class="code" href="classKviAnimatedPixmap.html">KviAnimatedPixmap</a> * <a class="code" href="classKvsObject__pixmap.html#a5388ca5121d3841afabc85b63368183b">m_pAnimatedPixmap</a>;
-<a name="l00051"></a><a class="code" href="classKvsObject__pixmap.html#a648988c445bf9f93d0473c9daf07a51b">00051</a>             QPixmap * <a class="code" href="classKvsObject__pixmap.html#a648988c445bf9f93d0473c9daf07a51b">m_pPixmap</a>;
-<a name="l00052"></a>00052 signals:
-<a name="l00053"></a>00053         <span class="keywordtype">void</span> <a class="code" href="classKvsObject__pixmap.html#a0a4c5178ca687cebceecd94af6085d0b">aboutToDie</a>();
-<a name="l00054"></a>00054 <span class="keyword">protected</span>:
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#ad85ff01dc7d094efdb51a919ab258a27">fill</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00057"></a>00057         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a3189b2f40db25e3e597416fbfe0e1b6f">resize</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00058"></a>00058         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a1533c3c3757a5ba9e212656ea0756d0b">scale</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00059"></a>00059         <span class="comment">//bool rotate(KviKvsObjectFunctionCall *c);</span>
-<a name="l00060"></a>00060         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#ab7f0ac903fda05d2ae61e0cceb1b8a3a">save</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00061"></a>00061         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a485b74893ce5dda04837b3b20997d904">startAnimation</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00062"></a>00062         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#af41955ceefbf6d372a966512a25d2e07">stopAnimation</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00063"></a>00063         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#ae0901c3e589f19a5447b41b6e9fb5149">loadAnimation</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00064"></a>00064         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a4ea334d8df75633f8b0b45d31e4ecd1a">load</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00065"></a>00065         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a1ea45d08c2abbebb5a4e9f0e49b245de">height</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00066"></a>00066         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a38cf7aec5d1812afa4664e76147bede5">width</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00067"></a>00067         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#ad67b638f9e580568a6e48eed11ccf6f7">grabWidget</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00068"></a>00068 <span class="comment">//      bool setOpacity(KviKvsObjectFunctionCall *c);</span>
-<a name="l00069"></a>00069         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a057e111ca8ce62dc61691bb5d610353c">loadFromMemoryBuffer</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a1c3d0d0b75095d5ba0f13b15109508f2">frameChangedEvent</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073 <span class="keyword">protected</span> slots:
-<a name="l00074"></a>00074         <span class="keywordtype">void</span> <a class="code" href="classKvsObject__pixmap.html#a55d0562f6f4b0c24f31ef411ff00636b">frameChanged</a>();
-<a name="l00075"></a>00075   };
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077 <span class="preprocessor">#endif  // !_CLASS_PIXMAP_H_</span>
+<a name="l00046"></a><a class="code" href="classKvsObject__pixmap.html#a4f445c7ab2ea2cfb5c1434dbae302a0e">00046</a>         enum <a class="code" href="classKvsObject__pixmap.html#a4f445c7ab2ea2cfb5c1434dbae302a0e">Type</a> { <a class="code" href="classKvsObject__pixmap.html#a4f445c7ab2ea2cfb5c1434dbae302a0ea1803948914708dd77b1cb94e322e141a">Pixmap</a>, <a class="code" href="classKvsObject__pixmap.html#a4f445c7ab2ea2cfb5c1434dbae302a0ea1416cf290806446f81bff9c5dc9cb63f">AnimatedPixmap</a>, <a class="code" href="classKvsObject__pixmap.html#a4f445c7ab2ea2cfb5c1434dbae302a0ea51fbb5c6b552323053ada881e2191a95">Image</a> };
+<a name="l00047"></a><a class="code" href="classKvsObject__pixmap.html#a266e3940558ffc407131a13d054626e4">00047</a>         <a class="code" href="classKvsObject__pixmap.html#a4f445c7ab2ea2cfb5c1434dbae302a0e">Type</a> <a class="code" href="classKvsObject__pixmap.html#a266e3940558ffc407131a13d054626e4">m_currentType</a>;
+<a name="l00048"></a>00048         <span class="keywordtype">void</span> <a class="code" href="classKvsObject__pixmap.html#a0e8929e05c9f8a281116361fff6ead73">setInternalPixmap</a>(QPixmap *pPixmap);
+<a name="l00049"></a>00049         <span class="keywordtype">void</span> <a class="code" href="classKvsObject__pixmap.html#a5e2b92130aa89f10f2a6aea17d403ec4">setInternalImage</a>(QImage *pImage);
+<a name="l00050"></a>00050 
+<a name="l00051"></a><a class="code" href="classKvsObject__pixmap.html#ab823c33a0498cfa11dfe7368a32eaacb">00051</a>         QImage * <a class="code" href="classKvsObject__pixmap.html#ab823c33a0498cfa11dfe7368a32eaacb">getImage</a>()
+<a name="l00052"></a>00052         {
+<a name="l00053"></a>00053                 <span class="keywordflow">if</span>(!<a class="code" href="classKvsObject__pixmap.html#a705892464ad964fc8075e5fed44c30da">m_pImage</a>)
+<a name="l00054"></a>00054                         <a class="code" href="classKvsObject__pixmap.html#a705892464ad964fc8075e5fed44c30da">m_pImage</a> = <span class="keyword">new</span> QImage();
+<a name="l00055"></a>00055                 <span class="keywordflow">if</span>(<a class="code" href="classKvsObject__pixmap.html#a266e3940558ffc407131a13d054626e4">m_currentType</a>==<a class="code" href="classKvsObject__pixmap.html#a4f445c7ab2ea2cfb5c1434dbae302a0ea1803948914708dd77b1cb94e322e141a">Pixmap</a>)
+<a name="l00056"></a>00056                 {
+<a name="l00057"></a>00057                         <span class="keywordflow">if</span>(<a class="code" href="classKvsObject__pixmap.html#a648988c445bf9f93d0473c9daf07a51b">m_pPixmap</a>)
+<a name="l00058"></a>00058                         {
+<a name="l00059"></a>00059                                 *<a class="code" href="classKvsObject__pixmap.html#a705892464ad964fc8075e5fed44c30da">m_pImage</a> = <a class="code" href="classKvsObject__pixmap.html#a648988c445bf9f93d0473c9daf07a51b">m_pPixmap</a>-&gt;toImage();
+<a name="l00060"></a>00060                                 <span class="keyword">delete</span> <a class="code" href="classKvsObject__pixmap.html#a648988c445bf9f93d0473c9daf07a51b">m_pPixmap</a>;
+<a name="l00061"></a>00061                                 <a class="code" href="classKvsObject__pixmap.html#a648988c445bf9f93d0473c9daf07a51b">m_pPixmap</a> = 0;
+<a name="l00062"></a>00062                         }
+<a name="l00063"></a>00063                 }
+<a name="l00064"></a>00064                 <a class="code" href="classKvsObject__pixmap.html#a266e3940558ffc407131a13d054626e4">m_currentType</a> = <a class="code" href="classKvsObject__pixmap.html#a4f445c7ab2ea2cfb5c1434dbae302a0ea51fbb5c6b552323053ada881e2191a95">Image</a>;
+<a name="l00065"></a>00065                 <span class="keywordflow">return</span> <a class="code" href="classKvsObject__pixmap.html#a705892464ad964fc8075e5fed44c30da">m_pImage</a>;
+<a name="l00066"></a>00066         }
+<a name="l00067"></a>00067 
+<a name="l00068"></a><a class="code" href="classKvsObject__pixmap.html#a80b63bb8367893a56ddbf63fc1ac51b7">00068</a>         QPixmap * <a class="code" href="classKvsObject__pixmap.html#a80b63bb8367893a56ddbf63fc1ac51b7">getPixmap</a>()
+<a name="l00069"></a>00069         {
+<a name="l00070"></a>00070                 <span class="keywordflow">if</span>(!<a class="code" href="classKvsObject__pixmap.html#a648988c445bf9f93d0473c9daf07a51b">m_pPixmap</a>)
+<a name="l00071"></a>00071                         <a class="code" href="classKvsObject__pixmap.html#a648988c445bf9f93d0473c9daf07a51b">m_pPixmap</a> = <span class="keyword">new</span> QPixmap();
+<a name="l00072"></a>00072                 <span class="keywordflow">if</span>(<a class="code" href="classKvsObject__pixmap.html#a266e3940558ffc407131a13d054626e4">m_currentType</a>==<a class="code" href="classKvsObject__pixmap.html#a4f445c7ab2ea2cfb5c1434dbae302a0ea51fbb5c6b552323053ada881e2191a95">Image</a>)
+<a name="l00073"></a>00073                 {
+<a name="l00074"></a>00074                         <span class="keywordflow">if</span>(<a class="code" href="classKvsObject__pixmap.html#a705892464ad964fc8075e5fed44c30da">m_pImage</a>)
+<a name="l00075"></a>00075                         {
+<a name="l00076"></a>00076                                 *<a class="code" href="classKvsObject__pixmap.html#a648988c445bf9f93d0473c9daf07a51b">m_pPixmap</a> = <a class="code" href="classKvsObject__pixmap.html#a648988c445bf9f93d0473c9daf07a51b">m_pPixmap</a>-&gt;fromImage(*<a class="code" href="classKvsObject__pixmap.html#a705892464ad964fc8075e5fed44c30da">m_pImage</a>);
+<a name="l00077"></a>00077                                 <span class="keyword">delete</span> <a class="code" href="classKvsObject__pixmap.html#a705892464ad964fc8075e5fed44c30da">m_pImage</a>;
+<a name="l00078"></a>00078                                 <a class="code" href="classKvsObject__pixmap.html#a705892464ad964fc8075e5fed44c30da">m_pImage</a> = 0;
+<a name="l00079"></a>00079                         }
+<a name="l00080"></a>00080                 }
+<a name="l00081"></a>00081                 <a class="code" href="classKvsObject__pixmap.html#a266e3940558ffc407131a13d054626e4">m_currentType</a> = <a class="code" href="classKvsObject__pixmap.html#a4f445c7ab2ea2cfb5c1434dbae302a0ea1803948914708dd77b1cb94e322e141a">Pixmap</a>;
+<a name="l00082"></a>00082                 <span class="keywordflow">return</span> <a class="code" href="classKvsObject__pixmap.html#a648988c445bf9f93d0473c9daf07a51b">m_pPixmap</a>;
+<a name="l00083"></a>00083         }
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 <span class="keyword">protected</span>:
+<a name="l00086"></a><a class="code" href="classKvsObject__pixmap.html#a5388ca5121d3841afabc85b63368183b">00086</a>         <a class="code" href="classKviAnimatedPixmap.html">KviAnimatedPixmap</a> * <a class="code" href="classKvsObject__pixmap.html#a5388ca5121d3841afabc85b63368183b">m_pAnimatedPixmap</a>;
+<a name="l00087"></a><a class="code" href="classKvsObject__pixmap.html#a648988c445bf9f93d0473c9daf07a51b">00087</a>         QPixmap * <a class="code" href="classKvsObject__pixmap.html#a648988c445bf9f93d0473c9daf07a51b">m_pPixmap</a>;
+<a name="l00088"></a><a class="code" href="classKvsObject__pixmap.html#a705892464ad964fc8075e5fed44c30da">00088</a>         QImage * <a class="code" href="classKvsObject__pixmap.html#a705892464ad964fc8075e5fed44c30da">m_pImage</a>;
+<a name="l00089"></a>00089 signals:
+<a name="l00090"></a>00090         <span class="keywordtype">void</span> <a class="code" href="classKvsObject__pixmap.html#a0a4c5178ca687cebceecd94af6085d0b">aboutToDie</a>();
+<a name="l00091"></a>00091 <span class="keyword">protected</span>:
+<a name="l00092"></a>00092         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#ad85ff01dc7d094efdb51a919ab258a27">fill</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00093"></a>00093         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a3189b2f40db25e3e597416fbfe0e1b6f">resize</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00094"></a>00094         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a1533c3c3757a5ba9e212656ea0756d0b">scale</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00095"></a>00095         <span class="comment">//bool rotate(KviKvsObjectFunctionCall *c);</span>
+<a name="l00096"></a>00096         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#ab7f0ac903fda05d2ae61e0cceb1b8a3a">save</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00097"></a>00097         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a485b74893ce5dda04837b3b20997d904">startAnimation</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00098"></a>00098         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#af41955ceefbf6d372a966512a25d2e07">stopAnimation</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00099"></a>00099         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#ae0901c3e589f19a5447b41b6e9fb5149">loadAnimation</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00100"></a>00100         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a4ea334d8df75633f8b0b45d31e4ecd1a">load</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00101"></a>00101         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a1ea45d08c2abbebb5a4e9f0e49b245de">height</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00102"></a>00102         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a38cf7aec5d1812afa4664e76147bede5">width</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00103"></a>00103         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a1dbb680996d9817e6badf90682a094f9">mirrored</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00104"></a>00104         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#ad67b638f9e580568a6e48eed11ccf6f7">grabWidget</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00105"></a>00105         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a057e111ca8ce62dc61691bb5d610353c">loadFromMemoryBuffer</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00106"></a>00106         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#ad587f8c7ba2c55699538309fb61e6b54">rotate</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00107"></a>00107         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a19aeadeaf437a5500efcd24beda1594c">toGrayScale</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00108"></a>00108         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#ac80358c4ef7c70ac0eda6bffff475c70">setPixel</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00109"></a>00109         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a539b124cc675019aeb4086c7cb8bca46">pixel</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00110"></a>00110         <span class="keywordtype">bool</span> <a class="code" href="classKvsObject__pixmap.html#a1c3d0d0b75095d5ba0f13b15109508f2">frameChangedEvent</a>(<a class="code" href="classKviKvsObjectFunctionCall.html">KviKvsObjectFunctionCall</a> *<a class="code" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>);
+<a name="l00111"></a>00111 <span class="keyword">protected</span> slots:
+<a name="l00112"></a>00112         <span class="keywordtype">void</span> <a class="code" href="classKvsObject__pixmap.html#a55d0562f6f4b0c24f31ef411ff00636b">frameChanged</a>();
+<a name="l00113"></a>00113 };
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115 <span class="preprocessor">#endif  // !_CLASS_PIXMAP_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:31 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:20 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

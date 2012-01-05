@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -327,119 +327,120 @@ function toggleVisibility(linkObj) {
 <a name="l00658"></a>00658 
 <a name="l00666"></a><a class="code" href="classKviIrcConnection.html#aad68b5263794ede0f0e36bf8caeee8cf">00666</a>         <span class="keyword">inline</span> QTextCodec * <a class="code" href="classKviIrcConnection.html#aad68b5263794ede0f0e36bf8caeee8cf" title="Returns a pointer to the current global codec for inbound data.">serverCodec</a>(){ <span class="keywordflow">return</span> m_pSrvCodec; };
 <a name="l00667"></a>00667 
-<a name="l00677"></a>00677         <span class="keywordtype">void</span> setEncoding(<span class="keyword">const</span> QString &amp; szEncoding);
-<a name="l00678"></a>00678 
-<a name="l00687"></a>00687         QString decodeText(<span class="keyword">const</span> <span class="keywordtype">char</span> * szText);
-<a name="l00688"></a>00688 
-<a name="l00697"></a>00697         QByteArray encodeText(<span class="keyword">const</span> QString &amp; szText);
-<a name="l00698"></a>00698 <span class="keyword">protected</span>:
-<a name="l00699"></a>00699         <span class="comment">//</span>
-<a name="l00700"></a>00700         <span class="comment">// Notify list management</span>
-<a name="l00701"></a>00701         <span class="comment">//</span>
-<a name="l00702"></a>00702 
-<a name="l00710"></a>00710         <span class="keywordtype">void</span> delayedStartNotifyList();
-<a name="l00711"></a>00711 
-<a name="l00712"></a>00712         <span class="comment">//</span>
-<a name="l00713"></a>00713         <span class="comment">// Login operations</span>
-<a name="l00714"></a>00714         <span class="comment">//</span>
-<a name="l00715"></a>00715 
-<a name="l00720"></a>00720         <span class="keywordtype">void</span> resolveLocalHost();
-<a name="l00721"></a>00721 
-<a name="l00722"></a>00722 <span class="preprocessor">#ifdef COMPILE_SSL_SUPPORT</span>
-<a name="l00723"></a>00723 <span class="preprocessor"></span>        <span class="keywordtype">void</span> trySTARTTLS();
-<a name="l00724"></a>00724         <span class="keywordtype">void</span> enableStartTlsSupport(<span class="keywordtype">bool</span> bEnable);
-<a name="l00725"></a>00725 <span class="preprocessor">#endif</span>
-<a name="l00726"></a>00726 <span class="preprocessor"></span>
-<a name="l00736"></a>00736         <span class="keywordtype">void</span> useProfileData(<a class="code" href="classKviIdentityProfileSet.html" title="Class which manages the list of identity profiles.">KviIdentityProfileSet</a> * pSet, <span class="keyword">const</span> QString &amp; szNetwork);
-<a name="l00737"></a>00737 
-<a name="l00743"></a>00743         <span class="keywordtype">void</span> useRealName(<span class="keyword">const</span> QString &amp;szRealName);
-<a name="l00744"></a>00744 
-<a name="l00749"></a>00749         <span class="keywordtype">void</span> loginToIrcServer();
-<a name="l00750"></a>00750 
-<a name="l00761"></a>00761         QString pickNextLoginNickName(<span class="keywordtype">bool</span> bForceDefaultIfPrimaryNicknamesEmpty,<span class="keyword">const</span> QString &amp; szBaseNickForRandomChoices,QString &amp;szChoiceDescriptionBuffer);
-<a name="l00762"></a>00762 
-<a name="l00763"></a>00763         <span class="comment">//</span>
-<a name="l00764"></a>00764         <span class="comment">// KviIrcServerParser interface</span>
-<a name="l00765"></a>00765         <span class="comment">//</span>
+<a name="l00680"></a>00680         <span class="keywordtype">void</span> setEncoding(<span class="keyword">const</span> QString &amp; szEncoding);
+<a name="l00681"></a>00681 
+<a name="l00690"></a>00690         QString decodeText(<span class="keyword">const</span> <span class="keywordtype">char</span> * szText);
+<a name="l00691"></a>00691 
+<a name="l00700"></a>00700         QByteArray encodeText(<span class="keyword">const</span> QString &amp; szText);
+<a name="l00701"></a>00701 <span class="keyword">protected</span>:
+<a name="l00702"></a>00702         <span class="comment">//</span>
+<a name="l00703"></a>00703         <span class="comment">// Notify list management</span>
+<a name="l00704"></a>00704         <span class="comment">//</span>
+<a name="l00705"></a>00705 
+<a name="l00713"></a>00713         <span class="keywordtype">void</span> delayedStartNotifyList();
+<a name="l00714"></a>00714 
+<a name="l00715"></a>00715         <span class="comment">//</span>
+<a name="l00716"></a>00716         <span class="comment">// Login operations</span>
+<a name="l00717"></a>00717         <span class="comment">//</span>
+<a name="l00718"></a>00718 
+<a name="l00723"></a>00723         <span class="keywordtype">void</span> resolveLocalHost();
+<a name="l00724"></a>00724 
+<a name="l00725"></a>00725 <span class="preprocessor">#ifdef COMPILE_SSL_SUPPORT</span>
+<a name="l00726"></a>00726 <span class="preprocessor"></span>        <span class="keywordtype">void</span> handleFailedInitialStartTls();
+<a name="l00727"></a>00727         <span class="keywordtype">bool</span> trySTARTTLS(<span class="keywordtype">bool</span> bAppendPing);
+<a name="l00728"></a>00728         <span class="keywordtype">void</span> enableStartTlsSupport(<span class="keywordtype">bool</span> bEnable);
+<a name="l00729"></a>00729 <span class="preprocessor">#endif</span>
+<a name="l00730"></a>00730 <span class="preprocessor"></span>
+<a name="l00740"></a>00740         <span class="keywordtype">void</span> useProfileData(<a class="code" href="classKviIdentityProfileSet.html" title="Class which manages the list of identity profiles.">KviIdentityProfileSet</a> * pSet, <span class="keyword">const</span> QString &amp; szNetwork);
+<a name="l00741"></a>00741 
+<a name="l00747"></a>00747         <span class="keywordtype">void</span> useRealName(<span class="keyword">const</span> QString &amp;szRealName);
+<a name="l00748"></a>00748 
+<a name="l00753"></a>00753         <span class="keywordtype">void</span> loginToIrcServer();
+<a name="l00754"></a>00754 
+<a name="l00765"></a>00765         QString pickNextLoginNickName(<span class="keywordtype">bool</span> bForceDefaultIfPrimaryNicknamesEmpty,<span class="keyword">const</span> QString &amp; szBaseNickForRandomChoices,QString &amp;szChoiceDescriptionBuffer);
 <a name="l00766"></a>00766 
-<a name="l00771"></a>00771         <span class="keywordtype">void</span> endOfMotdReceived();
-<a name="l00772"></a>00772 
-<a name="l00780"></a>00780         <span class="keywordtype">void</span> serverInfoReceived(<span class="keyword">const</span> QString &amp; szServerName, <span class="keyword">const</span> QString &amp; szUserModes, <span class="keyword">const</span> QString &amp; szChanModes);
-<a name="l00781"></a>00781 
-<a name="l00786"></a>00786         <span class="keywordtype">void</span> handleAuthenticate(<a class="code" href="classKviCString.html">KviCString</a> &amp; szResponse);
-<a name="l00787"></a>00787 
-<a name="l00792"></a>00792         <span class="keywordtype">void</span> handleInitialCapLs();
-<a name="l00793"></a>00793 
-<a name="l00798"></a>00798         <span class="keywordtype">void</span> handleFailedInitialCapLs();
-<a name="l00799"></a>00799 
-<a name="l00804"></a>00804         <span class="keywordtype">void</span> handleInitialCapAck();
-<a name="l00805"></a>00805 
-<a name="l00810"></a>00810         <span class="keywordtype">void</span> handleInitialCapNak();
-<a name="l00811"></a>00811 
-<a name="l00816"></a>00816         <span class="keywordtype">void</span> endInitialCapNegotiation();
-<a name="l00817"></a>00817 
-<a name="l00823"></a>00823         <span class="keywordtype">void</span> changeAwayState(<span class="keywordtype">bool</span> bAway);
-<a name="l00824"></a>00824 
-<a name="l00834"></a>00834         <span class="keywordtype">void</span> userInfoReceived(<span class="keyword">const</span> QString &amp; szUserName, <span class="keyword">const</span> QString &amp; szHostName);
-<a name="l00835"></a>00835 
-<a name="l00841"></a>00841         <span class="keywordtype">void</span> nickChange(<span class="keyword">const</span> QString &amp; szNewNick);
-<a name="l00842"></a>00842 
-<a name="l00849"></a>00849         <span class="keywordtype">bool</span> changeUserMode(<span class="keywordtype">char</span> cMode, <span class="keywordtype">bool</span> bSet);
-<a name="l00850"></a>00850 
-<a name="l00856"></a>00856         <span class="keywordtype">void</span> loginComplete(<span class="keyword">const</span> QString &amp; szNickName);
-<a name="l00857"></a>00857 
-<a name="l00858"></a>00858         <span class="comment">//</span>
-<a name="l00859"></a>00859         <span class="comment">// KviIrcContext interface</span>
-<a name="l00860"></a>00860         <span class="comment">//</span>
+<a name="l00767"></a>00767         <span class="comment">//</span>
+<a name="l00768"></a>00768         <span class="comment">// KviIrcServerParser interface</span>
+<a name="l00769"></a>00769         <span class="comment">//</span>
+<a name="l00770"></a>00770 
+<a name="l00775"></a>00775         <span class="keywordtype">void</span> endOfMotdReceived();
+<a name="l00776"></a>00776 
+<a name="l00784"></a>00784         <span class="keywordtype">void</span> serverInfoReceived(<span class="keyword">const</span> QString &amp; szServerName, <span class="keyword">const</span> QString &amp; szUserModes, <span class="keyword">const</span> QString &amp; szChanModes);
+<a name="l00785"></a>00785 
+<a name="l00790"></a>00790         <span class="keywordtype">void</span> handleAuthenticate(<a class="code" href="classKviCString.html">KviCString</a> &amp; szResponse);
+<a name="l00791"></a>00791 
+<a name="l00796"></a>00796         <span class="keywordtype">void</span> handleInitialCapLs();
+<a name="l00797"></a>00797 
+<a name="l00802"></a>00802         <span class="keywordtype">void</span> handleFailedInitialCapLs();
+<a name="l00803"></a>00803 
+<a name="l00808"></a>00808         <span class="keywordtype">void</span> handleInitialCapAck();
+<a name="l00809"></a>00809 
+<a name="l00814"></a>00814         <span class="keywordtype">void</span> handleInitialCapNak();
+<a name="l00815"></a>00815 
+<a name="l00820"></a>00820         <span class="keywordtype">void</span> endInitialCapNegotiation();
+<a name="l00821"></a>00821 
+<a name="l00827"></a>00827         <span class="keywordtype">void</span> changeAwayState(<span class="keywordtype">bool</span> bAway);
+<a name="l00828"></a>00828 
+<a name="l00838"></a>00838         <span class="keywordtype">void</span> userInfoReceived(<span class="keyword">const</span> QString &amp; szUserName, <span class="keyword">const</span> QString &amp; szHostName);
+<a name="l00839"></a>00839 
+<a name="l00845"></a>00845         <span class="keywordtype">void</span> nickChange(<span class="keyword">const</span> QString &amp; szNewNick);
+<a name="l00846"></a>00846 
+<a name="l00853"></a>00853         <span class="keywordtype">bool</span> changeUserMode(<span class="keywordtype">char</span> cMode, <span class="keywordtype">bool</span> bSet);
+<a name="l00854"></a>00854 
+<a name="l00860"></a>00860         <span class="keywordtype">void</span> loginComplete(<span class="keyword">const</span> QString &amp; szNickName);
 <a name="l00861"></a>00861 
-<a name="l00869"></a>00869         <span class="keywordtype">void</span> start();
-<a name="l00870"></a>00870 
-<a name="l00875"></a>00875         <span class="keywordtype">void</span> abort();
-<a name="l00876"></a>00876 
-<a name="l00882"></a>00882         <span class="keywordtype">void</span> heartbeat(<a class="code" href="KviTimeUtils_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a> tNow);
-<a name="l00883"></a>00883 
-<a name="l00884"></a>00884         <span class="comment">//</span>
-<a name="l00885"></a>00885         <span class="comment">// KviIrcLink interface (down)</span>
-<a name="l00886"></a>00886         <span class="comment">//</span>
+<a name="l00862"></a>00862         <span class="comment">//</span>
+<a name="l00863"></a>00863         <span class="comment">// KviIrcContext interface</span>
+<a name="l00864"></a>00864         <span class="comment">//</span>
+<a name="l00865"></a>00865 
+<a name="l00873"></a>00873         <span class="keywordtype">void</span> start();
+<a name="l00874"></a>00874 
+<a name="l00879"></a>00879         <span class="keywordtype">void</span> abort();
+<a name="l00880"></a>00880 
+<a name="l00886"></a>00886         <span class="keywordtype">void</span> heartbeat(<a class="code" href="KviTimeUtils_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a> tNow);
 <a name="l00887"></a>00887 
-<a name="l00893"></a>00893         <span class="keywordtype">void</span> linkAttemptFailed(<span class="keywordtype">int</span> iError);
-<a name="l00894"></a>00894 
-<a name="l00899"></a>00899         <span class="keywordtype">void</span> linkEstabilished();
-<a name="l00900"></a>00900 
-<a name="l00905"></a>00905         <span class="keywordtype">void</span> linkTerminated();
-<a name="l00906"></a>00906 <span class="keyword">private</span>:
-<a name="l00911"></a>00911         <span class="keywordtype">void</span> setupTextCodec();
-<a name="l00912"></a>00912 
-<a name="l00917"></a>00917         <span class="keywordtype">void</span> setupSrvCodec();
-<a name="l00918"></a>00918 <span class="keyword">public</span> slots:
-<a name="l00923"></a>00923         <span class="keywordtype">void</span> unhighlightAllChannels();
-<a name="l00924"></a>00924 
-<a name="l00929"></a>00929         <span class="keywordtype">void</span> unhighlightAllQueries();
-<a name="l00930"></a>00930 
-<a name="l00935"></a>00935         <span class="keywordtype">void</span> restartNotifyList();
-<a name="l00936"></a>00936 <span class="keyword">private</span> slots:
-<a name="l00941"></a>00941         <span class="keywordtype">void</span> hostNameLookupTerminated(<a class="code" href="classKviDnsResolver.html" title="The KviDnsResolver class.">KviDnsResolver</a> * pDns);
-<a name="l00942"></a>00942 signals:
-<a name="l00947"></a>00947         <span class="keywordtype">void</span> awayStateChanged();
-<a name="l00948"></a>00948 
-<a name="l00953"></a>00953         <span class="keywordtype">void</span> userModeChanged();
-<a name="l00954"></a>00954 
-<a name="l00959"></a>00959         <span class="keywordtype">void</span> nickNameChanged();
-<a name="l00960"></a>00960 
-<a name="l00966"></a>00966         <span class="keywordtype">void</span> channelRegistered(<a class="code" href="classKviChannelWindow.html" title="The class which manages a channel.">KviChannelWindow</a> * pChan);
-<a name="l00967"></a>00967 
-<a name="l00973"></a>00973         <span class="keywordtype">void</span> channelUnregistered(<a class="code" href="classKviChannelWindow.html" title="The class which manages a channel.">KviChannelWindow</a> * pChan);
-<a name="l00974"></a>00974 
-<a name="l00979"></a>00979         <span class="keywordtype">void</span> chanListChanged();
-<a name="l00980"></a>00980 };
-<a name="l00981"></a>00981 
-<a name="l00982"></a>00982 
-<a name="l00983"></a>00983 <span class="comment">// TODO: KviIdentity</span>
-<a name="l00984"></a>00984 
-<a name="l00985"></a>00985 <span class="preprocessor">#endif //_KVI_IRCCONNECTION_H_</span>
+<a name="l00888"></a>00888         <span class="comment">//</span>
+<a name="l00889"></a>00889         <span class="comment">// KviIrcLink interface (down)</span>
+<a name="l00890"></a>00890         <span class="comment">//</span>
+<a name="l00891"></a>00891 
+<a name="l00897"></a>00897         <span class="keywordtype">void</span> linkAttemptFailed(<span class="keywordtype">int</span> iError);
+<a name="l00898"></a>00898 
+<a name="l00903"></a>00903         <span class="keywordtype">void</span> linkEstabilished();
+<a name="l00904"></a>00904 
+<a name="l00909"></a>00909         <span class="keywordtype">void</span> linkTerminated();
+<a name="l00910"></a>00910 <span class="keyword">private</span>:
+<a name="l00915"></a>00915         <span class="keywordtype">void</span> setupTextCodec();
+<a name="l00916"></a>00916 
+<a name="l00921"></a>00921         <span class="keywordtype">void</span> setupSrvCodec();
+<a name="l00922"></a>00922 <span class="keyword">public</span> slots:
+<a name="l00927"></a>00927         <span class="keywordtype">void</span> unhighlightAllChannels();
+<a name="l00928"></a>00928 
+<a name="l00933"></a>00933         <span class="keywordtype">void</span> unhighlightAllQueries();
+<a name="l00934"></a>00934 
+<a name="l00939"></a>00939         <span class="keywordtype">void</span> restartNotifyList();
+<a name="l00940"></a>00940 <span class="keyword">private</span> slots:
+<a name="l00945"></a>00945         <span class="keywordtype">void</span> hostNameLookupTerminated(<a class="code" href="classKviDnsResolver.html" title="The KviDnsResolver class.">KviDnsResolver</a> * pDns);
+<a name="l00946"></a>00946 signals:
+<a name="l00951"></a>00951         <span class="keywordtype">void</span> awayStateChanged();
+<a name="l00952"></a>00952 
+<a name="l00957"></a>00957         <span class="keywordtype">void</span> userModeChanged();
+<a name="l00958"></a>00958 
+<a name="l00963"></a>00963         <span class="keywordtype">void</span> nickNameChanged();
+<a name="l00964"></a>00964 
+<a name="l00970"></a>00970         <span class="keywordtype">void</span> channelRegistered(<a class="code" href="classKviChannelWindow.html" title="The class which manages a channel.">KviChannelWindow</a> * pChan);
+<a name="l00971"></a>00971 
+<a name="l00977"></a>00977         <span class="keywordtype">void</span> channelUnregistered(<a class="code" href="classKviChannelWindow.html" title="The class which manages a channel.">KviChannelWindow</a> * pChan);
+<a name="l00978"></a>00978 
+<a name="l00983"></a>00983         <span class="keywordtype">void</span> chanListChanged();
+<a name="l00984"></a>00984 };
+<a name="l00985"></a>00985 
+<a name="l00986"></a>00986 
+<a name="l00987"></a>00987 <span class="comment">// TODO: KviIdentity</span>
+<a name="l00988"></a>00988 
+<a name="l00989"></a>00989 <span class="preprocessor">#endif //_KVI_IRCCONNECTION_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:26 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:16 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

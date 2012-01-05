@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -88,12 +88,12 @@ This is the complete list of members for <a class="el" href="classKviAnimatedPix
   <tr class="memlist"><td><a class="el" href="classKviAnimatedPixmapCache.html#a2764c3ec7e8299ecb94df34406c1a1ad">free</a>(Data *data)</td><td><a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a></td><td><code> [inline, static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviAnimatedPixmapCache.html#aa812893dea87bfd8f83b044aed1475be">init</a>()</td><td><a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a></td><td><code> [static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviAnimatedPixmapCache.html#a5aa5a02e48afcf9787da86fd624c546f">internalFree</a>(Data *data)</td><td><a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a></td><td><code> [protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classKviAnimatedPixmapCache.html#ae3f7efacbf2b4d8e4e058461f3e1c9c9">internalLoad</a>(const QString &amp;szFile)</td><td><a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a></td><td><code> [protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviAnimatedPixmapCache.html#a5e42f6d0dd6705ef3c9d8f4d9f39fa71">internalLoad</a>(const QString &amp;szFile, int iWidth=0, int iHeight=0)</td><td><a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviAnimatedPixmapCache.html#a0767f6a7f00bab8cc49bf923f9c44a45">internalNotifyDelete</a>(KviAnimatedPixmapInterface *receiver)</td><td><a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviAnimatedPixmapCache.html#a351e265ee99ccd8bcec8ffc43389c8be">internalResize</a>(Data *data, const QSize &amp;size)</td><td><a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviAnimatedPixmapCache.html#a6867b97698cf7708e609f0721a395c42">internalScheduleFrameChange</a>(uint delay, KviAnimatedPixmapInterface *receiver)</td><td><a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviAnimatedPixmapCache.html#a65951aa90e6ca3111bbca7c937614983">KviAnimatedPixmapCache</a>()</td><td><a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a></td><td><code> [protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="classKviAnimatedPixmapCache.html#ae0c918f6f52b188f71e454e04233af1f">load</a>(const QString &amp;szFileName)</td><td><a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a></td><td><code> [inline, static]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="classKviAnimatedPixmapCache.html#abe290889ccd02ea20016ae2c281b6a88">load</a>(const QString &amp;szFileName, int iWidth=0, int iHeight=0)</td><td><a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a></td><td><code> [inline, static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviAnimatedPixmapCache.html#ade4982a53e7aa38396e89832a5a5338b">m_animationTimer</a></td><td><a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviAnimatedPixmapCache.html#ae4e81c52cb4ce8f4e51703724a97f3cc">m_cacheMutex</a></td><td><a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a></td><td><code> [mutable, protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviAnimatedPixmapCache.html#a0f880c2aa88fb65f9713366e9f7f0137">m_hCache</a></td><td><a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a></td><td><code> [protected]</code></td></tr>
@@ -106,7 +106,7 @@ This is the complete list of members for <a class="el" href="classKviAnimatedPix
   <tr class="memlist"><td><a class="el" href="classKviAnimatedPixmapCache.html#acad73630f7417654ec7a799facc23f5d">timeoutEvent</a>()</td><td><a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a></td><td><code> [protected, virtual, slot]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="classKviAnimatedPixmapCache.html#ab95419d3f98c22afc50da6c7302c47db">~KviAnimatedPixmapCache</a>()</td><td><a class="el" href="classKviAnimatedPixmapCache.html">KviAnimatedPixmapCache</a></td><td><code> [protected, virtual]</code></td></tr>
 </table></div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:35 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:26 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

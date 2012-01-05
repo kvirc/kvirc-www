@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -84,7 +84,7 @@ function toggleVisibility(linkObj) {
 </div>
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="KviCoreActions_8h_source.html">KviCoreActions.h</a>&quot;</code><br/>
-<code>#include &quot;kvi_shortcuts.h&quot;</code><br/>
+<code>#include &quot;KviShortcut.h&quot;</code><br/>
 <code>#include &quot;KviMainWindow.h&quot;</code><br/>
 <code>#include &quot;KviLocale.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="KviIrcContext_8h_source.html">KviIrcContext.h</a>&quot;</code><br/>
@@ -189,7 +189,7 @@ Functions</h2></td></tr>
                 QString(__icon), \
                 QString(<span class="stringliteral">&quot;%1&quot;</span>).arg(__smallicon), \
                 __flags, \
-                __accel); \
+                QKeySequence(__accel).<a class="code" href="namespaceKviStringConversion.html#af0787e21e312ad6d81d0084f7afdb561">toString</a>()); \
         <a class="code" href="detector_8cpp.html#a00626facb4f86efb8618a4c5f5c3c5f8">m</a>-&gt;registerAction(<a class="code" href="detector_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>)
 </pre></div>
 <p>Referenced by <a class="el" href="KviCoreActions_8cpp.html#a29be7450b2c301d31d1ec09bd977c319">register_core_actions()</a>.</p>
@@ -276,7 +276,7 @@ Functions</h2></td></tr>
                 QString(__icon), \
                 QString(<span class="stringliteral">&quot;%1&quot;</span>).arg(__smallicon), \
                 __flags, \
-                __accel); \
+                QKeySequence(__accel).<a class="code" href="namespaceKviStringConversion.html#af0787e21e312ad6d81d0084f7afdb561">toString</a>()); \
         <a class="code" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">QObject::connect</a>(<a class="code" href="detector_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>,SIGNAL(activated()),__object,__slot); \
         <a class="code" href="detector_8cpp.html#a00626facb4f86efb8618a4c5f5c3c5f8">m</a>-&gt;registerAction(<a class="code" href="detector_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>)
 </pre></div>
@@ -307,7 +307,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:32 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:22 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

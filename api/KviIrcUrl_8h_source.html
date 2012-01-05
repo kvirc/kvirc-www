@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -136,31 +136,33 @@ function toggleVisibility(linkObj) {
 <a name="l00055"></a><a class="code" href="namespaceKviIrcUrl.html#acc0749da15526ea11db515db7cbb743c">00055</a>         <span class="keyword">enum</span> <a class="code" href="namespaceKviIrcUrl.html#acc0749da15526ea11db515db7cbb743c">KviIrcUrlParserError</a> {
 <a name="l00056"></a><a class="code" href="namespaceKviIrcUrl.html#acc0749da15526ea11db515db7cbb743ca4c017fb07c7d8894787b10c62b34feef">00056</a>                 <a class="code" href="namespaceKviIrcUrl.html#acc0749da15526ea11db515db7cbb743ca4c017fb07c7d8894787b10c62b34feef">InvalidProtocol</a> = 1,
 <a name="l00057"></a><a class="code" href="namespaceKviIrcUrl.html#acc0749da15526ea11db515db7cbb743caae951bb4cb8a30fb67ba98ecad7e720c">00057</a>                 <a class="code" href="namespaceKviIrcUrl.html#acc0749da15526ea11db515db7cbb743caae951bb4cb8a30fb67ba98ecad7e720c">InvalidPort</a> = 2,
-<a name="l00058"></a><a class="code" href="namespaceKviIrcUrl.html#acc0749da15526ea11db515db7cbb743ca22dc907abf01c102a091bb013f605482">00058</a>                 <a class="code" href="namespaceKviIrcUrl.html#acc0749da15526ea11db515db7cbb743ca22dc907abf01c102a091bb013f605482">NeedNewContext</a> = 4
-<a name="l00059"></a>00059         };
-<a name="l00060"></a>00060 
-<a name="l00061"></a><a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4">00061</a>         <span class="keyword">enum</span> <a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4">KviIrcUrlContextSpec</a> {
-<a name="l00062"></a><a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a2ca99f961bfd95a1ef89e2bb2ac3e267">00062</a>                 <a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a2ca99f961bfd95a1ef89e2bb2ac3e267">FirstFreeContext</a> = 1,
-<a name="l00063"></a><a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a7603bfa1c3f5739b882b1cf84419101d">00063</a>                 <a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a7603bfa1c3f5739b882b1cf84419101d">NewContext</a> = 2,
-<a name="l00064"></a><a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a2c0657abced21b5e93f0862a562dea7c">00064</a>                 <a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a2c0657abced21b5e93f0862a562dea7c">CurrentContext</a> = 4,
-<a name="l00065"></a><a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4ad8aaee93ccda84ff1f98d53a3e53cb31">00065</a>                 <a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4ad8aaee93ccda84ff1f98d53a3e53cb31">TryCurrentContext</a> = 8,
-<a name="l00066"></a>00066 
-<a name="l00067"></a><a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a1fa7cea8c32a947b29c6ca61a4140841">00067</a>                 <a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a1fa7cea8c32a947b29c6ca61a4140841">DoNotPartChans</a> = 16
-<a name="l00068"></a>00068         };
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">bool</span> <a class="code" href="namespaceKviIrcUrl.html#a520482418922e54c1a5d20cd0f469a01">parse</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * url,<a class="code" href="classKviCString.html">KviCString</a> &amp;cmdBuffer,<span class="keywordtype">int</span> contextSpec = <a class="code" href="KviIrcUrl_8h.html#a20e19919309ad265385af43abb430a0d">KVI_IRCURL_CONTEXT_FIRSTFREE</a>);
+<a name="l00058"></a><a class="code" href="namespaceKviIrcUrl.html#acc0749da15526ea11db515db7cbb743ca22dc907abf01c102a091bb013f605482">00058</a>                 <a class="code" href="namespaceKviIrcUrl.html#acc0749da15526ea11db515db7cbb743ca22dc907abf01c102a091bb013f605482">NeedNewContext</a> = 4,
+<a name="l00059"></a><a class="code" href="namespaceKviIrcUrl.html#acc0749da15526ea11db515db7cbb743cad3c972e2b4ca844a90cbca0c235b6a64">00059</a>                 <a class="code" href="namespaceKviIrcUrl.html#acc0749da15526ea11db515db7cbb743cad3c972e2b4ca844a90cbca0c235b6a64">InvalidUrl</a> = 8
+<a name="l00060"></a>00060         };
+<a name="l00061"></a>00061 
+<a name="l00062"></a><a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4">00062</a>         <span class="keyword">enum</span> <a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4">KviIrcUrlContextSpec</a> {
+<a name="l00063"></a><a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a2ca99f961bfd95a1ef89e2bb2ac3e267">00063</a>                 <a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a2ca99f961bfd95a1ef89e2bb2ac3e267">FirstFreeContext</a> = 1,
+<a name="l00064"></a><a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a7603bfa1c3f5739b882b1cf84419101d">00064</a>                 <a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a7603bfa1c3f5739b882b1cf84419101d">NewContext</a> = 2,
+<a name="l00065"></a><a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a2c0657abced21b5e93f0862a562dea7c">00065</a>                 <a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a2c0657abced21b5e93f0862a562dea7c">CurrentContext</a> = 4,
+<a name="l00066"></a><a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4ad8aaee93ccda84ff1f98d53a3e53cb31">00066</a>                 <a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4ad8aaee93ccda84ff1f98d53a3e53cb31">TryCurrentContext</a> = 8,
+<a name="l00067"></a><a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a93269b3b002ffffc3bd0568d955c7d73">00067</a>                 <a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a93269b3b002ffffc3bd0568d955c7d73">TryEveryContext</a> = 32,
+<a name="l00068"></a>00068 
+<a name="l00069"></a><a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a1fa7cea8c32a947b29c6ca61a4140841">00069</a>                 <a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a1fa7cea8c32a947b29c6ca61a4140841">DoNotPartChans</a> = 16
+<a name="l00070"></a>00070         };
 <a name="l00071"></a>00071 
-<a name="l00072"></a>00072         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">int</span>  <a class="code" href="namespaceKviIrcUrl.html#aa47a51d8f196fb9cd529b6ce788952f7">run</a>(<span class="keyword">const</span> QString&amp; url,<span class="keywordtype">int</span> contextSpec = <a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a2ca99f961bfd95a1ef89e2bb2ac3e267">FirstFreeContext</a>,<a class="code" href="classKviConsoleWindow.html">KviConsoleWindow</a>* pConsole = 0);
+<a name="l00072"></a>00072         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">bool</span> <a class="code" href="namespaceKviIrcUrl.html#a520482418922e54c1a5d20cd0f469a01">parse</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * url,<a class="code" href="classKviCString.html">KviCString</a> &amp;cmdBuffer,<span class="keywordtype">int</span> contextSpec = <a class="code" href="KviIrcUrl_8h.html#a20e19919309ad265385af43abb430a0d">KVI_IRCURL_CONTEXT_FIRSTFREE</a>);
 <a name="l00073"></a>00073 
-<a name="l00074"></a>00074         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">void</span> <a class="code" href="namespaceKviIrcUrl.html#a12d7e48add2cbec0cd6a818ad39ccb8b">split</a>(QString url, <a class="code" href="struct__KviIrcUrlParts.html">KviIrcUrlParts</a>&amp; parts);
-<a name="l00075"></a>00075         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">void</span> <a class="code" href="namespaceKviIrcUrl.html#af751379842a085aa22d4cb3987060e6d">join</a>(QString &amp;url, <a class="code" href="classKviIrcServer.html" title="The class which manages the irc servers.">KviIrcServer</a>* server);
-<a name="l00076"></a>00076         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">void</span> <a class="code" href="namespaceKviIrcUrl.html#a79a44f6a0775a54f706fa38e32d24634">makeJoinCmd</a>(<span class="keyword">const</span> QStringList&amp; chans, QString&amp; szJoinCommand);
-<a name="l00077"></a>00077 }
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079 <span class="preprocessor">#endif // _KVI_IRCURL_H_</span>
+<a name="l00074"></a>00074         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">int</span>  <a class="code" href="namespaceKviIrcUrl.html#aa47a51d8f196fb9cd529b6ce788952f7">run</a>(<span class="keyword">const</span> QString&amp; url,<span class="keywordtype">int</span> contextSpec = <a class="code" href="namespaceKviIrcUrl.html#a33c8e4fb34d5ac547c883bef8ef1d1e4a2ca99f961bfd95a1ef89e2bb2ac3e267">FirstFreeContext</a>,<a class="code" href="classKviConsoleWindow.html">KviConsoleWindow</a>* pConsole = 0);
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">void</span> <a class="code" href="namespaceKviIrcUrl.html#a12d7e48add2cbec0cd6a818ad39ccb8b">split</a>(QString url, <a class="code" href="struct__KviIrcUrlParts.html">KviIrcUrlParts</a>&amp; parts);
+<a name="l00077"></a>00077         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">void</span> <a class="code" href="namespaceKviIrcUrl.html#af751379842a085aa22d4cb3987060e6d">join</a>(QString &amp;url, <a class="code" href="classKviIrcServer.html" title="The class which manages the irc servers.">KviIrcServer</a>* server);
+<a name="l00078"></a>00078         <span class="keyword">extern</span> <a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <span class="keywordtype">void</span> <a class="code" href="namespaceKviIrcUrl.html#a79a44f6a0775a54f706fa38e32d24634">makeJoinCmd</a>(<span class="keyword">const</span> QStringList&amp; chans, QString&amp; szJoinCommand);
+<a name="l00079"></a>00079 }
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 <span class="preprocessor">#endif // _KVI_IRCURL_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:27 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:16 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -83,6 +83,7 @@ function toggleVisibility(linkObj) {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a>  </div>
   <div class="headertitle">
 <h1>KviTreeWindowListTreeWidget Class Reference</h1>  </div>
@@ -99,6 +100,7 @@ Public Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviTreeWindowListTreeWidget.html#a8ec61fd4ef3660ecf0aeea102a711d9f">sort</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviTreeWindowListTreeWidget.html#a7bd3ba044cbeb2a0bc34d232401835dd">isReverseSort</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviTreeWindowListTreeWidget.html#a1cb002dbf5f4326a7588f89d607195b6">KviTreeWindowListTreeWidget</a> (QWidget *par)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviTreeWindowListTreeWidget.html#aebb1c444de2b3678022fc2b29b4a3075">~KviTreeWindowListTreeWidget</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
@@ -111,6 +113,9 @@ Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviWindowListItem.html">KviWindowListItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviTreeWindowListTreeWidget.html#ab83c6019e78eeba14e3304255b19c43f">lastItem</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviTreeWindowListTreeWidget.html#ab3e5e944ec2a781d36f78dbee0118efa">bReverseSort</a></td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
 Friends</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviTreeWindowListTreeWidget.html#a72abc6f7da480b78198c0bbaea6a6c92">KviTreeWindowListItem</a></td></tr>
@@ -132,7 +137,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="KviOptions_8h.html#a3cd46c1dc22f59aa3f6e87f9f863215e">KVI_OPTION_FONT</a>, and <a class="el" href="KviOptions_8h.html#a156c0dc99a19ed4b183c2b6802e194f3">KviOption_fontTreeWindowList</a>.</p>
+<p>References <a class="el" href="classKviTreeWindowListTreeWidget.html#ab3e5e944ec2a781d36f78dbee0118efa">bReverseSort</a>, <a class="el" href="KviOptions_8h.html#a3cd46c1dc22f59aa3f6e87f9f863215e">KVI_OPTION_FONT</a>, and <a class="el" href="KviOptions_8h.html#a156c0dc99a19ed4b183c2b6802e194f3">KviOption_fontTreeWindowList</a>.</p>
 
 </div>
 </div>
@@ -153,6 +158,22 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a7bd3ba044cbeb2a0bc34d232401835dd"></a><!-- doxytag: member="KviTreeWindowListTreeWidget::isReverseSort" ref="a7bd3ba044cbeb2a0bc34d232401835dd" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool KviTreeWindowListTreeWidget::isReverseSort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ab83c6019e78eeba14e3304255b19c43f"></a><!-- doxytag: member="KviTreeWindowListTreeWidget::lastItem" ref="ab83c6019e78eeba14e3304255b19c43f" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -255,6 +276,8 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>References <a class="el" href="classKviTreeWindowListTreeWidget.html#ab3e5e944ec2a781d36f78dbee0118efa">bReverseSort</a>.</p>
+
 <p>Referenced by <a class="el" href="classKviTreeWindowListTreeWidget.html#a1bdbd94a5e57a0ed74620c4d96617902">mousePressEvent()</a>.</p>
 
 </div>
@@ -272,6 +295,8 @@ Friends</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>References <a class="el" href="classKviTreeWindowListTreeWidget.html#ab3e5e944ec2a781d36f78dbee0118efa">bReverseSort</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviTreeWindowListTreeWidget.html#a1bdbd94a5e57a0ed74620c4d96617902">mousePressEvent()</a>.</p>
 
@@ -323,12 +348,28 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="ab3e5e944ec2a781d36f78dbee0118efa"></a><!-- doxytag: member="KviTreeWindowListTreeWidget::bReverseSort" ref="ab3e5e944ec2a781d36f78dbee0118efa" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classKviTreeWindowListTreeWidget.html#ab3e5e944ec2a781d36f78dbee0118efa">KviTreeWindowListTreeWidget::bReverseSort</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="classKviTreeWindowListTreeWidget.html#a1cb002dbf5f4326a7588f89d607195b6">KviTreeWindowListTreeWidget()</a>, <a class="el" href="classKviTreeWindowListTreeWidget.html#acc799dacc4c1cb67a409bfbe54f53c71">reverseSort()</a>, and <a class="el" href="classKviTreeWindowListTreeWidget.html#a8ec61fd4ef3660ecf0aeea102a711d9f">sort()</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/kvirc/ui/<a class="el" href="KviTreeWindowList_8h_source.html">KviTreeWindowList.h</a></li>
 <li>src/kvirc/ui/<a class="el" href="KviTreeWindowList_8cpp.html">KviTreeWindowList.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:46 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:36 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

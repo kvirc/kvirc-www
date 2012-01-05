@@ -52,7 +52,7 @@ function toggleVisibility(linkObj) {
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="kvirc_doxy.png"></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.1</span></div>
+   <div id="projectname">KVIrc&#160;<span id="projectnumber">4.1.3</span></div>
    <div id="projectbrief">DeveloperAPIs</div>
   </td>
  </tr>
@@ -111,7 +111,7 @@ function toggleVisibility(linkObj) {
 <code>#include &quot;KviTalPopupMenu.h&quot;</code><br/>
 <code>#include &quot;KviAnimatedPixmap.h&quot;</code><br/>
 <code>#include &quot;KviPixmapUtils.h&quot;</code><br/>
-<code>#include &quot;<a class="el" href="KviDockExtension_8h_source.html">KviDockExtension.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="KviTrayIcon_8h_source.html">KviTrayIcon.h</a>&quot;</code><br/>
 <code>#include &lt;QBitmap&gt;</code><br/>
 <code>#include &lt;QPainter&gt;</code><br/>
 <code>#include &lt;QRegExp&gt;</code><br/>
@@ -138,6 +138,7 @@ Defines</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviIrcView_8cpp.html#a5145aff4fc904bef795d6e7408d335e0">KVI_IRCVIEW_BLOCK_SELECTION_LEFT</a>&#160;&#160;&#160;1</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviIrcView_8cpp.html#a9fcf315e1aab97ef26ba6f5c0f4ca859">KVI_IRCVIEW_BLOCK_SELECTION_RIGHT</a>&#160;&#160;&#160;2</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviIrcView_8cpp.html#ac423f162558ecf81123f5c47ff2f2c90">KVI_IRCVIEW_BLOCK_SELECTION_TOTAL</a>&#160;&#160;&#160;0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviIrcView_8cpp.html#a5d81890168adef67c42a45fffd723393">KVI_IRCVIEW_DOUBLEBORDER_WIDTH</a>&#160;&#160;&#160;8</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviIrcView_8cpp.html#ad80934a4870edf01acbaf59851021e8f">KVI_IRCVIEW_ESCAPE_TAG_GENERICESCAPE</a>&#160;&#160;&#160;'['</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviIrcView_8cpp.html#a3bb89c780c28158d104d391f78125d19">KVI_IRCVIEW_ESCAPE_TAG_HOSTLINK</a>&#160;&#160;&#160;'h'</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviIrcView_8cpp.html#a842f50f3987a790c71793446c185f382">KVI_IRCVIEW_ESCAPE_TAG_NICKLINK</a>&#160;&#160;&#160;'n'</td></tr>
@@ -146,7 +147,6 @@ Defines</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviIrcView_8cpp.html#a2d441fcdb0fcc9c639a58e0b78bcec8c">KVI_IRCVIEW_MINIMUM_HEIGHT</a>&#160;&#160;&#160;22</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviIrcView_8cpp.html#ab7ae2bf2aaf1940c39120a3b80e40ba9">KVI_IRCVIEW_MINIMUM_WIDTH</a>&#160;&#160;&#160;22</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviIrcView_8cpp.html#a6495936fa4df12a73a18f407e008bb5c">KVI_IRCVIEW_PIXMAP_AND_SEPARATOR</a>&#160;&#160;&#160;20</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviIrcView_8cpp.html#af676cf64f323cd61b12e89f34a1cc247">KVI_IRCVIEW_PIXMAP_SEPARATOR_AND_DOUBLEBORDER_WIDTH</a>&#160;&#160;&#160;28</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviIrcView_8cpp.html#a88995fc288ac43d09345379cdfbce494">KVI_IRCVIEW_PIXMAP_SIZE</a>&#160;&#160;&#160;16</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviIrcView_8cpp.html#a5b725093a1b1988a80f7b1672f576ea5">KVI_IRCVIEW_SIZEHINT_HEIGHT</a>&#160;&#160;&#160;150</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviIrcView_8cpp.html#a8680ca7aabb37a0c4243ed1139bbb026">KVI_IRCVIEW_SIZEHINT_WIDTH</a>&#160;&#160;&#160;150</td></tr>
@@ -372,6 +372,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a5d81890168adef67c42a45fffd723393"></a><!-- doxytag: member="KviIrcView.cpp::KVI_IRCVIEW_DOUBLEBORDER_WIDTH" ref="a5d81890168adef67c42a45fffd723393" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KVI_IRCVIEW_DOUBLEBORDER_WIDTH&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="classKviIrcView.html#a2a49dcef38110f62b69045656a6e07fe">KviIrcView::ensureLineVisible()</a>, <a class="el" href="classKviIrcView.html#ab7fb7a7af495572886d7d744216c8d7a">KviIrcView::fastScroll()</a>, and <a class="el" href="classKviIrcView.html#a74d00b3db3e318d867bb8da133dec4bf">KviIrcView::paintEvent()</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ad80934a4870edf01acbaf59851021e8f"></a><!-- doxytag: member="KviIrcView.cpp::KVI_IRCVIEW_ESCAPE_TAG_GENERICESCAPE" ref="ad80934a4870edf01acbaf59851021e8f" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -448,7 +463,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviIrcView.html#a21d1d3da46256b1a19a928395fd70c38">KviIrcView::KviIrcView()</a>.</p>
+<p>Referenced by <a class="el" href="classKviIrcView.html#afbde9f2d36456c0c22edc4a014e731ef">KviIrcView::KviIrcView()</a>.</p>
 
 </div>
 </div>
@@ -463,7 +478,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviIrcView.html#a21d1d3da46256b1a19a928395fd70c38">KviIrcView::KviIrcView()</a>.</p>
+<p>Referenced by <a class="el" href="classKviIrcView.html#afbde9f2d36456c0c22edc4a014e731ef">KviIrcView::KviIrcView()</a>.</p>
 
 </div>
 </div>
@@ -478,22 +493,7 @@ Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviIrcView.html#a43bd0051dda072ca8aab604c5a7bd699">KviIrcView::getLinkUnderMouse()</a>, <a class="el" href="classKviIrcView.html#a7fe8e5dde75f37b3feced118e371d556">KviIrcView::getVisibleCharIndexAt()</a>, and <a class="el" href="classKviIrcView.html#a74d00b3db3e318d867bb8da133dec4bf">KviIrcView::paintEvent()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af676cf64f323cd61b12e89f34a1cc247"></a><!-- doxytag: member="KviIrcView.cpp::KVI_IRCVIEW_PIXMAP_SEPARATOR_AND_DOUBLEBORDER_WIDTH" ref="af676cf64f323cd61b12e89f34a1cc247" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define KVI_IRCVIEW_PIXMAP_SEPARATOR_AND_DOUBLEBORDER_WIDTH&#160;&#160;&#160;28</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Referenced by <a class="el" href="classKviIrcView.html#a2a49dcef38110f62b69045656a6e07fe">KviIrcView::ensureLineVisible()</a>, <a class="el" href="classKviIrcView.html#ab7fb7a7af495572886d7d744216c8d7a">KviIrcView::fastScroll()</a>, and <a class="el" href="classKviIrcView.html#a74d00b3db3e318d867bb8da133dec4bf">KviIrcView::paintEvent()</a>.</p>
+<p>Referenced by <a class="el" href="classKviIrcView.html#a2a49dcef38110f62b69045656a6e07fe">KviIrcView::ensureLineVisible()</a>, <a class="el" href="classKviIrcView.html#ab7fb7a7af495572886d7d744216c8d7a">KviIrcView::fastScroll()</a>, <a class="el" href="classKviIrcView.html#a43bd0051dda072ca8aab604c5a7bd699">KviIrcView::getLinkUnderMouse()</a>, <a class="el" href="classKviIrcView.html#a7fe8e5dde75f37b3feced118e371d556">KviIrcView::getVisibleCharIndexAt()</a>, and <a class="el" href="classKviIrcView.html#a74d00b3db3e318d867bb8da133dec4bf">KviIrcView::paintEvent()</a>.</p>
 
 </div>
 </div>
@@ -604,7 +604,7 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sun Apr 10 2011 14:54:33 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:22 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>
