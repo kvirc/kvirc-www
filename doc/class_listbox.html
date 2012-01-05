@@ -38,25 +38,25 @@ A widget displaying a list of items.
   </tr>
   <tr bgcolor="#EAEAEA">
     <td><a href="class_object.html">object</a>
-                <a href="class_widget.html">widget</a></td>
+<a href="class_widget.html">widget</a></td>
   </tr>
   <tr bgcolor="#D2D2D2">
     <td><b>Description</b></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td>                The listbox <a href="class_object.html">class</a> is a widget displaying a list of string items.<br>
-                The listbox can operate in four <a href="class_combobox.html">selection</a> modes: single, multi, extended
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and none. In the "single" mode only one item can be selected at a time
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and that item is also the current one. In the "multi" mode multiple
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;items can be selected and unselected and the current item may or may not
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;be one of the selected items. In the "extended" mode multiple items
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;can be selected but they must be selected in a single mouse action
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or by keeping the shift button pressed while clicking on the item.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In this mode the current item is always one of the selected items.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the "none" mode no items can be selected and the current item
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;may be any item in the list.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In most situations you will operate the listwidget in "single" mode
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(and this is the default mode set at widget creation).
+    <td>The listbox <a href="class_object.html">class</a> is a widget displaying a list of string items.<br>
+The listbox can operate in four <a href="class_combobox.html">selection</a> modes: single, multi, extended
+and none. In the "single" mode only one item can be selected at a time
+and that item is also the current one. In the "multi" mode multiple
+items can be selected and unselected and the current item may or may not
+be one of the selected items. In the "extended" mode multiple items
+can be selected but they must be selected in a single mouse action
+or by keeping the shift button pressed while clicking on the item.
+In this mode the current item is always one of the selected items.<br>
+In the "none" mode no items can be selected and the current item
+may be any item in the list.<br>
+In most situations you will operate the listwidget in "single" mode
+(and this is the default mode set at widget creation).
 </td>
   </tr>
   <tr bgcolor="#D2D2D2">
@@ -68,7 +68,7 @@ A widget displaying a list of items.
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setSelectionMode">$setSelectionMode(&lt;selection_mode:string&gt;)</a></font></b></code></td></tr>
 <tr><td>Sets the current selection mode specified by the parameter &lt;mode&gt; that can be one of the following string:<br> "single" : only one item can be selected at a time<br> "multi" : multiple items can be selected at a time<br> "extended" : multiple items can be selected but only in a single mouse interaction<br> "none" : no items can be selected<br> The default mode is "single"</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setFlag">$setFlag(&lt;idx:integer&gt;,&lt;flag1:string&gt;, &lt;flag2:string&gt;, ...)</a></font></b></code></td></tr>
-<tr><td>Sets the flags for the item at index idz to the given flags. These determine whether the item can be selected or modified. This is often used to disable an item. Supported flags are: - noitemflag : no flag sets; - selectable : item is selecatble; - editable : item is editable; - dragEnabled : item can dragged; - dropEnabled : item can used as drop target; - userCheckable : item is checkable; - enabled :item is enabled; - tristate : item is checkable with three separate states.</td></tr>
+<tr><td>Sets the flags for the item at index idz to the given flags. These determine whether the item can be selected or modified. This is often used to disable an item. Supported flags are: <br>- noitemflag : no flag sets; <br>- selectable : item is selecatble; <br>- editable : item is editable; <br>- dragEnabled : item can dragged; <br>- dropEnabled : item can used as drop target; <br>- userCheckable : item is checkable; <br>- enabled :item is enabled; <br>- tristate : item is checkable with three separate states.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setChecked">$setChecked(&lt;checkstate:bool&gt;)</a></font></b></code></td></tr>
 <tr><td>Sets the eventual item check box 'checked state' to &lt;bool&gt;.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;bool&gt; isChecked">&lt;bool&gt; $isChecked()</a></font></b></code></td></tr>
@@ -90,7 +90,7 @@ A widget displaying a list of items.
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="textAt">$textAt(&lt;index:integer&gt;)</a></font></b></code></td></tr>
 <tr><td>Returns item at given index.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setCurrentItem">$setCurrentItem(&lt;index:integer&gt;)</a></font></b></code></td></tr>
-<tr><td>                Sets the current listbox item.</td></tr>
+<tr><td>Sets the current listbox item.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="clear">$clear()</a></font></b></code></td></tr>
 <tr><td>Removes all the items</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setFont">$setFont(&lt;idx:integer&gt;,&lt;family:string&gt;,&lt;size:integer&gt;[,&lt;style1:string&gt;, &lt;style2:string&gt;, ...])</a></font></b></code></td></tr>
@@ -129,6 +129,6 @@ A widget displaying a list of items.
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<hr>KVIrc 4.1.1.5765 Documentation<br>Generated by hellvis69 at Fri Apr  8 16:20:16 2011
+<hr>KVIrc 4.1.3.6019 Documentation<br>Generated by hellvis69 at Thu Jan  5 01:41:15 2012
 </body>
 </html>
