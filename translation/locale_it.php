@@ -715,6 +715,11 @@ $template['install']['tree35']="
 	Questo è utile soprattutto su wundows.";
 $template['install']['tree36']="Aggiunge un po' di pizza per cena :)";
 $template['install']['tree37']="Aggiunge un po' di birra in chat :)";
+$template['install']['tree38']="
+	QGtkStyle è un backend Qt che usa gli oggetti nativi Gtk. Nelle ultime versioni di Gtk sono state hardcodate delle scelte insane e impossibili da aggirare (esempio: le icone non possono essere visualizzate nei menu, il colore di sfondo delle etichette è fissato).<br />
+	Come predefinito noi disabilitiamo QGtkStyle dal momento che va in conflitto col motore interno dei temi di KVIrc creando dei problemi (come l'illeggibile testo bianco su sfondo bianco).<br />
+	Alcuni utenti lo vogliono lo stesso e noi controlleremo se gli sviluppatori Gtk smetteranno di crere problemi, quindi quest'opzione ti permette di abilitare il motore QGtkStyle.<br />
+	Vi preghiamo di non riportarci bug relativi ai temi se abilitate quest'opzione: sappiamo che non funziona, ma nessuno la sistemerà.";
 $template['install']['text31']="
 	Il sistema di compilazione CMake fornisce inoltre un modo interattivo per configurare l'ambiente prima di compilare.<br />
 	Ancora, suggeriamo la compilazione \"out-of-source\": compilare tutti i file senza sporcare la directory dei sorgenti.";

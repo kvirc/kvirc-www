@@ -716,6 +716,11 @@ $template['install']['tree35']="
 	Please do not specify useless information here, as it will make debugging harder and you won't profit from it.";
 $template['install']['tree36']="Add some pizza for dinner :)";
 $template['install']['tree37']="Add some beers to chat :)";
+$template['install']['tree38']="
+	QGtkStyle is a QT backend that uses native Gtk widgets. In recent Gtk versions some insane choices are hardcoded and impossible to workaround (example: icons can't be shown in menus, label background color is fixed).<br />
+	By default we disable QGtkStyle since it messes up with KVIrc internal themeing engine creating bad problems (like unreadable white text on a white background).<br />
+	Some users wants to use it anyway and sometimes we like to check if GTK developers quit smoking pot, so this option let you enable the QGtkStyle engine.<br />
+	Please don't report any theme-related bug if you enabled this option: we already know it's broken, but nobody's gonna fix it.";
 $template['install']['text31']="
 	The CMake build system provide also an interactive mode to configure the environment before compiling.<br />
 	Again, we encourage the \"out-of-source\" building: build all files without dirting the sources directory.";
