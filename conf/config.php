@@ -73,7 +73,8 @@ $ftp_mirror=array(
 	array("name" => "mirrorpool.in", "url" => "http://mirrorpool.in/Kvirc/", "desc" => "USA mirror 2", "city" => "Chicago, United States", "maintainer" => "Slevin Black", "maintainer_mail" => "topoyr at gmail dot com"),
 	//array("name" => "kvirc.game-fm.co.uk", "url" => "ftp://kvirc.game-fm.co.uk/pub/kvirc", "desc" => "USA mirror 3", "city" => "Chicago, United States", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org")
 	array("name" => "kvirc.cluenet.org", "url" => "ftp://kvirc.cluenet.org", "desc" => "USA mirror 3", "city" => "Newark, New Jersey, United States", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
-	array("name" => "kvirc2.cluenet.org", "url" => "ftp://kvirc2.cluenet.org", "desc" => "English mirror", "city" => "London, England", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org")
+	array("name" => "kvirc2.cluenet.org", "url" => "ftp://kvirc2.cluenet.org", "desc" => "English mirror", "city" => "London, England", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
+	array("name" => "ftp.kunduz.org", "url" => "ftp://ftp.kunduz.org/pub/kvirc", "desc" => "Turkish mirror", "city" => "Istambul, Turkey", "maintainer" => "Tolga")
 );
 
 
