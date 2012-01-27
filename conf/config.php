@@ -56,7 +56,9 @@ $www_mirror=array(
 	//array("name" => "kvirc.paracoda.com", "url" => "http://kvirc.paracoda.com", "desc" => "kvirc.paracoda.com: Canadian mirror (located in Quebec)", "country" => "Canada, Quebec", "city" => "", "sponsor" => "Hossam Hossny from Texle.com"),
 	//array("name" => "kvirc.ipv6.net.au", "url" => "http://kvirc.ipv6.net.au", "desc" => "kvirc.ipv6.net.au: Australian Mirror (located in Brisbane Queensland, IPv4 and IPv6)", "country" => "Australia, Queensland", "city" => "Brisbane", "sponsor" => "Peter Good, IPv6 Australia"),
 	//array("name" => "kvirc.firenze.linux.it", "url" => "http://kvirc.firenze.linux.it", "desc" => "kvirc.firenze.linux.it: Italian mirror (located in Milano)", "country" => "Italy", "city" => "Milano", "sponsor" => "Firenze Linux Users Group"),
-	array("name" => "www.ipv6.kvirc.net", "url" => "http://www.ipv6.kvirc.net", "desc" => "German IPv6 mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org")
+	array("name" => "www.ipv6.kvirc.net", "url" => "http://www.ipv6.kvirc.net", "desc" => "German IPv6 mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
+	array("name" => "kvirc.cluenet.org", "url" => "http://kvirc.cluenet.org", "desc" => "USA mirror 3", "city" => "Newark, New Jersey, United States", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
+	array("name" => "kvirc2.cluenet.org", "url" => "http://kvirc2.cluenet.org", "desc" => "English mirror", "city" => "London, England", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
 );
 
 $ftp_mirror=array(
@@ -72,8 +74,6 @@ $ftp_mirror=array(
 	array("name" => "kvirc.bcoos.net", "url" => "http://kvirc.bcoos.net", "desc" => "USA mirror", "city" => "United States", "maintainer" => "exoops.info"),
 	array("name" => "mirrorpool.in", "url" => "http://mirrorpool.in/Kvirc/", "desc" => "USA mirror 2", "city" => "Chicago, United States", "maintainer" => "Slevin Black", "maintainer_mail" => "topoyr at gmail dot com"),
 	//array("name" => "kvirc.game-fm.co.uk", "url" => "ftp://kvirc.game-fm.co.uk/pub/kvirc", "desc" => "USA mirror 3", "city" => "Chicago, United States", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org")
-	array("name" => "kvirc.cluenet.org", "url" => "ftp://kvirc.cluenet.org", "desc" => "USA mirror 3", "city" => "Newark, New Jersey, United States", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
-	array("name" => "kvirc2.cluenet.org", "url" => "ftp://kvirc2.cluenet.org", "desc" => "English mirror", "city" => "London, England", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
 	array("name" => "ftp.kunduz.org", "url" => "ftp://ftp.kunduz.org/pub/kvirc", "desc" => "Turkish mirror", "city" => "Istambul, Turkey", "maintainer" => "Tolga")
 );
 
@@ -104,7 +104,7 @@ $arts=array(
 	array("title" => "Avatar Background", "author" => "SuSp|r|a", "mail" => "suspy [at] email [dot] it", "desc" => $template['arts']['desc4'], "thumb" => "avatar_back_thumb.jpg", "down" => "avatar_back.jpg", "date" => "18.05.2005"),
 	array("title" => "Oh.. So Lovely!", "author" => "SuSp|r|a", "mail" => "suspy [at] email [dot] it", "desc" => ":)", "thumb" => "ohsolovely_thumb.jpg", "down" => "ohsolovely.jpg", "date" => "18.05.2005"),
 	array("title" => "BSD Magik", "author" => "Lady_dark_demoN", "mail" => "", "desc" => $template['arts']['desc6'], "thumb" => "karries_splash_thumb.jpg", "down" => "karrie_splash.jpg", "date" => "17.10.2005"),
-	array("title" => "\"Virg0 - Time makes no Sense\" Splash Screens", "author" => "etherea`", "mail" => "cle [at] virg0 [dot] org", "desc" => $template['arts']['desc7'], "thumb" => "virg0_anomalies_thumb.png", "down" => "virg0_anomalies.zip", "date" => "09.03.2006")
+	//array("title" => "\"Virg0 - Time makes no Sense\" Splash Screens", "author" => "etherea`", "mail" => "cle [at] virg0 [dot] org", "desc" => $template['arts']['desc7'], "thumb" => "virg0_anomalies_thumb.png", "down" => "virg0_anomalies.zip", "date" => "09.03.2006")
 );
 
 // Honor & glory

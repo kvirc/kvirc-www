@@ -49,66 +49,6 @@ search();
 	<script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
 	<!-- Google Analytics end -->
 	<title>KVIrc.net - The Visual IRC Client</title>
-	<!-- AKVS head start v1.5 -->
-	<style type="text/css">
-	<!--
-	div#akct {
-		position: absolute; top:0px; right: 0px; z-index: 2342; width:113px; height:88px;
-		background-image: url(http://wiki.vorratsdatenspeicherung.de/images/Akvse.gif);
-		background-repeat: no-repeat;
-		background-position: right top;
-		border:none;
-		padding:0;
-		margin:0;
-		text-align: right;
-	}
-
-	div#akct img {
-		border:none;
-		padding:0;
-		margin:0;
-		background: none;
-	}
-
-	div#akct a#akpeel img {
-	        width: 113px;
-	        height: 88px;
-	}
-
-	div#akct a, div#akct a:hover {
-		text-decoration: none;
-		border:none;
-		padding:0;
-		margin:0;
-		display: block;
-		background: none;
-	}
-
-	div#akct a#akpeel:hover {
-		position: absolute; top:0px; right: 0px; z-index: 4223; width:500px; height:500px;
-		display: block;
-		background-image: url(http://wiki.vorratsdatenspeicherung.de/images/Akvsb.gif);
-		background-repeat: no-repeat;
-		background-position: right top;
-	}
-
-	div#akct a#akpreload {
-		background-image: url(http://wiki.vorratsdatenspeicherung.de/images/Akvsb.gif);
-		background-repeat: no-repeat;
-		background-position: 234px 0px;
-	}
-	-->
-	</style>
-	<!--[if gte IE 5.5]>
-	<![if lt IE 7]>
-	<style type="text/css">
-	div#akct a#akpeel:hover {
-		right: -1px;
-	}
-	</style>
-	<![endif]>
-	<![endif]-->
-	<!-- AKVS head end -->
 </head>
 <body>
 	<!-- Google Analytics start -->
@@ -127,6 +67,7 @@ search();
 				<li><a href="?id=<?=$id;?>&amp;lang=de" title="<?=$template['index']['german'];?>"><img src="./img/flags/Germany.png" alt="<?=$template['index']['german'];?>" /></a></li>
 				<li><a href="?id=<?=$id;?>&amp;lang=es" title="<?=$template['index']['spanish'];?>"><img src="./img/flags/Spain.png" alt="<?=$template['index']['spanish'];?>" /></a></li>
 				<li><a href="?id=<?=$id;?>&amp;lang=fr" title="<?=$template['index']['french'];?>"><img src="./img/flags/France.png" alt="<?=$template['index']['french'];?>" /></a></li>
+				<li><a href="?id=<?=$id;?>&amp;lang=uk" title="<?=$template['index']['ukrainian'];?>"><img src="./img/flags/Ukraine.png" alt="<?=$template['index']['ukrainian'];?>" /></a></li>
 				<?/*
 				<li><a href="?id=<?=$id;?>&amp;lang=ru" title="<?=$template['index']['russian'];?>"><img src="./img/flags/Russia.png" alt="<?=$template['index']['russian'];?>" /></a></li>
 				<li><a href="?id=<?=$id;?>&amp;lang=bg" title="<?=$template['index']['bulgarian'];?>"><img src="./img/flags/Bulgaria.png" alt="<?=$template['index']['bulgarian'];?>" /></a></li>
