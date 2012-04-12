@@ -108,8 +108,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables the action upon checking the active context.  <a href="#acbb04ff0951ec3f77fdd09278027038a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContextDisplayAction.html#a48a2f25931311de68a84e68fafc1533d">addToCustomToolBar</a> (<a class="el" href="classKviCustomToolBar.html">KviCustomToolBar</a> *pTool)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the action to the given toolbar.  <a href="#a48a2f25931311de68a84e68fafc1533d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContextDisplayAction.html#ac440a95006c15061260fd77cf3847668">addToPopupMenu</a> (<a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *pMenu)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the action to the given popup.  <a href="#ac440a95006c15061260fd77cf3847668"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContextDisplayAction.html#a35e6883576ad6edd1418289e6339bb50">addToPopupMenu</a> (QMenu *pMenu)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the action to the given popup.  <a href="#a35e6883576ad6edd1418289e6339bb50"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContextDisplayAction.html#a20dd86ff4a1d0f2db94d5754a68698e8">KviIrcContextDisplayAction</a> (QObject *pParent)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcContextDisplayAction.html#a474cfd3f1844da972cd8d114c0605526">setEnabled</a> (bool)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the action.  <a href="#a474cfd3f1844da972cd8d114c0605526"></a><br/></td></tr>
@@ -217,14 +217,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac440a95006c15061260fd77cf3847668"></a><!-- doxytag: member="KviIrcContextDisplayAction::addToPopupMenu" ref="ac440a95006c15061260fd77cf3847668" args="(KviTalPopupMenu *pMenu)" -->
+<a class="anchor" id="a35e6883576ad6edd1418289e6339bb50"></a><!-- doxytag: member="KviIrcContextDisplayAction::addToPopupMenu" ref="a35e6883576ad6edd1418289e6339bb50" args="(QMenu *pMenu)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool KviIrcContextDisplayAction::addToPopupMenu </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td>
+          <td class="paramtype">QMenu *&#160;</td>
           <td class="paramname"><em>pMenu</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -241,7 +241,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classKviAction.html#a62ac15a73381217e5daedf1bac6a097b">KviAction</a>.</p>
+<p>Reimplemented from <a class="el" href="classKviAction.html#aef1a3ab0bdd8525efcea8069679717b9">KviAction</a>.</p>
 
 </div>
 </div>
@@ -303,7 +303,7 @@ Public Member Functions</h2></td></tr>
 <li>src/kvirc/kernel/<a class="el" href="KviCoreActions_8cpp.html">KviCoreActions.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:27 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:15 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

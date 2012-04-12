@@ -125,7 +125,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDccFileTransfer.html#a68db64d70ffd535afda023f122a51afd">displayPaint</a> (QPainter *p, int column, QRect rect)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDccFileTransfer.html#aeddaac81a19bb94e4ed909c9b974b146">doResume</a> (const char *filename, const char *port, quint64 filePos)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDccFileTransfer.html#a9c4f02f8d8cc97d3720ef36c7d2e2252">event</a> (QEvent *e)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDccFileTransfer.html#a944e11f182a004a9df506bd471480894">fillContextPopup</a> (<a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *m)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDccFileTransfer.html#a9ee9d63706580c7b742e4898d994a286">fillContextPopup</a> (QMenu *m)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDccFileTransfer.html#a6898d5aadae6102f8b98e25f98e7d548">fillStatusString</a> (QString &amp;<a class="el" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classDccThread.html">DccThread</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDccFileTransfer.html#a967752af5762565a2135fa62e7c4e815">getSlaveThread</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDccFileTransfer.html#acd8c1ccdf29a958d427692ce288289fd">isFileUpload</a> ()</td></tr>
@@ -269,7 +269,7 @@ Private Attributes</h2></td></tr>
 
 <p>References <a class="el" href="MpXmmsInterface_8cpp.html#ac6cbf35c922efef0f49c40b1189883b5">__tr2qs_ctx()</a>, <a class="el" href="KviLocale_8h.html#a55ce725debbfdfdc5360b88dab17cde8">__tr_ctx</a>, <a class="el" href="classDccMarshal.html#a2e7aea14ced2753e8822b8e3e4810529">DccMarshal::abort()</a>, <a class="el" href="classDccDescriptor.html#a0ca26970ed94d96839de4f9d9c08bb71">DccDescriptor::bRecvFile</a>, <a class="el" href="classKviFileTransfer.html#a98ea7d0b9e76cefce5f9f1cf8f2a9553">KviFileTransfer::displayUpdate()</a>, <a class="el" href="classDccFileTransfer.html#a62f1b03ae92ea6ad976e2a4970dc6161">eventWindow()</a>, <a class="el" href="classDccFileTransfer.html#a2d528e2ed715c39e3e15ceed20e03d9da8421669b7278ec80c8b10c702bc22b17">Failure</a>, <a class="el" href="classKviApplication.html#a4d18433c6b46336b4ac215e7e818d953">KviApplication::fileDownloadTerminated()</a>, <a class="el" href="KviApplication_8cpp.html#a2bab070e8cb43ca84c598b639d49fdfb">g_pApp</a>, <a class="el" href="classDccDescriptor.html#ab8097d628b08332d19614e22415b0831">DccDescriptor::idString()</a>, <a class="el" href="kvi__out_8h.html#aacdc19376ad3cd27c5b1a3bd363fa4fc">KVI_OUT_DCCERROR</a>, <a class="el" href="KviTimeUtils_8h.html#a6fe7a3ad3d1a08a5173aa2a58a242f24">kvi_unixTime</a>, <a class="el" href="KviKvsEventTable_8h.html#a83b42d6046f6c8ac35f65622cf94d2d2">KviEvent_OnDCCFileTransferFailed</a>, <a class="el" href="KviKvsEventTriggers_8h.html#a83af3ada98a87088d8ee572a141b458e">KVS_TRIGGER_EVENT_3</a>, <a class="el" href="classDccFileTransfer.html#ab0a352ddd090e5f23efe11bf9913c481">m_eGeneralStatus</a>, <a class="el" href="classDccFileTransfer.html#afa3cb0f6e407a19e7c4f3056368d22ec">m_pDescriptor</a>, <a class="el" href="classDccFileTransfer.html#a71d56a702bd4943f70aa42ae91c07b36">m_pMarshal</a>, <a class="el" href="classDccFileTransfer.html#a2c830ea6638a8136ca9201ba98bdecd7">m_pSlaveRecvThread</a>, <a class="el" href="classDccFileTransfer.html#ae7d210958e174444721af80f260a574d">m_pSlaveSendThread</a>, <a class="el" href="classDccFileTransfer.html#a1ae7af2e932a7ffe945d6cdbbb66b95f">m_szStatusString</a>, <a class="el" href="classDccFileTransfer.html#a086808f2cf024c10d668adfdd5df48b0">m_tTransferEndTime</a>, <a class="el" href="classDccFileTransfer.html#a7cb087e14c3c93e330396bf49f123f26">outputAndLog()</a>, <a class="el" href="classDccRecvThread.html#a513fa4df3ea98ad4d9cde3e25a360a5a">DccRecvThread::receivedBytes()</a>, <a class="el" href="classDccSendThread.html#ae4652079e12e4b31cefef72f7507ccc2">DccSendThread::sentBytes()</a>, <a class="el" href="classDccDescriptor.html#a9316355d8d3a6858368215b534e60263">DccDescriptor::szFileName</a>, <a class="el" href="classDccDescriptor.html#a95aea52ca265cb7f3d934e21b0faefdb">DccDescriptor::szLocalFileName</a>, <a class="el" href="classDccDescriptor.html#a0039e74b2879d789179a9731ff75055e">DccDescriptor::szNick</a>, and <a class="el" href="classKviSensitiveThread.html#ac1296dd14fd9dcf0262889b58c734acc">KviSensitiveThread::terminate()</a>.</p>
 
-<p>Referenced by <a class="el" href="libkvidcc_8cpp.html#abe72e7ddce026508d85f8b26d10d7390">dcc_kvs_cmd_abort()</a>, <a class="el" href="classDccFileTransfer.html#a944e11f182a004a9df506bd471480894">fillContextPopup()</a>, <a class="el" href="classDccFileTransfer.html#a251c41ce9861e73e3abc87c0686707d8">retryDCC()</a>, <a class="el" href="classDccFileTransfer.html#a803f04ca6c82d639d9be556eca72b42f">retryRevDCC()</a>, and <a class="el" href="classDccFileTransfer.html#a67c3eb99102baa0cf741b24be8d08712">retryTDCC()</a>.</p>
+<p>Referenced by <a class="el" href="libkvidcc_8cpp.html#abe72e7ddce026508d85f8b26d10d7390">dcc_kvs_cmd_abort()</a>, <a class="el" href="classDccFileTransfer.html#a9ee9d63706580c7b742e4898d994a286">fillContextPopup()</a>, <a class="el" href="classDccFileTransfer.html#a251c41ce9861e73e3abc87c0686707d8">retryDCC()</a>, <a class="el" href="classDccFileTransfer.html#a803f04ca6c82d639d9be556eca72b42f">retryRevDCC()</a>, and <a class="el" href="classDccFileTransfer.html#a67c3eb99102baa0cf741b24be8d08712">retryTDCC()</a>.</p>
 
 </div>
 </div>
@@ -291,7 +291,7 @@ Private Attributes</h2></td></tr>
 
 <p>References <a class="el" href="classDccFileTransfer.html#a2d528e2ed715c39e3e15ceed20e03d9daa93f57ddbfdede2a0511f6c3770616d5">Connecting</a>, <a class="el" href="classDccFileTransfer.html#ab0a352ddd090e5f23efe11bf9913c481">m_eGeneralStatus</a>, and <a class="el" href="classDccFileTransfer.html#a2d528e2ed715c39e3e15ceed20e03d9dae0c4c23ca5186d9bbb858d536cc54336">Transferring</a>.</p>
 
-<p>Referenced by <a class="el" href="classDccFileTransfer.html#a944e11f182a004a9df506bd471480894">fillContextPopup()</a>.</p>
+<p>Referenced by <a class="el" href="classDccFileTransfer.html#a9ee9d63706580c7b742e4898d994a286">fillContextPopup()</a>.</p>
 
 </div>
 </div>
@@ -392,7 +392,7 @@ Private Attributes</h2></td></tr>
 
 <p>References <a class="el" href="classDccFileTransfer.html#a4424ddd87799f74b6fe31c1845e732ee">bandwidthDialogDestroyed()</a>, <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="KviMainWindow_8cpp.html#a13001adf485ce537c0448fc76b5b9d88">g_pMainWindow</a>, and <a class="el" href="classDccFileTransfer.html#a66e86a682fb2a2ed547bcfce7a899e86">m_pBandwidthDialog</a>.</p>
 
-<p>Referenced by <a class="el" href="classDccFileTransfer.html#a944e11f182a004a9df506bd471480894">fillContextPopup()</a>.</p>
+<p>Referenced by <a class="el" href="classDccFileTransfer.html#a9ee9d63706580c7b742e4898d994a286">fillContextPopup()</a>.</p>
 
 </div>
 </div>
@@ -624,14 +624,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a944e11f182a004a9df506bd471480894"></a><!-- doxytag: member="DccFileTransfer::fillContextPopup" ref="a944e11f182a004a9df506bd471480894" args="(KviTalPopupMenu *m)" -->
+<a class="anchor" id="a9ee9d63706580c7b742e4898d994a286"></a><!-- doxytag: member="DccFileTransfer::fillContextPopup" ref="a9ee9d63706580c7b742e4898d994a286" args="(QMenu *m)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void DccFileTransfer::fillContextPopup </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td>
+          <td class="paramtype">QMenu *&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -639,9 +639,9 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="classKviFileTransfer.html#a4e1bb42435f9da2f068c2c12ba514031">KviFileTransfer</a>.</p>
+<p>Implements <a class="el" href="classKviFileTransfer.html#aee969dbc15b711112b9e4153e97a6371">KviFileTransfer</a>.</p>
 
-<p>References <a class="el" href="MpXmmsInterface_8cpp.html#ac6cbf35c922efef0f49c40b1189883b5">__tr2qs_ctx()</a>, <a class="el" href="classDccFileTransfer.html#aa0e94d504350526c251ba2f5cf6d076d">abort()</a>, <a class="el" href="classDccFileTransfer.html#a59881c635d16a4a963da165cf39e66a6">active()</a>, <a class="el" href="classDccFileTransfer.html#a83d881fb7a7f53475d0b025f435b3731">configureBandwidth()</a>, <a class="el" href="classKviTalPopupMenu.html#ad491ba2ad4a8133a89bdf417c1acacc6">KviTalPopupMenu::insertItem()</a>, <a class="el" href="classKviTalPopupMenu.html#aa8e6cf937ecf16c7ef3105c918359acc">KviTalPopupMenu::insertSeparator()</a>, <a class="el" href="classDccFileTransfer.html#a251c41ce9861e73e3abc87c0686707d8">retryDCC()</a>, <a class="el" href="classDccFileTransfer.html#a803f04ca6c82d639d9be556eca72b42f">retryRevDCC()</a>, <a class="el" href="classDccFileTransfer.html#a67c3eb99102baa0cf741b24be8d08712">retryTDCC()</a>, and <a class="el" href="classKviTalPopupMenu.html#af795e001403292ee5fb15cd600495f9e">KviTalPopupMenu::setItemEnabled()</a>.</p>
+<p>References <a class="el" href="MpXmmsInterface_8cpp.html#ac6cbf35c922efef0f49c40b1189883b5">__tr2qs_ctx()</a>, <a class="el" href="classDccFileTransfer.html#aa0e94d504350526c251ba2f5cf6d076d">abort()</a>, <a class="el" href="classDccFileTransfer.html#a59881c635d16a4a963da165cf39e66a6">active()</a>, <a class="el" href="classDccFileTransfer.html#a83d881fb7a7f53475d0b025f435b3731">configureBandwidth()</a>, <a class="el" href="classDccFileTransfer.html#a251c41ce9861e73e3abc87c0686707d8">retryDCC()</a>, <a class="el" href="classDccFileTransfer.html#a803f04ca6c82d639d9be556eca72b42f">retryRevDCC()</a>, and <a class="el" href="classDccFileTransfer.html#a67c3eb99102baa0cf741b24be8d08712">retryTDCC()</a>.</p>
 
 </div>
 </div>
@@ -999,7 +999,7 @@ Private Attributes</h2></td></tr>
 
 <p>References <a class="el" href="classDccFileTransfer.html#aa0e94d504350526c251ba2f5cf6d076d">abort()</a>, <a class="el" href="namespaceKviQString.html#a18507f7c41b3a80fc61a25b281c12ef3">KviQString::escapeKvs()</a>, <a class="el" href="namespaceKviQString.html#a8357b1d592f5e8971429e8ea9eb18569a00b99818caf801ac05383e16e2de2b08">KviQString::EscapeSpace</a>, <a class="el" href="KviWindow_8cpp.html#a2fe86e51e6cd81939fda329d662f4bef">g_pActiveWindow</a>, <a class="el" href="classDccDescriptor.html#ab8097d628b08332d19614e22415b0831">DccDescriptor::idString()</a>, <a class="el" href="classDccDescriptor.html#acdbed0d6c7b2f0f32cd69161b202d0aa">DccDescriptor::localFileName()</a>, <a class="el" href="classDccFileTransfer.html#afa3cb0f6e407a19e7c4f3056368d22ec">m_pDescriptor</a>, <a class="el" href="classDccDescriptor.html#ab21119555e529d725963eb8f2029ea42">DccDescriptor::remoteNick()</a>, and <a class="el" href="namespaceKviIrcUrl.html#aa47a51d8f196fb9cd529b6ce788952f7">KviIrcUrl::run()</a>.</p>
 
-<p>Referenced by <a class="el" href="classDccFileTransfer.html#a944e11f182a004a9df506bd471480894">fillContextPopup()</a>.</p>
+<p>Referenced by <a class="el" href="classDccFileTransfer.html#a9ee9d63706580c7b742e4898d994a286">fillContextPopup()</a>.</p>
 
 </div>
 </div>
@@ -1019,7 +1019,7 @@ Private Attributes</h2></td></tr>
 
 <p>References <a class="el" href="classDccFileTransfer.html#aa0e94d504350526c251ba2f5cf6d076d">abort()</a>, <a class="el" href="namespaceKviQString.html#a18507f7c41b3a80fc61a25b281c12ef3">KviQString::escapeKvs()</a>, <a class="el" href="namespaceKviQString.html#a8357b1d592f5e8971429e8ea9eb18569a00b99818caf801ac05383e16e2de2b08">KviQString::EscapeSpace</a>, <a class="el" href="KviWindow_8cpp.html#a2fe86e51e6cd81939fda329d662f4bef">g_pActiveWindow</a>, <a class="el" href="classDccDescriptor.html#ab8097d628b08332d19614e22415b0831">DccDescriptor::idString()</a>, <a class="el" href="classDccDescriptor.html#acdbed0d6c7b2f0f32cd69161b202d0aa">DccDescriptor::localFileName()</a>, <a class="el" href="classDccFileTransfer.html#afa3cb0f6e407a19e7c4f3056368d22ec">m_pDescriptor</a>, <a class="el" href="classDccDescriptor.html#ab21119555e529d725963eb8f2029ea42">DccDescriptor::remoteNick()</a>, and <a class="el" href="namespaceKviIrcUrl.html#aa47a51d8f196fb9cd529b6ce788952f7">KviIrcUrl::run()</a>.</p>
 
-<p>Referenced by <a class="el" href="classDccFileTransfer.html#a944e11f182a004a9df506bd471480894">fillContextPopup()</a>.</p>
+<p>Referenced by <a class="el" href="classDccFileTransfer.html#a9ee9d63706580c7b742e4898d994a286">fillContextPopup()</a>.</p>
 
 </div>
 </div>
@@ -1039,7 +1039,7 @@ Private Attributes</h2></td></tr>
 
 <p>References <a class="el" href="classDccFileTransfer.html#aa0e94d504350526c251ba2f5cf6d076d">abort()</a>, <a class="el" href="namespaceKviQString.html#a18507f7c41b3a80fc61a25b281c12ef3">KviQString::escapeKvs()</a>, <a class="el" href="namespaceKviQString.html#a8357b1d592f5e8971429e8ea9eb18569a00b99818caf801ac05383e16e2de2b08">KviQString::EscapeSpace</a>, <a class="el" href="KviWindow_8cpp.html#a2fe86e51e6cd81939fda329d662f4bef">g_pActiveWindow</a>, <a class="el" href="classDccDescriptor.html#ab8097d628b08332d19614e22415b0831">DccDescriptor::idString()</a>, <a class="el" href="classDccDescriptor.html#acdbed0d6c7b2f0f32cd69161b202d0aa">DccDescriptor::localFileName()</a>, <a class="el" href="classDccFileTransfer.html#afa3cb0f6e407a19e7c4f3056368d22ec">m_pDescriptor</a>, <a class="el" href="classDccDescriptor.html#ab21119555e529d725963eb8f2029ea42">DccDescriptor::remoteNick()</a>, and <a class="el" href="namespaceKviIrcUrl.html#aa47a51d8f196fb9cd529b6ce788952f7">KviIrcUrl::run()</a>.</p>
 
-<p>Referenced by <a class="el" href="classDccFileTransfer.html#a944e11f182a004a9df506bd471480894">fillContextPopup()</a>.</p>
+<p>Referenced by <a class="el" href="classDccFileTransfer.html#a9ee9d63706580c7b742e4898d994a286">fillContextPopup()</a>.</p>
 
 </div>
 </div>
@@ -1449,7 +1449,7 @@ Private Attributes</h2></td></tr>
 <li>src/modules/dcc/<a class="el" href="DccFileTransfer_8cpp.html">DccFileTransfer.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:25 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:13 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

@@ -138,7 +138,7 @@ function toggleVisibility(linkObj) {
 <a name="l00057"></a>00057 <span class="preprocessor"></span><span class="preprocessor">        #include &lt;QX11Info&gt;</span>
 <a name="l00058"></a>00058 <span class="preprocessor">#endif</span>
 <a name="l00059"></a>00059 <span class="preprocessor"></span>
-<a name="l00060"></a>00060 <span class="keyword">class </span><a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>;
+<a name="l00060"></a>00060 <span class="keyword">class </span>QMenu;
 <a name="l00061"></a>00061 <span class="keyword">class </span>KviTalListBox;
 <a name="l00062"></a>00062 <span class="keyword">class </span><a class="code" href="classKviConsoleWindow.html">KviConsoleWindow</a>;
 <a name="l00063"></a>00063 <span class="keyword">class </span><a class="code" href="classKviConfigurationFile.html">KviConfigurationFile</a>;
@@ -386,9 +386,9 @@ function toggleVisibility(linkObj) {
 <a name="l00319"></a>00319 
 <a name="l00320"></a>00320 
 <a name="l00321"></a>00321         <span class="keywordtype">void</span> addRecentServer(<span class="keyword">const</span> QString&amp; server);
-<a name="l00322"></a>00322         <span class="keywordtype">void</span> fillRecentServersPopup(<a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * <a class="code" href="detector_8cpp.html#a00626facb4f86efb8618a4c5f5c3c5f8">m</a>);
-<a name="l00323"></a>00323         <span class="keywordtype">void</span> fillRecentNicknamesPopup(<a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * <a class="code" href="detector_8cpp.html#a00626facb4f86efb8618a4c5f5c3c5f8">m</a>,<a class="code" href="classKviConsoleWindow.html">KviConsoleWindow</a> * pConsole);
-<a name="l00324"></a>00324         <span class="keywordtype">void</span> fillRecentChannelsPopup(<a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * <a class="code" href="detector_8cpp.html#a00626facb4f86efb8618a4c5f5c3c5f8">m</a>,<a class="code" href="classKviConsoleWindow.html">KviConsoleWindow</a> * pConsole);
+<a name="l00322"></a>00322     <span class="keywordtype">void</span> fillRecentServersPopup(QMenu * <a class="code" href="detector_8cpp.html#a00626facb4f86efb8618a4c5f5c3c5f8">m</a>);
+<a name="l00323"></a>00323     <span class="keywordtype">void</span> fillRecentNicknamesPopup(QMenu * <a class="code" href="detector_8cpp.html#a00626facb4f86efb8618a4c5f5c3c5f8">m</a>,<a class="code" href="classKviConsoleWindow.html">KviConsoleWindow</a> * pConsole);
+<a name="l00324"></a>00324     <span class="keywordtype">void</span> fillRecentChannelsPopup(QMenu * <a class="code" href="detector_8cpp.html#a00626facb4f86efb8618a4c5f5c3c5f8">m</a>,<a class="code" href="classKviConsoleWindow.html">KviConsoleWindow</a> * pConsole);
 <a name="l00325"></a>00325 <span class="comment">//</span>
 <a name="l00326"></a>00326         <span class="keywordtype">void</span> autoConnectToServers();
 <a name="l00327"></a>00327 
@@ -461,7 +461,7 @@ function toggleVisibility(linkObj) {
 <a name="l00394"></a>00394 <span class="preprocessor">#endif //_KVI_APP_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:15 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:04 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

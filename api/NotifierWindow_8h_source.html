@@ -111,20 +111,20 @@ function toggleVisibility(linkObj) {
 <a name="l00030"></a>00030 <span class="preprocessor">#include &quot;kvi_settings.h&quot;</span>
 <a name="l00031"></a>00031 <span class="preprocessor">#include &quot;KviQString.h&quot;</span>
 <a name="l00032"></a>00032 <span class="preprocessor">#include &quot;KviPointerList.h&quot;</span>
-<a name="l00033"></a>00033 <span class="preprocessor">#include &quot;KviTalPopupMenu.h&quot;</span>
-<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;KviTimeUtils.h&quot;</span>
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <span class="preprocessor">#include &lt;QBitmap&gt;</span>
-<a name="l00037"></a>00037 <span class="preprocessor">#include &lt;QColor&gt;</span>
-<a name="l00038"></a>00038 <span class="preprocessor">#include &lt;QCursor&gt;</span>
-<a name="l00039"></a>00039 <span class="preprocessor">#include &lt;QDateTime&gt;</span>
-<a name="l00040"></a>00040 <span class="preprocessor">#include &lt;QImage&gt;</span>
-<a name="l00041"></a>00041 <span class="preprocessor">#include &lt;QPixmap&gt;</span>
-<a name="l00042"></a>00042 <span class="preprocessor">#include &lt;QRect&gt;</span>
-<a name="l00043"></a>00043 <span class="preprocessor">#include &lt;QTimer&gt;</span>
-<a name="l00044"></a>00044 <span class="preprocessor">#include &lt;QWidget&gt;</span>
-<a name="l00045"></a>00045 <span class="preprocessor">#include &lt;QTabWidget&gt;</span>
-<a name="l00046"></a>00046 <span class="preprocessor">#include &lt;QProgressBar&gt;</span>
+<a name="l00033"></a>00033 <span class="preprocessor">#include &quot;KviTimeUtils.h&quot;</span>
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 <span class="preprocessor">#include &lt;QBitmap&gt;</span>
+<a name="l00036"></a>00036 <span class="preprocessor">#include &lt;QColor&gt;</span>
+<a name="l00037"></a>00037 <span class="preprocessor">#include &lt;QCursor&gt;</span>
+<a name="l00038"></a>00038 <span class="preprocessor">#include &lt;QDateTime&gt;</span>
+<a name="l00039"></a>00039 <span class="preprocessor">#include &lt;QImage&gt;</span>
+<a name="l00040"></a>00040 <span class="preprocessor">#include &lt;QPixmap&gt;</span>
+<a name="l00041"></a>00041 <span class="preprocessor">#include &lt;QRect&gt;</span>
+<a name="l00042"></a>00042 <span class="preprocessor">#include &lt;QTimer&gt;</span>
+<a name="l00043"></a>00043 <span class="preprocessor">#include &lt;QWidget&gt;</span>
+<a name="l00044"></a>00044 <span class="preprocessor">#include &lt;QTabWidget&gt;</span>
+<a name="l00045"></a>00045 <span class="preprocessor">#include &lt;QProgressBar&gt;</span>
+<a name="l00046"></a>00046 <span class="preprocessor">#include &lt;QMenu&gt;</span>
 <a name="l00047"></a>00047 
 <a name="l00048"></a>00048 <span class="keyword">class </span>QPainter;
 <a name="l00049"></a>00049 <span class="keyword">class </span><a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>;
@@ -171,8 +171,8 @@ function toggleVisibility(linkObj) {
 <a name="l00090"></a><a class="code" href="classNotifierWindow.html#a2e57e8010748e612ec76873a373f92f1">00090</a>         QPoint      <a class="code" href="classNotifierWindow.html#a2e57e8010748e612ec76873a373f92f1">m_pntPos</a>;
 <a name="l00091"></a><a class="code" href="classNotifierWindow.html#aca54281c4c8086031665ac1e9a2ca912">00091</a>         QPoint      <a class="code" href="classNotifierWindow.html#aca54281c4c8086031665ac1e9a2ca912">m_pntClick</a>;
 <a name="l00092"></a><a class="code" href="classNotifierWindow.html#a1c52ed589af58edeeedcc6b3b3d30e6b">00092</a>         <span class="keywordtype">int</span>         <a class="code" href="classNotifierWindow.html#a1c52ed589af58edeeedcc6b3b3d30e6b">m_iBlinkCount</a>;
-<a name="l00093"></a><a class="code" href="classNotifierWindow.html#a0963e811aeb9ce2bff88a1039daa38c6">00093</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>     * <a class="code" href="classNotifierWindow.html#a0963e811aeb9ce2bff88a1039daa38c6">m_pContextPopup</a>;
-<a name="l00094"></a><a class="code" href="classNotifierWindow.html#a4b2380a9aa7de04fe59dd2a0f680feec">00094</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>     * <a class="code" href="classNotifierWindow.html#a4b2380a9aa7de04fe59dd2a0f680feec">m_pDisablePopup</a>;
+<a name="l00093"></a><a class="code" href="classNotifierWindow.html#ac5bcb8208a31a33975fdd758ca4772f2">00093</a>         QMenu     * <a class="code" href="classNotifierWindow.html#ac5bcb8208a31a33975fdd758ca4772f2">m_pContextPopup</a>;
+<a name="l00094"></a><a class="code" href="classNotifierWindow.html#a45d7393e2d510cc1f012334ba4dd355f">00094</a>         QMenu     * <a class="code" href="classNotifierWindow.html#a45d7393e2d510cc1f012334ba4dd355f">m_pDisablePopup</a>;
 <a name="l00095"></a><a class="code" href="classNotifierWindow.html#a5a2db1af8001ef8f3edd21295d34b571">00095</a>         <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a> * <a class="code" href="classNotifierWindow.html#a5a2db1af8001ef8f3edd21295d34b571">m_pWindowToRaise</a>;
 <a name="l00096"></a><a class="code" href="classNotifierWindow.html#a82129518d106077dd7b416f5593e72ee">00096</a>         <a class="code" href="KviTimeUtils_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a>  <a class="code" href="classNotifierWindow.html#a82129518d106077dd7b416f5593e72ee">m_tAutoHideAt</a>;
 <a name="l00097"></a><a class="code" href="classNotifierWindow.html#a2e173c82749800dec2e733298e113689">00097</a>         <a class="code" href="KviTimeUtils_8h.html#ace58ed2bc439a885e61bf8d342f6d284">kvi_time_t</a>  <a class="code" href="classNotifierWindow.html#a2e173c82749800dec2e733298e113689">m_tStartedAt</a>;
@@ -240,7 +240,7 @@ function toggleVisibility(linkObj) {
 <a name="l00159"></a>00159 <span class="preprocessor">#endif //_NOTIFIERWINDOW_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:20 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:08 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

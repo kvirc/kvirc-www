@@ -118,7 +118,7 @@ function toggleVisibility(linkObj) {
 <a name="l00048"></a>00048 <span class="keyword">class </span>QTimer;
 <a name="l00049"></a>00049 <span class="keyword">class </span>QLabel;
 <a name="l00050"></a>00050 <span class="keyword">class </span><a class="code" href="classKviMainWindow.html">KviMainWindow</a>;
-<a name="l00051"></a>00051 <span class="keyword">class </span><a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>;
+<a name="l00051"></a>00051 <span class="keyword">class </span>QMenu;
 <a name="l00052"></a>00052 <span class="keyword">class </span><a class="code" href="classKviStatusBarApplet.html">KviStatusBarApplet</a>;
 <a name="l00053"></a>00053 <span class="keyword">class </span><a class="code" href="classKviStatusBarAppletDescriptor.html">KviStatusBarAppletDescriptor</a>;
 <a name="l00054"></a>00054 <span class="keyword">class </span><a class="code" href="classKviIrcContext.html">KviIrcContext</a>;
@@ -166,8 +166,8 @@ function toggleVisibility(linkObj) {
 <a name="l00134"></a><a class="code" href="classKviStatusBar.html#ad604912c54ec40440bff90661c02702c">00134</a>         QLabel                                         * <a class="code" href="classKviStatusBar.html#ad604912c54ec40440bff90661c02702c">m_pMessageLabel</a>;
 <a name="l00135"></a><a class="code" href="classKviStatusBar.html#aa1c25211010199d92f4e51b8ba19d24a">00135</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviStatusBarApplet&gt;</a>             * <a class="code" href="classKviStatusBar.html#aa1c25211010199d92f4e51b8ba19d24a">m_pAppletList</a>;
 <a name="l00136"></a><a class="code" href="classKviStatusBar.html#aa71f9a6e9462dacd16f2db8a0039e160">00136</a>         <a class="code" href="classKviPointerHashTable.html">KviPointerHashTable&lt;QString,KviStatusBarAppletDescriptor&gt;</a>      * <a class="code" href="classKviStatusBar.html#aa71f9a6e9462dacd16f2db8a0039e160">m_pAppletDescriptors</a>;
-<a name="l00137"></a><a class="code" href="classKviStatusBar.html#a86d96172b09ff2fcaaadb3f11b41c66b">00137</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>                                * <a class="code" href="classKviStatusBar.html#a86d96172b09ff2fcaaadb3f11b41c66b">m_pContextPopup</a>;
-<a name="l00138"></a><a class="code" href="classKviStatusBar.html#a5eb249c367a6b06117b43cb1f03fdc72">00138</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>                                * <a class="code" href="classKviStatusBar.html#a5eb249c367a6b06117b43cb1f03fdc72">m_pAppletsPopup</a>;
+<a name="l00137"></a><a class="code" href="classKviStatusBar.html#aa0b7812eb8426c0acd5c998606ae5a2a">00137</a>     QMenu                                * <a class="code" href="classKviStatusBar.html#aa0b7812eb8426c0acd5c998606ae5a2a">m_pContextPopup</a>;
+<a name="l00138"></a><a class="code" href="classKviStatusBar.html#a9cbaf8212011d8661f05d5c4ce92c497">00138</a>     QMenu                                * <a class="code" href="classKviStatusBar.html#a9cbaf8212011d8661f05d5c4ce92c497">m_pAppletsPopup</a>;
 <a name="l00139"></a><a class="code" href="classKviStatusBar.html#a25bc44b6ba2ebd0d7a1caade1a844017">00139</a>         <a class="code" href="classKviStatusBarApplet.html">KviStatusBarApplet</a>                             * <a class="code" href="classKviStatusBar.html#a25bc44b6ba2ebd0d7a1caade1a844017">m_pClickedApplet</a>;
 <a name="l00140"></a><a class="code" href="classKviStatusBar.html#acfa76224969a8c8f4b8945f8f4db93b5">00140</a>         <span class="keywordtype">int</span>                                              <a class="code" href="classKviStatusBar.html#acfa76224969a8c8f4b8945f8f4db93b5">m_iLastMinimumHeight</a>;
 <a name="l00141"></a><a class="code" href="classKviStatusBar.html#a8301d06be328c32aafdd64ea742e32be">00141</a>         <span class="keywordtype">bool</span>                                             <a class="code" href="classKviStatusBar.html#a8301d06be328c32aafdd64ea742e32be">m_bStopLayoutOnAddRemove</a>;
@@ -179,7 +179,7 @@ function toggleVisibility(linkObj) {
 <a name="l00156"></a>00156 
 <a name="l00167"></a>00167         <a class="code" href="classKviStatusBarApplet.html">KviStatusBarApplet</a> * appletAt(<span class="keyword">const</span> QPoint &amp; pnt, <span class="keywordtype">bool</span> bBestMatch = <span class="keyword">false</span>);
 <a name="l00168"></a>00168 
-<a name="l00169"></a>00169         <span class="comment">//KviTalPopupMenu * contextPopup();</span>
+<a name="l00169"></a>00169     <span class="comment">//QMenu * contextPopup();</span>
 <a name="l00170"></a>00170 
 <a name="l00177"></a>00177         <span class="keywordtype">void</span> queueMessage(<a class="code" href="classKviStatusBarMessage.html" title="A class that hold the statusbar message.">KviStatusBarMessage</a> * pMsg);
 <a name="l00178"></a>00178 
@@ -216,7 +216,7 @@ function toggleVisibility(linkObj) {
 <a name="l00282"></a>00282 
 <a name="l00287"></a>00287         <span class="keywordtype">void</span> appletsPopupAboutToShow();
 <a name="l00288"></a>00288 
-<a name="l00294"></a>00294         <span class="keywordtype">void</span> appletsPopupActivated(<span class="keywordtype">int</span> iId);
+<a name="l00294"></a>00294     <span class="keywordtype">void</span> appletsPopupActivated(QAction *pAction);
 <a name="l00295"></a>00295 
 <a name="l00300"></a>00300         <span class="keywordtype">void</span> removeClickedApplet();
 <a name="l00301"></a>00301 
@@ -233,7 +233,7 @@ function toggleVisibility(linkObj) {
 <a name="l00318"></a>00318 <span class="preprocessor">#endif // _KVI_STATUSBAR_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:18 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:06 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

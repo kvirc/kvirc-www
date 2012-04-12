@@ -111,10 +111,10 @@ function toggleVisibility(linkObj) {
 <a name="l00030"></a>00030 <span class="preprocessor">#include &quot;KviIrcServerParser.h&quot;</span>
 <a name="l00031"></a>00031 <span class="preprocessor">#include &quot;KviConsoleWindow.h&quot;</span>
 <a name="l00032"></a>00032 <span class="preprocessor">#include &quot;KviIrcContext.h&quot;</span>
-<a name="l00033"></a>00033 <span class="preprocessor">#include &quot;KviTalPopupMenu.h&quot;</span>
-<a name="l00034"></a>00034 <span class="preprocessor">#include &quot;KviThemedTreeWidget.h&quot;</span>
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <span class="preprocessor">#include &lt;QToolButton&gt;</span>
+<a name="l00033"></a>00033 <span class="preprocessor">#include &quot;KviThemedTreeWidget.h&quot;</span>
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 <span class="preprocessor">#include &lt;QToolButton&gt;</span>
+<a name="l00036"></a>00036 <span class="preprocessor">#include &lt;QMenu&gt;</span>
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038 <span class="keyword">class </span><a class="code" href="classKviThemedLabel.html">KviThemedLabel</a>;
 <a name="l00039"></a>00039 
@@ -149,7 +149,7 @@ function toggleVisibility(linkObj) {
 <a name="l00068"></a><a class="code" href="classLinksWindow.html#a90f1b02e6b2763bb8960c14b3e475b2c">00068</a>         QSplitter               * <a class="code" href="classLinksWindow.html#a90f1b02e6b2763bb8960c14b3e475b2c">m_pTopSplitter</a>;
 <a name="l00069"></a><a class="code" href="classLinksWindow.html#aaa59d157de31b8cc0b8dd716a5b3db43">00069</a>         <a class="code" href="classLinksListView.html">LinksListView</a>        * <a class="code" href="classLinksWindow.html#aaa59d157de31b8cc0b8dd716a5b3db43">m_pListView</a>;
 <a name="l00070"></a><a class="code" href="classLinksWindow.html#a034b6d48be0f21b224b79bd72427aed7">00070</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;KviLink&gt;</a> * <a class="code" href="classLinksWindow.html#a034b6d48be0f21b224b79bd72427aed7">m_pLinkList</a>;
-<a name="l00071"></a><a class="code" href="classLinksWindow.html#a7c1867d1d6c2650d9aaf33c47076005c">00071</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>         * <a class="code" href="classLinksWindow.html#a7c1867d1d6c2650d9aaf33c47076005c">m_pHostPopup</a>;
+<a name="l00071"></a><a class="code" href="classLinksWindow.html#a32d4cb34f7be27f66253c733a46aca44">00071</a>         QMenu         * <a class="code" href="classLinksWindow.html#a32d4cb34f7be27f66253c733a46aca44">m_pHostPopup</a>;
 <a name="l00072"></a><a class="code" href="classLinksWindow.html#a611d4c46cb98ab7bada0647bcf2d2826">00072</a>         QString                   <a class="code" href="classLinksWindow.html#a611d4c46cb98ab7bada0647bcf2d2826">m_szRootServer</a>;
 <a name="l00073"></a><a class="code" href="classLinksWindow.html#a8c8a37a584b127a3d8067180ee76ac5c">00073</a>         QToolButton             * <a class="code" href="classLinksWindow.html#a8c8a37a584b127a3d8067180ee76ac5c">m_pRequestButton</a>;
 <a name="l00074"></a><a class="code" href="classLinksWindow.html#a1cffdf6c3979f0f9656e61a14a8715fe">00074</a>         <a class="code" href="classKviThemedLabel.html">KviThemedLabel</a>          * <a class="code" href="classLinksWindow.html#a1cffdf6c3979f0f9656e61a14a8715fe">m_pInfoLabel</a>;
@@ -165,7 +165,7 @@ function toggleVisibility(linkObj) {
 <a name="l00084"></a>00084         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classLinksWindow.html#a25e8975f89002dcd1de79fc5775a59f7">getBaseLogFileName</a>(QString &amp;buffer);
 <a name="l00085"></a>00085 <span class="keyword">protected</span> slots:
 <a name="l00086"></a>00086         <span class="keywordtype">void</span> <a class="code" href="classLinksWindow.html#a7b0c28a430b5021292e18b8aff4531aa">showHostPopup</a>(QTreeWidgetItem *<a class="code" href="detector_8cpp.html#a08582ce460e3d5e1cf0b7fea017d608e">i</a>,<span class="keyword">const</span> QPoint &amp;<a class="code" href="detector_8cpp.html#ade66e4ccafbc33b117610bbc0d85feb0">p</a>);
-<a name="l00087"></a>00087         <span class="keywordtype">void</span> <a class="code" href="classLinksWindow.html#a685744cde6b2e4603392a9dabcd4bcba">hostPopupClicked</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
+<a name="l00087"></a>00087     <span class="keywordtype">void</span> <a class="code" href="classLinksWindow.html#a4161af6cfbca78d43e49cfef764b951f">hostPopupClicked</a>(QAction *pAction);
 <a name="l00088"></a>00088         <span class="keywordtype">void</span> <a class="code" href="classLinksWindow.html#a481bb8bbeec09d9949a7435f7bbfcfdc">requestLinks</a>();
 <a name="l00089"></a>00089         <span class="keywordtype">void</span> <a class="code" href="classLinksWindow.html#ab531e28997f11b9255be70963c8f8156">connectionStateChange</a>();
 <a name="l00090"></a>00090 <span class="keyword">public</span>:
@@ -180,7 +180,7 @@ function toggleVisibility(linkObj) {
 <a name="l00099"></a>00099 <span class="preprocessor">#endif //_KVI_LINKSWINDOW_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:19 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

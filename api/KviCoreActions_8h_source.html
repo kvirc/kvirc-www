@@ -120,7 +120,7 @@ function toggleVisibility(linkObj) {
 <a name="l00039"></a><a class="code" href="classKviConnectAction.html#a5fc223d5ac4ca8db63293fe34321c936">00039</a>         QString <a class="code" href="classKviConnectAction.html#a5fc223d5ac4ca8db63293fe34321c936">m_szAbortConnectionString</a>;
 <a name="l00040"></a><a class="code" href="classKviConnectAction.html#ae7727ffabb0b446acea2aacab09eaf5f">00040</a>         QString <a class="code" href="classKviConnectAction.html#ae7727ffabb0b446acea2aacab09eaf5f">m_szDisconnectString</a>;
 <a name="l00041"></a>00041 <span class="keyword">public</span>:
-<a name="l00042"></a>00042         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviConnectAction.html#a8fbb6d6c4a2d0b35b630f94d8c43f9d3" title="Adds the action to the given popup.">addToPopupMenu</a>(<a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * pMenu);
+<a name="l00042"></a>00042     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviConnectAction.html#a5ce0291a34ad4ce3dd575001f5fbb3d9" title="Adds the action to the given popup.">addToPopupMenu</a>(QMenu * pMenu);
 <a name="l00043"></a>00043         <span class="keyword">virtual</span> QAction * <a class="code" href="classKviConnectAction.html#a0a8b3f4fde061fab7e9f5efca8f66243" title="Adds the action to the given toolbar.">addToCustomToolBar</a>(<a class="code" href="classKviCustomToolBar.html">KviCustomToolBar</a> * pTool);
 <a name="l00044"></a>00044 <span class="keyword">protected</span>:
 <a name="l00045"></a>00045         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviConnectAction.html#a4adc449cabb1ae2b2c18bb5c86288e0c" title="Enables or disables the action upon starting KVIrc.">setup</a>();
@@ -136,11 +136,11 @@ function toggleVisibility(linkObj) {
 <a name="l00055"></a>00055 <span class="keyword">public</span>:
 <a name="l00056"></a>00056         <a class="code" href="classKviSeparatorAction.html#a13fa6dd09f0b5c2221f14bd3af3899a9">KviSeparatorAction</a>(QObject * pParent);
 <a name="l00057"></a>00057 <span class="keyword">public</span>:
-<a name="l00058"></a>00058         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviSeparatorAction.html#aca1e87877f0a24474d68454ebbbb4027" title="Adds the action to the given popup.">addToPopupMenu</a>(<a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * pMenu);
+<a name="l00058"></a>00058     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviSeparatorAction.html#ab09a823870594aa751c74a3456e23ded" title="Adds the action to the given popup.">addToPopupMenu</a>(QMenu * pMenu);
 <a name="l00059"></a>00059         <span class="keyword">virtual</span> QAction * <a class="code" href="classKviSeparatorAction.html#a57985ed30bf13be2052ed45337dd14f5" title="Adds the action to the given toolbar.">addToCustomToolBar</a>(<a class="code" href="classKviCustomToolBar.html">KviCustomToolBar</a> * pTool);
 <a name="l00060"></a>00060 };
 <a name="l00061"></a>00061 
-<a name="l00062"></a>00062 <span class="keyword">class </span><a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>;
+<a name="l00062"></a>00062 <span class="keyword">class </span>QMenu;
 <a name="l00063"></a>00063 
 <a name="l00064"></a><a class="code" href="classKviSubmenuAction.html">00064</a> <span class="keyword">class </span><a class="code" href="classKviSubmenuAction.html">KviSubmenuAction</a> : <span class="keyword">public</span> <a class="code" href="classKviKvsAction.html" title="This class handles the actions.">KviKvsAction</a>
 <a name="l00065"></a>00065 {
@@ -159,15 +159,15 @@ function toggleVisibility(linkObj) {
 <a name="l00078"></a>00078                 );
 <a name="l00079"></a>00079         <a class="code" href="classKviSubmenuAction.html#a94b9a21edec6b6206736d846f99e9325">~KviSubmenuAction</a>();
 <a name="l00080"></a>00080 <span class="keyword">protected</span>:
-<a name="l00081"></a><a class="code" href="classKviSubmenuAction.html#a5c7e8ce7530fdbb6bfc323078ba45b13">00081</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * <a class="code" href="classKviSubmenuAction.html#a5c7e8ce7530fdbb6bfc323078ba45b13">m_pPopup</a>;
+<a name="l00081"></a><a class="code" href="classKviSubmenuAction.html#aecd2df5ca8d96f347ce6aed50c89e321">00081</a>     QMenu * <a class="code" href="classKviSubmenuAction.html#aecd2df5ca8d96f347ce6aed50c89e321">m_pPopup</a>;
 <a name="l00082"></a>00082 <span class="keyword">protected</span>:
 <a name="l00083"></a>00083         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSubmenuAction.html#a00ade98a8f46409cd34a7933e20b08f4" title="Enables or disables the action upon starting KVIrc.">setup</a>();
 <a name="l00084"></a>00084 <span class="keyword">public</span>:
-<a name="l00085"></a>00085         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviSubmenuAction.html#a2daa3e8e19944910a5ef3c72426311b2" title="Adds the action to the given popup.">addToPopupMenu</a>(<a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * pMenu);
+<a name="l00085"></a>00085     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviSubmenuAction.html#ac0ecef0ed59e60038927262ba7f05a50" title="Adds the action to the given popup.">addToPopupMenu</a>(QMenu * pMenu);
 <a name="l00086"></a>00086         <span class="keyword">virtual</span> QAction * <a class="code" href="classKviSubmenuAction.html#afbd019bc4b3f95faa2710e76f95cae50" title="Adds the action to the given toolbar.">addToCustomToolBar</a>(<a class="code" href="classKviCustomToolBar.html">KviCustomToolBar</a> * pTool);
 <a name="l00087"></a>00087 <span class="keyword">protected</span> slots:
 <a name="l00088"></a>00088         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSubmenuAction.html#a1ff676714d3633a69c5ba0083dd50869">popupAboutToShow</a>();
-<a name="l00089"></a>00089         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSubmenuAction.html#a14eb38ea9b1f7826bfd2c8a512127766">popupActivated</a>(<span class="keywordtype">int</span> iId);
+<a name="l00089"></a>00089     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSubmenuAction.html#a23dcc36f55b902f7d51bed3e88baa0bf">popupActivated</a>(QAction *pAction);
 <a name="l00090"></a>00090 };
 <a name="l00091"></a>00091 
 <a name="l00092"></a><a class="code" href="classKviJoinChannelAction.html">00092</a> <span class="keyword">class </span><a class="code" href="classKviJoinChannelAction.html">KviJoinChannelAction</a> : <span class="keyword">public</span> <a class="code" href="classKviSubmenuAction.html">KviSubmenuAction</a>
@@ -177,7 +177,7 @@ function toggleVisibility(linkObj) {
 <a name="l00096"></a>00096         <a class="code" href="classKviJoinChannelAction.html#a83a48176a31bba7cface4931b0d11005">KviJoinChannelAction</a>(QObject * pParent);
 <a name="l00097"></a>00097 <span class="keyword">protected</span> slots:
 <a name="l00098"></a>00098         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviJoinChannelAction.html#a5b592caa091ebf5c6921da5b48bb2c8f">popupAboutToShow</a>();
-<a name="l00099"></a>00099         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviJoinChannelAction.html#a4afccb72eb027bea9348ed62204e104e">popupActivated</a>(<span class="keywordtype">int</span>);
+<a name="l00099"></a>00099     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviJoinChannelAction.html#a02ef2b37bb8bc9c1c01a54f079f1f18e">popupActivated</a>(QAction *pAction);
 <a name="l00100"></a>00100 };
 <a name="l00101"></a>00101 
 <a name="l00102"></a><a class="code" href="classKviChangeNickAction.html">00102</a> <span class="keyword">class </span><a class="code" href="classKviChangeNickAction.html">KviChangeNickAction</a> : <span class="keyword">public</span> <a class="code" href="classKviSubmenuAction.html">KviSubmenuAction</a>
@@ -187,7 +187,7 @@ function toggleVisibility(linkObj) {
 <a name="l00106"></a>00106         <a class="code" href="classKviChangeNickAction.html#a7daa6623b04ef785429c5f6de019eb91">KviChangeNickAction</a>(QObject * pParent);
 <a name="l00107"></a>00107 <span class="keyword">protected</span> slots:
 <a name="l00108"></a>00108         <span class="keywordtype">void</span> <a class="code" href="classKviChangeNickAction.html#ac9340c293e9d85d207c48213b9951f53">popupAboutToShow</a>();
-<a name="l00109"></a>00109         <span class="keywordtype">void</span> <a class="code" href="classKviChangeNickAction.html#a114a433a6ab288607f33afd796f9fc66">popupActivated</a>(<span class="keywordtype">int</span>);
+<a name="l00109"></a>00109     <span class="keywordtype">void</span> <a class="code" href="classKviChangeNickAction.html#a396323c6c82a19567885264ecf4fe815">popupActivated</a>(QAction *pAction);
 <a name="l00110"></a>00110 };
 <a name="l00111"></a>00111 
 <a name="l00112"></a><a class="code" href="classKviConnectToServerAction.html">00112</a> <span class="keyword">class </span><a class="code" href="classKviConnectToServerAction.html">KviConnectToServerAction</a> : <span class="keyword">public</span> <a class="code" href="classKviSubmenuAction.html">KviSubmenuAction</a>
@@ -197,7 +197,7 @@ function toggleVisibility(linkObj) {
 <a name="l00116"></a>00116         <a class="code" href="classKviConnectToServerAction.html#a22550fbdb4b51d03c7925ad31ae0ba5c">KviConnectToServerAction</a>(QObject * pParent);
 <a name="l00117"></a>00117 <span class="keyword">protected</span> slots:
 <a name="l00118"></a>00118         <span class="keywordtype">void</span> <a class="code" href="classKviConnectToServerAction.html#a5a35d85eddc10002233ee15d7aeb1c78">popupAboutToShow</a>();
-<a name="l00119"></a>00119         <span class="keywordtype">void</span> <a class="code" href="classKviConnectToServerAction.html#a73ccbe8c021986b3b03c92e906b8f519">popupActivated</a>(<span class="keywordtype">int</span>);
+<a name="l00119"></a>00119     <span class="keywordtype">void</span> <a class="code" href="classKviConnectToServerAction.html#ad0322c820c911dfcfe759c9d48f6e0e4">popupActivated</a>(QAction *pAction);
 <a name="l00120"></a>00120 };
 <a name="l00121"></a>00121 
 <a name="l00122"></a><a class="code" href="classKviChangeUserModeAction.html">00122</a> <span class="keyword">class </span><a class="code" href="classKviChangeUserModeAction.html">KviChangeUserModeAction</a> : <span class="keyword">public</span> <a class="code" href="classKviSubmenuAction.html">KviSubmenuAction</a>
@@ -207,7 +207,7 @@ function toggleVisibility(linkObj) {
 <a name="l00126"></a>00126         <a class="code" href="classKviChangeUserModeAction.html#a54009364d16d61e21dd388123ef4590c">KviChangeUserModeAction</a>(QObject * pParent);
 <a name="l00127"></a>00127 <span class="keyword">protected</span> slots:
 <a name="l00128"></a>00128         <span class="keywordtype">void</span> <a class="code" href="classKviChangeUserModeAction.html#aa314e78e3da9be37d4599ec5762ca9a2">popupAboutToShow</a>();
-<a name="l00129"></a>00129         <span class="keywordtype">void</span> <a class="code" href="classKviChangeUserModeAction.html#a5724108f758a96c97df4fec96e00e831">popupActivated</a>(<span class="keywordtype">int</span>);
+<a name="l00129"></a>00129     <span class="keywordtype">void</span> <a class="code" href="classKviChangeUserModeAction.html#abef60815755aaa19a2e1b5b4df61ea29">popupActivated</a>(QAction *pAction);
 <a name="l00130"></a>00130 };
 <a name="l00131"></a>00131 
 <a name="l00132"></a><a class="code" href="classKviIrcToolsAction.html">00132</a> <span class="keyword">class </span><a class="code" href="classKviIrcToolsAction.html">KviIrcToolsAction</a> : <span class="keyword">public</span> <a class="code" href="classKviSubmenuAction.html">KviSubmenuAction</a>
@@ -217,7 +217,7 @@ function toggleVisibility(linkObj) {
 <a name="l00136"></a>00136         <a class="code" href="classKviIrcToolsAction.html#aa62d70ff522141021558b0f8ed3d7cc0">KviIrcToolsAction</a>(QObject * pParent);
 <a name="l00137"></a>00137 <span class="keyword">protected</span> slots:
 <a name="l00138"></a>00138         <span class="keywordtype">void</span> <a class="code" href="classKviIrcToolsAction.html#a08bbbc71e7bea0e06b9ae08204bb6f0f">popupAboutToShow</a>();
-<a name="l00139"></a>00139         <span class="keywordtype">void</span> <a class="code" href="classKviIrcToolsAction.html#a334fcc16f5b9bc6fcfdb6e4d01d0f4df">popupActivated</a>(<span class="keywordtype">int</span>);
+<a name="l00139"></a>00139     <span class="keywordtype">void</span> <a class="code" href="classKviIrcToolsAction.html#a6fd9896d986361280f3315d01aea0c6d">popupActivated</a>(QAction *pAction);
 <a name="l00140"></a>00140 };
 <a name="l00141"></a>00141 
 <a name="l00142"></a>00142 
@@ -228,7 +228,7 @@ function toggleVisibility(linkObj) {
 <a name="l00147"></a>00147         <a class="code" href="classKviIrcOperationsAction.html#acd0b6a0921338ebd96fc42a2409451c9">KviIrcOperationsAction</a>(QObject * pParent);
 <a name="l00148"></a>00148 <span class="keyword">protected</span> slots:
 <a name="l00149"></a>00149         <span class="keywordtype">void</span> <a class="code" href="classKviIrcOperationsAction.html#a22ea4d32f06e16820ac5193ee705a999">popupAboutToShow</a>();
-<a name="l00150"></a>00150         <span class="keywordtype">void</span> <a class="code" href="classKviIrcOperationsAction.html#a4a37bae7908bec391f79c587916bd6d1">popupActivated</a>(<span class="keywordtype">int</span>);
+<a name="l00150"></a>00150     <span class="keywordtype">void</span> <a class="code" href="classKviIrcOperationsAction.html#aedfad660cd38655f2f2973ed5ba14591">popupActivated</a>(QAction *pAction);
 <a name="l00151"></a>00151 };
 <a name="l00152"></a>00152 
 <a name="l00153"></a>00153 <span class="preprocessor">#include &quot;KviIrcToolBar.h&quot;</span>
@@ -239,7 +239,7 @@ function toggleVisibility(linkObj) {
 <a name="l00158"></a>00158 <span class="keyword">public</span>:
 <a name="l00159"></a>00159         <a class="code" href="classKviIrcContextDisplayAction.html#a20dd86ff4a1d0f2db94d5754a68698e8">KviIrcContextDisplayAction</a>(QObject * pParent);
 <a name="l00160"></a>00160 <span class="keyword">public</span>:
-<a name="l00161"></a>00161         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviIrcContextDisplayAction.html#ac440a95006c15061260fd77cf3847668" title="Adds the action to the given popup.">addToPopupMenu</a>(<a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * pMenu);
+<a name="l00161"></a>00161     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviIrcContextDisplayAction.html#a35e6883576ad6edd1418289e6339bb50" title="Adds the action to the given popup.">addToPopupMenu</a>(QMenu * pMenu);
 <a name="l00162"></a>00162         <span class="keyword">virtual</span> QAction * <a class="code" href="classKviIrcContextDisplayAction.html#a48a2f25931311de68a84e68fafc1533d" title="Adds the action to the given toolbar.">addToCustomToolBar</a>(<a class="code" href="classKviCustomToolBar.html">KviCustomToolBar</a> * pTool);
 <a name="l00163"></a>00163         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviIrcContextDisplayAction.html#acbb04ff0951ec3f77fdd09278027038a" title="Enables or disables the action upon checking the active context.">activeContextStateChanged</a>();
 <a name="l00164"></a>00164         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviIrcContextDisplayAction.html#acb2f3289b95fa82ecf4b477a340016d0" title="Enables or disables the action upon checking the active context.">activeContextChanged</a>();
@@ -257,7 +257,7 @@ function toggleVisibility(linkObj) {
 <a name="l00176"></a><a class="code" href="classKviGoAwayAction.html#ad32dd3b2cd56c91736de93209914e2b0">00176</a>         QString <a class="code" href="classKviGoAwayAction.html#ad32dd3b2cd56c91736de93209914e2b0">m_szAwayString</a>;
 <a name="l00177"></a><a class="code" href="classKviGoAwayAction.html#aa9265ec4814c0407d3a5144f690a1ca8">00177</a>         QString <a class="code" href="classKviGoAwayAction.html#aa9265ec4814c0407d3a5144f690a1ca8">m_szBackString</a>;
 <a name="l00178"></a>00178 <span class="keyword">public</span>:
-<a name="l00179"></a>00179         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviGoAwayAction.html#a8274d5519290974975c39ff1483b34fc" title="Adds the action to the given popup.">addToPopupMenu</a>(<a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * pMenu);
+<a name="l00179"></a>00179     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classKviGoAwayAction.html#a8c368e44866731155f01134bf3934f30" title="Adds the action to the given popup.">addToPopupMenu</a>(QMenu * pMenu);
 <a name="l00180"></a>00180         <span class="keyword">virtual</span> QAction * <a class="code" href="classKviGoAwayAction.html#a245691755c76cae25386375096afaf2f" title="Adds the action to the given toolbar.">addToCustomToolBar</a>(<a class="code" href="classKviCustomToolBar.html">KviCustomToolBar</a> * pTool);
 <a name="l00181"></a>00181 <span class="keyword">protected</span>:
 <a name="l00182"></a>00182         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviGoAwayAction.html#a58d2955d5b5321571ea93b2f344b804a" title="Enables or disables the action upon starting KVIrc.">setup</a>();
@@ -269,7 +269,7 @@ function toggleVisibility(linkObj) {
 <a name="l00188"></a>00188 <span class="preprocessor">#endif //_KVI_COREACTIONS_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:16 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:04 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

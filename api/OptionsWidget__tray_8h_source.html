@@ -124,17 +124,19 @@ function toggleVisibility(linkObj) {
 <a name="l00043"></a><a class="code" href="classOptionsWidget__tray.html#a61340113709c4eb358b5a25840bba522">00043</a>         <a class="code" href="classKviBoolSelector.html">KviBoolSelector</a> * <a class="code" href="classOptionsWidget__tray.html#a61340113709c4eb358b5a25840bba522">m_pEnable</a>;
 <a name="l00044"></a><a class="code" href="classOptionsWidget__tray.html#a95bf77c9d9fc97c9ed5eab5625725fa6">00044</a>         <a class="code" href="classKviBoolSelector.html">KviBoolSelector</a> * <a class="code" href="classOptionsWidget__tray.html#a95bf77c9d9fc97c9ed5eab5625725fa6">m_pEnableFlashing</a>;
 <a name="l00045"></a><a class="code" href="classOptionsWidget__tray.html#a9a632fba3c4ea5298cfe13779816763f">00045</a>         <a class="code" href="classKviBoolSelector.html">KviBoolSelector</a> * <a class="code" href="classOptionsWidget__tray.html#a9a632fba3c4ea5298cfe13779816763f">m_pLevelBasedNotify</a>;
-<a name="l00046"></a><a class="code" href="classOptionsWidget__tray.html#a4c10059d1960d84625b698af1de7e94a">00046</a>         <a class="code" href="classKviBoolSelector.html">KviBoolSelector</a> * <a class="code" href="classOptionsWidget__tray.html#a4c10059d1960d84625b698af1de7e94a">m_pMinimizeInTray</a>;
-<a name="l00047"></a><a class="code" href="classOptionsWidget__tray.html#ada7e766e66637dc3501688ef9f2f0fea">00047</a>         <a class="code" href="classKviBoolSelector.html">KviBoolSelector</a> * <a class="code" href="classOptionsWidget__tray.html#ada7e766e66637dc3501688ef9f2f0fea">m_pCloseInTray</a>;
-<a name="l00048"></a><a class="code" href="classOptionsWidget__tray.html#a4deddc02684873a4302307d6160aaf85">00048</a>         <a class="code" href="classKviTalGroupBox.html" title="Toolkit Abstraction Layer: groupbox class.">KviTalGroupBox</a> * <a class="code" href="classOptionsWidget__tray.html#a4deddc02684873a4302307d6160aaf85">m_pLevelsGroup</a>;
-<a name="l00049"></a>00049 <span class="keyword">protected</span> slots:
-<a name="l00050"></a>00050         <span class="keywordtype">void</span> <a class="code" href="classOptionsWidget__tray.html#a7a1dc8b22fc9fddb2fba16215f1aa64c">setEnabled</a>(<span class="keywordtype">bool</span>);
-<a name="l00051"></a>00051 };
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053 <span class="preprocessor">#endif //_OPTW_TRAY_H_</span>
+<a name="l00046"></a>00046 <span class="preprocessor">#ifndef COMPILE_ON_MAC</span>
+<a name="l00047"></a><a class="code" href="classOptionsWidget__tray.html#a4c10059d1960d84625b698af1de7e94a">00047</a> <span class="preprocessor"></span>        <a class="code" href="classKviBoolSelector.html">KviBoolSelector</a> * <a class="code" href="classOptionsWidget__tray.html#a4c10059d1960d84625b698af1de7e94a">m_pMinimizeInTray</a>;
+<a name="l00048"></a>00048 <span class="preprocessor">#endif</span>
+<a name="l00049"></a><a class="code" href="classOptionsWidget__tray.html#ada7e766e66637dc3501688ef9f2f0fea">00049</a> <span class="preprocessor"></span>        <a class="code" href="classKviBoolSelector.html">KviBoolSelector</a> * <a class="code" href="classOptionsWidget__tray.html#ada7e766e66637dc3501688ef9f2f0fea">m_pCloseInTray</a>;
+<a name="l00050"></a><a class="code" href="classOptionsWidget__tray.html#a4deddc02684873a4302307d6160aaf85">00050</a>         <a class="code" href="classKviTalGroupBox.html" title="Toolkit Abstraction Layer: groupbox class.">KviTalGroupBox</a> * <a class="code" href="classOptionsWidget__tray.html#a4deddc02684873a4302307d6160aaf85">m_pLevelsGroup</a>;
+<a name="l00051"></a>00051 <span class="keyword">protected</span> slots:
+<a name="l00052"></a>00052         <span class="keywordtype">void</span> <a class="code" href="classOptionsWidget__tray.html#a7a1dc8b22fc9fddb2fba16215f1aa64c">setEnabled</a>(<span class="keywordtype">bool</span>);
+<a name="l00053"></a>00053 };
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055 <span class="preprocessor">#endif //_OPTW_TRAY_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:21 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:09 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

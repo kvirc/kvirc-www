@@ -421,7 +421,7 @@ function toggleVisibility(linkObj) {
 <a name="l00340"></a>00340         <span class="keywordtype">void</span> removeClicked();
 <a name="l00341"></a>00341 };
 <a name="l00342"></a>00342 
-<a name="l00343"></a>00343 <span class="keyword">class </span><a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>;
+<a name="l00343"></a>00343 <span class="keyword">class </span>QMenu;
 <a name="l00344"></a>00344 
 <a name="l00345"></a><a class="code" href="classKviMircTextColorSelector.html">00345</a> <span class="keyword">class </span><a class="code" href="kvi__settings_8h.html#a2b6e93c2a661b8c9970bddbac4e7bd2c">KVIRC_API</a> <a class="code" href="classKviMircTextColorSelector.html">KviMircTextColorSelector</a> : <span class="keyword">public</span> <a class="code" href="classKviTalHBox.html" title="Toolkit Abstraction Layer: hbox class.">KviTalHBox</a>, <span class="keyword">public</span> <a class="code" href="classKviSelectorInterface.html">KviSelectorInterface</a>
 <a name="l00346"></a>00346 {
@@ -436,16 +436,16 @@ function toggleVisibility(linkObj) {
 <a name="l00355"></a><a class="code" href="classKviMircTextColorSelector.html#a983c9ed08b4e99dfc9e5f4bf611fa9ff">00355</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> * <a class="code" href="classKviMircTextColorSelector.html#a983c9ed08b4e99dfc9e5f4bf611fa9ff">m_pUBack</a>;
 <a name="l00356"></a><a class="code" href="classKviMircTextColorSelector.html#aea4abb25397f6acc8a2d31ff06351ea7">00356</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviMircTextColorSelector.html#aea4abb25397f6acc8a2d31ff06351ea7">m_uFore</a>;
 <a name="l00357"></a><a class="code" href="classKviMircTextColorSelector.html#aad965ec8f47816a8373a9eb0e5d669a5">00357</a>         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classKviMircTextColorSelector.html#aad965ec8f47816a8373a9eb0e5d669a5">m_uBack</a>;
-<a name="l00358"></a><a class="code" href="classKviMircTextColorSelector.html#a2c8b3493f9887d6742dbc8e4d0bc487b">00358</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * <a class="code" href="classKviMircTextColorSelector.html#a2c8b3493f9887d6742dbc8e4d0bc487b">m_pContextPopup</a>;
-<a name="l00359"></a><a class="code" href="classKviMircTextColorSelector.html#adbe4bf5bba05f56d16005ef8bcb8a1bf">00359</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * <a class="code" href="classKviMircTextColorSelector.html#adbe4bf5bba05f56d16005ef8bcb8a1bf">m_pForePopup</a>;
-<a name="l00360"></a><a class="code" href="classKviMircTextColorSelector.html#ac8f0430ed8ce48276cdb0cdc40692b30">00360</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * <a class="code" href="classKviMircTextColorSelector.html#ac8f0430ed8ce48276cdb0cdc40692b30">m_pBackPopup</a>;
+<a name="l00358"></a><a class="code" href="classKviMircTextColorSelector.html#a15de00287f2458ea426bf5b48bfad149">00358</a>     QMenu * <a class="code" href="classKviMircTextColorSelector.html#a15de00287f2458ea426bf5b48bfad149">m_pContextPopup</a>;
+<a name="l00359"></a><a class="code" href="classKviMircTextColorSelector.html#a84edab499ae7ac996fd24db2dbe1f6a3">00359</a>     QMenu * <a class="code" href="classKviMircTextColorSelector.html#a84edab499ae7ac996fd24db2dbe1f6a3">m_pForePopup</a>;
+<a name="l00360"></a><a class="code" href="classKviMircTextColorSelector.html#afaa117686c456074eb73589fe20b0dbe">00360</a>     QMenu * <a class="code" href="classKviMircTextColorSelector.html#afaa117686c456074eb73589fe20b0dbe">m_pBackPopup</a>;
 <a name="l00361"></a>00361 <span class="keyword">public</span>:
 <a name="l00362"></a>00362         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviSelectorInterface.html#a2dac18af8c22c2ab82aff348a770eed3">commit</a>();
 <a name="l00363"></a>00363         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span> bEnabled);
 <a name="l00364"></a>00364 <span class="keyword">protected</span> slots:
 <a name="l00365"></a>00365         <span class="keywordtype">void</span> buttonClicked();
-<a name="l00366"></a>00366         <span class="keywordtype">void</span> foreSelected(<span class="keywordtype">int</span>);
-<a name="l00367"></a>00367         <span class="keywordtype">void</span> backSelected(<span class="keywordtype">int</span>);
+<a name="l00366"></a>00366     <span class="keywordtype">void</span> foreSelected(QAction *pAction);
+<a name="l00367"></a>00367     <span class="keywordtype">void</span> backSelected(QAction *pAction);
 <a name="l00368"></a>00368 <span class="keyword">protected</span>:
 <a name="l00369"></a>00369         <span class="keywordtype">void</span> setButtonPalette();
 <a name="l00370"></a>00370 };
@@ -505,7 +505,7 @@ function toggleVisibility(linkObj) {
 <a name="l00424"></a>00424 <span class="preprocessor">#endif //!_KVI_SELECTORS_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:18 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:06 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

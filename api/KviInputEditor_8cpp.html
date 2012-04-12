@@ -101,7 +101,6 @@ function toggleVisibility(linkObj) {
 <code>#include &quot;KviPixmapUtils.h&quot;</code><br/>
 <code>#include &quot;KviQString.h&quot;</code><br/>
 <code>#include &quot;kvi_out.h&quot;</code><br/>
-<code>#include &quot;KviTalPopupMenu.h&quot;</code><br/>
 <code>#include &quot;<a class="el" href="KviTextIconWindow_8h_source.html">KviTextIconWindow.h</a>&quot;</code><br/>
 <code>#include &quot;KviTextIconManager.h&quot;</code><br/>
 <code>#include &quot;KviUserInput.h&quot;</code><br/>
@@ -120,6 +119,7 @@ function toggleVisibility(linkObj) {
 <code>#include &lt;QKeyEvent&gt;</code><br/>
 <code>#include &lt;QDragEnterEvent&gt;</code><br/>
 <code>#include &lt;QInputContext&gt;</code><br/>
+<code>#include &lt;QMenu&gt;</code><br/>
 <code>#include &quot;KviInputEditor.moc&quot;</code><br/>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="define-members"></a>
@@ -128,7 +128,7 @@ Defines</h2></td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviColorWindow.html">KviColorWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviInputEditor_8cpp.html#a41b78774fa4929ec7a7a9f5314772f43">g_pColorWindow</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviInputEditor_8cpp.html#a0807532d472d503f6995ca44733fbe07">g_pInputPopup</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviInputEditor_8cpp.html#a3ad3bfe1196cedd2754f72fd7dbf3248">g_pInputPopup</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviTextIconWindow.html">KviTextIconWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviInputEditor_8cpp.html#ae8e4ef9ad2b271d001c4559d52f29440">g_pTextIconWindow</a></td></tr>
 </table>
 <hr/><h2>Define Documentation</h2>
@@ -161,18 +161,18 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0807532d472d503f6995ca44733fbe07"></a><!-- doxytag: member="KviInputEditor.cpp::g_pInputPopup" ref="a0807532d472d503f6995ca44733fbe07" args="" -->
+<a class="anchor" id="a3ad3bfe1196cedd2754f72fd7dbf3248"></a><!-- doxytag: member="KviInputEditor.cpp::g_pInputPopup" ref="a3ad3bfe1196cedd2754f72fd7dbf3248" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>* <a class="el" href="KviInputEditor_8cpp.html#a0807532d472d503f6995ca44733fbe07">g_pInputPopup</a></td>
+          <td class="memname">QMenu* <a class="el" href="KviInputEditor_8cpp.html#a3ad3bfe1196cedd2754f72fd7dbf3248">g_pInputPopup</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviApplication.html#a944c55d0e66654478fe4a817f26d433a">KviApplication::setup()</a>, and <a class="el" href="classKviApplication.html#a4d85ab5f5d8219eef3428ef487812d68">KviApplication::~KviApplication()</a>.</p>
+<p>Referenced by <a class="el" href="classKviInputEditor.html#a9fc70f0eb9ca564d6e098c56a7e1cf1e">KviInputEditor::mousePressEvent()</a>, <a class="el" href="classKviApplication.html#a944c55d0e66654478fe4a817f26d433a">KviApplication::setup()</a>, and <a class="el" href="classKviApplication.html#a4d85ab5f5d8219eef3428ef487812d68">KviApplication::~KviApplication()</a>.</p>
 
 </div>
 </div>
@@ -192,7 +192,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:22 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:10 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

@@ -107,15 +107,15 @@ function toggleVisibility(linkObj) {
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 <span class="preprocessor">#include &quot;KviOptionsWidget.h&quot;</span>
 <a name="l00028"></a>00028 <span class="preprocessor">#include &quot;KviMessageTypeSettings.h&quot;</span>
-<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;KviTalPopupMenu.h&quot;</span>
-<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;KviIconManager.h&quot;</span>
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032 <span class="preprocessor">#include &lt;QTreeWidget&gt;</span>
-<a name="l00033"></a>00033 <span class="preprocessor">#include &lt;QItemDelegate&gt;</span>
-<a name="l00034"></a>00034 <span class="preprocessor">#include &lt;QCheckBox&gt;</span>
-<a name="l00035"></a>00035 <span class="preprocessor">#include &lt;QToolButton&gt;</span>
-<a name="l00036"></a>00036 <span class="preprocessor">#include &lt;QPainter&gt;</span>
-<a name="l00037"></a>00037 <span class="preprocessor">#include &lt;QColorGroup&gt;</span>
+<a name="l00029"></a>00029 <span class="preprocessor">#include &quot;KviIconManager.h&quot;</span>
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 <span class="preprocessor">#include &lt;QTreeWidget&gt;</span>
+<a name="l00032"></a>00032 <span class="preprocessor">#include &lt;QItemDelegate&gt;</span>
+<a name="l00033"></a>00033 <span class="preprocessor">#include &lt;QCheckBox&gt;</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &lt;QToolButton&gt;</span>
+<a name="l00035"></a>00035 <span class="preprocessor">#include &lt;QPainter&gt;</span>
+<a name="l00036"></a>00036 <span class="preprocessor">#include &lt;QColorGroup&gt;</span>
+<a name="l00037"></a>00037 <span class="preprocessor">#include &lt;QMenu&gt;</span>
 <a name="l00038"></a>00038 
 <a name="l00039"></a><a class="code" href="OptionsWidget__message_8h.html#ac20f2684bdc84543053bc211bdc9cebf">00039</a> <span class="preprocessor">#define KVI_OPTIONS_WIDGET_ICON_OptionsWidget_message KviIconManager::Messages</span>
 <a name="l00040"></a><a class="code" href="OptionsWidget__message_8h.html#a4a5de53c28c88af4332164ae903e9092">00040</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_OPTIONS_WIDGET_NAME_OptionsWidget_message __tr2qs_no_lookup(&quot;Text&quot;)</span>
@@ -254,7 +254,7 @@ function toggleVisibility(linkObj) {
 <a name="l00173"></a><a class="code" href="classOptionsWidget__messageColors.html#ae1611da0170158a22e8972c66c944a93">00173</a>         <a class="code" href="classMessageListWidgetItem.html">MessageListWidgetItem</a>     * <a class="code" href="classOptionsWidget__messageColors.html#ae1611da0170158a22e8972c66c944a93">m_pLastItem</a>;
 <a name="l00174"></a><a class="code" href="classOptionsWidget__messageColors.html#af04c71c72ee80fbbb056eab01b9e5dee">00174</a>         QCheckBox                  * <a class="code" href="classOptionsWidget__messageColors.html#af04c71c72ee80fbbb056eab01b9e5dee">m_pEnableLogging</a>;
 <a name="l00175"></a><a class="code" href="classOptionsWidget__messageColors.html#a3e93e30f91dbf16cd1e012ca7965e747">00175</a>         QToolButton                * <a class="code" href="classOptionsWidget__messageColors.html#a3e93e30f91dbf16cd1e012ca7965e747">m_pIconButton</a>;
-<a name="l00176"></a><a class="code" href="classOptionsWidget__messageColors.html#a332813d5692ed8c805ad62e7b111f4b4">00176</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>            * <a class="code" href="classOptionsWidget__messageColors.html#a332813d5692ed8c805ad62e7b111f4b4">m_pIconPopup</a>;
+<a name="l00176"></a><a class="code" href="classOptionsWidget__messageColors.html#a8575dfd3e4b4a2a581ed1f0c43840fec">00176</a>         QMenu            * <a class="code" href="classOptionsWidget__messageColors.html#a8575dfd3e4b4a2a581ed1f0c43840fec">m_pIconPopup</a>;
 <a name="l00177"></a>00177 <span class="keyword">public</span>:
 <a name="l00178"></a>00178         <span class="keywordtype">void</span> <a class="code" href="classOptionsWidget__messageColors.html#a142741e0023b808cd27aa55e69b7f635">saveLastItem</a>();
 <a name="l00179"></a>00179 <span class="keyword">protected</span> slots:
@@ -287,7 +287,7 @@ function toggleVisibility(linkObj) {
 <a name="l00206"></a>00206 <span class="preprocessor">#endif //!_OPTW_MESSAGES_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:21 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:09 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

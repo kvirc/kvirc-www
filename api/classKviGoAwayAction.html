@@ -107,8 +107,8 @@ function toggleVisibility(linkObj) {
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviGoAwayAction.html#a245691755c76cae25386375096afaf2f">addToCustomToolBar</a> (<a class="el" href="classKviCustomToolBar.html">KviCustomToolBar</a> *pTool)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the action to the given toolbar.  <a href="#a245691755c76cae25386375096afaf2f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviGoAwayAction.html#a8274d5519290974975c39ff1483b34fc">addToPopupMenu</a> (<a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *pMenu)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the action to the given popup.  <a href="#a8274d5519290974975c39ff1483b34fc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviGoAwayAction.html#a8c368e44866731155f01134bf3934f30">addToPopupMenu</a> (QMenu *pMenu)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the action to the given popup.  <a href="#a8c368e44866731155f01134bf3934f30"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviGoAwayAction.html#aa8651bdddcc63982ae11054a7a6d4160">KviGoAwayAction</a> (QObject *pParent)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -226,14 +226,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8274d5519290974975c39ff1483b34fc"></a><!-- doxytag: member="KviGoAwayAction::addToPopupMenu" ref="a8274d5519290974975c39ff1483b34fc" args="(KviTalPopupMenu *pMenu)" -->
+<a class="anchor" id="a8c368e44866731155f01134bf3934f30"></a><!-- doxytag: member="KviGoAwayAction::addToPopupMenu" ref="a8c368e44866731155f01134bf3934f30" args="(QMenu *pMenu)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool KviGoAwayAction::addToPopupMenu </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td>
+          <td class="paramtype">QMenu *&#160;</td>
           <td class="paramname"><em>pMenu</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -250,9 +250,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classKviAction.html#a62ac15a73381217e5daedf1bac6a097b">KviAction</a>.</p>
+<p>Reimplemented from <a class="el" href="classKviAction.html#aef1a3ab0bdd8525efcea8069679717b9">KviAction</a>.</p>
 
-<p>References <a class="el" href="classKviKvsAction.html#afdbef2de2c0e7c7f005263fabb81e0c8">KviKvsAction::activate()</a>, <a class="el" href="classKviMainWindow.html#a3f587aa2679dda1480c4d082f21ef099">KviMainWindow::activeContext()</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7aa74914c9f90004630e7723471120a3b5">KviIconManager::Away</a>, <a class="el" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>, <a class="el" href="classKviIrcContext.html#a37935b83b79ed751ecdb29442dcd09b6ad5dd4111d3e1ee25b2d9738558ece6fa">KviIrcContext::Connected</a>, <a class="el" href="classKviIrcContext.html#a8e50d106e8492d3a5e11caab348c8f6e">KviIrcContext::connection()</a>, <a class="el" href="KviIconManager_8cpp.html#a3ea7617ef2d091c1c04b0f95fb0845ae">g_pIconManager</a>, <a class="el" href="KviMainWindow_8cpp.html#a13001adf485ce537c0448fc76b5b9d88">g_pMainWindow</a>, <a class="el" href="classKviIconManager.html#a36bca624a1c6293627263463d8f3e3a5">KviIconManager::getSmallIcon()</a>, <a class="el" href="classKviTalPopupMenu.html#ad491ba2ad4a8133a89bdf417c1acacc6">KviTalPopupMenu::insertItem()</a>, <a class="el" href="classKviIrcConnectionUserInfo.html#acb9ea30af2f0531aecfee524d4afc15c">KviIrcConnectionUserInfo::isAway()</a>, <a class="el" href="classKviGoAwayAction.html#ad32dd3b2cd56c91736de93209914e2b0">m_szAwayString</a>, <a class="el" href="classKviGoAwayAction.html#aa9265ec4814c0407d3a5144f690a1ca8">m_szBackString</a>, <a class="el" href="classKviAction.html#a1a9ecf9ba0f9f1e11e7be5cf6150abad">KviAction::m_szKeySequence</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7abf7c26c89b27b8ccb14b45a54c1a9e3d">KviIconManager::NotAway</a>, <a class="el" href="classKviTalPopupMenu.html#af795e001403292ee5fb15cd600495f9e">KviTalPopupMenu::setItemEnabled()</a>, <a class="el" href="classKviGoAwayAction.html#a58d2955d5b5321571ea93b2f344b804a">setup()</a>, <a class="el" href="classKviAction.html#aea704938943c932bcef1dbb7355f1eb9">KviAction::setupDone()</a>, <a class="el" href="classKviIrcContext.html#a6238f72e0d517fb2a051672378a810ac">KviIrcContext::state()</a>, <a class="el" href="KvsObject__http_8cpp.html#aa1d7477f8f4f580c1a0307ed79c7ec91">t()</a>, and <a class="el" href="classKviIrcConnection.html#a4c44613757ed0c556817874a5100c13b">KviIrcConnection::userInfo()</a>.</p>
+<p>References <a class="el" href="classKviKvsAction.html#afdbef2de2c0e7c7f005263fabb81e0c8">KviKvsAction::activate()</a>, <a class="el" href="classKviMainWindow.html#a3f587aa2679dda1480c4d082f21ef099">KviMainWindow::activeContext()</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7aa74914c9f90004630e7723471120a3b5">KviIconManager::Away</a>, <a class="el" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>, <a class="el" href="classKviIrcContext.html#a37935b83b79ed751ecdb29442dcd09b6ad5dd4111d3e1ee25b2d9738558ece6fa">KviIrcContext::Connected</a>, <a class="el" href="classKviIrcContext.html#a8e50d106e8492d3a5e11caab348c8f6e">KviIrcContext::connection()</a>, <a class="el" href="KviIconManager_8cpp.html#a3ea7617ef2d091c1c04b0f95fb0845ae">g_pIconManager</a>, <a class="el" href="KviMainWindow_8cpp.html#a13001adf485ce537c0448fc76b5b9d88">g_pMainWindow</a>, <a class="el" href="classKviIconManager.html#a36bca624a1c6293627263463d8f3e3a5">KviIconManager::getSmallIcon()</a>, <a class="el" href="classKviIrcConnectionUserInfo.html#acb9ea30af2f0531aecfee524d4afc15c">KviIrcConnectionUserInfo::isAway()</a>, <a class="el" href="classKviGoAwayAction.html#ad32dd3b2cd56c91736de93209914e2b0">m_szAwayString</a>, <a class="el" href="classKviGoAwayAction.html#aa9265ec4814c0407d3a5144f690a1ca8">m_szBackString</a>, <a class="el" href="classKviAction.html#a1a9ecf9ba0f9f1e11e7be5cf6150abad">KviAction::m_szKeySequence</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7abf7c26c89b27b8ccb14b45a54c1a9e3d">KviIconManager::NotAway</a>, <a class="el" href="classKviGoAwayAction.html#a58d2955d5b5321571ea93b2f344b804a">setup()</a>, <a class="el" href="classKviAction.html#aea704938943c932bcef1dbb7355f1eb9">KviAction::setupDone()</a>, <a class="el" href="classKviIrcContext.html#a6238f72e0d517fb2a051672378a810ac">KviIrcContext::state()</a>, <a class="el" href="KvsObject__http_8cpp.html#aa1d7477f8f4f580c1a0307ed79c7ec91">t()</a>, and <a class="el" href="classKviIrcConnection.html#a4c44613757ed0c556817874a5100c13b">KviIrcConnection::userInfo()</a>.</p>
 
 </div>
 </div>
@@ -301,7 +301,7 @@ Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="KviLocale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="classKviGoAwayAction.html#a26d63b650fe319f363c4b5388d447ce3">activeContextStateChanged()</a>, <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="KviMainWindow_8cpp.html#a13001adf485ce537c0448fc76b5b9d88">g_pMainWindow</a>, <a class="el" href="classKviGoAwayAction.html#ad32dd3b2cd56c91736de93209914e2b0">m_szAwayString</a>, and <a class="el" href="classKviGoAwayAction.html#aa9265ec4814c0407d3a5144f690a1ca8">m_szBackString</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviGoAwayAction.html#a245691755c76cae25386375096afaf2f">addToCustomToolBar()</a>, and <a class="el" href="classKviGoAwayAction.html#a8274d5519290974975c39ff1483b34fc">addToPopupMenu()</a>.</p>
+<p>Referenced by <a class="el" href="classKviGoAwayAction.html#a245691755c76cae25386375096afaf2f">addToCustomToolBar()</a>, and <a class="el" href="classKviGoAwayAction.html#a8c368e44866731155f01134bf3934f30">addToPopupMenu()</a>.</p>
 
 </div>
 </div>
@@ -317,7 +317,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviGoAwayAction.html#a26d63b650fe319f363c4b5388d447ce3">activeContextStateChanged()</a>, <a class="el" href="classKviGoAwayAction.html#a245691755c76cae25386375096afaf2f">addToCustomToolBar()</a>, <a class="el" href="classKviGoAwayAction.html#a8274d5519290974975c39ff1483b34fc">addToPopupMenu()</a>, and <a class="el" href="classKviGoAwayAction.html#a58d2955d5b5321571ea93b2f344b804a">setup()</a>.</p>
+<p>Referenced by <a class="el" href="classKviGoAwayAction.html#a26d63b650fe319f363c4b5388d447ce3">activeContextStateChanged()</a>, <a class="el" href="classKviGoAwayAction.html#a245691755c76cae25386375096afaf2f">addToCustomToolBar()</a>, <a class="el" href="classKviGoAwayAction.html#a8c368e44866731155f01134bf3934f30">addToPopupMenu()</a>, and <a class="el" href="classKviGoAwayAction.html#a58d2955d5b5321571ea93b2f344b804a">setup()</a>.</p>
 
 </div>
 </div>
@@ -332,7 +332,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviGoAwayAction.html#a26d63b650fe319f363c4b5388d447ce3">activeContextStateChanged()</a>, <a class="el" href="classKviGoAwayAction.html#a8274d5519290974975c39ff1483b34fc">addToPopupMenu()</a>, and <a class="el" href="classKviGoAwayAction.html#a58d2955d5b5321571ea93b2f344b804a">setup()</a>.</p>
+<p>Referenced by <a class="el" href="classKviGoAwayAction.html#a26d63b650fe319f363c4b5388d447ce3">activeContextStateChanged()</a>, <a class="el" href="classKviGoAwayAction.html#a8c368e44866731155f01134bf3934f30">addToPopupMenu()</a>, and <a class="el" href="classKviGoAwayAction.html#a58d2955d5b5321571ea93b2f344b804a">setup()</a>.</p>
 
 </div>
 </div>
@@ -341,7 +341,7 @@ Protected Attributes</h2></td></tr>
 <li>src/kvirc/kernel/<a class="el" href="KviCoreActions_8cpp.html">KviCoreActions.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:27 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:14 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

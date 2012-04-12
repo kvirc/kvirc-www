@@ -115,22 +115,22 @@ function toggleVisibility(linkObj) {
 <a name="l00034"></a>00034 <span class="preprocessor">#include &quot;KviPointerList.h&quot;</span>
 <a name="l00035"></a>00035 <span class="preprocessor">#include &quot;KviFileTransfer.h&quot;</span>
 <a name="l00036"></a>00036 <span class="preprocessor">#include &quot;KviTimeUtils.h&quot;</span>
-<a name="l00037"></a>00037 <span class="preprocessor">#include &quot;KviTalPopupMenu.h&quot;</span>
-<a name="l00038"></a>00038 <span class="preprocessor">#include &quot;KviTalHBox.h&quot;</span>
-<a name="l00039"></a>00039 <span class="preprocessor">#include &quot;KviTalVBox.h&quot;</span>
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041 <span class="preprocessor">#include &lt;QLabel&gt;</span>
-<a name="l00042"></a>00042 <span class="preprocessor">#include &lt;QProgressBar&gt;</span>
-<a name="l00043"></a>00043 <span class="preprocessor">#include &lt;QFile&gt;</span>
-<a name="l00044"></a>00044 <span class="preprocessor">#include &lt;QDialog&gt;</span>
-<a name="l00045"></a>00045 <span class="preprocessor">#include &lt;QCheckBox&gt;</span>
+<a name="l00037"></a>00037 <span class="preprocessor">#include &quot;KviTalHBox.h&quot;</span>
+<a name="l00038"></a>00038 <span class="preprocessor">#include &quot;KviTalVBox.h&quot;</span>
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040 <span class="preprocessor">#include &lt;QLabel&gt;</span>
+<a name="l00041"></a>00041 <span class="preprocessor">#include &lt;QProgressBar&gt;</span>
+<a name="l00042"></a>00042 <span class="preprocessor">#include &lt;QFile&gt;</span>
+<a name="l00043"></a>00043 <span class="preprocessor">#include &lt;QDialog&gt;</span>
+<a name="l00044"></a>00044 <span class="preprocessor">#include &lt;QCheckBox&gt;</span>
+<a name="l00045"></a>00045 <span class="preprocessor">#include &lt;QMenu&gt;</span>
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047 <span class="keyword">class </span>QSpinBox;
 <a name="l00048"></a>00048 <span class="keyword">class </span>QTimer;
 <a name="l00049"></a>00049 <span class="keyword">class </span>QPainter;
 <a name="l00050"></a>00050 <span class="keyword">class </span><a class="code" href="classDccFileTransfer.html">DccFileTransfer</a>;
 <a name="l00051"></a>00051 <span class="keyword">class </span><a class="code" href="classDccMarshal.html">DccMarshal</a>;
-<a name="l00052"></a>00052 <span class="keyword">class </span><a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>;
+<a name="l00052"></a>00052 <span class="keyword">class </span>QMenu;
 <a name="l00053"></a>00053 
 <a name="l00054"></a><a class="code" href="struct__KviDccSendThreadOptions.html">00054</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct__KviDccSendThreadOptions.html">_KviDccSendThreadOptions</a>
 <a name="l00055"></a>00055 {
@@ -297,7 +297,7 @@ function toggleVisibility(linkObj) {
 <a name="l00216"></a>00216 
 <a name="l00217"></a>00217         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classDccFileTransfer.html#a68db64d70ffd535afda023f122a51afd">displayPaint</a>(QPainter * <a class="code" href="detector_8cpp.html#ade66e4ccafbc33b117610bbc0d85feb0">p</a>,<span class="keywordtype">int</span> column, QRect rect);
 <a name="l00218"></a>00218         <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classDccFileTransfer.html#a0085db6772d87c36d18e68b5dbc5ae01">displayHeight</a>(<span class="keywordtype">int</span> iLineSpacing);
-<a name="l00219"></a>00219         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classDccFileTransfer.html#a944e11f182a004a9df506bd471480894">fillContextPopup</a>(<a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * <a class="code" href="detector_8cpp.html#a00626facb4f86efb8618a4c5f5c3c5f8">m</a>);
+<a name="l00219"></a>00219         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classDccFileTransfer.html#a9ee9d63706580c7b742e4898d994a286">fillContextPopup</a>(QMenu * <a class="code" href="detector_8cpp.html#a00626facb4f86efb8618a4c5f5c3c5f8">m</a>);
 <a name="l00220"></a>00220         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classDccFileTransfer.html#a6898d5aadae6102f8b98e25f98e7d548">fillStatusString</a>(QString &amp;<a class="code" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>);
 <a name="l00221"></a>00221         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classDccFileTransfer.html#a59881c635d16a4a963da165cf39e66a6">active</a>();
 <a name="l00222"></a>00222         <span class="keyword">virtual</span> QString <a class="code" href="classDccFileTransfer.html#aab39ba7a195b44c2a6343d27d093cf4b">tipText</a>();
@@ -337,7 +337,7 @@ function toggleVisibility(linkObj) {
 <a name="l00256"></a>00256 <span class="preprocessor">#endif //_SEND_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:18 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:06 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

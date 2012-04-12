@@ -116,7 +116,7 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinksWindow.html#ab531e28997f11b9255be70963c8f8156">connectionStateChange</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinksWindow.html#a685744cde6b2e4603392a9dabcd4bcba">hostPopupClicked</a> (int id)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinksWindow.html#a4161af6cfbca78d43e49cfef764b951f">hostPopupClicked</a> (QAction *pAction)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinksWindow.html#a481bb8bbeec09d9949a7435f7bbfcfdc">requestLinks</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinksWindow.html#a7b0c28a430b5021292e18b8aff4531aa">showHostPopup</a> (QTreeWidgetItem *i, const QPoint &amp;p)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
@@ -128,7 +128,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinksWindow.html#a4c2108e1ae6464fdc789e329216b6872">resizeEvent</a> (QResizeEvent *e)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinksWindow.html#a7c1867d1d6c2650d9aaf33c47076005c">m_pHostPopup</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinksWindow.html#a32d4cb34f7be27f66253c733a46aca44">m_pHostPopup</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviThemedLabel.html">KviThemedLabel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinksWindow.html#a1cffdf6c3979f0f9656e61a14a8715fe">m_pInfoLabel</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="struct__KviLink.html">KviLink</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinksWindow.html#a034b6d48be0f21b224b79bd72427aed7">m_pLinkList</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLinksListView.html">LinksListView</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinksWindow.html#aaa59d157de31b8cc0b8dd716a5b3db43">m_pListView</a></td></tr>
@@ -159,7 +159,7 @@ Private Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="KviLocale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classLinksWindow.html#ab531e28997f11b9255be70963c8f8156">connectionStateChange()</a>, <a class="el" href="classKviConsoleWindow.html#a38237f3ff6cbe08ee3ae18e281909bbb">KviConsoleWindow::context()</a>, <a class="el" href="KviIconManager_8cpp.html#a3ea7617ef2d091c1c04b0f95fb0845ae">g_pIconManager</a>, <a class="el" href="classKviIconManager.html#a36bca624a1c6293627263463d8f3e3a5">KviIconManager::getSmallIcon()</a>, <a class="el" href="classLinksWindow.html#a685744cde6b2e4603392a9dabcd4bcba">hostPopupClicked()</a>, <a class="el" href="KviTalSplitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a>, <a class="el" href="detector_8cpp.html#a1cb503ddd20ff3cf9588d2b5abd202d8">l</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a1ae1cf57e294da5d653c6d9a383c4edc">KviIconManager::Links</a>, <a class="el" href="classKviWindow.html#a5a723df27fb1fe16713ec320ae038855">KviWindow::m_pConsole</a>, <a class="el" href="classLinksWindow.html#a7c1867d1d6c2650d9aaf33c47076005c">m_pHostPopup</a>, <a class="el" href="classLinksWindow.html#a1cffdf6c3979f0f9656e61a14a8715fe">m_pInfoLabel</a>, <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classLinksWindow.html#a034b6d48be0f21b224b79bd72427aed7">m_pLinkList</a>, <a class="el" href="classLinksWindow.html#aaa59d157de31b8cc0b8dd716a5b3db43">m_pListView</a>, <a class="el" href="classLinksWindow.html#a8c8a37a584b127a3d8067180ee76ac5c">m_pRequestButton</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classLinksWindow.html#a90f1b02e6b2763bb8960c14b3e475b2c">m_pTopSplitter</a>, <a class="el" href="classLinksWindow.html#ada34d4be5b79270d4a1db9f816bb3fad">m_pVertSplitter</a>, <a class="el" href="classLinksWindow.html#a611d4c46cb98ab7bada0647bcf2d2826">m_szRootServer</a>, <a class="el" href="classLinksWindow.html#a481bb8bbeec09d9949a7435f7bbfcfdc">requestLinks()</a>, <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>, <a class="el" href="classKviIrcContext.html#acf4c54783b3674f191451d77d3113247">KviIrcContext::setLinksWindowPointer()</a>, <a class="el" href="classKviTalHBox.html#a827bba616683b199034e6a9b0a54b211">KviTalHBox::setStretchFactor()</a>, and <a class="el" href="classLinksWindow.html#a7b0c28a430b5021292e18b8aff4531aa">showHostPopup()</a>.</p>
+<p>References <a class="el" href="KviLocale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classLinksWindow.html#ab531e28997f11b9255be70963c8f8156">connectionStateChange()</a>, <a class="el" href="classKviConsoleWindow.html#a38237f3ff6cbe08ee3ae18e281909bbb">KviConsoleWindow::context()</a>, <a class="el" href="KviIconManager_8cpp.html#a3ea7617ef2d091c1c04b0f95fb0845ae">g_pIconManager</a>, <a class="el" href="classKviIconManager.html#a36bca624a1c6293627263463d8f3e3a5">KviIconManager::getSmallIcon()</a>, <a class="el" href="classLinksWindow.html#a4161af6cfbca78d43e49cfef764b951f">hostPopupClicked()</a>, <a class="el" href="KviTalSplitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a>, <a class="el" href="detector_8cpp.html#a1cb503ddd20ff3cf9588d2b5abd202d8">l</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a1ae1cf57e294da5d653c6d9a383c4edc">KviIconManager::Links</a>, <a class="el" href="classKviWindow.html#a5a723df27fb1fe16713ec320ae038855">KviWindow::m_pConsole</a>, <a class="el" href="classLinksWindow.html#a32d4cb34f7be27f66253c733a46aca44">m_pHostPopup</a>, <a class="el" href="classLinksWindow.html#a1cffdf6c3979f0f9656e61a14a8715fe">m_pInfoLabel</a>, <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classLinksWindow.html#a034b6d48be0f21b224b79bd72427aed7">m_pLinkList</a>, <a class="el" href="classLinksWindow.html#aaa59d157de31b8cc0b8dd716a5b3db43">m_pListView</a>, <a class="el" href="classLinksWindow.html#a8c8a37a584b127a3d8067180ee76ac5c">m_pRequestButton</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classLinksWindow.html#a90f1b02e6b2763bb8960c14b3e475b2c">m_pTopSplitter</a>, <a class="el" href="classLinksWindow.html#ada34d4be5b79270d4a1db9f816bb3fad">m_pVertSplitter</a>, <a class="el" href="classLinksWindow.html#a611d4c46cb98ab7bada0647bcf2d2826">m_szRootServer</a>, <a class="el" href="classLinksWindow.html#a481bb8bbeec09d9949a7435f7bbfcfdc">requestLinks()</a>, <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>, <a class="el" href="classKviIrcContext.html#acf4c54783b3674f191451d77d3113247">KviIrcContext::setLinksWindowPointer()</a>, <a class="el" href="classKviTalHBox.html#a827bba616683b199034e6a9b0a54b211">KviTalHBox::setStretchFactor()</a>, and <a class="el" href="classLinksWindow.html#a7b0c28a430b5021292e18b8aff4531aa">showHostPopup()</a>.</p>
 
 </div>
 </div>
@@ -177,7 +177,7 @@ Private Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviConsoleWindow.html#a38237f3ff6cbe08ee3ae18e281909bbb">KviConsoleWindow::context()</a>, <a class="el" href="classKviWindow.html#a5a723df27fb1fe16713ec320ae038855">KviWindow::m_pConsole</a>, <a class="el" href="classLinksWindow.html#a7c1867d1d6c2650d9aaf33c47076005c">m_pHostPopup</a>, <a class="el" href="classLinksWindow.html#a034b6d48be0f21b224b79bd72427aed7">m_pLinkList</a>, <a class="el" href="classKviPointerList.html#ae40ae20ce78c065788a04b47c35452c1">KviPointerList&lt; T &gt;::removeRef()</a>, and <a class="el" href="classKviIrcContext.html#acf4c54783b3674f191451d77d3113247">KviIrcContext::setLinksWindowPointer()</a>.</p>
+<p>References <a class="el" href="classKviConsoleWindow.html#a38237f3ff6cbe08ee3ae18e281909bbb">KviConsoleWindow::context()</a>, <a class="el" href="classKviWindow.html#a5a723df27fb1fe16713ec320ae038855">KviWindow::m_pConsole</a>, <a class="el" href="classLinksWindow.html#a32d4cb34f7be27f66253c733a46aca44">m_pHostPopup</a>, <a class="el" href="classLinksWindow.html#a034b6d48be0f21b224b79bd72427aed7">m_pLinkList</a>, <a class="el" href="classKviPointerList.html#ae40ae20ce78c065788a04b47c35452c1">KviPointerList&lt; T &gt;::removeRef()</a>, and <a class="el" href="classKviIrcContext.html#acf4c54783b3674f191451d77d3113247">KviIrcContext::setLinksWindowPointer()</a>.</p>
 
 </div>
 </div>
@@ -355,22 +355,22 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a685744cde6b2e4603392a9dabcd4bcba"></a><!-- doxytag: member="LinksWindow::hostPopupClicked" ref="a685744cde6b2e4603392a9dabcd4bcba" args="(int id)" -->
+<a class="anchor" id="a4161af6cfbca78d43e49cfef764b951f"></a><!-- doxytag: member="LinksWindow::hostPopupClicked" ref="a4161af6cfbca78d43e49cfef764b951f" args="(QAction *pAction)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void LinksWindow::hostPopupClicked </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramtype">QAction *&#160;</td>
+          <td class="paramname"><em>pAction</em></td><td>)</td>
           <td><code> [protected, slot]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="KviLocale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">KviWindow::connection()</a>, <a class="el" href="classKviCString.html#aff0fe23084552e2356477d570cd78af5">KviCString::hasData()</a>, <a class="el" href="kvi__out_8h.html#a89cf0690fda91720fff6432cf8e3dff8">KVI_OUT_SYSTEMERROR</a>, <a class="el" href="classKviWindow.html#a5a723df27fb1fe16713ec320ae038855">KviWindow::m_pConsole</a>, <a class="el" href="classLinksWindow.html#a7c1867d1d6c2650d9aaf33c47076005c">m_pHostPopup</a>, <a class="el" href="classKviWindow.html#ad481d46d9919c49de4ef0d97e083d1e8">KviWindow::output()</a>, <a class="el" href="classKviCString.html#ae063f5e8373911f9e078fc5a526c7569">KviCString::ptr()</a>, <a class="el" href="classKviIrcConnection.html#aa8f7edda624303e8f95eb13b4376920c">KviIrcConnection::sendData()</a>, and <a class="el" href="classKviTalPopupMenu.html#a1337465998eda31c3f3ea855ae31a876">KviTalPopupMenu::text()</a>.</p>
+<p>References <a class="el" href="KviLocale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">KviWindow::connection()</a>, <a class="el" href="classKviCString.html#aff0fe23084552e2356477d570cd78af5">KviCString::hasData()</a>, <a class="el" href="kvi__out_8h.html#a89cf0690fda91720fff6432cf8e3dff8">KVI_OUT_SYSTEMERROR</a>, <a class="el" href="classKviWindow.html#a5a723df27fb1fe16713ec320ae038855">KviWindow::m_pConsole</a>, <a class="el" href="classKviWindow.html#ad481d46d9919c49de4ef0d97e083d1e8">KviWindow::output()</a>, <a class="el" href="classKviCString.html#ae063f5e8373911f9e078fc5a526c7569">KviCString::ptr()</a>, and <a class="el" href="classKviIrcConnection.html#aa8f7edda624303e8f95eb13b4376920c">KviIrcConnection::sendData()</a>.</p>
 
 <p>Referenced by <a class="el" href="classLinksWindow.html#aff58efeb4f65e01990317d91c050ee62">LinksWindow()</a>.</p>
 
@@ -522,7 +522,7 @@ Private Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviTalPopupMenu.html#a2deae00fa8031a641272499bc195e87e">KviTalPopupMenu::clear()</a>, <a class="el" href="classKviCString.html#a4e249e7e1c6f964ee0983648bac01c50a610be006382845eee10fa97583bcf698">KviCString::Format</a>, <a class="el" href="KviIconManager_8cpp.html#a3ea7617ef2d091c1c04b0f95fb0845ae">g_pIconManager</a>, <a class="el" href="classKviIconManager.html#a36bca624a1c6293627263463d8f3e3a5">KviIconManager::getSmallIcon()</a>, <a class="el" href="classKviTalPopupMenu.html#ad491ba2ad4a8133a89bdf417c1acacc6">KviTalPopupMenu::insertItem()</a>, <a class="el" href="classKviTalPopupMenu.html#aa8e6cf937ecf16c7ef3105c918359acc">KviTalPopupMenu::insertSeparator()</a>, <a class="el" href="classKviCString.html#a75e3f69e8d1c7ef860194c1c583908a9">KviCString::isEmpty()</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a542342647d17536f569fffc4a610d821">KviIconManager::KVIrc</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a1ae1cf57e294da5d653c6d9a383c4edc">KviIconManager::Links</a>, <a class="el" href="classLinksWindow.html#a7c1867d1d6c2650d9aaf33c47076005c">m_pHostPopup</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7ae9f1c7547e414f35bddcccc2156ec471">KviIconManager::Motd</a>, <a class="el" href="classKviCString.html#ae063f5e8373911f9e078fc5a526c7569">KviCString::ptr()</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7aabbe7298f3fabe61a20d28d59cb8508b">KviIconManager::ServerInfo</a>, and <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a9cfd2bbb5e514dad9b2a602f3eb46487">KviIconManager::Time</a>.</p>
+<p>References <a class="el" href="classKviCString.html#a4e249e7e1c6f964ee0983648bac01c50a610be006382845eee10fa97583bcf698">KviCString::Format</a>, <a class="el" href="KviIconManager_8cpp.html#a3ea7617ef2d091c1c04b0f95fb0845ae">g_pIconManager</a>, <a class="el" href="classKviIconManager.html#a36bca624a1c6293627263463d8f3e3a5">KviIconManager::getSmallIcon()</a>, <a class="el" href="classKviCString.html#a75e3f69e8d1c7ef860194c1c583908a9">KviCString::isEmpty()</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a542342647d17536f569fffc4a610d821">KviIconManager::KVIrc</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a1ae1cf57e294da5d653c6d9a383c4edc">KviIconManager::Links</a>, <a class="el" href="classLinksWindow.html#a32d4cb34f7be27f66253c733a46aca44">m_pHostPopup</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7ae9f1c7547e414f35bddcccc2156ec471">KviIconManager::Motd</a>, <a class="el" href="classKviCString.html#ae063f5e8373911f9e078fc5a526c7569">KviCString::ptr()</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7aabbe7298f3fabe61a20d28d59cb8508b">KviIconManager::ServerInfo</a>, and <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a9cfd2bbb5e514dad9b2a602f3eb46487">KviIconManager::Time</a>.</p>
 
 <p>Referenced by <a class="el" href="classLinksWindow.html#aff58efeb4f65e01990317d91c050ee62">LinksWindow()</a>.</p>
 
@@ -547,18 +547,18 @@ Private Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a7c1867d1d6c2650d9aaf33c47076005c"></a><!-- doxytag: member="LinksWindow::m_pHostPopup" ref="a7c1867d1d6c2650d9aaf33c47076005c" args="" -->
+<a class="anchor" id="a32d4cb34f7be27f66253c733a46aca44"></a><!-- doxytag: member="LinksWindow::m_pHostPopup" ref="a32d4cb34f7be27f66253c733a46aca44" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>* <a class="el" href="classLinksWindow.html#a7c1867d1d6c2650d9aaf33c47076005c">LinksWindow::m_pHostPopup</a><code> [protected]</code></td>
+          <td class="memname">QMenu* <a class="el" href="classLinksWindow.html#a32d4cb34f7be27f66253c733a46aca44">LinksWindow::m_pHostPopup</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLinksWindow.html#a685744cde6b2e4603392a9dabcd4bcba">hostPopupClicked()</a>, <a class="el" href="classLinksWindow.html#aff58efeb4f65e01990317d91c050ee62">LinksWindow()</a>, <a class="el" href="classLinksWindow.html#a7b0c28a430b5021292e18b8aff4531aa">showHostPopup()</a>, and <a class="el" href="classLinksWindow.html#af67bc09016279d0cb63aa4b8e18746e2">~LinksWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLinksWindow.html#aff58efeb4f65e01990317d91c050ee62">LinksWindow()</a>, <a class="el" href="classLinksWindow.html#a7b0c28a430b5021292e18b8aff4531aa">showHostPopup()</a>, and <a class="el" href="classLinksWindow.html#af67bc09016279d0cb63aa4b8e18746e2">~LinksWindow()</a>.</p>
 
 </div>
 </div>
@@ -672,7 +672,7 @@ Private Member Functions</h2></td></tr>
 <li>src/modules/links/<a class="el" href="LinksWindow_8cpp.html">LinksWindow.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:37 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:24 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

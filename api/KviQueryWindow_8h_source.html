@@ -134,84 +134,85 @@ function toggleVisibility(linkObj) {
 <a name="l00076"></a><a class="code" href="classKviQueryWindow.html#ad2e65e1808c3a0f5275e0cd0c8ca6c4b">00076</a>         <span class="keywordtype">int</span>                                   <a class="code" href="classKviQueryWindow.html#ad2e65e1808c3a0f5275e0cd0c8ca6c4b">m_iFlags</a>;
 <a name="l00077"></a><a class="code" href="classKviQueryWindow.html#a7d71a7ff94653a4603e7ac2a2ac338db">00077</a>         <a class="code" href="classKviThemedLabel.html">KviThemedLabel</a>                      * <a class="code" href="classKviQueryWindow.html#a7d71a7ff94653a4603e7ac2a2ac338db">m_pLabel</a>;
 <a name="l00078"></a><a class="code" href="classKviQueryWindow.html#a4fcab19ead2d1aae6b5d1d104c0afbef">00078</a>         QFrame                              * <a class="code" href="classKviQueryWindow.html#a4fcab19ead2d1aae6b5d1d104c0afbef">m_pButtonGrid</a>;
-<a name="l00079"></a>00079 <span class="keyword">public</span>:
-<a name="l00084"></a><a class="code" href="classKviQueryWindow.html#a0f2de8c1cbbe4e540fdae05fc5c48e4a">00084</a>         <a class="code" href="classKviUserListView.html" title="User list view management class.">KviUserListView</a> * <a class="code" href="classKviQueryWindow.html#a0f2de8c1cbbe4e540fdae05fc5c48e4a" title="Returns the userlist of the query (the remote peer)">userListView</a>(){ <span class="keywordflow">return</span> m_pUserListView; };
-<a name="l00085"></a>00085 
-<a name="l00090"></a>00090         <span class="keywordtype">void</span> setDeadQuery();
-<a name="l00091"></a>00091 
-<a name="l00096"></a>00096         <span class="keywordtype">void</span> setAliveQuery();
-<a name="l00097"></a>00097 
-<a name="l00102"></a><a class="code" href="classKviQueryWindow.html#aeb0097f6cf807596ca12a7a8dd544415">00102</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviQueryWindow.html#aeb0097f6cf807596ca12a7a8dd544415" title="Returns true if the query is dead.">isDeadQuery</a>(){ <span class="keywordflow">return</span> m_iFlags &amp; Dead; };
-<a name="l00103"></a>00103 
-<a name="l00108"></a>00108         <span class="keyword">virtual</span> QSize sizeHint() <span class="keyword">const</span>;
-<a name="l00109"></a>00109 
-<a name="l00114"></a><a class="code" href="classKviQueryWindow.html#a656e32a36f2a0f6df8d20a5f25cc8284">00114</a>         <span class="keyword">virtual</span> <span class="keyword">const</span> QString &amp; <a class="code" href="classKviQueryWindow.html#a656e32a36f2a0f6df8d20a5f25cc8284" title="Returns the name of the query target.">target</a>(){ <span class="keywordflow">return</span> <a class="code" href="classKviWindow.html#a1a9d026251bc4cf03e3718f9d0af77ac" title="Returns the name of this window.">windowName</a>(); };
-<a name="l00115"></a>00115 
-<a name="l00123"></a>00123         <a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * setTarget(<span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser, <span class="keyword">const</span> QString &amp; <a class="code" href="libkvisetup_8cpp.html#a4fb3832e26f698a2be51f410b6a1e17e">szHost</a>);
-<a name="l00124"></a>00124 
-<a name="l00129"></a><a class="code" href="classKviQueryWindow.html#ace74881edf134b9630354e8574e01528">00129</a>         QFrame * <a class="code" href="classKviQueryWindow.html#ace74881edf134b9630354e8574e01528" title="Returns the button container.">buttonContainer</a>(){ <span class="keywordflow">return</span> (QFrame*)m_pButtonGrid; };
-<a name="l00130"></a>00130 
-<a name="l00135"></a>00135         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a372021c3ba0dcd30af1531e1910ea89f">applyOptions</a>();
-<a name="l00136"></a>00136 
-<a name="l00143"></a>00143         <span class="keywordtype">void</span> userAction(<a class="code" href="classKviIrcMask.html" title="Irc user mask handling.">KviIrcMask</a> * user, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uActionType);
-<a name="l00144"></a>00144 
-<a name="l00151"></a>00151         <span class="keywordtype">void</span> userAction(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uActionType);
-<a name="l00152"></a>00152 
-<a name="l00161"></a>00161         <span class="keywordtype">void</span> userAction(<span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser, <span class="keyword">const</span> QString &amp; <a class="code" href="libkvisetup_8cpp.html#a4fb3832e26f698a2be51f410b6a1e17e">szHost</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uActionType);
-<a name="l00162"></a>00162 
-<a name="l00169"></a>00169         <span class="keywordtype">bool</span> nickChange(<span class="keyword">const</span> QString &amp; szOldNick, <span class="keyword">const</span> QString &amp; szNewNick);
-<a name="l00170"></a>00170 
-<a name="l00177"></a>00177         <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a84791485798762785432f48ab9bbdfe1">ownMessage</a>(<span class="keyword">const</span> QString &amp; <a class="code" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>, <span class="keywordtype">bool</span> bUserFeedback = <span class="keyword">true</span>);
-<a name="l00178"></a>00178 
-<a name="l00184"></a>00184         <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a7cbab6cf8d74e8aeb0d70a275ec6325d">ownAction</a>(<span class="keyword">const</span> QString &amp; <a class="code" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>);
-<a name="l00185"></a>00185 
-<a name="l00190"></a><a class="code" href="classKviQueryWindow.html#ad6ab53d77c6016a5583e0f581a6e58c6">00190</a>         <span class="keywordtype">int</span> <a class="code" href="classKviQueryWindow.html#ad6ab53d77c6016a5583e0f581a6e58c6" title="Returns the number of selected users in the userlist.">selectedCount</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;selectedCount(); };
-<a name="l00191"></a>00191 
-<a name="l00197"></a><a class="code" href="classKviQueryWindow.html#af01e4fabf77844e2e3a0cca252802421">00197</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviQueryWindow.html#af01e4fabf77844e2e3a0cca252802421" title="Called when the target changes the avatar.">avatarChanged</a>(<span class="keyword">const</span> QString &amp; szNick){ <span class="keywordflow">return</span> m_pUserListView-&gt;avatarChanged(szNick); };
-<a name="l00198"></a>00198 
-<a name="l00208"></a>00208         <span class="keywordtype">void</span> notifyCommonChannels(<span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser, <span class="keyword">const</span> QString &amp; <a class="code" href="libkvisetup_8cpp.html#a4fb3832e26f698a2be51f410b6a1e17e">szHost</a>, <span class="keywordtype">int</span> iChans, <span class="keyword">const</span> QString &amp; szChans);
-<a name="l00209"></a>00209 
-<a name="l00215"></a>00215         <span class="keywordtype">void</span> showListView(<span class="keywordtype">bool</span> bShow);
-<a name="l00216"></a>00216 
-<a name="l00222"></a>00222         <span class="keywordtype">void</span> mergeQuery(<a class="code" href="classKviQueryWindow.html" title="The class which manages a query.">KviQueryWindow</a> * pQuery);
-<a name="l00223"></a>00223 
-<a name="l00228"></a>00228         <span class="keywordtype">void</span> updateLabelText();
-<a name="l00229"></a>00229 
-<a name="l00238"></a>00238         <span class="keywordtype">void</span> pasteLastLog();
-<a name="l00239"></a>00239 
-<a name="l00248"></a>00248         QByteArray loadLogFile(<span class="keyword">const</span> QString &amp; szFileName, <span class="keywordtype">bool</span> bGzip);
-<a name="l00249"></a>00249 <span class="keyword">protected</span>:
-<a name="l00260"></a>00260         <span class="keywordtype">void</span> notifyTargetChange(<span class="keyword">const</span> QString &amp; szOldNick, <span class="keyword">const</span> QString &amp; szOldUser, <span class="keyword">const</span> QString &amp; szOldHost, <span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser, <span class="keyword">const</span> QString &amp; <a class="code" href="libkvisetup_8cpp.html#a4fb3832e26f698a2be51f410b6a1e17e">szHost</a>);
-<a name="l00261"></a>00261 
-<a name="l00266"></a>00266         QString getInfoLabelText();
-<a name="l00267"></a>00267 
-<a name="l00272"></a>00272         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a59d6dd538cc823cb37fb9e24ded6a083">getWindowListTipText</a>(QString &amp; <a class="code" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>);
-<a name="l00273"></a>00273 
-<a name="l00278"></a>00278         <span class="keyword">virtual</span> QPixmap * <a class="code" href="classKviWindow.html#a4264947cba43ceaec2f0e5bae43f6f7c">myIconPtr</a>();
-<a name="l00279"></a>00279 
-<a name="l00284"></a>00284         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a62b040dc4fdd6dab69d5102a652b48ca">fillCaptionBuffers</a>();
-<a name="l00285"></a>00285 
-<a name="l00291"></a>00291         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a0cb041b9b2c9356d0c541273c9f8dca8">loadProperties</a>(<a class="code" href="classKviConfigurationFile.html">KviConfigurationFile</a> * pCfg);
-<a name="l00292"></a>00292 
-<a name="l00298"></a>00298         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a63f02e495408b530f84f6d4f559f9924">saveProperties</a>(<a class="code" href="classKviConfigurationFile.html">KviConfigurationFile</a> * pCfg);
-<a name="l00299"></a>00299 
-<a name="l00305"></a>00305         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a9471fd5fef52ba801626d4ac8521a520">getBaseLogFileName</a>(QString &amp; <a class="code" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>);
-<a name="l00306"></a>00306 
-<a name="l00311"></a>00311         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a497d86458ff9baa8b5fd5123c77d7c73">triggerCreationEvents</a>();
-<a name="l00312"></a>00312 
-<a name="l00313"></a>00313         <span class="keyword">virtual</span> <span class="keywordtype">void</span> resizeEvent(QResizeEvent *);
-<a name="l00314"></a>00314 <span class="keyword">protected</span> slots:
-<a name="l00319"></a>00319         <span class="keywordtype">void</span> textViewRightClicked();
-<a name="l00320"></a>00320 
-<a name="l00325"></a>00325         <span class="keywordtype">void</span> toggleListView();
-<a name="l00326"></a>00326 
-<a name="l00332"></a>00332         <span class="keywordtype">void</span> slotDndEvents(<span class="keyword">const</span> QString &amp; szFile);
-<a name="l00333"></a>00333 };
-<a name="l00334"></a>00334 
-<a name="l00335"></a>00335 <span class="preprocessor">#endif //_KVI_CHANNEL_H_</span>
+<a name="l00079"></a><a class="code" href="classKviQueryWindow.html#ae9ab0739f61637ca63fbcd451e3bbf29">00079</a>         QList&lt;int&gt;                            <a class="code" href="classKviQueryWindow.html#ae9ab0739f61637ca63fbcd451e3bbf29">m_SplitterSizesList</a>;
+<a name="l00080"></a>00080 <span class="keyword">public</span>:
+<a name="l00085"></a><a class="code" href="classKviQueryWindow.html#a0f2de8c1cbbe4e540fdae05fc5c48e4a">00085</a>         <a class="code" href="classKviUserListView.html" title="User list view management class.">KviUserListView</a> * <a class="code" href="classKviQueryWindow.html#a0f2de8c1cbbe4e540fdae05fc5c48e4a" title="Returns the userlist of the query (the remote peer)">userListView</a>(){ <span class="keywordflow">return</span> m_pUserListView; };
+<a name="l00086"></a>00086 
+<a name="l00091"></a>00091         <span class="keywordtype">void</span> setDeadQuery();
+<a name="l00092"></a>00092 
+<a name="l00097"></a>00097         <span class="keywordtype">void</span> setAliveQuery();
+<a name="l00098"></a>00098 
+<a name="l00103"></a><a class="code" href="classKviQueryWindow.html#aeb0097f6cf807596ca12a7a8dd544415">00103</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviQueryWindow.html#aeb0097f6cf807596ca12a7a8dd544415" title="Returns true if the query is dead.">isDeadQuery</a>(){ <span class="keywordflow">return</span> m_iFlags &amp; Dead; };
+<a name="l00104"></a>00104 
+<a name="l00109"></a>00109         <span class="keyword">virtual</span> QSize sizeHint() <span class="keyword">const</span>;
+<a name="l00110"></a>00110 
+<a name="l00115"></a><a class="code" href="classKviQueryWindow.html#a656e32a36f2a0f6df8d20a5f25cc8284">00115</a>         <span class="keyword">virtual</span> <span class="keyword">const</span> QString &amp; <a class="code" href="classKviQueryWindow.html#a656e32a36f2a0f6df8d20a5f25cc8284" title="Returns the name of the query target.">target</a>(){ <span class="keywordflow">return</span> <a class="code" href="classKviWindow.html#a1a9d026251bc4cf03e3718f9d0af77ac" title="Returns the name of this window.">windowName</a>(); };
+<a name="l00116"></a>00116 
+<a name="l00124"></a>00124         <a class="code" href="classKviUserListEntry.html" title="Userlist entry management class.">KviUserListEntry</a> * setTarget(<span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser, <span class="keyword">const</span> QString &amp; <a class="code" href="libkvisetup_8cpp.html#a4fb3832e26f698a2be51f410b6a1e17e">szHost</a>);
+<a name="l00125"></a>00125 
+<a name="l00130"></a><a class="code" href="classKviQueryWindow.html#ace74881edf134b9630354e8574e01528">00130</a>         QFrame * <a class="code" href="classKviQueryWindow.html#ace74881edf134b9630354e8574e01528" title="Returns the button container.">buttonContainer</a>(){ <span class="keywordflow">return</span> (QFrame*)m_pButtonGrid; };
+<a name="l00131"></a>00131 
+<a name="l00136"></a>00136         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a372021c3ba0dcd30af1531e1910ea89f">applyOptions</a>();
+<a name="l00137"></a>00137 
+<a name="l00144"></a>00144         <span class="keywordtype">void</span> userAction(<a class="code" href="classKviIrcMask.html" title="Irc user mask handling.">KviIrcMask</a> * user, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uActionType);
+<a name="l00145"></a>00145 
+<a name="l00152"></a>00152         <span class="keywordtype">void</span> userAction(<span class="keyword">const</span> QString &amp; szNick, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uActionType);
+<a name="l00153"></a>00153 
+<a name="l00162"></a>00162         <span class="keywordtype">void</span> userAction(<span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser, <span class="keyword">const</span> QString &amp; <a class="code" href="libkvisetup_8cpp.html#a4fb3832e26f698a2be51f410b6a1e17e">szHost</a>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uActionType);
+<a name="l00163"></a>00163 
+<a name="l00170"></a>00170         <span class="keywordtype">bool</span> nickChange(<span class="keyword">const</span> QString &amp; szOldNick, <span class="keyword">const</span> QString &amp; szNewNick);
+<a name="l00171"></a>00171 
+<a name="l00178"></a>00178         <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a84791485798762785432f48ab9bbdfe1">ownMessage</a>(<span class="keyword">const</span> QString &amp; <a class="code" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>, <span class="keywordtype">bool</span> bUserFeedback = <span class="keyword">true</span>);
+<a name="l00179"></a>00179 
+<a name="l00185"></a>00185         <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a7cbab6cf8d74e8aeb0d70a275ec6325d">ownAction</a>(<span class="keyword">const</span> QString &amp; <a class="code" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>);
+<a name="l00186"></a>00186 
+<a name="l00191"></a><a class="code" href="classKviQueryWindow.html#ad6ab53d77c6016a5583e0f581a6e58c6">00191</a>         <span class="keywordtype">int</span> <a class="code" href="classKviQueryWindow.html#ad6ab53d77c6016a5583e0f581a6e58c6" title="Returns the number of selected users in the userlist.">selectedCount</a>(){ <span class="keywordflow">return</span> m_pUserListView-&gt;selectedCount(); };
+<a name="l00192"></a>00192 
+<a name="l00198"></a><a class="code" href="classKviQueryWindow.html#af01e4fabf77844e2e3a0cca252802421">00198</a>         <span class="keywordtype">bool</span> <a class="code" href="classKviQueryWindow.html#af01e4fabf77844e2e3a0cca252802421" title="Called when the target changes the avatar.">avatarChanged</a>(<span class="keyword">const</span> QString &amp; szNick){ <span class="keywordflow">return</span> m_pUserListView-&gt;avatarChanged(szNick); };
+<a name="l00199"></a>00199 
+<a name="l00209"></a>00209         <span class="keywordtype">void</span> notifyCommonChannels(<span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser, <span class="keyword">const</span> QString &amp; <a class="code" href="libkvisetup_8cpp.html#a4fb3832e26f698a2be51f410b6a1e17e">szHost</a>, <span class="keywordtype">int</span> iChans, <span class="keyword">const</span> QString &amp; szChans);
+<a name="l00210"></a>00210 
+<a name="l00217"></a>00217         <span class="keywordtype">void</span> showListView(<span class="keywordtype">bool</span> bShow, <span class="keywordtype">bool</span> bIgnoreSizeChange=<span class="keyword">false</span>);
+<a name="l00218"></a>00218 
+<a name="l00224"></a>00224         <span class="keywordtype">void</span> mergeQuery(<a class="code" href="classKviQueryWindow.html" title="The class which manages a query.">KviQueryWindow</a> * pQuery);
+<a name="l00225"></a>00225 
+<a name="l00230"></a>00230         <span class="keywordtype">void</span> updateLabelText();
+<a name="l00231"></a>00231 
+<a name="l00240"></a>00240         <span class="keywordtype">void</span> pasteLastLog();
+<a name="l00241"></a>00241 
+<a name="l00250"></a>00250         QByteArray loadLogFile(<span class="keyword">const</span> QString &amp; szFileName, <span class="keywordtype">bool</span> bGzip);
+<a name="l00251"></a>00251 <span class="keyword">protected</span>:
+<a name="l00262"></a>00262         <span class="keywordtype">void</span> notifyTargetChange(<span class="keyword">const</span> QString &amp; szOldNick, <span class="keyword">const</span> QString &amp; szOldUser, <span class="keyword">const</span> QString &amp; szOldHost, <span class="keyword">const</span> QString &amp; szNick, <span class="keyword">const</span> QString &amp; szUser, <span class="keyword">const</span> QString &amp; <a class="code" href="libkvisetup_8cpp.html#a4fb3832e26f698a2be51f410b6a1e17e">szHost</a>);
+<a name="l00263"></a>00263 
+<a name="l00268"></a>00268         QString getInfoLabelText();
+<a name="l00269"></a>00269 
+<a name="l00274"></a>00274         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a59d6dd538cc823cb37fb9e24ded6a083">getWindowListTipText</a>(QString &amp; <a class="code" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>);
+<a name="l00275"></a>00275 
+<a name="l00280"></a>00280         <span class="keyword">virtual</span> QPixmap * <a class="code" href="classKviWindow.html#a4264947cba43ceaec2f0e5bae43f6f7c">myIconPtr</a>();
+<a name="l00281"></a>00281 
+<a name="l00286"></a>00286         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a62b040dc4fdd6dab69d5102a652b48ca">fillCaptionBuffers</a>();
+<a name="l00287"></a>00287 
+<a name="l00293"></a>00293         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a0cb041b9b2c9356d0c541273c9f8dca8">loadProperties</a>(<a class="code" href="classKviConfigurationFile.html">KviConfigurationFile</a> * pCfg);
+<a name="l00294"></a>00294 
+<a name="l00300"></a>00300         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a63f02e495408b530f84f6d4f559f9924">saveProperties</a>(<a class="code" href="classKviConfigurationFile.html">KviConfigurationFile</a> * pCfg);
+<a name="l00301"></a>00301 
+<a name="l00307"></a>00307         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a9471fd5fef52ba801626d4ac8521a520">getBaseLogFileName</a>(QString &amp; <a class="code" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>);
+<a name="l00308"></a>00308 
+<a name="l00313"></a>00313         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classKviWindow.html#a497d86458ff9baa8b5fd5123c77d7c73">triggerCreationEvents</a>();
+<a name="l00314"></a>00314 
+<a name="l00315"></a>00315         <span class="keyword">virtual</span> <span class="keywordtype">void</span> resizeEvent(QResizeEvent *);
+<a name="l00316"></a>00316 <span class="keyword">protected</span> slots:
+<a name="l00321"></a>00321         <span class="keywordtype">void</span> textViewRightClicked();
+<a name="l00322"></a>00322 
+<a name="l00327"></a>00327         <span class="keywordtype">void</span> toggleListView();
+<a name="l00328"></a>00328 
+<a name="l00334"></a>00334         <span class="keywordtype">void</span> slotDndEvents(<span class="keyword">const</span> QString &amp; szFile);
+<a name="l00335"></a>00335 };
+<a name="l00336"></a>00336 
+<a name="l00337"></a>00337 <span class="preprocessor">#endif //_KVI_CHANNEL_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:18 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:06 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

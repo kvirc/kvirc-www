@@ -147,8 +147,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the status of the query as dead.  <a href="#a7734417cd40e9b0d84c31aaa68170d86"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviUserListEntry.html">KviUserListEntry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#ae24951ba8ff6a4c2e632406f4769227a">setTarget</a> (const QString &amp;szNick, const QString &amp;szUser, const QString &amp;<a class="el" href="SetupWizard_8cpp.html#a4fb3832e26f698a2be51f410b6a1e17e">szHost</a>)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the target of the query.  <a href="#ae24951ba8ff6a4c2e632406f4769227a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#a7cc6f54f15842c1f541751f5d5322e04">showListView</a> (bool bShow)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows the userlist view.  <a href="#a7cc6f54f15842c1f541751f5d5322e04"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#a7c3490fa35fa3bd83d90f2fd07f9dad7">showListView</a> (bool bShow, bool bIgnoreSizeChange=false)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows the userlist view.  <a href="#a7c3490fa35fa3bd83d90f2fd07f9dad7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QSize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#ae88af826b59c5eab55ea3d373e08db03">sizeHint</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the query object.  <a href="#ae88af826b59c5eab55ea3d373e08db03"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#a656e32a36f2a0f6df8d20a5f25cc8284">target</a> ()</td></tr>
@@ -201,6 +201,7 @@ Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviThemedLabel.html">KviThemedLabel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#a7d71a7ff94653a4603e7ac2a2ac338db">m_pLabel</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#abaafd3122e27f9773e9ddf363653b8a9">m_pListViewButton</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviUserListView.html">KviUserListView</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#ac3d9d7a66db26e04737bac3247e6f573">m_pUserListView</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QList&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviQueryWindow.html#ae9ab0739f61637ca63fbcd451e3bbf29">m_SplitterSizesList</a></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>The class which manages a query. </p>
@@ -548,7 +549,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a0cb041b9b2c9356d0c541273c9f8dca8">KviWindow</a>.</p>
 
-<p>References <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classKviConfigurationFile.html#a5b0944547ed66f4b77babc2807b99dd7">KviConfigurationFile::readBoolEntry()</a>, <a class="el" href="classKviConfigurationFile.html#a8d5d75cadfd6a3b51a0d0404bb10fd58">KviConfigurationFile::readIntListEntry()</a>, and <a class="el" href="classKviQueryWindow.html#a7cc6f54f15842c1f541751f5d5322e04">showListView()</a>.</p>
+<p>References <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classKviQueryWindow.html#ae9ab0739f61637ca63fbcd451e3bbf29">m_SplitterSizesList</a>, <a class="el" href="classKviConfigurationFile.html#a5b0944547ed66f4b77babc2807b99dd7">KviConfigurationFile::readBoolEntry()</a>, <a class="el" href="classKviConfigurationFile.html#a8d5d75cadfd6a3b51a0d0404bb10fd58">KviConfigurationFile::readIntListEntry()</a>, and <a class="el" href="classKviQueryWindow.html#a7c3490fa35fa3bd83d90f2fd07f9dad7">showListView()</a>.</p>
 
 </div>
 </div>
@@ -917,7 +918,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a63f02e495408b530f84f6d4f559f9924">KviWindow</a>.</p>
 
-<p>References <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classKviQueryWindow.html#ac3d9d7a66db26e04737bac3247e6f573">m_pUserListView</a>, and <a class="el" href="classKviConfigurationFile.html#a275254abcc77f29662b7a81c6abebb37">KviConfigurationFile::writeEntry()</a>.</p>
+<p>References <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classKviQueryWindow.html#ac3d9d7a66db26e04737bac3247e6f573">m_pUserListView</a>, <a class="el" href="classKviQueryWindow.html#ae9ab0739f61637ca63fbcd451e3bbf29">m_SplitterSizesList</a>, and <a class="el" href="classKviConfigurationFile.html#a275254abcc77f29662b7a81c6abebb37">KviConfigurationFile::writeEntry()</a>.</p>
 
 </div>
 </div>
@@ -1032,7 +1033,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7cc6f54f15842c1f541751f5d5322e04"></a><!-- doxytag: member="KviQueryWindow::showListView" ref="a7cc6f54f15842c1f541751f5d5322e04" args="(bool bShow)" -->
+<a class="anchor" id="a7c3490fa35fa3bd83d90f2fd07f9dad7"></a><!-- doxytag: member="KviQueryWindow::showListView" ref="a7c3490fa35fa3bd83d90f2fd07f9dad7" args="(bool bShow, bool bIgnoreSizeChange=false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1040,8 +1041,18 @@ Protected Attributes</h2></td></tr>
           <td class="memname">void KviQueryWindow::showListView </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bShow</em></td><td>)</td>
+          <td class="paramname"><em>bShow</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bIgnoreSizeChange</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
@@ -1051,12 +1062,13 @@ Protected Attributes</h2></td></tr>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">bShow</td><td>Whether to show or hide the view </td></tr>
+    <tr><td class="paramname">bIgnoreSizeChange</td><td>Whether to ignore the size change </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviQueryWindow.html#abaafd3122e27f9773e9ddf363653b8a9">m_pListViewButton</a>, and <a class="el" href="classKviQueryWindow.html#ac3d9d7a66db26e04737bac3247e6f573">m_pUserListView</a>.</p>
+<p>References <a class="el" href="classKviQueryWindow.html#abaafd3122e27f9773e9ddf363653b8a9">m_pListViewButton</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classKviQueryWindow.html#ac3d9d7a66db26e04737bac3247e6f573">m_pUserListView</a>, and <a class="el" href="classKviQueryWindow.html#ae9ab0739f61637ca63fbcd451e3bbf29">m_SplitterSizesList</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviQueryWindow.html#a63a6b8c655c72ef444f7d1a79507be1a">loadProperties()</a>, and <a class="el" href="classKviQueryWindow.html#a976c2b00293842eb474377ddaad0f842">toggleListView()</a>.</p>
 
@@ -1178,7 +1190,7 @@ Protected Attributes</h2></td></tr>
 <p>Toggles the userlist view. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviQueryWindow.html#ac3d9d7a66db26e04737bac3247e6f573">m_pUserListView</a>, and <a class="el" href="classKviQueryWindow.html#a7cc6f54f15842c1f541751f5d5322e04">showListView()</a>.</p>
+<p>References <a class="el" href="classKviQueryWindow.html#ac3d9d7a66db26e04737bac3247e6f573">m_pUserListView</a>, and <a class="el" href="classKviQueryWindow.html#a7c3490fa35fa3bd83d90f2fd07f9dad7">showListView()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviQueryWindow.html#aa42ee5bdeeba4cc338da1d5d12ac4b69">KviQueryWindow()</a>.</p>
 
@@ -1439,7 +1451,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviQueryWindow.html#aa42ee5bdeeba4cc338da1d5d12ac4b69">KviQueryWindow()</a>, and <a class="el" href="classKviQueryWindow.html#a7cc6f54f15842c1f541751f5d5322e04">showListView()</a>.</p>
+<p>Referenced by <a class="el" href="classKviQueryWindow.html#aa42ee5bdeeba4cc338da1d5d12ac4b69">KviQueryWindow()</a>, and <a class="el" href="classKviQueryWindow.html#a7c3490fa35fa3bd83d90f2fd07f9dad7">showListView()</a>.</p>
 
 </div>
 </div>
@@ -1454,7 +1466,22 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviQueryWindow.html#aba3e44e12376fdebb70f7094ded3afb0">applyOptions()</a>, <a class="el" href="classKviQueryWindow.html#aa42ee5bdeeba4cc338da1d5d12ac4b69">KviQueryWindow()</a>, <a class="el" href="classKviQueryWindow.html#aeeaed3cdd39e5db0db0e02bdd62cc096">nickChange()</a>, <a class="el" href="classKviQueryWindow.html#a8160ed7681ec028f37656a305bc38bc1">ownAction()</a>, <a class="el" href="classKviQueryWindow.html#af16ef9e25200f6e74f1c32b5ff7f3f20">saveProperties()</a>, <a class="el" href="classKviQueryWindow.html#a11b9c7e2a7ce9e511d51c572ecd053ba">setAliveQuery()</a>, <a class="el" href="classKviQueryWindow.html#a7734417cd40e9b0d84c31aaa68170d86">setDeadQuery()</a>, <a class="el" href="classKviQueryWindow.html#ae24951ba8ff6a4c2e632406f4769227a">setTarget()</a>, <a class="el" href="classKviQueryWindow.html#a7cc6f54f15842c1f541751f5d5322e04">showListView()</a>, <a class="el" href="classKviQueryWindow.html#a976c2b00293842eb474377ddaad0f842">toggleListView()</a>, <a class="el" href="classKviQueryWindow.html#aaac1ec7dd3bbeb683e933b8b2413ccd9">userAction()</a>, and <a class="el" href="classKviQueryWindow.html#a5fc739f9915ee42f3c77baf414f05a45">~KviQueryWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classKviQueryWindow.html#aba3e44e12376fdebb70f7094ded3afb0">applyOptions()</a>, <a class="el" href="classKviQueryWindow.html#aa42ee5bdeeba4cc338da1d5d12ac4b69">KviQueryWindow()</a>, <a class="el" href="classKviQueryWindow.html#aeeaed3cdd39e5db0db0e02bdd62cc096">nickChange()</a>, <a class="el" href="classKviQueryWindow.html#a8160ed7681ec028f37656a305bc38bc1">ownAction()</a>, <a class="el" href="classKviQueryWindow.html#af16ef9e25200f6e74f1c32b5ff7f3f20">saveProperties()</a>, <a class="el" href="classKviQueryWindow.html#a11b9c7e2a7ce9e511d51c572ecd053ba">setAliveQuery()</a>, <a class="el" href="classKviQueryWindow.html#a7734417cd40e9b0d84c31aaa68170d86">setDeadQuery()</a>, <a class="el" href="classKviQueryWindow.html#ae24951ba8ff6a4c2e632406f4769227a">setTarget()</a>, <a class="el" href="classKviQueryWindow.html#a7c3490fa35fa3bd83d90f2fd07f9dad7">showListView()</a>, <a class="el" href="classKviQueryWindow.html#a976c2b00293842eb474377ddaad0f842">toggleListView()</a>, <a class="el" href="classKviQueryWindow.html#aaac1ec7dd3bbeb683e933b8b2413ccd9">userAction()</a>, and <a class="el" href="classKviQueryWindow.html#a5fc739f9915ee42f3c77baf414f05a45">~KviQueryWindow()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae9ab0739f61637ca63fbcd451e3bbf29"></a><!-- doxytag: member="KviQueryWindow::m_SplitterSizesList" ref="ae9ab0739f61637ca63fbcd451e3bbf29" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt;int&gt; <a class="el" href="classKviQueryWindow.html#ae9ab0739f61637ca63fbcd451e3bbf29">KviQueryWindow::m_SplitterSizesList</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="classKviQueryWindow.html#a63a6b8c655c72ef444f7d1a79507be1a">loadProperties()</a>, <a class="el" href="classKviQueryWindow.html#af16ef9e25200f6e74f1c32b5ff7f3f20">saveProperties()</a>, and <a class="el" href="classKviQueryWindow.html#a7c3490fa35fa3bd83d90f2fd07f9dad7">showListView()</a>.</p>
 
 </div>
 </div>
@@ -1463,7 +1490,7 @@ Protected Attributes</h2></td></tr>
 <li>src/kvirc/ui/<a class="el" href="KviQueryWindow_8cpp.html">KviQueryWindow.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:35 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:22 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

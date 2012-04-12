@@ -87,7 +87,7 @@ function toggleVisibility(linkObj) {
 <h1>LogViewWindow Class Reference</h1>  </div>
 </div>
 <div class="contents">
-<!-- doxytag: class="LogViewWindow" --><!-- doxytag: inherits="KviWindow,KviModuleExtension" -->
+<!-- doxytag: class="LogViewWindow" --><!-- doxytag: inherits="KviWindow" -->
 <p><code>#include &lt;<a class="el" href="LogViewWindow_8h_source.html">LogViewWindow.h</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png"/> Inheritance diagram for LogViewWindow:</div>
@@ -97,9 +97,7 @@ function toggleVisibility(linkObj) {
  <div class="center">
   <img src="classLogViewWindow.png" usemap="#LogViewWindow_map" alt=""/>
   <map id="LogViewWindow_map" name="LogViewWindow_map">
-<area href="classKviWindow.html" alt="KviWindow" shape="rect" coords="0,56,126,80"/>
-<area href="classKviModuleExtension.html" alt="KviModuleExtension" shape="rect" coords="136,56,262,80"/>
-<area href="classKviHeapObject.html" alt="KviHeapObject" shape="rect" coords="136,0,262,24"/>
+<area href="classKviWindow.html" alt="KviWindow" shape="rect" coords="0,0,105,24"/>
 </map>
  </div></div>
 
@@ -109,7 +107,7 @@ function toggleVisibility(linkObj) {
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogViewWindow.html#a1f20b19fc331d8c940a5508c29011152">createLog</a> (<a class="el" href="classLogFile.html">LogFile</a> *pLog, int iId, QString *pszFile=0)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports the log and creates the file in the selected format.  <a href="#a1f20b19fc331d8c940a5508c29011152"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow</a> (<a class="el" href="classKviModuleExtensionDescriptor.html">KviModuleExtensionDescriptor</a> *pDesc)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogViewWindow.html#a7e2ae59c564dae941a946256f59e7ae8">~LogViewWindow</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
@@ -140,7 +138,7 @@ Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QLineEdit *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogViewWindow.html#a794d68d4bdf584845425f87716389902">m_pContentsMask</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogViewWindow.html#a60a1a8435cad4ae75802502c5688c57c">m_pEnableFromFilter</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QCheckBox *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogViewWindow.html#a0aefeeb1c63898fa043123bafc1764c6">m_pEnableToFilter</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogViewWindow.html#a71db1f6ac0e0501072a5a8ff435781b2">m_pExportLogPopup</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogViewWindow.html#a8704ab226807cf4d4be4608125619051">m_pExportLogPopup</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QLineEdit *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogViewWindow.html#aa786fcc79836d6d75ffd9c9f24a2b4d3">m_pFileNameMask</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QStringList *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogViewWindow.html#a6f0197c20461961efc24209f0ca2841d">m_pFileNames</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogViewWindow.html#aa0f67a1c314b70d34123870791d34923">m_pFilterButton</a></td></tr>
@@ -163,22 +161,21 @@ Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogViewWindow.html#ac644bfad62edc94ae5d968a064fec8c9">m_szLastGroup</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ac2437a358df1f06e72bcd8877ab55e71"></a><!-- doxytag: member="LogViewWindow::LogViewWindow" ref="ac2437a358df1f06e72bcd8877ab55e71" args="(KviModuleExtensionDescriptor *pDesc)" -->
+<a class="anchor" id="ad603113c228ba9d0459d9266c6c70e58"></a><!-- doxytag: member="LogViewWindow::LogViewWindow" ref="ad603113c228ba9d0459d9266c6c70e58" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">LogViewWindow::LogViewWindow </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviModuleExtensionDescriptor.html">KviModuleExtensionDescriptor</a> *&#160;</td>
-          <td class="paramname"><em>pDesc</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="MpXmmsInterface_8cpp.html#ac6cbf35c922efef0f49c40b1189883b5">__tr2qs_ctx()</a>, <a class="el" href="classLogViewWindow.html#a24b18837bf7f9659c21f50827bd5e5a4">abortFilter()</a>, <a class="el" href="classLogViewWindow.html#a0049ae4e197bf5284849f8cf3b00e1cd">applyFilter()</a>, <a class="el" href="classLogViewWindow.html#a133771ef45f9c5c8ac273f9c97157611">cacheFileList()</a>, <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classLogViewWindow.html#a3612352af9a3025d05fad24c8bc51b6f">exportLog()</a>, <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, <a class="el" href="classKviTalPopupMenu.html#ad491ba2ad4a8133a89bdf417c1acacc6">KviTalPopupMenu::insertItem()</a>, <a class="el" href="classLogViewWindow.html#acdcdc9cc9b279b523c6740e6b40b1416">itemSelected()</a>, <a class="el" href="KviTalSplitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a>, <a class="el" href="classLogViewWindow.html#ac0ef6bc4c2d4bbb1fa7150503d237c5e">m_pBottomLayout</a>, <a class="el" href="classLogViewWindow.html#a11ee412add24f43e3cb1f0d40d877a5f">m_pCancelButton</a>, <a class="el" href="classLogViewWindow.html#a794d68d4bdf584845425f87716389902">m_pContentsMask</a>, <a class="el" href="classLogViewWindow.html#a60a1a8435cad4ae75802502c5688c57c">m_pEnableFromFilter</a>, <a class="el" href="classLogViewWindow.html#a0aefeeb1c63898fa043123bafc1764c6">m_pEnableToFilter</a>, <a class="el" href="classLogViewWindow.html#a71db1f6ac0e0501072a5a8ff435781b2">m_pExportLogPopup</a>, <a class="el" href="classLogViewWindow.html#aa786fcc79836d6d75ffd9c9f24a2b4d3">m_pFileNameMask</a>, <a class="el" href="classLogViewWindow.html#aa0f67a1c314b70d34123870791d34923">m_pFilterButton</a>, <a class="el" href="classLogViewWindow.html#ad522b6897f21cdd5383f668cf07db9c0">m_pFromDateEdit</a>, <a class="el" href="classLogViewWindow.html#a3100471a6cdbf90b70d1faea7a3a3160">m_pIndexTab</a>, <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classLogViewWindow.html#a71c34e04965db53a8a53fd118abe90d8">m_pLeftLayout</a>, <a class="el" href="classLogViewWindow.html#a3a56e85182040726137a3cfbe0d11100">m_pListView</a>, <a class="el" href="classLogViewWindow.html#a5cf756ebd652ba5bd0a78e59be41ec9e">m_pProgressBar</a>, <a class="el" href="classLogViewWindow.html#a00d77ab492680c99508ba7f35ea0cd54">m_pSearchTab</a>, <a class="el" href="classLogViewWindow.html#a5e662ea0e2929317e33dd2dc53e38698">m_pShowChannelsCheck</a>, <a class="el" href="classLogViewWindow.html#a8fa7d75ac50c557b48933c1dc518c0d5">m_pShowConsolesCheck</a>, <a class="el" href="classLogViewWindow.html#a44faed01a6560df335234c881908aca4">m_pShowDccChatCheck</a>, <a class="el" href="classLogViewWindow.html#a645216c06b4fc94b05f10dff329691d0">m_pShowOtherCheck</a>, <a class="el" href="classLogViewWindow.html#afb2b317726b3c7f68bfa4429f2d02244">m_pShowQueryesCheck</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classLogViewWindow.html#a14440018d1e1c6d6c8e136e0c7dfdb84">m_pTabWidget</a>, <a class="el" href="classLogViewWindow.html#a0c4385b9a644d0b6ef9cc8f4757629fa">m_pTimer</a>, <a class="el" href="classLogViewWindow.html#ada37b8eb6b6ef33f3d4a82ef98ccc3db">m_pToDateEdit</a>, <a class="el" href="classLogViewWindow.html#a3831affd30fd801b858de75f3a8e47b5">rightButtonClicked()</a>, and <a class="el" href="classKviIrcView.html#a2ef84de84e0c1332f614e4d6d472331c">KviIrcView::setMaxBufferSize()</a>.</p>
+<p>References <a class="el" href="MpXmmsInterface_8cpp.html#ac6cbf35c922efef0f49c40b1189883b5">__tr2qs_ctx()</a>, <a class="el" href="classLogViewWindow.html#a24b18837bf7f9659c21f50827bd5e5a4">abortFilter()</a>, <a class="el" href="classLogViewWindow.html#a0049ae4e197bf5284849f8cf3b00e1cd">applyFilter()</a>, <a class="el" href="classLogViewWindow.html#a133771ef45f9c5c8ac273f9c97157611">cacheFileList()</a>, <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classLogViewWindow.html#a3612352af9a3025d05fad24c8bc51b6f">exportLog()</a>, <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, <a class="el" href="classLogViewWindow.html#acdcdc9cc9b279b523c6740e6b40b1416">itemSelected()</a>, <a class="el" href="KviTalSplitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a>, <a class="el" href="classLogViewWindow.html#ac0ef6bc4c2d4bbb1fa7150503d237c5e">m_pBottomLayout</a>, <a class="el" href="classLogViewWindow.html#a11ee412add24f43e3cb1f0d40d877a5f">m_pCancelButton</a>, <a class="el" href="classLogViewWindow.html#a794d68d4bdf584845425f87716389902">m_pContentsMask</a>, <a class="el" href="classLogViewWindow.html#a60a1a8435cad4ae75802502c5688c57c">m_pEnableFromFilter</a>, <a class="el" href="classLogViewWindow.html#a0aefeeb1c63898fa043123bafc1764c6">m_pEnableToFilter</a>, <a class="el" href="classLogViewWindow.html#a8704ab226807cf4d4be4608125619051">m_pExportLogPopup</a>, <a class="el" href="classLogViewWindow.html#aa786fcc79836d6d75ffd9c9f24a2b4d3">m_pFileNameMask</a>, <a class="el" href="classLogViewWindow.html#aa0f67a1c314b70d34123870791d34923">m_pFilterButton</a>, <a class="el" href="classLogViewWindow.html#ad522b6897f21cdd5383f668cf07db9c0">m_pFromDateEdit</a>, <a class="el" href="classLogViewWindow.html#a3100471a6cdbf90b70d1faea7a3a3160">m_pIndexTab</a>, <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classLogViewWindow.html#a71c34e04965db53a8a53fd118abe90d8">m_pLeftLayout</a>, <a class="el" href="classLogViewWindow.html#a3a56e85182040726137a3cfbe0d11100">m_pListView</a>, <a class="el" href="classLogViewWindow.html#a5cf756ebd652ba5bd0a78e59be41ec9e">m_pProgressBar</a>, <a class="el" href="classLogViewWindow.html#a00d77ab492680c99508ba7f35ea0cd54">m_pSearchTab</a>, <a class="el" href="classLogViewWindow.html#a5e662ea0e2929317e33dd2dc53e38698">m_pShowChannelsCheck</a>, <a class="el" href="classLogViewWindow.html#a8fa7d75ac50c557b48933c1dc518c0d5">m_pShowConsolesCheck</a>, <a class="el" href="classLogViewWindow.html#a44faed01a6560df335234c881908aca4">m_pShowDccChatCheck</a>, <a class="el" href="classLogViewWindow.html#a645216c06b4fc94b05f10dff329691d0">m_pShowOtherCheck</a>, <a class="el" href="classLogViewWindow.html#afb2b317726b3c7f68bfa4429f2d02244">m_pShowQueryesCheck</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classLogViewWindow.html#a14440018d1e1c6d6c8e136e0c7dfdb84">m_pTabWidget</a>, <a class="el" href="classLogViewWindow.html#a0c4385b9a644d0b6ef9cc8f4757629fa">m_pTimer</a>, <a class="el" href="classLogViewWindow.html#ada37b8eb6b6ef33f3d4a82ef98ccc3db">m_pToDateEdit</a>, <a class="el" href="classLogViewWindow.html#a3831affd30fd801b858de75f3a8e47b5">rightButtonClicked()</a>, and <a class="el" href="classKviIrcView.html#a2ef84de84e0c1332f614e4d6d472331c">KviIrcView::setMaxBufferSize()</a>.</p>
 
 </div>
 </div>
@@ -215,7 +212,7 @@ Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="classLogViewWindow.html#a6cbf5d9d4a48fc3fe4585df7c1a89dea">m_bAborted</a>.</p>
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -235,7 +232,7 @@ Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="classLogViewWindow.html#aead4a158209b520077839ba86e50cba0">setupItemList()</a>.</p>
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -255,7 +252,7 @@ Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="KviApplication_8cpp.html#a2bab070e8cb43ca84c598b639d49fdfb">g_pApp</a>, <a class="el" href="classKviApplication.html#a1224e01e02a6f4538acf4f6618df4576">KviApplication::getLocalKvircDirectory()</a>, <a class="el" href="classKviApplication.html#ae3acc00018f1dfc30d3bcc84cab8ede7ad74b9e216442d5e794dc4574473f9ee1">KviApplication::Log</a>, <a class="el" href="classLogViewWindow.html#a1d72033a02f4d123e16ec1485992505d">recurseDirectory()</a>, and <a class="el" href="classLogViewWindow.html#aead4a158209b520077839ba86e50cba0">setupItemList()</a>.</p>
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -341,8 +338,6 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="classKviModuleExtension.html#a5191db2d3be43ffdb3a36530653bce4f">KviModuleExtension</a>.</p>
-
 </div>
 </div>
 <a class="anchor" id="a3612352af9a3025d05fad24c8bc51b6f"></a><!-- doxytag: member="LogViewWindow::exportLog" ref="a3612352af9a3025d05fad24c8bc51b6f" args="(int iId)" -->
@@ -362,7 +357,7 @@ Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviPointerList.html#a2217d6ab1560c7c93c2066dc63e3e9be">KviPointerList&lt; T &gt;::at()</a>, <a class="el" href="classKviPointerList.html#a37db5612395dc02903cd9aa6b0b9b000">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="classLogViewWindow.html#a1f20b19fc331d8c940a5508c29011152">createLog()</a>, <a class="el" href="detector_8cpp.html#a08582ce460e3d5e1cf0b7fea017d608e">i</a>, <a class="el" href="detector_8cpp.html#aa8c84707b22bdc99b810d3c7d3ec5d52">j</a>, <a class="el" href="classLogListViewItem.html#ac994e1832fa402ad26e47f93da98c733">LogListViewItem::log()</a>, <a class="el" href="classLogViewWindow.html#a3a56e85182040726137a3cfbe0d11100">m_pListView</a>, <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>, and <a class="el" href="detector_8cpp.html#a1f9aca42e2010bb82488684dee1a66ea">u</a>.</p>
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -402,7 +397,7 @@ Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="MpXmmsInterface_8cpp.html#ac6cbf35c922efef0f49c40b1189883b5">__tr2qs_ctx()</a>, <a class="el" href="classLogFile.html#a019579b3007273b26985d8dcd3d8225ba7ee6a04fd26ea7bc13bcc6d981d6b12e">LogFile::Channel</a>, <a class="el" href="classLogFile.html#a019579b3007273b26985d8dcd3d8225ba7bdc7244397c5cabefc741e1ae6333be">LogFile::Console</a>, <a class="el" href="classKviPointerList.html#a050cdb3baa827c85b7712bbbdcd9e9ef">KviPointerList&lt; T &gt;::current()</a>, <a class="el" href="classLogFile.html#a4664b14fde1e2309e1a9b29e78d4ec4c">LogFile::date()</a>, <a class="el" href="classLogFile.html#a019579b3007273b26985d8dcd3d8225ba8b3848bd0051e2d2f957be7082d23fc5">LogFile::DccChat</a>, <a class="el" href="classLogFile.html#af71983b96c731676020bc40927b61522">LogFile::getText()</a>, <a class="el" href="detector_8cpp.html#a08582ce460e3d5e1cf0b7fea017d608e">i</a>, <a class="el" href="classLogViewWindow.html#a6cbf5d9d4a48fc3fe4585df7c1a89dea">m_bAborted</a>, <a class="el" href="classLogListViewItem.html#a6452787738044c4fd5900323cfbdcb8f">LogListViewItem::m_eType</a>, <a class="el" href="classLogViewWindow.html#aca9faf61df161dc8377095b32c4eba5a">m_logList</a>, <a class="el" href="classLogViewWindow.html#ac0ef6bc4c2d4bbb1fa7150503d237c5e">m_pBottomLayout</a>, <a class="el" href="classLogViewWindow.html#a794d68d4bdf584845425f87716389902">m_pContentsMask</a>, <a class="el" href="classLogViewWindow.html#a60a1a8435cad4ae75802502c5688c57c">m_pEnableFromFilter</a>, <a class="el" href="classLogViewWindow.html#a0aefeeb1c63898fa043123bafc1764c6">m_pEnableToFilter</a>, <a class="el" href="classLogViewWindow.html#aa786fcc79836d6d75ffd9c9f24a2b4d3">m_pFileNameMask</a>, <a class="el" href="classLogViewWindow.html#aa0f67a1c314b70d34123870791d34923">m_pFilterButton</a>, <a class="el" href="classLogViewWindow.html#ad522b6897f21cdd5383f668cf07db9c0">m_pFromDateEdit</a>, <a class="el" href="classLogViewWindow.html#a2b3163f82a45774cc8cbaec0e882f851">m_pLastCategory</a>, <a class="el" href="classLogViewWindow.html#a7aa5bddcb3397196bf6244ba76913fa3">m_pLastGroupItem</a>, <a class="el" href="classLogViewWindow.html#a3a56e85182040726137a3cfbe0d11100">m_pListView</a>, <a class="el" href="classLogViewWindow.html#a5cf756ebd652ba5bd0a78e59be41ec9e">m_pProgressBar</a>, <a class="el" href="classLogViewWindow.html#a5e662ea0e2929317e33dd2dc53e38698">m_pShowChannelsCheck</a>, <a class="el" href="classLogViewWindow.html#a8fa7d75ac50c557b48933c1dc518c0d5">m_pShowConsolesCheck</a>, <a class="el" href="classLogViewWindow.html#a44faed01a6560df335234c881908aca4">m_pShowDccChatCheck</a>, <a class="el" href="classLogViewWindow.html#a645216c06b4fc94b05f10dff329691d0">m_pShowOtherCheck</a>, <a class="el" href="classLogViewWindow.html#afb2b317726b3c7f68bfa4429f2d02244">m_pShowQueryesCheck</a>, <a class="el" href="classLogViewWindow.html#a0c4385b9a644d0b6ef9cc8f4757629fa">m_pTimer</a>, <a class="el" href="classLogViewWindow.html#ada37b8eb6b6ef33f3d4a82ef98ccc3db">m_pToDateEdit</a>, <a class="el" href="classLogViewWindow.html#ac644bfad62edc94ae5d968a064fec8c9">m_szLastGroup</a>, <a class="el" href="namespaceKviQString.html#a73201f6b63483e608df3ca5c347c8e65">KviQString::matchString()</a>, <a class="el" href="classLogFile.html#a675bf6c249c98974d51c96f1299272af">LogFile::name()</a>, <a class="el" href="classLogFile.html#aaeff5441ebe6cad9f78c4fa34f15aa95">LogFile::network()</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classLogFile.html#a019579b3007273b26985d8dcd3d8225ba6d05e13225c3ec54a8ce5e065b193907">LogFile::Other</a>, <a class="el" href="classLogFile.html#a019579b3007273b26985d8dcd3d8225ba9c76a78d2f42d898fc83d0a746e53b69">LogFile::Query</a>, <a class="el" href="winamp_8cpp.html#adea253c22319cfeaf6c11107baf09fde">szBuffer</a>, and <a class="el" href="classLogFile.html#ae5b55ce4f9348bb7370c79411580b960">LogFile::type()</a>.</p>
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -433,7 +428,7 @@ Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="classKviIrcView.html#ae929dbf8cba870e6b1ce95940cdaa6ea">KviIrcView::clearBuffer()</a>, <a class="el" href="KviOptions_8h.html#a2a3caf50731669be8ae7279583b9e87d">KVI_NUM_MSGTYPE_OPTIONS</a>, <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classKviIrcView.html#a5a1eb10b62d7cffd3e6888ad52138e96a40297975e2302a9afc9b0cc6416c9dcc">KviIrcView::NoRepaint</a>, <a class="el" href="classKviIrcView.html#a5a1eb10b62d7cffd3e6888ad52138e96a23302b50ec9a2417a19cf870c5f8c257">KviIrcView::NoTimestamp</a>, and <a class="el" href="classKviWindow.html#afe4806ffbb0d9ab450b3065107ba805b">KviWindow::outputNoFmt()</a>.</p>
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -541,9 +536,9 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="MpXmmsInterface_8cpp.html#ac6cbf35c922efef0f49c40b1189883b5">__tr2qs_ctx()</a>, <a class="el" href="classLogViewWindow.html#a2779e2c7e665237a516c1ca9a255ae7b">deleteCurrent()</a>, <a class="el" href="KviIconManager_8cpp.html#a3ea7617ef2d091c1c04b0f95fb0845ae">g_pIconManager</a>, <a class="el" href="classKviIconManager.html#a36bca624a1c6293627263463d8f3e3a5">KviIconManager::getSmallIcon()</a>, <a class="el" href="classKviTalPopupMenu.html#ad491ba2ad4a8133a89bdf417c1acacc6">KviTalPopupMenu::insertItem()</a>, <a class="el" href="classLogViewWindow.html#a71db1f6ac0e0501072a5a8ff435781b2">m_pExportLogPopup</a>, <a class="el" href="classLogViewWindow.html#a3a56e85182040726137a3cfbe0d11100">m_pListView</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a4a50b2cd30eedd984669d13869ce85ae">KviIconManager::Quit</a>, and <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7afbdaec3f1c5f53f2524db22acc2a49f9">KviIconManager::UserList</a>.</p>
+<p>References <a class="el" href="MpXmmsInterface_8cpp.html#ac6cbf35c922efef0f49c40b1189883b5">__tr2qs_ctx()</a>, <a class="el" href="classLogViewWindow.html#a2779e2c7e665237a516c1ca9a255ae7b">deleteCurrent()</a>, <a class="el" href="KviIconManager_8cpp.html#a3ea7617ef2d091c1c04b0f95fb0845ae">g_pIconManager</a>, <a class="el" href="classKviIconManager.html#a36bca624a1c6293627263463d8f3e3a5">KviIconManager::getSmallIcon()</a>, <a class="el" href="classLogViewWindow.html#a8704ab226807cf4d4be4608125619051">m_pExportLogPopup</a>, <a class="el" href="classLogViewWindow.html#a3a56e85182040726137a3cfbe0d11100">m_pListView</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a4a50b2cd30eedd984669d13869ce85ae">KviIconManager::Quit</a>, and <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7afbdaec3f1c5f53f2524db22acc2a49f9">KviIconManager::UserList</a>.</p>
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -627,7 +622,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>, and <a class="el" href="classLogViewWindow.html#aead4a158209b520077839ba86e50cba0">setupItemList()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>, and <a class="el" href="classLogViewWindow.html#aead4a158209b520077839ba86e50cba0">setupItemList()</a>.</p>
 
 </div>
 </div>
@@ -642,7 +637,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -657,7 +652,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -672,7 +667,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -687,22 +682,22 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a71db1f6ac0e0501072a5a8ff435781b2"></a><!-- doxytag: member="LogViewWindow::m_pExportLogPopup" ref="a71db1f6ac0e0501072a5a8ff435781b2" args="" -->
+<a class="anchor" id="a8704ab226807cf4d4be4608125619051"></a><!-- doxytag: member="LogViewWindow::m_pExportLogPopup" ref="a8704ab226807cf4d4be4608125619051" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>* <a class="el" href="classLogViewWindow.html#a71db1f6ac0e0501072a5a8ff435781b2">LogViewWindow::m_pExportLogPopup</a><code> [protected]</code></td>
+          <td class="memname">QMenu* <a class="el" href="classLogViewWindow.html#a8704ab226807cf4d4be4608125619051">LogViewWindow::m_pExportLogPopup</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>, and <a class="el" href="classLogViewWindow.html#a3831affd30fd801b858de75f3a8e47b5">rightButtonClicked()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>, and <a class="el" href="classLogViewWindow.html#a3831affd30fd801b858de75f3a8e47b5">rightButtonClicked()</a>.</p>
 
 </div>
 </div>
@@ -717,7 +712,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -745,7 +740,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>, and <a class="el" href="classLogViewWindow.html#aead4a158209b520077839ba86e50cba0">setupItemList()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>, and <a class="el" href="classLogViewWindow.html#aead4a158209b520077839ba86e50cba0">setupItemList()</a>.</p>
 
 </div>
 </div>
@@ -760,7 +755,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -775,7 +770,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -820,7 +815,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -835,7 +830,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#a2779e2c7e665237a516c1ca9a255ae7b">deleteCurrent()</a>, <a class="el" href="classLogViewWindow.html#a3612352af9a3025d05fad24c8bc51b6f">exportLog()</a>, <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>, <a class="el" href="classLogViewWindow.html#a3831affd30fd801b858de75f3a8e47b5">rightButtonClicked()</a>, and <a class="el" href="classLogViewWindow.html#aead4a158209b520077839ba86e50cba0">setupItemList()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#a2779e2c7e665237a516c1ca9a255ae7b">deleteCurrent()</a>, <a class="el" href="classLogViewWindow.html#a3612352af9a3025d05fad24c8bc51b6f">exportLog()</a>, <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>, <a class="el" href="classLogViewWindow.html#a3831affd30fd801b858de75f3a8e47b5">rightButtonClicked()</a>, and <a class="el" href="classLogViewWindow.html#aead4a158209b520077839ba86e50cba0">setupItemList()</a>.</p>
 
 </div>
 </div>
@@ -850,7 +845,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>, and <a class="el" href="classLogViewWindow.html#aead4a158209b520077839ba86e50cba0">setupItemList()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>, and <a class="el" href="classLogViewWindow.html#aead4a158209b520077839ba86e50cba0">setupItemList()</a>.</p>
 
 </div>
 </div>
@@ -865,7 +860,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -880,7 +875,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -895,7 +890,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -910,7 +905,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -925,7 +920,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -940,7 +935,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -955,7 +950,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -970,7 +965,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>, and <a class="el" href="classLogViewWindow.html#aead4a158209b520077839ba86e50cba0">setupItemList()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>, and <a class="el" href="classLogViewWindow.html#aead4a158209b520077839ba86e50cba0">setupItemList()</a>.</p>
 
 </div>
 </div>
@@ -985,7 +980,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow()</a>.</p>
+<p>Referenced by <a class="el" href="classLogViewWindow.html#a6e268471b9210f611edaacf4e6e943eb">filterNext()</a>, and <a class="el" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow()</a>.</p>
 
 </div>
 </div>
@@ -1009,7 +1004,7 @@ Protected Attributes</h2></td></tr>
 <li>src/modules/logview/<a class="el" href="LogViewWindow_8cpp.html">LogViewWindow.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:37 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:24 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

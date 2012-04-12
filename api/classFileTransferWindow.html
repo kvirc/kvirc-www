@@ -121,7 +121,7 @@ Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#a6a91cf31db1917b0fa72f1b9b24dce77">deleteLocalFile</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#aed4c2d90e7eec9d7a4e593c6be3b0477">doubleClicked</a> (<a class="el" href="classFileTransferItem.html">FileTransferItem</a> *it, const QPoint &amp;pnt)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#acc8e35d60fe12aa9442a71119954aa2c">heartbeat</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#aa35bee12f9a2a9e6cb11dbe0099860d5">openFilePopupActivated</a> (int id)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#afb18b43f2565f2aed088ca67cb4a0441">openFilePopupActivated</a> (QAction *pAction)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#af7d2de9ee19674f4ec2d0ece5a8e6665">openLocalFile</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#a1d2fd081742addf0abdd78e7dfc3b6e3">openLocalFileFolder</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#a24f450a3491640080d4e727809450dd7">openLocalFileTerminal</a> ()</td></tr>
@@ -145,10 +145,10 @@ Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#a62368175eee4fbe0ab5aff97ac30da4c">m_iLineSpacing</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#a47bf052891aa32359347cf30aee5faf2">m_pContextPopup</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#a481882d89c50e4dc91750ec058ba2631">m_pContextPopup</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QAbstractItemDelegate *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#a6c1ff3b050762964c2cf434f6342d900">m_pItemDelegate</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#a338cc2e4a706a903f19baf3f7b73969a">m_pLocalFilePopup</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#af1aab294f443104d47a43e244303dd45">m_pOpenFilePopup</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#a732d3e6c3bf81c8efa3f64c133d91f64">m_pLocalFilePopup</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#ac790797d72d00a88083e6bbe03ccffd0">m_pOpenFilePopup</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classFileTransferWidget.html">FileTransferWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#a17f78108a26a0c2a224d6167b81dc0ac">m_pTableWidget</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QTimer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#a701e97f4f4f45b88578cea534f2a0885">m_pTimer</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QSplitter *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFileTransferWindow.html#a45732a074d4063bde232eccca36b6a6d">m_pVertSplitter</a></td></tr>
@@ -173,7 +173,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classFileTransferWindow.html#aed4c2d90e7eec9d7a4e593c6be3b0477">doubleClicked()</a>, <a class="el" href="classFileTransferWindow.html#a6764389ee8df6870706f8ca487c26c6e">FileTransferItemDelegate</a>, <a class="el" href="classFileTransferWindow.html#a0d16d5cb6b25558fde8ee71a5b2eb08b">fillTransferView()</a>, <a class="el" href="classFileTransferWindow.html#acc8e35d60fe12aa9442a71119954aa2c">heartbeat()</a>, <a class="el" href="classKviFileTransferManager.html#abdf83373715a6a36f0734a255eab7180">KviFileTransferManager::instance()</a>, <a class="el" href="KviTalSplitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a>, <a class="el" href="classFileTransferWindow.html#a62368175eee4fbe0ab5aff97ac30da4c">m_iLineSpacing</a>, <a class="el" href="classFileTransferWindow.html#a47bf052891aa32359347cf30aee5faf2">m_pContextPopup</a>, <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classFileTransferWindow.html#a6c1ff3b050762964c2cf434f6342d900">m_pItemDelegate</a>, <a class="el" href="classFileTransferWindow.html#a338cc2e4a706a903f19baf3f7b73969a">m_pLocalFilePopup</a>, <a class="el" href="classFileTransferWindow.html#af1aab294f443104d47a43e244303dd45">m_pOpenFilePopup</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classFileTransferWindow.html#a17f78108a26a0c2a224d6167b81dc0ac">m_pTableWidget</a>, <a class="el" href="classFileTransferWindow.html#a701e97f4f4f45b88578cea534f2a0885">m_pTimer</a>, <a class="el" href="classFileTransferWindow.html#a45732a074d4063bde232eccca36b6a6d">m_pVertSplitter</a>, <a class="el" href="classFileTransferWindow.html#aaee4d52afff64f5c5716da0b9ce98ce9">rightButtonPressed()</a>, <a class="el" href="classKviFileTransferManager.html#a9ded84b248197597cdb24938ab124e79">KviFileTransferManager::setTransferWindow()</a>, <a class="el" href="classFileTransferWindow.html#aabc4f76aa8c958a1176f45d9ff3061be">transferRegistered()</a>, and <a class="el" href="classFileTransferWindow.html#aafdd6ba0ad271c322fa7ee4461646a2e">transferUnregistering()</a>.</p>
+<p>References <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classFileTransferWindow.html#aed4c2d90e7eec9d7a4e593c6be3b0477">doubleClicked()</a>, <a class="el" href="classFileTransferWindow.html#a6764389ee8df6870706f8ca487c26c6e">FileTransferItemDelegate</a>, <a class="el" href="classFileTransferWindow.html#a0d16d5cb6b25558fde8ee71a5b2eb08b">fillTransferView()</a>, <a class="el" href="classFileTransferWindow.html#acc8e35d60fe12aa9442a71119954aa2c">heartbeat()</a>, <a class="el" href="classKviFileTransferManager.html#abdf83373715a6a36f0734a255eab7180">KviFileTransferManager::instance()</a>, <a class="el" href="KviTalSplitter_8h.html#acac78135c0b3a48113c305a401adddfd">KviTalSplitter</a>, <a class="el" href="classFileTransferWindow.html#a62368175eee4fbe0ab5aff97ac30da4c">m_iLineSpacing</a>, <a class="el" href="classFileTransferWindow.html#a481882d89c50e4dc91750ec058ba2631">m_pContextPopup</a>, <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classFileTransferWindow.html#a6c1ff3b050762964c2cf434f6342d900">m_pItemDelegate</a>, <a class="el" href="classFileTransferWindow.html#a732d3e6c3bf81c8efa3f64c133d91f64">m_pLocalFilePopup</a>, <a class="el" href="classFileTransferWindow.html#ac790797d72d00a88083e6bbe03ccffd0">m_pOpenFilePopup</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classFileTransferWindow.html#a17f78108a26a0c2a224d6167b81dc0ac">m_pTableWidget</a>, <a class="el" href="classFileTransferWindow.html#a701e97f4f4f45b88578cea534f2a0885">m_pTimer</a>, <a class="el" href="classFileTransferWindow.html#a45732a074d4063bde232eccca36b6a6d">m_pVertSplitter</a>, <a class="el" href="classFileTransferWindow.html#aaee4d52afff64f5c5716da0b9ce98ce9">rightButtonPressed()</a>, <a class="el" href="classKviFileTransferManager.html#a9ded84b248197597cdb24938ab124e79">KviFileTransferManager::setTransferWindow()</a>, <a class="el" href="classFileTransferWindow.html#aabc4f76aa8c958a1176f45d9ff3061be">transferRegistered()</a>, and <a class="el" href="classFileTransferWindow.html#aafdd6ba0ad271c322fa7ee4461646a2e">transferUnregistering()</a>.</p>
 
 </div>
 </div>
@@ -533,22 +533,22 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa35bee12f9a2a9e6cb11dbe0099860d5"></a><!-- doxytag: member="FileTransferWindow::openFilePopupActivated" ref="aa35bee12f9a2a9e6cb11dbe0099860d5" args="(int id)" -->
+<a class="anchor" id="afb18b43f2565f2aed088ca67cb4a0441"></a><!-- doxytag: member="FileTransferWindow::openFilePopupActivated" ref="afb18b43f2565f2aed088ca67cb4a0441" args="(QAction *pAction)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void FileTransferWindow::openFilePopupActivated </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramtype">QAction *&#160;</td>
+          <td class="paramname"><em>pAction</em></td><td>)</td>
           <td><code> [protected, slot]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="KviMainWindow_8cpp.html#a13001adf485ce537c0448fc76b5b9d88">g_pMainWindow</a>, <a class="el" href="classKviTalPopupMenu.html#a1970b6884dc9be05b9c8de88c244e3fd">KviTalPopupMenu::itemParameter()</a>, <a class="el" href="classKviFileTransfer.html#ad5ffcc70baeda8a28c8e62685361e985">KviFileTransfer::localFileName()</a>, <a class="el" href="classFileTransferWindow.html#af1aab294f443104d47a43e244303dd45">m_pOpenFilePopup</a>, <a class="el" href="namespaceKviIrcUrl.html#aa47a51d8f196fb9cd529b6ce788952f7">KviIrcUrl::run()</a>, <a class="el" href="classFileTransferWindow.html#a340243dd4cecd869aedade4e52119b86">selectedTransfer()</a>, and <a class="el" href="KvsObject__http_8cpp.html#aa1d7477f8f4f580c1a0307ed79c7ec91">t()</a>.</p>
+<p>References <a class="el" href="KviMainWindow_8cpp.html#a13001adf485ce537c0448fc76b5b9d88">g_pMainWindow</a>, <a class="el" href="classKviFileTransfer.html#ad5ffcc70baeda8a28c8e62685361e985">KviFileTransfer::localFileName()</a>, <a class="el" href="namespaceKviIrcUrl.html#aa47a51d8f196fb9cd529b6ce788952f7">KviIrcUrl::run()</a>, <a class="el" href="classFileTransferWindow.html#a340243dd4cecd869aedade4e52119b86">selectedTransfer()</a>, and <a class="el" href="KvsObject__http_8cpp.html#aa1d7477f8f4f580c1a0307ed79c7ec91">t()</a>.</p>
 
 <p>Referenced by <a class="el" href="classFileTransferWindow.html#aaee4d52afff64f5c5716da0b9ce98ce9">rightButtonPressed()</a>.</p>
 
@@ -678,7 +678,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="MpXmmsInterface_8cpp.html#ac6cbf35c922efef0f49c40b1189883b5">__tr2qs_ctx()</a>, <a class="el" href="classKviTalPopupMenu.html#a2deae00fa8031a641272499bc195e87e">KviTalPopupMenu::clear()</a>, <a class="el" href="classFileTransferWindow.html#af02e426320434cabf466d6d8fd878753">clearAll()</a>, <a class="el" href="classFileTransferWindow.html#a8f2fa2b7e70948bca193a71f396c7420">clearTerminated()</a>, <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classFileTransferWindow.html#a331b9ae495e3591224f0f62c3e37c833">copyLocalFileToClipboard()</a>, <a class="el" href="classFileTransferWindow.html#a6a91cf31db1917b0fa72f1b9b24dce77">deleteLocalFile()</a>, <a class="el" href="classKviFileTransfer.html#a4e1bb42435f9da2f068c2c12ba514031">KviFileTransfer::fillContextPopup()</a>, <a class="el" href="detector_8cpp.html#a08582ce460e3d5e1cf0b7fea017d608e">i</a>, <a class="el" href="classKviWindow.html#a604039f02ca3be05678e1a7c2b676eae">KviWindow::id()</a>, <a class="el" href="classKviTalPopupMenu.html#ad491ba2ad4a8133a89bdf417c1acacc6">KviTalPopupMenu::insertItem()</a>, <a class="el" href="classKviTalPopupMenu.html#aa8e6cf937ecf16c7ef3105c918359acc">KviTalPopupMenu::insertSeparator()</a>, <a class="el" href="detector_8cpp.html#a1cb503ddd20ff3cf9588d2b5abd202d8">l</a>, <a class="el" href="classKviFileTransfer.html#ad5ffcc70baeda8a28c8e62685361e985">KviFileTransfer::localFileName()</a>, <a class="el" href="classFileTransferWindow.html#a47bf052891aa32359347cf30aee5faf2">m_pContextPopup</a>, <a class="el" href="classFileTransferWindow.html#a338cc2e4a706a903f19baf3f7b73969a">m_pLocalFilePopup</a>, <a class="el" href="classFileTransferWindow.html#af1aab294f443104d47a43e244303dd45">m_pOpenFilePopup</a>, <a class="el" href="classFileTransferWindow.html#a17f78108a26a0c2a224d6167b81dc0ac">m_pTableWidget</a>, <a class="el" href="namespaceKviQString.html#a5a30711c102b0b2405e7417dcce13f0b">KviQString::makeSizeReadable()</a>, <a class="el" href="NotifierSettings_8h.html#a314884ecffe0ac8cb21478699cd2effda5ecbcf0afce98b042f35ec71ba03fa4b">Normal</a>, <a class="el" href="classFileTransferWindow.html#aa35bee12f9a2a9e6cb11dbe0099860d5">openFilePopupActivated()</a>, <a class="el" href="classFileTransferWindow.html#af7d2de9ee19674f4ec2d0ece5a8e6665">openLocalFile()</a>, <a class="el" href="classFileTransferWindow.html#a1d2fd081742addf0abdd78e7dfc3b6e3">openLocalFileFolder()</a>, <a class="el" href="classFileTransferWindow.html#a24f450a3491640080d4e727809450dd7">openLocalFileTerminal()</a>, <a class="el" href="classFileTransferWindow.html#acde611f0149fb6c371bd20b24b5648cf">openLocalFileWith()</a>, <a class="el" href="detector_8cpp.html#ade66e4ccafbc33b117610bbc0d85feb0">p</a>, <a class="el" href="classKviTalPopupMenu.html#af795e001403292ee5fb15cd600495f9e">KviTalPopupMenu::setItemEnabled()</a>, <a class="el" href="classKviTalPopupMenu.html#ae9a5fe5b16b306b6a071409e16c8375a">KviTalPopupMenu::setItemParameter()</a>, <a class="el" href="classKviFileTransfer.html#aa6e03a2138f96cd00ee07de53277ab39">KviFileTransfer::terminated()</a>, and <a class="el" href="classFileTransferItem.html#a53a59fb0296d036d3bf0e3d1b31d240c">FileTransferItem::transfer()</a>.</p>
+<p>References <a class="el" href="MpXmmsInterface_8cpp.html#ac6cbf35c922efef0f49c40b1189883b5">__tr2qs_ctx()</a>, <a class="el" href="classFileTransferWindow.html#af02e426320434cabf466d6d8fd878753">clearAll()</a>, <a class="el" href="classFileTransferWindow.html#a8f2fa2b7e70948bca193a71f396c7420">clearTerminated()</a>, <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classFileTransferWindow.html#a331b9ae495e3591224f0f62c3e37c833">copyLocalFileToClipboard()</a>, <a class="el" href="classFileTransferWindow.html#a6a91cf31db1917b0fa72f1b9b24dce77">deleteLocalFile()</a>, <a class="el" href="classKviFileTransfer.html#aee969dbc15b711112b9e4153e97a6371">KviFileTransfer::fillContextPopup()</a>, <a class="el" href="detector_8cpp.html#a08582ce460e3d5e1cf0b7fea017d608e">i</a>, <a class="el" href="detector_8cpp.html#a1cb503ddd20ff3cf9588d2b5abd202d8">l</a>, <a class="el" href="classKviFileTransfer.html#ad5ffcc70baeda8a28c8e62685361e985">KviFileTransfer::localFileName()</a>, <a class="el" href="classFileTransferWindow.html#a481882d89c50e4dc91750ec058ba2631">m_pContextPopup</a>, <a class="el" href="classFileTransferWindow.html#a732d3e6c3bf81c8efa3f64c133d91f64">m_pLocalFilePopup</a>, <a class="el" href="classFileTransferWindow.html#ac790797d72d00a88083e6bbe03ccffd0">m_pOpenFilePopup</a>, <a class="el" href="classFileTransferWindow.html#a17f78108a26a0c2a224d6167b81dc0ac">m_pTableWidget</a>, <a class="el" href="namespaceKviQString.html#a5a30711c102b0b2405e7417dcce13f0b">KviQString::makeSizeReadable()</a>, <a class="el" href="NotifierSettings_8h.html#a314884ecffe0ac8cb21478699cd2effda5ecbcf0afce98b042f35ec71ba03fa4b">Normal</a>, <a class="el" href="classFileTransferWindow.html#afb18b43f2565f2aed088ca67cb4a0441">openFilePopupActivated()</a>, <a class="el" href="classFileTransferWindow.html#af7d2de9ee19674f4ec2d0ece5a8e6665">openLocalFile()</a>, <a class="el" href="classFileTransferWindow.html#a1d2fd081742addf0abdd78e7dfc3b6e3">openLocalFileFolder()</a>, <a class="el" href="classFileTransferWindow.html#a24f450a3491640080d4e727809450dd7">openLocalFileTerminal()</a>, <a class="el" href="classFileTransferWindow.html#acde611f0149fb6c371bd20b24b5648cf">openLocalFileWith()</a>, <a class="el" href="detector_8cpp.html#ade66e4ccafbc33b117610bbc0d85feb0">p</a>, <a class="el" href="classKviFileTransfer.html#aa6e03a2138f96cd00ee07de53277ab39">KviFileTransfer::terminated()</a>, and <a class="el" href="classFileTransferItem.html#a53a59fb0296d036d3bf0e3d1b31d240c">FileTransferItem::transfer()</a>.</p>
 
 <p>Referenced by <a class="el" href="classFileTransferWindow.html#a75f9dfdfadeb771b9dc170d4297b279c">FileTransferWindow()</a>.</p>
 
@@ -700,7 +700,7 @@ Friends</h2></td></tr>
 
 <p>References <a class="el" href="detector_8cpp.html#a08582ce460e3d5e1cf0b7fea017d608e">i</a>, <a class="el" href="classFileTransferWindow.html#a17f78108a26a0c2a224d6167b81dc0ac">m_pTableWidget</a>, and <a class="el" href="classFileTransferItem.html#a53a59fb0296d036d3bf0e3d1b31d240c">FileTransferItem::transfer()</a>.</p>
 
-<p>Referenced by <a class="el" href="classFileTransferWindow.html#a331b9ae495e3591224f0f62c3e37c833">copyLocalFileToClipboard()</a>, <a class="el" href="classFileTransferWindow.html#a6a91cf31db1917b0fa72f1b9b24dce77">deleteLocalFile()</a>, <a class="el" href="classFileTransferWindow.html#aa35bee12f9a2a9e6cb11dbe0099860d5">openFilePopupActivated()</a>, <a class="el" href="classFileTransferWindow.html#af7d2de9ee19674f4ec2d0ece5a8e6665">openLocalFile()</a>, <a class="el" href="classFileTransferWindow.html#a1d2fd081742addf0abdd78e7dfc3b6e3">openLocalFileFolder()</a>, <a class="el" href="classFileTransferWindow.html#a24f450a3491640080d4e727809450dd7">openLocalFileTerminal()</a>, and <a class="el" href="classFileTransferWindow.html#acde611f0149fb6c371bd20b24b5648cf">openLocalFileWith()</a>.</p>
+<p>Referenced by <a class="el" href="classFileTransferWindow.html#a331b9ae495e3591224f0f62c3e37c833">copyLocalFileToClipboard()</a>, <a class="el" href="classFileTransferWindow.html#a6a91cf31db1917b0fa72f1b9b24dce77">deleteLocalFile()</a>, <a class="el" href="classFileTransferWindow.html#afb18b43f2565f2aed088ca67cb4a0441">openFilePopupActivated()</a>, <a class="el" href="classFileTransferWindow.html#af7d2de9ee19674f4ec2d0ece5a8e6665">openLocalFile()</a>, <a class="el" href="classFileTransferWindow.html#a1d2fd081742addf0abdd78e7dfc3b6e3">openLocalFileFolder()</a>, <a class="el" href="classFileTransferWindow.html#a24f450a3491640080d4e727809450dd7">openLocalFileTerminal()</a>, and <a class="el" href="classFileTransferWindow.html#acde611f0149fb6c371bd20b24b5648cf">openLocalFileWith()</a>.</p>
 
 </div>
 </div>
@@ -840,12 +840,12 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a47bf052891aa32359347cf30aee5faf2"></a><!-- doxytag: member="FileTransferWindow::m_pContextPopup" ref="a47bf052891aa32359347cf30aee5faf2" args="" -->
+<a class="anchor" id="a481882d89c50e4dc91750ec058ba2631"></a><!-- doxytag: member="FileTransferWindow::m_pContextPopup" ref="a481882d89c50e4dc91750ec058ba2631" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>* <a class="el" href="classFileTransferWindow.html#a47bf052891aa32359347cf30aee5faf2">FileTransferWindow::m_pContextPopup</a><code> [protected]</code></td>
+          <td class="memname">QMenu* <a class="el" href="classFileTransferWindow.html#a481882d89c50e4dc91750ec058ba2631">FileTransferWindow::m_pContextPopup</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -870,12 +870,12 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a338cc2e4a706a903f19baf3f7b73969a"></a><!-- doxytag: member="FileTransferWindow::m_pLocalFilePopup" ref="a338cc2e4a706a903f19baf3f7b73969a" args="" -->
+<a class="anchor" id="a732d3e6c3bf81c8efa3f64c133d91f64"></a><!-- doxytag: member="FileTransferWindow::m_pLocalFilePopup" ref="a732d3e6c3bf81c8efa3f64c133d91f64" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>* <a class="el" href="classFileTransferWindow.html#a338cc2e4a706a903f19baf3f7b73969a">FileTransferWindow::m_pLocalFilePopup</a><code> [protected]</code></td>
+          <td class="memname">QMenu* <a class="el" href="classFileTransferWindow.html#a732d3e6c3bf81c8efa3f64c133d91f64">FileTransferWindow::m_pLocalFilePopup</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -885,18 +885,18 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af1aab294f443104d47a43e244303dd45"></a><!-- doxytag: member="FileTransferWindow::m_pOpenFilePopup" ref="af1aab294f443104d47a43e244303dd45" args="" -->
+<a class="anchor" id="ac790797d72d00a88083e6bbe03ccffd0"></a><!-- doxytag: member="FileTransferWindow::m_pOpenFilePopup" ref="ac790797d72d00a88083e6bbe03ccffd0" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>* <a class="el" href="classFileTransferWindow.html#af1aab294f443104d47a43e244303dd45">FileTransferWindow::m_pOpenFilePopup</a><code> [protected]</code></td>
+          <td class="memname">QMenu* <a class="el" href="classFileTransferWindow.html#ac790797d72d00a88083e6bbe03ccffd0">FileTransferWindow::m_pOpenFilePopup</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classFileTransferWindow.html#a75f9dfdfadeb771b9dc170d4297b279c">FileTransferWindow()</a>, <a class="el" href="classFileTransferWindow.html#aa35bee12f9a2a9e6cb11dbe0099860d5">openFilePopupActivated()</a>, and <a class="el" href="classFileTransferWindow.html#aaee4d52afff64f5c5716da0b9ce98ce9">rightButtonPressed()</a>.</p>
+<p>Referenced by <a class="el" href="classFileTransferWindow.html#a75f9dfdfadeb771b9dc170d4297b279c">FileTransferWindow()</a>, and <a class="el" href="classFileTransferWindow.html#aaee4d52afff64f5c5716da0b9ce98ce9">rightButtonPressed()</a>.</p>
 
 </div>
 </div>
@@ -950,7 +950,7 @@ Friends</h2></td></tr>
 <li>src/modules/filetransferwindow/<a class="el" href="FileTransferWindow_8cpp.html">FileTransferWindow.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:26 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:13 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

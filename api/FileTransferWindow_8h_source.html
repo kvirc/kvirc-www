@@ -114,11 +114,11 @@ function toggleVisibility(linkObj) {
 <a name="l00033"></a>00033 <span class="preprocessor">#include &quot;KviFileTransfer.h&quot;</span>
 <a name="l00034"></a>00034 <span class="preprocessor">#include &quot;KviDynamicToolTip.h&quot;</span>
 <a name="l00035"></a>00035 <span class="preprocessor">#include &quot;KviTalTableWidget.h&quot;</span>
-<a name="l00036"></a>00036 <span class="preprocessor">#include &quot;KviTalPopupMenu.h&quot;</span>
-<a name="l00037"></a>00037 <span class="preprocessor">#include &quot;KviTalIconAndRichTextItemDelegate.h&quot;</span>
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039 <span class="preprocessor">#include &lt;QTimer&gt;</span>
-<a name="l00040"></a>00040 <span class="preprocessor">#include &lt;QPixmap&gt;</span>
+<a name="l00036"></a>00036 <span class="preprocessor">#include &quot;KviTalIconAndRichTextItemDelegate.h&quot;</span>
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 <span class="preprocessor">#include &lt;QTimer&gt;</span>
+<a name="l00039"></a>00039 <span class="preprocessor">#include &lt;QPixmap&gt;</span>
+<a name="l00040"></a>00040 <span class="preprocessor">#include &lt;QMenu&gt;</span>
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042 <span class="keyword">class </span><a class="code" href="classFileTransferItem.html">FileTransferItem</a>;
 <a name="l00043"></a>00043 
@@ -178,9 +178,9 @@ function toggleVisibility(linkObj) {
 <a name="l00097"></a><a class="code" href="classFileTransferWindow.html#a45732a074d4063bde232eccca36b6a6d">00097</a>         QSplitter               * <a class="code" href="classFileTransferWindow.html#a45732a074d4063bde232eccca36b6a6d">m_pVertSplitter</a>;
 <a name="l00098"></a><a class="code" href="classFileTransferWindow.html#a17f78108a26a0c2a224d6167b81dc0ac">00098</a>         <a class="code" href="classFileTransferWidget.html">FileTransferWidget</a>      * <a class="code" href="classFileTransferWindow.html#a17f78108a26a0c2a224d6167b81dc0ac">m_pTableWidget</a>;
 <a name="l00099"></a><a class="code" href="classFileTransferWindow.html#a6c1ff3b050762964c2cf434f6342d900">00099</a>         QAbstractItemDelegate   * <a class="code" href="classFileTransferWindow.html#a6c1ff3b050762964c2cf434f6342d900">m_pItemDelegate</a>;
-<a name="l00100"></a><a class="code" href="classFileTransferWindow.html#a47bf052891aa32359347cf30aee5faf2">00100</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>         * <a class="code" href="classFileTransferWindow.html#a47bf052891aa32359347cf30aee5faf2">m_pContextPopup</a>;
-<a name="l00101"></a><a class="code" href="classFileTransferWindow.html#a338cc2e4a706a903f19baf3f7b73969a">00101</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>         * <a class="code" href="classFileTransferWindow.html#a338cc2e4a706a903f19baf3f7b73969a">m_pLocalFilePopup</a>;
-<a name="l00102"></a><a class="code" href="classFileTransferWindow.html#af1aab294f443104d47a43e244303dd45">00102</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>         * <a class="code" href="classFileTransferWindow.html#af1aab294f443104d47a43e244303dd45">m_pOpenFilePopup</a>;
+<a name="l00100"></a><a class="code" href="classFileTransferWindow.html#a481882d89c50e4dc91750ec058ba2631">00100</a>         QMenu           * <a class="code" href="classFileTransferWindow.html#a481882d89c50e4dc91750ec058ba2631">m_pContextPopup</a>;
+<a name="l00101"></a><a class="code" href="classFileTransferWindow.html#a732d3e6c3bf81c8efa3f64c133d91f64">00101</a>         QMenu           * <a class="code" href="classFileTransferWindow.html#a732d3e6c3bf81c8efa3f64c133d91f64">m_pLocalFilePopup</a>;
+<a name="l00102"></a><a class="code" href="classFileTransferWindow.html#ac790797d72d00a88083e6bbe03ccffd0">00102</a>         QMenu           * <a class="code" href="classFileTransferWindow.html#ac790797d72d00a88083e6bbe03ccffd0">m_pOpenFilePopup</a>;
 <a name="l00103"></a><a class="code" href="classFileTransferWindow.html#a701e97f4f4f45b88578cea534f2a0885">00103</a>         QTimer                  * <a class="code" href="classFileTransferWindow.html#a701e97f4f4f45b88578cea534f2a0885">m_pTimer</a>;
 <a name="l00104"></a><a class="code" href="classFileTransferWindow.html#a62368175eee4fbe0ab5aff97ac30da4c">00104</a>         <span class="keywordtype">int</span>                     <a class="code" href="classFileTransferWindow.html#a62368175eee4fbe0ab5aff97ac30da4c">m_iLineSpacing</a>; <span class="comment">// cached fm value</span>
 <a name="l00105"></a>00105 <span class="keyword">public</span>: <span class="comment">// Methods</span>
@@ -212,7 +212,7 @@ function toggleVisibility(linkObj) {
 <a name="l00131"></a>00131         <span class="keywordtype">void</span> <a class="code" href="classFileTransferWindow.html#acde611f0149fb6c371bd20b24b5648cf">openLocalFileWith</a>();
 <a name="l00132"></a>00132         <span class="keywordtype">void</span> <a class="code" href="classFileTransferWindow.html#a331b9ae495e3591224f0f62c3e37c833">copyLocalFileToClipboard</a>();
 <a name="l00133"></a>00133         <span class="keywordtype">void</span> <a class="code" href="classFileTransferWindow.html#a1d2fd081742addf0abdd78e7dfc3b6e3">openLocalFileFolder</a>();
-<a name="l00134"></a>00134         <span class="keywordtype">void</span> <a class="code" href="classFileTransferWindow.html#aa35bee12f9a2a9e6cb11dbe0099860d5">openFilePopupActivated</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
+<a name="l00134"></a>00134     <span class="keywordtype">void</span> <a class="code" href="classFileTransferWindow.html#afb18b43f2565f2aed088ca67cb4a0441">openFilePopupActivated</a>(QAction *pAction);
 <a name="l00135"></a>00135         <span class="keywordtype">void</span> <a class="code" href="classFileTransferWindow.html#a24f450a3491640080d4e727809450dd7">openLocalFileTerminal</a>();
 <a name="l00136"></a>00136         <span class="keywordtype">void</span> <a class="code" href="classFileTransferWindow.html#a6a91cf31db1917b0fa72f1b9b24dce77">deleteLocalFile</a>();
 <a name="l00137"></a>00137 };
@@ -220,7 +220,7 @@ function toggleVisibility(linkObj) {
 <a name="l00139"></a>00139 <span class="preprocessor">#endif //_FILETRANSFERWINDOW_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:19 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:07 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

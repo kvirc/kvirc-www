@@ -139,11 +139,11 @@ function toggleVisibility(linkObj) {
 <a name="l00058"></a>00058         <span class="keywordtype">void</span> <a class="code" href="classLogViewListView.html#af83a5d010443c35a264b415a4bfac384">rightButtonPressed</a>(QTreeWidgetItem *, QPoint);
 <a name="l00059"></a>00059 };
 <a name="l00060"></a>00060 
-<a name="l00061"></a><a class="code" href="classLogViewWindow.html">00061</a> <span class="keyword">class </span><a class="code" href="classLogViewWindow.html">LogViewWindow</a> : <span class="keyword">public</span> <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>, <span class="keyword">public</span> <a class="code" href="classKviModuleExtension.html">KviModuleExtension</a>
+<a name="l00061"></a><a class="code" href="classLogViewWindow.html">00061</a> <span class="keyword">class </span><a class="code" href="classLogViewWindow.html">LogViewWindow</a> : <span class="keyword">public</span> <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>
 <a name="l00062"></a>00062 {
 <a name="l00063"></a>00063         Q_OBJECT
 <a name="l00064"></a>00064 <span class="keyword">public</span>:
-<a name="l00065"></a>00065         <a class="code" href="classLogViewWindow.html#ac2437a358df1f06e72bcd8877ab55e71">LogViewWindow</a>(<a class="code" href="classKviModuleExtensionDescriptor.html">KviModuleExtensionDescriptor</a> * pDesc);
+<a name="l00065"></a>00065         <a class="code" href="classLogViewWindow.html#ad603113c228ba9d0459d9266c6c70e58">LogViewWindow</a>();
 <a name="l00066"></a>00066         <a class="code" href="classLogViewWindow.html#a7e2ae59c564dae941a946256f59e7ae8">~LogViewWindow</a>();
 <a name="l00067"></a>00067 <span class="keyword">protected</span>:
 <a name="l00068"></a><a class="code" href="classLogViewWindow.html#aca9faf61df161dc8377095b32c4eba5a">00068</a>         <a class="code" href="classKviPointerList.html">KviPointerList&lt;LogFile&gt;</a> <a class="code" href="classLogViewWindow.html#aca9faf61df161dc8377095b32c4eba5a">m_logList</a>;
@@ -181,7 +181,7 @@ function toggleVisibility(linkObj) {
 <a name="l00100"></a><a class="code" href="classLogViewWindow.html#ac644bfad62edc94ae5d968a064fec8c9">00100</a>         QString                 <a class="code" href="classLogViewWindow.html#ac644bfad62edc94ae5d968a064fec8c9">m_szLastGroup</a>;
 <a name="l00101"></a><a class="code" href="classLogViewWindow.html#a6cbf5d9d4a48fc3fe4585df7c1a89dea">00101</a>         <span class="keywordtype">bool</span>                    <a class="code" href="classLogViewWindow.html#a6cbf5d9d4a48fc3fe4585df7c1a89dea">m_bAborted</a>;
 <a name="l00102"></a><a class="code" href="classLogViewWindow.html#a0c4385b9a644d0b6ef9cc8f4757629fa">00102</a>         QTimer                * <a class="code" href="classLogViewWindow.html#a0c4385b9a644d0b6ef9cc8f4757629fa">m_pTimer</a>;
-<a name="l00103"></a><a class="code" href="classLogViewWindow.html#a71db1f6ac0e0501072a5a8ff435781b2">00103</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>       * <a class="code" href="classLogViewWindow.html#a71db1f6ac0e0501072a5a8ff435781b2">m_pExportLogPopup</a>;
+<a name="l00103"></a><a class="code" href="classLogViewWindow.html#a8704ab226807cf4d4be4608125619051">00103</a>         QMenu       * <a class="code" href="classLogViewWindow.html#a8704ab226807cf4d4be4608125619051">m_pExportLogPopup</a>;
 <a name="l00104"></a>00104 <span class="keyword">public</span>:
 <a name="l00112"></a>00112         <span class="keywordtype">void</span> <a class="code" href="classLogViewWindow.html#a1f20b19fc331d8c940a5508c29011152" title="Exports the log and creates the file in the selected format.">createLog</a>(<a class="code" href="classLogFile.html" title="The LogFile class which handle any log file.">LogFile</a> * pLog, <span class="keywordtype">int</span> iId, QString * pszFile = 0);
 <a name="l00113"></a>00113 <span class="keyword">protected</span>:
@@ -208,7 +208,7 @@ function toggleVisibility(linkObj) {
 <a name="l00134"></a>00134 <span class="preprocessor">#endif //_LOGVIEWWINDOW_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:20 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:08 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

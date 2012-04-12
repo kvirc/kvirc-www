@@ -109,7 +109,7 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcOperationsAction.html#a22ea4d32f06e16820ac5193ee705a999">popupAboutToShow</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcOperationsAction.html#a4a37bae7908bec391f79c587916bd6d1">popupActivated</a> (int)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviIrcOperationsAction.html#aedfad660cd38655f2f2973ed5ba14591">popupActivated</a> (QAction *pAction)</td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="acd0b6a0921338ebd96fc42a2409451c9"></a><!-- doxytag: member="KviIrcOperationsAction::KviIrcOperationsAction" ref="acd0b6a0921338ebd96fc42a2409451c9" args="(QObject *pParent)" -->
@@ -146,26 +146,26 @@ Protected Slots</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviSubmenuAction.html#a1ff676714d3633a69c5ba0083dd50869">KviSubmenuAction</a>.</p>
 
-<p>References <a class="el" href="detector_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>, <a class="el" href="classKviAction.html#a62ac15a73381217e5daedf1bac6a097b">KviAction::addToPopupMenu()</a>, <a class="el" href="classKviTalPopupMenu.html#a2deae00fa8031a641272499bc195e87e">KviTalPopupMenu::clear()</a>, <a class="el" href="classKviActionManager.html#a47276709308dad0ac9cb2208256618c0">KviActionManager::getAction()</a>, <a class="el" href="classKviActionManager.html#a7076f244f6d84120a7665db74990ab6b">KviActionManager::instance()</a>, <a class="el" href="KviCoreActionNames_8h.html#a38419b1186d1edeb3a9923422db19b14">KVI_COREACTION_AWAYBACK</a>, <a class="el" href="KviCoreActionNames_8h.html#ac6ba830c1ff41ccbbca4cae79711fccf">KVI_COREACTION_CHANNELMENU</a>, <a class="el" href="KviCoreActionNames_8h.html#a194e0338270360e0a7c18458dc9c79b0">KVI_COREACTION_NICKNAMEMENU</a>, <a class="el" href="KviCoreActionNames_8h.html#a58c8244ca54685399af73d5c94788029">KVI_COREACTION_SEPARATOR</a>, <a class="el" href="KviCoreActionNames_8h.html#aeea68f860e823ac9fd6e95a0759d8478">KVI_COREACTION_SERVERMENU</a>, <a class="el" href="KviCoreActionNames_8h.html#a3555b57f7b4177dd4f304cc8410f14e0">KVI_COREACTION_USERMODEMENU</a>, and <a class="el" href="classKviSubmenuAction.html#a5c7e8ce7530fdbb6bfc323078ba45b13">KviSubmenuAction::m_pPopup</a>.</p>
+<p>References <a class="el" href="detector_8cpp.html#a8d3c3518d793541417a4845125da1ae1">a</a>, <a class="el" href="classKviAction.html#aef1a3ab0bdd8525efcea8069679717b9">KviAction::addToPopupMenu()</a>, <a class="el" href="classKviActionManager.html#a47276709308dad0ac9cb2208256618c0">KviActionManager::getAction()</a>, <a class="el" href="classKviActionManager.html#a7076f244f6d84120a7665db74990ab6b">KviActionManager::instance()</a>, <a class="el" href="KviCoreActionNames_8h.html#a38419b1186d1edeb3a9923422db19b14">KVI_COREACTION_AWAYBACK</a>, <a class="el" href="KviCoreActionNames_8h.html#ac6ba830c1ff41ccbbca4cae79711fccf">KVI_COREACTION_CHANNELMENU</a>, <a class="el" href="KviCoreActionNames_8h.html#a194e0338270360e0a7c18458dc9c79b0">KVI_COREACTION_NICKNAMEMENU</a>, <a class="el" href="KviCoreActionNames_8h.html#a58c8244ca54685399af73d5c94788029">KVI_COREACTION_SEPARATOR</a>, <a class="el" href="KviCoreActionNames_8h.html#aeea68f860e823ac9fd6e95a0759d8478">KVI_COREACTION_SERVERMENU</a>, <a class="el" href="KviCoreActionNames_8h.html#a3555b57f7b4177dd4f304cc8410f14e0">KVI_COREACTION_USERMODEMENU</a>, and <a class="el" href="classKviSubmenuAction.html#aecd2df5ca8d96f347ce6aed50c89e321">KviSubmenuAction::m_pPopup</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4a37bae7908bec391f79c587916bd6d1"></a><!-- doxytag: member="KviIrcOperationsAction::popupActivated" ref="a4a37bae7908bec391f79c587916bd6d1" args="(int)" -->
+<a class="anchor" id="aedfad660cd38655f2f2973ed5ba14591"></a><!-- doxytag: member="KviIrcOperationsAction::popupActivated" ref="aedfad660cd38655f2f2973ed5ba14591" args="(QAction *pAction)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void KviIrcOperationsAction::popupActivated </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">QAction *&#160;</td>
+          <td class="paramname"><em>pAction</em></td><td>)</td>
           <td><code> [protected, virtual, slot]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="classKviSubmenuAction.html#a14eb38ea9b1f7826bfd2c8a512127766">KviSubmenuAction</a>.</p>
+<p>Reimplemented from <a class="el" href="classKviSubmenuAction.html#a23dcc36f55b902f7d51bed3e88baa0bf">KviSubmenuAction</a>.</p>
 
 </div>
 </div>
@@ -174,7 +174,7 @@ Protected Slots</h2></td></tr>
 <li>src/kvirc/kernel/<a class="el" href="KviCoreActions_8cpp.html">KviCoreActions.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:27 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:15 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

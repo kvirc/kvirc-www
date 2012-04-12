@@ -174,7 +174,7 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QPixmap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConsoleWindow.html#a9794caff90bcd7be130bce3d36af0955">myIconPtr</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConsoleWindow.html#a6e1f4d2397d6d58dd16b08d4a3525d52">resizeEvent</a> (QResizeEvent *e)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConsoleWindow.html#a30221f60925ee047713987103ee8f898">saveProperties</a> (<a class="el" href="classKviConfigurationFile.html">KviConfigurationFile</a> *cfg)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConsoleWindow.html#aecf001a04c352406cfc77cc75399e340">showNotifyList</a> (bool bShow)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConsoleWindow.html#ad02ed820d5beb38cbf30a9153024d8b9">showNotifyList</a> (bool bShow, bool bIgnoreSizeChange=false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QSize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConsoleWindow.html#a46877a57941aad307e0330bf52bcf57e">sizeHint</a> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConsoleWindow.html#a63bb4c67241572b8bdcfada96ac3cd6c">triggerCreationEvents</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConsoleWindow.html#a889c4d7e050b073e7f62695bc654e081">triggerOnHighlight</a> (<a class="el" href="classKviWindow.html">KviWindow</a> *wnd, int type, const QString &amp;nick, const QString &amp;user, const QString &amp;host, const QString &amp;szMsg, const QString &amp;trigger)</td></tr>
@@ -189,6 +189,7 @@ Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviUserListView.html">KviUserListView</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConsoleWindow.html#a710ddbb03ed3557c19d475958d14d63f">m_pNotifyListView</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviWindowToolPageButton.html">KviWindowToolPageButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConsoleWindow.html#a294ddee87d1936c65b2066cc931b900c">m_pNotifyViewButton</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QStringList *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConsoleWindow.html#a841a77a383f1d034919081eb9ac1a880">m_pTmpHighLightedChannels</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QList&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConsoleWindow.html#ad45a9a23c220ab8b2c3d6f88b7fd8f2f">m_SplitterSizesList</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConsoleWindow.html#a4456e6b95b556f82b35b9794456f64e4">m_szOwnSmartColor</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConsoleWindow.html#af7967587f81273bd6cdb6641e38b211f">m_szStatusString</a></td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
@@ -709,7 +710,7 @@ Friends</h2></td></tr>
 
 <p>References <a class="el" href="classKviWindow.html#ade1bf7bcf0d106fa7473ed11d56fa4ca">KviWindow::connection()</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviConsoleWindow.html#a119120ffbd459d74b120a0ceb69eb007">avatarChanged()</a>, <a class="el" href="classKviConsoleWindow.html#a5bb175f2c04d9b27db09d8d3aa333ed4">checkDefaultAvatar()</a>, <a class="el" href="classKviConsoleWindow.html#a82881d1e59be9ceca99047509e8f1945">completeChannel()</a>, <a class="el" href="classListWindow.html#ac4444c6096213152f5714717c63d9004">ListWindow::connectionStateChange()</a>, <a class="el" href="classLinksWindow.html#ab531e28997f11b9255be70963c8f8156">LinksWindow::connectionStateChange()</a>, <a class="el" href="classKviTrayIconWidget.html#ab16844b5e696e16ecb43fa7f925cc0a8">KviTrayIconWidget::fillContextPopup()</a>, <a class="el" href="classChannelsJoinDialog.html#a535fae4a8f5e53560d39977cc6cc0511">ChannelsJoinDialog::fillListView()</a>, <a class="el" href="classKviApplication.html#aad4f9e32af06f10a53d3439bc3ff961b">KviApplication::fillRecentChannelsPopup()</a>, <a class="el" href="classKviQueryWindow.html#a25818a3c972d6e758ba73a193a623097">KviQueryWindow::getBaseLogFileName()</a>, <a class="el" href="classKviQueryWindow.html#af976e256a1c65b24e33504675df1bbb0">KviQueryWindow::pasteLastLog()</a>, and <a class="el" href="classKviChannelWindow.html#a30ef8db366b4e348f95400a348e1b31d">KviChannelWindow::pasteLastLog()</a>.</p>
+<p>Referenced by <a class="el" href="classKviConsoleWindow.html#a119120ffbd459d74b120a0ceb69eb007">avatarChanged()</a>, <a class="el" href="classKviConsoleWindow.html#a5bb175f2c04d9b27db09d8d3aa333ed4">checkDefaultAvatar()</a>, <a class="el" href="classKviConsoleWindow.html#a82881d1e59be9ceca99047509e8f1945">completeChannel()</a>, <a class="el" href="classListWindow.html#ac4444c6096213152f5714717c63d9004">ListWindow::connectionStateChange()</a>, <a class="el" href="classLinksWindow.html#ab531e28997f11b9255be70963c8f8156">LinksWindow::connectionStateChange()</a>, <a class="el" href="classKviTrayIconWidget.html#ab16844b5e696e16ecb43fa7f925cc0a8">KviTrayIconWidget::fillContextPopup()</a>, <a class="el" href="classChannelsJoinDialog.html#a535fae4a8f5e53560d39977cc6cc0511">ChannelsJoinDialog::fillListView()</a>, <a class="el" href="classKviApplication.html#afd90eda7442c7eee5001b1637c85bce0">KviApplication::fillRecentChannelsPopup()</a>, <a class="el" href="classKviQueryWindow.html#a25818a3c972d6e758ba73a193a623097">KviQueryWindow::getBaseLogFileName()</a>, <a class="el" href="classKviQueryWindow.html#af976e256a1c65b24e33504675df1bbb0">KviQueryWindow::pasteLastLog()</a>, and <a class="el" href="classKviChannelWindow.html#a30ef8db366b4e348f95400a348e1b31d">KviChannelWindow::pasteLastLog()</a>.</p>
 
 </div>
 </div>
@@ -939,7 +940,7 @@ Friends</h2></td></tr>
 
 <p>References <a class="el" href="classKviWindow.html#a9336ddf2950d51ab815d9548b6fcb0a6">KviWindow::context()</a>, and <a class="el" href="classKviIrcContext.html#ac87ccbaa284b1eaef16202c3c7bc796a">KviIrcContext::isConnected()</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviChannelWindow.html#ad9b0e4e25d0f8d9b1383df040136e5ed">KviChannelWindow::closeEvent()</a>, <a class="el" href="DccUtils_8h.html#ad990d75c5beac315c4eb85a43cd5f241">dcc_kvs_get_listen_ip_address()</a>, <a class="el" href="libkvidcc_8cpp.html#a0c6fed761b64b77aa8e46be3acee5575">dcc_kvs_parse_default_parameters()</a>, <a class="el" href="classKviTrayIconWidget.html#ae8787cb93522d8505ce392c018cd920f">KviTrayIconWidget::doAway()</a>, <a class="el" href="classKviIrcContextDisplay.html#a6869dd9394c8c40f7d31cd9301d170b4">KviIrcContextDisplay::drawContents()</a>, <a class="el" href="classKviTrayIconWidget.html#ab16844b5e696e16ecb43fa7f925cc0a8">KviTrayIconWidget::fillContextPopup()</a>, <a class="el" href="classKviApplication.html#aad4f9e32af06f10a53d3439bc3ff961b">KviApplication::fillRecentChannelsPopup()</a>, <a class="el" href="classKviApplication.html#a42a7e4804a691ca42fb1778feefc5c36">KviApplication::fillRecentNicknamesPopup()</a>, <a class="el" href="classKviWindowListBase.html#aaee30cb00f832df5887ae332f2ce0ac8">KviWindowListBase::getTextForConsole()</a>, <a class="el" href="namespaceKviKvsCoreSimpleCommands.html#a27ccf07d4cb27ec3c97affcf17f99358">KviKvsCoreSimpleCommands::KVSCSC()</a>, <a class="el" href="classKviConsoleWindow.html#a9794caff90bcd7be130bce3d36af0955">myIconPtr()</a>, <a class="el" href="classKviIrcServerParser.html#ac251bdd615c734dd9e2dea3666ff5274">KviIrcServerParser::parseNumericNicknameProblem()</a>, <a class="el" href="classKviIrcServerParser.html#affedde33c39eda5c1a9697384de2217b">KviIrcServerParser::parseNumericUnavailResource()</a>, <a class="el" href="classKviChangeUserModeAction.html#a5724108f758a96c97df4fec96e00e831">KviChangeUserModeAction::popupActivated()</a>, <a class="el" href="classLinksWindow.html#a481bb8bbeec09d9949a7435f7bbfcfdc">LinksWindow::requestLinks()</a>, <a class="el" href="classListWindow.html#aa6f285037a90c911a3d346c0fcc3b200">ListWindow::requestList()</a>, <a class="el" href="classListWindow.html#a4d7c975faa594a5fd7c01a411f1285e6">ListWindow::stoplistdownload()</a>, and <a class="el" href="classKviApplication.html#a192af2c34cc432b6c40bad5f3d0e0ec1">KviApplication::topmostConnectedConsole()</a>.</p>
+<p>Referenced by <a class="el" href="classKviChannelWindow.html#ad9b0e4e25d0f8d9b1383df040136e5ed">KviChannelWindow::closeEvent()</a>, <a class="el" href="DccUtils_8h.html#ad990d75c5beac315c4eb85a43cd5f241">dcc_kvs_get_listen_ip_address()</a>, <a class="el" href="libkvidcc_8cpp.html#a0c6fed761b64b77aa8e46be3acee5575">dcc_kvs_parse_default_parameters()</a>, <a class="el" href="classKviTrayIconWidget.html#ae8787cb93522d8505ce392c018cd920f">KviTrayIconWidget::doAway()</a>, <a class="el" href="classKviIrcContextDisplay.html#a6869dd9394c8c40f7d31cd9301d170b4">KviIrcContextDisplay::drawContents()</a>, <a class="el" href="classKviTrayIconWidget.html#ab16844b5e696e16ecb43fa7f925cc0a8">KviTrayIconWidget::fillContextPopup()</a>, <a class="el" href="classKviApplication.html#afd90eda7442c7eee5001b1637c85bce0">KviApplication::fillRecentChannelsPopup()</a>, <a class="el" href="classKviApplication.html#aa019e959d578d3f77d07d174f4f6c473">KviApplication::fillRecentNicknamesPopup()</a>, <a class="el" href="classKviWindowListBase.html#aaee30cb00f832df5887ae332f2ce0ac8">KviWindowListBase::getTextForConsole()</a>, <a class="el" href="namespaceKviKvsCoreSimpleCommands.html#a27ccf07d4cb27ec3c97affcf17f99358">KviKvsCoreSimpleCommands::KVSCSC()</a>, <a class="el" href="classKviConsoleWindow.html#a9794caff90bcd7be130bce3d36af0955">myIconPtr()</a>, <a class="el" href="classKviIrcServerParser.html#ac251bdd615c734dd9e2dea3666ff5274">KviIrcServerParser::parseNumericNicknameProblem()</a>, <a class="el" href="classKviIrcServerParser.html#affedde33c39eda5c1a9697384de2217b">KviIrcServerParser::parseNumericUnavailResource()</a>, <a class="el" href="classKviChangeUserModeAction.html#abef60815755aaa19a2e1b5b4df61ea29">KviChangeUserModeAction::popupActivated()</a>, <a class="el" href="classLinksWindow.html#a481bb8bbeec09d9949a7435f7bbfcfdc">LinksWindow::requestLinks()</a>, <a class="el" href="classListWindow.html#aa6f285037a90c911a3d346c0fcc3b200">ListWindow::requestList()</a>, <a class="el" href="classListWindow.html#a4d7c975faa594a5fd7c01a411f1285e6">ListWindow::stoplistdownload()</a>, and <a class="el" href="classKviApplication.html#a192af2c34cc432b6c40bad5f3d0e0ec1">KviApplication::topmostConnectedConsole()</a>.</p>
 
 </div>
 </div>
@@ -1028,7 +1029,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a0cb041b9b2c9356d0c541273c9f8dca8">KviWindow</a>.</p>
 
-<p>References <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classKviConfigurationFile.html#a5b0944547ed66f4b77babc2807b99dd7">KviConfigurationFile::readBoolEntry()</a>, <a class="el" href="classKviConfigurationFile.html#a8d5d75cadfd6a3b51a0d0404bb10fd58">KviConfigurationFile::readIntListEntry()</a>, and <a class="el" href="classKviConsoleWindow.html#aecf001a04c352406cfc77cc75399e340">showNotifyList()</a>.</p>
+<p>References <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classKviConsoleWindow.html#ad45a9a23c220ab8b2c3d6f88b7fd8f2f">m_SplitterSizesList</a>, <a class="el" href="classKviConfigurationFile.html#a5b0944547ed66f4b77babc2807b99dd7">KviConfigurationFile::readBoolEntry()</a>, <a class="el" href="classKviConfigurationFile.html#a8d5d75cadfd6a3b51a0d0404bb10fd58">KviConfigurationFile::readIntListEntry()</a>, and <a class="el" href="classKviConsoleWindow.html#ad02ed820d5beb38cbf30a9153024d8b9">showNotifyList()</a>.</p>
 
 </div>
 </div>
@@ -1244,7 +1245,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviWindow.html#a63f02e495408b530f84f6d4f559f9924">KviWindow</a>.</p>
 
-<p>References <a class="el" href="classKviWindow.html#aa076ad40b42da3f0f98e208a71c136f8">KviWindow::m_pIrcView</a>, <a class="el" href="classKviConsoleWindow.html#a710ddbb03ed3557c19d475958d14d63f">m_pNotifyListView</a>, <a class="el" href="classKviConsoleWindow.html#a294ddee87d1936c65b2066cc931b900c">m_pNotifyViewButton</a>, and <a class="el" href="classKviConfigurationFile.html#a275254abcc77f29662b7a81c6abebb37">KviConfigurationFile::writeEntry()</a>.</p>
+<p>References <a class="el" href="classKviConsoleWindow.html#a294ddee87d1936c65b2066cc931b900c">m_pNotifyViewButton</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, <a class="el" href="classKviConsoleWindow.html#ad45a9a23c220ab8b2c3d6f88b7fd8f2f">m_SplitterSizesList</a>, and <a class="el" href="classKviConfigurationFile.html#a275254abcc77f29662b7a81c6abebb37">KviConfigurationFile::writeEntry()</a>.</p>
 
 </div>
 </div>
@@ -1333,7 +1334,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aecf001a04c352406cfc77cc75399e340"></a><!-- doxytag: member="KviConsoleWindow::showNotifyList" ref="aecf001a04c352406cfc77cc75399e340" args="(bool bShow)" -->
+<a class="anchor" id="ad02ed820d5beb38cbf30a9153024d8b9"></a><!-- doxytag: member="KviConsoleWindow::showNotifyList" ref="ad02ed820d5beb38cbf30a9153024d8b9" args="(bool bShow, bool bIgnoreSizeChange=false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1341,14 +1342,24 @@ Friends</h2></td></tr>
           <td class="memname">void KviConsoleWindow::showNotifyList </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bShow</em></td><td>)</td>
-          <td><code> [protected]</code></td>
+          <td class="paramname"><em>bShow</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bIgnoreSizeChange</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviConsoleWindow.html#a710ddbb03ed3557c19d475958d14d63f">m_pNotifyListView</a>, and <a class="el" href="classKviConsoleWindow.html#a294ddee87d1936c65b2066cc931b900c">m_pNotifyViewButton</a>.</p>
+<p>References <a class="el" href="classKviConsoleWindow.html#a710ddbb03ed3557c19d475958d14d63f">m_pNotifyListView</a>, <a class="el" href="classKviConsoleWindow.html#a294ddee87d1936c65b2066cc931b900c">m_pNotifyViewButton</a>, <a class="el" href="classKviWindow.html#aafe69c17847945b718333dbd78e769e9">KviWindow::m_pSplitter</a>, and <a class="el" href="classKviConsoleWindow.html#ad45a9a23c220ab8b2c3d6f88b7fd8f2f">m_SplitterSizesList</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviConsoleWindow.html#aa2da393558b3067f871dcddf3a419e80">loadProperties()</a>, and <a class="el" href="classKviConsoleWindow.html#a3e1a6004678cb6e662f45363805de97c">toggleNotifyView()</a>.</p>
 
@@ -1469,7 +1480,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviConsoleWindow.html#a710ddbb03ed3557c19d475958d14d63f">m_pNotifyListView</a>, and <a class="el" href="classKviConsoleWindow.html#aecf001a04c352406cfc77cc75399e340">showNotifyList()</a>.</p>
+<p>References <a class="el" href="classKviConsoleWindow.html#a710ddbb03ed3557c19d475958d14d63f">m_pNotifyListView</a>, and <a class="el" href="classKviConsoleWindow.html#ad02ed820d5beb38cbf30a9153024d8b9">showNotifyList()</a>.</p>
 
 </div>
 </div>
@@ -1699,7 +1710,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviConsoleWindow.html#a330d49711ba9870fb69fbbc604cf7b33">applyOptions()</a>, <a class="el" href="classKviConsoleWindow.html#af5e55dc61f0d555d8ff9d4b88d07ede8">avatarChangedUpdateWindows()</a>, <a class="el" href="classKviConsoleWindow.html#a750f59b9eda013a1a14cd624dfa7436d">connectionAttached()</a>, <a class="el" href="classKviConsoleWindow.html#a09fe2915e3b391a392160d788f9c2be4">connectionDetached()</a>, <a class="el" href="classKviConsoleWindow.html#a30221f60925ee047713987103ee8f898">saveProperties()</a>, <a class="el" href="classKviConsoleWindow.html#a91effb6d6b28a81e3d7d22091efcfd7a">selectedCount()</a>, <a class="el" href="classKviConsoleWindow.html#aecf001a04c352406cfc77cc75399e340">showNotifyList()</a>, and <a class="el" href="classKviConsoleWindow.html#a3e1a6004678cb6e662f45363805de97c">toggleNotifyView()</a>.</p>
+<p>Referenced by <a class="el" href="classKviConsoleWindow.html#a330d49711ba9870fb69fbbc604cf7b33">applyOptions()</a>, <a class="el" href="classKviConsoleWindow.html#af5e55dc61f0d555d8ff9d4b88d07ede8">avatarChangedUpdateWindows()</a>, <a class="el" href="classKviConsoleWindow.html#a750f59b9eda013a1a14cd624dfa7436d">connectionAttached()</a>, <a class="el" href="classKviConsoleWindow.html#a09fe2915e3b391a392160d788f9c2be4">connectionDetached()</a>, <a class="el" href="classKviConsoleWindow.html#a91effb6d6b28a81e3d7d22091efcfd7a">selectedCount()</a>, <a class="el" href="classKviConsoleWindow.html#ad02ed820d5beb38cbf30a9153024d8b9">showNotifyList()</a>, and <a class="el" href="classKviConsoleWindow.html#a3e1a6004678cb6e662f45363805de97c">toggleNotifyView()</a>.</p>
 
 </div>
 </div>
@@ -1714,7 +1725,7 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviConsoleWindow.html#a30221f60925ee047713987103ee8f898">saveProperties()</a>, and <a class="el" href="classKviConsoleWindow.html#aecf001a04c352406cfc77cc75399e340">showNotifyList()</a>.</p>
+<p>Referenced by <a class="el" href="classKviConsoleWindow.html#a30221f60925ee047713987103ee8f898">saveProperties()</a>, and <a class="el" href="classKviConsoleWindow.html#ad02ed820d5beb38cbf30a9153024d8b9">showNotifyList()</a>.</p>
 
 </div>
 </div>
@@ -1730,6 +1741,21 @@ Friends</h2></td></tr>
 <div class="memdoc">
 
 <p>Referenced by <a class="el" href="classKviConsoleWindow.html#a5fcea5c312ce5c2990b975d8306e7d9d">addHighlightedChannel()</a>, <a class="el" href="classKviConsoleWindow.html#a405ad55f634af1cd4305aae5e79e29fb">removeHighlightedChannel()</a>, and <a class="el" href="classKviConsoleWindow.html#a146c1ec7e6f9696ab0485f1b776a0cbb">~KviConsoleWindow()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad45a9a23c220ab8b2c3d6f88b7fd8f2f"></a><!-- doxytag: member="KviConsoleWindow::m_SplitterSizesList" ref="ad45a9a23c220ab8b2c3d6f88b7fd8f2f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt;int&gt; <a class="el" href="classKviConsoleWindow.html#ad45a9a23c220ab8b2c3d6f88b7fd8f2f">KviConsoleWindow::m_SplitterSizesList</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="classKviConsoleWindow.html#aa2da393558b3067f871dcddf3a419e80">loadProperties()</a>, <a class="el" href="classKviConsoleWindow.html#a30221f60925ee047713987103ee8f898">saveProperties()</a>, and <a class="el" href="classKviConsoleWindow.html#ad02ed820d5beb38cbf30a9153024d8b9">showNotifyList()</a>.</p>
 
 </div>
 </div>
@@ -1768,7 +1794,7 @@ Friends</h2></td></tr>
 <li>src/kvirc/ui/<a class="el" href="KviConsoleWindow_8cpp.html">KviConsoleWindow.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:26 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:14 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

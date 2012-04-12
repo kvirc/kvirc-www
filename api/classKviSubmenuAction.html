@@ -114,21 +114,21 @@ function toggleVisibility(linkObj) {
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#afbd019bc4b3f95faa2710e76f95cae50">addToCustomToolBar</a> (<a class="el" href="classKviCustomToolBar.html">KviCustomToolBar</a> *pTool)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the action to the given toolbar.  <a href="#afbd019bc4b3f95faa2710e76f95cae50"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a2daa3e8e19944910a5ef3c72426311b2">addToPopupMenu</a> (<a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *pMenu)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the action to the given popup.  <a href="#a2daa3e8e19944910a5ef3c72426311b2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#ac0ecef0ed59e60038927262ba7f05a50">addToPopupMenu</a> (QMenu *pMenu)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the action to the given popup.  <a href="#ac0ecef0ed59e60038927262ba7f05a50"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a7b9881398563eb0f0a5ba2561f898497">KviSubmenuAction</a> (QObject *pParent, const QString &amp;szName, const QString &amp;szScriptCode, const QString &amp;szVisibleName, const QString &amp;szDescription, <a class="el" href="classKviActionCategory.html">KviActionCategory</a> *pCategory=<a class="el" href="KviIrcNumericCodes_8h.html#af2ebd5db010f0e321c1faa0e6a182c2b">NULL</a>, const QString &amp;szBigIconId=QString(), const QString &amp;szSmallIcoNId=QString(), unsigned int uFlags=0)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a94b9a21edec6b6206736d846f99e9325">~KviSubmenuAction</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-slots"></a>
 Protected Slots</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a1ff676714d3633a69c5ba0083dd50869">popupAboutToShow</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a14eb38ea9b1f7826bfd2c8a512127766">popupActivated</a> (int iId)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a23dcc36f55b902f7d51bed3e88baa0bf">popupActivated</a> (QAction *pAction)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a00ade98a8f46409cd34a7933e20b08f4">setup</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables or disables the action upon starting KVIrc.  <a href="#a00ade98a8f46409cd34a7933e20b08f4"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#a5c7e8ce7530fdbb6bfc323078ba45b13">m_pPopup</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviSubmenuAction.html#aecd2df5ca8d96f347ce6aed50c89e321">m_pPopup</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7b9881398563eb0f0a5ba2561f898497"></a><!-- doxytag: member="KviSubmenuAction::KviSubmenuAction" ref="a7b9881398563eb0f0a5ba2561f898497" args="(QObject *pParent, const QString &amp;szName, const QString &amp;szScriptCode, const QString &amp;szVisibleName, const QString &amp;szDescription, KviActionCategory *pCategory=NULL, const QString &amp;szBigIconId=QString(), const QString &amp;szSmallIcoNId=QString(), unsigned int uFlags=0)" -->
@@ -198,7 +198,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviSubmenuAction.html#a5c7e8ce7530fdbb6bfc323078ba45b13">m_pPopup</a>.</p>
+<p>References <a class="el" href="classKviSubmenuAction.html#aecd2df5ca8d96f347ce6aed50c89e321">m_pPopup</a>.</p>
 
 </div>
 </div>
@@ -216,7 +216,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviSubmenuAction.html#a5c7e8ce7530fdbb6bfc323078ba45b13">m_pPopup</a>.</p>
+<p>References <a class="el" href="classKviSubmenuAction.html#aecd2df5ca8d96f347ce6aed50c89e321">m_pPopup</a>.</p>
 
 </div>
 </div>
@@ -247,18 +247,18 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviAction.html#ae77d9161c30042279d33e7f07c785ea2">KviAction</a>.</p>
 
-<p>References <a class="el" href="classKviKvsAction.html#afdbef2de2c0e7c7f005263fabb81e0c8">KviKvsAction::activate()</a>, <a class="el" href="classKviAction.html#acefe140b14d825cfc8b12f1419eef3a2">KviAction::bigIcon()</a>, <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classKviAction.html#a13bd501174c472299d566a33e75ec177">KviAction::isEnabled()</a>, <a class="el" href="classKviSubmenuAction.html#a5c7e8ce7530fdbb6bfc323078ba45b13">m_pPopup</a>, <a class="el" href="classKviAction.html#a1a45f49e6669e13643057319e40f303c">KviAction::name()</a>, <a class="el" href="detector_8cpp.html#ade66e4ccafbc33b117610bbc0d85feb0">p</a>, <a class="el" href="classKviAction.html#abcac4e100aa892e8e7c0d0210826545a">KviAction::registerAction()</a>, <a class="el" href="classKviKvsAction.html#a4f6ba0632e490fa359572b303bcf27fe">KviKvsAction::scriptCode()</a>, <a class="el" href="classKviSubmenuAction.html#a00ade98a8f46409cd34a7933e20b08f4">setup()</a>, <a class="el" href="classKviAction.html#aea704938943c932bcef1dbb7355f1eb9">KviAction::setupDone()</a>, and <a class="el" href="classKviAction.html#a75f53e180467211892c803f245d99cac">KviAction::visibleName()</a>.</p>
+<p>References <a class="el" href="classKviKvsAction.html#afdbef2de2c0e7c7f005263fabb81e0c8">KviKvsAction::activate()</a>, <a class="el" href="classKviAction.html#acefe140b14d825cfc8b12f1419eef3a2">KviAction::bigIcon()</a>, <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classKviAction.html#a13bd501174c472299d566a33e75ec177">KviAction::isEnabled()</a>, <a class="el" href="classKviSubmenuAction.html#aecd2df5ca8d96f347ce6aed50c89e321">m_pPopup</a>, <a class="el" href="classKviAction.html#a1a45f49e6669e13643057319e40f303c">KviAction::name()</a>, <a class="el" href="detector_8cpp.html#ade66e4ccafbc33b117610bbc0d85feb0">p</a>, <a class="el" href="classKviAction.html#abcac4e100aa892e8e7c0d0210826545a">KviAction::registerAction()</a>, <a class="el" href="classKviKvsAction.html#a4f6ba0632e490fa359572b303bcf27fe">KviKvsAction::scriptCode()</a>, <a class="el" href="classKviSubmenuAction.html#a00ade98a8f46409cd34a7933e20b08f4">setup()</a>, <a class="el" href="classKviAction.html#aea704938943c932bcef1dbb7355f1eb9">KviAction::setupDone()</a>, and <a class="el" href="classKviAction.html#a75f53e180467211892c803f245d99cac">KviAction::visibleName()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a2daa3e8e19944910a5ef3c72426311b2"></a><!-- doxytag: member="KviSubmenuAction::addToPopupMenu" ref="a2daa3e8e19944910a5ef3c72426311b2" args="(KviTalPopupMenu *pMenu)" -->
+<a class="anchor" id="ac0ecef0ed59e60038927262ba7f05a50"></a><!-- doxytag: member="KviSubmenuAction::addToPopupMenu" ref="ac0ecef0ed59e60038927262ba7f05a50" args="(QMenu *pMenu)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool KviSubmenuAction::addToPopupMenu </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td>
+          <td class="paramtype">QMenu *&#160;</td>
           <td class="paramname"><em>pMenu</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -275,9 +275,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classKviAction.html#a62ac15a73381217e5daedf1bac6a097b">KviAction</a>.</p>
+<p>Reimplemented from <a class="el" href="classKviAction.html#aef1a3ab0bdd8525efcea8069679717b9">KviAction</a>.</p>
 
-<p>References <a class="el" href="classKviTalPopupMenu.html#ad491ba2ad4a8133a89bdf417c1acacc6">KviTalPopupMenu::insertItem()</a>, <a class="el" href="classKviAction.html#a13bd501174c472299d566a33e75ec177">KviAction::isEnabled()</a>, <a class="el" href="classKviSubmenuAction.html#a5c7e8ce7530fdbb6bfc323078ba45b13">m_pPopup</a>, <a class="el" href="classKviTalPopupMenu.html#af795e001403292ee5fb15cd600495f9e">KviTalPopupMenu::setItemEnabled()</a>, <a class="el" href="classKviSubmenuAction.html#a00ade98a8f46409cd34a7933e20b08f4">setup()</a>, <a class="el" href="classKviAction.html#aea704938943c932bcef1dbb7355f1eb9">KviAction::setupDone()</a>, <a class="el" href="classKviAction.html#ab97e47d4ee5a86fb1a5e4e8d338bb7ae">KviAction::smallIcon()</a>, and <a class="el" href="classKviAction.html#a75f53e180467211892c803f245d99cac">KviAction::visibleName()</a>.</p>
+<p>References <a class="el" href="classKviAction.html#a13bd501174c472299d566a33e75ec177">KviAction::isEnabled()</a>, <a class="el" href="classKviSubmenuAction.html#aecd2df5ca8d96f347ce6aed50c89e321">m_pPopup</a>, <a class="el" href="classKviSubmenuAction.html#a00ade98a8f46409cd34a7933e20b08f4">setup()</a>, <a class="el" href="classKviAction.html#aea704938943c932bcef1dbb7355f1eb9">KviAction::setupDone()</a>, <a class="el" href="classKviAction.html#ab97e47d4ee5a86fb1a5e4e8d338bb7ae">KviAction::smallIcon()</a>, and <a class="el" href="classKviAction.html#a75f53e180467211892c803f245d99cac">KviAction::visibleName()</a>.</p>
 
 </div>
 </div>
@@ -301,22 +301,22 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a14eb38ea9b1f7826bfd2c8a512127766"></a><!-- doxytag: member="KviSubmenuAction::popupActivated" ref="a14eb38ea9b1f7826bfd2c8a512127766" args="(int iId)" -->
+<a class="anchor" id="a23dcc36f55b902f7d51bed3e88baa0bf"></a><!-- doxytag: member="KviSubmenuAction::popupActivated" ref="a23dcc36f55b902f7d51bed3e88baa0bf" args="(QAction *pAction)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void KviSubmenuAction::popupActivated </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>iId</em></td><td>)</td>
+          <td class="paramtype">QAction *&#160;</td>
+          <td class="paramname"><em>pAction</em></td><td>)</td>
           <td><code> [protected, virtual, slot]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="classKviJoinChannelAction.html#a4afccb72eb027bea9348ed62204e104e">KviJoinChannelAction</a>, <a class="el" href="classKviChangeNickAction.html#a114a433a6ab288607f33afd796f9fc66">KviChangeNickAction</a>, <a class="el" href="classKviConnectToServerAction.html#a73ccbe8c021986b3b03c92e906b8f519">KviConnectToServerAction</a>, <a class="el" href="classKviChangeUserModeAction.html#a5724108f758a96c97df4fec96e00e831">KviChangeUserModeAction</a>, <a class="el" href="classKviIrcToolsAction.html#a334fcc16f5b9bc6fcfdb6e4d01d0f4df">KviIrcToolsAction</a>, and <a class="el" href="classKviIrcOperationsAction.html#a4a37bae7908bec391f79c587916bd6d1">KviIrcOperationsAction</a>.</p>
+<p>Reimplemented in <a class="el" href="classKviJoinChannelAction.html#a02ef2b37bb8bc9c1c01a54f079f1f18e">KviJoinChannelAction</a>, <a class="el" href="classKviChangeNickAction.html#a396323c6c82a19567885264ecf4fe815">KviChangeNickAction</a>, <a class="el" href="classKviConnectToServerAction.html#ad0322c820c911dfcfe759c9d48f6e0e4">KviConnectToServerAction</a>, <a class="el" href="classKviChangeUserModeAction.html#abef60815755aaa19a2e1b5b4df61ea29">KviChangeUserModeAction</a>, <a class="el" href="classKviIrcToolsAction.html#a6fd9896d986361280f3315d01aea0c6d">KviIrcToolsAction</a>, and <a class="el" href="classKviIrcOperationsAction.html#aedfad660cd38655f2f2973ed5ba14591">KviIrcOperationsAction</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviSubmenuAction.html#a00ade98a8f46409cd34a7933e20b08f4">setup()</a>.</p>
 
@@ -341,25 +341,25 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classKviAction.html#a8773fa578d8687610b66649ca3faa230">KviAction</a>.</p>
 
-<p>References <a class="el" href="classKviAction.html#a0302b98b60d7f6ce7ae767383313e042">KviAction::activated()</a>, <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classKviSubmenuAction.html#a5c7e8ce7530fdbb6bfc323078ba45b13">m_pPopup</a>, <a class="el" href="classKviSubmenuAction.html#a1ff676714d3633a69c5ba0083dd50869">popupAboutToShow()</a>, and <a class="el" href="classKviSubmenuAction.html#a14eb38ea9b1f7826bfd2c8a512127766">popupActivated()</a>.</p>
+<p>References <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classKviSubmenuAction.html#aecd2df5ca8d96f347ce6aed50c89e321">m_pPopup</a>, <a class="el" href="classKviSubmenuAction.html#a1ff676714d3633a69c5ba0083dd50869">popupAboutToShow()</a>, and <a class="el" href="classKviSubmenuAction.html#a23dcc36f55b902f7d51bed3e88baa0bf">popupActivated()</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviSubmenuAction.html#afbd019bc4b3f95faa2710e76f95cae50">addToCustomToolBar()</a>, and <a class="el" href="classKviSubmenuAction.html#a2daa3e8e19944910a5ef3c72426311b2">addToPopupMenu()</a>.</p>
+<p>Referenced by <a class="el" href="classKviSubmenuAction.html#afbd019bc4b3f95faa2710e76f95cae50">addToCustomToolBar()</a>, and <a class="el" href="classKviSubmenuAction.html#ac0ecef0ed59e60038927262ba7f05a50">addToPopupMenu()</a>.</p>
 
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a5c7e8ce7530fdbb6bfc323078ba45b13"></a><!-- doxytag: member="KviSubmenuAction::m_pPopup" ref="a5c7e8ce7530fdbb6bfc323078ba45b13" args="" -->
+<a class="anchor" id="aecd2df5ca8d96f347ce6aed50c89e321"></a><!-- doxytag: member="KviSubmenuAction::m_pPopup" ref="aecd2df5ca8d96f347ce6aed50c89e321" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>* <a class="el" href="classKviSubmenuAction.html#a5c7e8ce7530fdbb6bfc323078ba45b13">KviSubmenuAction::m_pPopup</a><code> [protected]</code></td>
+          <td class="memname">QMenu* <a class="el" href="classKviSubmenuAction.html#aecd2df5ca8d96f347ce6aed50c89e321">KviSubmenuAction::m_pPopup</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviSubmenuAction.html#afbd019bc4b3f95faa2710e76f95cae50">addToCustomToolBar()</a>, <a class="el" href="classKviSubmenuAction.html#a2daa3e8e19944910a5ef3c72426311b2">addToPopupMenu()</a>, <a class="el" href="classKviSubmenuAction.html#a7b9881398563eb0f0a5ba2561f898497">KviSubmenuAction()</a>, <a class="el" href="classKviIrcOperationsAction.html#a22ea4d32f06e16820ac5193ee705a999">KviIrcOperationsAction::popupAboutToShow()</a>, <a class="el" href="classKviIrcToolsAction.html#a08bbbc71e7bea0e06b9ae08204bb6f0f">KviIrcToolsAction::popupAboutToShow()</a>, <a class="el" href="classKviChangeUserModeAction.html#aa314e78e3da9be37d4599ec5762ca9a2">KviChangeUserModeAction::popupAboutToShow()</a>, <a class="el" href="classKviConnectToServerAction.html#a5a35d85eddc10002233ee15d7aeb1c78">KviConnectToServerAction::popupAboutToShow()</a>, <a class="el" href="classKviChangeNickAction.html#ac9340c293e9d85d207c48213b9951f53">KviChangeNickAction::popupAboutToShow()</a>, <a class="el" href="classKviJoinChannelAction.html#a5b592caa091ebf5c6921da5b48bb2c8f">KviJoinChannelAction::popupAboutToShow()</a>, <a class="el" href="classKviChangeUserModeAction.html#a5724108f758a96c97df4fec96e00e831">KviChangeUserModeAction::popupActivated()</a>, <a class="el" href="classKviConnectToServerAction.html#a73ccbe8c021986b3b03c92e906b8f519">KviConnectToServerAction::popupActivated()</a>, <a class="el" href="classKviChangeNickAction.html#a114a433a6ab288607f33afd796f9fc66">KviChangeNickAction::popupActivated()</a>, <a class="el" href="classKviJoinChannelAction.html#a4afccb72eb027bea9348ed62204e104e">KviJoinChannelAction::popupActivated()</a>, <a class="el" href="classKviSubmenuAction.html#a00ade98a8f46409cd34a7933e20b08f4">setup()</a>, and <a class="el" href="classKviSubmenuAction.html#a94b9a21edec6b6206736d846f99e9325">~KviSubmenuAction()</a>.</p>
+<p>Referenced by <a class="el" href="classKviSubmenuAction.html#afbd019bc4b3f95faa2710e76f95cae50">addToCustomToolBar()</a>, <a class="el" href="classKviSubmenuAction.html#ac0ecef0ed59e60038927262ba7f05a50">addToPopupMenu()</a>, <a class="el" href="classKviSubmenuAction.html#a7b9881398563eb0f0a5ba2561f898497">KviSubmenuAction()</a>, <a class="el" href="classKviIrcOperationsAction.html#a22ea4d32f06e16820ac5193ee705a999">KviIrcOperationsAction::popupAboutToShow()</a>, <a class="el" href="classKviIrcToolsAction.html#a08bbbc71e7bea0e06b9ae08204bb6f0f">KviIrcToolsAction::popupAboutToShow()</a>, <a class="el" href="classKviChangeUserModeAction.html#aa314e78e3da9be37d4599ec5762ca9a2">KviChangeUserModeAction::popupAboutToShow()</a>, <a class="el" href="classKviConnectToServerAction.html#a5a35d85eddc10002233ee15d7aeb1c78">KviConnectToServerAction::popupAboutToShow()</a>, <a class="el" href="classKviChangeNickAction.html#ac9340c293e9d85d207c48213b9951f53">KviChangeNickAction::popupAboutToShow()</a>, <a class="el" href="classKviJoinChannelAction.html#a5b592caa091ebf5c6921da5b48bb2c8f">KviJoinChannelAction::popupAboutToShow()</a>, <a class="el" href="classKviSubmenuAction.html#a00ade98a8f46409cd34a7933e20b08f4">setup()</a>, and <a class="el" href="classKviSubmenuAction.html#a94b9a21edec6b6206736d846f99e9325">~KviSubmenuAction()</a>.</p>
 
 </div>
 </div>
@@ -368,7 +368,7 @@ Protected Attributes</h2></td></tr>
 <li>src/kvirc/kernel/<a class="el" href="KviCoreActions_8cpp.html">KviCoreActions.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:35 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:22 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

@@ -121,7 +121,7 @@ function toggleVisibility(linkObj) {
 <a name="l00040"></a>00040 <span class="keyword">class </span>QPushButton;
 <a name="l00041"></a>00041 <span class="keyword">class </span><a class="code" href="classKviIpEditor.html">KviIpEditor</a>;
 <a name="l00042"></a>00042 <span class="keyword">class </span><a class="code" href="classKviIrcServer.html" title="The class which manages the irc servers.">KviIrcServer</a>;
-<a name="l00043"></a>00043 <span class="keyword">class </span><a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>;
+<a name="l00043"></a>00043 <span class="keyword">class </span>QMenu;
 <a name="l00044"></a>00044 <span class="keyword">class </span><a class="code" href="classKviScriptEditor.html">KviScriptEditor</a>;
 <a name="l00045"></a>00045 <span class="keyword">class </span><a class="code" href="classKviNickServRule.html">KviNickServRule</a>;
 <a name="l00046"></a>00046 <span class="keyword">class </span><a class="code" href="classNickServRuleEditor.html">NickServRuleEditor</a>;
@@ -263,9 +263,9 @@ function toggleVisibility(linkObj) {
 <a name="l00182"></a><a class="code" href="classOptionsWidget__servers.html#ac36bf8639686a467f2c2d751ec646e66">00182</a>         QLabel                       * <a class="code" href="classOptionsWidget__servers.html#ac36bf8639686a467f2c2d751ec646e66">m_pFilterLabel</a>;
 <a name="l00183"></a><a class="code" href="classOptionsWidget__servers.html#aca0548681432baa4aa8b17286912902f">00183</a>         QLineEdit                    * <a class="code" href="classOptionsWidget__servers.html#aca0548681432baa4aa8b17286912902f">m_pFilterEdit</a>;
 <a name="l00184"></a><a class="code" href="classOptionsWidget__servers.html#af7ae16bde9f0bc2ed949747f2f588814">00184</a>         QPushButton                  * <a class="code" href="classOptionsWidget__servers.html#af7ae16bde9f0bc2ed949747f2f588814">m_pDetailsButton</a>;
-<a name="l00185"></a><a class="code" href="classOptionsWidget__servers.html#a96a084df871e77140a6c2e51791b25d9">00185</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>              * <a class="code" href="classOptionsWidget__servers.html#a96a084df871e77140a6c2e51791b25d9">m_pRecentPopup</a>;
-<a name="l00186"></a><a class="code" href="classOptionsWidget__servers.html#a89d911b69668dd2c90af1d14bcf4708d">00186</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>              * <a class="code" href="classOptionsWidget__servers.html#a89d911b69668dd2c90af1d14bcf4708d">m_pContextPopup</a>;
-<a name="l00187"></a><a class="code" href="classOptionsWidget__servers.html#ad09f4fc4a6afafe11ef8c69e93e46ee8">00187</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>              * <a class="code" href="classOptionsWidget__servers.html#ad09f4fc4a6afafe11ef8c69e93e46ee8">m_pImportPopup</a>;
+<a name="l00185"></a><a class="code" href="classOptionsWidget__servers.html#ac9511c384d2cd378256f305e1661d31c">00185</a>     QMenu              * <a class="code" href="classOptionsWidget__servers.html#ac9511c384d2cd378256f305e1661d31c">m_pRecentPopup</a>;
+<a name="l00186"></a><a class="code" href="classOptionsWidget__servers.html#aa514b6beeb96fa77f8ca9bb5c7792d52">00186</a>     QMenu              * <a class="code" href="classOptionsWidget__servers.html#aa514b6beeb96fa77f8ca9bb5c7792d52">m_pContextPopup</a>;
+<a name="l00187"></a><a class="code" href="classOptionsWidget__servers.html#abcd28d9b1a3fc7266f17c28ec78d6be6">00187</a>     QMenu              * <a class="code" href="classOptionsWidget__servers.html#abcd28d9b1a3fc7266f17c28ec78d6be6">m_pImportPopup</a>;
 <a name="l00188"></a><a class="code" href="classOptionsWidget__servers.html#a24642946b87849a8ca088af8bb787f40">00188</a>         <a class="code" href="classKviIrcServer.html" title="The class which manages the irc servers.">KviIrcServer</a>                 * <a class="code" href="classOptionsWidget__servers.html#a24642946b87849a8ca088af8bb787f40">m_pClipboard</a>;
 <a name="l00189"></a><a class="code" href="classOptionsWidget__servers.html#a279574acd56882fd91f33b6c0cd0557d">00189</a>         QPushButton                  * <a class="code" href="classOptionsWidget__servers.html#a279574acd56882fd91f33b6c0cd0557d">m_pConnectCurrent</a>;
 <a name="l00190"></a><a class="code" href="classOptionsWidget__servers.html#afadce1751a0f644d73553d6c5962a70f">00190</a>         QPushButton                  * <a class="code" href="classOptionsWidget__servers.html#afadce1751a0f644d73553d6c5962a70f">m_pConnectNew</a>;
@@ -303,8 +303,8 @@ function toggleVisibility(linkObj) {
 <a name="l00222"></a>00222         <span class="keywordtype">void</span> <a class="code" href="classOptionsWidget__servers.html#ab532abe600c12c617bb7081825fea36a">detailsClicked</a>();
 <a name="l00223"></a>00223         <span class="keywordtype">void</span> <a class="code" href="classOptionsWidget__servers.html#aa5dee5a89ec38960e42102dacbad78b0">connectCurrentClicked</a>();
 <a name="l00224"></a>00224         <span class="keywordtype">void</span> <a class="code" href="classOptionsWidget__servers.html#a513b07a44ff3de053e027cc9aec4a6f5">recentServersPopupAboutToShow</a>();
-<a name="l00225"></a>00225         <span class="keywordtype">void</span> <a class="code" href="classOptionsWidget__servers.html#afe88e95ca8eb166b6c4b28f1ec876ffd">recentServersPopupClicked</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
-<a name="l00226"></a>00226         <span class="keywordtype">void</span> <a class="code" href="classOptionsWidget__servers.html#ad2978c2b86893d2dc820639ea857c06d">importPopupActivated</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
+<a name="l00225"></a>00225     <span class="keywordtype">void</span> <a class="code" href="classOptionsWidget__servers.html#a1b2b7a3f3839dba7dd633041c6118b58">recentServersPopupClicked</a>(QAction *pAction);
+<a name="l00226"></a>00226     <span class="keywordtype">void</span> <a class="code" href="classOptionsWidget__servers.html#ac901fd9a98c4470b8f4efb567b2c8f1a">importPopupActivated</a>(QAction *pAction);
 <a name="l00227"></a>00227         <span class="keywordtype">void</span> <a class="code" href="classOptionsWidget__servers.html#ab473708cc9cb7819895a0a1e503a6e3c">serverNetworkEditTextEdited</a>(<span class="keyword">const</span> QString &amp;szNewText);
 <a name="l00228"></a>00228         <span class="keywordtype">void</span> <a class="code" href="classOptionsWidget__servers.html#a8c1861ad5849f9eae784b6a784293d1f">filterTextEdited</a>(<span class="keyword">const</span> QString &amp;szNewText);
 <a name="l00229"></a>00229 <span class="keyword">public</span>:
@@ -314,7 +314,7 @@ function toggleVisibility(linkObj) {
 <a name="l00233"></a>00233 <span class="preprocessor">#endif //!_OPTW_SERVERS_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:21 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:09 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

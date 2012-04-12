@@ -118,7 +118,7 @@ function toggleVisibility(linkObj) {
 <a name="l00052"></a>00052 <span class="keyword">class </span>QKeyEvent;
 <a name="l00053"></a>00053 <span class="keyword">class </span>QDragEnterEvent;
 <a name="l00054"></a>00054 <span class="keyword">class </span><a class="code" href="classKviUserListView.html" title="User list view management class.">KviUserListView</a>;
-<a name="l00055"></a>00055 <span class="keyword">class </span><a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>;
+<a name="l00055"></a>00055 <span class="keyword">class </span>QMenu;
 <a name="l00056"></a>00056 
 <a name="l00057"></a><a class="code" href="KviInputEditor_8h.html#a240066866419544310ddeb7d57cc9fca">00057</a> <span class="preprocessor">#define KVI_INPUT_MAX_BUFFER_SIZE 400</span>
 <a name="l00058"></a><a class="code" href="KviInputEditor_8h.html#a1aa55591d886d2f3cd499db5fb9c4fe0">00058</a> <span class="preprocessor"></span><span class="preprocessor">#define KVI_INPUT_XTRAPADDING 1</span>
@@ -200,7 +200,7 @@ function toggleVisibility(linkObj) {
 <a name="l00148"></a><a class="code" href="classKviInputEditor.html#ac15c85823d7399d5aa3a7b57afd97198">00148</a>         <a class="code" href="classKviCString.html">KviCString</a>                    <a class="code" href="classKviInputEditor.html#ac15c85823d7399d5aa3a7b57afd97198">m_szAltKeyCode</a>;
 <a name="l00149"></a><a class="code" href="classKviInputEditor.html#a44f210aa0844cf82ba1959668ee49061">00149</a>         <a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>               * <a class="code" href="classKviInputEditor.html#a44f210aa0844cf82ba1959668ee49061">m_pKviWindow</a>;
 <a name="l00150"></a><a class="code" href="classKviInputEditor.html#aba71896040de01e859a2498a6457579f">00150</a>         QWidget                 * <a class="code" href="classKviInputEditor.html#aba71896040de01e859a2498a6457579f">m_pInputParent</a>;
-<a name="l00151"></a><a class="code" href="classKviInputEditor.html#aebef244c5834860d6ed52043c804b99c">00151</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>         * <a class="code" href="classKviInputEditor.html#aebef244c5834860d6ed52043c804b99c">m_pIconMenu</a>;
+<a name="l00151"></a><a class="code" href="classKviInputEditor.html#af9d325ab2f81d67db0baea217be0827e">00151</a>         QMenu         * <a class="code" href="classKviInputEditor.html#af9d325ab2f81d67db0baea217be0827e">m_pIconMenu</a>;
 <a name="l00152"></a><a class="code" href="classKviInputEditor.html#a86b456c83b5a61594f1dd811b877be29">00152</a>         <span class="keywordtype">bool</span>                      <a class="code" href="classKviInputEditor.html#a86b456c83b5a61594f1dd811b877be29">m_bReadOnly</a>;
 <a name="l00153"></a>00153 
 <a name="l00158"></a><a class="code" href="classKviInputEditor_1_1EditCommand.html">00158</a>         <span class="keyword">class </span><a class="code" href="classKviInputEditor_1_1EditCommand.html" title="Holds the command used in the {un,re}do operations.">EditCommand</a>
@@ -319,7 +319,7 @@ function toggleVisibility(linkObj) {
 <a name="l00536"></a>00536         QFontMetrics * getLastFontMetrics(<span class="keyword">const</span> QFont &amp; font);
 <a name="l00537"></a>00537 
 <a name="l00538"></a>00538 <span class="keyword">public</span> slots:
-<a name="l00544"></a>00544         <span class="keywordtype">void</span> iconPopupActivated(<span class="keywordtype">int</span> iId);
+<a name="l00544"></a>00544     <span class="keywordtype">void</span> iconPopupActivated(QAction *pAction);
 <a name="l00545"></a>00545 
 <a name="l00554"></a>00554         <span class="keywordtype">void</span> copyToSelection(<span class="keywordtype">bool</span> bDonNotCopyToClipboard = <span class="keyword">true</span>);
 <a name="l00555"></a>00555 
@@ -466,7 +466,7 @@ function toggleVisibility(linkObj) {
 <a name="l00944"></a>00944 <span class="preprocessor">#endif //_KVI_INPUT_EDITOR_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:17 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

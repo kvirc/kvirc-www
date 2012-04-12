@@ -107,10 +107,10 @@ function toggleVisibility(linkObj) {
 <a name="l00026"></a>00026 
 <a name="l00033"></a>00033 <span class="preprocessor">#include &quot;KviWindow.h&quot;</span>
 <a name="l00034"></a>00034 <span class="preprocessor">#include &quot;KviCString.h&quot;</span>
-<a name="l00035"></a>00035 <span class="preprocessor">#include &quot;KviTalPopupMenu.h&quot;</span>
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037 <span class="preprocessor">#include &lt;QTreeWidget&gt;</span>
-<a name="l00038"></a>00038 <span class="preprocessor">#include &lt;QDialog&gt;</span>
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036 <span class="preprocessor">#include &lt;QTreeWidget&gt;</span>
+<a name="l00037"></a>00037 <span class="preprocessor">#include &lt;QDialog&gt;</span>
+<a name="l00038"></a>00038 <span class="preprocessor">#include &lt;QMenu&gt;</span>
 <a name="l00039"></a>00039 
 <a name="l00040"></a>00040 <span class="keyword">class </span>QCheckBox;
 <a name="l00041"></a>00041 <span class="keyword">class </span>QPushButton;
@@ -123,17 +123,17 @@ function toggleVisibility(linkObj) {
 <a name="l00052"></a>00052         Q_OBJECT
 <a name="l00053"></a>00053 <span class="keyword">public</span>:
 <a name="l00054"></a><a class="code" href="classChannelsJoinDialogTreeWidget.html#ad7f9c672ebf4fced41c9aef13f824b09">00054</a>         <a class="code" href="classChannelsJoinDialogTreeWidget.html#ad7f9c672ebf4fced41c9aef13f824b09">ChannelsJoinDialogTreeWidget</a>(QWidget * par)
-<a name="l00055"></a>00055         :QTreeWidget(par), <a class="code" href="classChannelsJoinDialogTreeWidget.html#a4ce844a265f1847f925f532301ec3c9b">m_pJoinPopup</a>(0)
+<a name="l00055"></a>00055         :QTreeWidget(par), <a class="code" href="classChannelsJoinDialogTreeWidget.html#a71c9a101e81976a155be68a0e95e3158">m_pJoinPopup</a>(0)
 <a name="l00056"></a>00056         {
 <a name="l00057"></a>00057         };
 <a name="l00058"></a>00058 
 <a name="l00059"></a><a class="code" href="classChannelsJoinDialogTreeWidget.html#adefb92e89f2e64e8723ee1946c6ca609">00059</a>         <a class="code" href="classChannelsJoinDialogTreeWidget.html#adefb92e89f2e64e8723ee1946c6ca609">~ChannelsJoinDialogTreeWidget</a>()
 <a name="l00060"></a>00060         {
-<a name="l00061"></a>00061                 <span class="keywordflow">if</span>(<a class="code" href="classChannelsJoinDialogTreeWidget.html#a4ce844a265f1847f925f532301ec3c9b">m_pJoinPopup</a>)
-<a name="l00062"></a>00062                         <span class="keyword">delete</span> <a class="code" href="classChannelsJoinDialogTreeWidget.html#a4ce844a265f1847f925f532301ec3c9b">m_pJoinPopup</a>;
-<a name="l00063"></a><a class="code" href="classChannelsJoinDialogTreeWidget.html#a4ce844a265f1847f925f532301ec3c9b">00063</a>         };
+<a name="l00061"></a>00061                 <span class="keywordflow">if</span>(<a class="code" href="classChannelsJoinDialogTreeWidget.html#a71c9a101e81976a155be68a0e95e3158">m_pJoinPopup</a>)
+<a name="l00062"></a>00062                         <span class="keyword">delete</span> <a class="code" href="classChannelsJoinDialogTreeWidget.html#a71c9a101e81976a155be68a0e95e3158">m_pJoinPopup</a>;
+<a name="l00063"></a><a class="code" href="classChannelsJoinDialogTreeWidget.html#a71c9a101e81976a155be68a0e95e3158">00063</a>         };
 <a name="l00064"></a>00064 <span class="keyword">protected</span>:
-<a name="l00065"></a>00065         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>                   * <a class="code" href="classChannelsJoinDialogTreeWidget.html#a4ce844a265f1847f925f532301ec3c9b">m_pJoinPopup</a>;
+<a name="l00065"></a>00065         QMenu                   * <a class="code" href="classChannelsJoinDialogTreeWidget.html#a71c9a101e81976a155be68a0e95e3158">m_pJoinPopup</a>;
 <a name="l00071"></a>00071         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classChannelsJoinDialogTreeWidget.html#ac0b485e8f8f001fbd23d7144166fccc8" title="Called when the user clicks on the list.">mousePressEvent</a>(QMouseEvent * <a class="code" href="detector_8cpp.html#a270b1ecf56619755ce62f6970dfabc91">e</a>);
 <a name="l00072"></a>00072         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classChannelsJoinDialogTreeWidget.html#a351a355b80c606b1d54daa5ecdca3278">mouseDoubleClickEvent</a>(QMouseEvent * <a class="code" href="detector_8cpp.html#a270b1ecf56619755ce62f6970dfabc91">e</a>);
 <a name="l00073"></a>00073 };
@@ -191,7 +191,7 @@ function toggleVisibility(linkObj) {
 <a name="l00194"></a>00194 <span class="preprocessor">#endif //_CHANNELSJOINSWINDOW_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:18 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:06 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

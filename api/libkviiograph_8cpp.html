@@ -98,7 +98,6 @@ function toggleVisibility(linkObj) {
 </div><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classKviModuleExtension.html">KviModuleExtension</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviiograph_8cpp.html#a4ea32a1699dc934dce3e68400dfa4d59">iograph_extension_alloc</a> (<a class="el" href="struct__KviModuleExtensionAllocStructTag.html">KviModuleExtensionAllocStruct</a> *<a class="el" href="KviIrcNumericCodes_8h.html#aa9aecae134548e58e711a4cee1c8ec16">s</a>)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviiograph_8cpp.html#a1a4632fa041744452ccf24c253c74f85">iograph_module_can_unload</a> (<a class="el" href="classKviModule.html">KviModule</a> *)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviiograph_8cpp.html#a4cb8566d957b6c1c5992171b7f102ef9">iograph_module_cleanup</a> (<a class="el" href="classKviModule.html">KviModule</a> *)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviiograph_8cpp.html#a8f285eae6589bf3c807034046d52da6d">iograph_module_cmd_open</a> (<a class="el" href="classKviKvsModuleCommandCall.html">KviKvsModuleCommandCall</a> *<a class="el" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>)</td></tr>
@@ -108,27 +107,6 @@ Variables</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviIOGraphWindow.html">KviIOGraphWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviiograph_8cpp.html#a5ff655ddf9123e809139ecb3e7ee4ace">g_pIOGraphWindow</a> = 0</td></tr>
 </table>
 <hr/><h2>Function Documentation</h2>
-<a class="anchor" id="a4ea32a1699dc934dce3e68400dfa4d59"></a><!-- doxytag: member="libkviiograph.cpp::iograph_extension_alloc" ref="a4ea32a1699dc934dce3e68400dfa4d59" args="(KviModuleExtensionAllocStruct *s)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="classKviModuleExtension.html">KviModuleExtension</a>* iograph_extension_alloc </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct__KviModuleExtensionAllocStructTag.html">KviModuleExtensionAllocStruct</a> *&#160;</td>
-          <td class="paramname"><em>s</em></td><td>)</td>
-          <td><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>References <a class="el" href="classKviMainWindow.html#a2e152133069d5aca99be0e5b35bf2d5d">KviMainWindow::addWindow()</a>, <a class="el" href="classKviWindow.html#a2a895610ca05360b61a546f496941248">KviWindow::delayedAutoRaise()</a>, <a class="el" href="classKviPointerHashTable.html#a48f1853fb04e83b76b5634bdd81d4221">KviPointerHashTable&lt; Key, T &gt;::find()</a>, <a class="el" href="libkviiograph_8cpp.html#a5ff655ddf9123e809139ecb3e7ee4ace">g_pIOGraphWindow</a>, <a class="el" href="KviMainWindow_8cpp.html#a13001adf485ce537c0448fc76b5b9d88">g_pMainWindow</a>, <a class="el" href="classKviWindow.html#a04a9e17b1c53120448e521b440f6f6cf">KviWindow::minimize()</a>, <a class="el" href="struct__KviModuleExtensionAllocStructTag.html#a4946d9db554e7aa3853b24599a0f209b">_KviModuleExtensionAllocStructTag::pDescriptor</a>, <a class="el" href="struct__KviModuleExtensionAllocStructTag.html#a18dbcb6930471217c7794fa5cd7438ab">_KviModuleExtensionAllocStructTag::pParams</a>, and <a class="el" href="detector_8cpp.html#a38bf1e5e0427bdeba2b469eea9befc23">v</a>.</p>
-
-<p>Referenced by <a class="el" href="libkviiograph_8cpp.html#a75467644163ee52f503f2af76a5e03ce">iograph_module_init()</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a1a4632fa041744452ccf24c253c74f85"></a><!-- doxytag: member="libkviiograph.cpp::iograph_module_can_unload" ref="a1a4632fa041744452ccf24c253c74f85" args="(KviModule *)" -->
 <div class="memitem">
 <div class="memproto">
@@ -180,7 +158,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="KviLocale_8h.html#ac7445f076d723be6df1b3532ea8159f7">__tr</a>, <a class="el" href="classKviModuleExtensionDescriptor.html#a713de0a18b678e4f43a9d74208a6b8e5">KviModuleExtensionDescriptor::allocate()</a>, <a class="el" href="KviIrcNumericCodes_8h.html#aa0d1b16fcc0ac96e2d3a51a02d62a3aa">d</a>, <a class="el" href="classKviModule.html#a9ecc06f95aeee691351d5a4934102d4f">KviModule::findExtensionDescriptor()</a>, <a class="el" href="classKviKvsModuleCommandCall.html#a8acdf7d00816cbd644e4983640e335b6">KviKvsModuleCommandCall::hasSwitch()</a>, <a class="el" href="libkviiograph_8h.html#a11aa1d3f67e4020949f84c283cb029bd">IOGRAPH_MODULE_EXTENSION_NAME</a>, <a class="el" href="classKviKvsModuleRunTimeCall.html#ad0552a08239ad749e1d3bcef29b7cd0f">KviKvsModuleRunTimeCall::module()</a>, <a class="el" href="classKviPointerHashTable.html#a429780ac2d3e4c2c7376c93a50da1f54">KviPointerHashTable&lt; Key, T &gt;::replace()</a>, <a class="el" href="classKviPointerHashTable.html#ac4b0eb0129f8d32f757d1a2a846d85cd">KviPointerHashTable&lt; Key, T &gt;::setAutoDelete()</a>, <a class="el" href="classKviKvsRunTimeCall.html#ab9aed835b3901b828e61b4ca3ecc160a">KviKvsRunTimeCall::warning()</a>, and <a class="el" href="classKviKvsRunTimeCall.html#a3ffafdef3160c40c67ec982b7347e14e">KviKvsRunTimeCall::window()</a>.</p>
+<p>References <a class="el" href="classKviMainWindow.html#a2e152133069d5aca99be0e5b35bf2d5d">KviMainWindow::addWindow()</a>, <a class="el" href="classKviWindow.html#a2a895610ca05360b61a546f496941248">KviWindow::delayedAutoRaise()</a>, <a class="el" href="KviMainWindow_8cpp.html#a13001adf485ce537c0448fc76b5b9d88">g_pMainWindow</a>, <a class="el" href="classKviKvsModuleCommandCall.html#a8acdf7d00816cbd644e4983640e335b6">KviKvsModuleCommandCall::hasSwitch()</a>, and <a class="el" href="classKviWindow.html#a04a9e17b1c53120448e521b440f6f6cf">KviWindow::minimize()</a>.</p>
 
 <p>Referenced by <a class="el" href="libkviiograph_8cpp.html#a75467644163ee52f503f2af76a5e03ce">iograph_module_init()</a>.</p>
 
@@ -201,7 +179,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="KviLocale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="KviIrcNumericCodes_8h.html#aa0d1b16fcc0ac96e2d3a51a02d62a3aa">d</a>, <a class="el" href="KviIconManager_8cpp.html#a3ea7617ef2d091c1c04b0f95fb0845ae">g_pIconManager</a>, <a class="el" href="classKviIconManager.html#a36bca624a1c6293627263463d8f3e3a5">KviIconManager::getSmallIcon()</a>, <a class="el" href="libkviiograph_8cpp.html#a4ea32a1699dc934dce3e68400dfa4d59">iograph_extension_alloc()</a>, <a class="el" href="libkviiograph_8cpp.html#a8f285eae6589bf3c807034046d52da6d">iograph_module_cmd_open()</a>, <a class="el" href="libkviiograph_8h.html#a11aa1d3f67e4020949f84c283cb029bd">IOGRAPH_MODULE_EXTENSION_NAME</a>, <a class="el" href="KviKvsModuleInterface_8h.html#aa97e8392db4434fb87a3235b98a319f5">KVSM_REGISTER_SIMPLE_COMMAND</a>, <a class="el" href="classKviModule.html#abb549cde09ac1c738eb58912888201e1">KviModule::registerExtension()</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a1695b8622242f0e2108d8c183e38e30e">KviIconManager::SayIcon</a>, and <a class="el" href="classKviModuleExtensionDescriptor.html#ab5b421e2be9539f6ed299219e335a8e2">KviModuleExtensionDescriptor::setIcon()</a>.</p>
+<p>References <a class="el" href="libkviiograph_8cpp.html#a8f285eae6589bf3c807034046d52da6d">iograph_module_cmd_open()</a>, and <a class="el" href="KviKvsModuleInterface_8h.html#aa97e8392db4434fb87a3235b98a319f5">KVSM_REGISTER_SIMPLE_COMMAND</a>.</p>
 
 </div>
 </div>
@@ -217,12 +195,10 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="libkviiograph_8cpp.html#a4ea32a1699dc934dce3e68400dfa4d59">iograph_extension_alloc()</a>.</p>
-
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:22 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:11 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

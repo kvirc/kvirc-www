@@ -108,16 +108,16 @@ function toggleVisibility(linkObj) {
 <a name="l00033"></a>00033 <span class="preprocessor">#include &quot;KviWindow.h&quot;</span>
 <a name="l00034"></a>00034 <span class="preprocessor">#include &quot;KviCString.h&quot;</span>
 <a name="l00035"></a>00035 <span class="preprocessor">#include &quot;KviPointerList.h&quot;</span>
-<a name="l00036"></a>00036 <span class="preprocessor">#include &quot;KviTalPopupMenu.h&quot;</span>
-<a name="l00037"></a>00037 <span class="preprocessor">#include &quot;KviHeapObject.h&quot;</span>
-<a name="l00038"></a>00038 <span class="preprocessor">#include &quot;KviKvsObjectClass.h&quot;</span>
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040 <span class="preprocessor">#include &lt;QWidget&gt;</span>
-<a name="l00041"></a>00041 <span class="preprocessor">#include &lt;QComboBox&gt;</span>
-<a name="l00042"></a>00042 <span class="preprocessor">#include &lt;QDialog&gt;</span>
-<a name="l00043"></a>00043 <span class="preprocessor">#include &lt;QLineEdit&gt;</span>
-<a name="l00044"></a>00044 <span class="preprocessor">#include &lt;QCheckBox&gt;</span>
-<a name="l00045"></a>00045 <span class="preprocessor">#include &lt;QTreeWidget&gt;</span>
+<a name="l00036"></a>00036 <span class="preprocessor">#include &quot;KviHeapObject.h&quot;</span>
+<a name="l00037"></a>00037 <span class="preprocessor">#include &quot;KviKvsObjectClass.h&quot;</span>
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 <span class="preprocessor">#include &lt;QWidget&gt;</span>
+<a name="l00040"></a>00040 <span class="preprocessor">#include &lt;QComboBox&gt;</span>
+<a name="l00041"></a>00041 <span class="preprocessor">#include &lt;QDialog&gt;</span>
+<a name="l00042"></a>00042 <span class="preprocessor">#include &lt;QLineEdit&gt;</span>
+<a name="l00043"></a>00043 <span class="preprocessor">#include &lt;QCheckBox&gt;</span>
+<a name="l00044"></a>00044 <span class="preprocessor">#include &lt;QTreeWidget&gt;</span>
+<a name="l00045"></a>00045 <span class="preprocessor">#include &lt;QMenu&gt;</span>
 <a name="l00046"></a>00046 
 <a name="l00047"></a>00047 <span class="keyword">class </span>QLineEdit;
 <a name="l00048"></a>00048 <span class="keyword">class </span>QStringList;
@@ -222,7 +222,7 @@ function toggleVisibility(linkObj) {
 <a name="l00286"></a>00286 
 <a name="l00287"></a><a class="code" href="classClassEditorWidget.html#a0413f1ce9cbbe7374becef6658002947">00287</a>         <a class="code" href="classClassEditorTreeWidgetItem.html" title="Describes an item inside the class editor tree widget.">ClassEditorTreeWidgetItem</a> * <a class="code" href="classClassEditorWidget.html#a0413f1ce9cbbe7374becef6658002947">m_pLastEditedItem</a>;
 <a name="l00288"></a><a class="code" href="classClassEditorWidget.html#a5c604ac7d80df892a4f424ed196f3f57">00288</a>         <a class="code" href="classClassEditorTreeWidgetItem.html" title="Describes an item inside the class editor tree widget.">ClassEditorTreeWidgetItem</a> * <a class="code" href="classClassEditorWidget.html#a5c604ac7d80df892a4f424ed196f3f57">m_pLastClickedItem</a>;
-<a name="l00289"></a><a class="code" href="classClassEditorWidget.html#a1709d657ebe9564f98b2a699d1851337">00289</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>              * <a class="code" href="classClassEditorWidget.html#a1709d657ebe9564f98b2a699d1851337">m_pContextPopup</a>;
+<a name="l00289"></a><a class="code" href="classClassEditorWidget.html#ac5f8c4da15db6deb229c235853043704">00289</a>         QMenu              * <a class="code" href="classClassEditorWidget.html#ac5f8c4da15db6deb229c235853043704">m_pContextPopup</a>;
 <a name="l00290"></a><a class="code" href="classClassEditorWidget.html#a55319ec593a2715a2b2d2607e1f22539">00290</a>         QSplitter                    * <a class="code" href="classClassEditorWidget.html#a55319ec593a2715a2b2d2607e1f22539">m_pSplitter</a>;
 <a name="l00291"></a><a class="code" href="classClassEditorWidget.html#a9395eacb7ba57a00a8b2259c9ddbbf90">00291</a>         QString                        <a class="code" href="classClassEditorWidget.html#a9395eacb7ba57a00a8b2259c9ddbbf90">m_szDir</a>;
 <a name="l00292"></a><a class="code" href="classClassEditorWidget.html#aa999f7c0e0f5035c0374f3d81f9bb6e3">00292</a>         <span class="keywordtype">bool</span>                           <a class="code" href="classClassEditorWidget.html#aa999f7c0e0f5035c0374f3d81f9bb6e3">m_bSaving</a>;
@@ -385,7 +385,7 @@ function toggleVisibility(linkObj) {
 <a name="l00637"></a>00637 <span class="preprocessor">#endif //_CLASSEDITOR_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:18 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:06 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

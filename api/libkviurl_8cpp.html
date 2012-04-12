@@ -99,7 +99,6 @@ function toggleVisibility(linkObj) {
 <code>#include &quot;KviWindowListBase.h&quot;</code><br/>
 <code>#include &quot;KviPointerList.h&quot;</code><br/>
 <code>#include &quot;KviKvsEventManager.h&quot;</code><br/>
-<code>#include &quot;KviTalPopupMenu.h&quot;</code><br/>
 <code>#include &quot;KviWindow.h&quot;</code><br/>
 <code>#include &quot;KviOptions.h&quot;</code><br/>
 <code>#include &quot;KviQString.h&quot;</code><br/>
@@ -112,6 +111,7 @@ function toggleVisibility(linkObj) {
 <code>#include &lt;QTextStream&gt;</code><br/>
 <code>#include &lt;QMouseEvent&gt;</code><br/>
 <code>#include &lt;QPainter&gt;</code><br/>
+<code>#include &lt;QMenu&gt;</code><br/>
 <code>#include &quot;libkviurl.moc&quot;</code><br/>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
@@ -131,7 +131,6 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#a9c8ca4362d3345fa8b995caf5cce501f">loadUrlList</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#a372dc7eaaef026fb81a3524a33b5c641">saveBanList</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#a326704ff0a71999c02714e704f152254">saveUrlList</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classKviModuleExtension.html">KviModuleExtension</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#ae2a6b0519035eb0abbe48db85dad2581">url_extension_alloc</a> (<a class="el" href="struct__KviModuleExtensionAllocStructTag.html">KviModuleExtensionAllocStruct</a> *)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#a27378cf37e49daf4cdccf1555fcd3b60">url_kvs_cmd_config</a> (<a class="el" href="classKviKvsModuleCommandCall.html">KviKvsModuleCommandCall</a> *)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#ad0c8da499c510b82c2fe4043cd15d233">url_kvs_cmd_list</a> (<a class="el" href="classKviKvsModuleCommandCall.html">KviKvsModuleCommandCall</a> *)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#a0b7dff1e445dd3906c63521218d21644">url_module_can_unload</a> (<a class="el" href="classKviModule.html">KviModule</a> *)</td></tr>
@@ -139,7 +138,6 @@ Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#adb403df60dd7803c6db2294a2f785aef">url_module_config</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#a2f2b1755966e778dbd2d65c474f24d20">url_module_help</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#a50d397f3e8f6fa0282f0a657264ffd88">url_module_init</a> (<a class="el" href="classKviModule.html">KviModule</a> *m)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#ab543096235cfe6f35a840b2247c419be">urllist</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#ac610cf4b8ae18acd08aa18615a9b8eff">urllist_module_event_onUrl</a> (<a class="el" href="classKviKvsModuleEventCall.html">KviKvsModuleEventCall</a> *<a class="el" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>)</td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -147,7 +145,6 @@ Variables</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#a779532613c3042ffde850905a3b4ba72">g_pBanListFilename</a> = &quot;/list.kviban&quot;</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classConfigDialog.html">ConfigDialog</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#a984ce1654c7727d33376a9ea5b28a7bd">g_pConfigDialog</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="classKviUrl.html">KviUrl</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#a69a4c9f0a37a78756181b404b79a3c33">g_pList</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classKviUrlAction.html">KviUrlAction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#aa22d6dc425e7320cc1c822f1e1ff9b17">g_pUrlAction</a> = 0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviPointerList.html">KviPointerList</a>&lt; <a class="el" href="struct__UrlDlgList.html">UrlDlgList</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#a81aa9457d38652cb29a9efeb3fa86b65">g_pUrlDlgList</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#a9ba696e41428eb07e92c036471232429">g_pUrlListFilename</a> = &quot;/list.kviurl&quot;</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="libkviurl_8cpp.html#a420d9c88dce07fcfc9b7b4d1fc748279">szConfigPath</a></td></tr>
@@ -163,8 +160,6 @@ Variables</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
-
-<p>Referenced by <a class="el" href="libkviurl_8cpp.html#a50d397f3e8f6fa0282f0a657264ffd88">url_module_init()</a>.</p>
 
 </div>
 </div>
@@ -228,9 +223,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviPointerList.html#a050cdb3baa827c85b7712bbbdcd9e9ef">KviPointerList&lt; T &gt;::current()</a>, <a class="el" href="struct__UrlDlgList.html#a914427eb42478aa11a0b5a75680ec991">_UrlDlgList::dlg</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, and <a class="el" href="struct__UrlDlgList.html#aa49608d489e6a4314aa6c8952b1dc8c9">_UrlDlgList::menu_id</a>.</p>
+<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviPointerList.html#a050cdb3baa827c85b7712bbbdcd9e9ef">KviPointerList&lt; T &gt;::current()</a>, <a class="el" href="struct__UrlDlgList.html#a57dfee84a258d13baf69353924a2d3fd">_UrlDlgList::dlg</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, and <a class="el" href="struct__UrlDlgList.html#aa49608d489e6a4314aa6c8952b1dc8c9">_UrlDlgList::menu_id</a>.</p>
 
-<p>Referenced by <a class="el" href="libkviurl_8cpp.html#ab543096235cfe6f35a840b2247c419be">urllist()</a>, and <a class="el" href="classUrlDialog.html#abb3875d3611ee9f7ceeb963c55544fe2">UrlDialog::~UrlDialog()</a>.</p>
+<p>Referenced by <a class="el" href="libkviurl_8cpp.html#ad0c8da499c510b82c2fe4043cd15d233">url_kvs_cmd_list()</a>, and <a class="el" href="classUrlDialog.html#abb3875d3611ee9f7ceeb963c55544fe2">UrlDialog::~UrlDialog()</a>.</p>
 
 </div>
 </div>
@@ -268,7 +263,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviPointerList.html#acc4c59d1af7c01f82f7afe2c5339ffda">KviPointerList&lt; T &gt;::clear()</a>, <a class="el" href="classKviApplication.html#ae3acc00018f1dfc30d3bcc84cab8ede7a826e0933331d94d35d7cf1c2b8dceebd">KviApplication::ConfigPlugins</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="KviApplication_8cpp.html#a2bab070e8cb43ca84c598b639d49fdfb">g_pApp</a>, <a class="el" href="libkviurl_8cpp.html#a9ba696e41428eb07e92c036471232429">g_pUrlListFilename</a>, <a class="el" href="classKviApplication.html#a1224e01e02a6f4538acf4f6618df4576">KviApplication::getLocalKvircDirectory()</a>, <a class="el" href="detector_8cpp.html#a08582ce460e3d5e1cf0b7fea017d608e">i</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviUrl.html#abc10c1a806f3afe6c552a591d26a87fe">KviUrl::url()</a>, and <a class="el" href="libkviurl_8cpp.html#ab543096235cfe6f35a840b2247c419be">urllist()</a>.</p>
+<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviPointerList.html#acc4c59d1af7c01f82f7afe2c5339ffda">KviPointerList&lt; T &gt;::clear()</a>, <a class="el" href="classKviApplication.html#ae3acc00018f1dfc30d3bcc84cab8ede7a826e0933331d94d35d7cf1c2b8dceebd">KviApplication::ConfigPlugins</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="KviApplication_8cpp.html#a2bab070e8cb43ca84c598b639d49fdfb">g_pApp</a>, <a class="el" href="libkviurl_8cpp.html#a9ba696e41428eb07e92c036471232429">g_pUrlListFilename</a>, <a class="el" href="classKviApplication.html#a1224e01e02a6f4538acf4f6618df4576">KviApplication::getLocalKvircDirectory()</a>, <a class="el" href="detector_8cpp.html#a08582ce460e3d5e1cf0b7fea017d608e">i</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, and <a class="el" href="classKviUrl.html#abc10c1a806f3afe6c552a591d26a87fe">KviUrl::url()</a>.</p>
 
 <p>Referenced by <a class="el" href="classUrlDialog.html#a9c30113851f01b8a149ab930e68e9556">UrlDialog::loadList()</a>, and <a class="el" href="libkviurl_8cpp.html#a50d397f3e8f6fa0282f0a657264ffd88">url_module_init()</a>.</p>
 
@@ -308,30 +303,9 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviApplication.html#ae3acc00018f1dfc30d3bcc84cab8ede7a826e0933331d94d35d7cf1c2b8dceebd">KviApplication::ConfigPlugins</a>, <a class="el" href="classKviPointerList.html#a37db5612395dc02903cd9aa6b0b9b000">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="KviApplication_8cpp.html#a2bab070e8cb43ca84c598b639d49fdfb">g_pApp</a>, <a class="el" href="libkviurl_8cpp.html#a9ba696e41428eb07e92c036471232429">g_pUrlListFilename</a>, <a class="el" href="classKviApplication.html#a1224e01e02a6f4538acf4f6618df4576">KviApplication::getLocalKvircDirectory()</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, and <a class="el" href="libkviurl_8cpp.html#ab543096235cfe6f35a840b2247c419be">urllist()</a>.</p>
+<p>References <a class="el" href="classKviApplication.html#ae3acc00018f1dfc30d3bcc84cab8ede7a826e0933331d94d35d7cf1c2b8dceebd">KviApplication::ConfigPlugins</a>, <a class="el" href="classKviPointerList.html#a37db5612395dc02903cd9aa6b0b9b000">KviPointerList&lt; T &gt;::count()</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="KviApplication_8cpp.html#a2bab070e8cb43ca84c598b639d49fdfb">g_pApp</a>, <a class="el" href="libkviurl_8cpp.html#a9ba696e41428eb07e92c036471232429">g_pUrlListFilename</a>, <a class="el" href="classKviApplication.html#a1224e01e02a6f4538acf4f6618df4576">KviApplication::getLocalKvircDirectory()</a>, and <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>.</p>
 
 <p>Referenced by <a class="el" href="classUrlDialog.html#a1f12853778913054015f8a8806c1a7ee">UrlDialog::saveList()</a>, and <a class="el" href="libkviurl_8cpp.html#a676bc8235e73eed978fecfc49b0f45c0">url_module_cleanup()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae2a6b0519035eb0abbe48db85dad2581"></a><!-- doxytag: member="libkviurl.cpp::url_extension_alloc" ref="ae2a6b0519035eb0abbe48db85dad2581" args="(KviModuleExtensionAllocStruct *)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">static <a class="el" href="classKviModuleExtension.html">KviModuleExtension</a>* url_extension_alloc </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct__KviModuleExtensionAllocStructTag.html">KviModuleExtensionAllocStruct</a> *&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>References <a class="el" href="libkviurl_8cpp.html#ab543096235cfe6f35a840b2247c419be">urllist()</a>.</p>
-
-<p>Referenced by <a class="el" href="libkviurl_8cpp.html#a50d397f3e8f6fa0282f0a657264ffd88">url_module_init()</a>.</p>
 
 </div>
 </div>
@@ -369,7 +343,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="libkviurl_8cpp.html#ab543096235cfe6f35a840b2247c419be">urllist()</a>.</p>
+<p>References <a class="el" href="classUrlDialog.html#a1d5f75fab1af8862ec9752e0c42bbafa">UrlDialog::addUrl()</a>, <a class="el" href="classKviMainWindow.html#a2e152133069d5aca99be0e5b35bf2d5d">KviMainWindow::addWindow()</a>, <a class="el" href="struct__UrlDlgList.html#a57dfee84a258d13baf69353924a2d3fd">_UrlDlgList::dlg</a>, <a class="el" href="libkviurl_8cpp.html#ad6e5c3f38d3975220f80841254016d33">findFrame()</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="KviMainWindow_8cpp.html#a13001adf485ce537c0448fc76b5b9d88">g_pMainWindow</a>, and <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>.</p>
 
 <p>Referenced by <a class="el" href="libkviurl_8cpp.html#a50d397f3e8f6fa0282f0a657264ffd88">url_module_init()</a>.</p>
 
@@ -407,7 +381,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="libkviurl_8cpp.html#aac4afc833c5905142830743cc3612479">g_pBanList</a>, <a class="el" href="libkviurl_8cpp.html#a69a4c9f0a37a78756181b404b79a3c33">g_pList</a>, <a class="el" href="libkviurl_8cpp.html#aa22d6dc425e7320cc1c822f1e1ff9b17">g_pUrlAction</a>, <a class="el" href="libkviurl_8cpp.html#a81aa9457d38652cb29a9efeb3fa86b65">g_pUrlDlgList</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviConfigurationFile.html#a3b1ec413e904808da4e98fe8acee437eac45d880e416b9066f644b382fa5d7ebb">KviConfigurationFile::Read</a>, <a class="el" href="classKviConfigurationFile.html#a5b0944547ed66f4b77babc2807b99dd7">KviConfigurationFile::readBoolEntry()</a>, <a class="el" href="libkviurl_8cpp.html#a326704ff0a71999c02714e704f152254">saveUrlList()</a>, <a class="el" href="classKviConfigurationFile.html#a5dfb862ca85a153b11da75b40b80ab63">KviConfigurationFile::setGroup()</a>, and <a class="el" href="libkviurl_8cpp.html#a420d9c88dce07fcfc9b7b4d1fc748279">szConfigPath</a>.</p>
+<p>References <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="libkviurl_8cpp.html#aac4afc833c5905142830743cc3612479">g_pBanList</a>, <a class="el" href="libkviurl_8cpp.html#a69a4c9f0a37a78756181b404b79a3c33">g_pList</a>, <a class="el" href="libkviurl_8cpp.html#a81aa9457d38652cb29a9efeb3fa86b65">g_pUrlDlgList</a>, <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>, <a class="el" href="classKviConfigurationFile.html#a3b1ec413e904808da4e98fe8acee437eac45d880e416b9066f644b382fa5d7ebb">KviConfigurationFile::Read</a>, <a class="el" href="classKviConfigurationFile.html#a5b0944547ed66f4b77babc2807b99dd7">KviConfigurationFile::readBoolEntry()</a>, <a class="el" href="libkviurl_8cpp.html#a326704ff0a71999c02714e704f152254">saveUrlList()</a>, <a class="el" href="classKviConfigurationFile.html#a5dfb862ca85a153b11da75b40b80ab63">KviConfigurationFile::setGroup()</a>, and <a class="el" href="libkviurl_8cpp.html#a420d9c88dce07fcfc9b7b4d1fc748279">szConfigPath</a>.</p>
 
 </div>
 </div>
@@ -458,27 +432,7 @@ Variables</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="KviLocale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviApplication.html#ae3acc00018f1dfc30d3bcc84cab8ede7a826e0933331d94d35d7cf1c2b8dceebd">KviApplication::ConfigPlugins</a>, <a class="el" href="KviIrcNumericCodes_8h.html#aa0d1b16fcc0ac96e2d3a51a02d62a3aa">d</a>, <a class="el" href="struct__UrlDlgList.html#a914427eb42478aa11a0b5a75680ec991">_UrlDlgList::dlg</a>, <a class="el" href="KviApplication_8cpp.html#a2bab070e8cb43ca84c598b639d49fdfb">g_pApp</a>, <a class="el" href="KviIconManager_8cpp.html#a3ea7617ef2d091c1c04b0f95fb0845ae">g_pIconManager</a>, <a class="el" href="classKviApplication.html#a1224e01e02a6f4538acf4f6618df4576">KviApplication::getLocalKvircDirectory()</a>, <a class="el" href="classKviIconManager.html#a36bca624a1c6293627263463d8f3e3a5">KviIconManager::getSmallIcon()</a>, <a class="el" href="classKviActionManager.html#a7076f244f6d84120a7665db74990ab6b">KviActionManager::instance()</a>, <a class="el" href="libkviurl_8cpp.html#a091891b75f23add1000447a21c344a73">KVI_URL_EXTENSION_NAME</a>, <a class="el" href="KviKvsEventTable_8h.html#ab21bd3084249ec225b701713bd90ae9c">KviEvent_OnURL</a>, <a class="el" href="KviKvsModuleInterface_8h.html#aa97e8392db4434fb87a3235b98a319f5">KVSM_REGISTER_SIMPLE_COMMAND</a>, <a class="el" href="classKviKvsModuleInterface.html#a1e777f855da134067d29675652109d83">KviKvsModuleInterface::kvsRegisterAppEventHandler()</a>, <a class="el" href="libkviurl_8cpp.html#a4de403ae8e1e5df0c93192066194923a">loadBanList()</a>, <a class="el" href="libkviurl_8cpp.html#a9c8ca4362d3345fa8b995caf5cce501f">loadUrlList()</a>, <a class="el" href="classKviActionManager.html#a2888b7a3e52574094deb415c7d943029">KviActionManager::registerAction()</a>, <a class="el" href="classKviModule.html#abb549cde09ac1c738eb58912888201e1">KviModule::registerExtension()</a>, <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>, <a class="el" href="classKviModuleExtensionDescriptor.html#ab5b421e2be9539f6ed299219e335a8e2">KviModuleExtensionDescriptor::setIcon()</a>, <a class="el" href="libkviurl_8cpp.html#a420d9c88dce07fcfc9b7b4d1fc748279">szConfigPath</a>, <a class="el" href="classKviIconManager.html#a096b855e411698c7a5131a8c11862ec7a3f1fe996482f5a0cf135bc88d94ce138">KviIconManager::Url</a>, <a class="el" href="libkviurl_8cpp.html#ae2a6b0519035eb0abbe48db85dad2581">url_extension_alloc()</a>, <a class="el" href="libkviurl_8cpp.html#a27378cf37e49daf4cdccf1555fcd3b60">url_kvs_cmd_config()</a>, <a class="el" href="libkviurl_8cpp.html#ad0c8da499c510b82c2fe4043cd15d233">url_kvs_cmd_list()</a>, and <a class="el" href="libkviurl_8cpp.html#ac610cf4b8ae18acd08aa18615a9b8eff">urllist_module_event_onUrl()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab543096235cfe6f35a840b2247c419be"></a><!-- doxytag: member="libkviurl.cpp::urllist" ref="ab543096235cfe6f35a840b2247c419be" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool urllist </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>References <a class="el" href="classUrlDialog.html#a1d5f75fab1af8862ec9752e0c42bbafa">UrlDialog::addUrl()</a>, <a class="el" href="classKviMainWindow.html#a2e152133069d5aca99be0e5b35bf2d5d">KviMainWindow::addWindow()</a>, <a class="el" href="struct__UrlDlgList.html#a914427eb42478aa11a0b5a75680ec991">_UrlDlgList::dlg</a>, <a class="el" href="libkviurl_8cpp.html#ad6e5c3f38d3975220f80841254016d33">findFrame()</a>, <a class="el" href="classKviPointerList.html#a6324f9ee819bcc416b4f8fefcbeabf89">KviPointerList&lt; T &gt;::first()</a>, <a class="el" href="KviMainWindow_8cpp.html#a13001adf485ce537c0448fc76b5b9d88">g_pMainWindow</a>, and <a class="el" href="classKviPointerList.html#acb3163e78d00aefdb35d75626405c424">KviPointerList&lt; T &gt;::next()</a>.</p>
-
-<p>Referenced by <a class="el" href="libkviurl_8cpp.html#a9c8ca4362d3345fa8b995caf5cce501f">loadUrlList()</a>, <a class="el" href="libkviurl_8cpp.html#a326704ff0a71999c02714e704f152254">saveUrlList()</a>, <a class="el" href="libkviurl_8cpp.html#ae2a6b0519035eb0abbe48db85dad2581">url_extension_alloc()</a>, and <a class="el" href="libkviurl_8cpp.html#ad0c8da499c510b82c2fe4043cd15d233">url_kvs_cmd_list()</a>.</p>
+<p>References <a class="el" href="classKviPointerList.html#a11da1256431689a598f07f0b7d2a4ec0">KviPointerList&lt; T &gt;::append()</a>, <a class="el" href="classKviApplication.html#ae3acc00018f1dfc30d3bcc84cab8ede7a826e0933331d94d35d7cf1c2b8dceebd">KviApplication::ConfigPlugins</a>, <a class="el" href="struct__UrlDlgList.html#a57dfee84a258d13baf69353924a2d3fd">_UrlDlgList::dlg</a>, <a class="el" href="KviApplication_8cpp.html#a2bab070e8cb43ca84c598b639d49fdfb">g_pApp</a>, <a class="el" href="classKviApplication.html#a1224e01e02a6f4538acf4f6618df4576">KviApplication::getLocalKvircDirectory()</a>, <a class="el" href="KviKvsEventTable_8h.html#ab21bd3084249ec225b701713bd90ae9c">KviEvent_OnURL</a>, <a class="el" href="KviKvsModuleInterface_8h.html#aa97e8392db4434fb87a3235b98a319f5">KVSM_REGISTER_SIMPLE_COMMAND</a>, <a class="el" href="classKviKvsModuleInterface.html#a1e777f855da134067d29675652109d83">KviKvsModuleInterface::kvsRegisterAppEventHandler()</a>, <a class="el" href="libkviurl_8cpp.html#a4de403ae8e1e5df0c93192066194923a">loadBanList()</a>, <a class="el" href="libkviurl_8cpp.html#a9c8ca4362d3345fa8b995caf5cce501f">loadUrlList()</a>, <a class="el" href="classKviPointerList.html#a615f2c6f2f29648760a00f70addb9418">KviPointerList&lt; T &gt;::setAutoDelete()</a>, <a class="el" href="libkviurl_8cpp.html#a420d9c88dce07fcfc9b7b4d1fc748279">szConfigPath</a>, <a class="el" href="libkviurl_8cpp.html#a27378cf37e49daf4cdccf1555fcd3b60">url_kvs_cmd_config()</a>, <a class="el" href="libkviurl_8cpp.html#ad0c8da499c510b82c2fe4043cd15d233">url_kvs_cmd_list()</a>, and <a class="el" href="libkviurl_8cpp.html#ac610cf4b8ae18acd08aa18615a9b8eff">urllist_module_event_onUrl()</a>.</p>
 
 </div>
 </div>
@@ -562,21 +516,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa22d6dc425e7320cc1c822f1e1ff9b17"></a><!-- doxytag: member="libkviurl.cpp::g_pUrlAction" ref="aa22d6dc425e7320cc1c822f1e1ff9b17" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classKviUrlAction.html">KviUrlAction</a>* <a class="el" href="libkviurl_8cpp.html#aa22d6dc425e7320cc1c822f1e1ff9b17">g_pUrlAction</a> = 0<code> [static]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Referenced by <a class="el" href="libkviurl_8cpp.html#a676bc8235e73eed978fecfc49b0f45c0">url_module_cleanup()</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a81aa9457d38652cb29a9efeb3fa86b65"></a><!-- doxytag: member="libkviurl.cpp::g_pUrlDlgList" ref="a81aa9457d38652cb29a9efeb3fa86b65" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -623,7 +562,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:24 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:12 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

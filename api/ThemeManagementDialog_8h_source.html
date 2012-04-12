@@ -108,17 +108,17 @@ function toggleVisibility(linkObj) {
 <a name="l00027"></a>00027 <span class="preprocessor">#include &quot;KviOptionsWidget.h&quot;</span>
 <a name="l00028"></a>00028 <span class="preprocessor">#include &quot;KviPointerList.h&quot;</span>
 <a name="l00029"></a>00029 <span class="preprocessor">#include &quot;KviTheme.h&quot;</span>
-<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;KviTalPopupMenu.h&quot;</span>
-<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;KviTalWizard.h&quot;</span>
-<a name="l00032"></a>00032 <span class="preprocessor">#include &quot;KviTalListWidget.h&quot;</span>
-<a name="l00033"></a>00033 
-<a name="l00034"></a>00034 <span class="preprocessor">#include &lt;QWidget&gt;</span>
-<a name="l00035"></a>00035 <span class="preprocessor">#include &lt;QComboBox&gt;</span>
-<a name="l00036"></a>00036 <span class="preprocessor">#include &lt;QCursor&gt;</span>
-<a name="l00037"></a>00037 <span class="preprocessor">#include &lt;QTextDocument&gt;</span>
-<a name="l00038"></a>00038 <span class="preprocessor">#include &lt;QListWidget&gt;</span>
-<a name="l00039"></a>00039 <span class="preprocessor">#include &lt;QItemDelegate&gt;</span>
-<a name="l00040"></a>00040 <span class="preprocessor">#include &lt;QToolButton&gt;</span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;KviTalWizard.h&quot;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &quot;KviTalListWidget.h&quot;</span>
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033 <span class="preprocessor">#include &lt;QWidget&gt;</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &lt;QComboBox&gt;</span>
+<a name="l00035"></a>00035 <span class="preprocessor">#include &lt;QCursor&gt;</span>
+<a name="l00036"></a>00036 <span class="preprocessor">#include &lt;QTextDocument&gt;</span>
+<a name="l00037"></a>00037 <span class="preprocessor">#include &lt;QListWidget&gt;</span>
+<a name="l00038"></a>00038 <span class="preprocessor">#include &lt;QItemDelegate&gt;</span>
+<a name="l00039"></a>00039 <span class="preprocessor">#include &lt;QToolButton&gt;</span>
+<a name="l00040"></a>00040 <span class="preprocessor">#include &lt;QMenu&gt;</span>
 <a name="l00041"></a>00041 <span class="preprocessor">#include &quot;kvi_settings.h&quot;</span>
 <a name="l00042"></a>00042 <span class="preprocessor">#if defined(COMPILE_WEBKIT_SUPPORT) || defined(Q_MOC_RUN)</span>
 <a name="l00043"></a>00043 <span class="preprocessor"></span><span class="preprocessor">#include &quot;<a class="code" href="WebThemeInterfaceDialog_8h.html">WebThemeInterfaceDialog.h</a>&quot;</span>
@@ -151,7 +151,7 @@ function toggleVisibility(linkObj) {
 <a name="l00070"></a><a class="code" href="classThemeManagementDialog.html#a65a758c91665a005e9545de1ce1dd274">00070</a>         <a class="code" href="classKviTalIconAndRichTextItemDelegate.html" title="Toolkit Abstraction Layer: itemdelegate class.">KviTalIconAndRichTextItemDelegate</a> * <a class="code" href="classThemeManagementDialog.html#a65a758c91665a005e9545de1ce1dd274">m_pItemDelegate</a>;
 <a name="l00071"></a><a class="code" href="classThemeManagementDialog.html#a1a049ece8e351ed50d4f8fc60e08d6bd">00071</a>         <a class="code" href="classKviTalListWidget.html">KviTalListWidget</a>    * <a class="code" href="classThemeManagementDialog.html#a1a049ece8e351ed50d4f8fc60e08d6bd">m_pListWidget</a>;
 <a name="l00072"></a><a class="code" href="classThemeManagementDialog.html#a9960974ab23061e739fbd8f352ccea54">00072</a>         QLabel * <a class="code" href="classThemeManagementDialog.html#a9960974ab23061e739fbd8f352ccea54">m_pCurrentInstalledThemeLabel</a>;
-<a name="l00073"></a><a class="code" href="classThemeManagementDialog.html#aff8c0d3feba16dc0ed5f44c89c19df21">00073</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>     * <a class="code" href="classThemeManagementDialog.html#aff8c0d3feba16dc0ed5f44c89c19df21">m_pContextPopup</a>;
+<a name="l00073"></a><a class="code" href="classThemeManagementDialog.html#a26329b2a819ac4ac5640c52e3877f591">00073</a>         QMenu     * <a class="code" href="classThemeManagementDialog.html#a26329b2a819ac4ac5640c52e3877f591">m_pContextPopup</a>;
 <a name="l00074"></a><a class="code" href="classThemeManagementDialog.html#aaa0cbab57cd5d7780b41c9dd49fad399">00074</a>         QToolButton         * <a class="code" href="classThemeManagementDialog.html#aaa0cbab57cd5d7780b41c9dd49fad399">m_pDeleteThemeButton</a>;
 <a name="l00075"></a><a class="code" href="classThemeManagementDialog.html#ad180d0ddd32ab393349612eec7dca561">00075</a>         QToolButton         * <a class="code" href="classThemeManagementDialog.html#ad180d0ddd32ab393349612eec7dca561">m_pPackThemeButton</a>;
 <a name="l00076"></a>00076 <span class="preprocessor">#if defined(COMPILE_WEBKIT_SUPPORT) || defined(Q_MOC_RUN)</span>
@@ -185,7 +185,7 @@ function toggleVisibility(linkObj) {
 <a name="l00104"></a>00104 <span class="preprocessor">#endif //!_MANAGEMENTDIALOG_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:21 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:09 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

@@ -109,7 +109,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a94bbf57df67fc3b01cb0e4706ad56fbc">displayHeight</a> (int iLineSpacing)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#ab46298f82f80cf5dec2ec0e8eb340748">displayPaint</a> (QPainter *p, int column, QRect rect)=0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a98ea7d0b9e76cefce5f9f1cf8f2a9553">displayUpdate</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a4e1bb42435f9da2f068c2c12ba514031">fillContextPopup</a> (<a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *m)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#aee969dbc15b711112b9e4153e97a6371">fillContextPopup</a> (QMenu *m)=0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#af7f5218ad962c8c265fa4e73cec848c7">id</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a1426c791b86a4b24f275e6ac0d6715ca">invokeTransferWindow</a> (<a class="el" href="classKviWindow.html">KviWindow</a> *pWnd=0, bool bCreateMinimized=false, bool bNoRaise=false)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviFileTransfer.html#a161fca332e38c7af002753eb776e8a19">KviFileTransfer</a> ()</td></tr>
@@ -281,14 +281,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4e1bb42435f9da2f068c2c12ba514031"></a><!-- doxytag: member="KviFileTransfer::fillContextPopup" ref="a4e1bb42435f9da2f068c2c12ba514031" args="(KviTalPopupMenu *m)=0" -->
+<a class="anchor" id="aee969dbc15b711112b9e4153e97a6371"></a><!-- doxytag: member="KviFileTransfer::fillContextPopup" ref="aee969dbc15b711112b9e4153e97a6371" args="(QMenu *m)=0" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">virtual void KviFileTransfer::fillContextPopup </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td>
+          <td class="paramtype">QMenu *&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
           <td><code> [pure virtual]</code></td>
         </tr>
@@ -296,7 +296,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Implemented in <a class="el" href="classDccFileTransfer.html#a944e11f182a004a9df506bd471480894">DccFileTransfer</a>, and <a class="el" href="classHttpFileTransfer.html#a4b09fff564244a4ffc1809b607981be2">HttpFileTransfer</a>.</p>
+<p>Implemented in <a class="el" href="classDccFileTransfer.html#a9ee9d63706580c7b742e4898d994a286">DccFileTransfer</a>, and <a class="el" href="classHttpFileTransfer.html#ab0e42df2ac54edf264cadaf79a7f203c">HttpFileTransfer</a>.</p>
 
 <p>Referenced by <a class="el" href="classFileTransferWindow.html#aaee4d52afff64f5c5716da0b9ce98ce9">FileTransferWindow::rightButtonPressed()</a>.</p>
 
@@ -375,7 +375,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classDccFileTransfer.html#a0fce024ced53f40ae8a0e7c9118db3b8">DccFileTransfer</a>, and <a class="el" href="classHttpFileTransfer.html#a95af66282de2e64983e9e700d7bcd341">HttpFileTransfer</a>.</p>
 
-<p>Referenced by <a class="el" href="classFileTransferWindow.html#a331b9ae495e3591224f0f62c3e37c833">FileTransferWindow::copyLocalFileToClipboard()</a>, <a class="el" href="classFileTransferWindow.html#a6a91cf31db1917b0fa72f1b9b24dce77">FileTransferWindow::deleteLocalFile()</a>, <a class="el" href="classFileTransferWindow.html#aa35bee12f9a2a9e6cb11dbe0099860d5">FileTransferWindow::openFilePopupActivated()</a>, <a class="el" href="classFileTransferWindow.html#af7d2de9ee19674f4ec2d0ece5a8e6665">FileTransferWindow::openLocalFile()</a>, <a class="el" href="classFileTransferWindow.html#a1d2fd081742addf0abdd78e7dfc3b6e3">FileTransferWindow::openLocalFileFolder()</a>, <a class="el" href="classFileTransferWindow.html#a24f450a3491640080d4e727809450dd7">FileTransferWindow::openLocalFileTerminal()</a>, <a class="el" href="classFileTransferWindow.html#acde611f0149fb6c371bd20b24b5648cf">FileTransferWindow::openLocalFileWith()</a>, and <a class="el" href="classFileTransferWindow.html#aaee4d52afff64f5c5716da0b9ce98ce9">FileTransferWindow::rightButtonPressed()</a>.</p>
+<p>Referenced by <a class="el" href="classFileTransferWindow.html#a331b9ae495e3591224f0f62c3e37c833">FileTransferWindow::copyLocalFileToClipboard()</a>, <a class="el" href="classFileTransferWindow.html#a6a91cf31db1917b0fa72f1b9b24dce77">FileTransferWindow::deleteLocalFile()</a>, <a class="el" href="classFileTransferWindow.html#afb18b43f2565f2aed088ca67cb4a0441">FileTransferWindow::openFilePopupActivated()</a>, <a class="el" href="classFileTransferWindow.html#af7d2de9ee19674f4ec2d0ece5a8e6665">FileTransferWindow::openLocalFile()</a>, <a class="el" href="classFileTransferWindow.html#a1d2fd081742addf0abdd78e7dfc3b6e3">FileTransferWindow::openLocalFileFolder()</a>, <a class="el" href="classFileTransferWindow.html#a24f450a3491640080d4e727809450dd7">FileTransferWindow::openLocalFileTerminal()</a>, <a class="el" href="classFileTransferWindow.html#acde611f0149fb6c371bd20b24b5648cf">FileTransferWindow::openLocalFileWith()</a>, and <a class="el" href="classFileTransferWindow.html#aaee4d52afff64f5c5716da0b9ce98ce9">FileTransferWindow::rightButtonPressed()</a>.</p>
 
 </div>
 </div>
@@ -548,7 +548,7 @@ Protected Attributes</h2></td></tr>
 <li>src/kvirc/kernel/<a class="el" href="KviFileTransfer_8cpp.html">KviFileTransfer.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:26 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:14 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

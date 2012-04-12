@@ -118,7 +118,7 @@ function toggleVisibility(linkObj) {
 <a name="l00037"></a>00037 <span class="keyword">class </span>QLineEdit;
 <a name="l00038"></a>00038 <span class="keyword">class </span>QFile;
 <a name="l00039"></a>00039 <span class="keyword">class </span>QFontMetrics;
-<a name="l00040"></a>00040 <span class="keyword">class </span><a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>;
+<a name="l00040"></a>00040 <span class="keyword">class </span>QMenu;
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042 <span class="keyword">class </span><a class="code" href="classKviWindow.html" title="Base class for all windows in KVIrc.">KviWindow</a>;
 <a name="l00043"></a>00043 <span class="keyword">class </span><a class="code" href="classKviMainWindow.html">KviMainWindow</a>;
@@ -175,7 +175,7 @@ function toggleVisibility(linkObj) {
 <a name="l00094"></a><a class="code" href="classKviIrcView.html#a55c8b80382a945cf7f4438fb30fe6382">00094</a>         QPixmap                   * <a class="code" href="classKviIrcView.html#a55c8b80382a945cf7f4438fb30fe6382">m_pPrivateBackgroundPixmap</a>;
 <a name="l00095"></a><a class="code" href="classKviIrcView.html#a5ab674ca0d5c06d0d135d976e006ca8f">00095</a>         QScrollBar                * <a class="code" href="classKviIrcView.html#a5ab674ca0d5c06d0d135d976e006ca8f">m_pScrollBar</a>;
 <a name="l00096"></a><a class="code" href="classKviIrcView.html#a131f81c7bc82011e57b056ec071d67b5">00096</a>         QToolButton               * <a class="code" href="classKviIrcView.html#a131f81c7bc82011e57b056ec071d67b5">m_pToolsButton</a>;
-<a name="l00097"></a><a class="code" href="classKviIrcView.html#a97751d3e4497052ab1fdbd7ccf971ff3">00097</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>           * <a class="code" href="classKviIrcView.html#a97751d3e4497052ab1fdbd7ccf971ff3">m_pToolsPopup</a>;
+<a name="l00097"></a><a class="code" href="classKviIrcView.html#acef8aa1455bf58d5752ddf00e4953066">00097</a>         QMenu           * <a class="code" href="classKviIrcView.html#acef8aa1455bf58d5752ddf00e4953066">m_pToolsPopup</a>;
 <a name="l00098"></a>00098 
 <a name="l00099"></a><a class="code" href="classKviIrcView.html#a1f1344e985409c4f3c75d8a359af9a3b">00099</a>         <a class="code" href="classKviIrcViewToolWidget.html">KviIrcViewToolWidget</a>      * <a class="code" href="classKviIrcView.html#a1f1344e985409c4f3c75d8a359af9a3b">m_pToolWidget</a>;
 <a name="l00100"></a>00100 
@@ -306,8 +306,8 @@ function toggleVisibility(linkObj) {
 <a name="l00225"></a>00225         <span class="keywordtype">bool</span> checkSelectionBlock(<a class="code" href="struct__KviIrcViewLine.html">KviIrcViewLine</a> * line,<span class="keywordtype">int</span> bufIndex);
 <a name="l00226"></a>00226         <a class="code" href="struct__KviIrcViewWrappedBlock.html">KviIrcViewWrappedBlock</a> * getLinkUnderMouse(<span class="keywordtype">int</span> xPos,<span class="keywordtype">int</span> yPos,QRect * pRect = 0,QString * linkCmd = 0,QString * linkText = 0);
 <a name="l00227"></a>00227         <span class="keywordtype">void</span> doLinkToolTip(<span class="keyword">const</span> QRect &amp;rct,QString &amp;linkCmd,QString &amp;linkText);
-<a name="l00228"></a>00228         <span class="keywordtype">void</span> doMarkerToolTip(<span class="keyword">const</span> QRect &amp;rct);
-<a name="l00229"></a>00229         <span class="keywordtype">bool</span> checkMarkerArea(<span class="keyword">const</span> QRect &amp; area, <span class="keyword">const</span> QPoint &amp; mousePos);
+<a name="l00228"></a>00228         <span class="keywordtype">void</span> doMarkerToolTip();
+<a name="l00229"></a>00229         <span class="keywordtype">bool</span> checkMarkerArea(<span class="keyword">const</span> QPoint &amp; mousePos);
 <a name="l00230"></a>00230         <span class="keywordtype">void</span> addControlCharacter(<a class="code" href="struct__KviIrcViewLineChunk.html">KviIrcViewLineChunk</a> *pC, QString &amp; szSelectionText);
 <a name="l00231"></a>00231 <span class="keyword">public</span> slots:
 <a name="l00232"></a>00232         <span class="keywordtype">void</span> flushLog();
@@ -333,7 +333,7 @@ function toggleVisibility(linkObj) {
 <a name="l00252"></a>00252 <span class="preprocessor">#endif //_KVI_IRCVIEW_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:17 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:05 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

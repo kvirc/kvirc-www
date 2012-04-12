@@ -116,8 +116,6 @@ Public Slots</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimizes this window.  <a href="#aed024bb2b29e3f6cb55114c9661eccdd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiChild.html#a9e81e29f3f36792fe7f118f5ff006689">restore</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Restore it's latest postition/state.  <a href="#a9e81e29f3f36792fe7f118f5ff006689"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiChild.html#acfb9d47c817a413fbd53d990fb0dee61">windowStateChangedEvent</a> (Qt::WindowStates oldState, Qt::WindowStates newState)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggered when the state of a window changes.  <a href="#acfb9d47c817a413fbd53d990fb0dee61"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiChild.html#a29fe14b6acb2ab856dd13039087add03">activate</a> ()</td></tr>
@@ -130,6 +128,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the Mdi child object.  <a href="#ab54d038354cf269fb7e3745dd84b49c6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviMdiManager.html">KviMdiManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiChild.html#a63bbdcd69010a99bca55665407bbd657">manager</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current <a class="el" href="classKviMdiManager.html" title="Handles all MDI windows.">KviMdiManager</a> of the subwindow.  <a href="#a63bbdcd69010a99bca55665407bbd657"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiChild.html#ab14e926306f2c151f73a5eaa02a05d35">normalGeometry</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Overrides parent implementation to return a correct value even when we're maximized or minimized.  <a href="#ab14e926306f2c151f73a5eaa02a05d35"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiChild.html#aa989153fb7e0a2e9a50ecdc283451e6a">plainCaption</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns plain text caption.  <a href="#aa989153fb7e0a2e9a50ecdc283451e6a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiChild.html#a364de5bf3e7974354a47088210dc0501">setClient</a> (QWidget *w)</td></tr>
@@ -149,7 +149,9 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiChild.html#ad4f339e397ec40fb7400c3484f8b93cd">closeEvent</a> (QCloseEvent *e)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Hooks into close event to make user decisions possible.  <a href="#ad4f339e397ec40fb7400c3484f8b93cd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiChild.html#add9fc56970519cee326320fc2de44bc2">moveEvent</a> (QMoveEvent *e)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the widget background when moving.  <a href="#add9fc56970519cee326320fc2de44bc2"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the widget background when moving, and our normalGeometry.  <a href="#add9fc56970519cee326320fc2de44bc2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiChild.html#a107e0935488e6d3f91e42a69a572d152">resizeEvent</a> (QResizeEvent *e)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates our normalGeometry.  <a href="#a107e0935488e6d3f91e42a69a572d152"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classKviMdiManager.html">KviMdiManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiChild.html#a9a8f26ee716a64ba56691f204b3d58cb">m_pManager</a></td></tr>
@@ -170,6 +172,8 @@ Private Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The widget docked into our MDI window.  <a href="#a872a4c7ab771b22b74538774304d93c1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QPixmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiChild.html#a040c42e3d88326240b7c7f2198fb5135">m_pIcon</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains the current window Icon.  <a href="#a040c42e3d88326240b7c7f2198fb5135"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiChild.html#a57df9542b5c1a72cef2c20bdd2171223">m_rNormalizedGeometry</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Our geometry when we're in a restored state.  <a href="#a57df9542b5c1a72cef2c20bdd2171223"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviMdiChild.html#a55bf0fbfba52c7790768dc898d1cb001">m_szPlainCaption</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Caption as plain text.  <a href="#a55bf0fbfba52c7790768dc898d1cb001"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="friends"></a>
@@ -243,7 +247,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><a class="el" href="classKviMdiChild.html" title="Class of an MDI window.">KviMdiChild</a> </dd></dl>
 
-<p>References <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classKviMdiChild.html#a872a4c7ab771b22b74538774304d93c1">m_pClient</a>, <a class="el" href="classKviMdiChild.html#a9a8f26ee716a64ba56691f204b3d58cb">m_pManager</a>, <a class="el" href="classKviMdiChild.html#a850cfb199569d3b1067175bbd7551ce3">transparencyWorkaround()</a>, <a class="el" href="classKviMdiChild.html#a234b3bf5300c94aad79e66e07dec86d6">updateSystemPopup()</a>, and <a class="el" href="classKviMdiChild.html#acfb9d47c817a413fbd53d990fb0dee61">windowStateChangedEvent()</a>.</p>
+<p>References <a class="el" href="KvsObject__ftp_8cpp.html#a219d683a9e78fa06eff2a90a9dee3343">connect()</a>, <a class="el" href="classKviMdiChild.html#a872a4c7ab771b22b74538774304d93c1">m_pClient</a>, <a class="el" href="classKviMdiChild.html#a9a8f26ee716a64ba56691f204b3d58cb">m_pManager</a>, <a class="el" href="classKviMdiChild.html#a850cfb199569d3b1067175bbd7551ce3">transparencyWorkaround()</a>, and <a class="el" href="classKviMdiChild.html#a234b3bf5300c94aad79e66e07dec86d6">updateSystemPopup()</a>.</p>
 
 </div>
 </div>
@@ -307,6 +311,8 @@ Friends</h2></td></tr>
 
 <p>Returns the currently in the window visible widget. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>QWidget * </dd></dl>
+
+<p>Referenced by <a class="el" href="classKviMdiManager.html#a54aed89516b7393cdd153948111ab72d">KviMdiManager::processWindowStateChanged()</a>.</p>
 
 </div>
 </div>
@@ -391,7 +397,7 @@ Friends</h2></td></tr>
 <p>Maximizes this window. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>Referenced by <a class="el" href="classKviMdiManager.html#a979f40e56dbf51bd1a36a14fad2c3387">KviMdiManager::focusPreviousTopChild()</a>, and <a class="el" href="classKviWindow.html#a211a549a3c517de521d47b57d5eaa890">KviWindow::maximize()</a>.</p>
+<p>Referenced by <a class="el" href="classKviWindow.html#a211a549a3c517de521d47b57d5eaa890">KviWindow::maximize()</a>.</p>
 
 </div>
 </div>
@@ -431,10 +437,31 @@ Friends</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Updates the widget background when moving. </p>
+<p>Updates the widget background when moving, and our normalGeometry. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>References <a class="el" href="classKviMdiChild.html#a872a4c7ab771b22b74538774304d93c1">m_pClient</a>.</p>
+<p>References <a class="el" href="classKviMdiChild.html#a872a4c7ab771b22b74538774304d93c1">m_pClient</a>, and <a class="el" href="classKviMdiChild.html#a57df9542b5c1a72cef2c20bdd2171223">m_rNormalizedGeometry</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab14e926306f2c151f73a5eaa02a05d35"></a><!-- doxytag: member="KviMdiChild::normalGeometry" ref="ab14e926306f2c151f73a5eaa02a05d35" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QRect KviMdiChild::normalGeometry </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Overrides parent implementation to return a correct value even when we're maximized or minimized. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>QRect </dd></dl>
+
+<p>Referenced by <a class="el" href="classKviMainWindow.html#ae97356e4a5f95bfa773352eca7f303bb">KviMainWindow::saveWindowProperties()</a>.</p>
 
 </div>
 </div>
@@ -457,6 +484,28 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a107e0935488e6d3f91e42a69a572d152"></a><!-- doxytag: member="KviMdiChild::resizeEvent" ref="a107e0935488e6d3f91e42a69a572d152" args="(QResizeEvent *e)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KviMdiChild::resizeEvent </td>
+          <td>(</td>
+          <td class="paramtype">QResizeEvent *&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Updates our normalGeometry. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
+
+<p>References <a class="el" href="classKviMdiChild.html#a57df9542b5c1a72cef2c20bdd2171223">m_rNormalizedGeometry</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a9e81e29f3f36792fe7f118f5ff006689"></a><!-- doxytag: member="KviMdiChild::restore" ref="a9e81e29f3f36792fe7f118f5ff006689" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -474,7 +523,7 @@ Friends</h2></td></tr>
 <p>Restore it's latest postition/state. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
-<p>Referenced by <a class="el" href="classKviMdiManager.html#a014e4d03c9683721545811e1f52fca0a">KviMdiManager::menuActivated()</a>, <a class="el" href="classKviWindow.html#a0af5b4a32b1ae9ffdc6f1fb1a824d829">KviWindow::restore()</a>, and <a class="el" href="classKviMdiManager.html#af589f656bae16a59017046accb07dffe">KviMdiManager::restoreAll()</a>.</p>
+<p>Referenced by <a class="el" href="classKviWindow.html#a0af5b4a32b1ae9ffdc6f1fb1a824d829">KviWindow::restore()</a>, and <a class="el" href="classKviMdiManager.html#af589f656bae16a59017046accb07dffe">KviMdiManager::restoreAll()</a>.</p>
 
 </div>
 </div>
@@ -587,7 +636,7 @@ Friends</h2></td></tr>
 
 <p>References <a class="el" href="classKviMdiChild.html#a3098a440d2c15ef29c63db7d794ed2bfaf85482aa50d3194f752b4d00bbbe5340">Maximized</a>, <a class="el" href="classKviMdiChild.html#a3098a440d2c15ef29c63db7d794ed2bfa192faf9d5cd3aaf8d9dd2119f3f5a448">Minimized</a>, and <a class="el" href="classKviMdiChild.html#a3098a440d2c15ef29c63db7d794ed2bfae5f5f4db84297532461f0ac10eafdd3f">Normal</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviMdiManager.html#a04e6174d92fce1b728072357914eb929">KviMdiManager::fillWindowPopup()</a>, <a class="el" href="classKviMdiManager.html#a979f40e56dbf51bd1a36a14fad2c3387">KviMdiManager::focusPreviousTopChild()</a>, <a class="el" href="classKviMdiManager.html#a014e4d03c9683721545811e1f52fca0a">KviMdiManager::menuActivated()</a>, and <a class="el" href="classKviMdiManager.html#a592d23f90d081dabfb43888b8996a987">KviMdiManager::tileAllInternal()</a>.</p>
+<p>Referenced by <a class="el" href="classKviMdiManager.html#a04e6174d92fce1b728072357914eb929">KviMdiManager::fillWindowPopup()</a>, <a class="el" href="classKviMdiManager.html#a979f40e56dbf51bd1a36a14fad2c3387">KviMdiManager::focusPreviousTopChild()</a>, and <a class="el" href="classKviMdiManager.html#a592d23f90d081dabfb43888b8996a987">KviMdiManager::tileAllInternal()</a>.</p>
 
 </div>
 </div>
@@ -654,7 +703,7 @@ Friends</h2></td></tr>
 
 <p>References <a class="el" href="classKviMdiChild.html#a872a4c7ab771b22b74538774304d93c1">m_pClient</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviMdiChild.html#acfb9d47c817a413fbd53d990fb0dee61">windowStateChangedEvent()</a>.</p>
+<p>Referenced by <a class="el" href="classKviMdiManager.html#a54aed89516b7393cdd153948111ab72d">KviMdiManager::processWindowStateChanged()</a>.</p>
 
 </div>
 </div>
@@ -676,48 +725,6 @@ Friends</h2></td></tr>
 <dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
 
 <p>References <a class="el" href="KviKvsEventTable_8h.html#a29bb8a2185d0504d80741e93ac417328">KviEvent_OnWindowPopupRequest</a>, <a class="el" href="KviKvsEventTriggers_8h.html#a0d79b9bd36e0f3ba87cfcfec6d5e5a11">KVS_TRIGGER_EVENT_0</a>, and <a class="el" href="classKviMdiChild.html#a872a4c7ab771b22b74538774304d93c1">m_pClient</a>.</p>
-
-<p>Referenced by <a class="el" href="classKviMdiChild.html#ab54d038354cf269fb7e3745dd84b49c6">KviMdiChild()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="acfb9d47c817a413fbd53d990fb0dee61"></a><!-- doxytag: member="KviMdiChild::windowStateChangedEvent" ref="acfb9d47c817a413fbd53d990fb0dee61" args="(Qt::WindowStates oldState, Qt::WindowStates newState)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void KviMdiChild::windowStateChangedEvent </td>
-          <td>(</td>
-          <td class="paramtype">Qt::WindowStates&#160;</td>
-          <td class="paramname"><em>oldState</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Qt::WindowStates&#160;</td>
-          <td class="paramname"><em>newState</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [slot]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Triggered when the state of a window changes. </p>
-<p>This event is used to catch minmize event of the KviMdiSubWindow </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">oldState</td><td>The old state of the window </td></tr>
-    <tr><td class="paramname">newState</td><td>The new state of the window </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>void </dd></dl>
-
-<p>References <a class="el" href="classKviMdiManager.html#a979f40e56dbf51bd1a36a14fad2c3387">KviMdiManager::focusPreviousTopChild()</a>, <a class="el" href="classKviMdiChild.html#a9a8f26ee716a64ba56691f204b3d58cb">m_pManager</a>, <a class="el" href="classKviMdiManager.html#a4921143b82a5e986aac51a68f67fc42f">KviMdiManager::setIsInSDIMode()</a>, and <a class="el" href="classKviMdiChild.html#ad37268c6534885170125538e728c29eb">updateCaption()</a>.</p>
 
 <p>Referenced by <a class="el" href="classKviMdiChild.html#ab54d038354cf269fb7e3745dd84b49c6">KviMdiChild()</a>.</p>
 
@@ -785,7 +792,24 @@ Friends</h2></td></tr>
 
 <p>Contains the according <a class="el" href="classKviMdiManager.html" title="Handles all MDI windows.">KviMdiManager</a> object. </p>
 
-<p>Referenced by <a class="el" href="classKviMdiChild.html#a29fe14b6acb2ab856dd13039087add03">activate()</a>, <a class="el" href="classKviMdiChild.html#ab54d038354cf269fb7e3745dd84b49c6">KviMdiChild()</a>, <a class="el" href="classKviMdiChild.html#acfb9d47c817a413fbd53d990fb0dee61">windowStateChangedEvent()</a>, and <a class="el" href="classKviMdiChild.html#a02e9af94fa357fc7943ae0d03c1a198c">~KviMdiChild()</a>.</p>
+<p>Referenced by <a class="el" href="classKviMdiChild.html#a29fe14b6acb2ab856dd13039087add03">activate()</a>, <a class="el" href="classKviMdiChild.html#ab54d038354cf269fb7e3745dd84b49c6">KviMdiChild()</a>, and <a class="el" href="classKviMdiChild.html#a02e9af94fa357fc7943ae0d03c1a198c">~KviMdiChild()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a57df9542b5c1a72cef2c20bdd2171223"></a><!-- doxytag: member="KviMdiChild::m_rNormalizedGeometry" ref="a57df9542b5c1a72cef2c20bdd2171223" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QRect <a class="el" href="classKviMdiChild.html#a57df9542b5c1a72cef2c20bdd2171223">KviMdiChild::m_rNormalizedGeometry</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Our geometry when we're in a restored state. </p>
+
+<p>Referenced by <a class="el" href="classKviMdiChild.html#add9fc56970519cee326320fc2de44bc2">moveEvent()</a>, and <a class="el" href="classKviMdiChild.html#a107e0935488e6d3f91e42a69a572d152">resizeEvent()</a>.</p>
 
 </div>
 </div>
@@ -811,7 +835,7 @@ Friends</h2></td></tr>
 <li>src/kvirc/ui/<a class="el" href="KviMdiChild_8cpp.html">KviMdiChild.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:34 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:21 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

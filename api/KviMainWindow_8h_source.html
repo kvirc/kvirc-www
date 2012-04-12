@@ -130,7 +130,7 @@ function toggleVisibility(linkObj) {
 <a name="l00049"></a>00049 <span class="keyword">class </span><a class="code" href="classKviIrcContext.html">KviIrcContext</a>;
 <a name="l00050"></a>00050 <span class="keyword">class </span><a class="code" href="classKviIrcConnection.html" title="An abstraction of a connection to an IRC server.">KviIrcConnection</a>;
 <a name="l00051"></a>00051 <span class="keyword">class </span><a class="code" href="classKviStatusBar.html" title="Status Bar class.">KviStatusBar</a>;
-<a name="l00052"></a>00052 <span class="keyword">class </span><a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>;
+<a name="l00052"></a>00052 <span class="keyword">class </span>QMenu;
 <a name="l00053"></a>00053 <span class="keyword">class </span><a class="code" href="classKviTrayIcon.html" title="The KviTrayIcon class.">KviTrayIcon</a>;
 <a name="l00054"></a>00054 <span class="keyword">class </span>QShortcut;
 <a name="l00055"></a>00055 
@@ -227,8 +227,8 @@ function toggleVisibility(linkObj) {
 <a name="l00146"></a>00146         <a class="code" href="classKviMexToolBar.html">KviMexToolBar</a> * moduleExtensionToolBar(<span class="keywordtype">int</span> extensionId);
 <a name="l00147"></a>00147         <span class="comment">// Helper to fill the toolbars popup</span>
 <a name="l00148"></a>00148         <span class="comment">// it is used by KviToolBar and KviMenuBar</span>
-<a name="l00149"></a>00149         <span class="keywordtype">void</span> fillToolBarsPopup(<a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * <a class="code" href="detector_8cpp.html#ade66e4ccafbc33b117610bbc0d85feb0">p</a>);
-<a name="l00150"></a>00150         <span class="keywordtype">void</span> fillIconSizePopup(<a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> * <a class="code" href="detector_8cpp.html#ade66e4ccafbc33b117610bbc0d85feb0">p</a>);
+<a name="l00149"></a>00149         <span class="keywordtype">void</span> fillToolBarsPopup(QMenu * <a class="code" href="detector_8cpp.html#ade66e4ccafbc33b117610bbc0d85feb0">p</a>);
+<a name="l00150"></a>00150         <span class="keywordtype">void</span> fillIconSizePopup(QMenu * <a class="code" href="detector_8cpp.html#ade66e4ccafbc33b117610bbc0d85feb0">p</a>);
 <a name="l00151"></a>00151         <span class="comment">// Set the size of the icons used by the whole app</span>
 <a name="l00152"></a>00152         <span class="comment">// Allowed sizes are 16, 22, 32 and 48</span>
 <a name="l00153"></a>00153         <span class="keywordtype">void</span> setIconSize(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> uSize);
@@ -286,7 +286,7 @@ function toggleVisibility(linkObj) {
 <a name="l00205"></a>00205         <span class="keywordtype">void</span> minimizeWindow();
 <a name="l00206"></a>00206 
 <a name="l00207"></a>00207         <span class="keywordtype">void</span> accelActivated();
-<a name="l00208"></a>00208         <span class="keywordtype">void</span> toolbarsPopupSelected(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);
+<a name="l00208"></a>00208     <span class="keywordtype">void</span> toolbarsPopupSelected(QAction *pAction);
 <a name="l00209"></a>00209         <span class="keywordtype">void</span> iconSizePopupSelected(QAction * pAction);
 <a name="l00210"></a>00210         <span class="keywordtype">void</span> buttonStylePopupSelected(QAction * pAction);
 <a name="l00211"></a>00211 signals:
@@ -314,7 +314,7 @@ function toggleVisibility(linkObj) {
 <a name="l00233"></a>00233 <span class="preprocessor">#endif //_KVI_FRAME_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:17 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:06 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

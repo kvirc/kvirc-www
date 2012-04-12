@@ -87,11 +87,11 @@ function toggleVisibility(linkObj) {
 <code>#include &quot;<a class="el" href="KviMainWindow_8h_source.html">KviMainWindow.h</a>&quot;</code><br/>
 <code>#include &quot;KviLocale.h&quot;</code><br/>
 <code>#include &quot;KviApplication.h&quot;</code><br/>
-<code>#include &quot;KviTalPopupMenu.h&quot;</code><br/>
 <code>#include &quot;KviOptions.h&quot;</code><br/>
 <code>#include &lt;QCursor&gt;</code><br/>
 <code>#include &lt;QEvent&gt;</code><br/>
 <code>#include &lt;QMouseEvent&gt;</code><br/>
+<code>#include &lt;QMenu&gt;</code><br/>
 <code>#include &quot;KviToolBar.moc&quot;</code><br/>
 </div><table class="memberdecls">
 <tr><td colspan="2"><h2><a name="define-members"></a>
@@ -100,10 +100,10 @@ Defines</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#a694b5547b1d89e5889722f9269852699">VALID_ICONSIZES_NUM</a>&#160;&#160;&#160;4</td></tr>
 <tr><td colspan="2"><h2><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#aa8bbac34d21a2053a59942f3652dcdc4">g_pToolBarButtonStylePopup</a> = 0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#af92881dde3c8c74a208961bce1c96dd8">g_pToolBarContextPopup</a> = 0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#abb35eeb02accbd3f33a34e4a4b307bb9">g_pToolBarIconSizesPopup</a> = 0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#a816fe8e3d1d8d48ad8cc0ab9c43b70b6">g_pToolBarWindowsPopup</a> = 0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static QMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#abd937af2fd968668347a604ae9eda3c7">g_pToolBarButtonStylePopup</a> = 0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static QMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#ac67575c93abcddc0bab1570139b2c475">g_pToolBarContextPopup</a> = 0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static QMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#a5cb5b0405f8df5f0e6290976c2bf46d5">g_pToolBarIconSizesPopup</a> = 0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static QMenu *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#ad6cba32ec27cdc391dddb366edc18658">g_pToolBarWindowsPopup</a> = 0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#ad87db855d2827ec22a8f0d82a11a6690">uToolBarInstances</a> = 0</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structKviToolBar_1_1__ButtonStyles.html">KviToolBar::ButtonStyles</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#a19542dadae2fac9b8360598abcd61429">valid_buttonstyles</a> [VALID_BUTTONSTYLES_NUM]</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structKviToolBar_1_1__IconSizes.html">KviToolBar::IconSizes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="KviToolBar_8cpp.html#a01f34356f8ff9caaea602e49eb9b168a">valid_iconsizes</a> [VALID_ICONSIZES_NUM]</td></tr>
@@ -140,63 +140,63 @@ Variables</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Variable Documentation</h2>
-<a class="anchor" id="aa8bbac34d21a2053a59942f3652dcdc4"></a><!-- doxytag: member="KviToolBar.cpp::g_pToolBarButtonStylePopup" ref="aa8bbac34d21a2053a59942f3652dcdc4" args="" -->
+<a class="anchor" id="abd937af2fd968668347a604ae9eda3c7"></a><!-- doxytag: member="KviToolBar.cpp::g_pToolBarButtonStylePopup" ref="abd937af2fd968668347a604ae9eda3c7" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>* <a class="el" href="KviToolBar_8cpp.html#aa8bbac34d21a2053a59942f3652dcdc4">g_pToolBarButtonStylePopup</a> = 0<code> [static]</code></td>
+          <td class="memname">QMenu* <a class="el" href="KviToolBar_8cpp.html#abd937af2fd968668347a604ae9eda3c7">g_pToolBarButtonStylePopup</a> = 0<code> [static]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviToolBar.html#aae70da4bfc8f35719629e69a0d1519c3">KviToolBar::~KviToolBar()</a>.</p>
+<p>Referenced by <a class="el" href="classKviToolBar.html#a0ed8a0cf4288fb28c46f0d5d960646c4">KviToolBar::mousePressEvent()</a>, and <a class="el" href="classKviToolBar.html#aae70da4bfc8f35719629e69a0d1519c3">KviToolBar::~KviToolBar()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af92881dde3c8c74a208961bce1c96dd8"></a><!-- doxytag: member="KviToolBar.cpp::g_pToolBarContextPopup" ref="af92881dde3c8c74a208961bce1c96dd8" args="" -->
+<a class="anchor" id="ac67575c93abcddc0bab1570139b2c475"></a><!-- doxytag: member="KviToolBar.cpp::g_pToolBarContextPopup" ref="ac67575c93abcddc0bab1570139b2c475" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>* <a class="el" href="KviToolBar_8cpp.html#af92881dde3c8c74a208961bce1c96dd8">g_pToolBarContextPopup</a> = 0<code> [static]</code></td>
+          <td class="memname">QMenu* <a class="el" href="KviToolBar_8cpp.html#ac67575c93abcddc0bab1570139b2c475">g_pToolBarContextPopup</a> = 0<code> [static]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviToolBar.html#aae70da4bfc8f35719629e69a0d1519c3">KviToolBar::~KviToolBar()</a>.</p>
+<p>Referenced by <a class="el" href="classKviToolBar.html#a0ed8a0cf4288fb28c46f0d5d960646c4">KviToolBar::mousePressEvent()</a>, and <a class="el" href="classKviToolBar.html#aae70da4bfc8f35719629e69a0d1519c3">KviToolBar::~KviToolBar()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="abb35eeb02accbd3f33a34e4a4b307bb9"></a><!-- doxytag: member="KviToolBar.cpp::g_pToolBarIconSizesPopup" ref="abb35eeb02accbd3f33a34e4a4b307bb9" args="" -->
+<a class="anchor" id="a5cb5b0405f8df5f0e6290976c2bf46d5"></a><!-- doxytag: member="KviToolBar.cpp::g_pToolBarIconSizesPopup" ref="a5cb5b0405f8df5f0e6290976c2bf46d5" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>* <a class="el" href="KviToolBar_8cpp.html#abb35eeb02accbd3f33a34e4a4b307bb9">g_pToolBarIconSizesPopup</a> = 0<code> [static]</code></td>
+          <td class="memname">QMenu* <a class="el" href="KviToolBar_8cpp.html#a5cb5b0405f8df5f0e6290976c2bf46d5">g_pToolBarIconSizesPopup</a> = 0<code> [static]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviToolBar.html#aae70da4bfc8f35719629e69a0d1519c3">KviToolBar::~KviToolBar()</a>.</p>
+<p>Referenced by <a class="el" href="classKviToolBar.html#a0ed8a0cf4288fb28c46f0d5d960646c4">KviToolBar::mousePressEvent()</a>, and <a class="el" href="classKviToolBar.html#aae70da4bfc8f35719629e69a0d1519c3">KviToolBar::~KviToolBar()</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a816fe8e3d1d8d48ad8cc0ab9c43b70b6"></a><!-- doxytag: member="KviToolBar.cpp::g_pToolBarWindowsPopup" ref="a816fe8e3d1d8d48ad8cc0ab9c43b70b6" args="" -->
+<a class="anchor" id="ad6cba32ec27cdc391dddb366edc18658"></a><!-- doxytag: member="KviToolBar.cpp::g_pToolBarWindowsPopup" ref="ad6cba32ec27cdc391dddb366edc18658" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>* <a class="el" href="KviToolBar_8cpp.html#a816fe8e3d1d8d48ad8cc0ab9c43b70b6">g_pToolBarWindowsPopup</a> = 0<code> [static]</code></td>
+          <td class="memname">QMenu* <a class="el" href="KviToolBar_8cpp.html#ad6cba32ec27cdc391dddb366edc18658">g_pToolBarWindowsPopup</a> = 0<code> [static]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviToolBar.html#aae70da4bfc8f35719629e69a0d1519c3">KviToolBar::~KviToolBar()</a>.</p>
+<p>Referenced by <a class="el" href="classKviToolBar.html#a0ed8a0cf4288fb28c46f0d5d960646c4">KviToolBar::mousePressEvent()</a>, and <a class="el" href="classKviToolBar.html#aae70da4bfc8f35719629e69a0d1519c3">KviToolBar::~KviToolBar()</a>.</p>
 
 </div>
 </div>
@@ -257,7 +257,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:22 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:10 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

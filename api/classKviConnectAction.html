@@ -106,8 +106,8 @@ function toggleVisibility(linkObj) {
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual QAction *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConnectAction.html#a0a8b3f4fde061fab7e9f5efca8f66243">addToCustomToolBar</a> (<a class="el" href="classKviCustomToolBar.html">KviCustomToolBar</a> *pTool)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the action to the given toolbar.  <a href="#a0a8b3f4fde061fab7e9f5efca8f66243"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConnectAction.html#a8fbb6d6c4a2d0b35b630f94d8c43f9d3">addToPopupMenu</a> (<a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *pMenu)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the action to the given popup.  <a href="#a8fbb6d6c4a2d0b35b630f94d8c43f9d3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConnectAction.html#a5ce0291a34ad4ce3dd575001f5fbb3d9">addToPopupMenu</a> (QMenu *pMenu)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the action to the given popup.  <a href="#a5ce0291a34ad4ce3dd575001f5fbb3d9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKviConnectAction.html#a89ebcf89e83ae16dee7e6221e548f1f1">KviConnectAction</a> (QObject *pParent)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -168,7 +168,7 @@ Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="classKviMainWindow.html#a3f587aa2679dda1480c4d082f21ef099">KviMainWindow::activeContext()</a>, <a class="el" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>, <a class="el" href="classKviIrcContext.html#a1a7327f570a79cc370f1c5bb77185f47">KviIrcContext::connectOrDisconnect()</a>, and <a class="el" href="KviMainWindow_8cpp.html#a13001adf485ce537c0448fc76b5b9d88">g_pMainWindow</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviConnectAction.html#a0a8b3f4fde061fab7e9f5efca8f66243">addToCustomToolBar()</a>, and <a class="el" href="classKviConnectAction.html#a8fbb6d6c4a2d0b35b630f94d8c43f9d3">addToPopupMenu()</a>.</p>
+<p>Referenced by <a class="el" href="classKviConnectAction.html#a0a8b3f4fde061fab7e9f5efca8f66243">addToCustomToolBar()</a>, and <a class="el" href="classKviConnectAction.html#a5ce0291a34ad4ce3dd575001f5fbb3d9">addToPopupMenu()</a>.</p>
 
 </div>
 </div>
@@ -254,14 +254,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8fbb6d6c4a2d0b35b630f94d8c43f9d3"></a><!-- doxytag: member="KviConnectAction::addToPopupMenu" ref="a8fbb6d6c4a2d0b35b630f94d8c43f9d3" args="(KviTalPopupMenu *pMenu)" -->
+<a class="anchor" id="a5ce0291a34ad4ce3dd575001f5fbb3d9"></a><!-- doxytag: member="KviConnectAction::addToPopupMenu" ref="a5ce0291a34ad4ce3dd575001f5fbb3d9" args="(QMenu *pMenu)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool KviConnectAction::addToPopupMenu </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classKviTalPopupMenu.html">KviTalPopupMenu</a> *&#160;</td>
+          <td class="paramtype">QMenu *&#160;</td>
           <td class="paramname"><em>pMenu</em></td><td>)</td>
           <td><code> [virtual]</code></td>
         </tr>
@@ -278,9 +278,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>bool </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classKviAction.html#a62ac15a73381217e5daedf1bac6a097b">KviAction</a>.</p>
+<p>Reimplemented from <a class="el" href="classKviAction.html#aef1a3ab0bdd8525efcea8069679717b9">KviAction</a>.</p>
 
-<p>References <a class="el" href="classKviConnectAction.html#a8f3301f5b5756e81a02bd7036b6b024d">activate()</a>, <a class="el" href="classKviMainWindow.html#a3f587aa2679dda1480c4d082f21ef099">KviMainWindow::activeContext()</a>, <a class="el" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>, <a class="el" href="classKviIrcContext.html#a37935b83b79ed751ecdb29442dcd09b6ad5dd4111d3e1ee25b2d9738558ece6fa">KviIrcContext::Connected</a>, <a class="el" href="classKviIrcContext.html#a37935b83b79ed751ecdb29442dcd09b6a24258d4fa79791f40b171fd1986a5f30">KviIrcContext::Connecting</a>, <a class="el" href="KviMainWindow_8cpp.html#a13001adf485ce537c0448fc76b5b9d88">g_pMainWindow</a>, <a class="el" href="classKviIrcContext.html#a37935b83b79ed751ecdb29442dcd09b6abd8d1f8b40a195def4280d5a30027de5">KviIrcContext::Idle</a>, <a class="el" href="classKviTalPopupMenu.html#ad491ba2ad4a8133a89bdf417c1acacc6">KviTalPopupMenu::insertItem()</a>, <a class="el" href="classKviIrcContext.html#a37935b83b79ed751ecdb29442dcd09b6aacf9402adf917c7ee860c95d5d51ae21">KviIrcContext::LoggingIn</a>, <a class="el" href="classKviConnectAction.html#a5fc223d5ac4ca8db63293fe34321c936">m_szAbortConnectionString</a>, <a class="el" href="classKviConnectAction.html#a5097ff3c974e0246fdad2720f198b80e">m_szConnectString</a>, <a class="el" href="classKviConnectAction.html#ae7727ffabb0b446acea2aacab09eaf5f">m_szDisconnectString</a>, <a class="el" href="classKviAction.html#a1a9ecf9ba0f9f1e11e7be5cf6150abad">KviAction::m_szKeySequence</a>, <a class="el" href="classKviTalPopupMenu.html#af795e001403292ee5fb15cd600495f9e">KviTalPopupMenu::setItemEnabled()</a>, <a class="el" href="classKviConnectAction.html#a4adc449cabb1ae2b2c18bb5c86288e0c">setup()</a>, <a class="el" href="classKviAction.html#aea704938943c932bcef1dbb7355f1eb9">KviAction::setupDone()</a>, <a class="el" href="classKviIrcContext.html#a6238f72e0d517fb2a051672378a810ac">KviIrcContext::state()</a>, and <a class="el" href="KvsObject__http_8cpp.html#aa1d7477f8f4f580c1a0307ed79c7ec91">t()</a>.</p>
+<p>References <a class="el" href="classKviConnectAction.html#a8f3301f5b5756e81a02bd7036b6b024d">activate()</a>, <a class="el" href="classKviMainWindow.html#a3f587aa2679dda1480c4d082f21ef099">KviMainWindow::activeContext()</a>, <a class="el" href="KviIrcNumericCodes_8h.html#afcc1b6144d7f6a9e27acc4aebef7774c">c</a>, <a class="el" href="classKviIrcContext.html#a37935b83b79ed751ecdb29442dcd09b6ad5dd4111d3e1ee25b2d9738558ece6fa">KviIrcContext::Connected</a>, <a class="el" href="classKviIrcContext.html#a37935b83b79ed751ecdb29442dcd09b6a24258d4fa79791f40b171fd1986a5f30">KviIrcContext::Connecting</a>, <a class="el" href="KviMainWindow_8cpp.html#a13001adf485ce537c0448fc76b5b9d88">g_pMainWindow</a>, <a class="el" href="classKviIrcContext.html#a37935b83b79ed751ecdb29442dcd09b6abd8d1f8b40a195def4280d5a30027de5">KviIrcContext::Idle</a>, <a class="el" href="classKviIrcContext.html#a37935b83b79ed751ecdb29442dcd09b6aacf9402adf917c7ee860c95d5d51ae21">KviIrcContext::LoggingIn</a>, <a class="el" href="classKviConnectAction.html#a5fc223d5ac4ca8db63293fe34321c936">m_szAbortConnectionString</a>, <a class="el" href="classKviConnectAction.html#a5097ff3c974e0246fdad2720f198b80e">m_szConnectString</a>, <a class="el" href="classKviConnectAction.html#ae7727ffabb0b446acea2aacab09eaf5f">m_szDisconnectString</a>, <a class="el" href="classKviAction.html#a1a9ecf9ba0f9f1e11e7be5cf6150abad">KviAction::m_szKeySequence</a>, <a class="el" href="classKviConnectAction.html#a4adc449cabb1ae2b2c18bb5c86288e0c">setup()</a>, <a class="el" href="classKviAction.html#aea704938943c932bcef1dbb7355f1eb9">KviAction::setupDone()</a>, <a class="el" href="classKviIrcContext.html#a6238f72e0d517fb2a051672378a810ac">KviIrcContext::state()</a>, and <a class="el" href="KvsObject__http_8cpp.html#aa1d7477f8f4f580c1a0307ed79c7ec91">t()</a>.</p>
 
 </div>
 </div>
@@ -329,7 +329,7 @@ Protected Attributes</h2></td></tr>
 
 <p>References <a class="el" href="KviLocale_8h.html#ab4beda4df43af41d38832026955fee22">__tr2qs</a>, <a class="el" href="classKviConnectAction.html#a5fc223d5ac4ca8db63293fe34321c936">m_szAbortConnectionString</a>, <a class="el" href="classKviConnectAction.html#a5097ff3c974e0246fdad2720f198b80e">m_szConnectString</a>, and <a class="el" href="classKviConnectAction.html#ae7727ffabb0b446acea2aacab09eaf5f">m_szDisconnectString</a>.</p>
 
-<p>Referenced by <a class="el" href="classKviConnectAction.html#a0a8b3f4fde061fab7e9f5efca8f66243">addToCustomToolBar()</a>, and <a class="el" href="classKviConnectAction.html#a8fbb6d6c4a2d0b35b630f94d8c43f9d3">addToPopupMenu()</a>.</p>
+<p>Referenced by <a class="el" href="classKviConnectAction.html#a0a8b3f4fde061fab7e9f5efca8f66243">addToCustomToolBar()</a>, and <a class="el" href="classKviConnectAction.html#a5ce0291a34ad4ce3dd575001f5fbb3d9">addToPopupMenu()</a>.</p>
 
 </div>
 </div>
@@ -345,7 +345,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviConnectAction.html#a00ce110e97a471b6b314b24057dfadf4">activeContextStateChanged()</a>, <a class="el" href="classKviConnectAction.html#a8fbb6d6c4a2d0b35b630f94d8c43f9d3">addToPopupMenu()</a>, and <a class="el" href="classKviConnectAction.html#a4adc449cabb1ae2b2c18bb5c86288e0c">setup()</a>.</p>
+<p>Referenced by <a class="el" href="classKviConnectAction.html#a00ce110e97a471b6b314b24057dfadf4">activeContextStateChanged()</a>, <a class="el" href="classKviConnectAction.html#a5ce0291a34ad4ce3dd575001f5fbb3d9">addToPopupMenu()</a>, and <a class="el" href="classKviConnectAction.html#a4adc449cabb1ae2b2c18bb5c86288e0c">setup()</a>.</p>
 
 </div>
 </div>
@@ -360,7 +360,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviConnectAction.html#a00ce110e97a471b6b314b24057dfadf4">activeContextStateChanged()</a>, <a class="el" href="classKviConnectAction.html#a0a8b3f4fde061fab7e9f5efca8f66243">addToCustomToolBar()</a>, <a class="el" href="classKviConnectAction.html#a8fbb6d6c4a2d0b35b630f94d8c43f9d3">addToPopupMenu()</a>, and <a class="el" href="classKviConnectAction.html#a4adc449cabb1ae2b2c18bb5c86288e0c">setup()</a>.</p>
+<p>Referenced by <a class="el" href="classKviConnectAction.html#a00ce110e97a471b6b314b24057dfadf4">activeContextStateChanged()</a>, <a class="el" href="classKviConnectAction.html#a0a8b3f4fde061fab7e9f5efca8f66243">addToCustomToolBar()</a>, <a class="el" href="classKviConnectAction.html#a5ce0291a34ad4ce3dd575001f5fbb3d9">addToPopupMenu()</a>, and <a class="el" href="classKviConnectAction.html#a4adc449cabb1ae2b2c18bb5c86288e0c">setup()</a>.</p>
 
 </div>
 </div>
@@ -375,7 +375,7 @@ Protected Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="classKviConnectAction.html#a00ce110e97a471b6b314b24057dfadf4">activeContextStateChanged()</a>, <a class="el" href="classKviConnectAction.html#a8fbb6d6c4a2d0b35b630f94d8c43f9d3">addToPopupMenu()</a>, and <a class="el" href="classKviConnectAction.html#a4adc449cabb1ae2b2c18bb5c86288e0c">setup()</a>.</p>
+<p>Referenced by <a class="el" href="classKviConnectAction.html#a00ce110e97a471b6b314b24057dfadf4">activeContextStateChanged()</a>, <a class="el" href="classKviConnectAction.html#a5ce0291a34ad4ce3dd575001f5fbb3d9">addToPopupMenu()</a>, and <a class="el" href="classKviConnectAction.html#a4adc449cabb1ae2b2c18bb5c86288e0c">setup()</a>.</p>
 
 </div>
 </div>
@@ -384,7 +384,7 @@ Protected Attributes</h2></td></tr>
 <li>src/kvirc/kernel/<a class="el" href="KviCoreActions_8cpp.html">KviCoreActions.cpp</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:26 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:14 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>

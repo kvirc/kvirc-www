@@ -107,12 +107,12 @@ function toggleVisibility(linkObj) {
 <a name="l00026"></a>00026 
 <a name="l00027"></a>00027 <span class="preprocessor">#include &quot;KviWindow.h&quot;</span>
 <a name="l00028"></a>00028 <span class="preprocessor">#include &quot;KviCString.h&quot;</span>
-<a name="l00029"></a>00029 <span class="preprocessor">#include &lt;QTreeWidget&gt;</span>
-<a name="l00030"></a>00030 <span class="preprocessor">#include &quot;KviTalPopupMenu.h&quot;</span>
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032 <span class="preprocessor">#include &lt;QWidget&gt;</span>
-<a name="l00033"></a>00033 <span class="preprocessor">#include &lt;QLineEdit&gt;</span>
-<a name="l00034"></a>00034 <span class="preprocessor">#include &lt;QPushButton&gt;</span>
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030 <span class="preprocessor">#include &lt;QTreeWidget&gt;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include &lt;QWidget&gt;</span>
+<a name="l00032"></a>00032 <span class="preprocessor">#include &lt;QLineEdit&gt;</span>
+<a name="l00033"></a>00033 <span class="preprocessor">#include &lt;QPushButton&gt;</span>
+<a name="l00034"></a>00034 <span class="preprocessor">#include &lt;QMenu&gt;</span>
 <a name="l00035"></a>00035 
 <a name="l00036"></a>00036 <span class="keyword">class </span><a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a>;
 <a name="l00037"></a>00037 <span class="keyword">class </span><a class="code" href="classKviKvsPopupMenuItem.html">KviKvsPopupMenuItem</a>;
@@ -164,7 +164,7 @@ function toggleVisibility(linkObj) {
 <a name="l00083"></a><a class="code" href="classSinglePopupEditor.html#a7a6ca0040a9c7701a210820bbe13aacc">00083</a>         QLineEdit            * <a class="code" href="classSinglePopupEditor.html#a7a6ca0040a9c7701a210820bbe13aacc">m_pIconEditor</a>;
 <a name="l00084"></a><a class="code" href="classSinglePopupEditor.html#ad6c21daccfd9fdcc7996d98020ec9515">00084</a>         QLineEdit            * <a class="code" href="classSinglePopupEditor.html#ad6c21daccfd9fdcc7996d98020ec9515">m_pConditionEditor</a>;
 <a name="l00085"></a><a class="code" href="classSinglePopupEditor.html#abd9c678bc78d7dba5155b7e1830eb1c5">00085</a>         QLineEdit            * <a class="code" href="classSinglePopupEditor.html#abd9c678bc78d7dba5155b7e1830eb1c5">m_pExtNameEditor</a>;
-<a name="l00086"></a><a class="code" href="classSinglePopupEditor.html#a4361ecfbf9f848d92796f20f46519c29">00086</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>      * <a class="code" href="classSinglePopupEditor.html#a4361ecfbf9f848d92796f20f46519c29">m_pContextPopup</a>;
+<a name="l00086"></a><a class="code" href="classSinglePopupEditor.html#a849b673b126e7ad3ff7154ddab9879b6">00086</a>     QMenu      * <a class="code" href="classSinglePopupEditor.html#a849b673b126e7ad3ff7154ddab9879b6">m_pContextPopup</a>;
 <a name="l00087"></a>00087 <span class="keyword">public</span>:
 <a name="l00088"></a>00088         <span class="keywordtype">void</span> <a class="code" href="classSinglePopupEditor.html#aea551b08046d28d1b86b3c4b82836277">edit</a>(<a class="code" href="classMenuTreeWidgetItem.html">MenuTreeWidgetItem</a> * it);
 <a name="l00089"></a>00089         <a class="code" href="classKviKvsPopupMenu.html">KviKvsPopupMenu</a> * <a class="code" href="classSinglePopupEditor.html#a2054b43ddec5c2e1a094ffcbd68e9b34">getMenu</a>();
@@ -237,8 +237,8 @@ function toggleVisibility(linkObj) {
 <a name="l00156"></a><a class="code" href="classPopupEditorWidget.html#a3511a64540f7cb6088098a4af5df58e7">00156</a>         QTreeWidget     * <a class="code" href="classPopupEditorWidget.html#a3511a64540f7cb6088098a4af5df58e7">m_pTreeWidget</a>;
 <a name="l00157"></a><a class="code" href="classPopupEditorWidget.html#a2cbf3a545c49cb6f5f30df0cb3ed84ca">00157</a>         <a class="code" href="classMenuTreeWidgetItem.html">MenuTreeWidgetItem</a>  * <a class="code" href="classPopupEditorWidget.html#a2cbf3a545c49cb6f5f30df0cb3ed84ca">m_pLastEditedItem</a>;
 <a name="l00158"></a><a class="code" href="classPopupEditorWidget.html#a44ea910d2677e42932f4b883c665ea85">00158</a>         <span class="keywordtype">bool</span>                   <a class="code" href="classPopupEditorWidget.html#a44ea910d2677e42932f4b883c665ea85">m_bOneTimeSetupDone</a>;
-<a name="l00159"></a><a class="code" href="classPopupEditorWidget.html#a20ac9532612dab6dda05be564bc75df4">00159</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>      * <a class="code" href="classPopupEditorWidget.html#a20ac9532612dab6dda05be564bc75df4">m_pContextPopup</a>;
-<a name="l00160"></a><a class="code" href="classPopupEditorWidget.html#ac37fd1d0d67bf37ea1d8cb1c4b11cfc9">00160</a>         <a class="code" href="classKviTalPopupMenu.html">KviTalPopupMenu</a>      * <a class="code" href="classPopupEditorWidget.html#ac37fd1d0d67bf37ea1d8cb1c4b11cfc9">m_pEmptyContextPopup</a>;
+<a name="l00159"></a><a class="code" href="classPopupEditorWidget.html#a626862dc5649c65e3c1baa0ff99004cc">00159</a>     QMenu      * <a class="code" href="classPopupEditorWidget.html#a626862dc5649c65e3c1baa0ff99004cc">m_pContextPopup</a>;
+<a name="l00160"></a><a class="code" href="classPopupEditorWidget.html#a6082bb06ed1e00479478c2632682d754">00160</a>     QMenu      * <a class="code" href="classPopupEditorWidget.html#a6082bb06ed1e00479478c2632682d754">m_pEmptyContextPopup</a>;
 <a name="l00161"></a><a class="code" href="classPopupEditorWidget.html#a02d2d372c897f88809102a04985f3fe5">00161</a>         <span class="keywordtype">bool</span>                   <a class="code" href="classPopupEditorWidget.html#a02d2d372c897f88809102a04985f3fe5">m_bSaving</a>;
 <a name="l00162"></a>00162 <span class="keyword">public</span>:
 <a name="l00163"></a>00163         <span class="keywordtype">void</span> <a class="code" href="classPopupEditorWidget.html#ab711e5df3450343fc74b2db981cf267f">commit</a>();
@@ -286,7 +286,7 @@ function toggleVisibility(linkObj) {
 <a name="l00205"></a>00205 <span class="preprocessor">#endif //_POPUPEDITOR_H_</span>
 </pre></div></div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Jan 5 2012 02:46:21 for KVIrc by&#160;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 15:50:09 for KVIrc by&#160;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.3 </small></address>
 </body>
