@@ -309,13 +309,20 @@ $splash=array(
 			"19.01.2009"  // 4.0.0-svn
 		),
 		"present" => ""
-	)/*,
+	),
 	array(
 		"name" => "4.2.0 \"Equilibrium\"",
 		"motd" => "",
-		"screen" => "4.1.1.png",
-		"date" => 
-	)*/
+		"screen" => array(
+			"4.1.3.png",
+			"4.1.1.png"
+		),
+		"date" => array(
+			"18.09.2011", // 4.1.3
+			"01.08.2010"  // 4.1.1
+		),
+		"present" => ""
+	)
 );
 
 // Themes
