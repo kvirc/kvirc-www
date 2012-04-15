@@ -311,8 +311,8 @@ $splash=array(
 		"present" => ""
 	),
 	array(
-		"name" => "4.2.0 \"Equilibrium\"",
-		"motd" => "",
+		"name" => "4.1.3 \"Equilibrium\"",
+		"motd" => "Once you know what it is you want to be true, instinct is a very useful device for enabling you to know that it is",
 		"screen" => array(
 			"4.1.3.png",
 			"4.1.1.png"
