@@ -32,7 +32,7 @@ echo($out);
 function outputMap($urls)
 {
 	$out="";
-	$out.=("<?php xml version='1.0' encoding='UTF-8'?".">"."\r\n");
+	$out.=("<?xml version='1.0' encoding='UTF-8'?".">"."\r\n");
 	$out.=('<urlset xmlns="http://www.google.com/schemas/sitemap/0.84"'."\r\n");
 	$out.=('xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"'."\r\n");
 	$out.=('xsi:schemaLocation="http://www.google.com/schemas/sitemap/0.84'."\r\n");
