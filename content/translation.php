@@ -1,4 +1,4 @@
-<?
+<?php
 // Security check
 if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
@@ -11,7 +11,7 @@ echo "<div class=\"column1-unit\">";
 	echo "<p>".$template['translation']['text4']."</p>";
 	?>
 	<ul>
-		<?
+		<?php
 		foreach($translators as $key => $value)
 		{
 			echo "<img src=\"./img/flags/".$value['flag'].".png\" alt=\"".$value['lang']."\" title=\"".$value['lang']."\" />";
@@ -43,7 +43,7 @@ echo "<div class=\"column1-unit\">";
 		?>
 	</ul>
 
-	<?
+	<?php
 	echo "<p>".$template['translation']['text6a']." <a href=\"/?id=mailinglist&amp;lang=$lang\">".$template['index']['ml']."</a> ".$template['translation']['text6b']."</p>";
 
 	echo "<hr />";
@@ -74,7 +74,7 @@ echo "<div class=\"column1-unit\">";
 	# cd ../modules/addon<br />
 	# cp addon.pot addon_xxx.po
 	</code>
-	<?
+	<?php
 	echo "<p>".$template['translation']['text18']."</p>";
 
 	echo "<h1>".$template['translation']['step']." 4: ".$template['translation']['text19']."</h1>";

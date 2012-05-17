@@ -1,4 +1,4 @@
-<?
+<?php
 // Set site language
 function setlang()
 {

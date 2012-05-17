@@ -1,4 +1,4 @@
-<?
+<?php
 // Security check
 if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";

@@ -1,4 +1,4 @@
-<?
+<?php
 // This file returns the latest stable version of KVIrc
 // It is used by the Update Indicator applet
 

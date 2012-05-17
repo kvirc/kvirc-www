@@ -1,4 +1,4 @@
-<?
+<?php
 // Security check
 if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
@@ -24,7 +24,7 @@ echo "<div class=\"column1-unit\">";
 		</form>
 	</div><br />
 
-	<?
+	<?php
 	echo "<p>".$template['donate']['text4']."</p>";
 	echo "<p>".$template['donate']['text5']."</p>";
 echo "</div>";

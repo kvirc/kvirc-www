@@ -1,4 +1,4 @@
-<?
+<?php
 // Create Google sitemap
 $date=date("Y-m-d");
 $freq="daily";

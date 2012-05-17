@@ -5,7 +5,7 @@
 		<link>http://www.kvirc.net</link>
 		<description>The K-visual IRC client</description>
 		<language>en</language>
-	<?
+	<?php
 	require("conf/functions.php");
 	
 	function cleanText($intext) {

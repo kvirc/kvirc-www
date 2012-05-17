@@ -1,4 +1,4 @@
-﻿<?
+﻿<?php
 
 /* Ukrainian translation for KVIrc.net Website. Made by Igor Paliychuk <mansonigor[at]gmail[dot]com> */
 /* index.php start */
