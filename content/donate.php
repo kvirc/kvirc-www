@@ -19,7 +19,7 @@ echo "<div class=\"column1-unit\">";
 			<input type="hidden" name="no_note" value="1" />
 			<input type="hidden" name="currency_code" value="EUR" />
 			<input type="hidden" name="tax" value="0" />
-			<input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but21.gif" name="submit" alt="<?echo $template['donate']['alttext'];?>" />
+			<input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but21.gif" name="submit" alt="<?php echo $template['donate']['alttext'];?>" />
 			</p>
 		</form>
 	</div><br />

@@ -26,12 +26,12 @@ echo "<div class=\"column1-unit\">";
 
 	<hr />
 
-	<?echo "<h1>".$template['banners']['bannerby']." kiara</h1>";?>
+	<?php echo "<h1>".$template['banners']['bannerby']." kiara</h1>";?>
 	<img src="img/banners/kiara1.gif" alt="kiara1" />
 
 	<hr />
 
-	<?echo "<h1>".$template['banners']['bannerby']." Cle' :)</h1>";?>
+	<?php echo "<h1>".$template['banners']['bannerby']." Cle' :)</h1>";?>
 	<img src="img/banners/cle1.jpg" alt="cle1" /><br /><br />
 	<img src="img/banners/cle2.png" alt="cle2" /><br /><br />
 	<img src="img/banners/cle3.png" alt="cle3" /><br /><br />

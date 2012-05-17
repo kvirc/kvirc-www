@@ -1,4 +1,4 @@
-<?
+<?php 
 // Security check
 if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
@@ -17,7 +17,7 @@ ul.gallery li {
 	margin-bottom:10px;
 }
 </style>
-<?
+<?php 
 echo "<h1 class=\"pagetitle\">".$template['splash']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
 	echo "<br /><h3>".$template['splash']['text']."</h3>";

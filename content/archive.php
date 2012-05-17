@@ -9,11 +9,11 @@ echo "<div class=\"column1-unit\">";
 	?>
 
 	<div class="searchform">
-		<form action="<?echo "?id=$id&amp;lang=$lang";?>" method="post" class="form">
+		<form action="<?php echo "?id=$id&amp;lang=$lang";?>" method="post" class="form">
 			<fieldset>
-				<input type="text" name="keywords" value="<?echo $template['index']['search'];?>..." class="field" onclick="this.value=''" />
+				<input type="text" name="keywords" value="<?php echo $template['index']['search'];?>..." class="field" onclick="this.value=''" />
 				<input type="hidden" name="type" value="mail" />
-				<input type="submit" name="button" value="<?echo $template['index']['go'];?>!" class="button" />
+				<input type="submit" name="button" value="<?php echo $template['index']['go'];?>!" class="button" />
 			</fieldset>
 		</form>
 	</div><br />
