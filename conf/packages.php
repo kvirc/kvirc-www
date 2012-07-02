@@ -169,7 +169,7 @@ $package_count++;
 $p_filename[$package_count]    = "KVIrc-4.2.0-Equilibrium.dmg";
 $p_path[$package_count]        = "4.2.0/binary/osx";
 $p_description[$package_count] = "KVIrc 4.2.0, Mac OS X image, 32.";
-$p_details[$package_count]     = "The MacOSX image for Mac OS X built on clang on top of Qt 4.8.1. Known to work at least on Mac OS X 10.7x64 and 10.6x32".;
+$p_details[$package_count]     = "The MacOSX image for Mac OS X built on clang on top of Qt 4.8.1. Known to work at least on Mac OS X 10.7x64 and 10.6x32";
 $p_platform[$package_count]    = "macosx";
 $p_version[$package_count]     = "4.2.0";
 $p_size[$package_count]        = "31002661";
