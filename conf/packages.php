@@ -50,10 +50,13 @@ $version_description["4.0.0"]       = "4.0.0 : Stable (Jun 2010)";
 $version_details["4.0.0"]           = "An old stable release";
 
 $version_description["4.0.2"]       = "4.0.2 : Stable (Aug 2010)";
-$version_details["4.0.2"]           = "The previous stable release.";
+$version_details["4.0.2"]           = "An old stable release.";
 
 $version_description["4.0.4"]       = "4.0.4 : Stable (Mar 2011)";
-$version_details["4.0.4"]           = "The latest stable release. This is the package you want :)";
+$version_details["4.0.4"]           = "The previous stable release.";
+
+$version_description["4.2.0"]       = "4.2.0 : Stable (Jul 2012)";
+$version_details["4.2.0"]           = "The latest stable release. This is the package you want :)";
 
 // The package groups
 $group_description["none"]      = "No group";
@@ -116,6 +119,64 @@ if((strpos($hua,'Windows') !== false) || (strpos($hua,'WinXP') !== false))
 
 
 $package_count = 0;
+
+//============================================================================================================================================
+// 4.2.0
+//============================================================================================================================================
+
+
+// 4.2.0
+// BZip 2 sources
+$p_filename[$package_count]    = "kvirc-4.2.0.tar.bz2";
+$p_path[$package_count]        = "4.2.0/source";
+$p_description[$package_count] = "KVIrc 4.2.0, sources (bzipped package)";
+$p_details[$package_count]     = "Source tarball for both unix and windows version. The package is compressed using the bzip2 program.";
+$p_platform[$package_count]    = "source";
+$p_version[$package_count]     = "4.2.0";
+$p_size[$package_count]        = "5461587";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Fabio Bas (ctrlaltca at gmail dot com)";
+$package_count++;
+
+// 4.2.0
+// Gzip sources
+$p_filename[$package_count]    = "kvirc-4.2.0.tar.gz";
+$p_path[$package_count]        = "4.2.0/source";
+$p_description[$package_count] = "KVIrc 4.2.0, sources (gzipped package)";
+$p_details[$package_count]     = "Source tarball for both unix and windows version. The package is compressed using the bzip2 program.";
+$p_platform[$package_count]    = "source";
+$p_version[$package_count]     = "4.2.0";
+$p_size[$package_count]        = "7216161";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Fabio Bas (ctrlaltca at gmail dot com)";
+$package_count++;
+
+// 4.2.0
+// Windows
+$p_filename[$package_count]    = "KVIrc-4.2.0-Equilibrium.exe";
+$p_path[$package_count]        = "4.2.0/binary/win32";
+$p_description[$package_count] = "KVIrc 4.2.0, Windows binary, 32bit";
+$p_details[$package_count]     = "The self-installing binary package for Windows built with Mingw 4.4 on top of Qt 4.8.2. Just double click on it after downloading.";
+$p_platform[$package_count]    = "win32";
+$p_version[$package_count]     = "4.2.0";
+$p_size[$package_count]        = "19210067";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Fabio Bas (ctrlaltca at gmail dot com)";
+$package_count++;
+
+// 4.2.0
+// MacOSX
+$p_filename[$package_count]    = "KVIrc-4.2.0-Equilibrium.dmg";
+$p_path[$package_count]        = "4.2.0/binary/osx";
+$p_description[$package_count] = "KVIrc 4.2.0, Mac OS X image, 32.";
+$p_details[$package_count]     = "The MacOSX image for Mac OS X built on clang on top of Qt 4.8.1. Known to work at least on Mac OS X 10.7x64 and 10.6x32".;
+$p_platform[$package_count]    = "macosx";
+$p_version[$package_count]     = "4.2.0";
+$p_size[$package_count]        = "31002661";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Fabio Bas (ctrlaltca at gmail dot com)";
+$package_count++;
+
 
 //============================================================================================================================================
 // 4.0.4

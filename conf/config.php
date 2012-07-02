@@ -4,9 +4,9 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
 // Some vars
-$current = "4.0.4";
-$codename = "Insomnia";
-$availVersions = array("4.0.0",$current);
+$current = "4.2.0";
+$codename = "Equilibrium";
+$availVersions = array("4.0.4",$current);
 $dpath = "ftp://ftp.kvirc.de/pub/kvirc/";
 
 // Include language templates
@@ -311,17 +311,19 @@ $splash=array(
 		"present" => ""
 	),
 	array(
-		"name" => "4.1.3 \"Equilibrium\"",
+		"name" => "4.2.0 \"Equilibrium\"",
 		"motd" => "Once you know what it is you want to be true, instinct is a very useful device for enabling you to know that it is",
 		"screen" => array(
+			"4.2.0.png",
 			"4.1.3.png",
 			"4.1.1.png"
 		),
 		"date" => array(
+			"03.07.2012", // 4.2.0
 			"18.09.2011", // 4.1.3
 			"01.08.2010"  // 4.1.1
 		),
-		"present" => ""
+		"present" => "4.1.3"
 	)
 );
 
