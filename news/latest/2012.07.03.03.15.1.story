@@ -65,12 +65,12 @@ And finally, as usual, a lot of bugfixes and minor enchancements.
 
 <p>
 The source packages are available <a href="javascript:opendoc('?id=releases&platform=source&version=4.2.0');">here</a>.
-Binaries for windows and macosx are available in the <a href="javascript:opendoc('?id=releases');">download section</a>.
+Binaries for Windows and Mac OS X are available in the <a href="javascript:opendoc('?id=releases');">download section</a>.
 Binaries for other platforms will be available soon in the same location as well as from your favorite distribution
 repositories.
 </p>
 
-<p>There is also a portable version for windows available on <a href="http://portableapps.com/apps/internet/kvirc_portable">portableapps.com</a>.</p>
+<p>There is also a portable version for Windows available on <a href="http://portableapps.com/apps/internet/kvirc_portable">portableapps.com</a>.</p>
 
 <p>
 As usual, any bug for this release should be reported by using the bugtrack system
@@ -87,7 +87,7 @@ continuous effort on bridging the gap between developers and users.
 <p>Honor and Glory to everyone involved!</p>
 <br>
 
-<p>Enjoy! :)</p>
+<p>Enjoy... and remember: we have no boundaries on the net! :)</p>
 <br>
 <p>Fabio Bas and <b>The KVIrc Development Team</b></p>
 
