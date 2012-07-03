@@ -21,7 +21,7 @@ development.
 <p>
 Support for new os/architectures:
 <ul>
-	<li>- Mac OSX support, clang support</li>
+	<li>- Mac OS X support, clang support</li>
 	<li>- 64-bit Windows support</li>
 	<li>- improved FreeBSD integration</li>
 	<li>- an experimental OS/2 patch</li>
@@ -48,7 +48,7 @@ More scripting power:
 </p>
 
 <p>
-A lot of new miscelaneous features:
+A lot of new miscellaneous features:
 <ul>
 	<li>- a module to support FiSH irc encryption</li>
 	<li>- smart logging paths using KVS</li>
@@ -70,7 +70,7 @@ Binaries for other platforms will be available soon in the same location as well
 repositories.
 </p>
 
-<p>There is also a portable version for Windows available on <a href="http://portableapps.com/apps/internet/kvirc_portable">portableapps.com</a>.</p>
+<p>There is also a portable version for Windows available on <a href="http://portableapps.com/apps/internet/kvirc_portable">PortableApps.com</a>.</p>
 
 <p>
 As usual, any bug for this release should be reported by using the bugtrack system
