@@ -57,25 +57,23 @@ $www_mirror=array(
 	//array("name" => "kvirc.ipv6.net.au", "url" => "http://kvirc.ipv6.net.au", "desc" => "kvirc.ipv6.net.au: Australian Mirror (located in Brisbane Queensland, IPv4 and IPv6)", "country" => "Australia, Queensland", "city" => "Brisbane", "sponsor" => "Peter Good, IPv6 Australia"),
 	//array("name" => "kvirc.firenze.linux.it", "url" => "http://kvirc.firenze.linux.it", "desc" => "kvirc.firenze.linux.it: Italian mirror (located in Milano)", "country" => "Italy", "city" => "Milano", "sponsor" => "Firenze Linux Users Group"),
 	array("name" => "www.ipv6.kvirc.net", "url" => "http://www.ipv6.kvirc.net", "desc" => "German IPv6 mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
-	array("name" => "kvirc.cluenet.org", "url" => "http://kvirc.cluenet.org", "desc" => "French mirror", "city" => "Roubaix, France", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
-	array("name" => "kvirc2.cluenet.org", "url" => "http://kvirc2.cluenet.org", "desc" => "French mirror 2", "city" => "Roubaix, France", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
-	array("name" => "bots.wmflabs.org/~richs/kvirc", "url" => "http://bots.wmflabs.org/~richs/kvirc", "desc" => "USA mirror 2", "city" => "Tampa, Florida", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org")
+	//array("name" => "bots.wmflabs.org/~richs/kvirc", "url" => "http://bots.wmflabs.org/~richs/kvirc", "desc" => "USA mirror 2", "city" => "Tampa, Florida", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
 );
 
 $ftp_mirror=array(
 	1 => array("name" => "ftp.kvirc.de", "url" => "ftp://ftp.kvirc.de/pub/kvirc", "desc" => "German mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
-	//array("name" => "ftp.kvirc.ru", "url" => "ftp://ftp.kvirc.ru/pub/kvirc", "desc" => "German mirror", "city" => "Frankfurt am Main", "country" => "Germany", "maintainer" => "CtrlAltCa"),
 	array("name" => "kvirc.gmake.de", "url" => "http://kvirc.gmake.de/pub/kvirc", "desc" => "German mirror", "city" => "Jena, Germany", "maintainer" => "Dessa"),
-	array("name" => "kvirc-ftp.visualscripts.com", "url" => "http://kvirc-ftp.visualscripts.com", "desc" => "USA mirror", "city" => "Houston, Texas, United States", "maintainer" => "THeLooX"),
+	//array("name" => "kvirc-ftp.visualscripts.com", "url" => "http://kvirc-ftp.visualscripts.com", "desc" => "USA mirror", "city" => "Houston, Texas, United States", "maintainer" => "THeLooX"),
 	array("name" => "dedimarbo.ath.cx", "url" => "ftp://dedimarbo.ath.cx/pub/kvirc/", "desc" => "French mirror", "city" => "Paris, France", "maintainer" => "MarbolanGos"),
-	array("name" => "kvirc.eban-meban.com", "url" => "ftp://kvirc.eban-meban.com", "desc" => "Bulgarian mirror", "city" => "Asenovgrad, Bulgaria", "maintainer" => "lame"),
-	//array("name" => "ftp.kvirc.net", "url" => "ftp://ftp.kvirc.net/pub/kvirc", "desc" => "Primary FTP server", "city" => "Oslo, Norway", "maintainer" => "Norwegian Linux Community"),
+	//array("name" => "kvirc.eban-meban.com", "url" => "ftp://kvirc.eban-meban.com", "desc" => "Bulgarian mirror", "city" => "Asenovgrad, Bulgaria", "maintainer" => "lame"),
 	array("name" => "kvirc.tradebit.com", "url" => "http://kvirc.tradebit.com", "desc" => "USA mirror", "city" => "New York, United States", "maintainer" => "tradebit.com"),
 	array("name" => "kvirc.imsam.info", "url" => "http://kvirc.imsam.info", "desc" => "German mirror", "city" => "Nuernberg, Germany", "maintainer" => "tradebit.com"),
 //	array("name" => "kvirc.bcoos.net", "url" => "http://kvirc.bcoos.net", "desc" => "USA mirror", "city" => "United States", "maintainer" => "exoops.info"),
 //	array("name" => "mirrorpool.in", "url" => "http://mirrorpool.in/Kvirc/", "desc" => "USA mirror 2", "city" => "Chicago, United States", "maintainer" => "Slevin Black", "maintainer_mail" => "topoyr at gmail dot com"),
 	//array("name" => "kvirc.game-fm.co.uk", "url" => "ftp://kvirc.game-fm.co.uk/pub/kvirc", "desc" => "USA mirror 3", "city" => "Chicago, United States", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org")
-	array("name" => "ftp.kunduz.org", "url" => "ftp://ftp.kunduz.org/pub/kvirc", "desc" => "Turkish mirror", "city" => "Istambul, Turkey", "maintainer" => "Tolga")
+	array("name" => "ftp.kunduz.org", "url" => "ftp://ftp.kunduz.org/pub/kvirc", "desc" => "Turkish mirror", "city" => "Istambul, Turkey", "maintainer" => "Tolga"),
+	array("name" => "kvirc.cluenet.org", "url" => "http://kvirc.cluenet.org/kvirc/", "desc" => "French mirror", "city" => "Roubaix, France", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
+	array("name" => "kvirc2.cluenet.org", "url" => "http://kvirc2.cluenet.org", "desc" => "French mirror 2", "city" => "Roubaix, France", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
 );
 
 
