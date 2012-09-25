@@ -489,10 +489,23 @@ $themes = array(
 		"screen" => "darkmatter.png",
 		"release_date" => "2011.06.06",
 		"min_version" => "4.0.0"
+	),
+	array("name" => "DarkEnergy",
+		"version" => "1.0",
+		"mail" => "swarfega [at] swarfegaonline [dot] co.uk",
+		"author" => "swarfega",
+		"desc" => $template['themes']['theme43'],
+		"home" => "http://www.swarfegaonline.co.uk",
+		"download" => "DarkEnergy-1.0.kvt",
+		"screen" => "darkenergy.png",
+		"release_date" => "2012.08.05",
+		"min_version" => "4.0.0"
 	)
-/*
-	// without info, not listed
-	//array("name" => "Burst Rebird",
+	
+	/*
+	 * Without info, not listed
+	 *
+	array("name" => "Burst Rebird",
 		"version" => "0.1",
 		"mail" => "",
 		"author" => "",
@@ -501,7 +514,7 @@ $themes = array(
 		"download" => "BurstRebird-0.1.kvt",
 		"screen" => ""
 	),
-	//array("name" => "Kvinvision", "version" => "1.0",
+	array("name" => "Kvinvision", "version" => "1.0",
 		"mail" => "",
 		"author" => "LoSko",
 		"desc" => "",
@@ -509,6 +522,6 @@ $themes = array(
 		"download" => "Kvinvision-1.0.kvt",
 		"screen" => ""
 	)
-*/
+	*/
 );
 ?>
