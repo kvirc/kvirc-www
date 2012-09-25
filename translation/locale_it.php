@@ -1019,6 +1019,7 @@ $template['themes']['theme39']="Un bel tema chiaro con uno sfondo verde ad alta 
 $template['themes']['theme40']="Un tema scuro ottimizzato per lavorare su un monitor impostato alla minima lucentezza e per comunicazioni sicure.";
 $template['themes']['theme41']="Un tema luminoso dall'autore di VDark.";
 $template['themes']['theme42']="Un semplice tema scuro";
+$template['themes']['theme43']="Un semplice tema scuro";
 /* themes.php end */
 
 /* tools.php start */

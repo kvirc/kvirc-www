@@ -1021,6 +1021,7 @@ $template['themes']['theme39']="Гарна світла тема з деліка
 $template['themes']['theme40']="Темна тема, оптимізована для роботи з монітором з мінімальною яскравістю і для безпечної комунікації.";
 $template['themes']['theme41']="Світла тема від автора VDark.";
 $template['themes']['theme42']="Проста темна тема";
+$template['themes']['theme43']="Проста темна тема";
 /* themes.php end */
 
 /* tools.php start */

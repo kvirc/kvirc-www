@@ -1020,6 +1020,7 @@ $template['themes']['theme39']="A nice bright theme with a delicate high-resolut
 $template['themes']['theme40']="A dark theme optimized for working on a monitor set to minimum brightness and for secure communication.";
 $template['themes']['theme41']="A light theme from the author of VDark.";
 $template['themes']['theme42']="A simple dark theme";
+$template['themes']['theme43']="A simple dark theme";
 /* themes.php end */
 
 /* tools.php start */
