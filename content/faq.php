@@ -86,8 +86,8 @@ echo "<div class=\"column1-unit\">";
 	echo "</ul>";
 	
 	echo "<br/>";
-	
-	echo "<strong>".$template['faq']['faqonwiki']."</strong>";
+
+	echo "<font size=\"+1\"><b><strong>".$template['faq']['faqonwiki']."</strong></b></font>";
 	
 echo "</div>";
 ?>
