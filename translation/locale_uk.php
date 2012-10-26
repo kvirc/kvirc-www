@@ -389,7 +389,7 @@ $template['faq']['text18a']="KVIrc падає коли відкрите введ
 $template['faq']['text18b']="
 	Якщо ви встановили нову версію KVIrc поверх попередньої або якщо ви змінили бібліотеки Qt, до яких прив'язаний KVIrc тоді це може бути через зламану конфігурацію багаторядкового редактора.<br />
 	Спробуйте видалити \$HOME/.kvircssexeditorrc і перезапустіть KVIrc";
-$template['faq']['faqonwiki']="There is another set of frequently asked questions on <a href=\"https://svn.kvirc.de/kvirc/wiki/FAQ\">wiki</a>.";
+$template['faq']['faqonwiki']="There is another set of frequently asked questions on <a href=\"https://svn.kvirc.de/kvirc/wiki/FAQ\">the wiki</a>.";
 
 /* faq.php end */
 

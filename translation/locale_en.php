@@ -388,7 +388,7 @@ $template['faq']['text18a']="KVIrc crashes when the multiline text input is open
 $template['faq']['text18b']="
 	If you have installed a new version of KVIrc over a previous installation or if you have changed the Qt libraries that KVIrc is linked to then it might be caused by a broken multiline text editor config.<br />
 	Try removing \$HOME/.kvircssexeditorrc and starting KVIrc again";
-$template['faq']['faqonwiki']="There is another set of frequently asked questions on <a href=\"https://svn.kvirc.de/kvirc/wiki/FAQ\">wiki</a>.";
+$template['faq']['faqonwiki']="There is another set of frequently asked questions on <a href=\"https://svn.kvirc.de/kvirc/wiki/FAQ\">the wiki</a>.";
 /* faq.php end */
 
 /* features.php start */
