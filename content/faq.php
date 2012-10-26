@@ -85,5 +85,9 @@ echo "<div class=\"column1-unit\">";
 		echo "A: ".$template['faq']['text18b'].".</li>";
 	echo "</ul>";
 	
+	echo "<br/>";
+	
+	echo "<strong>".$template['faq']['faqonwiki']."</strong>";
+	
 echo "</div>";
 ?>

@@ -386,6 +386,8 @@ $template['faq']['text18a']="KVIrc crasha quando l'editor multilinea viene apert
 $template['faq']['text18b']="
 	Se hai installato una nuova versione di KVIrc sopra una vecchia installazione o hai cambiato le librerie Qt a cui KVIrc è linkato, potrebbe essere causato da una configurazione rotta dell'editor multilinea.<br />
 	Prova a rimuovere \$HOME/.kvircssexeditorrc ed a riavviare KVIrc";
+$template['faq']['faqonwiki']="Puoi trovare un'altro insieme di domande e rispose sul <a href=\"https://svn.kvirc.de/kvirc/wiki/FAQ\">wiki</a>.";
+
 /* faq.php end */
 
 /* features.php start */

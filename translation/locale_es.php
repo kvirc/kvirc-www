@@ -387,6 +387,7 @@ $template['faq']['text18a']="KVIrc falla cuando se abre el campo de entrada de t
 $template['faq']['text18b']="
 	Si has instalado una nueva versión de KVIrc sobre una instalación anterior o si has cambiado las librerías Qt a las que KVIrc está vinculado, podría estar causado por un error en al configuración.<br />
 	Prueba a eliminar \$HOME/.kvircssexeditorrc y reinicia KVIrc";
+$template['faq']['faqonwiki']="There is another set of frequently asked questions on <a href=\"https://svn.kvirc.de/kvirc/wiki/FAQ\">wiki</a>.";
 /* faq.php end */
 
 /* features.php start */
