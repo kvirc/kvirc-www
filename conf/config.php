@@ -72,8 +72,11 @@ $ftp_mirror=array(
 //	array("name" => "mirrorpool.in", "url" => "http://mirrorpool.in/Kvirc/", "desc" => "USA mirror 2", "city" => "Chicago, United States", "maintainer" => "Slevin Black", "maintainer_mail" => "topoyr at gmail dot com"),
 	//array("name" => "kvirc.game-fm.co.uk", "url" => "ftp://kvirc.game-fm.co.uk/pub/kvirc", "desc" => "USA mirror 3", "city" => "Chicago, United States", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org")
 	array("name" => "ftp.kunduz.org", "url" => "ftp://ftp.kunduz.org/pub/kvirc", "desc" => "Turkish mirror", "city" => "Istambul, Turkey", "maintainer" => "Tolga"),
-	array("name" => "kvirc.cluenet.org", "url" => "http://kvirc.cluenet.org/kvirc/", "desc" => "French mirror", "city" => "Roubaix, France", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
-	array("name" => "kvirc2.cluenet.org", "url" => "http://kvirc2.cluenet.org", "desc" => "French mirror 2", "city" => "Roubaix, France", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
+//	array("name" => "kvirc.cluenet.org", "url" => "http://kvirc.cluenet.org/kvirc/", "desc" => "French mirror", "city" => "Roubaix, France", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
+//	array("name" => "kvirc2.cluenet.org", "url" => "http://kvirc2.cluenet.org", "desc" => "French mirror 2", "city" => "Roubaix, France", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
+	array("name" => "mirrors.go-part.com (1)", "url" => "http://mirrors.go-part.com/kvirc/", "desc" => "Japanese mirror (http)", "city" => "Iso, Japan", "mantainer" => "Otoniel Ortega"),
+	array("name" => "mirrors.go-part.com (2)", "url" => "ftp://mirrors.go-part.com/kvirc/", "desc" => "Japanese mirror (ftp)", "city" => "Iso, Japan", "mantainer" => "Otoniel Ortega")
+
 );
 
 
