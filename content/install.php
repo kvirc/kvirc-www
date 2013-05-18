@@ -186,8 +186,6 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 		<?php echo $template['install']['tree16']?></li>
 		<li>-DWANT_SSL (default: ON)<br />
 		<?php echo $template['install']['tree17']?></li>
-		<li>-DWANT_CRYPTOPP (default: OFF)<br />
-		<?php echo $template['install']['tree18']?></li>
 		<li>-DWANT_CRYPT (default: ON)<br />
 		<?php echo $template['install']['tree19']?></li>
 		<li>-DWANT_IPV6 (default: ON)<br />
