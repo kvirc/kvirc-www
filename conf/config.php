@@ -356,7 +356,7 @@ $translators=array(
 	array("lang" => $template['index']['croatian'], "nick" => "SpeedyGhost", "mail" => "speedyghost [at] gmail [dot] com", "flag" => "Croatia", "unmain" => 1),
 	array("lang" => $template['index']['czech'], "nick" => "Dusan Hokuv", "mail" => "dusan [at] mirc [dot] cz", "flag" => "Czech-Republic", "unmain" => 1),
 	array("lang" => $template['index']['dutch'], "nick" => "Balboy", "mail" => "balboy [at] kvirc [dot] net", "flag" => "Netherlands", "unmain" => 1),
-	array("lang" => $template['index']['finnish'], "nick" => "", "mail" => "", "flag" => "Finland", "unmain" => 1),
+	array("lang" => $template['index']['finnish'], "nick" => "Jermakovi", "mail" => "jere.v [at] live [dot] fi", "flag" => "Finland"),
 	array("lang" => $template['index']['french'], "nick" => array("Ahinu","_Otaku"), "mail" => array("ahinu.laman [at] gmail [dot] com","notakou [at] gmail [dot] com"), "flag" => "France"),
 	array("lang" => $template['index']['german'], "nick" => "mren", "mail" => "kvirc [at] mrmx [dot] de", "flag" => "Germany"),
 	array("lang" => $template['index']['hungarian'], "nick" => "Fiber^", "mail" => "vfiber [at] gmail [dot] com", "flag" => "Hungary", "unmain" => 1),
@@ -365,7 +365,7 @@ $translators=array(
 	array("lang" => $template['index']['portuguese'], "nick" => "Ze_m", "mail" => "mmodem00 [at] netvisao [dot] pt", "flag" => "Portugal", "unmain" => 1),
 	array("lang" => $template['index']['russian'], "nick" => "Alexey", "mail" => "spam [at] kvirc [dot] ru", "flag" => "Russia", "unmain" => 1),
 	array("lang" => $template['index']['serbian'], "nick" => "Prethorian", "mail" => "preth [at] kvsky [dot] net", "flag" => "Serbia", "unmain" => 1),
-	array("lang" => $template['index']['spanish'], "nick" => "egns", "mail" => "grannost [at] gmail [dot] com", "flag" => "Spain"),
+	array("lang" => $template['index']['spanish'], "nick" => "wodim", "mail" => "neikokz [at] gmail [dot] com", "flag" => "Spain"),
 	array("lang" => $template['index']['ukrainian'], "nick" => "igorko", "mail" => "mansonigor [at] gmail [dot] com", "flag" => "Ukraine")
 );
 ?>

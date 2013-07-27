@@ -24,7 +24,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 <div class="column1-unit">
 	<p><?php echo $template['install']['text2']?>:</p>
 	<ul class="list">
-		<li><a href="?id=install&amp;lang=<?php echo $lang?>#qt">Qt GUI Toolkit 4.6</a> - <a href="javascript:opendoc('http://www.qtsoftware.com');">http://www.qtsoftware.com</a></li>
+		<li><a href="?id=install&amp;lang=<?php echo $lang?>#qt">Qt GUI Toolkit 4.6</a> - <a href="javascript:opendoc('http://qt-project.org');">http://qt-project.org</a></li>
 		<li><a href="?id=install&amp;lang=<?php echo $lang?>#cmake">CMake 2.6.4</a> - <a href="javascript:opendoc('http://www.cmake.org');">http://www.cmake.org</a></li>
 		<li><a href="?id=install&amp;lang=<?php echo $lang?>#cpp">C++ compiler</a> - <a href="javascript:opendoc('http://gcc.gnu.org');">http://gcc.gnu.org</a></li>
 		<li><a href="?id=install&amp;lang=<?php echo $lang?>#pthread">Pthread</a></li>
