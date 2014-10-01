@@ -37,6 +37,6 @@ echo "<div class=\"column1-unit\">";
 	echo "<p>31.08.2014: 15 EUR ".$template['donate']['donation']." Dan Derebenskiy (<a href=\"http://www.go-parts.com/\" target=\"_blank\">Go-Parts</a>)</p>";
 echo "</div>";
 echo "<div class=\"column1-unit\">";
-	echo "<p>01.10.2014: 100 EUR ".$template['donate']['donation']." <a href=\"https://github.com/SolarAquarion\" target=\"_blank\">Michele Choina</a></p>";
+	echo "<p>01.10.2014: 100 EUR ".$template['donate']['donation']." <a href=\"https://github.com/SolarAquarion\" target=\"_blank\">Solomon</a></p>";
 echo "</div>";
 ?>
