@@ -31,9 +31,12 @@ echo "</div>";
 
 echo "<h1 class=\"pagetitle\">".$template['donate']['title2']."</h1>";
 echo "<div class=\"column1-unit\">";
-	echo "<p>17.06.2006: 15 USD ".$template['donate']['donation']." Iulian Topliceanu (<a href=\"http://anaaman.blogspot.com/\">".$template['custom']['homepage']."</a>)</p>";
+	echo "<p>17.06.2006: 15 USD ".$template['donate']['donation']." Iulian Topliceanu (<a href=\"http://anaaman.blogspot.com/\" target=\"_blank\">".$template['custom']['homepage']."</a>)</p>";
 echo "</div>";
 echo "<div class=\"column1-unit\">";
-	echo "<p>31.08.2014: 15 EUR ".$template['donate']['donation']." Dan Derebenskiy (<a href=\"http://www.go-parts.com/\">Go-Parts</a>)</p>";
+	echo "<p>31.08.2014: 15 EUR ".$template['donate']['donation']." Dan Derebenskiy (<a href=\"http://www.go-parts.com/\" target=\"_blank\">Go-Parts</a>)</p>";
+echo "</div>";
+echo "<div class=\"column1-unit\">";
+	echo "<p>01.10.2014: 100 EUR ".$template['donate']['donation']." <a href=\"https://github.com/SolarAquarion\" target=\"_blank\">Michele Choina</a></p>";
 echo "</div>";
 ?>
