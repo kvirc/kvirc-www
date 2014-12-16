@@ -1,7 +1,7 @@
 @@title:
-64 bit windows packages
-@@short:
 64 bit windows builds available
+@@short:
+64 bit windows packages
 @@author:
 Szymon Stefanek (pragma at kvirc dot net)
 @@body:
