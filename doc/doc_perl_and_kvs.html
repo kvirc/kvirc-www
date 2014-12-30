@@ -41,7 +41,7 @@ This feature is present only if a working perl installation
 has been found at build time.<br>
 <br>
 </td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Using perl from KVS</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
-Using perl from <a href="doc_kvircintro.html">KVIrc</a> is really easy: just enclose
+Using perl from <a href="doc_kvircintro.html">KVIrc</a> is really easy - just enclose
 your perl code snippet inside <a href="cmd_perl.begin.html">perl.begin</a> and <a href="cmd_perl.end.html">perl.end</a>.
 <p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000"><a href="cmd_perl.begin.html">perl.begin</a>
 &lt;perl code goes here&gt;
@@ -55,11 +55,11 @@ close(MYFILE);
 <a href="cmd_perl.end.html">perl.end</a>
 </font></code></pre></td></tr></table></p>
 A perl code snippet can appear anywhere a <a href="doc_kvs_introduction.html">KVS</a> code snippet can
-with the only restriction that i must be enclosed in <a href="cmd_perl.begin.html">perl.begin</a>
+with the only restriction that it must be enclosed in <a href="cmd_perl.begin.html">perl.begin</a>
 and <a href="cmd_perl.end.html">perl.end</a>. This means that you can write perl code
 in the commandline, in the <a href="doc_aliases.html">aliases</a>, the <a href="doc_events.html">event handlers</a>, popups...anywhere.<br>
-If you have already encountered the <a href="doc_kvircintro.html">KVIrc</a>'s <a href="cmd_eval.html">eval</a> command
-that you probably also know how to execute a perl code snippet from a file :)<br>
+If you have already encountered <a href="doc_kvircintro.html">KVIrc</a>'s <a href="cmd_eval.html">eval</a> command
+then you probably also know how to execute a perl code snippet from a file :)<br>
 <br>
 </td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Using <a href="doc_kvs_introduction.html">KVS</a> from perl</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 <a href="doc_kvircintro.html">KVIrc</a> exports several commands to the perl namespace
@@ -78,16 +78,17 @@ is the equivalent of the -w option. Both &lt;colorset&gt; and &lt;windowid&gt;
 can be omitted (in this case <a href="doc_kvircintro.html">KVIrc</a> will use a default colorset and the current window).<br>
 <br>
 </td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Perl execution contexts</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
-The perl code snippets are executed by the means of a perl interpreter.
-Each perl interpreter has its own context and thus it's own <a href="doc_kvs_datatypes.html">variables</a>,
+The perl code snippets are executed by a perl interpreter - each
+interpreter has its own context and thus its own <a href="doc_kvs_datatypes.html">variables</a>,
 own function namespace etc.<br>
 <br>
-In the example above <a href="doc_kvircintro.html">KVIrc</a> creates an interpreter when <a href="cmd_perl.begin.html">perl.begin</a>
+In the example above, <a href="doc_kvircintro.html">KVIrc</a> creates an interpreter when <a href="cmd_perl.begin.html">perl.begin</a>
 is invoked and destroys it at <a href="cmd_perl.end.html">perl.end</a> parsing time.
 In fact, <a href="doc_kvircintro.html">KVIrc</a> can mantain multiple persistent interpreters that will
 allow you to preserve your context across <a href="cmd_perl.begin.html">perl.begin</a> invocations.<br>
+<br>
 You can invoke a specific perl context by passing it as parameter to the <a href="cmd_perl.begin.html">perl.begin</a>
-command.<br>
+command:<br>
 <p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">[cmd]perl.begin("mycontext")[/cmd]
 $myvariable = "mycontext";
 <a href="doc_kvircintro.html">KVIrc</a>::echo("This perl code is executed from ".$myvariable);
@@ -99,31 +100,32 @@ and discover that $mycontext has preserved its value:<br>
 <a href="doc_kvircintro.html">KVIrc</a>::echo("myvariable is still equal to ".$myvariable);
 <a href="cmd_perl.end.html">perl.end</a>
 </font></code></pre></td></tr></table></p>
-The first time you invoke a named perl context it gets automatically created and
+The first time you invoke a named perl context it is automatically created and
 it persists until <a href="doc_kvircintro.html">KVIrc</a> terminates or the perl context is explicitly destroyed
-by the means of <a href="cmd_perl.destroy.html">perl.destroy</a>.<br>
+by <a href="cmd_perl.destroy.html">perl.destroy</a>.<br>
 <br>
-In fact there is a third possibility to destroy a context: it's when the
-perlcore module is forcibly unloaded (by the means of /perlcore.unload) but
-this is really a rare case and should be threated just like a <a href="doc_kvircintro.html">KVIrc</a> restart (the
+There is a third possibility to destroy a context - when the
+perlcore module is forcibly unloaded (by the means of /perlcore.unload). This
+is however a rare case and should be treated just like a <a href="doc_kvircintro.html">KVIrc</a> restart (the
 user probably WANTS the contexts to be reinitialized).<br>
 <br>
-The nice thing is that not only your <a href="doc_kvs_datatypes.html">variables</a> will get preserved
-but also any perl function or <a href="class_object.html">class</a> you declare in a context will persist.
+The nice thing is that not only will your <a href="doc_kvs_datatypes.html">variables</a> be preserved, any perl
+function or <a href="class_object.html">class</a> you declare in a context will persist.
 It's just like executing a long perl <a href="doc_kvs_basicconcepts.html">script</a> file with pauses inside.<br>
 <br>
 If you omit the perl context name in the <a href="cmd_perl.begin.html">perl.begin</a> command
-(or if you use an empty string in it's place)
+(or if you use an empty string in its place)
 then <a href="doc_kvircintro.html">KVIrc</a> will create a temporary context for the snippet execution
 and will destroy it immediately after <a href="cmd_perl.end.html">perl.end</a> has been called.<br>
 <br>
 The major side effect of keeping persistent perl contexts is that
-the perl's symbol table will grow and if not used carefully the interpreter
-may become a memory hog. So if you're going to use persistent contexts
+perl's symbol table will grow, and if not used carefully, the interpreter
+may become a memory hog. So if you're going to use persistent contexts,
 either try to keep the symbol table clean or explicitly call <a href="cmd_perl.destroy.html">perl.destroy</a>
 once in a while to recreate the interpreter.<br>
-If you just execute occasional perl code snippets and don't need to keep persistent <a href="doc_kvs_datatypes.html">variables</a>
-then just use the nameless temporary context provided by <a href="cmd_perl.begin.html">perl.begin</a>("").<br>
+If you just execute occasional perl code snippets and don't need to keep
+persistent <a href="doc_kvs_datatypes.html">variables</a>, then just use the nameless temporary context provided
+by <a href="cmd_perl.begin.html">perl.begin</a>("").<br>
 <br>
 </td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Passing parameters to the perl script</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 The easiest way to pass parameters to the perl code snippet
@@ -139,17 +141,17 @@ for($i=0;$i&lt;5;$i++)
 </font></code></pre></td></tr></table></p>
 <br>
 </td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Accessing the <a href="doc_kvircintro.html">KVIrc</a> scripting context from perl</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
-<a href="doc_kvircintro.html">KVIrc</a> exposes the following <a href="doc_kvs_aliasesandfunctions.html">functions</a> that manipulate the
-<a href="doc_kvs_datatypes.html">variables</a> of the <a href="doc_kvircintro.html">KVIrc</a>'s current <a href="doc_kvs_introduction.html">KVS</a> execution context.<br>
+<a href="doc_kvircintro.html">KVIrc</a> exposes the following <a href="doc_kvs_aliasesandfunctions.html">functions</a> that manipulate
+<a href="doc_kvs_datatypes.html">variables</a> of the <a href="doc_kvircintro.html">KVIrc</a>'s current <a href="doc_kvs_introduction.html">KVS</a> execution context:<br>
 &nbsp; &nbsp; <b>KVIrc::getLocal(&lt;x&gt;)</b><br>
 Returns the value of the <a href="doc_kvircintro.html">KVIrc</a>'s <a href="doc_kvs_datatypes.html">local variable</a> %x.<br>
 &nbsp; &nbsp; <b>KVIrc::getGlobal(&lt;Y&gt;)</b><br>
 Returns the value of the <a href="doc_kvircintro.html">KVIrc</a>'s <a href="doc_kvs_datatypes.html">global variable</a> %Y.<br>
 &nbsp; &nbsp; <b>KVIrc::setLocal(&lt;x&gt;,&lt;value&gt;)</b><br>
-Sets the <a href="doc_kvircintro.html">KVIrc</a>'s <a href="doc_kvs_datatypes.html">global variable</a> %x to &lt;value&gt;<br>
+Sets <a href="doc_kvircintro.html">KVIrc</a>'s <a href="doc_kvs_datatypes.html">local variable</a> %x to &lt;value&gt;<br>
 &nbsp; &nbsp; <b>KVIrc::setGlobal(&lt;Y&gt;,&lt;value&gt;)</b><br>
-Sets the <a href="doc_kvircintro.html">KVIrc</a>'s <a href="doc_kvs_datatypes.html">global variable</a> %Y to &lt;value&gt;<br>
-The <a href="doc_kvs_datatypes.html">local variables</a> interested belong to the current <a href="doc_kvs_introduction.html">KVS</a> exection context
+Sets <a href="doc_kvircintro.html">KVIrc</a>'s <a href="doc_kvs_datatypes.html">global variable</a> %Y to &lt;value&gt;<br>
+The <a href="doc_kvs_datatypes.html">local variables</a> referenced belong to the current <a href="doc_kvs_introduction.html">KVS</a> exection context
 while the <a href="doc_kvs_datatypes.html">global variables</a> are visible everywhere.<br>
 <p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">%pippo = test
 %Pluto = 12345
@@ -166,10 +168,10 @@ $mypluto =~ s/23/xx/g;
 </font></code></pre></td></tr></table></p>
 <br>
 </td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Executing arbitrary <a href="doc_kvircintro.html">KVIrc</a> commands from perl</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
-You can execute arbitrary <a href="doc_kvs_introduction.html">KVS</a> commands from perl by the means of:<br>
+You can execute arbitrary <a href="doc_kvs_introduction.html">KVS</a> commands from perl by means of:<br>
 &nbsp; &nbsp; <b>KVIrc::eval(&lt;code&gt;)</b><br>
-This function behaves exactly like the ${ &lt;code&gt; } <a href="doc_kvs_introduction.html">KVS</a> construct:
-it executes &lt;code&gt; in a child context and returns it's evaluation retult.<br>
+This function behaves exactly like the ${ &lt;code&gt; } <a href="doc_kvs_introduction.html">KVS</a> construct -
+it executes &lt;code&gt; in a child context and returns its evaluation result.<br>
 The following two code snippets have equivalent visible effects:<br>
 <p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000"><a href="cmd_echo.html">echo</a> ${ return "Yeah!"; }
 </font></code></pre></td></tr></table></p>
@@ -177,9 +179,9 @@ The following two code snippets have equivalent visible effects:<br>
 <a href="doc_kvircintro.html">KVIrc</a>::echo(<a href="doc_kvircintro.html">KVIrc</a>::eval("return \"Yeah!\""));
 <a href="cmd_perl.end.html">perl.end</a>
 </font></code></pre></td></tr></table></p>
-You can "eval" composite command sequences and <a href="doc_kvs_datatypes.html">variable</a> ones.<br>
+You can "eval" compound command sequences and <a href="doc_kvs_datatypes.html">variable</a> ones.<br>
 Remember that the perl code snippet is evaluated in a child <a href="doc_kvs_introduction.html">KVS</a> context
-and thus the <a href="doc_kvs_datatypes.html">local variables</a> are NOT visible!.
+and thus the <a href="doc_kvs_datatypes.html">local variables</a> are NOT visible!
 The following code snippets may easily fool you:<br>
 <p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">%x = 10
 <a href="cmd_perl.begin.html">perl.begin</a>
@@ -194,10 +196,8 @@ $x = <a href="doc_kvircintro.html">KVIrc</a>::getLocal("x");
 <a href="doc_kvircintro.html">KVIrc</a>::eval("echo \"The value is ".$x."\"");
 <a href="cmd_perl.end.html">perl.end</a>
 </font></code></pre></td></tr></table></p>
-<br>
-Note also that you must either escape the $ at the beginning of the <a href="doc_kvircintro.html">KVIrc</a> identifiers
-or use the single quotes to prevent perl from catching the $ as the beginning of
-a <a href="doc_kvs_datatypes.html">variable</a>.
+Note also that you must either escape the $ at the beginning of <a href="doc_kvircintro.html">KVIrc</a> identifiers
+or use single quotes to prevent perl from interpreting the $ as the beginning of a <a href="doc_kvs_datatypes.html">variable</a>.
 <p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000"><font color="#207500"># This will not work as expected</font>
 <a href="cmd_perl.begin.html">perl.begin</a>
 <a href="doc_kvircintro.html">KVIrc</a>::echo(<a href="doc_kvircintro.html">KVIrc</a>::eval("return $window.caption"));
@@ -209,8 +209,8 @@ a <a href="doc_kvs_datatypes.html">variable</a>.
 <a href="cmd_perl.end.html">perl.end</a>
 </font></code></pre></td></tr></table></p>
 </td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">A shortcut for <a href="doc_kvircintro.html">KVIrc</a>::eval("/say...")</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
-Since <a href="doc_kvircintro.html">KVIrc</a>::eval("/say...") is a common calling pattern then say
-has been added to the <a href="doc_kvircintro.html">KVIrc</a> perl namespace. You can now call
+Since <a href="doc_kvircintro.html">KVIrc</a>::eval("/say...") is a common calling pattern, say has been added
+to the <a href="doc_kvircintro.html">KVIrc</a> perl namespace. You can now call
 <p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">KVIrc::say("Hi all!");
 </font></code></pre></td></tr></table></p>
 and that will mimic the behaviour of
@@ -220,13 +220,19 @@ The complete syntax for <a href="doc_kvircintro.html">KVIrc</a>::say() is:<br>
 &nbsp; &nbsp; <b>KVIrc::say(&lt;text&gt;[,&lt;windowid&gt;])</b><br>
 and the semantics are obvious (see also /<a href="cmd_say.html">say</a>).
 <br>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">The perl <a href="doc_kvs_basicconcepts.html">script</a> return values</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Perl <a href="doc_kvs_basicconcepts.html">script</a> return values</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 The <a href="cmd_perl.begin.html">perl.begin</a> command propagates the perl code return
-value to the <a href="doc_kvircintro.html">KVIrc</a> context (just like a setreturn() would do).<br>
-In fact the perl snippet return value is the last "thing" that
-the interpreter evaluates.<br>
-In this way you can write perl <a href="doc_aliases.html">aliases</a> that return values
-without doing any <a href="doc_kvs_datatypes.html">variable</a> passing equilibrism.<br>
+value to the <a href="doc_kvircintro.html">KVIrc</a> context (just like a <a href="cmd_setreturn.html">setreturn</a>() would do)
+- this makes it easier to create an alias that executes a perl <a href="doc_kvs_basicconcepts.html">script</a> and
+returns its result.<br>
+<br>
+Without this automatic propagation, you would be forced to play with <a href="doc_kvs_datatypes.html">variables</a>:
+<ul>
+<li>First use <b>KVIrc::setLocal("var",123)</b> from inside the
+perl <a href="doc_kvs_basicconcepts.html">script</a>;</li>
+<li>Then, from the <a href="doc_kvircintro.html">KVIrc</a> <a href="doc_kvs_basicconcepts.html">script</a> after <a href="cmd_perl.end.html">perl.end</a>, retrieve the
+%var <a href="doc_kvs_datatypes.html">variable</a>, check its value and call <a href="cmd_setreturn.html">setreturn</a>() on it.</li>
+</ul>
 <br>
 </td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Executing perl scripts from files</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 <p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000"><a href="cmd_alias.html">alias</a>(perlexec)
@@ -242,10 +248,10 @@ perlexec "/home/pragma/myperlscript.pl" "param1" "param2" "param3"
 </font></code></pre></td></tr></table></p>
 <br>
 </td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Other tricks</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
-An interesting feature of the persistent perl contexts is
-that you can prepare a context for a later fast execution.<br>
-The idea is to declare perl <a href="doc_kvs_aliasesandfunctions.html">functions</a> in a single perl code snippet
-and to call the single <a href="doc_kvs_aliasesandfunctions.html">functions</a> when a fast execution is needed.<br>
+An interesting feature of persistent perl contexts is that you can prepare a
+context for later fast execution.<br>
+The idea is to declare all perl <a href="doc_kvs_aliasesandfunctions.html">functions</a> in a single perl code snippet
+then call single <a href="doc_kvs_aliasesandfunctions.html">functions</a> when fast execution is needed.<br>
 For example you might parse the following snippet at <a href="doc_kvircintro.html">KVIrc</a>'s startup:<br>
 <p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000"><a href="cmd_perl.begin.html">perl.begin</a>("persistent")
 sub handler_for_event_1
@@ -267,21 +273,20 @@ handler_for_event_1($_[0],$_[1])
 </td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Curiosity</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 The perl support in <a href="doc_kvircintro.html">KVIrc</a> is implemented as a master-slave module pair.
 The perl.* module is the master while perlcore is the slave.
-When the perl support isn't compiled in, the perl.* commands
+When perl support isn't compiled in, the perl.* commands
 print some warnings and exit gracefully while the perlcore module
 refuses to be loaded. When perl support is compiled in but
-for some reason the libperl.so can't be found or loaded
-then perlcore fails the dynamic loading stage but perl.* still fails
-gracefully with just some warning messages. This trick allows
-the scripters to check for perl support with <a href="fnc_perl.isavailable.html">$perl.isavailable</a>
-and to embed perl code snippets in <a href="doc_kvs_introduction.html">KVS</a> even if the support is missing.
-The snippets will be just skipped.<br>
+for some reason the libperl.so can't be found or loaded, perlcore fails
+the dynamic loading stage, however perl.* only fails gracefully with warning
+messages. This trick allows scripters to check for perl
+support with <a href="fnc_perl.isavailable.html">$perl.isavailable</a> and to embed perl code snippets
+in <a href="doc_kvs_introduction.html">KVS</a> even if the support is missing - the snippets will be just skipped.<br>
 <br>
 Happy perl hacking :)<br>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
-<hr>KVIrc 4.3.1.6251 Documentation<br>Generated by hellvis69 at Tue Sep 25 19:00:49 2012
+<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
 </body>
 </html>

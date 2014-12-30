@@ -482,7 +482,7 @@ body {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.connectiontype.html">$dcc.connectionType</a></td>
-  <td>Returns the connection type of the specified DCC</td>
+  <td>Returns the connection type of the specified DCC session</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.getsslcertinfo.html">$dcc.getSSLCertInfo</a></td>
@@ -506,63 +506,63 @@ body {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.localfilename.html">$dcc.localFileName</a></td>
-  <td>Returns the local file name associated with the specified DCC</td>
+  <td>Returns the local file name associated with the specified DCC session</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.localfilesize.html">$dcc.localFileSize</a></td>
-  <td>Returns the local file size associated with the specified DCC</td>
+  <td>Returns the local file size associated with the specified DCC session</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.localhost.html">$dcc.localHost</a></td>
-  <td>Returns the local hostname associated with the specified DCC</td>
+  <td>Returns the local hostname associated with the specified DCC session</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.localip.html">$dcc.localIp</a></td>
-  <td>Returns the local ip address associated with the specified DCC</td>
+  <td>Returns the local ip address associated with the specified DCC session</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.localnick.html">$dcc.localNick</a></td>
-  <td>Returns the local nickname associated with the specified DCC</td>
+  <td>Returns the local nickname associated with the specified DCC session</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.localport.html">$dcc.localPort</a></td>
-  <td>Returns the local port associated with the specified DCC</td>
+  <td>Returns the local port associated with the specified DCC session</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.localuser.html">$dcc.localUser</a></td>
-  <td>Returns the local username associated with the specified DCC</td>
+  <td>Returns the local username associated with the specified DCC session</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.protocol.html">$dcc.protocol</a></td>
-  <td>Returns the protocol of the specified DCC</td>
+  <td>Returns the protocol of the specified DCC session</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.remotefilename.html">$dcc.remoteFileName</a></td>
-  <td>Returns the remote file name associated with the specified DCC</td>
+  <td>Returns the remote file name associated with the specified DCC session</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.remotefilesize.html">$dcc.remoteFileSize</a></td>
-  <td>Returns the remote file size associated with the specified DCC</td>
+  <td>Returns the remote file size associated with the specified DCC session</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.remotehost.html">$dcc.remoteHost</a></td>
-  <td>Returns the remote hostname associated with the specified DCC</td>
+  <td>Returns the remote hostname associated with the specified DCC session</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.remoteip.html">$dcc.remoteIp</a></td>
-  <td>Returns the remote ip address associated with the specified DCC</td>
+  <td>Returns the remote ip address associated with the specified DCC session</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.remotenick.html">$dcc.remoteNick</a></td>
-  <td>Returns the remote nickname associated with the specified DCC</td>
+  <td>Returns the remote nickname associated with the specified DCC session</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.remoteport.html">$dcc.remotePort</a></td>
-  <td>Returns the remote port associated with the specified DCC</td>
+  <td>Returns the remote port associated with the specified DCC session</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.remoteuser.html">$dcc.remoteUser</a></td>
-  <td>Returns the remote username associated with the specified DCC</td>
+  <td>Returns the remote username associated with the specified DCC session</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_dcc.session.html">$dcc.session</a></td>
@@ -1081,8 +1081,28 @@ body {
   <td>List all the functions .</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="fnc_objects.classes.html">$objects.classes</a></td>
+  <td>List user defined classes</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="fnc_objects.dump.html">$objects.dump</a></td>
   <td>Dump the kvirc widgets.</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="fnc_objects.exists.html">$objects.exists</a></td>
+  <td>Check if an object exists.</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="fnc_objects.instances.html">$objects.instances</a></td>
+  <td>List object instances</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="fnc_objects.name.html">$objects.name</a></td>
+  <td>Returns class name</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="fnc_objects.variables.html">$objects.variables</a></td>
+  <td>List object's variables.</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_option.html">$option</a></td>
@@ -1361,6 +1381,14 @@ body {
   <td>Sorts an array</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="fnc_spellchecker.available_dictionaries.html">$spellchecker.available_dictionaries</a></td>
+  <td>Return available dictionaries.</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="fnc_spellchecker.check.html">$spellchecker.check</a></td>
+  <td>Check a single work for spelling mistakes.</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.append.html">$str.append</a></td>
   <td>Append one string to another.</td>
 </tr>
@@ -1398,7 +1426,7 @@ body {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.find.html">$str.find</a></td>
-  <td>Find the index of the nth ocurrence of a substring in a string</td>
+  <td>Find the index of the nth occurrence of a substring in a string</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.findfirst.html">$str.findfirst</a></td>
@@ -1446,7 +1474,7 @@ body {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.lefttolast.html">$str.lefttolast</a></td>
-  <td>Returns the left part of a string until the last ocurrence of a given substring</td>
+  <td>Returns the left part of a string until the last occurrence of a given substring</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.len.html">$str.len</a></td>
@@ -1494,11 +1522,11 @@ body {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.rightfromfirst.html">$str.rightfromfirst</a></td>
-  <td>Returns the right part of a string from the first ocurrence of a given substring</td>
+  <td>Returns the right part of a string from the first occurrence of a given substring</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.rightfromlast.html">$str.rightfromlast</a></td>
-  <td>Returns the right part of a string from the last ocurrence of a given substring</td>
+  <td>Returns the right part of a string from the last occurrence of a given substring</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.section.html">$str.section</a></td>
@@ -1571,6 +1599,14 @@ body {
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_system.hostname.html">$system.hostname</a></td>
   <td>Returns the hostname of the machine that KVIrc is running on</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="fnc_system.htoni.html">$system.htoni</a></td>
+  <td>Convert an integer from host to network byte order.</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="fnc_system.ntohi.html">$system.ntohi</a></td>
+  <td>Convert an integer from network to host byte order.</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_system.osmachine.html">$system.osmachine</a></td>
@@ -1777,6 +1813,10 @@ body {
   <td>Returns the IRC context of a window</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="fnc_$window.cryptengine.html">$window.cryptEngine</a></td>
+  <td>Returns the name of the crypt engine currently set in a window</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="fnc_window.exists.html">$window.exists</a></td>
   <td>Checks for the existence of a window</td>
 </tr>
@@ -1828,18 +1868,6 @@ body {
   <td><a href="fnc_window.html">$window</a></td>
   <td>Retrieve the id of a specified window.</td>
 </tr>
-<tr bgcolor="#EAEAEA">
-  <td><a href="fnc_objects.classallhandlers.html">objects.classAllHandlers</a></td>
-  <td>List all the functions .</td>
-</tr>
-<tr bgcolor="#EAEAEA">
-  <td><a href="fnc_theme.info.html">theme.info</a></td>
-  <td>Return info about an user defined theme.</td>
-</tr>
-<tr bgcolor="#EAEAEA">
-  <td><a href="fnc_theme.list.html">theme.list</a></td>
-  <td>Return a list of the installed themes.</td>
-</tr>
 </table>
 <table width="100%" cellpadding="3" cellspacing="1" border="0">
   <tr bgcolor="#EAEAEA">
@@ -1874,6 +1902,6 @@ body {
  <td><a href="doc_function_index_all.html">All</a></td></tr></table></td>
   </tr>
 </table>
-<hr>KVIrc 4.3.1.6251 Documentation<br>Generated by hellvis69 at Tue Sep 25 19:00:49 2012
+<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
 </body>
 </html>

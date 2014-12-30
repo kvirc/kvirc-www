@@ -79,26 +79,26 @@ name cannot be installed. The second parameter is the addon version. It should
 be expressed in the classic format [major].[minor].[pathlevel] or something
 really similar (in fact <a href="doc_kvircintro.html">KVIrc</a> just expects the version to be a string composed
 of numbers separated by dots). The version is compared when an addon is
-installed and <a href="doc_kvircintro.html">KVIrc</a> complains if the user tries to downgrade an addon (that is 
+installed and <a href="doc_kvircintro.html">KVIrc</a> complains if the user tries to downgrade an addon (that is
 to install a less recent version over a more recent one). The third parameter
 is the visible name of your addon: it will be displayed to the user in the
 addon management dialog. It can contain the <a href="fnc_tr.html">$tr</a> function so you
 can have it translated to several languages. The fourth parameter
-is a short description of the feature that the addon implements; it can 
+is a short description of the feature that the addon implements; it can
 contain the $tr() function too. The fifth parameter is the minimal <a href="doc_kvircintro.html">KVIrc</a>
 version required to run the addon. The sixth parameter is the icon to show in
-the manager: it has to be 32x32 pixel big. There are also some switches that 
+the manager: it has to be 32x32 pixel big. There are also some switches that
 can be used to fiddle a little bit more :)
 </p>
 <p>
 The callback instruction that follows the registration command is the
 uninstallation code. <a href="doc_kvircintro.html">KVIrc</a> will invoke it when the user will ask for your
 addon to be uninstalled. Don't assume that your addon will be never
-uninstalled: sooner or later it will be. For example, when upgrading an addon 
+uninstalled: sooner or later it will be. For example, when upgrading an addon
 <a href="doc_kvircintro.html">KVIrc</a> will first uninstall the existing version and after that install the new
 one. The uninstallation <a href="class_process.html">process</a> is a very important requisite for any program
 (in any programming language). In the example above there is nothing to
-uninstall (yet) so the callback code is empty, but if you continue reading we 
+uninstall (yet) so the callback code is empty, but if you continue reading we
 will soon fill it.
 To uninstall all files which are not automatically spotted by the installation
 <a href="class_process.html">process</a>, you need to write an alias which handles them.
@@ -172,13 +172,10 @@ The <b>initialization script</b> has to be named init.<a href="doc_kvs_introduct
 routines to register your addon.
 <p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Register classes</font>
 &nbsp;&nbsp;&nbsp;&nbsp;MyAddon::classes::register
-&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Initialize events</font>
 &nbsp;&nbsp;&nbsp;&nbsp;MyAddon::<a href="doc_events.html">events</a>::init
-&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Load configuration</font>
 &nbsp;&nbsp;&nbsp;&nbsp;MyAddon::config::load
-&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Setup popups</font>
 &nbsp;&nbsp;&nbsp;&nbsp;defpopup("MyAddon")
 &nbsp;&nbsp;&nbsp;&nbsp;{
@@ -187,7 +184,6 @@ routines to register your addon.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
 &nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Set options</font>
 &nbsp;&nbsp;&nbsp;&nbsp;option boolAutoAcceptDccSend 1
 &nbsp;&nbsp;&nbsp;&nbsp;option boolShowMinimizedDebugWindow 1
@@ -200,10 +196,8 @@ File names should contain the namespace of the addon, the optional subnamespace
 and the name of the feature like $addonNS_$subNS_[$subNS_[...]]$name.<a href="doc_kvs_introduction.html">kvs</a>
 <p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># A <a href="class_object.html">class</a> which handles a database</font>
 &nbsp;&nbsp;&nbsp;&nbsp;MyAddon_classes_database.<a href="doc_kvs_introduction.html">kvs</a>
-&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># A <a href="class_object.html">class</a> which handles the options of our addon in a GUI</font>
 &nbsp;&nbsp;&nbsp;&nbsp;MyAddon_classes_gui_options.<a href="doc_kvs_introduction.html">kvs</a>
-&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># A <a href="doc_kvs_basicconcepts.html">script</a> containing some <a href="cmd_log.flush.html">logging</a> functions</font>
 &nbsp;&nbsp;&nbsp;&nbsp;MyAddon_functions_logging.<a href="doc_kvs_introduction.html">kvs</a>
 </font></code></pre></td></tr></table></p>
@@ -219,7 +213,7 @@ which store the configuration of your addon and must end with the .kvc
 extension.
 </p>
 <p>
-The "<b>pics</b>" and "<b>sound</b>" (if relevant) directories should contain 
+The "<b>pics</b>" and "<b>sound</b>" (if relevant) directories should contain
 your multimedia files. I's a good idea to have your pics file in PNG format
 and sound files in WAV format.
 </p>
@@ -244,7 +238,6 @@ your own addon. The name of the classes refer to the ones described above.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MyAddon::classes::gui::options, \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Scan the <a href="doc_kvs_datatypes.html">array</a> and register the classes</font>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(%i=0; %i &lt; <a href="fnc_length.html">$length</a>(%classes[]); %i++)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
@@ -255,7 +248,6 @@ your own addon. The name of the classes refer to the ones described above.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_eval.html">eval</a> %classes[%i]
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
 &nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Initialize events</font>
 &nbsp;&nbsp;&nbsp;&nbsp;alias(MyAddon::<a href="doc_events.html">events</a>::init)
 &nbsp;&nbsp;&nbsp;&nbsp;{
@@ -272,7 +264,6 @@ your own addon. The name of the classes refer to the ones described above.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
 &nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Load configuration</font>
 &nbsp;&nbsp;&nbsp;&nbsp;alias(MyAddon::config::load)
 &nbsp;&nbsp;&nbsp;&nbsp;{
@@ -281,15 +272,12 @@ your own addon. The name of the classes refer to the ones described above.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MyAddon::classes::register
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Sets some variables</font>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%MyAddonConfig = <a href="fnc_new.html">$new</a>(MyAddon::classes::ConfHandler)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%MyAddonConfigPath = <a href="fnc_file.localdir.html">$file.localdir</a>(config/scripts/MyAddon)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Open the configuration file and sets the section "general"</font>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%c = <a href="fnc_config.open.html">$config.open</a>(%MyAddonConfigPath/MyAddon.kvc,"r")
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_config.setsection.html">config.setsection</a> %c general
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Store the value of the key "Key" in the <a href="doc_kvs_datatypes.html">global variable</a> %Key</font>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%Key = <a href="fnc_config.read.html">$config.read</a>(%c,"Key",2)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
@@ -343,6 +331,6 @@ Have fun! :)
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
-<hr>KVIrc 4.3.1.6251 Documentation<br>Generated by hellvis69 at Tue Sep 25 19:00:49 2012
+<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
 </body>
 </html>
