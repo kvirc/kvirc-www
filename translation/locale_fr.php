@@ -1031,6 +1031,7 @@ $template['tools']['tool2']="Un simple tcl pour eggdrops qui leur permettra de r
 $template['tools']['tool3']="Script tcl pour eggdrops servant à avoir les news des fluxs RSS SVN et Trac avec des commandes publiques";
 $template['tools']['tool4']="A simple script written in TCL to check for GetText translation files and report possible errors";
 $template['tools']['tool5']="A simple PHP-CLI script which converts KVIrc-formatted logs to plain text stripping color codes and control chars";
+$template['tools']['tool6']="A simple plugin for Supybot to make it reply to some CTCP requests";
 /* tools.php end */
 
 /* translation.php start */

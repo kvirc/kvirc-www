@@ -1032,6 +1032,7 @@ $template['tools']['tool2']="Ein einfaches TCL-Skript für eggdrop-Bots, damit d
 $template['tools']['tool3']="Ein RSS-Sydikations-TCL-Skript für eggdrop-Bots, um diese per Befehl SVN- und RSS-Feeds abrufen zu lassen.";
 $template['tools']['tool4']="Ein einfaches TCL-Skript, um gettext-Übersetzungen zu prüfen und evtl. Fehler zu melden";
 $template['tools']['tool5']="Ein einfaches PHP-CLI-Skript, welches KVIrc-Logs in einfachen Text wandelt, indem es Farbcodes und Kontrollzeichen entfernt";
+$template['tools']['tool6']="A simple plugin for Supybot to make it reply to some CTCP requests";
 /* tools.php end */
 
 /* translation.php start */
