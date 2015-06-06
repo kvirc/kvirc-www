@@ -45,9 +45,6 @@ search();
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="alternate" type="application/rss+xml" href="rss.php"  title="KVIrc News" />
 	<script type="text/javascript" src="conf/functions.js"></script>
-	<!-- Google Analytics start -->
-	<script type="text/javascript" src="http://www.google-analytics.com/urchin.js"></script>
-	<!-- Google Analytics end -->
 	<title>KVIrc.net - The Visual IRC Client</title>
 </head>
 <body>
