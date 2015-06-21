@@ -32,7 +32,7 @@ $template['index']['bugtrack']="rapport de bugs";
 // running kvirc
 $template['index']['running']="lancer KVIrc";
 $template['index']['download']="télécharger";
-$template['index']['releases']="releases officieles";
+$template['index']['releases']="versions officielles";
 $template['index']['snapshots']="snapshots";
 $template['index']['svn']="SVN";
 $template['index']['install']="installation";
@@ -40,11 +40,12 @@ $template['index']['install']="installation";
 $template['index']['docs']="documentation";
 $template['index']['faq']="FAQ";
 $template['index']['api']="API";
-$template['index']['doc']="manuel KVIrc";
+$template['index']['doc']="manuel de KVIrc";
 $template['index']['tutorials']="tutoriels";
 $template['index']['translations']="traductions";
 $template['index']['shortcuts']="Raccourcis clavier";
 $template['index']['faq2']="FAQ (Wiki)";
+
 // graphic suite
 $template['index']['graphsuite']="suite graphique";
 $template['index']['themes']="thèmes";
@@ -61,9 +62,9 @@ $template['index']['changelog']="changements";
 $template['index']['svncommits']="suivi du SVN";
 // contact
 $template['index']['contact']="contacts";
-$template['index']['ml']="mailing-liste KVIrc";
+$template['index']['ml']="liste de diffusion de KVIrc";
 $template['index']['archive']="archives";
-$template['index']['contribute']="collaborer";
+$template['index']['contribute']="contribuer";
 $template['index']['help']="trouver de l'aide";
 $template['index']['donation']="faire un don";
 // KVIrc related
@@ -85,10 +86,10 @@ $template['index']['allnews']="Toutes les News";
 $template['index']['mirrors']="miroirs";
 $template['index']['wwwmirrors']="miroirs WWW";
 $template['index']['ftpmirrors']="miroirs FTP";
-$template['index']['mirrorstext1a']="Contribuer au projet KVIrc en hébergeant les miroires de téléchargement est très simple et apprécié; dans";
+$template['index']['mirrorstext1a']="Contribuer au projet KVIrc en hébergeant les miroirs de téléchargement est très simple et apprécié; sur";
 $template['index']['mirrorstext1b']="cette page";
 $template['index']['mirrorstext1c']="vous trouverez les instructions étape par étape pour créer un miroir www ou ftp (ou les deux).";
-$template['index']['mirrorstext2']="Les ftp non européens sont pris avec joie.";
+$template['index']['mirrorstext2']="Les ftp non européens sont acceptés avec joie.";
 $template['index']['mirrorstitle']="miroirs www et ftp";
 // layouts
 $template['index']['oldlayout']="anciens sites";
@@ -96,11 +97,11 @@ $template['index']['oldsite']="anciens sites KVIrc";
 $template['index']['iakkohome']="chez iakko";
 // help
 $template['index']['helptext1a']="si vous avez besoin d'aide la manière la plus simple est de se référer à";
-$template['index']['helptext1b']="la mailing-liste officielle";
+$template['index']['helptext1b']="la liste de diffusion officielle";
 $template['index']['helptext1c']="ou en rejoignant un salon dédié";
 // bugs
 $template['index']['bugreport']="rapport de bugs";
-$template['index']['bugstext']="les bugs peuvent être rapportés et vus en utilisant le bugtrack KVIrc disponible à";
+$template['index']['bugstext']="les bugs peuvent être signalés et consultés en utilisant le bugtrack KVIrc disponible à";
 // more docs
 $template['index']['moredocs']="plus de docs";
 $template['index']['officialdocs']="documentation officielle";
@@ -109,7 +110,7 @@ $template['index']['docsauto']="générée automatiquement";
 $template['index']['hwdonation']="rocket-propelled";
 $template['index']['hwdonationtext']="a la gentillesse d'offrir le matériel pour faire tourner svn.kvirc.de";
 $template['index']['tahdonation']="lifted into the air";
-$template['index']['tahdonationtext']="sponsorise l'hébergement et le trafique de svn.kvirc.de";
+$template['index']['tahdonationtext']="sponsorise l'hébergement et le trafic de svn.kvirc.de";
 $template['index']['donationtextkvirc.de']="et son miroir";
 // other
 $template['index']['latestscreen']="dernière capture";
@@ -174,10 +175,10 @@ $template['addons']['addon23']="Simple gestionnaire d'icones. Vous pouvez choisi
 /* addons.php end */
 
 /* archive.php start */
-$template['archive']['title']="Archives de la Mailing-Lists";
+$template['archive']['title']="Archives de la liste de diffusion";
 $template['archive']['text']="
-	Ici vous pouvez trouver les archives de la mailing-liste: c'est le premier endroit où chercher de l'aide en cas de problème.<br />
-	Vous pouvez regarder les archives manuellement ou avec la recherche.";
+	Ici vous pouvez trouver les archives de la liste de diffusion : c'est le premier endroit où chercher de l'aide en cas de problème.<br />
+	Vous pouvez consulter les archives manuellement ou avec la recherche.";
 $template['archive']['search']="Recherche Google";
 $template['archive']['jan']="Janvier";
 $template['archive']['feb']="Février";
@@ -275,10 +276,10 @@ $template['donate']['alttext']="Faire un don au projet KVIrc par PayPal";
 
 /* download.php start */
 $template['download']['title']="Télécharger KVIrc";
-$template['download']['text1']="Vous pouvez obtenir KVIrc de trois façons:";
+$template['download']['text1']="Vous pouvez obtenir KVIrc de trois façons :";
 $template['download']['text2']="Paquets officiels";
 $template['download']['text3']="
-	Les paquets officiels sortent moins fréquemment, mais sont les plus stables. Chaque paquet source officiel est bien évalué et compilera probablement sur votre système. Vous avez aussi plus de possibilités de trouver un paquet binaire approprié pour votre système. Les FAQS (les FOIRES AUX QUESTIONS) en ligne et la documentation se réfèrent à ce type de paquet.";
+	Les paquets officiels sont publiés moins fréquemment, mais sont les plus stables. Chaque paquet source officiel est bien évalué et compilera probablement sur votre système. Vous avez aussi plus de possibilités de trouver un paquet binaire approprié pour votre système. Les FAQS (les FOIRES AUX QUESTIONS) en ligne et la documentation se réfèrent à ce type de paquet.";
 $template['download']['text4']="Paquets de développement";
 $template['download']['text5']="
 	Les paquets de développement sont des paquets officieux extraits du SVN sur une base non-régulière. Chacun reflète l'état du SVN sur une révision particulière et vous allez trouver une version plus récente. Les paquets ont été évalués sur au moins deux ou trois systèmes et ont une bonne possibilité de compiler sur le vôtre. Il y a aussi certain fichiers binaires disponibles.";
@@ -1160,8 +1161,8 @@ $template['tutorials']['text7b']="Tutorial on how to manage the registered users
 /* welcome.php start */
 $template['welcome']['title']="Bienvenue!";
 $template['welcome']['text']="
-	KVIrc est un client <acronym title=\"Internet Relay Chat\">IRC</acronym> <a href=\"http://www.gnu.org\">libre</a> et portable basé sur l'excelent <a href=\"http://www.trolltech.com\">Qt GUI toolkit</a>.
-	KVIrc est écrit par <a href=\"http://www.pragmaware.net\">Szymon Stefanek</a> et l'équipe de developpement avec la contribution de nombreux fans de l'irc dans le monde entier.";
+	KVIrc est un client <acronym title=\"Internet Relay Chat\">IRC</acronym> <a href=\"http://www.gnu.org\">libre</a> et portable basé sur l'excellent <a href=\"http://www.trolltech.com\">Qt GUI toolkit</a>.
+	KVIrc est écrit par <a href=\"http://www.pragmaware.net\">Szymon Stefanek</a> et l'équipe de développement avec la contribution de nombreux fans de l'IRC dans le monde entier.";
 $template['welcome']['text2']="prenez part au projet!";
 $template['welcome']['alttext']="comment aider le projet KVIrc";
 /* welcome.php end */
