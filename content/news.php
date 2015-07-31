@@ -11,8 +11,10 @@ $dir = trim(strip_tags(htmlentities($_GET['dir'],ENT_QUOTES)));
 echo "<h1 class=\"pagetitle\">".$template['news']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
 
-if(($story!="")&&($dir!="")){
-	$x['dummy']="";
+if(($story!="")&&($dir!=""))
+{
+	$x[] = "";
+	$x['dummy'] = "";
 	if(!news_read_entry($docRoot."/news/".$dir."/".$story,$x))
 	{
 		echo "<h1>".$template['news']['error']."</h1>";
@@ -40,7 +42,8 @@ if($dir!=""){
 	$cnt = count($latestnews);
 	for($i = 0;$i < $cnt;$i++){
 		$content['dummy'] = "";
-		if(news_read_entry($latestnews[$i],$content)){
+		if(news_read_entry($latestnews[$i],$content))
+		{
 			echo "<li>";
 			echo "<b>".$content['year'].".".$content['month'].".".$content['day']." ".$content['hour'].":".$content['minute']."</b><br />";
 			echo $content['short']."<br />";
