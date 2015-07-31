@@ -100,7 +100,7 @@ search();
 								<li><a href="?id=download&amp;lang=<?php echo $lang;?>"><?php echo $template['index']['download'];?></a></li>
 								<li><a href="?id=releases&amp;lang=<?php echo $lang;?>"><?php echo $template['index']['releases'];?></a></li>
 								<li><a href="?id=snapshots&amp;lang=<?php echo $lang;?>"><?php echo $template['index']['snapshots'];?></a></li>
-								<li><a href="?id=svn&amp;lang=<?php echo $lang;?>"><?php echo $template['index']['svn'];?></a></li>
+								<li><a href="?id=git&amp;lang=<?php echo $lang;?>"><?php echo $template['index']['git'];?></a></li>
 								<li><a href="?id=install&amp;lang=<?php echo $lang;?>"><?php echo $template['index']['install'];?></a></li>
 							</ul>
 						</li>

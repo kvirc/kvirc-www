@@ -34,7 +34,7 @@ $template['index']['running']="usar KVIrc";
 $template['index']['download']="descargar";
 $template['index']['releases']="versiones oficiales";
 $template['index']['snapshots']="snapshots";
-$template['index']['svn']="SVN";
+$template['index']['git']="GIT";
 $template['index']['install']="instalación";
 // documentation
 $template['index']['docs']="documentación";
@@ -1012,22 +1012,19 @@ $template['status']['text']="
 	<p>También asegúrate de mirar las <a href=\"?id=install&amp;lang=$lang\">notas de instalación</a>, <a href=\"?id=tutorials&amp;lang=$lang\">tutoriales</a>, <a href=\"?id=translation&amp;lang=$lang\">traducciones</a> y <a href=\"?id=themes&amp;lang=$lang\">temas</a> para tener una versión más personalizada de KVIrc =)</p>";
 /* status.php end */
 
-/* svn.php start */
-$template['svn']['title']="Usando SVN";
-$template['svn']['text1']="
-	Desde el servidor SVN puedes descargar la última versión en desarrollo de KVIrc.<br />
-	Una vez que te hayas asegurado de que subversion está instalado en tu sistema solo tienes que introducir la siguiente línea:";
-$template['svn']['text2']="
-	Estarás descargando el código fuente del núcleo de KVIrc.<br />
-	Si quieres sacar también el código fuente de los módulos tienes que introducir la siguiente línea:";
+/* git.php start */
+$template['git']['title']="Cloning the GIT Source Tree";
+$template['git']['text1']="
+	The git source tree is hosted on github..<br />
+	Once you've made sure that git is installed on your system you only need enter this line:";
 $template['svn']['text3']="
-	Para compilar el ejecutable y los módulos del núcleo simplemente introduce en el directorio de las fuentes:";
+	To compile the executable and the core modules just enter the source directory:";
 $template['svn']['text4']="
-	y entonces sigue las <a href=\"?id=install&amp;lang=$lang\">instrucciones de instalación</a> comunes.<br />
-	Las siguientes instrucciones de instalación para la versión SVN de KVIrc pueden también ser encontradas en el archivo INSTALL.<br />
-	Intentamos mantener el SVN tan \"limpio\" como sea posible pero *podría* pasar que las fuentes que te descargues no compilen o no se ejecuten correctamente.<br />
-	También puedes navegar por el SVN mediante <a href=\"https://svn.kvirc.de/kvirc/browser/\">https://svn.kvirc.de/</a>";
-/* svn.php end */
+	and then follow the common <a href=\"?id=install&amp;lang=$lang\">installation instructions</a>.<br />
+	The latest installation instructions for the git version of KVIrc can be also found in the INSTALL file.<br />
+	We're trying to keep the git as \"clean\" as possible but it *might* happen that the sources you have downloaded do not compile or run properly.<br />
+	You can also browse trough the git via <a href=\"https://github.com/kvirc/KVIrc\">https://github.com/kvirc/KVIrc</a>";
+/* git.php end */
 
 /* themes.php start */
 $template['themes']['title']="Temas";
