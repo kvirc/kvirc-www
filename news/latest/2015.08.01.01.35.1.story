@@ -1,4 +1,5 @@
-@@title:The KVIrc project has moved to github
+@@title:
+The KVIrc project has moved to github
 @@short:
 Moved to github
 @@author:

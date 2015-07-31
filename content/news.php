@@ -13,7 +13,7 @@ echo "<div class=\"column1-unit\">";
 
 if(($story!="")&&($dir!=""))
 {
-	$x[] = "";
+	$x = array();
 	$x['dummy'] = "";
 	if(!news_read_entry($docRoot."/news/".$dir."/".$story,$x))
 	{
