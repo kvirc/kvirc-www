@@ -331,11 +331,11 @@ $splash=array(
 
 // Themes
 // This part was splitted to allow external apps to access themes data
-//include_once("themes.php"); // FIXME: Put this include only where it's really needed
+include_once("themes.php"); // FIXME: Put this include only where it's really needed
 
 // Addons
 // This part was splitted to allow external apps to access addons data
-//include_once("addons.php"); // FIXME: Put this include only where it's really needed
+include_once("addons.php"); // FIXME: Put this include only where it's really needed
 
 // Tools
 //aray("name" => "tool name", "author" => "author name", "mail" => "author mail", "desc" => "description", "url" => "url")
