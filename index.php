@@ -136,7 +136,6 @@ search();
 								<li><a href="?id=addons&amp;lang=<?php echo $lang;?>"><?php echo $template['index']['addons'];?></a></li>
 								<li><a href="?id=tools&amp;lang=<?php echo $lang;?>"><?php echo $template['index']['tools'];?></a></li>
 								<li><a href="?id=changelog&amp;lang=<?php echo $lang;?>"><?php echo $template['index']['changelog'];?></a></li>
-								<li><a href="javascript:opendoc('http://cia.vc/stats/project/kvirc');" title="CIA commits on KVIrc project"><?php echo $template['index']['svncommits'];?></a></li>
 							</ul>
 						</li>
 					</ul>

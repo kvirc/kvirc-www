@@ -34,7 +34,7 @@ $template['index']['running']="KVIrc nutzen";
 $template['index']['download']="Download";
 $template['index']['releases']="offizielle Veröffentlichungen";
 $template['index']['snapshots']="Snapshots";
-$template['index']['git']="GIT";
+$template['index']['git']="git";
 $template['index']['install']="Installation";
 // documentation
 $template['index']['docs']="Dokumentation";
@@ -59,7 +59,6 @@ $template['index']['scripts']="Skripte";
 $template['index']['addons']="Erweiterungen";
 $template['index']['tools']="Werkzeuge";
 $template['index']['changelog']="Änderungsliste";
-$template['index']['svncommits']="SVN Einreichungen";
 // contact
 $template['index']['contact']="Kontakt";
 $template['index']['ml']="KVIrc Mailingliste";
@@ -944,13 +943,14 @@ $template['status']['text']="
 /* status.php end */
 
 /* git.php start */
-$template['git']['title']="Cloning the GIT Source Tree";
+$template['git']['title']="Cloning the git Source Tree";
 $template['git']['text1']="
-	The git source tree is hosted on github..<br />
-	Once you've made sure that git is installed on your system you only need enter this line:";
-$template['svn']['text3']="
+	The git source tree is hosted on github.<br />
+	Once you've made sure that <a href="https://git-scm.com/" target="_blank">git</a> is installed on your system you should clone the tree
+	with the following command:";
+$template['git']['text3']="
 	To compile the executable and the core modules just enter the source directory:";
-$template['svn']['text4']="
+$template['git']['text4']="
 	and then follow the common <a href=\"?id=install&amp;lang=$lang\">installation instructions</a>.<br />
 	The latest installation instructions for the git version of KVIrc can be also found in the INSTALL file.<br />
 	We're trying to keep the git as \"clean\" as possible but it *might* happen that the sources you have downloaded do not compile or run properly.<br />
