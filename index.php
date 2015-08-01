@@ -271,7 +271,7 @@ search();
 					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
 					<h1 class="orange"><img src="img/media-record.png" alt="<?php echo $template['index']['bugreport'];?>" /><?php echo $template['index']['bugreport'];?></h1>
 					<p class="center">
-						<?php echo $template['index']['bugstext'];?> <a href="javascript:opendoc('https://svn.kvirc.de/kvirc/');" title="<?php echo $template['index']['bugtrack'];?>"><?php echo $template['index']['bugtrack'];?></a>
+						<?php echo $template['index']['bugstext'];?> <a href="javascript:opendoc('https://github.com/kvirc/KVIrc/issues');" title="<?php echo $template['index']['bugtrack'];?>"><?php echo $template['index']['bugtrack'];?></a>
 					</p>
 				</div>
 				<div class="subcontent-unit-border">
