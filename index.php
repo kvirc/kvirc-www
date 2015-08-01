@@ -109,11 +109,11 @@ search();
 						<li><a href="#"><?php echo $template['index']['docs'];?></a>
 							<ul>
 								<li><a href="?id=faq&amp;lang=<?php echo $lang;?>"><?php echo $template['index']['faq'];?></a></li>
-								<li><a href="javascript:opendoc('https://svn.kvirc.de/kvirc/wiki/FAQ');"><?php echo $template['index']['faq2'];?></a></li>
+								<li><a href="javascript:opendoc('https://github.com/kvirc/KVIrc/wiki/FAQ');"><?php echo $template['index']['faq2'];?></a></li>
 								<li><a href="javascript:opendoc('api');"><?php echo $template['index']['api'];?></a></li>
 								<li><a href="javascript:opendoc('doc');"><?php echo $template['index']['doc'];?></a></li>
 								<li><a href="?id=tutorials&amp;lang=<?php echo $lang;?>"><?php echo $template['index']['tutorials'];?></a></li>
-								<li><a href="javascript:opendoc('https://svn.kvirc.de/kvirc/wiki/KeyboardShortcuts');"><?php echo $template['index']['shortcuts'];?></a></li>
+								<li><a href="javascript:opendoc('https://github.com/kvirc/KVIrc/wiki/Keyboard-shortcuts');"><?php echo $template['index']['shortcuts'];?></a></li>
 							</ul>
 						</li>
 					</ul>
@@ -147,7 +147,7 @@ search();
 								<li><a href="?id=contribute&amp;lang=<?php echo $lang;?>"><?php echo $template['index']['contribute'];?></a></li>
 								<li><a href="?id=help&amp;lang=<?php echo $lang;?>"><?php echo $template['index']['help'];?></a></li>
 								<li><a href="?id=donate&amp;lang=<?php echo $lang;?>"><?php echo $template['index']['donation'];?></a></li>
-								<li><a href="javascript:opendoc('https://svn.kvirc.de/kvirc/');" title="KVIrc bugtrack"><?php echo $template['index']['bugtrack'];?></a></li>
+								<li><a href="javascript:opendoc('https://github.com/kvirc/KVIrc/issues');" title="KVIrc bugtrack"><?php echo $template['index']['bugtrack'];?></a></li>
 							</ul>
 						</li>
 					</ul>
