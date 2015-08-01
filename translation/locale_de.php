@@ -384,7 +384,7 @@ $template['faq']['text18a']="KVIrc stürzt ab, wenn die Mehrzeileneingabe geöff
 $template['faq']['text18b']="
 	Wenn eine neue Version von KVIrc über eine alte installiert wurde, oder wenn die Qt-Bibliotheken, gegen die KVIrc gelinked ist, getauscht wurden, dann kann damit ein kaputter Mehrzeileneditor verursacht werden.<br />
 	Möglicherweise hilft es, \$HOME/.kvircssexeditorrc zu löschen und KVIrc neu zu starten";
-$template['faq']['faqonwiki']="There is another set of frequently asked questions on <a href=\"https://svn.kvirc.de/kvirc/wiki/FAQ\">the wiki</a>.";
+$template['faq']['faqonwiki']="There is another set of frequently asked questions on <a href=\"https://github.com/kvirc/KVIrc/wiki/FAQ\">the wiki</a>.";
 /* faq.php end */
 
 /* features.php start */
