@@ -946,7 +946,7 @@ $template['status']['text']="
 $template['git']['title']="Cloning the git Source Tree";
 $template['git']['text1']="
 	The git source tree is hosted on github.<br />
-	Once you've made sure that <a href="https://git-scm.com/" target="_blank">git</a> is installed on your system you should clone the tree
+	Once you've made sure that <a href=\"https://git-scm.com/\" target=\"_blank\">git</a> is installed on your system you should clone the tree
 	with the following command:<br />";
 $template['git']['text3']="
 	To compile the executable and the core modules just enter the source directory:";
