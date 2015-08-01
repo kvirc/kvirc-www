@@ -245,7 +245,7 @@ $template['contribute']['text13']="
 $template['contribute']['text14']="Mirroring";
 $template['contribute']['text15']="
 	FTP and WWW mirrors are always welcome: we're actually missing mirrors outside Europe.<br />
-	The www site is written in php and updated via SVN thus the mirroring machine must have a php-capable web server and a SVN client installed.<br />
+	The www site is written in php and updated via GIT thus the mirroring machine must have a php-capable web server and a GIT client installed.<br />
 	The FTP archive is around 1.2GB; partial mirroring schemes can be also arranged.<br />
 	The detailed instructions for setting up a www or ftp mirror are available <a href=\"?id=mirroring&amp;lang=$lang\">here</a>.";
 $template['contribute']['text16']="Public relations";
@@ -1054,7 +1054,7 @@ $template['translation']['text7']="
 	This mini-howto describes the procedure for translating KVIrc in a new language";
 $template['translation']['text8']="Getting the right sources.";
 $template['translation']['text9a']="
-	First of all you need the SVN version of KVIrc. To obtain the SVN version you can follow the instructions on";
+	First of all you need the GIT version of KVIrc. To obtain the GIT version you can follow the instructions on";
 $template['translation']['text9b']="The translation stuff is in";
 $template['translation']['text10']="Initialize the build environment";
 $template['translation']['text11']="
@@ -1109,7 +1109,7 @@ $template['translation']['text32']="
 $template['translation']['text33']="Updating the translation when the sources change";
 $template['translation']['text34']="
 	In the process of KVIrc development, new message strings gets added inside the source files, while some others can change or even get removed.<br />
-	When you do a svn update to obtain the latest sources you should then enter your build directory and run:";
+	When you do a git pull to obtain the latest sources you should then enter your build directory and run:";
 $template['translation']['text35']="
 	This procedure will update your *_xxx.po files with the new messages and mark the old messages as either fuzzy or invalid.<br />
 	The invalid entries must be re-translated completely again while the fuzzy entries have minor changes and can be probably adjusted in few seconds.";
@@ -1120,7 +1120,7 @@ $template['translation']['text38']="
 	Since many of the modules have their own translation files then the procedure above may be repeated for the po/modules/*/ subdirectories.<br />
 	Anyway you are not forced to translate all the files at once: a partial translation will work anyway.";
 $template['translation']['text39']="
-	When you're satisfied with your translation you may send your *.po files to the KVIrc mailing list asking for inclusion in the SVN. If you want to maintain the translation in the future then you may also apply for a SVN account.";
+	When you're satisfied with your translation, you can either send your *.po files to the KVIrc mailing list asking for inclusion in the GIT repository, or commit and push to your own git fork. If you want to maintain the translation in the future then you may need a github account and proper fork.";
 $template['translation']['text40']="Happy translating :)";
 /* translation.php end */
 

@@ -51,7 +51,7 @@ echo "<div class=\"column1-unit\">";
 	echo "<hr />";
 
 	echo "<h1>".$template['translation']['step']." 0: ".$template['translation']['text8']."</h1>";
-	echo "<p>".$template['translation']['text9a']." <a href=\"?id=svn&amp;lang=$lang\">http://www.kvirc.net/?id=svn</a>.<br />".$template['translation']['text9b']." kvirc/po/";
+	echo "<p>".$template['translation']['text9a']." <a href=\"?id=git&amp;lang=$lang\">http://www.kvirc.net/?id=git</a>.<br />".$template['translation']['text9b']." kvirc/po/";
 
 	echo "<h1>".$template['translation']['step']." 1: ".$template['translation']['text10']."</h1>";
 	echo "<p>".$template['translation']['text11'];
