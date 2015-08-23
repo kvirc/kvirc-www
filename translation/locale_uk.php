@@ -108,9 +108,9 @@ $template['index']['officialdocs']="офіційна документація KV
 $template['index']['docsauto']="автоматично згенерований індексний запит";
 // hardware, traffic and hosting donation
 $template['index']['hwdonation']="реактивний";
-$template['index']['hwdonationtext']="пожертвував залізо для роботи svn.kvirc.de";
+$template['index']['hwdonationtext']="пожертвував залізо для роботи *.kvirc.de";
 $template['index']['tahdonation']="підняв в повітря";
-$template['index']['tahdonationtext']="спонсорує хостинг та трафік для svn.kvirc.de";
+$template['index']['tahdonationtext']="спонсорує хостинг та трафік для *.kvirc.de";
 $template['index']['donationtextkvirc.de']="і це дзеркало";
 // other
 $template['index']['latestscreen']="свіжий скріншот";

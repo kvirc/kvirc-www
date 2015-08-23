@@ -106,9 +106,9 @@ $template['index']['officialdocs']="documentazione ufficiale";
 $template['index']['docsauto']="indice autogenerato";
 // hardware, traffic and hosting donation
 $template['index']['hwdonation']="propulsione a razzo";
-$template['index']['hwdonationtext']="è stato così gentile da donare hardware per svn.kvirc.de";
+$template['index']['hwdonationtext']="è stato così gentile da donare hardware per *.kvirc.de";
 $template['index']['tahdonation']="si è alzato nell'aria";
-$template['index']['tahdonationtext']="sponsorizza hosting e traffico per svn.kvirc.de";
+$template['index']['tahdonationtext']="sponsorizza hosting e traffico per *.kvirc.de";
 $template['index']['donationtextkvirc.de']="e questo mirror";
 // other
 $template['index']['latestscreen']="ultimo screenshot";

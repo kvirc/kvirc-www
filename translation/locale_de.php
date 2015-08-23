@@ -107,9 +107,9 @@ $template['index']['officialdocs']="offizielle KVIrc Dokumentation";
 $template['index']['docsauto']="automatisch generierter Index";
 // hardware, traffic and hosting donation
 $template['index']['hwdonation']="Raketenantrieb";
-$template['index']['hwdonationtext']="war so freundlich die Hardware zu stiften für den Betrieb von svn.kvirc.de";
+$template['index']['hwdonationtext']="war so freundlich die Hardware zu stiften für den Betrieb von *.kvirc.de";
 $template['index']['tahdonation']="Abgehoben";
-$template['index']['tahdonationtext']="finanziert Hosting und Datentransfer für svn.kvirc.de";
+$template['index']['tahdonationtext']="finanziert Hosting und Datentransfer für *.kvirc.de";
 $template['index']['donationtextkvirc.de']="und diesen Spiegel";
 // other
 $template['index']['latestscreen']="neueste Screenshots";
