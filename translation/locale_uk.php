@@ -978,6 +978,7 @@ $template['themes']['text4b']="Відішліть її до";
 $template['themes']['text4c']="з назвою теми, описом, версією, вашим ніком, веб-сторінкою та е-поштою, а також дайте чи ні дозвіл на відображення ваших даних на сторінці";
 $template['themes']['text5']="";
 $template['themes']['screenshot']="скріншоти";
+$template['themes']['theme0']="The icons and colors used in the early 4.x releases.";
 $template['themes']['theme1']="Гарнюня, основана на наборі значків Marble.";
 $template['themes']['theme2']="Чиста тема з значками Crystal. Деякі значки взяті з набору Marble.";
 $template['themes']['theme3']="Тема з зеленим фоном.";

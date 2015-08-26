@@ -3,6 +3,18 @@
 // Themes
 $themes = array(
 	array(
+		"name" => "Classic",
+		"version" => "1.0.0",
+		"mail" => "pragma [at] kvirc [dot] net",
+		"author" => "Pragma",
+		"desc" => $template['themes']['theme0'],
+		"home" => "",
+		"download" => "Classic-1.0.0.kvt",
+		"screen" => "classic.png",
+		"release_date" => "2015.08.26",
+		"min_version" => "4.2.0"
+	),
+	array(
 		"name" => "Marble Theme",
 		"version" => "1.0.4",
 		"mail" => "sbrokka [at] openlug [dot] org",

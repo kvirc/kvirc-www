@@ -1045,6 +1045,7 @@ $template['themes']['text4b']="Puedes enviarlo a";
 $template['themes']['text4c']="incluyendo el nombre del tema, descripción, versión, tu nick, página web y email, permitiéndonos o no mostrarlo en la web";
 $template['themes']['text5']="";
 $template['themes']['screenshot']="captura de pantalla";
+$template['themes']['theme0']="The icons and colors used in the early 4.x releases.";
 $template['themes']['theme1']="Bonita a la vista, y basada en el set de iconos Marble.";
 $template['themes']['theme2']="Un tema claro con iconos Crystal. Algunos iconos han sido tomados del set Marble.";
 $template['themes']['theme3']="Un tema con fondo verde.";

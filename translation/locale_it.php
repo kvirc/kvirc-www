@@ -976,6 +976,7 @@ $template['themes']['text4b']="Puoi mandarlo a";
 $template['themes']['text4c']="col nome del tema, descrizione, versione, nickname, homepage e mail, permettendoci o no di mostrarla sulla pagina";
 $template['themes']['text5']="";
 $template['themes']['screenshot']="screenshot";
+$template['themes']['theme0']="Icone e colori usati nelle prime release della serie 4.x";
 $template['themes']['theme1']="Versione caramellosa basata sulle icone Marble.";
 $template['themes']['theme2']="Una versione pulita con le icone Crystal. Alcune icone sono prese dal tema Marble.";
 $template['themes']['theme3']="Un tema con sfondo verde.";

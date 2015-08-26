@@ -976,6 +976,7 @@ $template['themes']['text4b']="Sie können es an";
 $template['themes']['text4c']="senden, inklusive eines Themennamens, Beschreibung, Version, Spitzname, Homepage und E-Mail; erlaube Sie uns (oder nicht) diese auf der Homepage zu zeigen";
 $template['themes']['text5']="";
 $template['themes']['screenshot']="Screenshot";
+$template['themes']['theme0']="The icons and colors used in the early 4.x releases.";
 $template['themes']['theme1']="Eine Augenweide, basierend auf dem Marble-Icon-Set.";
 $template['themes']['theme2']="Ein klares Thema mit Crystal-Icons. Einige Icons sind dem Marble-Icon-Set entnommen.";
 $template['themes']['theme3']="Ein Thema mit grünem Hintergrund.";
