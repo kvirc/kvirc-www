@@ -257,7 +257,7 @@ search();
 						<a href="javascript:opendoc('http://kvirc.virg0.org/themes.htm');" title="Anger Theme @ kvirc.virg0.org">Anger theme</a> - <a href="mailto:cle [at] virg0 [dot] org" title="mail etherea`">etherea`</a><br />
 						KVIrc Anomalies
 					</p>
-				</div> //-->
+				</div> //-->
 				<div class="subcontent-unit-border">
 					<div class="round-border-topleft"></div><div class="round-border-topright"></div>
 					<h1><img src="img/help-browser.png" alt="finding help" /><?php echo $template['index']['help'];?></h1>
