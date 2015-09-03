@@ -1,19 +1,19 @@
 function opendoc(doc)
 {
-	window.open(doc,"_blank");
+	window.open(doc, '_blank');
 }
 
 function showAll(id)
 {
 	var itemStyle = document.getElementById(id).style;
-	var act = (itemStyle.visibility == "visible") ? (1) : (0);
+	var act = (itemStyle.visibility == 'visible') ? (1) : (0);
 
 	if(act == 0)
 	{
-		itemStyle.visibility = "visible";
-		itemStyle.display = "block";
+		itemStyle.visibility = 'visible';
+		itemStyle.display = 'block';
 	} else {
-		itemStyle.visibility = "hidden";
-		itemStyle.display = "none";
+		itemStyle.visibility = 'hidden';
+		itemStyle.display = 'none';
 	}
 }
