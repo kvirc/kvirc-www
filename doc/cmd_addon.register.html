@@ -3,12 +3,163 @@
 <title>addon.register</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,146 +175,133 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>addon.register</h1>
-Registers a script-based addon
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>addon.register</div>      <div class='title-secondary-text'>Registers a script-based addon</div>    </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Usage</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Usage</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code>addon.register [-f] [-n] [-q] (&lt;id&gt;,&lt;version&gt;,&lt;visible_name&gt;,&lt;description&gt;,&lt;minkvircverion&gt;[,&lt;iconid&gt;])
+    <td><div class='syntax-text'><b>addon.register</b> <font color="#8080a0">[</font>-f<font color="#8080a0">]</font> <font color="#8080a0">[</font>-n<font color="#8080a0">]</font> <font color="#8080a0">[</font>-q<font color="#8080a0">]</font> <b>(</b><font color="#8080a0">&lt;</font>id<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>version<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>visible_name<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>description<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>minkvircverion<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>iconid<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font><b>)</b>
 {
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;uninstall callback&gt;
-}</code></pre></font></td>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">&lt;</font>uninstall callback<font color="#8080a0">&gt;</font>
+}</div></td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Description</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td><p>
-Registers a script-based <a href="doc_kvs_addons.html">addon</a>.
+Registers a script-based addon.
 </p>
 <p>
-The registration <a href="class_process.html">process</a> allows to "show" the <a href="doc_kvs_addons.html">addon</a> in the script-addon manager
-dialog and provides a standard way for the user to manage and uninstall the <a href="doc_kvs_addons.html">addons</a>.
-You simply register your <a href="doc_kvs_addons.html">addon</a> BEFORE attempting to install it.
+The registration process allows to "show" the addon in the script-addon manager
+dialog and provides a standard way for the user to manage and uninstall the addons.
+You simply register your addon BEFORE attempting to install it.
 </p>
 <p>
-A script-based <a href="doc_kvs_addons.html">addon</a> is a set of scripts, icons, translations and possibly
-other data files that add functionality to the <a href="doc_kvircintro.html">KVIrc</a> program.
-The script-based <a href="doc_kvs_addons.html">addons</a> are often simply called "scripts" and
+A script-based addon is a set of scripts, icons, translations and possibly
+other data files that add functionality to the KVIrc program.
+The script-based addons are often simply called "scripts" and
 we will adhere to that naming in certain parts of the documentation too.
 </p>
 <p>
-Each script-based <a href="doc_kvs_addons.html">addon</a> (a set of scripts) is identified by an UNIQUE
-&lt;id&gt;. Two <a href="doc_kvs_addons.html">addons</a> with the same &lt;id&gt; can't co-exist in the same
-<a href="doc_kvircintro.html">KVIrc</a> installation (so be sure to choose a token characteristic enough
+Each script-based addon (a set of scripts) is identified by an UNIQUE
+&lt;id&gt;. Two addons with the same &lt;id&gt; can't co-exist in the same
+KVIrc installation (so be sure to choose a token characteristic enough
 to avoid collisions with others). The &lt;id&gt; itself is used only for
 identification purposes and the user will almost always see the &lt;visible_name&gt;
 instead, which can contain the <a href="fnc_tr.html">$tr</a> function that will handle
 the translation for it.
 </p>
 <p>
-Each <a href="doc_kvs_addons.html">addon</a> has also a &lt;version&gt; which is a string in the form x.y.z
+Each addon has also a &lt;version&gt; which is a string in the form x.y.z
 where x, y and z are numbers (yes.. that's the standard major-minor-patch level
 version numbering scheme). A &lt;version&gt; of 2.4.23 is greater than 2.4.3
 even if 2.4.3 comes after when compared as a string.
-When an <a href="doc_kvs_addons.html">addon</a> with a greater or equal version is installed over
-an <a href="doc_kvs_addons.html">addon</a> with a lower version, the lower one gets uninstalled first.
+When an addon with a greater or equal version is installed over
+an addon with a lower version, the lower one gets uninstalled first.
 Installing a lower version over a greater one is not possible, unless
 the lower versioned one is uninstalled first.
 </p>
 <p>
 &lt;description&gt; is another, possibly translated, string that will
-be presented to the user in the <a href="doc_kvs_addons.html">addon</a> management dialog.
+be presented to the user in the addon management dialog.
 </p>
 <p>
-&lt;minkvircversion&gt; is the minimum <a href="doc_kvircintro.html">KVIrc</a> version required for the
-<a href="doc_kvs_addons.html">addon</a> to run. If the version of the running <a href="doc_kvircintro.html">KVIrc</a> executable
+&lt;minkvircversion&gt; is the minimum KVIrc version required for the
+addon to run. If the version of the running KVIrc executable
 is lower than the requested one then the command will abort with an error.
-If you want to completly ignore the <a href="doc_kvircintro.html">KVIrc</a> versioning (don't do it),
+If you want to completly ignore the KVIrc versioning (don't do it),
 use "0.0.0" here. If you need fine tuning on cvs features you may add also
 the sources date tag at the end of the required version string (e.g 3.2.1.20060303).
 </p>
 <p>
 &lt;iconid&gt; is the <a href="doc_image_id.html">image identifier</a> of the icon
-that will be displayed in the <a href="doc_kvs_addons.html">addon</a> management dialog.
+that will be displayed in the addon management dialog.
 If not specified, a default icon will be used.
 </p>
 <p>
 The &lt;uninstall_callback&gt; is a snippet of code that should
-wipe out the <a href="doc_kvs_addons.html">addon</a> from the system. It is ALWAYS a good practice
+wipe out the addon from the system. It is ALWAYS a good practice
 to write a complete uninstallation procedure (think that YOU like
 to be able to completly uninstall a program that you don't use anymore).
-The &lt;uninstall_callback&gt; will be called by <a href="doc_kvircintro.html">KVIrc</a> when the <a href="doc_kvs_addons.html">addon</a>
+The &lt;uninstall_callback&gt; will be called by KVIrc when the addon
 uninstallation is requested, either explicitly by using the GUI or the
 command <a href="cmd_addon.uninstall.html">addon.uninstall</a>, or implicitly by installing
-a newer version of the <a href="doc_kvs_addons.html">addon</a> (upgrading).
+a newer version of the addon (upgrading).
 </p>
 <p>
-If the user security rules don't allow your <a href="doc_kvs_addons.html">addon</a> to be installed
-or a higher version of a <a href="doc_kvs_addons.html">addon</a> with the same name already exists
-the command will fail with an error (aborting your whole intallation <a href="doc_kvs_addons.html">addon</a>).
+If the user security rules don't allow your addon to be installed
+or a higher version of a addon with the same name already exists
+the command will fail with an error (aborting your whole intallation addon).
 If you don't want to fail with an error but handle it gracefully instead
 then you should use <a href="fnc_addon.exists.html">$addon.exists()</a> to check if a
-<a href="doc_kvs_addons.html">addon</a> with the same name and a greater version already exists.
+addon with the same name and a greater version already exists.
 You can't gracefully handle security error conditions: your installation
 will be always aborted with an error in this case.
 </p>
 <p>
-The <a href="doc_kvs_addons.html">addon</a> can also have a configuration callback settable with <a href="cmd_addon.setconfigurecallback.html">addon.setconfigurecallback</a>
+The addon can also have a configuration callback settable with <a href="cmd_addon.setconfigurecallback.html">addon.setconfigurecallback</a>
 and a help callback settable with <a href="cmd_addon.sethelpcallback.html">addon.sethelpcallback</a>. The first
 will usually display a configuration dialog, the second will display
-some sort of <a href="doc_kvs_addons.html">addon</a>'s documentation, usually in the help browser.
+some sort of addon's documentation, usually in the help browser.
 </p>
 <p>
-The registration <a href="class_process.html">process</a> uninstalls any previous <a href="doc_kvs_addons.html">addon</a> version
+The registration process uninstalls any previous addon version
 by executing its uninstall callback routine. This is another reason for that
-you should call <a href="doc_kvs_addons.html">addon</a>.register BEFORE you attempt to install your <a href="doc_kvs_addons.html">addon</a>.
+you should call addon.register BEFORE you attempt to install your addon.
 Failing to do that may cause your old uninstalled to wipe out your newly
 installed files or code.
 </p>
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Switches</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Switches</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>
-      <table bgcolor="#D5D5D5">
-<tr bgcolor="#E0E0E0"><td><b>-f | --force</b></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Registers the <a href="doc_kvs_addons.html">addon</a> even if an <a href="doc_kvs_addons.html">addon</a> with the same &lt;id&gt; and &nbsp;&nbsp;&nbsp;&nbsp;a higher version already exists. The usage of this flag &nbsp;&nbsp;&nbsp;&nbsp;is highly discouraged (i.e. use it only for debugging purposes &nbsp;&nbsp;&nbsp;&nbsp;on your own machine).</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-n | --no-uninstall</b></td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Performs no uninstallation of existing versions of the <a href="doc_kvs_addons.html">addon</a>: &nbsp;&nbsp;&nbsp;&nbsp;it simply replaces the registration entry with the new data. &nbsp;&nbsp;&nbsp;&nbsp;Again, do NOT use this switch if not for debugging purposes &nbsp;&nbsp;&nbsp;&nbsp;and on your own machine.</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-q | --quiet</b></td></tr>
+      <table class="switch-table">
+<tr><td class="switch-title-table-cell">-f | --force</td></tr>
+<tr><td class="switch-body-table-cell">&nbsp;&nbsp;&nbsp;&nbsp;Registers the addon even if an addon with the same &lt;id&gt; and &nbsp;&nbsp;&nbsp;&nbsp;a higher version already exists. The usage of this flag &nbsp;&nbsp;&nbsp;&nbsp;is highly discouraged (i.e. use it only for debugging purposes &nbsp;&nbsp;&nbsp;&nbsp;on your own machine).</td></tr>
+<tr><td class="switch-title-table-cell">-n | --no-uninstall</td></tr>
+<tr><td class="switch-body-table-cell">&nbsp;&nbsp;&nbsp;&nbsp;Performs no uninstallation of existing versions of the addon: &nbsp;&nbsp;&nbsp;&nbsp;it simply replaces the registration entry with the new data. &nbsp;&nbsp;&nbsp;&nbsp;Again, do NOT use this switch if not for debugging purposes &nbsp;&nbsp;&nbsp;&nbsp;and on your own machine.</td></tr>
+<tr><td class="switch-title-table-cell">-q | --quiet</td></tr>
 <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Makes the command run quietly</td></tr>
       </table>
     </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Syntax Specification</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code><b>addon.register</b> <font color="#8080a0">[</font>-f<font color="#8080a0">]</font> <font color="#8080a0">[</font>-n<font color="#8080a0">]</font> <font color="#8080a0">[</font>-q<font color="#8080a0">]</font> <b>(</b><font color="#8080a0">&lt;</font>id<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>version<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>visible_name<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>description<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>minkvircverion<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>iconid<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font><b>)</b>
-{
-&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">&lt;</font>uninstall callback<font color="#8080a0">&gt;</font>
-}</code></pre></font></td>
-  </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Examples</b></td>
-  </tr>
-  <tr bgcolor="#EAEAEA">
-    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000"></font></code></pre></td></tr></table></p>
+    <td><div class="example-box"></div>
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>See also</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>See also</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td><a href="cmd_addon.uninstall.html">addon.uninstall</a>, <a href="fnc_addon.exists.html">$addon.exists</a>,
@@ -173,6 +311,6 @@ installed files or code.
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

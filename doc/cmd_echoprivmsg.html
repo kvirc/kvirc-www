@@ -3,12 +3,163 @@
 <title>echoprivmsg</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,30 +175,26 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>echoprivmsg</h1>
-Outputs text to a KVIrc window
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>echoprivmsg</div>      <div class='title-secondary-text'>Outputs text to a KVIrc window</div>    </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Usage</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Usage</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code>echoprivmsg [switches] &lt;nick&gt; &lt;user&gt; &lt;host&gt; &lt;text&gt;</code></pre></font></td>
+    <td><div class='syntax-text'><b>echoprivmsg</b> <font color="#8080a0">[</font>switches<font color="#8080a0">]</font> <font color="#8080a0">&lt;</font>nick<font color="#808080">:string</font><font color="#8080a0">&gt;</font> <font color="#8080a0">&lt;</font>user<font color="#808080">:string</font><font color="#8080a0">&gt;</font> <font color="#8080a0">&lt;</font>host<font color="#808080">:string</font><font color="#8080a0">&gt;</font> <font color="#8080a0">&lt;</font>text<font color="#808080">:string</font><font color="#8080a0">&gt;</font></div></td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Description</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>Outputs a &lt;text&gt; to the current window in the privmsg format.<br>
 The &lt;nick&gt; &lt;user&gt; and &lt;host&gt; parameters are formatted
 as specified by the user preferences (for example
 the nick may use smart colorisation).
-If you don't know the <a href="doc_irc_masks.html">username</a> and host then just use '*' for
+If you don't know the username and host then just use '*' for
 that parameters.
 The message will also get the highlighting rules applied.
 If the 'w' switch is present, outputs &lt;text&gt;
@@ -60,7 +207,7 @@ Please note that this is not the same as the standard
 but the command parameters are evaluated in the current window.<br>
 If the 'i' switch is given, it uses the specified
 icon scheme (icon and colors), otherwise it uses
-the default one (0).<br>
+the default one.<br>
 If the -n switch is present then the highlighting rules
 are not applied.<br>
 If the -x switch is present then the message will never cause
@@ -69,49 +216,43 @@ If the -f switch is present then the message will never cause
 the system taskbar to flash.<br>
 Actually -x and -f have a sense only if highlighting is used and thus -n is not present.<br>
 For more information about the icon/color schemes see <a href="fnc_msgtype.html">$msgtype</a>.
-The <a href="doc_kvircintro.html">KVIrc</a> view widgets support clickable sockets that can be realized by using special <a href="doc_escape_sequences.html">escape sequences</a>.<br>
+The KVIrc view widgets support clickable sockets that can be realized by using special <a href="doc_escape_sequences.html">escape sequences</a>.<br>
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Switches</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Switches</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>
-      <table bgcolor="#D5D5D5">
-<tr bgcolor="#E0E0E0"><td><b>-p[=&lt;nick_prefix&gt;] | --prefix[=&lt;prefix&gt;]</b></td></tr>
-<tr><td>The message is printed with the specified custom <a href="doc_irc_masks.html">nickname</a> prefix. If &lt;nick_prefix&gt; is omitted then an empty string is assumed.</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-s[=&lt;nick_suffix&gt;] | --suffix[=&lt;nicksuffix&gt;]</b></td></tr>
-<tr><td>The message is printed with the specified custom <a href="doc_irc_masks.html">nickname</a> suffix. If &lt;nick_suffix&gt; is omitted then an empty string is assumed.</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-w=&lt;window_id&gt; | --window=&lt;window_id&gt;</b></td></tr>
-<tr><td>The message is printed to the window specified by <a href="doc_window_naming_conventions.html">window_id</a></td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-i=&lt;color_set&gt; | --color-set=&lt;color_set&gt;</b></td></tr>
-<tr><td>Causes the message to use the specified icon scheme (icon and colors).</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-n | --no-highlighting</b></td></tr>
-<tr><td>Do not apply the highlighting rules</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-x | --no-notifier</b></td></tr>
-<tr><td>Never cause the notifier window to pop up</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-f | --no-flashing</b></td></tr>
+      <table class="switch-table">
+<tr><td class="switch-title-table-cell">-p[=&lt;nick_prefix&gt;] | --prefix[=&lt;prefix&gt;]</td></tr>
+<tr><td class="switch-body-table-cell">The message is printed with the specified custom nickname prefix. If &lt;nick_prefix&gt; is omitted then an empty string is assumed.</td></tr>
+<tr><td class="switch-title-table-cell">-s[=&lt;nick_suffix&gt;] | --suffix[=&lt;nicksuffix&gt;]</td></tr>
+<tr><td class="switch-body-table-cell">The message is printed with the specified custom nickname suffix. If &lt;nick_suffix&gt; is omitted then an empty string is assumed.</td></tr>
+<tr><td class="switch-title-table-cell">-w=&lt;window_id&gt; | --window=&lt;window_id&gt;</td></tr>
+<tr><td class="switch-body-table-cell">The message is printed to the window specified by <a href="doc_window_naming_conventions.html">window_id</a></td></tr>
+<tr><td class="switch-title-table-cell">-i=&lt;color_set&gt; | --color-set=&lt;color_set&gt;</td></tr>
+<tr><td class="switch-body-table-cell">Causes the message to use the specified icon scheme (icon and colors).</td></tr>
+<tr><td class="switch-title-table-cell">-n | --no-highlighting</td></tr>
+<tr><td class="switch-body-table-cell">Do not apply the highlighting rules</td></tr>
+<tr><td class="switch-title-table-cell">-x | --no-notifier</td></tr>
+<tr><td class="switch-body-table-cell">Never cause the notifier window to pop up</td></tr>
+<tr><td class="switch-title-table-cell">-f | --no-flashing</td></tr>
 <tr><td>Never cause the window taskbar entry to flash (this works only on some platforms)</td></tr>
       </table>
     </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Syntax Specification</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code><b>echoprivmsg</b> <font color="#8080a0">[</font>switches<font color="#8080a0">]</font> <font color="#8080a0">&lt;</font>nick<font color="#808080">:string</font><font color="#8080a0">&gt;</font> <font color="#8080a0">&lt;</font>user<font color="#808080">:string</font><font color="#8080a0">&gt;</font> <font color="#8080a0">&lt;</font>host<font color="#808080">:string</font><font color="#8080a0">&gt;</font> <font color="#8080a0">&lt;</font>text<font color="#808080">:string</font><font color="#8080a0">&gt;</font></code></pre></font></td>
-  </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Examples</b></td>
-  </tr>
-  <tr bgcolor="#EAEAEA">
-    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">echoprivmsg Test * * This is a test message
-echoprivmsg -i=$msgtype(ChanPrivmsgCrypted) Pragma pragma staff.kvirc.net Hi people! :)
-</font></code></pre></td></tr></table></p>
+    <td><div class="example-box">echoprivmsg Test * * This is a test message
+echoprivmsg -i=$msgtype<span class="example-paren">(</span>ChanPrivmsgCrypted<span class="example-paren">)</span> Pragma pragma staff.kvirc.net Hi people! :<span class="example-paren">)</span>
+</div>
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>See also</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>See also</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td><a href="fnc_window.html">$window</a>,
@@ -123,6 +264,6 @@ echoprivmsg -i=$msgtype(ChanPrivmsgCrypted) Pragma pragma staff.kvirc.net Hi peo
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

@@ -3,12 +3,163 @@
 <title>Binding operator</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,36 +175,32 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>Binding operator</h1>
-Binding operator
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>Binding operator</div>      <div class='title-secondary-text'>Binding operator</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td>This <a href="doc_operators.html">operator</a> is a really ugly, poor and clueless attempt to reach at least 1% of the
-power of the perl =~ <a href="doc_operators.html">operator</a> :D<br>
+    <td>This operator is a really ugly, poor and clueless attempt to reach at least 1% of the
+power of the perl =~ operator :D<br>
 It allows some complex string operations to be performed efficently by operating directly
-on the left operand (in fact this is a lot faster in <a href="doc_kvircintro.html">KVIrc</a> since at least one step of parsing is skipped).<br>
+on the left operand (in fact this is a lot faster in KVIrc since at least one step of parsing is skipped).<br>
 Its basic syntax is:<br>
 <br><b>&lt;left_operand&gt; =~ &lt;operation&gt;[parameters]</b><br><br>
 Where &lt;operation&gt; may be one of 't','s' and parameters depend on it.<br>
 &lt;left_operand&gt; is the target of the &lt;operation&gt;.<br>
-If &lt;left_operand&gt; is an <a href="doc_kvs_datatypes.html">array</a> or <a href="doc_kvs_datatypes.html">dictionary</a>, the &lt;operation&gt; is executed on each item they contain.<br>
+If &lt;left_operand&gt; is an array or dictionary, the &lt;operation&gt; is executed on each item they contain.<br>
 Operation 't' is the transliteration.<br>
 The complete syntax with parameters is:<br>
 <br><b>&lt;left_operand&gt; =~ t/&lt;search characters&gt;/&lt;replacement characters&gt;/</b><br><br>
 where &lt;search characters&gt; is a string of characters that are replaced with the corresponding
 characters in &lt;replacement characters&gt;.<br>
 This operation can be also named 'y' or 'tr' (to preserve some compatibility with other languages).
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">%A=This is a test string
-echo %A
-%A=~ tr/abcdefghi/ABCDEFGHI/
-echo %A
-</font></code></pre></td></tr></table></p>
+<div class="example-box"><span class="example-variable">%A</span>=This is a test string
+echo <span class="example-variable">%A</span>
+<span class="example-variable">%A</span>=~ tr/abcdefghi/ABCDEFGHI/
+echo <span class="example-variable">%A</span>
+</div>
 Operation 's' is the substitution.<br>
 The complete syntax with parameters is:<br>
 <br><b>&lt;left_operand&gt; =~ s/&lt;search pattern&gt;/&lt;replacement pattern&gt;/[flags]</b><br><br>
@@ -63,41 +210,41 @@ and &lt;replacement string&gt; is a special pattern that will replace any occure
 &lt;replacement string&gt; can contain the escape sequences \\N where N is a number between 1 and 9
 to be replaced by the captured text.<br>
 Please note that you need to double the backslashes in the search pattern
-since the <a href="doc_kvs_introduction.html">KVS</a> parser will first unquote the string and then pass it to the regexp engine.
+since the KVS parser will first unquote the string and then pass it to the regexp engine.
 That's also why we use \\N and not \N.<br>
 \\0 is a special escape that will be replaced by the entire match (is always valid!).<br>
 [flags] may be a combination of the letters 'g','i' and 'w'.<br>
 'g' causes the search to be global and not stop after the first occurence of &lt;search pattern&gt;.<br>
 'i' causes the search to be case insensitive.<br>
 'm' causes the search to be case minimal (non-greedy).<br>
-'w' causes the search pattern to be interpreted as a simple <a href="doc_irc_masks.html">wildcard</a> regular expression.
+'w' causes the search pattern to be interpreted as a simple wildcard regular expression.
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Examples</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%A=This is a test string
-&nbsp;&nbsp;&nbsp;&nbsp;echo %A
-&nbsp;&nbsp;&nbsp;&nbsp;%A=~ s/([a-z])i([a-z])/\\1I\\2/
-&nbsp;&nbsp;&nbsp;&nbsp;echo %A
-&nbsp;&nbsp;&nbsp;&nbsp;%A=~ s/([a-z])i([a-z])/\\1@\\2/gi
-&nbsp;&nbsp;&nbsp;&nbsp;echo %A
-</font></code></pre></td></tr></table></p>
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%a = ""
-&nbsp;&nbsp;&nbsp;&nbsp;%a &lt;&lt; free
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> %a
-&nbsp;&nbsp;&nbsp;&nbsp;%a .= bsd
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> %a
-&nbsp;&nbsp;&nbsp;&nbsp;%a &lt;&lt; rox
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> %a
-&nbsp;&nbsp;&nbsp;&nbsp;%a &lt;, but linux is better!
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> %a
-</font></code></pre></td></tr></table></p>
+    <td><div class="example-box"><span class="example-variable">%A</span>=This is a test string
+echo <span class="example-variable">%A</span>
+<span class="example-variable">%A</span>=~ s/<span class="example-paren">(</span>[a-z]<span class="example-paren">)</span>i<span class="example-paren">(</span>[a-z]<span class="example-paren">)</span>/\\1I\\2/
+echo <span class="example-variable">%A</span>
+<span class="example-variable">%A</span>=~ s/<span class="example-paren">(</span>[a-z]<span class="example-paren">)</span>i<span class="example-paren">(</span>[a-z]<span class="example-paren">)</span>/\\1@\\2/gi
+echo <span class="example-variable">%A</span>
+</div>
+<div class="example-box"><span class="example-variable">%a</span> = ""
+<span class="example-variable">%a</span> &lt;&lt; free
+<a href="cmd_echo.html">echo</a> <span class="example-variable">%a</span>
+<span class="example-variable">%a</span> .= bsd
+<a href="cmd_echo.html">echo</a> <span class="example-variable">%a</span>
+<span class="example-variable">%a</span> &lt;&lt; rox
+<a href="cmd_echo.html">echo</a> <span class="example-variable">%a</span>
+<span class="example-variable">%a</span> &lt;, but linux is better!
+<a href="cmd_echo.html">echo</a> <span class="example-variable">%a</span>
+</div>
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>See also</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>See also</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td><a href="doc_operators.html">operators</a>
@@ -105,6 +252,6 @@ That's also why we use \\N and not \N.<br>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

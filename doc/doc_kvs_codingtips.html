@@ -3,12 +3,163 @@
 <title>Coding tips</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,18 +175,14 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>Coding tips</h1>
-Generic coding tips for scripters (and not only)
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>Coding tips</div>      <div class='title-secondary-text'>Generic coding tips for scripters (and not only)</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>Here comes a small list of "coding tips".<br>
-These apply to programming in general, not only to <a href="doc_kvircintro.html">KVIrc</a> scripting.<br>
+These apply to programming in general, not only to KVIrc scripting.<br>
 <br>
 1. <b>Comment your code</b><br>
 A well commented code is easy to mantain, and easy to read by others.<br>
@@ -53,19 +200,19 @@ Mixing spaces and tabs is Evil (tm), since it makes the code look really
 ugly in editors that have the tab size different than yours; in some cases the
 code gets really unreadable.<br>
 <br>
-4. <b>Use descriptive <a href="doc_kvs_datatypes.html">variable</a> names</b><br>
-Using 'foo' as <a href="doc_kvs_datatypes.html">variable</a> name implies tracing its semantic the next
+4. <b>Use descriptive variable names</b><br>
+Using 'foo' as variable name implies tracing its semantic the next
 time that you're going to read the code that uses it.<br>
 This is really annoying and time-consuming, especially if the project
 is getting large.<br>
 Obviously using "thisIsACounterVariable" as name for a simple counter
 is also a suicide.<br>
-A good convention on <a href="doc_kvs_datatypes.html">variable</a> names can speed up writing, debugging and mantaining code.<br>
-Encoding the type of the <a href="doc_kvs_datatypes.html">variable</a> in the <a href="doc_kvs_datatypes.html">variable</a> name might be also a good idea,
+A good convention on variable names can speed up writing, debugging and mantaining code.<br>
+Encoding the type of the variable in the variable name might be also a good idea,
 but this is a matter of taste; personally I feel really well with that.<br>
 Just as example, here go my fundamental convention rules for C++:<br>
 <br>
-- The type of the <a href="doc_kvs_datatypes.html">variable</a> is encoded at the beginning of the <a href="doc_kvs_datatypes.html">variable</a> name:<br>
+- The type of the variable is encoded at the beginning of the variable name:<br>
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;- b prefix for the boolean varables<br>
 &nbsp;&nbsp;&nbsp;&nbsp;- i prefix for signed integers<br>
@@ -75,20 +222,20 @@ Just as example, here go my fundamental convention rules for C++:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;- ...<br>
 <br>
 - Pointers have a "p" prefix prepended<br>
-- Global <a href="doc_kvs_datatypes.html">variables</a> start with a "g_" prefix<br>
-- Member <a href="doc_kvs_datatypes.html">variables</a> start with a "m_" prefix<br>
-- Exception comes for <a href="doc_kvs_datatypes.html">local variables</a> with obvious semantics<br>
+- Global variables start with a "g_" prefix<br>
+- Member variables start with a "m_" prefix<br>
+- Exception comes for local variables with obvious semantics<br>
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;- i,j,k,l for local loop counters<br>
 &nbsp;&nbsp;&nbsp;&nbsp;- "aux" and "tmp" for local obvious short-term temporary variables<br>
 <br>
-So actually by ONLY reading "g_pszQuitMessage" I know that this is a global pointer to a string <a href="doc_kvs_datatypes.html">variable</a>
+So actually by ONLY reading "g_pszQuitMessage" I know that this is a global pointer to a string variable
 containing a quit message. :)<br>
 </p>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_generic_index_all.html">Miscellaneous</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

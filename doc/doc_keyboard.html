@@ -3,12 +3,163 @@
 <title>Keyboard shortcuts</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,24 +175,20 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>Keyboard shortcuts</h1>
-The list of the common keyboard shortcuts
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>Keyboard shortcuts</div>      <div class='title-secondary-text'>The list of the common keyboard shortcuts</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td>This list contains the key sequences associated to some common actions (like selecting text, etc). Since <a href="doc_kvircintro.html">KVIrc</a> 4.2 the shortcuts are dinamic:
+    <td>This list contains the key sequences associated to some common actions (like selecting text, etc). Since KVIrc 4.2 the shortcuts are dinamic:
 <ul>
 <li>more shortcuts can trigger the same actions: Cut is both Ctrl+X and Shift+Del</li>
 <li>shortcuts can be adapted to the os: Help is F1 under Windows and Linux, Ctrl+? on Mac OSX</li>
 </ul>
 A full list of available combinations is available at the <a href="http://doc.qt.nokia.com/latest/qkeysequence.html#standard-shortcuts"> Qt documentation</a>
 <br>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">All the standard keys alphabetically ordered</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">All the standard keys alphabetically ordered</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 <b>F1:</b> Help Index (Window)<br>
 <b>Ctrl+A:</b> Select all<br>
 <b>Ctrl+B:</b> Insert Bold control character<br>
@@ -61,16 +208,16 @@ A full list of available combinations is available at the <a href="http://doc.qt
 <b>Ctrl+V:</b> Paste clipboard contents<br>
 <b>Ctrl+W:</b> Close current window<br>
 <b>Ctrl+X:</b> Cut to clipboard<br>
-<b>Ctrl+Y:</b> Toggle the commandline's <a href="doc_kvs_introduction.html">KVS</a>/User-friendly mode<br>
+<b>Ctrl+Y:</b> Toggle the commandline's KVS/User-friendly mode<br>
 <b>Ctrl+Z:</b> Undo last action<br>
 <b>Ctrl+"+":</b> Increase font size<br>
 <b>Ctrl+"-":</b> Decrease font size<br>
 <b>Ctrl+0:</b> Restore default font (and font size)<br>
 <b>Ctrl+Shift+A:</b> Go away/back<br>
 <b>Ctrl+Shift+B:</b> Open "Manage Toolbars" dialog<br>
-<b>Ctrl+Shift+C:</b> Connect/disconnect current <a href="doc_rfc2812.html">irc</a> context<br>
-<b>Ctrl+Shift+D:</b> Open <a href="class_object.html">Class</a> editor<br>
-<b>Ctrl+Shift+E:</b> Open <a href="doc_events.html">Event</a> editor<br>
+<b>Ctrl+Shift+C:</b> Connect/disconnect current irc context<br>
+<b>Ctrl+Shift+D:</b> Open Class editor<br>
+<b>Ctrl+Shift+E:</b> Open Event editor<br>
 <b>Ctrl+Shift+I:</b> Open Identity options<br>
 <b>Ctrl+Shift+L:</b> Open Alias editor<br>
 <b>Ctrl+Shift+M:</b> Open "Manage Themes" dialog<br>
@@ -78,17 +225,17 @@ A full list of available combinations is available at the <a href="http://doc.qt
 <b>Ctrl+Shift+O:</b> Open "Options" dialog<br>
 <b>Ctrl+Shift+P:</b> Open Popup editor<br>
 <b>Ctrl+Shift+Q:</b> Open Action editor<br>
-<b>Ctrl+Shift+R:</b> Open Raw <a href="doc_events.html">events</a> editor<br>
+<b>Ctrl+Shift+R:</b> Open Raw events editor<br>
 <b>Ctrl+Shift+S:</b> Open Script tester<br>
 <b>Ctrl+Shift+T:</b> Open "Theme Options" dialog<br>
 <b>Ctrl+Shift+U:</b> Open "Registered users" dialog<br>
 <b>Ctrl+Shift+X:</b> Open "Execute Script" dialog<br>
 <b>Ctrl+Shift+Z:</b> Redo last action<br>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Window handling related keys:</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Window handling related keys:</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 <b>Alt+UpArrow:</b> Previous window<br>
 <b>Alt+DownArrow:</b> Next window<br>
-<b>Alt+Shift+UpArrow:</b> Previous window in the same <a href="doc_rfc2812.html">IRC</a> context<br>
-<b>Alt+Shift+DownArrow:</b> Next window in the same <a href="doc_rfc2812.html">IRC</a> context<br>
+<b>Alt+Shift+UpArrow:</b> Previous window in the same IRC context<br>
+<b>Alt+Shift+DownArrow:</b> Next window in the same IRC context<br>
 <b>Alt+PageUp:</b> Previous highlighted window<br>
 <b>Alt+PageDown:</b> Next highlighted window<br>
 <b>Ctrl+UpArrow:</b> Maximizes current window<br>
@@ -99,7 +246,7 @@ A full list of available combinations is available at the <a href="http://doc.qt
 <b>Shift+PageDown:</b> Scroll the output window down one line<br>
 <b>Ctrl+L:</b> Scroll to the last read line<br>
 <b>Ctrl+W:</b> Close current window<br>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Text editing related hotkeys:</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Text editing related hotkeys:</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 <b>Shift+LeftArrow:</b> Select the previous character<br>
 <b>Shift+RightArrow:</b> Select the next character<br>
 <b>Ctrl+LeftArrow:</b> Move to the beginning of the previous word<br>
@@ -114,7 +261,7 @@ A full list of available combinations is available at the <a href="http://doc.qt
 <b>Ctrl+R:</b> Insert the 'reverse' mIRC text control character<br>
 <b>Ctrl+U:</b> Insert the 'underline' mIRC text control character<br>
 <b>Ctrl+O:</b> Insert the 'reset' mIRC text control character<br>
-<b>Ctrl+P:</b> Insert the 'non-crypt' (plain text) <a href="doc_kvircintro.html">KVIrc</a> control character used to disable<br> encryption of the current text line<br>
+<b>Ctrl+P:</b> Insert the 'non-crypt' (plain text) KVIrc control character used to disable<br> encryption of the current text line<br>
 <b>Ctrl+C:</b> Copy the selected text to clipboard<br>
 <b>Ctrl+X:</b> Cut the selected text<br>
 <b>Ctrl+V:</b> Paste the clipboard contents (same as middle mouse click)<br>
@@ -124,28 +271,28 @@ A full list of available combinations is available at the <a href="http://doc.qt
 <b>Ctrl+PageUp:</b> Open the history popup<br>
 <b>LeftArrow:</b> Move the cursor to the left :)<br>
 <b>RightArrow:</b> Move the cursor to the right<br>
-<b>Shift+LeftArrow:</b> Move the <a href="class_combobox.html">selection</a> to the left<br>
-<b>Shift+RightArrow:</b> Move the <a href="class_combobox.html">selection</a> to the right<br>
+<b>Shift+LeftArrow:</b> Move the selection to the left<br>
+<b>Shift+RightArrow:</b> Move the selection to the right<br>
 <b>Alt+Enter:</b> Show/hide the multiline editor<br>
 <b>Ctrl+Enter:</b> Send message as plain text, ignoring / commands<br>
-<b>Shift+Enter:</b> Send message as a <a href="doc_kvs_introduction.html">kvs</a> command<br>
+<b>Shift+Enter:</b> Send message as a kvs command<br>
 <b>Alt+&lt;numeric_sequence&gt;:</b> Insert the character by ASCII/Unicode code<br>
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000"><b>Alt+32:</b> Inserts ASCII/Unicode character 32: ' ' (a space)
-<b>Alt+00032:</b> Same as above :)
-<b>Alt+13:</b> Inserts the Carriage Return (CR) control character
+<div class="example-box"><b>Alt+32:</b> Inserts ASCII/Unicode character 32: ' ' <span class="example-paren">(</span>a space<span class="example-paren">)</span>
+<b>Alt+00032:</b> Same as above :<span class="example-paren">)</span>
+<b>Alt+13:</b> Inserts the Carriage Return <span class="example-paren">(</span>CR<span class="example-paren">)</span> control character
 <b>Alt+77:</b> Inserts ASCII/Unicode character 77: 'M'
-<b>Alt+23566:</b> Inserts Unicode character 23566 (an ideogram)
-</font></code></pre></td></tr></table></p>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Completion hotkeys</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
-<b>Tab in the first word of <a href="class_painter.html">input</a>:</b> Complete <a href="doc_ircintro.html">nicknames</a> in the current <a href="doc_ircintro.html">channel</a> or query<br>
-<b>Shift+Tab after the first word of <a href="class_painter.html">input</a>:</b> Complete <a href="doc_ircintro.html">nicknames</a> with full mask in the current <a href="doc_ircintro.html">channel</a> or query<br>
+<b>Alt+23566:</b> Inserts Unicode character 23566 <span class="example-paren">(</span>an ideogram<span class="example-paren">)</span>
+</div>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Completion hotkeys</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+<b>Tab in the first word of input:</b> Complete nicknames in the current channel or query<br>
+<b>Shift+Tab after the first word of input:</b> Complete nicknames with full mask in the current channel or query<br>
 <b>Tab after a leading /:</b> Complete commands<br>
-<b>Tab after a / in the middle of <a href="class_painter.html">input</a>:</b> Complete directories<br>
+<b>Tab after a / in the middle of input:</b> Complete directories<br>
 <b>Tab after a $:</b> Complete function names
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_generic_index_all.html">Miscellaneous</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

@@ -3,12 +3,163 @@
 <title>RFC2812</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,14 +175,10 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>RFC2812</h1>
-The IRC protocol specification (revised)
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>RFC2812</div>      <div class='title-secondary-text'>The IRC protocol specification (revised)</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td><table bgcolor="#D5D5D5" width="100%">
@@ -42,7 +189,7 @@ Updates: 1459
 Category: Informational
 </pre></td></tr>
 <tr><td>
-<center></td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Internet Relay Chat: Client Protocol</div></td></tr><tr><td bgcolor="#EAEAEA"></center>
+<center></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Internet Relay Chat: Client Protocol</div></td></tr><tr><td bgcolor="#EAEAEA"></center>
 </td></tr>
 <tr><td>
 <b>Status of this Memo</b>
@@ -74,7 +221,7 @@ protocol, see for example http://www.irchelp.org/irchelp/security/.
 <tr><td>
 The IRC (Internet Relay Chat) protocol is for use with text based
 conferencing; the simplest client being any socket program capable of
-connecting to the <a href="doc_ircintro.html">server</a>.
+connecting to the server.
 <p>
 This document defines the Client Protocol, and assumes that the
 reader is familiar with the IRC Architecture [IRC-ARCH].
@@ -106,7 +253,7 @@ reader is familiar with the IRC Architecture [IRC-ARCH].
 <li>2.3.1 Message format in Augmented BNF</li>
 </ul>
 <li>2.4 Numeric replies</li>
-<li>2.5 <a href="doc_irc_masks.html">Wildcard</a> expressions</li>
+<li>2.5 Wildcard expressions</li>
 </ul>
 <li>3. Message Details</li>
 <ul>
@@ -121,11 +268,11 @@ reader is familiar with the IRC Architecture [IRC-ARCH].
 <li>3.1.7 Quit</li>
 <li>3.1.8 Squit</li>
 </ul>
-<li>3.2 <a href="doc_ircintro.html">Channel</a> operations</li>
+<li>3.2 Channel operations</li>
 <ul>
 <li>3.2.1 Join message</li>
 <li>3.2.2 Part message</li>
-<li>3.2.3 <a href="doc_ircintro.html">Channel</a> mode message</li>
+<li>3.2.3 Channel mode message</li>
 <li>3.2.4 Topic message</li>
 <li>3.2.5 Names message</li>
 <li>3.2.6 List message</li>
@@ -137,7 +284,7 @@ reader is familiar with the IRC Architecture [IRC-ARCH].
 <li>3.3.1 Private messages</li>
 <li>3.3.2 Notice</li>
 </ul>
-<li>3.4 <a href="doc_ircintro.html">Server</a> queries and commands</li>
+<li>3.4 Server queries and commands</li>
 <ul>
 <li>3.4.1 Motd message</li>
 <li>3.4.2 Lusers message</li>
@@ -214,7 +361,7 @@ of the IRC protocol.
 <tr><td>
 Servers are uniquely identified by their name, which has a maximum
 length of sixty three (63) characters. See the protocol grammar
-rules (section 2.3.1) for what may and may not be used in a <a href="doc_ircintro.html">server</a>
+rules (section 2.3.1) for what may and may not be used in a server
 name.
 </td></tr>
 <tr><td>
@@ -223,16 +370,16 @@ name.
 <tr><td>
 For each client all servers MUST have the following information: a
 netwide unique identifier (whose format depends on the type of
-client) and the <a href="doc_ircintro.html">server</a> which introduced the client.
+client) and the server which introduced the client.
 </td></tr>
 <tr><td>
 <b>1.2.1 Users</b>
 </td></tr>
 <tr><td>
-Each user is distinguished from other users by a unique <a href="doc_irc_masks.html">nickname</a>
+Each user is distinguished from other users by a unique nickname
 having a maximum length of nine (9) characters.  See the protocol
 grammar rules (section 2.3.1) for what may and may not be used in a
-<a href="doc_irc_masks.html">nickname</a>.
+nickname.
 <p>
 While the maximum length is limited to nine characters, clients
 SHOULD accept longer strings as they may become used in future
@@ -243,18 +390,18 @@ evolutions of the protocol.
 </td></tr>
 <tr><td>
 To allow a reasonable amount of order to be kept within the IRC
-network, a special <a href="class_object.html">class</a> of users (<a href="doc_operators.html">operators</a>) is allowed to perform
-general maintenance <a href="doc_kvs_aliasesandfunctions.html">functions</a> on the network.  Although the powers
-granted to an <a href="doc_operators.html">operator</a> can be considered as 'dangerous', they are
-nonetheless often necessary.  <a href="doc_operators.html">Operators</a> SHOULD be able to perform
+network, a special class of users (operators) is allowed to perform
+general maintenance functions on the network.  Although the powers
+granted to an operator can be considered as 'dangerous', they are
+nonetheless often necessary.  Operators SHOULD be able to perform
 basic network tasks such as disconnecting and reconnecting servers as
 needed.  In recognition of this need, the protocol discussed herein
-provides for <a href="doc_operators.html">operators</a> only to be able to perform such <a href="doc_kvs_aliasesandfunctions.html">functions</a>.
+provides for operators only to be able to perform such functions.
 See sections 3.1.8 (SQUIT) and 3.4.7 (CONNECT).<br>
 <p>
-A more controversial power of <a href="doc_operators.html">operators</a> is the ability to remove a
-user from the connected network by 'force', i.e., <a href="doc_operators.html">operators</a> are able
-to close the connection between any client and <a href="doc_ircintro.html">server</a>.  The
+A more controversial power of operators is the ability to remove a
+user from the connected network by 'force', i.e., operators are able
+to close the connection between any client and server.  The
 justification for this is very delicate since its abuse is both
 destructive and annoying, and its benefits close to inexistent.  For
 further details on this type of action, see section 3.7.1 (KILL).
@@ -264,30 +411,30 @@ further details on this type of action, see section 3.7.1 (KILL).
 </td></tr>
 <tr><td>
 Each service is distinguished from other services by a service name
-composed of a <a href="doc_irc_masks.html">nickname</a> and a <a href="doc_ircintro.html">server</a> name.  As for users, the <a href="doc_irc_masks.html">nickname</a>
+composed of a nickname and a server name.  As for users, the nickname
 has a maximum length of nine (9) characters.  See the protocol
 grammar rules (section 2.3.1) for what may and may not be used in a
-<a href="doc_irc_masks.html">nickname</a>.
+nickname.
 </td></tr>
 <tr><td>
 <b>1.3 Channels</b>
 </td></tr>
 <tr><td>
-<a href="doc_ircintro.html">Channels</a> names are strings (beginning with a '&', '#', '+' or '!'
+Channels names are strings (beginning with a '&', '#', '+' or '!'
 character) of length up to fifty (50) characters.  Apart from the
 requirement that the first character is either '&', '#', '+' or '!',
-the only restriction on a <a href="doc_ircintro.html">channel</a> name is that it SHALL NOT contain
+the only restriction on a channel name is that it SHALL NOT contain
 any spaces (' '), a control G (^G or ASCII 7), a comma (',').  Space
 is used as parameter separator and command is used as a list item
 separator by the protocol).  A colon (':') can also be used as a
-delimiter for the <a href="doc_ircintro.html">channel</a> mask.  <a href="doc_ircintro.html">Channel</a> names are case insensitive.
+delimiter for the channel mask.  Channel names are case insensitive.
 See the protocol grammar rules (section 2.3.1) for the exact syntax
-of a <a href="doc_ircintro.html">channel</a> name.<br>
+of a channel name.<br>
 <p>
-Each prefix characterizes a different <a href="doc_ircintro.html">channel</a> type.  The definition
-of the <a href="doc_ircintro.html">channel</a> types is not relevant to the client-server protocol
+Each prefix characterizes a different channel type.  The definition
+of the channel types is not relevant to the client-server protocol
 and thus it is beyond the scope of this document.  More details can
-be found in "Internet Relay Chat: <a href="doc_ircintro.html">Channel</a> Management" [IRC-CHAN].
+be found in "Internet Relay Chat: Channel Management" [IRC-CHAN].
 </td></tr>
 <tr><td>
 <b>2. The IRC Client Specification</b>
@@ -297,7 +444,7 @@ be found in "Internet Relay Chat: <a href="doc_ircintro.html">Channel</a> Manage
 </td></tr>
 <tr><td>
 The protocol as described herein is for use only with client to
-<a href="doc_ircintro.html">server</a> connections when the client registers as a user.
+server connections when the client registers as a user.
 </td></tr>
 <tr><td>
 <b>2.2 Character codes</b>
@@ -316,7 +463,7 @@ telnet connection.
 Because of IRC's Scandinavian origin, the characters {}|^ are
 considered to be the lower case equivalents of the characters []\~,
 respectively. This is a critical issue when determining the
-equivalence of two <a href="doc_ircintro.html">nicknames</a> or <a href="doc_ircintro.html">channel</a> names.
+equivalence of two nicknames or channel names.
 </td></tr>
 <tr><td>
 <b>2.3 Messages</b>
@@ -326,7 +473,7 @@ Servers and clients send each other messages, which may or may not
 generate a reply.  If the message contains a valid command, as
 described in later sections, the client should expect a reply as
 specified but it is not advised to wait forever for the reply; client
-to <a href="doc_ircintro.html">server</a> and <a href="doc_ircintro.html">server</a> to <a href="doc_ircintro.html">server</a> communication is essentially
+to server and server to server communication is essentially
 asynchronous by nature.
 <p>
 Each IRC message may consist of up to three main parts: the prefix
@@ -342,7 +489,7 @@ origin of the message.  If the prefix is missing from the message, it
 is assumed to have originated from the connection from which it was
 received from.  Clients SHOULD NOT use a prefix when sending a
 message; if they use one, the only valid prefix is the registered
-<a href="doc_irc_masks.html">nickname</a> associated with the client.
+nickname associated with the client.
 <p>
 The command MUST either be a valid IRC command or a three (3) digit
 number represented in ASCII text.
@@ -371,7 +518,7 @@ The extracted message is parsed into the components &lt;prefix&gt;,
 <pre>
     The Augmented BNF representation for this is:
     message    =  [ ":" prefix SPACE ] command [ params ] crlf
-    prefix     =  servername / ( <a href="doc_irc_masks.html">nickname</a> [ [ "!" user ] "@" host ] )
+    prefix     =  servername / ( nickname [ [ "!" user ] "@" host ] )
     command    =  1*letter / 3digit
     params     =  *14( SPACE middle ) [ SPACE ":" trailing ]
                =/ 14( SPACE middle ) [ SPACE [ ":" ] trailing ]
@@ -391,19 +538,19 @@ The extracted message is parsed into the components &lt;prefix&gt;,
          is not allowed within messages.
    Most protocol messages specify additional semantics and syntax for
    the extracted parameter strings dictated by their position in the
-   list.  For example, many <a href="doc_ircintro.html">server</a> commands will assume that the first
+   list.  For example, many server commands will assume that the first
    parameter after the command is the list of targets, which can be
    described with:
-  target     =  <a href="doc_irc_masks.html">nickname</a> / <a href="doc_ircintro.html">server</a>
+  target     =  nickname / server
   msgtarget  =  msgto *( "," msgto )
-  msgto      =  <a href="doc_ircintro.html">channel</a> / ( user [ "%" host ] "@" servername )
+  msgto      =  channel / ( user [ "%" host ] "@" servername )
   msgto      =/ ( user "%" host ) / targetmask
-  msgto      =/ <a href="doc_irc_masks.html">nickname</a> / ( <a href="doc_irc_masks.html">nickname</a> "!" user "@" host )
-  <a href="doc_ircintro.html">channel</a>    =  ( "#" / "+" / ( "!" channelid ) / "&" ) chanstring
+  msgto      =/ nickname / ( nickname "!" user "@" host )
+  channel    =  ( "#" / "+" / ( "!" channelid ) / "&" ) chanstring
                 [ ":" chanstring ]
-  servername =  <a href="doc_irc_masks.html">hostname</a>
-  host       =  <a href="doc_irc_masks.html">hostname</a> / hostaddr
-  <a href="doc_irc_masks.html">hostname</a>   =  shortname *( "." shortname )
+  servername =  hostname
+  host       =  hostname / hostaddr
+  hostname   =  shortname *( "." shortname )
   shortname  =  ( letter / digit ) *( letter / digit / "-" )
                 *( letter / digit )
                   ; as specified in RFC 1123 [HNAME]
@@ -411,7 +558,7 @@ The extracted message is parsed into the components &lt;prefix&gt;,
   ip4addr    =  1*3digit "." 1*3digit "." 1*3digit "." 1*3digit
   ip6addr    =  1*hexdigit 7( ":" 1*hexdigit )
   ip6addr    =/ "0:0:0:0:0:" ( "0" / "FFFF" ) ":" ip4addr
-  <a href="doc_irc_masks.html">nickname</a>   =  ( letter / special ) *8( letter / digit / special / "-" )
+  nickname   =  ( letter / special ) *8( letter / digit / special / "-" )
   targetmask =  ( "$" / "#" ) mask
                   ; see details on allowed masks in section 3.3.1
   chanstring =  %x01-07 / %x08-09 / %x0B-0C / %x0E-1F / %x21-2B
@@ -435,7 +582,7 @@ The extracted message is parsed into the components &lt;prefix&gt;,
          reflects the fact that the only available implementations of
          this protocol uses TCP/IP as underlying network protocol but is
          not meant to prevent other protocols to be used.
-      2) &lt;<a href="doc_irc_masks.html">hostname</a>&gt; has a maximum length of 63 characters.  This is a
+      2) &lt;hostname&gt; has a maximum length of 63 characters.  This is a
          limitation of the protocol as internet hostnames (in
          particular) can be longer.  Such restriction is necessary
          because IRC messages are limited to 512 characters in length.
@@ -453,7 +600,7 @@ The extracted message is parsed into the components &lt;prefix&gt;,
 <b>2.4 Numeric replies</b>
 </td></tr>
 <tr><td>
-Most of the messages sent to the <a href="doc_ircintro.html">server</a> generate a reply of some
+Most of the messages sent to the server generate a reply of some
 sort.  The most common reply is the numeric reply, used for both
 errors and normal replies.  The numeric reply MUST be sent as one
 message consisting of the sender prefix, the three-digit numeric, and
@@ -464,7 +611,7 @@ digits rather than a string of letters.  A list of different replies
 is supplied in section 5 (Replies).
 </td></tr>
 <tr><td>
-<b>2.5 <a href="doc_irc_masks.html">Wildcard</a> expressions</b>
+<b>2.5 Wildcard expressions</b>
 </td></tr>
 <tr><td>
 When wildcards are allowed in a string, it is referred as a "mask".
@@ -499,14 +646,14 @@ characters can be escaped using the character '\' (%x5C).
 </td></tr>
 <tr><td>
 On the following pages there are descriptions of each message
-recognized by the IRC <a href="doc_ircintro.html">server</a> and client.  All commands described in
-this section MUST be implemented by any <a href="doc_ircintro.html">server</a> for this protocol.
+recognized by the IRC server and client.  All commands described in
+this section MUST be implemented by any server for this protocol.
 <p>
 Where the reply ERR_NOSUCHSERVER is returned, it means that the
-target of the message could not be found.  The <a href="doc_ircintro.html">server</a> MUST NOT send
+target of the message could not be found.  The server MUST NOT send
 any other replies after this error for that command.
 <p>
-The <a href="doc_ircintro.html">server</a> to which a client is connected is required to parse the
+The server to which a client is connected is required to parse the
 complete message, and return any appropriate errors.
 <p>
 If multiple parameters is presented, then each MUST be checked for
@@ -519,7 +666,7 @@ comma as an item separator, a reply MUST be sent for each item.
 </td></tr>
 <tr><td>
 The commands described here are used to register a connection with an
-IRC <a href="doc_ircintro.html">server</a> as a user as well as to correctly disconnect.
+IRC server as a user as well as to correctly disconnect.
 <p>
 A "PASS" command is not required for a client connection to be
 registered, but it MUST precede the latter of the NICK/USER
@@ -559,8 +706,8 @@ PASS command before sending the NICK/USER combination.
 </pre></td></tr>
 <tr><td><pre>
 Command: NICK
-Parameters: &lt;<a href="doc_irc_masks.html">nickname</a>&gt;
-NICK command is used to give user a <a href="doc_irc_masks.html">nickname</a> or change the existing
+Parameters: &lt;nickname&gt;
+NICK command is used to give user a nickname or change the existing
 one.
    Numeric Replies:
            ERR_NONICKNAMEGIVEN             ERR_ERRONEUSNICKNAME
@@ -569,10 +716,10 @@ one.
    Examples:
    NICK Wiz                ; Introducing new nick "Wiz" if session is
                            still unregistered, or user changing his
-                           <a href="doc_irc_masks.html">nickname</a> to "Wiz"
+                           nickname to "Wiz"
    :WiZ!jto@tolsun.oulu.fi NICK Kilroy
-                           ; <a href="doc_ircintro.html">Server</a> telling that WiZ changed his
-                           <a href="doc_irc_masks.html">nickname</a> to Kilroy.
+                           ; Server telling that WiZ changed his
+                           nickname to Kilroy.
 </pre></td></tr>
 <tr><td><pre>
 <b>3.1.3 User message</b>
@@ -581,9 +728,9 @@ one.
 Command: USER
 Parameters: &lt;user&gt; &lt;mode&gt; &lt;unused&gt; &lt;realname&gt;
 The USER command is used at the beginning of connection to specify
-the <a href="doc_irc_masks.html">username</a>, <a href="doc_irc_masks.html">hostname</a> and realname of a new user.
+the username, hostname and realname of a new user.
 The &lt;mode&gt; parameter should be a numeric, and can be used to
-automatically set user modes when registering with the <a href="doc_ircintro.html">server</a>.  This
+automatically set user modes when registering with the server.  This
 parameter is a bitmask, with only 2 bits having any signification: if
 the bit 2 is set, the user mode 'w' will be set and if the bit 3 is
 set, the user mode 'i' will be set.  (See Section 3.1.5 "User
@@ -593,10 +740,10 @@ The &lt;realname&gt; may contain space characters.
            ERR_NEEDMOREPARAMS              ERR_ALREADYREGISTRED
    Example:
    USER guest 0 * :Ronnie Reagan   ; User registering themselves with a
-                                   <a href="doc_irc_masks.html">username</a> of "guest" and real name
+                                   username of "guest" and real name
                                    "Ronnie Reagan".
    USER guest 8 * :Ronnie Reagan   ; User registering themselves with a
-                                   <a href="doc_irc_masks.html">username</a> of "guest" and real name
+                                   username of "guest" and real name
                                    "Ronnie Reagan", and asking to be set
                                    invisible.
 </pre></td></tr>
@@ -606,16 +753,16 @@ The &lt;realname&gt; may contain space characters.
 <tr><td><pre>
 Command: OPER
 Parameters: &lt;name&gt; &lt;password&gt;
-A normal user uses the OPER command to obtain <a href="doc_operators.html">operator</a> privileges.
+A normal user uses the OPER command to obtain operator privileges.
 The combination of &lt;name&gt; and &lt;password&gt; are REQUIRED to gain
-<a href="doc_operators.html">Operator</a> privileges.  Upon success, the user will receive a MODE
+Operator privileges.  Upon success, the user will receive a MODE
 message (see section 3.1.5) indicating the new user modes.
    Numeric Replies:
            ERR_NEEDMOREPARAMS              RPL_YOUREOPER
            ERR_NOOPERHOST                  ERR_PASSWDMISMATCH
    Example:
-   OPER foo bar                    ; Attempt to register as an <a href="doc_operators.html">operator</a>
-                                   using a <a href="doc_irc_masks.html">username</a> of "foo" and "bar"
+   OPER foo bar                    ; Attempt to register as an operator
+                                   using a username of "foo" and "bar"
                                    as the password.
 </pre></td></tr>
 <tr><td><pre>
@@ -623,26 +770,26 @@ message (see section 3.1.5) indicating the new user modes.
 </pre></td></tr>
 <tr><td><pre>
 Command: MODE
-Parameters: &lt;<a href="doc_irc_masks.html">nickname</a>&gt;
+Parameters: &lt;nickname&gt;
 *( ( "+" / "-" ) *( "i" / "w" / "o" / "O" / "r" ) )
 The user MODE's are typically changes which affect either how the
 client is seen by others or what 'extra' messages the client is sent.
 A user MODE command MUST only be accepted if both the sender of the
-message and the <a href="doc_irc_masks.html">nickname</a> given as a parameter are both the same.  If
-no other parameter is given, then the <a href="doc_ircintro.html">server</a> will return the current
+message and the nickname given as a parameter are both the same.  If
+no other parameter is given, then the server will return the current
 settings for the nick.
       The available modes are as follows:
            a - user is flagged as away;
            i - marks a users as invisible;
            w - user receives wallops;
            r - restricted user connection;
-           o - <a href="doc_operators.html">operator</a> flag;
-           O - local <a href="doc_operators.html">operator</a> flag;
-           s - marks a user for receipt of <a href="doc_ircintro.html">server</a> notices.
+           o - operator flag;
+           O - local operator flag;
+           s - marks a user for receipt of server notices.
 Additional modes may be available later on.
 The flag 'a' SHALL NOT be toggled by the user using the MODE command,
 instead use of the AWAY command is REQUIRED.
-If a user attempts to make themselves an <a href="doc_operators.html">operator</a> using the "+o" or
+If a user attempts to make themselves an operator using the "+o" or
 "+O" flag, the attempt SHOULD be ignored as users could bypass the
 authentication mechanisms of the OPER command.  There is no
 restriction, however, on anyone `deopping' themselves (using "-o" or
@@ -650,11 +797,11 @@ restriction, however, on anyone `deopping' themselves (using "-o" or
 On the other hand, if a user attempts to make themselves unrestricted
 using the "-r" flag, the attempt SHOULD be ignored.  There is no
 restriction, however, on anyone `deopping' themselves (using "+r").
-This flag is typically set by the <a href="doc_ircintro.html">server</a> upon connection for
+This flag is typically set by the server upon connection for
 administrative reasons.  While the restrictions imposed are left up
 to the implementation, it is typical that a restricted user not be
-allowed to change <a href="doc_ircintro.html">nicknames</a>, nor make use of the <a href="doc_ircintro.html">channel operator</a>
-status on <a href="doc_ircintro.html">channels</a>.
+allowed to change nicknames, nor make use of the channel operator
+status on channels.
 The flag 's' is obsolete but MAY still be used.
    Numeric Replies:
            ERR_NEEDMOREPARAMS              ERR_USERSDONTMATCH
@@ -664,7 +811,7 @@ The flag 's' is obsolete but MAY still be used.
                                    reception of WALLOPS messages.
    MODE Angel +i                   ; Command from Angel to make herself
                                    invisible.
-   MODE WiZ -o                     ; WiZ 'deopping' (removing <a href="doc_operators.html">operator</a>
+   MODE WiZ -o                     ; WiZ 'deopping' (removing operator
                                    status).
 </pre></td></tr>
 <tr><td><pre>
@@ -672,15 +819,15 @@ The flag 's' is obsolete but MAY still be used.
 </pre></td></tr>
 <tr><td><pre>
 Command: SERVICE
-Parameters: &lt;<a href="doc_irc_masks.html">nickname</a>&gt; &lt;reserved&gt; &lt;distribution&gt; &lt;type&gt;
+Parameters: &lt;nickname&gt; &lt;reserved&gt; &lt;distribution&gt; &lt;type&gt;
 &lt;reserved&gt; &lt;info&gt;
 The SERVICE command to register a new service.  Command parameters
-specify the service <a href="doc_irc_masks.html">nickname</a>, distribution, type and info of a new
+specify the service nickname, distribution, type and info of a new
 service.
 The &lt;distribution&gt; parameter is used to specify the visibility of a
 service.  The service may only be known to servers which have a name
-matching the distribution.  For a matching <a href="doc_ircintro.html">server</a> to have knowledge
-of the service, the network path between that <a href="doc_ircintro.html">server</a> and the <a href="doc_ircintro.html">server</a>
+matching the distribution.  For a matching server to have knowledge
+of the service, the network path between that server and the server
 on which the service is connected MUST be composed of servers which
 names all match the mask.
 The &lt;type&gt; parameter is currently reserved for future usage.
@@ -701,7 +848,7 @@ The &lt;type&gt; parameter is currently reserved for future usage.
 <tr><td><pre>
 Command: QUIT
 Parameters: [ &lt;Quit Message&gt; ]
-A client session is terminated with a quit message.  The <a href="doc_ircintro.html">server</a>
+A client session is terminated with a quit message.  The server
 acknowledges this by sending an ERROR message to the client.
    Numeric Replies:
            None.
@@ -715,46 +862,46 @@ acknowledges this by sending an ERROR message to the client.
 </pre></td></tr>
 <tr><td><pre>
 Command: SQUIT
-Parameters: &lt;<a href="doc_ircintro.html">server</a>&gt; &lt;comment&gt;
-The SQUIT command is available only to <a href="doc_operators.html">operators</a>.  It is used to
-disconnect <a href="doc_ircintro.html">server</a> links.  Also servers can generate SQUIT messages on
-error conditions.  A SQUIT message may also target a remote <a href="doc_ircintro.html">server</a>
+Parameters: &lt;server&gt; &lt;comment&gt;
+The SQUIT command is available only to operators.  It is used to
+disconnect server links.  Also servers can generate SQUIT messages on
+error conditions.  A SQUIT message may also target a remote server
 connection.  In this case, the SQUIT message will simply be sent to
-the remote <a href="doc_ircintro.html">server</a> without affecting the servers in between the
-<a href="doc_operators.html">operator</a> and the remote <a href="doc_ircintro.html">server</a>.
-The &lt;comment&gt; SHOULD be supplied by all <a href="doc_operators.html">operators</a> who execute a SQUIT
-for a remote <a href="doc_ircintro.html">server</a>.  The <a href="doc_ircintro.html">server</a> ordered to disconnect its peer
+the remote server without affecting the servers in between the
+operator and the remote server.
+The &lt;comment&gt; SHOULD be supplied by all operators who execute a SQUIT
+for a remote server.  The server ordered to disconnect its peer
 generates a WALLOPS message with &lt;comment&gt; included, so that other
 users may be aware of the reason of this action.
    Numeric replies:
            ERR_NOPRIVILEGES                ERR_NOSUCHSERVER
            ERR_NEEDMOREPARAMS
    Examples:
-   SQUIT tolsun.oulu.fi :Bad Link ?  ; Command to uplink of the <a href="doc_ircintro.html">server</a>
+   SQUIT tolsun.oulu.fi :Bad Link ?  ; Command to uplink of the server
                                    tolson.oulu.fi to terminate its
                                    connection with comment "Bad Link".
-   :Trillian SQUIT cm22.eng.umd.edu :<a href="doc_ircintro.html">Server</a> out of control ; Command
+   :Trillian SQUIT cm22.eng.umd.edu :Server out of control ; Command
                                    from Trillian from to disconnect
                                    "cm22.eng.umd.edu" from the net with
-                                   comment "<a href="doc_ircintro.html">Server</a> out of control".
+                                   comment "Server out of control".
 </pre></td></tr>
 <tr><td><pre>
-<b>3.2 <a href="doc_ircintro.html">Channel</a> operations</b>
+<b>3.2 Channel operations</b>
 </pre></td></tr>
 <tr><td><pre>
-This group of messages is concerned with manipulating <a href="doc_ircintro.html">channels</a>, their
-properties (<a href="doc_ircintro.html">channel</a> modes), and their contents (typically users).
+This group of messages is concerned with manipulating channels, their
+properties (channel modes), and their contents (typically users).
 For this reason, these messages SHALL NOT be made available to
 services.
 All of these messages are requests which will or will not be granted
-by the <a href="doc_ircintro.html">server</a>.  The <a href="doc_ircintro.html">server</a> MUST send a reply informing the user
+by the server.  The server MUST send a reply informing the user
 whether the request was granted, denied or generated an error.  When
-the <a href="doc_ircintro.html">server</a> grants the request, the message is typically sent back
+the server grants the request, the message is typically sent back
 (eventually reformatted) to the user with the prefix set to the user
 itself.
-The rules governing how <a href="doc_ircintro.html">channels</a> are managed are enforced by the
+The rules governing how channels are managed are enforced by the
 servers.  These rules are beyond the scope of this document.  More
-details are found in "Internet Relay Chat: <a href="doc_ircintro.html">Channel</a> Management" [IRC-
+details are found in "Internet Relay Chat: Channel Management" [IRC-
 CHAN].
 </pre></td></tr>
 <tr><td><pre>
@@ -762,25 +909,25 @@ CHAN].
 </pre></td></tr>
 <tr><td><pre>
 Command: JOIN
-Parameters: ( &lt;<a href="doc_ircintro.html">channel</a>&gt; *( "," &lt;<a href="doc_ircintro.html">channel</a>&gt; ) [ &lt;key&gt; *( "," &lt;key&gt; ) ] )
+Parameters: ( &lt;channel&gt; *( "," &lt;channel&gt; ) [ &lt;key&gt; *( "," &lt;key&gt; ) ] )
 / "0"
 The JOIN command is used by a user to request to start listening to
-the specific <a href="doc_ircintro.html">channel</a>.  Servers MUST be able to parse arguments in the
+the specific channel.  Servers MUST be able to parse arguments in the
 form of a list of target, but SHOULD NOT use lists when sending JOIN
 messages to clients.
-Once a user has joined a <a href="doc_ircintro.html">channel</a>, he receives information about
-all commands his <a href="doc_ircintro.html">server</a> receives affecting the <a href="doc_ircintro.html">channel</a>.  This
+Once a user has joined a channel, he receives information about
+all commands his server receives affecting the channel.  This
 includes JOIN, MODE, KICK, PART, QUIT and of course PRIVMSG/NOTICE.
-This allows <a href="doc_ircintro.html">channel</a> members to keep track of the other <a href="doc_ircintro.html">channel</a>
-members, as well as <a href="doc_ircintro.html">channel</a> modes.
+This allows channel members to keep track of the other channel
+members, as well as channel modes.
 If a JOIN is successful, the user receives a JOIN message as
-confirmation and is then sent the <a href="doc_ircintro.html">channel</a>'s topic (using RPL_TOPIC) and
-the list of users who are on the <a href="doc_ircintro.html">channel</a> (using RPL_NAMREPLY), which
+confirmation and is then sent the channel's topic (using RPL_TOPIC) and
+the list of users who are on the channel (using RPL_NAMREPLY), which
 MUST include the user joining.
 Note that this message accepts a special argument ("0"), which is
-a special request to leave all <a href="doc_ircintro.html">channels</a> the user is currently a member
-of.  The <a href="doc_ircintro.html">server</a> will <a href="class_process.html">process</a> this message as if the user had sent
-a PART command (See Section 3.2.2) for each <a href="doc_ircintro.html">channel</a> he is a member
+a special request to leave all channels the user is currently a member
+of.  The server will process this message as if the user had sent
+a PART command (See Section 3.2.2) for each channel he is a member
 of.
    Numeric Replies:
            ERR_NEEDMOREPARAMS              ERR_BANNEDFROMCHAN
@@ -790,32 +937,32 @@ of.
            ERR_TOOMANYTARGETS              ERR_UNAVAILRESOURCE
            RPL_TOPIC
    Examples:
-   JOIN #foobar                    ; Command to join <a href="doc_ircintro.html">channel</a> #foobar.
-   JOIN &foo fubar                 ; Command to join <a href="doc_ircintro.html">channel</a> &foo using
+   JOIN #foobar                    ; Command to join channel #foobar.
+   JOIN &foo fubar                 ; Command to join channel &foo using
                                    key "fubar".
-   JOIN #foo,&bar fubar            ; Command to join <a href="doc_ircintro.html">channel</a> #foo using
+   JOIN #foo,&bar fubar            ; Command to join channel #foo using
                                    key "fubar" and &bar using no key.
-   JOIN #foo,#bar fubar,foobar     ; Command to join <a href="doc_ircintro.html">channel</a> #foo using
-                                   key "fubar", and <a href="doc_ircintro.html">channel</a> #bar using
+   JOIN #foo,#bar fubar,foobar     ; Command to join channel #foo using
+                                   key "fubar", and channel #bar using
                                    key "foobar".
-   JOIN #foo,#bar                  ; Command to join <a href="doc_ircintro.html">channels</a> #foo and
+   JOIN #foo,#bar                  ; Command to join channels #foo and
                                    #bar.
    JOIN 0                          ; Leave all currently joined
-                                   <a href="doc_ircintro.html">channels</a>.
+                                   channels.
    :WiZ!jto@tolsun.oulu.fi JOIN #Twilight_zone ; JOIN message from WiZ
-                                   on <a href="doc_ircintro.html">channel</a> #Twilight_zone
+                                   on channel #Twilight_zone
 </pre></td></tr>
 <tr><td><pre>
 <b>3.2.2 Part message</b>
 </pre></td></tr>
 <tr><td><pre>
 Command: PART
-Parameters: &lt;<a href="doc_ircintro.html">channel</a>&gt; *( "," &lt;<a href="doc_ircintro.html">channel</a>&gt; ) [ &lt;Part Message&gt; ]
+Parameters: &lt;channel&gt; *( "," &lt;channel&gt; ) [ &lt;Part Message&gt; ]
 The PART command causes the user sending the message to be removed
-from the list of active members for all given <a href="doc_ircintro.html">channels</a> listed in the
+from the list of active members for all given channels listed in the
 parameter string.  If a "Part Message" is given, this will be sent
-instead of the default message, the <a href="doc_irc_masks.html">nickname</a>.  This request is always
-granted by the <a href="doc_ircintro.html">server</a>.
+instead of the default message, the nickname.  This request is always
+granted by the server.
 Servers MUST be able to parse arguments in the form of a list of
 target, but SHOULD NOT use lists when sending PART messages to
 clients.
@@ -823,24 +970,24 @@ clients.
            ERR_NEEDMOREPARAMS              ERR_NOSUCHCHANNEL
            ERR_NOTONCHANNEL
    Examples:
-   PART #twilight_zone             ; Command to leave <a href="doc_ircintro.html">channel</a>
+   PART #twilight_zone             ; Command to leave channel
                                    "#twilight_zone"
-   PART #oz-ops,&group5            ; Command to leave both <a href="doc_ircintro.html">channels</a>
+   PART #oz-ops,&group5            ; Command to leave both channels
                                    "&group5" and "#oz-ops".
    :WiZ!jto@tolsun.oulu.fi PART #playzone :I lost
-                                   ; User WiZ leaving <a href="doc_ircintro.html">channel</a>
+                                   ; User WiZ leaving channel
                                    "#playzone" with the message "I
                                    lost".
 </pre></td></tr>
 <tr><td><pre>
-<b>3.2.3 <a href="doc_ircintro.html">Channel</a> mode message</b>
+<b>3.2.3 Channel mode message</b>
 </pre></td></tr>
 <tr><td><pre>
 Command: MODE
-Parameters: &lt;<a href="doc_ircintro.html">channel</a>&gt; *( ( "-" / "+" ) *&lt;modes&gt; *&lt;modeparams&gt; )
+Parameters: &lt;channel&gt; *( ( "-" / "+" ) *&lt;modes&gt; *&lt;modeparams&gt; )
 The MODE command is provided so that users may query and change the
-characteristics of a <a href="doc_ircintro.html">channel</a>.  For more details on available modes
-and their uses, see "Internet Relay Chat: <a href="doc_ircintro.html">Channel</a> Management" [IRC-
+characteristics of a channel.  For more details on available modes
+and their uses, see "Internet Relay Chat: Channel Management" [IRC-
 CHAN].  Note that there is a maximum limit of three (3) changes per
 command for modes that take a parameter.
    Numeric Replies:
@@ -854,46 +1001,46 @@ command for modes that take a parameter.
            RPL_UNIQOPIS
    The following examples are given to help understanding the syntax of
    the MODE command, but refer to modes defined in "Internet Relay Chat:
-   <a href="doc_ircintro.html">Channel</a> Management" [IRC-CHAN].
+   Channel Management" [IRC-CHAN].
    Examples:
-   MODE #Finnish +imI *!*@*.fi     ; Command to make #Finnish <a href="doc_ircintro.html">channel</a>
+   MODE #Finnish +imI *!*@*.fi     ; Command to make #Finnish channel
                                    moderated and 'invite-only' with user
-                                   with a <a href="doc_irc_masks.html">hostname</a> matching *.fi
+                                   with a hostname matching *.fi
                                    automatically invited.
    MODE #Finnish +o Kilroy         ; Command to give 'chanop' privileges
-                                   to Kilroy on <a href="doc_ircintro.html">channel</a> #Finnish.
+                                   to Kilroy on channel #Finnish.
    MODE #Finnish +v Wiz            ; Command to allow WiZ to speak on
                                    #Finnish.
    MODE #Fins -s                   ; Command to remove 'secret' flag
-                                   from <a href="doc_ircintro.html">channel</a> #Fins.
-   MODE #42 +k oulu                ; Command to set the <a href="doc_ircintro.html">channel</a> key to
+                                   from channel #Fins.
+   MODE #42 +k oulu                ; Command to set the channel key to
                                    "oulu".
    MODE #42 -k oulu                ; Command to remove the "oulu"
-                                   <a href="doc_ircintro.html">channel</a> key on <a href="doc_ircintro.html">channel</a> "#42".
+                                   channel key on channel "#42".
    MODE #eu-opers +l 10            ; Command to set the limit for the
-                                   number of users on <a href="doc_ircintro.html">channel</a>
+                                   number of users on channel
                                    "#eu-opers" to 10.
    :WiZ!jto@tolsun.oulu.fi MODE #eu-opers -l
                                    ; User "WiZ" removing the limit for
-                                   the number of users on <a href="doc_ircintro.html">channel</a> "#eu-
+                                   the number of users on channel "#eu-
                                    opers".
    MODE &oulu +b                   ; Command to list ban masks set for
-                                   the <a href="doc_ircintro.html">channel</a> "&oulu".
+                                   the channel "&oulu".
    MODE &oulu +b *!*@*             ; Command to prevent all users from
                                    joining.
    MODE &oulu +b *!*@*.edu +e *!*@*.bu.edu
                                    ; Command to prevent any user from a
-                                   <a href="doc_irc_masks.html">hostname</a> matching *.edu from joining,
+                                   hostname matching *.edu from joining,
                                    except if matching *.bu.edu
    MODE #bu +be *!*@*.edu *!*@*.bu.edu
                                    ; Comment to prevent any user from a
-                                   <a href="doc_irc_masks.html">hostname</a> matching *.edu from joining,
+                                   hostname matching *.edu from joining,
                                    except if matching *.bu.edu
    MODE #meditation e              ; Command to list exception masks set
-                                   for the <a href="doc_ircintro.html">channel</a> "#meditation".
+                                   for the channel "#meditation".
    MODE #meditation I              ; Command to list invitations masks
-                                   set for the <a href="doc_ircintro.html">channel</a> "#meditation".
-   MODE !12345ircd O               ; Command to ask who the <a href="doc_ircintro.html">channel</a>
+                                   set for the channel "#meditation".
+   MODE !12345ircd O               ; Command to ask who the channel
                                    creator for "!12345ircd" is
 </pre></td></tr>
 <tr><td><pre>
@@ -901,13 +1048,13 @@ command for modes that take a parameter.
 </pre></td></tr>
 <tr><td><pre>
 Command: TOPIC
-Parameters: &lt;<a href="doc_ircintro.html">channel</a>&gt; [ &lt;topic&gt; ]
-The TOPIC command is used to change or view the topic of a <a href="doc_ircintro.html">channel</a>.
-The topic for <a href="doc_ircintro.html">channel</a> &lt;<a href="doc_ircintro.html">channel</a>&gt; is returned if there is no &lt;topic&gt;
+Parameters: &lt;channel&gt; [ &lt;topic&gt; ]
+The TOPIC command is used to change or view the topic of a channel.
+The topic for channel &lt;channel&gt; is returned if there is no &lt;topic&gt;
 given.  If the &lt;topic&gt; parameter is present, the topic for that
-<a href="doc_ircintro.html">channel</a> will be changed, if this action is allowed for the user
+channel will be changed, if this action is allowed for the user
 requesting it.  If the &lt;topic&gt; parameter is an empty string, the
-topic for that <a href="doc_ircintro.html">channel</a> will be removed.
+topic for that channel will be removed.
    Numeric Replies:
            ERR_NEEDMOREPARAMS              ERR_NOTONCHANNEL
            RPL_NOTOPIC                     RPL_TOPIC
@@ -925,18 +1072,18 @@ topic for that <a href="doc_ircintro.html">channel</a> will be removed.
 <tr><td><pre>
 <b>3.2.5 Names message</b>
 Command: NAMES
-Parameters: [ &lt;<a href="doc_ircintro.html">channel</a>&gt; *( "," &lt;<a href="doc_ircintro.html">channel</a>&gt; ) [ &lt;target&gt; ] ]
-By using the NAMES command, a user can list all <a href="doc_ircintro.html">nicknames</a> that are
+Parameters: [ &lt;channel&gt; *( "," &lt;channel&gt; ) [ &lt;target&gt; ] ]
+By using the NAMES command, a user can list all nicknames that are
 visible to him. For more details on what is visible and what is not,
-see "Internet Relay Chat: <a href="doc_ircintro.html">Channel</a> Management" [IRC-CHAN].  The
-&lt;<a href="doc_ircintro.html">channel</a>&gt; parameter specifies which <a href="doc_ircintro.html">channel</a>(s) to return information
-about.  There is no error reply for bad <a href="doc_ircintro.html">channel</a> names.
-If no &lt;<a href="doc_ircintro.html">channel</a>&gt; parameter is given, a list of all <a href="doc_ircintro.html">channels</a> and their
+see "Internet Relay Chat: Channel Management" [IRC-CHAN].  The
+&lt;channel&gt; parameter specifies which channel(s) to return information
+about.  There is no error reply for bad channel names.
+If no &lt;channel&gt; parameter is given, a list of all channels and their
 occupants is returned.  At the end of this list, a list of users who
-are visible but either not on any <a href="doc_ircintro.html">channel</a> or not on a visible <a href="doc_ircintro.html">channel</a>
-are listed as being on `<a href="doc_ircintro.html">channel</a>' "*".
+are visible but either not on any channel or not on a visible channel
+are listed as being on `channel' "*".
 If the &lt;target&gt; parameter is specified, the request is forwarded to
-that <a href="doc_ircintro.html">server</a> which will generate the reply.
+that server which will generate the reply.
 Wildcards are allowed in the &lt;target&gt; parameter.
    Numerics:
            ERR_TOOMANYMATCHES              ERR_NOSUCHSERVER
@@ -945,26 +1092,26 @@ Wildcards are allowed in the &lt;target&gt; parameter.
    NAMES #twilight_zone,#42        ; Command to list visible users on
                                    #twilight_zone and #42
    NAMES                           ; Command to list all visible
-                                   <a href="doc_ircintro.html">channels</a> and users
+                                   channels and users
 </pre></td></tr>
 <tr><td><pre>
 <b>3.2.6 List message</b>
 </pre></td></tr>
 <tr><td><pre>
 Command: LIST
-Parameters: [ &lt;<a href="doc_ircintro.html">channel</a>&gt; *( "," &lt;<a href="doc_ircintro.html">channel</a>&gt; ) [ &lt;target&gt; ] ]
-The list command is used to list <a href="doc_ircintro.html">channels</a> and their topics.  If the
-&lt;<a href="doc_ircintro.html">channel</a>&gt; parameter is used, only the status of that <a href="doc_ircintro.html">channel</a> is
+Parameters: [ &lt;channel&gt; *( "," &lt;channel&gt; ) [ &lt;target&gt; ] ]
+The list command is used to list channels and their topics.  If the
+&lt;channel&gt; parameter is used, only the status of that channel is
 displayed.
 If the &lt;target&gt; parameter is specified, the request is forwarded to
-that <a href="doc_ircintro.html">server</a> which will generate the reply.
+that server which will generate the reply.
 Wildcards are allowed in the &lt;target&gt; parameter.
    Numeric Replies:
            ERR_TOOMANYMATCHES              ERR_NOSUCHSERVER
            RPL_LIST                        RPL_LISTEND
    Examples:
-   LIST                            ; Command to list all <a href="doc_ircintro.html">channels</a>.
-   LIST #twilight_zone,#42         ; Command to list <a href="doc_ircintro.html">channels</a>
+   LIST                            ; Command to list all channels.
+   LIST #twilight_zone,#42         ; Command to list channels
                                    #twilight_zone and #42
 </pre></td></tr>
 <tr><td><pre>
@@ -972,16 +1119,16 @@ Wildcards are allowed in the &lt;target&gt; parameter.
 </pre></td></tr>
 <tr><td><pre>
 Command: INVITE
-Parameters: &lt;<a href="doc_irc_masks.html">nickname</a>&gt; &lt;<a href="doc_ircintro.html">channel</a>&gt;
-The INVITE command is used to invite a user to a <a href="doc_ircintro.html">channel</a>.  The
-parameter &lt;<a href="doc_irc_masks.html">nickname</a>&gt; is the <a href="doc_irc_masks.html">nickname</a> of the person to be invited to
-the target <a href="doc_ircintro.html">channel</a> &lt;<a href="doc_ircintro.html">channel</a>&gt;.  There is no requirement that the
-<a href="doc_ircintro.html">channel</a> the target user is being invited to must exist or be a valid
-<a href="doc_ircintro.html">channel</a>.  However, if the <a href="doc_ircintro.html">channel</a> exists, only members of the <a href="doc_ircintro.html">channel</a>
-are allowed to invite other users.  When the <a href="doc_ircintro.html">channel</a> has invite-only
-flag set, only <a href="doc_ircintro.html">channel</a> <a href="doc_operators.html">operators</a> may issue INVITE command.
+Parameters: &lt;nickname&gt; &lt;channel&gt;
+The INVITE command is used to invite a user to a channel.  The
+parameter &lt;nickname&gt; is the nickname of the person to be invited to
+the target channel &lt;channel&gt;.  There is no requirement that the
+channel the target user is being invited to must exist or be a valid
+channel.  However, if the channel exists, only members of the channel
+are allowed to invite other users.  When the channel has invite-only
+flag set, only channel operators may issue INVITE command.
 Only the user inviting and the user being invited will receive
-notification of the invitation.  Other <a href="doc_ircintro.html">channel</a> members are not
+notification of the invitation.  Other channel members are not
 notified.  (This is unlike the MODE changes, and is occasionally the
 source of trouble for users.)
    Numeric Replies:
@@ -992,7 +1139,7 @@ source of trouble for users.)
    Examples:
    :Angel!wings@irc.org INVITE Wiz #Dust
                                    ; Message to WiZ when he has been
-                                   invited by user Angel to <a href="doc_ircintro.html">channel</a>
+                                   invited by user Angel to channel
                                    #Dust
    INVITE Wiz #Twilight_Zone       ; Command to invite WiZ to
                                    #Twilight_zone
@@ -1002,16 +1149,16 @@ source of trouble for users.)
 </pre></td></tr>
 <tr><td><pre>
 Command: KICK
-Parameters: &lt;<a href="doc_ircintro.html">channel</a>&gt; *( "," &lt;<a href="doc_ircintro.html">channel</a>&gt; ) &lt;user&gt; *( "," &lt;user&gt; )
+Parameters: &lt;channel&gt; *( "," &lt;channel&gt; ) &lt;user&gt; *( "," &lt;user&gt; )
 [&lt;comment&gt;]
 The KICK command can be used to request the forced removal of a user
-from a <a href="doc_ircintro.html">channel</a>.  It causes the &lt;user&gt; to PART from the &lt;<a href="doc_ircintro.html">channel</a>&gt; by
+from a channel.  It causes the &lt;user&gt; to PART from the &lt;channel&gt; by
 force.  For the message to be syntactically correct, there MUST be
-either one <a href="doc_ircintro.html">channel</a> parameter and multiple user parameter, or as many
-<a href="doc_ircintro.html">channel</a> parameters as there are user parameters.  If a "comment" is
-given, this will be sent instead of the default message, the <a href="doc_irc_masks.html">nickname</a>
+either one channel parameter and multiple user parameter, or as many
+channel parameters as there are user parameters.  If a "comment" is
+given, this will be sent instead of the default message, the nickname
 of the user issuing the KICK.
-The <a href="doc_ircintro.html">server</a> MUST NOT send KICK messages with multiple <a href="doc_ircintro.html">channels</a> or
+The server MUST NOT send KICK messages with multiple channels or
 users to clients.  This is necessarily to maintain backward
 compatibility with old client software.
    Numeric Replies:
@@ -1026,8 +1173,8 @@ compatibility with old client software.
                                    using "Speaking English" as the
                                    reason (comment).
    :WiZ!jto@tolsun.oulu.fi KICK #Finnish John
-                                   ; KICK message on <a href="doc_ircintro.html">channel</a> #Finnish
-                                   from WiZ to remove John from <a href="doc_ircintro.html">channel</a>
+                                   ; KICK message on channel #Finnish
+                                   from WiZ to remove John from channel
 </pre></td></tr>
 <tr><td><pre>
 <b>3.3 Sending messages</b>
@@ -1047,16 +1194,16 @@ to ensure it happens in a reliable and structured manner.
 Command: PRIVMSG
 Parameters: &lt;msgtarget&gt; &lt;text to be sent&gt;
 PRIVMSG is used to send private messages between users, as well as to
-send messages to <a href="doc_ircintro.html">channels</a>.  &lt;msgtarget&gt; is usually the <a href="doc_irc_masks.html">nickname</a> of
-the recipient of the message, or a <a href="doc_ircintro.html">channel</a> name.
-The &lt;msgtarget&gt; parameter may also be a host mask (#&lt;mask&gt;) or <a href="doc_ircintro.html">server</a>
-mask ($&lt;mask&gt;).  In both cases the <a href="doc_ircintro.html">server</a> will only send the PRIVMSG
-to those who have a <a href="doc_ircintro.html">server</a> or host matching the mask.  The mask MUST
+send messages to channels.  &lt;msgtarget&gt; is usually the nickname of
+the recipient of the message, or a channel name.
+The &lt;msgtarget&gt; parameter may also be a host mask (#&lt;mask&gt;) or server
+mask ($&lt;mask&gt;).  In both cases the server will only send the PRIVMSG
+to those who have a server or host matching the mask.  The mask MUST
 have at least 1 (one) "." in it and no wildcards following the last
 ".".  This requirement exists to prevent people sending messages to
 "#*" or "$*", which would broadcast to all users.  Wildcards are the
 '*' and '?'  characters.  This extension to the PRIVMSG command is
-only available to <a href="doc_operators.html">operators</a>.
+only available to operators.
    Numeric Replies:
            ERR_NORECIPIENT                 ERR_NOTEXTTOSEND
            ERR_CANNOTSENDTOCHAN            ERR_NOTOPLEVEL
@@ -1070,25 +1217,25 @@ only available to <a href="doc_operators.html">operators</a>.
                                    ; Command to send a message to Angel.
    PRIVMSG jto@tolsun.oulu.fi :Hello !
                                    ; Command to send a message to a user
-                                   on <a href="doc_ircintro.html">server</a> tolsun.oulu.fi with
-                                   <a href="doc_irc_masks.html">username</a> of "jto".
+                                   on server tolsun.oulu.fi with
+                                   username of "jto".
    PRIVMSG kalt%millennium.stealth.net@irc.stealth.net :Are you a frog?
-                                   ; Message to a user on <a href="doc_ircintro.html">server</a>
-                                   irc.stealth.net with <a href="doc_irc_masks.html">username</a> of
+                                   ; Message to a user on server
+                                   irc.stealth.net with username of
                                    "kalt", and connected from the host
                                    millennium.stealth.net.
    PRIVMSG kalt%millennium.stealth.net :Do you like cheese?
                                    ; Message to a user on the local
-                                   <a href="doc_ircintro.html">server</a> with <a href="doc_irc_masks.html">username</a> of "kalt", and
+                                   server with username of "kalt", and
                                    connected from the host
                                    millennium.stealth.net.
    PRIVMSG Wiz!jto@tolsun.oulu.fi :Hello !
-                                   ; Message to the user with <a href="doc_irc_masks.html">nickname</a>
+                                   ; Message to the user with nickname
                                    Wiz who is connected from the host
-                                   tolsun.oulu.fi and has the <a href="doc_irc_masks.html">username</a>
+                                   tolsun.oulu.fi and has the username
                                    "jto".
-   PRIVMSG $*.fi :<a href="doc_ircintro.html">Server</a> tolsun.oulu.fi rebooting.
-                                   ; Message to everyone on a <a href="doc_ircintro.html">server</a>
+   PRIVMSG $*.fi :Server tolsun.oulu.fi rebooting.
+                                   ; Message to everyone on a server
                                    which has a name matching *.fi.
    PRIVMSG #*.edu :NSFNet is undergoing work, expect interruptions
                                    ; Message to all users who come from
@@ -1105,7 +1252,7 @@ The NOTICE command is used similarly to PRIVMSG.  The difference
 between NOTICE and PRIVMSG is that automatic replies MUST NEVER be
 sent in response to a NOTICE message.  This rule applies to servers
 too - they MUST NOT send any error reply back to the client on
-receipt of a notice.  The <a href="class_object.html">object</a> of this rule is to avoid loops
+receipt of a notice.  The object of this rule is to avoid loops
 between clients automatically sending something in response to
 something it received.
 This command is available to services as well as users.
@@ -1114,15 +1261,15 @@ either an AI or other interactive program controlling their actions).
 See PRIVMSG for more details on replies and examples.
 </pre></td></tr>
 <tr><td><pre>
-<b>3.4 <a href="doc_ircintro.html">Server</a> queries and commands</b>
+<b>3.4 Server queries and commands</b>
 </pre></td></tr>
 <tr><td><pre>
-The <a href="doc_ircintro.html">server</a> query group of commands has been designed to return
-information about any <a href="doc_ircintro.html">server</a> which is connected to the network.
-In these queries, where a parameter appears as &lt;target&gt;, <a href="doc_irc_masks.html">wildcard</a>
+The server query group of commands has been designed to return
+information about any server which is connected to the network.
+In these queries, where a parameter appears as &lt;target&gt;, wildcard
 masks are usually valid.  For each parameter, however, only one query
-and set of replies is to be generated.  In most cases, if a <a href="doc_irc_masks.html">nickname</a>
-is given, it will mean the <a href="doc_ircintro.html">server</a> to which the user is connected.
+and set of replies is to be generated.  In most cases, if a nickname
+is given, it will mean the server to which the user is connected.
 These messages typically have little value for services, it is
 therefore RECOMMENDED to forbid services from using them.
 </pre></td></tr>
@@ -1133,7 +1280,7 @@ therefore RECOMMENDED to forbid services from using them.
 Command: MOTD
 Parameters: [ &lt;target&gt; ]
 The MOTD command is used to get the "Message Of The Day" of the given
-<a href="doc_ircintro.html">server</a>, or current <a href="doc_ircintro.html">server</a> if &lt;target&gt; is omitted.
+server, or current server if &lt;target&gt; is omitted.
 Wildcards are allowed in the &lt;target&gt; parameter.
    Numeric Replies:
            RPL_MOTDSTART                   RPL_MOTD
@@ -1150,7 +1297,7 @@ IRC network.  If no parameter is given, the reply will be about the
 whole net.  If a &lt;mask&gt; is specified, then the reply will only
 concern the part of the network formed by the servers matching the
 mask.  Finally, if the &lt;target&gt; parameter is specified, the request
-is forwarded to that <a href="doc_ircintro.html">server</a> which will generate the reply.
+is forwarded to that server which will generate the reply.
 Wildcards are allowed in the &lt;target&gt; parameter.
    Numeric Replies:
            RPL_LUSERCLIENT                 RPL_LUSEROP
@@ -1163,15 +1310,15 @@ Wildcards are allowed in the &lt;target&gt; parameter.
 <tr><td><pre>
 Command: VERSION
 Parameters: [ &lt;target&gt; ]
-The VERSION command is used to query the version of the <a href="doc_ircintro.html">server</a>
+The VERSION command is used to query the version of the server
 program.  An optional parameter &lt;target&gt; is used to query the version
-of the <a href="doc_ircintro.html">server</a> program which a client is not directly connected to.
+of the server program which a client is not directly connected to.
 Wildcards are allowed in the &lt;target&gt; parameter.
    Numeric Replies:
            ERR_NOSUCHSERVER                RPL_VERSION
    Examples:
    VERSION tolsun.oulu.fi          ; Command to check the version of
-                                   <a href="doc_ircintro.html">server</a> "tolsun.oulu.fi".
+                                   server "tolsun.oulu.fi".
 </pre></td></tr>
 <tr><td><pre>
 <b>3.4.4 Stats message</b>
@@ -1179,28 +1326,28 @@ Wildcards are allowed in the &lt;target&gt; parameter.
 <tr><td><pre>
 Command: STATS
 Parameters: [ &lt;query&gt; [ &lt;target&gt; ] ]
-The stats command is used to query statistics of certain <a href="doc_ircintro.html">server</a>.  If
+The stats command is used to query statistics of certain server.  If
 &lt;query&gt; parameter is omitted, only the end of stats reply is sent
 back.
 A query may be given for any single letter which is only checked by
-the destination <a href="doc_ircintro.html">server</a> and is otherwise passed on by intermediate
+the destination server and is otherwise passed on by intermediate
 servers, ignored and unaltered.
 Wildcards are allowed in the &lt;target&gt; parameter.
 Except for the ones below, the list of valid queries is
 implementation dependent.  The standard queries below SHOULD be
-supported by the <a href="doc_ircintro.html">server</a>:
-            l - returns a list of the <a href="doc_ircintro.html">server</a>'s connections, showing how
+supported by the server:
+            l - returns a list of the server's connections, showing how
                 long each connection has been established and the
                 traffic over that connection in Kbytes and messages for
                 each direction;
             m - returns the usage count for each of commands supported
-                by the <a href="doc_ircintro.html">server</a>; commands for which the usage count is
+                by the server; commands for which the usage count is
                 zero MAY be omitted;
             o - returns a list of configured privileged users,
-                <a href="doc_operators.html">operators</a>;
-            u - returns a string showing how long the <a href="doc_ircintro.html">server</a> has been
+                operators;
+            u - returns a string showing how long the server has been
                 up.
-It is also RECOMMENDED that client and <a href="doc_ircintro.html">server</a> access configuration be
+It is also RECOMMENDED that client and server access configuration be
 published this way.
    Numeric Replies:
            ERR_NOSUCHSERVER
@@ -1209,20 +1356,20 @@ published this way.
            RPL_ENDOFSTATS
    Examples:
    STATS m                         ; Command to check the command usage
-                                   for the <a href="doc_ircintro.html">server</a> you are connected to
+                                   for the server you are connected to
 </pre></td></tr>
 <tr><td><pre>
 <b>3.4.5 Links message</b>
 </pre></td></tr>
 <tr><td><pre>
 Command: LINKS
-Parameters: [ [ &lt;remote <a href="doc_ircintro.html">server</a>&gt; ] &lt;<a href="doc_ircintro.html">server</a> mask&gt; ]
+Parameters: [ [ &lt;remote server&gt; ] &lt;server mask&gt; ]
 With LINKS, a user can list all servernames, which are known by the
-<a href="doc_ircintro.html">server</a> answering the query.  The returned list of servers MUST match
+server answering the query.  The returned list of servers MUST match
 the mask, or if no mask is given, the full list is returned.
-If &lt;remote <a href="doc_ircintro.html">server</a>&gt; is given in addition to &lt;<a href="doc_ircintro.html">server</a> mask&gt;, the LINKS
-command is forwarded to the first <a href="doc_ircintro.html">server</a> found that matches that name
-(if any), and that <a href="doc_ircintro.html">server</a> is then required to answer the query.
+If &lt;remote server&gt; is given in addition to &lt;server mask&gt;, the LINKS
+command is forwarded to the first server found that matches that name
+(if any), and that server is then required to answer the query.
 Numeric Replies:
   ERR_NOSUCHSERVER
   RPL_LINKSRPL_ENDOFLINKS
@@ -1230,7 +1377,7 @@ Examples:
 LINKS *.au ; Command to list all servers which
   have a name that matches *.au;
 LINKS *.edu *.bu.edu; Command to list servers matching
-  *.bu.edu as seen by the first <a href="doc_ircintro.html">server</a>
+  *.bu.edu as seen by the first server
   matching *.edu.
 </pre></td></tr>
 <tr><td><pre>
@@ -1240,13 +1387,13 @@ LINKS *.edu *.bu.edu; Command to list servers matching
 Command: TIME
 Parameters: [ &lt;target&gt; ]
 The time command is used to query local time from the specified
-<a href="doc_ircintro.html">server</a>. If the &lt;target&gt; parameter is not given, the <a href="doc_ircintro.html">server</a> receiving
+server. If the &lt;target&gt; parameter is not given, the server receiving
 the command must reply to the query.
 Wildcards are allowed in the &lt;target&gt; parameter.
    Numeric Replies:
            ERR_NOSUCHSERVER              RPL_TIME
    Examples:
-   TIME tolsun.oulu.fi             ; check the time on the <a href="doc_ircintro.html">server</a>
+   TIME tolsun.oulu.fi             ; check the time on the server
                                    "tolson.oulu.fi"
 </pre></td></tr>
 <tr><td><pre>
@@ -1254,22 +1401,22 @@ Wildcards are allowed in the &lt;target&gt; parameter.
 </pre></td></tr>
 <tr><td><pre>
 Command: CONNECT
-Parameters: &lt;target <a href="doc_ircintro.html">server</a>&gt; &lt;port&gt; [ &lt;remote <a href="doc_ircintro.html">server</a>&gt; ]
-The CONNECT command can be used to request a <a href="doc_ircintro.html">server</a> to try to
-establish a new connection to another <a href="doc_ircintro.html">server</a> immediately.  CONNECT is
-a privileged command and SHOULD be available only to IRC <a href="doc_operators.html">Operators</a>.
-If a &lt;remote <a href="doc_ircintro.html">server</a>&gt; is given and its mask doesn't match name of the
-parsing <a href="doc_ircintro.html">server</a>, the CONNECT attempt is sent to the first match of
-remote <a href="doc_ircintro.html">server</a>. Otherwise the CONNECT attempt is made by the <a href="doc_ircintro.html">server</a>
+Parameters: &lt;target server&gt; &lt;port&gt; [ &lt;remote server&gt; ]
+The CONNECT command can be used to request a server to try to
+establish a new connection to another server immediately.  CONNECT is
+a privileged command and SHOULD be available only to IRC Operators.
+If a &lt;remote server&gt; is given and its mask doesn't match name of the
+parsing server, the CONNECT attempt is sent to the first match of
+remote server. Otherwise the CONNECT attempt is made by the server
 processing the request.
-The <a href="doc_ircintro.html">server</a> receiving a remote CONNECT command SHOULD generate a
+The server receiving a remote CONNECT command SHOULD generate a
 WALLOPS message describing the source and target of the request.
    Numeric Replies:
            ERR_NOSUCHSERVER              ERR_NOPRIVILEGES
            ERR_NEEDMOREPARAMS
    Examples:
    CONNECT tolsun.oulu.fi 6667     ; Command to attempt to connect local
-                                   <a href="doc_ircintro.html">server</a> to tolsun.oulu.fi on port 6667
+                                   server to tolsun.oulu.fi on port 6667
 </pre></td></tr>
 <tr><td><pre>
 <b>3.4.8 Trace message</b>
@@ -1277,32 +1424,32 @@ WALLOPS message describing the source and target of the request.
 <tr><td><pre>
 Command: TRACE
 Parameters: [ &lt;target&gt; ]
-TRACE command is used to find the route to specific <a href="doc_ircintro.html">server</a> and
-information about its peers.  Each <a href="doc_ircintro.html">server</a> that processes this command
+TRACE command is used to find the route to specific server and
+information about its peers.  Each server that processes this command
 MUST report to the sender about it.  The replies from pass-through
 links form a chain, which shows route to destination.  After sending
-this reply back, the query MUST be sent to the next <a href="doc_ircintro.html">server</a> until
-given &lt;target&gt; <a href="doc_ircintro.html">server</a> is reached.
-TRACE command is used to find the route to specific <a href="doc_ircintro.html">server</a>.  Each
-<a href="doc_ircintro.html">server</a> that processes this message MUST tell the sender about it by
+this reply back, the query MUST be sent to the next server until
+given &lt;target&gt; server is reached.
+TRACE command is used to find the route to specific server.  Each
+server that processes this message MUST tell the sender about it by
 sending a reply indicating it is a pass-through link, forming a chain
 of replies.  After sending this reply back, it MUST then send the
-TRACE message to the next <a href="doc_ircintro.html">server</a> until given <a href="doc_ircintro.html">server</a> is reached.  If
+TRACE message to the next server until given server is reached.  If
 the &lt;target&gt; parameter is omitted, it is RECOMMENDED that TRACE
 command sends a message to the sender telling which servers the local
-<a href="doc_ircintro.html">server</a> has direct connection to.
-If the destination given by &lt;target&gt; is an actual <a href="doc_ircintro.html">server</a>, the
-destination <a href="doc_ircintro.html">server</a> is REQUIRED to report all servers, services and
-<a href="doc_operators.html">operators</a> which are connected to it; if the command was issued by an
-<a href="doc_operators.html">operator</a>, the <a href="doc_ircintro.html">server</a> MAY also report all users which are connected to
-it.  If the destination given by &lt;target&gt; is a <a href="doc_irc_masks.html">nickname</a>, then only a
-reply for that <a href="doc_irc_masks.html">nickname</a> is given.  If the &lt;target&gt; parameter is
+server has direct connection to.
+If the destination given by &lt;target&gt; is an actual server, the
+destination server is REQUIRED to report all servers, services and
+operators which are connected to it; if the command was issued by an
+operator, the server MAY also report all users which are connected to
+it.  If the destination given by &lt;target&gt; is a nickname, then only a
+reply for that nickname is given.  If the &lt;target&gt; parameter is
 omitted, it is RECOMMENDED that the TRACE command is parsed as
-targeted to the processing <a href="doc_ircintro.html">server</a>.
+targeted to the processing server.
 Wildcards are allowed in the &lt;target&gt; parameter.
    Numeric Replies:
            ERR_NOSUCHSERVER
-      If the TRACE message is destined for another <a href="doc_ircintro.html">server</a>, all
+      If the TRACE message is destined for another server, all
       intermediate servers must return a RPL_TRACELINK reply to indicate
       that the TRACE passed through it and where it is going next.
            RPL_TRACELINK
@@ -1315,7 +1462,7 @@ Wildcards are allowed in the &lt;target&gt; parameter.
            RPL_TRACECLASS                RPL_TRACELOG
            RPL_TRACEEND
    Examples:
-   TRACE *.oulu.fi                 ; TRACE to a <a href="doc_ircintro.html">server</a> matching
+   TRACE *.oulu.fi                 ; TRACE to a server matching
                                    *.oulu.fi
 </pre></td></tr>
 <tr><td><pre>
@@ -1325,8 +1472,8 @@ Wildcards are allowed in the &lt;target&gt; parameter.
 Command: ADMIN
 Parameters: [ &lt;target&gt; ]
 The admin command is used to find information about the administrator
-of the given <a href="doc_ircintro.html">server</a>, or current <a href="doc_ircintro.html">server</a> if &lt;target&gt; parameter is
-omitted.  Each <a href="doc_ircintro.html">server</a> MUST have the ability to forward ADMIN messages
+of the given server, or current server if &lt;target&gt; parameter is
+omitted.  Each server MUST have the ability to forward ADMIN messages
 to other servers.
 Wildcards are allowed in the &lt;target&gt; parameter.
    Numeric Replies:
@@ -1336,7 +1483,7 @@ Wildcards are allowed in the &lt;target&gt; parameter.
    Examples:
    ADMIN tolsun.oulu.fi            ; request an ADMIN reply from
                                    tolsun.oulu.fi
-   ADMIN syrk                      ; ADMIN request for the <a href="doc_ircintro.html">server</a> to
+   ADMIN syrk                      ; ADMIN request for the server to
                                    which the user syrk is connected
 </pre></td></tr>
 <tr><td><pre>
@@ -1346,7 +1493,7 @@ Wildcards are allowed in the &lt;target&gt; parameter.
 Command: INFO
 Parameters: [ &lt;target&gt; ]
 The INFO command is REQUIRED to return information describing the
-<a href="doc_ircintro.html">server</a>: its version, when it was compiled, the patchlevel, when it
+server: its version, when it was compiled, the patchlevel, when it
 was started, and any other miscellaneous information which may be
 considered to be relevant.
 Wildcards are allowed in the &lt;target&gt; parameter.
@@ -1356,7 +1503,7 @@ Wildcards are allowed in the &lt;target&gt; parameter.
    Examples:
    INFO csd.bu.edu                 ; request an INFO reply from
                                    csd.bu.edu
-   INFO Angel                      ; request info from the <a href="doc_ircintro.html">server</a> that
+   INFO Angel                      ; request info from the server that
                                    Angel is connected to.
 </pre></td></tr>
 <tr><td><pre>
@@ -1392,7 +1539,7 @@ See PRIVMSG for more details on replies and example.
    Examples:
    SQUERY irchelp :HELP privmsg
                                    ; Message to the service with
-                                   <a href="doc_irc_masks.html">nickname</a> irchelp.
+                                   nickname irchelp.
    SQUERY dict@irc.fr :fr2en blaireau
                                    ; Message to the service with name
                                    dict@irc.fr.
@@ -1406,8 +1553,8 @@ with finding details on a particular user or group users.  When using
 wildcards with any of these commands, if they match, they will only
 return information on users who are 'visible' to you.  The visibility
 of a user is determined as a combination of the user's mode and the
-common set of <a href="doc_ircintro.html">channels</a> you are both on.
-Although services SHOULD NOT be using this <a href="class_object.html">class</a> of message, they are
+common set of channels you are both on.
+Although services SHOULD NOT be using this class of message, they are
 allowed to.
 </pre></td></tr>
 <tr><td><pre>
@@ -1420,12 +1567,12 @@ The WHO command is used by a client to generate a query which returns
 a list of information which 'matches' the &lt;mask&gt; parameter given by
 the client.  In the absence of the &lt;mask&gt; parameter, all visible
 (users who aren't invisible (user mode +i) and who don't have a
-common <a href="doc_ircintro.html">channel</a> with the requesting client) are listed.  The same
-result can be achieved by using a &lt;mask&gt; of "0" or any <a href="doc_irc_masks.html">wildcard</a> which
+common channel with the requesting client) are listed.  The same
+result can be achieved by using a &lt;mask&gt; of "0" or any wildcard which
 will end up matching every visible user.
-The &lt;mask&gt; passed to WHO is matched against users' host, <a href="doc_ircintro.html">server</a>, real
-name and <a href="doc_irc_masks.html">nickname</a> if the <a href="doc_ircintro.html">channel</a> &lt;mask&gt; cannot be found.
-If the "o" parameter is passed only <a href="doc_operators.html">operators</a> are returned according
+The &lt;mask&gt; passed to WHO is matched against users' host, server, real
+name and nickname if the channel &lt;mask&gt; cannot be found.
+If the "o" parameter is passed only operators are returned according
 to the &lt;mask&gt; supplied.
    Numeric Replies:
            ERR_NOSUCHSERVER
@@ -1435,7 +1582,7 @@ to the &lt;mask&gt; supplied.
                                    against "*.fi".
    WHO jto* o                      ; Command to list all users with a
                                    match against "jto*" if they are an
-                                   <a href="doc_operators.html">operator</a>.
+                                   operator.
 </pre></td></tr>
 <tr><td><pre>
 <b>3.6.2 Whois query</b>
@@ -1444,14 +1591,14 @@ to the &lt;mask&gt; supplied.
 Command: WHOIS
 Parameters: [ &lt;target&gt; ] &lt;mask&gt; *( "," &lt;mask&gt; )
 This command is used to query information about particular user.
-The <a href="doc_ircintro.html">server</a> will answer this command with several numeric messages
+The server will answer this command with several numeric messages
 indicating different statuses of each user which matches the mask (if
-you are entitled to see them).  If no <a href="doc_irc_masks.html">wildcard</a> is present in the
+you are entitled to see them).  If no wildcard is present in the
 &lt;mask&gt;, any information about that nick which you are allowed to see
 is presented.
 If the &lt;target&gt; parameter is specified, it sends the query to a
-specific <a href="doc_ircintro.html">server</a>.  It is useful if you want to know how long the user
-in question has been idle as only local <a href="doc_ircintro.html">server</a> (i.e., the <a href="doc_ircintro.html">server</a> the
+specific server.  It is useful if you want to know how long the user
+in question has been idle as only local server (i.e., the server the
 user is directly connected to) knows that information, while
 everything else is globally known.
 Wildcards are allowed in the &lt;target&gt; parameter.
@@ -1465,7 +1612,7 @@ Wildcards are allowed in the &lt;target&gt; parameter.
    Examples:
    WHOIS wiz                       ; return available user information
                                    about nick WiZ
-   WHOIS eff.org trillian          ; ask <a href="doc_ircintro.html">server</a> eff.org for user
+   WHOIS eff.org trillian          ; ask server eff.org for user
                                    information  about trillian
 </pre></td></tr>
 <tr><td><pre>
@@ -1473,10 +1620,10 @@ Wildcards are allowed in the &lt;target&gt; parameter.
 </pre></td></tr>
 <tr><td><pre>
 Command: WHOWAS
-Parameters: &lt;<a href="doc_irc_masks.html">nickname</a>&gt; *( "," &lt;<a href="doc_irc_masks.html">nickname</a>&gt; ) [ &lt;count&gt; [ &lt;target&gt; ] ]
-Whowas asks for information about a <a href="doc_irc_masks.html">nickname</a> which no longer exists.
-This may either be due to a <a href="doc_irc_masks.html">nickname</a> change or the user leaving IRC.
-In response to this query, the <a href="doc_ircintro.html">server</a> searches through its <a href="doc_irc_masks.html">nickname</a>
+Parameters: &lt;nickname&gt; *( "," &lt;nickname&gt; ) [ &lt;count&gt; [ &lt;target&gt; ] ]
+Whowas asks for information about a nickname which no longer exists.
+This may either be due to a nickname change or the user leaving IRC.
+In response to this query, the server searches through its nickname
 history, looking for any nicks which are lexically the same (no wild
 card matching here).  The history is searched backward, returning the
 most recent entry first.  If there are multiple entries, up to
@@ -1495,7 +1642,7 @@ Wildcards are allowed in the &lt;target&gt; parameter.
                                    entries in the nick history for
                                    "Mermaid";
    WHOWAS Trillian 1 *.edu         ; return the most recent history for
-                                   "Trillian" from the first <a href="doc_ircintro.html">server</a>
+                                   "Trillian" from the first server
                                    found to match "*.edu".
 </pre></td></tr>
 <tr><td><pre>
@@ -1510,11 +1657,11 @@ but are nonetheless still a part of and REQUIRED by the protocol.
 </pre></td></tr>
 <tr><td><pre>
 Command: KILL
-Parameters: &lt;<a href="doc_irc_masks.html">nickname</a>&gt; &lt;comment&gt;
+Parameters: &lt;nickname&gt; &lt;comment&gt;
 The KILL command is used to cause a client-server connection to be
-closed by the <a href="doc_ircintro.html">server</a> which has the actual connection.  Servers
-generate KILL messages on <a href="doc_irc_masks.html">nickname</a> collisions.  It MAY also be
-available available to users who have the <a href="doc_operators.html">operator</a> status.
+closed by the server which has the actual connection.  Servers
+generate KILL messages on nickname collisions.  It MAY also be
+available available to users who have the operator status.
 Clients which have automatic reconnect algorithms effectively make
 this command useless since the disconnection is only brief.  It does
 however break the flow of data and can be used to stop large amounts
@@ -1523,32 +1670,32 @@ don't care as they will reconnect promptly and resume their abusive
 behaviour.  To prevent this command from being abused, any user may
 elect to receive KILL messages generated for others to keep an 'eye'
 on would be trouble spots.
-In an arena where <a href="doc_ircintro.html">nicknames</a> are REQUIRED to be globally unique at all
+In an arena where nicknames are REQUIRED to be globally unique at all
 times, KILL messages are sent whenever 'duplicates' are detected
-(that is an attempt to register two users with the same <a href="doc_irc_masks.html">nickname</a>) in
+(that is an attempt to register two users with the same nickname) in
 the hope that both of them will disappear and only 1 reappear.
-When a client is removed as the result of a KILL message, the <a href="doc_ircintro.html">server</a>
-SHOULD add the <a href="doc_irc_masks.html">nickname</a> to the list of unavailable <a href="doc_ircintro.html">nicknames</a> in an
+When a client is removed as the result of a KILL message, the server
+SHOULD add the nickname to the list of unavailable nicknames in an
 attempt to avoid clients to reuse this name immediately which is
 usually the pattern of abusive behaviour often leading to useless
-"KILL loops".  See the "IRC <a href="doc_ircintro.html">Server</a> Protocol" document [IRC-SERVER]
+"KILL loops".  See the "IRC Server Protocol" document [IRC-SERVER]
 for more information on this procedure.
 The comment given MUST reflect the actual reason for the KILL.  For
 server-generated KILLs it usually is made up of details concerning
-the origins of the two conflicting <a href="doc_ircintro.html">nicknames</a>.  For users it is left
+the origins of the two conflicting nicknames.  For users it is left
 up to them to provide an adequate reason to satisfy others who see
 it.  To prevent/discourage fake KILLs from being generated to hide
 the identify of the KILLer, the comment also shows a 'kill-path'
-which is updated by each <a href="doc_ircintro.html">server</a> it passes through, each prepending
+which is updated by each server it passes through, each prepending
 its name to the path.
    Numeric Replies:
            ERR_NOPRIVILEGES              ERR_NEEDMOREPARAMS
            ERR_NOSUCHNICK                ERR_CANTKILLSERVER
 NOTE:
-It is RECOMMENDED that only <a href="doc_operators.html">Operators</a> be allowed to kill other users
+It is RECOMMENDED that only Operators be allowed to kill other users
 with KILL command.  This command has been the subject of many
 controversies over the years, and along with the above
-recommendation, it is also widely recognized that not even <a href="doc_operators.html">operators</a>
+recommendation, it is also widely recognized that not even operators
 should be allowed to kill users on remote servers.
 </pre></td></tr>
 <tr><td><pre>
@@ -1558,13 +1705,13 @@ should be allowed to kill users on remote servers.
 Command: PING
 Parameters: &lt;server1&gt; [ &lt;server2&gt; ]
 The PING command is used to test the presence of an active client or
-<a href="doc_ircintro.html">server</a> at the other end of the connection.  Servers send a PING
+server at the other end of the connection.  Servers send a PING
 message at regular intervals if no other activity detected coming
 from a connection.  If a connection fails to respond to a PING
 message within a set amount of time, that connection is closed.  A
 PING message MAY be sent even if the connection is active.
 When a PING message is received, the appropriate PONG message MUST be
-sent as reply to &lt;server1&gt; (<a href="doc_ircintro.html">server</a> which sent the PING message out)
+sent as reply to &lt;server1&gt; (server which sent the PING message out)
 as soon as possible.  If the &lt;server2&gt; parameter is specified, it
 represents the target of the ping, and the message gets forwarded
 there.
@@ -1572,10 +1719,10 @@ there.
            ERR_NOORIGIN                  ERR_NOSUCHSERVER
    Examples:
    PING tolsun.oulu.fi             ; Command to send a PING message to
-                                   <a href="doc_ircintro.html">server</a>
+                                   server
    PING WiZ tolsun.oulu.fi         ; Command from WiZ to send a PING
-                                   message to <a href="doc_ircintro.html">server</a> "tolsun.oulu.fi"
-   PING :irc.funet.fi              ; Ping message sent by <a href="doc_ircintro.html">server</a>
+                                   message to server "tolsun.oulu.fi"
+   PING :irc.funet.fi              ; Ping message sent by server
                                    "irc.funet.fi"
 </pre></td></tr>
 <tr><td><pre>
@@ -1583,9 +1730,9 @@ there.
 </pre></td></tr>
 <tr><td><pre>
 Command: PONG
-Parameters: &lt;<a href="doc_ircintro.html">server</a>&gt; [ &lt;server2&gt; ]
+Parameters: &lt;server&gt; [ &lt;server2&gt; ]
 PONG message is a reply to ping message.  If parameter &lt;server2&gt; is
-given, this message MUST be forwarded to given target.  The &lt;<a href="doc_ircintro.html">server</a>&gt;
+given, this message MUST be forwarded to given target.  The &lt;server&gt;
 parameter is the name of the entity who has responded to PING message
 and generated this message.
    Numeric Replies:
@@ -1601,37 +1748,37 @@ and generated this message.
 Command: ERROR
 Parameters: &lt;error message&gt;
 The ERROR command is for use by servers when reporting a serious or
-fatal error to its peers.  It may also be sent from one <a href="doc_ircintro.html">server</a> to
+fatal error to its peers.  It may also be sent from one server to
 another but MUST NOT be accepted from any normal unknown clients.
 Only an ERROR message SHOULD be used for reporting errors which occur
-with a server-to-server link.  An ERROR message is sent to the <a href="doc_ircintro.html">server</a>
+with a server-to-server link.  An ERROR message is sent to the server
 at the other end (which reports it to appropriate local users and
 logs) and to appropriate local users and logs.  It is not to be
-passed onto any other servers by a <a href="doc_ircintro.html">server</a> if it is received from a
-<a href="doc_ircintro.html">server</a>.
+passed onto any other servers by a server if it is received from a
+server.
 The ERROR message is also used before terminating a client
 connection.
-When a <a href="doc_ircintro.html">server</a> sends a received ERROR message to its <a href="doc_operators.html">operators</a>, the
+When a server sends a received ERROR message to its operators, the
 message SHOULD be encapsulated inside a NOTICE message, indicating
 that the client was not responsible for the error.
    Numerics:
            None.
    Examples:
-   ERROR :<a href="doc_ircintro.html">Server</a> *.fi already exists ; ERROR message to the other <a href="doc_ircintro.html">server</a>
+   ERROR :Server *.fi already exists ; ERROR message to the other server
                                    which caused this error.
-   NOTICE WiZ :ERROR from csd.bu.edu -- <a href="doc_ircintro.html">Server</a> *.fi already exists
+   NOTICE WiZ :ERROR from csd.bu.edu -- Server *.fi already exists
                                    ; Same ERROR message as above but
-                                   sent to user WiZ on the other <a href="doc_ircintro.html">server</a>.
+                                   sent to user WiZ on the other server.
 </pre></td></tr>
 <tr><td><pre>
 <b>4. Optional features</b>
 </pre></td></tr>
 <tr><td><pre>
 This section describes OPTIONAL messages.  They are not required in a
-working <a href="doc_ircintro.html">server</a> implementation of the protocol described herein.  In
+working server implementation of the protocol described herein.  In
 the absence of the feature, an error reply message MUST be generated
 or an unknown command error.  If the message is destined for another
-<a href="doc_ircintro.html">server</a> to answer then it MUST be passed on (elementary parsing
+server to answer then it MUST be passed on (elementary parsing
 REQUIRED) The allocated numerics for this are listed with the
 messages below.
 From this section, only the USERHOST and ISON messages are available
@@ -1644,15 +1791,15 @@ to services.
 Command: AWAY
 Parameters: [ &lt;text&gt; ]
 With the AWAY command, clients can set an automatic reply string for
-any PRIVMSG commands directed at them (not to a <a href="doc_ircintro.html">channel</a> they are on).
-The <a href="doc_ircintro.html">server</a> sends an automatic reply to the client sending the PRIVMSG
-command.  The only replying <a href="doc_ircintro.html">server</a> is the one to which the sending
+any PRIVMSG commands directed at them (not to a channel they are on).
+The server sends an automatic reply to the client sending the PRIVMSG
+command.  The only replying server is the one to which the sending
 client is connected to.
 The AWAY command is used either with one parameter, to set an AWAY
 message, or with no parameters, to remove the AWAY message.
 Because of its high cost (memory and bandwidth wise), the AWAY
 message SHOULD only be used for client-server communication.  A
-<a href="doc_ircintro.html">server</a> MAY choose to silently ignore AWAY messages received from
+server MAY choose to silently ignore AWAY messages received from
 other servers.  To update the away status of a client across servers,
 the user mode 'a' SHOULD be used instead.  (See Section 3.1.5)
    Numeric Replies:
@@ -1668,13 +1815,13 @@ the user mode 'a' SHOULD be used instead.  (See Section 3.1.5)
 Command: REHASH
 Parameters: None
 The rehash command is an administrative command which can be used by
-an <a href="doc_operators.html">operator</a> to force the <a href="doc_ircintro.html">server</a> to re-read and <a href="class_process.html">process</a> its
+an operator to force the server to re-read and process its
 configuration file.
    Numeric Replies:
            RPL_REHASHING                 ERR_NOPRIVILEGES
    Example:
-   REHASH                          ; message from user with <a href="doc_operators.html">operator</a>
-                                   status to <a href="doc_ircintro.html">server</a> asking it to reread
+   REHASH                          ; message from user with operator
+                                   status to server asking it to reread
                                    its configuration file.
 </pre></td></tr>
 <tr><td><pre>
@@ -1683,11 +1830,11 @@ configuration file.
 <tr><td><pre>
 Command: DIE
 Parameters: None
-An <a href="doc_operators.html">operator</a> can use the DIE command to shutdown the <a href="doc_ircintro.html">server</a>.  This
+An operator can use the DIE command to shutdown the server.  This
 message is optional since it may be viewed as a risk to allow
-arbitrary people to connect to a <a href="doc_ircintro.html">server</a> as an <a href="doc_operators.html">operator</a> and execute
+arbitrary people to connect to a server as an operator and execute
 this command.
-The DIE command MUST always be fully processed by the <a href="doc_ircintro.html">server</a> to which
+The DIE command MUST always be fully processed by the server to which
 the sending client is connected and MUST NOT be passed onto other
 connected servers.
    Numeric Replies:
@@ -1701,11 +1848,11 @@ connected servers.
 <tr><td><pre>
 Command: RESTART
 Parameters: None
-An <a href="doc_operators.html">operator</a> can use the restart command to force the <a href="doc_ircintro.html">server</a> to
+An operator can use the restart command to force the server to
 restart itself.  This message is optional since it may be viewed as a
-risk to allow arbitrary people to connect to a <a href="doc_ircintro.html">server</a> as an <a href="doc_operators.html">operator</a>
+risk to allow arbitrary people to connect to a server as an operator
 and execute this command, causing (at least) a disruption to service.
-The RESTART command MUST always be fully processed by the <a href="doc_ircintro.html">server</a> to
+The RESTART command MUST always be fully processed by the server to
 which the sending client is connected and MUST NOT be passed onto
 other connected servers.
    Numeric Replies:
@@ -1718,25 +1865,25 @@ other connected servers.
 </pre></td></tr>
 <tr><td><pre>
 Command: SUMMON
-Parameters: &lt;user&gt; [ &lt;target&gt; [ &lt;<a href="doc_ircintro.html">channel</a>&gt; ] ]
+Parameters: &lt;user&gt; [ &lt;target&gt; [ &lt;channel&gt; ] ]
 The SUMMON command can be used to give users who are on a host
-running an IRC <a href="doc_ircintro.html">server</a> a message asking them to please join IRC.  This
-message is only sent if the target <a href="doc_ircintro.html">server</a> (a) has SUMMON enabled, (b)
-the user is logged in and (c) the <a href="doc_ircintro.html">server</a> <a href="class_process.html">process</a> can write to the
+running an IRC server a message asking them to please join IRC.  This
+message is only sent if the target server (a) has SUMMON enabled, (b)
+the user is logged in and (c) the server process can write to the
 user's tty (or similar).
-If no &lt;<a href="doc_ircintro.html">server</a>&gt; parameter is given it tries to summon &lt;user&gt; from the
-<a href="doc_ircintro.html">server</a> the client is connected to is assumed as the target.
-If summon is not enabled in a <a href="doc_ircintro.html">server</a>, it MUST return the
+If no &lt;server&gt; parameter is given it tries to summon &lt;user&gt; from the
+server the client is connected to is assumed as the target.
+If summon is not enabled in a server, it MUST return the
 ERR_SUMMONDISABLED numeric.
    Numeric Replies:
            ERR_NORECIPIENT               ERR_FILEERROR
            ERR_NOLOGIN                   ERR_NOSUCHSERVER
            ERR_SUMMONDISABLED            RPL_SUMMONING
    Examples:
-   SUMMON jto                      ; summon user jto on the <a href="doc_ircintro.html">server</a>'s
+   SUMMON jto                      ; summon user jto on the server's
                                    host
    SUMMON jto tolsun.oulu.fi       ; summon user jto on the host which a
-                                   <a href="doc_ircintro.html">server</a> named "tolsun.oulu.fi" is
+                                   server named "tolsun.oulu.fi" is
                                    running.
 </pre></td></tr>
 <tr><td>
@@ -1745,13 +1892,13 @@ ERR_SUMMONDISABLED numeric.
 <tr><td><pre>
 Command: USERS
 Parameters: [ &lt;target&gt; ]
-The USERS command returns a list of users logged into the <a href="doc_ircintro.html">server</a> in a
+The USERS command returns a list of users logged into the server in a
 format similar to the UNIX commands who(1), rusers(1) and finger(1).
 If disabled, the correct numeric MUST be returned to indicate this.
 Because of the security implications of such a command, it SHOULD be
-disabled by default in <a href="doc_ircintro.html">server</a> implementations.  Enabling it SHOULD
-require recompiling the <a href="doc_ircintro.html">server</a> or some equivalent change rather than
-simply toggling an option and restarting the <a href="doc_ircintro.html">server</a>.  The procedure
+disabled by default in server implementations.  Enabling it SHOULD
+require recompiling the server or some equivalent change rather than
+simply toggling an option and restarting the server.  The procedure
 to enable this command SHOULD also include suitable large comments.
    Numeric Replies:
            ERR_NOSUCHSERVER              ERR_FILEERROR
@@ -1762,7 +1909,7 @@ to enable this command SHOULD also include suitable large comments.
            ERR_USERSDISABLED
    Example:
    USERS eff.org                   ; request a list of users logged in
-                                   on <a href="doc_ircintro.html">server</a> eff.org
+                                   on server eff.org
 </pre></td></tr>
 <tr><td>
 <b>4.7 Operwall message</b>
@@ -1791,10 +1938,10 @@ WALLOPS.
 </td></tr>
 <tr><td><pre>
 Command: USERHOST
-Parameters: &lt;<a href="doc_irc_masks.html">nickname</a>&gt; *( SPACE &lt;<a href="doc_irc_masks.html">nickname</a>&gt; )
-The USERHOST command takes a list of up to 5 <a href="doc_ircintro.html">nicknames</a>, each
+Parameters: &lt;nickname&gt; *( SPACE &lt;nickname&gt; )
+The USERHOST command takes a list of up to 5 nicknames, each
 separated by a space character and returns a list of information
-about each <a href="doc_irc_masks.html">nickname</a> that it found.  The returned list has each reply
+about each nickname that it found.  The returned list has each reply
 separated by a space.
    Numeric Replies:
            RPL_USERHOST                  ERR_NEEDMOREPARAMS
@@ -1809,19 +1956,19 @@ separated by a space.
 </td></tr>
 <tr><td><pre>
 Command: ISON
-Parameters: &lt;<a href="doc_irc_masks.html">nickname</a>&gt; *( SPACE &lt;<a href="doc_irc_masks.html">nickname</a>&gt; )
+Parameters: &lt;nickname&gt; *( SPACE &lt;nickname&gt; )
 The ISON command was implemented to provide a quick and efficient
-means to get a response about whether a given <a href="doc_irc_masks.html">nickname</a> was currently
+means to get a response about whether a given nickname was currently
 on IRC. ISON only takes one (1) type of parameter: a space-separated
-list of nicks.  For each <a href="doc_irc_masks.html">nickname</a> in the list that is present, the
-<a href="doc_ircintro.html">server</a> adds that to its reply string.  Thus the reply string may
+list of nicks.  For each nickname in the list that is present, the
+server adds that to its reply string.  Thus the reply string may
 return empty (none of the given nicks are present), an exact copy of
 the parameter string (all of them present) or any other subset of the
 set of nicks given in the parameter.  The only limit on the number of
 nicks that may be checked is that the combined length MUST NOT be too
-large as to cause the <a href="doc_ircintro.html">server</a> to chop it off so it fits in 512
+large as to cause the server to chop it off so it fits in 512
 characters.
-ISON is only processed by the <a href="doc_ircintro.html">server</a> local to the client sending the
+ISON is only processed by the server local to the client sending the
 command and thus not passed onto other servers for further
 processing.
    Numeric Replies:
@@ -1854,25 +2001,25 @@ to 399.
        002    RPL_YOURHOST
               "Your host is &lt;servername&gt;, running version &lt;ver&gt;"
        003    RPL_CREATED
-              "This <a href="doc_ircintro.html">server</a> was created &lt;date&gt;"
+              "This server was created &lt;date&gt;"
        004    RPL_MYINFO
               "&lt;servername&gt; &lt;version&gt; &lt;available user modes&gt;
-               &lt;available <a href="doc_ircintro.html">channel</a> modes&gt;"
-         - The <a href="doc_ircintro.html">server</a> sends Replies 001 to 004 to a user upon
+               &lt;available channel modes&gt;"
+         - The server sends Replies 001 to 004 to a user upon
            successful registration.
        005    RPL_BOUNCE
-              "Try <a href="doc_ircintro.html">server</a> &lt;<a href="doc_ircintro.html">server</a> name&gt;, port &lt;port number&gt;"
-         - Sent by the <a href="doc_ircintro.html">server</a> to a user to suggest an alternative
-           <a href="doc_ircintro.html">server</a>.  This is often used when the connection is
-           refused because the <a href="doc_ircintro.html">server</a> is already full.
+              "Try server &lt;server name&gt;, port &lt;port number&gt;"
+         - Sent by the server to a user to suggest an alternative
+           server.  This is often used when the connection is
+           refused because the server is already full.
        302    RPL_USERHOST
               ":*1&lt;reply&gt; *( " " &lt;reply&gt; )"
          - Reply format used by USERHOST to list replies to
            the query list.  The reply string is composed as
            follows:
-           reply = <a href="doc_irc_masks.html">nickname</a> [ "*" ] "=" ( "+" / "-" ) <a href="doc_irc_masks.html">hostname</a>
+           reply = nickname [ "*" ] "=" ( "+" / "-" ) hostname
            The '*' indicates whether the client has registered
-           as an <a href="doc_operators.html">Operator</a>.  The '-' or '+' characters represent
+           as an Operator.  The '-' or '+' characters represent
            whether the client has set an AWAY message or not
            respectively.
        303    RPL_ISON
@@ -1888,107 +2035,107 @@ to 399.
          - These replies are used with the AWAY command (if
            allowed).  RPL_AWAY is sent to any client sending a
            PRIVMSG to a client which is away.  RPL_AWAY is only
-           sent by the <a href="doc_ircintro.html">server</a> to which the client is connected.
+           sent by the server to which the client is connected.
            Replies RPL_UNAWAY and RPL_NOWAWAY are sent when the
            client removes and sets an AWAY message.
        311    RPL_WHOISUSER
               "&lt;nick&gt; &lt;user&gt; &lt;host&gt; * :&lt;real name&gt;"
        312    RPL_WHOISSERVER
-              "&lt;nick&gt; &lt;<a href="doc_ircintro.html">server</a>&gt; :&lt;<a href="doc_ircintro.html">server</a> info&gt;"
+              "&lt;nick&gt; &lt;server&gt; :&lt;server info&gt;"
        313    RPL_WHOISOPERATOR
-              "&lt;nick&gt; :is an IRC <a href="doc_operators.html">operator</a>
+              "&lt;nick&gt; :is an IRC operator
        317    RPL_WHOISIDLE
               "&lt;nick&gt; &lt;integer&gt; :seconds idle"
        318    RPL_ENDOFWHOIS
               "&lt;nick&gt; :End of WHOIS list"
        319    RPL_WHOISCHANNELS
-              "&lt;nick&gt; :*( ( "@" / "+" ) &lt;<a href="doc_ircintro.html">channel</a>&gt; " " )"
+              "&lt;nick&gt; :*( ( "@" / "+" ) &lt;channel&gt; " " )"
          - Replies 311 - 313, 317 - 319 are all replies
            generated in response to a WHOIS message.  Given that
            there are enough parameters present, the answering
-           <a href="doc_ircintro.html">server</a> MUST either formulate a reply out of the above
+           server MUST either formulate a reply out of the above
            numerics (if the query nick is found) or return an
            error reply.  The '*' in RPL_WHOISUSER is there as
            the literal character and not as a wild card.  For
            each reply set, only RPL_WHOISCHANNELS may appear
-           more than once (for long lists of <a href="doc_ircintro.html">channel</a> names).
-           The '@' and '+' characters next to the <a href="doc_ircintro.html">channel</a> name
-           indicate whether a client is a <a href="doc_ircintro.html">channel operator</a> or
+           more than once (for long lists of channel names).
+           The '@' and '+' characters next to the channel name
+           indicate whether a client is a channel operator or
            has been granted permission to speak on a moderated
-           <a href="doc_ircintro.html">channel</a>.  The RPL_ENDOFWHOIS reply is used to mark
+           channel.  The RPL_ENDOFWHOIS reply is used to mark
            the end of processing a WHOIS message.
        314    RPL_WHOWASUSER
               "&lt;nick&gt; &lt;user&gt; &lt;host&gt; * :&lt;real name&gt;"
        369    RPL_ENDOFWHOWAS
               "&lt;nick&gt; :End of WHOWAS"
-         - When replying to a WHOWAS message, a <a href="doc_ircintro.html">server</a> MUST use
+         - When replying to a WHOWAS message, a server MUST use
            the replies RPL_WHOWASUSER, RPL_WHOISSERVER or
-           ERR_WASNOSUCHNICK for each <a href="doc_irc_masks.html">nickname</a> in the presented
+           ERR_WASNOSUCHNICK for each nickname in the presented
            list.  At the end of all reply batches, there MUST
            be RPL_ENDOFWHOWAS (even if there was only one reply
            and it was an error).
        321    RPL_LISTSTART
               Obsolete. Not used.
        322    RPL_LIST
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; &lt;# visible&gt; :&lt;topic&gt;"
+              "&lt;channel&gt; &lt;# visible&gt; :&lt;topic&gt;"
        323    RPL_LISTEND
               ":End of LIST"
          - Replies RPL_LIST, RPL_LISTEND mark the actual replies
-           with data and end of the <a href="doc_ircintro.html">server</a>'s response to a LIST
-           command.  If there are no <a href="doc_ircintro.html">channels</a> available to return,
+           with data and end of the server's response to a LIST
+           command.  If there are no channels available to return,
            only the end reply MUST be sent.
        325    RPL_UNIQOPIS
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; &lt;<a href="doc_irc_masks.html">nickname</a>&gt;"
+              "&lt;channel&gt; &lt;nickname&gt;"
        324    RPL_CHANNELMODEIS
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; &lt;mode&gt; &lt;mode params&gt;"
+              "&lt;channel&gt; &lt;mode&gt; &lt;mode params&gt;"
        331    RPL_NOTOPIC
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; :No topic is set"
+              "&lt;channel&gt; :No topic is set"
        332    RPL_TOPIC
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; :&lt;topic&gt;"
+              "&lt;channel&gt; :&lt;topic&gt;"
          - When sending a TOPIC message to determine the
-           <a href="doc_ircintro.html">channel</a> topic, one of two replies is sent.  If
+           channel topic, one of two replies is sent.  If
            the topic is set, RPL_TOPIC is sent back else
            RPL_NOTOPIC.
        341    RPL_INVITING
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; &lt;nick&gt;"
-         - Returned by the <a href="doc_ircintro.html">server</a> to indicate that the
+              "&lt;channel&gt; &lt;nick&gt;"
+         - Returned by the server to indicate that the
            attempted INVITE message was successful and is
            being passed onto the end client.
        342    RPL_SUMMONING
               "&lt;user&gt; :Summoning user to IRC"
-         - Returned by a <a href="doc_ircintro.html">server</a> answering a SUMMON message to
+         - Returned by a server answering a SUMMON message to
            indicate that it is summoning that user.
        346    RPL_INVITELIST
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; &lt;invitemask&gt;"
+              "&lt;channel&gt; &lt;invitemask&gt;"
        347    RPL_ENDOFINVITELIST
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; :End of <a href="doc_ircintro.html">channel</a> invite list"
-         - When listing the 'invitations masks' for a given <a href="doc_ircintro.html">channel</a>,
-           a <a href="doc_ircintro.html">server</a> is required to send the list back using the
+              "&lt;channel&gt; :End of channel invite list"
+         - When listing the 'invitations masks' for a given channel,
+           a server is required to send the list back using the
            RPL_INVITELIST and RPL_ENDOFINVITELIST messages.  A
            separate RPL_INVITELIST is sent for each active mask.
            After the masks have been listed (or if none present) a
            RPL_ENDOFINVITELIST MUST be sent.
        348    RPL_EXCEPTLIST
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; &lt;exceptionmask&gt;"
+              "&lt;channel&gt; &lt;exceptionmask&gt;"
        349    RPL_ENDOFEXCEPTLIST
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; :End of <a href="doc_ircintro.html">channel</a> exception list"
-         - When listing the 'exception masks' for a given <a href="doc_ircintro.html">channel</a>,
-           a <a href="doc_ircintro.html">server</a> is required to send the list back using the
+              "&lt;channel&gt; :End of channel exception list"
+         - When listing the 'exception masks' for a given channel,
+           a server is required to send the list back using the
            RPL_EXCEPTLIST and RPL_ENDOFEXCEPTLIST messages.  A
            separate RPL_EXCEPTLIST is sent for each active mask.
            After the masks have been listed (or if none present)
            a RPL_ENDOFEXCEPTLIST MUST be sent.
        351    RPL_VERSION
-              "&lt;version&gt;.&lt;debuglevel&gt; &lt;<a href="doc_ircintro.html">server</a>&gt; :&lt;comments&gt;"
-         - Reply by the <a href="doc_ircintro.html">server</a> showing its version details.
+              "&lt;version&gt;.&lt;debuglevel&gt; &lt;server&gt; :&lt;comments&gt;"
+         - Reply by the server showing its version details.
            The &lt;version&gt; is the version of the software being
            used (including any patchlevel revisions) and the
-           &lt;debuglevel&gt; is used to indicate if the <a href="doc_ircintro.html">server</a> is
+           &lt;debuglevel&gt; is used to indicate if the server is
            running in "debug mode".
            The "comments" field may contain any comments about
            the version or further version details.
        352    RPL_WHOREPLY
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; &lt;user&gt; &lt;host&gt; &lt;<a href="doc_ircintro.html">server</a>&gt; &lt;nick&gt;
+              "&lt;channel&gt; &lt;user&gt; &lt;host&gt; &lt;server&gt; &lt;nick&gt;
               ( "H" / "G" &gt; ["*"] [ ( "@" / "+" ) ]
               :&lt;hopcount&gt; &lt;real name&gt;"
        315    RPL_ENDOFWHO
@@ -2001,34 +2148,34 @@ to 399.
            after processing each list item with &lt;name&gt; being
            the item.
        353    RPL_NAMREPLY
-              "( "=" / "*" / "@" ) &lt;<a href="doc_ircintro.html">channel</a>&gt;
+              "( "=" / "*" / "@" ) &lt;channel&gt;
                :[ "@" / "+" ] &lt;nick&gt; *( " " [ "@" / "+" ] &lt;nick&gt; )
-         - "@" is used for secret <a href="doc_ircintro.html">channels</a>, "*" for private
-           <a href="doc_ircintro.html">channels</a>, and "=" for others (public <a href="doc_ircintro.html">channels</a>).
+         - "@" is used for secret channels, "*" for private
+           channels, and "=" for others (public channels).
        366    RPL_ENDOFNAMES
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; :End of NAMES list"
+              "&lt;channel&gt; :End of NAMES list"
          - To reply to a NAMES message, a reply pair consisting
            of RPL_NAMREPLY and RPL_ENDOFNAMES is sent by the
-           <a href="doc_ircintro.html">server</a> back to the client.  If there is no <a href="doc_ircintro.html">channel</a>
+           server back to the client.  If there is no channel
            found as in the query, then only RPL_ENDOFNAMES is
            returned.  The exception to this is when a NAMES
            message is sent with no parameters and all visible
-           <a href="doc_ircintro.html">channels</a> and contents are sent back in a series of
+           channels and contents are sent back in a series of
            RPL_NAMEREPLY messages with a RPL_ENDOFNAMES to mark
            the end.
        364    RPL_LINKS
-              "&lt;mask&gt; &lt;<a href="doc_ircintro.html">server</a>&gt; :&lt;hopcount&gt; &lt;<a href="doc_ircintro.html">server</a> info&gt;"
+              "&lt;mask&gt; &lt;server&gt; :&lt;hopcount&gt; &lt;server info&gt;"
        365    RPL_ENDOFLINKS
               "&lt;mask&gt; :End of LINKS list"
-         - In replying to the LINKS message, a <a href="doc_ircintro.html">server</a> MUST send
+         - In replying to the LINKS message, a server MUST send
            replies back using the RPL_LINKS numeric and mark the
            end of the list using an RPL_ENDOFLINKS reply.
        367    RPL_BANLIST
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; &lt;banmask&gt;"
+              "&lt;channel&gt; &lt;banmask&gt;"
        368    RPL_ENDOFBANLIST
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; :End of <a href="doc_ircintro.html">channel</a> ban list"
-         - When listing the active 'bans' for a given <a href="doc_ircintro.html">channel</a>,
-           a <a href="doc_ircintro.html">server</a> is required to send the list back using the
+              "&lt;channel&gt; :End of channel ban list"
+         - When listing the active 'bans' for a given channel,
+           a server is required to send the list back using the
            RPL_BANLIST and RPL_ENDOFBANLIST messages.  A separate
            RPL_BANLIST is sent for each active banmask.  After the
            banmasks have been listed (or if none present) a
@@ -2037,12 +2184,12 @@ to 399.
               ":&lt;string&gt;"
        374    RPL_ENDOFINFO
               ":End of INFO list"
-         - A <a href="doc_ircintro.html">server</a> responding to an INFO message is required to
+         - A server responding to an INFO message is required to
            send all its 'info' in a series of RPL_INFO messages
            with a RPL_ENDOFINFO reply to indicate the end of the
            replies.
        375    RPL_MOTDSTART
-              ":- &lt;<a href="doc_ircintro.html">server</a>&gt; Message of the day - "
+              ":- &lt;server&gt; Message of the day - "
        372    RPL_MOTD
               ":- &lt;text&gt;"
        376    RPL_ENDOFMOTD
@@ -2054,22 +2201,22 @@ to 399.
            by a RPL_MOTDSTART (before the RPL_MOTDs) and an
            RPL_ENDOFMOTD (after).
        381    RPL_YOUREOPER
-              ":You are now an IRC <a href="doc_operators.html">operator</a>"
+              ":You are now an IRC operator"
          - RPL_YOUREOPER is sent back to a client which has
            just successfully issued an OPER message and gained
-           <a href="doc_operators.html">operator</a> status.
+           operator status.
        382    RPL_REHASHING
               "&lt;config file&gt; :Rehashing"
-         - If the REHASH option is used and an <a href="doc_operators.html">operator</a> sends
+         - If the REHASH option is used and an operator sends
            a REHASH message, an RPL_REHASHING is sent back to
-           the <a href="doc_operators.html">operator</a>.
+           the operator.
        383    RPL_YOURESERVICE
               "You are service &lt;servicename&gt;"
-         - Sent by the <a href="doc_ircintro.html">server</a> to a service upon successful
+         - Sent by the server to a service upon successful
            registration.
        391    RPL_TIME
-              "&lt;<a href="doc_ircintro.html">server</a>&gt; :&lt;string showing <a href="doc_ircintro.html">server</a>'s local time&gt;"
-         - When replying to the TIME message, a <a href="doc_ircintro.html">server</a> MUST send
+              "&lt;server&gt; :&lt;string showing server's local time&gt;"
+         - When replying to the TIME message, a server MUST send
            the reply using the RPL_TIME format above.  The string
            showing the time need only contain the correct day and
            time there.  There is no further requirement for the
@@ -2077,12 +2224,12 @@ to 399.
        392    RPL_USERSSTART
               ":UserID   Terminal  Host"
        393    RPL_USERS
-              ":&lt;<a href="doc_irc_masks.html">username</a>&gt; &lt;ttyline&gt; &lt;<a href="doc_irc_masks.html">hostname</a>&gt;"
+              ":&lt;username&gt; &lt;ttyline&gt; &lt;hostname&gt;"
        394    RPL_ENDOFUSERS
               ":End of users"
        395    RPL_NOUSERS
               ":Nobody logged in"
-         - If the USERS message is handled by a <a href="doc_ircintro.html">server</a>, the
+         - If the USERS message is handled by a server, the
            replies RPL_USERSTART, RPL_USERS, RPL_ENDOFUSERS and
            RPL_NOUSERS are used.  RPL_USERSSTART MUST be sent
            first, following by either a sequence of RPL_USERS
@@ -2090,47 +2237,47 @@ to 399.
            RPL_ENDOFUSERS.
        200    RPL_TRACELINK
               "Link &lt;version & debug level&gt; &lt;destination&gt;
-               &lt;next <a href="doc_ircintro.html">server</a>&gt; V&lt;protocol version&gt;
+               &lt;next server&gt; V&lt;protocol version&gt;
                &lt;link uptime in seconds&gt; &lt;backstream sendq&gt;
                &lt;upstream sendq&gt;"
        201    RPL_TRACECONNECTING
-              "Try. &lt;<a href="class_object.html">class</a>&gt; &lt;<a href="doc_ircintro.html">server</a>&gt;"
+              "Try. &lt;class&gt; &lt;server&gt;"
        202    RPL_TRACEHANDSHAKE
-              "H.S. &lt;<a href="class_object.html">class</a>&gt; &lt;<a href="doc_ircintro.html">server</a>&gt;"
+              "H.S. &lt;class&gt; &lt;server&gt;"
        203    RPL_TRACEUNKNOWN
-              "???? &lt;<a href="class_object.html">class</a>&gt; [&lt;client IP address in dot form&gt;]"
+              "???? &lt;class&gt; [&lt;client IP address in dot form&gt;]"
        204    RPL_TRACEOPERATOR
-              "Oper &lt;<a href="class_object.html">class</a>&gt; &lt;nick&gt;"
+              "Oper &lt;class&gt; &lt;nick&gt;"
        205    RPL_TRACEUSER
-              "User &lt;<a href="class_object.html">class</a>&gt; &lt;nick&gt;"
+              "User &lt;class&gt; &lt;nick&gt;"
        206    RPL_TRACESERVER
-              "Serv &lt;<a href="class_object.html">class</a>&gt; &lt;int&gt;S &lt;int&gt;C &lt;<a href="doc_ircintro.html">server</a>&gt;
-               &lt;nick!user|*!*&gt;@&lt;host|<a href="doc_ircintro.html">server</a>&gt; V&lt;protocol version&gt;"
+              "Serv &lt;class&gt; &lt;int&gt;S &lt;int&gt;C &lt;server&gt;
+               &lt;nick!user|*!*&gt;@&lt;host|server&gt; V&lt;protocol version&gt;"
        207    RPL_TRACESERVICE
-              "Service &lt;<a href="class_object.html">class</a>&gt; &lt;name&gt; &lt;type&gt; &lt;active type&gt;"
+              "Service &lt;class&gt; &lt;name&gt; &lt;type&gt; &lt;active type&gt;"
        208    RPL_TRACENEWTYPE
               "&lt;newtype&gt; 0 &lt;client name&gt;"
        209    RPL_TRACECLASS
-              "<a href="class_object.html">Class</a> &lt;<a href="class_object.html">class</a>&gt; &lt;count&gt;"
+              "Class &lt;class&gt; &lt;count&gt;"
        210    RPL_TRACERECONNECT
               Unused.
        261    RPL_TRACELOG
               "File &lt;logfile&gt; &lt;debug level&gt;"
        262    RPL_TRACEEND
-              "&lt;<a href="doc_ircintro.html">server</a> name&gt; &lt;version & debug level&gt; :End of TRACE"
-         - The RPL_TRACE* are all returned by the <a href="doc_ircintro.html">server</a> in
+              "&lt;server name&gt; &lt;version & debug level&gt; :End of TRACE"
+         - The RPL_TRACE* are all returned by the server in
            response to the TRACE message.  How many are
            returned is dependent on the TRACE message and
-           whether it was sent by an <a href="doc_operators.html">operator</a> or not.  There
+           whether it was sent by an operator or not.  There
            is no predefined order for which occurs first.
            Replies RPL_TRACEUNKNOWN, RPL_TRACECONNECTING and
            RPL_TRACEHANDSHAKE are all used for connections
            which have not been fully established and are either
            unknown, still attempting to connect or in the
-           <a href="class_process.html">process</a> of completing the '<a href="doc_ircintro.html">server</a> handshake'.
-           RPL_TRACELINK is sent by any <a href="doc_ircintro.html">server</a> which handles
+           process of completing the 'server handshake'.
+           RPL_TRACELINK is sent by any server which handles
            a TRACE message and has to pass it on to another
-           <a href="doc_ircintro.html">server</a>.  The list of RPL_TRACELINKs sent in
+           server.  The list of RPL_TRACELINKs sent in
            response to a TRACE command traversing the IRC
            network should reflect the actual connectivity of
            the servers themselves along that path.
@@ -2158,22 +2305,22 @@ to 399.
        219    RPL_ENDOFSTATS
               "&lt;stats letter&gt; :End of STATS report"
        242    RPL_STATSUPTIME
-              ":<a href="doc_ircintro.html">Server</a> Up %d days %d:%02d:%02d"
-         - reports the <a href="doc_ircintro.html">server</a> uptime.
+              ":Server Up %d days %d:%02d:%02d"
+         - reports the server uptime.
        243    RPL_STATSOLINE
               "O &lt;hostmask&gt; * &lt;name&gt;"
          - reports the allowed hosts from where user may become IRC
-           <a href="doc_operators.html">operators</a>.
+           operators.
        221    RPL_UMODEIS
               "&lt;user mode string&gt;"
          - To answer a query about a client's own mode,
            RPL_UMODEIS is sent back.
        234    RPL_SERVLIST
-              "&lt;name&gt; &lt;<a href="doc_ircintro.html">server</a>&gt; &lt;mask&gt; &lt;type&gt; &lt;hopcount&gt; &lt;info&gt;"
+              "&lt;name&gt; &lt;server&gt; &lt;mask&gt; &lt;type&gt; &lt;hopcount&gt; &lt;info&gt;"
        235    RPL_SERVLISTEND
               "&lt;mask&gt; &lt;type&gt; :End of service listing"
          - When listing services in reply to a SERVLIST message,
-           a <a href="doc_ircintro.html">server</a> is required to send the list back using the
+           a server is required to send the list back using the
            RPL_SERVLIST and RPL_SERVLISTEND messages.  A separate
            RPL_SERVLIST is sent for each service.  After the
            services have been listed (or if none present) a
@@ -2182,43 +2329,43 @@ to 399.
               ":There are &lt;integer&gt; users and &lt;integer&gt;
                services on &lt;integer&gt; servers"
        252    RPL_LUSEROP
-              "&lt;integer&gt; :<a href="doc_operators.html">operator</a>(s) online"
+              "&lt;integer&gt; :operator(s) online"
        253    RPL_LUSERUNKNOWN
               "&lt;integer&gt; :unknown connection(s)"
        254    RPL_LUSERCHANNELS
-              "&lt;integer&gt; :<a href="doc_ircintro.html">channels</a> formed"
+              "&lt;integer&gt; :channels formed"
        255    RPL_LUSERME
               ":I have &lt;integer&gt; clients and &lt;integer&gt;
                 servers"
-         - In processing an LUSERS message, the <a href="doc_ircintro.html">server</a>
+         - In processing an LUSERS message, the server
            sends a set of replies from RPL_LUSERCLIENT,
            RPL_LUSEROP, RPL_USERUNKNOWN,
            RPL_LUSERCHANNELS and RPL_LUSERME.  When
-           replying, a <a href="doc_ircintro.html">server</a> MUST send back
+           replying, a server MUST send back
            RPL_LUSERCLIENT and RPL_LUSERME.  The other
            replies are only sent back if a non-zero count
            is found for them.
        256    RPL_ADMINME
-              "&lt;<a href="doc_ircintro.html">server</a>&gt; :Administrative info"
+              "&lt;server&gt; :Administrative info"
        257    RPL_ADMINLOC1
               ":&lt;admin info&gt;"
        258    RPL_ADMINLOC2
               ":&lt;admin info&gt;"
        259    RPL_ADMINEMAIL
               ":&lt;admin info&gt;"
-         - When replying to an ADMIN message, a <a href="doc_ircintro.html">server</a>
+         - When replying to an ADMIN message, a server
            is expected to use replies RPL_ADMINME
            through to RPL_ADMINEMAIL and provide a text
            message with each.  For RPL_ADMINLOC1 a
            description of what city, state and country
-           the <a href="doc_ircintro.html">server</a> is in is expected, followed by
+           the server is in is expected, followed by
            details of the institution (RPL_ADMINLOC2)
            and finally the administrative contact for the
-           <a href="doc_ircintro.html">server</a> (an email address here is REQUIRED)
+           server (an email address here is REQUIRED)
            in RPL_ADMINEMAIL.
        263    RPL_TRYAGAIN
               "&lt;command&gt; :Please wait a while and try again."
-         - When a <a href="doc_ircintro.html">server</a> drops a command without processing it,
+         - When a server drops a command without processing it,
            it MUST use the reply RPL_TRYAGAIN to inform the
            originating client.
 </pre></td></tr>
@@ -2228,32 +2375,32 @@ to 399.
 <tr><td><pre>
        Error replies are found in the range from 400 to 599.
        401    ERR_NOSUCHNICK
-              "&lt;<a href="doc_irc_masks.html">nickname</a>&gt; :No such nick/<a href="doc_ircintro.html">channel</a>"
-          - Used to indicate the <a href="doc_irc_masks.html">nickname</a> parameter supplied to a
+              "&lt;nickname&gt; :No such nick/channel"
+          - Used to indicate the nickname parameter supplied to a
             command is currently unused.
        402    ERR_NOSUCHSERVER
-              "&lt;<a href="doc_ircintro.html">server</a> name&gt; :No such <a href="doc_ircintro.html">server</a>"
-         - Used to indicate the <a href="doc_ircintro.html">server</a> name given currently
+              "&lt;server name&gt; :No such server"
+         - Used to indicate the server name given currently
            does not exist.
        403    ERR_NOSUCHCHANNEL
-              "&lt;<a href="doc_ircintro.html">channel</a> name&gt; :No such <a href="doc_ircintro.html">channel</a>"
-         - Used to indicate the given <a href="doc_ircintro.html">channel</a> name is invalid.
+              "&lt;channel name&gt; :No such channel"
+         - Used to indicate the given channel name is invalid.
        404    ERR_CANNOTSENDTOCHAN
-              "&lt;<a href="doc_ircintro.html">channel</a> name&gt; :Cannot send to <a href="doc_ircintro.html">channel</a>"
-         - Sent to a user who is either (a) not on a <a href="doc_ircintro.html">channel</a>
+              "&lt;channel name&gt; :Cannot send to channel"
+         - Sent to a user who is either (a) not on a channel
            which is mode +n or (b) not a chanop (or mode +v) on
-           a <a href="doc_ircintro.html">channel</a> which has mode +m set or where the user is
+           a channel which has mode +m set or where the user is
            banned and is trying to send a PRIVMSG message to
-           that <a href="doc_ircintro.html">channel</a>.
+           that channel.
        405    ERR_TOOMANYCHANNELS
-              "&lt;<a href="doc_ircintro.html">channel</a> name&gt; :You have joined too many <a href="doc_ircintro.html">channels</a>"
+              "&lt;channel name&gt; :You have joined too many channels"
          - Sent to a user when they have joined the maximum
-           number of allowed <a href="doc_ircintro.html">channels</a> and they try to join
-           another <a href="doc_ircintro.html">channel</a>.
+           number of allowed channels and they try to join
+           another channel.
        406    ERR_WASNOSUCHNICK
-              "&lt;<a href="doc_irc_masks.html">nickname</a>&gt; :There was no such <a href="doc_irc_masks.html">nickname</a>"
+              "&lt;nickname&gt; :There was no such nickname"
          - Returned by WHOWAS to indicate there is no history
-           information for that <a href="doc_irc_masks.html">nickname</a>.
+           information for that nickname.
        407    ERR_TOOMANYTARGETS
               "&lt;target&gt; :&lt;error code&gt; recipients. &lt;abort message&gt;"
          - Returned to a client which is attempting to send a
@@ -2262,8 +2409,8 @@ to 399.
          - Returned to a client which trying to send a
            PRIVMSG/NOTICE to too many recipients.
          - Returned to a client which is attempting to JOIN a safe
-           <a href="doc_ircintro.html">channel</a> using the shortname when there are more than one
-           such <a href="doc_ircintro.html">channel</a>.
+           channel using the shortname when there are more than one
+           such channel.
        408    ERR_NOSUCHSERVICE
               "&lt;service name&gt; :No such service"
          - Returned to a client which is attempting to send a SQUERY
@@ -2278,24 +2425,24 @@ to 399.
        413    ERR_NOTOPLEVEL
               "&lt;mask&gt; :No toplevel domain specified"
        414    ERR_WILDTOPLEVEL
-              "&lt;mask&gt; :<a href="doc_irc_masks.html">Wildcard</a> in toplevel domain"
+              "&lt;mask&gt; :Wildcard in toplevel domain"
        415    ERR_BADMASK
-              "&lt;mask&gt; :Bad <a href="doc_ircintro.html">Server</a>/host mask"
+              "&lt;mask&gt; :Bad Server/host mask"
          - 412 - 415 are returned by PRIVMSG to indicate that
            the message wasn't delivered for some reason.
            ERR_NOTOPLEVEL and ERR_WILDTOPLEVEL are errors that
            are returned when an invalid use of
-           "PRIVMSG $&lt;<a href="doc_ircintro.html">server</a>&gt;" or "PRIVMSG #&lt;host&gt;" is attempted.
+           "PRIVMSG $&lt;server&gt;" or "PRIVMSG #&lt;host&gt;" is attempted.
        421    ERR_UNKNOWNCOMMAND
               "&lt;command&gt; :Unknown command"
          - Returned to a registered client to indicate that the
-           command sent is unknown by the <a href="doc_ircintro.html">server</a>.
+           command sent is unknown by the server.
        422    ERR_NOMOTD
               ":MOTD File is missing"
-         - <a href="doc_ircintro.html">Server</a>'s MOTD file could not be opened by the <a href="doc_ircintro.html">server</a>.
+         - Server's MOTD file could not be opened by the server.
        423    ERR_NOADMININFO
-              "&lt;<a href="doc_ircintro.html">server</a>&gt; :No administrative info available"
-         - Returned by a <a href="doc_ircintro.html">server</a> in response to an ADMIN message
+              "&lt;server&gt; :No administrative info available"
+         - Returned by a server in response to an ADMIN message
            when there is an error in finding the appropriate
            information.
        424    ERR_FILEERROR
@@ -2303,44 +2450,44 @@ to 399.
          - Generic error message used to report a failed file
            operation during the processing of a message.
        431    ERR_NONICKNAMEGIVEN
-              ":No <a href="doc_irc_masks.html">nickname</a> given"
-         - Returned when a <a href="doc_irc_masks.html">nickname</a> parameter expected for a
+              ":No nickname given"
+         - Returned when a nickname parameter expected for a
            command and isn't found.
        432    ERR_ERRONEUSNICKNAME
-              "&lt;nick&gt; :Erroneous <a href="doc_irc_masks.html">nickname</a>"
+              "&lt;nick&gt; :Erroneous nickname"
          - Returned after receiving a NICK message which contains
            characters which do not fall in the defined set.  See
-           section 2.3.1 for details on valid <a href="doc_ircintro.html">nicknames</a>.
+           section 2.3.1 for details on valid nicknames.
        433    ERR_NICKNAMEINUSE
-              "&lt;nick&gt; :<a href="doc_irc_masks.html">Nickname</a> is already in use"
+              "&lt;nick&gt; :Nickname is already in use"
          - Returned when a NICK message is processed that results
            in an attempt to change to a currently existing
-           <a href="doc_irc_masks.html">nickname</a>.
+           nickname.
        436    ERR_NICKCOLLISION
-              "&lt;nick&gt; :<a href="doc_irc_masks.html">Nickname</a> collision KILL from &lt;user&gt;@&lt;host&gt;"
-         - Returned by a <a href="doc_ircintro.html">server</a> to a client when it detects a
-           <a href="doc_irc_masks.html">nickname</a> collision (registered of a NICK that
-           already exists by another <a href="doc_ircintro.html">server</a>).
+              "&lt;nick&gt; :Nickname collision KILL from &lt;user&gt;@&lt;host&gt;"
+         - Returned by a server to a client when it detects a
+           nickname collision (registered of a NICK that
+           already exists by another server).
        437    ERR_UNAVAILRESOURCE
-              "&lt;nick/<a href="doc_ircintro.html">channel</a>&gt; :Nick/<a href="doc_ircintro.html">channel</a> is temporarily unavailable"
-         - Returned by a <a href="doc_ircintro.html">server</a> to a user trying to join a <a href="doc_ircintro.html">channel</a>
-           currently blocked by the <a href="doc_ircintro.html">channel</a> delay mechanism.
-         - Returned by a <a href="doc_ircintro.html">server</a> to a user trying to change <a href="doc_irc_masks.html">nickname</a>
-           when the desired <a href="doc_irc_masks.html">nickname</a> is blocked by the nick delay
+              "&lt;nick/channel&gt; :Nick/channel is temporarily unavailable"
+         - Returned by a server to a user trying to join a channel
+           currently blocked by the channel delay mechanism.
+         - Returned by a server to a user trying to change nickname
+           when the desired nickname is blocked by the nick delay
            mechanism.
        441    ERR_USERNOTINCHANNEL
-              "&lt;nick&gt; &lt;<a href="doc_ircintro.html">channel</a>&gt; :They aren't on that <a href="doc_ircintro.html">channel</a>"
-         - Returned by the <a href="doc_ircintro.html">server</a> to indicate that the target
-           user of the command is not on the given <a href="doc_ircintro.html">channel</a>.
+              "&lt;nick&gt; &lt;channel&gt; :They aren't on that channel"
+         - Returned by the server to indicate that the target
+           user of the command is not on the given channel.
        442    ERR_NOTONCHANNEL
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; :You're not on that <a href="doc_ircintro.html">channel</a>"
-         - Returned by the <a href="doc_ircintro.html">server</a> whenever a client tries to
-           perform a <a href="doc_ircintro.html">channel</a> affecting command for which the
+              "&lt;channel&gt; :You're not on that channel"
+         - Returned by the server whenever a client tries to
+           perform a channel affecting command for which the
            client isn't a member.
        443    ERR_USERONCHANNEL
-              "&lt;user&gt; &lt;<a href="doc_ircintro.html">channel</a>&gt; :is already on <a href="doc_ircintro.html">channel</a>"
+              "&lt;user&gt; &lt;channel&gt; :is already on channel"
          - Returned when a client tries to invite a user to a
-           <a href="doc_ircintro.html">channel</a> they are already on.
+           channel they are already on.
        444    ERR_NOLOGIN
               "&lt;user&gt; :User not logged in"
          - Returned by the summon after a SUMMON command for a
@@ -2349,30 +2496,30 @@ to 399.
        445    ERR_SUMMONDISABLED
               ":SUMMON has been disabled"
          - Returned as a response to the SUMMON command.  MUST be
-           returned by any <a href="doc_ircintro.html">server</a> which doesn't implement it.
+           returned by any server which doesn't implement it.
        446    ERR_USERSDISABLED
               ":USERS has been disabled"
          - Returned as a response to the USERS command.  MUST be
-           returned by any <a href="doc_ircintro.html">server</a> which does not implement it.
+           returned by any server which does not implement it.
        451    ERR_NOTREGISTERED
               ":You have not registered"
-         - Returned by the <a href="doc_ircintro.html">server</a> to indicate that the client
-           MUST be registered before the <a href="doc_ircintro.html">server</a> will allow it
+         - Returned by the server to indicate that the client
+           MUST be registered before the server will allow it
            to be parsed in detail.
        461    ERR_NEEDMOREPARAMS
               "&lt;command&gt; :Not enough parameters"
-         - Returned by the <a href="doc_ircintro.html">server</a> by numerous commands to
+         - Returned by the server by numerous commands to
            indicate to the client that it didn't supply enough
            parameters.
        462    ERR_ALREADYREGISTRED
               ":Unauthorized command (already registered)"
-         - Returned by the <a href="doc_ircintro.html">server</a> to any link which tries to
+         - Returned by the server to any link which tries to
            change part of the registered details (such as
            password or user details from second USER message).
        463    ERR_NOPERMFORHOST
               ":Your host isn't among the privileged"
          - Returned to a client which attempts to register with
-           a <a href="doc_ircintro.html">server</a> which does not been setup to allow
+           a server which does not been setup to allow
            connections from the host the attempted connection
            is tried.
        464    ERR_PASSWDMISMATCH
@@ -2381,66 +2528,66 @@ to 399.
            a connection for which a password was required and
            was either not given or incorrect.
        465    ERR_YOUREBANNEDCREEP
-              ":You are banned from this <a href="doc_ircintro.html">server</a>"
+              ":You are banned from this server"
          - Returned after an attempt to connect and register
-           yourself with a <a href="doc_ircintro.html">server</a> which has been setup to
+           yourself with a server which has been setup to
            explicitly deny connections to you.
        466    ERR_YOUWILLBEBANNED
-         - Sent by a <a href="doc_ircintro.html">server</a> to a user to inform that access to the
-           <a href="doc_ircintro.html">server</a> will soon be denied.
+         - Sent by a server to a user to inform that access to the
+           server will soon be denied.
        467    ERR_KEYSET
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; :<a href="doc_ircintro.html">Channel</a> key already set"
+              "&lt;channel&gt; :Channel key already set"
        471    ERR_CHANNELISFULL
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; :Cannot join <a href="doc_ircintro.html">channel</a> (+l)"
+              "&lt;channel&gt; :Cannot join channel (+l)"
        472    ERR_UNKNOWNMODE
-              "&lt;char&gt; :is unknown mode char to me for &lt;<a href="doc_ircintro.html">channel</a>&gt;"
+              "&lt;char&gt; :is unknown mode char to me for &lt;channel&gt;"
        473    ERR_INVITEONLYCHAN
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; :Cannot join <a href="doc_ircintro.html">channel</a> (+i)"
+              "&lt;channel&gt; :Cannot join channel (+i)"
        474    ERR_BANNEDFROMCHAN
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; :Cannot join <a href="doc_ircintro.html">channel</a> (+b)"
+              "&lt;channel&gt; :Cannot join channel (+b)"
        475    ERR_BADCHANNELKEY
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; :Cannot join <a href="doc_ircintro.html">channel</a> (+k)"
+              "&lt;channel&gt; :Cannot join channel (+k)"
        476    ERR_BADCHANMASK
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; :Bad <a href="doc_ircintro.html">Channel</a> Mask"
+              "&lt;channel&gt; :Bad Channel Mask"
        477    ERR_NOCHANMODES
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; :<a href="doc_ircintro.html">Channel</a> doesn't support modes"
+              "&lt;channel&gt; :Channel doesn't support modes"
        478    ERR_BANLISTFULL
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; &lt;char&gt; :<a href="doc_ircintro.html">Channel</a> list is full"
+              "&lt;channel&gt; &lt;char&gt; :Channel list is full"
        481    ERR_NOPRIVILEGES
-              ":Permission Denied- You're not an IRC <a href="doc_operators.html">operator</a>"
-         - Any command requiring <a href="doc_operators.html">operator</a> privileges to operate
+              ":Permission Denied- You're not an IRC operator"
+         - Any command requiring operator privileges to operate
            MUST return this error to indicate the attempt was
            unsuccessful.
        482    ERR_CHANOPRIVSNEEDED
-              "&lt;<a href="doc_ircintro.html">channel</a>&gt; :You're not <a href="doc_ircintro.html">channel operator</a>"
+              "&lt;channel&gt; :You're not channel operator"
          - Any command requiring 'chanop' privileges (such as
            MODE messages) MUST return this error if the client
            making the attempt is not a chanop on the specified
-           <a href="doc_ircintro.html">channel</a>.
+           channel.
        483    ERR_CANTKILLSERVER
-              ":You can't kill a <a href="doc_ircintro.html">server</a>!"
-         - Any attempts to use the KILL command on a <a href="doc_ircintro.html">server</a>
+              ":You can't kill a server!"
+         - Any attempts to use the KILL command on a server
            are to be refused and this error returned directly
            to the client.
        484    ERR_RESTRICTED
               ":Your connection is restricted!"
-         - Sent by the <a href="doc_ircintro.html">server</a> to a user upon connection to indicate
+         - Sent by the server to a user upon connection to indicate
            the restricted nature of the connection (user mode "+r").
        485    ERR_UNIQOPPRIVSNEEDED
-              ":You're not the original <a href="doc_ircintro.html">channel operator</a>"
-         - Any MODE requiring "<a href="doc_ircintro.html">channel</a> creator" privileges MUST
+              ":You're not the original channel operator"
+         - Any MODE requiring "channel creator" privileges MUST
            return this error if the client making the attempt is not
-           a chanop on the specified <a href="doc_ircintro.html">channel</a>.
+           a chanop on the specified channel.
        491    ERR_NOOPERHOST
               ":No O-lines for your host"
-         - If a client sends an OPER message and the <a href="doc_ircintro.html">server</a> has
+         - If a client sends an OPER message and the server has
            not been configured to allow connections from the
-           client's host as an <a href="doc_operators.html">operator</a>, this error MUST be
+           client's host as an operator, this error MUST be
            returned.
        501    ERR_UMODEUNKNOWNFLAG
               ":Unknown MODE flag"
-         - Returned by the <a href="doc_ircintro.html">server</a> to indicate that a MODE
-           message was sent with a <a href="doc_irc_masks.html">nickname</a> parameter and that
+         - Returned by the server to indicate that a MODE
+           message was sent with a nickname parameter and that
            the a mode flag sent was not recognized.
        502    ERR_USERSDONTMATCH
               ":Cannot change mode for other users"
@@ -2456,7 +2603,7 @@ to 399.
    1. no longer in use;
    2. reserved for future planned use;
    3. in current use but are part of a non-generic 'feature' of
-      the current IRC <a href="doc_ircintro.html">server</a>.
+      the current IRC server.
             231    RPL_SERVICEINFO     232  RPL_ENDOFSERVICES
             233    RPL_SERVICE
             300    RPL_NONE            316  RPL_WHOISCHANOP
@@ -2477,7 +2624,7 @@ to 399.
 </td></tr>
 <tr><td>
 The IRC software, version 2.10 is the only complete implementation of
-the IRC protocol (client and <a href="doc_ircintro.html">server</a>).  Because of the small amount of
+the IRC protocol (client and server).  Because of the small amount of
 changes in the client protocol since the publication of RFC 1459
 [IRC], implementations that follow it are likely to be compliant with
 this protocol or to require a small amount of changes to reach
@@ -2488,7 +2635,7 @@ compliance.
 </td></tr>
 <tr><td>
 There are a number of recognized problems with the IRC Client
-Protocol, and more generally with the IRC <a href="doc_ircintro.html">Server</a> Protocol.  In order
+Protocol, and more generally with the IRC Server Protocol.  In order
 to preserve backward compatibility with old clients, this protocol
 has almost not evolved since the publication of RFC 1459 [IRC].
 </td></tr>
@@ -2496,12 +2643,12 @@ has almost not evolved since the publication of RFC 1459 [IRC].
 <b>7.1 Nicknames</b>
 </td></tr>
 <tr><td>
-The idea of the <a href="doc_irc_masks.html">nickname</a> on IRC is very convenient for users to use
-when talking to each other outside of a <a href="doc_ircintro.html">channel</a>, but there is only a
-finite <a href="doc_irc_masks.html">nickname</a> space and being what they are, it's not uncommon for
-several people to want to use the same nick.  If a <a href="doc_irc_masks.html">nickname</a> is chosen
+The idea of the nickname on IRC is very convenient for users to use
+when talking to each other outside of a channel, but there is only a
+finite nickname space and being what they are, it's not uncommon for
+several people to want to use the same nick.  If a nickname is chosen
 by two people using this protocol, either one will not succeed or
-both will removed by use of a <a href="doc_ircintro.html">server</a> KILL (See Section 3.7.1).
+both will removed by use of a server KILL (See Section 3.7.1).
 </td></tr>
 <tr><td>
 <b>7.2 Limitation of wildcards</b>
@@ -2509,15 +2656,15 @@ both will removed by use of a <a href="doc_ircintro.html">server</a> KILL (See S
 <tr><td>
 There is no way to escape the escape character "\" (%x5C).  While
 this isn't usually a problem, it makes it impossible to form a mask
-with a backslash character ("\") preceding a <a href="doc_irc_masks.html">wildcard</a>.
+with a backslash character ("\") preceding a wildcard.
 </td></tr>
 <tr><td>
 <b>7.3 Security considerations</b>
 </td></tr>
 <tr><td>
 Security issues related to this protocol are discussed in the "IRC
-<a href="doc_ircintro.html">Server</a> Protocol" [IRC-SERVER] as they are mostly an issue for the
-<a href="doc_ircintro.html">server</a> side of the connection.
+Server Protocol" [IRC-SERVER] as they are mostly an issue for the
+server side of the connection.
 </td></tr>
 <tr><td>
 <b>8. Current support and availability</b>
@@ -2561,9 +2708,9 @@ Ruokonen, Magnus Tjernstrom, Stefan Zehl.
                 RFC 1459, May 1993.
    [IRC-ARCH]   Kalt, C., "Internet Relay Chat: Architecture", RFC 2810,
                 April 2000.
-   [IRC-CHAN]   Kalt, C., "Internet Relay Chat: <a href="doc_ircintro.html">Channel</a> Management", RFC
+   [IRC-CHAN]   Kalt, C., "Internet Relay Chat: Channel Management", RFC
                 2811, April 2000.
-   [IRC-SERVER] Kalt, C., "Internet Relay Chat: <a href="doc_ircintro.html">Server</a> Protocol", RFC
+   [IRC-SERVER] Kalt, C., "Internet Relay Chat: Server Protocol", RFC
                 2813, April 2000.
 </pre></td></tr>
 <tr><td>
@@ -2592,7 +2739,7 @@ document itself may not be modified in any way, such as by removing
 the copyright notice or references to the Internet Society or other
 Internet organizations, except as needed for the purpose of
 developing Internet standards in which case the procedures for
-copyrights defined in the Internet Standards <a href="class_process.html">process</a> must be
+copyrights defined in the Internet Standards process must be
 followed, or as required to translate it into languages other than
 English.
 <p>
@@ -2618,6 +2765,6 @@ Internet Society.
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_generic_index_all.html">Miscellaneous</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

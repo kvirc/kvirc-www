@@ -3,12 +3,163 @@
 <title>$system.dbus</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,23 +175,19 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>$system.dbus</h1>
-Performs a DBus call
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>$system.dbus</div>      <div class='title-secondary-text'>Performs a DBus call</div>    </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Usage</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Usage</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code>$system.dbus(&lt;service&gt;,&lt;path&gt;,&lt;interface&gt;,&lt;method&gt;[,&lt;bus_type&gt;[,&lt;parameter1&gt;[,&lt;parameter2&gt;[,...]]]])</code></pre></font></td>
+    <td><div class='syntax-text'><font color="#8080a0">&lt;</font><font color="#808080">variant</font><font color="#8080a0">&gt;</font> <b>$system.dbus</b><b>(</b><font color="#8080a0">&lt;</font>service<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>path<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>interface<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>method<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>bus_type<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>parameter1<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>parameter2<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,...<font color="#8080a0">]</font><font color="#8080a0">]</font><font color="#8080a0">]</font><font color="#8080a0">]</font><b>)</b></div></td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Description</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>This function allows performing simple Dbus calls without executing
@@ -48,8 +195,8 @@ an external process. This feature is available ONLY under unix:
 this means that this function is absolutely
 non portable (don't use it in scripts that you're going to distribute).
 &lt;application&gt; is the name of the application being called, &lt;objectid&gt; is the
-identifier of the <a href="class_object.html">object</a> called, &lt;function&gt; is the function to be executed
-on the remote <a href="class_object.html">object</a> and &lt;parameter1&gt;,&lt;parameter2&gt;,... is the list of
+identifier of the object called, &lt;function&gt; is the function to be executed
+on the remote object and &lt;parameter1&gt;,&lt;parameter2&gt;,... is the list of
 parameters to be passed. The &lt;function&gt; name must contain the
 trailing parenthesis and parameter specification (see examples).
 The &lt;bus_type&gt; specifies the bus to connect, use "system" for systemBus or
@@ -57,7 +204,7 @@ The &lt;bus_type&gt; specifies the bus to connect, use "system" for systemBus or
 The parameters MUST be in the form "type=value"
 where "type" is the C++ type of the parameter and value
 is the string representation of the parameter data. Currently
-<a href="doc_kvircintro.html">KVIrc</a> supports only QString,QByteArray,bool,int and uint data types.<br>
+KVIrc supports only QString,QByteArray,bool,int and uint data types.<br>
 The returned value is the string representation of the returned
 data if the return type is known, otherwise it is the name of the data type returned.
 <br>
@@ -67,29 +214,23 @@ successfully and 0 if the call failed. This can be used with the very first
 call to programmaticaly test if the remote application is running.
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Syntax Specification</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code><font color="#8080a0">&lt;</font><font color="#808080">variant</font><font color="#8080a0">&gt;</font> <b>$system.dbus</b><b>(</b><font color="#8080a0">&lt;</font>service<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>path<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>interface<font color="#808080">:string</font><font color="#8080a0">&gt;</font>,<font color="#8080a0">&lt;</font>method<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>bus_type<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>parameter1<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>parameter2<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,...<font color="#8080a0">]</font><font color="#8080a0">]</font><font color="#8080a0">]</font><font color="#8080a0">]</font><b>)</b></code></pre></font></td>
-  </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Examples</b></td>
-  </tr>
-  <tr bgcolor="#EAEAEA">
-    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;#get a string list of torrents currently in queue in ktorrent
-&nbsp;&nbsp;&nbsp;&nbsp;echo $system.dbus("org.ktorrent.ktorrent","/KTorrent", "org.ktorrent.KTorrent","torrents")
-&nbsp;&nbsp;&nbsp;&nbsp;#stop a torrent in ktorrent by its name
-&nbsp;&nbsp;&nbsp;&nbsp;echo $system.dbus("org.ktorrent.ktorrent","/KTorrent", "org.ktorrent.KTorrent","stop","QString=Torrent Name")
-&nbsp;&nbsp;&nbsp;&nbsp;#start the kde task manager
-&nbsp;&nbsp;&nbsp;&nbsp;echo $system.dbus("org.freedesktop.ScreenSaver","/App", "org.kde.krunner.App","showTaskManager")
-&nbsp;&nbsp;&nbsp;&nbsp;#get the clipboard contents using dbus
-&nbsp;&nbsp;&nbsp;&nbsp;echo $system.dbus("org.kde.klipper","/klipper", "org.kde.klipper.klipper","getClipboardContents")
-</font></code></pre></td></tr></table></p>
+    <td><div class="example-box"><span class="comment-text">#get a string list of torrents currently in queue in ktorrent
+</span>echo $system.dbus<span class="example-paren">(</span>"org.ktorrent.ktorrent","/KTorrent", "org.ktorrent.KTorrent","torrents"<span class="example-paren">)</span>
+<span class="comment-text">#stop a torrent in ktorrent by its name
+</span>echo $system.dbus<span class="example-paren">(</span>"org.ktorrent.ktorrent","/KTorrent", "org.ktorrent.KTorrent","stop","QString=Torrent Name"<span class="example-paren">)</span>
+<span class="comment-text">#start the kde task manager
+</span>echo $system.dbus<span class="example-paren">(</span>"org.freedesktop.ScreenSaver","/App", "org.kde.krunner.App","showTaskManager"<span class="example-paren">)</span>
+<span class="comment-text">#get the clipboard contents using dbus
+</span>echo $system.dbus<span class="example-paren">(</span>"org.kde.klipper","/klipper", "org.kde.klipper.klipper","getClipboardContents"<span class="example-paren">)</span>
+</div>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_function_alphabetic_a.html">Functions</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

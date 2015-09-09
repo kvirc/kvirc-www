@@ -3,12 +3,163 @@
 <title>parse</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,33 +175,29 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>parse</h1>
-Executes commands from a file
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>parse</div>      <div class='title-secondary-text'>Executes commands from a file</div>    </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Usage</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Usage</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code>parse [-q] [-e] [-f] [-r] &lt;filename&gt; [&lt;parameter1&gt; [&lt;parameter2&gt; [...]]]</code></pre></font></td>
+    <td><div class='syntax-text'><b>parse</b> <font color="#8080a0">[</font>-q<font color="#8080a0">]</font> <font color="#8080a0">[</font>-e<font color="#8080a0">]</font> <font color="#8080a0">[</font>-f<font color="#8080a0">]</font> <font color="#8080a0">[</font>-r<font color="#8080a0">]</font> <font color="#8080a0">&lt;</font>filename<font color="#808080">:string</font><font color="#8080a0">&gt;</font> <font color="#8080a0">[</font><font color="#8080a0">&lt;</font>parameter1<font color="#808080">:variant</font><font color="#8080a0">&gt;</font> <font color="#8080a0">[</font><font color="#8080a0">&lt;</font>parameter2<font color="#808080">:variant</font><font color="#8080a0">&gt;</font> <font color="#8080a0">[</font>...<font color="#8080a0">]</font><font color="#8080a0">]</font><font color="#8080a0">]</font></div></td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Description</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>Executes commands from the external file &lt;filename&gt;.<br>
 &lt;filename&gt; can be an absolute or relative path.<br>
-If it is a relative path then <a href="doc_kvircintro.html">KVIrc</a> will try to look it up
-in the path of the calling <a href="doc_kvs_basicconcepts.html">script</a> (if any) and in the current
-<a href="doc_kvircintro.html">KVIrc</a> working directory.
+If it is a relative path then KVIrc will try to look it up
+in the path of the calling script (if any) and in the current
+KVIrc working directory.
 The file must be utf8-encoded (see below).
 [parameters] is a space separated string of parameters to be
-passed to the <a href="doc_kvs_basicconcepts.html">script</a>. The parameter $0 will contain the
+passed to the script. The parameter $0 will contain the
 path of the file being parsed, the other parameters will
 be available starting from $1.<br>
 If &lt;filename&gt; is an existing directory name a file dialog
@@ -62,10 +209,10 @@ some reason. If you want the command to stop with an error in
 this case then use the -e switch.<br>
 This command has a builtin alias called <a href="cmd_include.html">include</a>.
 <br><br>
-Note that <a href="doc_kvs_basicconcepts.html">script</a> files, especially the ones that you distribute,
+Note that script files, especially the ones that you distribute,
 MUST be encoded in utf8. Any other encoding (especially the exotic
 ones like KOI8R or Shift-JIS) may screw things up.
-The reason for such a constraint is simple: <a href="doc_kvircintro.html">KVIrc</a> has no means
+The reason for such a constraint is simple: KVIrc has no means
 of knowing the encoding that one or other scripter uses to
 edit his files. Unlike other languages (like HTML, for example)
 there is no "external" metadata that will allow for
@@ -73,43 +220,37 @@ encoding detection before the data is actually decoded.
 UTF8 is the right way (tm). Use it.
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Switches</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Switches</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>
-      <table bgcolor="#D5D5D5">
-<tr bgcolor="#E0E0E0"><td><b>-e | --fail-on-load</b></td></tr>
-<tr><td>Causes the command to terminate with an error when the file can't be loaded: the error termination stops the parsing of the current <a href="doc_kvs_basicconcepts.html">script</a> too. If the -e switch is not used then file load failures are eventually reported only as a warning or not reported at all (if -q is used).</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-f | --fail-on-error</b></td></tr>
-<tr><td>Causes the command to terminate with an error when the execution of the <a href="doc_kvs_basicconcepts.html">script</a> loaded from disk generates an error. This error termination stops the parsing of the current <a href="doc_kvs_basicconcepts.html">script</a> too. If the -f switch is not used then the loaded <a href="doc_kvs_basicconcepts.html">script</a> errors do not stop the current script.</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-q | --quiet</b></td></tr>
-<tr><td>Causes the command to run quietly without printing warnings about empty &lt;filename&gt; and file loading errors.</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-r | --propagate-return</b></td></tr>
-<tr><td>Causes the return value of the <a href="doc_kvs_basicconcepts.html">script</a> to be propagated to the calling context. This allows the usage of ${ } trick to extract this return value. See the examples section for a sample usage.</td></tr>
+      <table class="switch-table">
+<tr><td class="switch-title-table-cell">-e | --fail-on-load</td></tr>
+<tr><td class="switch-body-table-cell">Causes the command to terminate with an error when the file can't be loaded: the error termination stops the parsing of the current script too. If the -e switch is not used then file load failures are eventually reported only as a warning or not reported at all (if -q is used).</td></tr>
+<tr><td class="switch-title-table-cell">-f | --fail-on-error</td></tr>
+<tr><td class="switch-body-table-cell">Causes the command to terminate with an error when the execution of the script loaded from disk generates an error. This error termination stops the parsing of the current script too. If the -f switch is not used then the loaded script errors do not stop the current script.</td></tr>
+<tr><td class="switch-title-table-cell">-q | --quiet</td></tr>
+<tr><td class="switch-body-table-cell">Causes the command to run quietly without printing warnings about empty &lt;filename&gt; and file loading errors.</td></tr>
+<tr><td class="switch-title-table-cell">-r | --propagate-return</td></tr>
+<tr><td>Causes the return value of the script to be propagated to the calling context. This allows the usage of ${ } trick to extract this return value. See the examples section for a sample usage.</td></tr>
       </table>
     </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Syntax Specification</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code><b>parse</b> <font color="#8080a0">[</font>-q<font color="#8080a0">]</font> <font color="#8080a0">[</font>-e<font color="#8080a0">]</font> <font color="#8080a0">[</font>-f<font color="#8080a0">]</font> <font color="#8080a0">[</font>-r<font color="#8080a0">]</font> <font color="#8080a0">&lt;</font>filename<font color="#808080">:string</font><font color="#8080a0">&gt;</font> <font color="#8080a0">[</font><font color="#8080a0">&lt;</font>parameter1<font color="#808080">:variant</font><font color="#8080a0">&gt;</font> <font color="#8080a0">[</font><font color="#8080a0">&lt;</font>parameter2<font color="#808080">:variant</font><font color="#8080a0">&gt;</font> <font color="#8080a0">[</font>...<font color="#8080a0">]</font><font color="#8080a0">]</font><font color="#8080a0">]</font></code></pre></font></td>
-  </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Examples</b></td>
-  </tr>
-  <tr bgcolor="#EAEAEA">
-    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;parse /home/pragma/myscript.kvs
-</font></code></pre></td></tr></table></p>
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Here we are assuming that fetchdata.kvs returns a string</font>
-&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># We evaluate the return value thru ${} and echo it</font>
-&nbsp;&nbsp;&nbsp;&nbsp;echo ${ parse -r /home/pragma/fetchdata.kvs; };
-</font></code></pre></td></tr></table></p>
+    <td><div class="example-box">parse /home/pragma/myscript.kvs
+</div>
+<div class="example-box"><span class="comment-text"># Here we are assuming that fetchdata.kvs returns a string</span>
+<span class="comment-text"># We evaluate the return value thru $<span class="example-bracket">{}</span> and echo it</span>
+echo $<span class="example-bracket">{</span> parse -r /home/pragma/fetchdata.kvs; <span class="example-bracket">}</span>;
+</div>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

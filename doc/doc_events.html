@@ -3,12 +3,163 @@
 <title>Events</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,57 +175,53 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>Events</h1>
-Events: user reactions
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>Events</div>      <div class='title-secondary-text'>Events: user reactions</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>KVIrc triggers an event when a particular situation occurs (hehe :D).<br>
 You can define a set of event handlers for each event type.<br>
 An event handler is a snippet of user-defined code that gets executed when the event is triggered.<br>
 Event handlers can be created or destroyed by using the scriptcenter (graphic interface)
-or even from the commandline (or <a href="doc_kvs_basicconcepts.html">script</a>) by using the <a href="cmd_event.html">event</a> command.<br>
+or even from the commandline (or script) by using the <a href="cmd_event.html">event</a> command.<br>
 For example, the <a href="event_onirc.html">onirc</a> is triggered when the login operations have
-been terminated and you can consider yourself "completely" on <a href="doc_rfc2812.html">IRC</a>. For example, you might
-want to "auto-join" some <a href="doc_ircintro.html">channels</a>. Nothing easier! The following snippet of code
-adds a handler to the OnIRC event that joins three <a href="doc_ircintro.html">channels</a>:<br>
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000"><a href="cmd_event.html">event</a>(OnIRC,autojoin)
-{
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Auto-joining my preferred <a href="doc_ircintro.html">channels</a>...
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_join.html">join</a> #<a href="doc_kvircintro.html">kvirc</a>,#siena,#linux
-}
-</font></code></pre></td></tr></table></p>
-Now try to connect to a <a href="doc_ircintro.html">server</a> and you'll see that it joins automatically the three <a href="doc_ircintro.html">channels</a>!.<br>
+been terminated and you can consider yourself "completely" on IRC. For example, you might
+want to "auto-join" some channels. Nothing easier! The following snippet of code
+adds a handler to the OnIRC event that joins three channels:<br>
+<div class="example-box"><a href="cmd_event.html">event</a><span class="example-paren">(</span>OnIRC,autojoin<span class="example-paren">)</span>
+<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Auto-joining my preferred channels...
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_join.html">join</a> #kvirc,#siena,#linux
+<span class="example-bracket">}</span>
+</div>
+Now try to connect to a server and you'll see that it joins automatically the three channels!.<br>
 You might also want to do some other actions just after the connection has been established,
 for example you might want to look immediately for a friend of yours by issuing a <a href="cmd_whois.html">whois</a>
-to the <a href="doc_ircintro.html">server</a> (well.. you could use the notify list for that, but well, this is an example).<br>
+to the server (well.. you could use the notify list for that, but well, this is an example).<br>
 You can add the <a href="cmd_whois.html">whois</a> request to the handler above or just create a new one:<br>
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000"><a href="cmd_event.html">event</a>(OnIRC,lookforfred)
-{
+<div class="example-box"><a href="cmd_event.html">event</a><span class="example-paren">(</span>OnIRC,lookforfred<span class="example-paren">)</span>
+<span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Looking for fred...
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_whois.html">whois</a> fred
-}
-</font></code></pre></td></tr></table></p>
+<span class="example-bracket">}</span>
+</div>
 (An even nicer idea would be to use the <a href="cmd_awhois.html">awhois</a> command...but that's left to the reader as exercise.<br>
 To remove an event handler you still use the <a href="cmd_event.html">event</a> command, but with an empty code block:<br>
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000"><a href="cmd_event.html">event</a>(OnIRC,lookforfred){}<br>
-</font></code></pre></td></tr></table></p>
+<div class="example-box"><a href="cmd_event.html">event</a><span class="example-paren">(</span>OnIRC,lookforfred<span class="example-paren">)</span><span class="example-bracket">{}</span><br>
+</div>
 <br>
 Certain events will pass you some data in the positional parameters.<br>
-For example, when you are being banned from a <a href="doc_ircintro.html">channel</a>, <a href="doc_kvircintro.html">KVIrc</a> triggers the <a href="event_onmeban.html">onmeban</a>
-event: you might be interested in WHO has banned you. <a href="doc_kvircintro.html">KVIrc</a> will pass the "ban source" information
+For example, when you are being banned from a channel, KVIrc triggers the <a href="event_onmeban.html">onmeban</a>
+event: you might be interested in WHO has banned you. KVIrc will pass the "ban source" information
 in the positional parameters $0,$1 and $2.<br>
-(Please note that the parameters started from $1 in <a href="doc_kvircintro.html">KVIrc</a> versions older than 3.0.0!).<br>
+(Please note that the parameters started from $1 in KVIrc versions older than 3.0.0!).<br>
 You may take a look at the list of available <a href="doc_event_index_all.html">events</a>.<br>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

@@ -3,12 +3,163 @@
 <title>The serverdb module</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,73 +175,69 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>The serverdb module</h1>
-Interface to the servers database
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>The serverdb module</div>      <div class='title-secondary-text'>Interface to the servers database</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>The serverdb module is the scripting interface to the servers and networks database.<br>
 It provides the following set of commands:<br>
 <a href="cmd_serverdb.addnetwork.html">serverdb.addnetwork</a>: adds a network entry to the database<br>
-<a href="cmd_serverdb.addserver.html">serverdb.addserver</a>: adds a <a href="doc_ircintro.html">server</a> entry to the database<br>
-<a href="cmd_serverdb.setnetworkconnectcommand.html">serverdb.setnetworkconnectcommand</a>: sets a "on connect" <a href="doc_kvs_basicconcepts.html">script</a> for the network<br>
+<a href="cmd_serverdb.addserver.html">serverdb.addserver</a>: adds a server entry to the database<br>
+<a href="cmd_serverdb.setnetworkconnectcommand.html">serverdb.setnetworkconnectcommand</a>: sets a "on connect" script for the network<br>
 <a href="cmd_serverdb.setnetworkencoding.html">serverdb.setnetworkencoding</a>: sets the network encoding<br>
 <a href="cmd_serverdb.setnetworktextencoding.html">serverdb.setnetworktextencoding</a>: sets the network text encoding<br>
 <a href="cmd_serverdb.setnetworkdescription.html">serverdb.setnetworkdescription</a>: sets the network description<br>
-<a href="cmd_serverdb.setnetworklogincommand.html">serverdb.setnetworklogincommand</a>: sets a "on login" <a href="doc_kvs_basicconcepts.html">script</a> for the network<br>
+<a href="cmd_serverdb.setnetworklogincommand.html">serverdb.setnetworklogincommand</a>: sets a "on login" script for the network<br>
 <a href="cmd_serverdb.setnetworknickname.html">serverdb.setnetworknickname</a>: sets the network specific nickname<br>
 <a href="cmd_serverdb.setnetworkrealname.html">serverdb.setnetworkrealname</a>: sets the network specific realname<br>
 <a href="cmd_serverdb.setnetworkusername.html">serverdb.setnetworkusername</a>: sets the network specific username<br>
-<a href="cmd_serverdb.setnetworkjoinchannels.html">serverdb.setnetworkjoinchannels</a>: sets the network autojoin <a href="doc_ircintro.html">channels</a> list<br>
-<a href="cmd_serverdb.setserverconnectcommand.html">serverdb.setserverconnectcommand</a>: sets a "on connect" <a href="doc_kvs_basicconcepts.html">script</a> for the server<br>
-<a href="cmd_serverdb.setserverencoding.html">serverdb.setserverencoding</a>: sets the <a href="doc_ircintro.html">server</a> encoding<br>
-<a href="cmd_serverdb.setservertextencoding.html">serverdb.setservertextencoding</a>: sets the <a href="doc_ircintro.html">server</a> text encoding<br>
-<a href="cmd_serverdb.setserverdescription.html">serverdb.setserverdescription</a>: sets the <a href="doc_ircintro.html">server</a> description<br>
-<a href="cmd_serverdb.setserverlogincommand.html">serverdb.setserverlogincommand</a>: sets a "on login" <a href="doc_kvs_basicconcepts.html">script</a> for the server<br>
-<a href="cmd_serverdb.setservernickname.html">serverdb.setservernickname</a>: sets the <a href="doc_ircintro.html">server</a> specific nickname<br>
-<a href="cmd_serverdb.setserverrealname.html">serverdb.setserverrealname</a>: sets the <a href="doc_ircintro.html">server</a> specific realname<br>
-<a href="cmd_serverdb.setserverusername.html">serverdb.setserverusername</a>: sets the <a href="doc_ircintro.html">server</a> specific username<br>
-<a href="cmd_serverdb.setserverjoinchannels.html">serverdb.setserverjoinchannels</a>: sets the <a href="doc_ircintro.html">server</a> autojoin <a href="doc_ircintro.html">channels</a> list<br>
+<a href="cmd_serverdb.setnetworkjoinchannels.html">serverdb.setnetworkjoinchannels</a>: sets the network autojoin channels list<br>
+<a href="cmd_serverdb.setserverconnectcommand.html">serverdb.setserverconnectcommand</a>: sets a "on connect" script for the server<br>
+<a href="cmd_serverdb.setserverencoding.html">serverdb.setserverencoding</a>: sets the server encoding<br>
+<a href="cmd_serverdb.setservertextencoding.html">serverdb.setservertextencoding</a>: sets the server text encoding<br>
+<a href="cmd_serverdb.setserverdescription.html">serverdb.setserverdescription</a>: sets the server description<br>
+<a href="cmd_serverdb.setserverlogincommand.html">serverdb.setserverlogincommand</a>: sets a "on login" script for the server<br>
+<a href="cmd_serverdb.setservernickname.html">serverdb.setservernickname</a>: sets the server specific nickname<br>
+<a href="cmd_serverdb.setserverrealname.html">serverdb.setserverrealname</a>: sets the server specific realname<br>
+<a href="cmd_serverdb.setserverusername.html">serverdb.setserverusername</a>: sets the server specific username<br>
+<a href="cmd_serverdb.setserverjoinchannels.html">serverdb.setserverjoinchannels</a>: sets the server autojoin channels list<br>
 <br>
-It provides the following set of <a href="doc_kvs_aliasesandfunctions.html">functions</a>:<br>
+It provides the following set of functions:<br>
 <a href="fnc_serverdb.cacheip.html">$serverdb.cacheip</a>: returns the cache-ip status for a server<br>
-<a href="fnc_serverdb.networkconnectcommand.html">$serverdb.networkconnectcommand</a>: returns the "on connect" <a href="doc_kvs_basicconcepts.html">script</a> for a network<br>
+<a href="fnc_serverdb.networkconnectcommand.html">$serverdb.networkconnectcommand</a>: returns the "on connect" script for a network<br>
 <a href="fnc_serverdb.networkdescription.html">$serverdb.networkdescription</a>: returns the description for a network<br>
 <a href="fnc_serverdb.networkencoding.html">$serverdb.networkencoding</a>: returns the encoding for a network<br>
 <a href="fnc_serverdb.networktextencoding.html">$serverdb.networktextencoding</a>: returns the text encoding for a network<br>
-<a href="fnc_serverdb.networklogincommand.html">$serverdb.networklogincommand</a>: returns the "on login" <a href="doc_kvs_basicconcepts.html">script</a> for a network<br>
+<a href="fnc_serverdb.networklogincommand.html">$serverdb.networklogincommand</a>: returns the "on login" script for a network<br>
 <a href="fnc_serverdb.networkname.html">$serverdb.networkname</a>: returns the name of a network<br>
-<a href="fnc_serverdb.networknickname.html">$serverdb.networknickname</a>: returns the specific <a href="doc_irc_masks.html">nickname</a> for a network<br>
+<a href="fnc_serverdb.networknickname.html">$serverdb.networknickname</a>: returns the specific nickname for a network<br>
 <a href="fnc_serverdb.networkrealname.html">$serverdb.networkrealname</a>: returns the specific realname for a network<br>
-<a href="fnc_serverdb.networkusername.html">$serverdb.networkusername</a>: returns the specific <a href="doc_irc_masks.html">username</a> for a network<br>
-<a href="fnc_serverdb.networkjoinchannels.html">$serverdb.networkjoinchannels</a>: returns the list of autojoin <a href="doc_ircintro.html">channels</a> for a network<br>
-<a href="fnc_serverdb.serverconnectcommand.html">$serverdb.serverconnectcommand</a>: returns the "on connect" <a href="doc_kvs_basicconcepts.html">script</a> for a server<br>
+<a href="fnc_serverdb.networkusername.html">$serverdb.networkusername</a>: returns the specific username for a network<br>
+<a href="fnc_serverdb.networkjoinchannels.html">$serverdb.networkjoinchannels</a>: returns the list of autojoin channels for a network<br>
+<a href="fnc_serverdb.serverconnectcommand.html">$serverdb.serverconnectcommand</a>: returns the "on connect" script for a server<br>
 <a href="fnc_serverdb.serverdescription.html">$serverdb.serverdescription</a>: returns the description for a server<br>
 <a href="fnc_serverdb.serverencoding.html">$serverdb.serverencoding</a>: returns the encoding for a server<br>
 <a href="fnc_serverdb.servertextencoding.html">$serverdb.servertextencoding</a>: returns the text encoding for a server<br>
 <a href="fnc_serverdb.serverid.html">$serverdb.serverid</a>: returns the unique id for a server<br>
 <a href="fnc_serverdb.serverip.html">$serverdb.serverip</a>: returns the ip for a server<br>
-<a href="fnc_serverdb.serverlogincommand.html">$serverdb.serverlogincommand</a>: returns the "on login" <a href="doc_kvs_basicconcepts.html">script</a> for a server<br>
-<a href="fnc_serverdb.servernickname.html">$serverdb.servernickname</a>: returns the specific <a href="doc_irc_masks.html">nickname</a> for a server<br>
+<a href="fnc_serverdb.serverlogincommand.html">$serverdb.serverlogincommand</a>: returns the "on login" script for a server<br>
+<a href="fnc_serverdb.servernickname.html">$serverdb.servernickname</a>: returns the specific nickname for a server<br>
 <a href="fnc_serverdb.serverpassword.html">$serverdb.serverpassword</a>: returns the password for a server<br>
 <a href="fnc_serverdb.serverport.html">$serverdb.serverport</a>: returns the port for a server<br>
 <a href="fnc_serverdb.serverrealname.html">$serverdb.serverrealname</a>: returns the specific realname for a server<br>
-<a href="fnc_serverdb.serverusername.html">$serverdb.serverusername</a>: returns the specific <a href="doc_irc_masks.html">username</a> for a server<br>
-<a href="fnc_serverdb.serverjoinchannels.html">$serverdb.serverjoinchannels</a>: returns the list of autojoin <a href="doc_ircintro.html">channels</a> for a server<br>
+<a href="fnc_serverdb.serverusername.html">$serverdb.serverusername</a>: returns the specific username for a server<br>
+<a href="fnc_serverdb.serverjoinchannels.html">$serverdb.serverjoinchannels</a>: returns the list of autojoin channels for a server<br>
 <a href="fnc_serverdb.isautoconnect.html">$serverdb.isautoconnect</a>: returns the autoconnect status for a server<br>
 <a href="fnc_serverdb.isipv6.html">$serverdb.isipv6</a>: returns the ipv6 status for a server<br>
 <a href="fnc_serverdb.isssl.html">$serverdb.isssl</a>: returns the ssl status for a server<br>
 <a href="fnc_serverdb.networkexists.html">$serverdb.networkexists</a>: checks if a network exists<br>
-<a href="fnc_serverdb.serverexists.html">$serverdb.serverexists</a>: checks if a <a href="doc_ircintro.html">server</a> exists<br>
+<a href="fnc_serverdb.serverexists.html">$serverdb.serverexists</a>: checks if a server exists<br>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_module_index_all.html">Modules</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

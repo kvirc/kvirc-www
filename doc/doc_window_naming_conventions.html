@@ -3,12 +3,163 @@
 <title>Window naming conventions</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,31 +175,27 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>Window naming conventions</h1>
-KVIrc window structure and the window naming conventions
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>Window naming conventions</div>      <div class='title-secondary-text'>KVIrc window structure and the window naming conventions</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td></td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Introduction</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
-Starting from the release 3.0.0 <a href="doc_kvircintro.html">KVIrc</a> window structure has
+    <td></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Introduction</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+Starting from the release 3.0.0 KVIrc window structure has
 grown in complexity. Older releases allowed one connetion
 per "frame window" and thus had a dedicated command parser
 for each connection. Finding a window in that scenario
 was quite easy: it was enough to designate it by "name"
 (that was exactly the text displayed in the window caption).
 It was sufficient to have an "unique" name for ever window;
-condition that was granted by the underlying <a href="doc_rfc2812.html">IRC</a> <a href="doc_rfc2812.html">protocol</a>
-and by the <a href="doc_kvircintro.html">KVIrc</a> core design.<br>
+condition that was granted by the underlying IRC protocol
+and by the KVIrc core design.<br>
 In this version, the unique window names are impossible to be granted.<br>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Scenario</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Scenario</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 The command parser is now "global" to the application.
 There can be two or more consoles in each frame and the user
-is able to join the same <a href="doc_ircintro.html">channel</a> with two different <a href="doc_ircintro.html">nicknames</a>
+is able to join the same channel with two different nicknames
 using two separate connections.
 <ul>
 <li>
@@ -58,7 +205,7 @@ Application (Unique command parser)
 &nbsp;&nbsp;&nbsp;&nbsp;Frame X
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ul>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console M (<a href="doc_connection_dependant_commands.html">IRC context</a>)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console M (IRC context)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ul>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>Channel windows</li>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>Query windows</li>
@@ -66,7 +213,7 @@ Application (Unique command parser)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ul>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console N (<a href="doc_connection_dependant_commands.html">IRC context</a>)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console N (IRC context)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ul>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>Channel windows</li>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>Query windows</li>
@@ -85,7 +232,7 @@ Application (Unique command parser)
 &nbsp;&nbsp;&nbsp;&nbsp;Frame Y
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ul>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console O (<a href="doc_connection_dependant_commands.html">IRC context</a>)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console O (IRC context)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ul>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>Channel windows</li>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>Query windows</li>
@@ -93,7 +240,7 @@ Application (Unique command parser)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ul>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console P (<a href="doc_connection_dependant_commands.html">IRC context</a>)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Console P (IRC context)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ul>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>Channel windows</li>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<li>Query windows</li>
@@ -116,59 +263,59 @@ Application (Unique command parser)
 </ul>
 <br>
 A naming convention has becomed necessary to resolve ambiguities.<br>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Basic assumptions</div></td></tr><tr><td bgcolor="#EAEAEA">
-Every <a href="doc_kvircintro.html">KVIrc</a> window has four main properties:<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Basic assumptions</div></td></tr><tr><td bgcolor="#EAEAEA">
+Every KVIrc window has four main properties:<br>
 -<b>an unique numeric identifier</b><br>
 -<b>the logical name</b><br>
 -<b>the type identifier</b><br>
 -<b>the caption text</b><br>
 The <b>numeric identifier</b> is unique to the whole application,
 and is the one returned by the <a href="fnc_window.html">$window</a> function.<br>
-The identifier is assigned by <a href="doc_kvircintro.html">KVIrc</a> when the window is created
+The identifier is assigned by KVIrc when the window is created
 and is not changed until the window is destroyed.
 This identifier will be referred as <b>window ID</b>.<br>
 The <b>logical name</b> is a property of some kind of windows.
 It usually corresponds to the first part of the window caption.
-For example, for <a href="doc_ircintro.html">channel</a> windows it is the <a href="doc_ircintro.html">channel</a> name, for
+For example, for channel windows it is the channel name, for
 queries it is the list of the targets. For some other windows
 the logical name corresponds to the caption text. This will be discussed later.<br>
 The <b>type identifier</b> describes the properties of a certain window.
-For <a href="doc_ircintro.html">channel</a> windows the type identifier is "<a href="doc_ircintro.html">channel</a>", for query windows is "query",
+For channel windows the type identifier is "channel", for query windows is "query",
 for console windows it is "console", etc..<br>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Irc contexts</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
-The <a href="doc_kvircintro.html">KVIrc</a> frame windows are numbered starting from 0 and named
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Irc contexts</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+The KVIrc frame windows are numbered starting from 0 and named
 "frame_&lt;number&gt;". Each frame can contain an unlimited number of consoles.<br>
 Each console is bound to an <b>IRC context</b>. (The part "is bound to" could
 be substituted by "defines" or "is contained in").<br>
 <i>An <b>IRC context</b> is a set of resources that can deal with a single
-<a href="doc_rfc2812.html">IRC</a> connection.</i><br>
+IRC connection.</i><br>
 The association between an <b>IRC context</b>
 and a console is bijective: each <b>IRC context</b> is associated
 to a single console window.<br>
 An <b>IRC context</b> can be in connected or not-connected state.
 When in connected state, it contains a set of windows beside the console:
-mainly <a href="doc_ircintro.html">channels</a> and query windows.
-The <a href="doc_ircintro.html">channels</a> and query windows can exist ONLY if the associated
+mainly channels and query windows.
+The channels and query windows can exist ONLY if the associated
 <b>IRC context</b> exists.<br>
-<a href="doc_ircintro.html">Channels</a> and queries have unique names inside a connection so
+Channels and queries have unique names inside a connection so
 there is no way to confuse it. (Theoretically there can
 be more than one query window with the same name, but in fact
 all the windows refer to the same target so they are instances
 of the same resource).
-All this creates a sort of namespace: the <a href="doc_ircintro.html">channels</a> and queries can be identified
+All this creates a sort of namespace: the channels and queries can be identified
 as "bound" to a specific <b>IRC context</b>.<br>
 An <b>IRC context</b> can "contain" other windows, such as the "sockets"
-window or the "list" window. <a href="doc_kvircintro.html">KVIrc</a> takes care of making them
+window or the "list" window. KVIrc takes care of making them
 unique inside the <b>IRC context</b> namespace.<br>
 Each <b>IRC context</b> has its own unique <b>IRC context ID</b> (see <a href="fnc_context.html">$context</a>).<br>
-Since to a single <b>IRC context</b> may correspond only a single <a href="doc_rfc2812.html">irc</a> connection,
+Since to a single <b>IRC context</b> may correspond only a single irc connection,
 when in connected state, the <b>IRC context</b> may be referred also as <b>connection</b>
 or <b>connection context</b>, and the associated <b>IRC context Id</b> can be
 referred as <b>connection ID</b> or <b>connection context ID</b>.<br>
 There are classes of windows that are not bound to any <b>IRC context</b>:
 this includes user created windows, DCC windows, browsers etc.<br>
-<a href="doc_kvircintro.html">KVIrc</a> will try to keep that windows with unique logical names.<br>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">How to identify a window</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+KVIrc will try to keep that windows with unique logical names.<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">How to identify a window</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 So what we have until now is:<br>
 <ul>
 <li>Each window has its own unique <b>window ID</b>: we
@@ -179,14 +326,14 @@ window type, logical name.</li>
 </ul>
 The simplest (but also the less significant) method of looking for
 a window is to finding it by caption.<br>
-The <a href="fnc_window.html">$window</a> function finds the first <a href="doc_kvircintro.html">KVIrc</a> window matching
+The <a href="fnc_window.html">$window</a> function finds the first KVIrc window matching
 the "caption text" and returns its <b>window ID</b>.<br>
 This method will likely fail when there are more windows with the same
-caption text; for this reason several specific <a href="doc_kvs_aliasesandfunctions.html">functions</a>
+caption text; for this reason several specific functions
 have been added to allow finding the correct window.<br>
 The <a href="fnc_console.html">$console</a> finds a console window bound to a specified
 <b>IRC context</b>.<br>
-The <a href="fnc_channel.html">$channel</a> finds a <a href="doc_ircintro.html">channel</a> window matching the specified
+The <a href="fnc_channel.html">$channel</a> finds a channel window matching the specified
 name and bound to a specified <b>IRC context</b>.<br>
 The <a href="fnc_query.html">$query</a> finds a query window that has a specified target
 and is bound to a specified <b>IRC context</b>.<br>
@@ -194,6 +341,6 @@ and is bound to a specified <b>IRC context</b>.<br>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

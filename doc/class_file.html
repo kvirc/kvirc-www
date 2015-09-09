@@ -3,12 +3,163 @@
 <title>file class</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,31 +175,27 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>file class</h1>
-I/O device that operates on files
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>file class</div>      <div class='title-secondary-text'>I/O device that operates on files</div>    </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Inherits</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Inherits</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td><a href="class_object.html">object</a></td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Description</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td>This <a href="class_memorybuffer.html">object class</a> provides access to files - basic I/O
+    <td>This object class provides access to files - basic I/O
 operations, copying, removing etc...
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Functions</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Functions</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>
@@ -58,7 +205,7 @@ operations, copying, removing etc...
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; name">&lt;string&gt; $name()</a></font></b></code></td></tr>
 <tr><td>Returns name set by <a href="#setName">$setName</a>().<br> See also: <a href="#setName">$setName</a>().</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="open">$open(&lt;mode1:string&gt;, &lt;mode2:string&gt;)</a></font></b></code></td></tr>
-<tr><td>Attempts to open the file in specified mode or modes "sum". Valid modes are:<br> <pre> Raw&nbsp;&nbsp;&nbsp;&nbsp;  - raw, non-buffered access<br> ReadOnly     - opens the file read-only<br> WriteOnly    - opens the file write-only<br> ReadWrite    - opens the file in read-write mode<br> Append       - opens the file in append mode. The file index is set to the end of the file.<br> Truncate     - truncates the file<br> </pre> If you call this function without any parameters, the file is opened in ReadOnly mode.<br> When working with buffered files, data is not written directly to the file at once. You must call <a href="#flush">$flush</a>() to force it.<br> See also: <a href="#close">$close</a>(), <a href="#flush">$flush</a>().</td></tr>
+<tr><td>Attempts to open the file in specified mode or modes "sum". Valid modes are:<br> <pre> Raw	  - raw, non-buffered access<br> ReadOnly     - opens the file read-only<br> WriteOnly    - opens the file write-only<br> ReadWrite    - opens the file in read-write mode<br> Append       - opens the file in append mode. The file index is set to the end of the file.<br> Truncate     - truncates the file<br> </pre> If you call this function without any parameters, the file is opened in ReadOnly mode.<br> When working with buffered files, data is not written directly to the file at once. You must call <a href="#flush">$flush</a>() to force it.<br> See also: <a href="#close">$close</a>(), <a href="#flush">$flush</a>().</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; isOpen">&lt;boolean&gt; $isOpen()</a></font></b></code></td></tr>
 <tr><td>Returns '1' if the file is open, '0' otherwise.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="close">$close()</a></font></b></code></td></tr>
@@ -88,6 +235,6 @@ operations, copying, removing etc...
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

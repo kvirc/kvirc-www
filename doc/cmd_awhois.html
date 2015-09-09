@@ -3,12 +3,163 @@
 <title>awhois</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,32 +175,28 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>awhois</h1>
-Asynchronous WHOIS
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>awhois</div>      <div class='title-secondary-text'>Asynchronous WHOIS</div>    </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Usage</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Usage</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code>awhois [-i] (&lt;nickname&gt;[,&lt;magic&gt;])
+    <td><div class='syntax-text'><b>awhois</b> <font color="#8080a0">[</font>-i<font color="#8080a0">]</font> <b>(</b><font color="#8080a0">&lt;</font>nickname<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>magic<font color="#808080">:variant</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font><b>)</b>
 {
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;callback command&gt;
-}</code></pre></font></td>
+&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">&lt;</font>callback command<font color="#8080a0">&gt;</font>
+}</div></td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Description</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>AWHOIS stands for Asynchronous WHOIS. It is used to obtain data for a specified
-<a href="doc_rfc2812.html">irc user</a> (designated by &lt;<a href="doc_irc_masks.html">nickname</a>&gt;). This command sends a WHOIS query to the
-<a href="doc_ircintro.html">server</a> and silently awaits the sequence of replies. When the "End of WHOIS" message
-is received from <a href="doc_ircintro.html">server</a> the &lt;callback command&gt; is executed passing the WHOIS
+irc user (designated by &lt;nickname&gt;). This command sends a WHOIS query to the
+server and silently awaits the sequence of replies. When the "End of WHOIS" message
+is received from server the &lt;callback command&gt; is executed passing the WHOIS
 information as positional parameters.<br>
 The &lt;magic&gt; string is an optional string to be evaluated at AWHOIS execution time.
 It is passed as the last positional parameter.<br>
@@ -61,16 +208,16 @@ $3 = realname (may be empty)<br>
 $4 = server<br>
 $5 = idle time (may be empty)<br>
 $6 = signon time (may be empty)<br>
-$7 = <a href="doc_ircintro.html">channels</a> (may be empty)<br>
-$8 = <a href="doc_ircintro.html">server</a> that provided the information<br>
+$7 = channels (may be empty)<br>
+$8 = server that provided the information<br>
 $9 = away message (empty if user hasn't set an away message)<br>
 $10 = magic string evaluated at awhois call (may be empty)<br>
 $11 = account the user is logged into (may be empty)<br>
 $12 = additional, server-specific info (may be empty)<br>
-If the -i switch is specified, the whois message is sent to the <a href="doc_ircintro.html">server</a>
-that the &lt;<a href="doc_irc_masks.html">nickname</a>&gt; user is connected to; in this way you will probably
+If the -i switch is specified, the whois message is sent to the server
+that the &lt;nickname&gt; user is connected to; in this way you will probably
 get the idle time of the user too.<br>
-If the <a href="doc_rfc2812.html">server replies</a> with a "No such nick/<a href="doc_ircintro.html">channel</a> error message" the
+If the server replies with a "No such nick/channel error message" the
 &lt;callback command&gt; will be still triggered, but will have all the parameters
 empty with the exception of $0.<br>
 If the connection gets interrupted before all the information have been received,
@@ -78,36 +225,27 @@ the &lt;callback command&gt; will never be triggered.<br>
 This command is <a href="doc_connection_dependant_commands.html">connection dependant</a>.<br>
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Switches</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Switches</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>
-      <table bgcolor="#D5D5D5">
-<tr bgcolor="#E0E0E0"><td><b>-i | --idle-time</b></td></tr>
-<tr><td>Ask the whois information to the <a href="doc_ircintro.html">server</a> that &lt;<a href="doc_irc_masks.html">nickname</a>&gt; is connected to, effectively returning the user's idle time.</td></tr>
+      <table class="switch-table">
+<tr><td class="switch-title-table-cell">-i | --idle-time</td></tr>
+<tr><td>Ask the whois information to the server that &lt;nickname&gt; is connected to, effectively returning the user's idle time.</td></tr>
       </table>
     </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Syntax Specification</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code><b>awhois</b> <font color="#8080a0">[</font>-i<font color="#8080a0">]</font> <b>(</b><font color="#8080a0">&lt;</font>nickname<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>magic<font color="#808080">:variant</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font><b>)</b>
-{
-&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">&lt;</font>callback command<font color="#8080a0">&gt;</font>
-}</code></pre></font></td>
-  </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Examples</b></td>
-  </tr>
-  <tr bgcolor="#EAEAEA">
-    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">awhois(pragma){ echo $0-; }
-</font></code></pre></td></tr></table></p>
+    <td><div class="example-box">awhois<span class="example-paren">(</span>pragma<span class="example-paren">)</span><span class="example-bracket">{</span> echo $0-; <span class="example-bracket">}</span>
+</div>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

@@ -3,12 +3,163 @@
 <title>eval</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,102 +175,92 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>eval</h1>
-Change the behaviour of a set of commands
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>eval</div>      <div class='title-secondary-text'>Change the behaviour of a set of commands</div>    </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Usage</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Usage</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code>eval [-q] [-r=&lt;window&gt;] &lt;command&gt;</code></pre></font></td>
+    <td><div class='syntax-text'><b>eval</b> <font color="#8080a0">[</font>-q<font color="#8080a0">]</font> <font color="#8080a0">[</font>-r=<font color="#8080a0">&lt;</font>window<font color="#808080">:integer</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font> <font color="#8080a0">&lt;</font>command<font color="#808080">:string</font><font color="#8080a0">&gt;</font></div></td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Description</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td>This command is useful to execute <a href="doc_kvs_datatypes.html">variable</a> command sequences.<br>
+    <td>This command is useful to execute variable command sequences.<br>
 &lt;command&gt; is first evaluated as a normal parameter (thus identifiers
-and <a href="doc_kvs_datatypes.html">variables</a> are substituted) then the evaluated string is executed
+and variables are substituted) then the evaluated string is executed
 as a command sequence.<br>
 -q causes eval to run quietly and don't display any errors in the inner command.<br>
 -f causes eval to ignore the errors inside &lt;command&gt; and continue execution.<br>
 This command may be used to rebind the &lt;command&gt; to a specified window.
-&lt;command&gt; shares the <a href="doc_kvs_datatypes.html">local variables</a> with this command scope so you
+&lt;command&gt; shares the local variables with this command scope so you
 can easily exchange data with it.
 Remember that &lt;command&gt; is still a normal parameter and it must be
 enclosed in quotes if you want it to be a complex command sequence.
 eval propagates the &lt;command&gt; return value.<br>
 <br>
-<b>WARNING: If some part of the &lt;command&gt; comes from external <a href="class_painter.html">input</a> you MUST
+<b>WARNING: If some part of the &lt;command&gt; comes from external input you MUST
 sanitize it by using <a href="fnc_escape.html">$escape</a>() in order to avoid command injection.</b>
-Note that <a href="doc_ircintro.html">nicknames</a>, usernames, hostnames, <a href="doc_ircintro.html">channel</a> names and any kind of text that
+Note that nicknames, usernames, hostnames, channel names and any kind of text that
 isn't generated under your control may contain malicious code. For instance, if you
 try to eval the string built by concatenating "echo" and the result of <a href="fnc_channel.name.html">$channel.name</a>
-inside a <a href="doc_ircintro.html">channel</a> named "#test;quit" (yes, that's a valid <a href="doc_ircintro.html">channel</a> name) you'll obtain
+inside a channel named "#test;quit" (yes, that's a valid channel name) you'll obtain
 a disconnection as a side effect. To avoid this you need to use <a href="fnc_escape.html">$escape</a>() around
 <a href="fnc_chan.name.html">$chan.name</a>.
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Switches</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Switches</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>
-      <table bgcolor="#D5D5D5">
-<tr bgcolor="#E0E0E0"><td><b>-q | --quiet</b></td></tr>
-<tr><td>Disable any error output</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-f | --force</b></td></tr>
+      <table class="switch-table">
+<tr><td class="switch-title-table-cell">-q | --quiet</td></tr>
+<tr><td class="switch-body-table-cell">Disable any error output</td></tr>
+<tr><td class="switch-title-table-cell">-f | --force</td></tr>
 <tr><td>Continue execution even if &lt;command&gt; fails with an error</td></tr>
       </table>
     </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Syntax Specification</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code><b>eval</b> <font color="#8080a0">[</font>-q<font color="#8080a0">]</font> <font color="#8080a0">[</font>-r=<font color="#8080a0">&lt;</font>window<font color="#808080">:integer</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font> <font color="#8080a0">&lt;</font>command<font color="#808080">:string</font><font color="#8080a0">&gt;</font></code></pre></font></td>
-  </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Examples</b></td>
-  </tr>
-  <tr bgcolor="#EAEAEA">
-    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># evaluate a variable command</font>
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_if.html">if</a>(%somecondition)%tmp = "echo yeah"
-&nbsp;&nbsp;&nbsp;&nbsp;else %tmp = "echo -i=10 yeah"
-&nbsp;&nbsp;&nbsp;&nbsp;eval %tmp
-&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Rebind the command to the #linux channel to get the user list</font>
-&nbsp;&nbsp;&nbsp;&nbsp;eval -r=<a href="fnc_channel.html">$channel</a>(#linux) "%Nicks[]=$chan.array;"
-&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># A nice alias that allows iterating commands through all the consoles</font>
-&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># This is by LatinSuD :)</font>
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_alias.html">alias</a>(iterate)
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%ctxt[]=<a href="fnc_window.list.html">$window.list</a>(console,all)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_for.html">for</a>(%i=0;%i&lt;%ctxt[]#;%i++)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_eval.html">eval</a> -r=%ctxt[%i] $0-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;iterate <a href="cmd_echo.html">echo</a> Hi ppl! :)
-&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># A little bit shorter (but less "colorful") version might be...</font>
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_alias.html">alias</a>(iterate)
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_foreach.html">foreach</a>(%x,<a href="fnc_window.list.html">$window.list</a>(console,all))
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_eval.html">eval</a> -r=%x $0-;
-&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;iterate <a href="cmd_echo.html">echo</a> Hi again!
-&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Evaluate a command block</font>
-&nbsp;&nbsp;&nbsp;&nbsp;eval "{ echo First command!; echo Second command!; }"
-</font></code></pre></td></tr></table></p>
+    <td><div class="example-box"><span class="comment-text"># evaluate a variable command</span>
+<a href="cmd_if.html">if</a><span class="example-paren">(</span><span class="example-variable">%somecondition</span><span class="example-paren">)</span><span class="example-variable">%tmp</span> = "echo yeah"
+else <span class="example-variable">%tmp</span> = "echo -i=10 yeah"
+eval <span class="example-variable">%tmp</span>
+<span class="comment-text"># Rebind the command to the #linux channel to get the user list</span>
+eval -r=<a href="fnc_channel.html">$channel</a><span class="example-paren">(</span>#linux<span class="example-paren">)</span> "<span class="example-variable">%Nicks</span>[]=$chan.array;"
+<span class="comment-text"># A nice alias that allows iterating commands through all the consoles</span>
+<span class="comment-text"># This is by LatinSuD :<span class="example-paren">)</span></span>
+<a href="cmd_alias.html">alias</a><span class="example-paren">(</span>iterate<span class="example-paren">)</span>
+<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%ctxt</span>[]=<a href="fnc_window.list.html">$window.list</a><span class="example-paren">(</span>console,all<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_for.html">for</a><span class="example-paren">(</span><span class="example-variable">%i</span>=0;<span class="example-variable">%i</span>&lt;<span class="example-variable">%ctxt</span>[]#;<span class="example-variable">%i</span>++<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_eval.html">eval</a> -r=<span class="example-variable">%ctxt</span>[<span class="example-variable">%i</span>] $0-
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
+<span class="example-bracket">}</span>
+iterate <a href="cmd_echo.html">echo</a> Hi ppl! :<span class="example-paren">)</span>
+<span class="comment-text"># A little bit shorter <span class="example-paren">(</span>but less "colorful"<span class="example-paren">)</span> version might be...</span>
+<a href="cmd_alias.html">alias</a><span class="example-paren">(</span>iterate<span class="example-paren">)</span>
+<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_foreach.html">foreach</a><span class="example-paren">(</span><span class="example-variable">%x</span>,<a href="fnc_window.list.html">$window.list</a><span class="example-paren">(</span>console,all<span class="example-paren">))</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_eval.html">eval</a> -r=<span class="example-variable">%x</span> $0-;
+<span class="example-bracket">}</span>
+iterate <a href="cmd_echo.html">echo</a> Hi again!
+<span class="comment-text"># Evaluate a command block</span>
+eval "<span class="example-bracket">{</span> echo First command!; echo Second command!; <span class="example-bracket">}</span>"
+</div>
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>See also</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>See also</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td><a href="fnc_escape.html">$escape</a>
@@ -127,6 +268,6 @@ a disconnection as a side effect. To avoid this you need to use <a href="fnc_esc
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

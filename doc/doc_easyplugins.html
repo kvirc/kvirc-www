@@ -3,12 +3,163 @@
 <title>Easyplugins</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,67 +175,63 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>Easyplugins</h1>
-Small plugins which can be called in scripts
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>Easyplugins</div>      <div class='title-secondary-text'>Small plugins which can be called in scripts</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>If you want to know how to call easyplugins please have a look at: $system.call()<br>
-This part of the documentation handles only the way how to write an easyplugin. An easyplugin is simply a dll/so. You can create one like you normally make such so/dll files. The important thing is that these so/dll-files export some of the following <a href="doc_kvs_aliasesandfunctions.html">functions</a>.
+This part of the documentation handles only the way how to write an easyplugin. An easyplugin is simply a dll/so. You can create one like you normally make such so/dll files. The important thing is that these so/dll-files export some of the following functions.
 <br><br>
-<b>Exported <a href="doc_kvs_aliasesandfunctions.html">functions</a> by easyplugin (C/C++-Examples):</b><br>
+<b>Exported functions by easyplugin (C/C++-Examples):</b><br>
 <br><b>_free function</b> <i> (needed)</i><br>
-This function is important! Since <a href="doc_kvircintro.html">KVIrc</a> can not free directly the memory of the dll, the <a href="doc_modules.html">plugins</a> need the _free function so that the memory can be freed by the plugin to prevent memory-leaks.<br>
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">int _free(void * p)<br>
-{<br>
+This function is important! Since KVIrc can not free directly the memory of the dll, the plugins need the _free function so that the memory can be freed by the plugin to prevent memory-leaks.<br>
+<div class="example-box">int _free<span class="example-paren">(</span>void * p<span class="example-paren">)</span><br>
+<span class="example-bracket">{</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;// Always free the memory here!<br>
-&nbsp;&nbsp;&nbsp;&nbsp;free(p);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;free<span class="example-paren">(</span>p<span class="example-paren">)</span>;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
-}<br>
-</font></code></pre></td></tr></table></p>
+<span class="example-bracket">}</span><br>
+</div>
 <br><b>_load function</b> <i>(optional)</i><br>
-After the plugin has be loaded, <a href="doc_kvircintro.html">KVIrc</a> will call the _load-function. Here you can prepare your plugin stuff.
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">int _load()<br>
-{<br>
+After the plugin has be loaded, KVIrc will call the _load-function. Here you can prepare your plugin stuff.
+<div class="example-box">int _load<span class="example-paren">()</span><br>
+<span class="example-bracket">{</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
-}<br>
-</font></code></pre></td></tr></table></p>
+<span class="example-bracket">}</span><br>
+</div>
 <br><b>_unload function</b> <i>((optional)</i><br>
-This function will be called before the <a href="doc_modules.html">plugins</a> is unloaded. In this function you can clean up memory or other things.
+This function will be called before the plugins is unloaded. In this function you can clean up memory or other things.
 After this call there is no guarantee that the plugin will be kept in memory.<br>
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">int _unload()<br>
-{<br>
+<div class="example-box">int _unload<span class="example-paren">()</span><br>
+<span class="example-bracket">{</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
-}<br>
-</font></code></pre></td></tr></table></p>
+<span class="example-bracket">}</span><br>
+</div>
 <br><b>_canunload function</b> <i>(optional)</i><br>
-The _canunload-function will be called by <a href="doc_kvircintro.html">KVIrc</a> to check if it may unload the plugin.
-If return value is true <a href="doc_kvircintro.html">KVIrc</a> will unload the plugin, false means he will try unloading it at the next check.<br>
-Important: <a href="doc_kvircintro.html">KVIrc</a> will ignore this if unload of <a href="doc_modules.html">plugins</a> will be forced! So you have to be sure that the _unload function of your <a href="doc_modules.html">plugins</a> cleans up!<br>
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">int _canunload()<br>
-{<br>
+The _canunload-function will be called by KVIrc to check if it may unload the plugin.
+If return value is true KVIrc will unload the plugin, false means he will try unloading it at the next check.<br>
+Important: KVIrc will ignore this if unload of plugins will be forced! So you have to be sure that the _unload function of your plugins cleans up!<br>
+<div class="example-box">int _canunload<span class="example-paren">()</span><br>
+<span class="example-bracket">{</span><br>
 &nbsp;&nbsp;&nbsp;&nbsp;return 0; <br>
-}<br>
-</font></code></pre></td></tr></table></p>
+<span class="example-bracket">}</span><br>
+</div>
 <br><b>user function</b><br>
 This is the general structure of a user function call.<br>
-The important thing here is the handling of return values. To return a value to <a href="doc_kvircintro.html">KVIrc</a> you have to allocate memory and write the pointer to it into pBuffer. Have a look at the example for more details.<br>
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">int about(int argc, char * argv[], char ** pBuffer)<br>
-{<br>
-    *pBuffer = (char*)malloc(1024);<br>
-    sprintf((char*)*pBuffer, "Hello World"); <br>
+The important thing here is the handling of return values. To return a value to KVIrc you have to allocate memory and write the pointer to it into pBuffer. Have a look at the example for more details.<br>
+<div class="example-box">int about<span class="example-paren">(</span>int argc, char * argv[], char ** pBuffer<span class="example-paren">)</span><br>
+<span class="example-bracket">{</span><br>
+    *pBuffer = <span class="example-paren">(</span>char*<span class="example-paren">)</span>malloc<span class="example-paren">(</span>1024<span class="example-paren">)</span>;<br>
+    sprintf<span class="example-paren">((</span>char*<span class="example-paren">)</span>*pBuffer, "Hello World"<span class="example-paren">)</span>; <br>
     return 1;<br>
-}<br>
-</font></code></pre></td></tr></table></p>
+<span class="example-bracket">}</span><br>
+</div>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_generic_index_all.html">Miscellaneous</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

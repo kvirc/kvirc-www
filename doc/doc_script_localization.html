@@ -3,12 +3,163 @@
 <title>Localization of scripts</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,59 +175,55 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>Localization of scripts</h1>
-Explains how to add translation capabilities to your scripts
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>Localization of scripts</div>      <div class='title-secondary-text'>Explains how to add translation capabilities to your scripts</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td><p>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Introduction</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Introduction</div></td></tr><tr><td bgcolor="#EAEAEA">
 </p>
 <p>
 Adding the translated versions of the strings adds a great
-value to your scripts. The <a href="class_process.html">process</a> of translating a part of
-software is called localization. <a href="doc_kvircintro.html">KVIrc</a> offers some commands
-and <a href="doc_kvs_aliasesandfunctions.html">functions</a> for this purpose and this document explains
+value to your scripts. The process of translating a part of
+software is called localization. KVIrc offers some commands
+and functions for this purpose and this document explains
 briefly how to use them.
 </p>
 <p>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">The big picture</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">The big picture</div></td></tr><tr><td bgcolor="#EAEAEA">
 </p>
 <p>
-All of the strings in your <a href="doc_kvs_basicconcepts.html">script</a> are written in a "primary language".
+All of the strings in your script are written in a "primary language".
 The most common "primary language" is english, but theoretically
 it can be any language of your choice.
 </p>
 <p>
 By the means of the gettext package programs you extract
-the strings from your <a href="doc_kvs_basicconcepts.html">script</a> and produce a translation file.
+the strings from your script and produce a translation file.
 </p>
 <p>
 The translation file is then effectively translated in another
 language and later compiled in a binary form.
 </p>
 <p>
-The binary form translations are then loaded in the <a href="doc_kvircintro.html">KVIrc</a>
+The binary form translations are then loaded in the KVIrc
 executable at runtime and a function is used to look up the
 translations.
 </p>
 <p>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">How to translate scripts</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">How to translate scripts</div></td></tr><tr><td bgcolor="#EAEAEA">
 </p>
 <p>
 Your strings should be surrounded by the <a href="fnc_tr.html">$tr</a>() function in the following way:
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="fnc_tr.html">$tr</a>("your default language text")
-</font></code></pre></td></tr></table></p>
+<div class="example-box"><a href="fnc_tr.html">$tr</a><span class="example-paren">(</span>"your default language text"<span class="example-paren">)</span>
+</div>
 </p>
 <p>
-Then you should run the xgettext command on your <a href="doc_kvs_basicconcepts.html">script</a> files.
+Then you should run the xgettext command on your script files.
 This is done by a shell commandline similar to the following:<br>
-<pre>xgettext -o myscript.pot -ktr mykvsfile1.<a href="doc_kvs_introduction.html">kvs</a> mykvsfile2.<a href="doc_kvs_introduction.html">kvs</a> ...</pre>
+<pre>xgettext -o myscript.pot -ktr mykvsfile1.kvs mykvsfile2.kvs ...</pre>
 </p>
 <p>
 Copy the translation file obtained in the following way:<br>
@@ -99,7 +246,7 @@ Compile your translation to binary form with the following command:<br>
 </p>
 <p>
 Copy the generated *.mo file to the "locale" subdirectory
-in the <a href="doc_kvircintro.html">KVIrc</a>'s local directory (usually $HOME/.<a href="doc_kvircintro.html">kvirc</a>/locale/).
+in the KVIrc's local directory (usually $HOME/.kvirc/locale/).
 </p>
 <p>
 Set the system language to the XX above with the following command:<br>
@@ -108,9 +255,9 @@ For Italian it would be:<br>
 <pre>export LANG="it"</pre><br>
 </p>
 <p>
-Start <a href="doc_kvircintro.html">KVIrc</a> and type in the commandline:
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000"><a href="cmd_echo.html">echo</a> <a href="fnc_tr.html">$tr</a>("your default language text","myscript")
-</font></code></pre></td></tr></table></p>
+Start KVIrc and type in the commandline:
+<div class="example-box"><a href="cmd_echo.html">echo</a> <a href="fnc_tr.html">$tr</a><span class="example-paren">(</span>"your default language text","myscript"<span class="example-paren">)</span>
+</div>
 If you did everything well, you should see the translated
 text echoed in the window :)<br>
 </p>
@@ -121,30 +268,30 @@ output the original string unchanged.
 <p>
 You can manage translations in several languages by producing
 several *.mo files all with the proper language/country code appended.
-The right *.mo file will be magically loaded by <a href="doc_kvircintro.html">KVIrc</a> that
-will look up the user's LANG <a href="doc_kvs_datatypes.html">variable</a>. (If you don't want
+The right *.mo file will be magically loaded by KVIrc that
+will look up the user's LANG variable. (If you don't want
 to use LANG, you can use KVIRC_LANG instead, it will still work).
 </p>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Caveats</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Caveats</div></td></tr><tr><td bgcolor="#EAEAEA">
 </p>
 <p>
-You should NEVER use <a href="doc_kvs_datatypes.html">variables</a> or identifiers inside the $tr() function.
+You should NEVER use variables or identifiers inside the $tr() function.
 This because the translation files are generated offline,
-when the string is not evaluated yet (i.e <a href="doc_kvs_datatypes.html">variables</a> ad identifiers
+when the string is not evaluated yet (i.e variables ad identifiers
 are not substituted by their actual return values).
-The translation <a href="class_process.html">process</a>, instead, happens at runtime, when
-the <a href="doc_kvs_datatypes.html">variables</a> and identifiers have been substituted by their
+The translation process, instead, happens at runtime, when
+the variables and identifiers have been substituted by their
 actual values. This would lead to a mismatch between the
 string you look up in the translation catalogue and the
-effectively translated one. If you need to include <a href="doc_kvs_datatypes.html">variables</a>
+effectively translated one. If you need to include variables
 in your strings you should compose the string with smaller pieces
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> <a href="fnc_tr.html">$tr</a>("On this <a href="doc_ircintro.html">channel</a>") %number <a href="fnc_tr.html">$tr</a>("users are <a href="doc_operators.html">operators</a>")
-</font></code></pre></td></tr></table></p>
+<div class="example-box"><a href="cmd_echo.html">echo</a> <a href="fnc_tr.html">$tr</a><span class="example-paren">(</span>"On this channel"<span class="example-paren">)</span> <span class="example-variable">%number</span> <a href="fnc_tr.html">$tr</a><span class="example-paren">(</span>"users are operators"<span class="example-paren">)</span>
+</div>
 </p>
 <p>
-The translation <a href="class_process.html">process</a> can be realized only if your
+The translation process can be realized only if your
 scripts are written in external files. This makes sense since
-if you're translating the <a href="doc_kvs_basicconcepts.html">script</a> then you will probably want to
+if you're translating the script then you will probably want to
 distribute it and the only way to distribute it is on files.
 But well.. this is a caveat.
 </p>
@@ -152,6 +299,6 @@ But well.. this is a caveat.
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_generic_index_all.html">Miscellaneous</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>
