@@ -3,12 +3,163 @@
 <title>http.get</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,75 +175,65 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>http.get</h1>
-Retrieves a file via HTTP GET
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>http.get</div>      <div class='title-secondary-text'>Retrieves a file via HTTP GET</div>    </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Usage</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Usage</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code>http.get [switches] &lt;http_url&gt; [save_file_name]</code></pre></font></td>
+    <td><div class='syntax-text'><b>http.get</b> <font color="#8080a0">[</font>switches<font color="#8080a0">]</font> <font color="#8080a0">&lt;</font>http_url<font color="#8080a0">&gt;</font> <font color="#8080a0">[</font>save_file_name<font color="#8080a0">]</font></div></td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Description</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>Attempts to download the file at &lt;http_url&gt; by using the HTTP GET or POST protocol.<br>
 If [save_file_name] is specified, then is is used as save file name, otherwise
 a save file dialog is displayed (unless -a is used).<br>
-The <a href="doc_events.html">event</a> OnHTTPGetTerminated is triggered upon the download completion (both
+The event OnHTTPGetTerminated is triggered upon the download completion (both
 in case of success or failure). If you want a callback command to be triggered
 instead please use <a href="cmd_http.asyncget.html">http.asyncget</a>.
 If the url contains a https:// prefix then a SSL connection will be used.
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Switches</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Switches</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>
-      <table bgcolor="#D5D5D5">
-<tr bgcolor="#E0E0E0"><td><b>-a=&lt;auto_file_name&gt; | --auto-file-name=&lt;auto_file_name&gt;</b></td></tr>
-<tr><td>Don't show the savefile dialog but determine automatically a file name. The file is put in the <a href="doc_kvircintro.html">KVIrc</a> incoming directory and the file name is the processed url.<br></td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-e=&lt;existing_file_action&gt; | --existing-file-action=&lt;existing_file_action&gt;</b></td></tr>
-<tr><td>Specifies the action to be taken when the local file already exists.<br> The action can be one of "i","e","o" or "r".<br> "i" causes the incoming file to be automatically renamed by appending a non colliding suffix. "e" causes the existing file to be renamed by appending a non colliding suffix (the incoming file will then have its name preserved). "o" causes the existing file to be overwritten and "r" will attempt to resume a interrupted transfer.<br> The default is to rename the incoming file.<br></td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-m=&lt;max_content_length&gt; | --max-len=&lt;max_content_length&gt;</b></td></tr>
-<tr><td>Causes content longer than &lt;max_content_length&gt; to be discarded.<br> This is mainly to prevent you from automatically downloading 300 MiB files and to prevent DOS attacks from malicious servers that do not report the Content-length header.<br> If the Content-length header is reported by the <a href="doc_ircintro.html">server</a> then the transfer is aborted if the length exceedes &lt;max_content_length&gt;.<br> If the Content-length header is missing then the transfer is interrupted when the received data length exceeds &lt;max_content_length&gt;.<br> -m=0 means "accept any content length" (which is the default).<br></td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-o=&lt;content_offset&gt; | --offset=&lt;content_offset&gt;</b></td></tr>
-<tr><td>Causes the download to start from position &lt;content offset&gt;.<br> This can be used to download only a part of the file starting at byte &lt;content_offset&gt;.<br> &lt;content_offset&gt; is used regardless if the file is resumed or not. Please note that you don't need to specify the content offset when using -e=r : the offset is automatically calculated. If you specify both -o=&lt;content_offset&gt; and -e=r then the file will be resumed, the transfer will start at the specified offset and the received stream will be appended to the existing file.(avoid it unless you know what you're doing: it's easy to download broken files).<br></td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-t=&lt;timeout_in_seconds&gt; | --timeout=&lt;timeout_in_seconds&gt;</b></td></tr>
-<tr><td>Changes the default connection timeout to the &lt;timeout_in_seconds&gt;. A connection stuck for more than &lt;timeout_in_seconds&gt; seconds will be simply aborted. The default timeout is 60 seconds and is appropriate for most operations. Use with care.<br></td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-h | --head</b></td></tr>
-<tr><td>Causes the connection to use the HTTP HEAD method that effectively does not transfer real data. The <a href="doc_ircintro.html">server</a> sends only the response headers. This might be used in conjunction with the -v option to print the headers to the active window.<br></td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-w=&lt;flags&gt; | --winctrl</b></td></tr>
-<tr><td>This switch controls the creation and visualization of the transfer window. &lt;flags&gt; can be any combination of 'm','n' and 'h'. The flag 'h' causes the window to not be created. The transfer will simply run in background. Note that with 'h' the user has no possibility to interact with the transfer. The flag 'm' causes the transfer window to be created as "minimized". 'm' does nothing if the window alread exists. The flag 'n' causes the window to be NOT activated (brought to top).</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-i=&lt;magic identifier&gt; | --identifier=&lt;magic identifier&gt;</b></td></tr>
-<tr><td>This identifier is passed as $3 parameter to the <a href="event_onhttpgetterminated.html">onhttpgetterminated</a> when this transfer terminates. If this switch is not present then an empty string is used. With <a href="cmd_http.asyncget.html">http.asyncget</a> this parameter is passed to the callback command instead.</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-p=&lt;post data&gt; | --post-data=&lt;post data&gt;</b></td></tr>
-<tr><td>The request is sent in form of a POST request. &lt;post data&gt; is the urlencoded payload of the request. -p is incompatible with -h.</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-q | --quiet</b></td></tr>
-<tr><td>Do not notify download completion in the notifier window nor in the console.</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-y | --no-output</b></td></tr>
-<tr><td>Supress any output in the file transfer window. This will effectively disable the file transfer window highlighting (so the user will not be alerted by a failed download unless he's really watching the window). This is useful when you're notifying failures in some other way...</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-c | --clear</b></td></tr>
+      <table class="switch-table">
+<tr><td class="switch-title-table-cell">-a=&lt;auto_file_name&gt; | --auto-file-name=&lt;auto_file_name&gt;</td></tr>
+<tr><td class="switch-body-table-cell">Don't show the savefile dialog but determine automatically a file name. The file is put in the KVIrc incoming directory and the file name is the processed url.<br></td></tr>
+<tr><td class="switch-title-table-cell">-e=&lt;existing_file_action&gt; | --existing-file-action=&lt;existing_file_action&gt;</td></tr>
+<tr><td class="switch-body-table-cell">Specifies the action to be taken when the local file already exists.<br> The action can be one of "i","e","o" or "r".<br> "i" causes the incoming file to be automatically renamed by appending a non colliding suffix. "e" causes the existing file to be renamed by appending a non colliding suffix (the incoming file will then have its name preserved). "o" causes the existing file to be overwritten and "r" will attempt to resume a interrupted transfer.<br> The default is to rename the incoming file.<br></td></tr>
+<tr><td class="switch-title-table-cell">-m=&lt;max_content_length&gt; | --max-len=&lt;max_content_length&gt;</td></tr>
+<tr><td class="switch-body-table-cell">Causes content longer than &lt;max_content_length&gt; to be discarded.<br> This is mainly to prevent you from automatically downloading 300 MiB files and to prevent DOS attacks from malicious servers that do not report the Content-length header.<br> If the Content-length header is reported by the server then the transfer is aborted if the length exceedes &lt;max_content_length&gt;.<br> If the Content-length header is missing then the transfer is interrupted when the received data length exceeds &lt;max_content_length&gt;.<br> -m=0 means "accept any content length" (which is the default).<br></td></tr>
+<tr><td class="switch-title-table-cell">-o=&lt;content_offset&gt; | --offset=&lt;content_offset&gt;</td></tr>
+<tr><td class="switch-body-table-cell">Causes the download to start from position &lt;content offset&gt;.<br> This can be used to download only a part of the file starting at byte &lt;content_offset&gt;.<br> &lt;content_offset&gt; is used regardless if the file is resumed or not. Please note that you don't need to specify the content offset when using -e=r : the offset is automatically calculated. If you specify both -o=&lt;content_offset&gt; and -e=r then the file will be resumed, the transfer will start at the specified offset and the received stream will be appended to the existing file.(avoid it unless you know what you're doing: it's easy to download broken files).<br></td></tr>
+<tr><td class="switch-title-table-cell">-t=&lt;timeout_in_seconds&gt; | --timeout=&lt;timeout_in_seconds&gt;</td></tr>
+<tr><td class="switch-body-table-cell">Changes the default connection timeout to the &lt;timeout_in_seconds&gt;. A connection stuck for more than &lt;timeout_in_seconds&gt; seconds will be simply aborted. The default timeout is 60 seconds and is appropriate for most operations. Use with care.<br></td></tr>
+<tr><td class="switch-title-table-cell">-h | --head</td></tr>
+<tr><td class="switch-body-table-cell">Causes the connection to use the HTTP HEAD method that effectively does not transfer real data. The server sends only the response headers. This might be used in conjunction with the -v option to print the headers to the active window.<br></td></tr>
+<tr><td class="switch-title-table-cell">-w=&lt;flags&gt; | --winctrl</td></tr>
+<tr><td class="switch-body-table-cell">This switch controls the creation and visualization of the transfer window. &lt;flags&gt; can be any combination of 'm','n' and 'h'. The flag 'h' causes the window to not be created. The transfer will simply run in background. Note that with 'h' the user has no possibility to interact with the transfer. The flag 'm' causes the transfer window to be created as "minimized". 'm' does nothing if the window alread exists. The flag 'n' causes the window to be NOT activated (brought to top).</td></tr>
+<tr><td class="switch-title-table-cell">-i=&lt;magic identifier&gt; | --identifier=&lt;magic identifier&gt;</td></tr>
+<tr><td class="switch-body-table-cell">This identifier is passed as $3 parameter to the <a href="event_onhttpgetterminated.html">onhttpgetterminated</a> when this transfer terminates. If this switch is not present then an empty string is used. With <a href="cmd_http.asyncget.html">http.asyncget</a> this parameter is passed to the callback command instead.</td></tr>
+<tr><td class="switch-title-table-cell">-p=&lt;post data&gt; | --post-data=&lt;post data&gt;</td></tr>
+<tr><td class="switch-body-table-cell">The request is sent in form of a POST request. &lt;post data&gt; is the urlencoded payload of the request. -p is incompatible with -h.</td></tr>
+<tr><td class="switch-title-table-cell">-q | --quiet</td></tr>
+<tr><td class="switch-body-table-cell">Do not notify download completion in the notifier window nor in the console.</td></tr>
+<tr><td class="switch-title-table-cell">-y | --no-output</td></tr>
+<tr><td class="switch-body-table-cell">Supress any output in the file transfer window. This will effectively disable the file transfer window highlighting (so the user will not be alerted by a failed download unless he's really watching the window). This is useful when you're notifying failures in some other way...</td></tr>
+<tr><td class="switch-title-table-cell">-c | --clear</td></tr>
 <tr><td>Automatically remove the transfer from the transfer list when terminated</td></tr>
       </table>
     </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Syntax Specification</b></td>
-  </tr>
-  <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code><b>http.get</b> <font color="#8080a0">[</font>switches<font color="#8080a0">]</font> <font color="#8080a0">&lt;</font>http_url<font color="#8080a0">&gt;</font> <font color="#8080a0">[</font>save_file_name<font color="#8080a0">]</font></code></pre></font></td>
-  </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>See also</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>See also</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td><a href="cmd_http.asyncget.html">http.asyncget</a>
@@ -100,6 +241,6 @@ If the url contains a https:// prefix then a SSL connection will be used.
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

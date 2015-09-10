@@ -3,12 +3,163 @@
 <title>server</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,113 +175,103 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>server</h1>
-Connects to the specified server
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>server</div>      <div class='title-secondary-text'>Connects to the specified server</div>    </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Usage</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Usage</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code>server [switches] [&lt;server&gt; [&lt;port&gt;]]</code></pre></font></td>
+    <td><div class='syntax-text'><b>server</b> <font color="#8080a0">[</font>switches<font color="#8080a0">]</font> <font color="#8080a0">[</font><font color="#8080a0">&lt;</font>server<font color="#808080">:string</font><font color="#8080a0">&gt;</font> <font color="#8080a0">[</font><font color="#8080a0">&lt;</font>port<font color="#808080">:uint</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font><font color="#8080a0">]</font></div></td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Description</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td>Attempts a connection to the specified &lt;<a href="doc_ircintro.html">server</a>&gt;
+    <td>Attempts a connection to the specified &lt;server&gt;
 on the specified &lt;port&gt;. If no &lt;port&gt; is specified
-the default 6667 is used. If no &lt;<a href="doc_ircintro.html">server</a>&gt; is specified,
-the currently selected <a href="doc_ircintro.html">server</a> from the <a href="doc_ircintro.html">server</a> list is used
-unless the -l switch is passed: in this case the last <a href="doc_ircintro.html">server</a>
-that was used in the <a href="doc_connection_dependant_commands.html">IRC context</a> is re-used.
-If the &lt;<a href="doc_ircintro.html">server</a>&gt; is a valid IPV6 address, the -i switch is implied.<br>
-The &lt;<a href="doc_ircintro.html">server</a>&gt; is added to the <a href="doc_ircintro.html">server</a> list (if not already
+the default 6667 is used. If no &lt;server&gt; is specified,
+the currently selected server from the server list is used
+unless the -l switch is passed: in this case the last server
+that was used in the IRC context is re-used.
+If the &lt;server&gt; is a valid IPV6 address, the -i switch is implied.<br>
+The &lt;server&gt; is added to the server list (if not already
 there) and set as current.<br>
 <br>
-If &lt;<a href="doc_ircintro.html">server</a>&gt; is in the form "id:&lt;some_string&gt;" then &lt;some_string&gt;
-is interpreted as the <a href="doc_ircintro.html">server</a>'s internal id (specified in the options dialog).
-This is useful when you need to force <a href="doc_kvircintro.html">kvirc</a> to choose between multiple
-<a href="doc_ircintro.html">server</a> entries with the same <a href="doc_irc_masks.html">hostname</a> and port stored in the database.<br>
+If &lt;server&gt; is in the form "id:&lt;some_string&gt;" then &lt;some_string&gt;
+is interpreted as the server's internal id (specified in the options dialog).
+This is useful when you need to force kvirc to choose between multiple
+server entries with the same hostname and port stored in the database.<br>
 Please note that this form causes most of the switches to have no effect
-since the entry in the database will override them. If no <a href="doc_ircintro.html">server</a>
+since the entry in the database will override them. If no server
 entry with the specified identifier is found then an error will be generated
 and the connection attempt will stop.
 <br>
-If &lt;<a href="doc_ircintro.html">server</a>&gt; doesn't seem to be a valid ip address or <a href="doc_irc_masks.html">hostname</a> (i.e. it contains no dots)
+If &lt;server&gt; doesn't seem to be a valid ip address or hostname (i.e. it contains no dots)
 and it doesn't look to be in the form "id:&lt;some_string&gt;" then
 it is assumed to be a network name and if such a network is found
-in the <a href="doc_ircintro.html">server</a> list then the best <a href="doc_ircintro.html">server</a> for that network is contacted.
-(<a href="doc_kvircintro.html">KVIrc</a> tries to guess the round-robin (random) servers first).<br>
-This behaviour can be forced by adding the "net:" prefix to the &lt;<a href="doc_ircintro.html">server</a>&gt;
+in the server list then the best server for that network is contacted.
+(KVIrc tries to guess the round-robin (random) servers first).<br>
+This behaviour can be forced by adding the "net:" prefix to the &lt;server&gt;
 (so it will work even if the network name contains a dot).<br>
 <br>
-The connection is attempted in the current <a href="doc_connection_dependant_commands.html">IRC context</a>. If there is already
+The connection is attempted in the current IRC context. If there is already
 a connection in progress then it is "brutally" terminated.<br>
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Switches</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Switches</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>
-      <table bgcolor="#D5D5D5">
-<tr bgcolor="#E0E0E0"><td><b>-b=&lt;local address:string&gt; | --bind-address=&lt;local address:string&gt;</b></td></tr>
-<tr><td>Bind the outgoing connection to &lt;local address&gt;. The &lt;local address&gt; must be either the IP address of a local interface or a local interface name itself (e.g. eth0 under Linux, en0 under Mac OS etc.) suitable for contacting the remote &lt;<a href="doc_ircintro.html">server</a>&gt;: this means that if you're going to use the -i switch, the &lt;local address&gt; <b>must</b> be an IPv6 address. If using a local interface name as &lt;local address&gt; (working on most, but not all systems), the <a href="doc_kvircintro.html">KVIrc</a> network engine will automatically detect the interface address (i.e. the default address of that interface).</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-c=&lt;command sequence:string&gt; | --command=&lt;command sequence:string&gt;</b></td></tr>
-<tr><td>The &lt;command sequence&gt; will be executed just after the login operations have been completed.</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-f=&lt;socket filter:string&gt; | --filter=&lt;socket filter:string&gt;</b></td></tr>
-<tr><td>Activates &lt;socket filter&gt; on the connection. A socket filter is a plugin that can adapt the <a href="doc_rfc2812.html">IRC</a> <a href="doc_rfc2812.html">protocol</a> to other existing protocols such as OpenNap. For plain <a href="doc_rfc2812.html">IRC</a> it is not needed.</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-i | --ipv6</b></td></tr>
-<tr><td>Connects to the &lt;<a href="doc_ircintro.html">server</a>&gt; via the IPv6 <a href="doc_rfc2812.html">protocol</a> (if IPv6 support has been compiled in).</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-n | --new-context</b></td></tr>
-<tr><td>Forces the connection to be attempted in a new <a href="doc_connection_dependant_commands.html">IRC context</a> (<a href="doc_ircintro.html">server</a> window) instead of the current one.</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-m | --minimized</b></td></tr>
-<tr><td>If a new console window is created (due to -n or -u) then create it as minimized.</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-p=&lt;password:string&gt; | --password=&lt;password:string&gt;</b></td></tr>
-<tr><td>Uses &lt;password&gt; to login to the <a href="doc_ircintro.html">server</a> (the password will be stored in the <a href="doc_ircintro.html">server</a> entry too).</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-q=&lt;nick:string&gt; | --nickname=&lt;nick:string&gt;</b></td></tr>
-<tr><td>Uses &lt;nick&gt; to login to the <a href="doc_ircintro.html">server</a> (the <a href="doc_irc_masks.html">nickname</a> will be stored in the <a href="doc_ircintro.html">server</a> entry too).</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-s | --ssl</b></td></tr>
-<tr><td>Activates the SSL support for this connection (if OpenSSL support has been compiled in).</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-u | --unused-context</b></td></tr>
-<tr><td>Forces the connection to be attempted in the first <a href="doc_connection_dependant_commands.html">IRC context</a> that has no connection in progress. If all the <a href="doc_rfc2812.html">IRC</a> contexts have connections in progress then a new one is created.</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-l | --last</b></td></tr>
-<tr><td>When &lt;<a href="doc_ircintro.html">server</a>&gt; and &lt;port&gt; are empty use the last ones used in the <a href="doc_connection_dependant_commands.html">IRC context</a>.</td></tr>
+      <table class="switch-table">
+<tr><td class="switch-title-table-cell">-b=&lt;local address:string&gt; | --bind-address=&lt;local address:string&gt;</td></tr>
+<tr><td class="switch-body-table-cell">Bind the outgoing connection to &lt;local address&gt;. The &lt;local address&gt; must be either the IP address of a local interface or a local interface name itself (e.g. eth0 under Linux, en0 under Mac OS etc.) suitable for contacting the remote &lt;server&gt;: this means that if you're going to use the -i switch, the &lt;local address&gt; <b>must</b> be an IPv6 address. If using a local interface name as &lt;local address&gt; (working on most, but not all systems), the KVIrc network engine will automatically detect the interface address (i.e. the default address of that interface).</td></tr>
+<tr><td class="switch-title-table-cell">-c=&lt;command sequence:string&gt; | --command=&lt;command sequence:string&gt;</td></tr>
+<tr><td class="switch-body-table-cell">The &lt;command sequence&gt; will be executed just after the login operations have been completed.</td></tr>
+<tr><td class="switch-title-table-cell">-f=&lt;socket filter:string&gt; | --filter=&lt;socket filter:string&gt;</td></tr>
+<tr><td class="switch-body-table-cell">Activates &lt;socket filter&gt; on the connection. A socket filter is a plugin that can adapt the IRC protocol to other existing protocols such as OpenNap. For plain IRC it is not needed.</td></tr>
+<tr><td class="switch-title-table-cell">-i | --ipv6</td></tr>
+<tr><td class="switch-body-table-cell">Connects to the &lt;server&gt; via the IPv6 protocol (if IPv6 support has been compiled in).</td></tr>
+<tr><td class="switch-title-table-cell">-n | --new-context</td></tr>
+<tr><td class="switch-body-table-cell">Forces the connection to be attempted in a new IRC context (server window) instead of the current one.</td></tr>
+<tr><td class="switch-title-table-cell">-m | --minimized</td></tr>
+<tr><td class="switch-body-table-cell">If a new console window is created (due to -n or -u) then create it as minimized.</td></tr>
+<tr><td class="switch-title-table-cell">-p=&lt;password:string&gt; | --password=&lt;password:string&gt;</td></tr>
+<tr><td class="switch-body-table-cell">Uses &lt;password&gt; to login to the server (the password will be stored in the server entry too).</td></tr>
+<tr><td class="switch-title-table-cell">-q=&lt;nick:string&gt; | --nickname=&lt;nick:string&gt;</td></tr>
+<tr><td class="switch-body-table-cell">Uses &lt;nick&gt; to login to the server (the nickname will be stored in the server entry too).</td></tr>
+<tr><td class="switch-title-table-cell">-s | --ssl</td></tr>
+<tr><td class="switch-body-table-cell">Activates the SSL support for this connection (if OpenSSL support has been compiled in).</td></tr>
+<tr><td class="switch-title-table-cell">-u | --unused-context</td></tr>
+<tr><td class="switch-body-table-cell">Forces the connection to be attempted in the first IRC context that has no connection in progress. If all the IRC contexts have connections in progress then a new one is created.</td></tr>
+<tr><td class="switch-title-table-cell">-l | --last</td></tr>
+<tr><td>When &lt;server&gt; and &lt;port&gt; are empty use the last ones used in the IRC context.</td></tr>
       </table>
     </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Syntax Specification</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code><b>server</b> <font color="#8080a0">[</font>switches<font color="#8080a0">]</font> <font color="#8080a0">[</font><font color="#8080a0">&lt;</font>server<font color="#808080">:string</font><font color="#8080a0">&gt;</font> <font color="#8080a0">[</font><font color="#8080a0">&lt;</font>port<font color="#808080">:uint</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font><font color="#8080a0">]</font></code></pre></font></td>
-  </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Examples</b></td>
-  </tr>
-  <tr bgcolor="#EAEAEA">
-    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;server irc.tin.it
-&nbsp;&nbsp;&nbsp;&nbsp;server -i irc6.ircd.it
-&nbsp;&nbsp;&nbsp;&nbsp;server -i ircd.stealth.net 6667
-&nbsp;&nbsp;&nbsp;&nbsp;server irc.undernet.org 6665
-&nbsp;&nbsp;&nbsp;&nbsp;server -n irc.openprojects.net
-&nbsp;&nbsp;&nbsp;&nbsp;server -c="join #kvirc" irc.stealth.net 6665
-&nbsp;&nbsp;&nbsp;&nbsp;server -b=ppp0 irc.tin.it
-&nbsp;&nbsp;&nbsp;&nbsp;server undernet
-&nbsp;&nbsp;&nbsp;&nbsp;server id:mybouncerwithusername1
-&nbsp;&nbsp;&nbsp;&nbsp;server id:mybouncerwithusername2
-&nbsp;&nbsp;&nbsp;&nbsp;server net:under.net
-</font></code></pre></td></tr></table></p>
+    <td><div class="example-box">server irc.tin.it
+server -i irc6.ircd.it
+server -i ircd.stealth.net 6667
+server irc.undernet.org 6665
+server -n irc.openprojects.net
+server -c="join #kvirc" irc.stealth.net 6665
+server -b=ppp0 irc.tin.it
+server undernet
+server id:mybouncerwithusername1
+server id:mybouncerwithusername2
+server net:under.net
+</div>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

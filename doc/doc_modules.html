@@ -3,12 +3,163 @@
 <title>Loadable modules</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,83 +175,79 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>Loadable modules</h1>
-KVIrc modules model
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>Loadable modules</div>      <div class='title-secondary-text'>KVIrc modules model</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td>Starting from version 2.0.0, <a href="doc_kvircintro.html">KVIrc</a> included support for external plugins:
+    <td>Starting from version 2.0.0, KVIrc included support for external plugins:
 parts of code that can be loaded at runtime. The support was optional
-and the main <a href="doc_kvircintro.html">KVIrc</a> functionality was indipendant of that support.
-In version 3.0.0 the "modularity" has becomed one of the primary <a href="doc_kvircintro.html">KVIrc</a> features.
+and the main KVIrc functionality was indipendant of that support.
+In version 3.0.0 the "modularity" has becomed one of the primary KVIrc features.
 The pieces of external code are now named "modules". The module
 support has been rewritten completely to extend the available features
 and remove some "basic" problems that were present in 2.0.0.
-This caused the old "plugins" to be binary incompatible with the new <a href="doc_kvircintro.html">KVIrc</a>
+This caused the old "plugins" to be binary incompatible with the new KVIrc
 executable; anyway, most old "plugins" have been rewritten as "modules"
-and included in the 3.0.0 distribution. Some of the basic <a href="doc_kvircintro.html">KVIrc</a> features
+and included in the 3.0.0 distribution. Some of the basic KVIrc features
 are based on modules now; for example, the help browser is now in an
 external library called libkvihelp.so. This allows to keep the basic
-<a href="doc_kvircintro.html">KVIrc</a> executable smaller and faster (in some phases).
+KVIrc executable smaller and faster (in some phases).
 Module loading is now "transparent" to the user. There are no
 "load" and "unload" commands: the modules are automatically
 loaded when the "core" requests them and unloaded after some (configurable) time
 of inactivity.<br>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Module naming convention</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
-Every <a href="doc_kvircintro.html">KVIrc</a> module must have an "unique" name: the name is a single token,
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Module naming convention</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+Every KVIrc module must have an "unique" name: the name is a single token,
 made only of <b>lowercase</b> letters, digits and underscores.
-The real <a href="class_object.html">object</a> file (library) is named "libkvi&lt;name&gt;.so".
-This convention allows <a href="doc_kvircintro.html">KVIrc</a> to load modules when they are referenced
+The real object file (library) is named "libkvi&lt;name&gt;.so".
+This convention allows KVIrc to load modules when they are referenced
 by name in the scripting code (the reference in the code is case insensitive
 and remapped always to the lowercase version).<br>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">What a module can do</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">What a module can do</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 Basically, a module exports parts of the scripting language features.
 For example, the module "about" exports the "aboutkvirc" command, that
-shows the dialog that lists the <a href="doc_kvircintro.html">KVIrc</a> staff people. The dialog
+shows the dialog that lists the KVIrc staff people. The dialog
 will be effectively activated only few times (maybe only once) by a single
 user: including it in a separate module allows keeping rarely used code out
-of the <a href="doc_kvircintro.html">KVIrc</a> executable and saving some memory.
+of the KVIrc executable and saving some memory.
 To activate the dialog you only need to execute the command:<br>
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">about.aboutkvirc
-</font></code></pre></td></tr></table></p>
-That's all. <a href="doc_kvircintro.html">KVIrc</a> will load the necessary module, run the "aboutkvirc" command,
+<div class="example-box">about.aboutkvirc
+</div>
+That's all. KVIrc will load the necessary module, run the "aboutkvirc" command,
 wait until the module is not used anymore and then unload it.<br>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Transparent loading and unloading</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Transparent loading and unloading</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 Any command that has the form &lt;name&gt;.&lt;command&gt; is assumed to be
-a module reference. <a href="doc_kvircintro.html">KVIrc</a> tries to locate the module named &lt;name&gt;, load it (if
+a module reference. KVIrc tries to locate the module named &lt;name&gt;, load it (if
 not already in memory) and execute the &lt;command&gt;.
-After the command execution <a href="doc_kvircintro.html">KVIrc</a> waits some user defined interval of time
+After the command execution KVIrc waits some user defined interval of time
 (typically 2-3 minutes) and then check the module state: if the module
 has not been referenced again, it is unloaded, otherwise it is kept in memory
 for another period of time. To prevent accidentaly unloading a module
 that has some windows or dialogs open, a module can lock itself in memory.
 For example, the 'help' module lock itself when a help browser window is open
 and unlocks itself when the last help browser window is closed.<br>
-A module can export <a href="doc_kvs_aliasesandfunctions.html">functions</a> as well: the function names follow
+A module can export functions as well: the function names follow
 exactly the same rule as the commands: $&lt;name&gt;.&lt;function&gt; is assumed
 to be a reference to the &lt;function&gt; exported by module named &lt;name&gt;.
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Forced loading and unloading</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Forced loading and unloading</div></td></tr><tr><td bgcolor="#EAEAEA">
 All the modules export a "load" and a "unload" command.
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">about.load
-</font></code></pre></td></tr></table></p>
+<div class="example-box">about.load
+</div>
 The example above will do nothing more than loading the "about"
 module into the core memory.
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">about.unload
-</font></code></pre></td></tr></table></p>
+<div class="example-box">about.unload
+</div>
 The example above will forcibly unload the module from the core memory;
 even if it is still locked.<br>
 Please note that this can be dangerous in some situations...so
-better check the <a href="doc_kvircintro.html">KVIrc</a> behaviour twice before making public any <a href="doc_kvs_basicconcepts.html">script</a>
+better check the KVIrc behaviour twice before making public any script
 that uses this command.
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_generic_index_all.html">Miscellaneous</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

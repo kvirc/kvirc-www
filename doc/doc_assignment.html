@@ -3,12 +3,163 @@
 <title>Assignment operation</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,75 +175,71 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>Assignment operation</h1>
-Assignment operation
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>Assignment operation</div>      <div class='title-secondary-text'>Assignment operation</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td>The assignment is the "plainest" of the <a href="doc_operators.html">operators</a>: it works just like in any other programming language.<br>
+    <td>The assignment is the "plainest" of the operators: it works just like in any other programming language.<br>
 The syntax is:<br>
 <br>
 <b>&lt;target&gt; = &lt;source&gt;</b>
 <br><br>
-&lt;target&gt; must be a <a href="doc_kvs_datatypes.html">variable</a>, &lt;source&gt; can be any parameter.<br>
-If the &lt;target&gt; <a href="doc_kvs_datatypes.html">variable</a> doesn't exist, it is created.
-If it already exists, it is eventually converted to the type of &lt;souce&gt; (scalar, <a href="doc_kvs_datatypes.html">hash</a> or <a href="doc_kvs_datatypes.html">array</a>).<br>
-If &lt;source&gt; evaluates to an empty value then the &lt;target&gt; <a href="doc_kvs_datatypes.html">variable</a> is unset.
+&lt;target&gt; must be a variable, &lt;source&gt; can be any parameter.<br>
+If the &lt;target&gt; variable doesn't exist, it is created.
+If it already exists, it is eventually converted to the type of &lt;souce&gt; (scalar, hash or array).<br>
+If &lt;source&gt; evaluates to an empty value then the &lt;target&gt; variable is unset.
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Examples</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000"><font color="#207500"># Assigning a constant to the variable %Tmp</font>
-%Tmp = 1
-<a href="cmd_echo.html">echo</a> %Tmp
-<font color="#207500"># Assigning a string constant to the variable %Tmp</font>
-%Tmp = some string
-<a href="cmd_echo.html">echo</a> %Tmp
-<font color="#207500"># Assigning a string constant to the variable %Tmp</font>
-%Tmp = "some string with whitespace &nbsp; &nbsp; &nbsp; &nbsp; preserved"
-<a href="cmd_echo.html">echo</a> %Tmp
-<font color="#207500"># Assigning a variable to another variable copies its contents</font>
-%Someothervariable = "Contents"
-%Tmp = %Someothervariable
-<a href="cmd_echo.html">echo</a> %Tmp
-<font color="#207500"># Assigning a variable string to the variable %z</font>
-%color = blue
-%z = my eyes are %color
-<a href="cmd_echo.html">echo</a> %z
-<font color="#207500"># Assigning a variable string (with a function call inside) to the variable %x</font>
-%x = the system os is <a href="fnc_system.osname.html">$system.osname</a>
-<a href="cmd_echo.html">echo</a> %x
-<font color="#207500"># Assigning an empty string to the local variable %y unsets %y</font>
-%x =
-<a href="cmd_echo.html">echo</a> %y
-<font color="#207500"># This is equivalent to the above</font>
-%y = ""
-<font color="#207500"># This is equivalent too, if $function evalutates to an empty string</font>
-%y = $function()
-<font color="#207500"># Assigning a variable string to a hash entry</font>
-%Dict{key} = <a href="fnc_system.osname.html">$system.osname</a>\ian
-<font color="#207500"># Unsetting an array entry</font>
-%mydict[23] = ""
-<font color="#207500"># Assigning a hash to another: %mydict[] becomes a copy of %anotherdict[]</font>
-%anotherdict{"The key"} = "Some dummy value"
-%mydict = %anotherdict
-<a href="cmd_echo.html">echo</a>%mydict{"The key"}
-<font color="#207500"># This will convert %mydict to be a scalar variable (deleting all the %mydict contents!)</font>
-%mydict = "some default value"
-<font color="#207500"># Unsetting a whole hash</font>
-%anotherdict =
-</font></code></pre></td></tr></table></p>
+    <td><div class="example-box"><span class="comment-text"># Assigning a constant to the variable <span class="example-variable">%Tmp</span></span>
+<span class="example-variable">%Tmp</span> = 1
+<a href="cmd_echo.html">echo</a> <span class="example-variable">%Tmp</span>
+<span class="comment-text"># Assigning a string constant to the variable <span class="example-variable">%Tmp</span></span>
+<span class="example-variable">%Tmp</span> = some string
+<a href="cmd_echo.html">echo</a> <span class="example-variable">%Tmp</span>
+<span class="comment-text"># Assigning a string constant to the variable <span class="example-variable">%Tmp</span></span>
+<span class="example-variable">%Tmp</span> = "some string with whitespace &nbsp; &nbsp; &nbsp; &nbsp; preserved"
+<a href="cmd_echo.html">echo</a> <span class="example-variable">%Tmp</span>
+<span class="comment-text"># Assigning a variable to another variable copies its contents</span>
+<span class="example-variable">%Someothervariable</span> = "Contents"
+<span class="example-variable">%Tmp</span> = <span class="example-variable">%Someothervariable</span>
+<a href="cmd_echo.html">echo</a> <span class="example-variable">%Tmp</span>
+<span class="comment-text"># Assigning a variable string to the variable <span class="example-variable">%z</span></span>
+<span class="example-variable">%color</span> = blue
+<span class="example-variable">%z</span> = my eyes are <span class="example-variable">%color</span>
+<a href="cmd_echo.html">echo</a> <span class="example-variable">%z</span>
+<span class="comment-text"># Assigning a variable string <span class="example-paren">(</span>with a function call inside<span class="example-paren">)</span> to the variable <span class="example-variable">%x</span></span>
+<span class="example-variable">%x</span> = the system os is <a href="fnc_system.osname.html">$system.osname</a>
+<a href="cmd_echo.html">echo</a> <span class="example-variable">%x</span>
+<span class="comment-text"># Assigning an empty string to the local variable <span class="example-variable">%y</span> unsets <span class="example-variable">%y</span></span>
+<span class="example-variable">%x</span> =
+<a href="cmd_echo.html">echo</a> <span class="example-variable">%y</span>
+<span class="comment-text"># This is equivalent to the above</span>
+<span class="example-variable">%y</span> = ""
+<span class="comment-text"># This is equivalent too, if $function evalutates to an empty string</span>
+<span class="example-variable">%y</span> = $function<span class="example-paren">()</span>
+<span class="comment-text"># Assigning a variable string to a hash entry</span>
+<span class="example-variable">%Dict</span><span class="example-bracket">{</span>key<span class="example-bracket">}</span> = <a href="fnc_system.osname.html">$system.osname</a>\ian
+<span class="comment-text"># Unsetting an array entry</span>
+<span class="example-variable">%mydict</span>[23] = ""
+<span class="comment-text"># Assigning a hash to another: <span class="example-variable">%mydict</span>[] becomes a copy of <span class="example-variable">%anotherdict</span>[]</span>
+<span class="example-variable">%anotherdict</span><span class="example-bracket">{</span>"The key"<span class="example-bracket">}</span> = "Some dummy value"
+<span class="example-variable">%mydict</span> = <span class="example-variable">%anotherdict</span>
+<a href="cmd_echo.html">echo</a><span class="example-variable">%mydict</span><span class="example-bracket">{</span>"The key"<span class="example-bracket">}</span>
+<span class="comment-text"># This will convert <span class="example-variable">%mydict</span> to be a scalar variable <span class="example-paren">(</span>deleting all the <span class="example-variable">%mydict</span> contents!<span class="example-paren">)</span></span>
+<span class="example-variable">%mydict</span> = "some default value"
+<span class="comment-text"># Unsetting a whole hash</span>
+<span class="example-variable">%anotherdict</span> =
+</div>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

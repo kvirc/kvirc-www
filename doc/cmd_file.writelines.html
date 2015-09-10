@@ -3,12 +3,163 @@
 <title>file.writeLines</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,59 +175,49 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>file.writeLines</h1>
-Writes an array of lines to a file
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>file.writeLines</div>      <div class='title-secondary-text'>Writes an array of lines to a file</div>    </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Usage</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Usage</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code>file.writeLines [-l] [-a] [-c] &lt;filename&gt; &lt;lines&gt;</code></pre></font></td>
+    <td><div class='syntax-text'><b>file.writeLines</b> <font color="#8080a0">[</font>-l<font color="#8080a0">]</font> <font color="#8080a0">[</font>-a<font color="#8080a0">]</font> <font color="#8080a0">[</font>-c<font color="#8080a0">]</font> <font color="#8080a0">&lt;</font>filename<font color="#808080">:string</font><font color="#8080a0">&gt;</font> <font color="#8080a0">&lt;</font>lines<font color="#808080">:array</font><font color="#8080a0">&gt;</font></div></td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Description</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td>Writes the <a href="doc_kvs_datatypes.html">array</a> of &lt;lines&gt; to the specified file.
+    <td>Writes the array of &lt;lines&gt; to the specified file.
 The lines are separated by a single linefeed character (see also <a href="fnc_lf.html">$lf</a>)
 unless the -c or -n switches are used. If the file already exists then it is
 overwritten with the new data unless the -a switch is used.
-The lines <a href="doc_kvs_datatypes.html">array</a> is encoded in the ut8 character set unless the -l switch is used.
+The lines array is encoded in the ut8 character set unless the -l switch is used.
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Switches</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Switches</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>
-      <table bgcolor="#D5D5D5">
-<tr bgcolor="#E0E0E0"><td><b>-l | --local-8-bit</b></td></tr>
-<tr><td>Causes the lines to be saved in local 8 bit character set instead of the default unicode encoding.</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-a | --append</b></td></tr>
-<tr><td>If the file already exists, then the lines are appended to the end instead of overwriting the file.</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-c | --crlf</b></td></tr>
-<tr><td>The lines are separated by a carriage-return+line-feed character combination, compatible with windows text mode files. This is the only way to make the file readable in windows notepad, for example. Please note that this is broken design: do NOT use it :)</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-n | --no-separator</b></td></tr>
-<tr><td>Do not separate the lines at all (either the separators are already inside the lines <a href="doc_kvs_datatypes.html">array</a> or no line separation is desired at all). -n takes precedence over -c.</td></tr>
-<tr bgcolor="#E0E0E0"><td><b>-q | --quiet</b></td></tr>
+      <table class="switch-table">
+<tr><td class="switch-title-table-cell">-l | --local-8-bit</td></tr>
+<tr><td class="switch-body-table-cell">Causes the lines to be saved in local 8 bit character set instead of the default unicode encoding.</td></tr>
+<tr><td class="switch-title-table-cell">-a | --append</td></tr>
+<tr><td class="switch-body-table-cell">If the file already exists, then the lines are appended to the end instead of overwriting the file.</td></tr>
+<tr><td class="switch-title-table-cell">-c | --crlf</td></tr>
+<tr><td class="switch-body-table-cell">The lines are separated by a carriage-return+line-feed character combination, compatible with windows text mode files. This is the only way to make the file readable in windows notepad, for example. Please note that this is broken design: do NOT use it :)</td></tr>
+<tr><td class="switch-title-table-cell">-n | --no-separator</td></tr>
+<tr><td class="switch-body-table-cell">Do not separate the lines at all (either the separators are already inside the lines array or no line separation is desired at all). -n takes precedence over -c.</td></tr>
+<tr><td class="switch-title-table-cell">-q | --quiet</td></tr>
 <tr><td>Don't complain if the file can't be opened: just fail silently</td></tr>
       </table>
     </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Syntax Specification</b></td>
-  </tr>
-  <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code><b>file.writeLines</b> <font color="#8080a0">[</font>-l<font color="#8080a0">]</font> <font color="#8080a0">[</font>-a<font color="#8080a0">]</font> <font color="#8080a0">[</font>-c<font color="#8080a0">]</font> <font color="#8080a0">&lt;</font>filename<font color="#808080">:string</font><font color="#8080a0">&gt;</font> <font color="#8080a0">&lt;</font>lines<font color="#808080">:array</font><font color="#8080a0">&gt;</font></code></pre></font></td>
-  </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>See also</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>See also</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td><a href="fnc_file.readlines.html">$file.readlines</a>
@@ -84,6 +225,6 @@ The lines <a href="doc_kvs_datatypes.html">array</a> is encoded in the ut8 chara
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

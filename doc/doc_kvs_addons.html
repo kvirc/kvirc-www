@@ -3,12 +3,163 @@
 <title>The KVIrc addon system</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,91 +175,87 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>The KVIrc addon system</h1>
-Writing KVIrc addons
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>The KVIrc addon system</div>      <div class='title-secondary-text'>Writing KVIrc addons</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td></td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Introduction</div></td></tr><tr><td bgcolor="#EAEAEA">
+    <td></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Introduction</div></td></tr><tr><td bgcolor="#EAEAEA">
 <p>
-An addon is basically a set of <a href="doc_kvs_introduction.html">KVS</a> scripts, multimedia, documentation
-and accessory files that implement a <a href="doc_kvircintro.html">KVIrc</a> feature.
+An addon is basically a set of KVS scripts, multimedia, documentation
+and accessory files that implement a KVIrc feature.
 It might be a simple automatic-away subsystem, a GUI newsticker or a complex
-<a href="doc_shared_files.html">file sharing</a>
+file sharing
 service (commonly called "fserve"). Addons are sometimes called "scripts".
-In fact a <a href="doc_kvircintro.html">KVIrc</a> addon is usually made of more than one <a href="doc_kvs_introduction.html">KVS</a> <a href="doc_kvs_basicconcepts.html">script</a>.
+In fact a KVIrc addon is usually made of more than one KVS script.
 </p>
 <p>
-<a href="doc_kvircintro.html">KVIrc</a> has a builtin addon management system that allows the users to create,
+KVIrc has a builtin addon management system that allows the users to create,
 install, configure and uninstall features with a nice graphical interface.
 The management system allows the addons to have documentation integrated in
-the <a href="doc_kvircintro.html">KVIrc</a> help and to be translated in several languages.
+the KVIrc help and to be translated in several languages.
 </p>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Addon installation</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Addon installation</div></td></tr><tr><td bgcolor="#EAEAEA">
 <p>
-The addons are usually shipped in compressed archives (.kva). <a href="doc_kvircintro.html">KVIrc</a> will look
-for the installer file called "install.<a href="doc_kvs_introduction.html">kvs</a>" and executes it when the user will
-ask for your addon to be installed. The install.<a href="doc_kvs_introduction.html">kvs</a> contains the code for the
+The addons are usually shipped in compressed archives (.kva). KVIrc will look
+for the installer file called "install.kvs" and executes it when the user will
+ask for your addon to be installed. The install.kvs contains the code for the
 <b>registration</b> of your addon and will <a href="cmd_include.html">include</a> all the other
 necessary source files.
 </p>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">The minimal addon</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">The minimal addon</div></td></tr><tr><td bgcolor="#EAEAEA">
 <p>
 The smallest addon that you can write is the one that does nothing.
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_addon.register.html">addon.register</a>("MyAddon", \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"1.0.0", \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"My First Addon", \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"An addon that is really cool but does
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;simply nothing", \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"4.0.0", \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"MyAddon_32.png")
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;}
-</font></code></pre></td></tr></table></p>
+<div class="example-box"><a href="cmd_addon.register.html">addon.register</a><span class="example-paren">(</span>"MyAddon", \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"1.0.0", \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"My First Addon", \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"An addon that is really cool but does
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;simply nothing", \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"4.0.0", \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"MyAddon_32.png"<span class="example-paren">)</span>
+<span class="example-bracket">{</span>
+<span class="example-bracket">}</span>
+</div>
 The code above does nothing but registers the "MyAddon" addon.
 </p>
 <p>
 The first parameter is the internal addon id which can be used to identify
-your addon inside <a href="doc_kvircintro.html">KVIrc</a>. The id must be unique: two addons that share the same
+your addon inside KVIrc. The id must be unique: two addons that share the same
 name cannot be installed. The second parameter is the addon version. It should
 be expressed in the classic format [major].[minor].[pathlevel] or something
-really similar (in fact <a href="doc_kvircintro.html">KVIrc</a> just expects the version to be a string composed
+really similar (in fact KVIrc just expects the version to be a string composed
 of numbers separated by dots). The version is compared when an addon is
-installed and <a href="doc_kvircintro.html">KVIrc</a> complains if the user tries to downgrade an addon (that is
+installed and KVIrc complains if the user tries to downgrade an addon (that is
 to install a less recent version over a more recent one). The third parameter
 is the visible name of your addon: it will be displayed to the user in the
 addon management dialog. It can contain the <a href="fnc_tr.html">$tr</a> function so you
 can have it translated to several languages. The fourth parameter
 is a short description of the feature that the addon implements; it can
-contain the $tr() function too. The fifth parameter is the minimal <a href="doc_kvircintro.html">KVIrc</a>
+contain the $tr() function too. The fifth parameter is the minimal KVIrc
 version required to run the addon. The sixth parameter is the icon to show in
 the manager: it has to be 32x32 pixel big. There are also some switches that
 can be used to fiddle a little bit more :)
 </p>
 <p>
 The callback instruction that follows the registration command is the
-uninstallation code. <a href="doc_kvircintro.html">KVIrc</a> will invoke it when the user will ask for your
+uninstallation code. KVIrc will invoke it when the user will ask for your
 addon to be uninstalled. Don't assume that your addon will be never
 uninstalled: sooner or later it will be. For example, when upgrading an addon
-<a href="doc_kvircintro.html">KVIrc</a> will first uninstall the existing version and after that install the new
-one. The uninstallation <a href="class_process.html">process</a> is a very important requisite for any program
+KVIrc will first uninstall the existing version and after that install the new
+one. The uninstallation process is a very important requisite for any program
 (in any programming language). In the example above there is nothing to
 uninstall (yet) so the callback code is empty, but if you continue reading we
 will soon fill it.
 To uninstall all files which are not automatically spotted by the installation
-<a href="class_process.html">process</a>, you need to write an alias which handles them.
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;alias(MyAddon::uninstall::uninstall)
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
-&nbsp;&nbsp;&nbsp;&nbsp;}
-</font></code></pre></td></tr></table></p>
+process, you need to write an alias which handles them.
+<div class="example-box">alias<span class="example-paren">(</span>MyAddon::uninstall::uninstall<span class="example-paren">)</span>
+<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;...
+<span class="example-bracket">}</span>
+</div>
 </p>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">A typical addon layout</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">A typical addon layout</div></td></tr><tr><td bgcolor="#EAEAEA">
 <p>
 As stated above, the addons are usually shipped in a compressed archive.
 Once uncompressed, the installer will check the directory tree containing the
@@ -119,36 +266,36 @@ respected.
 <p>
 <pre>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>name-version</b>
-&nbsp;&nbsp;&nbsp;&nbsp; +- init.<a href="doc_kvs_introduction.html">kvs</a>
+&nbsp;&nbsp;&nbsp;&nbsp; +- init.kvs
 &nbsp;&nbsp;&nbsp;&nbsp; +- <b>src</b>
-&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;+- source1.<a href="doc_kvs_introduction.html">kvs</a>
-&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;+- source2.<a href="doc_kvs_introduction.html">kvs</a>
-&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;\- ...
+&nbsp;&nbsp;&nbsp;&nbsp; |	+- source1.kvs
+&nbsp;&nbsp;&nbsp;&nbsp; |	+- source2.kvs
+&nbsp;&nbsp;&nbsp;&nbsp; |	\- ...
 &nbsp;&nbsp;&nbsp;&nbsp; +- <b>locale</b>
-&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;+- name_it.mo
-&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;+- name_de.mo
-&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;\- ...
+&nbsp;&nbsp;&nbsp;&nbsp; |	+- name_it.mo
+&nbsp;&nbsp;&nbsp;&nbsp; |	+- name_de.mo
+&nbsp;&nbsp;&nbsp;&nbsp; |	\- ...
 &nbsp;&nbsp;&nbsp;&nbsp; +- <b>config</b>
-&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;+- config1.kvc
-&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;+- config2.kvc
-&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;\- ...
+&nbsp;&nbsp;&nbsp;&nbsp; |	+- config1.kvc
+&nbsp;&nbsp;&nbsp;&nbsp; |	+- config2.kvc
+&nbsp;&nbsp;&nbsp;&nbsp; |	\- ...
 &nbsp;&nbsp;&nbsp;&nbsp; +- <b>sound</b>
-&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;+- audio1.wav
-&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;+- audio2.wav
-&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;\- ...
+&nbsp;&nbsp;&nbsp;&nbsp; |	+- audio1.wav
+&nbsp;&nbsp;&nbsp;&nbsp; |	+- audio2.wav
+&nbsp;&nbsp;&nbsp;&nbsp; |	\- ...
 &nbsp;&nbsp;&nbsp;&nbsp; +- <b>pics</b>
-&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;+- pic1.png
-&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;+- pic2.png
-&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;\- ...
+&nbsp;&nbsp;&nbsp;&nbsp; |	+- pic1.png
+&nbsp;&nbsp;&nbsp;&nbsp; |	+- pic2.png
+&nbsp;&nbsp;&nbsp;&nbsp; |	\- ...
 &nbsp;&nbsp;&nbsp;&nbsp; +- <b>help</b>
-&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;+- <b>en</b>
-&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;|   +- index.html
-&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;|   +- hints.html
-&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;|   \- ...
-&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;+- <b>it</b>
-&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;    +- index.html
-&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;    +- hints.html
-&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;    \- ...
+&nbsp;&nbsp;&nbsp;&nbsp;  	+- <b>en</b>
+&nbsp;&nbsp;&nbsp;&nbsp;  	|   +- index.html
+&nbsp;&nbsp;&nbsp;&nbsp;  	|   +- hints.html
+&nbsp;&nbsp;&nbsp;&nbsp;  	|   \- ...
+&nbsp;&nbsp;&nbsp;&nbsp;  	+- <b>it</b>
+&nbsp;&nbsp;&nbsp;&nbsp;  	    +- index.html
+&nbsp;&nbsp;&nbsp;&nbsp;  	    +- hints.html
+&nbsp;&nbsp;&nbsp;&nbsp;  	    \- ...
 </pre>
 </p>
 <p>
@@ -168,43 +315,43 @@ The poor windows' notepad has serious problems with reading text
 files that contain only linefeeds as line separators. Keep it in mind...
 </p>
 <p>
-The <b>initialization script</b> has to be named init.<a href="doc_kvs_introduction.html">kvs</a> and must contain all the
+The <b>initialization script</b> has to be named init.kvs and must contain all the
 routines to register your addon.
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Register classes</font>
-&nbsp;&nbsp;&nbsp;&nbsp;MyAddon::classes::register
-&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Initialize events</font>
-&nbsp;&nbsp;&nbsp;&nbsp;MyAddon::<a href="doc_events.html">events</a>::init
-&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Load configuration</font>
-&nbsp;&nbsp;&nbsp;&nbsp;MyAddon::config::load
-&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Setup popups</font>
-&nbsp;&nbsp;&nbsp;&nbsp;defpopup("MyAddon")
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item($tr("Something","MyAddon"),110)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Set options</font>
-&nbsp;&nbsp;&nbsp;&nbsp;option boolAutoAcceptDccSend 1
-&nbsp;&nbsp;&nbsp;&nbsp;option boolShowMinimizedDebugWindow 1
-</font></code></pre></td></tr></table></p>
+<div class="example-box"><span class="comment-text"># Register classes</span>
+MyAddon::classes::register
+<span class="comment-text"># Initialize events</span>
+MyAddon::events::init
+<span class="comment-text"># Load configuration</span>
+MyAddon::config::load
+<span class="comment-text"># Setup popups</span>
+defpopup<span class="example-paren">(</span>"MyAddon"<span class="example-paren">)</span>
+<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;item<span class="example-paren">(</span>$tr<span class="example-paren">(</span>"Something","MyAddon"<span class="example-paren">)</span>,110<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
+<span class="example-bracket">}</span>
+<span class="comment-text"># Set options</span>
+option boolAutoAcceptDccSend 1
+option boolShowMinimizedDebugWindow 1
+</div>
 </p>
 <p>
 The main <b>source directory</b> for your addon have to be named "src" and must
 contain the implementation of the feature(s) you're going to provide.
 File names should contain the namespace of the addon, the optional subnamespace
-and the name of the feature like $addonNS_$subNS_[$subNS_[...]]$name.<a href="doc_kvs_introduction.html">kvs</a>
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># A <a href="class_object.html">class</a> which handles a database</font>
-&nbsp;&nbsp;&nbsp;&nbsp;MyAddon_classes_database.<a href="doc_kvs_introduction.html">kvs</a>
-&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># A <a href="class_object.html">class</a> which handles the options of our addon in a GUI</font>
-&nbsp;&nbsp;&nbsp;&nbsp;MyAddon_classes_gui_options.<a href="doc_kvs_introduction.html">kvs</a>
-&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># A <a href="doc_kvs_basicconcepts.html">script</a> containing some <a href="cmd_log.flush.html">logging</a> functions</font>
-&nbsp;&nbsp;&nbsp;&nbsp;MyAddon_functions_logging.<a href="doc_kvs_introduction.html">kvs</a>
-</font></code></pre></td></tr></table></p>
+and the name of the feature like $addonNS_$subNS_[$subNS_[...]]$name.kvs
+<div class="example-box"><span class="comment-text"># A class which handles a database</span>
+MyAddon_classes_database.kvs
+<span class="comment-text"># A class which handles the options of our addon in a GUI</span>
+MyAddon_classes_gui_options.kvs
+<span class="comment-text"># A script containing some logging functions</span>
+MyAddon_functions_logging.kvs
+</div>
 </p>
 <p>
 The "<b>locale</b>" directory should contain the *.mo files for your tranlations.
-The localization <a href="class_process.html">process</a> of a <a href="doc_kvs_basicconcepts.html">script</a> is explained in <a href="doc_localization.html">this document</a>.
+The localization process of a script is explained in <a href="doc_localization.html">this document</a>.
 Your *.mo filenames should be prefixed by your addon name.
 </p>
 <p>
@@ -222,75 +369,75 @@ The "<b>help</b>" directory should contain subdirectories for each language
 your help files are written in. The languages dirs should be named
 with the language code also used for the translation files (like "en", "it"
 etc...).
-Please note that english is the default language and <a href="doc_kvircintro.html">KVIrc</a> will
+Please note that english is the default language and KVIrc will
 fallback to the "en" subdirectory when no other language is found around...
 </p>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Some examples</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Some examples</div></td></tr><tr><td bgcolor="#EAEAEA">
 <p>The code below is just an example of how to write a useful initalizazion of
 your own addon. The name of the classes refer to the ones described above.
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Register the classes</font>
-&nbsp;&nbsp;&nbsp;&nbsp;alias(MyAddon::classes::register)
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Create an <a href="doc_kvs_datatypes.html">array</a> with all the classes of our addon.</font>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># In this way it's easy to add or remove classes to registering routine</font>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%classes[] = <a href="fnc_array.html">$array</a>( \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MyAddon::classes::database, \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MyAddon::classes::gui::options, \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Scan the <a href="doc_kvs_datatypes.html">array</a> and register the classes</font>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(%i=0; %i &lt; <a href="fnc_length.html">$length</a>(%classes[]); %i++)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(<a href="fnc_classdefined.html">$classdefined</a>("%classes[%i]"))
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_objects.killclass.html">objects.killclass</a> %classes[%i]
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_eval.html">eval</a> %classes[%i]
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Initialize events</font>
-&nbsp;&nbsp;&nbsp;&nbsp;alias(MyAddon::<a href="doc_events.html">events</a>::init)
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="doc_events.html">event</a>(OnKVIrcStartup,"MyAddon")
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Load the catalogue (translation) file "myaddon" from the path provided</font>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_trload.html">trload</a> myaddon <a href="fnc_file.localdir.html">$file.localdir</a>("locale/MyAddon")
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MyAddon::config::load
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="doc_events.html">event</a>(OnChannelMessage,"MyAddon_something")
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
+<div class="example-box"><span class="comment-text"># Register the classes</span>
+alias<span class="example-paren">(</span>MyAddon::classes::register<span class="example-paren">)</span>
+<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Create an array with all the classes of our addon.</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># In this way it's easy to add or remove classes to registering routine</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%classes</span>[] = <a href="fnc_array.html">$array</a><span class="example-paren">(</span> \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MyAddon::classes::database, \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MyAddon::classes::gui::options, \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Load configuration</font>
-&nbsp;&nbsp;&nbsp;&nbsp;alias(MyAddon::config::load)
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># If the <a href="class_object.html">class</a> ConfHandler is not defined, register all classes we have</font>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(!<a href="fnc_classdefined.html">$classdefined</a>(MyAddon::classes::ConfHandler))
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MyAddon::classes::register
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Sets some variables</font>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%MyAddonConfig = <a href="fnc_new.html">$new</a>(MyAddon::classes::ConfHandler)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%MyAddonConfigPath = <a href="fnc_file.localdir.html">$file.localdir</a>(config/scripts/MyAddon)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Open the configuration file and sets the section "general"</font>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%c = <a href="fnc_config.open.html">$config.open</a>(%MyAddonConfigPath/MyAddon.kvc,"r")
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_config.setsection.html">config.setsection</a> %c general
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#207500"># Store the value of the key "Key" in the <a href="doc_kvs_datatypes.html">global variable</a> %Key</font>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%Key = <a href="fnc_config.read.html">$config.read</a>(%c,"Key",2)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Scan the array and register the classes</span>
+&nbsp;&nbsp;&nbsp;&nbsp;for<span class="example-paren">(</span><span class="example-variable">%i</span>=0; <span class="example-variable">%i</span> &lt; <a href="fnc_length.html">$length</a><span class="example-paren">(</span><span class="example-variable">%classes</span>[]<span class="example-paren">)</span>; <span class="example-variable">%i</span>++<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if<span class="example-paren">(</span><a href="fnc_classdefined.html">$classdefined</a><span class="example-paren">(</span>"<span class="example-variable">%classes</span>[<span class="example-variable">%i</span>]"<span class="example-paren">))</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_objects.killclass.html">objects.killclass</a> <span class="example-variable">%classes</span>[<span class="example-variable">%i</span>]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_eval.html">eval</a> <span class="example-variable">%classes</span>[<span class="example-variable">%i</span>]
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
+<span class="example-bracket">}</span>
+<span class="comment-text"># Initialize events</span>
+alias<span class="example-paren">(</span>MyAddon::events::init<span class="example-paren">)</span>
+<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;event<span class="example-paren">(</span>OnKVIrcStartup,"MyAddon"<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
-&nbsp;&nbsp;&nbsp;&nbsp;}
-</font></code></pre></td></tr></table></p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Load the catalogue <span class="example-paren">(</span>translation<span class="example-paren">)</span> file "myaddon" from the path provided</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_trload.html">trload</a> myaddon <a href="fnc_file.localdir.html">$file.localdir</a><span class="example-paren">(</span>"locale/MyAddon"<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MyAddon::config::load
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
+&nbsp;&nbsp;&nbsp;&nbsp;event<span class="example-paren">(</span>OnChannelMessage,"MyAddon_something"<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
+<span class="example-bracket">}</span>
+<span class="comment-text"># Load configuration</span>
+alias<span class="example-paren">(</span>MyAddon::config::load<span class="example-paren">)</span>
+<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># If the class ConfHandler is not defined, register all classes we have</span>
+&nbsp;&nbsp;&nbsp;&nbsp;if<span class="example-paren">(</span>!<a href="fnc_classdefined.html">$classdefined</a><span class="example-paren">(</span>MyAddon::classes::ConfHandler<span class="example-paren">))</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MyAddon::classes::register
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Sets some variables</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%MyAddonConfig</span> = <a href="fnc_new.html">$new</a><span class="example-paren">(</span>MyAddon::classes::ConfHandler<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%MyAddonConfigPath</span> = <a href="fnc_file.localdir.html">$file.localdir</a><span class="example-paren">(</span>config/scripts/MyAddon<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Open the configuration file and sets the section "general"</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%c</span> = <a href="fnc_config.open.html">$config.open</a><span class="example-paren">(</span><span class="example-variable">%MyAddonConfigPath</span>/MyAddon.kvc,"r"<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_config.setsection.html">config.setsection</a> <span class="example-variable">%c</span> general
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Store the value of the key "Key" in the global variable <span class="example-variable">%Key</span></span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%Key</span> = <a href="fnc_config.read.html">$config.read</a><span class="example-paren">(</span><span class="example-variable">%c</span>,"Key",2<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;...
+<span class="example-bracket">}</span>
+</div>
 </p>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">The help and configuration callbacks</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">The help and configuration callbacks</div></td></tr><tr><td bgcolor="#EAEAEA">
 <p>
 Each addon can have a help and a configuration callback. These are set
 respectively by <a href="cmd_addon.sethelpcallback.html">addon.sethelpcallback</a> and <a href="cmd_addon.setconfigurecallback.html">addon.setconfigurecallback</a>.
 </p>
 <p>
-The help callback will be invoked by <a href="doc_kvircintro.html">KVIrc</a> when the user will ask help for your addon (mainly
+The help callback will be invoked by KVIrc when the user will ask help for your addon (mainly
 from the addon management dialog, but not necessairly). It should call <a href="cmd_help.open.html">help.open</a>
 with the name of your documentation index html file (it should be relative
 to the help language directory: help.open myaddon/index.html will automatically
@@ -303,24 +450,24 @@ The configuration callback will be invoked when the user will try to configure
 your addon from the addon management dialog. This callback is useful
 mainly for complexier graphical scripts that can show up a dialog
 that allows configuring all of the addon features. To use this callback
-you will probably need some <a href="doc_objects.html">object scripting</a>.
+you will probably need some object scripting.
 </p>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">The real addon work</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">The real addon work</div></td></tr><tr><td bgcolor="#EAEAEA">
 <p>
 The real addon work is done by the scripts contained in the src directory.
-They will likely add <a href="doc_aliases.html">aliases</a> (maybe in a nice namespace named agains your addon),
-register <a href="doc_events.html">event handlers</a>, create actions, timers, toolbars and <a href="class_object.html">object</a> classes.
+They will likely add aliases (maybe in a nice namespace named agains your addon),
+register event handlers, create actions, timers, toolbars and object classes.
 You should install all of this stuff from your addon source files.
-Remember that your source files will NOT be parsed every time <a href="doc_kvircintro.html">KVIrc</a> starts up:
-your stuff must be registered in <a href="doc_kvircintro.html">KVIrc</a> and be able to startup itself, if needed.
+Remember that your source files will NOT be parsed every time KVIrc starts up:
+your stuff must be registered in KVIrc and be able to startup itself, if needed.
 Remember that you must clean up <b>everything</b> in your uninstallation callback.
-This means that you must remove the <a href="doc_aliases.html">aliases</a>, unregister the <a href="doc_events.html">event handlers</a>,
-destroy the actions, kill the timers and the <a href="class_object.html">object</a> classes you've created.
+This means that you must remove the aliases, unregister the event handlers,
+destroy the actions, kill the timers and the object classes you've created.
 Be a clean coder :)
 </p>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Where to start</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Where to start</div></td></tr><tr><td bgcolor="#EAEAEA">
 <p>
-It is a good idea to start on the <a href="doc_kvircintro.html">KVIrc</a> web site. There are surely
+It is a good idea to start on the KVIrc web site. There are surely
 several addons to look at. Pick one that seems simple and analyze its
 layout and code (wow... the free software!). It will be easier to do than it was to explain it :D
 </p>
@@ -331,6 +478,6 @@ Have fun! :)
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

@@ -3,12 +3,163 @@
 <title>Escape sequences and clickable links</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,30 +175,26 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>Escape sequences and clickable links</h1>
-
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>Escape sequences and clickable links</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td>The <a href="doc_kvircintro.html">KVIrc</a> view widgets support clickable links.<br>
+    <td>The KVIrc view widgets support clickable links.<br>
 The links can be created using special escape sequences in the text
 passed to the <a href="cmd_echo.html">echo</a> command.<br>
-<a href="doc_kvircintro.html">KVIrc</a> uses some escape sequences in the text "echoed" internally.<br>
+KVIrc uses some escape sequences in the text "echoed" internally.<br>
 The simplest way to explain it is to use an example:<br>
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> This is a <a href="fnc_cr.html">$cr</a>![!dbl]<a href="cmd_echo.html">echo</a> You have clicked it!<a href="fnc_cr.html">$cr</a>\clickable link$cr !
-</font></code></pre></td></tr></table></p>
+<div class="example-box"><a href="cmd_echo.html">echo</a> This is a <a href="fnc_cr.html">$cr</a>![!dbl]<a href="cmd_echo.html">echo</a> You have clicked it!<a href="fnc_cr.html">$cr</a>\clickable link$cr !
+</div>
 The example above will show the following text line: "This is a clickable link".
 If you move the mouse over the words "clickable link", you will see the text highlighted.<br>
 Once you double-click one of that words, the command "<a href="cmd_echo.html">echo</a> You have clicked it!" will be executed.<br>
 The format looks complex ?... it is not...just read on.<br>
 &lt;cr&gt;!&lt;link_type&gt;&lt;cr&gt;&lt;visible text&gt;&lt;cr&gt;
 &lt;cr&gt;!&lt;escape_command&gt;&lt;cr&gt;&lt;visible text&gt;&lt;cr&gt;
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">Escape format</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Escape format</div></td></tr><tr><td bgcolor="#EAEAEA">
 The whole escape sequence format is the following:<br>
 <b>&lt;cr&gt;!&lt;escape_command&gt;&lt;cr&gt;&lt;visible text&gt;&lt;cr&gt;</b><br>
 &lt;cr&gt; is the carriage return character. You can obtain it by using the [fnc]]$cr[/fnc] function.<br>
@@ -56,7 +203,7 @@ The whole escape sequence format is the following:<br>
 &lt;escape_command&gt; has the two following syntactic forms:<br>
 <b>&lt;escape_command&gt; ::= &lt;user_defined_commands&gt;</b><br>
 <b>&lt;escape_command&gt; ::= &lt;builtin_link_description&gt;</b>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">User defined links</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">User defined links</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 The user defined links allow you to perform arbitrary commands when the user interacts with the link.<br>
 The commands are specified in the &lt;escape_command&gt; part by using the following syntax:<br>
 &lt;escape_command&gt; ::= &lt;user_defined_commands&gt;<br>
@@ -64,14 +211,14 @@ The commands are specified in the &lt;escape_command&gt; part by using the follo
 &lt;command_rule&gt; ::= &lt;action_tag&gt;&lt;command&gt;<br>
 &lt;action_tag&gt; ::= "[!" &lt;action&gt; "]"<br>
 &lt;action&gt; ::= "rbt" | "mbt" | "dbl" | "txt"<br>
-&lt;command&gt; ::= any <a href="doc_kvircintro.html">kvirc</a> command (see notes below)<br>
-</td></tr><tr><td bgcolor="#A7D3DB"><div style="font-size:16pt;font-weight:800;">A shortcut</div></td></tr><tr><td bgcolor="#EAEAEA">
+&lt;command&gt; ::= any kvirc command (see notes below)<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">A shortcut</div></td></tr><tr><td bgcolor="#EAEAEA">
 You may have a look at the <a href="fnc_fmtlink.html">$fmtlink</a> function: it does automatically some of the job explained
 in this document.<br>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_generic_index_all.html">Miscellaneous</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

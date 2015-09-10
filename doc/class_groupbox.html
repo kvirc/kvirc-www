@@ -3,12 +3,163 @@
 <title>groupbox class</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,24 +175,20 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>groupbox class</h1>
-Provides a groupbox bar.
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>groupbox class</div>      <div class='title-secondary-text'>Provides a groupbox bar.</div>    </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Inherits</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Inherits</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td><a href="class_object.html">object</a>
 <a href="class_widget.html">widget</a></td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Description</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>This widget can be used to display a groupbox.
@@ -50,8 +197,8 @@ You can either use a child layout to manage the children geometries
 or use $setColumnLayout to manage the layout automatically.
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Functions</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Functions</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>
@@ -87,46 +234,46 @@ or use $setColumnLayout to manage the layout automatically.
       </table>
     </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Examples</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;//Let's start.
-&nbsp;&nbsp;&nbsp;&nbsp;//First we'll create the main widget. as a dialog
-&nbsp;&nbsp;&nbsp;&nbsp;%widget=$new(dialog)
-&nbsp;&nbsp;&nbsp;&nbsp;%layout=$new(layout,%widget)
-&nbsp;&nbsp;&nbsp;&nbsp;//then the groupbox
-&nbsp;&nbsp;&nbsp;&nbsp;%gb=$new(groupbox,%widget)
-&nbsp;&nbsp;&nbsp;&nbsp;%gb-&gt;$setTitle(Login)
-&nbsp;&nbsp;&nbsp;&nbsp;%gb-&gt;$setAlignment("Left")
-&nbsp;&nbsp;&nbsp;&nbsp;// add the gbox to the main layout
-&nbsp;&nbsp;&nbsp;&nbsp;%layout-&gt;$addWidget(%gb,0,0)
-&nbsp;&nbsp;&nbsp;&nbsp;// now we create the user field  (labels + lineedit)
-&nbsp;&nbsp;&nbsp;&nbsp;// in a horizontal box
-&nbsp;&nbsp;&nbsp;&nbsp;%hbox=$new(hbox,%gb)
-&nbsp;&nbsp;&nbsp;&nbsp;%labeluser=$new(label,%hbox)
-&nbsp;&nbsp;&nbsp;&nbsp;%labeluser-&gt;$settext(User: )
-&nbsp;&nbsp;&nbsp;&nbsp;%inputuser=$new(lineedit,%hbox)
-&nbsp;&nbsp;&nbsp;&nbsp;//now we create the pass field  (labels + lineedit).
-&nbsp;&nbsp;&nbsp;&nbsp;// in a horizontal box
-&nbsp;&nbsp;&nbsp;&nbsp;%hbox=$new(hbox,%gb)
-&nbsp;&nbsp;&nbsp;&nbsp;%labelpass=$new(label,%hbox)
-&nbsp;&nbsp;&nbsp;&nbsp;%labelpass-&gt;$settext(Pass: )
-&nbsp;&nbsp;&nbsp;&nbsp;%inputpass=$new(lineedit,%hbox)
-&nbsp;&nbsp;&nbsp;&nbsp;%inputpass-&gt;$setechomode("password")
-&nbsp;&nbsp;&nbsp;&nbsp;// now we create the ok/cancel box buttons
-&nbsp;&nbsp;&nbsp;&nbsp;%hbox=$new(hbox,%gb)
-&nbsp;&nbsp;&nbsp;&nbsp;%btnok=$new(button,%hbox)
-&nbsp;&nbsp;&nbsp;&nbsp;%btnok-&gt;$settext("OK")
-&nbsp;&nbsp;&nbsp;&nbsp;%btncancel=$new(button,%hbox)
-&nbsp;&nbsp;&nbsp;&nbsp;%btncancel-&gt;$settext("Cancel")
-&nbsp;&nbsp;&nbsp;&nbsp;//Let's show our nice form
-&nbsp;&nbsp;&nbsp;&nbsp;%widget-&gt;$show()
-</font></code></pre></td></tr></table></p>
+    <td><div class="example-box">//Let's start.
+//First we'll create the main widget. as a dialog
+<span class="example-variable">%widget</span>=$new<span class="example-paren">(</span>dialog<span class="example-paren">)</span>
+<span class="example-variable">%layout</span>=$new<span class="example-paren">(</span>layout,<span class="example-variable">%widget</span><span class="example-paren">)</span>
+//then the groupbox
+<span class="example-variable">%gb</span>=$new<span class="example-paren">(</span>groupbox,<span class="example-variable">%widget</span><span class="example-paren">)</span>
+<span class="example-variable">%gb</span>-&gt;$setTitle<span class="example-paren">(</span>Login<span class="example-paren">)</span>
+<span class="example-variable">%gb</span>-&gt;$setAlignment<span class="example-paren">(</span>"Left"<span class="example-paren">)</span>
+// add the gbox to the main layout
+<span class="example-variable">%layout</span>-&gt;$addWidget<span class="example-paren">(</span><span class="example-variable">%gb</span>,0,0<span class="example-paren">)</span>
+// now we create the user field  <span class="example-paren">(</span>labels + lineedit<span class="example-paren">)</span>
+// in a horizontal box
+<span class="example-variable">%hbox</span>=$new<span class="example-paren">(</span>hbox,<span class="example-variable">%gb</span><span class="example-paren">)</span>
+<span class="example-variable">%labeluser</span>=$new<span class="example-paren">(</span>label,<span class="example-variable">%hbox</span><span class="example-paren">)</span>
+<span class="example-variable">%labeluser</span>-&gt;$settext<span class="example-paren">(</span>User: <span class="example-paren">)</span>
+<span class="example-variable">%inputuser</span>=$new<span class="example-paren">(</span>lineedit,<span class="example-variable">%hbox</span><span class="example-paren">)</span>
+//now we create the pass field  <span class="example-paren">(</span>labels + lineedit<span class="example-paren">)</span>.
+// in a horizontal box
+<span class="example-variable">%hbox</span>=$new<span class="example-paren">(</span>hbox,<span class="example-variable">%gb</span><span class="example-paren">)</span>
+<span class="example-variable">%labelpass</span>=$new<span class="example-paren">(</span>label,<span class="example-variable">%hbox</span><span class="example-paren">)</span>
+<span class="example-variable">%labelpass</span>-&gt;$settext<span class="example-paren">(</span>Pass: <span class="example-paren">)</span>
+<span class="example-variable">%inputpass</span>=$new<span class="example-paren">(</span>lineedit,<span class="example-variable">%hbox</span><span class="example-paren">)</span>
+<span class="example-variable">%inputpass</span>-&gt;$setechomode<span class="example-paren">(</span>"password"<span class="example-paren">)</span>
+// now we create the ok/cancel box buttons
+<span class="example-variable">%hbox</span>=$new<span class="example-paren">(</span>hbox,<span class="example-variable">%gb</span><span class="example-paren">)</span>
+<span class="example-variable">%btnok</span>=$new<span class="example-paren">(</span>button,<span class="example-variable">%hbox</span><span class="example-paren">)</span>
+<span class="example-variable">%btnok</span>-&gt;$settext<span class="example-paren">(</span>"OK"<span class="example-paren">)</span>
+<span class="example-variable">%btncancel</span>=$new<span class="example-paren">(</span>button,<span class="example-variable">%hbox</span><span class="example-paren">)</span>
+<span class="example-variable">%btncancel</span>-&gt;$settext<span class="example-paren">(</span>"Cancel"<span class="example-paren">)</span>
+//Let's show our nice form
+<span class="example-variable">%widget</span>-&gt;$show<span class="example-paren">()</span>
+</div>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

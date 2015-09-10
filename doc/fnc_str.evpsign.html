@@ -3,12 +3,163 @@
 <title>$str.evpSign</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,61 +175,51 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>$str.evpSign</h1>
-Returns a signature for a message created using your certificate's private key
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>$str.evpSign</div>      <div class='title-secondary-text'>Returns a signature for a message created using your certificate's private key</div>    </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Usage</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Usage</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code>$str.evpSign(&lt;message&gt;[,&lt;certificate&gt;[,&lt;password&gt;]])</code></pre></font></td>
+    <td><div class='syntax-text'><font color="#8080a0">&lt;</font><font color="#808080">string</font><font color="#8080a0">&gt;</font> <b>$str.evpSign</b><b>(</b><font color="#8080a0">&lt;</font>message<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>certificate<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>password<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font><font color="#8080a0">]</font><b>)</b></div></td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Description</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>This function returns a base64-encoded signature string created signing the
-provided &lt;message&gt; using the <a href="doc_crypt_engines.html">private key</a> of the specified &lt;certificate&gt;.<br>
-If the &lt;certificate&gt; parameter is omitted, the <a href="doc_crypt_engines.html">private key</a> specified in the
+provided &lt;message&gt; using the private key of the specified &lt;certificate&gt;.<br>
+If the &lt;certificate&gt; parameter is omitted, the private key specified in the
 kvirc options will be used.<br>
 If any error occurs, this function will return an empty string.
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Syntax Specification</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code><font color="#8080a0">&lt;</font><font color="#808080">string</font><font color="#8080a0">&gt;</font> <b>$str.evpSign</b><b>(</b><font color="#8080a0">&lt;</font>message<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>certificate<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>password<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font><font color="#8080a0">]</font><b>)</b></code></pre></font></td>
-  </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Examples</b></td>
-  </tr>
-  <tr bgcolor="#EAEAEA">
-    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;# Emulate a call with no parameters
-&nbsp;&nbsp;&nbsp;&nbsp;%message="test message";
-&nbsp;&nbsp;&nbsp;&nbsp;%pcert=$file.read($option(stringSSLPrivateKeyPath));
-&nbsp;&nbsp;&nbsp;&nbsp;%sign=$str.evpSign(%message,%pcert,$option(stringSSLPrivateKeyPass));
-</font></code></pre></td></tr></table></p>
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;# Sign and verify the signature using the certificates from options
-&nbsp;&nbsp;&nbsp;&nbsp;%message="test message";
-&nbsp;&nbsp;&nbsp;&nbsp;%sign=$str.evpSign(%message);
-&nbsp;&nbsp;&nbsp;&nbsp;if($str.evpVerify(%message, %sign))
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "signature is valid";
-&nbsp;&nbsp;&nbsp;&nbsp;} else {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "signature is not valid";
-&nbsp;&nbsp;&nbsp;&nbsp;}
-</font></code></pre></td></tr></table></p>
+    <td><div class="example-box"><span class="comment-text"># Emulate a call with no parameters
+</span><span class="example-variable">%message</span>="test message";
+<span class="example-variable">%pcert</span>=$file.read<span class="example-paren">(</span>$option<span class="example-paren">(</span>stringSSLPrivateKeyPath<span class="example-paren">))</span>;
+<span class="example-variable">%sign</span>=$str.evpSign<span class="example-paren">(</span><span class="example-variable">%message</span>,<span class="example-variable">%pcert</span>,$option<span class="example-paren">(</span>stringSSLPrivateKeyPass<span class="example-paren">))</span>;
+</div>
+<div class="example-box"><span class="comment-text"># Sign and verify the signature using the certificates from options
+</span><span class="example-variable">%message</span>="test message";
+<span class="example-variable">%sign</span>=$str.evpSign<span class="example-paren">(</span><span class="example-variable">%message</span><span class="example-paren">)</span>;
+if<span class="example-paren">(</span>$str.evpVerify<span class="example-paren">(</span><span class="example-variable">%message</span>, <span class="example-variable">%sign</span><span class="example-paren">))</span>
+<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;echo "signature is valid";
+<span class="example-bracket">}</span> else <span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;echo "signature is not valid";
+<span class="example-bracket">}</span>
+</div>
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>See also</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>See also</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td><a href="fnc_str.evpverify.html">$str.evpverify</a>
@@ -88,6 +229,6 @@ If any error occurs, this function will return an empty string.
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_function_alphabetic_a.html">Functions</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

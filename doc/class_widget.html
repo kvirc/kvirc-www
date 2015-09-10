@@ -3,12 +3,163 @@
 <title>widget class</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,31 +175,27 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>widget class</h1>
-Base class for all widgets
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>widget class</div>      <div class='title-secondary-text'>Base class for all widgets</div>    </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Inherits</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Inherits</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td><a href="class_object.html">object</a></td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Description</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td>This <a href="class_memorybuffer.html">object class</a> is the representation of a widget.
+    <td>This object class is the representation of a widget.
 All the other widget-type classes inherit from this one.
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Functions</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Functions</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>
@@ -160,16 +307,16 @@ All the other widget-type classes inherit from this one.
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="centerToScreen">$centerToScreen()</a></font></b></code></td></tr>
 <tr><td>Centers the window on the screen (useful only for toplevel widgets).<br> The best place to call this function is in $showEvent()</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setFocusPolicy">$setFocusPolicy(&lt;key focus&gt;)</a></font></b></code></td></tr>
-<tr><td>Sets the way the widget accepts keyboard focus.<br> Valid parameters are: <pre> - TabFocus;&nbsp;&nbsp;&nbsp;&nbsp;(widget accepts keyboard focus by tabbing)<br> - ClickFocus; (widget accepts keyboard focus by clicking)<br> - StrongFocus; (widget accepts both tabbing/clicking)<br> - No Focus;  (widget does not accept focus at all; this is the default value)<br> </pre></td></tr>
+<tr><td>Sets the way the widget accepts keyboard focus.<br> Valid parameters are: <pre> - TabFocus;	(widget accepts keyboard focus by tabbing)<br> - ClickFocus; (widget accepts keyboard focus by clicking)<br> - StrongFocus; (widget accepts both tabbing/clicking)<br> - No Focus;  (widget does not accept focus at all; this is the default value)<br> </pre></td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="keyPressEvent">$keyPressEvent(&lt;key&gt;)</a></font></b></code></td></tr>
-<tr><td>If widget accepts keyboard focus (see <a href="#setFocusPolicy">$setFocusPolicy</a> ) this function handles for keys; In its argument the key pressed.<br> Special keys are: <pre> - Return <br> - Enter&nbsp;&nbsp;&nbsp;&nbsp;<br> - Down (cursor arrow down) <br> - Up   (cursor arrow up) <br> - Left (cursor arrow left) <br> - Right (cursor arrow right) <br> - Shift <br> - Ctrl <br> - Alt <br> - CapsLock <br> - Backspace <br> - Del <br> - Esc <br> - 0 <br> - 1 <br> - 2 <br> - 3 <br> - 4 <br> - 5 <br> - 6 <br> - 7 <br> - 8 <br> - 9 <br> - + <br> - - <br> - * <br> - / <br> - ( <br> - ) <br> - = <br> - . <br> - ^ <br> </pre></td></tr>
+<tr><td>If widget accepts keyboard focus (see <a href="#setFocusPolicy">$setFocusPolicy</a> ) this function handles for keys; In its argument the key pressed.<br> Special keys are: <pre> - Return <br> - Enter	<br> - Down (cursor arrow down) <br> - Up   (cursor arrow up) <br> - Left (cursor arrow left) <br> - Right (cursor arrow right) <br> - Shift <br> - Ctrl <br> - Alt <br> - CapsLock <br> - Backspace <br> - Del <br> - Esc <br> - 0 <br> - 1 <br> - 2 <br> - 3 <br> - 4 <br> - 5 <br> - 6 <br> - 7 <br> - 8 <br> - 9 <br> - + <br> - - <br> - * <br> - / <br> - ( <br> - ) <br> - = <br> - . <br> - ^ <br> </pre></td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="mapFromGlobal">$mapFromGlobal(&lt;x&gt;,&lt;y&gt;)</a></font></b></code></td></tr>
 <tr><td>Translates the global screen coordinate pos to widget coordinates.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="mapToGlobal">$mapToGlobal(&lt;x&gt;,&lt;y&gt;)</a></font></b></code></td></tr>
 <tr><td>Translates widget coordinates into the global screen coordinate pos.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="integer globalCursorX">integer $globalCursorX()</a></font></b></code></td></tr>
 <tr><td>Return the x coordinate of mouse pointer global position.</td></tr>
-<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;integer globalCursorY">&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;integer $globalCursorY()</a></font></b></code></td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&nbsp;&nbsp;&nbsp;&nbsp;   	integer globalCursorY">&nbsp;&nbsp;&nbsp;&nbsp;   	integer $globalCursorY()</a></font></b></code></td></tr>
 <tr><td>Return the y coordinate of the mo&gt;use pointer global position.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;tip:string&gt; maybeTipEvent">&lt;tip:string&gt; $maybeTipEvent(&lt;x_tip_pos:integer&gt;,&lt;y_tip_pos:integer&gt;)</a></font></b></code></td></tr>
 <tr><td>This event handler is called when a eventualy tip is going to be show. You can be reimplement this event and set a dynamic tool tip by using "<a href="cmd_return.html">return</a> &lt;tooltip_string&gt;". If a tooltip has setted with <a href="#setTooltip">$setTooltip</a> the dynamic tooltip will be ignored. The default implementation does nothing.</td></tr>
@@ -192,45 +339,45 @@ All the other widget-type classes inherit from this one.
       </table>
     </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Examples</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;%widget = $new(widget)
-&nbsp;&nbsp;&nbsp;&nbsp;# This is the main container for other elements.
-&nbsp;&nbsp;&nbsp;&nbsp;%widget-&gt;$setWindowTitle("This is the widget title")
-&nbsp;&nbsp;&nbsp;&nbsp;%box=$new(vbox,%widget)
-&nbsp;&nbsp;&nbsp;&nbsp;%layout=$new(layout,%widget)
-&nbsp;&nbsp;&nbsp;&nbsp;%layout-&gt;$addWidget(%box,0,0)
-&nbsp;&nbsp;&nbsp;&nbsp;%label = $new(label,%box)
-&nbsp;&nbsp;&nbsp;&nbsp;%label-&gt;$setText("This is a text label")
-&nbsp;&nbsp;&nbsp;&nbsp;%lineedit = $new(lineedit,%box)
-&nbsp;&nbsp;&nbsp;&nbsp;%lineedit-&gt;$setText("This is a lineedit")
-&nbsp;&nbsp;&nbsp;&nbsp;%multilineedit = $new(multilineedit,%box)
-&nbsp;&nbsp;&nbsp;&nbsp;%multilineedit-&gt;$setText("This is a multilineedit")
-&nbsp;&nbsp;&nbsp;&nbsp;%checkbox = $new(checkbox,%box)
-&nbsp;&nbsp;&nbsp;&nbsp;%checkbox-&gt;$setText("This is a checkbox")
-&nbsp;&nbsp;&nbsp;&nbsp;%combobox = $new(combobox,%box)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%combobox-&gt;$insertItem("This is a combobox")
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%combobox-&gt;$insertItem("This is a combobox's item")
-&nbsp;&nbsp;&nbsp;&nbsp;%listbox = $new(listbox,%box)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%listbox-&gt;$insertItem("This is a listbox item")
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%listbox-&gt;$insertItem("This is another item")
-&nbsp;&nbsp;&nbsp;&nbsp;%radiobutton = $new(radiobutton,%box)
-&nbsp;&nbsp;&nbsp;&nbsp;%radiobutton-&gt;$setText("This is a radiobutton")
-&nbsp;&nbsp;&nbsp;&nbsp;%button = $new(button, %box)
-&nbsp;&nbsp;&nbsp;&nbsp;%button-&gt;$setText("Close me")
-&nbsp;&nbsp;&nbsp;&nbsp;privateimpl(%widget,closeMe)
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete $$
-&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;objects.connect  %button clicked %widget closeMe
-&nbsp;&nbsp;&nbsp;&nbsp;%widget-&gt;$show()
-</font></code></pre></td></tr></table></p>
+    <td><div class="example-box"><span class="example-variable">%widget</span> = $new<span class="example-paren">(</span>widget<span class="example-paren">)</span>
+<span class="comment-text"># This is the main container for other elements.
+</span><span class="example-variable">%widget</span>-&gt;$setWindowTitle<span class="example-paren">(</span>"This is the widget title"<span class="example-paren">)</span>
+<span class="example-variable">%box</span>=$new<span class="example-paren">(</span>vbox,<span class="example-variable">%widget</span><span class="example-paren">)</span>
+<span class="example-variable">%layout</span>=$new<span class="example-paren">(</span>layout,<span class="example-variable">%widget</span><span class="example-paren">)</span>
+<span class="example-variable">%layout</span>-&gt;$addWidget<span class="example-paren">(</span><span class="example-variable">%box</span>,0,0<span class="example-paren">)</span>
+<span class="example-variable">%label</span> = $new<span class="example-paren">(</span>label,<span class="example-variable">%box</span><span class="example-paren">)</span>
+<span class="example-variable">%label</span>-&gt;$setText<span class="example-paren">(</span>"This is a text label"<span class="example-paren">)</span>
+<span class="example-variable">%lineedit</span> = $new<span class="example-paren">(</span>lineedit,<span class="example-variable">%box</span><span class="example-paren">)</span>
+<span class="example-variable">%lineedit</span>-&gt;$setText<span class="example-paren">(</span>"This is a lineedit"<span class="example-paren">)</span>
+<span class="example-variable">%multilineedit</span> = $new<span class="example-paren">(</span>multilineedit,<span class="example-variable">%box</span><span class="example-paren">)</span>
+<span class="example-variable">%multilineedit</span>-&gt;$setText<span class="example-paren">(</span>"This is a multilineedit"<span class="example-paren">)</span>
+<span class="example-variable">%checkbox</span> = $new<span class="example-paren">(</span>checkbox,<span class="example-variable">%box</span><span class="example-paren">)</span>
+<span class="example-variable">%checkbox</span>-&gt;$setText<span class="example-paren">(</span>"This is a checkbox"<span class="example-paren">)</span>
+<span class="example-variable">%combobox</span> = $new<span class="example-paren">(</span>combobox,<span class="example-variable">%box</span><span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%combobox</span>-&gt;$insertItem<span class="example-paren">(</span>"This is a combobox"<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%combobox</span>-&gt;$insertItem<span class="example-paren">(</span>"This is a combobox's item"<span class="example-paren">)</span>
+<span class="example-variable">%listbox</span> = $new<span class="example-paren">(</span>listbox,<span class="example-variable">%box</span><span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%listbox</span>-&gt;$insertItem<span class="example-paren">(</span>"This is a listbox item"<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%listbox</span>-&gt;$insertItem<span class="example-paren">(</span>"This is another item"<span class="example-paren">)</span>
+<span class="example-variable">%radiobutton</span> = $new<span class="example-paren">(</span>radiobutton,<span class="example-variable">%box</span><span class="example-paren">)</span>
+<span class="example-variable">%radiobutton</span>-&gt;$setText<span class="example-paren">(</span>"This is a radiobutton"<span class="example-paren">)</span>
+<span class="example-variable">%button</span> = $new<span class="example-paren">(</span>button, <span class="example-variable">%box</span><span class="example-paren">)</span>
+<span class="example-variable">%button</span>-&gt;$setText<span class="example-paren">(</span>"Close me"<span class="example-paren">)</span>
+privateimpl<span class="example-paren">(</span><span class="example-variable">%widget</span>,closeMe<span class="example-paren">)</span>
+<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;delete $$
+<span class="example-bracket">}</span>
+objects.connect  <span class="example-variable">%button</span> clicked <span class="example-variable">%widget</span> closeMe
+<span class="example-variable">%widget</span>-&gt;$show<span class="example-paren">()</span>
+</div>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

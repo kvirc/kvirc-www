@@ -3,12 +3,163 @@
 <title>class</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,112 +175,95 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>class</h1>
-Defines a new object class
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>class</div>      <div class='title-secondary-text'>Defines a new object class</div>    </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Usage</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Usage</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code>class(&lt;classname&gt;[,&lt;base_class_name&gt;])
-{
-&nbsp;&nbsp;&nbsp;&nbsp;[internal] [function] &lt;function_name&gt;[([&lt;parameter reminder&gt;])]
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;function body&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;...
-}</code></pre></font></td>
-  </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Description</b></td>
-  </tr>
-  <tr bgcolor="#EAEAEA">
-    <td>Defines a new implementation of the <a href="class_object.html">class</a> &lt;classname&gt;.
-If an implementation of that <a href="class_object.html">class</a> was already existing
-it is removed with all the derived classes (and all the instances of this <a href="class_object.html">class</a>
-and the derived ones are destroyed).
-&lt;base_class_name&gt; is the name of the <a href="class_object.html">class</a> that the
-new <a href="class_object.html">class</a> has to inherit from.<br>
-If &lt;base_class_name&gt; is omitted, the new <a href="class_object.html">class</a> inherits automatically
-from <a href="class_object.html">object</a>.<br>
-Note:<br>
-The keywords "function" and "<a href="doc_events.html">event</a>" that were used in <a href="doc_kvircintro.html">KVIrc</a> versions
-previous to 3.0.0 have been removed since "useless".<br>
-The function keyword, however, is still permitted.
-The keyword "internal" is useful when you want to hide
-certain function from the outside world. An internal function
-cannot be called by anyone else but the <a href="class_object.html">object</a> instance itself. Note that
-this is different from the C++ "protected" or "private" keywords
-that refer to the <a href="class_object.html">object</a>'s <a href="class_object.html">class</a> instead of the <a href="class_object.html">object</a> instance.
-The &lt;parameter reminder&gt; part is an optional string
-that can be used to sign the parameters that the function expects;
-it acts as a programmer reminder or comment and it has no other
-meaning in <a href="doc_kvircintro.html">KVIrc</a> scripting. The &lt;parameter reminder&gt; respects the syntax
-of an expression, so it is terminated by a closed parenthesis.
-It's rather dangerous to use this command inside an <a href="class_object.html">object</a>
-function handler: if the <a href="class_object.html">class</a> definition &lt;<a href="class_object.html">class</a>&gt; was already
-existing and it is a parent of the <a href="class_object.html">object</a>'s <a href="class_object.html">class</a>, you might
-end up executing "inexistant" code.<br>
-As a thumb rule, use this command only outside <a href="class_object.html">object</a> function handlers.<br>
-<br><br>
-Only for the curious: implementing protected and private access
-list on members would have a considerable runtime overhead because
-of the strange nature of the KVS language. <a href="class_object.html">Object</a> member calls
-are resolved completly at runtime (and that permits a lot of funny tricks
-like <a href="cmd_privateimpl.html">privateimpl</a>) but unfortunately this also forces us
-to check access lists at runtime. Ok, this would be a relatively small footprint for the "private"
-keyword where we need to run UP the called <a href="class_object.html">object</a> inheritance hierarchy
-but would have a significant performance footprint for the "protected"
-keyword where we would need to traverse the WHOLE inheritance tree of the called and calling
-<a href="doc_objects.html">objects</a>... "internal" still allows hiding members in a lot of situations
-and is really fast to verify at runtime: no inheritance tree traversal
-is needed and only <a href="class_object.html">object</a> pointers are compared.
-</td>
-  </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Syntax Specification</b></td>
-  </tr>
-  <tr bgcolor="#EAEAEA">
-    <td><font color="#802000"><pre><code><b>class</b><b>(</b><font color="#8080a0">&lt;</font>classname<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>base_class_name<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font><b>)</b>
+    <td><div class='syntax-text'><b>class</b><b>(</b><font color="#8080a0">&lt;</font>classname<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">[</font>,<font color="#8080a0">&lt;</font>base_class_name<font color="#808080">:string</font><font color="#8080a0">&gt;</font><font color="#8080a0">]</font><b>)</b>
 {
 &nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">[</font>internal<font color="#8080a0">]</font> <font color="#8080a0">[</font>function<font color="#8080a0">]</font> <font color="#8080a0">&lt;</font>function_name<font color="#8080a0">&gt;</font><font color="#8080a0">[</font><b>(</b><font color="#8080a0">[</font><font color="#8080a0">&lt;</font>parameter reminder<font color="#8080a0">&gt;</font><font color="#8080a0">]</font><b>)</b><font color="#8080a0">]</font>
 &nbsp;&nbsp;&nbsp;&nbsp;{
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#8080a0">&lt;</font>function body<font color="#8080a0">&gt;</font>
 &nbsp;&nbsp;&nbsp;&nbsp;}
 &nbsp;&nbsp;&nbsp;&nbsp;...
-}</code></pre></font></td>
+}</div></td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>Examples</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;class(myclass,<a href="class_object.html">object</a>)
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;constructor
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Hey this is my constructor
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> I have been just created
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;destructor
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Ops...being destroyed
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sayHello(this function expects no parameters)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Hello world!
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;}
-</font></code></pre></td></tr></table></p>
+    <td>Defines a new implementation of the class &lt;classname&gt;.
+If an implementation of that class was already existing
+it is removed with all the derived classes (and all the instances of this class
+and the derived ones are destroyed).
+&lt;base_class_name&gt; is the name of the class that the
+new class has to inherit from.<br>
+If &lt;base_class_name&gt; is omitted, the new class inherits automatically
+from <a href="class_object.html">object</a>.<br>
+Note:<br>
+The keywords "function" and "event" that were used in KVIrc versions
+previous to 3.0.0 have been removed since "useless".<br>
+The function keyword, however, is still permitted.
+The keyword "internal" is useful when you want to hide
+certain function from the outside world. An internal function
+cannot be called by anyone else but the object instance itself. Note that
+this is different from the C++ "protected" or "private" keywords
+that refer to the object's class instead of the object instance.
+The &lt;parameter reminder&gt; part is an optional string
+that can be used to sign the parameters that the function expects;
+it acts as a programmer reminder or comment and it has no other
+meaning in KVIrc scripting. The &lt;parameter reminder&gt; respects the syntax
+of an expression, so it is terminated by a closed parenthesis.
+It's rather dangerous to use this command inside an object
+function handler: if the class definition &lt;class&gt; was already
+existing and it is a parent of the object's class, you might
+end up executing "inexistant" code.<br>
+As a thumb rule, use this command only outside object function handlers.<br>
+<br><br>
+Only for the curious: implementing protected and private access
+list on members would have a considerable runtime overhead because
+of the strange nature of the KVS language. Object member calls
+are resolved completly at runtime (and that permits a lot of funny tricks
+like <a href="cmd_privateimpl.html">privateimpl</a>) but unfortunately this also forces us
+to check access lists at runtime. Ok, this would be a relatively small footprint for the "private"
+keyword where we need to run UP the called object inheritance hierarchy
+but would have a significant performance footprint for the "protected"
+keyword where we would need to traverse the WHOLE inheritance tree of the called and calling
+objects... "internal" still allows hiding members in a lot of situations
+and is really fast to verify at runtime: no inheritance tree traversal
+is needed and only object pointers are compared.
 </td>
   </tr>
-  <tr bgcolor="#D2D2D2">
-    <td><b>See also</b></td>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
+  </tr>
+  <tr bgcolor="#EAEAEA">
+    <td><div class="example-box">class<span class="example-paren">(</span>myclass,<a href="class_object.html">object</a><span class="example-paren">)</span>
+<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;constructor
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Hey this is my constructor
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> I have been just created
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
+&nbsp;&nbsp;&nbsp;&nbsp;destructor
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Ops...being destroyed
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
+&nbsp;&nbsp;&nbsp;&nbsp;sayHello<span class="example-paren">(</span>this function expects no parameters<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Hello world!
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
+<span class="example-bracket">}</span>
+</div>
+</td>
+  </tr>
+  <tr>
+    <td class='subtitle-table-cell'><div class='subtitle-text'>See also</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td><a href="cmd_privateimpl.html">privateimpl</a>, <a href="cmd_killclass.html">killclass</a>, <a href="cmd_clearobjects.html">clearobjects</a>, <a href="fnc_classdefined.html">$classdefined</a>(),
@@ -138,6 +272,6 @@ is needed and only <a href="class_object.html">object</a> pointers are compared.
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>

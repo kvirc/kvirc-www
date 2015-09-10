@@ -3,12 +3,163 @@
 <title>Notify lists</title>
 <style type="text/css">
 body {
- font-size: 11pt;
+ font-size: 10pt;
  margin-left: 8px;
  margin-right: 8px;
  margin-top: 6px;
  margin-bottom: 6px;
- font-family:Helvetica,Arial,Verdana;
+ font-family:Verdana,Helvetica,Arial;
+}
+table, td, tr {
+ font-size: 10pt;
+ font-family:Verdana,Helvetica,Arial;
+ color: #3c3c3c;
+}
+td {
+ padding: 6px;
+}
+a:link {
+ text-decoration: none;
+ color: #2883e2;
+}
+a:visited {
+ text-decoration: none;
+ color: #6856cc;
+}
+a:hover {
+ text-decoration: underline;
+ color: #1873d2;
+}
+a:active {
+ text-decoration: underline;
+ color: #1873d2;
+}
+.title-table-cell {
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ background-color: #BEBEF0;
+ background: linear-gradient(#B5E1FC,#4E94D2);
+}
+.title-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 18pt;
+ font-weight: bold;
+ padding-bottom: 3px;
+ color: #ffffff;
+ text-shadow: 2px 2px 2px rgba(88,88,88,1);
+}
+.title-secondary-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ padding-top: 3px;
+ color: #d0d0d0;
+ text-shadow: 1px 1px 1px rgba(88,88,88,1);
+}
+.subtitle-table-cell {
+ background-color: #cccccc;
+}
+.subtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 11pt;
+ color: #000000;
+ text-shadow: 1px 1px 1px rgba(110,110,110,1);
+}
+.subsubtitle-table-cell {
+ background-color: #dadada;
+}
+.subsubtitle-text {
+ font-family:Verdana,Helvetica,Arial;
+ font-size: 10pt;
+ color: #4e4e4e;
+}
+.syntax-text {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ font-weight: bold;
+ white-space: pre;
+ color: #800000;
+}
+.example-box {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ white-space: pre;
+ background-color: #f5f5f5;
+ border: 1px solid #d5d5d5;
+ color: #800000;
+ padding: 10px;
+ margin-top: 6px;
+ margin-bottom: 6px;
+}
+.example-box a:link {
+ color: #600030;
+}
+.example-box a:visited {
+ color: #600030;
+}
+.example-box a:hover {
+ color: #ff0020;
+}
+.example-box a:active {
+ color: #ff0020;
+}
+.comment-text {
+ color: #578A57;
+}
+.comment-text a:link {
+ color: #578A57;
+}
+.comment-text a:visited {
+ color: #578A57;
+}
+.comment-text a:hover {
+ color: #376A47;
+}
+.comment-text a:active {
+ color: #376A47;
+}
+.example-paren {
+ color: #8A7000;
+}
+.example-bracket {
+ color: #9C7914;
+}
+.example-oper {
+ color: #9C7914;
+}
+.example-variable {
+ color: #AB6332;
+}
+.comment-text .example-variable {
+ color: #578A57;
+}
+.comment-text .example-oper {
+ color: #578A57;
+}
+.comment-text .example-paren {
+ color: #578A57;
+}
+.comment-text .example-bracket {
+ color: #578A57;
+}
+.switch-table {
+ width: 100%;
+ border-collapse: collapse;
+}
+.switch-title-table-cell {
+ font-family:"Lucida Console", Monaco, monospace, "Courier New";
+ font-size: 10pt;
+ color: #670000;
+ background-color: #e0e0e0;
+}
+.switch-body-table-cell {
+}
+.footer {
+ border-top: 1px solid #a2a2a2;
+ color: #a2a2a2;
+ margin-top: 8px;
+ padding-top: 4px;
+ font-style: italic;
+ font-size: 8pt;
 }
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
@@ -24,69 +175,65 @@ body {
   </td>
  </tr>
 </table>
-<table width="100%" cellpadding="3" cellspacing="1" border="0">
-  <tr bgcolor="#BEBEF0">
-    <td>
-      <font color="#31507B">
-      <h1>Notify lists</h1>
-Tracking users on IRC
-      </font>
-    </td>
+<table width="100%" cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <td class='title-table-cell'>
+      <div class='title-text'>Notify lists</div>      <div class='title-secondary-text'>Tracking users on IRC</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>The notify list is a means of keeping track of users on IRC.<br>
-Once connected to an <a href="doc_rfc2812.html">IRC</a> <a href="doc_ircintro.html">server</a>, you can tell <a href="doc_kvircintro.html">KVIrc</a> to check
+Once connected to an IRC server, you can tell KVIrc to check
 periodically if your friends are online.<br>
 This is basically achieved by setting a property in the <a href="doc_registered_users.html">registered users database</a>
 entry.<br>
-The property is called "notify", and you have to set it to the <a href="doc_irc_masks.html">nickname</a>
+The property is called "notify", and you have to set it to the nickname
 that you want to look for.<br>
 So for example, assume to register a frend of yours like Szymon:<br>
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_reguser.add.html">reguser.add</a> Szymon
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_reguser.addmask.html">reguser.addmask</a> Szymon Pragma!*@*.it
-</font></code></pre></td></tr></table></p>
+<div class="example-box"><a href="cmd_reguser.add.html">reguser.add</a> Szymon
+<a href="cmd_reguser.addmask.html">reguser.addmask</a> Szymon Pragma!*@*.it
+</div>
 And then want it in the notify list; nothing easier, just set
-hist "notify" property to the <a href="doc_irc_masks.html">nickname</a> that you want him to be "looked for":<br>
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_reguser.setproperty.html">reguser.setproperty</a> Szymon notify Pragma
-</font></code></pre></td></tr></table></p>
-In this way, once in a while, <a href="doc_kvircintro.html">KVIrc</a> will send to the <a href="doc_ircintro.html">server</a> an ISON message
-with the <a href="doc_irc_masks.html">nickname</a> Pragma. If Szymon is online, you will be notified with a message:<br>
-"Pragma [someuser@somehost.it] is on <a href="doc_rfc2812.html">IRC</a>".<br>
-If Szymon uses often "[Pragma]" as his secondary <a href="doc_irc_masks.html">nickname</a>, you can do the following:<br>
-<p><table width="100%" cellpadding="3" cellspacing="1" border="0" bgcolor="#D5D5D5"><tr><td bgcolor="#F5F5F5"><pre><code><font color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_reguser.addmask.html">reguser.addmask</a> Szymon [Pragma]*@*.it
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_reguser.setproperty.html">reguser.setproperty</a> Szymon notify "Pragma [Pragma]"
-</font></code></pre></td></tr></table></p>
-<a href="doc_kvircintro.html">KVIrc</a> will then look for both <a href="doc_ircintro.html">nicknames</a> getting online.<br>
-<a href="doc_kvircintro.html">KVIrc</a> supports three notify lists management methods:<br>
+hist "notify" property to the nickname that you want him to be "looked for":<br>
+<div class="example-box"><a href="cmd_reguser.setproperty.html">reguser.setproperty</a> Szymon notify Pragma
+</div>
+In this way, once in a while, KVIrc will send to the server an ISON message
+with the nickname Pragma. If Szymon is online, you will be notified with a message:<br>
+"Pragma [someuser@somehost.it] is on IRC".<br>
+If Szymon uses often "[Pragma]" as his secondary nickname, you can do the following:<br>
+<div class="example-box"><a href="cmd_reguser.addmask.html">reguser.addmask</a> Szymon [Pragma]*@*.it
+<a href="cmd_reguser.setproperty.html">reguser.setproperty</a> Szymon notify "Pragma [Pragma]"
+</div>
+KVIrc will then look for both nicknames getting online.<br>
+KVIrc supports three notify lists management methods:<br>
 The "stupid ISON method", the "intelligent ISON method" and the "WATCH method".<br>
-The "stupid ISON method" will assume that Szymon is online if any user with <a href="doc_irc_masks.html">nickname</a>
+The "stupid ISON method" will assume that Szymon is online if any user with nickname
 Pragma (or [Pragma] in the second example) gets online; this means that also Pragma!someuser@somehost.com will be
 assumed to be "Szymon" and will be shown in the notify list.<br>
 This might be a false assumption (since somehod.com does not even match *.it),
 but it is the best result that the "stupid ISON method" can achieve.<br>
-The "intelligent ISON method" will also check the Pragma's <a href="doc_irc_masks.html">username</a> and <a href="doc_irc_masks.html">hostname</a>
+The "intelligent ISON method" will also check the Pragma's username and hostname
 and match it in the registered masks; so in the example above, you will be notified if
 any user that matches Pragma!*@*.it gets online; (but you will NOT be notified if
 (for example) Pragma!someuser@somehost.com gets online).<br>
 So what's the point in including a stupid method? :) Well...the intelligent
-method "eats" some of your <a href="doc_rfc2812.html">IRC</a> bandwidth; it has to send USERHOST messages
+method "eats" some of your IRC bandwidth; it has to send USERHOST messages
 for every group of 5 users in the notify list. If you have a lot of users
 in the notify list, it might become slow and eventually cause a
-client to <a href="doc_ircintro.html">server</a> flood.<br>
+client to server flood.<br>
 So finally, the intelligent method is the default. If you have "flood" problems,
 or if you think that the notify list is quite slow, try the "stupid" method:
 it is not that bad after all.<br>
 The third notify list management method is the "WATCH method".<br>
 It uses a totally different (and better) approach to the notify lists management,
 and can be used only on the networks that support the WATCH notify method (DALnet, WebNet, etc.).<br>
-<a href="doc_kvircintro.html">KVIrc</a> will attempt to guess if the <a href="doc_ircintro.html">server</a> you're currently using supports the WATCH command
+KVIrc will attempt to guess if the server you're currently using supports the WATCH command
 and eventually use this last method.<br>
-The WATCH method uses the "notify" property to get the <a href="doc_ircintro.html">nicknames</a> that have to be
-sent to the <a href="doc_ircintro.html">server</a> in the /WATCH commands.
+The WATCH method uses the "notify" property to get the nicknames that have to be
+sent to the server in the /WATCH commands.
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_generic_index_all.html">Miscellaneous</a>
-<hr>KVIrc 4.3.1.6423 Documentation<br>Generated by hellvis69 at Tue Dec 30 10:04:47 2014
+<div class='footer'>KVIrc 4.3.2.git-5292-gb397f4d Documentation - generated by universal at Wed Sep  9 13:23:28 2015</div>
 </body>
 </html>
