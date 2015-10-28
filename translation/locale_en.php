@@ -222,7 +222,7 @@ $template['contribute']['text2']="Contributing code";
 $template['contribute']['text3']="
 	The main task is obviously code writing. The development of the KVIrc core and external modules requires a reasonable knowledge of C++.<br />
 	The KVIrc GUI uses the Qt library (and eventually KDE) thus some knowledge of these libraries might be needed too. There are many areas of interest in the source tree: networking, cryptography, data compression, language parsers...<br />
-	Every level of conribution is precious: from two-line patches to core feature implementation and maintenance.";
+	Every level of contribution is precious: from two-line patches to core feature implementation and maintenance.";
 $template['contribute']['text4']="Contributing artwork";
 $template['contribute']['text5']="
 	The \"V\" in KVIrc stands for \"Visual\". Graphics help the users in navigating the program interface and recognizing quickly the many functions the program provides. We need icons, dialog images, splash-screens, logos, a mascot character... A nice idea would be to implement a complete theme of graphics...";
