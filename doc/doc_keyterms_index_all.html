@@ -28,49 +28,49 @@ a:visited {
 }
 a:hover {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 a:active {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 .title-table-cell {
- border-top-left-radius: 5px;
- border-top-right-radius: 5px;
- background-color: #BEBEF0;
- background: linear-gradient(#B5E1FC,#4E94D2);
+ border-top-left-radius: 3px;
+ border-top-right-radius: 3px;
+ background-color: #F2DFB1;
+ background: linear-gradient(#CBE4F2,#4E8ABF);
 }
 .title-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 18pt;
  font-weight: bold;
  padding-bottom: 3px;
- color: #ffffff;
- text-shadow: 2px 2px 2px rgba(88,88,88,1);
+ color: #404040;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .title-secondary-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  padding-top: 3px;
- color: #d0d0d0;
- text-shadow: 1px 1px 1px rgba(88,88,88,1);
+ color: #474747;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .subtitle-table-cell {
- background-color: #cccccc;
+ background-color: #D6D6D6;
 }
 .subtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  color: #000000;
- text-shadow: 1px 1px 1px rgba(110,110,110,1);
+ text-shadow: 0px 1px 0px rgba(247,247,247,1);
 }
 .subsubtitle-table-cell {
- background-color: #dadada;
+ background-color: #E3E3E3;
 }
 .subsubtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 10pt;
- color: #4e4e4e;
+ color: #474747;
 }
 .syntax-text {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
@@ -97,10 +97,10 @@ a:active {
  color: #600030;
 }
 .example-box a:hover {
- color: #ff0020;
+ color: #FF2B46;
 }
 .example-box a:active {
- color: #ff0020;
+ color: #FF2B46;
 }
 .comment-text {
  color: #578A57;
@@ -112,10 +112,10 @@ a:active {
  color: #578A57;
 }
 .comment-text a:hover {
- color: #376A47;
+ color: #35BD58;
 }
 .comment-text a:active {
- color: #376A47;
+ color: #35BD58;
 }
 .example-paren {
  color: #8A7000;
@@ -149,7 +149,7 @@ a:active {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
  font-size: 10pt;
  color: #670000;
- background-color: #e0e0e0;
+ background-color: #EDEDED;
 }
 .switch-body-table-cell {
 }
@@ -493,7 +493,7 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_char.html">$char</a></td>
-  <td>Returns a character specified by unicode</td>
+  <td>Returns a character specified by Unicode</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_classdefined.html">$classdefined</a></td>
@@ -1412,6 +1412,10 @@ a:active {
   <td>Returns the cache-ip status</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="fnc_serverdb.favorite.html">$serverdb.favorite</a></td>
+  <td>Returns if the server is favorited</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="fnc_serverdb.isautoconnect.html">$serverdb.isAutoConnect</a></td>
   <td>Returns the autoconnect status</td>
 </tr>
@@ -1697,7 +1701,7 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.stripcolors.html">$str.stripcolors</a></td>
-  <td>Returns a mirc color codes stripped string</td>
+  <td>Returns a mIRC color codes stripped string</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_str.stripleft.html">$str.stripleft</a></td>
@@ -1889,7 +1893,7 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_tr.html">$tr</a></td>
-  <td>Translates an english string to the current language</td>
+  <td>Translates an English string to the current language</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_trayicon.isvisible.html">$trayicon.isVisible</a></td>
@@ -1996,14 +2000,6 @@ a:active {
   <td>Checks if a window is currently docked</td>
 </tr>
 <tr bgcolor="#EAEAEA">
-  <td><a href="fnc_window.ismaximized.html">$window.isMaximized</a></td>
-  <td>Checks if a window is currently maximized</td>
-</tr>
-<tr bgcolor="#EAEAEA">
-  <td><a href="fnc_window.isminimized.html">$window.isMinimized</a></td>
-  <td>Checks if a window is currently minimized</td>
-</tr>
-<tr bgcolor="#EAEAEA">
   <td><a href="fnc_window.list.html">$window.list</a></td>
   <td>Generates lists of windows</td>
 </tr>
@@ -2062,6 +2058,10 @@ a:active {
 <tr bgcolor="#EAEAEA">
   <td><a href="widget_ctcpfloodprotectionoptions.html">CTCP flood protection options</a></td>
   <td>Protection against CTCP flooding</td>
+</tr>
+<tr bgcolor="#EAEAEA">
+  <td><a href="cmd_ctcp.html">CTCP</a></td>
+  <td>Sends a CTCP message</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="fnc_system.clipboard.html">Clipboard management</a></td>
@@ -2148,6 +2148,10 @@ a:active {
   <td>KVIrc window structure and the window naming conventions</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="doc_irc_masks.html">IRC masks</a></td>
+  <td>Description of the standard IRC masks</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="cmd_perl.begin.html">Including perl code snippets in KVS</a></td>
   <td>Starts a perl code snippet</td>
 </tr>
@@ -2166,10 +2170,6 @@ a:active {
 <tr bgcolor="#EAEAEA">
   <td><a href="doc_kvircintro.html">Introduction to KVIrc</a></td>
   <td>Introduction to KVIrc</td>
-</tr>
-<tr bgcolor="#EAEAEA">
-  <td><a href="doc_irc_masks.html">Irc masks</a></td>
-  <td>Decription of the standard IRC masks</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="doc_ctcp_handling.html">KVIrc and CTCP</a></td>
@@ -2604,6 +2604,10 @@ a:active {
   <td>Someone has given the local user the +h flag</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="event_onmehostchange.html">OnMeHostChange</a></td>
+  <td>Local user's visible host is changed</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="event_onmeinviteexception.html">OnMeInviteException</a></td>
   <td>A +I mode has been set on the local user</td>
 </tr>
@@ -2848,12 +2852,12 @@ a:active {
   <td>Variable operators, assignments & co.</td>
 </tr>
 <tr bgcolor="#EAEAEA">
-  <td><a href="doc_rfc2812.html">RFC2812</a></td>
-  <td>The IRC protocol specification (revised)</td>
+  <td><a href="doc_rfc2812wrappers.html">RFC2812 Wrappers</a></td>
+  <td>Wrappers for rfc2812 commands</td>
 </tr>
 <tr bgcolor="#EAEAEA">
-  <td><a href="doc_rfc2821wrappers.html">RFC2821 Wrappers</a></td>
-  <td>Wrappers for rfc2821 commands</td>
+  <td><a href="doc_rfc2812.html">RFC2812</a></td>
+  <td>The IRC protocol specification (revised)</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="doc_command_rebinding.html">Rebinding commands to another window</a></td>
@@ -2933,7 +2937,7 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="module_url.html">The URL list module</a></td>
-  <td>The URL list module: keeps track of all urls shown in kvirc windows</td>
+  <td>The URL list module: keeps track of all URLs shown in KVIrc windows</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="module_config.html">The config module</a></td>
@@ -3360,10 +3364,6 @@ a:active {
   <td>Protection against CTCP flooding</td>
 </tr>
 <tr bgcolor="#EAEAEA">
-  <td><a href="cmd_ctcp.html">ctcp</a></td>
-  <td>Sends a CTCP message</td>
-</tr>
-<tr bgcolor="#EAEAEA">
   <td><a href="doc_kvs_datatypes.html">data types</a></td>
   <td>All about the KVS variable and datatype management</td>
 </tr>
@@ -3524,6 +3524,10 @@ a:active {
   <td>Enable/disable ignoring of this user</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="doc_crypt_engines.html">encryption</a></td>
+  <td>Crypt/text transformation engines and how to use them</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="cmd_error.html">error</a></td>
   <td>Prints an error message and stops the script</td>
 </tr>
@@ -3570,10 +3574,6 @@ a:active {
 <tr bgcolor="#EAEAEA">
   <td><a href="doc_expressioneval.html">expressions</a></td>
   <td>Expression evaluation identifier</td>
-</tr>
-<tr bgcolor="#EAEAEA">
-  <td><a href="doc_kvs_datatypes.html">extended scope</a></td>
-  <td>All about the KVS variable and datatype management</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="class_file.html">file class</a></td>
@@ -3669,7 +3669,7 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_function.html">function</a></td>
-  <td>A synomim for alias</td>
+  <td>A synonym for alias</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="doc_modules.html">functions exported by modules</a></td>
@@ -3741,10 +3741,10 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="doc_irc_masks.html">hostname</a></td>
-  <td>Decription of the standard IRC masks</td>
+  <td>Description of the standard IRC masks</td>
 </tr>
 <tr bgcolor="#EAEAEA">
-  <td><a href="doc_image_id.html">how kvirc locates image files</a></td>
+  <td><a href="doc_image_id.html">how KVIrc locates image files</a></td>
   <td>Semantics of the &lt;image_id&gt; parameter</td>
 </tr>
 <tr bgcolor="#EAEAEA">
@@ -3765,11 +3765,11 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_ident.start.html">ident.start</a></td>
-  <td>Starts the builtin ident service</td>
+  <td>Starts the builtin Ident service</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_ident.stop.html">ident.stop</a></td>
-  <td>Stops the ident service</td>
+  <td>Stops the Ident service</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_if.html">if</a></td>
@@ -3821,7 +3821,7 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_invite.html">invite</a></td>
-  <td>Invites an user to a channel</td>
+  <td>Invites a user to a channel</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_iograph.open.html">iograph.open</a></td>
@@ -3841,7 +3841,7 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="doc_irc_masks.html">irc masks</a></td>
-  <td>Decription of the standard IRC masks</td>
+  <td>Description of the standard IRC masks</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="doc_ircintro.html">irc network</a></td>
@@ -3872,6 +3872,10 @@ a:active {
   <td>The IRC protocol specification (revised)</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="cmd_ison.html">ison</a></td>
+  <td>Checks if a user is online</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="cmd_do.html">iteration commands</a></td>
   <td>Iteration command</td>
 </tr>
@@ -3893,7 +3897,7 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_kick.html">kick</a></td>
-  <td>Kicks an user from a channel</td>
+  <td>Kicks a user from a channel</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_killtimer.html">killtimer</a></td>
@@ -4060,6 +4064,10 @@ a:active {
   <td>Provides a mainwindow.</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="cmd_map.html">map</a></td>
+  <td>Displays a map of connected servers</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="cmd_me.html">me</a></td>
   <td>Sends a CTCP ACTION</td>
 </tr>
@@ -4149,7 +4157,7 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_mode.html">mode</a></td>
-  <td>Sends a MODE irc message</td>
+  <td>Sends a MODE IRC message</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="doc_modules.html">module loading</a></td>
@@ -4193,7 +4201,7 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="doc_irc_masks.html">nickname</a></td>
-  <td>Decription of the standard IRC masks</td>
+  <td>Description of the standard IRC masks</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="doc_ircintro.html">nickname</a></td>
@@ -4281,7 +4289,7 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_openurl.html">openurl</a></td>
-  <td>Opens an url</td>
+  <td>Opens an URL</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_oper.html">oper</a></td>
@@ -4320,6 +4328,10 @@ a:active {
   <td>Saves the configuration to disk</td>
 </tr>
 <tr bgcolor="#EAEAEA">
+  <td><a href="cmd_package.extractfield.html">package.extractfield</a></td>
+  <td>Extract a package binary field and save it to a file.</td>
+</tr>
+<tr bgcolor="#EAEAEA">
   <td><a href="class_painter.html">painter class</a></td>
   <td>This class provide a painter to paint line and shapes.</td>
 </tr>
@@ -4340,7 +4352,7 @@ a:active {
   <td>Sends a password to the server</td>
 </tr>
 <tr bgcolor="#EAEAEA">
-  <td><a href="doc_kvs_datatypes.html">percent sign</a></td>
+  <td><a href="doc_kvs_datatypes.html">percent sign and extended scope</a></td>
   <td>All about the KVS variable and datatype management</td>
 </tr>
 <tr bgcolor="#EAEAEA">
@@ -4529,11 +4541,11 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_quit.html">quit</a></td>
-  <td>Terminates the current IRC connection or the entier application</td>
+  <td>Terminates the current IRC connection or the entire application</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_quote.html">quote</a></td>
-  <td>Builtin alias for raw</td>
+  <td>Builtin alias for RAW</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="class_radiobutton.html">radiobutton class</a></td>
@@ -4901,7 +4913,7 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_spaste.setdelay.html">spaste.setdelay</a></td>
-  <td>Sets the delay time in miliseconds for the spaste module command delay</td>
+  <td>Sets the delay time in milliseconds for the spaste module command delay</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_spaste.stop.html">spaste.stop</a></td>
@@ -5249,7 +5261,7 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_url.list.html">url.list</a></td>
-  <td>Opens url list</td>
+  <td>Opens URL list</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="doc_registered_users.html">user properties</a></td>
@@ -5257,7 +5269,7 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="doc_irc_masks.html">username</a></td>
-  <td>Decription of the standard IRC masks</td>
+  <td>Description of the standard IRC masks</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_userop.html">userop</a></td>
@@ -5333,7 +5345,7 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="doc_irc_masks.html">wildcard</a></td>
-  <td>Decription of the standard IRC masks</td>
+  <td>Description of the standard IRC masks</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="doc_window_naming_conventions.html">window ID</a></td>
@@ -5341,7 +5353,7 @@ a:active {
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="class_window.html">window class</a></td>
-  <td>A MDI window object</td>
+  <td>A window object</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_window.activate.html">window.activate</a></td>
@@ -5374,18 +5386,6 @@ a:active {
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_window.listtypes.html">window.listtypes</a></td>
   <td>Lists available types of windows</td>
-</tr>
-<tr bgcolor="#EAEAEA">
-  <td><a href="cmd_window.maximize.html">window.maximize</a></td>
-  <td>Maximizes a window</td>
-</tr>
-<tr bgcolor="#EAEAEA">
-  <td><a href="cmd_window.minimize.html">window.minimize</a></td>
-  <td>Minimizes a window</td>
-</tr>
-<tr bgcolor="#EAEAEA">
-  <td><a href="cmd_window.restore.html">window.restore</a></td>
-  <td>Restores a window</td>
 </tr>
 <tr bgcolor="#EAEAEA">
   <td><a href="cmd_window.savepropertiesasdefault.html">window.savePropertiesAsDefault</a></td>
@@ -5485,6 +5485,6 @@ a:active {
  <td><a href="doc_keyterms_index_all.html">All</a></td></tr></table></td>
   </tr>
 </table>
-<div class='footer'>KVIrc 4.3.2.git-5373-g6a601d4 Documentation - generated by universal at Wed Sep 16 00:01:03 2015</div>
+<div class='footer'>KVIrc 4.3.2.git-5728-g4e18af4 Documentation - generated by un1versal on Mon Nov 23 17:48:32 2015</div>
 </body>
 </html>

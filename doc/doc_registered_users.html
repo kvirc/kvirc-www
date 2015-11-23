@@ -28,49 +28,49 @@ a:visited {
 }
 a:hover {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 a:active {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 .title-table-cell {
- border-top-left-radius: 5px;
- border-top-right-radius: 5px;
- background-color: #BEBEF0;
- background: linear-gradient(#B5E1FC,#4E94D2);
+ border-top-left-radius: 3px;
+ border-top-right-radius: 3px;
+ background-color: #F2DFB1;
+ background: linear-gradient(#CBE4F2,#4E8ABF);
 }
 .title-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 18pt;
  font-weight: bold;
  padding-bottom: 3px;
- color: #ffffff;
- text-shadow: 2px 2px 2px rgba(88,88,88,1);
+ color: #404040;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .title-secondary-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  padding-top: 3px;
- color: #d0d0d0;
- text-shadow: 1px 1px 1px rgba(88,88,88,1);
+ color: #474747;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .subtitle-table-cell {
- background-color: #cccccc;
+ background-color: #D6D6D6;
 }
 .subtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  color: #000000;
- text-shadow: 1px 1px 1px rgba(110,110,110,1);
+ text-shadow: 0px 1px 0px rgba(247,247,247,1);
 }
 .subsubtitle-table-cell {
- background-color: #dadada;
+ background-color: #E3E3E3;
 }
 .subsubtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 10pt;
- color: #4e4e4e;
+ color: #474747;
 }
 .syntax-text {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
@@ -97,10 +97,10 @@ a:active {
  color: #600030;
 }
 .example-box a:hover {
- color: #ff0020;
+ color: #FF2B46;
 }
 .example-box a:active {
- color: #ff0020;
+ color: #FF2B46;
 }
 .comment-text {
  color: #578A57;
@@ -112,10 +112,10 @@ a:active {
  color: #578A57;
 }
 .comment-text a:hover {
- color: #376A47;
+ color: #35BD58;
 }
 .comment-text a:active {
- color: #376A47;
+ color: #35BD58;
 }
 .example-paren {
  color: #8A7000;
@@ -149,7 +149,7 @@ a:active {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
  font-size: 10pt;
  color: #670000;
- background-color: #e0e0e0;
+ background-color: #EDEDED;
 }
 .switch-body-table-cell {
 }
@@ -182,7 +182,7 @@ a:active {
   </tr>
   <tr bgcolor="#EAEAEA">
     <td></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Introduction</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
-The "registered user database" is basically a set of users with associated
+The registered user database is basically a set of users with associated
 <a href="doc_irc_masks.html">irc-masks</a> and properties.<br>
 It is used to recognize users on IRC and associate properties to them.<br>
 This works more or less like the IRC ban list, K-Line list, or invite list.<br>
@@ -192,7 +192,7 @@ It may be the nickname of the user that you want to match, or the real name (if 
 or any other string (even with spaces). The name is an "internal identifier" for the user entry:
 each name maps to a single entry and each entry has a single name.<br>
 Each entry has a set of registration <a href="doc_irc_masks.html">irc-masks</a>: these masks
-are used to recognize the user on irc.<br>
+are used to recognize the user on IRC.<br>
 <br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Registration masks</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 The masks have the common IRC mask format: <b>&lt;nick&gt;!&lt;user&gt;@&lt;host&gt;</b><br>
@@ -210,7 +210,7 @@ having root as username and coming from the host.com domain.<br>
 For this reason putting wildcards in nicknames could become a problem
 if not used carefully (but may also be used to achieve interesting tricks).<br>
 If you don't use wildcards in nicknames you are sure that
-in a single irc connection, a mask will always refer to a single user.<br>
+in a single IRC connection, a mask will always refer to a single user.<br>
 You will commonly use the following format:<br>
 &lt;nick&gt;!*&lt;username&gt;@*.&lt;host&gt;.&lt;top&gt;<br>
 or<br>
@@ -218,7 +218,7 @@ or<br>
 In this way you can be 95% sure that the mask will really match the correct user.<br>
 <br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Example of registration and lookups</div></td></tr><tr><td bgcolor="#EAEAEA">
-Assume that you want to registere a friend of yours: Derek Riggs.<br>
+Assume that you want to register a friend of yours: Derek Riggs.<br>
 Derek often uses "Eddie" as his nickname
 "stranger" as username and has a dial-up connection that makes his IP address appear as
 &lt;variable-number&gt;.somewhere.in.time.org.<br>
@@ -233,16 +233,16 @@ could become dangerous since it could match the users that you don't want to.<br
 On the other hand, if you dislike the users with the nickname Eddie that come from .org
 and you're implementing an auto-kick system, the correct mask to register is "Eddie!*@*.org".<br>
 <br>
-KVirc ties to be smart, and always find the most correct match for an user:
+KVIrc tries to be smart, and always find the most correct match for an user:
 If you have two masks registered: Pragma!*xor@*.myisp.it and *!*@*.myisp.it,
-kvirc will match Pragma!~xor@233-dyn.myisp.it with the first one even if the second
-one matches too; the firs one is a best match.<br>
+KVIrc will match Pragma!~xor@233-dyn.myisp.it with the first one even if the second
+one matches too; the first one is a best match.<br>
 <br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Properties</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 A registered user has an (eventually empty) set of properties
 defined by name/value pairs. (In versions prior to 3.0.0 flags were used instead,
 but revealed to be insufficient).<br>
-KVirc recognizes some of these proprietes and associates semantic actions to it; other properties
+KVIrc recognizes some of these properties and associates semantic actions to it; other properties
 are left for scripting extension. Property names are case insensitive.<br>
 One of the recognized properties is the "<a href="doc_notify_list.html">notify</a>" property.
 When an user is found to have this property set to a special value
@@ -258,6 +258,6 @@ It provides a set of commands for adding and removing masks and manipulating pro
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_generic_index_all.html">Miscellaneous</a>
-<div class='footer'>KVIrc 4.3.2.git-5373-g6a601d4 Documentation - generated by universal at Wed Sep 16 00:01:03 2015</div>
+<div class='footer'>KVIrc 4.3.2.git-5728-g4e18af4 Documentation - generated by un1versal on Mon Nov 23 17:48:32 2015</div>
 </body>
 </html>

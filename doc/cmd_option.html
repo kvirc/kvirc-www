@@ -28,49 +28,49 @@ a:visited {
 }
 a:hover {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 a:active {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 .title-table-cell {
- border-top-left-radius: 5px;
- border-top-right-radius: 5px;
- background-color: #BEBEF0;
- background: linear-gradient(#B5E1FC,#4E94D2);
+ border-top-left-radius: 3px;
+ border-top-right-radius: 3px;
+ background-color: #F2DFB1;
+ background: linear-gradient(#CBE4F2,#4E8ABF);
 }
 .title-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 18pt;
  font-weight: bold;
  padding-bottom: 3px;
- color: #ffffff;
- text-shadow: 2px 2px 2px rgba(88,88,88,1);
+ color: #404040;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .title-secondary-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  padding-top: 3px;
- color: #d0d0d0;
- text-shadow: 1px 1px 1px rgba(88,88,88,1);
+ color: #474747;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .subtitle-table-cell {
- background-color: #cccccc;
+ background-color: #D6D6D6;
 }
 .subtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  color: #000000;
- text-shadow: 1px 1px 1px rgba(110,110,110,1);
+ text-shadow: 0px 1px 0px rgba(247,247,247,1);
 }
 .subsubtitle-table-cell {
- background-color: #dadada;
+ background-color: #E3E3E3;
 }
 .subsubtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 10pt;
- color: #4e4e4e;
+ color: #474747;
 }
 .syntax-text {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
@@ -97,10 +97,10 @@ a:active {
  color: #600030;
 }
 .example-box a:hover {
- color: #ff0020;
+ color: #FF2B46;
 }
 .example-box a:active {
- color: #ff0020;
+ color: #FF2B46;
 }
 .comment-text {
  color: #578A57;
@@ -112,10 +112,10 @@ a:active {
  color: #578A57;
 }
 .comment-text a:hover {
- color: #376A47;
+ color: #35BD58;
 }
 .comment-text a:active {
- color: #376A47;
+ color: #35BD58;
 }
 .example-paren {
  color: #8A7000;
@@ -149,7 +149,7 @@ a:active {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
  font-size: 10pt;
  color: #670000;
- background-color: #e0e0e0;
+ background-color: #EDEDED;
 }
 .switch-body-table-cell {
 }
@@ -203,22 +203,22 @@ sorted by option type.<br> The possible option types are:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;("arial", "helvetica" etc..), &lt;pointsize&gt; is more or less the indicator of the size of the font
 &nbsp;&nbsp;&nbsp;&nbsp;(try sth like 12,14), &lt;style&gt; is an integer that indicates the font style (fixed for example),
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;charset&gt; is an integer that indicates the charset of the font (maybe one day I'll document it better),
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;weight&gt; indicates the (ehm) weight of the font (50,100,150...matches Bold,DemiBold etc..),
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;weight&gt; indicates the (em) weight of the font (50,100,150...matches Bold,DemiBold etc..),
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;flags&gt; is a combination of 'b','i','u','s,' and 'f' that match respectively bold,italic
 &nbsp;&nbsp;&nbsp;&nbsp;underline,strikeout and fixed.<br>
 <b>MessageType</b>: &lt;optValue&gt; is a comma separated list of message type properties:
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;icon&gt;,&lt;foreground&gt;,&lt;background&gt;,&lt;logBoolean&gt;,&lt;level&gt;: &lt;icon&gt; is the index of the internal
 &nbsp;&nbsp;&nbsp;&nbsp;small icon that has to be shown with the message type, &lt;foreground&gt; is an integer
-&nbsp;&nbsp;&nbsp;&nbsp;indicating the mirc color to be used for the message type text (0-15),
+&nbsp;&nbsp;&nbsp;&nbsp;indicating the mIRC color to be used for the message type text (0-15),
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;background&gt; is similar to foreground and accepts also the value of 100 that means transparent.
-&nbsp;&nbsp;&nbsp;&nbsp;&lt;logBoolean&gt; is a boolean value (0/1) that indicates wheter this message type has to be logged or not.
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;logBoolean&gt; is a boolean value (0/1) that indicates whether this message type has to be logged or not.
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;level&gt; is the message level (actually from 0 to 5).<br>
 <b>Rectangle</b>: &lt;optValue&gt; is a comma separated list of integer values that indicate &lt;x&gt;,&lt;y&gt;,&lt;width&gt; and &lt;height&gt;.<br>
 <b>Pixmap</b>: &lt;optValue&gt; must be an ABSOLUTE path of the image that you want to load.<br>
 <b>Int</b>: &lt;optValue&gt; must be an integer.<br>
 <b>Uint</b>: &lt;optValue&gt; must be an UNSIGNED positive integer.<br>
 Almost all the options available in the option dialog can be set by this command.<br>
-Some GUI options might require a KVIrc restart to work properly (altough I've tried to avoid that when possible).
+Some GUI options might require a KVIrc restart to work properly (although I've tried to avoid that when possible).
 </td>
   </tr>
   <tr>
@@ -227,13 +227,13 @@ Some GUI options might require a KVIrc restart to work properly (altough I've tr
   <tr bgcolor="#EAEAEA">
     <td><div class="example-box"><span class="comment-text"># List available options</span>
 option
-<span class="comment-text"># Set the mdi mananger background image</span>
+<span class="comment-text"># Set the mdi manager background image</span>
 option pixmapMdiBackground /home/pragma/myback1.png
 <span class="comment-text"># Set the frame caption text</span>
 option stringFrameCaption KVIrc rulez!
 <span class="comment-text"># Enable verbose mode</span>
 option boolBeVerbose 1
-<span class="comment-text"># Set the irc view font</span>
+<span class="comment-text"># Set the IRC view font</span>
 option fontIrcView helvetica,24,5,1,50
 </div>
 </td>
@@ -247,6 +247,6 @@ option fontIrcView helvetica,24,5,1,50
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<div class='footer'>KVIrc 4.3.2.git-5373-g6a601d4 Documentation - generated by universal at Wed Sep 16 00:01:03 2015</div>
+<div class='footer'>KVIrc 4.3.2.git-5728-g4e18af4 Documentation - generated by un1versal on Mon Nov 23 17:48:32 2015</div>
 </body>
 </html>

@@ -28,49 +28,49 @@ a:visited {
 }
 a:hover {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 a:active {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 .title-table-cell {
- border-top-left-radius: 5px;
- border-top-right-radius: 5px;
- background-color: #BEBEF0;
- background: linear-gradient(#B5E1FC,#4E94D2);
+ border-top-left-radius: 3px;
+ border-top-right-radius: 3px;
+ background-color: #F2DFB1;
+ background: linear-gradient(#CBE4F2,#4E8ABF);
 }
 .title-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 18pt;
  font-weight: bold;
  padding-bottom: 3px;
- color: #ffffff;
- text-shadow: 2px 2px 2px rgba(88,88,88,1);
+ color: #404040;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .title-secondary-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  padding-top: 3px;
- color: #d0d0d0;
- text-shadow: 1px 1px 1px rgba(88,88,88,1);
+ color: #474747;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .subtitle-table-cell {
- background-color: #cccccc;
+ background-color: #D6D6D6;
 }
 .subtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  color: #000000;
- text-shadow: 1px 1px 1px rgba(110,110,110,1);
+ text-shadow: 0px 1px 0px rgba(247,247,247,1);
 }
 .subsubtitle-table-cell {
- background-color: #dadada;
+ background-color: #E3E3E3;
 }
 .subsubtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 10pt;
- color: #4e4e4e;
+ color: #474747;
 }
 .syntax-text {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
@@ -97,10 +97,10 @@ a:active {
  color: #600030;
 }
 .example-box a:hover {
- color: #ff0020;
+ color: #FF2B46;
 }
 .example-box a:active {
- color: #ff0020;
+ color: #FF2B46;
 }
 .comment-text {
  color: #578A57;
@@ -112,10 +112,10 @@ a:active {
  color: #578A57;
 }
 .comment-text a:hover {
- color: #376A47;
+ color: #35BD58;
 }
 .comment-text a:active {
- color: #376A47;
+ color: #35BD58;
 }
 .example-paren {
  color: #8A7000;
@@ -149,7 +149,7 @@ a:active {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
  font-size: 10pt;
  color: #670000;
- background-color: #e0e0e0;
+ background-color: #EDEDED;
 }
 .switch-body-table-cell {
 }
@@ -220,7 +220,7 @@ Some simple examples (like the one above) can be also typed
 directly in the command input window.
 You must remember that the command input window needs
 a leading slash ('/') character to recognize a script.
-The command input window can also be put in multiline mode by clicking
+The command input window can also be put in multi-line mode by clicking
 on the button on the right.
 Another alternative for testing scripts is the code tester window.
 You can access it by selecting "New code tester" from the Scripting menu
@@ -233,7 +233,7 @@ A script contains a list of instructions separated by newlines or ';' characters
 Placing an instruction per line does not require a terminating character,
 placing more instructions in a single line require them to be separated by ';'.
 The most common instructions in KVS are <b>commands</b>. A command is basically
-a keyword followed by a list of space separater parameters.
+a keyword followed by a list of space separator parameters.
 The simplest (and the most useful) command in KVS is <a href="cmd_echo.html">echo</a>; it prints
 all its parameters to a KVIrc window.<br>
 The following is an example of a valid script that uses only <a href="cmd_echo.html">echo</a> commands.
@@ -314,7 +314,7 @@ will be preserved.
 </div>
 The first example will print out with spaces simplified but the second not.
 The quotes are also a nice trick to embed spaces into a single parameter that
-would be obviously splitted in two or more.
+would be obviously split in two or more.
 <div class="example-box"><a href="cmd_echo.html">echo</a> Parameter1 Parameter2 "Parameter  3 <span class="example-paren">(</span> with spaces <span class="example-paren">)</span>" Parameter4
 </div>
 By running the examples above you may have noticed that the spaces are preserved but the
@@ -352,14 +352,14 @@ so you must include the needed spaces <b>before</b> the escape character.
 The previous example will be printed as:<br><br>
 <i>This text will be printed on a single line</i><br>
 Another example:<br>
-<div class="example-box"><a href="cmd_echo.html">echo</a> "The new kvirc &nbsp; &nbsp; &nbsp \
+<div class="example-box"><a href="cmd_echo.html">echo</a> "The new KVIrc &nbsp; &nbsp; &nbsp \
             &nbsp; &nbsp; IS OUT!"
 <a href="cmd_echo.html">echo</a> Check it out at http://www.kvi\
             &nbsp; &nbsp; rc.net!
 </div>
 This will be printed as:<br><br>
 <i>
-The new kvirc &nbsp; &nbsp; &nbsp; IS OUT!<br>
+The new KVIrc &nbsp; &nbsp; &nbsp; IS OUT!<br>
 Check it out at http://www.kvirc.net!
 </i><br>
 Finally, you can escape an escape character to include it literally in a parameter (and
@@ -424,7 +424,7 @@ You can start a comment anywhere a command can start.<br>
 You can't escape newline characters in this case.
 (or better: escape characters have no meaning in comments...
 maybe one day I'll implement it).<br>
-Starting from version 3.0.0 kvirc supports also C++ single line and C multiline comments.<br>
+Starting from version 3.0.0, KVIrc supports also C++ single line and C multiline comments.<br>
 A C++ comment starts with two slashes '//' and terminates with a newline.
 A multiline C comment starts with '/ *' and ends at the first '* /' encountered.
 Since KVIrc has no pre-processor, the C/C++ comments usually can't be placed in the middle of a command:
@@ -437,7 +437,7 @@ word is written in bold characters: I mean that you really should indent your co
 Indenting helps both you (the script writer) and the reader (any other user that will
 read your script). A good indenting practice is the first step to become a great programmer :)
 <p><table width="100%" cellpadding="2"><tr><td bgcolor="#F0F0F0"><font color="#909090" size="-1">Please note that the command parameters should be separated by
-space characters (ascii 32). Tabs are not granted to work as parameter separators.<br>
+space characters (ASCII 32). Tabs are not granted to work as parameter separators.<br>
 </font></td></tr></table></p>
 <div class="example-box"><span class="example-bracket">{</span>
 &lt;tab&gt;<a href="cmd_echo.html">echo</a> Indented command
@@ -452,7 +452,7 @@ Tabs behave better than spaces as indentation characters since other users can
 adjust the tab size to match their taste. I personally prefer 4 character tabs
 while most text/code editors usually come with 8 characters as default.
 </p>
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">And now ?</div></td></tr><tr><td bgcolor="#EAEAEA">
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">And now?</div></td></tr><tr><td bgcolor="#EAEAEA">
 <p>
 You're now ready to really start experimenting with KVS. You can take
 a look at the <a href="doc_commands.html">command index</a> and start trying to use them
@@ -464,6 +464,6 @@ Have fun :)
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
-<div class='footer'>KVIrc 4.3.2.git-5373-g6a601d4 Documentation - generated by universal at Wed Sep 16 00:01:03 2015</div>
+<div class='footer'>KVIrc 4.3.2.git-5728-g4e18af4 Documentation - generated by un1versal on Mon Nov 23 17:48:32 2015</div>
 </body>
 </html>

@@ -28,49 +28,49 @@ a:visited {
 }
 a:hover {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 a:active {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 .title-table-cell {
- border-top-left-radius: 5px;
- border-top-right-radius: 5px;
- background-color: #BEBEF0;
- background: linear-gradient(#B5E1FC,#4E94D2);
+ border-top-left-radius: 3px;
+ border-top-right-radius: 3px;
+ background-color: #F2DFB1;
+ background: linear-gradient(#CBE4F2,#4E8ABF);
 }
 .title-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 18pt;
  font-weight: bold;
  padding-bottom: 3px;
- color: #ffffff;
- text-shadow: 2px 2px 2px rgba(88,88,88,1);
+ color: #404040;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .title-secondary-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  padding-top: 3px;
- color: #d0d0d0;
- text-shadow: 1px 1px 1px rgba(88,88,88,1);
+ color: #474747;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .subtitle-table-cell {
- background-color: #cccccc;
+ background-color: #D6D6D6;
 }
 .subtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  color: #000000;
- text-shadow: 1px 1px 1px rgba(110,110,110,1);
+ text-shadow: 0px 1px 0px rgba(247,247,247,1);
 }
 .subsubtitle-table-cell {
- background-color: #dadada;
+ background-color: #E3E3E3;
 }
 .subsubtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 10pt;
- color: #4e4e4e;
+ color: #474747;
 }
 .syntax-text {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
@@ -97,10 +97,10 @@ a:active {
  color: #600030;
 }
 .example-box a:hover {
- color: #ff0020;
+ color: #FF2B46;
 }
 .example-box a:active {
- color: #ff0020;
+ color: #FF2B46;
 }
 .comment-text {
  color: #578A57;
@@ -112,10 +112,10 @@ a:active {
  color: #578A57;
 }
 .comment-text a:hover {
- color: #376A47;
+ color: #35BD58;
 }
 .comment-text a:active {
- color: #376A47;
+ color: #35BD58;
 }
 .example-paren {
  color: #8A7000;
@@ -149,7 +149,7 @@ a:active {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
  font-size: 10pt;
  color: #670000;
- background-color: #e0e0e0;
+ background-color: #EDEDED;
 }
 .switch-body-table-cell {
 }
@@ -178,31 +178,33 @@ a:active {
 <table width="100%" cellpadding="3" cellspacing="0" border="0">
   <tr>
     <td class='title-table-cell'>
-      <div class='title-text'>The URL list module</div>      <div class='title-secondary-text'>The URL list module: keeps track of all urls shown in kvirc windows</div>    </td>
+      <div class='title-text'>The URL list module</div>      <div class='title-secondary-text'>The URL list module: keeps track of all URLs shown in KVIrc windows</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td>This plugin keeps track of all urls shown in kvirc windows.
-&lt;H3&gt;Exported commands:&lt;/H3&gt;
-&lt;B&gt;/url.list&lt;/B&gt; : this command opens a window containing the urls' list.
-In the list there is other information:&lt;BR&gt;
-&lt;U&gt;Window&lt;/U&gt; : window where the url has been shown last&lt;BR&gt;
-&lt;U&gt;Count&lt;/U&gt; : number of urls shown&lt;BR&gt;
-&lt;U&gt;Timestamp&lt;/U&gt; : date/time when the url has been shown first&lt;BR&gt;
-Clicking right on the url column of the list a menu will popup, through it
-you can remove the selected item, find the url in the window it appeared last, and
-say it to: &lt;I&gt;@Console, Channels, Querys, DCC Chats&lt;/I&gt; and &lt;I&gt;User windows&lt;/I&gt;.&lt;BR&gt;
+    <td>This plugin keeps track of all URLs shown in KVIrc windows.
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Exported commands:</div></td></tr><tr><td bgcolor="#EAEAEA">
+<b>/url.list</b>: this command opens a window containing the URLs' list.
+In the list there is other information:<br>
+<b>Window</b>: window where the URL has been shown last<br>
+<b>Count</b>: number of URLs shown<br>
+<b>Timestamp</b>: date/time when the URL has been shown first<br>
+    
+Clicking right on the URL column of the list a menu will popup, through it
+you can remove the selected item, find the URL in the window it appeared last, and
+say it to: <i>@Console, Channels, Queries, DCC Chats</i> and <i>User windows</i>.<br>
 The list is saved to file when you click on the menu item or when you unload the plugin
-on condition that you have checked the relative checkbox in configuration dialog.&lt;BR&gt;
-You can also open the url in your web browser double clicking on it in the url list window.&lt;BR&gt;&lt;BR&gt;
-Mail me if you have any suggestion or you want to notice a bug.&lt;BR&gt;
-&lt;B&gt;Andrea 'YaP' Parrella&lt;/B&gt; &lt;anandrea@iname.com&gt;&lt;BR&gt;&lt;BR&gt;
-Thanks to:&lt;BR&gt;
-&lt;B&gt;Szymon Stefanek&lt;/B&gt; and &lt;B&gt;Till Bush&lt;/B&gt; for their help.&lt;BR&gt;
-&lt;B&gt;Ted Podgurski&lt;/B&gt; for toolbar's icons.
+on condition that you have checked the relative checkbox in configuration dialog.<br>
+    
+You can also open the URL in your web browser double clicking on it in the URL list window.<br><br>
+Mail me if you have any suggestion or you want to notice a bug.<br>
+<b>Andrea 'YaP' Parrella</b> &lt;anandrea@iname.com&gt;<br><br>
+Thanks to:<br>
+<b>Szymon Stefanek</b> and <b>Till Bush</b> for their help.<br>
+<b>Ted Podgurski</b> for toolbar's icons.
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_module_index_all.html">Modules</a>
-<div class='footer'>KVIrc 4.3.2.git-5373-g6a601d4 Documentation - generated by universal at Wed Sep 16 00:01:03 2015</div>
+<div class='footer'>KVIrc 4.3.2.git-5728-g4e18af4 Documentation - generated by un1versal on Mon Nov 23 17:48:32 2015</div>
 </body>
 </html>

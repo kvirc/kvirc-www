@@ -28,49 +28,49 @@ a:visited {
 }
 a:hover {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 a:active {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 .title-table-cell {
- border-top-left-radius: 5px;
- border-top-right-radius: 5px;
- background-color: #BEBEF0;
- background: linear-gradient(#B5E1FC,#4E94D2);
+ border-top-left-radius: 3px;
+ border-top-right-radius: 3px;
+ background-color: #F2DFB1;
+ background: linear-gradient(#CBE4F2,#4E8ABF);
 }
 .title-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 18pt;
  font-weight: bold;
  padding-bottom: 3px;
- color: #ffffff;
- text-shadow: 2px 2px 2px rgba(88,88,88,1);
+ color: #404040;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .title-secondary-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  padding-top: 3px;
- color: #d0d0d0;
- text-shadow: 1px 1px 1px rgba(88,88,88,1);
+ color: #474747;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .subtitle-table-cell {
- background-color: #cccccc;
+ background-color: #D6D6D6;
 }
 .subtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  color: #000000;
- text-shadow: 1px 1px 1px rgba(110,110,110,1);
+ text-shadow: 0px 1px 0px rgba(247,247,247,1);
 }
 .subsubtitle-table-cell {
- background-color: #dadada;
+ background-color: #E3E3E3;
 }
 .subsubtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 10pt;
- color: #4e4e4e;
+ color: #474747;
 }
 .syntax-text {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
@@ -97,10 +97,10 @@ a:active {
  color: #600030;
 }
 .example-box a:hover {
- color: #ff0020;
+ color: #FF2B46;
 }
 .example-box a:active {
- color: #ff0020;
+ color: #FF2B46;
 }
 .comment-text {
  color: #578A57;
@@ -112,10 +112,10 @@ a:active {
  color: #578A57;
 }
 .comment-text a:hover {
- color: #376A47;
+ color: #35BD58;
 }
 .comment-text a:active {
- color: #376A47;
+ color: #35BD58;
 }
 .example-paren {
  color: #8A7000;
@@ -149,7 +149,7 @@ a:active {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
  font-size: 10pt;
  color: #670000;
- background-color: #e0e0e0;
+ background-color: #EDEDED;
 }
 .switch-body-table-cell {
 }
@@ -198,7 +198,7 @@ Defines a new script action.
 </p>
 <p>
 Each action has an unique &lt;name&gt; that must not collide with any core action
-(i.e. don't use the "kvirc." prefix).
+(i.e. don't use the "KVIrc." prefix).
 At any time you can check <a href="cmd_action.list.html">action.list</a> to verify that no core action
 is already using your &lt;name&gt;. If the &lt;name&gt; was already used for a script action
 then this action is simply replaced by the new one.
@@ -227,7 +227,7 @@ this parameter is optional.
 <p>
 &lt;action body&gt; is the callback code snippet that will be triggered when this action is activated
 either by the means of <a href="cmd_action.trigger.html">action.trigger</a>, a toolbar button or a menu item selection.
-An empty &lt;action body&gt; causes this command to behave like <a href="cmd_action.destoy.html">action.destoy</a> &lt;name&gt;.
+An empty &lt;action body&gt; causes this command to behave like <a href="cmd_action.destroy.html">action.destroy</a> &lt;name&gt;.
 </p>
 </td>
   </tr>
@@ -242,13 +242,13 @@ An empty &lt;action body&gt; causes this command to behave like <a href="cmd_act
 <tr><td class="switch-title-table-cell">-c | --bind-to-connection</td></tr>
 <tr><td class="switch-body-table-cell">Specifies that the action needs an IRC connection to be executed. When the current window has no associated IRC connection the action is automatically disabled. This switch implies -i.</td></tr>
 <tr><td class="switch-title-table-cell">-l | --enable-at-login</td></tr>
-<tr><td class="switch-body-table-cell">Specifies that the action needs to be enabled at login time, that is when a link to the server has been estabilished but the login operations haven't been carried out yet (and thus there is no real IRC connection). This switch requires -c to work.</td></tr>
+<tr><td class="switch-body-table-cell">Specifies that the action needs to be enabled at login time, that is when a link to the server has been established but the login operations haven't been carried out yet (and thus there is no real IRC connection). This switch requires -c to work.</td></tr>
 <tr><td class="switch-title-table-cell">-w=&lt;window_types&gt; | --window-types=&lt;window_type&gt;</td></tr>
 <tr><td class="switch-body-table-cell">Causes the action to be enabled only when the active window is one of the specified types. &lt;window_types&gt; may be any combination of the letters 'q' (query), 'c' (channel), 'x' (console), 'd' (dccchat). If this switch is omitted then the action is enabled in all the windows.<br></td></tr>
 <tr><td class="switch-title-table-cell">-s | --selected-only</td></tr>
-<tr><td class="switch-body-table-cell">Specifies that the action will be activated only if the active window has selected users in the userlist. This switch requires -w with a combination of flags 'q','c' and 'x' (it doesn't work for dcc chat).</td></tr>
+<tr><td class="switch-body-table-cell">Specifies that the action will be activated only if the active window has selected users in the userlist. This switch requires -w with a combination of flags 'q','c' and 'x' (it doesn't work for DCC chat).</td></tr>
 <tr><td class="switch-title-table-cell">-t=&lt;category&gt; | --category=&lt;category&gt;</td></tr>
-<tr><td class="switch-body-table-cell">Causes the action to belong to the specified category. &lt;category&gt; can be one of "irc","scripting","settings","gui","channel","tools" and "generic". If this switch is omitted the "generic" category is automatically assumed. The actions failing in the "tools" category will appear in the "Tools" KVIrc menu too.</td></tr>
+<tr><td class="switch-body-table-cell">Causes the action to belong to the specified category. &lt;category&gt; can be one of "IRC","scripting","settings","GUI","channel","tools" and "generic". If this switch is omitted the "generic" category is automatically assumed. The actions failing in the "tools" category will appear in the "Tools" KVIrc menu too.</td></tr>
 <tr><td class="switch-title-table-cell">-k=&lt;key sequence&gt; | --key-sequence=&lt;key sequence&gt;</td></tr>
 <tr><td>Specifies that the action will be activated also by the &lt;key sequence&gt; which is a string formed from up to four keyboard codes separated by commas optionally combined with the modifiers "Alt","Ctrl","Shift" and "Meta".<br> Examples of such sequences are: "Ctrl+X", "Ctrl+Alt+F" or "Ctrl+X,Alt+Space".</td></tr>
       </table>
@@ -270,6 +270,6 @@ An empty &lt;action body&gt; causes this command to behave like <a href="cmd_act
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<div class='footer'>KVIrc 4.3.2.git-5373-g6a601d4 Documentation - generated by universal at Wed Sep 16 00:01:03 2015</div>
+<div class='footer'>KVIrc 4.3.2.git-5728-g4e18af4 Documentation - generated by un1versal on Mon Nov 23 17:48:32 2015</div>
 </body>
 </html>

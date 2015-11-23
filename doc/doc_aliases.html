@@ -28,49 +28,49 @@ a:visited {
 }
 a:hover {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 a:active {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 .title-table-cell {
- border-top-left-radius: 5px;
- border-top-right-radius: 5px;
- background-color: #BEBEF0;
- background: linear-gradient(#B5E1FC,#4E94D2);
+ border-top-left-radius: 3px;
+ border-top-right-radius: 3px;
+ background-color: #F2DFB1;
+ background: linear-gradient(#CBE4F2,#4E8ABF);
 }
 .title-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 18pt;
  font-weight: bold;
  padding-bottom: 3px;
- color: #ffffff;
- text-shadow: 2px 2px 2px rgba(88,88,88,1);
+ color: #404040;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .title-secondary-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  padding-top: 3px;
- color: #d0d0d0;
- text-shadow: 1px 1px 1px rgba(88,88,88,1);
+ color: #474747;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .subtitle-table-cell {
- background-color: #cccccc;
+ background-color: #D6D6D6;
 }
 .subtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  color: #000000;
- text-shadow: 1px 1px 1px rgba(110,110,110,1);
+ text-shadow: 0px 1px 0px rgba(247,247,247,1);
 }
 .subsubtitle-table-cell {
- background-color: #dadada;
+ background-color: #E3E3E3;
 }
 .subsubtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 10pt;
- color: #4e4e4e;
+ color: #474747;
 }
 .syntax-text {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
@@ -97,10 +97,10 @@ a:active {
  color: #600030;
 }
 .example-box a:hover {
- color: #ff0020;
+ color: #FF2B46;
 }
 .example-box a:active {
- color: #ff0020;
+ color: #FF2B46;
 }
 .comment-text {
  color: #578A57;
@@ -112,10 +112,10 @@ a:active {
  color: #578A57;
 }
 .comment-text a:hover {
- color: #376A47;
+ color: #35BD58;
 }
 .comment-text a:active {
- color: #376A47;
+ color: #35BD58;
 }
 .example-paren {
  color: #8A7000;
@@ -149,7 +149,7 @@ a:active {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
  font-size: 10pt;
  color: #670000;
- background-color: #e0e0e0;
+ background-color: #EDEDED;
 }
 .switch-body-table-cell {
 }
@@ -181,7 +181,7 @@ a:active {
       <div class='title-text'>Aliases</div>      <div class='title-secondary-text'>Aliases : user definable command sequences</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td>An alias is an user defined command.  It can be used to rename the builtin kvirc commands or functions,
+    <td>An alias is an user defined command.  It can be used to rename the builtin KVIrc commands or functions,
 to automatize complex tasks or as structured programming mean.
 Aliases can be created or destroyed by using the scriptcenter (graphic interface)
 or from the commandline (or script) by using the <a href="cmd_alias.html">alias</a> command.
@@ -252,7 +252,7 @@ TIP: It is a good idea to write the following examples in a text file and then u
 </div>
 The example above will first check the validity of the &lt;nickname&gt; passed to kb:
 if no nickname was passed, it will warn the user and stop.
-The next step will be the "ban &lt;nickname&gt;" call. Another enchancement is the "default reason":
+The next step will be the "ban &lt;nickname&gt;" call. Another enhancement is the "default reason":
 we first assign the remaining parameters ($1- means "from $1 to the end") to a temporary variable,
 if the variable is empty, a default kick reason is assigned.
 Finally the "kick &lt;nickname&gt; &lt;reason&gt;" will be executed.
@@ -266,7 +266,7 @@ colored output or calculating a value from a set of other values)...
 Aliases are the way of writing the common tasks: they are equivalent to the "procedures"
 or "functions" in many high-level programming languages.
 The alias as a procedure (subroutine or sub-task) has been shown in the "kb" example above:
-it might be commonly called from complexier scripts or other aliases in case that a
+it might be commonly called from more complex scripts or other aliases in case that a
 kick & ban action is needed.
 </p>
 <p>
@@ -276,7 +276,7 @@ Assume that you need really often to calculate the sum of three numbers: a funct
 </div>
 This will add the alias "sum3" and make it available both as a command and a function.
 The "return" command sets the return value of a sequence of commands
-(an alias is a sequence of commands...remember ?) and terminates the execution (by returning
+(an alias is a sequence of commands...remember?) and terminates the execution (by returning
 the control to the caller).
 So return $($0 + $1 + $2); will set the return value of the alias to the value
 computed by $($0 + $1 + $2) that actually is the sum of the first three parameters passed.
@@ -286,18 +286,18 @@ You will then use it in the following way:
 <span class="example-variable">%anothersum</span> = $sum3<span class="example-paren">(</span>12,<span class="example-variable">%somevalue</span>,<span class="example-variable">%anothervalue</span><span class="example-paren">)</span>
 ...
 </div>
-Ops.. I've used some variables without actually explaining them... hehe.. please forgive me and read on.
-This example is again really simple, but you might have complexier function-aliases.
-The function-aliases are also normal aliases.... you can use it as a command:
+Oops! I've used some variables without actually explaining them, hehe... please forgive me and read on.
+This example is again really simple, but you might have more complex function-aliases.
+The function-aliases are also normal aliases... you can use it as a command:
 <div class="example-box">/sum3 1 2 3
 </div>
-Is a perfectly valid call.... it's just that it will have no visible results
+Is a perfectly valid call... it's just that it will have no visible results
 (just because a command call implies ignoring the return value.
 In fact there is no difference al all between function-aliases and normal-aliases:
 the caller makes the difference: by calling an alias as a command the return value
 just disappears in hyperspace, by calling an alias as a function, the return value
 is propagated (and in fact "used").
-(There are some "nice" exceptions to this rule...but you don't need to care about it, for now).
+(There are some "nice" exceptions to this rule... but you don't need to care about it, for now).
 If return is not called inside an alias body, the return value will be just a null value.
 </p>
 <p>
@@ -308,6 +308,6 @@ exactly for that purpose. Check it out.
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
-<div class='footer'>KVIrc 4.3.2.git-5373-g6a601d4 Documentation - generated by universal at Wed Sep 16 00:01:03 2015</div>
+<div class='footer'>KVIrc 4.3.2.git-5728-g4e18af4 Documentation - generated by un1versal on Mon Nov 23 17:48:32 2015</div>
 </body>
 </html>

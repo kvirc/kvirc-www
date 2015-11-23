@@ -28,49 +28,49 @@ a:visited {
 }
 a:hover {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 a:active {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 .title-table-cell {
- border-top-left-radius: 5px;
- border-top-right-radius: 5px;
- background-color: #BEBEF0;
- background: linear-gradient(#B5E1FC,#4E94D2);
+ border-top-left-radius: 3px;
+ border-top-right-radius: 3px;
+ background-color: #F2DFB1;
+ background: linear-gradient(#CBE4F2,#4E8ABF);
 }
 .title-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 18pt;
  font-weight: bold;
  padding-bottom: 3px;
- color: #ffffff;
- text-shadow: 2px 2px 2px rgba(88,88,88,1);
+ color: #404040;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .title-secondary-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  padding-top: 3px;
- color: #d0d0d0;
- text-shadow: 1px 1px 1px rgba(88,88,88,1);
+ color: #474747;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .subtitle-table-cell {
- background-color: #cccccc;
+ background-color: #D6D6D6;
 }
 .subtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  color: #000000;
- text-shadow: 1px 1px 1px rgba(110,110,110,1);
+ text-shadow: 0px 1px 0px rgba(247,247,247,1);
 }
 .subsubtitle-table-cell {
- background-color: #dadada;
+ background-color: #E3E3E3;
 }
 .subsubtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 10pt;
- color: #4e4e4e;
+ color: #474747;
 }
 .syntax-text {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
@@ -97,10 +97,10 @@ a:active {
  color: #600030;
 }
 .example-box a:hover {
- color: #ff0020;
+ color: #FF2B46;
 }
 .example-box a:active {
- color: #ff0020;
+ color: #FF2B46;
 }
 .comment-text {
  color: #578A57;
@@ -112,10 +112,10 @@ a:active {
  color: #578A57;
 }
 .comment-text a:hover {
- color: #376A47;
+ color: #35BD58;
 }
 .comment-text a:active {
- color: #376A47;
+ color: #35BD58;
 }
 .example-paren {
  color: #8A7000;
@@ -149,7 +149,7 @@ a:active {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
  font-size: 10pt;
  color: #670000;
- background-color: #e0e0e0;
+ background-color: #EDEDED;
 }
 .switch-body-table-cell {
 }
@@ -207,7 +207,7 @@ If &lt;base_class_name&gt; is omitted, the new class inherits automatically
 from <a href="class_object.html">object</a>.<br>
 Note:<br>
 The keywords "function" and "event" that were used in KVIrc versions
-previous to 3.0.0 have been removed since "useless".<br>
+previous to 3.0.0 have been removed since they are "useless".<br>
 The function keyword, however, is still permitted.
 The keyword "internal" is useful when you want to hide
 certain function from the outside world. An internal function
@@ -222,15 +222,15 @@ of an expression, so it is terminated by a closed parenthesis.
 It's rather dangerous to use this command inside an object
 function handler: if the class definition &lt;class&gt; was already
 existing and it is a parent of the object's class, you might
-end up executing "inexistant" code.<br>
+end up executing "inexistent" code.<br>
 As a thumb rule, use this command only outside object function handlers.<br>
 <br><br>
 Only for the curious: implementing protected and private access
 list on members would have a considerable runtime overhead because
 of the strange nature of the KVS language. Object member calls
-are resolved completly at runtime (and that permits a lot of funny tricks
+are resolved completely at runtime (and that permits a lot of funny tricks
 like <a href="cmd_privateimpl.html">privateimpl</a>) but unfortunately this also forces us
-to check access lists at runtime. Ok, this would be a relatively small footprint for the "private"
+to check access lists at runtime. OK, this would be a relatively small footprint for the "private"
 keyword where we need to run UP the called object inheritance hierarchy
 but would have a significant performance footprint for the "protected"
 keyword where we would need to traverse the WHOLE inheritance tree of the called and calling
@@ -252,7 +252,7 @@ is needed and only object pointers are compared.
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
 &nbsp;&nbsp;&nbsp;&nbsp;destructor
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Ops...being destroyed
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Oops... being destroyed
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
 &nbsp;&nbsp;&nbsp;&nbsp;sayHello<span class="example-paren">(</span>this function expects no parameters<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
@@ -272,6 +272,6 @@ is needed and only object pointers are compared.
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<div class='footer'>KVIrc 4.3.2.git-5373-g6a601d4 Documentation - generated by universal at Wed Sep 16 00:01:03 2015</div>
+<div class='footer'>KVIrc 4.3.2.git-5728-g4e18af4 Documentation - generated by un1versal on Mon Nov 23 17:48:32 2015</div>
 </body>
 </html>

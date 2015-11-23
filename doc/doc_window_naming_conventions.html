@@ -28,49 +28,49 @@ a:visited {
 }
 a:hover {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 a:active {
  text-decoration: underline;
- color: #1873d2;
+ color: #186CC4;
 }
 .title-table-cell {
- border-top-left-radius: 5px;
- border-top-right-radius: 5px;
- background-color: #BEBEF0;
- background: linear-gradient(#B5E1FC,#4E94D2);
+ border-top-left-radius: 3px;
+ border-top-right-radius: 3px;
+ background-color: #F2DFB1;
+ background: linear-gradient(#CBE4F2,#4E8ABF);
 }
 .title-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 18pt;
  font-weight: bold;
  padding-bottom: 3px;
- color: #ffffff;
- text-shadow: 2px 2px 2px rgba(88,88,88,1);
+ color: #404040;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .title-secondary-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  padding-top: 3px;
- color: #d0d0d0;
- text-shadow: 1px 1px 1px rgba(88,88,88,1);
+ color: #474747;
+ text-shadow: 0px 2px 0px rgba(247,247,247,1);
 }
 .subtitle-table-cell {
- background-color: #cccccc;
+ background-color: #D6D6D6;
 }
 .subtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 11pt;
  color: #000000;
- text-shadow: 1px 1px 1px rgba(110,110,110,1);
+ text-shadow: 0px 1px 0px rgba(247,247,247,1);
 }
 .subsubtitle-table-cell {
- background-color: #dadada;
+ background-color: #E3E3E3;
 }
 .subsubtitle-text {
  font-family:Verdana,Helvetica,Arial;
  font-size: 10pt;
- color: #4e4e4e;
+ color: #474747;
 }
 .syntax-text {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
@@ -97,10 +97,10 @@ a:active {
  color: #600030;
 }
 .example-box a:hover {
- color: #ff0020;
+ color: #FF2B46;
 }
 .example-box a:active {
- color: #ff0020;
+ color: #FF2B46;
 }
 .comment-text {
  color: #578A57;
@@ -112,10 +112,10 @@ a:active {
  color: #578A57;
 }
 .comment-text a:hover {
- color: #376A47;
+ color: #35BD58;
 }
 .comment-text a:active {
- color: #376A47;
+ color: #35BD58;
 }
 .example-paren {
  color: #8A7000;
@@ -149,7 +149,7 @@ a:active {
  font-family:"Lucida Console", Monaco, monospace, "Courier New";
  font-size: 10pt;
  color: #670000;
- background-color: #e0e0e0;
+ background-color: #EDEDED;
 }
 .switch-body-table-cell {
 }
@@ -182,8 +182,8 @@ a:active {
   </tr>
   <tr bgcolor="#EAEAEA">
     <td></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Introduction</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
-Starting from the release 3.0.0 KVIrc window structure has
-grown in complexity. Older releases allowed one connetion
+Starting from the release 3.0.0, KVIrc window structure has
+grown in complexity. Older releases allowed one connection
 per "frame window" and thus had a dedicated command parser
 for each connection. Finding a window in that scenario
 was quite easy: it was enough to designate it by "name"
@@ -262,7 +262,7 @@ Application (Unique command parser)
 </li>
 </ul>
 <br>
-A naming convention has becomed necessary to resolve ambiguities.<br>
+A naming convention has become necessary to resolve ambiguities.<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Basic assumptions</div></td></tr><tr><td bgcolor="#EAEAEA">
 Every KVIrc window has four main properties:<br>
 -<b>an unique numeric identifier</b><br>
@@ -281,8 +281,8 @@ queries it is the list of the targets. For some other windows
 the logical name corresponds to the caption text. This will be discussed later.<br>
 The <b>type identifier</b> describes the properties of a certain window.
 For channel windows the type identifier is "channel", for query windows is "query",
-for console windows it is "console", etc..<br>
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Irc contexts</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+for console windows it is "console", etc.<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">IRC Contexts</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 The KVIrc frame windows are numbered starting from 0 and named
 "frame_&lt;number&gt;". Each frame can contain an unlimited number of consoles.<br>
 Each console is bound to an <b>IRC context</b>. (The part "is bound to" could
@@ -308,7 +308,7 @@ An <b>IRC context</b> can "contain" other windows, such as the "sockets"
 window or the "list" window. KVIrc takes care of making them
 unique inside the <b>IRC context</b> namespace.<br>
 Each <b>IRC context</b> has its own unique <b>IRC context ID</b> (see <a href="fnc_context.html">$context</a>).<br>
-Since to a single <b>IRC context</b> may correspond only a single irc connection,
+Since to a single <b>IRC context</b> may correspond only a single IRC connection,
 when in connected state, the <b>IRC context</b> may be referred also as <b>connection</b>
 or <b>connection context</b>, and the associated <b>IRC context Id</b> can be
 referred as <b>connection ID</b> or <b>connection context ID</b>.<br>
@@ -341,6 +341,6 @@ and is bound to a specified <b>IRC context</b>.<br>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
-<div class='footer'>KVIrc 4.3.2.git-5373-g6a601d4 Documentation - generated by universal at Wed Sep 16 00:01:03 2015</div>
+<div class='footer'>KVIrc 4.3.2.git-5728-g4e18af4 Documentation - generated by un1versal on Mon Nov 23 17:48:32 2015</div>
 </body>
 </html>
