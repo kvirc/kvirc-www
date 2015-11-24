@@ -23,55 +23,55 @@ $template['index']['spanish']="Castellano";
 $template['index']['ukrainian']="Ucraniano";
 
 // the project
-$template['index']['theproject']="el proyecto";
-$template['index']['status']="estado";
-$template['index']['features']="características";
-$template['index']['license']="licencia";
-$template['index']['screens']="capturas";
+$template['index']['theproject']="El proyecto";
+$template['index']['status']="Estado";
+$template['index']['features']="Características";
+$template['index']['license']="Licencia";
+$template['index']['screens']="Capturas";
 $template['index']['bugtrack']="KVIrc bugtrack";
 // running kvirc
-$template['index']['running']="usar KVIrc";
-$template['index']['download']="descargar";
-$template['index']['releases']="versiones oficiales";
-$template['index']['snapshots']="snapshots";
-$template['index']['git']="git";
-$template['index']['install']="instalación";
+$template['index']['running']="Usar KVIrc";
+$template['index']['download']="Descargar";
+$template['index']['releases']="Versiones oficiales";
+$template['index']['snapshots']="Snapshots";
+$template['index']['git']="Git";
+$template['index']['install']="Instalación";
 // documentation
-$template['index']['docs']="documentación";
+$template['index']['docs']="Documentación";
 $template['index']['faq']="FAQ";
 $template['index']['api']="API";
-$template['index']['doc']="manual de KVIrc";
-$template['index']['tutorials']="tutoriales";
-$template['index']['translations']="traducciones";
-$template['index']['shortcuts']="atajos de teclado";
+$template['index']['doc']="Manual de KVIrc";
+$template['index']['tutorials']="Tutoriales";
+$template['index']['translations']="Traducciones";
+$template['index']['shortcuts']="Atajos de teclado";
 $template['index']['faq2']="FAQ (Wiki)";
 // graphic suite
-$template['index']['graphsuite']="suite gráfica";
-$template['index']['themes']="temas";
-$template['index']['splash']="splash screens";
-$template['index']['banners']="banners";
-$template['index']['arts']="diseños";
+$template['index']['graphsuite']="Suite gráfica";
+$template['index']['themes']="Temas";
+$template['index']['splash']="Splash screens";
+$template['index']['banners']="Banners";
+$template['index']['arts']="Diseños";
 // misc
-$template['index']['misc']="miscelánea";
-$template['index']['honor']="honor y gloria";
-$template['index']['scripts']="scripts";
-$template['index']['addons']="addons";
-$template['index']['tools']="herramientas";
-$template['index']['changelog']="changeLog";
+$template['index']['misc']="Miscelánea";
+$template['index']['honor']="Honor y gloria";
+$template['index']['scripts']="Scripts";
+$template['index']['addons']="Addons";
+$template['index']['tools']="Herramientas";
+$template['index']['changelog']="ChangeLog";
 // contact
-$template['index']['contact']="contacto";
-$template['index']['ml']="lista de correo de KVIrc";
-$template['index']['archive']="archivo";
-$template['index']['contribute']="colaboraciones";
-$template['index']['help']="buscando ayuda";
-$template['index']['donation']="hacer una donación";
+$template['index']['contact']="Contacto";
+$template['index']['ml']="Lista de correo de KVIrc";
+$template['index']['archive']="Archivo";
+$template['index']['contribute']="Colaboraciones";
+$template['index']['help']="Buscando ayuda";
+$template['index']['donation']="Hacer una donación";
 // KVIrc related
-$template['index']['related']="más KVIrc";
-$template['index']['forum']="foro oficial";
-$template['index']['rusite']="sitio Ruso";
+$template['index']['related']="Más KVIrc";
+$template['index']['forum']="Foro Oficial";
+$template['index']['rusite']="Sitio Ruso";
 //$template['index']['frsite']="sitio francés";
 //$template['index']['frforum']="foro francés";
-$template['index']['osxsite']="versión OS X";
+//$template['index']['osxsite']="versión OS X";
 // other
 $template['index']['quickdnl']="descarga rápida";
 // search
@@ -1015,7 +1015,7 @@ $template['status']['text']="
 $template['git']['title']="Cloning the Git Source Tree";
 $template['git']['text1']="
 	The Git source tree is hosted on Github.<br />
-	Once you've made sure that <a href=\"https://git-scm.com/\" target=\"_blank\">git</a> is installed on your system you should clone the tree
+	Once you've made sure that <a href=\"https://git-scm.com/\" target=\"_blank\">Git</a> is installed on your system you should clone the tree
 	with the following command:<br />";
 $template['git']['text3']="
 	To compile the executable and the core modules just enter the source directory:";
