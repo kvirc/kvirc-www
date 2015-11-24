@@ -23,55 +23,55 @@ $template['index']['spanish']="Spagnolo";
 $template['index']['ukrainian']="Ukraino";
 
 // the project
-$template['index']['theproject']="il progetto";
-$template['index']['status']="stato";
-$template['index']['features']="caratteristiche";
-$template['index']['license']="licenza";
-$template['index']['screens']="screenshot";
+$template['index']['theproject']="Il progetto";
+$template['index']['status']="Stato";
+$template['index']['features']="Caratteristiche";
+$template['index']['license']="Licenza";
+$template['index']['screens']="Screenshot";
 $template['index']['bugtrack']="KVIrc bugtrack";
 // running kvirc
-$template['index']['running']="usare KVIrc";
-$template['index']['download']="download";
-$template['index']['releases']="release ufficiali";
-$template['index']['snapshots']="snapshot";
-$template['index']['git']="git";
-$template['index']['install']="installazione";
+$template['index']['running']="Usare KVIrc";
+$template['index']['download']="Download";
+$template['index']['releases']="Release ufficiali";
+$template['index']['snapshots']="Snapshot";
+$template['index']['git']="Git";
+$template['index']['install']="Installazione";
 // documentation
-$template['index']['docs']="documentazione";
+$template['index']['docs']="Documentazione";
 $template['index']['faq']="FAQ";
 $template['index']['api']="API";
-$template['index']['doc']="manuale di KVIrc";
-$template['index']['tutorials']="tutorial";
+$template['index']['doc']="Manuale di KVIrc";
+$template['index']['tutorials']="Tutorial";
 $template['index']['translations']="traduzioni";
 $template['index']['shortcuts']="Scorciatoie tastiera";
 $template['index']['faq2']="FAQ (Wiki) (in inglese)";
 // graphic suite
-$template['index']['graphsuite']="suite grafica";
-$template['index']['themes']="temi";
-$template['index']['splash']="splash screen";
-$template['index']['banners']="banner";
-$template['index']['arts']="arte";
+$template['index']['graphsuite']="Suite grafica";
+$template['index']['themes']="Temi";
+$template['index']['splash']="Splash screen";
+$template['index']['banners']="Banner";
+$template['index']['arts']="Arte";
 // misc
-$template['index']['misc']="misc";
-$template['index']['honor']="onore &amp; gloria";
-$template['index']['scripts']="script";
-$template['index']['addons']="addon";
+$template['index']['misc']="Misc";
+$template['index']['honor']="Onore &amp; gloria";
+$template['index']['scripts']="Scripts";
+$template['index']['addons']="Addons";
 $template['index']['tools']="strumenti";
-$template['index']['changelog']="changeLog";
+$template['index']['changelog']="ChangeLog";
 // contact
-$template['index']['contact']="contatti";
-$template['index']['ml']="mailing list";
-$template['index']['archive']="archivio";
-$template['index']['contribute']="collaborazioni";
-$template['index']['help']="aiuto";
-$template['index']['donation']="fai una donazione";
+$template['index']['contact']="Contatti";
+$template['index']['ml']="Mailing list";
+$template['index']['archive']="Archivio";
+$template['index']['contribute']="Collaborazioni";
+$template['index']['help']="Aiuto";
+$template['index']['donation']="Fai una donazione";
 // KVIrc related
-$template['index']['related']="altro su KVIrc";
-$template['index']['forum']="forum ufficiale";
-$template['index']['rusite']="sito Russo";
+$template['index']['related']="Altro su KVIrc";
+$template['index']['forum']="Forum ufficiale";
+$template['index']['rusite']="Sito Russo";
 //$template['index']['frsite']="sito francese";
 //$template['index']['frforum']="forum francese";
-$template['index']['osxsite']="pacchetti OS X";
+//$template['index']['osxsite']="pacchetti OS X";
 // other
 $template['index']['quickdnl']="download veloce";
 // search
@@ -946,7 +946,7 @@ $template['status']['text']="
 $template['git']['title']="Cloning the Git Source Tree";
 $template['git']['text1']="
 	The Git source tree is hosted on Github.<br />
-	Once you've made sure that <a href=\"https://git-scm.com/\" target=\"_blank\">git</a> is installed on your system you should clone the tree
+	Once you've made sure that <a href=\"https://git-scm.com/\" target=\"_blank\">Git</a> is installed on your system you should clone the tree
 	with the following command:";
 $template['git']['text3']="
 	To compile the executable and the core modules just enter the source directory:";
