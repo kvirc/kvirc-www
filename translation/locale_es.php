@@ -68,10 +68,10 @@ $template['index']['donation']="hacer una donación";
 // KVIrc related
 $template['index']['related']="más KVIrc";
 $template['index']['forum']="foro oficial";
-$template['index']['rusite']="sitio ruso";
-$template['index']['frsite']="sitio francés";
-$template['index']['frforum']="foro francés";
-$template['index']['osxsite']="versión MacOS X";
+$template['index']['rusite']="sitio Ruso";
+//$template['index']['frsite']="sitio francés";
+//$template['index']['frforum']="foro francés";
+$template['index']['osxsite']="versión OS X";
 // other
 $template['index']['quickdnl']="descarga rápida";
 // search
@@ -86,9 +86,9 @@ $template['index']['wwwmirrors']="mirrors WWW";
 $template['index']['ftpmirrors']="mirrors FTP";
 $template['index']['mirrorstext1a']="Contribuir al proyecto KVIrc creando y manteniendo un mirror es realmente fácil y apreciado, en";
 $template['index']['mirrorstext1b']="esta página";
-$template['index']['mirrorstext1c']="encontrarás instrucciones paso a paso de cómo crear un mirror www o ftp (o ambos).";
-$template['index']['mirrorstext2']="Necesitamos ftps no-europeos.";
-$template['index']['mirrorstitle']="mirrors www y ftp";
+$template['index']['mirrorstext1c']="encontrarás instrucciones paso a paso de cómo crear un mirror WWW o FTP (o ambos).";
+$template['index']['mirrorstext2']="Necesitamos FTPs no-europeos.";
+$template['index']['mirrorstitle']="mirrors WWW y FTP";
 // layouts
 $template['index']['oldlayout']="webs antiguas	";
 $template['index']['oldsite']="sitio KVIrc antiguo";
@@ -245,9 +245,9 @@ $template['contribute']['text13']="
 $template['contribute']['text14']="Mirrors";
 $template['contribute']['text15']="
 	Mirrors FTP y WWW siempre son bienvenidos: actualmente necesitamos mirrors fuera de Europa.<br />
-	El sitio www está escrito en php y es actualizado vía SVN así que el mirror debe ser capaz de usar php y debe tener un servidor SVN.<br />
+	El sitio WWW está escrito en php y es actualizado vía Git así que el mirror debe ser capaz de usar php y debe tener un servidor Git.<br />
 	El archivo FTP tiene alrededor de 1.2GB; aunque si quieres puedes hacer un mirror parcial.<br />
-	Las instrucciones detalladas para montar un mirror www o ftp están <a href=\"?id=mirroring&amp;lang=$lang\">aquí</a>.";
+	Las instrucciones detalladas para montar un mirror WWW o FTP están <a href=\"?id=mirroring&amp;lang=$lang\">aquí</a>.";
 $template['contribute']['text16']="Relaciones públicas";
 $template['contribute']['text17']="
 	Necesitamos gente que hable de KVIrc, escriba artículos, descripciones, reviews, busque contribuyentes...";
@@ -262,7 +262,7 @@ $template['donate']['title']="Soportando el proyecto KVIrc haciendo donaciones e
 $template['donate']['text1']="
 	KVIrc está disponible gratuitamente y siempre estará disponible gratuitamente: no hace falta pagar para descargar, usar, modificar y redistribuir el código fuente.";
 $template['donate']['text2']="
-	La mayor parte de los recursos físicos de los que KVIrc vive (como servidores www o ftp) son contribuídos por miembros del equipo KVIrc. Por otro lado, el proyecto requiere una increíble cantidad de horas de escritura de código, y otras cosas que deben ser pagadas como actualizaciones de hardware, registros de nombres de dominio, pagos del hosting, libros... Si disfrutas de KVIrc, por favor considera soportar el proyecto financiándolo: puedes hacer la donación usando PayPal.";
+	La mayor parte de los recursos físicos de los que KVIrc vive (como servidores WWW o FTP) son contribuídos por miembros del equipo KVIrc. Por otro lado, el proyecto requiere una increíble cantidad de horas de escritura de código, y otras cosas que deben ser pagadas como actualizaciones de hardware, registros de nombres de dominio, pagos del hosting, libros... Si disfrutas de KVIrc, por favor considera soportar el proyecto financiándolo: puedes hacer la donación usando PayPal.";
 $template['donate']['text3']="
 	El botón de abajo te llevará al sitio de PayPal donde podrás especificar la cantidad de la donación y la moneda que usarás. Puedes donar cualquiera cantidad que quieras: toda será apreciada. Si nunca has usado PayPal antes, el sitio te preguntará sobre los detalles de tu tarjeta de crédito, tu país, dirección y el número de teléfono de tu casa.  Esta información es requerida por PayPal para hacer la transacción y no es requerida o visible para el equipo de KVIrc.";
 $template['donate']['text4']="
@@ -281,10 +281,10 @@ $template['download']['text3']="
 	Los paquetes oficiales son lanzados con menos frecuencia pero son los más estables. Cada paquete oficial está probado y seguramente compilará en tu sistema. También tienes más posibilidades de encontrar un paquete binario para tu sistema. Las FAQs y documentación se refieren a este tipo de paquete.";
 $template['download']['text4']="Snapshots en desarrollo";
 $template['download']['text5']="
-	Las snapshots en desarrollo son paquetes no-oficiales extraídos de la SVN en un estado no estable. Cada snapshot refleja el estado SVN de una revisión particular, así que probablemente quieras encontrar una reciente. Los paquetes han sido probados en al menos unos pocos sistemas y tienen una alta posibilidad de compilar en el tuyo. Hay también algunos binarios disponibles.";
-$template['download']['text6']="Fuentes actualizadas de SVN";
+	Las snapshots en desarrollo son paquetes no-oficiales extraídos de la Git en un estado no estable. Cada snapshot refleja el estado Git de una revisión particular, así que probablemente quieras encontrar una reciente. Los paquetes han sido probados en al menos unos pocos sistemas y tienen una alta posibilidad de compilar en el tuyo. Hay también algunos binarios disponibles.";
+$template['download']['text6']="Fuentes actualizadas de Git";
 $template['download']['text7']="
-	La última versión de las fuentes puede ser descargada usando el sistema SVN. Intentamos mantener el SVN tan \"limpio\" como sea posible pero no está garantizado que las fuentes compilen. El método SVN sólo da fuentes: no hay binarios.";
+	La última versión de las fuentes puede ser descargada usando el sistema Git. Intentamos mantener el Git tan \"limpio\" como sea posible pero no está garantizado que las fuentes compilen. El método Git sólo da fuentes: no hay binarios.";
 /* download.php end */
 
 /* faq.php start */
@@ -294,16 +294,16 @@ $template['faq']['text1b']="Escribe \"/join #nombredelcanal\"";
 $template['faq']['text2a']="¡No puedo compilar KVIrc (cualquier versión)";
 $template['faq']['text2b']="
 	LEE las instrucciones en el archivo INSTALL: los problemas más comunes pueden ser resueltos configurando correctamente las variables de entorno y jugando con las opciones de ./configure. Si es archivo INSTALL no te ayuda puedes intentar entrando en #kvirc en IRCNet o FreeNode: hay muchos usuarios expertos que podrían intentar ayudarte. Si todavía no puedes conseguirlo, publica tu error en la lista de correo de KVIrc";
-$template['faq']['text3a']="No me puedo conectar a un servidor IPV6";
+$template['faq']['text3a']="No me puedo conectar a un servidor IPv6";
 $template['faq']['text3b1']="
-	Primero de todo asegúrate de que tu pila IPV6 está bien configurada.<br />
-	¿Puedes hacer ping6 a otras máquinas IPV6?";
+	Primero de todo asegúrate de que tu pila IPv6 está bien configurada.<br />
+	¿Puedes hacer ping6 a otras máquinas IPv6?";
 $template['faq']['text3b2']="
-	Asegúrate de que el soporte IPV6 está activado en tu ejecutable KVIrc.<br />
+	Asegúrate de que el soporte IPv6 está activado en tu ejecutable KVIrc.<br />
 	¿No estás seguro?";
 $template['faq']['text3b3']="
-	Escribe eso en la línea de comandos de KVIrc. Deberías obtener una lista de características compiladas en el ejecutable, separadas por comas. Si la lista contiene \"IPV6\" entonces el soporte está compilado, si no es así deberías recompilar el ejecutable para ver qué está mal.
-	Para conectar a un servidor IPV6 puedes usar /server -i &lt;nombredelservidor&gt;
+	Escribe eso en la línea de comandos de KVIrc. Deberías obtener una lista de características compiladas en el ejecutable, separadas por comas. Si la lista contiene \"IPv6\" entonces el soporte está compilado, si no es así deberías recompilar el ejecutable para ver qué está mal.
+	Para conectar a un servidor IPv6 puedes usar /server -i &lt;nombredelservidor&gt;
 	Si puedes hacer ping a otras máquinas IPv6, el soporte IPv6 está compilado en tu ejecutable y aún así no puedes conectar aun servidor IPv6 *existente*, podrías haber encontrado un bug :) Repórtalo, por favor";
 $template['faq']['text4a']="¿Cómo auto-entro en canales";
 $template['faq']['text4b1']="
@@ -338,7 +338,7 @@ $template['faq']['text8a']="¿Necesito un certificado SSL";
 $template['faq']['text8b']="No deberías necesitarlo, pero puedes usarlo si quieres";
 $template['faq']['text9a']="¿Cómo creo un certificado SSL";
 $template['faq']['text9b']="
-	Un certificado de pruebas firmado por ti mismo puede ser creado usando el script en perl CA.pl incluido en OpenSSL. Será algo como";
+	Un certificado de pruebas firmado por ti mismo puede ser creado usando el script en Perl CA.pl incluido en OpenSSL. Será algo como";
 $template['faq']['text10a']="No consigo que KVIrc use mi certificado SSL en DCC";
 $template['faq']['text10b']="
 	El protocolo SSL no requiere que el \"cliente\" envíe el certificado: es enviado solo si el \"servidor\" lo requiere (y ese no es el caso de KVIrc).<br />
@@ -434,7 +434,7 @@ $template['features']['tree5a2']="aliases";
 $template['features']['tree5a3']="popups";
 $template['features']['tree5a4']="eventos";
 $template['features']['tree5a5']="barras de herramientas configurables por script";
-$template['features']['tree5a6']="soporte de perl";
+$template['features']['tree5a6']="soporte de Perl";
 $template['features']['tree5a7']="Posibilidad de traducir scripts (usando la función tr())";
 $template['features']['tree5b']="
 	Soporte de objetos en el lenguaje de scripting: sí, ahora puedes hacer <acronym title=\"Programación orientada a objetos\">OOP</acronym>";
@@ -525,16 +525,16 @@ $template['honor']['made30']="¡El hombre de KDE! Se asegura de que KVIrc tenga 
 $template['honor']['quote30']="Could I please make KVIrc a pure KDE application today?? Pleeease...";
 $template['honor']['made31']="Algunas \"pequeñas\" piezas de código.";
 $template['honor']['quote32']="&lt;Error403&gt;Number1: I imagined you looking crazy :)&quot;<br />&quot;&lt;NumeroUno&gt; I was drunk";
-$template['honor']['made33']="La \"mano abierta\" para el proyecto KVIrc. Proveedor del servicio SVN, mirrors www y ftp, ancho de banda, grandes ideas y diversión mientras escribimos código.";
+$template['honor']['made33']="La \"mano abierta\" para el proyecto KVIrc. Proveedor del servicio SVN, mirrors WWW y FTP, ancho de banda, grandes ideas y diversión mientras escribimos código.";
 $template['honor']['made34']="Caza bugs, fuente de ideas :)";
-$template['honor']['quote34']="buy a pigeon traveller and pass dcc transfers to him";
+$template['honor']['quote34']="buy a pigeon traveller and pass DCC transfers to him";
 $template['honor']['made35']="Varias mejoras.";
 $template['honor']['quote35']="I can program anything I set my mind to!";
 $template['honor']['made36']="Beta testing, mejoras en la estructura del lenguaje.";
 $template['honor']['quote36']="...it's enough for 100 IPs per meter on earth, so every lightswitch can have its own IP...then you telnet to your lightswitch and turn it off!";
-$template['honor']['made37']="Portabilidad a MacOS X";
-$template['honor']['made38']="Traducción al portugués, parches del script por defecto y paquetes de Mandriva.";
-$template['honor']['made39']="Traducción al ruso";
+$template['honor']['made37']="Portabilidad a OS X";
+$template['honor']['made38']="Traducción al Portugués, parches del script por defecto y paquetes de Mandriva.";
+$template['honor']['made39']="Traducción al Ruso";
 $template['honor']['made40']="Arreglo de bugs, escritura de código, portabilidad a mingw32, soporte al usuario";
 $template['honor']['made41']="FreeBSD Port mantainer";
 $template['honor']['quote37']="FreeBSD Gimp.";
@@ -556,7 +556,7 @@ $template['install']['text2']="Para compilar KVIrc 4.0 necesitas al menos lo sig
 $template['install']['text3']="
 	Si tu distro tiene KDE instalado entonces Qt ya está instalado. Si no, simplemente instala qt4 desde los repositorios de tu distro.";
 $template['install']['text4']="
-	Antes de ejecutar cmake asegúrate de que la variable de entorno \$QTDIR apunta al lugar correcto. Esto ayudará buscando la versión correcta de Qt.";
+	Antes de ejecutar Cmake asegúrate de que la variable de entorno \$QTDIR apunta al lugar correcto. Esto ayudará buscando la versión correcta de Qt.";
 $template['install']['text5a']="Puedes configurarlo con el comando";
 $template['install']['text5b']="tu directorio qt";
 $template['install']['text6']="En mi sistema, qt está instalado en /usr/lib64/qt así que ejecuto";
@@ -569,7 +569,7 @@ $template['install']['text10']="
 	Ten en cuenta también que tendrás que anular las librerías Qt usadas cuando ejecutes KVIrc";
 $template['install']['text11']="
 	Esto normalmente ya está incluido en las distros más actuales.<br />
-	Para comprobar qué cmake tienes, simplemente ejecuta";
+	Para comprobar qué Cmake tienes, simplemente ejecuta";
 $template['install']['text12']="
 	Necesitas un compilador C++ decente. Normalmente en linux es gcc de las GNU tools. Es preferible usar gcc 4.3.<br />
 	Para comprobar tu versión de gcc, ejecuta";
@@ -585,7 +585,7 @@ $template['install']['text15']="
 $template['install']['text16a']="
 	Si quieres compilar el soporte de integración de KDE necesitas obviamente KDE.<br />
 	El paquete kdelibs debería bastar.</p>
-	<p>Antes de ejecutar cmake asegúrate de que la variable \$KDEDIR apunta al lugar correcto.</p>
+	<p>Antes de ejecutar Cmake asegúrate de que la variable \$KDEDIR apunta al lugar correcto.</p>
 	<p>Puedes configurarlo con el comando";
 $template['install']['text16b']="tu directorio kde";
 $template['install']['text17']="En mi caso KDE está instalado en /usr así que uso";
@@ -598,11 +598,11 @@ $template['install']['text19']="
 $template['install']['text20']="
 	Si quieres que el soporte de SSL sea compilado necesitas la librería OpenSSL y las cabeceras (libssl.so y openssl/ssl.h).";
 $template['install']['text21']="
-	Si quieres generar la documentación on-line también necesitas perl: cualquier versión funcionará (supongo).";
+	Si quieres generar la documentación on-line también necesitas Perl: cualquier versión funcionará (supongo).";
 $template['install']['text22']="
-	Si quieres soporte que el scripting en perl sea compilado necesitas una instalación de perl funcional. Tu libperl.so DEBE estar compilado con la opción MULTIPLICITY..<br />
+	Si quieres soporte que el scripting en Perl sea compilado necesitas una instalación de Perl funcional. Tu libperl.so DEBE estar compilado con la opción MULTIPLICITY..<br />
 	Puedes comprobarlo con perl -V<br />
-	La manera en que el software externo puede embeber perl ha cambiado entre perl 5.8 y 5.10; KVIrc debería funcionar correctamente con perl >= 5.004, pero 5.10 es lo más recomendable, ya que actualizaciones futuras pueden romper la compatibilidad.";
+	La manera en que el software externo puede embeber Perl ha cambiado entre Perl 5.8 y 5.10; KVIrc debería funcionar correctamente con Perl >= 5.004, pero 5.10 es lo más recomendable, ya que actualizaciones futuras pueden romper la compatibilidad.";
 $template['install']['text23']="
 	Si quieres que DCC VOICE soporte el códec gsm, necesitas una copia reciente de libgsm.
 	<br/>Esto no es estrictamente requerido en el momento de la compilación ya que KVIrc buscará la librería en tiempo de ejecución, y sólo si se ha pedido un DCC VOICE con el códec gsm.<br />
@@ -619,7 +619,7 @@ $template['install']['text27a']="
 $template['install']['text27b']="tus opciones";
 $template['install']['text28']="
 	De esta manera acabas de crear un entorno fuera de las fuentes útil para tener un directorio de trabajo limpio.<br />
-	Ten en cuenta que los puntos del final son requeridos o cmake NO creará el entorno adecuado.";
+	Ten en cuenta que los puntos del final son requeridos o Cmake NO creará el entorno adecuado.";
 $template['install']['text29']="
 	Las reglas CMake soportan ciertas opciones. Si no las especificas, CMake intentará hacer un entorno bueno para ti :)<br />
 	Para usar esas opciones, tienes que pasarles un valor booleano o una cadena.</p>
@@ -643,8 +643,8 @@ $template['install']['tree6']="
 $template['install']['tree7']="
 	Reinicializará la ruta de instalación a un buen valor por defecto.<br />
 	Las siguientes compilaciones deberían usar el valor correcto, cacheado por CMake.<br />
-	Este flag es útil para resolver problemas de instalación de Mac OS X.";
-$template['install']['tree8']="Compila un binario universal para la plataforma Mac OS X";
+	Este flag es útil para resolver problemas de instalación de OS X.";
+$template['install']['tree8']="Compila un binario universal para la plataforma OS X";
 $template['install']['tree9']="Usa cabeceras pre-compiladas";
 $template['install']['tree10']="Desactiva el soporte del backend de audio Phonon.";
 $template['install']['tree11']="
@@ -670,8 +670,8 @@ $template['install']['tree20']="
 	También come algo del espacio del ejecutable.<br />
 	Así que esta opción permite desactivar la pseudo-transparencia.";
 $template['install']['tree21']="
-	Desactiva el soporte de perl.<br />
-        No podrás usar scripts de perl en KVIrc.";
+	Desactiva el soporte de Perl.<br />
+        No podrás usar scripts de Perl en KVIrc.";
 $template['install']['tree22']="
 	Desactiva el soporte de python.<br />
         No podrás usar scripts de python en KVIrc.";
@@ -714,9 +714,9 @@ $template['install']['tree7']="
 $template['install']['tree8']="
 	This will re-initialize the installation path to a good default.<br />
 	Following compilations should use the correct path value cached by CMake.<br />
-	This flag is useful to solve MacOS X install problems.";
+	This flag is useful to solve OS X install problems.";
 $template['install']['tree9']="
-	Enables or disables the compilation of universal binaries for the MacOS X platform.";
+	Enables or disables the compilation of universal binaries for the OS X platform.";
 $template['install']['tree10']="Enables or disables Phonon audio backend support.";
 $template['install']['tree11']="
 	Enables or disables OpenSoundSystem audio backend support.<br />
@@ -743,10 +743,10 @@ $template['install']['tree21']="
 	It is cool-looking but usually eats some memory and makes the executable slightly bigger, when enabled. Especially when moving objects around, CPU consumption may get high as well.<br />
 	You thus disable transparency here.";
 $template['install']['tree22']="
-	Enables or disables perl support.<br />
+	Enables or disables Perl support.<br />
 	You will not be able to use Perl scripts inside of KVIrc.<br />
 	You still can execute Perl scripts outside of KVIrc, i.e. with the exec() command.<br />
-	Note that perl support will be checked anyway, and used to generate the documentation if present.";
+	Note that Perl support will be checked anyway, and used to generate the documentation if present.";
 $template['install']['tree23']="
 	Enables or disables python support.<br />
         You will not be able to use python scripts inside of KVIrc.";
@@ -767,12 +767,12 @@ $template['install']['tree29']="
 	Enables or disables the DCC VOICE sound support. This might help if you have problems in compilation of src/modules/dcc/voice.cpp.<br />
 	It will disable the sound support (and thus make DCC VOICE not usable).";
 $template['install']['tree30']="Enables or disables EXPERIMENTAL DCC VIDEO support.";
-$template['install']['tree31']="Enables or disables EXPERIMENTAL Ogg/Theora Support for dcc video.";
+$template['install']['tree31']="Enables or disables EXPERIMENTAL Ogg/Theora Support for DCC video.";
 $template['install']['tree32']="Enables or disables OBSOLETE DCC CANVAS support.";
 $template['install']['tree33']="
 	Enables or disables memory allocation profiling.<br />
 	Don't set it, unless you are a developer and know what you are doing.<br />
-	It will have high impact on executable size and most noteably speed.<br />
+	It will have high impact on executable size and most notably speed.<br />
 	Please do not use this.";
 $template['install']['tree34']="
 	Enables or disables malloc() memory checks. This will print a nice message if your system goes out of memory.<br />
@@ -803,15 +803,15 @@ $template['install']['text34']="
 	<p>Una vez que la compilación ha sido exitosa, ejecuta";
 $template['install']['text35']="
 	Igual que antes, usa \"gmake install\" si tu make no es de GNU.</p>
-	<p>Ésto instalará el ejecutable en /usr/local/bin (si no has especificado una opción -DCMAKE_INSTALL_PREFIX distinta en las reglas cmake), las librerías en /usr/local/lib (si no has especificado una opción -DLIB_SUFFIX distinta en las reglas cmake) y los datos compartidos /usr/local/share/kvirc.</p>
+	<p>Ésto instalará el ejecutable en /usr/local/bin (si no has especificado una opción -DCMAKE_INSTALL_PREFIX distinta en las reglas Cmake), las librerías en /usr/local/lib (si no has especificado una opción -DLIB_SUFFIX distinta en las reglas Cmake) y los datos compartidos /usr/local/share/kvirc.</p>
 	<p>Asegúrate de que /usr/local/lib está en tu /etc/ld.so.conf, y si no está ahí, ponlo ahí y ejecuta";
 $template['install']['text36']="
 	Si has decidido usar el soporte KDE la instalación puede haber puesto todos estos archivos en \$KDEDIR en lugar de en /usr/local.<br />
 	En este caso, todo está bien ya que KDE requiere que su directorio de librerías esté en /etc/ld.so.conf";
 $template['install']['text37']="
-	Hay un HOWTO de compilación e instalación para sistemas Mac OS X en el directorio doc/. Se llama INSTALL-MacOS.txt";
+	Hay un HOWTO de compilación e instalación para sistemas OS X en el directorio doc/. Se llama INSTALL-MacOS.txt";
 $template['install']['text38']="
-	Hay un HOWTO de compilación e instalación para sistemas Mac OS X en el directorio doc/. Se llama INSTALL-Win32.txt";
+	Hay un HOWTO de compilación e instalación para sistemas OS X en el directorio doc/. Se llama INSTALL-Win32.txt";
 $template['install']['text39']="
 	CMake soporta el argumento DESTDIR.<br />
 	Así que, si quieres hacer un paquete para tu distro, simplemente tienes que pasarlo en la etapa \"make install\": tus archivos irán a la ruta elegida.<br />
@@ -860,22 +860,22 @@ $template['ml']['text9']="
 /* mirroring.php start */
 $template['mirror']['title']="Haciendo mirrors del proyecto KVIrc";
 $template['mirror']['text1']="
-	Esta página contiene instrucciones paso a paso para crear un mirror ftp";
+	Esta página contiene instrucciones paso a paso para crear un mirror FTP";
 $template['mirror']['text2']="
 	Contribuir al proyecto KVIrc haciendo mirrors de sus archivos es realmente fácil.<br />";
-$template['mirror']['text3']="¡Necesitamos especialmente mirrors ftp no-europeos";
+$template['mirror']['text3']="¡Necesitamos especialmente mirrors FTP no-europeos";
 $template['mirror']['title2']="Configurando un mirror de ftp-master.admin.kvirc.de";
 $template['mirror']['tree']="Requisitos";
-$template['mirror']['tree1']="Un servidor ftp";
+$template['mirror']['tree1']="Un servidor FTP";
 $template['mirror']['tree2']="Un demonio cron (o equivalente) para poder mantener el mirror sincronizado";
 $template['mirror']['text4']="Procedimiento de instalación";
 $template['mirror']['text5']="
-	Configurar un mirror ftp es realmente fácil: está hecho usando la prestación de mirror del programa";
+	Configurar un mirror FTP es realmente fácil: está hecho usando la prestación de mirror del programa";
 $template['mirror']['text6']="
-	La línea de comandos para recuperar todo el archivo ftp es la siguiente:";
+	La línea de comandos para recuperar todo el archivo FTP es la siguiente:";
 $template['mirror']['text7']="raiz_de_tu_servidor_ftp";
 $template['mirror']['text8']="
-	Así que todo lo que tienes que hacer es configurar tu servidor ftp para aceptar conexiones anónimas y configurar cron para sincronizar el mirror cada X horas.";
+	Así que todo lo que tienes que hacer es configurar tu servidor FTP para aceptar conexiones anónimas y configurar cron para sincronizar el mirror cada X horas.";
 $template['mirror']['text9']="
 	Ahora todo lo que tienes que hacer es configurar las actualizaciones automáticas.<br />
 	Esto suele ser tarea del demonio cron y supone añadir unas cuantas líneas al crontab.<br />
@@ -887,7 +887,7 @@ $template['mirror']['text11a']="En este caso";
 $template['mirror']['text11b']="sería el siguiente:";
 $template['mirror']['text12']="tudominio";
 $template['mirror']['text13']="
-	En el momento de escribir esto el archivo ftp completo es de alrededor de 1.5 GB. Si no tienes espacio suficiente para hacer un mirror completo puedes intentar hacer un mirror parcial recuperando solo una parte de los directorios de ftp.kvirc.net.";
+	En el momento de escribir esto el archivo FTP completo es de alrededor de 1.5 GB. Si no tienes espacio suficiente para hacer un mirror completo puedes intentar hacer un mirror parcial recuperando solo una parte de los directorios de ftp.kvirc.net.";
 $template['mirror']['text14']="
 	Una vez que hayas configurado tu mirror adecuadamente, suéltale un mail a <b>pragma at kvirc dot net</b> o a la <a href=\"?id=mailinglist&amp;lang=$lang\">lista de correo</a> de manera que pongamos un enlace desde el sitio principal.";
 /* mirroring.php end */
@@ -967,7 +967,7 @@ $template['screen']['screen34']="Tema SilverIRC. El editor de Popups. Captura he
 
 /* scripts.php start */
 $template['scripts']['title']="Scripts";
-$template['scripts']['text1']="En la distribución y el SVN están incluidos algunos scripts de ejemplo";
+$template['scripts']['text1']="En la distribución y el Git están incluidos algunos scripts de ejemplo";
 $template['scripts']['text2a']="Usa";
 $template['scripts']['text2b']="para instalar el script. El script por defecto debería ser instalado en";
 $template['scripts']['script1']="
@@ -983,13 +983,13 @@ $template['scripts']['script4']="
 /* snapshots.php start */
 $template['snapshots']['title']="Snapshots en desarrollo";
 $template['snapshots']['text1']="
-	Las snapshots en desarrollo son paquetes no-oficiales extraídos de la SVN en un estado no estable. Cada snapshot refleja el estado SVN de una revisión particular, así que probablemente quieras encontrar una reciente. Los paquetes han sido probados en al menos unos pocos sistemas y tienen una alta posibilidad de compilar en el tuyo. Hay también algunos binarios disponibles.";
+	Las snapshots en desarrollo son paquetes no-oficiales extraídos de la Git en un estado no estable. Cada snapshot refleja el estado Git de una revisión particular, así que probablemente quieras encontrar una reciente. Los paquetes han sido probados en al menos unos pocos sistemas y tienen una alta posibilidad de compilar en el tuyo. Hay también algunos binarios disponibles.";
 $template['snapshots']['text2']="
 	La fuente de los snapshots es proveída por el equipo de desarrollo de KVIrc.<br />
 	¡Honor y gloria! :)";
 $template['snapshots']['text3']="
 	Para descargar la última snapshot tienes que entrar en
-	<a href=\"ftp://ftp.kvirc.de/pub/kvirc/snapshots/\">el ftp de KVIrc</a> o en el subdirectorio \"snapshots\" de uno de los mirrors ftp.";
+	<a href=\"ftp://ftp.kvirc.de/pub/kvirc/snapshots/\">el FTP de KVIrc</a> o en el subdirectorio \"snapshots\" de uno de los mirrors FTP.";
 /* snapshots.php end */
 
 /* splash.php start */
@@ -1003,27 +1003,27 @@ $template['splash']['in']="Splash presente en";
 $template['status']['title']="Estado del proyecto";
 $template['status']['text']="
 	<p>Después de 10 años de desarrollo KVIrc es un cliente de IRC maduro y lleno de prestaciones, una excelente compañía para tus sesiones diarias de IRC.</p>
-	<p>La última versión estable es <a href=\"http://www.kvirc.net/?id=news&story=2011.03.19.23.40.1.story&dir=latest&lang=$lang\">4.0.4 \"Insomnia\"</a>.
-	It has been published on March 19, 2011.
+	<p>La última versión estable es <a href=\"http://kvirc.net/?id=news&story=2012.07.03.03.15.1.story&dir=latest&lang\">4.2.0 \"Equilibrium\"</a>.
+	Se ha publicado el 03 de julio 2012.
 	Puede ser obtenida en código desde la página de <a href=\"?id=download&amp;lang=$lang\">descargas</a>.</p>
-	<p>Si estás buscando versiones oficiales, échale un vistazo a <a href=\"?id=releases&amp;lang=$lang\">esta sección</a>, estas versiones son liberadas menos frecuentemente pero son las más estables. Elige tu versión entre Linux, Windows, MacOS X o el paquete de código fuente.</p>
-	<p>Las snapshots están <a href=\"?id=snapshots&amp;lang=$lang\">aquí</a> y el SVN está <a href=\"?id=SVN&amp;lang=$lang\">aquí</a>.</p>
+	<p>Si estás buscando versiones oficiales, échale un vistazo a <a href=\"?id=releases&amp;lang=$lang\">esta sección</a>, estas versiones son liberadas menos frecuentemente pero son las más estables. Elige tu versión entre Linux, Windows, OS X o el paquete de código fuente.</p>
+	<p>Las snapshots están <a href=\"?id=snapshots&amp;lang=$lang\">aquí</a> y el Git está <a href=\"?id=git&amp;lang=$lang\">aquí</a>.</p>
 	<p>También asegúrate de mirar las <a href=\"?id=install&amp;lang=$lang\">notas de instalación</a>, <a href=\"?id=tutorials&amp;lang=$lang\">tutoriales</a>, <a href=\"?id=translation&amp;lang=$lang\">traducciones</a> y <a href=\"?id=themes&amp;lang=$lang\">temas</a> para tener una versión más personalizada de KVIrc =)</p>";
 /* status.php end */
 
 /* git.php start */
-$template['git']['title']="Cloning the git Source Tree";
+$template['git']['title']="Cloning the Git Source Tree";
 $template['git']['text1']="
-	The git source tree is hosted on github.<br />
+	The Git source tree is hosted on Github.<br />
 	Once you've made sure that <a href=\"https://git-scm.com/\" target=\"_blank\">git</a> is installed on your system you should clone the tree
 	with the following command:<br />";
 $template['git']['text3']="
 	To compile the executable and the core modules just enter the source directory:";
 $template['git']['text4']="
 	and then follow the common <a href=\"?id=install&amp;lang=$lang\">installation instructions</a>.<br />
-	The latest installation instructions for the git version of KVIrc can be also found in the INSTALL file.<br />
-	We're trying to keep the git as \"clean\" as possible but it *might* happen that the sources you have downloaded do not compile or run properly.<br />
-	You can also browse trough the git via <a href=\"https://github.com/kvirc/KVIrc\">https://github.com/kvirc/KVIrc</a>";
+	The latest installation instructions for the Git version of KVIrc can be also found in the INSTALL file.<br />
+	We're trying to keep Git as \"clean\" as possible but it *might* happen that the sources you have downloaded do not compile or run properly.<br />
+	You can also browse trough the Git via <a href=\"https://github.com/kvirc/KVIrc\">https://github.com/kvirc/KVIrc</a>";
 /* git.php end */
 
 /* themes.php start */
@@ -1096,7 +1096,7 @@ $template['tools']['title']="Herramientas";
 $template['tools']['text1']="Aquí puedes encontrar algunas herramientas relacionadas con KVIrc";
 $template['tools']['tool1']="Resaltado de la sintaxis KVS para Notepad++";
 $template['tools']['tool2']="Un simple tcl para eggdrops para hacerlos responder a algunas peticiones CTCP";
-$template['tools']['tool3']="Un TCL de sindicación RSS para eggdrops, para hacerlos responder a algunos eventos como cambios en el SVN y feeds RSS de Tracking de bugs";
+$template['tools']['tool3']="Un TCL de sindicación RSS para eggdrops, para hacerlos responder a algunos eventos como cambios en el Git y feeds RSS de Tracking de bugs";
 $template['tools']['tool4']="Un script simple escrito en TCL para comprobar archivos de traducción GetText e informar de posibles errores";
 $template['tools']['tool5']="Un script PHP-CLI simple que convierte logs formateados de KVIrc a texto plano quitando los códigos de colores y caracteres de control";
 $template['tools']['tool6']="A simple plugin for Supybot to make it reply to some CTCP requests";
@@ -1124,7 +1124,7 @@ $template['translation']['text7']="
 	Este mini-howto describe el procedimiento para traducir KVIrc a un nuevo idioma";
 $template['translation']['text8']="Conseguir el código fuente.";
 $template['translation']['text9a']="
-	Lo primero de todo es conseguir la versión SVN de KVIrc. Para obtenerla puedes seguir las instrucciones de";
+	Lo primero de todo es conseguir la versión Git de KVIrc. Para obtenerla puedes seguir las instrucciones de";
 $template['translation']['text9b']="Las cosas de la traducción están en";
 $template['translation']['text10']="Inicializando el entorno de compilación";
 $template['translation']['text11']="
@@ -1178,7 +1178,7 @@ $template['translation']['text32']="
 $template['translation']['text33']="Actualizando la traducción cuando cambien las fuentes";
 $template['translation']['text34']="
 	En el proceso de desarrollo de KVIrc, se añaden nuevas cadenas dentro de los archivos de fuentes, mientras que otras cambian o incluso son eliminadas.<br />
-	Cuando hagas una actualización de svn para obtener las últimas fuentes deberías entrar a tu directorio de compilación y ejecutar:";
+	Cuando hagas una actualización de Git para obtener las últimas fuentes deberías entrar a tu directorio de compilación y ejecutar:";
 $template['translation']['text35']="
 	Este procedimiento actualizará tu archivo <code>kvirc_xxx.po</code> con los nuevos mensajes y marcará los antiguos mensajes como <i>difusos</i> o no válidos.
 	Las entradas no válidas deben ser traducidas completamente de nuevo mientras que las entradas <i>difusas</i> tienen cambios menores y podrán ser ajustadas probablemente en pocos segundos.";
@@ -1189,7 +1189,7 @@ $template['translation']['text38']="
 	Ya que muchos de los módulos tienen sus propios archivos de traducción, el procedimiento anterior debe ser repetido para los subdirectorios po/modules/*.<br />
 	De todos modos no tienes por qué traducir todos los archivos de una vez: una traducción parcial funcionará.";
 $template['translation']['text39']="
-	Cuando estés satisfecho con tu traducción puedes mandar tus archivos *.po a la lista de correo, pidiendo su inclusión en el SVN. Si quieres mantener la traducción en el futuro, también puedes pedir una cuenta SVN.";
+	Cuando estés satisfecho con tu traducción puedes mandar tus archivos *.po a la lista de correo, pidiendo su inclusión en el Git. Si quieres mantener la traducción en el futuro, también puedes pedir una cuenta Git.";
 $template['translation']['text40']="Feliz traducción :)";
 /* translation.php end */
 
@@ -1208,7 +1208,7 @@ $template['tutorials']['tree1g']="Objetos gráficos y entorno";
 $template['tutorials']['tree1h']="La clase envolvedora";
 $template['tutorials']['tree1i']="Slots y señales";
 $template['tutorials']['tree1j']="Eventos puros y acciones";
-$template['tutorials']['tree1k']="Sockets y perl";
+$template['tutorials']['tree1k']="Sockets y Perl";
 $template['tutorials']['text2a']="Compilación de KVIrc en Win32";
 $template['tutorials']['text2b']="Un tutorial para compilar KVIrc Win32";
 $template['tutorials']['text3a']="Tutorial de scripting para principiantes";

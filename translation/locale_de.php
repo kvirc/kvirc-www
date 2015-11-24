@@ -70,9 +70,9 @@ $template['index']['donation']="Spenden";
 $template['index']['related']="KVIrc-bezogen";
 $template['index']['forum']="Forum";
 $template['index']['rusite']="russische Seite";
-$template['index']['frsite']="französische Seite";
-$template['index']['frforum']="französisches Forum";
-$template['index']['osxsite']="MacOS X Pakete";
+//$template['index']['frsite']="französische Seite";
+//$template['index']['frforum']="französisches Forum";
+$template['index']['osxsite']="OS X Pakete";
 // other
 $template['index']['quickdnl']="Direktlink zum Download";
 // search
@@ -246,7 +246,7 @@ $template['contribute']['text13']="
 $template['contribute']['text14']="Spiegelung";
 $template['contribute']['text15']="
 	FTP- und WWW-Spiegel sind immer willkommen: Wir brauchen momentan Spiegel außerhalb Europas.<br />
-	Die Website ist in PHP geschrieben und wird via SVN aktualisiert, daher muss ein Spiegelserver PHP-fähig sein und einen SVN-Client installiert haben.<br />
+	Die Website ist in PHP geschrieben und wird via Git aktualisiert, daher muss ein Spiegelserver PHP-fähig sein und einen Git-Client installiert haben.<br />
 	Das FTP-Archiv umfasst ca. 1.2GB; eine teilweise Spiegelung kann ebenso arrangiert werden.<br />
 	Eine detailierte Anleitung um einen WWW- oder FTP-Spiegelserver einzurichten ist <a href=\"?id=mirroring&amp;lang=$lang\">hier</a> verfügbar.";
 $template['contribute']['text16']="Öffentlichkeitsarbeit";
@@ -282,10 +282,10 @@ $template['download']['text3']="
 	Die offiziellen Pakete werden weniger häufig veröffentlicht, sind aber die stabilsten. Jedes offizielle Quelltext-Paket ist gut getestet und wird wahrscheinlich auf ihrem System problemlos kompiliert werden können. Es bestehen auch mehrere Möglichkeiten, ein zum jeweiligen System passendes Binärpaket zu finden. Die hier abrufbaren häufig-gestellten-Fragen und die Dokumentation beziehen sich auf diese Pakete.";
 $template['download']['text4']="Entwicklungs-Snapshots";
 $template['download']['text5']="
-	Die Snapshots des Quelltextes sind inoffizielle Pakete, gewonnen aus dem SVN auf einer nicht regelmäßigen Basis. Jeder Snapshot spiegelt den SVN-Status zu einer bestimmten Revision wider. Diese Pakete wurden zumindest auf ein paar Systemen getestet und werden mit hoher Wahrscheinlichkeit auch auf ihrem System kopilieren. Es sind auch einige Binärpakete verfügbar.";
-$template['download']['text6']="Aktuelle Quellen aus dem SVN";
+	Die Snapshots des Quelltextes sind inoffizielle Pakete, gewonnen aus dem Git auf einer nicht regelmäßigen Basis. Jeder Snapshot spiegelt den Git-Status zu einer bestimmten Revision wider. Diese Pakete wurden zumindest auf ein paar Systemen getestet und werden mit hoher Wahrscheinlichkeit auch auf ihrem System kopilieren. Es sind auch einige Binärpakete verfügbar.";
+$template['download']['text6']="Aktuelle Quellen aus dem Git";
 $template['download']['text7']="
-	Der aktuelle Quelltext kann über das SVN-System geladen werden. Wir versuchen SVN so \"sauber\" wie möglich zu halten, aber trotzdem kann nicht garantiert werden, dass der Quelltext kompiliert. Der SVN-Methode stellt nur den Quelltext zur Verfügung, es gibt keine Binärpakete.";
+	Der aktuelle Quelltext kann über das Git-System geladen werden. Wir versuchen Git so \"sauber\" wie möglich zu halten, aber trotzdem kann nicht garantiert werden, dass der Quelltext kompiliert. Der Git-Methode stellt nur den Quelltext zur Verfügung, es gibt keine Binärpakete.";
 /* download.php end */
 
 /* faq.php start */
@@ -525,7 +525,7 @@ $template['honor']['made31']="Einige \"kleine\" Stücke Quelltext.";
 $template['honor']['quote32']="&lt;Error403&gt;Number1: Ich stellte mir vor, dass du verrückt aussiehst :)&quot;<br />&quot;&lt;NumeroUno&gt; Ich war betrunken";
 $template['honor']['made33']="Der \"großzügige\" für das KVIrc-Projekt. Stellt SVN-Service, WWW- &amp; FTP-Spiegelung und Bandbreite zur Verfügung, großartige Ideen und Spaß während dem Programmieren.";
 $template['honor']['made34']="Fehlersucher, Ideenquelle :)";
-$template['honor']['quote34']="buy a pigeon traveller and pass dcc transfers to him";							//TODO
+$template['honor']['quote34']="buy a pigeon traveller and pass DCC transfers to him";							//TODO
 $template['honor']['made35']="Verschiedene irre Verbesserungen.";
 $template['honor']['quote35']="Ich kann alles programmieren, woran ich denke!";
 $template['honor']['made36']="Betatester, Sprachstrukturverbesserungen.";
@@ -543,7 +543,7 @@ $template['install']['title2']="Minimale Anforderungen";
 $template['install']['title3']="Konfigurieren der Umgebung";
 $template['install']['title4']="Interaktiver Modus";
 $template['install']['title5']="Kompilieren";
-$template['install']['title6']="Kompilieren unter MacOS X";
+$template['install']['title6']="Kompilieren unter OS X";
 $template['install']['title7']="Kompilieren unter Win32";
 $template['install']['title8']="Hacker-level Installation";
 $template['install']['title9']="Ein KVIrc Paket erstellen";
@@ -553,7 +553,7 @@ $template['install']['text2']="Um KVIrc 4.0 kompilieren zu können, wird mindest
 $template['install']['text3']="
 	Wenn Ihre Distribution KDE installiert hat, ist auch Qt bereits installiert. Falls nicht, einfach Qt4 aus den Depots Ihrer Distributuin installieren.";
 $template['install']['text4']="
-	Bevor cmake aufgerufen wird, bitte sicherstellen, dass \$QTDIR auf das richtige Verzeichnis zeigt. Dies erleichtert das Auffinden der richtigen Qt-Version.";
+	Bevor Cmake aufgerufen wird, bitte sicherstellen, dass \$QTDIR auf das richtige Verzeichnis zeigt. Dies erleichtert das Auffinden der richtigen Qt-Version.";
 $template['install']['text5a']="\$QTDIR kann mit diesem Befehl eingestellt werden";
 $template['install']['text5b']="Ihr Qt-Verzeichnis";
 $template['install']['text6']="Auf meinem System ist Qt z. B. im Verzeichnis /usr/lib64/qt installiert, daher rufe ich den Befehl so auf";
@@ -582,7 +582,7 @@ $template['install']['text15']="
 $template['install']['text16a']="
 	Wenn die KDE-Unterstützung mitkompiliert werden soll, wird natürlich KDE benötigt.<br />
 	Das Paket kdelibs sollte ausreichen.</p>
-	<p>Bevor cmake aufgerufen wird, muss sichergestellt sein, dass die Variable \$KDEDIR auf das richtige Verzeichnis zeigt.</p>
+	<p>Bevor Cmake aufgerufen wird, muss sichergestellt sein, dass die Variable \$KDEDIR auf das richtige Verzeichnis zeigt.</p>
 	<p>Diese kann bei Bedarf wie folgt eingestellt werden";
 $template['install']['text16b']="Ihr KDE-Verzeichnis";
 $template['install']['text17']="In meinem Fall ist KDE in /usr installiert, daher benutze ich";
@@ -616,7 +616,7 @@ $template['install']['text27a']="
 $template['install']['text27b']="Ihre Optionen";
 $template['install']['text28']="
 	Hiermit wurde eine außerhalb-der-Quellen-Umgebung erschaffen; nützlich, um ein sauberes Arbeitsverzeichnis zu haben.<br />
-	Zu beachten ist, dass die abschließenden Punkte für cmake benötigt werden; ansonsten wird cmake NICHT die richtige Umgebung erzeugen.";
+	Zu beachten ist, dass die abschließenden Punkte für Cmake benötigt werden; ansonsten wird Cmake NICHT die richtige Umgebung erzeugen.";
 $template['install']['text29']="
 	Die CMake-Regeln unterstützen einige Flags. Wenn keine angegeben werden, wird CMake versuchen, eine passende Umgebung zu erstellen :)<br />
 	Wenn Flags benutzt weren sollen, müssen diesen ein Wahrheitswert oder eine Zeichenkette übergeben werden.</p>
@@ -636,14 +636,14 @@ $template['install']['tree5']="Dies installiert die man-pages nach DIRECTORY.";
 $template['install']['tree6']="
 	Wenn aktiviert, werden Versionsinformationen an kvirc und libkvilib anehangen, so dass mehrere unterschiedliche KVIrc-Versionen auf dem selben System existieren können.";
 $template['install']['tree7']="
-	Wenn aktiviert, werden die KVIrc-Installationsregeln nicht versuchen, die CMAKE_C(XX)_FLAGS zu setzen. Stattdessen wird cmake die systemweiten Variablen nutzen.<br />
+	Wenn aktiviert, werden die KVIrc-Installationsregeln nicht versuchen, die CMAKE_C(XX)_FLAGS zu setzen. Stattdessen wird Cmake die systemweiten Variablen nutzen.<br />
 	Die Aktivierung dieser Eigenschaft überstimmt den Wert von -DWANT_DEBUG.";
 $template['install']['tree8']="
 	Dies wird den Installationspfad auf einen guten Standardwert setzen.<br />
 	Folgende Kompilierungen sollten den korrekten Pfad aus dem CMake-Zwischenspeicher nutzen.<br />
-	Diese Eigenschaft ist nützlich, um Installationsprobleme unter MacOS X zu lösen.";
+	Diese Eigenschaft ist nützlich, um Installationsprobleme unter OS X zu lösen.";
 $template['install']['tree9']="
-	(De-) Aktiviert die Erstellung eines »Universal Binaries« unter MacOS X.";
+	(De-) Aktiviert die Erstellung eines »Universal Binaries« unter OS X.";
 $template['install']['tree10']="(De-) AKtiviert die Phonon-Audio-Backend-Unterstützung.";
 $template['install']['tree11']="
 	(De-) Aktiviert die OpenSoundSystem-Audio-Backend-Unterstüzung.<br />
@@ -698,7 +698,7 @@ $template['install']['tree29']="
 	(De-) Aktiviert die DCC-VOICE-Unterstützung. Dies kann helfen, wenn Probleme während der Kompilierung in src/modules/dcc/voice.cpp auftreten.<br />
 	Es deaktiviert die Sound-Unterstützung (und macht daher DCC-VOICE unbrauchbar).";
 $template['install']['tree30']="(De-) Aktiviert die EXPERIMENTELLE DCC-VIDEO-Unterstützung.";
-$template['install']['tree31']="(De-) Aktiviert die EXPERIMENTELLE Ogg/Theora-Unterstützung für dcc video.";
+$template['install']['tree31']="(De-) Aktiviert die EXPERIMENTELLE Ogg/Theora-Unterstützung für DCC video.";
 $template['install']['tree32']="(De-) Aktiviert die VERALTETE DCC-CANVAS-Unterstützung.";
 $template['install']['tree33']="
 	(De-) Aktiviert das Memory-Allocation-Profiling.<br />
@@ -740,7 +740,7 @@ $template['install']['text36']="
 	Bei KDE-Unterstützung kann es sein, dass die Installation alle Dateien unterhalb von \$KDEDIR installiert hat, anstatt unter /usr/local.<br />
 	Dies ist ok, da KDE seine Bibliotheksverzeichnisse bereits in /etc/ld.so.conf benötigt";
 $template['install']['text37']="
-	Für MacOS X gibt es eine detailierte Kompilierungs- und Installationsanweisung im Verzeichnis doc/. Sie heißt INSTALL-MacOS.txt";
+	Für OS X gibt es eine detailierte Kompilierungs- und Installationsanweisung im Verzeichnis doc/. Sie heißt INSTALL-MacOS.txt";
 $template['install']['text38']="
 	Für Win32-Systeme gibt es eine ausführliche Kompilierungs- und Installationsanweisung im Verzeichnis doc/. Sie heißt INSTALL-Win32.txt";
 $template['install']['text39']="
@@ -897,7 +897,7 @@ $template['screen']['screen34']="SilverIRC Thema. Der Aufklappmenü-Editor. Scre
 
 /* scripts.php start */
 $template['scripts']['title']="Skripte";
-$template['scripts']['text1']="Beispielskripte liegen den Paketen und der SVN-Version bei";
+$template['scripts']['text1']="Beispielskripte liegen den Paketen und der Git-Version bei";
 $template['scripts']['text2a']="Führe";
 $template['scripts']['text2b']="aus, um das Skript zu installieren. Das Standardskript sollte installiert sein unter";
 $template['scripts']['script1']="
@@ -913,7 +913,7 @@ $template['scripts']['script4']="
 /* snapshots.php start */
 $template['snapshots']['title']="Entwicklungs-Snapshots";
 $template['snapshots']['text1']="
-	Die Entwicklungs-Snapshots sind inoffizielle Pakete, die nicht regelmäßig aus dem SVN gebildet werden. Jeder Snapshot spiegelt den SVN-Stand zu einem bestimmten Datum wieder und sehr wahrscheinlich sind auch sehr aktuelle zu finden. Die Pakete sind zumindest auf ein paar Systemen getestet und die Wahrscheinlichkeit, dass sie auf ihrem System kompilieren, ist gut. Es sind auch einige Binärpakete verfügbar.";
+	Die Entwicklungs-Snapshots sind inoffizielle Pakete, die nicht regelmäßig aus dem Git gebildet werden. Jeder Snapshot spiegelt den Git-Stand zu einem bestimmten Datum wieder und sehr wahrscheinlich sind auch sehr aktuelle zu finden. Die Pakete sind zumindest auf ein paar Systemen getestet und die Wahrscheinlichkeit, dass sie auf ihrem System kompilieren, ist gut. Es sind auch einige Binärpakete verfügbar.";
 $template['snapshots']['text2']="
 	Die Quelltext-Snapshots werden freundlicherweise vom KVIrc-Entwicklungsteam zur Verfügung gestellt.<br />
 	Ehre und Ruhm! :)";
@@ -933,28 +933,28 @@ $template['splash']['in']="Enthalten in";
 $template['status']['title']="Projektstatus";
 $template['status']['text']="
 	<p>Nach 10 Jahren Entwicklung ist KVIrc ein ausgereifter und voll ausgestatteter IRC-Client, ein exzellenter Begleiter für die täglichen IRC-Aktivitäten.</p>
-	<p>Die aktuelle stabile Version ist <a href=\"http://www.kvirc.net/?id=news&story=2011.03.19.23.40.1.story&dir=latest&lang=$lang\">4.0.4 \"Insomnia\"</a>.
-	It has been published on March 19, 2011.
+	<p>Die aktuelle stabile Version ist <a href=\"http://kvirc.net/?id=news&story=2012.07.03.03.15.1.story&dir=latest&lang\">4.2.0 \"Equilibrium\"</a>.
+	Es wurde am 3. Juli 2012 veröffentlicht.
 
 	Sie kann als Quelltext von der <a href=\"?id=download&amp;lang=$lang\">download</a>-Seite bezogen werden.</p>
-	<p>Wenn Sie offizielle Veröffentlichungen suchen, schauen Sie in <a href=\"?id=releases&amp;lang=$lang\">diese Rubrik</a>, diese werden seltener veröffentlicht, sind aber die stabilsten. Wählen Sie ihre Version zwischen Linux, Windows, MacOSX oder Quelltextpaket.</p>
-	<p>Snapshots befinden sich <a href=\"?id=snapshots&amp;lang=$lang\">hier</a>, während SVN <a href=\"?id=SVN&amp;lang=$lang\">hier</a> gefunden werden kann.</p>
+	<p>Wenn Sie offizielle Veröffentlichungen suchen, schauen Sie in <a href=\"?id=releases&amp;lang=$lang\">diese Rubrik</a>, diese werden seltener veröffentlicht, sind aber die stabilsten. Wählen Sie ihre Version zwischen Linux, Windows, OS X oder Quelltextpaket.</p>
+	<p>Snapshots befinden sich <a href=\"?id=snapshots&amp;lang=$lang\">hier</a>, während Git <a href=\"?id=git&amp;lang=$lang\">hier</a> gefunden werden kann.</p>
 	<p>Beachten Sie auch die <a href=\"?id=install&amp;lang=$lang\">Installationshinweise</a>, <a href=\"?id=tutorials&amp;lang=$lang\">Tutorien</a>, <a href=\"?id=translation&amp;lang=$lang\">Übersetzungen</a> und <a href=\"?id=themes&amp;lang=$lang\">Themen</a>, um eine mehr angepasste KVIrc-Version zu erhalten =)</p>";
 /* status.php end */
 
 /* git.php start */
-$template['git']['title']="Cloning the git Source Tree";
+$template['git']['title']="Cloning the Git Source Tree";
 $template['git']['text1']="
-	The git source tree is hosted on github.<br />
+	The Git source tree is hosted on Github.<br />
 	Once you've made sure that <a href=\"https://git-scm.com/\" target=\"_blank\">git</a> is installed on your system you should clone the tree
 	with the following command:";
 $template['git']['text3']="
 	To compile the executable and the core modules just enter the source directory:";
 $template['git']['text4']="
 	and then follow the common <a href=\"?id=install&amp;lang=$lang\">installation instructions</a>.<br />
-	The latest installation instructions for the git version of KVIrc can be also found in the INSTALL file.<br />
-	We're trying to keep the git as \"clean\" as possible but it *might* happen that the sources you have downloaded do not compile or run properly.<br />
-	You can also browse trough the git via <a href=\"https://github.com/kvirc/KVIrc\">https://github.com/kvirc/KVIrc</a>";
+	The latest installation instructions for the Git version of KVIrc can be also found in the INSTALL file.<br />
+	We're trying to keep the Git as \"clean\" as possible but it *might* happen that the sources you have downloaded do not compile or run properly.<br />
+	You can also browse trough the Git via <a href=\"https://github.com/kvirc/KVIrc\">https://github.com/kvirc/KVIrc</a>";
 /* git.php end */
 
 /* themes.php start */
@@ -1027,7 +1027,7 @@ $template['tools']['title']="Werkzeuge";
 $template['tools']['text1']="Hier sind einige KVIrc-bezoge Werkzeuge zu finden";
 $template['tools']['tool1']="KVS-Syntax-Hervorhebung für Notepad++";
 $template['tools']['tool2']="Ein einfaches TCL-Skript für eggdrop-Bots, damit diese auf einige CTCP-Anfragen antworten";
-$template['tools']['tool3']="Ein RSS-Sydikations-TCL-Skript für eggdrop-Bots, um diese per Befehl SVN- und RSS-Feeds abrufen zu lassen.";
+$template['tools']['tool3']="Ein RSS-Sydikations-TCL-Skript für eggdrop-Bots, um diese per Befehl Git- und RSS-Feeds abrufen zu lassen.";
 $template['tools']['tool4']="Ein einfaches TCL-Skript, um gettext-Übersetzungen zu prüfen und evtl. Fehler zu melden";
 $template['tools']['tool5']="Ein einfaches PHP-CLI-Skript, welches KVIrc-Logs in einfachen Text wandelt, indem es Farbcodes und Kontrollzeichen entfernt";
 $template['tools']['tool6']="A simple plugin for Supybot to make it reply to some CTCP requests";
@@ -1055,7 +1055,7 @@ $template['translation']['text7']="
 	Diese kleine Schritt-für-Schritt-Anleitung beschreibt das Vorgehen, um KVIrc in eine neue Sprache zu übersetzen";
 $template['translation']['text8']="Die richtigen Quellen bekommen.";
 $template['translation']['text9a']="
-	Als erstes wird die SVN-Version von KVIrc gebraucht. Um diese zu erhalten, folgen Sie der Anleitung auf";
+	Als erstes wird die Git-Version von KVIrc gebraucht. Um diese zu erhalten, folgen Sie der Anleitung auf";
 $template['translation']['text9b']="Die zu übersetzenden Dateien sind in";
 $template['translation']['text10']="Die Kompilierungsumgebung initialisieren";
 $template['translation']['text11']="
@@ -1109,7 +1109,7 @@ $template['translation']['text32']="
 $template['translation']['text33']="Aktualisieren der Übersetzung, wenn die Quellen sich ändern";
 $template['translation']['text34']="
 	Während der Entwicklung werden neue Meldungen hinzugefügt, einige ändern sich oder werden gelöscht.<br />
-	Nachdem ein \"svn update\" ausgeführt wurde, um die neusten Quellen zu erhalten, sollten Sie danach ins Kompilationsverzeichnis wechseln und diesen Befehl ausführen:";
+	Nachdem ein \"Git update\" ausgeführt wurde, um die neusten Quellen zu erhalten, sollten Sie danach ins Kompilationsverzeichnis wechseln und diesen Befehl ausführen:";
 $template['translation']['text35']="
 	Dies wird die *_xxx.po-Dateien mit den neuen Meldungen aktualisieren und evtl. einige alte als entweder »fuzzy« oder ungültig (invalid) markieren.<br />
 	Die ungültigen Einträge müssen neu übersetzt werden; die mit »fuzzy« markierten haben kleinere Änderungen und können wahrscheinlich in ein paar Sekunden angepasst werden.";
@@ -1120,7 +1120,7 @@ $template['translation']['text38']="
 	Da viele Module ihre eigene Übersetzungsdateien haben, kann der obige Ablauf für die po/modules/*-Unterverzeichnisse wiederholt werden.<br />
 	Sie werden nicht gezwungen, alle Dateien auf einmal zu übersetzen; eine teilweise Übersetzung funktioniert auch.";
 $template['translation']['text39']="
-	Wenn Sie mit ihrer Übersetzung zufrieden sind, können Sie ihre *.po-Dateien an die KVIrc-Mailingliste schicken, um sie ins SVN aufzunehmen. Wenn Sie die Übersetzung weiterhin pflegen möchten, kann auch ein SVN-Zugang mit Schreibberechtigung gewährt werden.";
+	Wenn Sie mit ihrer Übersetzung zufrieden sind, können Sie ihre *.po-Dateien an die KVIrc-Mailingliste schicken, um sie ins Git aufzunehmen. Wenn Sie die Übersetzung weiterhin pflegen möchten, kann auch ein Git-Zugang mit Schreibberechtigung gewährt werden.";
 $template['translation']['text40']="Fröhlichen Übersetzen :)";
 /* translation.php end */
 
