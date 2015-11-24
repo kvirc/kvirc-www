@@ -23,56 +23,56 @@ $template['index']['spanish']="Spanish";
 $template['index']['ukrainian']="Ukrainian";
 
 // the project
-$template['index']['theproject']="the project";
-$template['index']['status']="status";
-$template['index']['features']="features";
-$template['index']['license']="license";
-$template['index']['screens']="screenshots";
+$template['index']['theproject']="The project";
+$template['index']['status']="Status";
+$template['index']['features']="Features";
+$template['index']['license']="License";
+$template['index']['screens']="Screenshots";
 $template['index']['bugtrack']="KVIrc bugtrack";
 // running kvirc
-$template['index']['running']="running KVIrc";
-$template['index']['download']="download";
-$template['index']['releases']="official releases";
-$template['index']['snapshots']="snapshots";
-$template['index']['git']="git";
-$template['index']['install']="installation";
+$template['index']['running']="Running KVIrc";
+$template['index']['download']="Download";
+$template['index']['releases']="Official releases";
+$template['index']['snapshots']="Snapshots";
+$template['index']['git']="Git";
+$template['index']['install']="Installation";
 // documentation
-$template['index']['docs']="documentation";
+$template['index']['docs']="Documentation";
 $template['index']['faq']="FAQ";
 $template['index']['api']="API";
 $template['index']['doc']="KVIrc manual";
-$template['index']['tutorials']="tutorials";
-$template['index']['translations']="translations";
+$template['index']['tutorials']="Tutorials";
+$template['index']['translations']="Translations";
 $template['index']['shortcuts']="Keyboard shortcuts";
 $template['index']['faq2']="FAQ (Wiki)";
 
 // graphic suite
-$template['index']['graphsuite']="graphic suite";
-$template['index']['themes']="themes";
-$template['index']['splash']="splash screens";
-$template['index']['banners']="banners";
-$template['index']['arts']="arts";
+$template['index']['graphsuite']="Graphic suite";
+$template['index']['themes']="Themes";
+$template['index']['splash']="Splash screens";
+$template['index']['banners']="Banners";
+$template['index']['arts']="Arts";
 // misc
-$template['index']['misc']="misc";
-$template['index']['honor']="honor &amp; glory";
-$template['index']['scripts']="scripts";
-$template['index']['addons']="addons";
-$template['index']['tools']="tools";
-$template['index']['changelog']="changeLog";
+$template['index']['misc']="Misc";
+$template['index']['honor']="Honor &amp; glory";
+$template['index']['scripts']="Scripts";
+$template['index']['addons']="Addons";
+$template['index']['tools']="Tools";
+$template['index']['changelog']="ChangeLog";
 // contact
-$template['index']['contact']="contact";
+$template['index']['contact']="Contact";
 $template['index']['ml']="KVIrc mailing list";
-$template['index']['archive']="archive";
-$template['index']['contribute']="collaboration";
-$template['index']['help']="finding help";
-$template['index']['donation']="make a donation";
+$template['index']['archive']="Archive";
+$template['index']['contribute']="Collaboration";
+$template['index']['help']="Finding help";
+$template['index']['donation']="Make a donation";
 // KVIrc related
 $template['index']['related']="KVIrc related";
-$template['index']['forum']="official forum";
-$template['index']['rusite']="russian site";
+$template['index']['forum']="Official forum";
+$template['index']['rusite']="Russian site";
 //$template['index']['frsite']="french site";
 //$template['index']['frforum']="french forum";
-$template['index']['osxsite']="OS X builds";
+//$template['index']['osxsite']="OS X builds";
 // other
 $template['index']['quickdnl']="quick download";
 // search
