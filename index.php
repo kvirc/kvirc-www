@@ -157,9 +157,11 @@ search();
 							<ul>
 								<li><a href="javascript:opendoc('http://forum.kvirc.ru/');"><?php echo $template['index']['forum']?></a></li>
 								<li><a href="javascript:opendoc('http://www.kvirc.ru/');"><?php echo $template['index']['rusite']?></a></li>
+								<?php /*
 								<li><a href="javascript:opendoc('http://kvirc.fr/');"><?php echo $template['index']['frsite']?></a></li>
 								<li><a href="javascript:opendoc('http://kvircfr.les-forums.com/');"><?php echo $template['index']['frforum']?></a></li>
 								<li><a href="javascript:opendoc('http://kvirc.dotadata.de/');"><?php echo $template['index']['osxsite']?></a></li>
+								*/?>
 							</ul>
 						</li>
 					</ul>
