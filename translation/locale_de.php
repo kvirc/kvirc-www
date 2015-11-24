@@ -72,7 +72,7 @@ $template['index']['forum']="Forum";
 $template['index']['rusite']="russische Seite";
 //$template['index']['frsite']="französische Seite";
 //$template['index']['frforum']="französisches Forum";
-$template['index']['osxsite']="OS X Pakete";
+//$template['index']['osxsite']="OS X Pakete";
 // other
 $template['index']['quickdnl']="Direktlink zum Download";
 // search
@@ -946,7 +946,7 @@ $template['status']['text']="
 $template['git']['title']="Cloning the Git Source Tree";
 $template['git']['text1']="
 	The Git source tree is hosted on Github.<br />
-	Once you've made sure that <a href=\"https://git-scm.com/\" target=\"_blank\">git</a> is installed on your system you should clone the tree
+	Once you've made sure that <a href=\"https://git-scm.com/\" target=\"_blank\">Git</a> is installed on your system you should clone the tree
 	with the following command:";
 $template['git']['text3']="
 	To compile the executable and the core modules just enter the source directory:";
