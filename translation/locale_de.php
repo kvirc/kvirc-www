@@ -448,7 +448,7 @@ $template['help']['text2']="
 $template['help']['text3']="
 	Die Entwickler verfolgen die Mailingliste und werden Fragen so schnell wie möglich beantworten.";
 $template['help']['text4a']="Der offizielle KVIrc-Support-Raum ist im";
-$template['help']['text4b']="Freenode Netzwerk";
+$template['help']['text4b']="freenode Netzwerk";
 $template['help']['text4c']="und der Raum heißt – wer hätte es gedacht – ";
 $template['help']['text4d']="Der offizielle italienische Raum ist";
 $template['help']['text4e']="im";

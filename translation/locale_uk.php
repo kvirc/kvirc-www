@@ -453,7 +453,7 @@ $template['help']['text2']="
 $template['help']['text3']="
 	Розробники слідкують за списком розсилки і дадуть вам відповідь як тільки зможуть.";
 $template['help']['text4a']="Офіційний канал підтримки KVIrc знаходиться в";
-$template['help']['text4b']="мережі Freenode";
+$template['help']['text4b']="мережі freenode";
 $template['help']['text4c']="а канал має очевидну назву";
 $template['help']['text4d']="Офіційний Італійський канал - ";
 $template['help']['text4e']="в";

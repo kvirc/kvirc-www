@@ -451,7 +451,7 @@ $template['help']['text2']="
 $template['help']['text3']="
 	Les développeurs répondront si possible aux questions.";
 $template['help']['text4a']="Le salon officiel de KVIrc (en anglais) est situé sur le";
-$template['help']['text4b']="réseau Freenode";
+$template['help']['text4b']="réseau freenode";
 $template['help']['text4c']="et le salon est évidemment nommé";
 $template['help']['text4d']="Le salon officiel Italien est";
 $template['help']['text4e']="sur le";

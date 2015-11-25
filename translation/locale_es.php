@@ -450,7 +450,7 @@ $template['help']['text2']="
 $template['help']['text3']="
 	Los desarrolladores siguen la lista de correo y responderán a las preguntas tan pronto como sea posible.";
 $template['help']['text4a']="El canal oficial de soporte de KVIrc está en la ";
-$template['help']['text4b']="red Freenode";
+$template['help']['text4b']="red freenode";
 $template['help']['text4c']="y se llama obviamente";
 $template['help']['text4d']="El canal oficial en italiano es";
 $template['help']['text4e']="en la";

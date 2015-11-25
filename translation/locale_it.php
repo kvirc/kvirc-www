@@ -450,7 +450,7 @@ $template['help']['text2']="
 $template['help']['text3']="
 	Gli sviluppatori seguono la mailing list e risponderanno alle domande il prima possibile.";
 $template['help']['text4a']="Il canale di supporto ufficiale di KVIrc è situato sulla";
-$template['help']['text4b']="rete Freenode";
+$template['help']['text4b']="rete freenode";
 $template['help']['text4c']="e il canale è ovviamente chiamato";
 $template['help']['text4d']="Il canale ufficiale Italiano è";
 $template['help']['text4e']="sulla";
