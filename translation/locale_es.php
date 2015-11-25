@@ -78,36 +78,36 @@ $template['index']['quickdnl']="descarga rápida";
 $template['index']['search']="Buscar";
 $template['index']['go']="¡IR"; // no acabar con !, ya lo pone el php
 // news
-$template['index']['latestnews']="noticias";
+$template['index']['latestnews']="Noticias";
 $template['index']['allnews']="Todas las noticias";
 // mirrors
-$template['index']['mirrors']="mirrors";
-$template['index']['wwwmirrors']="mirrors WWW";
-$template['index']['ftpmirrors']="mirrors FTP";
+$template['index']['mirrors']="Mirrors";
+$template['index']['wwwmirrors']="Mirrors WWW";
+$template['index']['ftpmirrors']="Mirrors FTP";
 $template['index']['mirrorstext1a']="Contribuir al proyecto KVIrc creando y manteniendo un mirror es realmente fácil y apreciado, en";
 $template['index']['mirrorstext1b']="esta página";
 $template['index']['mirrorstext1c']="encontrarás instrucciones paso a paso de cómo crear un mirror WWW o FTP (o ambos).";
 $template['index']['mirrorstext2']="Necesitamos FTPs no-europeos.";
-$template['index']['mirrorstitle']="mirrors WWW y FTP";
+$template['index']['mirrorstitle']="Mirrors WWW y FTP";
 // layouts
-$template['index']['oldlayout']="webs antiguas	";
-$template['index']['oldsite']="sitio KVIrc antiguo";
-$template['index']['iakkohome']="web de iakko";
+$template['index']['oldlayout']="Webs antiguas	";
+$template['index']['oldsite']="Sitio KVIrc antiguo";
+//$template['index']['iakkohome']="Web de iakko";
 // help
 $template['index']['helptext1a']="si necesitas algún tipo de ayuda, la manera más rápida es ir a la";
-$template['index']['helptext1b']="lista de correo pública de KVIrc";
-$template['index']['helptext1c']="o unirse a los canales dedicados";
+$template['index']['helptext1b']="Lista de correo pública de KVIrc";
+$template['index']['helptext1c']="O unirse a los canales dedicados";
 // bugs
-$template['index']['bugreport']="informar de bug";
+$template['index']['bugreport']="Informar de bug";
 $template['index']['bugstext']="los bugs pueden ser informados y vistos en el sistema bugtrack de KVIrc, disponible aquí:";
 // more docs
-$template['index']['moredocs']="documentación";
-$template['index']['officialdocs']="documentación oficial de KVIrc";
+$template['index']['moredocs']="Documentación";
+$template['index']['officialdocs']="Documentación oficial de KVIrc";
 $template['index']['docsauto']="peticiones del índice autogeneradas";
 // hardware, traffic and hosting donation
-$template['index']['hwdonation']="propulsado por";
+$template['index']['hwdonation']="Propulsado por";
 $template['index']['hwdonationtext']="fue muy amable donando hardware para *.kvirc.de";
-$template['index']['tahdonation']="levantado por";
+$template['index']['tahdonation']="Pevantado por";
 $template['index']['tahdonationtext']="patrocina el alojamiento y el tráfico de *.kvirc.de";
 $template['index']['donationtextkvirc.de']="y este mirror";
 // other
