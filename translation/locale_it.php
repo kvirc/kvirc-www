@@ -42,7 +42,7 @@ $template['index']['faq']="FAQ";
 $template['index']['api']="API";
 $template['index']['doc']="Manuale di KVIrc";
 $template['index']['tutorials']="Tutorial";
-$template['index']['translations']="traduzioni";
+$template['index']['translations']="Traduzioni";
 $template['index']['shortcuts']="Scorciatoie tastiera";
 $template['index']['faq2']="FAQ (Wiki) (in inglese)";
 // graphic suite
@@ -56,7 +56,7 @@ $template['index']['misc']="Misc";
 $template['index']['honor']="Onore &amp; gloria";
 $template['index']['scripts']="Scripts";
 $template['index']['addons']="Addons";
-$template['index']['tools']="strumenti";
+$template['index']['tools']="Strumenti";
 $template['index']['changelog']="ChangeLog";
 // contact
 $template['index']['contact']="Contatti";
@@ -78,40 +78,40 @@ $template['index']['quickdnl']="download veloce";
 $template['index']['search']="Cerca";
 $template['index']['go']="VAI";
 // news
-$template['index']['latestnews']="ultime notizie";
+$template['index']['latestnews']="Ultime notizie";
 $template['index']['allnews']="Tutte le Notizie";
 // mirrors
-$template['index']['mirrors']="mirror";
-$template['index']['wwwmirrors']="mirror WWW";
-$template['index']['ftpmirrors']="mirror FTP";
+$template['index']['mirrors']="Mirror";
+$template['index']['wwwmirrors']="Mirror WWW";
+$template['index']['ftpmirrors']="Mirror FTP";
 $template['index']['mirrorstext1a']="Contribuire al progetto KVIrc facendo un mirror dei file è molto semplice e apprezzato; in";
 $template['index']['mirrorstext1b']="questa pagina";
 $template['index']['mirrorstext1c']="troverai le istruzioni passo passo per creare un mirror WWW o FTP (o entrambi).";
 $template['index']['mirrorstext2']="FTP non europei sono molto richiesti.";
-$template['index']['mirrorstitle']="mirror WWW e FTP";
+$template['index']['mirrorstitle']="Mirror WWW e FTP";
 // layouts
-$template['index']['oldlayout']="layout vecchi";
-$template['index']['oldsite']="vecchio sito";
-$template['index']['iakkohome']="home di iakko";
+$template['index']['oldlayout']="Layout vecchi";
+$template['index']['oldsite']="Vecchio sito";
+//$template['index']['iakkohome']="Home di iakko";
 // help
 $template['index']['helptext1a']="se hai bisogno di aiuto il modo più veloce è contattarci tramite";
 $template['index']['helptext1b']="la mailing list pubblica di KVIrc";
 $template['index']['helptext1c']="o entrare nei canali dedicati";
 // bugs
-$template['index']['bugreport']="bug report";
+$template['index']['bugreport']="Bug report";
 $template['index']['bugstext']="i bug possono essere riportati e visti usando il sistema di bugtrack di KVIrc disponibile al seguente link:";
 // more docs
-$template['index']['moredocs']="documentazione";
-$template['index']['officialdocs']="documentazione ufficiale";
+$template['index']['moredocs']="Documentazione";
+$template['index']['officialdocs']="Documentazione ufficiale";
 $template['index']['docsauto']="indice autogenerato";
 // hardware, traffic and hosting donation
-$template['index']['hwdonation']="propulsione a razzo";
+$template['index']['hwdonation']="Propulsione a razzo";
 $template['index']['hwdonationtext']="è stato così gentile da donare hardware per *.kvirc.de";
-$template['index']['tahdonation']="si è alzato nell'aria";
+$template['index']['tahdonation']="Si è alzato nell'aria";
 $template['index']['tahdonationtext']="sponsorizza hosting e traffico per *.kvirc.de";
 $template['index']['donationtextkvirc.de']="e questo mirror";
 // other
-$template['index']['latestscreen']="ultimo screenshot";
+$template['index']['latestscreen']="Ultimo screenshot";
 $template['index']['footer']="questo sito si vede meglio con un monitor";
 /* index.php end */
 
