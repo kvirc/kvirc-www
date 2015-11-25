@@ -94,7 +94,7 @@ $template['index']['mirrorstitle']="www та ftp-віддзеркалюванн�
 // layouts
 $template['index']['oldlayout']="схеми старого сайту";
 $template['index']['oldsite']="старий сайт KVIrc";
-$template['index']['iakkohome']="домашня сторінка iakko";
+//$template['index']['iakkohome']="домашня сторінка iakko";
 // help
 $template['index']['helptext1a']="Якщо вам потрібна допомога тоді зв'яжіться з нами через";
 $template['index']['helptext1b']="публічний список розсилки KVIrc";
