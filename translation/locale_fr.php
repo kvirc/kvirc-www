@@ -79,40 +79,40 @@ $template['index']['quickdnl']="téléchargement rapide";
 $template['index']['search']="Chercher";
 $template['index']['go']="GO";
 // news
-$template['index']['latestnews']="dernières news";
+$template['index']['latestnews']="Dernières news";
 $template['index']['allnews']="Toutes les News";
 // mirrors
-$template['index']['mirrors']="miroirs";
-$template['index']['wwwmirrors']="miroirs WWW";
-$template['index']['ftpmirrors']="miroirs FTP";
+$template['index']['mirrors']="Miroirs";
+$template['index']['wwwmirrors']="Miroirs WWW";
+$template['index']['ftpmirrors']="Miroirs FTP";
 $template['index']['mirrorstext1a']="Contribuer au projet KVIrc en hébergeant les miroirs de téléchargement est très simple et apprécié; sur";
 $template['index']['mirrorstext1b']="cette page";
 $template['index']['mirrorstext1c']="vous trouverez les instructions étape par étape pour créer un miroir WWW ou FTP (ou les deux).";
 $template['index']['mirrorstext2']="Les FTP non européens sont acceptés avec joie.";
 $template['index']['mirrorstitle']="miroirs WWW et FTP";
 // layouts
-$template['index']['oldlayout']="anciens sites";
-$template['index']['oldsite']="anciens sites KVIrc";
-$template['index']['iakkohome']="chez iakko";
+$template['index']['oldlayout']="Anciens sites";
+$template['index']['oldsite']="Anciens sites KVIrc";
+//$template['index']['iakkohome']="Chez iakko";
 // help
 $template['index']['helptext1a']="si vous avez besoin d'aide la manière la plus simple est de se référer à";
 $template['index']['helptext1b']="la liste de diffusion officielle";
 $template['index']['helptext1c']="ou en rejoignant un salon dédié";
 // bugs
-$template['index']['bugreport']="rapport de bugs";
+$template['index']['bugreport']="Rapport de bugs";
 $template['index']['bugstext']="les bugs peuvent être signalés et consultés en utilisant le bugtrack KVIrc disponible à";
 // more docs
-$template['index']['moredocs']="plus de docs";
-$template['index']['officialdocs']="documentation officielle";
-$template['index']['docsauto']="générée automatiquement";
+$template['index']['moredocs']="Plus de docs";
+$template['index']['officialdocs']="Documentation officielle";
+$template['index']['docsauto']="Générée automatiquement";
 // hardware, traffic and hosting donation
-$template['index']['hwdonation']="rocket-propelled";
+$template['index']['hwdonation']="Rocket-propelled";
 $template['index']['hwdonationtext']="a la gentillesse d'offrir le matériel pour faire tourner *.kvirc.de";
-$template['index']['tahdonation']="lifted into the air";
+$template['index']['tahdonation']="Lifted into the air";
 $template['index']['tahdonationtext']="sponsorise l'hébergement et le trafic de *.kvirc.de";
-$template['index']['donationtextkvirc.de']="et son miroir";
+$template['index']['donationtextkvirc.de']="Et son miroir";
 // other
-$template['index']['latestscreen']="dernière capture";
+$template['index']['latestscreen']="Dernière capture";
 $template['index']['footer']="this site is best viewed with a monitor";
 /* index.php end */
 
