@@ -35,7 +35,7 @@ $template['index']['running']="запуск KVIrc";
 $template['index']['download']="завантаження";
 $template['index']['releases']="офіційні релізи";
 $template['index']['snapshots']="знімки";
-$template['index']['git']="git";
+$template['index']['git']="Git";
 $template['index']['install']="встановлення";
 // documentation
 $template['index']['docs']="документація";
