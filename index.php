@@ -83,7 +83,7 @@ search();
 			<div class="header-bottom">
 				<div class="nav2">
 					<ul>
-						<li><a href=".">home</a></li>
+						<li><a href=".">Home</a></li>
 					</ul>
 					<ul>
 						<li><a href="#"><?php echo $template['index']['theproject']?></a>
@@ -233,10 +233,12 @@ search();
 					<img src="img/th_oldsite_1.gif" alt="<?php echo $template['index']['oldsite']?>" width="159" height="105" /><br />
 					<a href="javascript:opendoc('http://old.kvirc.de/');" title="<?php echo $template['index']['oldsite']?>">old.kvirc.de</a> by istari
 				</p>
-				<p>
+				<?php /*
+        <p>
 					<img src="img/th_oldsite_2.gif" alt="<?php echo $template['index']['oldsite']?>" width="159" height="105" /><br />
 					kvirc.virg0.org/old by <a href="javascript:opendoc('http://iakko.net/');" title="<?php echo $template['index']['iakkohome']?>">iakko</a>
 				</p>
+				*/?>
 			</div>
  
 			<div class="main-content">
