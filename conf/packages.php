@@ -12,8 +12,8 @@ $platform_details["source"]      = "C++ sources: you must to compile them to obt
 $platform_description["win32"]   = "Windows binary package";
 $platform_details["win32"]       = "Self-contained win32 KVIrc executable: it should run just after the installation.";
 
-$platform_description["macosx"]  = "MacOSX binary package";
-$platform_details["macosx"]      = "Self-contained MaxOSX KVIrc executable: it should run just after the installation.";
+$platform_description["macosx"]  = "OS X binary package";
+$platform_details["macosx"]      = "Self-contained OS X KVIrc executable: it should run just after the installation.";
 
 $platform_description["linux"]   = "Linux flavor binary package";
 $platform_details["linux"]       = "Pre-compiled packages are available for several linux systems (read \"distributions\"). If a package for your exact distribution is not available you might try to install the \"closest match\". If no package works for you, then you have to compile KVIrc from the sources.";
