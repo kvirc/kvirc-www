@@ -93,7 +93,7 @@ $template['index']['mirrorstitle']="WWW- und FTP-Spiegelung";
 // layouts
 $template['index']['oldlayout']="Alte Seitenlayouts";
 $template['index']['oldsite']="alte KVIrc Seite";
-$template['index']['iakkohome']="iakkos Homepage";
+//$template['index']['iakkohome']="iakkos Homepage";
 // help
 $template['index']['helptext1a']="Wenn Sie Hilfe brauchen, wenden Sie sich an die";
 $template['index']['helptext1b']="öffentliche KVIrc Mailingliste";
