@@ -922,7 +922,7 @@ $template['snapshots']['text1']="
 	Честь і Слава! :)";
 $template['snapshots']['text3']="
 	Щоб завантажити останній знімок покопайтесь в
-	<a href=\"ftp://ftp.kvirc.de/pub/kvirc/snapshots/\">the KVIrc ftp</a> або в підтеці \"snapshots\" на одному з FTP дзеркал.";
+	<a href=\"https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrc's-nightly-source-or-binaries\">На сторінку завантаження проекту KVIrc Github Вікі</a> або в підтеці \"snapshots\" на одному з FTP дзеркал.";
 /* snapshots.php end */
 
 /* splash.php start */
