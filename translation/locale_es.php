@@ -989,7 +989,7 @@ $template['snapshots']['text2']="
 	¡Honor y gloria! :)";
 $template['snapshots']['text3']="
 	Para descargar la última snapshot tienes que entrar en
-	<a href=\"ftp://ftp.kvirc.de/pub/kvirc/snapshots/\">el FTP de KVIrc</a> o en el subdirectorio \"snapshots\" de uno de los mirrors FTP.";
+	<a href=\"https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrc's-nightly-source-or-binaries\">El KVIrc Github Wiki del proyecto página de descargas</a> o en el subdirectorio \"snapshots\" de uno de los mirrors FTP.";
 /* snapshots.php end */
 
 /* splash.php start */
