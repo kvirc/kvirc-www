@@ -761,7 +761,7 @@ $template['license']['text2']="
 	It is based on the GNU General Public License Version 2.<br />
 	It contains all the GPL terms and conditions and adds a special exception (see Terms and Conditions, clause 13) to the distribution limitations.<br /><br />
 	Note that the GPL below is copyrighted by the Free Software Foundation, but the instance of code that it refers to is copyrighted by Szymon Stefanek and other members of the KVIrc Development Team.<br /><br />
-	The source code for all versions of KVIrc is available at <a href=\"?id=releases&amp;platform=source&amp;lang=$lang\">this url</a>.<br /><br />
+	The source code for all versions of KVIrc is available at <a href=\"?id=releases&amp;platform=source&amp;lang=$lang\">this URL</a>.<br /><br />
 	Have fun!";
 /* license.php end */
 
@@ -898,7 +898,7 @@ $template['screen']['screen34']="SilverIRC theme. The Popups Editor. Screenshot 
 
 /* scripts.php start */
 $template['scripts']['title']="Scripts";
-$template['scripts']['text1']="Example scripts are included into the distribution and the SVN";
+$template['scripts']['text1']="Example scripts are included into the distribution and the Git";
 $template['scripts']['text2a']="Use";
 $template['scripts']['text2b']="to install the script. The default script should be installed at";
 $template['scripts']['script1']="
@@ -920,7 +920,7 @@ $template['snapshots']['text2']="
 	Honor and Glory! :)";
 $template['snapshots']['text3']="
 	To download the latest Git source or binary snapshot please visit.
-	<a href=\"https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrc-source-or-binaries\">the KVIrc Github Wiki project downloads page</a> or in the \"snapshots\" subdirectory of one of the FTP mirrors.";
+	<a href=\"https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrc's-nightly-source-or-binaries\">the KVIrc Github Wiki project downloads page</a> or in the \"snapshots\" subdirectory of one of the FTP mirrors.";
 /* snapshots.php end */
 
 /* splash.php start */
@@ -1027,7 +1027,7 @@ $template['tools']['title']="Tools";
 $template['tools']['text1']="Here you can find some KVIrc-related tools";
 $template['tools']['tool1']="KVS syntax highlight for Notepad++";
 $template['tools']['tool2']="A simple tcl for eggdrops to make them reply to some CTCP requests";
-$template['tools']['tool3']="A RSS syndacation tcl for eggdrops to make them reply to some triggers which poll the SVN and Trac RSS feeds";
+$template['tools']['tool3']="A RSS syndication tcl for eggdrops to make them reply to some triggers which poll the SVN and Trac RSS feeds";
 $template['tools']['tool4']="A simple script written in TCL to check for GetText translation files and report possible errors";
 $template['tools']['tool5']="A simple PHP-CLI script which converts KVIrc-formatted logs to plain text stripping color codes and control chars";
 $template['tools']['tool6']="A simple plugin for Supybot to make it reply to some CTCP requests";
