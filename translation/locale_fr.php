@@ -578,7 +578,7 @@ $template['install']['text13']="
 	You can look for it with the \"find\" command";
 $template['install']['text14']="
 	If you don't have it (CMake will tell you) you can download it from your favorite GNU mirror.<br />
-	The configure script will also fail if the library is hidden somewhere on your system (eg. not in /lib , /usr/lib or /usr/local/lib): you should probably move it.";
+	The configure script will also fail if the library is hidden somewhere on your system (e.g. not in /lib , /usr/lib or /usr/local/lib): you should probably move it.";
 $template['install']['text15']="
 	You need the dynamic linker interface library libdl.so.<br />
 	This is usually installed on your system , so don't care until configure complains about it. Some system have the interface builtin in libc.";
@@ -920,7 +920,7 @@ $template['snapshots']['text2']="
 	Honor and Glory! :)";
 $template['snapshots']['text3']="
 	To download the latest snapshot you have to dig in
-	<a href=\"https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrc's-nightly-source-or-binaries\">L'KVIrc Github Wiki du projet page téléchargements</a> or in the \"snapshots\" subdirectory of one of the FTP mirrors.";
+	<a href=\"https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrc's-nightly-source-or-binaries\">the KVIrc Github Wiki project downloads page</a> or in the \"snapshots\" subdirectory of one of the FTP mirrors.";
 /* snapshots.php end */
 
 /* splash.php start */
