@@ -187,10 +187,10 @@ to write complex code in a "clean" way.
 So I've added at least some pseudo-object support.<br><br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Basic concepts</div></td></tr><tr><td bgcolor="#EAEAEA">
 Objects are arranged in tree structures.
-Each object that you create is either toplevel object or a children
+Each object that you create is either toplevel object or a child
 of another object. A toplevel object is a parentless one.
-Obviously all objects can have children objects.<br><br>
-When an object is destroyed, all its children are also destroyed.
+Obviously all objects can have child objects.<br><br>
+When an object is destroyed, all its child objects are also destroyed.
 The toplevel objects are automatically destroyed when KVIrc quits.
 The objects are global to the entire application (this is different
 from previous KVIrc releases where the objects were local
@@ -202,7 +202,7 @@ by the programmer; the name is just a mnemonic expedient, and
 you may also not need it.<br><br>
 Each object is identified by an <b>OPAQUE UNIQUE ID</b>.
 The ID is assigned by KVIrc and can be held in any variable.
-You can think the object id as a "handle for the object" or the object's pointer.
+You can think the object ID as a "handle for the object" or the object's pointer.
 Any action performed on the object will require its ID.<br><br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Creation and destruction</div></td></tr><tr><td bgcolor="#EAEAEA">
 To create an object you must use the <a href="fnc_new.html">$new</a>()
@@ -214,7 +214,7 @@ function. <a href="fnc_new.html">$new</a>() requires three parameters:<br>
 </div>
 <a href="fnc_new.html">$new</a>() returns the ID of the newly created object, or
 the STRING "0" if the object creation fails
-(it is a string because the object id's are generally strings, and 0 is an "invalid object id").
+(it is a string because the object ID's are generally strings, and 0 is an "invalid object ID").
 In well written scripts it is not common that the object creation fails, anyway
 you can check if the creation has failed in the following way:<br>
 <div class="example-box"><a href="cmd_if.html">if</a><span class="example-paren">(</span><span class="example-variable">%myobject</span><span class="example-paren">)</span><a href="cmd_echo.html">echo</a> "Object created!"
@@ -223,13 +223,13 @@ else <a href="cmd_echo.html">echo</a> "Object creation failed!"
 You can also test the object ID's for equality:<br>
 <div class="example-box"><a href="cmd_if.html">if</a><span class="example-paren">(</span><span class="example-variable">%myobject</span> == <span class="example-variable">%anotherobject</span><span class="example-paren">)</span><a href="cmd_echo.html">echo</a> "This is the same object!";
 </div>
-The parent object id is optional, if not specified it is assumed to be 0.
+The parent object ID is optional, if not specified it is assumed to be 0.
 The object name is optional, but it may help you later in finding the object.<br><br>
 To destroy an object use the <a href="cmd_delete.html">delete</a> command. (In previous versions
 this command was named "destroy" and delete is currently aliased to that name too).<br>
 <div class="example-box"><a href="cmd_delete.html">delete</a> <span class="example-variable">%myobject</span>
 </div>
-If the destroyed object has children objects, these are destroyed too.<br><br>
+If the destroyed object has child objects, these are destroyed too.<br><br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Fields: objects as pseudo-structures</div></td></tr><tr><td bgcolor="#EAEAEA">
 All the objects can contain variable fields.
 You can set an object's field by using the object scope operator "-&gt;":<br>
@@ -325,13 +325,13 @@ and <a href="class_object.html#classname">$classname</a>() functions.<br>
 </div>
 Another cool function exported by the <a href="class_object.html">object</a> class is the
 <a href="class_object.html#children">$children</a>() function.
-It returns a comma separated list of children identifiers.<br>
+It returns a comma separated list of child identifiers.<br>
 <div class="example-box"><span class="example-variable">%tmp</span> = <a href="fnc_new.html">$new</a><span class="example-paren">(</span><a href="class_object.html">object</a>,0,myobject<span class="example-paren">)</span>
 <span class="example-variable">%tmpchild</span> = <a href="fnc_new.html">$new</a><span class="example-paren">(</span><a href="class_object.html">object</a>,<span class="example-variable">%tmp</span>,child1<span class="example-paren">)</span>
 <span class="example-variable">%tmpchild</span> = <a href="fnc_new.html">$new</a><span class="example-paren">(</span><a href="class_object.html">object</a>,<span class="example-variable">%tmp</span>,child2<span class="example-paren">)</span>
 <span class="example-variable">%tmpchild</span> = <a href="fnc_new.html">$new</a><span class="example-paren">(</span><a href="class_object.html">object</a>,<span class="example-variable">%tmp</span>,child3<span class="example-paren">)</span>
-<a href="cmd_echo.html">echo</a> The object's children list is: <span class="example-variable">%tmp</span>-&gt;<a href="class_object.html#children">$children</a><span class="example-paren">()</span>
-<span class="comment-text"># Destroy the object and the children
+<a href="cmd_echo.html">echo</a> The object's child list is: <span class="example-variable">%tmp</span>-&gt;<a href="class_object.html#children">$children</a><span class="example-paren">()</span>
+<span class="comment-text"># Destroy the object and the child
 </span><a href="cmd_delete.html">delete</a> <span class="example-variable">%tmp</span>
 </div>
 There are two special functions for each objects: the "constructor" and the "destructor".
@@ -359,19 +359,19 @@ A more complex example<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Children : <span class="example-variable">%t</span>-&gt;<a href="class_object.html#name">$name</a><span class="example-paren">()</span> with class <span class="example-variable">%t</span>-&gt;<a href="class_object.html#class">$class</a><span class="example-paren">()</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%count</span>++
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Just before destroying my <span class="example-variable">%count</span> children.
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Just before destroying my <span class="example-variable">%count</span> child items.
 <span class="example-bracket">}</span>
-<span class="comment-text"># Destroy the object and the children
-</span><a href="cmd_delete.html">delete</a> <span class="example-variable">%tmp</span>
+<span class="comment-text">//Destroy the object and it's child items</span>
+<a href="cmd_delete.html">delete</a> <span class="example-variable">%tmp</span>
 </div>
 In the example above four objects have been created.
-A "parent" object named "myobject", and three children objects.
+A "parent" object named "myobject", and three child objects.
 The destructor has been reimplemented for each child object,
 to make it "say" its name (Please note the usage of <a href="fnc_this.html">$this</a>).
-In the parent destructor the children have been counted and listed.<br>
+In the parent destructor the child objects have been counted and listed.<br>
 Then the parent object is destroyed causing to:<br>
 - trigger the parent destructor.<br>
-- destroy all the children (and consequently trigger all the "individual" destructors).<br><br>
+- destroy all the child items (and consequently trigger all the <i>individual</i> destructors).<br><br>
 Not all the object functions must return a value:
 If a function does not return a meaningful value, or you just want to ignore it, you can call it in the following way:<br>
 <div class="example-box"><span class="example-variable">%anyobject</span>-&gt;$functionname<span class="example-paren">()</span>
@@ -501,7 +501,7 @@ So we <b>override</b> the inherited sayhello function.
 "To override" means "to reimplement": if you call %object-&gt;$sayhello() and %object
 contains the ID of an instance of class "localizedhelloworld", the new implementation of that function will be called (executed).
 The inherited sayhello was able to say "hello world" only in English, so we can still use it in the new implementation
-without rewriting its contents. So if the language set is "not Italian" we assume that it is English and
+without rewriting its contents. So if the language set is not Italian we assume that it is English and
 call the <b>base class implementation</b>.<br>
 <div class="example-box"><a href="fnc_this.html">$this</a>-&gt;$helloworld:sayhello<span class="example-paren">()</span>
 <span class="comment-text"># equivalent to $$-&gt;$helloworld:sayhello<span class="example-paren">()</span>,</span>
@@ -509,11 +509,11 @@ call the <b>base class implementation</b>.<br>
 <span class="comment-text"># and to $$-&gt;$helloworld::sayhello<span class="example-paren">()</span></span>
 </div>
 otherwise the language is Italian and we say "hello" in Italian :).
-So, to call a base class implementation of a function we "prepend" the base class name before the function name in the call.
+So, to call a base class implementation of a function we prepend the base class name before the function name in the call.
 The base class name could be also <a href="class_object.html">object</a> in this case, but the <a href="class_object.html">object</a> class has no "sayhello" function defined
 so it would result in an error.<br><br>
 In the above example, all the values of <a href="fnc_this.html">$this</a>-&gt;%language
-that are not equal to "italian" are assumed to be "English".
+that are not equal to Italian are assumed to be English.
 This is not always true, for example, just after the object creation the %language variable field
 is effectively empty. The above class works correctly in this case, but we might want to have always
 a coherent state of the field variables, so we need another concept: the class <b>constructor</b>
@@ -552,7 +552,7 @@ when creating the instances of the built-in classes.<br><br>
 In derived classes you can override the constructor to setup your object's state.<br>
 You should <b>always call the base class constructor</b> in your overridden one, to setup
 the base class state, and propagate its return value (eventually modified if the base class
-constructor is succesfull but your derived class initialization fails).<br>
+constructor is successful but your derived class initialization fails).<br>
 This very basic example will illustrate how to do this (please read the paragraph about inheriting classes
 above first):<br>
 <div class="example-box"><a href="cmd_class.html">class</a><span class="example-paren">(</span>baseObject,<a href="class_object.html">object</a><span class="example-paren">)</span>
@@ -597,6 +597,6 @@ by all the modern kernels and used in inter-process communication).<br>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_generic_index_all.html">Miscellaneous</a>
-<div class='footer'>KVIrc 4.3.2.git-5731-g7b829d7 Documentation - generated by un1versal on Mon Nov 23 21:13:39 2015</div>
+<div class='footer'>KVIrc 4.3.2.git-5846-g1ca5419 Documentation - generated by un1versal on Sat Dec 19 23:31:50 2015</div>
 </body>
 </html>

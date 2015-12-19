@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>groupbox class</title>
+<title>groupbox object class</title>
 <style type="text/css">
 body {
  font-size: 10pt;
@@ -177,7 +177,7 @@ a:active {
 <table width="100%" cellpadding="3" cellspacing="0" border="0">
   <tr>
     <td class='title-table-cell'>
-      <div class='title-text'>groupbox class</div>      <div class='title-secondary-text'>Provides a groupbox bar.</div>    </td>
+      <div class='title-text'>groupbox object class</div>      <div class='title-secondary-text'>Provides a groupbox bar.</div>    </td>
   </tr>
   <tr>
     <td class='subtitle-table-cell'><div class='subtitle-text'>Inherits</div></td>
@@ -192,7 +192,7 @@ a:active {
   <tr bgcolor="#EAEAEA">
     <td>This widget can be used to display a groupbox.
 It will be usually a parent for other child controls.
-You can either use a child layout to manage the children geometries
+You can either use a child layout to manage the child geometries
 or use $setColumnLayout to manage the layout automatically.
 </td>
   </tr>
@@ -205,15 +205,15 @@ or use $setColumnLayout to manage the layout automatically.
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setTitle">$setTitle(&lt;text:String&gt;)</a></font></b></code></td></tr>
 <tr><td>Sets the group box title to &lt;text&gt;.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; title">&lt;string&gt; $title()</a></font></b></code></td></tr>
-<tr><td>Returns the group box title text.</td></tr>
+<tr><td>Returns the groupbox title text.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setFlat">$setFlat(&lt;bflag:boolean&gt;)</a></font></b></code></td></tr>
 <tr><td>Sets whether the group box is painted flat. Valid Values are 1 or 0.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; isFlat">&lt;boolean&gt; $isFlat()</a></font></b></code></td></tr>
-<tr><td>Returns 1 (true) if the group box is painted flat; otherwise returns 0 (false).</td></tr>
+<tr><td>Returns 1 (true) if the groupbox is painted flat; otherwise returns 0 (false).</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; isCheckable">&lt;boolean&gt; $isCheckable()</a></font></b></code></td></tr>
 <tr><td>Returns 1 (true) if the group box has a checkbox in its title; otherwise returns 0 (false).</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setCheckable">$setCheckable(&lt;bflag:boolean&gt;)</a></font></b></code></td></tr>
-<tr><td>Sets whether the group box has a checkbox in its title: Valid values are 1 or 0.</td></tr>
+<tr><td>Sets whether the groupbox has a checkbox in its title: Valid values are 1 or 0.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setInsideMargin">$setInsideMargin(&lt;margin:uint&gt;)</a></font></b></code></td></tr>
 <tr><td>Sets the the width of the inside margin to m pixels.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;integer&gt; insideMargin">&lt;integer&gt; $insideMargin()</a></font></b></code></td></tr>
@@ -225,11 +225,11 @@ or use $setColumnLayout to manage the layout automatically.
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="addSpace">$addSpace()</a></font></b></code></td></tr>
 <tr><td>Adds an empty cell at the next free position.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; alignment">&lt;string&gt; $alignment()</a></font></b></code></td></tr>
-<tr><td>Returns the alignment of the group box title.</td></tr>
+<tr><td>Returns the alignment of the groupbox title.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setAlignment">$setAlignment(&lt;alignment:string&gt;)</a></font></b></code></td></tr>
-<tr><td>Set the alignment of the groupbox;  Valid values are Left,Right,HCenter.</td></tr>
+<tr><td>Set the alignment of the groupbox;  Valid values are: Left, Right, HCenter.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setOrientation&lt;orientation:string&gt;">$setOrientation&lt;orientation:string&gt;</a></font></b></code></td></tr>
-<tr><td>Sets the group box's orientation. Valid values are: Horizontal, Vertical.</td></tr>
+<tr><td>Sets the groupbox's orientation. Valid values are: Horizontal, Vertical.</td></tr>
       </table>
     </td>
   </tr>
@@ -237,42 +237,41 @@ or use $setColumnLayout to manage the layout automatically.
     <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><div class="example-box">//Let's start.
-//First we'll create the main widget. as a dialog
+    <td><div class="example-box"><span class="comment-text">//First we'll create the main widget. as a dialog</span>
 <span class="example-variable">%widget</span>=$new<span class="example-paren">(</span>dialog<span class="example-paren">)</span>
 <span class="example-variable">%layout</span>=$new<span class="example-paren">(</span>layout,<span class="example-variable">%widget</span><span class="example-paren">)</span>
-//then the groupbox
+<span class="comment-text">//Then the groupbox</span>
 <span class="example-variable">%gb</span>=$new<span class="example-paren">(</span>groupbox,<span class="example-variable">%widget</span><span class="example-paren">)</span>
 <span class="example-variable">%gb</span>-&gt;$setTitle<span class="example-paren">(</span>Login<span class="example-paren">)</span>
 <span class="example-variable">%gb</span>-&gt;$setAlignment<span class="example-paren">(</span>"Left"<span class="example-paren">)</span>
-// add the gbox to the main layout
+<span class="comment-text">//Add the groupbox to the main layout</span>
 <span class="example-variable">%layout</span>-&gt;$addWidget<span class="example-paren">(</span><span class="example-variable">%gb</span>,0,0<span class="example-paren">)</span>
-// now we create the user field  <span class="example-paren">(</span>labels + lineedit<span class="example-paren">)</span>
-// in a horizontal box
+<span class="comment-text">//Now we create the user field 
+<span class="example-paren">(</span>labels + lineedit<span class="example-paren">)</span> in a horizontal box</span>
 <span class="example-variable">%hbox</span>=$new<span class="example-paren">(</span>hbox,<span class="example-variable">%gb</span><span class="example-paren">)</span>
 <span class="example-variable">%labeluser</span>=$new<span class="example-paren">(</span>label,<span class="example-variable">%hbox</span><span class="example-paren">)</span>
 <span class="example-variable">%labeluser</span>-&gt;$settext<span class="example-paren">(</span>User: <span class="example-paren">)</span>
 <span class="example-variable">%inputuser</span>=$new<span class="example-paren">(</span>lineedit,<span class="example-variable">%hbox</span><span class="example-paren">)</span>
-//now we create the pass field  <span class="example-paren">(</span>labels + lineedit<span class="example-paren">)</span>.
-// in a horizontal box
+<span class="comment-text">//Now we create the password field 
+<span class="example-paren">(</span>labels + lineedit<span class="example-paren">)</span> in a horizontal box</span>
 <span class="example-variable">%hbox</span>=$new<span class="example-paren">(</span>hbox,<span class="example-variable">%gb</span><span class="example-paren">)</span>
 <span class="example-variable">%labelpass</span>=$new<span class="example-paren">(</span>label,<span class="example-variable">%hbox</span><span class="example-paren">)</span>
 <span class="example-variable">%labelpass</span>-&gt;$settext<span class="example-paren">(</span>Pass: <span class="example-paren">)</span>
 <span class="example-variable">%inputpass</span>=$new<span class="example-paren">(</span>lineedit,<span class="example-variable">%hbox</span><span class="example-paren">)</span>
 <span class="example-variable">%inputpass</span>-&gt;$setechomode<span class="example-paren">(</span>"password"<span class="example-paren">)</span>
-// now we create the ok/cancel box buttons
+<span class="comment-text">//Now we create the OK/Cancel box buttons</span>
 <span class="example-variable">%hbox</span>=$new<span class="example-paren">(</span>hbox,<span class="example-variable">%gb</span><span class="example-paren">)</span>
 <span class="example-variable">%btnok</span>=$new<span class="example-paren">(</span>button,<span class="example-variable">%hbox</span><span class="example-paren">)</span>
 <span class="example-variable">%btnok</span>-&gt;$settext<span class="example-paren">(</span>"OK"<span class="example-paren">)</span>
 <span class="example-variable">%btncancel</span>=$new<span class="example-paren">(</span>button,<span class="example-variable">%hbox</span><span class="example-paren">)</span>
 <span class="example-variable">%btncancel</span>-&gt;$settext<span class="example-paren">(</span>"Cancel"<span class="example-paren">)</span>
-//Let's show our nice form
+<span class="comment-text">//Let's show our nice form</span>
 <span class="example-variable">%widget</span>-&gt;$show<span class="example-paren">()</span>
 </div>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<div class='footer'>KVIrc 4.3.2.git-5731-g7b829d7 Documentation - generated by un1versal on Mon Nov 23 21:13:39 2015</div>
+<div class='footer'>KVIrc 4.3.2.git-5846-g1ca5419 Documentation - generated by un1versal on Sat Dec 19 23:31:50 2015</div>
 </body>
 </html>

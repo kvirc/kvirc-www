@@ -193,12 +193,12 @@ a:active {
 The items are added by creating children <a href="class_listviewitem.html">listviewitem</a> objects: simply allocating them with $new
 will add the items to the listview and simply deleting them will remove them.
 Allocating a <a href="class_listviewtitem.html">listviewtitem</a> item2 as a child of item1 will insert it to the same listview creating
-a subtree of items spannig from item1. The subtree can be opened or closed by a simple click either
+a subtree of items spanning from item1. The subtree can be opened or closed by a simple click either
 on the parent item or on the little plus sign on the side of it (when <a href="class_listview.html#setrootisdecorated">$setrootisdecorated</a>
 is set to $true. The listview can be in Single, Multi, Extended or NoSelection selection mode.
 In single selection mode there can be only one selected item at a time and the selected item is also
 the current item (this mode is the default). In Multi and Extended selection mode there can be multiple selected items
-and the current item is one of them. The difference between Multi and Extended is in the way
+and the current item is one of them. The difference between multi and extended is in the way
 that items can be selected by the mouse actions: experiment with the two modes :).
 The NoSelection mode has obviously no selection at all.
 </td>
@@ -242,19 +242,19 @@ The NoSelection mode has obviously no selection at all.
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="clickEvent">$clickEvent(&lt;item:object&gt;)</a></font></b></code></td></tr>
 <tr><td>This function is called when the user clicks in the list view. In its argument the <a href="class_listviewitem.html">listviewitem</a> object clicked or 0 if the user didn't click on an item.<br> The default implementation emits the <a href="#clicked">$clicked</a>() signal.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="selectionChangedEvent">$selectionChangedEvent(&lt;item:object&gt;)</a></font></b></code></td></tr>
-<tr><td>This event handle whenever the set of selected items has changed. The argument is the newly selected item if the listview is in single selection mode.<br> When the listview is in Multi or Extended selection mode then item is always $null.<br> The default implementation emits the <a href="#selectionChanged">$selectionChanged</a>() signal.</td></tr>
+<tr><td>This event handle whenever the set of selected items has changed. The argument is the newly selected item if the listview is in single selection mode.<br> When the listview is in multi or extended selection mode then item is always $null.<br> The default implementation emits the <a href="#selectionChanged">$selectionChanged</a>() signal.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="currentChangedEvent">$currentChangedEvent(&lt;item:object&gt;)</a></font></b></code></td></tr>
 <tr><td>This event are called whenever the current item has changed. In its argument is the newly selected item or 0 if the change made no item current.<br> The default implementation emits the <a href="#currentChanged">$currentChanged</a>() signal.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="itemActivatedEvent">$itemActivatedEvent(&lt;item:object&gt;)</a></font></b></code></td></tr>
-<tr><td>This s signal is emitted when the user activates an item by single- or double-clicking or pressing 'Enter'.<br> In its argument the currrent item.<br> The default implementation emits the <a href="#itemActivated">$itemActivated</a>() signal.</td></tr>
+<tr><td>This s signal is emitted when the user activates an item by single- or double-clicking or pressing 'Enter'.<br> In its argument the current item.<br> The default implementation emits the <a href="#itemActivated">$itemActivated</a>() signal.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="spacePressedEvent">$spacePressedEvent(&lt;item:object&gt;)</a></font></b></code></td></tr>
-<tr><td>This function is called by the framework when the space key is pressed.<br> In its arument the currrent item.<br> The default implementation emits the <a href="#spacePressed">$spacePressed</a>() signal.</td></tr>
+<tr><td>This function is called by the framework when the space key is pressed.<br> In its an argument in the current item.<br> The default implementation emits the <a href="#spacePressed">$spacePressed</a>() signal.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="onItemEvent">$onItemEvent(&lt;item:object&gt;)</a></font></b></code></td></tr>
-<tr><td>This event is called by framwork when the user moves the mouse cursor onto item. The default implementation emits the <a href="#onItem">$onItem</a>() signal.</td></tr>
+<tr><td>This event is called by framework when the user moves the mouse cursor onto item. The default implementation emits the <a href="#onItem">$onItem</a>() signal.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="itemExpandedEvent">$itemExpandedEvent(&lt;item:object&gt;)</a></font></b></code></td></tr>
-<tr><td>This event is called when an item has been expanded, i.e. when the children of item are shown. The default implementation emits the <a href="#expanded">$expanded</a>() signal.</td></tr>
+<tr><td>This event is called when an item has been expanded, i.e. when the child of an item is shown. The default implementation emits the <a href="#expanded">$expanded</a>() signal.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="itemCollapsedEvent">$itemCollapsedEvent(&lt;item:object&gt;)</a></font></b></code></td></tr>
-<tr><td>This event is called when an item has been collapsed, i.e. when the children of item are hidden. The default implementation emits the <a href="#collapsed">$collapsed</a>() signal.</td></tr>
+<tr><td>This event is called when an item has been collapsed, i.e. when the child of an item is hidden. The default implementation emits the <a href="#collapsed">$collapsed</a>() signal.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="itemChangedEvent">$itemChangedEvent(&lt;item:object&gt;,&lt;col:integer&gt;,&lt;text:string&gt;)</a></font></b></code></td></tr>
 <tr><td>This event is called when the item has been renamed in text, e.g. by in in-place renaming, in column col.<br> The default implementation emits the <a href="#itemChanged">$itemChanged</a>() signal.</td></tr>
       </table>
@@ -291,6 +291,6 @@ The NoSelection mode has obviously no selection at all.
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<div class='footer'>KVIrc 4.3.2.git-5731-g7b829d7 Documentation - generated by un1versal on Mon Nov 23 21:13:39 2015</div>
+<div class='footer'>KVIrc 4.3.2.git-5846-g1ca5419 Documentation - generated by un1versal on Sat Dec 19 23:31:50 2015</div>
 </body>
 </html>

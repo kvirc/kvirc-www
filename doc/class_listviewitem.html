@@ -209,7 +209,7 @@ A checkable listviewitem will display a small check mark in the first column.
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; text">&lt;string&gt; $text(&lt;column:integer&gt;)</a></font></b></code></td></tr>
 <tr><td>Returs the text of the specified column.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setPixmap">$setPixmap(&lt;column:integer&gt;,&lt;pixmap:hobject or imageID&gt;)</a></font></b></code></td></tr>
-<tr><td>Sets the pixmap in column column to pm, if pm is non-null and different from the current pixmap, and if column is non-negative. Pixmap can be a Kvirc imageid, an image file or a <a href="class_pixmap.html">pixmap</a> object.</td></tr>
+<tr><td>Sets the pixmap in column column to pm, if pm is non-null and different from the current pixmap, and if column is non-negative. Pixmap can be a KVIrc image ID, an image file or a <a href="class_pixmap.html">pixmap</a> object.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setItemEditable">$setItemEditable(&lt;bEnabled:boolean&gt;)</a></font></b></code></td></tr>
 <tr><td>If bEnabled is true (1), this item can be in-place editable by the user; otherwise it cannot be editable in-place.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="isItemEditable">$isItemEditable()</a></font></b></code></td></tr>
@@ -219,11 +219,11 @@ A checkable listviewitem will display a small check mark in the first column.
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="isEnabled">$isEnabled()</a></font></b></code></td></tr>
 <tr><td>Returns $true if this item is enabled and $false otherwise.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setOpen">$setOpen(&lt;bOpen:boolean&gt;)</a></font></b></code></td></tr>
-<tr><td>Opens or closes the item to show its children items.</td></tr>
+<tr><td>Opens or closes the item to show its child items.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="isOpen">$isOpen()</a></font></b></code></td></tr>
 <tr><td>Returns the open state of this item</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setCheckable">$setCheckable(&lt;bCheckable:boolean&gt;)</a></font></b></code></td></tr>
-<tr><td>Makes this item checkable or not. This function should be called immediately after the item creation: changing this property later at runtime may have strange results (like the item being moved inside the list, text disappearing, hidden children etc... don't do it :D ).</td></tr>
+<tr><td>Makes this item checkable or not. This function should be called immediately after the item creation: changing this property later at runtime may have strange results (like the item being moved inside the list, text disappearing, hidden child items etc... don't do it :D ).</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="isCheckable">$isCheckable()</a></font></b></code></td></tr>
 <tr><td>Returns $true if this item is checkable and $false otherwise</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setChecked">$setChecked(&lt;bChecked:boolean&gt;)</a></font></b></code></td></tr>
@@ -231,12 +231,12 @@ A checkable listviewitem will display a small check mark in the first column.
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="isChecked">$isChecked()</a></font></b></code></td></tr>
 <tr><td>Returns the check status of this item. <a href="class_listviewitem.html#setcheckable">$setcheckable</a>() must have been previously called.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setFlags">$setFlags(&lt;flag1:string&gt;, &lt;flag2:string&gt;, ...)</a></font></b></code></td></tr>
-<tr><td>Sets the flags for the item to the given flags. These determine whether the item can be selected or modified. This is often used to disable an item. Supported flags are: <br>- noitemflag : no flag sets; <br>- selectable : item is selecatble; <br>- editable : item is editable; <br>- dragEnabled : item can dragged; <br>- dropEnabled : item can used as drop target; <br>- userCheckable : item is checkable; <br>- enabled :item is enabled; <br>- tristate : item is checkable with three separate states.</td></tr>
+<tr><td>Sets the flags for the item to the given flags. These determine whether the item can be selected or modified.<br> This is often used to disable an item. Supported flags are: <pre> <br>- noitemflag : no flag sets; <br>- selectable : item is selectable; <br>- editable : item is editable; <br>- dragEnabled : item can dragged; <br>- dropEnabled : item can used as drop target; <br>- userCheckable : item is checkable; <br>- enabled :item is enabled; <br>- tristate : item is checkable with three separate states. </pre></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<div class='footer'>KVIrc 4.3.2.git-5731-g7b829d7 Documentation - generated by un1versal on Mon Nov 23 21:13:39 2015</div>
+<div class='footer'>KVIrc 4.3.2.git-5846-g1ca5419 Documentation - generated by un1versal on Sat Dec 19 23:31:50 2015</div>
 </body>
 </html>

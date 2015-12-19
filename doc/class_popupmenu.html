@@ -190,8 +190,8 @@ a:active {
     <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td>This widget can be used to display a popup menu.Technically, a popup menu consists of a list of menu items.<br>
-You add items with insertItem(). An item is either a string. In addition, items can have an optional icon drawn on the very left side.<br>
+    <td>This widget can be used to display a popup menu. Technically, a popup menu consists of a list of menu items.<br>
+You add items with insertItem(). An item can be a string. In addition, items can have an optional icon drawn on the very left side.<br>
 </td>
   </tr>
   <tr>
@@ -209,15 +209,15 @@ You add items with insertItem(). An item is either a string. In addition, items 
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="exec">$exec([&lt;widget:objects&gt;,&lt;x:uinteger&gt;,&lt;y:integer&gt;])</a></font></b></code></td></tr>
 <tr><td>If called without paramaters show the popup menu at the current pointer position.<br> With the optional parameters show the popup menu at the coordinate x,y widget parameter relative.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="removeItem">$removeItem(&lt;popup_id:Uinteger&gt;)</a></font></b></code></td></tr>
-<tr><td>Removes the menu item that has the identifier id.</td></tr>
+<tr><td>Removes the menu item that has the identifier ID.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="removeItemAt">$removeItemAt(&lt;index:uinteger&gt;)</a></font></b></code></td></tr>
 <tr><td>Removes the menu item at position index.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="insertSeparator">$insertSeparator(&lt;index:uinteger&gt;)</a></font></b></code></td></tr>
 <tr><td>Inserts a separator at position index.<br> If the index is negative the separator becomes the last menu item.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="activatedEvent">$activatedEvent(&lt;popup_id:uinteger&gt;)</a></font></b></code></td></tr>
-<tr><td>This function is called when a menu item and return the the item id.<br> The default implementation emits the <a href="#activated">$activated</a>() signal.</td></tr>
+<tr><td>This function is called when a menu item and return the the item ID.<br> The default implementation emits the <a href="#activated">$activated</a>() signal.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="highligthtedEvent">$highligthtedEvent(&lt;popup_id:uinteger&gt;)</a></font></b></code></td></tr>
-<tr><td>This function is called when a menu item is highlighted (hovered) and return the item id.<br> The default implementation emits the <a href="#highlighted">$highlighted</a>() signal.</td></tr>
+<tr><td>This function is called when a menu item is highlighted (hovered) and return the item ID.<br> The default implementation emits the <a href="#highlighted">$highlighted</a>() signal.</td></tr>
       </table>
     </td>
   </tr>
@@ -238,42 +238,42 @@ You add items with insertItem(). An item is either a string. In addition, items 
     <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><div class="example-box">// first we define a class inherited from popupmenu
+    <td><div class="example-box"><span class="comment-text">//First we define a class inherited from popupmenu</span>
 class<span class="example-paren">(</span>menu,popupmenu<span class="example-paren">)</span>
 <span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;constructor<span class="example-paren">()</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// we store the item's id for checkit in activatedEvent
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		@<span class="example-variable">%tile_id</span>=@$insertItem<span class="example-paren">(</span>"Tile",118<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		@<span class="example-variable">%cascade_id</span>=@$insertItem<span class="example-paren">(</span>"Cascade",115<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		@$insertSeparator<span class="example-paren">(</span>3<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		@<span class="example-variable">%closeactw_id</span>=@$insertItem<span class="example-paren">(</span>"Close Active Window",08<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		@<span class="example-variable">%closeallw_id</span>=@$insertItem<span class="example-paren">(</span>"Close All Window",58<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">//We store the item's ID for checking in activatedEvent</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@<span class="example-variable">%tile_id</span>=@$insertItem<span class="example-paren">(</span>"Tile",118<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@<span class="example-variable">%cascade_id</span>=@$insertItem<span class="example-paren">(</span>"Cascade",115<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@$insertSeparator<span class="example-paren">(</span>3<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@<span class="example-variable">%closeactw_id</span>=@$insertItem<span class="example-paren">(</span>"Close Active Window",08<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@<span class="example-variable">%closeallw_id</span>=@$insertItem<span class="example-paren">(</span>"Close All Window",58<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
 &nbsp;&nbsp;&nbsp;&nbsp;activatedEvent<span class="example-paren">()</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// now we emit a signals to the relative to the user choice
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">//Now we emit a signals to the relative to the user choice</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%id</span>=$0
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if <span class="example-paren">(</span><span class="example-variable">%id</span>==@<span class="example-variable">%tile_id</span><span class="example-paren">)</span> @$emit<span class="example-paren">(</span>"tile"<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if<span class="example-paren">(</span><span class="example-variable">%id</span>==@<span class="example-variable">%cascade_id</span><span class="example-paren">)</span> @$emit<span class="example-paren">(</span>"cascade"<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if <span class="example-paren">(</span><span class="example-variable">%id</span>==@<span class="example-variable">%closeactw_id</span><span class="example-paren">)</span> @$emit<span class="example-paren">(</span>"closeactive"<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else @$emit<span class="example-paren">(</span>"closeallwindows"<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// deleting the popup
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">//Deleting the popup</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete $$
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
 <span class="example-bracket">}</span>
 class <span class="example-paren">(</span>ws,widget<span class="example-paren">)</span><br>
 <span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">#In the constructor we create everything that belong to the single widget.
-</span>&nbsp;&nbsp;&nbsp;&nbsp;constructor<span class="example-paren">()</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">In the constructor we create everything that belong to the single widget.</span>
+&nbsp;&nbsp;&nbsp;&nbsp;constructor<span class="example-paren">()</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">#Here we generate a loop to create our labels inside the widget.
-</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%lay</span>=$new<span class="example-paren">(</span>layout,$$<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// we use a vbox to managing labels in vertical orientation
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">//Here we generate a loop to create our labels inside the widget.</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%lay</span>=$new<span class="example-paren">(</span>layout,$$<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">we use a vbox to managing labels in vertical orientation</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%vb</span>=$new<span class="example-paren">(</span>vbox,$$<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// then add the vbox to the main layout
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">Then add the vbox to the main layout</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%lay</span>-&gt;$addWidget<span class="example-paren">(</span><span class="example-variable">%vb</span>,0,0<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// let's create our colorful labels
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">Let's create our colorful labels</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for<span class="example-paren">(</span><span class="example-variable">%i</span>=0;<span class="example-variable">%i</span>&lt;15;<span class="example-variable">%i</span>++<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@<span class="example-variable">%label</span>=$new<span class="example-paren">(</span>label,<span class="example-variable">%vb</span><span class="example-paren">)</span>
@@ -284,8 +284,8 @@ class <span class="example-paren">(</span>ws,widget<span class="example-paren">)
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
 &nbsp;&nbsp;&nbsp;&nbsp;customContextMenuRequestedEvent<span class="example-paren">()</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">#We create  the popupmenu relative to this widget at runtime.
-</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%p</span>=$new<span class="example-paren">(</span>menu,$$<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">//We create the popupmenu relative to this widget at runtime.</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%p</span>=$new<span class="example-paren">(</span>menu,$$<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objects.connect <span class="example-variable">%p</span> tile @$parent tile
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objects.connect <span class="example-variable">%p</span> cascade @$parent cascade
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objects.connect <span class="example-variable">%p</span> closeactive @$parent closeactivewindow
@@ -293,33 +293,33 @@ class <span class="example-paren">(</span>ws,widget<span class="example-paren">)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%p</span>-&gt;$exec<span class="example-paren">(</span>$$,$<span class="example-paren">(</span>$0+10<span class="example-paren">)</span>,$<span class="example-paren">(</span>$1+10<span class="example-paren">))</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
 <span class="example-bracket">}</span>
-// we create the workspace widget
+<span class="comment-text">//We create the workspace widget</span>
 <span class="example-variable">%Workspace</span>=$new<span class="example-paren">(</span>workspace<span class="example-paren">)</span>
-// we use as space as we have
+<span class="comment-text">//We use as space as we have</span>
 <span class="example-variable">%size</span>[]=<span class="example-variable">%Workspace</span>-&gt;$screenResolution<span class="example-paren">()</span>
-// resize it
+<span class="comment-text">//Resize it</span>
 <span class="example-variable">%Workspace</span>-&gt;$resize<span class="example-paren">(</span><span class="example-variable">%size</span>[0],<span class="example-variable">%size</span>[1]<span class="example-paren">)</span>
-// then create 20 subwidget
+<span class="comment-text">//Then create 20 subwidget</span>
 for<span class="example-paren">(</span><span class="example-variable">%i</span>=0;<span class="example-variable">%i</span>&lt;20;<span class="example-variable">%i</span>++<span class="example-paren">)</span>
 <span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%w</span>=$new<span class="example-paren">(</span>ws,<span class="example-variable">%Workspace</span><span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;// let's add avery widget to the workspace
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">//Let's add every widget to the workspace</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%Workspace</span>-&gt;$addSubWindow<span class="example-paren">(</span><span class="example-variable">%w</span><span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;// then "shake it" a little bit around :-<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">//Then "shake it" a little bit around :-<span class="example-paren">)</span></span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%w</span>-&gt;$move<span class="example-paren">(</span>$rand<span class="example-paren">(</span>$<span class="example-paren">(</span><span class="example-variable">%size</span>[0]-50<span class="example-paren">))</span>,$rand<span class="example-paren">(</span>$<span class="example-paren">(</span><span class="example-variable">%size</span>[1]-50<span class="example-paren">)))</span>
 <span class="example-bracket">}</span>
-// reimplement closeEvent to delete all this :-<span class="example-paren">)</span>
+<span class="comment-text">//Reimplement closeEvent to delete all this :-<span class="example-paren">)</span></span>
 privateimpl<span class="example-paren">(</span><span class="example-variable">%Workspace</span>,closeEvent<span class="example-paren">)</span>
 <span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;delete $$
 <span class="example-bracket">}</span>
-<span class="comment-text">#Let's show!
-</span><span class="example-variable">%Workspace</span>-&gt;$show<span class="example-paren">()</span>
+<span class="comment-text">//Let's show!</span>
+<span class="example-variable">%Workspace</span>-&gt;$show<span class="example-paren">()</span>
 </div>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<div class='footer'>KVIrc 4.3.2.git-5731-g7b829d7 Documentation - generated by un1versal on Mon Nov 23 21:13:39 2015</div>
+<div class='footer'>KVIrc 4.3.2.git-5846-g1ca5419 Documentation - generated by un1versal on Sat Dec 19 23:31:50 2015</div>
 </body>
 </html>

@@ -200,7 +200,7 @@ a:active {
     <td>
       <table bgcolor="#EDEDED">
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="load">$load(&lt;url:string&gt;)</a></font></b></code></td></tr>
-<tr><td>Sets the current url for the webView and starts loading it</td></tr>
+<tr><td>Sets the current URL for the webView and starts loading it</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setHtml">$setHtml(&lt;html_code:string&gt;,[&lt;baseurl:string&gt;])</a></font></b></code></td></tr>
 <tr><td>Sets the content of the web view to the specified &lt;html_code&gt;. External objects such as stylesheets or images referenced in the HTML document are located relative to &lt;baseurl&gt;. The html is loaded immediately; external objects are loaded asynchronously.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="findText">$findText(&lt;txt:string&gt;,[flag 1,flag 2,..;string])</a></font></b></code></td></tr>
@@ -209,7 +209,7 @@ a:active {
 <tr><td>Returns an array containing the names of the document frames.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="appendWebViewActionToMenu">appendWebViewActionToMenu(&lt;menu:h_object&gt;,&lt;webview_action:string&gt;,[&lt;icon_identifier&gt;])</a></font></b></code></td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;id:integer&gt; firstChild">&lt;id:integer&gt; $firstChild(&lt;element_id:integer&gt;)</a></font></b></code></td></tr>
-<tr><td>Return the identifier of element's first childr.</td></tr>
+<tr><td>Return the identifier of element's first child.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;array&gt; findAll">&lt;array&gt; $findAll(&lt;element_id:integer&gt;,&lt;query:string&gt;)</a></font></b></code></td></tr>
 <tr><td>Searches for all the elements named &lt;query&gt; and stores them in an array of element's identifiers.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;id:integer&gt; findFirst">&lt;id:integer&gt; $findFirst(&lt;element_id:integer&gt;,&lt;query:string&gt;)</a></font></b></code></td></tr>
@@ -231,9 +231,9 @@ a:active {
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setStyleProperty">setStyleProperty(&lt;element_id&gt;,&lt;name:string&gt;,&lt;value:string&gt;)</a></font></b></code></td></tr>
 <tr><td>Sets the value of the inline style on element &lt;element_id&gt; with the given name to &lt;value&gt; . In order to ensure that the value will be applied, you may have to append "!important" to the value.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;value:string&gt; styleProperty">&lt;value:string&gt; styleProperty(&lt;element_id&gt;,&lt;name:string&gt;,&lt;style_resolve_strategy:string&gt;)</a></font></b></code></td></tr>
-<tr><td>Returns the value of the style with the given name using the specified strategy. If a style with name does not exist, an empty string is returned. Possible value for &lt;style_resolve_strategy&gt; are: <pre> CascadedStyle  - the property's value is determined using the rules defined in the document's stylesheet. This is the default strategy. InlineStyle    - the property's value is determined by element definetion, without respecting CSS rules. ComputedStyle  - the property's value is determined by the style property resolved from the environment. </pre></td></tr>
+<tr><td>Returns the value of the style with the given name using the specified strategy. If a style with name does not exist, an empty string is returned. Possible value for &lt;style_resolve_strategy&gt; are: <pre> CascadedStyle  - the property's value is determined using the rules defined in the document's stylesheet. This is the default strategy. InlineStyle    - the property's value is determined by element definition, without respecting CSS rules. ComputedStyle  - the property's value is determined by the style property resolved from the environment. </pre></td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="pixmap makePreview">pixmap $makePreview()</a></font></b></code></td></tr>
-<tr><td>Returns a 212x142 thumbnail of the current webView contants. The returned object is an instance of the pixmap class.</td></tr>
+<tr><td>Returns a 212x142 thumbnail of the current webView constants. The returned object is an instance of the pixmap class.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="string toPlainText">string $toPlainText(&lt;element_id&gt;)</a></font></b></code></td></tr>
 <tr><td>Returns the string representation of element &lt;element_id&gt;.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="string setPlainText">string $setPlainText(&lt;element_id&gt;)</a></font></b></code></td></tr>
@@ -251,7 +251,7 @@ a:active {
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setLinkDelegationPolicy">$setLinkDelegationPolicy(&lt;policy:string&gt;)</a></font></b></code></td></tr>
 <tr><td>Sets the link delegation policy: what happens when the users click on a link. Valid values: <br> DontDelegateLinks: No links are delegated. Instead, webView tries to handle them all. <br> DelegateExternalLinks: When activating links that point to documents not stored on the local filesystem or an equivalent then $linkClickedEvent() is executed. <br> DelegateAllLinks: Whenever a link is activated the $linkClickedEvent() is executed.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="linkClickedEvent">$linkClickedEvent()</a></font></b></code></td></tr>
-<tr><td>This function can be called when the user clicks on a link, depending no the current link delegation policy. The argument of the function is the url that has been clicked.<br> The default implementation emits the <a href="class_webview.html#linkclicked">$linkclicked</a>() signal.</td></tr>
+<tr><td>This function can be called when the user clicks on a link, depending no the current link delegation policy. The argument of the function is the URL that has been clicked.<br> The default implementation emits the <a href="class_webview.html#linkclicked">$linkclicked</a>() signal.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="loadStartedEvent">$loadStartedEvent()</a></font></b></code></td></tr>
 <tr><td>This function is called when the load of the page has started. The default implementation emits the <a href="class_webview.html#loadstarted">$loadstarted</a>() signal.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="loadProgressEvent">$loadProgressEvent()</a></font></b></code></td></tr>
@@ -259,11 +259,11 @@ a:active {
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="loadFinishedEvent">$loadFinishedEvent()</a></font></b></code></td></tr>
 <tr><td>This function is called when the load of the page has finished. The argument of the function is a bool value that is true if the page has been loaded successfully, false otherwise.<br> The default implementation emits the <a href="class_webview.html#loadfinished">$loadfinished</a>() signal.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="downloadRequestEvent">$downloadRequestEvent()</a></font></b></code></td></tr>
-<tr><td>This function is called when the user tries to download a file. The argument of the function is the url of the file.<br> You should return a valid path in the filesystem where to save the file.<br> The default implementation emits the <a href="class_webview.html#downloadrequest">$downloadrequest</a>() signal.</td></tr>
+<tr><td>This function is called when the user tries to download a file. The argument of the function is the URL of the file.<br> You should return a valid path in the filesystem where to save the file.<br> The default implementation emits the <a href="class_webview.html#downloadrequest">$downloadrequest</a>() signal.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="downloadProgressEvent">$downloadProgressEvent()</a></font></b></code></td></tr>
-<tr><td>This function can be called during the download of a file. Three integer arguments are passed to this function: the number of downloaded bytes, the download id, the size of the remove file (if known). The default implementation emits the <a href="class_webview.html#downloadprogress">$downloadprogress</a>() signal.</td></tr>
+<tr><td>This function can be called during the download of a file. Three integer arguments are passed to this function: the number of downloaded bytes, the download ID, the size of the remove file (if known). The default implementation emits the <a href="class_webview.html#downloadprogress">$downloadprogress</a>() signal.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="downloadCompletedEvent">$downloadCompletedEvent()</a></font></b></code></td></tr>
-<tr><td>This function can be called when a file download finishes. The argument of the function is the an integer value containing the download id. The default implementation emits the <a href="class_webview.html#downloadcompleted">$downloadcompleted</a>() signal.</td></tr>
+<tr><td>This function can be called when a file download finishes. The argument of the function is the an integer value containing the download ID. The default implementation emits the <a href="class_webview.html#downloadcompleted">$downloadcompleted</a>() signal.</td></tr>
       </table>
     </td>
   </tr>
@@ -292,6 +292,6 @@ a:active {
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<div class='footer'>KVIrc 4.3.2.git-5731-g7b829d7 Documentation - generated by un1versal on Mon Nov 23 21:13:39 2015</div>
+<div class='footer'>KVIrc 4.3.2.git-5846-g1ca5419 Documentation - generated by un1versal on Sat Dec 19 23:31:50 2015</div>
 </body>
 </html>

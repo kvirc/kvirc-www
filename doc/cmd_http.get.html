@@ -195,7 +195,7 @@ a save file dialog is displayed (unless -a is used).<br>
 The event OnHTTPGetTerminated is triggered upon the download completion (both
 in case of success or failure). If you want a callback command to be triggered
 instead please use <a href="cmd_http.asyncget.html">http.asyncget</a>.
-If the url contains a https:// prefix then a SSL connection will be used.
+If the URL contains a https:// prefix then a SSL connection will be used.
 </td>
   </tr>
   <tr>
@@ -205,11 +205,11 @@ If the url contains a https:// prefix then a SSL connection will be used.
     <td>
       <table class="switch-table">
 <tr><td class="switch-title-table-cell">-a=&lt;auto_file_name&gt; | --auto-file-name=&lt;auto_file_name&gt;</td></tr>
-<tr><td class="switch-body-table-cell">Don't show the savefile dialog but determine automatically a file name. The file is put in the KVIrc incoming directory and the file name is the processed url.<br></td></tr>
+<tr><td class="switch-body-table-cell">Don't show the save file dialog but determine automatically a file name. The file is put in the KVIrc incoming directory and the file name is the processed URL.<br></td></tr>
 <tr><td class="switch-title-table-cell">-e=&lt;existing_file_action&gt; | --existing-file-action=&lt;existing_file_action&gt;</td></tr>
 <tr><td class="switch-body-table-cell">Specifies the action to be taken when the local file already exists.<br> The action can be one of "i","e","o" or "r".<br> "i" causes the incoming file to be automatically renamed by appending a non colliding suffix. "e" causes the existing file to be renamed by appending a non colliding suffix (the incoming file will then have its name preserved). "o" causes the existing file to be overwritten and "r" will attempt to resume a interrupted transfer.<br> The default is to rename the incoming file.<br></td></tr>
 <tr><td class="switch-title-table-cell">-m=&lt;max_content_length&gt; | --max-len=&lt;max_content_length&gt;</td></tr>
-<tr><td class="switch-body-table-cell">Causes content longer than &lt;max_content_length&gt; to be discarded.<br> This is mainly to prevent you from automatically downloading 300 MiB files and to prevent DOS attacks from malicious servers that do not report the Content-length header.<br> If the Content-length header is reported by the server then the transfer is aborted if the length exceedes &lt;max_content_length&gt;.<br> If the Content-length header is missing then the transfer is interrupted when the received data length exceeds &lt;max_content_length&gt;.<br> -m=0 means "accept any content length" (which is the default).<br></td></tr>
+<tr><td class="switch-body-table-cell">Causes content longer than &lt;max_content_length&gt; to be discarded.<br> This is mainly to prevent you from automatically downloading 300 MiB files and to prevent DOS attacks from malicious servers that do not report the Content-length header.<br> If the Content-length header is reported by the server then the transfer is aborted if the length exceeds &lt;max_content_length&gt;.<br> If the Content-length header is missing then the transfer is interrupted when the received data length exceeds &lt;max_content_length&gt;.<br> -m=0 means "accept any content length" (which is the default).<br></td></tr>
 <tr><td class="switch-title-table-cell">-o=&lt;content_offset&gt; | --offset=&lt;content_offset&gt;</td></tr>
 <tr><td class="switch-body-table-cell">Causes the download to start from position &lt;content offset&gt;.<br> This can be used to download only a part of the file starting at byte &lt;content_offset&gt;.<br> &lt;content_offset&gt; is used regardless if the file is resumed or not. Please note that you don't need to specify the content offset when using -e=r : the offset is automatically calculated. If you specify both -o=&lt;content_offset&gt; and -e=r then the file will be resumed, the transfer will start at the specified offset and the received stream will be appended to the existing file.(avoid it unless you know what you're doing: it's easy to download broken files).<br></td></tr>
 <tr><td class="switch-title-table-cell">-t=&lt;timeout_in_seconds&gt; | --timeout=&lt;timeout_in_seconds&gt;</td></tr>
@@ -217,7 +217,7 @@ If the url contains a https:// prefix then a SSL connection will be used.
 <tr><td class="switch-title-table-cell">-h | --head</td></tr>
 <tr><td class="switch-body-table-cell">Causes the connection to use the HTTP HEAD method that effectively does not transfer real data. The server sends only the response headers. This might be used in conjunction with the -v option to print the headers to the active window.<br></td></tr>
 <tr><td class="switch-title-table-cell">-w=&lt;flags&gt; | --winctrl</td></tr>
-<tr><td class="switch-body-table-cell">This switch controls the creation and visualization of the transfer window. &lt;flags&gt; can be any combination of 'm','n' and 'h'. The flag 'h' causes the window to not be created. The transfer will simply run in background. Note that with 'h' the user has no possibility to interact with the transfer. The flag 'm' causes the transfer window to be created as "minimized". 'm' does nothing if the window alread exists. The flag 'n' causes the window to be NOT activated (brought to top).</td></tr>
+<tr><td class="switch-body-table-cell">This switch controls the creation and visualization of the transfer window. &lt;flags&gt; can be any combination of 'm','n' and 'h'. The 'h' flag causes the window to not be created. The transfer will simply run in background. Note that with 'h' the user has no possibility to interact with the transfer. The 'm' flag causes the transfer window to be created as "minimized". 'm' does nothing if the window already exists. The 'n' flag causes the window to be <b>not</b> activated (brought to top).</td></tr>
 <tr><td class="switch-title-table-cell">-i=&lt;magic identifier&gt; | --identifier=&lt;magic identifier&gt;</td></tr>
 <tr><td class="switch-body-table-cell">This identifier is passed as $3 parameter to the <a href="event_onhttpgetterminated.html">onhttpgetterminated</a> when this transfer terminates. If this switch is not present then an empty string is used. With <a href="cmd_http.asyncget.html">http.asyncget</a> this parameter is passed to the callback command instead.</td></tr>
 <tr><td class="switch-title-table-cell">-p=&lt;post data&gt; | --post-data=&lt;post data&gt;</td></tr>
@@ -225,7 +225,7 @@ If the url contains a https:// prefix then a SSL connection will be used.
 <tr><td class="switch-title-table-cell">-q | --quiet</td></tr>
 <tr><td class="switch-body-table-cell">Do not notify download completion in the notifier window nor in the console.</td></tr>
 <tr><td class="switch-title-table-cell">-y | --no-output</td></tr>
-<tr><td class="switch-body-table-cell">Supress any output in the file transfer window. This will effectively disable the file transfer window highlighting (so the user will not be alerted by a failed download unless he's really watching the window). This is useful when you're notifying failures in some other way...</td></tr>
+<tr><td class="switch-body-table-cell">Suppress any output in the file transfer window. This will effectively disable the file transfer window highlighting (so the user will not be alerted by a failed download unless he's really watching the window). This is useful when you're notifying failures in some other way...</td></tr>
 <tr><td class="switch-title-table-cell">-c | --clear</td></tr>
 <tr><td>Automatically remove the transfer from the transfer list when terminated</td></tr>
       </table>
@@ -240,6 +240,6 @@ If the url contains a https:// prefix then a SSL connection will be used.
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<div class='footer'>KVIrc 4.3.2.git-5731-g7b829d7 Documentation - generated by un1versal on Mon Nov 23 21:13:39 2015</div>
+<div class='footer'>KVIrc 4.3.2.git-5846-g1ca5419 Documentation - generated by un1versal on Sat Dec 19 23:31:50 2015</div>
 </body>
 </html>

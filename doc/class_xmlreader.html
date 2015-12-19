@@ -177,7 +177,7 @@ a:active {
 <table width="100%" cellpadding="3" cellspacing="0" border="0">
   <tr>
     <td class='title-table-cell'>
-      <div class='title-text'>xmlreader class</div>      <div class='title-secondary-text'>A simple xml document parser</div>    </td>
+      <div class='title-text'>xmlreader class</div>      <div class='title-secondary-text'>A simple XML document parser</div>    </td>
   </tr>
   <tr>
     <td class='subtitle-table-cell'><div class='subtitle-text'>Inherits</div></td>
@@ -189,7 +189,7 @@ a:active {
     <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td>This class implements a really simple xml document parser.
+    <td>This class implements a really simple XML document parser.
 You will usually derive your own class from this one and reimplement
 some of the events that it triggers.
 You will typically reimplement <a href="class_xmlreader.html#onelementstart">$onelementstart</a>()
@@ -213,9 +213,9 @@ reflecting the order of elements in the parsed document.
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; onDocumentEnd">&lt;boolean&gt; $onDocumentEnd()</a></font></b></code></td></tr>
 <tr><td>This function is called when the document parsing terminates successfully. You can reimplement it in order to handle this notification. You should return $true if you want document parsing to continue and $false if you want it to be aborted. The default implementation does nothing besides returning $true.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; onElementStart">&lt;boolean&gt; $onElementStart(&lt;qualified_name:string&gt;,&lt;attributes:hash&gt;,&lt;namespace:string&gt;,&lt;local_name:string&gt;)</a></font></b></code></td></tr>
-<tr><td>This function is called when an element opening tag is encountered. The &lt;qualified_name&gt; of the tag is passed as the first parameter. The &lt;attributes&gt; are passed in the form of a hash with attribute values indexed by their names. When the &lt;qualified_name&gt; contains a namespace then it is also reported in the splitted &lt;namespace&gt; &lt;local_name&gt; pair. You should return $true if you want document parsing to continue and $false if you want it to be aborted. The default implementation does nothing besides returning $true.</td></tr>
+<tr><td>This function is called when an element opening tag is encountered. The &lt;qualified_name&gt; of the tag is passed as the first parameter. The &lt;attributes&gt; are passed in the form of a hash with attribute values indexed by their names. When the &lt;qualified_name&gt; contains a namespace then it is also reported in the split &lt;namespace&gt; &lt;local_name&gt; pair. You should return $true if you want document parsing to continue and $false if you want it to be aborted. The default implementation does nothing besides returning $true.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; onElementEnd">&lt;boolean&gt; $onElementEnd(&lt;qualified_name:string&gt;,&lt;namespace:string&gt;,&lt;local_name:string&gt;)</a></font></b></code></td></tr>
-<tr><td>This function is called when an element closing tag is encountered. The &lt;qualified_name&gt; of the tag is passed as the first parameter. When the &lt;qualified_name&gt; contains a namespace then it is also reported in the splitted &lt;namespace&gt; &lt;local_name&gt; pair. You should return $true if you want document parsing to continue and $false if you want it to be aborted. The default implementation does nothing besides returning $true.</td></tr>
+<tr><td>This function is called when an element closing tag is encountered. The &lt;qualified_name&gt; of the tag is passed as the first parameter. When the &lt;qualified_name&gt; contains a namespace then it is also reported in the split &lt;namespace&gt; &lt;local_name&gt; pair. You should return $true if you want document parsing to continue and $false if you want it to be aborted. The default implementation does nothing besides returning $true.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; onText">&lt;boolean&gt; $onText($0 = &lt;text:string&gt;)</a></font></b></code></td></tr>
 <tr><td>This function is called when a chunk of text is encountered inside the document. The parsed &lt;text&gt; chunk is passed as the first parameter. You should return $true if you want document parsing to continue and $false if you want it to be aborted. The default implementation does nothing besides returning $true.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; onWarning">&lt;boolean&gt; $onWarning(&lt;message:string&gt;)</a></font></b></code></td></tr>
@@ -227,6 +227,6 @@ reflecting the order of elements in the parsed document.
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<div class='footer'>KVIrc 4.3.2.git-5731-g7b829d7 Documentation - generated by un1versal on Mon Nov 23 21:13:39 2015</div>
+<div class='footer'>KVIrc 4.3.2.git-5846-g1ca5419 Documentation - generated by un1versal on Sat Dec 19 23:31:50 2015</div>
 </body>
 </html>
