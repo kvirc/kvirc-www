@@ -1,7 +1,7 @@
 @@title:
-The KVIrc project has moved to github
+The KVIrc project has moved to Github
 @@short:
-Moved to github
+Moved to Github
 @@author:
 Szymon Stefanek (pragma at kvirc dot net)
 @@body:
