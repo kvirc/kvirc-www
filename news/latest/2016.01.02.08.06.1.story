@@ -20,7 +20,7 @@ We have said our goodbyes to KviMdiManager and welcomed KviWindowStack thanks to
 Much much more has been added, changed and fixed by our beloved leader, but enough tooting his horn, we wouldn't want him to get big headed or anything. Wide grin!
 <br><br>
 Amongst other such many, many, many other changes and fixes here is a nice <i>random</i> dip;
-<b>SASL identification was fixed</b> on freenode, however seems that special characters<a href="https://github.com/kvirc/KVIrc/issues/1413">in SASL password, issue #1413"</a> still cause issues in this area, though with some luck we can also squash this issue before release (no promises).<br>
+<b>SASL identification was fixed</b> on freenode, however seems that special characters <a href="https://github.com/kvirc/KVIrc/issues/1413">in SASL password, issue #1413</a> still cause issues in this area, though with some luck we can also squash this issue before release (no promises).<br>
 Another team member, wodim, <a href="https://github.com/kvirc/KVIrc/commit/b2aa6e4da9e87ee1a99124cd7ada34ca7e05e829">fixed a bug with breeze on KDE5 yesterday, issue #1799</a>, which caused corrupt display in KVIrc, so good news to all KDE5 users switching to breeze.</p><p>
 A long standing feature request, dating back to 2007, asking for <a href="https://github.com/kvirc/KVIrc/issues/24">spell-checker</a> support for aspell type dictionaries, was finally added by DarthGandalf, and it works a treat, so now the days of blaming your atrocious typing on your keyboard or cat, are numbered! Sarcastic smiley face...
 <br>staticfox whom has recently joined our ranks, has also been busy, amongst a few of his contributions, a optional way to favorite servers option was added, and it doesn't stop there, but we cant spoil the surprise, for you guys to come and discover what other goodies await you.<br>
@@ -46,5 +46,5 @@ Many other existing members haven't been mentioned here or their contributions, 
 <br><br>
 I hope you all enjoyed this <i>small</i> progress report and are now trying the nightly versions and <a href="https://github.com/kvirc/KVIrc/issues/new">report any outstanding issues</a> to us so things can have a chance to be fixed.
 <br>All going well, we should be back soon with other news about KVIrc's progress
-<br>
+<br><br>
 Have fun in IRC and Happy New Year from <i>The KVIrc Development Team</i></p>
