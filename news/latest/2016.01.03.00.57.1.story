@@ -1,7 +1,7 @@
 @@title:
 KVIrc 5.0.0 Alpha 1 released
 @@short:
-KVIrc Dev News
+KVIrc 5.0.0 Alpha 1
 @@author:
 pragma
 @@body:
