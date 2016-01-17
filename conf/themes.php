@@ -513,6 +513,30 @@ $themes = array(
 		"release_date" => "2012.08.05",
 		"min_version" => "4.0.0"
 	)
+	array(
+		"name" => "VoidLight",
+		"version" => "1.0.3",
+		"mail" => "swarfega [at] swarfegaonline [dot] co.uk",
+		"author" => "swarfega",
+		"desc" => $template['themes']['theme44'],
+		"home" => "https://github.com/swarfega",
+		"download" => "VoidLight-1.0.3.kvt",
+		"screen" => "voidlight.png",
+		"release_date" => "2016.02.17",
+		"min_version" => "4.9.1"
+	),
+	array(
+		"name" => "VoidDark",
+		"version" => "1.0.2",
+		"mail" => "swarfega [at] swarfegaonline [dot] co.uk",
+		"author" => "swarfega",
+		"desc" => $template['themes']['theme45'],
+		"home" => "https://github.com/swarfega",
+		"download" => "VoidDark-1.0.2.kvt",
+		"screen" => "voiddark.png",
+		"release_date" => "2016.02.17",
+		"min_version" => "4.9.1"
+	),
 	
 	/*
 	 * Without info, not listed
