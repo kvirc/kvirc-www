@@ -512,7 +512,7 @@ $themes = array(
 		"screen" => "darkenergy.png",
 		"release_date" => "2012.08.05",
 		"min_version" => "4.0.0"
-	)
+	),
 	array(
 		"name" => "VoidLight",
 		"version" => "1.0.3",
@@ -536,7 +536,7 @@ $themes = array(
 		"screen" => "voiddark.png",
 		"release_date" => "2016.02.17",
 		"min_version" => "4.9.1"
-	),
+	)
 	
 	/*
 	 * Without info, not listed
