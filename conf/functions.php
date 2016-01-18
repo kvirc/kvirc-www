@@ -86,7 +86,7 @@ function humanSize($size)
 function getHostKvircde()
 {
 	// Detection of kvirc.de machines
-	return (stristr(gethostbyaddr(gethostbyname($_SERVER["SERVER_NAME"])),'kvirc.de')) ? 1 : 0;
+	return (stristr(($_SERVER["SERVER_NAME"]),'kvirc.de')),'kvirc.de')) ? 1 : 0;
 }
 
 // News
