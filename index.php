@@ -322,7 +322,7 @@ search();
 			<p class="credits"><a href="javascript:opendoc('http://validator.w3.org/check/referer');" title="Validate XHTML code">XHTML 1.1</a> | <a href="javascript:opendoc('http://jigsaw.w3.org/css-validator/check/referer');" title="Validate CSS code">CSS 2.1</a> | credits</p>
 		</div>
 	</div>
-	<?php if(stristr(gethostbyaddr(gethostbyname($_SERVER['SERVER_NAME'])), 'kvirc.de')): ?>
+	<?php if(stristr(($_SERVER["SERVER_NAME"]),'kvirc.de')): ?>
 		<div id="akct">
 			<a id="akpeel" href="javascript:opendoc('http://www.vorratsdatenspeicherung.de');" title="Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!">
 				<img src="http://wiki.vorratsdatenspeicherung.de/images/Akvst.gif" alt="Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!" />
