@@ -186,7 +186,7 @@ An addon is basically a set of KVS scripts, multimedia, documentation
 and accessory files that implement a KVIrc feature.
 It might be a simple automatic-away subsystem, a GUI newsticker or a complex
 file sharing
-service (commonly called "fserve"). Addons are sometimes called "scripts".
+service (commonly called <i>fserve</i>). Addons are sometimes called <i>scripts</i>.
 In fact a KVIrc addon is usually made of more than one KVS script.
 </p>
 <p>
@@ -198,7 +198,7 @@ the KVIrc help and to be translated in several languages.
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Addon installation</div></td></tr><tr><td bgcolor="#EAEAEA">
 <p>
 The addons are usually shipped in compressed archives (.kva). KVIrc will look
-for the installer file called "install.kvs" and executes it when the user will
+for the installer file called <i>install.kvs</i> and executes it when the user will
 ask for your addon to be installed. The install.kvs contains the code for the
 <b>registration</b> of your addon and will <a href="cmd_include.html">include</a> all the other
 necessary source files.
@@ -216,7 +216,7 @@ The smallest addon that you can write is the one that does nothing.
 <span class="example-bracket">{</span>
 <span class="example-bracket">}</span>
 </div>
-The code above does nothing but registers the "MyAddon" addon.
+The code above does nothing but registers the <i>MyAddon</i> addon.
 </p>
 <p>
 The first parameter is the internal addon ID which can be used to identify
@@ -336,7 +336,7 @@ option boolShowMinimizedDebugWindow 1
 </div>
 </p>
 <p>
-The main <b>source directory</b> for your addon have to be named "src" and must
+The main <b>source directory</b> for your addon have to be named <i>src</i> and must
 contain the implementation of the feature(s) you're going to provide.
 File names should contain the namespace of the addon, the optional subnamespace
 and the name of the feature like $addonNS_$subNS_[$subNS_[...]]$name.kvs
@@ -349,27 +349,27 @@ MyAddon_functions_logging.kvs
 </div>
 </p>
 <p>
-The "<b>locale</b>" directory should contain the *.mo files for your tranlations.
+The <b>locale</b> directory should contain the *.mo files for your tranlations.
 The localization process of a script is explained in <a href="doc_localization.html">this document</a>.
 Your *.mo filenames should be prefixed by your addon name.
 </p>
 <p>
-The <b>configuration directory</b> "config" should contains only the files
+The <b>configuration directory</b> <i>config</i> should contains only the files
 which store the configuration of your addon and must end with the .kvc
 extension.
 </p>
 <p>
-The "<b>pics</b>" and "<b>sound</b>" (if relevant) directories should contain
+The <b>pics</b> and <b>sound</b> (if relevant) directories should contain
 your multimedia files. I's a good idea to have your pics file in PNG format
 and sound files in WAV format.
 </p>
 <p>
-The "<b>help</b>" directory should contain subdirectories for each language
+The <b>help</b> directory should contain subdirectories for each language
 your help files are written in. The languages dirs should be named
-with the language code also used for the translation files (like "en", "it"
+with the language code also used for the translation files (like <i>en</i>, <i>it</i>
 etc...).
 Please note that English is the default language and KVIrc will
-fallback to the "en" subdirectory when no other language is found around...
+fallback to the <i>en</i> subdirectory when no other language is found around...
 </p>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Some examples</div></td></tr><tr><td bgcolor="#EAEAEA">
 <p>The code below is just an example of how to write a useful initalizazion of
@@ -400,7 +400,7 @@ alias<span class="example-paren">(</span>MyAddon::events::init<span class="examp
 &nbsp;&nbsp;&nbsp;&nbsp;event<span class="example-paren">(</span>OnKVIrcStartup,"MyAddon"<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Load the catalogue <span class="example-paren">(</span>translation<span class="example-paren">)</span> file "myaddon" from the path provided</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Load the catalogue <span class="example-paren">(</span>translation<span class="example-paren">)</span> file <i>myaddon</i> from the path provided</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_trload.html">trload</a> myaddon <a href="fnc_file.localdir.html">$file.localdir</a><span class="example-paren">(</span>"locale/MyAddon"<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MyAddon::config::load
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
@@ -421,7 +421,7 @@ alias<span class="example-paren">(</span>MyAddon::config::load<span class="examp
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Sets some variables</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%MyAddonConfig</span> = <a href="fnc_new.html">$new</a><span class="example-paren">(</span>MyAddon::classes::ConfHandler<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%MyAddonConfigPath</span> = <a href="fnc_file.localdir.html">$file.localdir</a><span class="example-paren">(</span>config/scripts/MyAddon<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Open the configuration file and sets the section "general"</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Open the configuration file and sets the section general</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%c</span> = <a href="fnc_config.open.html">$config.open</a><span class="example-paren">(</span><span class="example-variable">%MyAddonConfigPath</span>/MyAddon.kvc,"r"<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_config.setsection.html">config.setsection</a> <span class="example-variable">%c</span> general
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Store the value of the key "Key" in the global variable <span class="example-variable">%Key</span></span>
@@ -477,6 +477,6 @@ Have fun! :)
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
-<div class='footer'>KVIrc 4.3.2.git-5846-g1ca5419 Documentation - generated by un1versal on Sat Dec 19 23:31:50 2015</div>
+<div class='footer'>KVIrc 4.9.1.git-6198-g42ee441 Documentation - generated by un1versal on Mon Feb  1 04:36:48 2016</div>
 </body>
 </html>

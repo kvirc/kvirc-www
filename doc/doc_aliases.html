@@ -188,15 +188,15 @@ Once created, an alias remains stored permanently in the KVIrc configuration fil
 until it is explicitly deleted.
 A couple of examples will make the things clear.
 join is a really commonly used command. It might be a good idea to rename it to
-simply "j" .. just to type it faster.
-Nothing easier in KVirc: just try this commandline:
+simply <b>j</b> .. just to type it faster.
+Nothing easier in KVIrc: just try this commandline:
 <div class="example-box"><a href="cmd_alias.html">alias</a><span class="example-paren">(</span>j<span class="example-paren">)</span><span class="example-bracket">{</span> <a href="cmd_join.html">join</a> $0-; <span class="example-bracket">}</span>;
 </div>
-This will create the alias "j". From this moment you can use /j as it was a normal command.
+This will create the alias <b>j</b>. From this moment you can use /j as it was a normal command.
 <div class="example-box">j #kvirc
 </div>
 You may have notices the strange $0- function in the alias body: it stands for
-"all parameters passed to the alias". This means that when you call
+<i>all parameters passed to the alias</i>. This means that when you call
 <div class="example-box">j #kvirc testpassword
 </div>
 then both the parameters (#kvirc and testpassword) are passed to the join command.
@@ -214,27 +214,27 @@ all the parameters starting from the first one.
 To remove an alias use again the alias command with an empty body:
 <div class="example-box"><a href="cmd_alias.html">alias</a><span class="example-paren">(</span>j<span class="example-paren">)</span><span class="example-bracket">{}</span>
 </div>
-This will remove the alias "j" defined above.
+This will remove the alias <b>j</b> defined above.
 </p>
 <p>
 A common task in channel management is the kick & ban action.
 You first ban an user from the channel and then eventually kick him
 (obviously assuming that he is actually on the channel).
 This involves using two commands: ban and then kick.
-It could be a nice idea to have a single "kb" command to perform this action.
+It could be a nice idea to have a single <b>kb</b> command to perform this action.
 Well...easy:
 <div class="example-box"><a href="cmd_alias.html">alias</a><span class="example-paren">(</span>kb<span class="example-paren">)</span><span class="example-bracket">{</span> <a href="cmd_ban.html">ban</a> $0; <a href="cmd_kick.html">kick</a> $0-; <span class="example-bracket">}</span>;
 </div>
-This adds the "kb" alias: it can be called as a normal command:
+This adds the <b>kb</b> alias: it can be called as a normal command:
 <div class="example-box">kb spammer You're not welcome here!
 </div>
-This will first execute "ban spammer" and then "kick spammer You're not welcome here".
+This will first execute <i>ban spammer</i> and then <i>kick spammer with; You're not welcome here</i>.
 Our kb is a really simple example... it doesn't check for the validity of the parameters:
 the server will warn us if the parameters passed to kb were empty.
 </p>
 <p>
 The alias can be modified at any time by re-using the alias command.
-Let's make our "kb" a bit more intelligent and add a check for the parameters.
+Let's make our <b>kb</b> a bit more intelligent and add a check for the parameters.
 TIP: It is a good idea to write the following examples in a text file and then use /parse &lt;filename&gt; to execute it.
 <div class="example-box"><a href="cmd_alias.html">alias</a><span class="example-paren">(</span>kb<span class="example-paren">)</span>
 <span class="example-bracket">{</span>
@@ -251,20 +251,20 @@ TIP: It is a good idea to write the following examples in a text file and then u
 </div>
 The example above will first check the validity of the &lt;nickname&gt; passed to kb:
 if no nickname was passed, it will warn the user and stop.
-The next step will be the "ban &lt;nickname&gt;" call. Another enhancement is the "default reason":
-we first assign the remaining parameters ($1- means "from $1 to the end") to a temporary variable,
+The next step will be the <i>ban &lt;nickname&gt;</i> call. Another enhancement is the <i>default reason</i>:
+we first assign the remaining parameters ($1- means <i>from $1 to the end</i>) to a temporary variable,
 if the variable is empty, a default kick reason is assigned.
-Finally the "kick &lt;nickname&gt; &lt;reason&gt;" will be executed.
+Finally the <i>kick &lt;nickname&gt; &lt;reason&gt;</i> will be executed.
 Get used to looking at the single command documentation pages, they will give
 you the hints necessary to fully understand the above piece of code.
 </p>
 <p>
 Aliases can be used as a mean for structured programming.
-In large scripts you will SURELY have "common tasks" to perform (like having specially
+In large scripts you will <b>surely</b> have <i>common tasks</i> to perform (like having specially
 colored output or calculating a value from a set of other values)...
-Aliases are the way of writing the common tasks: they are equivalent to the "procedures"
-or "functions" in many high-level programming languages.
-The alias as a procedure (subroutine or sub-task) has been shown in the "kb" example above:
+Aliases are the way of writing the common tasks: they are equivalent to the <i>procedures</i>
+or <i>functions</i> in many high-level programming languages.
+The alias as a procedure (subroutine or sub-task) has been shown in the <b>kb</b> example above:
 it might be commonly called from more complex scripts or other aliases in case that a
 kick & ban action is needed.
 </p>
@@ -273,8 +273,8 @@ The aliases can be used also as functions.
 Assume that you need really often to calculate the sum of three numbers: a function-alias is the way.
 <div class="example-box"><a href="cmd_alias.html">alias</a><span class="example-paren">(</span>sum3<span class="example-paren">)</span><span class="example-bracket">{</span> <a href="cmd_return.html">return</a> $<span class="example-paren">(</span>$0 + $1 + $2<span class="example-paren">)</span>; <span class="example-bracket">}</span>;
 </div>
-This will add the alias "sum3" and make it available both as a command and a function.
-The "return" command sets the return value of a sequence of commands
+This will add the alias <i>sum3</i> and make it available both as a command and a function.
+The <i>return</i> command sets the return value of a sequence of commands
 (an alias is a sequence of commands...remember?) and terminates the execution (by returning
 the control to the caller).
 So return $($0 + $1 + $2); will set the return value of the alias to the value
@@ -295,8 +295,8 @@ Is a perfectly valid call... it's just that it will have no visible results
 In fact there is no difference al all between function-aliases and normal-aliases:
 the caller makes the difference: by calling an alias as a command the return value
 just disappears in hyperspace, by calling an alias as a function, the return value
-is propagated (and in fact "used").
-(There are some "nice" exceptions to this rule... but you don't need to care about it, for now).
+is propagated (and in fact <i>used</i>).
+(There are some <i>nice</i> exceptions to this rule... but you don't need to care about it, for now).
 If return is not called inside an alias body, the return value will be just a null value.
 </p>
 <p>
@@ -307,6 +307,6 @@ exactly for that purpose. Check it out.
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
-<div class='footer'>KVIrc 4.3.2.git-5846-g1ca5419 Documentation - generated by un1versal on Sat Dec 19 23:31:50 2015</div>
+<div class='footer'>KVIrc 4.9.1.git-6198-g42ee441 Documentation - generated by un1versal on Mon Feb  1 04:36:48 2016</div>
 </body>
 </html>
