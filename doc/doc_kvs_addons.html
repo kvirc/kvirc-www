@@ -181,30 +181,24 @@ a:active {
   </tr>
   <tr bgcolor="#EAEAEA">
     <td></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Introduction</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>
+<br>
 An addon is basically a set of KVS scripts, multimedia, documentation
 and accessory files that implement a KVIrc feature.
 It might be a simple automatic-away subsystem, a GUI newsticker or a complex
-file sharing
-service (commonly called <i>fserve</i>). Addons are sometimes called <i>scripts</i>.
-In fact a KVIrc addon is usually made of more than one KVS script.
-</p>
-<p>
+file sharing service (commonly called <i>fserve</i>). Addons are sometimes called <i>scripts</i>.
+In fact a KVIrc addon is usually made of more than one KVS script.<br><br>
 KVIrc has a builtin addon management system that allows the users to create,
 install, configure and uninstall features with a nice graphical interface.
 The management system allows the addons to have documentation integrated in
-the KVIrc help and to be translated in several languages.
-</p>
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Addon installation</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>
+the KVIrc help and to be translated in several languages.<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Addon installation</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
 The addons are usually shipped in compressed archives (.kva). KVIrc will look
 for the installer file called <i>install.kvs</i> and executes it when the user will
 ask for your addon to be installed. The install.kvs contains the code for the
 <b>registration</b> of your addon and will <a href="cmd_include.html">include</a> all the other
-necessary source files.
-</p>
+necessary source files.<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">The minimal addon</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>
+<br>
 The smallest addon that you can write is the one that does nothing.
 <div class="example-box"><a href="cmd_addon.register.html">addon.register</a><span class="example-paren">(</span>"MyAddon", \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"1.0.0", \
@@ -217,17 +211,16 @@ The smallest addon that you can write is the one that does nothing.
 <span class="example-bracket">}</span>
 </div>
 The code above does nothing but registers the <i>MyAddon</i> addon.
-</p>
-<p>
+<br>
 The first parameter is the internal addon ID which can be used to identify
 your addon inside KVIrc. The ID must be unique: two addons that share the same
 name cannot be installed. The second parameter is the addon version. It should
 be expressed in the classic format [major].[minor].[pathlevel] or something
 really similar (in fact KVIrc just expects the version to be a string composed
-of numbers separated by dots). The version is compared when an addon is
-installed and KVIrc complains if the user tries to downgrade an addon (that is
-to install a less recent version over a more recent one). The third parameter
-is the visible name of your addon: it will be displayed to the user in the
+of numbers separated by dots).<br><br>
+The version is compared when an addon is installed and KVIrc complains if the user
+tries to downgrade an addon (that is to install a less recent version over a more recent one).<br>
+The third parameter is the visible name of your addon: it will be displayed to the user in the
 addon management dialog. It can contain the <a href="fnc_tr.html">$tr</a> function so you
 can have it translated to several languages. The fourth parameter
 is a short description of the feature that the addon implements; it can
@@ -235,8 +228,7 @@ contain the $tr() function too. The fifth parameter is the minimal KVIrc
 version required to run the addon. The sixth parameter is the icon to show in
 the manager: it has to be 32x32 pixel big. There are also some switches that
 can be used to fiddle a little bit more :)
-</p>
-<p>
+<br>
 The callback instruction that follows the registration command is the
 uninstallation code. KVIrc will invoke it when the user will ask for your
 addon to be uninstalled. Don't assume that your addon will be never
@@ -253,16 +245,15 @@ process, you need to write an alias which handles them.
 &nbsp;&nbsp;&nbsp;&nbsp;...
 <span class="example-bracket">}</span>
 </div>
-</p>
+<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">A typical addon layout</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>
+<br>
 As stated above, the addons are usually shipped in a compressed archive.
 Once uncompressed, the installer will check the directory tree containing the
 addon code and all the related files.
 In order to have uniformity the installer complains if the structure is not
 respected.
-</p>
-<p>
+<br>
 <pre>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>name-version</b>
 &nbsp;&nbsp;&nbsp;&nbsp; +- init.kvs
@@ -296,24 +287,19 @@ respected.
 &nbsp;&nbsp;&nbsp;&nbsp;  	    +- hints.html
 &nbsp;&nbsp;&nbsp;&nbsp;  	    \- ...
 </pre>
-</p>
-<p>
 The entries in <b>bold</b> are directories while the other are files.
 Please note that you need all of these directories or the routine that
 automagically creates the installer will fail.
-</p>
-<p>
+<br>
 The toplevel directory should be named with your addon name and version.
 Use no spaces in the directory entries (this will make the things simpler for
 people that want to use your addon).
-</p>
-<p>
+<br>
 Hint: Remember that your addon is going to be installed on different platforms
 (at least Linux, OS X and Windows based).
 The poor windows' notepad has serious problems with reading text
 files that contain only linefeeds as line separators. Keep it in mind...
-</p>
-<p>
+<br>
 The <b>initialization script</b> has to be named init.kvs and must contain all the
 routines to register your addon.
 <div class="example-box"><span class="comment-text"># Register classes</span>
@@ -347,33 +333,30 @@ MyAddon_classes_gui_options.kvs
 <span class="comment-text"># A script containing some logging functions</span>
 MyAddon_functions_logging.kvs
 </div>
-</p>
-<p>
-The <b>locale</b> directory should contain the *.mo files for your tranlations.
+<br>
+The <b>locale</b> directory should contain the *.mo files for your translations.
 The localization process of a script is explained in <a href="doc_localization.html">this document</a>.
 Your *.mo filenames should be prefixed by your addon name.
-</p>
-<p>
+<br>
 The <b>configuration directory</b> <i>config</i> should contains only the files
 which store the configuration of your addon and must end with the .kvc
 extension.
-</p>
-<p>
+<br>
 The <b>pics</b> and <b>sound</b> (if relevant) directories should contain
 your multimedia files. I's a good idea to have your pics file in PNG format
 and sound files in WAV format.
-</p>
-<p>
+<br>
 The <b>help</b> directory should contain subdirectories for each language
 your help files are written in. The languages dirs should be named
 with the language code also used for the translation files (like <i>en</i>, <i>it</i>
 etc...).
 Please note that English is the default language and KVIrc will
 fallback to the <i>en</i> subdirectory when no other language is found around...
-</p>
+<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Some examples</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>The code below is just an example of how to write a useful initalizazion of
+The code below is just an example of how to write a useful initialization of
 your own addon. The name of the classes refer to the ones described above.
+<br>
 <div class="example-box"><span class="comment-text"># Register the classes</span>
 alias<span class="example-paren">(</span>MyAddon::classes::register<span class="example-paren">)</span>
 <span class="example-bracket">{</span>
@@ -429,13 +412,12 @@ alias<span class="example-paren">(</span>MyAddon::config::load<span class="examp
 &nbsp;&nbsp;&nbsp;&nbsp;...
 <span class="example-bracket">}</span>
 </div>
-</p>
+<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">The help and configuration callbacks</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>
+<br>
 Each addon can have a help and a configuration callback. These are set
 respectively by <a href="cmd_addon.sethelpcallback.html">addon.sethelpcallback</a> and <a href="cmd_addon.setconfigurecallback.html">addon.setconfigurecallback</a>.
-</p>
-<p>
+<br>
 The help callback will be invoked by KVIrc when the user will ask help for your addon (mainly
 from the addon management dialog, but not necessarily). It should call <a href="cmd_help.open.html">help.open</a>
 with the name of your documentation index html file (it should be relative
@@ -443,16 +425,15 @@ to the help language directory: help.open myaddon/index.html will automatically
 lookup the right language). If you provide no help callback, the buttons
 for requesting help will be simply disabled. (A good an relatively complex addon
 *should* have at least a minimal help file explaining the features).
-</p>
-<p>
+<br>
 The configuration callback will be invoked when the user will try to configure
 your addon from the addon management dialog. This callback is useful
 mainly for more complex graphical scripts that can show up a dialog
 that allows configuring all of the addon features. To use this callback
 you will probably need some object scripting.
-</p>
+<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">The real addon work</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>
+<br>
 The real addon work is done by the scripts contained in the src directory.
 They will likely add aliases (maybe in a nice namespace named against your addon),
 register event handlers, create actions, timers, toolbars and object classes.
@@ -463,20 +444,18 @@ Remember that you must clean up <b>everything</b> in your uninstallation callbac
 This means that you must remove the aliases, unregister the event handlers,
 destroy the actions, kill the timers and the object classes you've created.
 Be a clean coder :)
-</p>
+<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Where to start</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>
-It is a good idea to start on the KVIrc web site. There are surely
-several addons to look at. Pick one that seems simple and analyze its
-layout and code (wow... the free software!). It will be easier to do than it was to explain it :D
-</p>
-<p>
+<br>
+It is a good idea to start in the KVIrc scripts GitHub repository https://github.com/kvirc/kvirc-scripts. There are surely
+several addons to look at. Pick one that seems simple and analyze its layout and code 
+(wow... amazing free software!). It will be easier to do than it was to explain it :D<br>
 Have fun! :)
-</p>
+<br>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
-<div class='footer'>KVIrc 4.9.1.git-6259-g8df76d1 Documentation - generated by un1versal on Mon Feb 29 12:49:04 2016</div>
+<div class='footer'>KVIrc 4.9.2.git-6382-g7bc5592 Documentation - generated by staticfox on Wed Apr 13 01:13:45 2016</div>
 </body>
 </html>

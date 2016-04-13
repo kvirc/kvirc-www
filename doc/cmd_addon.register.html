@@ -192,30 +192,21 @@ a:active {
     <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><p>
-Registers a script-based addon.
-</p>
-<p>
-The registration process allows to "show" the addon in the script-addon manager
+    <td>Registers a script-based addon.<br>
+The registration process allows to <i>show</i> the addon in the script-addon manager
 dialog and provides a standard way for the user to manage and uninstall the addons.
-You simply register your addon BEFORE attempting to install it.
-</p>
-<p>
+You simply register your addon BEFORE attempting to install it.<br>
 A script-based addon is a set of scripts, icons, translations and possibly
 other data files that add functionality to the KVIrc program.
-The script-based addons are often simply called "scripts" and
-we will adhere to that naming in certain parts of the documentation too.
-</p>
-<p>
+The script-based addons are often simply called <i>scripts</i> and
+we will adhere to that naming in certain parts of the documentation too.<br>
 Each script-based addon (a set of scripts) is identified by an UNIQUE
 &lt;id&gt;. Two addons with the same &lt;id&gt; can't co-exist in the same
 KVIrc installation (so be sure to choose a token characteristic enough
 to avoid collisions with others). The &lt;id&gt; itself is used only for
 identification purposes and the user will almost always see the &lt;visible_name&gt;
 instead, which can contain the <a href="fnc_tr.html">$tr</a> function that will handle
-the translation for it.
-</p>
-<p>
+the translation for it.<br>
 Each addon has also a &lt;version&gt; which is a string in the form x.y.z
 where x, y and z are numbers (yes.. that's the standard major-minor-patch level
 version numbering scheme). A &lt;version&gt; of 2.4.23 is greater than 2.4.3
@@ -223,26 +214,18 @@ even if 2.4.3 comes after when compared as a string.
 When an addon with a greater or equal version is installed over
 an addon with a lower version, the lower one gets uninstalled first.
 Installing a lower version over a greater one is not possible, unless
-the lower version one is uninstalled first.
-</p>
-<p>
+the lower version one is uninstalled first.<br><br>
 &lt;description&gt; is another, possibly translated, string that will
-be presented to the user in the addon management dialog.
-</p>
-<p>
+be presented to the user in the addon management dialog.<br><br>
 &lt;minkvircversion&gt; is the minimum KVIrc version required for the
 addon to run. If the version of the running KVIrc executable
 is lower than the requested one then the command will abort with an error.
 If you want to completely ignore the KVIrc versioning (don't do it),
-use "0.0.0" here. If you need fine tuning on cvs features you may add also
-the sources date tag at the end of the required version string (e.g 3.2.1.20060303).
-</p>
-<p>
+use <b><i>0.0.0</i></b> here. If you need fine tuning on cvs features you may add also
+the sources date tag at the end of the required version string (e.g 3.2.1.20060303).<br><br>
 &lt;iconid&gt; is the <a href="doc_image_id.html">image identifier</a> of the icon
 that will be displayed in the addon management dialog.
-If not specified, a default icon will be used.
-</p>
-<p>
+If not specified, a default icon will be used.<br><br>
 The &lt;uninstall_callback&gt; is a snippet of code that should
 wipe out the addon from the system. It is ALWAYS a good practice
 to write a complete uninstallation procedure (think that YOU like
@@ -250,9 +233,7 @@ to be able to completely uninstall a program that you don't use anymore).
 The &lt;uninstall_callback&gt; will be called by KVIrc when the addon
 uninstallation is requested, either explicitly by using the GUI or the
 command <a href="cmd_addon.uninstall.html">addon.uninstall</a>, or implicitly by installing
-a newer version of the addon (upgrading).
-</p>
-<p>
+a newer version of the addon (upgrading).<br>
 If the user security rules don't allow your addon to be installed
 or a higher version of a addon with the same name already exists
 the command will fail with an error (aborting your whole installation addon).
@@ -260,21 +241,16 @@ If you don't want to fail with an error but handle it gracefully instead
 then you should use <a href="fnc_addon.exists.html">$addon.exists()</a> to check if a
 addon with the same name and a greater version already exists.
 You can't gracefully handle security error conditions: your installation
-will be always aborted with an error in this case.
-</p>
-<p>
+will be always aborted with an error in this case.<br>
 The addon can also have a configuration callback settable with <a href="cmd_addon.setconfigurecallback.html">addon.setconfigurecallback</a>
 and a help callback settable with <a href="cmd_addon.sethelpcallback.html">addon.sethelpcallback</a>. The first
 will usually display a configuration dialog, the second will display
-some sort of addon's documentation, usually in the help browser.
-</p>
-<p>
+some sort of addon's documentation, usually in the help browser.<br>
 The registration process uninstalls any previous addon version
 by executing its uninstall callback routine. This is another reason for that
 you should call addon.register BEFORE you attempt to install your addon.
 Failing to do that may cause your old uninstalled to wipe out your newly
 installed files or code.
-</p>
 </td>
   </tr>
   <tr>
@@ -284,11 +260,11 @@ installed files or code.
     <td>
       <table class="switch-table">
 <tr><td class="switch-title-table-cell">-f | --force</td></tr>
-<tr><td class="switch-body-table-cell">&nbsp;&nbsp;&nbsp;&nbsp;Registers the addon even if an addon with the same &lt;id&gt; and &nbsp;&nbsp;&nbsp;&nbsp;a higher version already exists. The usage of this flag &nbsp;&nbsp;&nbsp;&nbsp;is highly discouraged (i.e. use it only for debugging purposes &nbsp;&nbsp;&nbsp;&nbsp;on your own machine).</td></tr>
+<tr><td class="switch-body-table-cell">Registers the addon even if an addon with the same &lt;id&gt; and a higher version already exists. The usage of this flag is highly discouraged (i.e. use it only for debugging purposes on your own machine).</td></tr>
 <tr><td class="switch-title-table-cell">-n | --no-uninstall</td></tr>
-<tr><td class="switch-body-table-cell">&nbsp;&nbsp;&nbsp;&nbsp;Performs no uninstallation of existing versions of the addon: &nbsp;&nbsp;&nbsp;&nbsp;it simply replaces the registration entry with the new data. &nbsp;&nbsp;&nbsp;&nbsp;Again, do <b>not</b> use this switch if not for debugging purposes &nbsp;&nbsp;&nbsp;&nbsp;and on your own machine.</td></tr>
+<tr><td class="switch-body-table-cell">Performs no uninstallation of existing versions of the addon: it simply replaces the registration entry with the new data. Again, do <b>not</b> use this switch if not for debugging purposes and on your own machine.</td></tr>
 <tr><td class="switch-title-table-cell">-q | --quiet</td></tr>
-<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;Makes the command run quietly</td></tr>
+<tr><td>Makes the command run quietly</td></tr>
       </table>
     </td>
   </tr>
@@ -310,6 +286,6 @@ installed files or code.
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<div class='footer'>KVIrc 4.9.1.git-6259-g8df76d1 Documentation - generated by un1versal on Mon Feb 29 12:49:04 2016</div>
+<div class='footer'>KVIrc 4.9.2.git-6382-g7bc5592 Documentation - generated by staticfox on Wed Apr 13 01:13:45 2016</div>
 </body>
 </html>

@@ -238,12 +238,12 @@ You add items with insertItem(). An item can be a string. In addition, items can
     <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><div class="example-box"><span class="comment-text">//First we define a class inherited from popupmenu</span>
+    <td><div class="example-box"><span class="comment-text"># First we define a class inherited from popupmenu</span>
 class<span class="example-paren">(</span>menu,popupmenu<span class="example-paren">)</span>
 <span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;constructor<span class="example-paren">()</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">//We store the item's ID for checking in activatedEvent</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># We store the item's ID for checking in activatedEvent</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@<span class="example-variable">%tile_id</span>=@$insertItem<span class="example-paren">(</span>"Tile",118<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@<span class="example-variable">%cascade_id</span>=@$insertItem<span class="example-paren">(</span>"Cascade",115<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@$insertSeparator<span class="example-paren">(</span>3<span class="example-paren">)</span>
@@ -252,13 +252,13 @@ class<span class="example-paren">(</span>menu,popupmenu<span class="example-pare
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
 &nbsp;&nbsp;&nbsp;&nbsp;activatedEvent<span class="example-paren">()</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">//Now we emit a signals to the relative to the user choice</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Now we emit a signals to the relative to the user choice</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%id</span>=$0
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if <span class="example-paren">(</span><span class="example-variable">%id</span>==@<span class="example-variable">%tile_id</span><span class="example-paren">)</span> @$emit<span class="example-paren">(</span>"tile"<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if<span class="example-paren">(</span><span class="example-variable">%id</span>==@<span class="example-variable">%cascade_id</span><span class="example-paren">)</span> @$emit<span class="example-paren">(</span>"cascade"<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if <span class="example-paren">(</span><span class="example-variable">%id</span>==@<span class="example-variable">%closeactw_id</span><span class="example-paren">)</span> @$emit<span class="example-paren">(</span>"closeactive"<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else @$emit<span class="example-paren">(</span>"closeallwindows"<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">//Deleting the popup</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Deleting the popup</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delete $$
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
 <span class="example-bracket">}</span>
@@ -267,24 +267,24 @@ class <span class="example-paren">(</span>ws,widget<span class="example-paren">)
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">In the constructor we create everything that belong to the single widget.</span>
 &nbsp;&nbsp;&nbsp;&nbsp;constructor<span class="example-paren">()</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">//Here we generate a loop to create our labels inside the widget.</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Here we generate a loop to create our labels inside the widget.</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%lay</span>=$new<span class="example-paren">(</span>layout,$$<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">we use a vbox to managing labels in vertical orientation</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%vb</span>=$new<span class="example-paren">(</span>vbox,$$<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">Then add the vbox to the main layout</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Then add the vbox to the main layout</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%lay</span>-&gt;$addWidget<span class="example-paren">(</span><span class="example-variable">%vb</span>,0,0<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">Let's create our colorful labels</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Let's create our colorful labels</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for<span class="example-paren">(</span><span class="example-variable">%i</span>=0;<span class="example-variable">%i</span>&lt;15;<span class="example-variable">%i</span>++<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@<span class="example-variable">%label</span>=$new<span class="example-paren">(</span>label,<span class="example-variable">%vb</span><span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@<span class="example-variable">%label</span>-&gt;$settext<span class="example-paren">(</span>"Another class by N\&G"<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">#We set our foreground's colors using the hex array in a random way.
-</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@<span class="example-variable">%label</span>-&gt;$setforegroundcolor<span class="example-paren">(</span>$array<span class="example-paren">(</span>$rand<span class="example-paren">(</span>255<span class="example-paren">)</span>,$rand<span class="example-paren">(</span>255<span class="example-paren">)</span>,$rand<span class="example-paren">(</span>255<span class="example-paren">)))</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># We set our foreground's colors using the hex array in a random way.</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@<span class="example-variable">%label</span>-&gt;$setforegroundcolor<span class="example-paren">(</span>$array<span class="example-paren">(</span>$rand<span class="example-paren">(</span>255<span class="example-paren">)</span>,$rand<span class="example-paren">(</span>255<span class="example-paren">)</span>,$rand<span class="example-paren">(</span>255<span class="example-paren">)))</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
 &nbsp;&nbsp;&nbsp;&nbsp;customContextMenuRequestedEvent<span class="example-paren">()</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">//We create the popupmenu relative to this widget at runtime.</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># We create the popupmenu relative to this widget at runtime.</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%p</span>=$new<span class="example-paren">(</span>menu,$$<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objects.connect <span class="example-variable">%p</span> tile @$parent tile
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objects.connect <span class="example-variable">%p</span> cascade @$parent cascade
@@ -293,33 +293,33 @@ class <span class="example-paren">(</span>ws,widget<span class="example-paren">)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%p</span>-&gt;$exec<span class="example-paren">(</span>$$,$<span class="example-paren">(</span>$0+10<span class="example-paren">)</span>,$<span class="example-paren">(</span>$1+10<span class="example-paren">))</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
 <span class="example-bracket">}</span>
-<span class="comment-text">//We create the workspace widget</span>
+<span class="comment-text"># We create the workspace widget</span>
 <span class="example-variable">%Workspace</span>=$new<span class="example-paren">(</span>workspace<span class="example-paren">)</span>
-<span class="comment-text">//We use as space as we have</span>
+<span class="comment-text"># We use as space as we have</span>
 <span class="example-variable">%size</span>[]=<span class="example-variable">%Workspace</span>-&gt;$screenResolution<span class="example-paren">()</span>
-<span class="comment-text">//Resize it</span>
+<span class="comment-text"># Resize it</span>
 <span class="example-variable">%Workspace</span>-&gt;$resize<span class="example-paren">(</span><span class="example-variable">%size</span>[0],<span class="example-variable">%size</span>[1]<span class="example-paren">)</span>
-<span class="comment-text">//Then create 20 subwidget</span>
+<span class="comment-text"># Then create 20 subwidget</span>
 for<span class="example-paren">(</span><span class="example-variable">%i</span>=0;<span class="example-variable">%i</span>&lt;20;<span class="example-variable">%i</span>++<span class="example-paren">)</span>
 <span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%w</span>=$new<span class="example-paren">(</span>ws,<span class="example-variable">%Workspace</span><span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">//Let's add every widget to the workspace</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Let's add every widget to the workspace</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%Workspace</span>-&gt;$addSubWindow<span class="example-paren">(</span><span class="example-variable">%w</span><span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">//Then "shake it" a little bit around :-<span class="example-paren">)</span></span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># Then "shake it" a little bit around :-<span class="example-paren">)</span></span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%w</span>-&gt;$move<span class="example-paren">(</span>$rand<span class="example-paren">(</span>$<span class="example-paren">(</span><span class="example-variable">%size</span>[0]-50<span class="example-paren">))</span>,$rand<span class="example-paren">(</span>$<span class="example-paren">(</span><span class="example-variable">%size</span>[1]-50<span class="example-paren">)))</span>
 <span class="example-bracket">}</span>
-<span class="comment-text">//Reimplement closeEvent to delete all this :-<span class="example-paren">)</span></span>
+<span class="comment-text"># Reimplement closeEvent to delete all this :-<span class="example-paren">)</span></span>
 privateimpl<span class="example-paren">(</span><span class="example-variable">%Workspace</span>,closeEvent<span class="example-paren">)</span>
 <span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;delete $$
 <span class="example-bracket">}</span>
-<span class="comment-text">//Let's show!</span>
+<span class="comment-text"># Let's show!</span>
 <span class="example-variable">%Workspace</span>-&gt;$show<span class="example-paren">()</span>
 </div>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<div class='footer'>KVIrc 4.9.1.git-6259-g8df76d1 Documentation - generated by un1versal on Mon Feb 29 12:49:04 2016</div>
+<div class='footer'>KVIrc 4.9.2.git-6382-g7bc5592 Documentation - generated by staticfox on Wed Apr 13 01:13:45 2016</div>
 </body>
 </html>

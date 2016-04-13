@@ -240,9 +240,9 @@ a:active {
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;integer&gt; currentRow">&lt;integer&gt; $currentRow()</a></font></b></code></td></tr>
 <tr><td>Returns the current column. Useful in the [classfnc]customContextMenuRequestedEvent[/classfnc] See also <a href="#foreground">$foreground</a>.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setForegroundColor">$setForegroundColor(&lt;row:uinteger&gt;,&lt;col:uinteger&gt;,&lt;rgb(hex string)_array(red:integer,green:integer,blue_integer)_or_red_or_colorname&gt;,[geen:integer],[blue:integer])</a></font></b></code></td></tr>
-<tr><td>Sets the foreground of the cell at &lt;row,&lt;col&gt; according to &lt;colorname&gt; &lt;rgb_value&gt;:valid values are: - hex string: must be a string with 6 hexadecimal digits (like the ones used to specify colors in html pages). The first two digits specify the RED component, the third and fourth digit specify the GREEN component and the last two specify the BLUE component. For example "FFFF00" means full red, full green and no blue that gives</td></tr>
+<tr><td>Sets the foreground of the cell at &lt;row,&lt;col&gt; according to &lt;colorname&gt; &lt;rgb_value&gt;:valid values are: - hex string: must be a string with 6 hexadecimal digits (like the ones used to specify colors in HTML pages). The first two digits specify the RED component, the third and fourth digit specify the GREEN component and the last two specify the BLUE component. For example "FFFF00" means full red, full green and no blue that gives</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setItemFlags">$setItemFlags(&lt;row:uint&gt;,&lt;col:uint&gt;,&lt;flag1:string&gt;, &lt;flag2:string&gt;, ...)</a></font></b></code></td></tr>
-<tr><td>Sets the flags for the cell pointed by row and col to the given flags. These determine whether the cell can be selected or modified. Supported flags are: <pre> <br>- noitemflag : no flag sets; <br>- selectable : cell is selecatble; <br>- editable : cell is editable; <br>- dragEnabled : cell can dragged; <br>- dropEnabled : cell can used as drop target; <br>- userCheckable : cell is checkable; <br>- enabled :cell is enabled; <br>- tristate : cell is checkable with three separate states. </pre></td></tr>
+<tr><td>Sets the flags for the cell pointed by row and col to the given flags. These determine whether the cell can be selected or modified. Supported flags are: <pre> &nbsp;&nbsp;&nbsp;&nbsp;- noitemflag : no flag sets; &nbsp;&nbsp;&nbsp;&nbsp;- selectable : cell is selectable;<br> &nbsp;&nbsp;&nbsp;&nbsp;- editable : cell is editable;<br> &nbsp;&nbsp;&nbsp;&nbsp;- dragEnabled : cell can dragged;<br> &nbsp;&nbsp;&nbsp;&nbsp;- dropEnabled : cell can used as drop target;<br> &nbsp;&nbsp;&nbsp;&nbsp;- userCheckable : cell is checkable;<br> &nbsp;&nbsp;&nbsp;&nbsp;- enabled :cell is enabled;<br> &nbsp;&nbsp;&nbsp;&nbsp;- tristate : cell is checkable with three separate states. </pre></td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setCellWidget">$setCellWidget(&lt;row:uint&gt;,&lt;column:uint&gt;,&lt;widget:hobject&gt;)</a></font></b></code></td></tr>
 <tr><td>Sets the given widget to be displayed in the cell in the given row and column, passing the ownership of the widget to the table.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setIcon">$setIcon(&lt;row:uint&gt;,&lt;column:uint&gt;,&lt;icon:imageid or hobject&gt;)</a></font></b></code></td></tr>
@@ -264,7 +264,7 @@ a:active {
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;row,col&gt;  cellDoubleClickedEvent">&lt;row,col&gt;  $cellDoubleClickedEvent()</a></font></b></code></td></tr>
 <tr><td>This event is triggered whenever a cell in the table is double clicked.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="paintCellEvent">$paintCellEvent(&lt;painter:hobject&gt;,&lt;row,uint&gt;,&lt;col:uint&gt;,&lt;cell_width:uint&gt;,&lt;cell_height:uint&gt;)</a></font></b></code></td></tr>
-<tr><td>This event handler can be reimplemented to repaint cells. The framework will pass the row/col coordinates, cell's width and height, and, as parameter, a <a href="class_painter.html">painter</a>object. You don't need to begin/end/delete the painter.</td></tr>
+<tr><td>This event handler can be reimplemented to repaint cells. The framework will pass the row/col coordinates, cell's width and height as parameter, a <a href="class_painter.html">painter</a>object. You don't need to begin/end/delete the painter.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="sizeHintCellRequestEvent">$sizeHintCellRequestEvent()</a></font></b></code></td></tr>
 <tr><td>This event handler can be reimplemented to pass a custom size hint for this cell to the table layout !fn; $resizeRowsToContents() This function will try to redistribute the available space according to the space requirement of each row !fn; $resizeColumnsToContents() This function will try to redistribute the available space according to the space requirement of each column</td></tr>
       </table>
@@ -283,6 +283,6 @@ a:active {
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<div class='footer'>KVIrc 4.9.1.git-6259-g8df76d1 Documentation - generated by un1versal on Mon Feb 29 12:49:04 2016</div>
+<div class='footer'>KVIrc 4.9.2.git-6382-g7bc5592 Documentation - generated by staticfox on Wed Apr 13 01:13:45 2016</div>
 </body>
 </html>

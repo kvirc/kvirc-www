@@ -177,7 +177,7 @@ a:active {
 <table width="100%" cellpadding="3" cellspacing="0" border="0">
   <tr>
     <td class='title-table-cell'>
-      <div class='title-text'>$language.detect</div>      <div class='title-secondary-text'>(Tries to) detect the language and encoding of a string</div>    </td>
+      <div class='title-text'>$language.detect</div>      <div class='title-secondary-text'>Tries to detect the language and encoding of a string</div>    </td>
   </tr>
   <tr>
     <td class='subtitle-table-cell'><div class='subtitle-text'>Usage</div></td>
@@ -193,7 +193,7 @@ a:active {
 as [text]. The accuracy of the detection mainly depends on the length
 of the supplied text. Good results can be achieved with some thousands
 characters.<br>
-This command is exported by the "language" module.
+This command is exported by the <i>language</i> module.
 </td>
   </tr>
   <tr>
@@ -202,12 +202,12 @@ This command is exported by the "language" module.
   <tr bgcolor="#EAEAEA">
     <td><div class="example-box"><span class="example-variable">%dati</span> = $language.detect<span class="example-paren">(</span>"I'm a lord and I speak perfect English."<span class="example-paren">)</span>;
 if<span class="example-paren">(</span><span class="example-variable">%dati</span><span class="example-bracket">{</span>"error"<span class="example-bracket">}</span> != ""<span class="example-paren">)</span>echo "Language detection failed: " <span class="example-variable">%dati</span><span class="example-bracket">{</span>"error"<span class="example-bracket">}</span>;
-<span class="example-variable">%count</span> = <span class="example-variable">%dati</span><span class="example-bracket">{</span>"matchcount"<span class="example-bracket">}</span>;
-for<span class="example-paren">(</span><span class="example-variable">%i</span>=0;<span class="example-variable">%i</span>&lt;<span class="example-variable">%count</span>;<span class="example-variable">%i</span>++<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%count</span> = <span class="example-variable">%dati</span><span class="example-bracket">{</span>"matchcount"<span class="example-bracket">}</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;for<span class="example-paren">(</span><span class="example-variable">%i</span>=0;<span class="example-variable">%i</span>&lt;<span class="example-variable">%count</span>;<span class="example-variable">%i</span>++<span class="example-paren">)</span>
 <span class="example-bracket">{</span>
-echo "LANGUAGE " <span class="example-variable">%i</span> " : " <span class="example-variable">%dati</span><span class="example-bracket">{</span>"matches"<span class="example-bracket">}</span>[<span class="example-variable">%i</span>]<span class="example-bracket">{</span>"language"<span class="example-bracket">}</span>;
-echo "ENCODING " <span class="example-variable">%i</span> " : " <span class="example-variable">%dati</span><span class="example-bracket">{</span>"matches"<span class="example-bracket">}</span>[<span class="example-variable">%i</span>]<span class="example-bracket">{</span>"encoding"<span class="example-bracket">}</span>;
-echo "SCORE " <span class="example-variable">%i</span> " : "<span class="example-variable">%dati</span><span class="example-bracket">{</span>"matches"<span class="example-bracket">}</span>[<span class="example-variable">%i</span>]<span class="example-bracket">{</span>"score"<span class="example-bracket">}</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;echo "LANGUAGE " <span class="example-variable">%i</span> " : " <span class="example-variable">%dati</span><span class="example-bracket">{</span>"matches"<span class="example-bracket">}</span>[<span class="example-variable">%i</span>]<span class="example-bracket">{</span>"language"<span class="example-bracket">}</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;echo "ENCODING " <span class="example-variable">%i</span> " : " <span class="example-variable">%dati</span><span class="example-bracket">{</span>"matches"<span class="example-bracket">}</span>[<span class="example-variable">%i</span>]<span class="example-bracket">{</span>"encoding"<span class="example-bracket">}</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;echo "SCORE " <span class="example-variable">%i</span> " : "<span class="example-variable">%dati</span><span class="example-bracket">{</span>"matches"<span class="example-bracket">}</span>[<span class="example-variable">%i</span>]<span class="example-bracket">{</span>"score"<span class="example-bracket">}</span>;
 <span class="example-bracket">}</span>
 echo "ACCURACY: " <span class="example-variable">%dati</span><span class="example-bracket">{</span>"accuracy"<span class="example-bracket">}</span>;
 </div>
@@ -215,6 +215,6 @@ echo "ACCURACY: " <span class="example-variable">%dati</span><span class="exampl
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_function_alphabetic_a.html">Functions</a>
-<div class='footer'>KVIrc 4.9.1.git-6259-g8df76d1 Documentation - generated by un1versal on Mon Feb 29 12:49:04 2016</div>
+<div class='footer'>KVIrc 4.9.2.git-6382-g7bc5592 Documentation - generated by staticfox on Wed Apr 13 01:13:45 2016</div>
 </body>
 </html>

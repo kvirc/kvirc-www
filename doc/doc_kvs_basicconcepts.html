@@ -181,7 +181,7 @@ a:active {
   </tr>
   <tr bgcolor="#EAEAEA">
     <td></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Scripts</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>
+<br>
 You use KVS to implement <b>scripts</b>.
 A script is basically a finite list of KVS instructions.
 When you type a command in the KVIrc input window you in fact
@@ -189,22 +189,18 @@ execute a small one-line script. You can store
 longer scripts in KVIrc memory and execute them at later time.
 Scripts can be also read from external files by the means of the
 <a href="cmd_parse.html">parse</a> command.
-</p>
-<p>
+<br>
 There is an issue with the word <i>script</i> that is worth clearing here.
 It is common usage to call <i>script</i> a thing that is something more
 that a finite list of (some scripting language) instructions.
 In fact a set of scripts, documentation files, graphics or other multimedia
-files and sometimes executable binaries is still called a <i>script</i>...just like
+files and sometimes executable binaries is still called a <i>script</i>... just like
 the <i>PrincoScript</i> or <i>dynamirc</i> (tough this last one should be categorized as <i>malware</i> instead).
 In KVIrc such a collection of items is called <i>addon</i>, but be prepared
-for both usages of the word in this documentation and around the web.
-</p>
-<p>
-More about addons in this <a href="doc_addons.html">document</a>
-</p>
+for both usages of the word in this documentation and around the web.<br>
+More about addons in this <a href="doc_addons.html">document</a><br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Hello world!</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>
+<br>
 This documentation contains a lot of script examples.
 They will appear like the following block of code:
 <div class="example-box"><a href="cmd_echo.html">echo</a> Hello world!
@@ -224,10 +220,9 @@ on the button on the right.
 Another alternative for testing scripts is the code tester window.
 You can access it by selecting <i>New code tester</i> from the Scripting menu
 at the top of the KVIrc window. You will soon have the opportunity to
-experiment with all the methods. Read on.
-</p>
+experiment with all the methods. Read on.<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Basic syntax</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>
+<br>
 A script contains a list of instructions separated by newlines or ';' characters.
 Placing an instruction per line does not require a terminating character,
 placing more instructions in a single line require them to be separated by ';'.
@@ -251,20 +246,20 @@ also reflected in KVS).
 Another interesting thing is that when you execute the script you
 don't see the enclosing quotes around the printed text: more about this
 in the following sections.<br>
-<p><table width="100%" cellpadding="2"><tr><td bgcolor="#F0F0F0"><font color="#909090" size="-1">Cryptic note (you may skip it for now):<br>
-Yes, the command terminator is a problem for those that want to use ';)' at the end
-of IRC commands like <a href="cmd_msg.html">msg</a>. It is almost unavoidable (read: the cost for
-avoiding it is too high). Note that using '|' or any other character as command terminator
-will <b>not</b> solve the problem: if the terminator is too difficult to type it will annoy the
-scripters (and me), if it is too easy then there will be always someone that wants to use it
-at the end (or in the middle) of a command with the original meaning.
-The solution is to escape the ';' character:
+<p><table width="100%" cellpadding="2"><tr><td bgcolor="#F0F0F0"><font color="#909090" size="-1">&nbsp;&nbsp;&nbsp;&nbsp;Cryptic note (you may skip it for now):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Yes, the command terminator is a problem for those that want to use ';)' at the end
+&nbsp;&nbsp;&nbsp;&nbsp;of IRC commands like <a href="cmd_msg.html">msg</a>. It is almost unavoidable (read: the cost for
+&nbsp;&nbsp;&nbsp;&nbsp;avoiding it is too high). Note that using '|' or any other character as command terminator
+&nbsp;&nbsp;&nbsp;&nbsp;will <b>not</b> solve the problem: if the terminator is too difficult to type it will annoy the
+&nbsp;&nbsp;&nbsp;&nbsp;scripters (and me), if it is too easy then there will be always someone that wants to use it
+&nbsp;&nbsp;&nbsp;&nbsp;at the end (or in the middle) of a command with the original meaning.
+&nbsp;&nbsp;&nbsp;&nbsp;The solution is to escape the <b>;</b> character:
 <div class="example-box"><a href="cmd_echo.html">echo</a> You can do it now \;<span class="example-paren">)</span>
 </div>
 </font></td></tr></table></p>
-</p>
+<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Parameter processing</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>
+<br>
 Most of the commands accept (and sometimes require) a list of parameters.
 For example, the <a href="cmd_join.html">join</a> command (that is used to join an IRC channel)
 accepts two parameters: the first one is the channel to join and the second is
@@ -279,9 +274,9 @@ otherwise the command will fail and KVIrc will probably complain too.
 [password] is still a parameter but the square parentheses indicate that it is
 optional: if you specify it, then it will be interpreted as the channel password,
 if you don't then no password will be used.
-<p><table width="100%" cellpadding="2"><tr><td bgcolor="#F0F0F0"><font color="#909090" size="-1">The syntax is written in a simplified BNF. I say simplified because it is not
-totally strict around the KVIrc documentation. I just prefer the syntax to be
-clear and easy to read instead of being formally perfect.
+<p><table width="100%" cellpadding="2"><tr><td bgcolor="#F0F0F0"><font color="#909090" size="-1">&nbsp;&nbsp;&nbsp;&nbsp;The syntax is written in a simplified BNF. I say simplified because it is not
+&nbsp;&nbsp;&nbsp;&nbsp;totally strict around the KVIrc documentation. I just prefer the syntax to be
+&nbsp;&nbsp;&nbsp;&nbsp;clear and easy to read instead of being formally perfect.
 </font></td></tr></table></p>
 You can finally join a channel by writing:
 <div class="example-box"><a href="cmd_join.html">join</a> #kvirc kvircrocks
@@ -290,20 +285,18 @@ or, since #kvirc usually has no password, by writing:
 <div class="example-box"><a href="cmd_join.html">join</a> #kvirc
 </div>
 In the example above the optional parameter [password] is omitted.
-<p><table width="100%" cellpadding="2"><tr><td bgcolor="#F0F0F0"><font color="#909090" size="-1">In fact it is not really omitted: KVIrc interprets it as an empty string that later
-means <i>do not send the password to the server</i>.
-Empty strings are equivalent to omitted ones.
-</font></td></tr></table></p>
-</p>
+<p><table width="100%" cellpadding="2"><tr><td bgcolor="#F0F0F0"><font color="#909090" size="-1">&nbsp;&nbsp;&nbsp;&nbsp;In fact it is not really omitted: KVIrc interprets it as an empty string that later
+&nbsp;&nbsp;&nbsp;&nbsp;means <i>do not send the password to the server</i>.
+&nbsp;&nbsp;&nbsp;&nbsp;Empty strings are equivalent to omitted ones.
+</font></td></tr></table></p><br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Parameters, spaces and quotes</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>
+<br>
 From the examples above is obvious that KVS command parameters are separated by spaces.
 What is not totally obvious is that multiple spaces are allowed but KVIrc
 will automatically reduce them to exactly one (just like HTML parsers or the shell
 interpreters do). This is an useful behaviour in an IRC client since spaces usually
 carry no information and in text oriented protocols make the parsing really harder (:D).
-</p>
-<p>
+<br>
 The spaces are simplified in normal processing but there are ways to force KVIrc
 to interpret the spaces just as they are.
 The first method are the quotation marks: all the spaces enclosed in quotation marks
@@ -321,9 +314,9 @@ quotes are then stripped! Yes, this is another tricky behaviour. But don't be af
 it is really easier to use than to explain.
 There is obviously a method to preserve the quotes too and it is also another
 method to preserve the spaces but that leads us to the next paragraph.
-</p>
+<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Escape character</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>
+<br>
 You may have already noticed that KVS treats some characters in a special way.
 For example the double-quote characters can be used to enclose strings
 and are stripped by the parser.
@@ -352,9 +345,9 @@ The previous example will be printed as:<br><br>
 <i>This text will be printed on a single line</i><br>
 Another example:<br>
 <div class="example-box"><a href="cmd_echo.html">echo</a> "The new KVIrc &nbsp; &nbsp; &nbsp \
-            &nbsp; &nbsp; IS OUT!"
-<a href="cmd_echo.html">echo</a> Check it out at http://www.kvi\
-            &nbsp; &nbsp; rc.net!
+&nbsp; &nbsp; IS OUT!"
+<a href="cmd_echo.html">echo</a> Check it out at http://www.kvi \
+&nbsp; &nbsp; rc.net!
 </div>
 This will be printed as:<br><br>
 <i>
@@ -366,9 +359,9 @@ this is really the end of these tricks :)
 Later we will discover other common usages of the backslash escape, such
 as preventing KVIrc from interpreting a literal percent character as a variable
 or separating variable names from the text.
-</p>
+<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Command switches</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>
+<br>
 Many commands accept switch parameters.
 <b>A switch modifies the behaviour of a command.</b>
 Any switch can optionally accept a parameter, that must
@@ -387,9 +380,9 @@ with a literal '-' you must again escape it:
 or use the quotes:
 <div class="example-box"><a href="cmd_echo.html">echo</a> "--- This text has three minus signs on the left"
 </div>
-</p>
+<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Command blocks</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>
+<br>
 Commands can be 'grouped' in blocks by using the classic C++ braces.
 Here is a single line example:<br>
 <div class="example-box"><span class="example-bracket">{</span> <a href="cmd_echo.html">echo</a> First command; <a href="cmd_echo.html">echo</a> Second command; <span class="example-bracket">}</span> <a href="cmd_echo.html">echo</a> Third command
@@ -401,17 +394,17 @@ Multi line example:<br>
 <span class="example-bracket">}</span>
 <a href="cmd_echo.html">echo</a> Third command
 </div>
-<p><table width="100%" cellpadding="2"><tr><td bgcolor="#F0F0F0"><font color="#909090" size="-1">Reminder : copy the example above to a text file
-and then use /<a href="cmd_parse.html">parse</a> &lt;filename&gt;
+<p><table width="100%" cellpadding="2"><tr><td bgcolor="#F0F0F0"><font color="#909090" size="-1">&nbsp;&nbsp;&nbsp;&nbsp;Reminder: copy the example above to a text file
+&nbsp;&nbsp;&nbsp;&nbsp;and then use /<a href="cmd_parse.html">parse</a> &lt;filename&gt;
 </font></td></tr></table></p>
 In this case the command block has no special meaning
 other than making the code more readable, but command blocks
 will be useful later (see <a href="cmd_if.html">if</a>,<a href="cmd_while.html">while</a>...).<br>
-<p><table width="100%" cellpadding="2"><tr><td bgcolor="#F0F0F0"><font color="#909090" size="-1">Unlike in C or C++, the braces do <b>not</b> automatically define a variable scope
-(with few exceptions to this rule ... just to complicate the things a bit more).
-You will recall this last assertion later, when reading about <a href="doc_data_structures.html">data structures</a>.
+<p><table width="100%" cellpadding="2"><tr><td bgcolor="#F0F0F0"><font color="#909090" size="-1">&nbsp;&nbsp;&nbsp;&nbsp;Unlike in C or C++, the braces do <b>not</b> automatically define a variable scope
+&nbsp;&nbsp;&nbsp;&nbsp;(with few exceptions to this rule ... just to complicate the things a bit more).
+&nbsp;&nbsp;&nbsp;&nbsp;You will recall this last assertion later, when reading about <a href="doc_data_structures.html">data structures</a>.
 </font></td></tr></table></p>
-</p>
+<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Comments</div></td></tr><tr><td bgcolor="#EAEAEA">
 <p>
 KVIrc supports comments in command sequences.<br>
@@ -423,46 +416,46 @@ You can start a comment anywhere a command can start.<br>
 You can't escape newline characters in this case.
 (or better: escape characters have no meaning in comments...
 maybe one day I'll implement it).<br>
-Starting from version 3.0.0, KVIrc supports also C++ single line and C multiline comments.<br>
-A C++ comment starts with two slashes '//' and terminates with a newline.
-A multiline C comment starts with '/ *' and ends at the first '* /' encountered.
+Starting from version 3.0.0, KVIrc supports also C++ single line and C multi-line comments.<br>
+A C++ comment starts with two slashes <b>//</b> and terminates with a newline.
+A multi-line C comment starts with <b>/ *</b> and ends at the first <b>* /</b> encountered.
 Since KVIrc has no pre-processor, the C/C++ comments usually can't be placed in the middle of a command:
 they must start where a command would start and end before the begin of another command.<br>
-</p>
+<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Indentation</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>
+<br>
 You <b>should</b> use spaces or <b>tabs</b> to <b>indent</b> your code. Note that the <b>should</b>
 word is written in bold characters: I mean that you really should indent your code.
 Indenting helps both you (the script writer) and the reader (any other user that will
 read your script). A good indenting practice is the first step to become a great programmer :)
-<p><table width="100%" cellpadding="2"><tr><td bgcolor="#F0F0F0"><font color="#909090" size="-1">Please note that the command parameters should be separated by
-space characters (ASCII 32). Tabs are not granted to work as parameter separators.<br>
+<p><table width="100%" cellpadding="2"><tr><td bgcolor="#F0F0F0"><font color="#909090" size="-1">&nbsp;&nbsp;&nbsp;&nbsp;Please note that the command parameters should be separated by
+&nbsp;&nbsp;&nbsp;&nbsp;space characters (ASCII 32). Tabs are not granted to work as parameter separators.<br>
 </font></td></tr></table></p>
 <div class="example-box"><span class="example-bracket">{</span>
-&lt;tab&gt;<a href="cmd_echo.html">echo</a> Indented command
-&lt;tab&gt;<span class="example-bracket">{</span>
-&lt;tab&gt;&lt;tab&gt;# Comment
-&lt;tab&gt;&lt;tab&gt;<a href="cmd_echo.html">echo</a> Really Really long indented \
-&lt;tab&gt;&lt;tab&gt;&lt;tab&gt;command
-&lt;tab&gt;<span class="example-bracket">}</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;tab&gt;<a href="cmd_echo.html">echo</a> Indented command
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;tab&gt;<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;tab&gt;&lt;tab&gt;# Comment
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;tab&gt;&lt;tab&gt;<a href="cmd_echo.html">echo</a> Really Really long indented \
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;tab&gt;&lt;tab&gt;&lt;tab&gt;command
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;tab&gt;<span class="example-bracket">}</span>
 <span class="example-bracket">}</span>
 </div>
 Tabs behave better than spaces as indentation characters since other users can
 adjust the tab size to match their taste. I personally prefer 4 character tabs
 while most text/code editors usually come with 8 characters as default.
-</p>
+<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">And now?</div></td></tr><tr><td bgcolor="#EAEAEA">
-<p>
+<br>
 You're now ready to really start experimenting with KVS. You can take
 a look at the <a href="doc_commands.html">command index</a> and start trying to use them
 while keeping in mind the rules described in this document.
 The next suggested lecture is the documentation about <a href="doc_kvs_aliasesandfunctions.html">the aliases and the functions</a>.
 Have fun :)
-</p>
+<br>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
-<div class='footer'>KVIrc 4.9.1.git-6259-g8df76d1 Documentation - generated by un1versal on Mon Feb 29 12:49:04 2016</div>
+<div class='footer'>KVIrc 4.9.2.git-6382-g7bc5592 Documentation - generated by staticfox on Wed Apr 13 01:13:45 2016</div>
 </body>
 </html>

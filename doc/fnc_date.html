@@ -190,58 +190,43 @@ a:active {
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>Returns the string representation of &lt;unixtime&gt; or
-of the current time if &lt;unixtime&gt; is not given,
-based on &lt;format&gt;.<br>
+of the current time if &lt;unixtime&gt; is not given, based on &lt;format&gt;.<br>
 The &lt;format string&gt; should contain a set of characters
 that will be transformed according to the following rules:<br>
-<br>
 <table bgcolor="#D5D5D5" width="100%">
-<tr><td><b>a</b></td><td>The abbreviated weekday name according to the current locale.</td></tr>
-<tr><td><b>A</b></td><td>The full weekday name according to the current locale.</td></tr>
-<tr><td><b>b</b></td><td>The abbreviated month name according to the current locale.</td></tr>
-<tr><td><b>B</b></td><td>The full month name according to the current locale.</td></tr>
-<tr><td><b>c</b></td><td>The preferred date and time representation for the current locale.</td></tr>
-<tr><td><b>C</b></td><td>The century number (year/100) as a 2-digit integer. (SU)</td></tr>
-<tr><td><b>d</b></td><td>The day of the month as a decimal number (range 01 to 31).</td></tr>
-<tr><td><b>D</b></td><td>Equivalent to m/d/y.</td></tr>
-<tr><td><b>e</b></td><td>Like d, the day of the month as a decimal number, but a leading
-zero is replaced by a space. (SU)</td></tr>
-<tr><td><b>F</b></td><td>Equivalent to Y-m-d (the ISO 8601 date format). (C99)</td></tr>
-<tr><td><b>h</b></td><td>Equivalent to b.</td></tr>
-<tr><td><b>H</b></td><td>The hour as a decimal number using a 24-hour clock (range 00 to 23).</td></tr>
-<tr><td><b>I</b></td><td>The hour as a decimal number using a 12-hour clock (range 01 to 12).</td></tr>
-<tr><td><b>j</b></td><td>The day of the year as a decimal number (range 001 to 366).</td></tr>
-<tr><td><b>k</b></td><td>The hour (24-hour clock) as a decimal number (range 0 to 23); sin-
-gle digits are preceded by a blank. (See also H.)</td></tr>
-<tr><td><b>l</b></td><td>The hour (12-hour clock) as a decimal number (range 1 to 12); sin-
-gle digits are preceded by a blank. (See also I.)</td></tr>
-<tr><td><b>m</b></td><td>The month as a decimal number (range 01 to 12).</td></tr>
-<tr><td><b>M</b></td><td>The minute as a decimal number (range 00 to 59).</td></tr>
-<tr><td><b>n</b></td><td>A newline character. (SU)</td></tr>
-<tr><td><b>p</b></td><td>Either  `AM' or `PM' according to the given time value, or the cor-
-responding strings for the current locale.  Noon is treated as `pm' and midnight as `am'.</td></tr>
-<tr><td><b>r</b></td><td>The time in a.m. or p.m. notation.  In the  POSIX  locale  this  is
-equivalent to `I:M:S p'.</td></tr>
-<tr><td><b>s</b></td><td>The number of seconds  since  the  Epoch,  i.e.,  since  1970-01-01
-00:00:00 UTC.</td></tr>
-<tr><td><b>S</b></td><td>The second as a decimal number (range 00 to 60).  (The range is up
-to 60 to allow for occasional leap seconds.)</td></tr>
-<tr><td><b>t</b></td><td>A tab character.</td></tr>
-<tr><td><b>T</b></td><td>The time in 24-hour notation (H:M:S). (SU)</td></tr>
-<tr><td><b>u</b></td><td>The day of the week as a decimal, range 1 to  7,  Monday  being  1.
-See also w.</td></tr>
-<tr><td><b>V</b></td><td>The ISO 8601:1988 week number of the current year as a decimal num-
-ber, range 01 to 53, where week 1 is the first  week  that  has  at
-least  4 days in the current year, and with Monday as the first day
-of the week. See also U and W.</td></tr>
-<tr><td><b>w</b></td><td>The day of the week as a decimal, range 0 to  6,  Sunday  being  0.</td></tr>
-<tr><td><b>W</b></td><td>The week number of the current year as a decimal number, range 00
-to 53, starting with the first Monday as the first day of week  01.</td></tr>
-<tr><td><b>y</b></td><td>The year as a decimal number without a century (range 00 to 99).</td></tr>
-<tr><td><b>Y</b></td><td>The year as a decimal number including the century.</td></tr>
-<tr><td><b>z</b></td><td>The   time-zone   as  hour  offset  from  GMT.   Required  to  emit
-              RFC822-conformant dates (using "a, d b Y H:M:S z").</td></tr>
-<tr><td><b>Z</b></td><td>The time zone or name or abbreviation (not implemented yet).</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>a</b></td><td>The abbreviated weekday name according to the current locale.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>A</b></td><td>The full weekday name according to the current locale.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>b</b></td><td>The abbreviated month name according to the current locale.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>B</b></td><td>The full month name according to the current locale.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>c</b></td><td>The preferred date and time representation for the current locale.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>C</b></td><td>The century number (year/100) as a 2-digit integer. (SU)</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>d</b></td><td>The day of the month as a decimal number (range 01 to 31).</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>D</b></td><td>Equivalent to m/d/y.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>e</b></td><td>Like d, the day of the month as a decimal number, but a leading zero is replaced by a space. (SU)</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>F</b></td><td>Equivalent to Y-m-d (the ISO 8601 date format). (C99)</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>h</b></td><td>Equivalent to b.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>H</b></td><td>The hour as a decimal number using a 24-hour clock (range 00 to 23).</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>I</b></td><td>The hour as a decimal number using a 12-hour clock (range 01 to 12).</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>j</b></td><td>The day of the year as a decimal number (range 001 to 366).</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>k</b></td><td>The hour (24-hour clock) as a decimal number (range 0 to 23); single digits are preceded by a blank. See also <b>H</b>.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>l</b></td><td>The hour (12-hour clock) as a decimal number (range 1 to 12); single digits are preceded by a blank. See also <b>I</b>.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>m</b></td><td>The month as a decimal number (range 01 to 12).</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>M</b></td><td>The minute as a decimal number (range 00 to 59).</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>n</b></td><td>A newline character. (SU)</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>p</b></td><td>Either <b>AM</b> or <b>PM</b> according to the given time value, or the corresponding strings for the current locale. Noon is treated as <b>pm</b> and midnight as <b>am</b>.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>r</b></td><td>The time in a.m. or p.m. notation. In the POSIX locale this is	equivalent to <b>I:M:S p</b>.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>s</b></td><td>The number of seconds since the Epoch, i.e., since 1970-01-01 00:00:00 UTC.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>S</b></td><td>The second as a decimal number (range 00 to 60). (The range is up to 60 to allow for occasional leap seconds.)</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>t</b></td><td>A tab character.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>T</b></td><td>The time in 24-hour notation (H:M:S). (SU)</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>u</b></td><td>The day of the week as a decimal, range 1 to 7, Monday being 1. See also <b>w</b>.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>V</b></td><td>The ISO 8601:1988 week number of the current year as a decimal number, range 01 to 53,	where week 1 is the first week that has at least 4 days in the current year, and with Monday as the first day of the week. See also <b>U</b> and </b>W.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>w</b></td><td>The day of the week as a decimal, range 0 to 6, Sunday being 0.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>W</b></td><td>The week number of the current year as a decimal number, range 00 to 53, starting with the first Monday as the first day of week 01.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>y</b></td><td>The year as a decimal number without a century (range 00 to 99).</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>Y</b></td><td>The year as a decimal number including the century.</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>z</b></td><td>The time-zone as hour offset from GMT. Required to emit RFC822-compliant dates (using <i>a, d b Y H:M:S z</i>).</td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;<tr><td><b>Z</b></td><td>The time zone or name or abbreviation (not implemented yet).</td></tr>
 </table>
 </td>
   </tr>
@@ -262,6 +247,6 @@ to 53, starting with the first Monday as the first day of week  01.</td></tr>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_function_alphabetic_a.html">Functions</a>
-<div class='footer'>KVIrc 4.9.1.git-6259-g8df76d1 Documentation - generated by un1versal on Mon Feb 29 12:49:04 2016</div>
+<div class='footer'>KVIrc 4.9.2.git-6382-g7bc5592 Documentation - generated by staticfox on Wed Apr 13 01:13:45 2016</div>
 </body>
 </html>

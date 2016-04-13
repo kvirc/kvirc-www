@@ -180,18 +180,18 @@ a:active {
       <div class='title-text'>KVIrc and CTCP</div>      <div class='title-secondary-text'>For developers: Client-To-Client Protocol handling in KVIrc</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Introduction</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+    <td></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Introduction</div></td></tr><tr><td bgcolor="#EAEAEA">
 Personally, I think that the CTCP specification is to
 be symbolically printed & burned. It is really too complex
 (you can go mad with the quoting specifications)
 and NO IRC CLIENT supports it completely.
 Here is my personal point of view on the CTCP protocol.<br>
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">What is CTCP?</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">What is CTCP?</div></td></tr><tr><td bgcolor="#EAEAEA">
 CTCP stands for Client-to-Client Protocol. It is designed
 for exchanging almost arbitrary data between IRC clients;
 the data is embedded into text messages of the underlying
 IRC protocol.<br>
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Basic concepts</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Basic concepts</div></td></tr><tr><td bgcolor="#EAEAEA">
 A CTCP message is sent as the &lt;text&gt; part of the PRIVMSG and
 NOTICE IRC commands.<br>
 To differentiate the CTCP message from a normal IRC message
@@ -219,7 +219,7 @@ be disconnected while sending the replies, after only
 receiving a single IRC message (no flood for the sender).
 From my personal point of view, only <b>one CTCP message per IRC message</b>
 should be allowed and theoretically the trailing &lt;0x01&gt; delimiter can be optional.<br>
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">How to extract the CTCP message</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">How to extract the CTCP message</div></td></tr><tr><td bgcolor="#EAEAEA">
 The IRC messages do not allow the following characters to be sent:<br>
 &lt;NUL&gt; (ASCII character 0), &lt;CR&gt; (Carriage return), &lt;LF&gt; (Line feed).<br>
 So finally we have four characters that <b>cannot appear literally into a
@@ -234,15 +234,16 @@ The trailing (optional) &lt;0x01&gt; can be removed in this phase
 or later, assuming that it is not a valid char in the &lt;ctcp message&gt;.<br>
 In this document I will assume that you have stripped the trailing &lt;0x01&gt;
 and thus from now on we will deal only with the &lt;ctcp message&gt; part.<br>
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Parsing a CTCP message: The quoting dilemma</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Parsing a CTCP message: The quoting dilemma</div></td></tr><tr><td bgcolor="#EAEAEA">
 Since there are characters that cannot appear in a &lt;ctcp message&gt;,
 theoretically we should have to use a quoting mechanism.
 Well, in fact, no actual CTCP message uses the quoting: there
 is no need to include a &lt;NUL&gt;, a &lt;CR&gt; or &lt;LF&gt; inside the actually
 defined messages (The only one could be CTCP SED, but I have never
 seen it in action... is there any client that implements it?).
-We could also leave the "quoting" to the "single message type semantic":
-a message that needs to include "any character" could have its own
+We could also leave the <i>quoting</i> to the <i>single message type semantic</i>:
+a message that needs to include <i>any character</i> could have its own
 encoding method (Base64 for example). With the "one CTCP per IRC message"
 convention we could even allow &lt;0x01&gt; inside messages. Only the leading
 (and eventually trailing) &lt;0x01&gt; would be the delimiter, the other ones
@@ -250,8 +251,8 @@ would be valid characters. Finally, is there any CTCP type that needs
 &lt;0x01&gt; inside a message? &lt;0x01&gt; is not printable (as well as &lt;CR&gt;,&lt;LF&gt; and &lt;NUL&gt;),
 so only encoded messages (and again we can stick to the single message semantic)
 messages or the ones including special parameters. Some machines might
-allow &lt;0x01&gt; in filenames....well, a file with &lt;0x01&gt; in its name has something
-broken inside, or the creator is a sort of "hacker" (so he also
+allow &lt;0x01&gt; in filenames... well, a file with &lt;0x01&gt; in its name has something
+broken inside, or the creator is a sort of <i>hacker</i> (so he also
 knows how to rename a file...) :).<br>
 Anyway, let's be pedantic, and define this quoting method.
 Let's use the most intuitive method, adopted all around the world:<br>
@@ -267,27 +268,29 @@ I've chosen the octal representation just to follow a bit the old specification:
 the authors seemed to like it. This point could be discussed in
 some mailing list or sth. The '\C' sequence is useful to include the backslash
 character (escape sequence '\\').<br>
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Let's mess a little more</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Let's mess a little more</div></td></tr><tr><td bgcolor="#EAEAEA">
 A CTCP message is made of <b>space separated parameters</b>.<br>
 The natural way of separating parameters is to use the space character.
-We define a "token" as a sequence of valid CTCP characters not including literal space.
+We define a <i>token</i> as a sequence of valid CTCP characters not including literal space.
 A &lt;ctcp parameter&gt; is usually a token, but not always;
 filenames can contain spaces inside names (and it happens very often!).
 So one of the parameters of CTCP DCC is not a space separated token.
 How do we handle it? Again a standard is missing. Some clients simply change
 the filename placing underscores instead of spaces, this is a reasonable solution if used with care.
-Other clients attempt to "isolate" the filename token by surrounding it with some kind
-of quotes, usually the '"' or ''' characters. This is also a good solution.
+Other clients attempt to <i>isolate</i> the filename token by surrounding it with some kind
+of quotes, usually the <b>"</b> or <b>'</b> characters. This is also a good solution.
 Another one that naturally comes into my mind is to use the previously defined
-quoting to define a "non-breaking space" character, because a space after a backslash
+quoting to define a <i>non-breaking space</i> character, because a space after a backslash
 could lose its original semantic. Better yet, use the backslash followed by
 the octal representation of the space character ('\040').
 Anyway, to maintain compatibility with other popular IRC clients (such as mIRC),
-let's include the '"' quotes in our standard: literal (unescaped) '"' quotes
-define a single token string. To include a literal '"' character, escape it.
+let's include the <b>"</b> quotes in our standard: literal (unescaped) <b>"</b> quotes
+define a single token string. To include a literal <b>"</b> character, escape it.
 Additionally, the last parameter of a &lt;ctcp message&gt; may be made of multiple tokens.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">A CTCP parameter extracting example</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
-A trivial example of a C "CTCP parameter extracting routine" follows.<br>
+<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">A CTCP parameter extracting example</div></td></tr><tr><td bgcolor="#EAEAEA">
+A trivial example of a C <i>CTCP parameter extracting routine</i> follows.<br>
 An IRC message is made of up to 510 usable characters.
 When a CTCP is sent there is a PRIVMSG or NOTICE token that uses at least 6 characters,
 at least two spaces and a target token (that can not be empty, so it is at least one character)
@@ -295,8 +298,8 @@ and finally one &lt;0x01&gt; escape character. This gives 500 characters as maxi
 for a complete &lt;ctcp message&gt; and thus for a &lt;ctcp token&gt;.
 In fact, the &lt;ctcp message&gt; is always smaller than 500 characters; there are usually two
 &lt;0x01&gt; chars, there is a message source part at the beginning of the IRC message
-that is 10-15 characters long, and there is a ':' character before the trailing parameter.
-Anyway, to really be on the "safe side", we use a 512 character buffer for each
+that is 10-15 characters long, and there is a <b>:</b> character before the trailing parameter.
+Anyway, to really be on the <i>safe side</i>, we use a 512 character buffer for each
 &lt;ctcp token&gt;. Finally, I'll assume that you have already ensured that
 the &lt;ctcp message&gt; that we are extracting from is shorter than 511 characters in all,
 and have provided a buffer big enough to avoid this code segfaulting.
@@ -377,7 +380,7 @@ const char * extract_ctcp_parameter<span class="example-paren">(</span>const cha
 &nbsp;&nbsp;&nbsp;&nbsp;return msg_ptr;
 <span class="example-bracket">}</span>
 </div><br>
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">CTCP parameter semantics</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">CTCP parameter semantics</div></td></tr><tr><td bgcolor="#EAEAEA">
 The first &lt;ctcp parameter&gt; of a &lt;ctcp message&gt; is the &lt;ctcp tag&gt;: it defines
 the semantic of the rest of the message.<br>
 Although it is a convention to specify the &lt;ctcp tag&gt; as uppercase letters,
@@ -386,7 +389,8 @@ case sensitive, I'd prefer to follow the IRC message semantic (just to
 have less "special cases") and treat the whole message as <b>case insensitive</b>.<br>
 The remaining tokens depend on the &lt;ctcp tag&gt;. A description of known &lt;ctcp tags&gt;
 and thus &lt;ctcp messages&gt; follows.<br>
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">PING</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">PING</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;PING &lt;data&gt;&lt;0x01&gt;</b><br>
 The PING request is used to check the round trip time from one client to another.
 The receiving client should reply with exactly the same message but sent
@@ -394,23 +398,26 @@ through a NOTICE instead of a PRIVMSG. The &lt;data&gt; usually contains an unsi
 integer but not necessarily; it is not even mandatory for &lt;data&gt; to be a single token.
 The receiver should ignore the semantic of &lt;data&gt;.<br>
 The reply is intended to be processed by IRC clients.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">VERSION</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">VERSION</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;VERSION&lt;0x01&gt;</b><br>
 The VERSION request asks for information about another user's IRC client program.
 The reply should be sent through a NOTICE with the following syntax:<br>
 &lt;0x01&gt;VERSION &lt;client_version_data&gt;&lt;0x01&gt;<br>
 The preferred form for &lt;client_version_data&gt; is
-"&lt;client_name&gt;:&lt;client_version&gt;:&lt;client_enviroinement&gt;", but historically
+<i>&lt;client_name&gt;:&lt;client_version&gt;:&lt;client_enviroinement&gt;</i>, but historically
 clients (and users) send a generic reply describing the client name, version
 and eventually the used script name. This CTCP reply is intended to be human
 readable, so any form is accepted.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">USERINFO</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">USERINFO</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;USERINFO&lt;0x01&gt;</b><br>
 The USERINFO request asks for information about another user.
 The reply should be sent through a NOTICE with the following syntax:<br>
 &lt;0x01&gt;USERINFO &lt;user_info_data&gt;&lt;0x01&gt;<br>
-The &lt;user_info_data&gt; should be a human readable "user defined" string;
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">CLIENTINFO</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+The &lt;user_info_data&gt; should be a human readable <i>user defined</i> string;
+<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">CLIENTINFO</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;CLIENTINFO&lt;0x01&gt;</b><br>
 The CLIENTINFO request asks for information about another user's IRC client program.
 While VERSION requests the client program name and version, CLIENTINFO requests
@@ -419,33 +426,39 @@ The reply should be sent through a NOTICE with the following syntax:<br>
 &lt;0x01&gt;CLIENTINFO &lt;client_info_data&gt;&lt;0x01&gt;<br>
 The &lt;client_info_data&gt; should contain a list of supported CTCP request tags.
 The CLIENTINFO reply is intended to be human readable.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">FINGER</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">FINGER</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;FINGER&lt;0x01&gt;</b><br>
 The FINGER request asks for information about another IRC user.
 The reply should be sent through a NOTICE with the following syntax:<br>
 &lt;0x01&gt;FINGER &lt;user_info_data&gt;&lt;0x01&gt;<br>
 The &lt;user_info_data&gt; should be a human readable string containing
 the system username and possibly the system idle time;
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">SOURCE</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">SOURCE</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;SOURCE&lt;0x01&gt;</b><br>
 The SOURCE request asks for the client homepage or ftp site information.
 The reply should be sent through a NOTICE with the following syntax:<br>
 &lt;0x01&gt;VERSION &lt;homepage_url_data&gt;&lt;0x01&gt;<br>
 This CTCP reply is intended to be human readable, so any form is accepted.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">TIME</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">TIME</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;TIME&lt;0x01&gt;</b><br>
 The TIME request asks for the user local time.
 The reply should be sent through a NOTICE with the following syntax:<br>
 &lt;0x01&gt;TIME &lt;time and date string&gt;&lt;0x01&gt;<br>
 This CTCP reply is intended to be human readable, so any form is accepted.
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">ACTION</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">ACTION</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;ACTION&lt;0x01&gt;</b><br>
 The ACTION tag is used to describe an action.<br>
 It should be sent through a NOTICE message and never generate a reply.<br>
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">AVATAR (equivalent to ICON or FACE)</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">AVATAR (equivalent to ICON or FACE)</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;AVATAR&lt;0x01&gt;</b><br>
 The AVATAR tag is used to query an user's avatar.<br>
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">MULTIMEDIA (equivalent to MM or SOUND)</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">MULTIMEDIA (equivalent to MM or SOUND)</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;MULTIMEDIA &lt;filename&gt;&lt;0x01&gt;</b><br>
 The MULTIMEDIA tag is used to play a multimedia file on the receiver's side.<br>
 The receiving client should locate the file associated to &lt;filename&gt;,
@@ -459,21 +472,22 @@ path. If any part of the &lt;filename&gt; appears to be a path component, it sho
 The client may decide to drop the entire message too. Older clients (including
 older releases of KVIrc) used to request the missing filenames by a particular
 non-standard private message syntax. This convention should be dropped.<br>
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">DCC</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+<br>
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">DCC</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;DCC &lt;type&gt; &lt;type dependent parameters&gt;&lt;0x01&gt;</b><br>
 The DCC tag is used to initiate a Direct Client Connection.
 The known DCC types are:<br>
-CHAT<br>
-SEND<br>
-TSEND<br>
-GET<br>
-TGET<br>
-ACCEPT<br>
-RESUME<br>
+&nbsp;&nbsp;&nbsp;&nbsp;CHAT<br>
+&nbsp;&nbsp;&nbsp;&nbsp;SEND<br>
+&nbsp;&nbsp;&nbsp;&nbsp;TSEND<br>
+&nbsp;&nbsp;&nbsp;&nbsp;GET<br>
+&nbsp;&nbsp;&nbsp;&nbsp;TGET<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ACCEPT<br>
+&nbsp;&nbsp;&nbsp;&nbsp;RESUME<br>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_generic_index_all.html">Miscellaneous</a>
-<div class='footer'>KVIrc 4.9.1.git-6259-g8df76d1 Documentation - generated by un1versal on Mon Feb 29 12:49:04 2016</div>
+<div class='footer'>KVIrc 4.9.2.git-6382-g7bc5592 Documentation - generated by staticfox on Wed Apr 13 01:13:45 2016</div>
 </body>
 </html>

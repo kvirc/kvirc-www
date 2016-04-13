@@ -192,42 +192,36 @@ a:active {
     <td class='subtitle-table-cell'><div class='subtitle-text'>Description</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><p>
+    <td><br>
 Defines a new script action.
-</p>
-<p>
+<br>
 Each action has an unique &lt;name&gt; that must not collide with any core action
-(i.e. don't use the "KVIrc." prefix).
+(i.e. don't use the <i>KVIrc.</i> prefix).
 At any time you can check <a href="cmd_action.list.html">action.list</a> to verify that no core action
 is already using your &lt;name&gt;. If the &lt;name&gt; was already used for a script action
 then this action is simply replaced by the new one.
-</p>
-<p>
+<br>
 Each action has an associated &lt;visible label&gt; that is the name meant to be presented to the user,
 possibly even translated. This label will appear on the toolbar buttons, in the tooltips and
 in the popup menu items. The string will be evaluated just before the actions is displayed
 so the eventual runtime translation will fetch from the correct language catalogue.
-</p>
-<p>
+<br>
 &lt;description&gt; is the descriptive text that will be displayed in the action choice dialog
 (and maybe in other places).
 The string will be evaluated just before the actions is displayed
 so the eventual runtime translation will fetch from the correct language catalogue.
-</p>
-<p>
+<br>]
 &lt;big_icon_id&gt; is the <a href="doc_image_id.html">image identifier</a> of the icon that will
 appear on the toolbar buttons and in the action choice dialog.
-</p>
-<p>
+<br>
 &lt;small_icon_id&gt; is optional and is the <a href="doc_image_id.html">image identifier</a> of the icon
 that will appear in the menu items. Since menu items can be also iconless then
 this parameter is optional.
-</p>
-<p>
+<br>
 &lt;action body&gt; is the callback code snippet that will be triggered when this action is activated
 either by the means of <a href="cmd_action.trigger.html">action.trigger</a>, a toolbar button or a menu item selection.
 An empty &lt;action body&gt; causes this command to behave like <a href="cmd_action.destroy.html">action.destroy</a> &lt;name&gt;.
-</p>
+<br>
 </td>
   </tr>
   <tr>
@@ -237,19 +231,19 @@ An empty &lt;action body&gt; causes this command to behave like <a href="cmd_act
     <td>
       <table class="switch-table">
 <tr><td class="switch-title-table-cell">-i | --bind-to-context</td></tr>
-<tr><td class="switch-body-table-cell">Specifies that the action needs an IRC context to be executed. When the current window does not belong to an IRC context the action is automatically disabled</td></tr>
+<tr><td class="switch-body-table-cell">Specifies that the action needs an IRC context to be executed. When the current window does not belong to an IRC context the action is automatically disabled <br></td></tr>
 <tr><td class="switch-title-table-cell">-c | --bind-to-connection</td></tr>
-<tr><td class="switch-body-table-cell">Specifies that the action needs an IRC connection to be executed. When the current window has no associated IRC connection the action is automatically disabled. This switch implies -i.</td></tr>
+<tr><td class="switch-body-table-cell">Specifies that the action needs an IRC connection to be executed. When the current window has no associated IRC connection the action is automatically disabled. This switch implies -i. <br></td></tr>
 <tr><td class="switch-title-table-cell">-l | --enable-at-login</td></tr>
-<tr><td class="switch-body-table-cell">Specifies that the action needs to be enabled at login time, that is when a link to the server has been established but the login operations haven't been carried out yet (and thus there is no real IRC connection). This switch requires -c to work.</td></tr>
+<tr><td class="switch-body-table-cell">Specifies that the action needs to be enabled at login time, that is when a link to the server has been established but the login operations haven't been carried out yet (and thus there is no real IRC connection). This switch requires -c to work. <br></td></tr>
 <tr><td class="switch-title-table-cell">-w=&lt;window_types&gt; | --window-types=&lt;window_type&gt;</td></tr>
-<tr><td class="switch-body-table-cell">Causes the action to be enabled only when the active window is one of the specified types. &lt;window_types&gt; may be any combination of the letters 'q' (query), 'c' (channel), 'x' (console), 'd' (dccchat). If this switch is omitted then the action is enabled in all the windows.<br></td></tr>
+<tr><td class="switch-body-table-cell">Causes the action to be enabled only when the active window is one of the specified types. &lt;window_types&gt; may be any combination of the letters <b>q</b> (query), <b>c</b> (channel), <b>x</b> (console), <b>d</b> (dccchat). If this switch is omitted then the action is enabled in all the windows.<br> <br></td></tr>
 <tr><td class="switch-title-table-cell">-s | --selected-only</td></tr>
-<tr><td class="switch-body-table-cell">Specifies that the action will be activated only if the active window has selected users in the userlist. This switch requires -w with a combination of flags 'q','c' and 'x' (it doesn't work for DCC chat).</td></tr>
+<tr><td class="switch-body-table-cell">Specifies that the action will be activated only if the active window has selected users in the userlist. This switch requires -w with a combination of flags <b>q</b>, <b>c/b] and <b>x</b> (it doesn't work for DCC chat). <br></td></tr>
 <tr><td class="switch-title-table-cell">-t=&lt;category&gt; | --category=&lt;category&gt;</td></tr>
-<tr><td class="switch-body-table-cell">Causes the action to belong to the specified category. &lt;category&gt; can be one of "IRC","scripting","settings","GUI","channel","tools" and "generic". If this switch is omitted the "generic" category is automatically assumed. The actions failing in the "tools" category will appear in the "Tools" KVIrc menu too.</td></tr>
+<tr><td class="switch-body-table-cell">Causes the action to belong to the specified category. &lt;category&gt; can be one of <i>IRC</i>, <i>scripting</i>, <i>settings</i>, <i>GUI</i>, <i>channel</i>, <i>tools</i> and <i>generic</i>. If this switch is omitted the <i>generic</i> category is automatically assumed. The actions failing in the <i>tools</i> category will appear in the <i>Tools</i> KVIrc menu too. <br></td></tr>
 <tr><td class="switch-title-table-cell">-k=&lt;key sequence&gt; | --key-sequence=&lt;key sequence&gt;</td></tr>
-<tr><td>Specifies that the action will be activated also by the &lt;key sequence&gt; which is a string formed from up to four keyboard codes separated by commas optionally combined with the modifiers "Alt","Ctrl","Shift" and "Meta".<br> Examples of such sequences are: "Ctrl+X", "Ctrl+Alt+F" or "Ctrl+X,Alt+Space".</td></tr>
+<tr><td>Specifies that the action will be activated also by the &lt;key sequence&gt; which is a string formed from up to four keyboard codes separated by commas optionally combined with the modifiers <i>Alt</i>, <i>Ctrl</i>, <i>Shift</i> and <i>Meta</i>.<br> Examples of such sequences are: <i>Ctrl+X", <i>Ctrl+Alt+F</i> or <i>Ctrl+X,Alt+Space</i>.</td></tr>
       </table>
     </td>
   </tr>
@@ -269,6 +263,6 @@ An empty &lt;action body&gt; causes this command to behave like <a href="cmd_act
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<div class='footer'>KVIrc 4.9.1.git-6259-g8df76d1 Documentation - generated by un1versal on Mon Feb 29 12:49:04 2016</div>
+<div class='footer'>KVIrc 4.9.2.git-6382-g7bc5592 Documentation - generated by staticfox on Wed Apr 13 01:13:45 2016</div>
 </body>
 </html>

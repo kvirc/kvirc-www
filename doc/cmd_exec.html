@@ -205,8 +205,8 @@ $0 = &lt;event cause&gt;<br>
 $1 = &lt;event parameter&gt;<br>
 $2 = &lt;magic data&gt;<br>
 The first parameter specifies the event cause and contains one of the
-following strings: "stdout","stderr","terminated","started" and "ping".
-<b>By default (if no switches are used) only "stdout" type events are triggered</b>.
+following strings: <i>stdout</i>, <i>stderr</i>, <i>terminated</i>, <i>started</i> and <i>ping</i>.
+<b>By default (if no switches are used) only <i>stdout</i> type events are triggered</b>.
 The second parameter depends on the event cause and contains data sensible
 to each event type. The third parameter is the eventual &lt;magic data&gt;
 passed to the exec command call.<br>
@@ -223,13 +223,13 @@ include all the relevant carriage returns and newlines in the return value
 <b>Startup event</b><br>
 If the -x switch is used then the startup event is triggered
 just after the process has been successfully launched.
-The $0 parameter passed to the callback contains the string "started".
+The $0 parameter passed to the callback contains the string <i>started</i>.
 Parameter $1 contains the pid of the slave process.<br>
 <br>
 <b>Stdout data event</b><br>
 The stdout data event is triggered when the process prints some output
 on its stdout stream. This event is triggered by default and to disable
-it you must use the -n switch. $0 contains the string "stdout".
+it you must use the -n switch. $0 contains the string <i>stdout</i>.
 If the -b switch is not used then $1 contains a single line of process
 output with the trailing carriage return and/or line feed stripped.
 If -b is used then $1 contains the whole process output
@@ -239,13 +239,13 @@ block (eventually empty) with all the cr/lf pairs.<br>
 The stderr data event is similar to the stdout one but there are three differences.
 The first one is that the stderr event is <b>not</b> triggered by default: you must
 use the -e switch to enable it. The second difference is that $0
-contains "stderr" instead of "stdout". The last difference is that $1 contains data
+contains <i>stderr</i> instead of <i>stdout</i>. The last difference is that $1 contains data
 coming from the slave process stderr stream.<br>
 <br>
 <b>Termination event</b><br>
 The termination event is triggered after the slave process has terminated its
 execution. You must use the -t switch to enable it since it is
-disabled by default. $0 contains the string "terminated". $1 contains the process exit
+disabled by default. $0 contains the string <i>terminated</i>. $1 contains the process exit
 status value. (Note that if the process has crashed or has been terminated
 by an external signal then this value will be 0).<br>
 <br>
@@ -267,7 +267,7 @@ for the events stdout and stderr (if enabled) with the complete output block fro
 With the -b switch the events stdout and stderr are triggered once even if the process
 emits no output.
 The -s=&lt;interpreter&gt; switch may be used to specify the path of the command interpreter
-that is "sh -c" by default on UNIX machines and "cmd.exe /c" on Windows.
+that is <i>sh -c</i> by default on UNIX machines and <i>cmd.exe /c</i> on Windows.
 The interpreter executable is searched on the system PATH.
 If the process can't be started then a warning message is printed in the current window
 unless the -q (quiet) flag is used.<br>
@@ -295,11 +295,11 @@ unless the -q (quiet) flag is used.<br>
 <tr><td class="switch-title-table-cell">-k=&lt;maximum run time&gt; | --kill-after=&lt;maximum run time&gt;</td></tr>
 <tr><td class="switch-body-table-cell">&nbsp;&nbsp;&nbsp;&nbsp;Kill the process unconditionally after &lt;maximum run time&gt; milliseconds. &nbsp;&nbsp;&nbsp;&nbsp;If the -t switch is used then the termination event will be &nbsp;&nbsp;&nbsp;&nbsp;triggered just after the process has been killed.</td></tr>
 <tr><td class="switch-title-table-cell">-p=&lt;timeout&gt; | --trigger-ping=&lt;timeout&gt;</td></tr>
-<tr><td class="switch-body-table-cell">&nbsp;&nbsp;&nbsp;&nbsp;Trigger &lt;callback command&gt; with "ping" events every &lt;timeout&gt; milliseconds.</td></tr>
+<tr><td class="switch-body-table-cell">&nbsp;&nbsp;&nbsp;&nbsp;Trigger &lt;callback command&gt; with <i>ping</i> events every &lt;timeout&gt; milliseconds.</td></tr>
 <tr><td class="switch-title-table-cell">-w | --bind-to-window</td></tr>
 <tr><td class="switch-body-table-cell">&nbsp;&nbsp;&nbsp;&nbsp;Kill the process if the current window is closed. In this case the &nbsp;&nbsp;&nbsp;&nbsp;termination event is <b>not</b> triggered (since the parent window has been lost). &nbsp;&nbsp;&nbsp;&nbsp;If this switch is not used then the process is rebound to &nbsp;&nbsp;&nbsp;&nbsp;the active console window and continues running.</td></tr>
 <tr><td class="switch-title-table-cell">-s=&lt;interpreter command&gt; | --shell=&lt;interpreter command&gt;</td></tr>
-<tr><td class="switch-body-table-cell">&nbsp;&nbsp;&nbsp;&nbsp;Use &lt;interpreter command&gt; instead of the default interpreter "sh -c". &nbsp;&nbsp;&nbsp;&nbsp;The &lt;interpreter command&gt; should be able to launch the interpeter &nbsp;&nbsp;&nbsp;&nbsp;and should contain the necessary arguments in order to allow &nbsp;&nbsp;&nbsp;&nbsp;KVirc to pass the "commandline" by appending it as the last parameter.</td></tr>
+<tr><td class="switch-body-table-cell">&nbsp;&nbsp;&nbsp;&nbsp;Use &lt;interpreter command&gt; instead of the default interpreter <i>sh -c</i>. &nbsp;&nbsp;&nbsp;&nbsp;The &lt;interpreter command&gt; should be able to launch the interpeter &nbsp;&nbsp;&nbsp;&nbsp;and should contain the necessary arguments in order to allow &nbsp;&nbsp;&nbsp;&nbsp;KVirc to pass the <i>commandline</i> by appending it as the last parameter.</td></tr>
 <tr><td class="switch-title-table-cell">-d | --direct</td></tr>
 <tr><td class="switch-body-table-cell">&nbsp;&nbsp;&nbsp;&nbsp;Use no command interpreter at all: run the command directly. &nbsp;&nbsp;&nbsp;&nbsp;Takes precedence over -s.</td></tr>
 <tr><td class="switch-title-table-cell">-q | --quiet</td></tr>
@@ -498,6 +498,6 @@ exec -s -k=60000 -t <span class="example-paren">(</span>"telnet my.mail.server.c
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<div class='footer'>KVIrc 4.9.1.git-6259-g8df76d1 Documentation - generated by un1versal on Mon Feb 29 12:49:04 2016</div>
+<div class='footer'>KVIrc 4.9.2.git-6382-g7bc5592 Documentation - generated by staticfox on Wed Apr 13 01:13:45 2016</div>
 </body>
 </html>

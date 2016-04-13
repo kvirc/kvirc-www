@@ -210,7 +210,7 @@ a:active {
     <td>The switch command is based on the standard C 'switch' keyword.
 It conditionally executes groups of commands chosen from a larger set of command groups.<br>
 First &lt;expression&gt; is evaluated (&lt;expression&gt; is any arithmetic or string expression).<br>
-Then the 'match', 'regexp', 'case' and 'default' labels are evaluated sequentially
+Then the <b>match</b>, <b>regexp</b>, <b>case</b> and <b>default</b> labels are evaluated sequentially
 in the order of appearance.<br>
 <b>case(&lt;value&gt;)[:]&lt;command&gt;</b><br>
 The &lt;value&gt; is evaluated and is compared against the result of &lt;expression&gt;.
@@ -222,7 +222,7 @@ is terminated, otherwise the next label is evaluated.<br>
 If the -p (--passthrough) option is enabled, than the switch command will execute all the instructions blocks
 until a <a href="cmd_break.html">break</a> statement is found.<br>
 <b>match(&lt;value&gt;)[:]&lt;command&gt;</b><br>
-The &lt;value&gt; is expected to be a wildcard expression (wildcard characters being '*' and '?')
+The &lt;value&gt; is expected to be a wildcard expression (wildcard characters being <b>*</b> and <b>?</b>)
 that is matched in a case insensitive fashion against &lt;expression&gt;.<br>
 If a match occurs, the related &lt;command&gt; is executed.
 The <a href="cmd_break.html">break</a> statement is treated as in the case label.<br>
@@ -265,13 +265,13 @@ switch<span class="example-paren">(</span><span class="example-variable">%tmp</s
 &nbsp;&nbsp;&nbsp;&nbsp;break;
 <span class="example-bracket">}</span>
 </div>
-<span class="comment-text"># A more complex example: change the 1 in 2 or 3</span>
-<div class="example-box"><span class="example-variable">%tmp</span> = 1
+<div class="example-box"><span class="comment-text"># A more complex example: change the 1 in 2 or 3</span>
+<span class="example-variable">%tmp</span> = 1
 switch<span class="example-paren">(</span><span class="example-variable">%tmp</span><span class="example-paren">)</span>
 <span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;case<span class="example-paren">(</span>1<span class="example-paren">)</span>:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo \<span class="example-variable">%tmp</span> was 1!
-&nbsp;&nbsp;&nbsp;&nbsp;case<span class="example-paren">(</span>2<span class="example-paren">)</span>
+case<span class="example-paren">(</span>2<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo \<span class="example-variable">%tmp</span> was 2!
 &nbsp;&nbsp;&nbsp;&nbsp;break;
 &nbsp;&nbsp;&nbsp;&nbsp;default:
@@ -279,8 +279,8 @@ switch<span class="example-paren">(</span><span class="example-variable">%tmp</s
 &nbsp;&nbsp;&nbsp;&nbsp;break;
 <span class="example-bracket">}</span>
 </div>
-<span class="comment-text"># An example of the -p switch</span>
-<div class="example-box"><span class="example-variable">%tmp</span> = 1
+<div class="example-box"><span class="comment-text"># An example of the -p switch</span>
+<span class="example-variable">%tmp</span> = 1
 switch -p <span class="example-paren">(</span><span class="example-variable">%tmp</span><span class="example-paren">)</span>
 <span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;case<span class="example-paren">(</span>1<span class="example-paren">)</span>:
@@ -293,8 +293,8 @@ switch -p <span class="example-paren">(</span><span class="example-variable">%tm
 &nbsp;&nbsp;&nbsp;&nbsp;break;
 <span class="example-bracket">}</span>
 </div>
-<span class="comment-text"># An example with strings</span>
-<div class="example-box"><span class="example-variable">%tmp</span> = "This is a test"
+<div class="example-box"><span class="comment-text"># An example with strings</span>
+<span class="example-variable">%tmp</span> = "This is a test"
 <span class="example-variable">%tmp2</span> = "This is not a test"
 switch<span class="example-paren">(</span><span class="example-variable">%tmp</span><span class="example-paren">)</span>
 <span class="example-bracket">{</span>
@@ -303,7 +303,7 @@ switch<span class="example-paren">(</span><span class="example-variable">%tmp</s
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
 &nbsp;&nbsp;&nbsp;&nbsp;case<span class="example-paren">(</span><span class="example-variable">%tmp</span><span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">//do not break here</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text"># do not break here</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Yeah... It's stupid... \<span class="example-variable">%tmp</span> == \<span class="example-variable">%tmp</span> :D"
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
 &nbsp;&nbsp;&nbsp;&nbsp;match<span class="example-paren">(</span>"*TEST"<span class="example-paren">)</span>:
@@ -321,6 +321,6 @@ switch<span class="example-paren">(</span><span class="example-variable">%tmp</s
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<div class='footer'>KVIrc 4.9.1.git-6259-g8df76d1 Documentation - generated by un1versal on Mon Feb 29 12:49:04 2016</div>
+<div class='footer'>KVIrc 4.9.2.git-6382-g7bc5592 Documentation - generated by staticfox on Wed Apr 13 01:13:45 2016</div>
 </body>
 </html>
