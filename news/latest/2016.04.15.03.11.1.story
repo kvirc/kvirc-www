@@ -20,10 +20,11 @@ Fret not, we also provide <a href="https://github.com/kvirc/KVIrc/blob/master/do
 If you wish to start using our nightly but fairly stable builds and aren't confident in compiling from source, direct your browser to
 <a href="https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrc's-nightly-source-or-binaries">our GitHub downloads page</a>, where you can find details on how to start using this ppa immediately.<br>
 </p>
+<p>
 To help us reach more distros, feel free to contact us via <a href="https://webchat.freenode.net?nick=kvirc-user&channels=%23kvirc&prompt=1&uio=OT10cnVlde">#KVIrc</a> or <a href="https://github.com/kvirc/KVIrc/issues/new">open an issue</a> on our GitHub project page to discuss your thoughts and ideas.
 </p>
 <p>
-KVIrc heavily depends on peoples varied skills, time, interest and goodwill to help fix bugs add features and do general project related tasks for what is a free and largely thankless job.<br>
+KVIrc heavily depends on peoples varied skills, time, interest and goodwill to help fix bugs add features and do general project related tasks for what is a free and largely thankless job.<br><br>
 Help KVIrc grow as a contributor by <a href="https://github.com/kvirc/KVIrc/wiki/Getting-involved-and-contributing">donating your skills, time and other expertise</a> and see how you can make a difference to your opensource project and expand your knowledge, experience and horizons.
 </p>
 <br>
