@@ -29,5 +29,5 @@ Help KVIrc grow as a contributor by <a href="https://github.com/kvirc/KVIrc/wiki
 </p>
 <br>
 <p>
-Have fun in IRC<i>The KVIrc Development Team</i>
+Have fun in IRC from <i>The KVIrc Development Team</i>
 </p>
