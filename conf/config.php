@@ -76,9 +76,11 @@ $ftp_mirror=array(
 //	array("name" => "kvirc2.cluenet.org", "url" => "http://kvirc2.cluenet.org", "desc" => "French mirror 2", "city" => "Roubaix, France", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
 //	array("name" => "mirrors.go-parts.com (1)", "url" => "http://mirrors.go-parts.com/kvirc/", "desc" => "Japanese mirror (http)", "city" => "Iso, Japan", "maintainer" => "Otoniel Ortega"),
 //	array("name" => "mirrors.go-parts.com (2)", "url" => "ftp://mirrors.go-parts.com/kvirc/", "desc" => "Japanese mirror (ftp)", "city" => "Iso, Japan", "maintainer" => "Otoniel Ortega"),
-	array("name" => "mirror.ibcp.fr", "url" => "http://mirror.ibcp.fr/pub/kvirc/", "desc" => "French mirror (ftp)", "city" => "Lyon, France", "maintainer" => "Alexis Michon")
-
+	array("name" => "mirror.ibcp.fr", "url" => "http://mirror.ibcp.fr/pub/kvirc/", "desc" => "French mirror (ftp)", "city" => "Lyon, France", "maintainer" => "Alexis Michon"),
+	array("name" => "mirror-sg.pooltoys.com", "url" => "ftp://mirrors-sg.pooltoys.com/kvirc/", "desc" => "Singapore mirror (ftp)", "city" => "Singapore", "maintainer" => "Otoniel Ortega"),
+	array("name" => "mirror-sg.pooltoys.com", "url" => "http://mirrors-sg.pooltoys.com/kvirc/", "desc" => "Singapore mirror (http)", "city" => "Singapore", "maintainer" => "Otoniel Ortega")
 );
+
 
 
 // Archive
