@@ -2,10 +2,10 @@
 
 #### KVIrc's website repository
 
-KVIrc is a free portable IRC client based on the excellent Qt GUI toolkit.
-KVirc is being written by Szymon Stefanek and the KVIrc Development Team with the contribution of many IRC addicted developers around the world.
+KVIrc is a free and portable IRC client leveraging the Qt GUI toolkit.
+KVIrc is written by Szymon Stefanek and the KVIrc development team, with the contribution and support of many IRC addicted developers around the world.
 
-This is the Github website development and bug tracker home for the KVIrc website project.
+This is the GitHub website development and bug tracker home for the KVIrc website project.
 
 #### Getting involved
 
@@ -22,6 +22,6 @@ This is the Github website development and bug tracker home for the KVIrc websit
 
 ---
 
-#### Licensing
+#### Licensed under
 
-- [GPLv2](https://github.com/kvirc/KVIrc/blob/master/doc/LICENSE-GPLV2)
+[![License GPLv2](https://img.shields.io/badge/License-GPLv2-blue.svg)](https://github.com/kvirc/KVIrc/blob/master/doc/LICENSE-GPLV2)
