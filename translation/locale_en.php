@@ -74,8 +74,7 @@ $template['index']['rusite']="Russian site";
 //$template['index']['frforum']="french forum";
 //$template['index']['osxsite']="OS X builds";
 // other
-//$template['index']['quickdnl']="quick download";
-$template['index']['quickdnl']="Grab the latest build";
+$template['index']['quickdnl']="quick download";
 // search
 $template['index']['search']="Search";
 $template['index']['go']="GO";
@@ -277,7 +276,7 @@ $template['donate']['alttext']="Make a donation to the KVIrc Project by PayPal";
 
 /* download.php start */
 $template['download']['title']="Downloading KVIrc";
-$template['download']['text1']="You can obtain KVIrc in three ways:<br><br><b><u>Note:</b></u> Consider downloading the current nightly Git builds instead of 4.2.0 stable</b>.<br>The current Git builds are quite stable and safe for day-to-day usage, due to the considerable enhancements, improvements and bugs fixes that are now included.<br>For more information <a href=\"https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrc%27s-nightly-source-or-binaries\">click here</a>.";
+$template['download']['text1']="You can obtain KVIrc in three ways:";
 $template['download']['text2']="Official release packages";
 $template['download']['text3']="
 	The official packages are released least frequently but are the most stable ones. Each official source package is well tested and will probably compile on your system. You also have more possibilities to find a binary package suitable for your system. The on-line FAQs and documentation refer to this type of package.";

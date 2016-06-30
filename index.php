@@ -169,9 +169,8 @@ search();
 			</div>
 			<div class="header-breadcrumbs">
 				<ul>
-					<li><a href="https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrc's-nightly-source-or-binaries" title="Get the latest build"><?php echo $template['index']['quickdnl']?></a></li>
+					<li><a href="<?php echo $quickdownload_link?>" title="get the latest release"><?php echo $template['index']['quickdnl']?></a></li>
 					<!--
-					<li><a href="<?php echo $quickdownload_link?>" title="Get the Latest Release"><?php echo $template['index']['quickdnl']?></a></li>
 					<li><a href="ftp://ftp.kvirc.de/pub/kvirc/snapshots/" title="get snapshots"><?php echo $template['index']['snapshots']?></a></li>
 					<li><a href="?id=themes&amp;lang=<?php echo $lang?>" title="themes and appearance"><?php echo $template['index']['themes']?></a></li>
 					//-->
