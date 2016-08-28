@@ -288,7 +288,7 @@ search();
 					<div class="round-border-topright"></div>
 					<h1><img src="img/document-open.png" alt="<?php echo $template['index']['moredocs']?>" /><?php echo $template['index']['moredocs']?></h1>
 					<p class="center">
-						<a href="javascript:opendoc('http://www.kvirc.net/doc');" title="<?php echo $template['index']['officialdocs']?>"><?php echo $template['index']['officialdocs']?></a><br /><?php echo $template['index']['docsauto']?>
+						<a href="javascript:opendoc('/doc');" title="<?php echo $template['index']['officialdocs']?>"><?php echo $template['index']['officialdocs']?></a><br /><?php echo $template['index']['docsauto']?>
 					</p>
 				</div>
 				<div class="subcontent-unit-border-white">
