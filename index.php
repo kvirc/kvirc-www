@@ -100,8 +100,8 @@ search();
 							<ul>
 								<li><a href="?id=download&amp;lang=<?php echo $lang?>"><?php echo $template['index']['download']?></a></li>
 								<li><a href="?id=releases&amp;lang=<?php echo $lang?>"><?php echo $template['index']['releases']?></a></li>
-								<li><a href="javascript:opendoc('https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrcs-nightly-source-or-binaries#source-downloads-master');"><?php echo $template['index']['snapshots']?></a></li>
-								<li><a href="javascript:opendoc('https://github.com/kvirc/KVIrc');"><?php echo $template['index']['git']?></a></li>
+								<li><a href="https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrcs-nightly-source-or-binaries#source-downloads-master"><?php echo $template['index']['snapshots']?></a></li>
+								<li><a href="https://github.com/kvirc/KVIrc"><?php echo $template['index']['git']?></a></li>
 								<li><a href="?id=install&amp;lang=<?php echo $lang?>"><?php echo $template['index']['install']?></a></li>
 							</ul>
 						</li>
@@ -169,7 +169,7 @@ search();
 			</div>
 			<div class="header-breadcrumbs">
 				<ul>
-					<li><a href="https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrc's-nightly-source-or-binaries" title="Get the latest build"><?php echo $template['index']['quickdnl']?></a></li>
+					<li><a href="https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrcs-nightly-source-or-binaries" title="Get the latest build"><?php echo $template['index']['quickdnl']?></a></li>
 					<!--
 					<li><a href="<?php echo $quickdownload_link?>" title="Get the Latest Release"><?php echo $template['index']['quickdnl']?></a></li>
 					<li><a href="ftp://ftp.kvirc.de/pub/kvirc/snapshots/" title="get snapshots"><?php echo $template['index']['snapshots']?></a></li>
