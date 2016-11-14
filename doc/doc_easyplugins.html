@@ -185,54 +185,54 @@ This part of the documentation handles only the way how to write an easyplugin. 
 The important thing is that these so/dll-files export some of the following functions.
 <br><br>
 <b>Exported functions by easyplugin (C/C++-Examples):</b><br>
-<br><b>_free function</b> <i> (needed)</i><br>
+<b>_free function</b> <i> (needed)</i><br><br>
 This function is important! Since KVIrc can not free directly the memory of the dll, the plugins need the _free function so that the memory can be freed by the plugin to prevent memory-leaks.<br>
-<div class="example-box">int _free<span class="example-paren">(</span>void * p<span class="example-paren">)</span><br>
-<span class="example-bracket">{</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;// Always free the memory here!<br>
-&nbsp;&nbsp;&nbsp;&nbsp;free<span class="example-paren">(</span>p<span class="example-paren">)</span>;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
-<span class="example-bracket">}</span><br>
+<div class="example-box">int _free<span class="example-paren">(</span>void * p<span class="example-paren">)</span>
+<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment-text">// Always free the memory here!</span>
+&nbsp;&nbsp;&nbsp;&nbsp;free<span class="example-paren">(</span>p<span class="example-paren">)</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;
+<span class="example-bracket">}</span>
 </div>
-<br><b>_load function</b> <i>(optional)</i><br>
+<b>_load function</b> <i>(optional)</i><br><br>
 After the plugin has be loaded, KVIrc will call the _load-function. Here you can prepare your plugin stuff.
-<div class="example-box">int _load<span class="example-paren">()</span><br>
-<span class="example-bracket">{</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
-<span class="example-bracket">}</span><br>
+<div class="example-box">int _load<span class="example-paren">()</span>
+<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;
+<span class="example-bracket">}</span>
 </div>
-<br><b>_unload function</b> <i>((optional)</i><br>
+<b>_unload function</b> <i>((optional)</i><br><br>
 This function will be called before the plugins is unloaded. In this function you can clean up memory or other things.
 After this call there is no guarantee that the plugin will be kept in memory.<br>
-<div class="example-box">int _unload<span class="example-paren">()</span><br>
-<span class="example-bracket">{</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
-<span class="example-bracket">}</span><br>
+<div class="example-box">int _unload<span class="example-paren">()</span>
+<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;
+<span class="example-bracket">}</span>
 </div>
 <br><b>_canunload function</b> <i>(optional)</i><br>
 The _canunload-function will be called by KVIrc to check if it may unload the plugin.
 If return value is true KVIrc will unload the plugin, false means he will try unloading it at the next check.<br>
 Important: KVIrc will ignore this if unload of plugins will be forced! So you have to be sure that the _unload function of your plugins cleans up!<br>
-<div class="example-box">int _canunload<span class="example-paren">()</span><br>
-<span class="example-bracket">{</span><br>
-&nbsp;&nbsp;&nbsp;&nbsp;return 0; <br>
-<span class="example-bracket">}</span><br>
+<div class="example-box">int _canunload<span class="example-paren">()</span>
+<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;
+<span class="example-bracket">}</span>
 </div>
 <br><b>user function</b><br>
 This is the general structure of a user function call.<br>
 The important thing here is the handling of return values. To return a value to KVIrc you have to allocate memory and write the pointer to it into pBuffer.<br>
 Have a look at the example for more details.<br>
-<div class="example-box">int about<span class="example-paren">(</span>int argc, char * argv[], char ** pBuffer<span class="example-paren">)</span><br>
-<span class="example-bracket">{</span><br>
-    *pBuffer = <span class="example-paren">(</span>char*<span class="example-paren">)</span>malloc<span class="example-paren">(</span>1024<span class="example-paren">)</span>;<br>
-    sprintf<span class="example-paren">((</span>char*<span class="example-paren">)</span>*pBuffer, "Hello World"<span class="example-paren">)</span>; <br>
-    return 1;<br>
-<span class="example-bracket">}</span><br>
+<div class="example-box">int about<span class="example-paren">(</span>int argc, char * argv[], char ** pBuffer<span class="example-paren">)</span>
+<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;*pBuffer = <span class="example-paren">(</span>char*<span class="example-paren">)</span>malloc<span class="example-paren">(</span>1024<span class="example-paren">)</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;sprintf<span class="example-paren">((</span>char*<span class="example-paren">)</span>*pBuffer, "Hello World"<span class="example-paren">)</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;return 1;
+<span class="example-bracket">}</span>
 </div>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_generic_index_all.html">Miscellaneous</a>
-<div class='footer'>KVIrc 4.9.2.git-6569-g19ebcf6 Documentation - generated by un1versal on Tue May  3 21:04:28 2016</div>
+<div class='footer'>KVIrc 4.9.2.git-7017-g48dacdb Documentation - generated by un1versal on Mon Nov 14 04:21:37 2016</div>
 </body>
 </html>

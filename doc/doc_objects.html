@@ -221,11 +221,14 @@ the STRING <b>0</b> if the object creation fails
 (it is a string because the object ID's are generally strings, and 0 is an "invalid object ID").
 In well written scripts it is not common that the object creation fails, anyway
 you can check if the creation has failed in the following way:<br>
-<div class="example-box"><a href="cmd_if.html">if</a><span class="example-paren">(</span><span class="example-variable">%myobject</span><span class="example-paren">)</span><a href="cmd_echo.html">echo</a> "Object created!"
-else <a href="cmd_echo.html">echo</a> "Object creation failed!"
+<div class="example-box"><a href="cmd_if.html">if</a><span class="example-paren">(</span><span class="example-variable">%myobject</span><span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> "Object created!"
+else 
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> "Object creation failed!"
 </div>
 You can also test the object ID's for equality:<br>
-<div class="example-box"><a href="cmd_if.html">if</a><span class="example-paren">(</span><span class="example-variable">%myobject</span> == <span class="example-variable">%anotherobject</span><span class="example-paren">)</span><a href="cmd_echo.html">echo</a> "This is the same object!";
+<div class="example-box"><a href="cmd_if.html">if</a><span class="example-paren">(</span><span class="example-variable">%myobject</span> == <span class="example-variable">%anotherobject</span><span class="example-paren">)</span>[cmd]
+&nbsp;&nbsp;&nbsp;&nbsp;echo[/cmd] "This is the same object!";
 </div>
 The parent object ID is optional, if not specified it is assumed to be 0.
 The object name is optional, but it may help you later in finding the object.
@@ -257,7 +260,8 @@ to the command sequence). The variable names are completely case insensitive.
 Any <a href="doc_operators.html">operator</a> can be used with the object field variables:<br>
 <div class="example-box"><span class="example-variable">%myobject</span>-&gt;<span class="example-variable">%fieldVariable</span> = 0
 <span class="example-variable">%myobject</span>-&gt;<span class="example-variable">%fieldVarialbe</span> ++
-<a href="cmd_if.html">if</a>0<span class="example-paren">(</span><span class="example-variable">%myobject</span>-&gt;<span class="example-variable">%fieldVariable</span> != 1<span class="example-paren">)</span><a href="cmd_echo.html">echo</a> KVIrc is drunk, maybe a reboot will help?
+<a href="cmd_if.html">if</a>0<span class="example-paren">(</span><span class="example-variable">%myobject</span>-&gt;<span class="example-variable">%fieldVariable</span> != 1<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> KVIrc is drunk, maybe a reboot will help?
 </div>
 You can simulate C structures <i>on the fly</i> by using objects and fields:<br>
 <div class="example-box"><span class="comment-text"># Create a user description on the fly
@@ -289,7 +293,8 @@ the function they are defined in.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%test</span> = "will this persist?"
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
-&nbsp;&nbsp;&nbsp;&nbsp;anotherfunc<span class="example-paren">()</span> <span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;anotherfunc<span class="example-paren">()</span> 
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> "var: <span class="example-variable">%test</span>"
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
 <span class="example-bracket">}</span>
@@ -360,7 +365,10 @@ A more complex example<br>
 <a href="cmd_foreach.html">foreach</a><span class="example-paren">(</span><span class="example-variable">%i</span>,1,2,3<span class="example-paren">)</span>
 <span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%tmpchild</span> = <a href="fnc_new.html">$new</a><span class="example-paren">(</span><a href="class_object.html">object</a>,<span class="example-variable">%tmp</span>,child<span class="example-variable">%i</span><span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_privateimpl.html">privateimpl</a><span class="example-paren">(</span><span class="example-variable">%tmpchild</span>,destructor<span class="example-paren">)</span><span class="example-bracket">{</span> <a href="cmd_echo.html">echo</a> Object <a href="fnc_this.html">$this</a> <span class="example-paren">(</span><a href="fnc_this.html">$this</a>-&gt;<a href="class_object.html#name">$name</a><span class="example-paren">())</span> destroyed; <span class="example-bracket">}</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_privateimpl.html">privateimpl</a><span class="example-paren">(</span><span class="example-variable">%tmpchild</span>,destructor<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Object <a href="fnc_this.html">$this</a> <span class="example-paren">(</span><a href="fnc_this.html">$this</a>-&gt;<a href="class_object.html#name">$name</a><span class="example-paren">())</span> destroyed;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
 <span class="example-bracket">}</span>
 <a href="cmd_privateimpl.html">privateimpl</a><span class="example-paren">(</span><span class="example-variable">%tmp</span>,destructor<span class="example-paren">)</span>
 <span class="example-bracket">{</span>
@@ -486,7 +494,9 @@ derive another class from helloworld and make it say <i>hello</i> in two differe
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="fnc_this.html">$$</a>-&gt;<span class="example-variable">%lang</span> = $0
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_return.html">return</a> 1
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span> else <span class="example-bracket">{</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> I don't know that language <span class="example-paren">(</span>$0<span class="example-paren">)</span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> defaulting to English
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="fnc_this.html">$$</a>-&gt;<span class="example-variable">%lang</span> = english
@@ -495,8 +505,10 @@ derive another class from helloworld and make it say <i>hello</i> in two differe
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
 &nbsp;&nbsp;&nbsp;&nbsp;sayhello<span class="example-paren">()</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_if.html">if</a><span class="example-paren">(</span><a href="fnc_this.html">$$</a>-&gt;<span class="example-variable">%lang</span> == italian<span class="example-paren">)</span><a href="cmd_echo.html">echo</a> Ciao mondo!
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else <a href="fnc_this.html">$$</a>-&gt;$helloworld:sayhello<span class="example-paren">()</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_if.html">if</a><span class="example-paren">(</span><a href="fnc_this.html">$$</a>-&gt;<span class="example-variable">%lang</span> == italian<span class="example-paren">)</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="cmd_echo.html">echo</a> Ciao mondo!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="fnc_this.html">$$</a>-&gt;$helloworld:sayhello<span class="example-paren">()</span>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
 <span class="example-bracket">}</span>
 </div>
@@ -563,7 +575,7 @@ Any other return value is treated as success, so the object is effectively
 created and <a href="fnc_new.html">$new</a>() returns its ID to the caller.<br>
 This said, KVI++ will automatically return a value of 1 and you should <b>never</b>
 return a value other than 0 if something bad happened (like a mandatory parameter was not given in the $new()
-call or the like.) KVIrc will also issue a warning message and remind you of this when a non-zero value is 
+call or the like.) KVIrc will also issue a warning message and remind you of this when a non-zero value is
 returned.<br>
 All the builtin classes have a constructor defined that will almost never fail (only if we run out of memory),
 so you can avoid to check the <a href="fnc_new.html">$new</a>() return value
@@ -616,6 +628,6 @@ by all the modern kernels and used in inter-process communication).<br>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_generic_index_all.html">Miscellaneous</a>
-<div class='footer'>KVIrc 4.9.2.git-6569-g19ebcf6 Documentation - generated by un1versal on Tue May  3 21:04:28 2016</div>
+<div class='footer'>KVIrc 4.9.2.git-7017-g48dacdb Documentation - generated by un1versal on Mon Nov 14 04:21:37 2016</div>
 </body>
 </html>
