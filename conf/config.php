@@ -78,7 +78,8 @@ $ftp_mirror=array(
 //	array("name" => "mirrors.go-parts.com (2)", "url" => "ftp://mirrors.go-parts.com/kvirc/", "desc" => "Japanese mirror (ftp)", "city" => "Iso, Japan", "maintainer" => "Otoniel Ortega"),
 	array("name" => "mirror.ibcp.fr", "url" => "http://mirror.ibcp.fr/pub/kvirc/", "desc" => "French mirror (ftp)", "city" => "Lyon, France", "maintainer" => "Alexis Michon"),
 	array("name" => "mirror-sg.pooltoys.com", "url" => "ftp://mirrors-sg.pooltoys.com/kvirc/", "desc" => "Singapore mirror (ftp)", "city" => "Singapore", "maintainer" => "Otoniel Ortega"),
-	array("name" => "mirror-sg.pooltoys.com", "url" => "http://mirrors-sg.pooltoys.com/kvirc/", "desc" => "Singapore mirror (http)", "city" => "Singapore", "maintainer" => "Otoniel Ortega")
+	array("name" => "mirror-sg.pooltoys.com", "url" => "http://mirrors-sg.pooltoys.com/kvirc/", "desc" => "Singapore mirror (http)", "city" => "Singapore", "maintainer" => "Otoniel Ortega"),
+	array("name" => "mirrors.standaloneinstaller.com", "url" => "http://mirrors.standaloneinstaller.com/kvirc/", "desc" => "French mirror (http)", "city" => "France", "maintainer" => "Sam Cohen-Brown"),
 );
 
 
