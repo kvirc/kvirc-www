@@ -7,12 +7,12 @@
 		<language>en</language>
 		<?php
 		require('conf/functions.php');
-		
+
 		function cleanText($intext)
 		{
 			return utf8_encode(htmlspecialchars(stripslashes($intext)));
 		}
-		
+
 		$latestnews = array();
 		news_scan_dir('news/latest', $latestnews);
 		$cnt = count($latestnews);
@@ -31,11 +31,11 @@
 			?>
 
 		<item>
-			<title><?=$title?></title>
-			<guid><?=$guid?></guid>
-			<author><?=$author?></author>
-			<description><?=$description?></description>
-			<pubDate><?=$pubDate?></pubDate>
+			<title><?php echo $title; ?></title>
+			<guid><?php echo $guid; ?></guid>
+			<author><?php echo $author; ?></author>
+			<description><?php echo $description; ?></description>
+			<pubDate><?php echo $pubDate; ?></pubDate>
 		</item>
 		<?php endfor; ?>
 	</channel>
