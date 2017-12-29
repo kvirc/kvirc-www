@@ -57,7 +57,7 @@ if($dir!="")
 }
 
 
-echo "<a href=\"?id=news&amp;dir=latest&amp;lang=$lang\">".$template['news']['latest']."</a>";
+echo "<p><a href=\"?id=news&amp;dir=latest&amp;lang=$lang\">".$template['news']['latest']."</a></p>";
 
 $d=opendir($docRoot."/news");
 if($d){
