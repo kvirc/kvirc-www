@@ -53,7 +53,7 @@ if($dir!="")
 		}
 	}
 
-	echo "<br><hr><br>"
+	echo "<br><hr><br>";
 }
 
 
