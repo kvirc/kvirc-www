@@ -5,8 +5,8 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 
 require_once("conf/functions.php");
 
-$story = trim(strip_tags(htmlentities($_GET['story'],ENT_QUOTES)));
-$dir = trim(strip_tags(htmlentities($_GET['dir'],ENT_QUOTES)));
+$story = str_replace("/","",trim(strip_tags(htmlentities($_GET['story'],ENT_QUOTES))));
+$dir = str_replace("/","",trim(strip_tags(htmlentities($_GET['dir'],ENT_QUOTES))));
 
 echo "<h1 class=\"pagetitle\">".$template['news']['title']."</h1>";
 echo "<div class=\"column1-unit\">";
@@ -29,7 +29,8 @@ if(($story!="")&&($dir!=""))
 	return;
 }
 
-if($dir!=""){
+if($dir!="")
+{
 	echo "<h1>";
 	if($dir!="latest")
 		echo $template['news']['news'].": ".news_get_dir_description($dir);
@@ -44,15 +45,19 @@ if($dir!=""){
 		$content['dummy'] = "";
 		if(news_read_entry($latestnews[$i],$content))
 		{
-			echo "<li>";
-			echo "<b>".$content['year'].".".$content['month'].".".$content['day']." ".$content['hour'].":".$content['minute']."</b><br />";
-			echo $content['short']."<br />";
-			echo "<a href=\"?id=news&amp;story=".basename($latestnews[$i])."&amp;dir=$dir&amp;lang=$lang\">".$template['news']['readmore']."...</a></li>";
+			echo "<div class='news-block'>";
+			echo "<div class='news-block-title'>".$content['year'].".".$content['month'].".".$content['day']." ".$content['hour'].":".$content['minute']."</div>";
+			echo "<div class='news-block-short'>".$content['short']."</div>";
+			echo "<div class='news-block-read-more'><a href=\"?id=news&amp;story=".basename($latestnews[$i])."&amp;dir=$dir&amp;lang=$lang\">".$template['news']['readmore']."...</a></div>";
+			echo "</div>";
 		}
 	}
+
+	echo "<br><hr><br>"
 }
 
-echo "<li><a href=\"?id=news&amp;dir=latest&amp;lang=$lang\">".$template['news']['latest']."</a></li>";
+
+echo "<a href=\"?id=news&amp;dir=latest&amp;lang=$lang\">".$template['news']['latest']."</a>";
 
 $d=opendir($docRoot."/news");
 if($d){
