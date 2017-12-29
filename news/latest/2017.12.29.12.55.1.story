@@ -19,7 +19,7 @@ that the binaries may be marked with the internal version 4.9.3.
 
 <p>
 Several people have worked on the codebase and ultimately on this release.
-Many of them hang daily around #kvirc@Freenode. <b><a href="irc://freenode/kvirc">Come</a> and say Hi! :)</b>
+Many of them hang daily around #kvirc@Freenode. <b><a href="irc://irc.freenode.net/kvirc">Come</a> and say Hi!</b>
 </p>
 
 <br>
