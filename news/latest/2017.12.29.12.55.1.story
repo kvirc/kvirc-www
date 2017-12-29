@@ -1,7 +1,7 @@
 @@title:
 KVIrc 5.0.0 Beta 1 Released
 @@short:
-KVIRC 5.0.0 Beta 1 Released
+KVIrc 5.0.0 Beta 1
 @@author:
 Pragma
 @@body:
