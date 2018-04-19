@@ -49,40 +49,14 @@ if(preg_match("/:/",$ip6,$blah)){
 $www_mirror=array(
 	1 => array("name" => "www.kvirc.net", "url" => "http://www.kvirc.net", "desc" => "Primary WWW site", "city" => "Oslo, Norway", "maintainer" => "Norwegian Linux Community"),
 	array("name" => "www.kvirc.de", "url" => "http://www.kvirc.de", "desc" => "German mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
-	//array("name" => "kvirc.slackware.it", "url" => "http://kvirc.slackware.it", "desc" => "Italian mirror", "country" => "Italy", "city" => "Milano", "maintainer" => "Slackware.it"),
-	array("name" => "kvirc.visualscripts.com", "url" => "http://kvirc.visualscripts.com", "desc" => "USA mirror", "city" => "Houston, Texas, United States", "maintainer" => "THeLooX"),
-	//array("name" => "www.kvirc.omnikron.net", "url" => "http://www.kvirc.omnikron.net", "desc" => "www.kvirc.omnikron.net: Italian mirror (located in Arezzo)", "country" => "Italy", "city" => "Arezzo", "sponsor" => "Pragma,Iakko and Resio"),
-	//array("name" => "kvirc.trexle.net", "url" => "http://kvirc.trexle.net", "desc" => "kvirc.trexle.net: USA mirror (located in Texas)", "country" => "USA, Texas", "city" => "", "sponsor" => "Hossam Hossny from Texle.com"),
-	//array("name" => "kvirc.paracoda.com", "url" => "http://kvirc.paracoda.com", "desc" => "kvirc.paracoda.com: Canadian mirror (located in Quebec)", "country" => "Canada, Quebec", "city" => "", "sponsor" => "Hossam Hossny from Texle.com"),
-	//array("name" => "kvirc.ipv6.net.au", "url" => "http://kvirc.ipv6.net.au", "desc" => "kvirc.ipv6.net.au: Australian Mirror (located in Brisbane Queensland, IPv4 and IPv6)", "country" => "Australia, Queensland", "city" => "Brisbane", "sponsor" => "Peter Good, IPv6 Australia"),
-	//array("name" => "kvirc.firenze.linux.it", "url" => "http://kvirc.firenze.linux.it", "desc" => "kvirc.firenze.linux.it: Italian mirror (located in Milano)", "country" => "Italy", "city" => "Milano", "sponsor" => "Firenze Linux Users Group"),
-	//array("name" => "www.ipv6.kvirc.net", "url" => "http://www.ipv6.kvirc.net", "desc" => "German IPv6 mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
-	//array("name" => "bots.wmflabs.org/~richs/kvirc", "url" => "http://bots.wmflabs.org/~richs/kvirc", "desc" => "USA mirror 2", "city" => "Tampa, Florida", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
 );
 
 $ftp_mirror=array(
 	1 => array("name" => "ftp.kvirc.de", "url" => "ftp://ftp.kvirc.de/pub/kvirc", "desc" => "German mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
 	array("name" => "kvirc.gmake.de", "url" => "http://kvirc.gmake.de/pub/kvirc", "desc" => "German mirror", "city" => "Jena, Germany", "maintainer" => "Dessa"),
-//	array("name" => "kvirc-ftp.visualscripts.com", "url" => "http://kvirc-ftp.visualscripts.com", "desc" => "USA mirror", "city" => "Houston, Texas, United States", "maintainer" => "THeLooX"),
-//	array("name" => "dedimarbo.ath.cx", "url" => "ftp://dedimarbo.ath.cx/pub/kvirc/", "desc" => "French mirror", "city" => "Paris, France", "maintainer" => "MarbolanGos"),
-//	array("name" => "kvirc.eban-meban.com", "url" => "ftp://kvirc.eban-meban.com", "desc" => "Bulgarian mirror", "city" => "Asenovgrad, Bulgaria", "maintainer" => "lame"),
-//	array("name" => "kvirc.tradebit.com", "url" => "http://kvirc.tradebit.com", "desc" => "USA mirror", "city" => "New York, United States", "maintainer" => "tradebit.com"),
-//	array("name" => "kvirc.imsam.info", "url" => "http://kvirc.imsam.info", "desc" => "German mirror", "city" => "Nuernberg, Germany", "maintainer" => "tradebit.com"),
-//	array("name" => "kvirc.bcoos.net", "url" => "http://kvirc.bcoos.net", "desc" => "USA mirror", "city" => "United States", "maintainer" => "exoops.info"),
-//	array("name" => "mirrorpool.in", "url" => "http://mirrorpool.in/Kvirc/", "desc" => "USA mirror 2", "city" => "Chicago, United States", "maintainer" => "Slevin Black", "maintainer_mail" => "topoyr at gmail dot com"),
-//	array("name" => "kvirc.game-fm.co.uk", "url" => "ftp://kvirc.game-fm.co.uk/pub/kvirc", "desc" => "USA mirror 3", "city" => "Chicago, United States", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org")
-//	array("name" => "ftp.kunduz.org", "url" => "ftp://ftp.kunduz.org/pub/kvirc", "desc" => "Turkish mirror", "city" => "Istambul, Turkey", "maintainer" => "Tolga"),
-//	array("name" => "kvirc.cluenet.org", "url" => "http://kvirc.cluenet.org/kvirc/", "desc" => "French mirror", "city" => "Roubaix, France", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
-//	array("name" => "kvirc2.cluenet.org", "url" => "http://kvirc2.cluenet.org", "desc" => "French mirror 2", "city" => "Roubaix, France", "maintainer" => "Rich Smith", "maintainer_mail" => "rsmithy at cluenet dot org"),
-//	array("name" => "mirrors.go-parts.com (1)", "url" => "http://mirrors.go-parts.com/kvirc/", "desc" => "Japanese mirror (http)", "city" => "Iso, Japan", "maintainer" => "Otoniel Ortega"),
-//	array("name" => "mirrors.go-parts.com (2)", "url" => "ftp://mirrors.go-parts.com/kvirc/", "desc" => "Japanese mirror (ftp)", "city" => "Iso, Japan", "maintainer" => "Otoniel Ortega"),
 	array("name" => "mirror.ibcp.fr", "url" => "http://mirror.ibcp.fr/pub/kvirc/", "desc" => "French mirror (ftp)", "city" => "Lyon, France", "maintainer" => "Alexis Michon"),
-	array("name" => "mirror-sg.pooltoys.com", "url" => "ftp://mirrors-sg.pooltoys.com/kvirc/", "desc" => "Singapore mirror (ftp)", "city" => "Singapore", "maintainer" => "Otoniel Ortega"),
-	array("name" => "mirror-sg.pooltoys.com", "url" => "http://mirrors-sg.pooltoys.com/kvirc/", "desc" => "Singapore mirror (http)", "city" => "Singapore", "maintainer" => "Otoniel Ortega"),
 	array("name" => "standaloneinstaller.com", "url" => "http://mirrors.standaloneinstaller.com/kvirc/", "desc" => "French mirror (http)", "city" => "France", "maintainer" => "Sam Cohen-Brown"),
 );
-
-
 
 // Archive
 // array("link" => "link name", "long" => "long name")
@@ -151,7 +125,7 @@ $honor=array(
 	array("nick" => "Njaard", "name" => "Charles Samuels", "mail" => "kcharles [at] altair.dhs [dot] org", "made" => $template['honor']['made30'], "quote" => $template['honor']['quote30'], "image" => "unknown"),
 	array("nick" => "BuTi", "name" => "", "mail" => "buti [at] geocities [dot] com", "made" => $template['honor']['made31'], "quote" => "", "image" => "unknown"),
 	array("nick" => "Error403", "name" => "Nick Betcher", "mail" => "nbetcher [at] real-time [dot] com", "made" => "", "quote" => $template['honor']['quote32'], "image" => "unknown"),
-	array("nick" => "Crocodile", "name" => "Olle H�ln�", "mail" => "olle [at] xmms [dot] org", "made" => $template['honor']['made33'], "quote" => "", "image" => "unknown"),
+	array("nick" => "Crocodile", "name" => "Olle Holne", "mail" => "olle [at] xmms [dot] org", "made" => $template['honor']['made33'], "quote" => "", "image" => "unknown"),
 	array("nick" => "marl", "name" => "Giovanni Ferri", "mail" => "giovanni [at] fonderiadigitale [dot] it", "made" => $template['honor']['made34'], "quote" => $template['honor']['quote34'], "image" => "unknown"),
 	array("nick" => "[Anodine]", "name" => "Anodine", "mail" => "", "made" => $template['honor']['made35'], "quote" => $template['honor']['quote35'], "image" => "unknown"),
 	array("nick" => "infected", "name" => "Paul Boehm", "mail" => "", "made" => $template['honor']['made36'], "quote" => $template['honor']['quote36'], "image" => "unknown"),
