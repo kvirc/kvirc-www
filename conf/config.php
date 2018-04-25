@@ -125,7 +125,7 @@ $honor=array(
 	array("nick" => "Njaard", "name" => "Charles Samuels", "mail" => "kcharles [at] altair.dhs [dot] org", "made" => $template['honor']['made30'], "quote" => $template['honor']['quote30'], "image" => "unknown"),
 	array("nick" => "BuTi", "name" => "", "mail" => "buti [at] geocities [dot] com", "made" => $template['honor']['made31'], "quote" => "", "image" => "unknown"),
 	array("nick" => "Error403", "name" => "Nick Betcher", "mail" => "nbetcher [at] real-time [dot] com", "made" => "", "quote" => $template['honor']['quote32'], "image" => "unknown"),
-	array("nick" => "Crocodile", "name" => "Olle Holne", "mail" => "olle [at] xmms [dot] org", "made" => $template['honor']['made33'], "quote" => "", "image" => "unknown"),
+	array("nick" => "Crocodile", "name" => "Olle Hällnäs", "mail" => "olle [at] xmms [dot] org", "made" => $template['honor']['made33'], "quote" => "", "image" => "unknown"),
 	array("nick" => "marl", "name" => "Giovanni Ferri", "mail" => "giovanni [at] fonderiadigitale [dot] it", "made" => $template['honor']['made34'], "quote" => $template['honor']['quote34'], "image" => "unknown"),
 	array("nick" => "[Anodine]", "name" => "Anodine", "mail" => "", "made" => $template['honor']['made35'], "quote" => $template['honor']['quote35'], "image" => "unknown"),
 	array("nick" => "infected", "name" => "Paul Boehm", "mail" => "", "made" => $template['honor']['made36'], "quote" => $template['honor']['quote36'], "image" => "unknown"),
