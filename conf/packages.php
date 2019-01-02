@@ -56,10 +56,11 @@ $version_description["4.0.4"]       = "4.0.4 : Stable (Mar 2011)";
 $version_details["4.0.4"]           = "An old stable release.";
 
 $version_description["4.2.0"]       = "4.2.0 : Stable (Jul 2012)";
-$version_details["4.2.0"]           = "The latest stable release.";
+$version_details["4.2.0"]           = "An old stable release.";
 
-//$version_description["4.3.2"]       = "4.3.2 : Beta (Nov 2015)";
-//$version_details["4.3.2"]           = "The latest beta release. This is the package you should get :)";
+$version_description["5.0.0"]       = "5.0.0 : Stable (Jan 2019)";
+$version_details["5.0.0"]           = "The latest stable release.";
+
 
 // The package groups
 $group_description["none"]      = "No group";
@@ -122,6 +123,24 @@ if((strpos($hua,'Windows') !== false) || (strpos($hua,'WinXP') !== false))
 
 
 $package_count = 0;
+
+//================================================================================================
+// 5.0.0
+//================================================================================================
+
+// 5.0.0
+// BZip 2 sources
+$p_filename[$package_count]    = "KVIrc-5.0.0.tar.bz2";
+$p_path[$package_count]        = "5.0.0/source";
+$p_description[$package_count] = "KVIrc 5.0.0, sources (bzipped package)";
+$p_details[$package_count]     = "Source tarball for both UNIX and Windows versions. The package is compressed using the bzip2 program.";
+$p_platform[$package_count]    = "source";
+$p_version[$package_count]     = "5.0.0";
+$p_size[$package_count]        = "4329467";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "The KVIrc Development Team";
+$package_count++;
+
 
 //============================================================================================================================================
 // 4.2.0
