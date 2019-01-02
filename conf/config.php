@@ -52,10 +52,10 @@ $www_mirror=array(
 );
 
 $ftp_mirror=array(
-	1 => array("name" => "ftp.kvirc.de", "url" => "ftp://ftp.kvirc.de/pub/kvirc", "desc" => "German mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
-	array("name" => "kvirc.gmake.de", "url" => "http://kvirc.gmake.de/pub/kvirc", "desc" => "German mirror", "city" => "Jena, Germany", "maintainer" => "Dessa"),
-	array("name" => "mirror.ibcp.fr", "url" => "http://mirror.ibcp.fr/pub/kvirc/", "desc" => "French mirror (ftp)", "city" => "Lyon, France", "maintainer" => "Alexis Michon"),
-	array("name" => "standaloneinstaller.com", "url" => "http://mirrors.standaloneinstaller.com/kvirc/", "desc" => "French mirror (http)", "city" => "France", "maintainer" => "Sam Cohen-Brown"),
+	1 => array("name" => "ftp.kvirc.net", "url" => "ftp://ftp.kvirc.net/pub/kvirc", "desc" => "Primary Mirror", "city" => "France", "maintainer" => "pragmaware.net")
+	//array("name" => "kvirc.gmake.de", "url" => "http://kvirc.gmake.de/pub/kvirc", "desc" => "German mirror", "city" => "Jena, Germany", "maintainer" => "Dessa"),
+	//array("name" => "mirror.ibcp.fr", "url" => "http://mirror.ibcp.fr/pub/kvirc/", "desc" => "French mirror (ftp)", "city" => "Lyon, France", "maintainer" => "Alexis Michon"),
+	//array("name" => "standaloneinstaller.com", "url" => "http://mirrors.standaloneinstaller.com/kvirc/", "desc" => "French mirror (http)", "city" => "France", "maintainer" => "Sam Cohen-Brown"),
 );
 
 // Archive
