@@ -9,8 +9,11 @@ require_once("config.php");
 $platform_description["source"]  = "Source package (all the platforms)";
 $platform_details["source"]      = "C++ sources: you must to compile them to obtain a working executable. This means that you need a compiler and all the tools needed to compile a program on your system.";
 
-$platform_description["win32"]   = "Windows binary package";
+$platform_description["win32"]   = "Windows 32 bit binary package";
 $platform_details["win32"]       = "Self-contained win32 KVIrc executable: it should run just after the installation.";
+
+$platform_description["win64"]   = "Windows 64 bit binary package";
+$platform_details["win64"]       = "Self-contained win64 KVIrc executable: it should run just after the installation.";
 
 $platform_description["macosx"]  = "OS X binary package";
 $platform_details["macosx"]      = "Self-contained OS X KVIrc executable: it should run just after the installation.";
@@ -141,6 +144,28 @@ $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "The KVIrc Development Team";
 $package_count++;
 
+
+$p_filename[$package_count]    = "KVIrc-5.0.0-x86.exe";
+$p_path[$package_count]        = "5.0.0/binary/win32";
+$p_description[$package_count] = "KVIrc 5.0.0, Windows 32 bit Binary";
+$p_details[$package_count]     = "Self-contained win32 KVIrc executable: it should run just after the installation.";
+$p_platform[$package_count]    = "win32";
+$p_version[$package_count]     = "5.0.0";
+$p_size[$package_count]        = "33713940";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "DarthGandalf";
+$package_count++;
+
+$p_filename[$package_count]    = "KVIrc-5.0.0-x86_64.exe";
+$p_path[$package_count]        = "5.0.0/binary/win64";
+$p_description[$package_count] = "KVIrc 5.0.0, Windows 64 bit Binary";
+$p_details[$package_count]     = "Self-contained win64 KVIrc executable: it should run just after the installation.";
+$p_platform[$package_count]    = "win64";
+$p_version[$package_count]     = "5.0.0";
+$p_size[$package_count]        = "37998478";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "DarthGandalf";
+$package_count++;
 
 //============================================================================================================================================
 // 4.2.0
