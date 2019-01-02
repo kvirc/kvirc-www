@@ -303,6 +303,17 @@ $splash=array(
 			"01.08.2010"  // 4.1.1
 		),
 		"present" => ""
+	),
+	array(
+		"name" => "5.0.0 \"Aria\"",
+		"motd" => "",
+		"screen" => array(
+			"5.0.0.png"
+		),
+		"date" => array(
+			"01.01.2019"
+		),
+		"present" => ""
 	)
 );
 
