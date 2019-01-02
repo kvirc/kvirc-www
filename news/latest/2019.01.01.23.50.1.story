@@ -24,7 +24,7 @@ Binary packages in various forms are available <a href="https://github.com/kvirc
 
 <p>
 Most prominent contributors to this release are IceN9ne, wodim, Stanzilla,
-DarthGandalf, Dessa, staticfox, AndrioCelos and craftwar: Honor and Glory! :)
+DarthGandalf, Dessa, staticfox, AndrioCelos, craftwar, un1versal and AlexanderP: Honor and Glory! :)
 As usual, developers hang around #kvirc@Freenode. <b><a href="irc://irc.freenode.net/kvirc">Come in</a> and say hi!
 </p>
 
