@@ -167,6 +167,17 @@ $p_group[$package_count]       = "none";
 $p_author[$package_count]      = "DarthGandalf";
 $package_count++;
 
+$p_filename[$package_count]    = "KVIrc-5.0.0.dmg";
+$p_path[$package_count]        = "5.0.0/binary/macosx";
+$p_description[$package_count] = "KVIrc 5.0.0, Mac OS X Bundle";
+$p_details[$package_count]     = "Self-contained OS X KVIrc executable: it should run just after the installation.";
+$p_platform[$package_count]    = "macosx";
+$p_version[$package_count]     = "5.0.0";
+$p_size[$package_count]        = "23144136";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "Asokolov";
+$package_count++;
+
 //============================================================================================================================================
 // 4.2.0
 //============================================================================================================================================
