@@ -17,7 +17,7 @@ This is the GitHub website development and bug tracker home for the KVIrc websit
 - [KVIrc - Wiki FAQ](https://github.com/kvirc/KVIrc/wiki/FAQ)
 - [KVIrc - Project FAQ](https://github.com/kvirc/KVIrc/blob/master/doc/FAQ)
 - [Open a bug report or make a suggestion](https://github.com/kvirc/kvirc-www/issues/new)
-- [#KVIrc](https://webchat.freenode.net?nick=kvirc-user&channels=%23kvirc&prompt=1&uio=OT10cnVlde) on freenode.net
+- #KVIrc on irc.libera.chat
 - [KVIrc - Community forums](http://www.kvirc.ru/forum/)
 
 ---

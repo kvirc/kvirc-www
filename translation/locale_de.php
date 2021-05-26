@@ -255,7 +255,7 @@ $template['contribute']['text17']="
 $template['contribute']['text18']="Wen kontaktieren";
 $template['contribute']['text19']="
 	Wenn Sie sich entschieden haben mitzuwirken, können Sie ihr Angebot an <a href=\"mailto:pragma [at] kvirc [dot] net\">Pragma</a> senden.<br />
-	Ein weiterer Platz um die Bereitschaft anzuzeigen, ist der <a href=\"irc://chat.ircnet.org/#kvirc\">#KVIrc</a>-IRC-Raum bei IRCNet, <a href=\"irc://irc.azzura.org/#KVIrc.net\">#KVIrc.net</a> bei Azzura oder <a href=\"irc://irc.freenode.org/'KVirc\">#KVIrc</a> bei FreeNode (früher bekannt als OpenProjects network).";
+	Ein weiterer Platz um die Bereitschaft anzuzeigen, ist der <a href=\"irc://chat.ircnet.org/#kvirc\">#KVIrc</a>-IRC-Raum bei IRCNet, <a href=\"irc://irc.azzura.org/#KVIrc.net\">#KVIrc.net</a> bei Azzura oder <a href=\"irc://irc.libera.chat/'KVirc\">#KVIrc</a> bei Libera (früher bekannt als OpenProjects network).";
 /* contribute.php end */
 
 /* donate.php start */
@@ -294,7 +294,7 @@ $template['faq']['text1a']="Wie betrete ich einen Raum";
 $template['faq']['text1b']="Tippen Sie \"/join #Raumname\"";
 $template['faq']['text2a']="Ich kann KVIrc nicht kompilieren (jede Version)";
 $template['faq']['text2b']="
-	LESEN Sie die Anweisungen in der Datei INSTALL; die meisten üblichen Probleme können gelöst werden, indem man die Umgebungsvariablen richtig setzt und mit den Optionen von ./configure \"spielt\". Wenn die Datei INSTALL nicht hilft, kann eine entsprechende Frage in #kvirc bei Freenode oder im IRCNet gestellt werden: Hier sind viele erfahrene Benutzer, die versuchen können/werden, zu helfen. Falls dies das Problem immer noch nicht lösen konnte, sollte eine E-Mail mit der Problem-/Fehlerbeschreibung an die KVIrc-Mailingliste geschrieben werden";
+	LESEN Sie die Anweisungen in der Datei INSTALL; die meisten üblichen Probleme können gelöst werden, indem man die Umgebungsvariablen richtig setzt und mit den Optionen von ./configure \"spielt\". Wenn die Datei INSTALL nicht hilft, kann eine entsprechende Frage in #kvirc bei Libera oder im IRCNet gestellt werden: Hier sind viele erfahrene Benutzer, die versuchen können/werden, zu helfen. Falls dies das Problem immer noch nicht lösen konnte, sollte eine E-Mail mit der Problem-/Fehlerbeschreibung an die KVIrc-Mailingliste geschrieben werden";
 $template['faq']['text3a']="Ich kann mich nicht zu einem IPv6-Server verbinden";
 $template['faq']['text3b1']="
 	Zuerst sollte sicher gestellt werden, dass IPv6 auf dem System korrekt eingerichtet ist.<br />
@@ -448,7 +448,7 @@ $template['help']['text2']="
 $template['help']['text3']="
 	Die Entwickler verfolgen die Mailingliste und werden Fragen so schnell wie möglich beantworten.";
 $template['help']['text4a']="Der offizielle KVIrc-Support-Raum ist im";
-$template['help']['text4b']="freenode Netzwerk";
+$template['help']['text4b']="Libera Netzwerk";
 $template['help']['text4c']="und der Raum heißt – wer hätte es gedacht – ";
 $template['help']['text4d']="Der offizielle italienische Raum ist";
 $template['help']['text4e']="im";
@@ -1115,7 +1115,7 @@ $template['translation']['text35']="
 	Die ungültigen Einträge müssen neu übersetzt werden; die mit »fuzzy« markierten haben kleinere Änderungen und können wahrscheinlich in ein paar Sekunden angepasst werden.";
 $template['translation']['text36']="Verschiedenes";
 $template['translation']['text37']="
-	Wenn Zweifel bei manchen Übersetzungen bestehen, kann geguckt werden, wie ähnliche Sätze in den KDE *.po-Dateien, oder in anderen Programmen, übersetzt wurden. Wenn weitere Hilfe benötigt wird, können Sie uns über unsere Mailingliste oder im Irc (irc://irc.freenode.net/#KVIrc) erreichen.";
+	Wenn Zweifel bei manchen Übersetzungen bestehen, kann geguckt werden, wie ähnliche Sätze in den KDE *.po-Dateien, oder in anderen Programmen, übersetzt wurden. Wenn weitere Hilfe benötigt wird, können Sie uns über unsere Mailingliste oder im Irc (irc://irc.libera.chat/#KVIrc) erreichen.";
 $template['translation']['text38']="
 	Da viele Module ihre eigene Übersetzungsdateien haben, kann der obige Ablauf für die po/modules/*-Unterverzeichnisse wiederholt werden.<br />
 	Sie werden nicht gezwungen, alle Dateien auf einmal zu übersetzen; eine teilweise Übersetzung funktioniert auch.";

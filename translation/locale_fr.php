@@ -254,7 +254,7 @@ $template['contribute']['text17']="
 $template['contribute']['text18']="Who to contact";
 $template['contribute']['text19']="
 	Once you decide that you want to contribute in some way you can mail your proposal to <a href=\"mailto:pragma [at] kvirc [dot] net\">Pragma</a>.<br />
-	Another place where you can announce your availability/proposal is the <a href=\"irc://chat.ircnet.org/#kvirc\">#KVIrc</a> IRC channel on IRCNet, <a href=\"irc://irc.azzurra.org/#KVIrc.net\">#KVIrc.net</a> on Azzurra or <a href=\"irc://irc.freenode.org/#kvirc\">#KVIrc</a> on FreeNode (formerly known as OpenProjects network).";
+	Another place where you can announce your availability/proposal is the <a href=\"irc://chat.ircnet.org/#kvirc\">#KVIrc</a> IRC channel on IRCNet, <a href=\"irc://irc.azzurra.org/#KVIrc.net\">#KVIrc.net</a> on Azzurra or <a href=\"irc://irc.libera.chat/#kvirc\">#KVIrc</a> on Libera (formerly known as OpenProjects network).";
 /* contribute.php end */
 
 /* donate.php start */
@@ -293,7 +293,7 @@ $template['faq']['text1a']="Comment je peux joindre un salon";
 $template['faq']['text1b']="Tapez \"/join #nomdusalon\"";
 $template['faq']['text2a']="Je n'arrive pas à compiler KVIrc";
 $template['faq']['text2b']="
-	Lisez les instructions présentes dans le fichier INSTALL, la pluspart des problêmes peuvent être résolus en choisissants les bonnes variables de configuration lors du ./configuration. Si malgré ceci vous n'y arrivez pas, vous pouvez rejoindre le salon #kvirc sur le réseau FreeNode, des utlisateurs expérimentés tenteront de vous aider. Enfin, vous pouvez aussi poster votre problême sur le liste de diffusion de KVIRC";
+	Lisez les instructions présentes dans le fichier INSTALL, la pluspart des problêmes peuvent être résolus en choisissants les bonnes variables de configuration lors du ./configuration. Si malgré ceci vous n'y arrivez pas, vous pouvez rejoindre le salon #kvirc sur le réseau Libera, des utlisateurs expérimentés tenteront de vous aider. Enfin, vous pouvez aussi poster votre problême sur le liste de diffusion de KVIRC";
 $template['faq']['text3a']="Je n'arrive pas à me connecter à un serveur en IPv6";
 $template['faq']['text3b1']="
 	Assurez-vous tout d'abord que votre pile d'IPv6 est correctement installée.<br />
@@ -451,7 +451,7 @@ $template['help']['text2']="
 $template['help']['text3']="
 	Les développeurs répondront si possible aux questions.";
 $template['help']['text4a']="Le salon officiel de KVIrc (en anglais) est situé sur le";
-$template['help']['text4b']="réseau freenode";
+$template['help']['text4b']="réseau Libera";
 $template['help']['text4c']="et le salon est évidemment nommé";
 $template['help']['text4d']="Le salon officiel Italien est";
 $template['help']['text4e']="sur le";
@@ -1116,7 +1116,7 @@ $template['translation']['text35']="
 	The invalid entries must be re-translated completely again while the fuzzy entries have minor changes and can be probably adjusted in few seconds.";
 $template['translation']['text36']="Misc notes";
 $template['translation']['text37']="
-	If you're in doubt about some translation, you could take a look at how similar sentences have been translated in the KDE *.po files, or in other softwares. If you need some further help, contact us on our mailing list or on IRC (irc://irc.freenode.net/#KVIrc).";
+	If you're in doubt about some translation, you could take a look at how similar sentences have been translated in the KDE *.po files, or in other softwares. If you need some further help, contact us on our mailing list or on IRC (irc://irc.libera.chat/#KVIrc).";
 $template['translation']['text38']="
 	Since many of the modules have their own translation files then the procedure above may be repeated for the po/modules/*/ subdirectories.<br />
 	Anyway you are not forced to translate all the files at once: a partial translation will work anyway.";

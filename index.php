@@ -272,7 +272,7 @@ search();
 					<p class="center">
 						<?php echo $template['index']['helptext1a']?> <a href="?id=mailinglist&amp;lang=<?php echo $lang?>" title="<?php echo $template['index']['helptext1b']?>"><?php echo $template['index']['helptext1b']?></a><br /><br /><?php echo $template['index']['helptext1c']?><br />
 
-						<a href="irc://irc.eutelia.it/KVIrc">#kvirc@IRCnet</a><br /><a href="irc://irc.azzurra.org/KVIrc.net">#kvirc.net@azzurra</a><br /><a href="irc://irc.freenode.org/KVIrc">#kvirc@freenode</a>
+						<a href="irc://irc.eutelia.it/KVIrc">#kvirc@IRCnet</a><br /><a href="irc://irc.azzurra.org/KVIrc.net">#kvirc.net@azzurra</a><br /><a href="irc://irc.libera.chat/KVIrc">#kvirc@libera</a>
 					</p>
 				</div>
 				<div class="subcontent-unit-border-orange">

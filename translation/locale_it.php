@@ -253,7 +253,7 @@ $template['contribute']['text17']="
 $template['contribute']['text18']="Chi contattare";
 $template['contribute']['text19']="
 	Una volta che decidi che vuoi contribuire in qualche modo puoi mandare la tua proposta via mail a <a href=\"mailto:pragma [at] kvirc [dot] net\">Pragma</a>.<br />
-	Un altro posto dove puoi inviare la tua proposta/disponibilità è il canale <a href=\"irc://chat.ircnet.org/#kvirc\">#KVIrc</a> su IRCNet, <a href=\"irc://irc.azzurra.org/#KVIrc.net\">#KVIrc.net</a> su Azzurra o <a href=\"irc://irc.freenode.org/#kvirc\">#KVIrc</a> su FreeNode (conosciuta come rete OpenProjects).";
+	Un altro posto dove puoi inviare la tua proposta/disponibilità è il canale <a href=\"irc://chat.ircnet.org/#kvirc\">#KVIrc</a> su IRCNet, <a href=\"irc://irc.azzurra.org/#KVIrc.net\">#KVIrc.net</a> su Azzurra o <a href=\"irc://irc.libera.chat/#kvirc\">#KVIrc</a> su Libera (conosciuta come rete OpenProjects).";
 /* contribute.php end */
 
 /* donate.php start */
@@ -292,7 +292,7 @@ $template['faq']['text1a']="Come joino un canale";
 $template['faq']['text1b']="Scrivi \"/join #nomedelcanale\"";
 $template['faq']['text2a']="Non riesco a compilare KVIrc (qualsiasi versione)";
 $template['faq']['text2b']="
-	LEGGI le istruzioni nel file INSTALL: molti problemi comuni possono essere risolti settando le corrette variabili d'ambiente e giocando con le opzioni del ./configure. Se il file INSTALL non ti aiuta puoi provare a entrare su #KVIrc su IRCnet o FreeNode o su #KVIrc.net su Azzurra: ci sono molti utenti esperti che possono aiutarti. Se ancora non riesci a uscirne, puoi postare il tuo errore sulla mailing list";
+	LEGGI le istruzioni nel file INSTALL: molti problemi comuni possono essere risolti settando le corrette variabili d'ambiente e giocando con le opzioni del ./configure. Se il file INSTALL non ti aiuta puoi provare a entrare su #KVIrc su IRCnet o Libera o su #KVIrc.net su Azzurra: ci sono molti utenti esperti che possono aiutarti. Se ancora non riesci a uscirne, puoi postare il tuo errore sulla mailing list";
 $template['faq']['text3a']="Non riesco a connettermi a un server IPv6";
 $template['faq']['text3b1']="
 	Prima di tutto assicurati che il tuo stack IPv6 sia settato correttamente.<br />
@@ -450,7 +450,7 @@ $template['help']['text2']="
 $template['help']['text3']="
 	Gli sviluppatori seguono la mailing list e risponderanno alle domande il prima possibile.";
 $template['help']['text4a']="Il canale di supporto ufficiale di KVIrc è situato sulla";
-$template['help']['text4b']="rete freenode";
+$template['help']['text4b']="rete Libera";
 $template['help']['text4c']="e il canale è ovviamente chiamato";
 $template['help']['text4d']="Il canale ufficiale Italiano è";
 $template['help']['text4e']="sulla";
@@ -1115,7 +1115,7 @@ $template['translation']['text35']="
 	Le stringhe invalide vanno ritradotte completamente mentre quelle fuzzy hanno cambiamenti minori che possono essere sistemati probabilmente in pochi secondi.";
 $template['translation']['text36']="Note varie";
 $template['translation']['text37']="
-	Se sei in dubbio riguardo alcune traduzioni, potresti guardare a come stringhe simili sono state tradotte nei file *.po di KDE o in altri software. Se hai bisogno di maggiore aiuto, contattaci sulla mailing list oppure su IRC (irc://irc.freenode.net/#KVIrc).";
+	Se sei in dubbio riguardo alcune traduzioni, potresti guardare a come stringhe simili sono state tradotte nei file *.po di KDE o in altri software. Se hai bisogno di maggiore aiuto, contattaci sulla mailing list oppure su IRC (irc://irc.libera.chat/#KVIrc).";
 $template['translation']['text38']="
 	Dal momento che molti moduli hanno la loro traduzione la procedura sopra potrebbe essere ripetuta per le sottodirectory in po/modules/*/.<br />
 	Comunque non sei costretto a tradurre tutti i file in una sola volta: una traduzione parziale funzionerà in ogni caso.";
