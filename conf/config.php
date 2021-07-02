@@ -7,7 +7,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 $current = "5.0.0";
 $codename = "Aria";
 $availVersions = array("5.0.0",$current);
-$dpath = "ftp://ftp.kvirc.de/pub/kvirc/";
+$dpath = "ftp://ftp.kvirc.net/pub/kvirc/";
 
 // Include language templates
 if(!file_exists("./translation/locale_$lang.php"))
@@ -48,7 +48,7 @@ if(preg_match("/:/",$ip6,$blah)){
 //array("name" => "name", "url" => "http url", "desc" => "description", "city" => "city location", "maintainer" => "who maintains")
 $www_mirror=array(
 	1 => array("name" => "www.kvirc.net", "url" => "http://www.kvirc.net", "desc" => "Primary WWW site", "city" => "Oslo, Norway", "maintainer" => "Norwegian Linux Community"),
-	array("name" => "www.kvirc.de", "url" => "http://www.kvirc.de", "desc" => "German mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
+	//array("name" => "www.kvirc.de", "url" => "http://www.kvirc.de", "desc" => "German mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
 );
 
 $ftp_mirror=array(
