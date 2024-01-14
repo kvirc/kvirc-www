@@ -1,167 +1,9 @@
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
 <title>Window naming conventions</title>
 <style type="text/css">
-body {
- font-size: 10pt;
- margin-left: 8px;
- margin-right: 8px;
- margin-top: 6px;
- margin-bottom: 6px;
- font-family:Verdana,Helvetica,Arial;
-}
-table, td, tr {
- font-size: 10pt;
- font-family:Verdana,Helvetica,Arial;
- color: #3c3c3c;
-}
-td {
- padding: 6px;
-}
-a:link {
- text-decoration: none;
- color: #2883e2;
-}
-a:visited {
- text-decoration: none;
- color: #6856cc;
-}
-a:hover {
- text-decoration: underline;
- color: #186CC4;
-}
-a:active {
- text-decoration: underline;
- color: #186CC4;
-}
-.title-table-cell {
- border-top-left-radius: 3px;
- border-top-right-radius: 3px;
- background-color: #F2DFB1;
-}
-.title-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 18pt;
- font-weight: bold;
- padding-bottom: 3px;
- color: #404040;
- text-shadow: 0px 2px 0px rgba(247,247,247,1);
-}
-.title-secondary-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 11pt;
- padding-top: 3px;
- color: #474747;
- text-shadow: 0px 2px 0px rgba(247,247,247,1);
-}
-.subtitle-table-cell {
- background-color: #D6D6D6;
-}
-.subtitle-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 11pt;
- color: #000000;
- text-shadow: 0px 1px 0px rgba(247,247,247,1);
-}
-.subsubtitle-table-cell {
- background-color: #E3E3E3;
-}
-.subsubtitle-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 10pt;
- color: #474747;
-}
-.syntax-text {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- font-weight: bold;
- white-space: pre;
- color: #800000;
-}
-.example-box {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- white-space: pre;
- background-color: #f5f5f5;
- border: 1px solid #d5d5d5;
- color: #800000;
- padding: 10px;
- margin-top: 6px;
- margin-bottom: 6px;
-}
-.example-box a:link {
- color: #600030;
-}
-.example-box a:visited {
- color: #600030;
-}
-.example-box a:hover {
- color: #FF2B46;
-}
-.example-box a:active {
- color: #FF2B46;
-}
-.comment-text {
- color: #578A57;
-}
-.comment-text a:link {
- color: #578A57;
-}
-.comment-text a:visited {
- color: #578A57;
-}
-.comment-text a:hover {
- color: #35BD58;
-}
-.comment-text a:active {
- color: #35BD58;
-}
-.example-paren {
- color: #8A7000;
-}
-.example-bracket {
- color: #9C7914;
-}
-.example-oper {
- color: #9C7914;
-}
-.example-variable {
- color: #AB6332;
-}
-.comment-text .example-variable {
- color: #578A57;
-}
-.comment-text .example-oper {
- color: #578A57;
-}
-.comment-text .example-paren {
- color: #578A57;
-}
-.comment-text .example-bracket {
- color: #578A57;
-}
-.switch-table {
- width: 100%;
- border-collapse: collapse;
-}
-.switch-title-table-cell {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- color: #670000;
- background-color: #EDEDED;
-}
-.switch-body-table-cell {
-}
-.footer {
- border-top: 1px solid #a2a2a2;
- color: #a2a2a2;
- margin-top: 8px;
- padding-top: 4px;
- font-style: italic;
- font-size: 8pt;
-}
-</style>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+body { 	font-size: 10pt; 	margin-left: 8px; 	margin-right: 8px; 	margin-top: 6px; 	margin-bottom: 6px; 	line-height: 24px; 	font-family: sans-serif; } table, td, tr { 	color: #3c3c3c; 	font-size: 10pt; } td { 	padding: 6px; } a:link { 	text-decoration: none; 	color: #2883e2; } a:visited { 	text-decoration: none; 	color: #6856cc; } a:hover { 	text-decoration: underline; 	color: #186CC4; } pre { 	white-space: normal; } a:active { 	text-decoration: underline; 	color: #186CC4; } .title-table-cell { 	border-top-left-radius: 3px; 	border-top-right-radius: 3px; 	background-color: #F2DFB1; } .title-text { 	font-size: 18pt; 	font-weight: bold; 	padding-bottom: 3px; 	color: #404040; 	text-shadow: 0px 2px 0px rgba(247,247,247,1); } .title-secondary-text { 	font-size: 11pt; 	padding-top: 3px; 	color: #474747; 	text-shadow: 0px 2px 0px rgba(247,247,247,1); } .subtitle-table-cell { 	background-color: #D6D6D6; } .subtitle-text { 	font-size: 11pt; 	color: #000000; 	text-shadow: 0px 1px 0px rgba(247,247,247,1); } .subsubtitle-table-cell { 	background-color: #E3E3E3; } .subsubtitle-text { 	font-size: 10pt; 	color: #474747; } .syntax-text { 	font-family: monospace; 	font-size: 10pt; 	font-weight: bold; 	color: #800000; } .note-box { 	background-color: #F2F2F2; 	color: #636363; 	font-size: 9pt; } .example-box { 	font-family: monospace; 	font-size: 10pt; 	background-color: #f5f5f5; 	border: 1px solid #d5d5d5; 	color: #800000; 	margin-top: 6px; 	margin-bottom: 6px; 	line-height: 16px; 	padding: 10px; } .example-box a:link { 	color: #600030; } .example-box a:visited { 	color: #600030; } .example-box a:hover { 	color: #FF2B46; } .example-box a:active { 	color: #FF2B46; } .comment-text { 	color: #578A57; } .comment-text a:link { 	color: #578A57; } .comment-text a:visited { 	color: #578A57; } .comment-text a:hover { 	color: #35BD58; } .comment-text a:active { 	color: #35BD58; } .example-paren { 	color: #8A7000; } .example-bracket { 	color: #9C7914; } .example-oper { 	color: #9C7914; } .example-variable { 	color: #AB6332; } .comment-text .example-variable { 	color: #578A57; } .comment-text .example-oper { 	color: #578A57; } .comment-text .example-paren { 	color: #578A57; } .comment-text .example-bracket { 	color: #578A57; } .switch-table { 	width: 100%; 	border-collapse: collapse; } .switch-title-table-cell { 	font-family:"Lucida Console", Monaco, "Courier New", monospace; 	font-size: 10pt; 	color: #670000; 	background-color: #EDEDED; } /* .switch-body-table-cell { } */ .footer { 	border-top: 1px solid #a2a2a2; 	color: #a2a2a2; 	margin-top: 8px; 	padding-top: 4px; 	font-style: italic; 	font-size: 8pt; } </style>
 </head>
 <body bgcolor="#FFFFFF" text="#000000">
 <table width="100%" cellpadding="1" cellspacing="0" border="0">
@@ -180,7 +22,7 @@ a:active {
       <div class='title-text'>Window naming conventions</div>      <div class='title-secondary-text'>KVIrc window structure and the window naming conventions</div>    </td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Introduction</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+    <td></td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Introduction</div></td></tr><tr><td bgcolor="#EAEAEA">
 Starting from the release 3.0.0, KVIrc window structure has
 grown in complexity. Older releases allowed one connection
 per <i>frame window</i> and thus had a dedicated command parser
@@ -190,8 +32,8 @@ was quite easy: it was enough to designate it by <i>name</i>
 It was sufficient to have an <i>unique</i> name for ever window;
 condition that was granted by the underlying IRC protocol
 and by the KVIrc core design.<br>
-In this version, the unique window names are impossible to be granted.<br>
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Scenario</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+In this version, the unique window names are impossible to be granted.
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Scenario</div></td></tr><tr><td bgcolor="#EAEAEA">
 The command parser is now <i>global</i> to the application.
 There can be two or more consoles in each frame and the user
 is able to join the same channel with two different nicknames
@@ -261,7 +103,7 @@ Application (Unique command parser)
 </li>
 </ul>
 <br>
-A naming convention has become necessary to resolve ambiguities.<br>
+A naming convention has become necessary to resolve ambiguities.
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Basic assumptions</div></td></tr><tr><td bgcolor="#EAEAEA">
 Every KVIrc window has four main properties:<br>
 -<b>an unique numeric identifier</b><br>
@@ -280,9 +122,8 @@ queries it is the list of the targets. For some other windows
 the logical name corresponds to the caption text. This will be discussed later.<br>
 The <b>type identifier</b> describes the properties of a certain window.
 For channel windows the type identifier is <i>channel</i>, for query windows is <i>query</i>,
-for console windows it is <i>console</i>, etc.<br>
-<br>
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">IRC Contexts</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
+for console windows it is <i>console</i>, etc.
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">IRC Contexts</div></td></tr><tr><td bgcolor="#EAEAEA">
 The KVIrc frame windows are numbered starting from 0 and named
 <i>frame_&lt;number&gt;</i>. Each frame can contain an unlimited number of consoles.<br>
 Each console is bound to an <b>IRC context</b>. (The part <i>is bound to</i> could
@@ -314,9 +155,9 @@ or <b>connection context</b>, and the associated <b>IRC context Id</b> can be
 referred as <b>connection ID</b> or <b>connection context ID</b>.<br>
 There are classes of windows that are not bound to any <b>IRC context</b>:
 this includes user created windows, DCC windows, browsers etc.<br>
-KVIrc will try to keep that windows with unique logical names.<br>
-</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">How to identify a window</div></td></tr><tr><td bgcolor="#EAEAEA"><br>
-So what we have until now is:<br>
+KVIrc will try to keep that windows with unique logical names.
+</td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">How to identify a window</div></td></tr><tr><td bgcolor="#EAEAEA">
+So what we have until now is:
 <ul>
 <li>Each window has its own unique <b>window ID</b>: we
 will refer windows always using this identifier.</li>
@@ -341,6 +182,6 @@ and is bound to a specified <b>IRC context</b>.<br>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_language_index_all.html">Language Overview</a>
-<div class='footer'>KVIrc 4.9.2.git-7017-g48dacdb Documentation - generated by un1versal on Mon Nov 14 04:21:37 2016</div>
+<div class='footer'>KVIrc 5.2.0.5.2.0 Documentation - generated by pragma on Sun Jan 14 18:20:53 2024</div>
 </body>
 </html>

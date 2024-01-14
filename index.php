@@ -37,9 +37,6 @@ search();
 	<meta name="distribution" content="global" />
 	<meta name="description" content="KVIrc.net - The K-Visual IRC client" />
 	<meta name="keywords" content="KVIrc, KDE, IRC, Chat, pragma" />
-	<!-- Google Diagnostic start -->
-	<meta name="verify-v1" content="Q0B/rT+mLDe7URI4WfL8NQlJ5ksx3WMAMK3K0spUib4=" />
-	<!-- Google Diagnostic end -->
 	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="./css/layout4_setup.css" />
 	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="./css/layout4_text.css" />
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -49,12 +46,6 @@ search();
 	<title>KVIrc.net - The Visual IRC Client</title>
 </head>
 <body>
-	<!-- Google Analytics start -->
-	<script type="text/javascript">
-		_uacct="UA-881180-2";
-		urchinTracker();
-	</script>
-	<!-- Google Analytics end -->
 	<div class="page-container">
 		<div class="header">
 			<div class="header-top"></div>
@@ -152,29 +143,11 @@ search();
 							</ul>
 						</li>
 					</ul>
-					<ul>
-						<li><a href="#"><?php echo $template['index']['related']?></a>
-							<ul>
-								<li><a href="javascript:opendoc('http://forum.kvirc.ru/');"><?php echo $template['index']['forum']?></a></li>
-								<li><a href="javascript:opendoc('http://www.kvirc.ru/');"><?php echo $template['index']['rusite']?></a></li>
-								<?php /*
-								<li><a href="javascript:opendoc('http://kvirc.fr/');"><?php echo $template['index']['frsite']?></a></li>
-								<li><a href="javascript:opendoc('http://kvircfr.les-forums.com/');"><?php echo $template['index']['frforum']?></a></li>
-								<li><a href="javascript:opendoc('http://kvirc.dotadata.de/');"><?php echo $template['index']['osxsite']?></a></li>
-								*/?>
-							</ul>
-						</li>
-					</ul>
 				</div>
 			</div>
 			<div class="header-breadcrumbs">
 				<ul>
 					<li><a href="https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrcs-nightly-source-or-binaries" title="Get the latest build"><?php echo $template['index']['quickdnl']?></a></li>
-					<!--
-					<li><a href="<?php echo $quickdownload_link?>" title="Get the Latest Release"><?php echo $template['index']['quickdnl']?></a></li>
-					<li><a href="ftp://ftp.kvirc.de/pub/kvirc/snapshots/" title="get snapshots"><?php echo $template['index']['snapshots']?></a></li>
-					<li><a href="?id=themes&amp;lang=<?php echo $lang?>" title="themes and appearance"><?php echo $template['index']['themes']?></a></li>
-					//-->
 				</ul>
 				<div class="searchform">
 					<form action="<?php echo "?id=$id&amp;lang=$lang"?>" method="post" class="form">

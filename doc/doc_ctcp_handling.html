@@ -1,167 +1,9 @@
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
 <title>KVIrc and CTCP</title>
 <style type="text/css">
-body {
- font-size: 10pt;
- margin-left: 8px;
- margin-right: 8px;
- margin-top: 6px;
- margin-bottom: 6px;
- font-family:Verdana,Helvetica,Arial;
-}
-table, td, tr {
- font-size: 10pt;
- font-family:Verdana,Helvetica,Arial;
- color: #3c3c3c;
-}
-td {
- padding: 6px;
-}
-a:link {
- text-decoration: none;
- color: #2883e2;
-}
-a:visited {
- text-decoration: none;
- color: #6856cc;
-}
-a:hover {
- text-decoration: underline;
- color: #186CC4;
-}
-a:active {
- text-decoration: underline;
- color: #186CC4;
-}
-.title-table-cell {
- border-top-left-radius: 3px;
- border-top-right-radius: 3px;
- background-color: #F2DFB1;
-}
-.title-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 18pt;
- font-weight: bold;
- padding-bottom: 3px;
- color: #404040;
- text-shadow: 0px 2px 0px rgba(247,247,247,1);
-}
-.title-secondary-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 11pt;
- padding-top: 3px;
- color: #474747;
- text-shadow: 0px 2px 0px rgba(247,247,247,1);
-}
-.subtitle-table-cell {
- background-color: #D6D6D6;
-}
-.subtitle-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 11pt;
- color: #000000;
- text-shadow: 0px 1px 0px rgba(247,247,247,1);
-}
-.subsubtitle-table-cell {
- background-color: #E3E3E3;
-}
-.subsubtitle-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 10pt;
- color: #474747;
-}
-.syntax-text {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- font-weight: bold;
- white-space: pre;
- color: #800000;
-}
-.example-box {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- white-space: pre;
- background-color: #f5f5f5;
- border: 1px solid #d5d5d5;
- color: #800000;
- padding: 10px;
- margin-top: 6px;
- margin-bottom: 6px;
-}
-.example-box a:link {
- color: #600030;
-}
-.example-box a:visited {
- color: #600030;
-}
-.example-box a:hover {
- color: #FF2B46;
-}
-.example-box a:active {
- color: #FF2B46;
-}
-.comment-text {
- color: #578A57;
-}
-.comment-text a:link {
- color: #578A57;
-}
-.comment-text a:visited {
- color: #578A57;
-}
-.comment-text a:hover {
- color: #35BD58;
-}
-.comment-text a:active {
- color: #35BD58;
-}
-.example-paren {
- color: #8A7000;
-}
-.example-bracket {
- color: #9C7914;
-}
-.example-oper {
- color: #9C7914;
-}
-.example-variable {
- color: #AB6332;
-}
-.comment-text .example-variable {
- color: #578A57;
-}
-.comment-text .example-oper {
- color: #578A57;
-}
-.comment-text .example-paren {
- color: #578A57;
-}
-.comment-text .example-bracket {
- color: #578A57;
-}
-.switch-table {
- width: 100%;
- border-collapse: collapse;
-}
-.switch-title-table-cell {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- color: #670000;
- background-color: #EDEDED;
-}
-.switch-body-table-cell {
-}
-.footer {
- border-top: 1px solid #a2a2a2;
- color: #a2a2a2;
- margin-top: 8px;
- padding-top: 4px;
- font-style: italic;
- font-size: 8pt;
-}
-</style>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+body { 	font-size: 10pt; 	margin-left: 8px; 	margin-right: 8px; 	margin-top: 6px; 	margin-bottom: 6px; 	line-height: 24px; 	font-family: sans-serif; } table, td, tr { 	color: #3c3c3c; 	font-size: 10pt; } td { 	padding: 6px; } a:link { 	text-decoration: none; 	color: #2883e2; } a:visited { 	text-decoration: none; 	color: #6856cc; } a:hover { 	text-decoration: underline; 	color: #186CC4; } pre { 	white-space: normal; } a:active { 	text-decoration: underline; 	color: #186CC4; } .title-table-cell { 	border-top-left-radius: 3px; 	border-top-right-radius: 3px; 	background-color: #F2DFB1; } .title-text { 	font-size: 18pt; 	font-weight: bold; 	padding-bottom: 3px; 	color: #404040; 	text-shadow: 0px 2px 0px rgba(247,247,247,1); } .title-secondary-text { 	font-size: 11pt; 	padding-top: 3px; 	color: #474747; 	text-shadow: 0px 2px 0px rgba(247,247,247,1); } .subtitle-table-cell { 	background-color: #D6D6D6; } .subtitle-text { 	font-size: 11pt; 	color: #000000; 	text-shadow: 0px 1px 0px rgba(247,247,247,1); } .subsubtitle-table-cell { 	background-color: #E3E3E3; } .subsubtitle-text { 	font-size: 10pt; 	color: #474747; } .syntax-text { 	font-family: monospace; 	font-size: 10pt; 	font-weight: bold; 	color: #800000; } .note-box { 	background-color: #F2F2F2; 	color: #636363; 	font-size: 9pt; } .example-box { 	font-family: monospace; 	font-size: 10pt; 	background-color: #f5f5f5; 	border: 1px solid #d5d5d5; 	color: #800000; 	margin-top: 6px; 	margin-bottom: 6px; 	line-height: 16px; 	padding: 10px; } .example-box a:link { 	color: #600030; } .example-box a:visited { 	color: #600030; } .example-box a:hover { 	color: #FF2B46; } .example-box a:active { 	color: #FF2B46; } .comment-text { 	color: #578A57; } .comment-text a:link { 	color: #578A57; } .comment-text a:visited { 	color: #578A57; } .comment-text a:hover { 	color: #35BD58; } .comment-text a:active { 	color: #35BD58; } .example-paren { 	color: #8A7000; } .example-bracket { 	color: #9C7914; } .example-oper { 	color: #9C7914; } .example-variable { 	color: #AB6332; } .comment-text .example-variable { 	color: #578A57; } .comment-text .example-oper { 	color: #578A57; } .comment-text .example-paren { 	color: #578A57; } .comment-text .example-bracket { 	color: #578A57; } .switch-table { 	width: 100%; 	border-collapse: collapse; } .switch-title-table-cell { 	font-family:"Lucida Console", Monaco, "Courier New", monospace; 	font-size: 10pt; 	color: #670000; 	background-color: #EDEDED; } /* .switch-body-table-cell { } */ .footer { 	border-top: 1px solid #a2a2a2; 	color: #a2a2a2; 	margin-top: 8px; 	padding-top: 4px; 	font-style: italic; 	font-size: 8pt; } </style>
 </head>
 <body bgcolor="#FFFFFF" text="#000000">
 <table width="100%" cellpadding="1" cellspacing="0" border="0">
@@ -185,12 +27,12 @@ Personally, I think that the CTCP specification is to
 be symbolically printed & burned. It is really too complex
 (you can go mad with the quoting specifications)
 and NO IRC CLIENT supports it completely.
-Here is my personal point of view on the CTCP protocol.<br>
+Here is my personal point of view on the CTCP protocol.
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">What is CTCP?</div></td></tr><tr><td bgcolor="#EAEAEA">
 CTCP stands for Client-to-Client Protocol. It is designed
 for exchanging almost arbitrary data between IRC clients;
 the data is embedded into text messages of the underlying
-IRC protocol.<br>
+IRC protocol.
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Basic concepts</div></td></tr><tr><td bgcolor="#EAEAEA">
 A CTCP message is sent as the &lt;text&gt; part of the PRIVMSG and
 NOTICE IRC commands.<br>
@@ -218,7 +60,7 @@ a client that has no CTCP flood protection (or has it disabled) will surely
 be disconnected while sending the replies, after only
 receiving a single IRC message (no flood for the sender).
 From my personal point of view, only <b>one CTCP message per IRC message</b>
-should be allowed and theoretically the trailing &lt;0x01&gt; delimiter can be optional.<br>
+should be allowed and theoretically the trailing &lt;0x01&gt; delimiter can be optional.
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">How to extract the CTCP message</div></td></tr><tr><td bgcolor="#EAEAEA">
 The IRC messages do not allow the following characters to be sent:<br>
 &lt;NUL&gt; (ASCII character 0), &lt;CR&gt; (Carriage return), &lt;LF&gt; (Line feed).<br>
@@ -233,8 +75,7 @@ we have a &lt;ctcp_message&gt; beginning just after &lt;0x01&gt;.
 The trailing (optional) &lt;0x01&gt; can be removed in this phase
 or later, assuming that it is not a valid char in the &lt;ctcp message&gt;.<br>
 In this document I will assume that you have stripped the trailing &lt;0x01&gt;
-and thus from now on we will deal only with the &lt;ctcp message&gt; part.<br>
-<br>
+and thus from now on we will deal only with the &lt;ctcp message&gt; part.
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Parsing a CTCP message: The quoting dilemma</div></td></tr><tr><td bgcolor="#EAEAEA">
 Since there are characters that cannot appear in a &lt;ctcp message&gt;,
 theoretically we should have to use a quoting mechanism.
@@ -267,8 +108,7 @@ with it (This will become clear later).
 I've chosen the octal representation just to follow a bit the old specification:
 the authors seemed to like it. This point could be discussed in
 some mailing list or sth. The '\C' sequence is useful to include the backslash
-character (escape sequence '\\').<br>
-<br>
+character (escape sequence '\\').
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">Let's mess a little more</div></td></tr><tr><td bgcolor="#EAEAEA">
 A CTCP message is made of <b>space separated parameters</b>.<br>
 The natural way of separating parameters is to use the space character.
@@ -288,7 +128,6 @@ Anyway, to maintain compatibility with other popular IRC clients (such as mIRC),
 let's include the <b>"</b> quotes in our standard: literal (unescaped) <b>"</b> quotes
 define a single token string. To include a literal <b>"</b> character, escape it.
 Additionally, the last parameter of a &lt;ctcp message&gt; may be made of multiple tokens.
-<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">A CTCP parameter extracting example</div></td></tr><tr><td bgcolor="#EAEAEA">
 A trivial example of a C <i>CTCP parameter extracting routine</i> follows.<br>
 An IRC message is made of up to 510 usable characters.
@@ -305,81 +144,82 @@ the &lt;ctcp message&gt; that we are extracting from is shorter than 511 charact
 and have provided a buffer big enough to avoid this code segfaulting.
 I'm assuming that msg_ptr points somewhere in the &lt;ctcp message&gt; and is null-terminated.<br>
 (There are C++ style comments, you might want to remove them)
-<div class="example-box">const char * decode_escape<span class="example-paren">(</span>const char * msg_ptr,char * buffer<span class="example-paren">)</span>
-<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;// This one decodes an escape sequence
-&nbsp;&nbsp;&nbsp;&nbsp;// and returns the pointer "just after it"
-&nbsp;&nbsp;&nbsp;&nbsp;// and should be called when *msg_ptr points
-&nbsp;&nbsp;&nbsp;&nbsp;// just after a backslash
-&nbsp;&nbsp;&nbsp;&nbsp;char c;
-&nbsp;&nbsp;&nbsp;&nbsp;if<span class="example-paren">((</span>*msg_ptr &gt;= '0'<span class="example-paren">)</span> && <span class="example-paren">(</span>*msg_ptr &lt; '8'<span class="example-paren">))</span>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// a digit follows the backslash
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c = *msg_ptr - '0';
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msg_ptr++;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if<span class="example-paren">(</span>*msg_ptr &gt;= '0'<span class="example-paren">)</span> && <span class="example-paren">(</span>*msg_ptr &lt; '8'<span class="example-paren">))</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c = <span class="example-paren">((</span>c &lt;&lt; 3<span class="example-paren">)</span> + <span class="example-paren">(</span>*msg_ptr - '0'<span class="example-paren">))</span>;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msg_ptr++;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if<span class="example-paren">(</span>*msg_ptr &gt;= '0'<span class="example-paren">)</span> && <span class="example-paren">(</span>*msg_ptr &lt; '8'<span class="example-paren">))</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c = <span class="example-paren">((</span>c &lt;&lt; 3<span class="example-paren">)</span> + <span class="example-paren">(</span>*msg_ptr - '0'<span class="example-paren">))</span>;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msg_ptr++;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span> // else broken message, but let's be flexible
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span> // else it is broken, but let's be flexible
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// append the character and return
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*buffer = c;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return msg_ptr;
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span> else <span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// simple escape: just append the following
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// character <span class="example-paren">(</span>thus discarding its semantic<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*buffer = *msg_ptr;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return ++msg_ptr;
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
-<span class="example-bracket">}</span>
-const char * extract_ctcp_parameter<span class="example-paren">(</span>const char * msg_ptr,char * buffer,int spaceBreaks<span class="example-paren">)</span>
-<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;// this one extracts the "next" ctcp parameter in msg_ptr
-&nbsp;&nbsp;&nbsp;&nbsp;// it skips the leading and trailing spaces.
-&nbsp;&nbsp;&nbsp;&nbsp;// spaceBreaks should be set to 0 if <span class="example-paren">(</span>and only if<span class="example-paren">)</span> the
-&nbsp;&nbsp;&nbsp;&nbsp;// extracted parameter is the last in the CTCP message.
-&nbsp;&nbsp;&nbsp;&nbsp;int inString = 0;
-&nbsp;&nbsp;&nbsp;&nbsp;while<span class="example-paren">(</span>*msg_ptr == ' '<span class="example-paren">)</span>msg_ptr++;
-&nbsp;&nbsp;&nbsp;&nbsp;while<span class="example-paren">(</span>*msg_ptr<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch<span class="example-paren">(</span>*msg_ptr<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case '\\':
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// backslash : escape sequence
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msg_ptr++;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if<span class="example-paren">(</span>*msg_ptr<span class="example-paren">)</span>msg_ptr = decode_escape<span class="example-paren">(</span>msg_ptr,buffer<span class="example-paren">)</span>;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else return msg_ptr; // senseless backslash
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case ' ':
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// space : separate tokens?
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if<span class="example-paren">(</span>inString || <span class="example-paren">(</span>!spaceBreaks<span class="example-paren">))</span>*buffer++ = *msg_ptr++;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else <span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	// not in string and space breaks: end of token
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	// skip trailing white space <span class="example-paren">(</span>this could be avoided<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	// and return
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	while<span class="example-paren">(</span>*msg_ptr == ' '<span class="example-paren">)</span>msg_ptr++;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	return msg_ptr;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case '"':
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// a string begin or end
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inString = !inString;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msg_ptr++;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// any other char
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*buffer++ = *msg_ptr++;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span>
-&nbsp;&nbsp;&nbsp;&nbsp;return msg_ptr;
-<span class="example-bracket">}</span>
-</div><br>
+</td></tr><tr><td class="example-box"><br>
+const char * decode_escape<span class="example-paren">(</span>const char * msg_ptr,char * buffer<span class="example-paren">)</span><br>
+<span class="example-bracket">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;// This one decodes an escape sequence<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// and returns the pointer "just after it"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// and should be called when *msg_ptr points<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// just after a backslash<br>
+&nbsp;&nbsp;&nbsp;&nbsp;char c;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if<span class="example-paren">((</span>*msg_ptr &gt;= '0'<span class="example-paren">)</span> && <span class="example-paren">(</span>*msg_ptr &lt; '8'<span class="example-paren">))</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// a digit follows the backslash<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c = *msg_ptr - '0';<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msg_ptr++;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if<span class="example-paren">(</span>*msg_ptr &gt;= '0'<span class="example-paren">)</span> && <span class="example-paren">(</span>*msg_ptr &lt; '8'<span class="example-paren">))</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c = <span class="example-paren">((</span>c &lt;&lt; 3<span class="example-paren">)</span> + <span class="example-paren">(</span>*msg_ptr - '0'<span class="example-paren">))</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msg_ptr++;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if<span class="example-paren">(</span>*msg_ptr &gt;= '0'<span class="example-paren">)</span> && <span class="example-paren">(</span>*msg_ptr &lt; '8'<span class="example-paren">))</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c = <span class="example-paren">((</span>c &lt;&lt; 3<span class="example-paren">)</span> + <span class="example-paren">(</span>*msg_ptr - '0'<span class="example-paren">))</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msg_ptr++;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span> // else broken message, but let's be flexible<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span> // else it is broken, but let's be flexible<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// append the character and return<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*buffer = c;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return msg_ptr;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span> else <span class="example-bracket">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// simple escape: just append the following<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// character <span class="example-paren">(</span>thus discarding its semantic<span class="example-paren">)</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*buffer = *msg_ptr;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return ++msg_ptr;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span><br>
+<span class="example-bracket">}</span><br>
+const char * extract_ctcp_parameter<span class="example-paren">(</span>const char * msg_ptr,char * buffer,int spaceBreaks<span class="example-paren">)</span><br>
+<span class="example-bracket">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;// this one extracts the "next" ctcp parameter in msg_ptr<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// it skips the leading and trailing spaces.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// spaceBreaks should be set to 0 if <span class="example-paren">(</span>and only if<span class="example-paren">)</span> the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// extracted parameter is the last in the CTCP message.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int inString = 0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;while<span class="example-paren">(</span>*msg_ptr == ' '<span class="example-paren">)</span>msg_ptr++;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;while<span class="example-paren">(</span>*msg_ptr<span class="example-paren">)</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switch<span class="example-paren">(</span>*msg_ptr<span class="example-paren">)</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case '\\':<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// backslash : escape sequence<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msg_ptr++;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if<span class="example-paren">(</span>*msg_ptr<span class="example-paren">)</span>msg_ptr = decode_escape<span class="example-paren">(</span>msg_ptr,buffer<span class="example-paren">)</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else return msg_ptr; // senseless backslash<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case ' ':<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// space : separate tokens?<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if<span class="example-paren">(</span>inString || <span class="example-paren">(</span>!spaceBreaks<span class="example-paren">))</span>*buffer++ = *msg_ptr++;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else <span class="example-bracket">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	// not in string and space breaks: end of token<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	// skip trailing white space <span class="example-paren">(</span>this could be avoided<span class="example-paren">)</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	// and return<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	while<span class="example-paren">(</span>*msg_ptr == ' '<span class="example-paren">)</span>msg_ptr++;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	return msg_ptr;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case '"':<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// a string begin or end<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inString = !inString;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msg_ptr++;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// any other char<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*buffer++ = *msg_ptr++;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-bracket">}</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;return msg_ptr;<br>
+<span class="example-bracket">}</span><br>
+</td></tr><tr><td bgcolor="#EAEAEA">
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">CTCP parameter semantics</div></td></tr><tr><td bgcolor="#EAEAEA">
 The first &lt;ctcp parameter&gt; of a &lt;ctcp message&gt; is the &lt;ctcp tag&gt;: it defines
 the semantic of the rest of the message.<br>
@@ -388,8 +228,7 @@ and the original specification says that the whole &lt;ctcp message&gt; is
 case sensitive, I'd prefer to follow the IRC message semantic (just to
 have less "special cases") and treat the whole message as <b>case insensitive</b>.<br>
 The remaining tokens depend on the &lt;ctcp tag&gt;. A description of known &lt;ctcp tags&gt;
-and thus &lt;ctcp messages&gt; follows.<br>
-<br>
+and thus &lt;ctcp messages&gt; follows.
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">PING</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;PING &lt;data&gt;&lt;0x01&gt;</b><br>
 The PING request is used to check the round trip time from one client to another.
@@ -398,7 +237,6 @@ through a NOTICE instead of a PRIVMSG. The &lt;data&gt; usually contains an unsi
 integer but not necessarily; it is not even mandatory for &lt;data&gt; to be a single token.
 The receiver should ignore the semantic of &lt;data&gt;.<br>
 The reply is intended to be processed by IRC clients.
-<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">VERSION</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;VERSION&lt;0x01&gt;</b><br>
 The VERSION request asks for information about another user's IRC client program.
@@ -409,14 +247,12 @@ The preferred form for &lt;client_version_data&gt; is
 clients (and users) send a generic reply describing the client name, version
 and eventually the used script name. This CTCP reply is intended to be human
 readable, so any form is accepted.
-<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">USERINFO</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;USERINFO&lt;0x01&gt;</b><br>
 The USERINFO request asks for information about another user.
 The reply should be sent through a NOTICE with the following syntax:<br>
 &lt;0x01&gt;USERINFO &lt;user_info_data&gt;&lt;0x01&gt;<br>
 The &lt;user_info_data&gt; should be a human readable <i>user defined</i> string;
-<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">CLIENTINFO</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;CLIENTINFO&lt;0x01&gt;</b><br>
 The CLIENTINFO request asks for information about another user's IRC client program.
@@ -426,7 +262,6 @@ The reply should be sent through a NOTICE with the following syntax:<br>
 &lt;0x01&gt;CLIENTINFO &lt;client_info_data&gt;&lt;0x01&gt;<br>
 The &lt;client_info_data&gt; should contain a list of supported CTCP request tags.
 The CLIENTINFO reply is intended to be human readable.
-<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">FINGER</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;FINGER&lt;0x01&gt;</b><br>
 The FINGER request asks for information about another IRC user.
@@ -434,63 +269,57 @@ The reply should be sent through a NOTICE with the following syntax:<br>
 &lt;0x01&gt;FINGER &lt;user_info_data&gt;&lt;0x01&gt;<br>
 The &lt;user_info_data&gt; should be a human readable string containing
 the system username and possibly the system idle time;
-<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">SOURCE</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;SOURCE&lt;0x01&gt;</b><br>
 The SOURCE request asks for the client homepage or ftp site information.
 The reply should be sent through a NOTICE with the following syntax:<br>
 &lt;0x01&gt;VERSION &lt;homepage_url_data&gt;&lt;0x01&gt;<br>
 This CTCP reply is intended to be human readable, so any form is accepted.
-<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">TIME</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;TIME&lt;0x01&gt;</b><br>
 The TIME request asks for the user local time.
 The reply should be sent through a NOTICE with the following syntax:<br>
 &lt;0x01&gt;TIME &lt;time and date string&gt;&lt;0x01&gt;<br>
 This CTCP reply is intended to be human readable, so any form is accepted.
-<br>
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">ACTION</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;ACTION&lt;0x01&gt;</b><br>
 The ACTION tag is used to describe an action.<br>
-It should be sent through a NOTICE message and never generate a reply.<br>
-<br>
+It should be sent through a NOTICE message and never generate a reply.
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">AVATAR (equivalent to ICON or FACE)</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;AVATAR&lt;0x01&gt;</b><br>
-The AVATAR tag is used to query a user's avatar.<br>
-<br>
+The AVATAR tag is used to query a user's avatar.
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">MULTIMEDIA (equivalent to MM or SOUND)</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;MULTIMEDIA &lt;filename&gt;&lt;0x01&gt;</b><br>
 The MULTIMEDIA tag is used to play a multimedia file on the receiver's side.<br>
 The receiving client should locate the file associated to &lt;filename&gt;,
 and play it. If the file can not be located
 by the receiving client, and the MULTIMEDIA tag was sent through a PRIVMSG format CTCP,
-the receiving client CAN request a <a href="doc_dcc_connection.html">dcc get</a> &lt;filename&gt; from the source user.
+the receiving client CAN request a <a href="doc_dcc_connection.html">DCC GET</a> &lt;filename&gt; from the source user.
 If the MULTIMEDIA tag was sent through a NOTICE message, the receiving client
 should not generate any reply: the message should be notified to the receiving
 client's user and then be discarded. The &lt;filename&gt; should never contain a leading
 path. If any part of the &lt;filename&gt; appears to be a path component, it should be discarded.
 The client may decide to drop the entire message too. Older clients (including
 older releases of KVIrc) used to request the missing filenames by a particular
-non-standard private message syntax. This convention should be dropped.<br>
-<br>
+non-standard private message syntax. This convention should be dropped.
 </td></tr><tr><td class="subtitle-table-cell"><div class="subtitle-text">DCC</div></td></tr><tr><td bgcolor="#EAEAEA">
 <b>Syntax: &lt;0x01&gt;DCC &lt;type&gt; &lt;type dependent parameters&gt;&lt;0x01&gt;</b><br>
 The DCC tag is used to initiate a Direct Client Connection.
 The known DCC types are:<br>
-<pre>
-&nbsp;&nbsp;&nbsp;&nbsp;CHAT<br>
-&nbsp;&nbsp;&nbsp;&nbsp;SEND<br>
-&nbsp;&nbsp;&nbsp;&nbsp;SSEND<br>
-&nbsp;&nbsp;&nbsp;&nbsp;TSEND<br>
-&nbsp;&nbsp;&nbsp;&nbsp;GET<br>
-&nbsp;&nbsp;&nbsp;&nbsp;TGET<br>
-&nbsp;&nbsp;&nbsp;&nbsp;ACCEPT<br>
-&nbsp;&nbsp;&nbsp;&nbsp;RESUME<br>
+<pre><br>
+CHAT<br>
+SEND<br>
+SSEND<br>
+TSEND<br>
+GET<br>
+TGET<br>
+ACCEPT<br>
+RESUME<br>
 </pre>
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_generic_index_all.html">Miscellaneous</a>
-<div class='footer'>KVIrc 4.9.2.git-7017-g48dacdb Documentation - generated by un1versal on Mon Nov 14 04:21:37 2016</div>
+<div class='footer'>KVIrc 5.2.0.5.2.0 Documentation - generated by pragma on Sun Jan 14 18:20:53 2024</div>
 </body>
 </html>

@@ -4,9 +4,9 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
 // Some vars
-$current = "5.0.0";
+$current = "5.2.0";
 $codename = "Aria";
-$availVersions = array("5.0.0",$current);
+$availVersions = array("5.2.0",$current);
 $dpath = "ftp://ftp.kvirc.net/pub/kvirc/";
 
 // Include language templates

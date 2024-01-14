@@ -1,167 +1,9 @@
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
 <title>server</title>
 <style type="text/css">
-body {
- font-size: 10pt;
- margin-left: 8px;
- margin-right: 8px;
- margin-top: 6px;
- margin-bottom: 6px;
- font-family:Verdana,Helvetica,Arial;
-}
-table, td, tr {
- font-size: 10pt;
- font-family:Verdana,Helvetica,Arial;
- color: #3c3c3c;
-}
-td {
- padding: 6px;
-}
-a:link {
- text-decoration: none;
- color: #2883e2;
-}
-a:visited {
- text-decoration: none;
- color: #6856cc;
-}
-a:hover {
- text-decoration: underline;
- color: #186CC4;
-}
-a:active {
- text-decoration: underline;
- color: #186CC4;
-}
-.title-table-cell {
- border-top-left-radius: 3px;
- border-top-right-radius: 3px;
- background-color: #F2DFB1;
-}
-.title-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 18pt;
- font-weight: bold;
- padding-bottom: 3px;
- color: #404040;
- text-shadow: 0px 2px 0px rgba(247,247,247,1);
-}
-.title-secondary-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 11pt;
- padding-top: 3px;
- color: #474747;
- text-shadow: 0px 2px 0px rgba(247,247,247,1);
-}
-.subtitle-table-cell {
- background-color: #D6D6D6;
-}
-.subtitle-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 11pt;
- color: #000000;
- text-shadow: 0px 1px 0px rgba(247,247,247,1);
-}
-.subsubtitle-table-cell {
- background-color: #E3E3E3;
-}
-.subsubtitle-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 10pt;
- color: #474747;
-}
-.syntax-text {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- font-weight: bold;
- white-space: pre;
- color: #800000;
-}
-.example-box {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- white-space: pre;
- background-color: #f5f5f5;
- border: 1px solid #d5d5d5;
- color: #800000;
- padding: 10px;
- margin-top: 6px;
- margin-bottom: 6px;
-}
-.example-box a:link {
- color: #600030;
-}
-.example-box a:visited {
- color: #600030;
-}
-.example-box a:hover {
- color: #FF2B46;
-}
-.example-box a:active {
- color: #FF2B46;
-}
-.comment-text {
- color: #578A57;
-}
-.comment-text a:link {
- color: #578A57;
-}
-.comment-text a:visited {
- color: #578A57;
-}
-.comment-text a:hover {
- color: #35BD58;
-}
-.comment-text a:active {
- color: #35BD58;
-}
-.example-paren {
- color: #8A7000;
-}
-.example-bracket {
- color: #9C7914;
-}
-.example-oper {
- color: #9C7914;
-}
-.example-variable {
- color: #AB6332;
-}
-.comment-text .example-variable {
- color: #578A57;
-}
-.comment-text .example-oper {
- color: #578A57;
-}
-.comment-text .example-paren {
- color: #578A57;
-}
-.comment-text .example-bracket {
- color: #578A57;
-}
-.switch-table {
- width: 100%;
- border-collapse: collapse;
-}
-.switch-title-table-cell {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- color: #670000;
- background-color: #EDEDED;
-}
-.switch-body-table-cell {
-}
-.footer {
- border-top: 1px solid #a2a2a2;
- color: #a2a2a2;
- margin-top: 8px;
- padding-top: 4px;
- font-style: italic;
- font-size: 8pt;
-}
-</style>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+body { 	font-size: 10pt; 	margin-left: 8px; 	margin-right: 8px; 	margin-top: 6px; 	margin-bottom: 6px; 	line-height: 24px; 	font-family: sans-serif; } table, td, tr { 	color: #3c3c3c; 	font-size: 10pt; } td { 	padding: 6px; } a:link { 	text-decoration: none; 	color: #2883e2; } a:visited { 	text-decoration: none; 	color: #6856cc; } a:hover { 	text-decoration: underline; 	color: #186CC4; } pre { 	white-space: normal; } a:active { 	text-decoration: underline; 	color: #186CC4; } .title-table-cell { 	border-top-left-radius: 3px; 	border-top-right-radius: 3px; 	background-color: #F2DFB1; } .title-text { 	font-size: 18pt; 	font-weight: bold; 	padding-bottom: 3px; 	color: #404040; 	text-shadow: 0px 2px 0px rgba(247,247,247,1); } .title-secondary-text { 	font-size: 11pt; 	padding-top: 3px; 	color: #474747; 	text-shadow: 0px 2px 0px rgba(247,247,247,1); } .subtitle-table-cell { 	background-color: #D6D6D6; } .subtitle-text { 	font-size: 11pt; 	color: #000000; 	text-shadow: 0px 1px 0px rgba(247,247,247,1); } .subsubtitle-table-cell { 	background-color: #E3E3E3; } .subsubtitle-text { 	font-size: 10pt; 	color: #474747; } .syntax-text { 	font-family: monospace; 	font-size: 10pt; 	font-weight: bold; 	color: #800000; } .note-box { 	background-color: #F2F2F2; 	color: #636363; 	font-size: 9pt; } .example-box { 	font-family: monospace; 	font-size: 10pt; 	background-color: #f5f5f5; 	border: 1px solid #d5d5d5; 	color: #800000; 	margin-top: 6px; 	margin-bottom: 6px; 	line-height: 16px; 	padding: 10px; } .example-box a:link { 	color: #600030; } .example-box a:visited { 	color: #600030; } .example-box a:hover { 	color: #FF2B46; } .example-box a:active { 	color: #FF2B46; } .comment-text { 	color: #578A57; } .comment-text a:link { 	color: #578A57; } .comment-text a:visited { 	color: #578A57; } .comment-text a:hover { 	color: #35BD58; } .comment-text a:active { 	color: #35BD58; } .example-paren { 	color: #8A7000; } .example-bracket { 	color: #9C7914; } .example-oper { 	color: #9C7914; } .example-variable { 	color: #AB6332; } .comment-text .example-variable { 	color: #578A57; } .comment-text .example-oper { 	color: #578A57; } .comment-text .example-paren { 	color: #578A57; } .comment-text .example-bracket { 	color: #578A57; } .switch-table { 	width: 100%; 	border-collapse: collapse; } .switch-title-table-cell { 	font-family:"Lucida Console", Monaco, "Courier New", monospace; 	font-size: 10pt; 	color: #670000; 	background-color: #EDEDED; } /* .switch-body-table-cell { } */ .footer { 	border-top: 1px solid #a2a2a2; 	color: #a2a2a2; 	margin-top: 8px; 	padding-top: 4px; 	font-style: italic; 	font-size: 8pt; } </style>
 </head>
 <body bgcolor="#FFFFFF" text="#000000">
 <table width="100%" cellpadding="1" cellspacing="0" border="0">
@@ -227,7 +69,7 @@ a connection in progress then it is <i>brutally</i> terminated.<br>
     <td>
       <table class="switch-table">
 <tr><td class="switch-title-table-cell">-b=&lt;local address:string&gt; | --bind-address=&lt;local address:string&gt;</td></tr>
-<tr><td class="switch-body-table-cell">Bind the outgoing connection to &lt;local address&gt;. The &lt;local address&gt; must be either the IP address of a local interface or a local interface name itself (e.g. eth0 under Linux, en0 under OS X etc.) suitable for contacting the remote &lt;server&gt;: this means that if you're going to use the -i switch, the &lt;local address&gt; <b>must</b> be an IPv6 address. If using a local interface name as &lt;local address&gt; (working on most, but not all systems), the KVIrc network engine will automatically detect the interface address (i.e. the default address of that interface).</td></tr>
+<tr><td class="switch-body-table-cell">Bind the outgoing connection to &lt;local address&gt;. The &lt;local address&gt; must be either the IP address of a local interface or a local interface name itself (e.g. eth0 under Linux, en0 under macOS etc.) suitable for contacting the remote &lt;server&gt;: this means that if you're going to use the -i switch, the &lt;local address&gt; <b>must</b> be an IPv6 address. If using a local interface name as &lt;local address&gt; (working on most, but not all systems), the KVIrc network engine will automatically detect the interface address (i.e. the default address of that interface).</td></tr>
 <tr><td class="switch-title-table-cell">-c=&lt;command sequence:string&gt; | --command=&lt;command sequence:string&gt;</td></tr>
 <tr><td class="switch-body-table-cell">The &lt;command sequence&gt; will be executed just after the login operations have been completed.</td></tr>
 <tr><td class="switch-title-table-cell">-f=&lt;socket filter:string&gt; | --filter=&lt;socket filter:string&gt;</td></tr>
@@ -243,7 +85,7 @@ a connection in progress then it is <i>brutally</i> terminated.<br>
 <tr><td class="switch-title-table-cell">-q=&lt;nick:string&gt; | --nickname=&lt;nick:string&gt;</td></tr>
 <tr><td class="switch-body-table-cell">Uses &lt;nick&gt; to login to the server (the nickname will be stored in the server entry too).</td></tr>
 <tr><td class="switch-title-table-cell">-s | --ssl</td></tr>
-<tr><td class="switch-body-table-cell">Activates the SSL support for this connection (if OpenSSL support has been compiled in).</td></tr>
+<tr><td class="switch-body-table-cell">Activates the SSL support for this connection (if OpenSSL support has been compiled in). If SSL is enabled and no port is specified, the connection will be made to port 6697.</td></tr>
 <tr><td class="switch-title-table-cell">-u | --unused-context</td></tr>
 <tr><td class="switch-body-table-cell">Forces the connection to be attempted in the first IRC context that has no connection in progress. If all the IRC contexts have connections in progress then a new one is created.</td></tr>
 <tr><td class="switch-title-table-cell">-l | --last</td></tr>
@@ -255,22 +97,23 @@ a connection in progress then it is <i>brutally</i> terminated.<br>
     <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><div class="example-box">server irc.tin.it
-server -i irc6.ircd.it
-server -i ircd.stealth.net 6667
-server irc.undernet.org 6665
-server -n irc.openprojects.net
-server -c="join #kvirc" irc.stealth.net 6665
-server -b=ppp0 irc.tin.it
-server undernet
-server id:mybouncerwithusername1
-server id:mybouncerwithusername2
-server net:under.net
-</div>
+    <td></td></tr><tr><td class="example-box"><br>
+server irc.tin.it<br>
+server -i irc6.ircd.it<br>
+server -i ircd.stealth.net 6667<br>
+server irc.undernet.org 6665<br>
+server -n irc.openprojects.net<br>
+server -c="join #kvirc" irc.stealth.net 6665<br>
+server -b=ppp0 irc.tin.it<br>
+server undernet<br>
+server id:mybouncerwithusername1<br>
+server id:mybouncerwithusername2<br>
+server net:under.net<br>
+</td></tr><tr><td bgcolor="#EAEAEA">
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<div class='footer'>KVIrc 4.9.2.git-7017-g48dacdb Documentation - generated by un1versal on Mon Nov 14 04:21:37 2016</div>
+<div class='footer'>KVIrc 5.2.0.5.2.0 Documentation - generated by pragma on Sun Jan 14 18:20:53 2024</div>
 </body>
 </html>

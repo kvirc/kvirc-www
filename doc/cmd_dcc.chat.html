@@ -1,167 +1,9 @@
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
 <title>dcc.chat</title>
 <style type="text/css">
-body {
- font-size: 10pt;
- margin-left: 8px;
- margin-right: 8px;
- margin-top: 6px;
- margin-bottom: 6px;
- font-family:Verdana,Helvetica,Arial;
-}
-table, td, tr {
- font-size: 10pt;
- font-family:Verdana,Helvetica,Arial;
- color: #3c3c3c;
-}
-td {
- padding: 6px;
-}
-a:link {
- text-decoration: none;
- color: #2883e2;
-}
-a:visited {
- text-decoration: none;
- color: #6856cc;
-}
-a:hover {
- text-decoration: underline;
- color: #186CC4;
-}
-a:active {
- text-decoration: underline;
- color: #186CC4;
-}
-.title-table-cell {
- border-top-left-radius: 3px;
- border-top-right-radius: 3px;
- background-color: #F2DFB1;
-}
-.title-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 18pt;
- font-weight: bold;
- padding-bottom: 3px;
- color: #404040;
- text-shadow: 0px 2px 0px rgba(247,247,247,1);
-}
-.title-secondary-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 11pt;
- padding-top: 3px;
- color: #474747;
- text-shadow: 0px 2px 0px rgba(247,247,247,1);
-}
-.subtitle-table-cell {
- background-color: #D6D6D6;
-}
-.subtitle-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 11pt;
- color: #000000;
- text-shadow: 0px 1px 0px rgba(247,247,247,1);
-}
-.subsubtitle-table-cell {
- background-color: #E3E3E3;
-}
-.subsubtitle-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 10pt;
- color: #474747;
-}
-.syntax-text {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- font-weight: bold;
- white-space: pre;
- color: #800000;
-}
-.example-box {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- white-space: pre;
- background-color: #f5f5f5;
- border: 1px solid #d5d5d5;
- color: #800000;
- padding: 10px;
- margin-top: 6px;
- margin-bottom: 6px;
-}
-.example-box a:link {
- color: #600030;
-}
-.example-box a:visited {
- color: #600030;
-}
-.example-box a:hover {
- color: #FF2B46;
-}
-.example-box a:active {
- color: #FF2B46;
-}
-.comment-text {
- color: #578A57;
-}
-.comment-text a:link {
- color: #578A57;
-}
-.comment-text a:visited {
- color: #578A57;
-}
-.comment-text a:hover {
- color: #35BD58;
-}
-.comment-text a:active {
- color: #35BD58;
-}
-.example-paren {
- color: #8A7000;
-}
-.example-bracket {
- color: #9C7914;
-}
-.example-oper {
- color: #9C7914;
-}
-.example-variable {
- color: #AB6332;
-}
-.comment-text .example-variable {
- color: #578A57;
-}
-.comment-text .example-oper {
- color: #578A57;
-}
-.comment-text .example-paren {
- color: #578A57;
-}
-.comment-text .example-bracket {
- color: #578A57;
-}
-.switch-table {
- width: 100%;
- border-collapse: collapse;
-}
-.switch-title-table-cell {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- color: #670000;
- background-color: #EDEDED;
-}
-.switch-body-table-cell {
-}
-.footer {
- border-top: 1px solid #a2a2a2;
- color: #a2a2a2;
- margin-top: 8px;
- padding-top: 4px;
- font-style: italic;
- font-size: 8pt;
-}
-</style>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+body { 	font-size: 10pt; 	margin-left: 8px; 	margin-right: 8px; 	margin-top: 6px; 	margin-bottom: 6px; 	line-height: 24px; 	font-family: sans-serif; } table, td, tr { 	color: #3c3c3c; 	font-size: 10pt; } td { 	padding: 6px; } a:link { 	text-decoration: none; 	color: #2883e2; } a:visited { 	text-decoration: none; 	color: #6856cc; } a:hover { 	text-decoration: underline; 	color: #186CC4; } pre { 	white-space: normal; } a:active { 	text-decoration: underline; 	color: #186CC4; } .title-table-cell { 	border-top-left-radius: 3px; 	border-top-right-radius: 3px; 	background-color: #F2DFB1; } .title-text { 	font-size: 18pt; 	font-weight: bold; 	padding-bottom: 3px; 	color: #404040; 	text-shadow: 0px 2px 0px rgba(247,247,247,1); } .title-secondary-text { 	font-size: 11pt; 	padding-top: 3px; 	color: #474747; 	text-shadow: 0px 2px 0px rgba(247,247,247,1); } .subtitle-table-cell { 	background-color: #D6D6D6; } .subtitle-text { 	font-size: 11pt; 	color: #000000; 	text-shadow: 0px 1px 0px rgba(247,247,247,1); } .subsubtitle-table-cell { 	background-color: #E3E3E3; } .subsubtitle-text { 	font-size: 10pt; 	color: #474747; } .syntax-text { 	font-family: monospace; 	font-size: 10pt; 	font-weight: bold; 	color: #800000; } .note-box { 	background-color: #F2F2F2; 	color: #636363; 	font-size: 9pt; } .example-box { 	font-family: monospace; 	font-size: 10pt; 	background-color: #f5f5f5; 	border: 1px solid #d5d5d5; 	color: #800000; 	margin-top: 6px; 	margin-bottom: 6px; 	line-height: 16px; 	padding: 10px; } .example-box a:link { 	color: #600030; } .example-box a:visited { 	color: #600030; } .example-box a:hover { 	color: #FF2B46; } .example-box a:active { 	color: #FF2B46; } .comment-text { 	color: #578A57; } .comment-text a:link { 	color: #578A57; } .comment-text a:visited { 	color: #578A57; } .comment-text a:hover { 	color: #35BD58; } .comment-text a:active { 	color: #35BD58; } .example-paren { 	color: #8A7000; } .example-bracket { 	color: #9C7914; } .example-oper { 	color: #9C7914; } .example-variable { 	color: #AB6332; } .comment-text .example-variable { 	color: #578A57; } .comment-text .example-oper { 	color: #578A57; } .comment-text .example-paren { 	color: #578A57; } .comment-text .example-bracket { 	color: #578A57; } .switch-table { 	width: 100%; 	border-collapse: collapse; } .switch-title-table-cell { 	font-family:"Lucida Console", Monaco, "Courier New", monospace; 	font-size: 10pt; 	color: #670000; 	background-color: #EDEDED; } /* .switch-body-table-cell { } */ .footer { 	border-top: 1px solid #a2a2a2; 	color: #a2a2a2; 	margin-top: 8px; 	padding-top: 4px; 	font-style: italic; 	font-size: 8pt; } </style>
 </head>
 <body bgcolor="#FFFFFF" text="#000000">
 <table width="100%" cellpadding="1" cellspacing="0" border="0">
@@ -193,7 +35,7 @@ a:active {
 The simplest case <i>dcc.chat &lt;nickname&gt;</i> will work just as in all
 the other IRC clients, but this command is really more powerful...<br>
 Before attempting to understand the possibilities of this command,
-be sure to know how <a href="doc_dcc_connection.html">dcc negotiation and connections</a> work.
+be sure to know how <a href="doc_dcc_connection.html">DCC negotiation and connections</a> work.
 If the <b>i</b> switch is specified, the local listening socket
 will be bound to the specified &lt;interface&gt; (which is an IP address, IPv4 or IPv6),
 otherwise it will be bound to the interface of the current IRC connection.<br>
@@ -286,72 +128,76 @@ and set it in the options dialog.
   </tr>
   <tr bgcolor="#EAEAEA">
     <td>Simple examples:
-<div class="example-box"><span class="comment-text"># Simple DCC chat to Pragma
-</span>dcc.chat Pragma
-<span class="comment-text"># DCC chat to Pragma, listen on address 127.0.0.1
-</span>dcc.chat -i=127.0.0.1 Pragma
-<span class="comment-text"># DCC chat to Pragma, listen on address 168.0.0.1 and port 1025
-</span>dcc.chat -i=168.0.0.1 -p=1025 Pragma
-</div>
+</td></tr><tr><td class="example-box"><br>
+<span class="comment-text"># Simple DCC chat to Pragma<br>
+</span>dcc.chat Pragma<br>
+<span class="comment-text"># DCC chat to Pragma, listen on address 127.0.0.1<br>
+</span>dcc.chat -i=127.0.0.1 Pragma<br>
+<span class="comment-text"># DCC chat to Pragma, listen on address 168.0.0.1 and port 1025<br>
+</span>dcc.chat -i=168.0.0.1 -p=1025 Pragma<br>
+</td></tr><tr><td bgcolor="#EAEAEA">
 More tricky ones:
-<div class="example-box"><span class="comment-text"># DCC chat to Pragma, listen on address 127.0.0.1 and port 1080
-</span><span class="comment-text"># but tell him to connect to address 212.134.22.11 port 1080
-</span>dcc.chat -i=127.0.0.1 -p=1080 -a=212.134.22.11 Pragma
-<span class="comment-text"># DCC chat to Pragma, listen on address 127.0.0.1 and port 1080
-</span><span class="comment-text"># but tell him to connect to address 212.134.22.11 port 1090
-</span>dcc.chat -i=127.0.0.1 -p=1080 -a=212.134.22.11 -f=1090 Pragma
-</div>
+</td></tr><tr><td class="example-box"><br>
+<span class="comment-text"># DCC chat to Pragma, listen on address 127.0.0.1 and port 1080<br>
+</span><span class="comment-text"># but tell him to connect to address 212.134.22.11 port 1080<br>
+</span>dcc.chat -i=127.0.0.1 -p=1080 -a=212.134.22.11 Pragma<br>
+<span class="comment-text"># DCC chat to Pragma, listen on address 127.0.0.1 and port 1080<br>
+</span><span class="comment-text"># but tell him to connect to address 212.134.22.11 port 1090<br>
+</span>dcc.chat -i=127.0.0.1 -p=1080 -a=212.134.22.11 -f=1090 Pragma<br>
+</td></tr><tr><td bgcolor="#EAEAEA">
 Now run completely out of bounds. Use dcc.chat connections
 to do various things:
-<div class="example-box"><span class="comment-text"># Tricky: simulate a HTTP server
-</span>dcc.chat -n -i=127.0.0.1 -p=80 WebBrowser
-<span class="comment-text"># Now open http://127.0.0.1 with your web browser
-</span><span class="comment-text"># and type </span>"&lt;html&gt;&lt;body&gt;Hello!&lt;/body&gt;&lt;/html&gt;" :)
-<span class="comment-text">#
-</span><span class="comment-text"># Tricky 2: simulate the Ident daemon (if you have none)
-</span>dcc.chat -n -i=127.0.0.1 -p=113 Client
-<span class="comment-text">#
-</span><span class="comment-text"># Now a self-DCC connection without the IRC negotiation
-</span><span class="comment-text"># Src: Setup a listening socket awaiting the </span>"Destination" user connection
-dcc.chat -n -i=127.0.0.1 -p=1080 Dst
-<span class="comment-text"># Dst: Connect to the listening socket at addr 127.0.0.1 and port 1080
-</span>dcc.chat -c -i=127.0.0.1 -p=1080 Src
-<span class="comment-text"># The above example will mess you a bit...
-</span><span class="comment-text"># Try to guess why in both windows YOU have the same nickname
-</span><span class="comment-text"># that is probably not Dst nor Src... :)
-</span></div>
+</td></tr><tr><td class="example-box"><br>
+<span class="comment-text"># Tricky: simulate a HTTP server<br>
+</span>dcc.chat -n -i=127.0.0.1 -p=80 WebBrowser<br>
+<span class="comment-text"># Now open http://127.0.0.1 with your web browser<br>
+</span><span class="comment-text"># and type </span>"&lt;html&gt;&lt;body&gt;Hello!&lt;/body&gt;&lt;/html&gt;" :)<br>
+<span class="comment-text">#<br>
+</span><span class="comment-text"># Tricky 2: simulate the Ident daemon (if you have none)<br>
+</span>dcc.chat -n -i=127.0.0.1 -p=113 Client<br>
+<span class="comment-text">#<br>
+</span><span class="comment-text"># Now a self-DCC connection without the IRC negotiation<br>
+</span><span class="comment-text"># Src: Setup a listening socket awaiting the </span>"Destination" user connection<br>
+dcc.chat -n -i=127.0.0.1 -p=1080 Dst<br>
+<span class="comment-text"># Dst: Connect to the listening socket at addr 127.0.0.1 and port 1080<br>
+</span>dcc.chat -c -i=127.0.0.1 -p=1080 Src<br>
+<span class="comment-text"># The above example will mess you a bit...<br>
+</span><span class="comment-text"># Try to guess why in both windows YOU have the same nickname<br>
+</span><span class="comment-text"># that is probably not Dst nor Src... :)<br>
+</span></td></tr><tr><td bgcolor="#EAEAEA">
 Using the shell FTP program is too easy:
 we're <b>real hackers</b> and want to do complicated things...
-<div class="example-box"><span class="comment-text"># Connect to the local FTP server and get the list of contents
-</span>/dcc.chat -c -i=127.0.0.1 -p=21 FtpServer
-<span class="comment-text"># Now login, type in the new window (the following lines are <b>not</b> commands):
-</span>USER youruser
-PASS yourpass
-<span class="comment-text"># Now enter passive mode
-</span>PASV
-<span class="comment-text"># And watch the line that you have received...sth like
-</span><span class="comment-text"># 227 Entering passive mode (127,0,0,1,210,195)
-</span>/dcc.chat -c -i=127.0.0.1 -p=$<span class="example-paren">((</span>210 * 256<span class="example-paren">)</span> + 195<span class="example-paren">)</span> FtpList
-<span class="comment-text"># (Change the port numbers accordingly)
-</span><span class="comment-text"># And then type in the FTP server window (this is <b>not</b> a KVIrc command):
-</span>LIST
-<span class="comment-text"># Then watch the ls output in the FtpList window. :)
-</span><span class="comment-text"># In this way you can also read ASCII files by FTP:
-</span><span class="comment-text"># Assume that in the previous ls output you have seen
-</span><span class="comment-text"># a README file.
-</span><span class="comment-text"># In the FTP server window type:
-</span>PASV
-<span class="comment-text"># Watch the message
-</span><span class="comment-text"># 227 Entering passive mode (127,0,0,1,22,227)
-</span>/dcc.chat -c -i=127.0.0.1 -p=$<span class="example-paren">((</span>22 * 256<span class="example-paren">)</span> + 227<span class="example-paren">)</span> README
-<span class="comment-text"># In the FtpServer window type:
-</span>RETR README
-<span class="comment-text"># And read the file in the README window :)
-</span></div>
+</td></tr><tr><td class="example-box"><br>
+<span class="comment-text"># Connect to the local FTP server and get the list of contents<br>
+</span>/dcc.chat -c -i=127.0.0.1 -p=21 FtpServer<br>
+<span class="comment-text"># Now login, type in the new window (the following lines are <b>not</b> commands):<br>
+</span>USER youruser<br>
+PASS yourpass<br>
+<span class="comment-text"># Now enter passive mode<br>
+</span>PASV<br>
+<span class="comment-text"># And watch the line that you have received...sth like<br>
+</span><span class="comment-text"># 227 Entering passive mode (127,0,0,1,210,195)<br>
+</span>/dcc.chat -c -i=127.0.0.1 -p=$<span class="example-paren">((</span>210 * 256<span class="example-paren">)</span> + 195<span class="example-paren">)</span> FtpList<br>
+<span class="comment-text"># (Change the port numbers accordingly)<br>
+</span><span class="comment-text"># And then type in the FTP server window (this is <b>not</b> a KVIrc command):<br>
+</span>LIST<br>
+<span class="comment-text"># Then watch the ls output in the FtpList window. :)<br>
+</span><span class="comment-text"># In this way you can also read ASCII files by FTP:<br>
+</span><span class="comment-text"># Assume that in the previous ls output you have seen<br>
+</span><span class="comment-text"># a README file.<br>
+</span><span class="comment-text"># In the FTP server window type:<br>
+</span>PASV<br>
+<span class="comment-text"># Watch the message<br>
+</span><span class="comment-text"># 227 Entering passive mode (127,0,0,1,22,227)<br>
+</span>/dcc.chat -c -i=127.0.0.1 -p=$<span class="example-paren">((</span>22 * 256<span class="example-paren">)</span> + 227<span class="example-paren">)</span> README<br>
+<span class="comment-text"># In the FtpServer window type:<br>
+</span>RETR README<br>
+<span class="comment-text"># And read the file in the README window :)<br>
+</span></td></tr><tr><td bgcolor="#EAEAEA">
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_command_alphabetic_a.html">Commands</a>
-<div class='footer'>KVIrc 4.9.2.git-7017-g48dacdb Documentation - generated by un1versal on Mon Nov 14 04:21:37 2016</div>
+<div class='footer'>KVIrc 5.2.0.5.2.0 Documentation - generated by pragma on Sun Jan 14 18:20:53 2024</div>
 </body>
 </html>

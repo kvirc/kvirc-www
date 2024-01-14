@@ -1,167 +1,9 @@
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
 <title>widget class</title>
 <style type="text/css">
-body {
- font-size: 10pt;
- margin-left: 8px;
- margin-right: 8px;
- margin-top: 6px;
- margin-bottom: 6px;
- font-family:Verdana,Helvetica,Arial;
-}
-table, td, tr {
- font-size: 10pt;
- font-family:Verdana,Helvetica,Arial;
- color: #3c3c3c;
-}
-td {
- padding: 6px;
-}
-a:link {
- text-decoration: none;
- color: #2883e2;
-}
-a:visited {
- text-decoration: none;
- color: #6856cc;
-}
-a:hover {
- text-decoration: underline;
- color: #186CC4;
-}
-a:active {
- text-decoration: underline;
- color: #186CC4;
-}
-.title-table-cell {
- border-top-left-radius: 3px;
- border-top-right-radius: 3px;
- background-color: #F2DFB1;
-}
-.title-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 18pt;
- font-weight: bold;
- padding-bottom: 3px;
- color: #404040;
- text-shadow: 0px 2px 0px rgba(247,247,247,1);
-}
-.title-secondary-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 11pt;
- padding-top: 3px;
- color: #474747;
- text-shadow: 0px 2px 0px rgba(247,247,247,1);
-}
-.subtitle-table-cell {
- background-color: #D6D6D6;
-}
-.subtitle-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 11pt;
- color: #000000;
- text-shadow: 0px 1px 0px rgba(247,247,247,1);
-}
-.subsubtitle-table-cell {
- background-color: #E3E3E3;
-}
-.subsubtitle-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 10pt;
- color: #474747;
-}
-.syntax-text {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- font-weight: bold;
- white-space: pre;
- color: #800000;
-}
-.example-box {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- white-space: pre;
- background-color: #f5f5f5;
- border: 1px solid #d5d5d5;
- color: #800000;
- padding: 10px;
- margin-top: 6px;
- margin-bottom: 6px;
-}
-.example-box a:link {
- color: #600030;
-}
-.example-box a:visited {
- color: #600030;
-}
-.example-box a:hover {
- color: #FF2B46;
-}
-.example-box a:active {
- color: #FF2B46;
-}
-.comment-text {
- color: #578A57;
-}
-.comment-text a:link {
- color: #578A57;
-}
-.comment-text a:visited {
- color: #578A57;
-}
-.comment-text a:hover {
- color: #35BD58;
-}
-.comment-text a:active {
- color: #35BD58;
-}
-.example-paren {
- color: #8A7000;
-}
-.example-bracket {
- color: #9C7914;
-}
-.example-oper {
- color: #9C7914;
-}
-.example-variable {
- color: #AB6332;
-}
-.comment-text .example-variable {
- color: #578A57;
-}
-.comment-text .example-oper {
- color: #578A57;
-}
-.comment-text .example-paren {
- color: #578A57;
-}
-.comment-text .example-bracket {
- color: #578A57;
-}
-.switch-table {
- width: 100%;
- border-collapse: collapse;
-}
-.switch-title-table-cell {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- color: #670000;
- background-color: #EDEDED;
-}
-.switch-body-table-cell {
-}
-.footer {
- border-top: 1px solid #a2a2a2;
- color: #a2a2a2;
- margin-top: 8px;
- padding-top: 4px;
- font-style: italic;
- font-size: 8pt;
-}
-</style>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+body { 	font-size: 10pt; 	margin-left: 8px; 	margin-right: 8px; 	margin-top: 6px; 	margin-bottom: 6px; 	line-height: 24px; 	font-family: sans-serif; } table, td, tr { 	color: #3c3c3c; 	font-size: 10pt; } td { 	padding: 6px; } a:link { 	text-decoration: none; 	color: #2883e2; } a:visited { 	text-decoration: none; 	color: #6856cc; } a:hover { 	text-decoration: underline; 	color: #186CC4; } pre { 	white-space: normal; } a:active { 	text-decoration: underline; 	color: #186CC4; } .title-table-cell { 	border-top-left-radius: 3px; 	border-top-right-radius: 3px; 	background-color: #F2DFB1; } .title-text { 	font-size: 18pt; 	font-weight: bold; 	padding-bottom: 3px; 	color: #404040; 	text-shadow: 0px 2px 0px rgba(247,247,247,1); } .title-secondary-text { 	font-size: 11pt; 	padding-top: 3px; 	color: #474747; 	text-shadow: 0px 2px 0px rgba(247,247,247,1); } .subtitle-table-cell { 	background-color: #D6D6D6; } .subtitle-text { 	font-size: 11pt; 	color: #000000; 	text-shadow: 0px 1px 0px rgba(247,247,247,1); } .subsubtitle-table-cell { 	background-color: #E3E3E3; } .subsubtitle-text { 	font-size: 10pt; 	color: #474747; } .syntax-text { 	font-family: monospace; 	font-size: 10pt; 	font-weight: bold; 	color: #800000; } .note-box { 	background-color: #F2F2F2; 	color: #636363; 	font-size: 9pt; } .example-box { 	font-family: monospace; 	font-size: 10pt; 	background-color: #f5f5f5; 	border: 1px solid #d5d5d5; 	color: #800000; 	margin-top: 6px; 	margin-bottom: 6px; 	line-height: 16px; 	padding: 10px; } .example-box a:link { 	color: #600030; } .example-box a:visited { 	color: #600030; } .example-box a:hover { 	color: #FF2B46; } .example-box a:active { 	color: #FF2B46; } .comment-text { 	color: #578A57; } .comment-text a:link { 	color: #578A57; } .comment-text a:visited { 	color: #578A57; } .comment-text a:hover { 	color: #35BD58; } .comment-text a:active { 	color: #35BD58; } .example-paren { 	color: #8A7000; } .example-bracket { 	color: #9C7914; } .example-oper { 	color: #9C7914; } .example-variable { 	color: #AB6332; } .comment-text .example-variable { 	color: #578A57; } .comment-text .example-oper { 	color: #578A57; } .comment-text .example-paren { 	color: #578A57; } .comment-text .example-bracket { 	color: #578A57; } .switch-table { 	width: 100%; 	border-collapse: collapse; } .switch-title-table-cell { 	font-family:"Lucida Console", Monaco, "Courier New", monospace; 	font-size: 10pt; 	color: #670000; 	background-color: #EDEDED; } /* .switch-body-table-cell { } */ .footer { 	border-top: 1px solid #a2a2a2; 	color: #a2a2a2; 	margin-top: 8px; 	padding-top: 4px; 	font-style: italic; 	font-size: 8pt; } </style>
 </head>
 <body bgcolor="#FFFFFF" text="#000000">
 <table width="100%" cellpadding="1" cellspacing="0" border="0">
@@ -227,6 +69,14 @@ All the other widget-type classes inherit from this one.
 <tr><td>Sets the maximum width of this widget to &lt;value&gt;. The user will not be able to resize the widget to a bigger value. This value is also used by the <a href="class_layout.html">layout class</a>.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setMaximumHeight">$setMaximumHeight(&lt;value&gt;)</a></font></b></code></td></tr>
 <tr><td>Sets the maximum height of this widget to &lt;value&gt;. The user will not be able to resize the widget to a bigger value. This value is also used by the <a href="class_layout.html">layout class</a>.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setFixedWidth">$setFixedWidth(&lt;value&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the fixed width of this widget to &lt;value&gt;. The user will not be able to resize the widget to a smaller or a bigger value.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setFixedHeight">$setFixedHeight(&lt;value&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the fixed height of this widget to &lt;value&gt;. The user will not be able to resize the widget to a smaller or a bigger value.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setFixedSize">$setFixedSize(&lt;width&gt;,&lt;height&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the fixed width and height of this widget to &lt;width&gt; and &lt;height&gt;. The user will not be able to resize the widget to a smaller or a bigger value.</td></tr>
+<tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setSizePolicy">$setSizePolicy(&lt;width_policy&gt;,&lt;height_policy&gt;)</a></font></b></code></td></tr>
+<tr><td>Sets the size policy of this widget.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="move">$move(&lt;x_or_array&gt;[,&lt;y&gt;])</a></font></b></code></td></tr>
 <tr><td>Moves this widget to the coordinate &lt;x&gt; and &lt;y&gt; relative to its parent widget (or the desktop if this widget is a toplevel one). This is equivalent to <a href="#setGeometry">$setGeometry</a>(&lt;x&gt;,&lt;y&gt;, <a href="#width">$width</a>(),<a href="#height">$height</a>()).</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="resize">$resize(&lt;w_or_array&gt;,[height])</a></font></b></code></td></tr>
@@ -302,13 +152,13 @@ All the other widget-type classes inherit from this one.
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setFont">$setFont(&lt;family:string&gt;,&lt;size:integer&gt;[,&lt;style1:string&gt;, &lt;style2:string&gt;, ...])</a></font></b></code></td></tr>
 <tr><td>Set the font's family,size and style, valid flag for style are:<br> - italic, bold, underline, overline, strikeout, fixedpitch  <br></td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setWFlags">$setWFlags(&lt;flag1&gt;, &lt;flag2&gt;, ...)</a></font></b></code></td></tr>
-<tr><td>This function sets widget flags, given as parameters. Valid flags are: <pre> &nbsp;&nbsp;&nbsp;&nbsp;TopLevel        - indicates that this widget is a top-level widget<br> &nbsp;&nbsp;&nbsp;&nbsp;Dialog          - indicates that this widget is a top-level window that should be decorated as a dialog<br> &nbsp;&nbsp;&nbsp;&nbsp;Desktop         - indicates that this widget is the desktop<br> &nbsp;&nbsp;&nbsp;&nbsp;Popup           - indicates that this widget is a popup top-level window<br> &nbsp;&nbsp;&nbsp;&nbsp;Title           - gives the window a title bar<br> &nbsp;&nbsp;&nbsp;&nbsp;StaysOnTop      - window stays on top <br> &nbsp;&nbsp;&nbsp;&nbsp;SysMenu         - add a windows system menu<br> &nbsp;&nbsp;&nbsp;&nbsp;Minimize        - add a minimize button for the sysmenu style<br> &nbsp;&nbsp;&nbsp;&nbsp;Maximize        - add a maximize button for the sysmenu style<br> </pre></td></tr>
+<tr><td>This function sets widget flags, given as parameters. Valid flags are: <pre><br> TopLevel        - indicates that this widget is a top-level widget<br> Dialog          - indicates that this widget is a top-level window that should be decorated as a dialog<br> Desktop         - indicates that this widget is the desktop<br> Popup           - indicates that this widget is a popup top-level window<br> Title           - gives the window a title bar<br> StaysOnTop      - window stays on top<br> SysMenu         - add a windows system menu<br> Minimize        - add a minimize button for the sysmenu style<br> Maximize        - add a maximize button for the sysmenu style<br> </pre></td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="centerToScreen">$centerToScreen()</a></font></b></code></td></tr>
 <tr><td>Centers the window on the screen (useful only for toplevel widgets).<br> The best place to call this function is in $showEvent()</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setFocusPolicy">$setFocusPolicy(&lt;key focus&gt;)</a></font></b></code></td></tr>
-<tr><td>Sets the way the widget accepts keyboard focus.<br> Valid parameters are: <pre> &nbsp;&nbsp;&nbsp;&nbsp;- TabFocus;	(widget accepts keyboard focus by tabbing)<br> &nbsp;&nbsp;&nbsp;&nbsp;- ClickFocus; (widget accepts keyboard focus by clicking)<br> &nbsp;&nbsp;&nbsp;&nbsp;- StrongFocus; (widget accepts both tabbing/clicking)<br> &nbsp;&nbsp;&nbsp;&nbsp;- No Focus;  (widget does not accept focus at all; this is the default value)<br> </pre></td></tr>
+<tr><td>Sets the way the widget accepts keyboard focus.<br> Valid parameters are: <pre><br> - TabFocus;	<span class="example-paren">(</span>widget accepts keyboard focus by tabbing<span class="example-paren">)</span><br> - ClickFocus; <span class="example-paren">(</span>widget accepts keyboard focus by clicking<span class="example-paren">)</span><br> - StrongFocus; <span class="example-paren">(</span>widget accepts both tabbing/clicking<span class="example-paren">)</span><br> - NoFocus;  <span class="example-paren">(</span>widget does not accept focus at all; this is the default value<span class="example-paren">)</span><br> </pre></td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="keyPressEvent">$keyPressEvent(&lt;key&gt;)</a></font></b></code></td></tr>
-<tr><td>If widget accepts keyboard focus (see <a href="#setFocusPolicy">$setFocusPolicy</a> ) this function handles for keys; In its argument the key pressed.<br> Special keys are: <pre> &nbsp;&nbsp;&nbsp;&nbsp;- Return <br> &nbsp;&nbsp;&nbsp;&nbsp;- Enter	<br> &nbsp;&nbsp;&nbsp;&nbsp;- Down (cursor arrow down) <br> &nbsp;&nbsp;&nbsp;&nbsp;- Up   (cursor arrow up) <br> &nbsp;&nbsp;&nbsp;&nbsp;- Left (cursor arrow left) <br> &nbsp;&nbsp;&nbsp;&nbsp;- Right (cursor arrow right) <br> &nbsp;&nbsp;&nbsp;&nbsp;- Shift <br> &nbsp;&nbsp;&nbsp;&nbsp;- Ctrl <br> &nbsp;&nbsp;&nbsp;&nbsp;- Alt <br> &nbsp;&nbsp;&nbsp;&nbsp;- CapsLock <br> &nbsp;&nbsp;&nbsp;&nbsp;- Backspace <br> &nbsp;&nbsp;&nbsp;&nbsp;- Del <br> &nbsp;&nbsp;&nbsp;&nbsp;- Esc <br> &nbsp;&nbsp;&nbsp;&nbsp;- 0 <br> &nbsp;&nbsp;&nbsp;&nbsp;- 1 <br> &nbsp;&nbsp;&nbsp;&nbsp;- 2 <br> &nbsp;&nbsp;&nbsp;&nbsp;- 3 <br> &nbsp;&nbsp;&nbsp;&nbsp;- 4 <br> &nbsp;&nbsp;&nbsp;&nbsp;- 5 <br> &nbsp;&nbsp;&nbsp;&nbsp;- 6 <br> &nbsp;&nbsp;&nbsp;&nbsp;- 7 <br> &nbsp;&nbsp;&nbsp;&nbsp;- 8 <br> &nbsp;&nbsp;&nbsp;&nbsp;- 9 <br> &nbsp;&nbsp;&nbsp;&nbsp;- + <br> &nbsp;&nbsp;&nbsp;&nbsp;- - <br> &nbsp;&nbsp;&nbsp;&nbsp;- * <br> &nbsp;&nbsp;&nbsp;&nbsp;- / <br> &nbsp;&nbsp;&nbsp;&nbsp;- ( <br> &nbsp;&nbsp;&nbsp;&nbsp;- ) <br> &nbsp;&nbsp;&nbsp;&nbsp;- = <br> &nbsp;&nbsp;&nbsp;&nbsp;- . <br> &nbsp;&nbsp;&nbsp;&nbsp;- ^ <br> </pre></td></tr>
+<tr><td>If widget accepts keyboard focus (see <a href="#setFocusPolicy">$setFocusPolicy</a> ) this function handles for keys; In its argument the key pressed.<br> Special keys are: <pre><br> - Return<br> - Enter<br> - Down <span class="example-paren">(</span>cursor arrow down<span class="example-paren">)</span><br> - Up   <span class="example-paren">(</span>cursor arrow up<span class="example-paren">)</span><br> - Left <span class="example-paren">(</span>cursor arrow left<span class="example-paren">)</span><br> - Right <span class="example-paren">(</span>cursor arrow right<span class="example-paren">)</span><br> - Shift<br> - Ctrl<br> - Alt<br> - CapsLock<br> - Backspace<br> - Del<br> - Esc<br> - 0<br> - 1<br> - 2<br> - 3<br> - 4<br> - 5<br> - 6<br> - 7<br> - 8<br> - 9<br> - +<br> - -<br> - *<br> - /<br> - <span class="example-paren">(</span><br> - <span class="example-paren">)</span><br> - =<br> - .<br> - ^<br> </pre></td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="mapFromGlobal">$mapFromGlobal(&lt;x&gt;,&lt;y&gt;)</a></font></b></code></td></tr>
 <tr><td>Translates the global screen coordinate pos to widget coordinates.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="mapToGlobal">$mapToGlobal(&lt;x&gt;,&lt;y&gt;)</a></font></b></code></td></tr>
@@ -320,13 +170,13 @@ All the other widget-type classes inherit from this one.
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;tip:string&gt; maybeTipEvent">&lt;tip:string&gt; $maybeTipEvent(&lt;x_tip_pos:integer&gt;,&lt;y_tip_pos:integer&gt;)</a></font></b></code></td></tr>
 <tr><td>This event handler is called when an eventual tip is going to be show. You can be reimplement this event and set a dynamic tool tip by using <i><a href="cmd_return.html">return</a> &lt;tooltip_string&gt;</i>. If a tooltip was set with <a href="#setTooltip">$setTooltip</a> the dynamic tooltip will be ignored. The default implementation does nothing.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="integer setAttribute">integer $setAttribute(&lt;string&gt;,&lt;bool_flag&gt;)</a></font></b></code></td></tr>
-<tr><td>Sets the attribute attribute on this widget if on is true; otherwise clears the attribute.<br> Valid attributes are:<br> <pre> &nbsp;&nbsp;&nbsp;&nbsp;OpaquePaintEvent - Indicates that the widget paints all its pixels when it receives a paint event. &nbsp;&nbsp;&nbsp;&nbsp;NoSystemBackground - Indicates that the widget has no background, i.e. when the widget receives paint events, the background is not automatically repainted. &nbsp;&nbsp;&nbsp;&nbsp;PaintOnScreen - Indicates that the widget wants to draw directly onto the screen. &nbsp;&nbsp;&nbsp;&nbsp;NoMousePropagation - Prohibits mouse events from being propagated to the widget's parent. </pre></td></tr>
+<tr><td>Sets the attribute attribute on this widget if on is true; otherwise clears the attribute.<br> Valid attributes are:<br> <pre><br> OpaquePaintEvent - Indicates that the widget paints all its pixels when it receives a paint event.<br> NoSystemBackground - Indicates that the widget has no background, i.e. when the widget receives paint events, the background is not automatically repainted.<br> PaintOnScreen - Indicates that the widget wants to draw directly onto the screen.<br> NoMousePropagation - Prohibits mouse events from being propagated to the widget's parent.<br> </pre></td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setStyleSheet">$setStyleSheet(&lt;string&gt;)</a></font></b></code></td></tr>
 <tr><td>Set a style sheet for this widget.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="customContextMenuRequestedEvent">$customContextMenuRequestedEvent(&lt;x_mouse_pos:integer&gt;,&lt;y_mouse_pos:integer&gt;)</a></font></b></code></td></tr>
 <tr><td>This event is triggered when the user has requested a context menu on the widget (i.e. right clicking on the widget). The x,y coordinates are widget relative.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="array">$array(&lt;red:integer,green:integer,blue:integer) $colorPalette(&lt;color_role:string&gt;&lt;color_group:string&gt;)</a></font></b></code></td></tr>
-<tr><td>Returns the color in color_group(disabled, active or inactive), used for color_role.<br> Valid color role are: <pre> &nbsp;&nbsp;&nbsp;&nbsp;Window - A general background color. &nbsp;&nbsp;&nbsp;&nbsp;WindowText - A general foreground color. &nbsp;&nbsp;&nbsp;&nbsp;Base - Used as the background color for text. &nbsp;&nbsp;&nbsp;&nbsp;Text - Used as foreground color for the text. &nbsp;&nbsp;&nbsp;&nbsp;Button - The general button background color. &nbsp;&nbsp;&nbsp;&nbsp;ButtonText - A foreground color used with the Button color. &nbsp;&nbsp;&nbsp;&nbsp;Highlight - A color to indicate a selected item or the current item. &nbsp;&nbsp;&nbsp;&nbsp;HighlightedText - A text color that contrasts with Highlight. </pre></td></tr>
+<tr><td>Returns the color in color_group(disabled, active or inactive), used for color_role.<br> Valid color role are: <pre><br> Window - A general background color.<br> WindowText - A general foreground color.<br> Base - Used as the background color for text.<br> Text - Used as foreground color for the text.<br> Button - The general button background color.<br> ButtonText - A foreground color used with the Button color.<br> Highlight - A color to indicate a selected item or the current item.<br> HighlightedText - A text color that contrasts with Highlight.<br> </pre></td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;short_cut_id:integer&gt; setKeyShortCut">&lt;short_cut_id:integer&gt; $setKeyShortCut(&lt;key:char&gt;)</a></font></b></code></td></tr>
 <tr><td>Adds a shortcut with key. A <a href="#shortCutEvent">$shortCutEvent</a> will be triggered when the user will press alt+key.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="shortCutEvent">$shortCutEvent(&lt;shortcut_id:integer&gt;)</a></font></b></code></td></tr>
@@ -342,41 +192,42 @@ All the other widget-type classes inherit from this one.
     <td class='subtitle-table-cell'><div class='subtitle-text'>Examples</div></td>
   </tr>
   <tr bgcolor="#EAEAEA">
-    <td><div class="example-box"><span class="example-variable">%widget</span> = $new<span class="example-paren">(</span>widget<span class="example-paren">)</span>
-<span class="comment-text"># This is the main container for other elements.</span>
-<span class="example-variable">%widget</span>-&gt;$setWindowTitle<span class="example-paren">(</span>"This is the widget title"<span class="example-paren">)</span>
-<span class="example-variable">%box</span>=$new<span class="example-paren">(</span>vbox,<span class="example-variable">%widget</span><span class="example-paren">)</span>
-<span class="example-variable">%layout</span>=$new<span class="example-paren">(</span>layout,<span class="example-variable">%widget</span><span class="example-paren">)</span>
-<span class="example-variable">%layout</span>-&gt;$addWidget<span class="example-paren">(</span><span class="example-variable">%box</span>,0,0<span class="example-paren">)</span>
-<span class="example-variable">%label</span> = $new<span class="example-paren">(</span>label,<span class="example-variable">%box</span><span class="example-paren">)</span>
-<span class="example-variable">%label</span>-&gt;$setText<span class="example-paren">(</span>"This is a text label"<span class="example-paren">)</span>
-<span class="example-variable">%lineedit</span> = $new<span class="example-paren">(</span>lineedit,<span class="example-variable">%box</span><span class="example-paren">)</span>
-<span class="example-variable">%lineedit</span>-&gt;$setText<span class="example-paren">(</span>"This is a lineedit"<span class="example-paren">)</span>
-<span class="example-variable">%multilineedit</span> = $new<span class="example-paren">(</span>multilineedit,<span class="example-variable">%box</span><span class="example-paren">)</span>
-<span class="example-variable">%multilineedit</span>-&gt;$setText<span class="example-paren">(</span>"This is a multilineedit"<span class="example-paren">)</span>
-<span class="example-variable">%checkbox</span> = $new<span class="example-paren">(</span>checkbox,<span class="example-variable">%box</span><span class="example-paren">)</span>
-<span class="example-variable">%checkbox</span>-&gt;$setText<span class="example-paren">(</span>"This is a checkbox"<span class="example-paren">)</span>
-<span class="example-variable">%combobox</span> = $new<span class="example-paren">(</span>combobox,<span class="example-variable">%box</span><span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%combobox</span>-&gt;$insertItem<span class="example-paren">(</span>"This is a combobox"<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%combobox</span>-&gt;$insertItem<span class="example-paren">(</span>"This is a combobox's item"<span class="example-paren">)</span>
-<span class="example-variable">%listbox</span> = $new<span class="example-paren">(</span>listbox,<span class="example-variable">%box</span><span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%listbox</span>-&gt;$insertItem<span class="example-paren">(</span>"This is a listbox item"<span class="example-paren">)</span>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%listbox</span>-&gt;$insertItem<span class="example-paren">(</span>"This is another item"<span class="example-paren">)</span>
-<span class="example-variable">%radiobutton</span> = $new<span class="example-paren">(</span>radiobutton,<span class="example-variable">%box</span><span class="example-paren">)</span>
-<span class="example-variable">%radiobutton</span>-&gt;$setText<span class="example-paren">(</span>"This is a radiobutton"<span class="example-paren">)</span>
-<span class="example-variable">%button</span> = $new<span class="example-paren">(</span>button, <span class="example-variable">%box</span><span class="example-paren">)</span>
-<span class="example-variable">%button</span>-&gt;$setText<span class="example-paren">(</span>"Close me"<span class="example-paren">)</span>
-privateimpl<span class="example-paren">(</span><span class="example-variable">%widget</span>,closeMe<span class="example-paren">)</span>
-<span class="example-bracket">{</span>
-&nbsp;&nbsp;&nbsp;&nbsp;delete $$
-<span class="example-bracket">}</span>
-objects.connect  <span class="example-variable">%button</span> clicked <span class="example-variable">%widget</span> closeMe
-<span class="example-variable">%widget</span>-&gt;$show<span class="example-paren">()</span>
-</div>
+    <td></td></tr><tr><td class="example-box"><br>
+<span class="example-variable">%widget</span> = $new<span class="example-paren">(</span>widget<span class="example-paren">)</span><br>
+<span class="comment-text"># This is the main container for other elements.</span><br>
+<span class="example-variable">%widget</span>-&gt;$setWindowTitle<span class="example-paren">(</span>"This is the widget title"<span class="example-paren">)</span><br>
+<span class="example-variable">%box</span>=$new<span class="example-paren">(</span>vbox,<span class="example-variable">%widget</span><span class="example-paren">)</span><br>
+<span class="example-variable">%layout</span>=$new<span class="example-paren">(</span>layout,<span class="example-variable">%widget</span><span class="example-paren">)</span><br>
+<span class="example-variable">%layout</span>-&gt;$addWidget<span class="example-paren">(</span><span class="example-variable">%box</span>,0,0<span class="example-paren">)</span><br>
+<span class="example-variable">%label</span> = $new<span class="example-paren">(</span>label,<span class="example-variable">%box</span><span class="example-paren">)</span><br>
+<span class="example-variable">%label</span>-&gt;$setText<span class="example-paren">(</span>"This is a text label"<span class="example-paren">)</span><br>
+<span class="example-variable">%lineedit</span> = $new<span class="example-paren">(</span>lineedit,<span class="example-variable">%box</span><span class="example-paren">)</span><br>
+<span class="example-variable">%lineedit</span>-&gt;$setText<span class="example-paren">(</span>"This is a lineedit"<span class="example-paren">)</span><br>
+<span class="example-variable">%multilineedit</span> = $new<span class="example-paren">(</span>multilineedit,<span class="example-variable">%box</span><span class="example-paren">)</span><br>
+<span class="example-variable">%multilineedit</span>-&gt;$setText<span class="example-paren">(</span>"This is a multilineedit"<span class="example-paren">)</span><br>
+<span class="example-variable">%checkbox</span> = $new<span class="example-paren">(</span>checkbox,<span class="example-variable">%box</span><span class="example-paren">)</span><br>
+<span class="example-variable">%checkbox</span>-&gt;$setText<span class="example-paren">(</span>"This is a checkbox"<span class="example-paren">)</span><br>
+<span class="example-variable">%combobox</span> = $new<span class="example-paren">(</span>combobox,<span class="example-variable">%box</span><span class="example-paren">)</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%combobox</span>-&gt;$insertItem<span class="example-paren">(</span>"This is a combobox"<span class="example-paren">)</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%combobox</span>-&gt;$insertItem<span class="example-paren">(</span>"This is a combobox's item"<span class="example-paren">)</span><br>
+<span class="example-variable">%listbox</span> = $new<span class="example-paren">(</span>listbox,<span class="example-variable">%box</span><span class="example-paren">)</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%listbox</span>-&gt;$insertItem<span class="example-paren">(</span>"This is a listbox item"<span class="example-paren">)</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="example-variable">%listbox</span>-&gt;$insertItem<span class="example-paren">(</span>"This is another item"<span class="example-paren">)</span><br>
+<span class="example-variable">%radiobutton</span> = $new<span class="example-paren">(</span>radiobutton,<span class="example-variable">%box</span><span class="example-paren">)</span><br>
+<span class="example-variable">%radiobutton</span>-&gt;$setText<span class="example-paren">(</span>"This is a radiobutton"<span class="example-paren">)</span><br>
+<span class="example-variable">%button</span> = $new<span class="example-paren">(</span>button, <span class="example-variable">%box</span><span class="example-paren">)</span><br>
+<span class="example-variable">%button</span>-&gt;$setText<span class="example-paren">(</span>"Close me"<span class="example-paren">)</span><br>
+privateimpl<span class="example-paren">(</span><span class="example-variable">%widget</span>,closeMe<span class="example-paren">)</span><br>
+<span class="example-bracket">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;delete $$<br>
+<span class="example-bracket">}</span><br>
+objects.connect  <span class="example-variable">%button</span> clicked <span class="example-variable">%widget</span> closeMe<br>
+<span class="example-variable">%widget</span>-&gt;$show<span class="example-paren">()</span><br>
+</td></tr><tr><td bgcolor="#EAEAEA">
 </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<div class='footer'>KVIrc 4.9.2.git-7017-g48dacdb Documentation - generated by un1versal on Mon Nov 14 04:21:37 2016</div>
+<div class='footer'>KVIrc 5.2.0.5.2.0 Documentation - generated by pragma on Sun Jan 14 18:20:53 2024</div>
 </body>
 </html>

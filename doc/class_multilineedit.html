@@ -1,167 +1,9 @@
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
 <title>multilineedit class</title>
 <style type="text/css">
-body {
- font-size: 10pt;
- margin-left: 8px;
- margin-right: 8px;
- margin-top: 6px;
- margin-bottom: 6px;
- font-family:Verdana,Helvetica,Arial;
-}
-table, td, tr {
- font-size: 10pt;
- font-family:Verdana,Helvetica,Arial;
- color: #3c3c3c;
-}
-td {
- padding: 6px;
-}
-a:link {
- text-decoration: none;
- color: #2883e2;
-}
-a:visited {
- text-decoration: none;
- color: #6856cc;
-}
-a:hover {
- text-decoration: underline;
- color: #186CC4;
-}
-a:active {
- text-decoration: underline;
- color: #186CC4;
-}
-.title-table-cell {
- border-top-left-radius: 3px;
- border-top-right-radius: 3px;
- background-color: #F2DFB1;
-}
-.title-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 18pt;
- font-weight: bold;
- padding-bottom: 3px;
- color: #404040;
- text-shadow: 0px 2px 0px rgba(247,247,247,1);
-}
-.title-secondary-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 11pt;
- padding-top: 3px;
- color: #474747;
- text-shadow: 0px 2px 0px rgba(247,247,247,1);
-}
-.subtitle-table-cell {
- background-color: #D6D6D6;
-}
-.subtitle-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 11pt;
- color: #000000;
- text-shadow: 0px 1px 0px rgba(247,247,247,1);
-}
-.subsubtitle-table-cell {
- background-color: #E3E3E3;
-}
-.subsubtitle-text {
- font-family:Verdana,Helvetica,Arial;
- font-size: 10pt;
- color: #474747;
-}
-.syntax-text {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- font-weight: bold;
- white-space: pre;
- color: #800000;
-}
-.example-box {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- white-space: pre;
- background-color: #f5f5f5;
- border: 1px solid #d5d5d5;
- color: #800000;
- padding: 10px;
- margin-top: 6px;
- margin-bottom: 6px;
-}
-.example-box a:link {
- color: #600030;
-}
-.example-box a:visited {
- color: #600030;
-}
-.example-box a:hover {
- color: #FF2B46;
-}
-.example-box a:active {
- color: #FF2B46;
-}
-.comment-text {
- color: #578A57;
-}
-.comment-text a:link {
- color: #578A57;
-}
-.comment-text a:visited {
- color: #578A57;
-}
-.comment-text a:hover {
- color: #35BD58;
-}
-.comment-text a:active {
- color: #35BD58;
-}
-.example-paren {
- color: #8A7000;
-}
-.example-bracket {
- color: #9C7914;
-}
-.example-oper {
- color: #9C7914;
-}
-.example-variable {
- color: #AB6332;
-}
-.comment-text .example-variable {
- color: #578A57;
-}
-.comment-text .example-oper {
- color: #578A57;
-}
-.comment-text .example-paren {
- color: #578A57;
-}
-.comment-text .example-bracket {
- color: #578A57;
-}
-.switch-table {
- width: 100%;
- border-collapse: collapse;
-}
-.switch-title-table-cell {
- font-family:"Lucida Console", Monaco, monospace, "Courier New";
- font-size: 10pt;
- color: #670000;
- background-color: #EDEDED;
-}
-.switch-body-table-cell {
-}
-.footer {
- border-top: 1px solid #a2a2a2;
- color: #a2a2a2;
- margin-top: 8px;
- padding-top: 4px;
- font-style: italic;
- font-size: 8pt;
-}
-</style>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+body { 	font-size: 10pt; 	margin-left: 8px; 	margin-right: 8px; 	margin-top: 6px; 	margin-bottom: 6px; 	line-height: 24px; 	font-family: sans-serif; } table, td, tr { 	color: #3c3c3c; 	font-size: 10pt; } td { 	padding: 6px; } a:link { 	text-decoration: none; 	color: #2883e2; } a:visited { 	text-decoration: none; 	color: #6856cc; } a:hover { 	text-decoration: underline; 	color: #186CC4; } pre { 	white-space: normal; } a:active { 	text-decoration: underline; 	color: #186CC4; } .title-table-cell { 	border-top-left-radius: 3px; 	border-top-right-radius: 3px; 	background-color: #F2DFB1; } .title-text { 	font-size: 18pt; 	font-weight: bold; 	padding-bottom: 3px; 	color: #404040; 	text-shadow: 0px 2px 0px rgba(247,247,247,1); } .title-secondary-text { 	font-size: 11pt; 	padding-top: 3px; 	color: #474747; 	text-shadow: 0px 2px 0px rgba(247,247,247,1); } .subtitle-table-cell { 	background-color: #D6D6D6; } .subtitle-text { 	font-size: 11pt; 	color: #000000; 	text-shadow: 0px 1px 0px rgba(247,247,247,1); } .subsubtitle-table-cell { 	background-color: #E3E3E3; } .subsubtitle-text { 	font-size: 10pt; 	color: #474747; } .syntax-text { 	font-family: monospace; 	font-size: 10pt; 	font-weight: bold; 	color: #800000; } .note-box { 	background-color: #F2F2F2; 	color: #636363; 	font-size: 9pt; } .example-box { 	font-family: monospace; 	font-size: 10pt; 	background-color: #f5f5f5; 	border: 1px solid #d5d5d5; 	color: #800000; 	margin-top: 6px; 	margin-bottom: 6px; 	line-height: 16px; 	padding: 10px; } .example-box a:link { 	color: #600030; } .example-box a:visited { 	color: #600030; } .example-box a:hover { 	color: #FF2B46; } .example-box a:active { 	color: #FF2B46; } .comment-text { 	color: #578A57; } .comment-text a:link { 	color: #578A57; } .comment-text a:visited { 	color: #578A57; } .comment-text a:hover { 	color: #35BD58; } .comment-text a:active { 	color: #35BD58; } .example-paren { 	color: #8A7000; } .example-bracket { 	color: #9C7914; } .example-oper { 	color: #9C7914; } .example-variable { 	color: #AB6332; } .comment-text .example-variable { 	color: #578A57; } .comment-text .example-oper { 	color: #578A57; } .comment-text .example-paren { 	color: #578A57; } .comment-text .example-bracket { 	color: #578A57; } .switch-table { 	width: 100%; 	border-collapse: collapse; } .switch-title-table-cell { 	font-family:"Lucida Console", Monaco, "Courier New", monospace; 	font-size: 10pt; 	color: #670000; 	background-color: #EDEDED; } /* .switch-body-table-cell { } */ .footer { 	border-top: 1px solid #a2a2a2; 	color: #a2a2a2; 	margin-top: 8px; 	padding-top: 4px; 	font-style: italic; 	font-size: 8pt; } </style>
 </head>
 <body bgcolor="#FFFFFF" text="#000000">
 <table width="100%" cellpadding="1" cellspacing="0" border="0">
@@ -213,7 +55,7 @@ Besides that, it has unfinished docs.
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; atEnd">&lt;boolean&gt; $atEnd()</a></font></b></code></td></tr>
 <tr><td>Returns <b>1</b> (true) if the cursor is placed at the end of the text; otherwise returns <b>0</b> (false).</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setWordWrap">$setWordWrap(&lt;wrap_mode:string&gt;)</a></font></b></code></td></tr>
-<tr><td>Sets the word wrap mode to mode.<br> Valid Values are:<br> <div class="example-box">- NoWrap - Do not wrap the text.<br> - WidgetWidth - Wrap the text at the current width of the widget.<br> - FixedPixelWidth - Wrap the text at a fixed number of pixels from the widget's left side.<br> - FixedColumnWidth - Wrap the text at a fixed number of character columns from the widget's left side. </div></td></tr>
+<tr><td>Sets the word wrap mode to mode.<br> Valid Values are: </td></tr><tr><td class="example-box"><br> - NoWrap - Do not wrap the text.<br><br> - WidgetWidth - Wrap the text at the current width of the widget.<br><br> - FixedPixelWidth - Wrap the text at a fixed number of pixels from the widget's left side.<br><br> - FixedColumnWidth - Wrap the text at a fixed number of character columns from the widget's left side.<br> </td></tr><tr><td bgcolor="#EAEAEA"></td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; wordWrap">&lt;string&gt; $wordWrap()</a></font></b></code></td></tr>
 <tr><td>Returns the word wrap mode. NoWrap, WidgetWidth, FixedPixelWidth, FixedColumnWidth.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setWordWrapWidth">$setWordWrapWidth(&lt;width:integer&gt;)</a></font></b></code></td></tr>
@@ -273,7 +115,7 @@ Besides that, it has unfinished docs.
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setText">$setText(&lt;txt:string&gt;)</a></font></b></code></td></tr>
 <tr><td>Sets the text edit's text to txt.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setColor">$setColor(&lt;rgb_value&gt;)</a></font></b></code></td></tr>
-<tr><td>Sets the foreground color of this widget to &lt;rgb_value&gt; Valid values are: <div class="example-box">- hex string: must be a string with 6 hexadecimal digits <span class="example-paren">(</span>like the ones used to<br>   specify colors in HTML pages<span class="example-paren">)</span>. The first two digits specify<br>   the <b>red</b> component, the third and fourth digit specify the <b>green</b> component<br>   and the last two specify the <b>blue</b> component.<br> - array<span class="example-paren">(</span>red:integer, green:integer, blue:integer<span class="example-paren">)</span><br> - red:integer, green:integer, blue:integer. </div></td></tr>
+<tr><td>Sets the foreground color of this widget to &lt;rgb_value&gt; Valid values are: </td></tr><tr><td class="example-box"><br> - hex string: must be a string with 6 hexadecimal digits <span class="example-paren">(</span>like the ones used to<br><br>   specify colors in HTML pages<span class="example-paren">)</span>. The first two digits specify<br><br>   the <b>red</b> component, the third and fourth digit specify the <b>green</b> component<br><br>   and the last two specify the <b>blue</b> component.<br><br> - array<span class="example-paren">(</span>red:integer, green:integer, blue:integer<span class="example-paren">)</span><br><br> - red:integer, green:integer, blue:integer.<br> </td></tr><tr><td bgcolor="#EAEAEA"></td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setPointSize">$setPointSize(&lt;point_size:integer))</a></font></b></code></td></tr>
 <tr><td>Sets the point size of the font.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setLinkUnderline">$setLinkUnderline(&lt;bLinkUnderline:boolean&gt;)</a></font></b></code></td></tr>
@@ -283,9 +125,9 @@ Besides that, it has unfinished docs.
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;string&gt; textFormat">&lt;string&gt; $textFormat()</a></font></b></code></td></tr>
 <tr><td>Returns the text format: RichText or PlainText.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="loadFile">$loadFile(&lt;path:string&gt;[,&lt;format:string&gt;])</a></font></b></code></td></tr>
-<tr><td>Load the file specified in the &lt;path&gt;.<br> Valid values for &lt;format&gt; are: <div class="example-box">- text - interprets the file as a plain text document.<br> - html - interprets the file as a HTML document. </div> If &lt;format&gt; is omitted, the widget will try to guess whether or not the text is a HTML document.</td></tr>
+<tr><td>Load the file specified in the &lt;path&gt;.<br> Valid values for &lt;format&gt; are: </td></tr><tr><td class="example-box"><br> - text - interprets the file as a plain text document.<br><br> - html - interprets the file as a HTML document.<br> </td></tr><tr><td bgcolor="#EAEAEA"> If &lt;format&gt; is omitted, the widget will try to guess whether or not the text is a HTML document.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="saveFile">$saveFile(&lt;path:string&gt;[,&lt;format:string&gt;])</a></font></b></code></td></tr>
-<tr><td>Writes the content of the widget to the file specified by &lt;path&gt;.<br> Valid values for &lt;format&gt; are: <div class="example-box">- text - writes the file as a plain text document <span class="example-paren">(</span>default<span class="example-paren">)</span>.<br> - html - writes the file as a HTML document. </div> The file is saved in UTF-8.</td></tr>
+<tr><td>Writes the content of the widget to the file specified by &lt;path&gt;.<br> Valid values for &lt;format&gt; are: </td></tr><tr><td class="example-box"><br> - text - writes the file as a plain text document <span class="example-paren">(</span>default<span class="example-paren">)</span>.<br><br> - html - writes the file as a HTML document.<br> </td></tr><tr><td bgcolor="#EAEAEA"> The file is saved in UTF-8.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; isUndoAvailable ">&lt;boolean&gt; $isUndoAvailable ()</a></font></b></code></td></tr>
 <tr><td>Returns <b>1 (true)</b> if undo is available; otherwise returns <b>0 (false)</b>.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="&lt;boolean&gt; isRedoAvailable ">&lt;boolean&gt; $isRedoAvailable ()</a></font></b></code></td></tr>
@@ -297,12 +139,12 @@ Besides that, it has unfinished docs.
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setModified">$setModified(&lt;bModified:boolean&gt;)</a></font></b></code></td></tr>
 <tr><td>Sets whether the document has been modified by the user. Valid Values are <b>1 (true)</b> or <b>0 (false)</b>.</td></tr>
 <tr bgcolor="#D5D5D5"><td><code><b><font color=""><a name="setAlignment">$setAlignment(&lt;alignment:string&gt;)</a></font></b></code></td></tr>
-<tr><td>Sets the alignment of the current paragraph to &lt;alignment&gt;.<br> Valid values are: <div class="example-box">- Auto - Aligns according to the language.<br> - Left - Aligns with the left edge.<br> - Right - Aligns with the right edge.<br> - Center - Centers in both dimensions.<br> - Justify - Justify the text. </div></td></tr>
+<tr><td>Sets the alignment of the current paragraph to &lt;alignment&gt;.<br> Valid values are: </td></tr><tr><td class="example-box"><br> - Auto - Aligns according to the language.<br><br> - Left - Aligns with the left edge.<br><br> - Right - Aligns with the right edge.<br><br> - Center - Centers in both dimensions.<br><br> - Justify - Justify the text.<br> </td></tr><tr><td bgcolor="#EAEAEA"></td></tr>
       </table>
     </td>
   </tr>
 </table>
 <hr><a href="index.html">Index</a>, <a href="doc_class_index_all.html">Object Classes</a>
-<div class='footer'>KVIrc 4.9.2.git-7017-g48dacdb Documentation - generated by un1versal on Mon Nov 14 04:21:37 2016</div>
+<div class='footer'>KVIrc 5.2.0.5.2.0 Documentation - generated by pragma on Sun Jan 14 18:20:53 2024</div>
 </body>
 </html>
