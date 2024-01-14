@@ -15,12 +15,12 @@ This release contains changes from the last 5 years of development, including:
 </p>
 
 <ul>
-    <li>Support for the latest version of upstream libraries: Qt5.15/6.6, KDE5/6, OpenSSL 1.x/3.x
-    <li>Wayland support
-    <li>Fix for some nasty crash bugs
-    <li>an improved font rendering engine able to represent complex characters like emojis with ligatures
-    <li>a reworked tray icon that now follows your OS style
-    <li>better support for solanum ircd (Libera net)
+    <li>- Support for the latest version of upstream libraries: Qt5.15/6.6, KDE5/6, OpenSSL 1.x/3.x</li>
+    <li>- Wayland support</li>
+    <li>- Fix for some nasty crash bugs</li>
+    <li>- an improved font rendering engine able to represent complex characters like emojis with ligatures</li>
+    <li>- a reworked tray icon that now follows your OS style</li>
+    <li>- better support for solanum ircd (Libera net)</li>
 </ul>
 
 <p>
@@ -35,7 +35,7 @@ But the team also includes packagers, bug hunters and general supporters. Honor 
 </p>
 
 <p>
-Many of the team members hang out on #kvirc@libera. <b><a href="irc://irc.libera.chat/kvirc">Come in</a> and say hi!
+Many of the team members hang out on #kvirc@libera. <a href="irc://irc.libera.chat/kvirc">Come in</a> and say hi!
 </p>
 
 <br>
