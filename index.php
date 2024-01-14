@@ -224,22 +224,6 @@ search();
 						<a href="<?php echo $value['url']?>" class="info"><?php echo $value['name']?><span><br /><?php echo $value['desc']?><br /><?php echo $template['custom']['city']?>: <?php echo $value['city']?><br /><?php echo $template['custom']['maintainer']?>: <?php echo $value['maintainer']?></span></a><br />
 					<?php endforeach; ?>
 				</p>
-				<p><br />
-					<?php echo $template['index']['mirrorstext1a']?> <a href="?id=mirroring&amp;lang=<?php echo $lang?>" title="<?php echo $template['index']['mirrorstitle']?>"><?php echo $template['index']['mirrorstext1b']?></a> <?php echo $template['index']['mirrorstext1c']?><br />
-					<?php echo $template['index']['mirrorstext2']?>
-				</p>
-
-				<h1><img src="img/network-offline.png" alt="<?php echo $template['index']['oldlayout']?>" class="noborder" /><?php echo $template['index']['oldlayout']?></h1>
-				<p>
-					<img src="img/th_oldsite_1.gif" alt="<?php echo $template['index']['oldsite']?>" width="159" height="105" /><br />
-					<a href="javascript:opendoc('http://old.kvirc.de/');" title="<?php echo $template['index']['oldsite']?>">old.kvirc.de</a> by istari
-				</p>
-				<?php /*
-        <p>
-					<img src="img/th_oldsite_2.gif" alt="<?php echo $template['index']['oldsite']?>" width="159" height="105" /><br />
-					kvirc.virg0.org/old by <a href="javascript:opendoc('http://iakko.net/');" title="<?php echo $template['index']['iakkohome']?>">iakko</a>
-				</p>
-				*/?>
 			</div>
  
 			<div class="main-content">
@@ -272,7 +256,7 @@ search();
 					<p class="center">
 						<?php echo $template['index']['helptext1a']?> <a href="?id=mailinglist&amp;lang=<?php echo $lang?>" title="<?php echo $template['index']['helptext1b']?>"><?php echo $template['index']['helptext1b']?></a><br /><br /><?php echo $template['index']['helptext1c']?><br />
 
-						<a href="irc://irc.eutelia.it/KVIrc">#kvirc@IRCnet</a><br /><a href="irc://irc.azzurra.org/KVIrc.net">#kvirc.net@azzurra</a><br /><a href="irc://irc.libera.chat/KVIrc">#kvirc@libera</a>
+						<a href="irc://irc.libera.chat/KVIrc">#kvirc@libera</a>
 					</p>
 				</div>
 				<div class="subcontent-unit-border-orange">
@@ -291,30 +275,6 @@ search();
 						<a href="javascript:opendoc('/doc');" title="<?php echo $template['index']['officialdocs']?>"><?php echo $template['index']['officialdocs']?></a><br /><?php echo $template['index']['docsauto']?>
 					</p>
 				</div>
-				<div class="subcontent-unit-border-white">
-					<div class="round-border-topleft"></div>
-					<div class="round-border-topright"></div>
-					<h1><img src="img/dialog-information.png" alt="<?php echo $template['index']['hwdonation']?>" /><?php echo $template['index']['hwdonation']?></h1>
-					<p class="center">
-						<a href="javascript:opendoc('http://www.waaf.net');" title="waaf.net - the hosting &amp; development company"><img src="img/waaf.net.gif" alt="waaf.net - the hosting &amp; development company" /></a><br />
-						<a href="javascript:opendoc('http://www.waaf.net');" title="waaf.net - the hosting &amp; development company">waaf.net</a> <?php echo $template['index']['hwdonationtext']?>
-						<?php if(getHostKvircde()): ?>
-							<?php echo $template['index']['donationtextkvirc.de']?>
-						<?php endif; ?>
-					</p>
-				</div>
-				<div class="subcontent-unit-border-white">
-					<div class="round-border-topleft"></div>
-					<div class="round-border-topright"></div>
-					<h1><img src="img/dialog-information.png" alt="<?php echo $template['index']['tahdonation']?>" /><?php echo $template['index']['tahdonation']?></h1>
-					<p class="center">
-						<a href="javascript:opendoc('http://www.tmt.de');"><img src="img/tmtlogo.gif" alt="TMT" /></a><br />
-						<a href="javascript:opendoc('http://www.tmt.de');">TMT Teleservice</a> <?php echo $template['index']['tahdonationtext']?>
-						<?php if(getHostKvircde()): ?>
-							<?php echo $template['index']['donationtextkvirc.de']?>
-						<?php endif; ?>
-					</p>
-				</div>
 			</div>
 		</div>
 
@@ -323,15 +283,5 @@ search();
 			<p class="credits"><a href="javascript:opendoc('http://validator.w3.org/check/referer');" title="Validate XHTML code">XHTML 1.1</a> | <a href="javascript:opendoc('http://jigsaw.w3.org/css-validator/check/referer');" title="Validate CSS code">CSS 2.1</a> | credits</p>
 		</div>
 	</div>
-	<?php if(stristr(($_SERVER["SERVER_NAME"]),'kvirc.de')): ?>
-		<div id="akct">
-			<a id="akpeel" href="javascript:opendoc('http://www.vorratsdatenspeicherung.de');" title="Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!">
-				<img src="http://wiki.vorratsdatenspeicherung.de/images/Akvst.gif" alt="Stoppt die Vorratsdatenspeicherung! Jetzt klicken &amp; handeln!" />
-			</a>
-			<a id="akpreload" href="javascript:opendoc('http://wiki.vorratsdatenspeicherung.de/?title=Online_Demo');" title="Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:">
-				<img src="http://wiki.vorratsdatenspeicherung.de/images/Akvsi.gif" alt="Willst du auch bei der Aktion teilnehmen? Hier findest du alle relevanten Infos und Materialien:" />
-			</a>
-		</div>
-	<?php endif; ?>
 </body>
 </html>
