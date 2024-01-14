@@ -1161,7 +1161,7 @@ $template['tutorials']['text7b']="Tutorial on how to manage the registered users
 $template['welcome']['title']="Welcome!";
 $template['welcome']['text']="
 	KVIrc is a <a href=\"http://www.gnu.org\">free</a> portable <acronym title=\"Internet Relay Chat\">IRC</acronym> client based on the excellent <a href=\"http://www.trolltech.com\">Qt GUI toolkit</a>.
-	KVirc is being written by <a href=\"http://www.pragmaware.net\">Szymon Stefanek</a> and the KVIrc Development Team with the contribution of many IRC addicted developers around the world.";
+	KVirc is being written by the <a href=\"https://github.com/kvirc/KVIrc/graphs/contributors\" target=\"_blank\">KVIrc Development Team</a> with the contribution of many IRC addicted developers around the world.";
 $template['welcome']['text2']="be part of the project!";
 $template['welcome']['alttext']="how to help the KVIrc project";
 /* welcome.php end */
