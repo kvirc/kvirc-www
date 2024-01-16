@@ -308,6 +308,17 @@ $splash=array(
 			"01.01.2019"
 		),
 		"present" => ""
+	),
+	array(
+		"name" => "5.2.0 \"Quasar\"",
+		"motd" => "",
+		"screen" => array(
+			"5.2.0.png"
+		),
+		"date" => array(
+			"14.01.2024"
+		),
+		"present" => ""
 	)
 );
 
