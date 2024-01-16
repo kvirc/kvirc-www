@@ -114,10 +114,8 @@ search();
 					<ul>
 						<li><a href="#"><?php echo $template['index']['contact']?></a>
 							<ul>
-								<li><a href="?id=mailinglist&amp;lang=<?php echo $lang?>"><?php echo $template['index']['ml']?></a></li>
-								<li><a href="?id=archive&amp;lang=<?php echo $lang?>"><?php echo $template['index']['archive']?></a></li>
-								<li><a href="?id=contribute&amp;lang=<?php echo $lang?>"><?php echo $template['index']['contribute']?></a></li>
 								<li><a href="?id=help&amp;lang=<?php echo $lang?>"><?php echo $template['index']['help']?></a></li>
+								<li><a href="?id=contribute&amp;lang=<?php echo $lang?>"><?php echo $template['index']['contribute']?></a></li>
 								<li><a href="?id=donate&amp;lang=<?php echo $lang?>"><?php echo $template['index']['donation']?></a></li>
 								<li><a href="javascript:opendoc('https://github.com/kvirc/KVIrc/issues');" title="KVIrc bugtrack"><?php echo $template['index']['bugtrack']?></a></li>
 							</ul>
@@ -127,7 +125,7 @@ search();
 			</div>
 			<div class="header-breadcrumbs">
 				<ul>
-					<li><a href="https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrcs-nightly-source-or-binaries" title="Get the latest build"><?php echo $template['index']['quickdnl']?></a></li>
+					<li><a href="https://github.com/kvirc/KVIrc/releases" title="Get the latest build"><?php echo $template['index']['quickdnl']?></a></li>
 				</ul>
 				<div class="searchform">
 					<form action="<?php echo "?id=$id&amp;lang=$lang"?>" method="post" class="form">
@@ -207,7 +205,7 @@ search();
 					<div class="round-border-topright"></div>
 					<h1><img src="img/help-browser.png" alt="finding help" /><?php echo $template['index']['help']?></h1>
 					<p class="center">
-						<?php echo $template['index']['helptext1a']?> <a href="?id=mailinglist&amp;lang=<?php echo $lang?>" title="<?php echo $template['index']['helptext1b']?>"><?php echo $template['index']['helptext1b']?></a><br /><br /><?php echo $template['index']['helptext1c']?><br />
+						<?php echo $template['index']['helptext1a']?> <a href="https://github.com/kvirc/KVIrc/issues" title="<?php echo $template['index']['helptext1b']?>"><?php echo $template['index']['helptext1b']?></a><br /><br /><?php echo $template['index']['helptext1c']?><br />
 
 						<a href="irc://irc.libera.chat/KVIrc">#kvirc@libera</a>
 					</p>

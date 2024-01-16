@@ -96,8 +96,8 @@ $template['index']['oldlayout']="Old site layouts";
 $template['index']['oldsite']="Old KVIrc site";
 //$template['index']['iakkohome']="iakko's home";
 // help
-$template['index']['helptext1a']="if you need any help the fastest way is to refer to the";
-$template['index']['helptext1b']="KVIrc public mailing list";
+$template['index']['helptext1a']="if you need any help the fastest way is to open an issue on the ";
+$template['index']['helptext1b']="KVIrc bugtracker";
 $template['index']['helptext1c']="or join dedicated channels";
 // bugs
 $template['index']['bugreport']="Bug report";
@@ -256,7 +256,7 @@ $template['contribute']['text17']="
 $template['contribute']['text18']="Who to contact";
 $template['contribute']['text19']="
 	Once you decide that you want to contribute in some way you can mail your proposal to <a href=\"mailto:pragma [at] kvirc [dot] net\">Pragma</a>.<br />
-	Another place where you can announce your availability/proposal is the <a href=\"irc://chat.ircnet.org/#kvirc\">#KVIrc</a> IRC channel on IRCNet, <a href=\"irc://irc.azzurra.org/#KVIrc.net\">#KVIrc.net</a> on Azzurra or <a href=\"irc://irc.libera.chat/#kvirc\">#KVIrc</a> on Libera (formerly known as OpenProjects network).";
+	Another place where you can announce your availability/proposal is the <a href=\"irc://irc.azzurra.org/#KVIrc.net\">#KVIrc.net</a> on Azzurra or <a href=\"irc://irc.libera.chat/#kvirc\">#KVIrc</a> on Libera.";
 /* contribute.php end */
 
 /* donate.php start */
@@ -277,7 +277,7 @@ $template['donate']['alttext']="Make a donation to the KVIrc Project by PayPal";
 
 /* download.php start */
 $template['download']['title']="Downloading KVIrc";
-$template['download']['text1']="You can obtain KVIrc in three ways:<br><br><b><u>Note:</b></u> Consider downloading the current nightly Git builds instead of 4.2.0 stable</b>.<br>The current Git builds are quite stable and safe for day-to-day usage, due to the considerable enhancements, improvements and bugs fixes that are now included.<br>For more information <a href=\"https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrcs-nightly-source-or-binaries\">click here</a>.";
+$template['download']['text1']="You can obtain KVIrc in three ways:";
 $template['download']['text2']="Official release packages";
 $template['download']['text3']="
 	The official packages are released least frequently but are the most stable ones. Each official source package is well tested and will probably compile on your system. You also have more possibilities to find a binary package suitable for your system. The on-line FAQs and documentation refer to this type of package.";
@@ -446,11 +446,11 @@ $template['features']['text2']="Hmmm...I hope that's enough to make you curious 
 /* help.php start */
 $template['help']['title']="Help Wanted";
 $template['help']['text1']="
-	The first place to look at when you have a problem is the KVIrc mailing list.";
+	The first place to look at when you have a problem is the KVIrc bug tracker.";
 $template['help']['text2']="
-	If something goes wrong, or if you have a question, a suggestion, or are simply interested in KVIrc development, you can join the";
+	If something goes wrong, or if you have a question, a suggestion, or are simply interested in KVIrc development, you can report on the";
 $template['help']['text3']="
-	The developers follow the mailing list and will answer questions as soon as possible.";
+	The developers follow the bug tracker and will answer questions as soon as possible.";
 $template['help']['text4a']="The official KVIrc support channel is located on the";
 $template['help']['text4b']="Libera network";
 $template['help']['text4c']="and the channel is obviously named";
@@ -767,9 +767,9 @@ $template['license']['text2']="
 /* license.php end */
 
 /* mailinglist.php start */
-$template['ml']['title']="KVIrc Public Mailing List";
+$template['ml']['title']="KVIrc bugtracker";
 $template['ml']['text1a']="
-	If something goes wrong, or if you have a question, a suggestion, or are simply interested in KVIrc development, you can join the KVIrc public mailing list.";
+	If something goes wrong, or if you have a question, a suggestion, or are simply interested in KVIrc development, you can report on the .";
 $template['ml']['text1b']="
 	The developers follow the mailing list and will answer questions as soon as possible.";
 $template['ml']['text2']="Web interface";
