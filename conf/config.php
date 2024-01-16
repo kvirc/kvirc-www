@@ -5,7 +5,7 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 
 // Some vars
 $current = "5.2.0";
-$codename = "Aria";
+$codename = "Quasar";
 $availVersions = array("5.2.0",$current);
 $dpath = "ftp://ftp.kvirc.net/pub/kvirc/";
 

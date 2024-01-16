@@ -921,7 +921,7 @@ $template['snapshots']['text2']="
 	Honor and Glory! :)";
 $template['snapshots']['text3']="
 	To download the latest Git source or binary snapshot please visit.
-	<a href=\"https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrc's-nightly-source-or-binaries\">the KVIrc Github Wiki project downloads page</a> or in the \"snapshots\" subdirectory of one of the FTP mirrors.";
+	<a href=\"https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrcs-nightly-source-or-binaries\">the KVIrc Github Wiki project downloads page</a> or in the \"snapshots\" subdirectory of one of the FTP mirrors.";
 /* snapshots.php end */
 
 /* splash.php start */
@@ -934,9 +934,9 @@ $template['splash']['in']="Splash Present in";
 /* status.php start */
 $template['status']['title']="Project Status";
 $template['status']['text']="
-	<p>After more than 10 years of development KVIrc is a mature and full featured IRC client, an excellent companion for your daily IRC sessions.</p>
-	<p>The latest stable release is <a href=\"http://kvirc.net/?id=news&story=2012.07.03.03.15.1.story&dir=latest&lang\">4.2.0 \"Equilibrium\"</a>.
-	It has been published on July 03, 2012.
+	<p>After more than 20 years of development KVIrc is a mature and full featured IRC client, an excellent companion for your daily IRC sessions.</p>
+	<p>The latest stable release is <a href=\"https://www.kvirc.net/?id=news&story=2024.01.14.19.25.1.story&dir=latest&lang=$lang\">5.2.0 \"Quasar\"</a>.
+	It has been published on January 14, 2024.
 	It can be obtained in source form from the <a href=\"?id=download&amp;lang=$lang\">download</a> page.</p>
 	<p>If you are looking for official releases have a look at <a href=\"?id=releases&amp;lang=$lang\">this section</a>, those are released less often but are most stable. Choose your release between Linux, Windows, OS X or source package.</p>
 	<p>Snapshots are located <a href=\"?id=snapshots&amp;lang=$lang\">here</a> while Git are found <a href=\"?id=git&amp;lang=$lang\">here</a>.</p></p>

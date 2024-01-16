@@ -138,9 +138,13 @@ echo "<div class=\"column1-unit\">";
 
 						echo "<tr><td colspan=\"2\">";
 						echo "<b>".$template['releases']['available']."</b><br /><br />";
-						foreach($ftp_mirror as $key=>$value){
-							echo "<a href=\"".$value['url']."/".$p_path[$i]."/".$p_filename[$i]."\">".$p_filename[$i]."</a><br />";
-							echo $value['desc'].", ".$value['city']."<br /><br />";
+						if(isset($p_fullurl[$i])) {
+							echo "<a href=\"".$p_fullurl[$i]."\">".$p_filename[$i]."</a><br />";
+						} else {
+							foreach($ftp_mirror as $key=>$value){
+								echo "<a href=\"".$value['url']."/".$p_path[$i]."/".$p_filename[$i]."\">".$p_filename[$i]."</a><br />";
+								echo $value['desc'].", ".$value['city']."<br /><br />";
+							}
 						}
 						echo "</td></tr></table>";
 				}

@@ -12,7 +12,7 @@ echo "<div class=\"column1-unit\">";
 	echo "<h1><a href=\"?id=snapshots&amp;lang=$lang\">".$template['download']['text4']."</a></h1>";
 	echo "<p>".$template['download']['text5']."</p>";
 
-	echo "<h1><a href=\"?id=svn&amp;lang=$lang\">".$template['download']['text6']."</a></h1>";
+	echo "<h1><a href=\"https://github.com/kvirc/KVIrc\">".$template['download']['text6']."</a></h1>";
 	echo "<p>".$template['download']['text7']."</p>";
 echo "</div>";
 ?>
