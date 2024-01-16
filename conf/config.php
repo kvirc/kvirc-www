@@ -10,9 +10,7 @@ $availVersions = array("5.2.0",$current);
 $dpath = "ftp://ftp.kvirc.net/pub/kvirc/";
 
 // Include language templates
-if(!file_exists("./translation/locale_$lang.php"))
-	include("./translation/locale_en.php");
-else include("./translation/locale_$lang.php");
+include("./translation/locale_en.php");
 
 // Get environment
 if((strlen(getenv("SERVER_SOFTWARE")))!="0"){

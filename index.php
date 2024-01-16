@@ -50,26 +50,6 @@ search();
 		<div class="header">
 			<div class="header-top"></div>
 			<div class="header-middle">
-				<ul>
-					<li><a href="?id=<?php echo $id?>&amp;lang=it" title="<?php echo $template['index']['italian']?>"><img src="./img/flags/Italy.png" alt="<?php echo $template['index']['italian']?>" /></a></li>
-					<li><a href="?id=<?php echo $id?>&amp;lang=en" title="<?php echo $template['index']['english']?>"><img src="./img/flags/United-States.png" alt="<?php echo $template['index']['english']?>" /></a></li>
-					<li><a href="?id=<?php echo $id?>&amp;lang=de" title="<?php echo $template['index']['german']?>"><img src="./img/flags/Germany.png" alt="<?php echo $template['index']['german']?>" /></a></li>
-					<li><a href="?id=<?php echo $id?>&amp;lang=es" title="<?php echo $template['index']['spanish']?>"><img src="./img/flags/Spain.png" alt="<?php echo $template['index']['spanish']?>" /></a></li>
-					<li><a href="?id=<?php echo $id?>&amp;lang=fr" title="<?php echo $template['index']['french']?>"><img src="./img/flags/France.png" alt="<?php echo $template['index']['french']?>" /></a></li>
-					<li><a href="?id=<?php echo $id?>&amp;lang=uk" title="<?php echo $template['index']['ukrainian']?>"><img src="./img/flags/Ukraine.png" alt="<?php echo $template['index']['ukrainian']?>" /></a></li>
-					<?php /*
-					<li><a href="?id=<?php echo $id?>&amp;lang=ru" title="<?php echo $template['index']['russian']?>"><img src="./img/flags/Russia.png" alt="<?php echo $template['index']['russian']?>" /></a></li>
-					<li><a href="?id=<?php echo $id?>&amp;lang=bg" title="<?php echo $template['index']['bulgarian']?>"><img src="./img/flags/Bulgaria.png" alt="<?php echo $template['index']['bulgarian']?>" /></a></li>
-					<li><a href="?id=<?php echo $id?>&amp;lang=cz" title="<?php echo $template['index']['czech']?>"><img src="./img/flags/Czech-Republic.png" alt="<?php echo $template['index']['czech']?>" /></a></li>
-					<li><a href="?id=<?php echo $id?>&amp;lang=nl" title="<?php echo $template['index']['dutch']?>"><img src="./img/flags/Netherlands.png" alt="<?php echo $template['index']['dutch']?>" /></a></li>
-					<li><a href="?id=<?php echo $id?>&amp;lang=pl" title="<?php echo $template['index']['polish']?>"><img src="./img/flags/Poland.png" alt="<?php echo $template['index']['polish']?>" /></a></li>
-					<li><a href="?id=<?php echo $id?>&amp;lang=pt" title="<?php echo $template['index']['portuguese']?>"><img src="./img/flags/Portugal.png" alt="<?php echo $template['index']['portuguese']?>" /></a></li>
-					<li><a href="?id=<?php echo $id?>&amp;lang=br" title="<?php echo $template['index']['brazilian']?>"><img src="./img/flags/Brazil.png" alt="<?php echo $template['index']['brazilian']?>" /></a></li>
-					<li><a href="?id=<?php echo $id?>&amp;lang=sr" title="<?php echo $template['index']['serbian']?>"><img src="./img/flags/Serbia.png" alt="<?php echo $template['index']['serbian']?>" /></a></li>
-					<li><a href="?id=<?php echo $id?>&amp;lang=hu" title="<?php echo $template['index']['hungarian']?>"><img src="./img/flags/Hungary.png" alt="<?php echo $template['index']['hungarian']?>" /></a></li>
-					<li><a href="?id=<?php echo $id?>&amp;lang=hr" title="<?php echo $template['index']['croatian']?>"><img src="./img/flags/Croatia.png" alt="<?php echo $template['index']['croatian']?>" /></a></li>
-					<li><a href="?id=<?php echo $id?>&amp;lang=lv" title="<?php echo $template['index']['latvian']?>"><img src="./img/flags/Latvia.png" alt="<?php echo $template['index']['latvian']?>" /></a></li>*/?>
-				</ul>
 			</div>
 			<div class="header-bottom">
 				<div class="nav2">
