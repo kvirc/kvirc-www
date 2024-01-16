@@ -282,7 +282,7 @@ $_SESSION["dir"] = $g_szRequestedSortDirection;
 
 $szThumbPath = "/img/themes";
 $szScreenshotPath = "/img/themes";
-$szDownloadPath = "ftp://ftp.kvirc.de/pub/kvirc/themes";
+$szDownloadPath = "ftp://ftp.kvirc.net/pub/kvirc/themes";
 $iMaxItemsPerPage = 10;
 
 

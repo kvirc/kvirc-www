@@ -83,12 +83,6 @@ function humanSize($size)
 	return $size;
 }
 
-function getHostKvircde()
-{
-	// Detection of kvirc.de machines
-	return (stristr(($_SERVER["SERVER_NAME"]),'kvirc.de')) ? 1 : 0;
-}
-
 // News
 /*
 news file name:

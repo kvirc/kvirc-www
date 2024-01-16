@@ -48,14 +48,10 @@ if(preg_match("/:/",$ip6,$blah)){
 //array("name" => "name", "url" => "http url", "desc" => "description", "city" => "city location", "maintainer" => "who maintains")
 $www_mirror=array(
 	1 => array("name" => "www.kvirc.net", "url" => "http://www.kvirc.net", "desc" => "Primary WWW site", "city" => "Oslo, Norway", "maintainer" => "Norwegian Linux Community"),
-	//array("name" => "www.kvirc.de", "url" => "http://www.kvirc.de", "desc" => "German mirror", "city" => "Bayreuth, Germany", "maintainer" => "cyconet.org"),
 );
 
 $ftp_mirror=array(
 	1 => array("name" => "ftp.kvirc.net", "url" => "ftp://ftp.kvirc.net/pub/kvirc", "desc" => "Primary Mirror", "city" => "France", "maintainer" => "pragmaware.net")
-	//array("name" => "kvirc.gmake.de", "url" => "http://kvirc.gmake.de/pub/kvirc", "desc" => "German mirror", "city" => "Jena, Germany", "maintainer" => "Dessa"),
-	//array("name" => "mirror.ibcp.fr", "url" => "http://mirror.ibcp.fr/pub/kvirc/", "desc" => "French mirror (ftp)", "city" => "Lyon, France", "maintainer" => "Alexis Michon"),
-	//array("name" => "standaloneinstaller.com", "url" => "http://mirrors.standaloneinstaller.com/kvirc/", "desc" => "French mirror (http)", "city" => "France", "maintainer" => "Sam Cohen-Brown"),
 );
 
 // Archive

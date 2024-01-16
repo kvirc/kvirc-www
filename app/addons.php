@@ -281,7 +281,7 @@ $_SESSION["dir"] = $g_szRequestedSortDirection;
 
 $szIconPath = "/img/addons";
 $szScreenshotPath = "/img/addons";
-$szDownloadPath = "ftp://ftp.kvirc.de/pub/kvirc/addons";
+$szDownloadPath = "ftp://ftp.kvirc.net/pub/kvirc/addons";
 $iMaxItemsPerPage = 10;
 
 
