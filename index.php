@@ -206,7 +206,7 @@ search();
 					<p class="center">
 						<?php echo $template['index']['helptext1a']?> <a href="https://github.com/kvirc/KVIrc/issues" title="<?php echo $template['index']['helptext1b']?>"><?php echo $template['index']['helptext1b']?></a><br /><br /><?php echo $template['index']['helptext1c']?><br />
 
-						<a href="irc://irc.libera.chat/KVIrc">#kvirc@libera</a>
+						<a href="irc://irc.libera.chat/KVIrc">#kvirc@libera.chat</a>
 					</p>
 				</div>
 				<div class="subcontent-unit-border-orange">

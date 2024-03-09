@@ -935,7 +935,7 @@ $template['splash']['in']="Splash Present in";
 $template['status']['title']="Project Status";
 $template['status']['text']="
 	<p>After more than 20 years of development KVIrc is a mature and full featured IRC client, an excellent companion for your daily IRC sessions.</p>
-	<p>The latest stable release is <a href=\"https://www.kvirc.net/?id=news&story=2024.01.14.19.25.1.story&dir=latest&lang=$lang\">5.2.0 \"Quasar\"</a>.
+	<p>The latest stable release is <a href=\"https://www.kvirc.net/?id=news&story=2024.03.09.12.18.1.story&dir=latest&lang=$lang\">5.2.2 \"Quasar\"</a>.
 	It has been published on January 14, 2024.
 	It can be obtained in source form from the <a href=\"?id=download&amp;lang=$lang\">download</a> page.</p>
 	<p>If you are looking for official releases have a look at <a href=\"?id=releases&amp;lang=$lang\">this section</a>, those are released less often but are most stable. Choose your release between Linux, Windows, OS X or source package.</p>
