@@ -77,7 +77,10 @@ $version_description["5.2.6"]       = "5.2.6 : Stable (Oct 2024)";
 $version_details["5.2.6"]           = "Previous stable release.";
 
 $version_description["5.2.8"]       = "5.2.8 : Stable (Jul 2025)";
-$version_details["5.2.8"]           = "The latest stable release.";
+$version_details["5.2.8"]           = "Previous stable release.";
+
+$version_description["5.2.10"]       = "5.2.10 : Stable (Dec 2025)";
+$version_details["5.2.10"]           = "The latest stable release.";
 
 // The package groups
 $group_description["none"]      = "No group";
@@ -140,6 +143,54 @@ if((strpos($hua,'Windows') !== false) || (strpos($hua,'WinXP') !== false))
 
 
 $package_count = 0;
+
+//================================================================================================
+// 5.2.10
+//================================================================================================
+
+$p_filename[$package_count]    = "KVIrc-5.2.10.tar.gz";
+$p_description[$package_count] = "KVIrc 5.2.10, sources (gzipped package)";
+$p_details[$package_count]     = "Source tarball for both UNIX and Windows versions. The package is compressed using the gzip program.";
+$p_platform[$package_count]    = "source";
+$p_version[$package_count]     = "5.2.10";
+$p_size[$package_count]        = "6365703";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "The KVIrc Development Team";
+$p_fullurl[$package_count]     = "https://github.com/kvirc/KVIrc/archive/refs/tags/5.2.10.tar.gz";
+$package_count++;
+
+$p_filename[$package_count]    = "KVIrc-5.2.10-Quasar-x86_64.exe";
+$p_description[$package_count] = "KVIrc 5.2.10, Windows 64 bit Binary";
+$p_details[$package_count]     = "Self-contained win64 KVIrc executable: it should run just after the installation.";
+$p_platform[$package_count]    = "win64";
+$p_version[$package_count]     = "5.2.10";
+$p_size[$package_count]        = "50670453";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "The KVIrc Development Team";
+$p_fullurl[$package_count]     = "https://github.com/kvirc/KVIrc/releases/download/5.2.10/KVIrc-5.2.10-Quasar-x86_64.exe";
+$package_count++;
+
+$p_filename[$package_count]    = "KVIrc-5.2.10-Quasar-Win7-x64.exe";
+$p_description[$package_count] = "KVIrc 5.2.10, Windows 64 bit Binary for Windows 7 based on Qt 5";
+$p_details[$package_count]     = "Self-contained win64 KVIrc executable: it should run just after the installation.";
+$p_platform[$package_count]    = "win64";
+$p_version[$package_count]     = "5.2.10";
+$p_size[$package_count]        = "50670453";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "The KVIrc Development Team";
+$p_fullurl[$package_count]     = "https://github.com/kvirc/KVIrc/releases/download/5.2.10/KVIrc-5.2.10-Quasar-Win7-x64.exe";
+$package_count++;
+
+$p_filename[$package_count]    = "KVIrc-5.2.10-Quasar.dmg";
+$p_description[$package_count] = "KVIrc 5.2.10, Mac OS X Bundle";
+$p_details[$package_count]     = "Self-contained OS X KVIrc executable: it should run just after the installation.";
+$p_platform[$package_count]    = "macosx";
+$p_version[$package_count]     = "5.2.10";
+$p_size[$package_count]        = "43093377";
+$p_group[$package_count]       = "none";
+$p_author[$package_count]      = "The KVIrc Development Team";
+$p_fullurl[$package_count]     = "https://github.com/kvirc/KVIrc/releases/download/5.2.10/KVIrc-5.2.10-Quasar.dmg";
+$package_count++;
 
 //================================================================================================
 // 5.2.8

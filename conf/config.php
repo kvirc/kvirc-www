@@ -4,9 +4,9 @@ if(isset($_GET['checkNetHack'])||!isset($checkNetHack))
 	echo "<script type=\"text/javascript\">location.href='..';</script>";
 
 // Some vars
-$current = "5.2.8";
+$current = "5.2.10";
 $codename = "Quasar";
-$availVersions = array("5.2.8",$current);
+$availVersions = array("5.2.10",$current);
 $dpath = "ftp://ftp.kvirc.net/pub/kvirc/";
 
 // Include language templates
@@ -361,6 +361,17 @@ $splash=array(
 		),
 		"date" => array(
 			"30.07.2025"
+		),
+		"present" => ""
+	),
+	array(
+		"name" => "5.2.10 \"Quasar\"",
+		"motd" => "",
+		"screen" => array(
+			"5.2.0.png"
+		),
+		"date" => array(
+			"12.12.2025"
 		),
 		"present" => ""
 	),
