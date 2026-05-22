@@ -69,9 +69,7 @@ search();
 					<ul>
 						<li><a href="#"><?php echo $template['index']['running']?></a>
 							<ul>
-								<li><a href="?id=download&amp;lang=<?php echo $lang?>"><?php echo $template['index']['download']?></a></li>
-								<li><a href="?id=releases&amp;lang=<?php echo $lang?>"><?php echo $template['index']['releases']?></a></li>
-								<li><a href="https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrcs-nightly-source-or-binaries#source-downloads-master"><?php echo $template['index']['snapshots']?></a></li>
+								<li><a href="https://github.com/kvirc/KVIrc/wiki/Downloading-KVIrcs-nightly-source-or-binaries"><?php echo $template['index']['download']?></a></li>
 								<li><a href="https://github.com/kvirc/KVIrc"><?php echo $template['index']['git']?></a></li>
 								<li><a href="https://github.com/kvirc/KVIrc/wiki/installation"><?php echo $template['index']['install']?></a></li>
 							</ul>
